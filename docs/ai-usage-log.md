@@ -2,11 +2,11 @@
 
 ## Semana 1 - P1L0
 
-- Objetivo: crear un ejemplo minimo 2D de OpenSeesPy y validarlo con una solucion manual.
-- Encargo a IA: analizar el enunciado, proponer alcance P1L0, crear script reproducible, documentar verificaciones.
+- Objetivo: crear un ejemplo minimo 2D de OpenSeesPy usando un ejercicio existente del curso.
+- Encargo a IA: analizar el enunciado, adaptar la Pregunta 2 del Control 1, crear script reproducible, documentar verificaciones.
 - Restricciones: no avanzar a Unity, AR, Fiber Sections ni modelo completo del edificio.
-- Verificacion exigida: equilibrio global, reacciones teoricas y deflexion central teorica.
-- Revision humana pendiente: ejecutar frente al ayudante y explicar GDL, apoyos, carga, elementos y resultados.
+- Verificacion exigida: equilibrio global, reacciones, axial maximo, corte maximo y momento maximo contra la pauta.
+- Revision humana pendiente: ejecutar frente al ayudante y explicar GDL, apoyos, rotula interna, carga, elementos y resultados.
 
 ## Documentacion compartida del enunciado
 

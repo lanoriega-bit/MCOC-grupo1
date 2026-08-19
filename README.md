@@ -26,7 +26,7 @@ Repositorio de trabajo para el Proyecto 1 del curso. El grupo desarrollara duran
 
 ## Foco actual
 
-## P1L0 - Ejemplo minimo 2D OpenSeesPy basado en Pregunta 2
+### P1L0 - Ejemplo minimo 2D OpenSeesPy basado en Pregunta 2
 
 La entrega actual corresponde solo a `P1L0`: mostrar, validar y explicar un ejemplo minimo 2D de OpenSeesPy.
 

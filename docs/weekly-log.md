@@ -9,15 +9,7 @@
 - Marco isostatico 2D de tres articulaciones con carga distribuida vertical.
 - Comparacion contra la pauta del ejercicio.
 
-### Resultado anterior
-
-- Analisis OpenSeesPy convergente.
-- Reacciones verticales: `R_Ay = 5000 N`, `R_By = 5000 N`.
-- Equilibrio global: `R_Ay + R_By - P = 0 N`.
-- Deflexion central: `-2.666666667e-03 m`.
-- Error de deflexion contra formula teorica: `8.673617e-19 m`.
-
-### Resultado actualizado con Pregunta 2
+### Resultado
 
 - Analisis OpenSeesPy convergente.
 - Reacciones verticales: `R_Ay = 19.500 tonf`, `R_Ey = 19.500 tonf`.
@@ -39,7 +31,6 @@ python opensees/p1l0/ejemplo_minimo_2d.py
 ### Pendiente
 
 - Confirmar con el ayudante si este ejemplo cumple exactamente el formato esperado para P1L0.
-- Subir el avance al repositorio GitHub `MCOC-grupo1` cuando se configure el remoto local.
 
 ### Actualizacion de documentacion
 
@@ -50,6 +41,7 @@ python opensees/p1l0/ejemplo_minimo_2d.py
 
 - Se reemplazo el ejemplo generico de viga simplemente apoyada por la Pregunta 2 del Control 1.
 - La razon del cambio es que el grupo confirmo que P1L0 debe usar un ejercicio existente.
+- El ejemplo anterior no queda como entrega vigente para evitar confusion.
 
 ### Diagrama de resultados
 
