@@ -31,8 +31,33 @@ La entrega actual corresponde solo a `P1L0`: mostrar, validar y explicar un ejem
 
 ## Como ejecutar
 
-```powershell
+Requisitos:
+
+- Python 3.12 (no usar 3.9 ni otras versiones anteriores).
+- OpenSeesPy 3.8.0.0 (definido en `requirements.txt`).
+
+Este repositorio puede usarse desde WSL y Windows en la misma carpeta.
+Cada entorno usa su propia carpeta `.venv` para evitar conflictos.
+
+### WSL / Linux
+
+```bash
+python3.12 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
+python -c "import openseespy.opensees as ops; print('OpenSeesPy OK')"
+python opensees/p1l0/ejemplo_minimo_2d.py
+```
+
+### Windows PowerShell
+
+```powershell
+py -3.12 -m venv .venv-win
+.\.venv-win\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+python -c "import openseespy.opensees as ops; print('OpenSeesPy OK')"
 python opensees/p1l0/ejemplo_minimo_2d.py
 ```
 
