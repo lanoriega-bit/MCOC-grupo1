@@ -21,3 +21,10 @@
 - Encargo a IA: reemplazar el ejemplo generico por un modelo OpenSeesPy 2D del marco isostatico de la pauta.
 - Verificacion: comparar reacciones, equilibrio global, axial maximo, corte maximo y momento maximo contra la pauta.
 - Resultado esperado: el script debe terminar con `Estado: OK - el modelo equilibra y coincide con la pauta de la P2.`
+
+## Diagrama de resultados P1L0
+
+- Objetivo: permitir que el resultado se vea fisicamente y no solo como texto en terminal.
+- Encargo a IA: generar una imagen del marco con carga, reacciones, rotula, deformada amplificada y resumen de esfuerzos.
+- Resultado: `results/p1l0/diagrama_pregunta_2.png`.
+- Verificacion: ejecutar el script y confirmar que se crea el archivo PNG junto con la validacion numerica.

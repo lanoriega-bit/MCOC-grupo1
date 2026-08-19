@@ -7,6 +7,12 @@ La validacion se realiza contra la pauta del Control 1 de Estructuras Isostatica
 from __future__ import annotations
 
 import math
+from pathlib import Path
+
+import matplotlib
+
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
 
 import openseespy.opensees as ops
 
@@ -54,6 +60,142 @@ def tonf(value_newton: float) -> float:
 
 def tonf_m(value_newton_meter: float) -> float:
     return value_newton_meter / TONF
+
+
+def save_result_diagram(
+    output_path: Path,
+    reaction_a_x: float,
+    reaction_a_y: float,
+    reaction_e_x: float,
+    reaction_e_y: float,
+    max_axial: float,
+    max_shear: float,
+    max_moment: float,
+    max_normal_stress_bending: float,
+    max_shear_stress: float,
+) -> None:
+    node_tags = {
+        "A": 1,
+        "B": 2,
+        "C": 3,
+        "D": 5,
+        "E": 6,
+    }
+    members = [
+        ("A", "B"),
+        ("B", "C"),
+        ("C", "D"),
+        ("D", "E"),
+    ]
+
+    coords = {name: tuple(ops.nodeCoord(tag)) for name, tag in node_tags.items()}
+    disps = {
+        name: (ops.nodeDisp(tag, 1), ops.nodeDisp(tag, 2))
+        for name, tag in node_tags.items()
+    }
+    max_disp = max(math.hypot(ux, uy) for ux, uy in disps.values())
+    deformation_scale = 0.8 / max_disp if max_disp > 0 else 1.0
+
+    fig, ax = plt.subplots(figsize=(12, 7))
+    ax.set_aspect("equal", adjustable="box")
+    ax.set_title("P1L0 - Pregunta 2: marco isostatico 2D", fontsize=14)
+    ax.set_xlabel("x [m]")
+    ax.set_ylabel("y [m]")
+
+    for start, end in members:
+        x1, y1 = coords[start]
+        x2, y2 = coords[end]
+        ax.plot([x1, x2], [y1, y2], color="#1f77b4", linewidth=3)
+
+        dx1, dy1 = disps[start]
+        dx2, dy2 = disps[end]
+        ax.plot(
+            [x1 + deformation_scale * dx1, x2 + deformation_scale * dx2],
+            [y1 + deformation_scale * dy1, y2 + deformation_scale * dy2],
+            color="#ff7f0e",
+            linestyle="--",
+            linewidth=2,
+        )
+
+    for name, (x, y) in coords.items():
+        ax.scatter(x, y, color="black", zorder=5)
+        ax.text(x, y + 0.18, name, ha="center", fontsize=11, fontweight="bold")
+
+    ax.scatter(coords["C"][0], coords["C"][1], s=180, facecolors="none", edgecolors="green", linewidths=2)
+    ax.text(coords["C"][0], coords["C"][1] - 0.35, "rotula interna", ha="center", color="green")
+
+    ax.scatter(coords["A"][0], coords["A"][1] - 0.08, marker="^", s=220, color="gray")
+    ax.scatter(coords["E"][0], coords["E"][1] - 0.08, marker="^", s=220, color="gray")
+
+    for x in [value * 0.5 for value in range(0, 27)]:
+        ax.annotate(
+            "",
+            xy=(x, 3.12),
+            xytext=(x, 3.95),
+            arrowprops={"arrowstyle": "->", "color": "#d62728", "lw": 1.2},
+        )
+    ax.plot([0.0, 13.0], [3.95, 3.95], color="#d62728", linewidth=1)
+    ax.text(6.5, 4.12, "q = 3 tonf/m", ha="center", color="#d62728", fontsize=11)
+
+    reaction_scale = 0.045
+    ax.annotate(
+        "",
+        xy=(0.0, reaction_scale * tonf(reaction_a_y)),
+        xytext=(0.0, 0.0),
+        arrowprops={"arrowstyle": "->", "color": "#2ca02c", "lw": 2},
+    )
+    ax.annotate(
+        "",
+        xy=(reaction_scale * tonf(reaction_a_x), 0.0),
+        xytext=(0.0, 0.0),
+        arrowprops={"arrowstyle": "->", "color": "#2ca02c", "lw": 2},
+    )
+    ax.annotate(
+        "",
+        xy=(13.0, reaction_scale * tonf(reaction_e_y)),
+        xytext=(13.0, 0.0),
+        arrowprops={"arrowstyle": "->", "color": "#2ca02c", "lw": 2},
+    )
+    ax.annotate(
+        "",
+        xy=(13.0 + reaction_scale * tonf(reaction_e_x), 0.0),
+        xytext=(13.0, 0.0),
+        arrowprops={"arrowstyle": "->", "color": "#2ca02c", "lw": 2},
+    )
+    ax.text(0.15, 1.05, f"RAy = {tonf(reaction_a_y):.2f} tonf", color="#2ca02c")
+    ax.text(0.35, -0.35, f"RAx = {tonf(reaction_a_x):.2f} tonf", color="#2ca02c")
+    ax.text(10.9, 1.05, f"REy = {tonf(reaction_e_y):.2f} tonf", color="#2ca02c")
+    ax.text(10.25, -0.35, f"REx = {tonf(reaction_e_x):.2f} tonf", color="#2ca02c")
+
+    summary = (
+        "Resultados OpenSeesPy\n"
+        f"|N|max = {tonf(max_axial):.2f} tonf\n"
+        f"|Q|max = {tonf(max_shear):.2f} tonf\n"
+        f"|M|max = {tonf_m(max_moment):.3f} tonf*m\n"
+        f"sigma_M = {max_normal_stress_bending / MPA:.2f} MPa\n"
+        f"tau_max = {max_shear_stress / MPA:.2f} MPa\n"
+        f"deformada x {deformation_scale:.0f}"
+    )
+    ax.text(
+        0.02,
+        0.98,
+        summary,
+        transform=ax.transAxes,
+        va="top",
+        bbox={"boxstyle": "round", "facecolor": "white", "edgecolor": "#777777", "alpha": 0.95},
+    )
+
+    ax.plot([], [], color="#1f77b4", linewidth=3, label="geometria original")
+    ax.plot([], [], color="#ff7f0e", linestyle="--", linewidth=2, label="deformada amplificada")
+    ax.legend(loc="lower center", ncol=2)
+    ax.grid(True, linestyle=":", alpha=0.45)
+    ax.set_xlim(-1.0, 14.0)
+    ax.set_ylim(-0.8, 4.6)
+
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    fig.tight_layout()
+    fig.savefig(output_path, dpi=180)
+    plt.close(fig)
 
 
 def main() -> None:
@@ -195,8 +337,24 @@ def main() -> None:
     assert math.isclose(tonf(max_shear), reference_max_shear, rel_tol=0.0, abs_tol=0.1)
     assert math.isclose(tonf_m(max_moment), reference_max_moment, rel_tol=0.0, abs_tol=0.02)
 
+    repo_root = Path(__file__).resolve().parents[2]
+    diagram_path = repo_root / "results" / "p1l0" / "diagrama_pregunta_2.png"
+    save_result_diagram(
+        diagram_path,
+        reaction_a_x,
+        reaction_a_y,
+        reaction_e_x,
+        reaction_e_y,
+        max_axial,
+        max_shear,
+        max_moment,
+        max_normal_stress_bending,
+        max_shear_stress,
+    )
+
     print("")
     print("Estado: OK - el modelo equilibra y coincide con la pauta de la P2.")
+    print(f"Diagrama guardado en: {diagram_path}")
 
     ops.wipe()
 

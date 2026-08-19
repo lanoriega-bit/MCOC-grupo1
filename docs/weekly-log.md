@@ -28,6 +28,7 @@
 - Corte maximo: `|Q|max = 7.500 tonf`.
 - Momento maximo: `|M|max = 9.375 tonf*m`.
 - Estado: coincide con la pauta de la Pregunta 2 dentro de redondeo.
+- Salida grafica: `results/p1l0/diagrama_pregunta_2.png`.
 
 ### Comando de verificacion
 
@@ -49,3 +50,8 @@ python opensees/p1l0/ejemplo_minimo_2d.py
 
 - Se reemplazo el ejemplo generico de viga simplemente apoyada por la Pregunta 2 del Control 1.
 - La razon del cambio es que el grupo confirmo que P1L0 debe usar un ejercicio existente.
+
+### Diagrama de resultados
+
+- Se agrego generacion automatica de un diagrama `PNG` con geometria, deformada amplificada, carga distribuida, rotula interna, reacciones y esfuerzos maximos.
+- El objetivo es que el resultado no sea solo numerico, sino tambien visible fisicamente.

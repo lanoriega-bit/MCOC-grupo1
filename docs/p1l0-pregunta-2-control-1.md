@@ -113,3 +113,20 @@ El resultado esperado es:
 ```text
 Estado: OK - el modelo equilibra y coincide con la pauta de la P2.
 ```
+
+## Salida grafica
+
+El mismo comando genera una figura `PNG`:
+
+```text
+results/p1l0/diagrama_pregunta_2.png
+```
+
+La figura incluye:
+
+- Geometria original del marco.
+- Deformada amplificada.
+- Carga distribuida.
+- Reacciones en los apoyos.
+- Rotula interna.
+- Resumen de esfuerzos y tensiones maximas.

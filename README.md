@@ -39,6 +39,14 @@ python -m pip install -r requirements.txt
 python opensees/p1l0/ejemplo_minimo_2d.py
 ```
 
+Al ejecutarlo, ademas de imprimir la verificacion numerica, se genera una imagen con el resultado fisico del modelo:
+
+```text
+results/p1l0/diagrama_pregunta_2.png
+```
+
+Ese diagrama muestra la geometria original, la deformada amplificada, la carga distribuida, la rotula interna, las reacciones y los esfuerzos maximos.
+
 ## Que modela
 
 Se modela el marco 2D de la Pregunta 2:
@@ -79,4 +87,5 @@ La entrega P1L0 se considera correcta si:
 - Las reacciones equilibran la carga aplicada.
 - Las reacciones coinciden con la pauta de la Pregunta 2 dentro de redondeo.
 - Los maximos de axial, corte y momento coinciden con la pauta dentro de redondeo.
+- Se genera el diagrama `results/p1l0/diagrama_pregunta_2.png`.
 - Se puede explicar claramente el modelo, los GDL, apoyos, rotula interna, carga y verificacion.
