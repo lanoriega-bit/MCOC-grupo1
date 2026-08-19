@@ -1,0 +1,9 @@
+# Registro de uso de IA
+
+## Semana 1 - P1L0
+
+- Objetivo: crear un ejemplo minimo 2D de OpenSeesPy y validarlo con una solucion manual.
+- Encargo a IA: analizar el enunciado, proponer alcance P1L0, crear script reproducible, documentar verificaciones.
+- Restricciones: no avanzar a Unity, AR, Fiber Sections ni modelo completo del edificio.
+- Verificacion exigida: equilibrio global, reacciones teoricas y deflexion central teorica.
+- Revision humana pendiente: ejecutar frente al ayudante y explicar GDL, apoyos, carga, elementos y resultados.
