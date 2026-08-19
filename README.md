@@ -5,6 +5,7 @@ Repositorio de trabajo para el Proyecto 1 del curso. El grupo desarrollara duran
 ## Entrada rapida para el equipo
 
 - Enunciado completo organizado: `docs/enunciado-proyecto-p1.md`.
+- Enunciado P1L0 usado: `docs/p1l0-pregunta-2-control-1.md`.
 - Entrega actual P1L0: `docs/p1l0-explicacion.md`.
 - Script OpenSeesPy P1L0: `opensees/p1l0/ejemplo_minimo_2d.py`.
 - Registro semanal: `docs/weekly-log.md`.
@@ -25,9 +26,11 @@ Repositorio de trabajo para el Proyecto 1 del curso. El grupo desarrollara duran
 
 ## Foco actual
 
-## P1L0 - Ejemplo minimo 2D OpenSeesPy
+## P1L0 - Ejemplo minimo 2D OpenSeesPy basado en Pregunta 2
 
 La entrega actual corresponde solo a `P1L0`: mostrar, validar y explicar un ejemplo minimo 2D de OpenSeesPy.
+
+Como el curso pidio usar un ejercicio existente, el ejemplo se basa en la Pregunta 2 del Control 1 de Estructuras Isostaticas: marco isostatico de tres articulaciones con carga distribuida vertical.
 
 ## Como ejecutar
 
@@ -38,33 +41,42 @@ python opensees/p1l0/ejemplo_minimo_2d.py
 
 ## Que modela
 
-Se modela una viga simplemente apoyada 2D con una carga puntual vertical en el centro.
+Se modela el marco 2D de la Pregunta 2:
 
 - Modelo: `basic`, 2 dimensiones, 3 GDL por nodo.
 - GDL por nodo: desplazamiento `ux`, desplazamiento `uy`, rotacion `rz`.
 - Elementos: `elasticBeamColumn`.
 - Transformacion geometrica: `Linear`.
-- Apoyo izquierdo: pasador, restringe `ux` y `uy`.
-- Apoyo derecho: rodillo, restringe `uy`.
-- Carga: fuerza puntual vertical descendente en el nodo central.
+- Apoyos en `A` y `E`: articulaciones, restringen `ux` y `uy`.
+- Rotula interna en `C`: se duplican nodos y se igualan solo las traslaciones.
+- Carga: distribuida vertical de `3 tonf/m` sobre la proyeccion horizontal.
+- Geometria: `A(0,0)`, `B(4,3)`, `C(6.5,3)`, `D(9,3)`, `E(13,0)`.
 
-## Validacion manual
+## Validacion contra la pauta
 
-Para una viga simplemente apoyada de largo `L` con carga puntual centrada `P`:
+El script compara automaticamente contra los resultados de la pauta:
 
-- Reaccion izquierda: `R_A = P / 2`.
-- Reaccion derecha: `R_B = P / 2`.
-- Momento maximo: `M_max = P * L / 4`.
-- Deflexion vertical central: `delta = P * L^3 / (48 * E * I)`.
+- Reacciones verticales: `R_Ay = R_Ey = 19.5 tonf`.
+- Reacciones horizontales: `|R_Ax| = |R_Ex| = 21.13 tonf`.
+- Axial maximo: `|N|max = 28.6 tonf`.
+- Corte maximo: `|Q|max = 7.5 tonf`.
+- Momento maximo: `|M|max = 9.38 tonf*m`.
+- Tension maxima por flexion: aproximadamente `80.511 MPa`.
+- Tension tangencial maxima por corte: aproximadamente `29.6 MPa`.
 
-El script compara las reacciones y la deflexion de OpenSeesPy contra estas expresiones teoricas.
+Tambien verifica equilibrio global:
+
+```text
+sum Fx = 0
+sum Fy = 0
+```
 
 ## Criterio de aceptacion
 
 La entrega P1L0 se considera correcta si:
 
 - El analisis converge.
-- La suma de reacciones verticales equilibra la carga aplicada.
-- Las reacciones coinciden con `P/2` dentro de tolerancia numerica.
-- La deflexion central coincide con la solucion teorica dentro de tolerancia numerica razonable.
-- Se puede explicar claramente el modelo, los GDL, apoyos, carga y verificacion.
+- Las reacciones equilibran la carga aplicada.
+- Las reacciones coinciden con la pauta de la Pregunta 2 dentro de redondeo.
+- Los maximos de axial, corte y momento coinciden con la pauta dentro de redondeo.
+- Se puede explicar claramente el modelo, los GDL, apoyos, rotula interna, carga y verificacion.

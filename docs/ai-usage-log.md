@@ -14,3 +14,10 @@
 - Encargo a IA: convertir el documento entregado por el usuario en una guia estructurada dentro del repositorio.
 - Resultado: `docs/enunciado-proyecto-p1.md` y enlaces desde `README.md`.
 - Restriccion: mantener el foco actual en P1L0 y no implementar aun Unity, AR, capacidad RC ni sidequests.
+
+## Cambio P1L0 a ejercicio existente
+
+- Objetivo: adaptar P1L0 para usar la Pregunta 2 del Control 1 de Estructuras Isostaticas.
+- Encargo a IA: reemplazar el ejemplo generico por un modelo OpenSeesPy 2D del marco isostatico de la pauta.
+- Verificacion: comparar reacciones, equilibrio global, axial maximo, corte maximo y momento maximo contra la pauta.
+- Resultado esperado: el script debe terminar con `Estado: OK - el modelo equilibra y coincide con la pauta de la P2.`

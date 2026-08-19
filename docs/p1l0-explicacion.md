@@ -2,17 +2,28 @@
 
 ## Objetivo
 
-Mostrar un ejemplo minimo 2D de OpenSeesPy, ejecutarlo desde la linea de comandos y validarlo con una solucion manual conocida.
+Mostrar un ejemplo minimo 2D de OpenSeesPy, ejecutarlo desde la linea de comandos y validarlo frente al ayudante usando un ejercicio existente del curso.
 
 ## Modelo elegido
 
-Se usa una viga simplemente apoyada con carga puntual centrada porque tiene solucion teorica directa.
+Se usa la Pregunta 2 del Control 1 de Estructuras Isostaticas.
 
-La estructura se divide en dos elementos para poder aplicar la carga en un nodo central:
+El ejercicio corresponde a un marco isostatico 2D de tres articulaciones con carga distribuida vertical de `3 tonf/m`.
 
-- Nodo 1: apoyo izquierdo.
-- Nodo 2: centro de la viga y punto de aplicacion de la carga.
-- Nodo 3: apoyo derecho.
+Geometria modelada:
+
+- `A(0,0)`.
+- `B(4,3)`.
+- `C(6.5,3)`.
+- `D(9,3)`.
+- `E(13,0)`.
+
+Miembros modelados:
+
+- `AB`.
+- `BC`.
+- `CD`.
+- `DE`.
 
 ## Grados de libertad
 
@@ -26,34 +37,96 @@ Por eso se define en OpenSeesPy con `ndm=2` y `ndf=3`.
 
 ## Apoyos
 
-- Nodo 1: pasador, restringe `ux` y `uy`, deja libre `rz`.
-- Nodo 3: rodillo, restringe `uy`, deja libre `ux` y `rz`.
+- Nodo `A`: apoyo articulado, restringe `ux` y `uy`, deja libre `rz`.
+- Nodo `E`: apoyo articulado, restringe `ux` y `uy`, deja libre `rz`.
 
-Esto representa una viga simplemente apoyada estable e isostatica.
+El marco es isostatico porque ademas tiene una rotula interna en `C`.
+
+## Rotula interna
+
+En OpenSeesPy la rotula interna se modela duplicando el nodo `C`:
+
+- Nodo `C izquierda` para el elemento `BC`.
+- Nodo `C derecha` para el elemento `CD`.
+
+Luego se usa `equalDOF` para que ambos nodos tengan los mismos desplazamientos `ux` y `uy`, pero rotaciones independientes. Asi se transmite fuerza axial y corte, pero no momento.
 
 ## Carga
 
-Se aplica una carga vertical descendente `P` en el nodo central.
+Se aplica una carga distribuida vertical descendente de:
 
-En OpenSeesPy el eje vertical positivo es `+Y`, por lo que una carga hacia abajo se ingresa como `-P`.
+```text
+q = 3 tonf/m
+```
+
+La carga se define sobre la proyeccion horizontal del marco, como aparece en el enunciado.
+
+En OpenSeesPy las cargas distribuidas sobre vigas se aplican en ejes locales. Por eso el script convierte la carga vertical global a componentes locales de cada elemento inclinado.
 
 ## Validacion
 
-Para una viga simplemente apoyada con carga puntual centrada:
+El script compara contra la pauta del ejercicio.
+
+Resultados de referencia:
 
 ```text
-R_A = P / 2
-R_B = P / 2
-M_max = P L / 4
-delta_centro = P L^3 / (48 E I)
+R_Ay = 19.5 tonf
+R_Ey = 19.5 tonf
+|R_Ax| = 21.13 tonf
+|R_Ex| = 21.13 tonf
+|N|max = 28.6 tonf
+|Q|max = 7.5 tonf
+|M|max = 9.38 tonf*m
 ```
 
-El script compara automaticamente las reacciones y la deflexion central de OpenSeesPy contra estas expresiones.
+Tambien calcula tensiones usando propiedades de la seccion HE 340 AA de la pauta:
+
+```text
+A = 9424.5 mm2
+Iz = 182805143.4 mm4
+Wz = 1142532.1 mm3
+```
+
+Para tension normal maxima por flexion:
+
+```text
+sigma_M = M / Wz
+```
+
+Para tension normal por axial:
+
+```text
+sigma_N = N / A
+```
+
+Para tension tangencial maxima por corte se usa la relacion de Jouravsky indicada en la pauta:
+
+```text
+tau_max = Q * S/(I*t)
+S/(I*t) = 0.0004028 1/mm2
+```
+
+## Resultados esperados al correr el script
+
+```text
+R_Ax = 21.125 tonf
+R_Ay = 19.500 tonf
+R_Ex = -21.125 tonf
+R_Ey = 19.500 tonf
+|N|max = 28.600 tonf
+|Q|max = 7.500 tonf
+|M|max = 9.375 tonf*m
+Estado: OK - el modelo equilibra y coincide con la pauta de la P2.
+```
+
+Las pequenas diferencias con la pauta son por redondeo, por ejemplo `21.125 tonf` se reporta como `21.13 tonf`.
 
 ## Que hay que explicar al ayudante
 
 - OpenSees calcula desplazamientos nodales resolviendo equilibrio estructural.
 - Las reacciones salen de los GDL restringidos.
-- La carga aplicada debe equilibrarse con las reacciones.
-- La deflexion obtenida debe ser negativa porque la carga va hacia abajo.
-- La magnitud de la deflexion coincide con la formula teorica de viga Euler-Bernoulli.
+- La carga aplicada debe equilibrarse con las reacciones horizontales y verticales.
+- El modelo es 2D, por eso cada nodo tiene `ux`, `uy` y `rz`.
+- Las barras inclinadas requieren convertir la carga vertical global a carga local de elemento.
+- La rotula interna en `C` se logra liberando la continuidad rotacional entre las dos mitades del marco.
+- Los esfuerzos internos maximos coinciden con la pauta de la Pregunta 2.

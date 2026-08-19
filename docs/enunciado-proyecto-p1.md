@@ -412,15 +412,17 @@ Interpretacion para esta entrega:
 
 Lo implementado en este repo:
 
-- Viga simplemente apoyada 2D.
-- Carga puntual vertical centrada.
+- Pregunta 2 del Control 1 de Estructuras Isostaticas.
+- Marco isostatico 2D de tres articulaciones.
+- Carga vertical distribuida de `3 tonf/m` sobre la proyeccion horizontal.
 - Elementos `elasticBeamColumn`.
 - Modelo `basic` con `ndm=2` y `ndf=3`.
-- Comparacion contra solucion teorica de resistencia de materiales.
+- Comparacion contra la pauta del ejercicio.
 
 Archivos relacionados:
 
 - `opensees/p1l0/ejemplo_minimo_2d.py`.
+- `docs/p1l0-pregunta-2-control-1.md`.
 - `docs/p1l0-explicacion.md`.
 - `docs/weekly-log.md`.
 - `docs/ai-usage-log.md`.
