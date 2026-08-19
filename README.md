@@ -1,8 +1,31 @@
 # MCOC-grupo1
 
-## P1L0 - Ejemplo minimo 2D OpenSeesPy
+Repositorio de trabajo para el Proyecto 1 del curso. El grupo desarrollara durante el semestre un laboratorio estructural digital del Edificio de Ingenieria, usando OpenSeesPy para analisis estructural y Unity para visualizacion/interaccion en etapas posteriores.
 
-Repositorio de trabajo para el Proyecto 1 del grupo MCOC-grupo1.
+## Entrada rapida para el equipo
+
+- Enunciado completo organizado: `docs/enunciado-proyecto-p1.md`.
+- Entrega actual P1L0: `docs/p1l0-explicacion.md`.
+- Script OpenSeesPy P1L0: `opensees/p1l0/ejemplo_minimo_2d.py`.
+- Registro semanal: `docs/weekly-log.md`.
+- Registro de uso de IA: `docs/ai-usage-log.md`.
+- Reglas para agentes IA: `AGENTS.md`.
+
+## Alcance general del proyecto
+
+- Modelo estructural global lineal elastico 3D en OpenSees/OpenSeesPy.
+- Nodos 3D con 6 GDL para el modelo global.
+- Vigas, columnas y muros idealizados con elementos lineales equivalentes.
+- Cargas gravitacionales y vivas transferidas por areas tributarias.
+- Casos base `G`, `Q`, `EX`, `EY` y uso de superposicion.
+- Capacidad no lineal de secciones RC separada del modelo global.
+- Unity como herramienta de visualizacion, preproceso, postproceso e interaccion.
+- AR basica en etapas posteriores.
+- Uso documentado y critico de IA durante el semestre.
+
+## Foco actual
+
+## P1L0 - Ejemplo minimo 2D OpenSeesPy
 
 La entrega actual corresponde solo a `P1L0`: mostrar, validar y explicar un ejemplo minimo 2D de OpenSeesPy.
 

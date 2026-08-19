@@ -26,3 +26,8 @@ python opensees/p1l0/ejemplo_minimo_2d.py
 
 - Confirmar con el ayudante si este ejemplo cumple exactamente el formato esperado para P1L0.
 - Subir el avance al repositorio GitHub `MCOC-grupo1` cuando se configure el remoto local.
+
+### Actualizacion de documentacion
+
+- Se agrego `docs/enunciado-proyecto-p1.md` con el enunciado completo organizado para el equipo.
+- Se actualizo `README.md` para que cualquier integrante encuentre rapidamente el enunciado, P1L0, registros y script ejecutable.
