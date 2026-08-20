@@ -8,6 +8,7 @@ Repositorio de trabajo para el Proyecto 1 del curso. El grupo desarrollara duran
 - Enunciado P1L0 usado: `docs/p1l0-pregunta-2-control-1.md`.
 - Entrega actual P1L0: `docs/p1l0-explicacion.md`.
 - Script OpenSeesPy P1L0: `opensees/p1l0/ejemplo_minimo_2d.py`.
+- Ejercicio adicional columna-viga: `docs/ejercicio-columna-viga.md`.
 - Registro semanal: `docs/weekly-log.md`.
 - Registro de uso de IA: `docs/ai-usage-log.md`.
 - Reglas para agentes IA: `AGENTS.md`.
@@ -37,6 +38,12 @@ Como el curso pidio usar un ejercicio existente, el ejemplo se basa en la Pregun
 ```powershell
 python -m pip install -r requirements.txt
 python opensees/p1l0/ejemplo_minimo_2d.py
+```
+
+Para ejecutar el ejercicio adicional de columna-viga:
+
+```powershell
+python opensees/ejercicio_columna_viga/columna_viga_2d.py
 ```
 
 Al ejecutarlo, ademas de imprimir la verificacion numerica, se genera una imagen con el resultado fisico del modelo:

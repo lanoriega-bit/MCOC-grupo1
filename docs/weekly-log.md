@@ -47,3 +47,20 @@ python opensees/p1l0/ejemplo_minimo_2d.py
 
 - Se agrego generacion automatica de un diagrama `PNG` con geometria, deformada amplificada, carga distribuida, rotula interna, reacciones y esfuerzos maximos.
 - El objetivo es que el resultado no sea solo numerico, sino tambien visible fisicamente.
+
+## Ejercicio adicional - Columna y viga ASTM A36
+
+### Alcance
+
+- Modelo 2D separado del P1L0 oficial.
+- Columna vertical de `5 m` con union rigida a una viga a `2 m` de altura.
+- Viga horizontal de `8 m` con carga puntual de `20 kN` a `5 m` desde la columna.
+- Carga distribuida horizontal de `17 kN/m` en toda la columna.
+- Base empotrada asumida para cerrar el modelo.
+- Apoyo de pared en el extremo derecho restringiendo solo `ux`.
+
+### Archivos
+
+- Script: `opensees/ejercicio_columna_viga/columna_viga_2d.py`.
+- Documento: `docs/ejercicio-columna-viga.md`.
+- Diagrama: `results/ejercicio_columna_viga/diagrama_columna_viga.png`.

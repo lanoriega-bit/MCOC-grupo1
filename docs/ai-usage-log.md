@@ -28,3 +28,10 @@
 - Encargo a IA: generar una imagen del marco con carga, reacciones, rotula, deformada amplificada y resumen de esfuerzos.
 - Resultado: `results/p1l0/diagrama_pregunta_2.png`.
 - Verificacion: ejecutar el script y confirmar que se crea el archivo PNG junto con la validacion numerica.
+
+## Ejercicio adicional columna-viga
+
+- Objetivo: crear un segundo ejercicio en carpeta aparte dentro del mismo repositorio.
+- Encargo a IA: implementar un modelo OpenSeesPy 2D de una columna con viga rigida, cargas dadas, verificaciones y diagrama.
+- Hipotesis documentada: base empotrada y apoyo de pared que restringe solo `ux`.
+- Verificacion: equilibrio global en `Fx`, `Fy` y momento respecto a la base, mas chequeo elastico preliminar.
