@@ -24,14 +24,17 @@ KN = 1_000.0
 MPA = 1.0e6
 
 
+# Convierte fuerzas desde newton a kN para reportar resultados.
 def kN(value_newton: float) -> float:
     return value_newton / KN
 
 
+# Convierte momentos desde N*m a kN*m para reportar resultados.
 def kN_m(value_newton_meter: float) -> float:
     return value_newton_meter / KN
 
 
+# Convierte una carga distribuida global a componentes locales de elemento.
 def add_uniform_global_load(
     ele_tag: int,
     node_i: int,
@@ -54,6 +57,7 @@ def add_uniform_global_load(
     return length, q_local_x, q_local_y
 
 
+# Obtiene los maximos absolutos de axial, corte y momento en extremos de elementos.
 def max_endpoint_forces(local_forces: dict[int, list[float]]) -> tuple[float, float, float]:
     """Return max absolute endpoint N, V and M from OpenSees local forces."""
     max_axial = max(max(abs(force[0]), abs(force[3])) for force in local_forces.values())
@@ -62,6 +66,7 @@ def max_endpoint_forces(local_forces: dict[int, list[float]]) -> tuple[float, fl
     return max_axial, max_shear, max_moment
 
 
+# Genera el diagrama fisico de la columna-viga con cargas, reacciones y deformada.
 def save_result_diagram(
     output_path: Path,
     reactions: dict[str, float],
@@ -181,6 +186,7 @@ def save_result_diagram(
     plt.close(fig)
 
 
+# Genera los diagramas de esfuerzo axial, corte y momento de la columna-viga.
 def save_internal_force_diagrams(
     output_path: Path,
     local_forces: dict[int, list[float]],
@@ -250,6 +256,7 @@ def save_internal_force_diagrams(
     plt.close(fig)
 
 
+# Construye, analiza, verifica y exporta resultados del ejercicio columna-viga.
 def main() -> None:
     # Unidades internas: m, N, Pa.
     elastic_modulus = 200.0e9

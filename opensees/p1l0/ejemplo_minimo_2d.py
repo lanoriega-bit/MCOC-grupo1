@@ -24,6 +24,7 @@ MM3_TO_M3 = 1.0e-9
 MPA = 1.0e6
 
 
+# Convierte una carga vertical global definida por proyeccion horizontal a carga local de elemento.
 def add_vertical_load_on_horizontal_projection(
     ele_tag: int,
     node_i: int,
@@ -54,14 +55,17 @@ def add_vertical_load_on_horizontal_projection(
     return q_horizontal * abs(dx), length, load_local_x, load_local_y
 
 
+# Convierte fuerzas desde newton a toneladas-fuerza para comparar con la pauta.
 def tonf(value_newton: float) -> float:
     return value_newton / TONF
 
 
+# Convierte momentos desde N*m a tonf*m para comparar con la pauta.
 def tonf_m(value_newton_meter: float) -> float:
     return value_newton_meter / TONF
 
 
+# Genera el diagrama fisico del marco con cargas, reacciones y deformada.
 def save_result_diagram(
     output_path: Path,
     reaction_a_x: float,
@@ -198,6 +202,7 @@ def save_result_diagram(
     plt.close(fig)
 
 
+# Genera los diagramas de esfuerzo axial, corte y momento de los elementos.
 def save_internal_force_diagrams(
     output_path: Path,
     local_forces: dict[int, list[float]],
@@ -267,6 +272,7 @@ def save_internal_force_diagrams(
     plt.close(fig)
 
 
+# Construye, analiza, verifica y exporta resultados del modelo P1L0.
 def main() -> None:
     # Unidades internas SI: m, N, Pa.
     elastic_modulus = 200.0e9
