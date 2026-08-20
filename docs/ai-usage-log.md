@@ -25,8 +25,8 @@
 ## Diagrama de resultados P1L0
 
 - Objetivo: permitir que el resultado se vea fisicamente y no solo como texto en terminal.
-- Encargo a IA: generar una imagen del marco con carga, reacciones, rotula, deformada amplificada y resumen de esfuerzos.
-- Resultado: `results/p1l0/diagrama_pregunta_2.png`.
+- Encargo a IA: generar una imagen del marco con carga, reacciones, rotula, deformada amplificada y resumen de esfuerzos, mas diagramas `N`, `V` y `M`.
+- Resultado: `results/p1l0/diagrama_pregunta_2.png` y `results/p1l0/diagramas_nvm_pregunta_2.png`.
 - Verificacion: ejecutar el script y confirmar que se crea el archivo PNG junto con la validacion numerica.
 
 ## Ejercicio adicional columna-viga
@@ -35,3 +35,4 @@
 - Encargo a IA: implementar un modelo OpenSeesPy 2D de una columna con viga rigida, cargas dadas, verificaciones y diagrama.
 - Hipotesis documentada: base empotrada y apoyo de pared que restringe solo `ux`.
 - Verificacion: equilibrio global en `Fx`, `Fy` y momento respecto a la base, mas chequeo elastico preliminar.
+- Resultado grafico: `results/ejercicio_columna_viga/diagrama_columna_viga.png` y `results/ejercicio_columna_viga/diagramas_nvm_columna_viga.png`.

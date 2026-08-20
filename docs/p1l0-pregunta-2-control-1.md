@@ -120,9 +120,10 @@ El mismo comando genera una figura `PNG`:
 
 ```text
 results/p1l0/diagrama_pregunta_2.png
+results/p1l0/diagramas_nvm_pregunta_2.png
 ```
 
-La figura incluye:
+La primera figura incluye:
 
 - Geometria original del marco.
 - Deformada amplificada.
@@ -130,3 +131,9 @@ La figura incluye:
 - Reacciones en los apoyos.
 - Rotula interna.
 - Resumen de esfuerzos y tensiones maximas.
+
+La segunda figura incluye los diagramas:
+
+- `N`: esfuerzo axial.
+- `V`: corte.
+- `M`: momento de flexion.

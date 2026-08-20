@@ -21,6 +21,7 @@
 - Momento maximo: `|M|max = 9.375 tonf*m`.
 - Estado: coincide con la pauta de la Pregunta 2 dentro de redondeo.
 - Salida grafica: `results/p1l0/diagrama_pregunta_2.png`.
+- Diagramas N/V/M: `results/p1l0/diagramas_nvm_pregunta_2.png`.
 
 ### Comando de verificacion
 
@@ -46,6 +47,7 @@ python opensees/p1l0/ejemplo_minimo_2d.py
 ### Diagrama de resultados
 
 - Se agrego generacion automatica de un diagrama `PNG` con geometria, deformada amplificada, carga distribuida, rotula interna, reacciones y esfuerzos maximos.
+- Se agrego generacion automatica de diagramas `N`, `V` y `M`.
 - El objetivo es que el resultado no sea solo numerico, sino tambien visible fisicamente.
 
 ## Ejercicio adicional - Columna y viga ASTM A36
@@ -64,3 +66,4 @@ python opensees/p1l0/ejemplo_minimo_2d.py
 - Script: `opensees/ejercicio_columna_viga/columna_viga_2d.py`.
 - Documento: `docs/ejercicio-columna-viga.md`.
 - Diagrama: `results/ejercicio_columna_viga/diagrama_columna_viga.png`.
+- Diagramas N/V/M: `results/ejercicio_columna_viga/diagramas_nvm_columna_viga.png`.

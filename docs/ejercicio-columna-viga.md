@@ -122,9 +122,10 @@ El script genera:
 
 ```text
 results/ejercicio_columna_viga/diagrama_columna_viga.png
+results/ejercicio_columna_viga/diagramas_nvm_columna_viga.png
 ```
 
-La figura muestra:
+La primera figura muestra:
 
 - Geometria original.
 - Deformada amplificada.
@@ -132,3 +133,11 @@ La figura muestra:
 - Carga puntual vertical.
 - Reacciones.
 - Resumen de esfuerzos maximos y tensiones aproximadas.
+
+La segunda figura muestra los tres diagramas de esfuerzos internos:
+
+- Axial `N`.
+- Corte `V`.
+- Momento `M`.
+
+Los diagramas se construyen a partir de los esfuerzos locales de extremo reportados por OpenSees para cada elemento.

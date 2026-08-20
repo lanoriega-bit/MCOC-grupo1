@@ -38,7 +38,7 @@ def add_uniform_global_load(
     node_j: int,
     qx_global: float,
     qy_global: float,
-) -> float:
+) -> tuple[float, float, float]:
     """Apply a uniform global load converted to local element axes."""
     xi, yi = ops.nodeCoord(node_i)
     xj, yj = ops.nodeCoord(node_j)
@@ -51,7 +51,7 @@ def add_uniform_global_load(
     q_local_x = qx_global * cos_theta + qy_global * sin_theta
     q_local_y = -qx_global * sin_theta + qy_global * cos_theta
     ops.eleLoad("-ele", ele_tag, "-type", "-beamUniform", q_local_y, q_local_x)
-    return length
+    return length, q_local_x, q_local_y
 
 
 def max_endpoint_forces(local_forces: dict[int, list[float]]) -> tuple[float, float, float]:
@@ -181,6 +181,75 @@ def save_result_diagram(
     plt.close(fig)
 
 
+def save_internal_force_diagrams(
+    output_path: Path,
+    local_forces: dict[int, list[float]],
+    element_loads: dict[int, tuple[float, float, float, str]],
+) -> None:
+    """Save N, V and M diagrams using local OpenSees element forces."""
+    fig, axes = plt.subplots(3, 1, figsize=(13, 9), sharex=True)
+    titles = ["Axial N [kN]", "Corte V [kN]", "Momento M [kN*m]"]
+    ylabels = ["N [kN]", "V [kN]", "M [kN*m]"]
+    colors = ["#1f77b4", "#2ca02c", "#d62728"]
+    offsets: list[tuple[float, float, str]] = []
+    cursor = 0.0
+
+    all_values = [[], [], []]
+    for ele_tag in sorted(element_loads):
+        length, qx_local, qy_local, name = element_loads[ele_tag]
+        force = local_forces[ele_tag]
+        xs = [length * i / 80 for i in range(81)]
+        x_plot = [cursor + x for x in xs]
+
+        # Diagrams are interpolated between OpenSees local end forces for traceability.
+        axial_i, axial_j = -force[0], force[3]
+        shear_i, shear_j = -force[1], force[4]
+        moment_i, moment_j = -force[2], force[5]
+        axial = [axial_i + (axial_j - axial_i) * x / length for x in xs]
+        shear = [shear_i + (shear_j - shear_i) * x / length for x in xs]
+        moment = [moment_i + (moment_j - moment_i) * x / length for x in xs]
+        series = [
+            [kN(value) for value in axial],
+            [kN(value) for value in shear],
+            [kN_m(value) for value in moment],
+        ]
+
+        for idx, values in enumerate(series):
+            axes[idx].plot(x_plot, values, color=colors[idx], linewidth=2)
+            axes[idx].fill_between(x_plot, values, 0.0, color=colors[idx], alpha=0.18)
+            all_values[idx].extend(values)
+
+        offsets.append((cursor, cursor + length, name))
+        cursor += length
+
+    for idx, ax in enumerate(axes):
+        ax.axhline(0.0, color="black", linewidth=0.8)
+        ax.set_ylabel(ylabels[idx])
+        ax.set_title(titles[idx])
+        ax.grid(True, linestyle=":", alpha=0.45)
+        max_abs = max(abs(value) for value in all_values[idx])
+        ax.text(
+            0.99,
+            0.90,
+            f"max |{ylabels[idx].split()[0]}| = {max_abs:.3f}",
+            transform=ax.transAxes,
+            ha="right",
+            va="top",
+            bbox={"boxstyle": "round", "facecolor": "white", "edgecolor": "#777777", "alpha": 0.9},
+        )
+        for start, end, name in offsets:
+            ax.axvline(start, color="#999999", linewidth=0.8, linestyle="--")
+            ax.text((start + end) / 2.0, 0.02, name, transform=ax.get_xaxis_transform(), ha="center")
+        ax.axvline(offsets[-1][1], color="#999999", linewidth=0.8, linestyle="--")
+
+    axes[-1].set_xlabel("Longitud acumulada de elementos [m]")
+    fig.suptitle("Ejercicio columna-viga - Diagramas de esfuerzos internos N, V y M", fontsize=14)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    fig.tight_layout()
+    fig.savefig(output_path, dpi=180)
+    plt.close(fig)
+
+
 def main() -> None:
     # Unidades internas: m, N, Pa.
     elastic_modulus = 200.0e9
@@ -221,8 +290,13 @@ def main() -> None:
 
     ops.timeSeries("Linear", 1)
     ops.pattern("Plain", 1, 1)
-    add_uniform_global_load(1, 1, 2, horizontal_load, 0.0)
-    add_uniform_global_load(2, 2, 3, horizontal_load, 0.0)
+    element_loads: dict[int, tuple[float, float, float, str]] = {}
+    length, qx_local, qy_local = add_uniform_global_load(1, 1, 2, horizontal_load, 0.0)
+    element_loads[1] = (length, qx_local, qy_local, "AB")
+    length, qx_local, qy_local = add_uniform_global_load(2, 2, 3, horizontal_load, 0.0)
+    element_loads[2] = (length, qx_local, qy_local, "BC")
+    element_loads[3] = (5.0, 0.0, 0.0, "BD")
+    element_loads[4] = (3.0, 0.0, 0.0, "DE")
     ops.load(4, 0.0, -point_load, 0.0)
 
     ops.system("BandGeneral")
@@ -276,6 +350,7 @@ def main() -> None:
 
     repo_root = Path(__file__).resolve().parents[2]
     diagram_path = repo_root / "results" / "ejercicio_columna_viga" / "diagrama_columna_viga.png"
+    nvm_diagram_path = repo_root / "results" / "ejercicio_columna_viga" / "diagramas_nvm_columna_viga.png"
     save_result_diagram(
         diagram_path,
         {"RAx": reaction_a_x, "RAy": reaction_a_y, "REx": reaction_e_x},
@@ -288,6 +363,7 @@ def main() -> None:
             "sigma_beam": sigma_beam,
         },
     )
+    save_internal_force_diagrams(nvm_diagram_path, local_forces, element_loads)
 
     print("Ejercicio 2D - columna y viga ASTM A36")
     print("Hipotesis: base empotrada, apoyo de pared restringe ux, union B rigida")
@@ -330,6 +406,7 @@ def main() -> None:
     print("")
     print("Estado: OK - el modelo converge, equilibra y genera diagrama.")
     print(f"Diagrama guardado en: {diagram_path}")
+    print(f"Diagramas N/V/M guardados en: {nvm_diagram_path}")
 
     ops.wipe()
 

@@ -50,9 +50,17 @@ Al ejecutarlo, ademas de imprimir la verificacion numerica, se genera una imagen
 
 ```text
 results/p1l0/diagrama_pregunta_2.png
+results/p1l0/diagramas_nvm_pregunta_2.png
 ```
 
-Ese diagrama muestra la geometria original, la deformada amplificada, la carga distribuida, la rotula interna, las reacciones y los esfuerzos maximos.
+El primer diagrama muestra la geometria original, la deformada amplificada, la carga distribuida, la rotula interna, las reacciones y los esfuerzos maximos. El segundo contiene los diagramas `N`, `V` y `M`.
+
+El ejercicio adicional de columna-viga genera:
+
+```text
+results/ejercicio_columna_viga/diagrama_columna_viga.png
+results/ejercicio_columna_viga/diagramas_nvm_columna_viga.png
+```
 
 ## Que modela
 

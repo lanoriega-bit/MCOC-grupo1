@@ -128,9 +128,10 @@ El script genera automaticamente:
 
 ```text
 results/p1l0/diagrama_pregunta_2.png
+results/p1l0/diagramas_nvm_pregunta_2.png
 ```
 
-El diagrama sirve para mostrar fisicamente el resultado del modelo:
+El primer diagrama sirve para mostrar fisicamente el resultado del modelo:
 
 - Linea azul: geometria original.
 - Linea naranjo segmentada: deformada amplificada.
@@ -138,6 +139,14 @@ El diagrama sirve para mostrar fisicamente el resultado del modelo:
 - Flechas verdes: reacciones en `A` y `E`.
 - Circulo verde en `C`: rotula interna.
 - Cuadro de resumen: maximos de axial, corte, momento y tensiones.
+
+El segundo archivo contiene los tres diagramas de esfuerzos internos:
+
+- Axial `N`.
+- Corte `V`.
+- Momento `M`.
+
+Estos diagramas se construyen a partir de los esfuerzos locales de extremo reportados por OpenSees para cada elemento.
 
 La deformada esta amplificada solo para visualizacion. No representa escala real.
 
