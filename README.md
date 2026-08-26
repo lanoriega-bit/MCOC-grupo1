@@ -2,7 +2,7 @@
 
 Repositorio de trabajo para el Proyecto 1 del curso. El grupo desarrollara durante el semestre un laboratorio estructural digital del Edificio de Ingenieria, usando OpenSeesPy para analisis estructural y Unity para visualizacion/interaccion en etapas posteriores.
 
-## Entrada rapida para el equipo
+## Entrada Rapida
 
 - Enunciado completo organizado: `docs/gestion/enunciado-proyecto-p1.md`.
 - Entrega P1L0: `entregas/p1l0/`.
@@ -13,7 +13,21 @@ Repositorio de trabajo para el Proyecto 1 del curso. El grupo desarrollara duran
 - Registro de uso de IA: `docs/gestion/ai-usage-log.md`.
 - Reglas para agentes IA: `AGENTS.md`.
 
-## Organizacion del repositorio
+## Entregas
+
+| Entrega | Descripcion | Script principal | Resultados |
+| --- | --- | --- | --- |
+| P1L0 | Benchmark 2D basado en Pregunta 2 del Control 1. | `entregas/p1l0/opensees/ejemplo_minimo_2d.py` | `entregas/p1l0/results/` |
+| P1L1 | Benchmark 3D de un pano simple del edificio. | `entregas/p1l1_benchmark_3d/opensees/benchmark_3d.py` | `entregas/p1l1_benchmark_3d/results/` |
+| Ejercicio adicional | Modelo 2D columna-viga de acero. | `entregas/ejercicios/columna_viga/opensees/columna_viga_2d.py` | `entregas/ejercicios/columna_viga/results/` |
+
+Cada entrega se organiza igual:
+
+- `docs/`: explicacion, informe o enunciado usado.
+- `opensees/`: scripts OpenSeesPy.
+- `results/`: figuras, tablas y verificaciones generadas.
+
+## Organizacion
 
 ```text
 entregas/
@@ -49,14 +63,6 @@ docs/gestion/   bitacoras, enunciado y registros generales
 - Unity como herramienta de visualizacion, preproceso, postproceso e interaccion.
 - AR basica en etapas posteriores.
 - Uso documentado y critico de IA durante el semestre.
-
-## Foco actual
-
-### P1L0 - Ejemplo minimo 2D OpenSeesPy basado en Pregunta 2
-
-La entrega actual corresponde solo a `P1L0`: mostrar, validar y explicar un ejemplo minimo 2D de OpenSeesPy.
-
-Como el curso pidio usar un ejercicio existente, el ejemplo se basa en la Pregunta 2 del Control 1 de Estructuras Isostaticas: marco isostatico de tres articulaciones con carga distribuida vertical.
 
 ## Como ejecutar
 
