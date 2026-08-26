@@ -4,15 +4,39 @@ Repositorio de trabajo para el Proyecto 1 del curso. El grupo desarrollara duran
 
 ## Entrada rapida para el equipo
 
-- Enunciado completo organizado: `docs/enunciado-proyecto-p1.md`.
-- Enunciado P1L0 usado: `docs/p1l0-pregunta-2-control-1.md`.
-- Entrega actual P1L0: `docs/p1l0-explicacion.md`.
-- Script OpenSeesPy P1L0: `opensees/p1l0/ejemplo_minimo_2d.py`.
-- Ejercicio adicional columna-viga: `docs/ejercicio-columna-viga.md`.
-- Indice preliminar de planos: `planos/notas/indice-planos.md`.
-- Registro semanal: `docs/weekly-log.md`.
-- Registro de uso de IA: `docs/ai-usage-log.md`.
+- Enunciado completo organizado: `docs/gestion/enunciado-proyecto-p1.md`.
+- Entrega P1L0: `entregas/p1l0/`.
+- Entrega P1L1 benchmark 3D: `entregas/p1l1_benchmark_3d/`.
+- Ejercicio adicional columna-viga: `entregas/ejercicios/columna_viga/`.
+- Indice preliminar de planos: `recursos/planos/notas/indice-planos.md`.
+- Registro semanal: `docs/gestion/weekly-log.md`.
+- Registro de uso de IA: `docs/gestion/ai-usage-log.md`.
 - Reglas para agentes IA: `AGENTS.md`.
+
+## Organizacion del repositorio
+
+```text
+entregas/
+  p1l0/
+    docs/       documentacion de la entrega
+    opensees/   scripts OpenSeesPy
+    results/    figuras y resultados generados
+  p1l1_benchmark_3d/
+    docs/
+    opensees/
+    results/
+  ejercicios/
+    columna_viga/
+      docs/
+      opensees/
+      results/
+recursos/
+  planos/
+    pdf/        planos originales
+    notas/      indices y observaciones
+    logs/       archivos auxiliares no estructurales
+docs/gestion/   bitacoras, enunciado y registros generales
+```
 
 ## Alcance general del proyecto
 
@@ -38,20 +62,26 @@ Como el curso pidio usar un ejercicio existente, el ejemplo se basa en la Pregun
 
 ```powershell
 python -m pip install -r requirements.txt
-python opensees/p1l0/ejemplo_minimo_2d.py
+python entregas/p1l0/opensees/ejemplo_minimo_2d.py
 ```
 
 Para ejecutar el ejercicio adicional de columna-viga:
 
 ```powershell
-python opensees/ejercicio_columna_viga/columna_viga_2d.py
+python entregas/ejercicios/columna_viga/opensees/columna_viga_2d.py
+```
+
+Para ejecutar el benchmark 3D P1L1:
+
+```powershell
+python entregas/p1l1_benchmark_3d/opensees/benchmark_3d.py
 ```
 
 Al ejecutarlo, ademas de imprimir la verificacion numerica, se genera una imagen con el resultado fisico del modelo:
 
 ```text
-results/p1l0/diagrama_pregunta_2.png
-results/p1l0/diagramas_nvm_pregunta_2.png
+entregas/p1l0/results/diagrama_pregunta_2.png
+entregas/p1l0/results/diagramas_nvm_pregunta_2.png
 ```
 
 El primer diagrama muestra la geometria original, la deformada amplificada, la carga distribuida, la rotula interna, las reacciones y los esfuerzos maximos. El segundo contiene los diagramas `N`, `V` y `M`.
@@ -59,8 +89,8 @@ El primer diagrama muestra la geometria original, la deformada amplificada, la c
 El ejercicio adicional de columna-viga genera:
 
 ```text
-results/ejercicio_columna_viga/diagrama_columna_viga.png
-results/ejercicio_columna_viga/diagramas_nvm_columna_viga.png
+entregas/ejercicios/columna_viga/results/diagrama_columna_viga.png
+entregas/ejercicios/columna_viga/results/diagramas_nvm_columna_viga.png
 ```
 
 ## Que modela
@@ -103,5 +133,5 @@ La entrega P1L0 se considera correcta si:
 - Las reacciones equilibran la carga aplicada.
 - Las reacciones coinciden con la pauta de la Pregunta 2 dentro de redondeo.
 - Los maximos de axial, corte y momento coinciden con la pauta dentro de redondeo.
-- Se genera el diagrama `results/p1l0/diagrama_pregunta_2.png`.
+- Se genera el diagrama `entregas/p1l0/results/diagrama_pregunta_2.png`.
 - Se puede explicar claramente el modelo, los GDL, apoyos, rotula interna, carga y verificacion.

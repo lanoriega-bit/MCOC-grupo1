@@ -355,9 +355,9 @@ def main() -> None:
     }
     max_displacement = max(math.hypot(ux, uy) for ux, uy in displacements.values())
 
-    repo_root = Path(__file__).resolve().parents[2]
-    diagram_path = repo_root / "results" / "ejercicio_columna_viga" / "diagrama_columna_viga.png"
-    nvm_diagram_path = repo_root / "results" / "ejercicio_columna_viga" / "diagramas_nvm_columna_viga.png"
+    entrega_dir = Path(__file__).resolve().parents[1]
+    diagram_path = entrega_dir / "results" / "diagrama_columna_viga.png"
+    nvm_diagram_path = entrega_dir / "results" / "diagramas_nvm_columna_viga.png"
     save_result_diagram(
         diagram_path,
         {"RAx": reaction_a_x, "RAy": reaction_a_y, "REx": reaction_e_x},

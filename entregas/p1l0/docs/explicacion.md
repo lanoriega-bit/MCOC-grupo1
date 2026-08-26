@@ -127,8 +127,8 @@ Las pequenas diferencias con la pauta son por redondeo, por ejemplo `21.125 tonf
 El script genera automaticamente:
 
 ```text
-results/p1l0/diagrama_pregunta_2.png
-results/p1l0/diagramas_nvm_pregunta_2.png
+entregas/p1l0/results/diagrama_pregunta_2.png
+entregas/p1l0/results/diagramas_nvm_pregunta_2.png
 ```
 
 El primer diagrama sirve para mostrar fisicamente el resultado del modelo:

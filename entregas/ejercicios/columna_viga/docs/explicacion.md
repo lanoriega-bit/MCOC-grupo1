@@ -5,7 +5,7 @@ Este ejercicio esta separado del `P1L0` oficial y queda como un modelo adicional
 ## Carpeta
 
 ```text
-opensees/ejercicio_columna_viga/
+entregas/ejercicios/columna_viga/opensees/
 ```
 
 ## Enunciado resumido
@@ -95,7 +95,7 @@ Wz = Iz/(h/2)
 Desde la raiz del repositorio:
 
 ```powershell
-python opensees/ejercicio_columna_viga/columna_viga_2d.py
+python entregas/ejercicios/columna_viga/opensees/columna_viga_2d.py
 ```
 
 ## Validacion
@@ -121,8 +121,8 @@ Ese chequeo es preliminar y no reemplaza diseno estructural, pandeo, corte, cone
 El script genera:
 
 ```text
-results/ejercicio_columna_viga/diagrama_columna_viga.png
-results/ejercicio_columna_viga/diagramas_nvm_columna_viga.png
+entregas/ejercicios/columna_viga/results/diagrama_columna_viga.png
+entregas/ejercicios/columna_viga/results/diagramas_nvm_columna_viga.png
 ```
 
 La primera figura muestra:

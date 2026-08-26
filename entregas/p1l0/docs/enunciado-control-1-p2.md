@@ -100,12 +100,12 @@ tau_max = 29.6 MPa
 
 ## Uso en OpenSeesPy
 
-El archivo `opensees/p1l0/ejemplo_minimo_2d.py` implementa este ejercicio en OpenSeesPy y compara automaticamente contra los valores anteriores.
+El archivo `entregas/p1l0/opensees/ejemplo_minimo_2d.py` implementa este ejercicio en OpenSeesPy y compara automaticamente contra los valores anteriores.
 
 Comando:
 
 ```powershell
-python opensees/p1l0/ejemplo_minimo_2d.py
+python entregas/p1l0/opensees/ejemplo_minimo_2d.py
 ```
 
 El resultado esperado es:
@@ -119,8 +119,8 @@ Estado: OK - el modelo equilibra y coincide con la pauta de la P2.
 El mismo comando genera una figura `PNG`:
 
 ```text
-results/p1l0/diagrama_pregunta_2.png
-results/p1l0/diagramas_nvm_pregunta_2.png
+entregas/p1l0/results/diagrama_pregunta_2.png
+entregas/p1l0/results/diagramas_nvm_pregunta_2.png
 ```
 
 La primera figura incluye:

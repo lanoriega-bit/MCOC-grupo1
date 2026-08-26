@@ -11,10 +11,10 @@ Por eso, cualquier dimension, seccion o carga extraida desde estos planos debe v
 ## Carpeta oficial de PDFs
 
 ```text
-planos_pdf/
+recursos/planos/pdf/
 ```
 
-La carpeta fue creada por el grupo y se mantiene como ubicacion comun de los planos originales. La carpeta `planos/notas/` se usa solo para indices y observaciones.
+La carpeta fue creada por el grupo y se mantiene como ubicacion comun de los planos originales. La carpeta `recursos/planos/notas/` se usa solo para indices y observaciones.
 
 ## Inventario
 

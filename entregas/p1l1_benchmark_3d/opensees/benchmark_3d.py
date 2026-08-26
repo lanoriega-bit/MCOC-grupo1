@@ -338,8 +338,9 @@ def main() -> None:
     reference_beam_moment = line_load_x * lx**2 / 12.0
     reference_column_axial = expected_reaction
 
-    repo_root = Path(__file__).resolve().parents[2]
-    results_dir = repo_root / "results" / "p1l1_benchmark_3d"
+    repo_root = Path(__file__).resolve().parents[3]
+    entrega_dir = Path(__file__).resolve().parents[1]
+    results_dir = entrega_dir / "results"
     geometry_path = results_dir / "geometria_deformada_ejes.png"
     nvm_path = results_dir / "diagramas_nvm_3d.png"
     forces_path = results_dir / "fuerzas_elementos.csv"

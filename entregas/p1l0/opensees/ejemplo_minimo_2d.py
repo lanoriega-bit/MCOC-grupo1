@@ -421,9 +421,9 @@ def main() -> None:
     assert math.isclose(tonf(max_shear), reference_max_shear, rel_tol=0.0, abs_tol=0.1)
     assert math.isclose(tonf_m(max_moment), reference_max_moment, rel_tol=0.0, abs_tol=0.02)
 
-    repo_root = Path(__file__).resolve().parents[2]
-    diagram_path = repo_root / "results" / "p1l0" / "diagrama_pregunta_2.png"
-    nvm_diagram_path = repo_root / "results" / "p1l0" / "diagramas_nvm_pregunta_2.png"
+    entrega_dir = Path(__file__).resolve().parents[1]
+    diagram_path = entrega_dir / "results" / "diagrama_pregunta_2.png"
+    nvm_diagram_path = entrega_dir / "results" / "diagramas_nvm_pregunta_2.png"
     save_result_diagram(
         diagram_path,
         reaction_a_x,

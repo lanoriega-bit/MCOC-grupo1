@@ -421,16 +421,16 @@ Lo implementado en este repo:
 
 Archivos relacionados:
 
-- `opensees/p1l0/ejemplo_minimo_2d.py`.
-- `docs/p1l0-pregunta-2-control-1.md`.
-- `docs/p1l0-explicacion.md`.
-- `docs/weekly-log.md`.
-- `docs/ai-usage-log.md`.
+- `entregas/p1l0/opensees/ejemplo_minimo_2d.py`.
+- `entregas/p1l0/docs/enunciado-control-1-p2.md`.
+- `entregas/p1l0/docs/explicacion.md`.
+- `docs/gestion/weekly-log.md`.
+- `docs/gestion/ai-usage-log.md`.
 
 Comando de ejecucion:
 
 ```powershell
-python opensees/p1l0/ejemplo_minimo_2d.py
+python entregas/p1l0/opensees/ejemplo_minimo_2d.py
 ```
 
 Resultado esperado:

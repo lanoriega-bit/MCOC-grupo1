@@ -8,9 +8,9 @@ Construir y verificar un benchmark 3D simple, basado en una zona realista del ed
 
 Se escogio un pano rectangular idealizado del edificio, inspirado en la reticula repetitiva visible en los planos estructurales:
 
-- Plantas estructurales: `planos_pdf/2017_67-101-Model.pdf` y `planos_pdf/2017_67-102-Model.pdf`.
-- Elevaciones: `planos_pdf/2017_67-300-Model.pdf`, `2017_67-302-Model.pdf`, `2017_67-303-Model.pdf`.
-- Cargas: `planos_pdf/2017_67-700-Model.pdf`.
+- Plantas estructurales: `recursos/planos/pdf/2017_67-101-Model.pdf` y `recursos/planos/pdf/2017_67-102-Model.pdf`.
+- Elevaciones: `recursos/planos/pdf/2017_67-300-Model.pdf`, `2017_67-302-Model.pdf`, `2017_67-303-Model.pdf`.
+- Cargas: `recursos/planos/pdf/2017_67-700-Model.pdf`.
 
 No se intenta modelar el edificio completo en esta etapa. La meta es un benchmark 3D pequeno, trazable y explicable.
 
@@ -150,7 +150,7 @@ OpenSees arma internamente la matriz de rigidez global a partir de las rigideces
 
 ## Ejes locales
 
-Se muestran ejes locales en la figura `results/p1l1_benchmark_3d/geometria_deformada_ejes.png` para tres elementos:
+Se muestran ejes locales en la figura `entregas/p1l1_benchmark_3d/results/geometria_deformada_ejes.png` para tres elementos:
 
 - Elemento `1`: columna vertical.
 - Elemento `5`: viga en direccion X.
@@ -163,7 +163,7 @@ El eje local `x` va desde el nodo inicial al nodo final del elemento. Los ejes l
 Archivo de verificacion:
 
 ```text
-results/p1l1_benchmark_3d/verificacion.json
+entregas/p1l1_benchmark_3d/results/verificacion.json
 ```
 
 | Magnitud | Referencia | OpenSees | Error |
@@ -182,10 +182,10 @@ La comparacion de desplazamiento y momento es una referencia aproximada, no una 
 El script genera:
 
 ```text
-results/p1l1_benchmark_3d/geometria_deformada_ejes.png
-results/p1l1_benchmark_3d/diagramas_nvm_3d.png
-results/p1l1_benchmark_3d/fuerzas_elementos.csv
-results/p1l1_benchmark_3d/verificacion.json
+entregas/p1l1_benchmark_3d/results/geometria_deformada_ejes.png
+entregas/p1l1_benchmark_3d/results/diagramas_nvm_3d.png
+entregas/p1l1_benchmark_3d/results/fuerzas_elementos.csv
+entregas/p1l1_benchmark_3d/results/verificacion.json
 ```
 
 Los diagramas incluyen:
@@ -208,11 +208,11 @@ Estos errores se detectan con equilibrio, signos de reacciones y magnitud de des
 Estructura propuesta:
 
 ```text
-opensees/p1l1_benchmark_3d/   scripts OpenSeesPy
-results/p1l1_benchmark_3d/    resultados numericos y figuras
-reports/                      informes Markdown
-planos_pdf/                   planos originales
-planos/notas/                 indice y lectura de planos
+entregas/p1l1_benchmark_3d/opensees/   scripts OpenSeesPy
+entregas/p1l1_benchmark_3d/results/    resultados numericos y figuras
+entregas/p1l1_benchmark_3d/docs/       informes Markdown
+recursos/planos/pdf/                    planos originales
+recursos/planos/notas/                  indice y lectura de planos
 ```
 
 La interfaz futura OpenSees-Unity deberia pasar por archivos independientes de la escena, preferentemente JSON/CSV:
@@ -227,7 +227,7 @@ OpenSeesPy -> JSON/CSV -> Unity
 | --- | --- |
 | Issue/tarea | Crear benchmark 3D de Semana 1 desde un sector simple del edificio. |
 | Plan del agente | Usar un pano realista, no todo el edificio; conservar carga tributaria y verificar equilibrio. |
-| Implementacion | Script `opensees/p1l1_benchmark_3d/benchmark_3d.py`. |
+| Implementacion | Script `entregas/p1l1_benchmark_3d/opensees/benchmark_3d.py`. |
 | Test | Ejecutar el script y revisar `verificacion.json`, figuras y CSV. |
 | Revision | Verificar unidades, signos, ejes locales, equilibrio y supuestos. |
 

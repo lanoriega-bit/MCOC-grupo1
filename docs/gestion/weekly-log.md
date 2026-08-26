@@ -20,13 +20,13 @@
 - Corte maximo: `|Q|max = 7.500 tonf`.
 - Momento maximo: `|M|max = 9.375 tonf*m`.
 - Estado: coincide con la pauta de la Pregunta 2 dentro de redondeo.
-- Salida grafica: `results/p1l0/diagrama_pregunta_2.png`.
-- Diagramas N/V/M: `results/p1l0/diagramas_nvm_pregunta_2.png`.
+- Salida grafica: `entregas/p1l0/results/diagrama_pregunta_2.png`.
+- Diagramas N/V/M: `entregas/p1l0/results/diagramas_nvm_pregunta_2.png`.
 
 ### Comando de verificacion
 
 ```powershell
-python opensees/p1l0/ejemplo_minimo_2d.py
+python entregas/p1l0/opensees/ejemplo_minimo_2d.py
 ```
 
 ### Pendiente
@@ -35,7 +35,7 @@ python opensees/p1l0/ejemplo_minimo_2d.py
 
 ### Actualizacion de documentacion
 
-- Se agrego `docs/enunciado-proyecto-p1.md` con el enunciado completo organizado para el equipo.
+- Se agrego `docs/gestion/enunciado-proyecto-p1.md` con el enunciado completo organizado para el equipo.
 - Se actualizo `README.md` para que cualquier integrante encuentre rapidamente el enunciado, P1L0, registros y script ejecutable.
 
 ### Cambio de alcance P1L0
@@ -63,17 +63,17 @@ python opensees/p1l0/ejemplo_minimo_2d.py
 
 ### Archivos
 
-- Script: `opensees/ejercicio_columna_viga/columna_viga_2d.py`.
-- Documento: `docs/ejercicio-columna-viga.md`.
-- Diagrama: `results/ejercicio_columna_viga/diagrama_columna_viga.png`.
-- Diagramas N/V/M: `results/ejercicio_columna_viga/diagramas_nvm_columna_viga.png`.
+- Script: `entregas/ejercicios/columna_viga/opensees/columna_viga_2d.py`.
+- Documento: `entregas/ejercicios/columna_viga/docs/explicacion.md`.
+- Diagrama: `entregas/ejercicios/columna_viga/results/diagrama_columna_viga.png`.
+- Diagramas N/V/M: `entregas/ejercicios/columna_viga/results/diagramas_nvm_columna_viga.png`.
 
 ## Planos del edificio
 
 ### Alcance
 
-- Se agregaron 13 PDFs originales del edificio en `planos/originales/`.
-- Se creo un indice preliminar en `planos/notas/indice-planos.md`.
+- Se agregaron PDFs originales del edificio en `recursos/planos/pdf/`.
+- Se creo un indice preliminar en `recursos/planos/notas/indice-planos.md`.
 - Los planos se clasificaron como plantas de losa, plantas de cargas y elevaciones/cortes estructurales.
 
 ### Advertencia
