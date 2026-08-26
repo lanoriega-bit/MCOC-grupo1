@@ -79,3 +79,39 @@ python entregas/p1l0/opensees/ejemplo_minimo_2d.py
 ### Advertencia
 
 - Los PDFs se leen principalmente como imagen; las cotas y textos pequenos deben verificarse manualmente antes de usarlos como datos definitivos.
+
+## Semana 1 - P1L1 Benchmark 3D 2
+
+### Alcance
+
+- Segundo benchmark 3D OpenSeesPy, llamado `p1l1_benchmark_3d_2`.
+- Sector `P1L1-S02`: dos panos idealizados entre ejes `F-G-H` y `2-3`.
+- Modelo de un nivel con 6 columnas, 7 vigas superiores y losas no modeladas como elementos finitos.
+- La viga interior del eje `G` recibe carga tributaria desde los dos panos.
+
+### Resultado
+
+- Analisis OpenSeesPy convergente.
+- Carga vertical total: `352.800 kN`.
+- Suma de reacciones verticales: `352.800 kN`.
+- Error de equilibrio vertical: `5.82e-14 kN`.
+- Maximo global de `N`: `92.104 kN`.
+- Maximo global de `Vres`: `44.100 kN`.
+- Maximo global de `Mres`: `25.519 kN*m`.
+- Cierre de diagramas de fuerza: `0.0 kN`.
+- Cierre de diagramas de momento: `2.18e-14 kN*m`.
+
+### Archivos
+
+- Script: `entregas/p1l1_benchmark_3d_2/opensees/benchmark_3d_2.py`.
+- Informe: `entregas/p1l1_benchmark_3d_2/docs/semana01.md`.
+- Deformada 3D: `entregas/p1l1_benchmark_3d_2/results/geometria_deformada_ejes.png`.
+- Diagramas 3D `N`, `V`, `M`: `entregas/p1l1_benchmark_3d_2/results/diagramas_nvm_3d.png`.
+- CSV de fuerzas locales: `entregas/p1l1_benchmark_3d_2/results/fuerzas_elementos.csv`.
+- CSV por estaciones: `entregas/p1l1_benchmark_3d_2/results/diagramas_nvm_3d_valores.csv`.
+
+### Comando de verificacion
+
+```powershell
+python entregas/p1l1_benchmark_3d_2/opensees/benchmark_3d_2.py
+```

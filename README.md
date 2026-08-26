@@ -7,6 +7,7 @@ Repositorio de trabajo para el Proyecto 1 del curso. El grupo desarrollara duran
 - Enunciado completo organizado: `docs/gestion/enunciado-proyecto-p1.md`.
 - Entrega P1L0: `entregas/p1l0/`.
 - Entrega P1L1 benchmark 3D: `entregas/p1l1_benchmark_3d/`.
+- Entrega P1L1 benchmark 3D 2: `entregas/p1l1_benchmark_3d_2/`.
 - Ejercicio adicional columna-viga: `entregas/ejercicios/columna_viga/`.
 - Indice preliminar de planos: `recursos/planos/notas/indice-planos.md`.
 - Registro semanal: `docs/gestion/weekly-log.md`.
@@ -19,6 +20,7 @@ Repositorio de trabajo para el Proyecto 1 del curso. El grupo desarrollara duran
 | --- | --- | --- | --- |
 | P1L0 | Benchmark 2D basado en Pregunta 2 del Control 1. | `entregas/p1l0/opensees/ejemplo_minimo_2d.py` | `entregas/p1l0/results/` |
 | P1L1 | Benchmark 3D del sector `P1L1-S01`: pano entre ejes `F-G` y `2-3`. | `entregas/p1l1_benchmark_3d/opensees/benchmark_3d.py` | `entregas/p1l1_benchmark_3d/results/` |
+| P1L1 3D 2 | Benchmark 3D del sector `P1L1-S02`: dos panos entre ejes `F-G-H` y `2-3`. | `entregas/p1l1_benchmark_3d_2/opensees/benchmark_3d_2.py` | `entregas/p1l1_benchmark_3d_2/results/` |
 | Ejercicio adicional | Modelo 2D columna-viga de acero. | `entregas/ejercicios/columna_viga/opensees/columna_viga_2d.py` | `entregas/ejercicios/columna_viga/results/` |
 
 Cada entrega se organiza igual:
@@ -36,6 +38,10 @@ entregas/
     opensees/   scripts OpenSeesPy
     results/    figuras y resultados generados
   p1l1_benchmark_3d/
+    docs/
+    opensees/
+    results/
+  p1l1_benchmark_3d_2/
     docs/
     opensees/
     results/
@@ -81,6 +87,12 @@ Para ejecutar el benchmark 3D P1L1:
 
 ```powershell
 python entregas/p1l1_benchmark_3d/opensees/benchmark_3d.py
+```
+
+Para ejecutar el benchmark 3D P1L1 2:
+
+```powershell
+python entregas/p1l1_benchmark_3d_2/opensees/benchmark_3d_2.py
 ```
 
 Al ejecutarlo, ademas de imprimir la verificacion numerica, se genera una imagen con el resultado fisico del modelo:

@@ -1,0 +1,54 @@
+{
+  "model": "P1L1 benchmark 3D 2",
+  "sector_id": "P1L1-S02",
+  "sector_name": "Dos panos idealizados entre ejes F-G-H y 2-3",
+  "sector_description": "Sector estructural idealizado de dos panos entre ejes F-G-H y 2-3, de un nivel tipo del edificio.",
+  "units": "m, N, Pa",
+  "geometry": {
+    "span_FG_m": 6.0,
+    "span_GH_m": 6.0,
+    "Ly_m": 4.0,
+    "H_m": 3.0,
+    "panel_area_m2": 24.0,
+    "total_slab_area_m2": 48.0
+  },
+  "loads": {
+    "qG_kN_m2": 7.35,
+    "total_slab_load_kN": 352.8,
+    "line_load_x_beams_kN_m": 7.35,
+    "line_load_y_edge_beams_kN_m": 11.025,
+    "line_load_y_interior_beam_kN_m": 22.05
+  },
+  "checks": {
+    "sum_loads_kN": -352.8,
+    "sum_reactions_z_kN": 352.80000000000007,
+    "vertical_equilibrium_error_kN": 5.820766091346741e-14,
+    "tributary_edge_column_reaction_kN": 44.1,
+    "tributary_interior_column_reaction_kN": 88.2,
+    "opensees_Rz_F2_kN": 42.14781055767265,
+    "opensees_Rz_G2_kN": 92.10437888465472,
+    "opensees_Rz_H2_kN": 42.147810557672656,
+    "opensees_Rz_F3_kN": 42.147810557672635,
+    "opensees_Rz_G3_kN": 92.10437888465475,
+    "opensees_Rz_H3_kN": 42.14781055767262,
+    "reaction_symmetry_error_kN": 2.9103830456733704e-14,
+    "reference_edge_top_uz_m": -1.0800000000000002e-05,
+    "reference_interior_top_uz_m": -2.1600000000000003e-05,
+    "opensees_max_top_uz_m": -2.255617442073178e-05,
+    "diagram_global_axial_max_kN": 92.10437888465475,
+    "diagram_global_shear_resultant_max_kN": 44.1,
+    "diagram_global_moment_resultant_max_kN_m": 25.51940213482536,
+    "reference_fixed_beam_FG_moment_kN_m": 22.05,
+    "reference_fixed_beam_G_interior_moment_kN_m": 29.4,
+    "opensees_beam_FG_axis_2_moment_max_kN_m": 25.51940213482536,
+    "opensees_beam_G_interior_moment_max_kN_m": 23.83538641886573,
+    "diagram_end_residual_force_kN": 0.0,
+    "diagram_end_residual_moment_kN_m": 2.1827872842550278e-14
+  },
+  "outputs": {
+    "geometry_diagram": "entregas/p1l1_benchmark_3d_2/results/geometria_deformada_ejes.png",
+    "nvm_diagram": "entregas/p1l1_benchmark_3d_2/results/diagramas_nvm_3d.png",
+    "element_forces_csv": "entregas/p1l1_benchmark_3d_2/results/fuerzas_elementos.csv",
+    "nvm_values_csv": "entregas/p1l1_benchmark_3d_2/results/diagramas_nvm_3d_valores.csv"
+  }
+}

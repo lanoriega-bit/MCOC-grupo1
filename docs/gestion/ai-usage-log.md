@@ -43,3 +43,11 @@
 - Encargo a IA: copiar PDFs, clasificarlos y registrar que informacion puede extraerse de forma confiable.
 - Resultado: `recursos/planos/pdf/` y `recursos/planos/notas/indice-planos.md`.
 - Limitacion: los PDFs son principalmente imagen; las cotas pequenas y cargas deben confirmarse con revision manual o archivos vectoriales.
+
+## P1L1 benchmark 3D 2
+
+- Objetivo: crear una segunda variante 3D mas compleja que el benchmark `P1L1-S01`.
+- Encargo a IA: implementar el sector `P1L1-S02`, con dos panos `F-G-H / 2-3`, cargas tributarias, deformada 3D y diagramas 3D `N`, `V`, `M`.
+- Verificacion: equilibrio vertical, simetria de reacciones, cierre de diagramas de fuerza y cierre de diagramas de momento.
+- Resultado: `entregas/p1l1_benchmark_3d_2/`.
+- Limitacion: las dimensiones y cargas siguen siendo preliminares hasta confirmacion manual desde planos.
