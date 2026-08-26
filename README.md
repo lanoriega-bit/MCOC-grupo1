@@ -9,6 +9,7 @@ Repositorio de trabajo para el Proyecto 1 del curso. El grupo desarrollara duran
 - Entrega actual P1L0: `docs/p1l0-explicacion.md`.
 - Script OpenSeesPy P1L0: `opensees/p1l0/ejemplo_minimo_2d.py`.
 - Ejercicio adicional columna-viga: `docs/ejercicio-columna-viga.md`.
+- Indice preliminar de planos: `planos/notas/indice-planos.md`.
 - Registro semanal: `docs/weekly-log.md`.
 - Registro de uso de IA: `docs/ai-usage-log.md`.
 - Reglas para agentes IA: `AGENTS.md`.

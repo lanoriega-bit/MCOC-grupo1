@@ -67,3 +67,15 @@ python opensees/p1l0/ejemplo_minimo_2d.py
 - Documento: `docs/ejercicio-columna-viga.md`.
 - Diagrama: `results/ejercicio_columna_viga/diagrama_columna_viga.png`.
 - Diagramas N/V/M: `results/ejercicio_columna_viga/diagramas_nvm_columna_viga.png`.
+
+## Planos del edificio
+
+### Alcance
+
+- Se agregaron 13 PDFs originales del edificio en `planos/originales/`.
+- Se creo un indice preliminar en `planos/notas/indice-planos.md`.
+- Los planos se clasificaron como plantas de losa, plantas de cargas y elevaciones/cortes estructurales.
+
+### Advertencia
+
+- Los PDFs se leen principalmente como imagen; las cotas y textos pequenos deben verificarse manualmente antes de usarlos como datos definitivos.

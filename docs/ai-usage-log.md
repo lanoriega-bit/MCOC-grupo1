@@ -36,3 +36,10 @@
 - Hipotesis documentada: base empotrada y apoyo de pared que restringe solo `ux`.
 - Verificacion: equilibrio global en `Fx`, `Fy` y momento respecto a la base, mas chequeo elastico preliminar.
 - Resultado grafico: `results/ejercicio_columna_viga/diagrama_columna_viga.png` y `results/ejercicio_columna_viga/diagramas_nvm_columna_viga.png`.
+
+## Organizacion y lectura preliminar de planos
+
+- Objetivo: subir los planos disponibles al repositorio y dejar una guia para el equipo.
+- Encargo a IA: copiar PDFs, clasificarlos y registrar que informacion puede extraerse de forma confiable.
+- Resultado: `planos/originales/` y `planos/notas/indice-planos.md`.
+- Limitacion: los PDFs son principalmente imagen; las cotas pequenas y cargas deben confirmarse con revision manual o archivos vectoriales.
