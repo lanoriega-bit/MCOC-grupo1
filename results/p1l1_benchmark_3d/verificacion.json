@@ -1,0 +1,34 @@
+{
+  "model": "P1L1 benchmark 3D sector F-G / 2-3 idealizado",
+  "units": "m, N, Pa",
+  "geometry": {
+    "Lx_m": 6.0,
+    "Ly_m": 4.0,
+    "H_m": 3.0,
+    "slab_area_m2": 24.0
+  },
+  "loads": {
+    "qG_kN_m2": 7.35,
+    "total_slab_load_kN": 176.4,
+    "line_load_x_beams_kN_m": 7.35,
+    "line_load_y_beams_kN_m": 11.025
+  },
+  "checks": {
+    "sum_loads_kN": -176.4,
+    "sum_reactions_z_kN": 176.40000000000003,
+    "vertical_equilibrium_error_kN": 2.9103830456733704e-14,
+    "reference_reaction_per_column_kN": 44.1,
+    "opensees_Rz_node_1_kN": 44.1,
+    "reference_column_axial_kN": 44.1,
+    "opensees_column_1_axial_max_kN": 44.1,
+    "reference_top_uz_m": -1.0800000000000002e-05,
+    "opensees_max_top_uz_m": -1.0800000000000008e-05,
+    "reference_fixed_beam_moment_kN_m": 22.05,
+    "opensees_beam_EF_moment_max_kN_m": 16.541420332291356
+  },
+  "outputs": {
+    "geometry_diagram": "results/p1l1_benchmark_3d/geometria_deformada_ejes.png",
+    "nvm_diagram": "results/p1l1_benchmark_3d/diagramas_nvm_3d.png",
+    "element_forces_csv": "results/p1l1_benchmark_3d/fuerzas_elementos.csv"
+  }
+}
