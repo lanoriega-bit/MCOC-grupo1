@@ -1,6 +1,6 @@
-"""P1L1: benchmark 3D OpenSeesPy de un sector simple del edificio.
+"""P1L1: benchmark 3D OpenSeesPy del sector P1L1-S01 del edificio.
 
-Modelo idealizado: un pano 3D de un nivel, basado en la reticula visible en planos.
+Sector P1L1-S01: pano idealizado entre ejes F-G y 2-3 del edificio.
 La losa no se modela con elementos finitos; su carga se transfiere a vigas.
 """
 
@@ -21,6 +21,9 @@ from mpl_toolkits.mplot3d import Axes3D  # noqa: F401
 
 KN = 1_000.0
 MPA = 1.0e6
+
+SECTOR_ID = "P1L1-S01"
+SECTOR_NAME = "Pano idealizado entre ejes F-G y 2-3"
 
 
 # Convierte fuerzas desde newton a kN para imprimir resultados legibles.
@@ -101,7 +104,7 @@ def save_geometry_diagram(
 ) -> None:
     fig = plt.figure(figsize=(12, 9))
     ax = fig.add_subplot(111, projection="3d")
-    ax.set_title("P1L1 - Benchmark 3D: sector idealizado del edificio")
+    ax.set_title("P1L1 - Benchmark 3D: sector F-G / 2-3")
     ax.set_xlabel("X [m]")
     ax.set_ylabel("Y [m]")
     ax.set_zlabel("Z [m]")
@@ -245,6 +248,7 @@ def write_element_forces_csv(output_path: Path, local_forces: dict[int, list[flo
 
 # Construye, analiza y verifica el benchmark 3D completo.
 def main() -> None:
+    # Definimos propiedades de material y dimensiones del sector F-G / 2-3.
     elastic_modulus = 25.0e9
     poisson = 0.20
     shear_modulus = elastic_modulus / (2.0 * (1.0 + poisson))
@@ -252,9 +256,11 @@ def main() -> None:
     ly = 4.0
     h = 3.0
 
+    # Idealizamos columnas y vigas con secciones rectangulares preliminares de planos.
     column = rectangular_section(0.70, 0.70)  # P. 70x70 observado en planos.
     beam = rectangular_section(0.60, 0.80)  # V. 60/80 observado en plantas.
 
+    # Convertimos carga superficial de losa a cargas lineales tributarias sobre vigas.
     slab_area = lx * ly
     q_g = 7.35 * KN  # 250 + 200 + 300 kgf/m2 aprox. convertido con 9.8.
     total_slab_load = q_g * slab_area
@@ -262,6 +268,7 @@ def main() -> None:
     line_load_x = q_g * tributary_area_per_beam / lx
     line_load_y = q_g * tributary_area_per_beam / ly
 
+    # Los nodos representan las esquinas F2, G2, G3 y F3 en base y nivel superior.
     nodes = {
         1: (0.0, 0.0, 0.0),
         2: (lx, 0.0, 0.0),
@@ -272,28 +279,33 @@ def main() -> None:
         7: (lx, ly, h),
         8: (0.0, ly, h),
     }
+    # Cada elemento queda nombrado segun su ubicacion futura en el edificio.
     elements: dict[int, dict[str, object]] = {
-        1: {"name": "col_AE", "nodes": (1, 5), "type": "column", "vecxz": (1.0, 0.0, 0.0)},
-        2: {"name": "col_BF", "nodes": (2, 6), "type": "column", "vecxz": (1.0, 0.0, 0.0)},
-        3: {"name": "col_CG", "nodes": (3, 7), "type": "column", "vecxz": (1.0, 0.0, 0.0)},
-        4: {"name": "col_DH", "nodes": (4, 8), "type": "column", "vecxz": (1.0, 0.0, 0.0)},
-        5: {"name": "viga_EF", "nodes": (5, 6), "type": "beam", "vecxz": (0.0, 0.0, 1.0)},
-        6: {"name": "viga_FG", "nodes": (6, 7), "type": "beam", "vecxz": (0.0, 0.0, 1.0)},
-        7: {"name": "viga_GH", "nodes": (7, 8), "type": "beam", "vecxz": (0.0, 0.0, 1.0)},
-        8: {"name": "viga_HE", "nodes": (8, 5), "type": "beam", "vecxz": (0.0, 0.0, 1.0)},
+        1: {"name": "col_F2", "nodes": (1, 5), "type": "column", "vecxz": (1.0, 0.0, 0.0)},
+        2: {"name": "col_G2", "nodes": (2, 6), "type": "column", "vecxz": (1.0, 0.0, 0.0)},
+        3: {"name": "col_G3", "nodes": (3, 7), "type": "column", "vecxz": (1.0, 0.0, 0.0)},
+        4: {"name": "col_F3", "nodes": (4, 8), "type": "column", "vecxz": (1.0, 0.0, 0.0)},
+        5: {"name": "viga_eje_2", "nodes": (5, 6), "type": "beam", "vecxz": (0.0, 0.0, 1.0)},
+        6: {"name": "viga_eje_G", "nodes": (6, 7), "type": "beam", "vecxz": (0.0, 0.0, 1.0)},
+        7: {"name": "viga_eje_3", "nodes": (7, 8), "type": "beam", "vecxz": (0.0, 0.0, 1.0)},
+        8: {"name": "viga_eje_F", "nodes": (8, 5), "type": "beam", "vecxz": (0.0, 0.0, 1.0)},
     }
 
+    # Iniciamos el modelo OpenSees 3D con 6 GDL por nodo.
     ops.wipe()
     ops.model("basic", "-ndm", 3, "-ndf", 6)
 
+    # Creamos nodos y empotramos los cuatro apoyos inferiores.
     for node, coords in nodes.items():
         ops.node(node, *coords)
     for node in (1, 2, 3, 4):
         ops.fix(node, 1, 1, 1, 1, 1, 1)
 
+    # Definimos transformaciones geometricas para columnas y vigas.
     ops.geomTransf("Linear", 1, 1.0, 0.0, 0.0)
     ops.geomTransf("Linear", 2, 0.0, 0.0, 1.0)
 
+    # Creamos columnas y vigas elasticas con las propiedades de seccion definidas arriba.
     for ele_tag in (1, 2, 3, 4):
         ni, nj = elements[ele_tag]["nodes"]
         ops.element("elasticBeamColumn", ele_tag, ni, nj, column["A"], elastic_modulus, shear_modulus, column["J"], column["Iy"], column["Iz"], 1)
@@ -301,6 +313,7 @@ def main() -> None:
         ni, nj = elements[ele_tag]["nodes"]
         ops.element("elasticBeamColumn", ele_tag, ni, nj, beam["A"], elastic_modulus, shear_modulus, beam["J"], beam["Iy"], beam["Iz"], 2)
 
+    # Aplicamos la carga gravitacional de losa como carga uniforme en las cuatro vigas.
     ops.timeSeries("Linear", 1)
     ops.pattern("Plain", 1, 1)
     add_beam_gravity_load(5, line_load_x)
@@ -308,6 +321,7 @@ def main() -> None:
     add_beam_gravity_load(6, line_load_y)
     add_beam_gravity_load(8, line_load_y)
 
+    # Configuramos y ejecutamos un analisis estatico lineal.
     ops.system("BandGeneral")
     ops.numberer("RCM")
     ops.constraints("Transformation")
@@ -318,6 +332,7 @@ def main() -> None:
     result = ops.analyze(1)
     if result != 0:
         raise RuntimeError(f"OpenSees no convergio. Codigo: {result}")
+    # Recuperamos reacciones, desplazamientos y fuerzas locales despues de resolver.
     ops.reactions()
 
     reactions = {node: tuple(ops.nodeReaction(node, dof) for dof in (1, 2, 3)) for node in (1, 2, 3, 4)}
@@ -330,6 +345,7 @@ def main() -> None:
     }
     summaries = {ele: element_force_summary(force) for ele, force in local_forces.items()}
 
+    # Comparamos los resultados contra chequeos manuales simples de equilibrio y rigidez axial.
     total_reaction_z = sum(reaction[2] for reaction in reactions.values())
     vertical_residual = total_reaction_z - total_slab_load
     expected_reaction = total_slab_load / 4.0
@@ -338,6 +354,7 @@ def main() -> None:
     reference_beam_moment = line_load_x * lx**2 / 12.0
     reference_column_axial = expected_reaction
 
+    # Definimos rutas de salida dentro de la carpeta de esta entrega.
     repo_root = Path(__file__).resolve().parents[3]
     entrega_dir = Path(__file__).resolve().parents[1]
     results_dir = entrega_dir / "results"
@@ -346,6 +363,7 @@ def main() -> None:
     forces_path = results_dir / "fuerzas_elementos.csv"
     verification_path = results_dir / "verificacion.json"
 
+    # Guardamos figuras y tablas para revisar el modelo sin abrir Python.
     max_disp = max(math.sqrt(sum(value * value for value in disp)) for disp in displacements.values())
     deformation_scale = 0.45 / max_disp if max_disp > 0.0 else 1.0
     save_geometry_diagram(geometry_path, nodes, elements, displacements, reactions, deformation_scale)
@@ -353,7 +371,10 @@ def main() -> None:
     write_element_forces_csv(forces_path, local_forces, element_names)
 
     verification = {
-        "model": "P1L1 benchmark 3D sector F-G / 2-3 idealizado",
+        "model": "P1L1 benchmark 3D",
+        "sector_id": SECTOR_ID,
+        "sector_name": SECTOR_NAME,
+        "sector_description": "Sector estructural idealizado entre ejes F-G y 2-3, de un nivel tipo del edificio.",
         "units": "m, N, Pa",
         "geometry": {"Lx_m": lx, "Ly_m": ly, "H_m": h, "slab_area_m2": slab_area},
         "loads": {
@@ -373,7 +394,7 @@ def main() -> None:
             "reference_top_uz_m": -reference_column_shortening,
             "opensees_max_top_uz_m": -max_top_displacement,
             "reference_fixed_beam_moment_kN_m": kN_m(reference_beam_moment),
-            "opensees_beam_EF_moment_max_kN_m": kN_m(summaries[5]["moment_abs_Nm"]),
+            "opensees_beam_axis_2_moment_max_kN_m": kN_m(summaries[5]["moment_abs_Nm"]),
         },
         "outputs": {
             "geometry_diagram": geometry_path.relative_to(repo_root).as_posix(),
@@ -385,7 +406,8 @@ def main() -> None:
     verification_path.write_text(json.dumps(verification, indent=2), encoding="utf-8")
 
     print("P1L1 - Benchmark 3D OpenSeesPy")
-    print("Modelo: pano idealizado del edificio entre ejes tipo F-G y 2-3")
+    print(f"Sector: {SECTOR_ID} - {SECTOR_NAME}")
+    print("Modelo: un nivel idealizado del edificio, no el edificio completo")
     print("")
     print("Geometria y carga")
     print(f"  Lx = {lx:.3f} m, Ly = {ly:.3f} m, H = {h:.3f} m")
@@ -406,8 +428,8 @@ def main() -> None:
     print(f"  OpenSees axial columna e1 = {kN(summaries[1]['axial_abs_N']):.6f} kN")
     print(f"  referencia uz superior = {-reference_column_shortening:.9e} m")
     print(f"  OpenSees max |uz| superior = {-max_top_displacement:.9e} m")
-    print(f"  referencia M fijo viga X = {kN_m(reference_beam_moment):.6f} kN*m")
-    print(f"  OpenSees max M viga EF = {kN_m(summaries[5]['moment_abs_Nm']):.6f} kN*m")
+    print(f"  referencia M fijo viga eje 2 = {kN_m(reference_beam_moment):.6f} kN*m")
+    print(f"  OpenSees max M viga eje 2 = {kN_m(summaries[5]['moment_abs_Nm']):.6f} kN*m")
     print("")
     print("Archivos generados")
     print(f"  {geometry_path}")
@@ -415,6 +437,7 @@ def main() -> None:
     print(f"  {forces_path}")
     print(f"  {verification_path}")
 
+    # Validamos automaticamente que el equilibrio vertical cierre antes de terminar.
     assert math.isclose(vertical_residual, 0.0, rel_tol=0.0, abs_tol=1e-6)
     assert all(math.isclose(reactions[node][2], expected_reaction, rel_tol=0.0, abs_tol=1e-5) for node in (1, 2, 3, 4))
 

@@ -1,5 +1,8 @@
 {
-  "model": "P1L1 benchmark 3D sector F-G / 2-3 idealizado",
+  "model": "P1L1 benchmark 3D",
+  "sector_id": "P1L1-S01",
+  "sector_name": "Pano idealizado entre ejes F-G y 2-3",
+  "sector_description": "Sector estructural idealizado entre ejes F-G y 2-3, de un nivel tipo del edificio.",
   "units": "m, N, Pa",
   "geometry": {
     "Lx_m": 6.0,
@@ -24,7 +27,7 @@
     "reference_top_uz_m": -1.0800000000000002e-05,
     "opensees_max_top_uz_m": -1.0800000000000008e-05,
     "reference_fixed_beam_moment_kN_m": 22.05,
-    "opensees_beam_EF_moment_max_kN_m": 16.541420332291356
+    "opensees_beam_axis_2_moment_max_kN_m": 16.541420332291356
   },
   "outputs": {
     "geometry_diagram": "entregas/p1l1_benchmark_3d/results/geometria_deformada_ejes.png",

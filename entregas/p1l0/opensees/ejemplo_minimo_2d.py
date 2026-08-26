@@ -282,6 +282,7 @@ def main() -> None:
     web_thickness = 8.5e-3
     q_horizontal = 3.0 * TONF  # 3 tonf/m.
 
+    # Iniciamos un modelo 2D con 3 GDL por nodo: ux, uy y rotacion rz.
     ops.wipe()
     ops.model("basic", "-ndm", 2, "-ndf", 3)
 
@@ -300,6 +301,7 @@ def main() -> None:
     # Rotula interna en C: ambas mitades comparten traslaciones, no rotacion.
     ops.equalDOF(3, 4, 1, 2)
 
+    # Definimos la transformacion y los cuatro elementos elasticos del marco.
     ops.geomTransf("Linear", 1)
     ops.element("elasticBeamColumn", 1, 1, 2, area, elastic_modulus, inertia_z, 1)  # AB
     ops.element("elasticBeamColumn", 2, 2, 3, area, elastic_modulus, inertia_z, 1)  # BC
@@ -309,6 +311,7 @@ def main() -> None:
     ops.timeSeries("Linear", 1)
     ops.pattern("Plain", 1, 1)
 
+    # Aplicamos la carga distribuida vertical sobre la proyeccion horizontal del marco.
     element_loads: dict[int, tuple[float, float, float, str]] = {}
     total_load = 0.0
     load_total, length, qx_local, qy_local = add_vertical_load_on_horizontal_projection(1, 1, 2, q_horizontal)
@@ -324,6 +327,7 @@ def main() -> None:
     total_load += load_total
     element_loads[4] = (length, qx_local, qy_local, "DE")
 
+    # Configuramos y ejecutamos un analisis estatico lineal.
     ops.system("BandGeneral")
     ops.numberer("RCM")
     ops.constraints("Transformation")
@@ -335,6 +339,7 @@ def main() -> None:
     if analysis_result != 0:
         raise RuntimeError(f"OpenSees no convergio. Codigo: {analysis_result}")
 
+    # Recuperamos reacciones y fuerzas internas despues de resolver.
     ops.reactions()
 
     reaction_a_x = ops.nodeReaction(1, 1)
@@ -355,6 +360,7 @@ def main() -> None:
     shear_factor = 0.0004028 * 1.0e6
     max_shear_stress = max_shear * shear_factor
 
+    # Guardamos los valores de referencia de la pauta para comparar automaticamente.
     reference_reaction_y = 19.5
     reference_reaction_x = 21.13
     reference_max_axial = 28.6
@@ -363,6 +369,7 @@ def main() -> None:
     reference_sigma_bending = 80.511
     reference_tau = 29.6
 
+    # Calculamos residuos de equilibrio global para detectar errores de signos o cargas.
     vertical_equilibrium_residual = reaction_a_y + reaction_e_y - total_load
     horizontal_equilibrium_residual = reaction_a_x + reaction_e_x
 
@@ -411,6 +418,7 @@ def main() -> None:
     print(f"  Error |Q|max = {abs(tonf(max_shear) - reference_max_shear):.3e} tonf")
     print(f"  Error |M|max = {abs(tonf_m(max_moment) - reference_max_moment):.3e} tonf*m")
 
+    # Validamos con assert que el resultado coincida con equilibrio y pauta.
     assert math.isclose(horizontal_equilibrium_residual, 0.0, rel_tol=0.0, abs_tol=1e-7)
     assert math.isclose(vertical_equilibrium_residual, 0.0, rel_tol=0.0, abs_tol=1e-7)
     assert math.isclose(tonf(reaction_a_y), reference_reaction_y, rel_tol=0.0, abs_tol=1e-9)
@@ -421,6 +429,7 @@ def main() -> None:
     assert math.isclose(tonf(max_shear), reference_max_shear, rel_tol=0.0, abs_tol=0.1)
     assert math.isclose(tonf_m(max_moment), reference_max_moment, rel_tol=0.0, abs_tol=0.02)
 
+    # Exportamos figuras dentro de la carpeta results de esta entrega.
     entrega_dir = Path(__file__).resolve().parents[1]
     diagram_path = entrega_dir / "results" / "diagrama_pregunta_2.png"
     nvm_diagram_path = entrega_dir / "results" / "diagramas_nvm_pregunta_2.png"

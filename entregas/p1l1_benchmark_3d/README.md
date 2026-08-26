@@ -1,6 +1,23 @@
 # P1L1 Benchmark 3D
 
-Benchmark 3D OpenSeesPy de un pano simple del edificio.
+Benchmark 3D OpenSeesPy del sector `P1L1-S01`.
+
+## Sector Modelado
+
+El sector queda definido para futuras etapas como:
+
+```text
+P1L1-S01 = pano idealizado entre ejes F-G y 2-3 del edificio
+```
+
+Convencion usada en el modelo:
+
+- Direccion `X`: eje longitudinal entre `F` y `G`, longitud `6.0 m`.
+- Direccion `Y`: eje transversal entre `2` y `3`, longitud `4.0 m`.
+- Direccion `Z`: vertical, altura de nivel `3.0 m`.
+- Esquinas del pano: `F2`, `G2`, `G3`, `F3`.
+
+Este sector es una idealizacion inicial para verificar el flujo OpenSeesPy. No representa todavia el edificio completo.
 
 ## Contenido
 

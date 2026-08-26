@@ -277,9 +277,11 @@ def main() -> None:
     horizontal_load = 17.0 * KN
     point_load = 20.0 * KN
 
+    # Iniciamos un modelo 2D con 3 GDL por nodo: ux, uy y rotacion rz.
     ops.wipe()
     ops.model("basic", "-ndm", 2, "-ndf", 3)
 
+    # Creamos nodos para columna, union rigida, viga y apoyo contra pared.
     ops.node(1, 0.0, 0.0)  # A: base columna
     ops.node(2, 0.0, 2.0)  # B: union rigida columna-viga
     ops.node(3, 0.0, 5.0)  # C: coronacion columna
@@ -289,12 +291,14 @@ def main() -> None:
     ops.fix(1, 1, 1, 1)  # base empotrada
     ops.fix(5, 1, 0, 0)  # apoyo en pared: restringe solo ux
 
+    # Definimos elementos elasticos: dos tramos de columna y dos tramos de viga.
     ops.geomTransf("Linear", 1)
     ops.element("elasticBeamColumn", 1, 1, 2, column_area, elastic_modulus, column_inertia_z, 1)
     ops.element("elasticBeamColumn", 2, 2, 3, column_area, elastic_modulus, column_inertia_z, 1)
     ops.element("elasticBeamColumn", 3, 2, 4, beam_area, elastic_modulus, beam_inertia_z, 1)
     ops.element("elasticBeamColumn", 4, 4, 5, beam_area, elastic_modulus, beam_inertia_z, 1)
 
+    # Aplicamos carga distribuida horizontal en columna y carga puntual vertical en viga.
     ops.timeSeries("Linear", 1)
     ops.pattern("Plain", 1, 1)
     element_loads: dict[int, tuple[float, float, float, str]] = {}
@@ -306,6 +310,7 @@ def main() -> None:
     element_loads[4] = (3.0, 0.0, 0.0, "DE")
     ops.load(4, 0.0, -point_load, 0.0)
 
+    # Configuramos y ejecutamos un analisis estatico lineal.
     ops.system("BandGeneral")
     ops.numberer("RCM")
     ops.constraints("Plain")
@@ -317,6 +322,7 @@ def main() -> None:
     if analysis_result != 0:
         raise RuntimeError(f"OpenSees no convergio. Codigo: {analysis_result}")
 
+    # Recuperamos reacciones, fuerzas internas y desplazamientos despues de resolver.
     ops.reactions()
 
     reaction_a_x = ops.nodeReaction(1, 1)
@@ -332,9 +338,11 @@ def main() -> None:
     max_column_axial, _, max_column_moment = max_endpoint_forces(column_forces)
     max_beam_axial, _, max_beam_moment = max_endpoint_forces(beam_forces)
 
+    # Estimamos tensiones elasticas maximas para revisar si superan Fy.
     sigma_column = max_column_axial / column_area + max_column_moment / column_section_modulus
     sigma_beam = max_beam_axial / beam_area + max_beam_moment / beam_section_modulus
 
+    # Calculamos equilibrio global para verificar signos y magnitudes de cargas.
     total_horizontal_load = horizontal_load * 5.0
     total_vertical_load = point_load
     horizontal_equilibrium = reaction_a_x + reaction_e_x + total_horizontal_load
@@ -355,6 +363,7 @@ def main() -> None:
     }
     max_displacement = max(math.hypot(ux, uy) for ux, uy in displacements.values())
 
+    # Exportamos figuras dentro de la carpeta results de este ejercicio.
     entrega_dir = Path(__file__).resolve().parents[1]
     diagram_path = entrega_dir / "results" / "diagrama_columna_viga.png"
     nvm_diagram_path = entrega_dir / "results" / "diagramas_nvm_columna_viga.png"
@@ -404,6 +413,7 @@ def main() -> None:
     print(f"  sigma columna / Fy = {sigma_column / fy_a36:.6f}")
     print(f"  sigma viga / Fy = {sigma_beam / fy_a36:.6f}")
 
+    # Validamos con assert que el modelo equilibre y permanezca elastico.
     assert math.isclose(horizontal_equilibrium, 0.0, rel_tol=0.0, abs_tol=1e-7)
     assert math.isclose(vertical_equilibrium, 0.0, rel_tol=0.0, abs_tol=1e-7)
     assert math.isclose(moment_equilibrium, 0.0, rel_tol=0.0, abs_tol=1e-7)

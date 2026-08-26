@@ -6,7 +6,20 @@ Construir y verificar un benchmark 3D simple, basado en una zona realista del ed
 
 ## Sector escogido
 
-Se escogio un pano rectangular idealizado del edificio, inspirado en la reticula repetitiva visible en los planos estructurales:
+El sector de referencia de esta entrega queda fijado como:
+
+```text
+P1L1-S01 = pano idealizado entre ejes F-G y 2-3 del edificio
+```
+
+Se escogio este pano rectangular porque corresponde a una zona repetitiva y facil de verificar antes de pasar al edificio completo. La convencion del modelo es:
+
+- Direccion `X`: desde eje `F` hacia eje `G`, `Lx = 6.0 m`.
+- Direccion `Y`: desde eje `2` hacia eje `3`, `Ly = 4.0 m`.
+- Direccion `Z`: vertical, `H = 3.0 m`.
+- Esquinas del sector: `F2`, `G2`, `G3`, `F3`.
+
+La seleccion esta inspirada en la reticula repetitiva visible en los planos estructurales:
 
 - Plantas estructurales: `recursos/planos/pdf/2017_67-101-Model.pdf` y `recursos/planos/pdf/2017_67-102-Model.pdf`.
 - Elevaciones: `recursos/planos/pdf/2017_67-300-Model.pdf`, `2017_67-302-Model.pdf`, `2017_67-303-Model.pdf`.
@@ -18,7 +31,7 @@ No se intenta modelar el edificio completo en esta etapa. La meta es un benchmar
 
 ### Geometria
 
-El modelo representa un pano de un nivel:
+El modelo representa el sector `P1L1-S01` de un nivel:
 
 ```text
 Lx = 6.0 m
@@ -29,19 +42,19 @@ H  = 3.0 m
 Nodos base:
 
 ```text
-1 = (0, 0, 0)
-2 = (6, 0, 0)
-3 = (6, 4, 0)
-4 = (0, 4, 0)
+1 = F2 base = (0, 0, 0)
+2 = G2 base = (6, 0, 0)
+3 = G3 base = (6, 4, 0)
+4 = F3 base = (0, 4, 0)
 ```
 
 Nodos superiores:
 
 ```text
-5 = (0, 0, 3)
-6 = (6, 0, 3)
-7 = (6, 4, 3)
-8 = (0, 4, 3)
+5 = F2 superior = (0, 0, 3)
+6 = G2 superior = (6, 0, 3)
+7 = G3 superior = (6, 4, 3)
+8 = F3 superior = (0, 4, 3)
 ```
 
 ### Elementos
@@ -49,19 +62,19 @@ Nodos superiores:
 Columnas:
 
 ```text
-1: 1-5
-2: 2-6
-3: 3-7
-4: 4-8
+1: 1-5 = columna F2
+2: 2-6 = columna G2
+3: 3-7 = columna G3
+4: 4-8 = columna F3
 ```
 
 Vigas superiores:
 
 ```text
-5: 5-6
-6: 6-7
-7: 7-8
-8: 8-5
+5: 5-6 = viga sobre eje 2, entre F-G
+6: 6-7 = viga sobre eje G, entre 2-3
+7: 7-8 = viga sobre eje 3, entre G-F
+8: 8-5 = viga sobre eje F, entre 3-2
 ```
 
 Se usan elementos `elasticBeamColumn` 3D.
@@ -173,7 +186,7 @@ entregas/p1l1_benchmark_3d/results/verificacion.json
 | Reaccion vertical por columna | `44.100 kN` | `44.100 kN` | `~0` |
 | Axial columna elemento 1 | `44.100 kN` | `44.100 kN` | `~0` |
 | Desplazamiento vertical superior | `-1.080e-05 m` | `-1.080e-05 m` | `~0` |
-| Momento de extremo viga X | `22.050 kN*m` | `16.541 kN*m` | referencia aproximada |
+| Momento de extremo viga eje 2 | `22.050 kN*m` | `16.541 kN*m` | referencia aproximada |
 
 La comparacion de desplazamiento y momento es una referencia aproximada, no una solucion exacta, porque el modelo 3D completo incluye compatibilidad de columnas y vigas.
 
@@ -225,8 +238,8 @@ OpenSeesPy -> JSON/CSV -> Unity
 
 | Etapa | Registro |
 | --- | --- |
-| Issue/tarea | Crear benchmark 3D de Semana 1 desde un sector simple del edificio. |
-| Plan del agente | Usar un pano realista, no todo el edificio; conservar carga tributaria y verificar equilibrio. |
+| Issue/tarea | Crear benchmark 3D de Semana 1 desde el sector `P1L1-S01`, pano entre ejes `F-G` y `2-3`. |
+| Plan del agente | Usar un pano realista y trazable, no todo el edificio; conservar carga tributaria y verificar equilibrio. |
 | Implementacion | Script `entregas/p1l1_benchmark_3d/opensees/benchmark_3d.py`. |
 | Test | Ejecutar el script y revisar `verificacion.json`, figuras y CSV. |
 | Revision | Verificar unidades, signos, ejes locales, equilibrio y supuestos. |
