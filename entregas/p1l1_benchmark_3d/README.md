@@ -24,8 +24,9 @@ Este sector es una idealizacion inicial para verificar el flujo OpenSeesPy. No r
 - `docs/semana01.md`: informe de la entrega.
 - `opensees/benchmark_3d.py`: script OpenSeesPy.
 - `results/geometria_deformada_ejes.png`: geometria, deformada, cargas y ejes locales.
-- `results/diagramas_nvm_3d.png`: diagramas de fuerzas internas.
+- `results/diagramas_nvm_3d.png`: diagramas espaciales de `N`, `V` y `M` sobre la geometria 3D.
 - `results/fuerzas_elementos.csv`: fuerzas locales por elemento.
+- `results/diagramas_nvm_3d_valores.csv`: valores de `N`, `Vy`, `Vz`, `Vres`, `My`, `Mz` y `Mres` por estacion.
 - `results/verificacion.json`: equilibrio y verificaciones numericas.
 
 ## Ejecutar

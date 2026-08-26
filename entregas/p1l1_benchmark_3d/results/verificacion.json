@@ -24,14 +24,20 @@
     "opensees_Rz_node_1_kN": 44.1,
     "reference_column_axial_kN": 44.1,
     "opensees_column_1_axial_max_kN": 44.1,
+    "diagram_global_axial_max_kN": 44.10000000000003,
+    "diagram_global_shear_resultant_max_kN": 22.05,
+    "diagram_global_moment_resultant_max_kN_m": 19.249930906373528,
     "reference_top_uz_m": -1.0800000000000002e-05,
     "opensees_max_top_uz_m": -1.0800000000000008e-05,
     "reference_fixed_beam_moment_kN_m": 22.05,
-    "opensees_beam_axis_2_moment_max_kN_m": 16.541420332291356
+    "opensees_beam_axis_2_moment_max_kN_m": 16.541420332291356,
+    "diagram_end_residual_force_kN": 0.0,
+    "diagram_end_residual_moment_kN_m": 1.0913936421275139e-14
   },
   "outputs": {
     "geometry_diagram": "entregas/p1l1_benchmark_3d/results/geometria_deformada_ejes.png",
     "nvm_diagram": "entregas/p1l1_benchmark_3d/results/diagramas_nvm_3d.png",
-    "element_forces_csv": "entregas/p1l1_benchmark_3d/results/fuerzas_elementos.csv"
+    "element_forces_csv": "entregas/p1l1_benchmark_3d/results/fuerzas_elementos.csv",
+    "nvm_values_csv": "entregas/p1l1_benchmark_3d/results/diagramas_nvm_3d_valores.csv"
   }
 }

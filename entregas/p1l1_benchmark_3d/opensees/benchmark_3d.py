@@ -75,21 +75,67 @@ def local_axes(
 
 
 # Agrega una carga vertical distribuida local sobre una viga 3D.
-def add_beam_gravity_load(ele_tag: int, line_load: float) -> None:
+def add_beam_gravity_load(ele_tag: int, line_load: float) -> tuple[float, float, float]:
     ops.eleLoad("-ele", ele_tag, "-type", "-beamUniform", 0.0, -line_load, 0.0)
+    return 0.0, 0.0, -line_load
 
 
-# Extrae maximos de axial, corte y momento desde fuerzas locales 3D de OpenSees.
-def element_force_summary(local_force: list[float]) -> dict[str, float]:
-    axial = max(abs(local_force[0]), abs(local_force[6]))
-    shear_i = math.hypot(local_force[1], local_force[2])
-    shear_j = math.hypot(local_force[7], local_force[8])
-    moment_i = math.hypot(local_force[4], local_force[5])
-    moment_j = math.hypot(local_force[10], local_force[11])
+# Calcula N, V y M internos en estaciones del elemento usando equilibrio local.
+def element_diagram_values(
+    local_force: list[float],
+    length: float,
+    uniform_load: tuple[float, float, float],
+    station_count: int = 81,
+) -> list[dict[str, float]]:
+    wx, wy, wz = uniform_load
+    values = []
+
+    for index in range(station_count):
+        x = length * index / (station_count - 1)
+        axial = local_force[0] + wx * x
+        shear_y = local_force[1] + wy * x
+        shear_z = local_force[2] + wz * x
+
+        # Los momentos se integran desde los cortes: dMy/dx = Vz y dMz/dx = -Vy.
+        moment_y = local_force[4] + local_force[2] * x + 0.5 * wz * x**2
+        moment_z = local_force[5] - local_force[1] * x - 0.5 * wy * x**2
+
+        values.append(
+            {
+                "x_m": x,
+                "N_N": axial,
+                "Vy_N": shear_y,
+                "Vz_N": shear_z,
+                "Vres_N": math.hypot(shear_y, shear_z),
+                "My_Nm": moment_y,
+                "Mz_Nm": moment_z,
+                "Mres_Nm": math.hypot(moment_y, moment_z),
+            }
+        )
+
+    return values
+
+
+# Resume maximos de diagramas ya calculados, incluyendo maximos interiores de momento.
+def diagram_force_summary(diagram_values: list[dict[str, float]]) -> dict[str, float]:
     return {
-        "axial_abs_N": axial,
-        "shear_abs_N": max(shear_i, shear_j),
-        "moment_abs_Nm": max(moment_i, moment_j),
+        "axial_abs_N": max(abs(row["N_N"]) for row in diagram_values),
+        "shear_abs_N": max(row["Vres_N"] for row in diagram_values),
+        "moment_abs_Nm": max(row["Mres_Nm"] for row in diagram_values),
+        "my_abs_Nm": max(abs(row["My_Nm"]) for row in diagram_values),
+        "mz_abs_Nm": max(abs(row["Mz_Nm"]) for row in diagram_values),
+    }
+
+
+# Verifica que los diagramas lleguen al extremo j con el signo esperado por OpenSees.
+def diagram_end_residuals(local_force: list[float], diagram_values: list[dict[str, float]]) -> dict[str, float]:
+    last = diagram_values[-1]
+    return {
+        "N_j_balance_N": last["N_N"] + local_force[6],
+        "Vy_j_balance_N": last["Vy_N"] + local_force[7],
+        "Vz_j_balance_N": last["Vz_N"] + local_force[8],
+        "My_j_balance_Nm": last["My_Nm"] + local_force[10],
+        "Mz_j_balance_Nm": last["Mz_Nm"] + local_force[11],
     }
 
 
@@ -170,70 +216,117 @@ def save_geometry_diagram(
     plt.close(fig)
 
 
-# Dibuja diagramas acumulados de N, V y M para columnas y vigas del benchmark 3D.
+# Dibuja diagramas espaciales de N, V y M sobre la geometria 3D del benchmark.
 def save_nvm_diagrams(
     output_path: Path,
+    nodes: dict[int, tuple[float, float, float]],
+    elements: dict[int, dict[str, object]],
     local_forces: dict[int, list[float]],
     element_lengths: dict[int, float],
     element_names: dict[int, str],
+    uniform_loads: dict[int, tuple[float, float, float]],
 ) -> None:
-    fig, axes = plt.subplots(3, 1, figsize=(13, 9), sharex=True)
-    labels = ["N [kN]", "V resultante [kN]", "M resultante [kN*m]"]
-    colors = ["#1f77b4", "#2ca02c", "#d62728"]
-    cursor = 0.0
-    all_values = [[], [], []]
-    offsets: list[tuple[float, float, str]] = []
+    diagrams = {
+        ele_tag: element_diagram_values(local_forces[ele_tag], element_lengths[ele_tag], uniform_loads[ele_tag])
+        for ele_tag in elements
+    }
+    max_n = max(abs(row["N_N"]) for rows in diagrams.values() for row in rows)
+    max_v = max(row["Vres_N"] for rows in diagrams.values() for row in rows)
+    max_m = max(row["Mres_Nm"] for rows in diagrams.values() for row in rows)
+    diagram_specs = [
+        ("N", "N_N", "N [kN]", "signed", max_n, "#1f77b4"),
+        ("V", "Vres_N", "V resultante [kN]", "positive", max_v, "#2ca02c"),
+        ("M", "Mres_Nm", "M resultante [kN*m]", "positive", max_m, "#d62728"),
+    ]
 
-    for ele_tag in sorted(local_forces):
-        force = local_forces[ele_tag]
-        length = element_lengths[ele_tag]
-        xs = [length * i / 50 for i in range(51)]
-        x_plot = [cursor + x for x in xs]
-        n_i, n_j = -force[0], force[6]
-        v_i = math.hypot(force[1], force[2])
-        v_j = math.hypot(force[7], force[8])
-        m_i = math.hypot(force[4], force[5])
-        m_j = math.hypot(force[10], force[11])
-        series = [
-            [kN(n_i + (n_j - n_i) * x / length) for x in xs],
-            [kN(v_i + (v_j - v_i) * x / length) for x in xs],
-            [kN_m(m_i + (m_j - m_i) * x / length) for x in xs],
-        ]
+    fig = plt.figure(figsize=(18, 6))
+    for plot_index, (short_label, value_key, title, sign_mode, max_abs, color) in enumerate(diagram_specs, start=1):
+        ax = fig.add_subplot(1, 3, plot_index, projection="3d")
+        ax.set_title(f"{title}\nmax = {kN_m(max_abs) if short_label == 'M' else kN(max_abs):.3f}")
+        ax.set_xlabel("X [m]")
+        ax.set_ylabel("Y [m]")
+        ax.set_zlabel("Z [m]")
 
-        for idx, values in enumerate(series):
-            axes[idx].plot(x_plot, values, color=colors[idx], linewidth=2)
-            axes[idx].fill_between(x_plot, values, 0.0, color=colors[idx], alpha=0.18)
-            all_values[idx].extend(values)
+        for element in elements.values():
+            ni, nj = element["nodes"]
+            xi, yi, zi = nodes[ni]
+            xj, yj, zj = nodes[nj]
+            ax.plot([xi, xj], [yi, yj], [zi, zj], color="#777777", linewidth=1.5, alpha=0.7)
 
-        offsets.append((cursor, cursor + length, element_names[ele_tag]))
-        cursor += length
+        diagram_scale = 0.75 / max_abs if max_abs > 0.0 else 1.0
+        for ele_tag, rows in diagrams.items():
+            element = elements[ele_tag]
+            ni, nj = element["nodes"]
+            start = nodes[ni]
+            end = nodes[nj]
+            local_x, local_y, local_z = local_axes(start, end, element["vecxz"])
+            plot_axis = local_y if short_label == "V" else local_z
 
-    for idx, ax in enumerate(axes):
-        ax.axhline(0.0, color="black", linewidth=0.8)
-        ax.set_ylabel(labels[idx])
-        ax.set_title(labels[idx])
-        ax.grid(True, linestyle=":", alpha=0.45)
-        max_abs = max(abs(value) for value in all_values[idx])
-        ax.text(
-            0.99,
-            0.90,
-            f"max |{labels[idx].split()[0]}| = {max_abs:.3f}",
-            transform=ax.transAxes,
-            ha="right",
-            va="top",
-            bbox={"boxstyle": "round", "facecolor": "white", "edgecolor": "#777777", "alpha": 0.9},
-        )
-        for start, end, name in offsets:
-            ax.axvline(start, color="#999999", linewidth=0.8, linestyle="--")
-            ax.text((start + end) / 2.0, 0.02, name, transform=ax.get_xaxis_transform(), ha="center")
-        ax.axvline(offsets[-1][1], color="#999999", linewidth=0.8, linestyle="--")
+            base_points = []
+            diagram_points = []
+            for row in rows:
+                base = tuple(start[idx] + local_x[idx] * row["x_m"] for idx in range(3))
+                value = row[value_key]
+                if sign_mode == "positive":
+                    value = abs(value)
+                diagram = tuple(base[idx] + plot_axis[idx] * diagram_scale * value for idx in range(3))
+                base_points.append(base)
+                diagram_points.append(diagram)
 
-    axes[-1].set_xlabel("Longitud acumulada de elementos [m]")
-    fig.suptitle("P1L1 - Diagramas de fuerzas internas 3D", fontsize=14)
+            ax.plot(
+                [point[0] for point in diagram_points],
+                [point[1] for point in diagram_points],
+                [point[2] for point in diagram_points],
+                color=color,
+                linewidth=2.2,
+            )
+            for base, diagram in zip(base_points[::8], diagram_points[::8]):
+                ax.plot(
+                    [base[0], diagram[0]],
+                    [base[1], diagram[1]],
+                    [base[2], diagram[2]],
+                    color=color,
+                    linewidth=0.8,
+                    alpha=0.45,
+                )
+
+            mid = diagram_points[len(diagram_points) // 2]
+            ax.text(mid[0], mid[1], mid[2], element_names[ele_tag], fontsize=7)
+
+        ax.set_box_aspect((6, 4, 3))
+        ax.view_init(elev=22, azim=-58)
+
+    fig.suptitle("P1L1-S01 - Diagramas 3D de N, V y M sobre la geometria", fontsize=14)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     fig.tight_layout()
     fig.savefig(output_path, dpi=180)
     plt.close(fig)
+
+
+# Guarda valores por estacion para auditar los diagramas 3D de N, V y M.
+def write_diagram_values_csv(
+    output_path: Path,
+    diagrams: dict[int, list[dict[str, float]]],
+    names: dict[int, str],
+) -> None:
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    with output_path.open("w", newline="", encoding="utf-8") as file:
+        writer = csv.writer(file)
+        writer.writerow(["element", "name", "x_m", "N_N", "Vy_N", "Vz_N", "Vres_N", "My_Nm", "Mz_Nm", "Mres_Nm"])
+        for ele_tag in sorted(diagrams):
+            for row in diagrams[ele_tag]:
+                writer.writerow([
+                    ele_tag,
+                    names[ele_tag],
+                    row["x_m"],
+                    row["N_N"],
+                    row["Vy_N"],
+                    row["Vz_N"],
+                    row["Vres_N"],
+                    row["My_Nm"],
+                    row["Mz_Nm"],
+                    row["Mres_Nm"],
+                ])
 
 
 # Guarda una tabla CSV con fuerzas locales de cada elemento.
@@ -316,10 +409,11 @@ def main() -> None:
     # Aplicamos la carga gravitacional de losa como carga uniforme en las cuatro vigas.
     ops.timeSeries("Linear", 1)
     ops.pattern("Plain", 1, 1)
-    add_beam_gravity_load(5, line_load_x)
-    add_beam_gravity_load(7, line_load_x)
-    add_beam_gravity_load(6, line_load_y)
-    add_beam_gravity_load(8, line_load_y)
+    uniform_loads = {ele_tag: (0.0, 0.0, 0.0) for ele_tag in elements}
+    uniform_loads[5] = add_beam_gravity_load(5, line_load_x)
+    uniform_loads[7] = add_beam_gravity_load(7, line_load_x)
+    uniform_loads[6] = add_beam_gravity_load(6, line_load_y)
+    uniform_loads[8] = add_beam_gravity_load(8, line_load_y)
 
     # Configuramos y ejecutamos un analisis estatico lineal.
     ops.system("BandGeneral")
@@ -343,7 +437,27 @@ def main() -> None:
         ele: math.dist(nodes[data["nodes"][0]], nodes[data["nodes"][1]])
         for ele, data in elements.items()
     }
-    summaries = {ele: element_force_summary(force) for ele, force in local_forces.items()}
+    diagrams = {
+        ele: element_diagram_values(local_forces[ele], element_lengths[ele], uniform_loads[ele])
+        for ele in elements
+    }
+    summaries = {ele: diagram_force_summary(values) for ele, values in diagrams.items()}
+    end_residuals = {
+        ele: diagram_end_residuals(local_forces[ele], diagrams[ele])
+        for ele in elements
+    }
+    max_diagram_end_residual_force = max(
+        abs(value)
+        for residual in end_residuals.values()
+        for key, value in residual.items()
+        if key.endswith("_N")
+    )
+    max_diagram_end_residual_moment = max(
+        abs(value)
+        for residual in end_residuals.values()
+        for key, value in residual.items()
+        if key.endswith("_Nm")
+    )
 
     # Comparamos los resultados contra chequeos manuales simples de equilibrio y rigidez axial.
     total_reaction_z = sum(reaction[2] for reaction in reactions.values())
@@ -353,6 +467,9 @@ def main() -> None:
     reference_column_shortening = expected_reaction * h / (column["A"] * elastic_modulus)
     reference_beam_moment = line_load_x * lx**2 / 12.0
     reference_column_axial = expected_reaction
+    max_diagram_axial = max(summary["axial_abs_N"] for summary in summaries.values())
+    max_diagram_shear = max(summary["shear_abs_N"] for summary in summaries.values())
+    max_diagram_moment = max(summary["moment_abs_Nm"] for summary in summaries.values())
 
     # Definimos rutas de salida dentro de la carpeta de esta entrega.
     repo_root = Path(__file__).resolve().parents[3]
@@ -361,14 +478,16 @@ def main() -> None:
     geometry_path = results_dir / "geometria_deformada_ejes.png"
     nvm_path = results_dir / "diagramas_nvm_3d.png"
     forces_path = results_dir / "fuerzas_elementos.csv"
+    diagram_values_path = results_dir / "diagramas_nvm_3d_valores.csv"
     verification_path = results_dir / "verificacion.json"
 
     # Guardamos figuras y tablas para revisar el modelo sin abrir Python.
     max_disp = max(math.sqrt(sum(value * value for value in disp)) for disp in displacements.values())
     deformation_scale = 0.45 / max_disp if max_disp > 0.0 else 1.0
     save_geometry_diagram(geometry_path, nodes, elements, displacements, reactions, deformation_scale)
-    save_nvm_diagrams(nvm_path, local_forces, element_lengths, element_names)
+    save_nvm_diagrams(nvm_path, nodes, elements, local_forces, element_lengths, element_names, uniform_loads)
     write_element_forces_csv(forces_path, local_forces, element_names)
+    write_diagram_values_csv(diagram_values_path, diagrams, element_names)
 
     verification = {
         "model": "P1L1 benchmark 3D",
@@ -391,15 +510,21 @@ def main() -> None:
             "opensees_Rz_node_1_kN": kN(reactions[1][2]),
             "reference_column_axial_kN": kN(reference_column_axial),
             "opensees_column_1_axial_max_kN": kN(summaries[1]["axial_abs_N"]),
+            "diagram_global_axial_max_kN": kN(max_diagram_axial),
+            "diagram_global_shear_resultant_max_kN": kN(max_diagram_shear),
+            "diagram_global_moment_resultant_max_kN_m": kN_m(max_diagram_moment),
             "reference_top_uz_m": -reference_column_shortening,
             "opensees_max_top_uz_m": -max_top_displacement,
             "reference_fixed_beam_moment_kN_m": kN_m(reference_beam_moment),
             "opensees_beam_axis_2_moment_max_kN_m": kN_m(summaries[5]["moment_abs_Nm"]),
+            "diagram_end_residual_force_kN": kN(max_diagram_end_residual_force),
+            "diagram_end_residual_moment_kN_m": kN_m(max_diagram_end_residual_moment),
         },
         "outputs": {
             "geometry_diagram": geometry_path.relative_to(repo_root).as_posix(),
             "nvm_diagram": nvm_path.relative_to(repo_root).as_posix(),
             "element_forces_csv": forces_path.relative_to(repo_root).as_posix(),
+            "nvm_values_csv": diagram_values_path.relative_to(repo_root).as_posix(),
         },
     }
     verification_path.parent.mkdir(parents=True, exist_ok=True)
@@ -426,20 +551,28 @@ def main() -> None:
     print(f"  error equilibrio Z = {kN(vertical_residual):.6e} kN")
     print(f"  referencia axial columna = {kN(reference_column_axial):.6f} kN")
     print(f"  OpenSees axial columna e1 = {kN(summaries[1]['axial_abs_N']):.6f} kN")
+    print(f"  max N global diagrama = {kN(max_diagram_axial):.6f} kN")
+    print(f"  max V global diagrama = {kN(max_diagram_shear):.6f} kN")
+    print(f"  max M global diagrama = {kN_m(max_diagram_moment):.6f} kN*m")
     print(f"  referencia uz superior = {-reference_column_shortening:.9e} m")
     print(f"  OpenSees max |uz| superior = {-max_top_displacement:.9e} m")
     print(f"  referencia M fijo viga eje 2 = {kN_m(reference_beam_moment):.6f} kN*m")
     print(f"  OpenSees max M viga eje 2 = {kN_m(summaries[5]['moment_abs_Nm']):.6f} kN*m")
+    print(f"  cierre diagramas fuerza = {kN(max_diagram_end_residual_force):.6e} kN")
+    print(f"  cierre diagramas momento = {kN_m(max_diagram_end_residual_moment):.6e} kN*m")
     print("")
     print("Archivos generados")
     print(f"  {geometry_path}")
     print(f"  {nvm_path}")
     print(f"  {forces_path}")
+    print(f"  {diagram_values_path}")
     print(f"  {verification_path}")
 
     # Validamos automaticamente que el equilibrio vertical cierre antes de terminar.
     assert math.isclose(vertical_residual, 0.0, rel_tol=0.0, abs_tol=1e-6)
     assert all(math.isclose(reactions[node][2], expected_reaction, rel_tol=0.0, abs_tol=1e-5) for node in (1, 2, 3, 4))
+    assert max_diagram_end_residual_force < 1e-6
+    assert max_diagram_end_residual_moment < 1e-6
 
     print("")
     print("Estado: OK - benchmark 3D converge, equilibra y genera resultados.")

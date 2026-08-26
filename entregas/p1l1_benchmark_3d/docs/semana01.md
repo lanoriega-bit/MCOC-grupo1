@@ -185,8 +185,13 @@ entregas/p1l1_benchmark_3d/results/verificacion.json
 | Suma de reacciones verticales | `176.400 kN` | `176.400 kN` | `~0` |
 | Reaccion vertical por columna | `44.100 kN` | `44.100 kN` | `~0` |
 | Axial columna elemento 1 | `44.100 kN` | `44.100 kN` | `~0` |
+| Maximo global `N` del diagrama | calculado por estaciones | `44.100 kN` | ver CSV |
+| Maximo global `Vres` del diagrama | calculado por estaciones | `22.050 kN` | ver CSV |
+| Maximo global `Mres` del diagrama | calculado por estaciones | `19.250 kN*m` | ver CSV |
 | Desplazamiento vertical superior | `-1.080e-05 m` | `-1.080e-05 m` | `~0` |
 | Momento de extremo viga eje 2 | `22.050 kN*m` | `16.541 kN*m` | referencia aproximada |
+| Cierre diagramas de fuerza | `0` | `0.000e+00 kN` | `0` |
+| Cierre diagramas de momento | `0` | `1.091e-14 kN*m` | `~0` |
 
 La comparacion de desplazamiento y momento es una referencia aproximada, no una solucion exacta, porque el modelo 3D completo incluye compatibilidad de columnas y vigas.
 
@@ -198,6 +203,7 @@ El script genera:
 entregas/p1l1_benchmark_3d/results/geometria_deformada_ejes.png
 entregas/p1l1_benchmark_3d/results/diagramas_nvm_3d.png
 entregas/p1l1_benchmark_3d/results/fuerzas_elementos.csv
+entregas/p1l1_benchmark_3d/results/diagramas_nvm_3d_valores.csv
 entregas/p1l1_benchmark_3d/results/verificacion.json
 ```
 
@@ -206,6 +212,17 @@ Los diagramas incluyen:
 - `N`: axial.
 - `V`: corte resultante local.
 - `M`: momento resultante local.
+
+Para evitar errores en vigas con carga distribuida, el momento no se interpola linealmente entre extremos. El script calcula por estaciones usando equilibrio local:
+
+```text
+Vz(x) = Vz_i + wz*x
+My(x) = My_i + Vz_i*x + 0.5*wz*x^2
+Mz(x) = Mz_i - Vy_i*x - 0.5*wy*x^2
+Mres(x) = sqrt(My(x)^2 + Mz(x)^2)
+```
+
+El archivo `diagramas_nvm_3d_valores.csv` permite revisar manualmente esos valores.
 
 ## Errores deliberados propuestos
 
