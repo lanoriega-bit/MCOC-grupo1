@@ -93,3 +93,13 @@
 - Resultado: `handcalc_sum_col_axial_kN` = 25726.95 kN = suma OpenSees (coincidencia exacta); maximo error por columna 50.0 kN (~1.2% en columnas mayores, esperado por redistribucion via rigideces).
 - Salida: nuevos campos en `verificacion.json`, fila en `informe-semana2.md` y linea en el panel del viewer.
 - Verificacion: assert relativo al 5% del total; el modelo pasa.
+
+## Semana 2 - Confirmacion de niveles y arreglo visual del viewer
+
+- Objetivo: resolver la duda sobre el numero de niveles y que el subterraneo sea visible en el viewer.
+- Encargo a IA: re-verificar el numero de niveles vs. los rotulos `NIVEL SUPERIOR LOSA` en los DXF y asegurar que el viewer muestre el subterraneo.
+- Resultado:
+  - Confirmado desde DXF: 5 niveles de losa = 1 subterraneo (-4.01) + 4 pisos (-0.05, +3.91, +7.87, +11.83 techumbre); no hay 6to nivel.
+  - Viewer: se agrego rejilla de piso base (z=-4.01) y etiquetas de nivel S0..S4 con cota para hacer evidente el subterraneo.
+- Verificacion: consulta del JSON del modelo (5 niveles, 18 nodos cada uno, 18 columnas por entrepiso) y relectura de los rotulos DXF.
+- Limitacion: el usuario no percibia el nivel por la vista por defecto (no por falta de datos); se mejoro la referencia visual.

@@ -155,6 +155,26 @@ python entregas/p1l0/opensees/ejemplo_minimo_2d.py
   redistribucion via diafragma/vigas rigidas frente al reparto puro de tributaria.
 - Chequeo expuesto en `verificacion.json`, `informe-semana2.md` y en el panel del viewer.
 
+### Confirmacion de numero de niveles (directo desde DXF)
+
+- Ante la duda del equipo, se re-verifico el numero de niveles directamente desde los
+  rotulos `NIVEL SUPERIOR LOSA` de los DXF (NO solo desde la documentacion):
+  - 101: `-4.01` (1 Subterraneo) y `-0.05` (1 piso).
+  - 102: `+3.91` (2 piso) y `+7.87` (3 piso).
+  - 103: `+11.83` (techumbre / 4 piso).
+- Total: **5 niveles de losa = 1 subterraneo + 4 pisos** (el ultimo es techumbre). No hay
+  un sexto "techo" adicional. El modelo (`geometria_unity.json`) tiene los 5 niveles, con
+  18 nodos por nivel y 18 columnas por entrepiso.
+- Viewer: se agrego rejilla de piso en la base (z=-4.01) y etiquetas de nivel S0..S4 con
+  cota para hacer visible/identificable el subterraneo.
+
+### Pendiente (proxima etapa)
+
+- Validacion humana de la geometria (viewer/PNG) y de supuestos de carga (q_G/SC, vanos Y,
+  columnas en techumbre).
+- Siguientes etapas del proyecto: interface Unity completa, tratamiento de muros del 1S
+  como elementos, analisis modal/sismico.
+
 ## Semana 1 - P1L1 Benchmark 3D 2
 
 ### Alcance
