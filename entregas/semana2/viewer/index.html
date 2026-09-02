@@ -110,8 +110,8 @@ const DIAG=Math.hypot(Math.max(...allX)-Math.min(...allX),
                      Math.max(...allZ)-Math.min(...allZ));
 
 /* ---- camara orbital pinhole (yaw, pitch, distancia, target) ---- */
-const cam = { yaw:-0.9, pitch:0.5, dist:1.7*DIAG, target:[CX,CY,CZ] };
-function resetView(){ cam.yaw=-0.9; cam.pitch=0.5; cam.dist=1.7*DIAG; cam.target=[CX,CY,CZ]; render(); }
+const cam = { yaw:-0.9, pitch:0.28, dist:2.0*DIAG, target:[CX,CY,CZ] };
+function resetView(){ cam.yaw=-0.9; cam.pitch=0.28; cam.dist=2.0*DIAG; cam.target=[CX,CY,CZ]; render(); }
 let drag=null;
 cv.addEventListener('mousedown',e=>{ drag={x:e.clientX,y:e.clientY}; });
 window.addEventListener('mousemove',e=>{ if(!drag)return;
@@ -152,7 +152,7 @@ function proj(x,y,z){
 
 /* ---- colores por capa ---- */
 const COL={ nodes:'#66ff99', cols:'#5aa9ff', beams:'#c9a35c', walls:'#b48cff',
-            supports:'#ff5a5a', diaph:'rgba(90,169,255,0.18)', axes:'#ffffff', ids:'#ffd75a' };
+            supports:'#ff5a5a', diaph:'rgba(90,169,255,0.07)', axes:'#ffffff', ids:'#ffd75a' };
 
 /* ---- construccion de geometria ---- */
 const segs={ cols:[], beams:[], walls:[], supports:[], idpos:[] };
@@ -218,6 +218,18 @@ function render(){
     ctx.strokeStyle='rgba(90,169,255,0.45)'; ctx.lineWidth=1; ctx.stroke();
   });
 
+  // rejilla de piso en la base (z -4.01 = nivel S0 / subterraneo) para anclar la vista
+  const ZBASE=Math.min(...allZ);
+  ctx.strokeStyle='rgba(255,255,255,0.12)'; ctx.lineWidth=1;
+  for(let i=0;i<=18;i++){
+    const x=Math.min(...allX)+i*(Math.max(...allX)-Math.min(...allX))/18;
+    drawLine(x,Math.min(...allY),ZBASE,x,Math.max(...allY),ZBASE,'rgba(255,255,255,0.10)',1);
+  }
+  for(let i=0;i<=6;i++){
+    const y=Math.min(...allY)+i*(Math.max(...allY)-Math.min(...allY))/6;
+    drawLine(Math.min(...allX),y,ZBASE,Math.max(...allX),y,ZBASE,'rgba(255,255,255,0.10)',1);
+  }
+
   // elementos
   const order=[['cols','cols'],['walls','walls'],['supports','supports'],['beams','beams']];
   order.forEach(([key,col])=>{
@@ -248,6 +260,17 @@ function render(){
     ctx.fillStyle='#7aff9a'; ctx.fillText('Y',proj(0,6,0)[0]+2,proj(0,6,0)[1]+4);
     ctx.fillStyle='#7aaaff'; ctx.fillText('Z',proj(0,0,6)[0],proj(0,0,6)[1]-2);
   }
+
+  // etiquetas de nivel (S0..S4 + cota) junto a cada losa
+  ctx.font='11px Consolas,monospace';
+  GEO.levels.forEach((l,i)=>{
+    const xl=Math.max(...allX)+1.0;
+    const p=proj(xl,Math.max(...allY),l.z_m);
+    ctx.fillStyle=(i===0)?'#ff5a5a':'#8ab4f8';
+    ctx.fillText((l.name||('S'+i))+'  z='+l.z_m.toFixed(2)+' m', p[0]+3, p[1]);
+  });
+  ctx.fillStyle='#ff5a5a'; ctx.font='bold 11px Consolas,monospace';
+  ctx.fillText('SUBT.'+'  z='+Math.min(...allZ).toFixed(2)+' m (base/apoyos)', proj(Math.max(...allX)+1.0, Math.min(...allY)*2-Math.max(...allY)*1, Math.min(...allZ))[0]+0, proj(Math.max(...allX)+1.0, Math.min(...allY)*2-Math.max(...allY)*1, Math.min(...allZ))[1]+14);
 
   // info (una sola vez)
   fillInfo();
