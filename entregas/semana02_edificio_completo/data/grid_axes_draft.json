@@ -1,0 +1,73 @@
+{
+  "source": "Lectura manual usuario desde planos actuales, cotas en cm convertidas a m.",
+  "status": "draft",
+  "units": "m",
+  "notes": [
+    "Se incluyen primera etapa y segunda etapa, porque ambas son parte del edificio actual a modelar.",
+    "La tercera etapa/no construida queda fuera hasta recibir planos nuevos.",
+    "Todas las cotas entregadas por el usuario se consideran en cm salvo indicacion contraria; este archivo las convierte a m.",
+    "Hay dos cadenas internas distintas entre E y F: E-Eb-Ec-F y E-Ea-Ed-F. Ambas cierran en 10.00 m, por lo que se registran todos los ejes internos."
+  ],
+  "x_axes": {
+    "E_prime": -0.25,
+    "E": 0.0,
+    "Ea": 3.3,
+    "Eb": 3.6,
+    "Ec": 6.4,
+    "Ed": 6.7,
+    "F": 10.0,
+    "F_prime": 10.25,
+    "G": 20.0,
+    "Ga": 21.45,
+    "H": 30.0,
+    "H1": 33.825,
+    "H_prime": 34.477,
+    "H2": 38.825,
+    "I": 40.0,
+    "IA": 42.6,
+    "I_prime": 45.0,
+    "IB": 45.345,
+    "J": 50.0
+  },
+  "x_spans_raw_cm": {
+    "E-Eb": "250 + 110",
+    "Eb-Ec": "140 + 140",
+    "Ec-F": "110 + 250",
+    "F-G": "250 + 250 + 250 + 250",
+    "G-Ga": "145",
+    "G-H": "1000",
+    "H-H1": "382.5",
+    "H1-H2": "117.5 + 382.5",
+    "I-IA": "260",
+    "IA-I_prime": "240",
+    "I_prime-IB": "34.5",
+    "I_prime-J": "500 (leido desde CAD 2017_67-102/103)",
+    "F-F_prime": "25",
+    "E_prime-E": "25",
+    "E-Ea": "330",
+    "Ea-Ed": "340",
+    "Ed-F": "330",
+    "H-H_prime": "447.7",
+    "H_prime-I": "52.3 + 265 + 235"
+  },
+  "y_axes": {
+    "1": 0.0,
+    "1_prime": 0.25,
+    "1b": 0.55,
+    "2": 10.0,
+    "2a": 14.945,
+    "3": 17.25,
+    "3_prime": 17.5
+  },
+  "y_spans_raw_cm": {
+    "1-1_prime": "25",
+    "1_prime-1b": "30",
+    "1b-2": "55 + 890",
+    "2-2a": "494.5",
+    "2a-3": "230.5",
+    "3-3_prime": "25"
+  },
+  "pending_clarifications": [
+    "Falta confirmar si en Y existe eje 4 o 4_prime en otro plano; por ahora no se incorpora a la grilla."
+  ]
+}

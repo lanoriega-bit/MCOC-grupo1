@@ -1,0 +1,143 @@
+# Semana 2 - Edificio completo desde CAD
+
+## Alcance
+
+Esta carpeta contiene el avance del modelo completo del edificio para Semana 2.
+
+Se modela todo lo que aparece en los planos actuales, incluyendo primera etapa y segunda etapa. La tercera etapa/no construida queda fuera hasta recibir planos nuevos.
+
+Los planos CAD originales y DXF convertidos no se suben a GitHub. Se trabaja con ellos localmente y se versionan solo scripts, datos procesados, resultados e informes.
+
+## Carpetas
+
+| Carpeta | Contenido |
+| --- | --- |
+| `data/` | Datos trazables: ejes, niveles, reglas de extraccion, cargas preliminares y fuentes CAD |
+| `opensees/` | Scripts Python para extraer modelo CAD y correr esqueleto OpenSees |
+| `results/` | JSON, imagenes y verificaciones generadas |
+| `unity_export/` | JSON preparado para viewer Unity |
+| `docs/` | Estado tecnico del modelo |
+
+## Archivos principales
+
+| Archivo | Uso |
+| --- | --- |
+| `data/grid_axes_draft.json` | Ejes X/Y en metros, convertidos desde cotas en cm |
+| `data/levels_draft.json` | Niveles Z en metros |
+| `data/load_definitions_draft.json` | Cargas gravitacionales preliminares desde plano 700 |
+| `data/cad_sources.md` | Registro de DWG encontrados, conversion DXF y capas usadas |
+| `opensees/extract_cad_model.py` | Extrae segmentos CAD por capas y genera modelo 3D coloreado |
+| `opensees/building_gravity_skeleton.py` | Modelo OpenSees preliminar de gravedad para QA |
+| `results/cad_model_3d_segments.json` | Segmentos 3D con `elementTag`, categoria, piso, coordenadas y longitud |
+| `unity_export/model_viewer.json` | Export para viewer Unity con colores y toggles |
+| `results/cad_model_3d_colored.png` | Vista 3D coloreada del edificio |
+| `results/cad_model_floor_qc.png` | Control 2D por piso |
+| `results/gravity_skeleton_verification.json` | Verificacion del esqueleto OpenSees |
+
+## Ejes X preliminares
+
+Todas las cotas entregadas por el usuario se interpretan en cm y se convierten a m.
+
+| Eje | X [m] |
+| --- | ---: |
+| `E_prime` | `-0.250` |
+| `E` | `0.000` |
+| `Ea` | `3.300` |
+| `Eb` | `3.600` |
+| `Ec` | `6.400` |
+| `Ed` | `6.700` |
+| `F` | `10.000` |
+| `F_prime` | `10.250` |
+| `G` | `20.000` |
+| `Ga` | `21.450` |
+| `H` | `30.000` |
+| `H1` | `33.825` |
+| `H_prime` | `34.477` |
+| `H2` | `38.825` |
+| `I` | `40.000` |
+| `IA` | `42.600` |
+| `I_prime` | `45.000` |
+| `IB` | `45.345` |
+| `J` | `50.000` |
+
+## Ejes Y preliminares
+
+| Eje | Y [m] |
+| --- | ---: |
+| `1` | `0.000` |
+| `1_prime` | `0.250` |
+| `1b` | `0.550` |
+| `2` | `10.000` |
+| `2a` | `14.945` |
+| `3` | `17.250` |
+| `3_prime` | `17.500` |
+
+## Niveles Z preliminares
+
+| Nivel | Z [m] |
+| --- | ---: |
+| `base` | `0.000` |
+| `1S` | `3.960` |
+| `1` | `7.920` |
+| `2` | `11.880` |
+| `3` | `15.840` |
+| `4` | `19.800` |
+
+## Colores de categorias
+
+| Categoria | Color |
+| --- | --- |
+| Vigas `beam` | Azul |
+| Muros `wall` | Verde |
+| Pilares/columnas en planta `column_plan` | Naranjo |
+| Apoyos/fundaciones `support` | Negro |
+| Ejes `axis` | Rojo tenue |
+| Diafragmas `diaphragm` | Morado punteado |
+| Borde de losa `slab_edge` | Gris |
+
+## Resultados actuales
+
+| Resultado | Valor |
+| --- | ---: |
+| Segmentos CAD extraidos | `2460` |
+| Etiquetas estructurales extraidas | `514` |
+| Segmentos estructurales usados en esqueleto OpenSees | `1494` |
+| Nodos OpenSees preliminares | `3657` |
+| Elementos OpenSees preliminares | `3744` |
+| Diafragmas identificados | `5` |
+| Suma cargas Z | `-54322.527 kN` |
+| Suma reacciones Z | `54322.527 kN` |
+| Error equilibrio Z | `-1.49e-11 kN` |
+
+## Como ejecutar
+
+Primero instalar dependencias:
+
+```powershell
+python -m pip install -r requirements.txt
+```
+
+Si los DXF ya existen localmente, generar modelo CAD 3D:
+
+```powershell
+python entregas/semana02_edificio_completo/opensees/extract_cad_model.py
+```
+
+Luego correr el esqueleto OpenSees de gravedad:
+
+```powershell
+python entregas/semana02_edificio_completo/opensees/building_gravity_skeleton.py
+```
+
+## Estado del modelo OpenSees
+
+El archivo `building_gravity_skeleton.py` es un modelo preliminar de QA. Ya verifica equilibrio vertical, pero todavia no reemplaza la geometria CAD por centrolineas estructurales definitivas ni aplica cargas mediante areas tributarias explicitas sobre cada viga.
+
+Proximos pasos:
+
+1. Extraer centrolineas de vigas reales desde `RLE-VIGA`.
+2. Asociar cada viga a su etiqueta de seccion `V.60/80`, `V.20/80`, etc.
+3. Convertir pilares y muros a elementos verticales equivalentes.
+4. Aplicar diafragmas rigidos analiticos por piso en la malla centrolineal.
+5. Calcular areas tributarias explicitas y descargar `qG` sobre vigas.
+6. Exportar el mismo modelo final a Unity para inspeccion.
