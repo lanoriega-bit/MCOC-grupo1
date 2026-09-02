@@ -131,6 +131,18 @@ python entregas/p1l0/opensees/ejemplo_minimo_2d.py
 - Informe: `entregas/semana2/docs/informe-semana2.md`.
 - **Revision humana pendiente**: validar geometrica (PNG) y supuestos de carga/vanos Y y techumbre.
 
+### Viewer 3D autocontenido (OpenSees -> Unity)
+
+- `tools/build_viewer.py` genera `entregas/semana2/viewer/index.html` (un solo archivo HTML, sin librerias externas ni red; geometria embebida).
+- El viewer consume `results/geometria_unity.json` y `results/verificacion.json`:
+  - Orbitar (arrastrar), zoom (rueda), reset (F).
+  - Toggles de capas: nodos, columnas, vigas, muros, apoyos, diafragmas, IDs, ejes locales.
+  - **Tributary Area Inspector**: piso + viga, muestra `L`, `A_trib` (m²), `q·A` (kN) y `w` (kN/m).
+  - Muestra verificaciones: conservacion, equilibrio vertical y compatibilidad de diafragma.
+- El modelo ahora exporta `trib_area_m2` por viga (misma regla 1/4 por borde que la transferencia de carga) para que el inspector sea coherente con la carga aplicada en OpenSees.
+- Registro: `entregas/semana2/viewer/README.md`.
+- El viewer valida el mismo contrato JSON que consumira el proyecto Unity (arquitectura OpenSees/Unity sin cambio).
+
 ## Semana 1 - P1L1 Benchmark 3D 2
 
 ### Alcance

@@ -76,3 +76,12 @@
 - Verificacion (asserts automaticos): conservacion de carga (error 3.7e-12 kN), equilibrio vertical (error 2.2e-11 kN), compatibilidad de diafragma rigido (diferencia en plano 7.3e-6 m). Todo pasa.
 - Hipotesis documentadas: q_G = 6.35 kN/m² + SC 2.5 kN/m² = 8.85 kN/m²; reticula Y = 0,7.25,16.15 m; techumbre con 2 filas de columnas; el 1°S se modela como geometria pero no carga losa tipica (nivel de muros de contencion).
 - Limitacion: este agente no interpreta imagenes; la validacion visual del PNG y el cruce fino de vanos/cargas con los planos queda para revision humana.
+
+## Semana 2 - Viewer 3D autocontenido (etapa 3)
+
+- Objetivo: validar visualmente la geometria y las areas tributarias sin depender del editor de Unity, consumiendo el mismo contrato JSON que usara Unity.
+- Encargo a IA: generar un viewer HTML autocontenido (un archivo, sin red) que lea `geometria_unity.json` y `verificacion.json`.
+- Resultado: `tools/build_viewer.py` -> `entregas/semana2/viewer/index.html` con orbitar/zoom/reset, toggles de capas (nodos, columnas, vigas, muros, apoyos, diafragmas, IDs, ejes locales), Tributary Area Inspector (L, A_trib, q*A, w) y verificaciones mostradas en pantalla.
+- Se agrego `trib_area_m2` por viga al contrato JSON (regla 1/4 por borde del panel), coherente con la transferencia de carga real en OpenSees.
+- Verificacion: el viewer se abre localmente sin servidor; los datos del inspector suman q*A_trib = carga transferida por la misma regla del analisis.
+- Limitacion: viewer en HTML/JS como validacion/preproceso; el producto oficial Unity (postproceso delegado) sigue siendo una etapa posterior. El JSON de contrato no cambia de esquema.
