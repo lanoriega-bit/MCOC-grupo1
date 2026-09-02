@@ -40,6 +40,22 @@ Conversión: valor_dxf × 0.01 = metros.
 - Ejes Y: `1=~6297, 2=~5407, 3=~4682` (+ `1''=5907, 2a=4912`).
 - Pilares: 70 cm y 22 cm (más columnas 22 = mayor presencia de col 20 en pisos altos). Vigas: 435/930/655/820/665/830.
 
+## Retícula por piso (extraída a JSON, bloque principal)
+
+Usando `tools/extraer_piso_json.py` (agrupa cuadrados de pilar 70x70 y limpia filas/columnas por clustering):
+
+| Piso | Rango Y del plano | nº col | Retícula cx (cm) | Retícula cy (cm) | JSON |
+|------|-------------------|--------|------------------|------------------|------|
+| 2° | 102, y∈[5200,8700] | 18 (6×3) | 893, 1893, 2893, 3893, 4893, 5393 | 6266, 6995, 7885 | `data/piso2_raw.json` |
+| 3° | 102, y∈[0,5200] | 18 (6×3) | 535, 1535, 2535, 3535, 4535, 5035 | 2645, 3370, 4260 | `data/piso3_raw.json` |
+| 4° (techumbre) | 103, y∈[0,5500] | 12 (6×2) | 490, 1490, 2490, 3490, 4490, 4990 | 4664, 5389 | `data/piso4_raw.json` |
+
+- Todos los pilares del bloque principal son **70×70 cm**.
+- **Vanos X entre columnas** (centros): 1000, 1000, 1000, 1000, 500 cm → luces principales de **10.00 m** con eje secundario a media luz, y borde de 5.00 m (hasta I'-J).
+- **Vanos Y piso 2-3**: ~725 y ~890 cm; piso 4: ~725 cm (2 filas).
+- Vigas dominantes (longitud cm): 660 y 440 (mayoría), más 930/820/830 y 60 (ancho perfil 60/80). → se debe cruzar con cotas reales del plano para asignar vigas primarias/secundarias en la etapa de modelado.
+- Las coordenadas son relativas a la copia del papel; para el modelo se usan coordenadas locales por piso (desplazamiento gráfico entre pisos no es geométrico real).
+
 ## Niveles de piso y alturas de entrepiso (trazables desde planos)
 
 Niveles = cota de **nivel superior de losa** (S.I.C.), extraídos de los rótulos de los planos:
@@ -73,7 +89,7 @@ Extras útiles de niveles:
 - **Losa**: e=15 en 2°-4° (y e=15 en 1°); fundación losa/radier e=25 y vigas de fundación V.F.
 
 ## Siguientes pasos
-1. Corregir la retícula "limpia" de referencia por planta (elegir UNA copia alineada al edificio) y extraer coordenadas de pilares (cuadrados 70) y vigas por piso.
-2. Definir ejes locales del solver y numeración de nodos/vigas/columnas/muros por piso.
+1. Validar visualmente la retícula fina y la asignación de vigas primarias/secundarias (cruce con cotas del plano 102).
+2. Extraer piso 1° y 1°S (plano 101, dos bloques, dilatación 10 cm) y confirmar continuidad de columnas con los pisos 2-4.
 3. Cargas del plano 700 → q_G por zona.
-4. Ensamblar JSON por piso + modelo OpenSeesPy + diafragmas rígidos + áreas tributarias + verificaciones.
+4. Ensamblar JSON por piso (interfaz OpenSees-Unity) + modelo OpenSeesPy + diafragmas rígidos + áreas tributarias + verificaciones.

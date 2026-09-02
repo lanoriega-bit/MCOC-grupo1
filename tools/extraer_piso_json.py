@@ -113,10 +113,22 @@ def extract_segments(msp, layer, ymin=-1e9, ymax=1e9, min_len=10.0):
     return out
 
 
+def cluster_axis(vals, tol=20.0):
+    """Agrupa coordenadas cercanas (ruido de redondeo) en un valor representativo."""
+    vals = sorted(vals)
+    groups = []
+    for v in vals:
+        if groups and abs(v - groups[-1][-1]) <= tol:
+            groups[-1].append(v)
+        else:
+            groups.append([v])
+    return [round(sum(g) / len(g), 1) for g in groups]
+
+
 def grid_from_cols(cols, tol=2.0):
     """Deriva reticula (xs unicas, ys unicas) de los centros de columnas."""
-    xs = sorted({round(c["cx"]) for c in cols})
-    ys = sorted({round(c["cy"]) for c in cols})
+    xs = cluster_axis([c["cx"] for c in cols], tol=20.0)
+    ys = cluster_axis([c["cy"] for c in cols], tol=20.0)
     return xs, ys
 
 
