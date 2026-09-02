@@ -88,8 +88,15 @@ Extras útiles de niveles:
 - **Muros**: M.H.A. e=20/25/30, M.I. e=20.
 - **Losa**: e=15 en 2°-4° (y e=15 en 1°); fundación losa/radier e=25 y vigas de fundación V.F.
 
+## Piso 1° y 1°S (plano 101, más complejo)
+
+- **Piso 1°** (y∈[0,5000]): 16 columnas 70×70 en ejes `E,I,I',J` (x≈1063, 2061, 3061, 4062, 5061, 5561) + columnas 30×30 en zonas locales (radier/escaleras). Vanos X: 1000, 1000, 1000, 1000, 500 (mismo patrón que pisos 2-4, solo con corrimiento gráfico del papel).
+- **1°S** (y∈[5234,8557]): planta mayormente de muros de contención/pantallas; no presenta cuadrados de pilar 70×70 en RLE-PILAR (se modela vía muros/equivalentes).
+- **Continuidad vertical confirmada**: la retícula X de columnas del piso 1° (E-F-G-H-I-I'-J) coincide con la de los pisos 2-4; cada piso solo difiere por el corrimiento gráfico del papel (≈527 cm), no geométrico. → La malla de columnas es continua de piso 1° a 4°.
+- Datos crudos: `data/piso1_raw.json`, `data/piso1S_raw.json` (el 1°S no tiene columnas detectadas automáticamente; se requiere tratamiento por muros).
+
 ## Siguientes pasos
 1. Validar visualmente la retícula fina y la asignación de vigas primarias/secundarias (cruce con cotas del plano 102).
-2. Extraer piso 1° y 1°S (plano 101, dos bloques, dilatación 10 cm) y confirmar continuidad de columnas con los pisos 2-4.
+2. Tratar el 1°S (muros de contención) y definir apoyos de fundaciones desde el plano 100.
 3. Cargas del plano 700 → q_G por zona.
 4. Ensamblar JSON por piso (interfaz OpenSees-Unity) + modelo OpenSeesPy + diafragmas rígidos + áreas tributarias + verificaciones.
