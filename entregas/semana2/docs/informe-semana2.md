@@ -75,6 +75,7 @@ carga de losa como piso típico.
 | Conservación de carga | Σ carga en vigas vs. 4×carga de piso | error **3.7e-12 kN** ✓ |
 | Equilibrio vertical | Σ reacciones Z vs. Σ cargas | 25726.95 = 25726.95 kN, error **2.2e-11 kN** ✓ |
 | Compatibilidad de diafragma | ux,uy iguales en todos los nodos de un piso (sólido rígido) | dif. en plano **7.3e-6 m** (< 0.1 mm) ✓ |
+| Cálculo manual independiente (axial en columnas) | Σ axial manual por área tributaria (Voronoi) vs. reacciones en base de cada columna | Σ manual = **25726.95 kN** = Σ OpenSees; máx. error por columna **50.0 kN** (~1.2% en columnas mayores) ✓ |
 | Convergencia del análisis | análisis elástico completo | convergente ✓ |
 
 El script lanza **assert** y aborta si falla alguna, garantizando que los resultados

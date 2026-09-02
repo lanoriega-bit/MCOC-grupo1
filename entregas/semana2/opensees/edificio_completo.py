@@ -237,6 +237,39 @@ def main() -> None:
     sum_rz = sum(r[2] for r in reactions.values())
     disp = {n: tuple(ops.nodeDisp(n, dof) for dof in (1, 2, 3)) for n in node_id.values()}
 
+    # ---- Verificacion por calculo manual independiente (AGENTS: "compare
+    #      against an independent hand calculation") ----
+    # Cada columna recauda su area tributaria (Voronoi sobre la reticula de
+    # columnas) por cada piso cargado; el axial esperado = q * sum(area_trib * n_pisos).
+    # Se compara contra la reaccion vertical en base de esa columna.
+    import collections
+    trib_col_area = collections.defaultdict(float)
+    for ilz in range(1, len(zg)):  # pisos con losa cargada
+        rows = rows_per_level[ilz]
+        for iy in rows:
+            for ix in range(len(xg)):
+                x0 = (xg[ix - 1] + xg[ix]) / 2 if ix > 0 else xg[0] - float("inf")
+                x1 = (xg[ix + 1] + xg[ix]) / 2 if ix < len(xg) - 1 else float("inf")
+                y0 = (yg[iy - 1] + yg[iy]) / 2 if iy > 0 else yg[0] - float("inf")
+                y1 = (yg[iy + 1] + yg[iy]) / 2 if iy < len(yg) - 1 else float("inf")
+                xa = max(x0, xg[0]); xb = min(x1, xg[-1])
+                ya = max(y0, yg[0]); yb = min(y1, yg[-1])
+                trib_col_area[(ix, iy)] += max(0.0, xb - xa) * max(0.0, yb - ya)
+    axial_hand = {}   # clave (ix,iy) -> axial esperado en base (N)
+    for (ix, iy), a in trib_col_area.items():
+        axial_hand[(ix, iy)] = total * a
+    base_node_col = {}  # nodo base -> (ix,iy)
+    for (ix, iy, ilz), n in node_id.items():
+        if ilz == 0:
+            base_node_col[n] = (ix, iy)
+    hand_errs = []
+    for n, rz_t in reactions.items():
+        if n in base_node_col and base_node_col[n] in axial_hand:
+            hand_errs.append(abs(rz_t[2] - axial_hand[base_node_col[n]]))
+    max_col_hand_err = max(hand_errs) if hand_errs else 0.0
+    sum_axial_hand = sum(axial_hand.values())
+
+
     # ---- Salidas ----
     repo_root = Path(__file__).resolve().parents[3]
     entrega_root = Path(__file__).resolve().parents[1]
@@ -306,9 +339,10 @@ def main() -> None:
             "conservacion_carga_error_kN": kN(conservation_error),
             "equilibrio_vertical_error_kN": kN(equilibrium_error),
             "sum_reacciones_Z_kN": kN(sum_rz),
-            "conexion": True,
             "max_diaphragm_inplane_diff_piso4_m": max_diaphragm_inplane_diff,
             "n_diaphragms": len(zg),
+            "handcalc_max_col_axial_error_kN": kN(max_col_hand_err),
+            "handcalc_sum_col_axial_kN": kN(sum_axial_hand),
         },
         "geometry_diagram": geometry_path.relative_to(repo_root).as_posix(),
     }
@@ -357,6 +391,8 @@ def main() -> None:
     assert conservation_error < 1.0, f"Conservacion de carga fallo: {conservation_error:.3e} N"
     assert equilibrium_error < 1.0, f"Equilibrio vertical fallo: {equilibrium_error:.3e} N"
     assert max_diaphragm_inplane_diff < 1e-4, f"Diafragma no compatible en plano: {max_diaphragm_inplane_diff:.3e} m"
+    assert max_col_hand_err < 0.05 * max(sum_axial_hand, 1.0), \
+        f"Chequeo manual de axial en columnas fallo: {kN(max_col_hand_err):.3f} kN"
 
     print("Modelo edificio Semana 2 (bloque principal)")
     for k in ("niveles_losa", "nodos", "elementos", "num_columnas", "num_vigas"):
@@ -368,6 +404,7 @@ def main() -> None:
     print(f"  conservacion error = {kN(conservation_error):.3e} kN")
     print(f"  equilibrio error = {kN(equilibrium_error):.3e} kN")
     print(f"  max diaphragm in-plane diff = {max_diaphragm_inplane_diff:.3e} m")
+    print(f"  handcalc sum col axial = {kN(sum_axial_hand):.3f} kN  (max err/col {kN(max_col_hand_err):.3f} kN)")
     print(f"  diagrama: {geometry_path}")
     print(f"  verificacion: {out_path}")
     print(f"  unity json: {unity_path}")

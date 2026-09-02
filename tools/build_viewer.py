@@ -184,6 +184,8 @@ function fillInfo(){
   document.getElementById('v_eq').textContent=fmt(kN(ch.equilibrio_vertical_error_kN))+' kN';
   const dd=ch.max_diaphragm_inplane_diff_m;
   document.getElementById('v_diaph').textContent=(dd!==undefined?(dd*1000).toFixed(4):'--')+' mm';
+  const he=ch.handcalc_max_col_axial_error_kN;
+  document.getElementById('v_hand').textContent=(he!==undefined?he.toFixed(3):'--');
 }
 function kN(v){ return v? v/1000 : 0; }
 function fmt(v){ return Number(v).toExponential(2); }
@@ -322,6 +324,7 @@ HTML_HEAD = r"""<!DOCTYPE html>
   Conservación: <b class="ok" id="v_conserv"></b> kN<br>
   Equilibrio vertical: <b class="ok" id="v_eq"></b> kN<br>
   Diafragma rígido (Δ plano): <b class="ok" id="v_diaph"></b> mm
+  Cálculo manual axial en columnas: <b class="ok" id="v_hand"></b> kN
 </div>
 
 <div id="tip">Arrastrar: orbitar · Rueda: zoom · F: reset</div>
