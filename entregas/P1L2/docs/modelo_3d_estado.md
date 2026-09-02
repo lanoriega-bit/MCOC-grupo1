@@ -1,4 +1,4 @@
-# Estado modelo 3D - Semana 2
+# Estado modelo 3D - P1L2
 
 ## Alcance
 
@@ -34,10 +34,7 @@ Los archivos DWG/DXF quedan ignorados por Git. El repositorio versiona scripts, 
 
 | Archivo | Uso |
 | --- | --- |
-| `entregas/semana02_edificio_completo/results/cad_model_3d_segments.json` | Modelo 3D CAD apilado, con `elementTag` por segmento |
-| `entregas/semana02_edificio_completo/unity_export/model_viewer.json` | Export directo para viewer Unity |
-| `entregas/semana02_edificio_completo/results/cad_model_3d_colored.png` | Vista 3D coloreada por tipo |
-| `entregas/semana02_edificio_completo/results/cad_model_floor_qc.png` | Control 2D por piso |
+| `entregas/P1L2/unity_export/model_viewer.json` | Export directo para viewer web/Unity |
 
 ## Resumen actual
 

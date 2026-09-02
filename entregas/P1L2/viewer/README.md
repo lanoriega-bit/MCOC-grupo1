@@ -15,7 +15,7 @@ python -m http.server 8000
 Luego abrir:
 
 ```text
-http://localhost:8000/entregas/semana02_edificio_completo/viewer/
+http://localhost:8000/entregas/P1L2/viewer/
 ```
 
 No abrir `index.html` con doble click, porque el navegador puede bloquear la lectura de `model_viewer.json`.

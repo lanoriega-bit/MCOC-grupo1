@@ -420,7 +420,9 @@ function topView() {
   const size = modelBounds.getSize(new THREE.Vector3());
   const radius = Math.max(size.x, size.y) * 1.05;
   controls.target.copy(center);
+  camera.up.set(0, 1, 0);
   camera.position.set(center.x, center.y, center.z + radius);
+  camera.lookAt(center);
   controls.update();
 }
 
@@ -428,18 +430,21 @@ function sideView(side) {
   if (!modelBounds) return;
   const center = modelBounds.getCenter(new THREE.Vector3());
   const size = modelBounds.getSize(new THREE.Vector3());
-  const dist = Math.max(size.x, size.y, size.z) * 1.4;
-  controls.target.copy(center);
+  const dist = Math.max(size.x, size.y, size.z) * 1.5;
   const lift = size.z * 0.08;
-  if (side === "A") {
-    camera.position.set(center.x + dist, center.y, center.z + lift); // +X
-  } else if (side === "B") {
-    camera.position.set(center.x, center.y + dist, center.z + lift); // +Y
-  } else if (side === "C") {
-    camera.position.set(center.x - dist, center.y, center.z + lift); // -X
-  } else if (side === "D") {
-    camera.position.set(center.x, center.y - dist, center.z + lift); // -Y
-  }
+
+  // Orientar la orbita: D = sur (-Y) es la referencia. Los demas son
+  // rotaciones de +90° hacia la derecha: A = este, B = norte, C = oeste.
+  const angles = { D: 0, A: Math.PI / 2, B: Math.PI, C: Math.PI * 1.5 };
+  const angle = angles[side] ?? 0;
+  const offset = new THREE.Vector3(0, -dist, 0).applyMatrix4(new THREE.Matrix4().makeRotationZ(angle));
+
+  // Fijar la vertical del mundo (Z) como "arriba" en pantalla para que
+  // el piso base quede abajo y el piso 4 arriba en los 4 lados.
+  camera.up.set(0, 0, 1);
+  controls.target.copy(center);
+  camera.position.set(center.x + offset.x, center.y + offset.y, center.z + lift);
+  camera.lookAt(center);
   controls.update();
 }
 

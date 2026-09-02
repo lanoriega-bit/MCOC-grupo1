@@ -1,12 +1,12 @@
-# Semana 2 - Edificio completo desde CAD
+# P1L2 - Edificio completo desde CAD
 
 ## Alcance
 
-Esta carpeta contiene el avance del modelo completo del edificio para Semana 2.
+Esta carpeta contiene la entrega P1L2: el modelo completo del edificio modelado desde CAD.
 
 Se modela todo lo que aparece en los planos actuales, incluyendo primera etapa y segunda etapa. La tercera etapa/no construida queda fuera hasta recibir planos nuevos.
 
-Los planos CAD originales y DXF convertidos no se suben a GitHub. Se trabaja con ellos localmente y se versionan solo scripts, datos procesados, resultados e informes.
+Los planos CAD originales y DXF convertidos no se suben a GitHub. Se trabaja con ellos localmente y se versionan solo scripts, datos procesados e informes.
 
 ## Carpetas
 
@@ -14,8 +14,8 @@ Los planos CAD originales y DXF convertidos no se suben a GitHub. Se trabaja con
 | --- | --- |
 | `data/` | Datos trazables: ejes, niveles, reglas de extraccion, cargas preliminares y fuentes CAD |
 | `opensees/` | Scripts Python para extraer modelo CAD y correr esqueleto OpenSees |
-| `results/` | JSON, imagenes y verificaciones generadas |
-| `unity_export/` | JSON preparado para viewer Unity |
+| `unity_export/` | JSON preparado para viewer Unity/web |
+| `viewer/` | Viewer 3D interactivo del edificio |
 | `docs/` | Estado tecnico del modelo |
 
 ## Archivos principales
@@ -26,14 +26,10 @@ Los planos CAD originales y DXF convertidos no se suben a GitHub. Se trabaja con
 | `data/levels_draft.json` | Niveles Z en metros |
 | `data/load_definitions_draft.json` | Cargas gravitacionales preliminares desde plano 700 |
 | `data/cad_sources.md` | Registro de DWG encontrados, conversion DXF y capas usadas |
-| `opensees/extract_cad_model.py` | Extrae segmentos CAD por capas y genera modelo 3D coloreado |
+| `opensees/extract_cad_model.py` | Extrae segmentos CAD por capas y genera el modelo 3D del edificio |
 | `opensees/building_gravity_skeleton.py` | Modelo OpenSees preliminar de gravedad para QA |
-| `results/cad_model_3d_segments.json` | Segmentos 3D con `elementTag`, categoria, piso, coordenadas y longitud |
-| `unity_export/model_viewer.json` | Export para viewer Unity con colores y toggles |
-| `results/cad_model_3d_colored.png` | Vista 3D coloreada del edificio |
-| `results/cad_model_floor_qc.png` | Control 2D por piso |
-| `results/gravity_skeleton_verification.json` | Verificacion del esqueleto OpenSees |
-| `viewer/index.html` | Viewer web 3D preliminar tipo orbit/zoom para QA |
+| `unity_export/model_viewer.json` | Export para viewer Unity/web con colores y toggles |
+| `viewer/index.html` | Viewer web 3D interactivo tipo orbit/zoom para QA |
 
 ## Ejes X preliminares
 
@@ -121,13 +117,13 @@ python -m pip install -r requirements.txt
 Si los DXF ya existen localmente, generar modelo CAD 3D:
 
 ```powershell
-python entregas/semana02_edificio_completo/opensees/extract_cad_model.py
+python entregas/P1L2/opensees/extract_cad_model.py
 ```
 
 Luego correr el esqueleto OpenSees de gravedad:
 
 ```powershell
-python entregas/semana02_edificio_completo/opensees/building_gravity_skeleton.py
+python entregas/P1L2/opensees/building_gravity_skeleton.py
 ```
 
 Para abrir el viewer web 3D, levantar un servidor HTTP local desde la raiz del repositorio:
@@ -139,7 +135,7 @@ python -m http.server 8000
 Luego abrir en el navegador:
 
 ```text
-http://localhost:8000/entregas/semana02_edificio_completo/viewer/
+http://localhost:8000/entregas/P1L2/viewer/
 ```
 
 El viewer permite:
