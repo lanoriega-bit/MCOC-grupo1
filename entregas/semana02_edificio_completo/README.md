@@ -33,6 +33,7 @@ Los planos CAD originales y DXF convertidos no se suben a GitHub. Se trabaja con
 | `results/cad_model_3d_colored.png` | Vista 3D coloreada del edificio |
 | `results/cad_model_floor_qc.png` | Control 2D por piso |
 | `results/gravity_skeleton_verification.json` | Verificacion del esqueleto OpenSees |
+| `viewer/index.html` | Viewer web 3D preliminar tipo orbit/zoom para QA |
 
 ## Ejes X preliminares
 
@@ -128,6 +129,27 @@ Luego correr el esqueleto OpenSees de gravedad:
 ```powershell
 python entregas/semana02_edificio_completo/opensees/building_gravity_skeleton.py
 ```
+
+Para abrir el viewer web 3D, levantar un servidor HTTP local desde la raiz del repositorio:
+
+```powershell
+python -m http.server 8000
+```
+
+Luego abrir en el navegador:
+
+```text
+http://localhost:8000/entregas/semana02_edificio_completo/viewer/
+```
+
+El viewer permite:
+
+1. Orbitar, acercar, alejar y hacer pan con controles tipo Google Earth.
+2. Activar/desactivar pisos: `base`, `1S`, `1`, `2`, `3`, `4`.
+3. Activar/desactivar categorias: vigas, muros, pilares, apoyos, ejes, diafragmas y bordes de losa.
+4. Aislar un piso con el boton `solo`.
+5. Buscar un `elementTag`, por ejemplo `CAD_1_beam_0042`.
+6. Hacer click sobre un elemento para ver tipo, piso, capa CAD, plano, longitud, coordenadas y ejes locales del seleccionado.
 
 ## Estado del modelo OpenSees
 

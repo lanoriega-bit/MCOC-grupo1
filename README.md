@@ -115,6 +115,18 @@ Para correr el esqueleto OpenSees de gravedad de Semana 2:
 python entregas/semana02_edificio_completo/opensees/building_gravity_skeleton.py
 ```
 
+Para abrir el viewer web 3D preliminar de Semana 2:
+
+```powershell
+python -m http.server 8000
+```
+
+Abrir luego:
+
+```text
+http://localhost:8000/entregas/semana02_edificio_completo/viewer/
+```
+
 Al ejecutarlo, ademas de imprimir la verificacion numerica, se genera una imagen con el resultado fisico del modelo:
 
 ```text

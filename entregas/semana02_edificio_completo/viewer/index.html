@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Semana 2 - Viewer 3D edificio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main id="app">
+      <section id="viewport" aria-label="visor 3D"></section>
+
+      <aside id="panel">
+        <header>
+          <p class="eyebrow">Semana 2</p>
+          <h1>Viewer 3D edificio</h1>
+          <p id="status">Cargando modelo...</p>
+        </header>
+
+        <section class="panel-block">
+          <h2>Navegacion</h2>
+          <div class="button-grid">
+            <button id="reset-view">Vista inicial</button>
+            <button id="top-view">Vista planta</button>
+            <button id="fit-view">Centrar</button>
+            <button id="toggle-labels">IDs: off</button>
+          </div>
+          <p class="hint">Mouse: arrastrar para orbitar, rueda para zoom, click derecho para pan.</p>
+        </section>
+
+        <section class="panel-block">
+          <h2>Pisos</h2>
+          <div id="floor-controls" class="control-list"></div>
+        </section>
+
+        <section class="panel-block">
+          <h2>Tipos</h2>
+          <div id="category-controls" class="control-list"></div>
+        </section>
+
+        <section class="panel-block">
+          <h2>Buscar elemento</h2>
+          <div class="search-row">
+            <input id="tag-search" type="search" placeholder="Ej: CAD_1_beam_0042" />
+            <button id="search-button">Ir</button>
+          </div>
+        </section>
+
+        <section class="panel-block selected-card">
+          <h2>Seleccion</h2>
+          <dl id="selection-details">
+            <dt>Estado</dt>
+            <dd>Haz click sobre una viga, muro, pilar o apoyo.</dd>
+          </dl>
+        </section>
+      </aside>
+    </main>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+        }
+      }
+    </script>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
