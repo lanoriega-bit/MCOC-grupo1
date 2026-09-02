@@ -62,12 +62,15 @@ LAYER_CATEGORIES = {
 CATEGORY_COLORS = {
     "beam": "#1f77b4",
     "wall": "#2ca02c",
+    "column": "#ff7f0e",
     "column_plan": "#ff7f0e",
     "slab_edge": "#999999",
+    "slab": "#8fb8ff",
     "slab_label": "#bbbbbb",
     "axis": "#d62728",
     "diaphragm": "#9467bd",
     "support": "#000000",
+    "cad_reference": "#7d8794",
 }
 
 
@@ -236,7 +239,188 @@ def floor_diaphragms(segments: list[dict[str, object]]) -> list[dict[str, object
     return diaphragms
 
 
-def write_model_json(path: Path, segments: list[dict[str, object]], labels: list[dict[str, object]], diaphragms: list[dict[str, object]]) -> None:
+def previous_floor_z(floor_id: str) -> float:
+    previous = 0.0
+    for floor in FLOORS:
+        if floor.floor_id == floor_id:
+            return previous
+        previous = floor.z_m
+    return 0.0
+
+
+def make_linear_solid(
+    tag: str,
+    category: str,
+    floor: str,
+    start: tuple[float, float, float],
+    end: tuple[float, float, float],
+    width_m: float,
+    height_m: float,
+    z_center_m: float,
+    source: dict[str, object],
+) -> dict[str, object]:
+    return {
+        "solidTag": tag,
+        "category": category,
+        "kind": "linear_prism",
+        "floor": floor,
+        "sourceTag": source.get("elementTag"),
+        "source_layer": source.get("source_layer"),
+        "source_dxf": source.get("source_dxf"),
+        "start": [start[0], start[1], z_center_m],
+        "end": [end[0], end[1], z_center_m],
+        "width_m": width_m,
+        "height_m": height_m,
+        "length_m": math.dist((start[0], start[1], 0.0), (end[0], end[1], 0.0)),
+        "confidence": source.get("confidence", "medium"),
+    }
+
+
+def cluster_column_segments(floor_id: str, segments: list[dict[str, object]]) -> list[dict[str, object]]:
+    column_segments = [
+        segment
+        for segment in segments
+        if segment["floor"] == floor_id and segment["category"] == "column_plan" and 0.08 <= segment["length_m"] <= 1.50
+    ]
+    clusters: list[dict[str, object]] = []
+    for segment in column_segments:
+        points = segment["points"]
+        mx = (points[0][0] + points[1][0]) / 2.0
+        my = (points[0][1] + points[1][1]) / 2.0
+        assigned = None
+        for cluster in clusters:
+            cx, cy = cluster["center"]
+            if math.hypot(mx - cx, my - cy) <= 0.85:
+                assigned = cluster
+                break
+        if assigned is None:
+            assigned = {"segments": [], "points": [], "center": (mx, my)}
+            clusters.append(assigned)
+        assigned["segments"].append(segment)
+        assigned["points"].extend(points)
+        xs = [point[0] for point in assigned["points"]]
+        ys = [point[1] for point in assigned["points"]]
+        assigned["center"] = (sum(xs) / len(xs), sum(ys) / len(ys))
+
+    solids = []
+    z_top = next(floor.z_m for floor in FLOORS if floor.floor_id == floor_id)
+    z_bottom = previous_floor_z(floor_id)
+    height = z_top - z_bottom
+    for index, cluster in enumerate(clusters, start=1):
+        points = cluster["points"]
+        xs = [point[0] for point in points]
+        ys = [point[1] for point in points]
+        width = min(max(max(xs) - min(xs), 0.35), 1.20)
+        depth = min(max(max(ys) - min(ys), 0.35), 1.20)
+        cx, cy = cluster["center"]
+        solids.append(
+            {
+                "solidTag": f"SOL_{floor_id}_column_{index:04d}",
+                "category": "column",
+                "kind": "box",
+                "floor": floor_id,
+                "center": [cx, cy, (z_bottom + z_top) / 2.0],
+                "width_m": width,
+                "depth_m": depth,
+                "height_m": height,
+                "length_m": height,
+                "source_layer": "RLE-PILAR",
+                "source_dxf": cluster["segments"][0].get("source_dxf"),
+                "sourceTags": [segment.get("elementTag") for segment in cluster["segments"]],
+                "confidence": "medium",
+            }
+        )
+    return solids
+
+
+def generate_solids(segments: list[dict[str, object]], diaphragms: list[dict[str, object]]) -> list[dict[str, object]]:
+    solids: list[dict[str, object]] = []
+    counters: dict[str, int] = {"beam": 0, "wall": 0, "support": 0, "slab": 0}
+    floor_ids = [floor.floor_id for floor in FLOORS if floor.floor_id != "base"]
+
+    for segment in segments:
+        floor = str(segment["floor"])
+        category = str(segment["category"])
+        if segment["length_m"] < 0.35:
+            continue
+        start, end = segment["points"]
+        if category == "beam" and floor != "base":
+            counters["beam"] += 1
+            solids.append(
+                make_linear_solid(
+                    f"SOL_{floor}_beam_{counters['beam']:04d}",
+                    "beam",
+                    floor,
+                    tuple(start),
+                    tuple(end),
+                    0.32,
+                    0.60,
+                    start[2] - 0.30,
+                    segment,
+                )
+            )
+        elif category == "wall" and floor != "base":
+            counters["wall"] += 1
+            z_bottom = previous_floor_z(floor)
+            z_top = start[2]
+            solids.append(
+                make_linear_solid(
+                    f"SOL_{floor}_wall_{counters['wall']:04d}",
+                    "wall",
+                    floor,
+                    tuple(start),
+                    tuple(end),
+                    0.22,
+                    z_top - z_bottom,
+                    (z_bottom + z_top) / 2.0,
+                    segment,
+                )
+            )
+        elif category == "support" and floor == "base":
+            counters["support"] += 1
+            solids.append(
+                make_linear_solid(
+                    f"SOL_base_support_{counters['support']:04d}",
+                    "support",
+                    floor,
+                    tuple(start),
+                    tuple(end),
+                    0.55,
+                    0.35,
+                    0.175,
+                    segment,
+                )
+            )
+
+    for floor_id in floor_ids:
+        solids.extend(cluster_column_segments(floor_id, segments))
+
+    for diaphragm in diaphragms:
+        points = diaphragm["points"]
+        xs = [point[0] for point in points]
+        ys = [point[1] for point in points]
+        z = points[0][2]
+        counters["slab"] += 1
+        solids.append(
+            {
+                "solidTag": f"SOL_{diaphragm['floor']}_slab_{counters['slab']:04d}",
+                "category": "slab",
+                "kind": "slab_box",
+                "floor": diaphragm["floor"],
+                "center": [(min(xs) + max(xs)) / 2.0, (min(ys) + max(ys)) / 2.0, z - 0.04],
+                "width_m": max(xs) - min(xs),
+                "depth_m": max(ys) - min(ys),
+                "height_m": 0.08,
+                "area_m2": (max(xs) - min(xs)) * (max(ys) - min(ys)),
+                "source_layer": "generated_diaphragm_bbox",
+                "source_dxf": "generated",
+                "confidence": "low",
+            }
+        )
+    return solids
+
+
+def write_model_json(path: Path, segments: list[dict[str, object]], labels: list[dict[str, object]], diaphragms: list[dict[str, object]], solids: list[dict[str, object]]) -> None:
     summary: dict[str, dict[str, int]] = {}
     for segment in segments:
         floor_summary = summary.setdefault(str(segment["floor"]), {})
@@ -250,6 +434,7 @@ def write_model_json(path: Path, segments: list[dict[str, object]], labels: list
         "colors": CATEGORY_COLORS,
         "summary": summary,
         "segments": segments,
+        "solids": solids,
         "labels": labels,
         "diaphragms": diaphragms,
     }
@@ -257,12 +442,13 @@ def write_model_json(path: Path, segments: list[dict[str, object]], labels: list
     path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
 
 
-def write_unity_export(path: Path, segments: list[dict[str, object]], labels: list[dict[str, object]], diaphragms: list[dict[str, object]]) -> None:
+def write_unity_export(path: Path, segments: list[dict[str, object]], labels: list[dict[str, object]], diaphragms: list[dict[str, object]], solids: list[dict[str, object]]) -> None:
     payload = {
         "model": "Semana 2 - Unity QA viewer export",
         "units": "m",
-        "availableToggles": ["beam", "wall", "column_plan", "slab_edge", "axis", "diaphragm", "ids"],
+        "availableToggles": ["beam", "wall", "column", "support", "slab", "axis", "diaphragm", "cad_reference", "ids"],
         "colors": CATEGORY_COLORS,
+        "solids": solids,
         "segments": segments,
         "labels": labels,
         "diaphragms": diaphragms,
@@ -375,14 +561,16 @@ def main() -> None:
         segments.extend(extract_floor_segments(floor))
         labels.extend(extract_floor_labels(floor))
     diaphragms = floor_diaphragms(segments)
+    solids = generate_solids(segments, diaphragms)
 
-    write_model_json(RESULTS_DIR / "cad_model_3d_segments.json", segments, labels, diaphragms)
-    write_unity_export(UNITY_EXPORT_DIR / "model_viewer.json", segments, labels, diaphragms)
+    write_model_json(RESULTS_DIR / "cad_model_3d_segments.json", segments, labels, diaphragms, solids)
+    write_unity_export(UNITY_EXPORT_DIR / "model_viewer.json", segments, labels, diaphragms, solids)
     plot_model(RESULTS_DIR / "cad_model_3d_colored.png", segments, diaphragms)
     plot_floor_qc(RESULTS_DIR / "cad_model_floor_qc.png", segments)
 
     print("Modelo CAD 3D preliminar generado")
     print(f"  segmentos: {len(segments)}")
+    print(f"  solidos viewer: {len(solids)}")
     print(f"  etiquetas estructurales: {len(labels)}")
     for floor in FLOORS:
         count = sum(1 for segment in segments if segment["floor"] == floor.floor_id)
