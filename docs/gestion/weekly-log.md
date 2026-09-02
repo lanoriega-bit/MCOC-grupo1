@@ -168,12 +168,24 @@ python entregas/p1l0/opensees/ejemplo_minimo_2d.py
 - Viewer: se agrego rejilla de piso en la base (z=-4.01) y etiquetas de nivel S0..S4 con
   cota para hacer visible/identificable el subterraneo.
 
-### Pendiente (proxima etapa)
+### Siguientes etapas del proyecto
 
-- Validacion humana de la geometria (viewer/PNG) y de supuestos de carga (q_G/SC, vanos Y,
-  columnas en techumbre).
-- Siguientes etapas del proyecto: interface Unity completa, tratamiento de muros del 1S
-  como elementos, analisis modal/sismico.
+- Validacion humana de la geometria/cargas (viewer/PNG).
+- Interface Unity completa, muros del 1S como elementos, analisis modal/sismico.
+
+### Tarea 8 - Superposicion de cargas G y Q + combinaciones lineales
+
+- Script: `entregas/semana3/tarea8_superposicion/opensees/superposicion_GQ.py`.
+- Modela los casos base gravitacional (G) y viva (Q) del edificio (areas tributarias) y verifica superposicion y combinaciones lineales.
+- Resultados:
+  - G: ΣRz = 18459.45 kN (4 × 726.75 × 6.35). ✓
+  - Q: ΣRz = 7267.50 kN (4 × 726.75 × 2.50). ✓
+  - G+Q: ΣRz = 25726.95 kN. ✓
+  - Superposicion R(G)+R(Q)-R(G+Q): 1.50e-11 kN (≈0). ✓
+  - Desplazamientos: 2.4e-18 m. ✓
+  - Combinaciones (1.4G, 1.2G+1.6Q, 1.4G+1.4Q): errores ~1e-12 kN (superpuestas = directas). ✓
+- Salidas: `results/superposicion_GQ.json`, `results/superposicion_reacciones.png`.
+- Informe: `docs/informe-tarea8.md`.
 
 ## Semana 1 - P1L1 Benchmark 3D 2
 

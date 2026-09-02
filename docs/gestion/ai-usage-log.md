@@ -103,3 +103,14 @@
   - Viewer: se agrego rejilla de piso base (z=-4.01) y etiquetas de nivel S0..S4 con cota para hacer evidente el subterraneo.
 - Verificacion: consulta del JSON del modelo (5 niveles, 18 nodos cada uno, 18 columnas por entrepiso) y relectura de los rotulos DXF.
 - Limitacion: el usuario no percibia el nivel por la vista por defecto (no por falta de datos); se mejoro la referencia visual.
+
+## Tarea 8 - Superposicion de cargas G y Q + combinaciones lineales
+
+- Objetivo: resolver los casos base de carga gravitacional (G) y viva (Q) del edificio y verificar superposicion y combinaciones lineales.
+- Encargo a IA: ampliar el modelo del edificio con casos G/Q separados, aplicar combinaciones lineales y verificar que R(G+Q)=R(G)+R(Q).
+- Resultado:
+  - `entregas/semana3/tarea8_superposicion/opensees/superposicion_GQ.py`.
+  - `results/superposicion_GQ.json` y `results/superposicion_reacciones.png`.
+  - `docs/informe-tarea8.md`.
+- Verificacion (asserts): superposicion R: 1.50e-11 kN; desplazamientos: 2.4e-18 m; combinaciones (1.4G, 1.2G+1.6Q, 1.4G+1.4Q): errores ~1e-12 kN.
+- Limitacion: se reconstruye el modelo por caso (equivalente en resultados; mas lento que reusar patrones, pero inequivoco). El conteo de niveles (1 sub + 4 pisos) se reutiliza del modelo de Semana 2.

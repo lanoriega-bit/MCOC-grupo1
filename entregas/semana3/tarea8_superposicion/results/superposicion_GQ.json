@@ -1,0 +1,60 @@
+{
+  "caso_G": {
+    "sum_Rz_kN": 18459.45000000001,
+    "max_Rz_kN": 2054.1995864056644,
+    "min_Rz_kN": 237.01217245653012
+  },
+  "caso_Q": {
+    "sum_Rz_kN": 7267.500000000003,
+    "max_Rz_kN": 808.7399946478987,
+    "min_Rz_kN": 93.31187891989363
+  },
+  "caso_GmasQ": {
+    "sum_Rz_kN": 25726.95000000002,
+    "max_Rz_kN": 2862.9395810535602
+  },
+  "superposicion": {
+    "sum_abs_diff_Rz_kN": 1.4959368854761124e-11,
+    "max_abs_diff_Rz_kN": 3.259629011154175e-12,
+    "max_abs_diff_disp_m": 2.3852447794681098e-18
+  },
+  "combinaciones": [
+    {
+      "lam_G": 1.0,
+      "lam_Q": 0.0,
+      "err_Rz_max_N": 0.0,
+      "err_disp_max_m": 0.0
+    },
+    {
+      "lam_G": 0.0,
+      "lam_Q": 1.0,
+      "err_Rz_max_N": 0.0,
+      "err_disp_max_m": 0.0
+    },
+    {
+      "lam_G": 1.4,
+      "lam_Q": 0.0,
+      "err_Rz_max_N": 2.7939677238464355e-09,
+      "err_disp_max_m": 4.336808689942018e-18
+    },
+    {
+      "lam_G": 1.2,
+      "lam_Q": 1.6,
+      "err_Rz_max_N": 2.7939677238464355e-09,
+      "err_disp_max_m": 3.903127820947816e-18
+    },
+    {
+      "lam_G": 1.4,
+      "lam_Q": 1.4,
+      "err_Rz_max_N": 2.3283064365386963e-09,
+      "err_disp_max_m": 2.1412992906588713e-18
+    },
+    {
+      "lam_G": 1.0,
+      "lam_Q": 1.0,
+      "err_Rz_max_N": 3.259629011154175e-09,
+      "err_disp_max_m": 2.3852447794681098e-18
+    }
+  ],
+  "unidades": "m, N, Pa"
+}
