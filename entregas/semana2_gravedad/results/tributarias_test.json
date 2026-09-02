@@ -1,0 +1,372 @@
+{
+  "formato": "MCOC-grupo1-gravity-v1",
+  "units": {
+    "length": "m",
+    "force": "N",
+    "load": "kN/m2"
+  },
+  "qG_definicion": "PP.LOSA + PM.ADIC.  SC excluida.",
+  "pisos": [
+    {
+      "floor_id": 1,
+      "losas": [
+        {
+          "slab_id": "L1",
+          "floor_id": 1,
+          "area_m2": 24.0,
+          "thickness_m": 0.2,
+          "pp_kN_m2": 4.707192,
+          "pm_kN_m2": 1.5,
+          "qG_kN_m2": 6.207192,
+          "total_load_kN": 148.972608
+        },
+        {
+          "slab_id": "L2",
+          "floor_id": 1,
+          "area_m2": 24.0,
+          "thickness_m": 0.25,
+          "pp_kN_m2": 5.88399,
+          "pm_kN_m2": 2.0,
+          "qG_kN_m2": 7.88399,
+          "total_load_kN": 189.21576000000002
+        }
+      ]
+    }
+  ],
+  "vigas": [
+    {
+      "beam_id": "V1",
+      "floor_id": 1,
+      "node_i": [
+        0.0,
+        0.0,
+        3.0
+      ],
+      "node_j": [
+        6.0,
+        0.0,
+        3.0
+      ],
+      "length_m": 6.0,
+      "tributarias": [
+        {
+          "slab_id": "L1",
+          "area_m2": 8.0,
+          "polygon": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              6.0,
+              0.0
+            ],
+            [
+              4.0,
+              2.0
+            ],
+            [
+              2.0,
+              2.0
+            ]
+          ]
+        }
+      ],
+      "A_tributaria_total_m2": 8.0,
+      "qG_kN_m2": 6.207192,
+      "P_total_kN": 49.657536,
+      "w_lineal_kN_m": 8.276256
+    },
+    {
+      "beam_id": "V2",
+      "floor_id": 1,
+      "node_i": [
+        6.0,
+        0.0,
+        3.0
+      ],
+      "node_j": [
+        12.0,
+        0.0,
+        3.0
+      ],
+      "length_m": 6.0,
+      "tributarias": [
+        {
+          "slab_id": "L2",
+          "area_m2": 8.0,
+          "polygon": [
+            [
+              6.0,
+              0.0
+            ],
+            [
+              12.0,
+              0.0
+            ],
+            [
+              10.0,
+              2.0
+            ],
+            [
+              8.0,
+              2.0
+            ]
+          ]
+        }
+      ],
+      "A_tributaria_total_m2": 8.0,
+      "qG_kN_m2": 7.88399,
+      "P_total_kN": 63.07192,
+      "w_lineal_kN_m": 10.511986666666665
+    },
+    {
+      "beam_id": "V3",
+      "floor_id": 1,
+      "node_i": [
+        0.0,
+        4.0,
+        3.0
+      ],
+      "node_j": [
+        6.0,
+        4.0,
+        3.0
+      ],
+      "length_m": 6.0,
+      "tributarias": [
+        {
+          "slab_id": "L1",
+          "area_m2": 8.0,
+          "polygon": [
+            [
+              6.0,
+              4.0
+            ],
+            [
+              0.0,
+              4.0
+            ],
+            [
+              2.0,
+              2.0
+            ],
+            [
+              4.0,
+              2.0
+            ]
+          ]
+        }
+      ],
+      "A_tributaria_total_m2": 8.0,
+      "qG_kN_m2": 6.207192,
+      "P_total_kN": 49.657536,
+      "w_lineal_kN_m": 8.276256
+    },
+    {
+      "beam_id": "V4",
+      "floor_id": 1,
+      "node_i": [
+        6.0,
+        4.0,
+        3.0
+      ],
+      "node_j": [
+        12.0,
+        4.0,
+        3.0
+      ],
+      "length_m": 6.0,
+      "tributarias": [
+        {
+          "slab_id": "L2",
+          "area_m2": 8.0,
+          "polygon": [
+            [
+              12.0,
+              4.0
+            ],
+            [
+              6.0,
+              4.0
+            ],
+            [
+              8.0,
+              2.0
+            ],
+            [
+              10.0,
+              2.0
+            ]
+          ]
+        }
+      ],
+      "A_tributaria_total_m2": 8.0,
+      "qG_kN_m2": 7.88399,
+      "P_total_kN": 63.07192,
+      "w_lineal_kN_m": 10.511986666666665
+    },
+    {
+      "beam_id": "V5",
+      "floor_id": 1,
+      "node_i": [
+        0.0,
+        0.0,
+        3.0
+      ],
+      "node_j": [
+        0.0,
+        4.0,
+        3.0
+      ],
+      "length_m": 4.0,
+      "tributarias": [
+        {
+          "slab_id": "L1",
+          "area_m2": 4.0,
+          "polygon": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              4.0
+            ],
+            [
+              2.0,
+              2.0
+            ]
+          ]
+        }
+      ],
+      "A_tributaria_total_m2": 4.0,
+      "qG_kN_m2": 6.207192,
+      "P_total_kN": 24.828768,
+      "w_lineal_kN_m": 6.207192
+    },
+    {
+      "beam_id": "V6",
+      "floor_id": 1,
+      "node_i": [
+        6.0,
+        0.0,
+        3.0
+      ],
+      "node_j": [
+        6.0,
+        4.0,
+        3.0
+      ],
+      "length_m": 4.0,
+      "tributarias": [
+        {
+          "slab_id": "L1",
+          "area_m2": 4.0,
+          "polygon": [
+            [
+              6.0,
+              0.0
+            ],
+            [
+              6.0,
+              4.0
+            ],
+            [
+              4.0,
+              2.0
+            ]
+          ]
+        },
+        {
+          "slab_id": "L2",
+          "area_m2": 4.0,
+          "polygon": [
+            [
+              6.0,
+              0.0
+            ],
+            [
+              6.0,
+              4.0
+            ],
+            [
+              8.0,
+              2.0
+            ]
+          ]
+        }
+      ],
+      "A_tributaria_total_m2": 8.0,
+      "qG_kN_m2": 7.045591,
+      "P_total_kN": 56.364728,
+      "w_lineal_kN_m": 14.091182
+    },
+    {
+      "beam_id": "V7",
+      "floor_id": 1,
+      "node_i": [
+        12.0,
+        0.0,
+        3.0
+      ],
+      "node_j": [
+        12.0,
+        4.0,
+        3.0
+      ],
+      "length_m": 4.0,
+      "tributarias": [
+        {
+          "slab_id": "L2",
+          "area_m2": 4.0,
+          "polygon": [
+            [
+              12.0,
+              0.0
+            ],
+            [
+              12.0,
+              4.0
+            ],
+            [
+              10.0,
+              2.0
+            ]
+          ]
+        }
+      ],
+      "A_tributaria_total_m2": 4.0,
+      "qG_kN_m2": 7.88399,
+      "P_total_kN": 31.53596,
+      "w_lineal_kN_m": 7.88399
+    }
+  ],
+  "muros": [
+    {
+      "wall_id": "W1",
+      "node_i": [
+        0.0,
+        4.0,
+        3.0
+      ],
+      "node_j": [
+        6.0,
+        4.0,
+        3.0
+      ],
+      "axial_load_kN": 0.0
+    }
+  ],
+  "verificacion": {
+    "suma_tributarias_m2": 48.0,
+    "area_total_losas_m2": 48.0,
+    "error_area_m2": 0.0,
+    "suma_cargas_N": 338188.368,
+    "qG_area_total_N": 338188.368,
+    "error_carga_N": 0.0,
+    "num_vigas": 7,
+    "num_losas": 2,
+    "num_muros": 1
+  }
+}
