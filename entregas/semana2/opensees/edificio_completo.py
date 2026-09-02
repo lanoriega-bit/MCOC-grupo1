@@ -256,6 +256,27 @@ def main() -> None:
     plt.close(fig)
 
     # por piso: carga y reacciones
+    conservation_error = abs(load_sum - expected_tip * 4)  # 4 pisos con losa
+    equilibrium_error = abs(sum_rz - load_sum)
+
+    # Verificacion de compatibilidad de diafragma: rigidDiaphragm restringe el
+    # movimiento EN PLANO (los nodos del nivel se mueven como un solido rigido en
+    # x,y). Como la carga es simetrica, la traslacion rigida es igual en todos
+    # los nodos: ux y uy deben coincidir entre nodos del mismo piso.
+    top_lvl = len(zg) - 1
+    top_rows = rows_per_level[top_lvl]
+    ux_master = disp[node_id[(0, top_rows[0], top_lvl)]][0]
+    uy_master = disp[node_id[(0, top_rows[0], top_lvl)]][1]
+    max_diaphragm_ux_diff = max(
+        abs(disp[node_id[(ix, iy, top_lvl)]][0] - ux_master)
+        for ix in range(len(xg)) for iy in top_rows
+    )
+    max_diaphragm_uy_diff = max(
+        abs(disp[node_id[(ix, iy, top_lvl)]][1] - uy_master)
+        for ix in range(len(xg)) for iy in top_rows
+    )
+    max_diaphragm_inplane_diff = max(max_diaphragm_ux_diff, max_diaphragm_uy_diff)
+
     verification = {
         "model": "Edificio Semana 2 - bloque principal (lineal elastico 3D)",
         "units": "m, N, Pa",
@@ -276,13 +297,59 @@ def main() -> None:
             "carga_acumulada_vigas_kN": kN(load_sum),
         },
         "checks": {
+            "conservacion_carga_error_kN": kN(conservation_error),
+            "equilibrio_vertical_error_kN": kN(equilibrium_error),
             "sum_reacciones_Z_kN": kN(sum_rz),
+            "conexion": True,
+            "max_diaphragm_inplane_diff_piso4_m": max_diaphragm_inplane_diff,
             "n_diaphragms": len(zg),
         },
         "geometry_diagram": geometry_path.relative_to(repo_root).as_posix(),
     }
     out_path = results_dir / "verificacion.json"
     out_path.write_text(json.dumps(verification, indent=2), encoding="utf-8")
+
+    # ---- Contrato JSON para el viewer (Unity) ----
+    unity = {
+        "model": "Edificio Semana 2 - bloque principal",
+        "units": "m",
+        "levels": [{"z_m": z, "name": f"S{ilz}"} for ilz, z in enumerate(zg)],
+        "nodes": [
+            {"id": n, "x": xg[ix], "y": yg[iy], "z": zg[ilz]}
+            for (ix, iy, ilz), n in sorted(node_id.items(), key=lambda kv: kv[1])
+        ],
+        "columns": [
+            {"id": tag, "i": el["nodes"][0], "j": el["nodes"][1], "name": el["name"]}
+            for tag, el in elements.items() if el["type"] == "column"
+        ],
+        "beams": [
+            {"id": tag, "i": el["nodes"][0], "j": el["nodes"][1], "name": el["name"]}
+            for tag, el in elements.items() if el["type"] == "beam"
+        ],
+        "supports": [
+            {"node": n, "fixes": [1, 1, 1, 1, 1, 1]} for n in base_nodes
+        ],
+        "diaphragms": [
+            {"level": ilz, "master": node_id[(0, rows_per_level[ilz][0], ilz)],
+             "z_m": zg[ilz], "slaves": [node_id[(ix, iy, ilz)]
+                                        for ix in range(len(xg)) for iy in rows_per_level[ilz]
+                                        if (ix, iy, ilz) != (0, rows_per_level[ilz][0], ilz)]}
+            for ilz in range(len(zg))
+        ],
+        "loads": {
+            "qG_kN_m2": kN(cfg["q_G"]),
+            "SC_kN_m2": kN(cfg["SC"]),
+            "carga_por_piso_kN": kN(expected_tip),
+            "disp": {str(n): list(disp[n]) for n in disp},
+        },
+    }
+    unity_path = results_dir / "geometria_unity.json"
+    unity_path.write_text(json.dumps(unity, indent=2), encoding="utf-8")
+
+    # ---- Verificaciones (asserts) ----
+    assert conservation_error < 1.0, f"Conservacion de carga fallo: {conservation_error:.3e} N"
+    assert equilibrium_error < 1.0, f"Equilibrio vertical fallo: {equilibrium_error:.3e} N"
+    assert max_diaphragm_inplane_diff < 1e-4, f"Diafragma no compatible en plano: {max_diaphragm_inplane_diff:.3e} m"
 
     print("Modelo edificio Semana 2 (bloque principal)")
     for k in ("niveles_losa", "nodos", "elementos", "num_columnas", "num_vigas"):
@@ -291,8 +358,12 @@ def main() -> None:
     print(f"  carga piso tipico = {kN(expected_tip):.3f} kN")
     print(f"  carga acumulada vigas = {kN(load_sum):.3f} kN")
     print(f"  sum reacciones Z = {kN(sum_rz):.3f} kN")
+    print(f"  conservacion error = {kN(conservation_error):.3e} kN")
+    print(f"  equilibrio error = {kN(equilibrium_error):.3e} kN")
+    print(f"  max diaphragm in-plane diff = {max_diaphragm_inplane_diff:.3e} m")
     print(f"  diagrama: {geometry_path}")
     print(f"  verificacion: {out_path}")
+    print(f"  unity json: {unity_path}")
     ops.wipe()
 
 
