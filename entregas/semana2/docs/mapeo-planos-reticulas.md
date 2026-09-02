@@ -95,8 +95,29 @@ Extras útiles de niveles:
 - **Continuidad vertical confirmada**: la retícula X de columnas del piso 1° (E-F-G-H-I-I'-J) coincide con la de los pisos 2-4; cada piso solo difiere por el corrimiento gráfico del papel (≈527 cm), no geométrico. → La malla de columnas es continua de piso 1° a 4°.
 - Datos crudos: `data/piso1_raw.json`, `data/piso1S_raw.json` (el 1°S no tiene columnas detectadas automáticamente; se requiere tratamiento por muros).
 
+## Cargas de diseño (plano 700) — trazables
+
+El plano 700 define zonas `CARGAS DE DISEÑO` con:
+- `SC` = sobrecarga (Kg/m²), `PM. ADIC.` = peso muerto adicional (Kg/m²),
+- `PP. LOSA = e(m) × 2500 Kg/m²`.
+
+**Zonas típicas de piso (y≈2900..5100):**
+
+| SC (Kg/m²) | PM. ADIC. (Kg/m²) | Uso probable |
+|-----------|-------------------|--------------|
+| 200 | 200 | oficina liviana |
+| 250 | 260 | oficina/uso liviano |
+| 300 | 260 | tránsito/uso medio |
+| 400 | 260 | areas de uso |
+| 500 | 260 ó 300 | uso intenso/corredores |
+
+- Peso específico hormigón: **2500 Kg/m³**.
+- `PP. LOSA` para e=15 cm (pisos 2°-4°): `0.15×2500 = 375 Kg/m²`; para e=25 cm (fundación): `625 Kg/m²`.
+- **q_G (gravitacional de piso, típico) = PP losa + PM adic.** E.g. zona SC=250: `375 + 260 = 635 Kg/m² ≈ 6.35 kN/m²`.
+- Otras filas (y≤500) son cargas especiales de fundaciones/muros: SC=800/PM=7600, SC=6700/PM=13000, SC=6000/PM=10000, SC=7000/PM=13000 (no aplican a losas de piso típico).
+
 ## Siguientes pasos
 1. Validar visualmente la retícula fina y la asignación de vigas primarias/secundarias (cruce con cotas del plano 102).
 2. Tratar el 1°S (muros de contención) y definir apoyos de fundaciones desde el plano 100.
-3. Cargas del plano 700 → q_G por zona.
+3. Ensamblar el JSON de geometría limpio por piso (interfaz OpenSees-Unity) y el modelo OpenSeesPy completo con diafragmas rígidos, áreas tributarias (con q_G y SC del plano 700) y verificaciones.
 4. Ensamblar JSON por piso (interfaz OpenSees-Unity) + modelo OpenSeesPy + diafragmas rígidos + áreas tributarias + verificaciones.
