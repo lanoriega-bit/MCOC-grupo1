@@ -1,4 +1,4 @@
-"""Modelo OpenSees preliminar de gravedad para Semana 2.
+"""Modelo OpenSees preliminar de gravedad para P1L2.
 
 Este script usa el modelo CAD apilado como entrada y genera una malla estable de
 QA. La siguiente iteracion debe reemplazar cargas nodales uniformes por areas
@@ -154,7 +154,7 @@ def main() -> None:
     max_uz = max(abs(ops.nodeDisp(tag, 3)) for tag in node_floor)
 
     verification = {
-        "model": "Semana 2 gravity skeleton from CAD",
+            "model": "P1L2 gravity skeleton from CAD",
         "units": "m, N, Pa",
         "status": "preliminary_skeleton",
         "assumptions": [
@@ -185,7 +185,7 @@ def main() -> None:
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
     (RESULTS_DIR / "gravity_skeleton_verification.json").write_text(json.dumps(verification, indent=2), encoding="utf-8")
 
-    print("Semana 2 - gravity skeleton OK")
+    print("P1L2 - gravity skeleton OK")
     print(f"  nodos OpenSees = {verification['counts']['opensees_nodes']}")
     print(f"  elementos = {verification['counts']['total_elements_including_vertical_links']}")
     print(f"  diafragmas identificados = {verification['counts']['identified_diaphragms']}")

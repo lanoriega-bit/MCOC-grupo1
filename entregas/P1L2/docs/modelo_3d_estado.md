@@ -38,6 +38,8 @@ Los archivos DWG/DXF quedan ignorados por Git. El repositorio versiona scripts, 
 
 ## Resumen actual
 
+El viewer versionado usa `927` solidos limpios: `545` vigas, `134` muros, `149` columnas, `94` apoyos/fundaciones conectadas y `5` losas. Las capas auxiliares `RLE-FUNDACION` y `RLA-MURO INV DILATADO` se conservan solo como referencia CAD, no como solidos estructurales, para evitar fundaciones flotantes y muros fragmentados.
+
 | Nivel | Segmentos extraidos |
 | --- | ---: |
 | `base` | `526` |

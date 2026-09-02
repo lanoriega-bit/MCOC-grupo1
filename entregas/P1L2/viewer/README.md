@@ -27,9 +27,8 @@ No abrir `index.html` con doble click, porque el navegador puede bloquear la lec
 | Mouse izquierdo | Orbitar el modelo |
 | Rueda | Acercar/alejar |
 | Mouse derecho | Pan/desplazamiento lateral |
-| Vista inicial | Vuelve a una vista isometrica general |
+| Lado A/B/C/D | Muestra las cuatro fachadas, manteniendo piso base abajo y piso 4 arriba |
 | Vista planta | Mira el edificio desde arriba |
-| Centrar | Ajusta el modelo completo a la camara |
 | IDs | Activa/desactiva etiquetas de `elementTag` |
 | Pisos | Apaga/enciende `base`, `1S`, `1`, `2`, `3`, `4` |
 | Solo | Aisla un piso para inspeccion |
@@ -40,7 +39,7 @@ No abrir `index.html` con doble click, porque el navegador puede bloquear la lec
 
 El viewer carga `model_viewer.json` que contiene:
 
-- **1264 solidos**: vigas (prismas), muros (paneles verticales), columnas (agrupadas entre pisos), losas (cajas transparentes), apoyos
+- **927 solidos**: vigas (prismas), muros (paneles verticales limpios), columnas continuas entre pisos, losas (cajas transparentes), apoyos conectados
 - **2460 segmentos CAD**: lineas extraidas de los planos para referencia
 - **514 etiquetas**: texto de los planos CAD
 - **18 ejes**: ejes verticales del edificio

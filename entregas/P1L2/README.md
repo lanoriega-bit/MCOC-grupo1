@@ -96,15 +96,16 @@ Todas las cotas entregadas por el usuario se interpretan en cm y se convierten a
 
 | Resultado | Valor |
 | --- | ---: |
+| Solidos limpios para viewer | `927` |
 | Segmentos CAD extraidos | `2460` |
 | Etiquetas estructurales extraidas | `514` |
-| Segmentos estructurales usados en esqueleto OpenSees | `1494` |
-| Nodos OpenSees preliminares | `3657` |
-| Elementos OpenSees preliminares | `3744` |
+| Segmentos estructurales usados en esqueleto OpenSees | `985` |
+| Nodos OpenSees preliminares | `2266` |
+| Elementos OpenSees preliminares | `2650` |
 | Diafragmas identificados | `5` |
 | Suma cargas Z | `-54322.527 kN` |
 | Suma reacciones Z | `54322.527 kN` |
-| Error equilibrio Z | `-1.49e-11 kN` |
+| Error equilibrio Z | `-1.27e-10 kN` |
 
 ## Como ejecutar
 
@@ -114,9 +115,10 @@ Primero instalar dependencias:
 python -m pip install -r requirements.txt
 ```
 
-Si los DXF ya existen localmente, generar modelo CAD 3D:
+Si los DXF ya existen localmente, indicar su carpeta y generar el modelo CAD 3D:
 
 ```powershell
+$env:MCOC_DXF_DIR="C:\ruta\local\a\dxf\2017_67"
 python entregas/P1L2/opensees/extract_cad_model.py
 ```
 

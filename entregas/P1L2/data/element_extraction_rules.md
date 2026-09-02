@@ -1,4 +1,4 @@
-# Reglas de extraccion de elementos - Semana 2
+# Reglas de extraccion de elementos - P1L2
 
 ## Alcance
 
