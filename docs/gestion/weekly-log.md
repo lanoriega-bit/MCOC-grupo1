@@ -143,6 +143,18 @@ python entregas/p1l0/opensees/ejemplo_minimo_2d.py
 - Registro: `entregas/semana2/viewer/README.md`.
 - El viewer valida el mismo contrato JSON que consumira el proyecto Unity (arquitectura OpenSees/Unity sin cambio).
 
+### Chequeo manual independiente (AGENTS verification rule)
+
+- Se agrego al modelo una verificacion por calculo manual del axial en columnas:
+  cada columna recauda su area tributaria (Voronoi sobre la reticula) por cada piso
+  cargado; el axial esperado = q × area_trib × nº pisos, comparado contra la reaccion
+  en base de esa columna (OpenSees).
+- Resultado: **Σ axial manual = 25726.95 kN = Σ OpenSees** (coincidencia exacta);
+  `handcalc_sum_col_axial_kN` en `verificacion.json`.
+- Maximo error por columna: **50.0 kN** (~1.2% en columnas mayores), esperado por la
+  redistribucion via diafragma/vigas rigidas frente al reparto puro de tributaria.
+- Chequeo expuesto en `verificacion.json`, `informe-semana2.md` y en el panel del viewer.
+
 ## Semana 1 - P1L1 Benchmark 3D 2
 
 ### Alcance

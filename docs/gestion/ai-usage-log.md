@@ -85,3 +85,11 @@
 - Se agrego `trib_area_m2` por viga al contrato JSON (regla 1/4 por borde del panel), coherente con la transferencia de carga real en OpenSees.
 - Verificacion: el viewer se abre localmente sin servidor; los datos del inspector suman q*A_trib = carga transferida por la misma regla del analisis.
 - Limitacion: viewer en HTML/JS como validacion/preproceso; el producto oficial Unity (postproceso delegado) sigue siendo una etapa posterior. El JSON de contrato no cambia de esquema.
+
+## Semana 2 - Chequeo manual independiente del axial en columnas
+
+- Objetivo: cumplir la regla de verificacion del AGENTS de comparar resultados OpenSees contra un calculo manual independiente cuando sea factible.
+- Encargo a IA: verificar el camino de carga por columnas mediante areas tributarias (Voronoi) y comparar el axial esperado por columna contra las reacciones en base.
+- Resultado: `handcalc_sum_col_axial_kN` = 25726.95 kN = suma OpenSees (coincidencia exacta); maximo error por columna 50.0 kN (~1.2% en columnas mayores, esperado por redistribucion via rigideces).
+- Salida: nuevos campos en `verificacion.json`, fila en `informe-semana2.md` y linea en el panel del viewer.
+- Verificacion: assert relativo al 5% del total; el modelo pasa.
