@@ -153,6 +153,40 @@ def main() -> None:
                 add_column(node_id[(ix, iy, ilz)], node_id[(ix, iy, ilz + 1)],
                            f"col_{AX[ix]}{AY[iy]}_S{ilz+1}")
 
+    # ---- Muros equivalentes (1 Subterraneo: entre base S0 y piso1 S1) ----
+    # Convencion del curso: muro representado por elemento lineal equivalente.
+    # Se modelan como muros de contencion del perimetro del nivel -4.01 a -0.05:
+    # un elemento vertical (viga-columna con seccion de muro e=0.25 m) en cada
+    # linea de columna del perimetro, que reproduce la caja de contencion.
+    wall_t = 0.25            # espesor equivalente del muro [m]
+    wall_h = 3.0             # altura de seccion equivalente [m]
+    wall_A = wall_t * wall_h
+    wall_J = 0.35 * (wall_t * wall_h**3 / 12.0 + wall_t**3 * wall_h / 12.0)
+    wall_Iy = wall_t * wall_h**3 / 12.0   # eje fuerte (plano del muro)
+    wall_Iz = wall_t**3 * wall_h / 12.0   # eje debil (fuera del plano)
+    ilz = 0  # tramo del subterraneo (S0 -> S1)
+    for iy in rows_per_level[ilz]:
+        for ix in range(len(xg)):
+            is_perimeter = (ix == 0 or ix == len(xg) - 1
+                            or iy == 0 or iy == len(yg) - 1)
+            if not is_perimeter:
+                continue
+            if (iy + 1) not in rows_per_level[ilz + 1]:
+                continue
+            # elemento VERTICAL (igual que columnas) -> transf 1 (vecXz=+X)
+            ele_id += 1
+            elements[ele_id] = {
+                "nodes": (node_id[(ix, iy, ilz)], node_id[(ix, iy, ilz + 1)]),
+                "type": "wall",
+                "name": f"muro_{AX[ix]}{AY[iy]}_S{ilz+1}",
+                "A": wall_A, "E": cfg["E"], "G": G, "J": wall_J,
+                "Iy": wall_Iy, "Iz": wall_Iz,
+                "transf": 1,
+            }
+            ops.element("elasticBeamColumn", ele_id,
+                        node_id[(ix, iy, ilz)], node_id[(ix, iy, ilz + 1)],
+                        wall_A, cfg["E"], G, wall_J, wall_Iy, wall_Iz, 1)
+
     # vigas en cada nivel de losa (piso1..piso4)
     col_lines_x = {  # direccion X
     }
@@ -326,6 +360,7 @@ def main() -> None:
             "elementos": len(elements),
             "num_columnas": sum(1 for el in elements.values() if el["type"] == "column"),
             "num_vigas": sum(1 for el in elements.values() if el["type"] == "beam"),
+            "num_muros": sum(1 for el in elements.values() if el["type"] == "wall"),
         },
         "loads": {
             "qG_kN_m2": kN(cfg["q_G"]),
@@ -334,6 +369,15 @@ def main() -> None:
             "area_piso_tipico_m2": area_tip,
             "carga_piso_tipico_kN": kN(expected_tip),
             "carga_acumulada_vigas_kN": kN(load_sum),
+        },
+        "tributary_areas": {
+            "carga_losa_por_piso_kN": kN(expected_tip),
+            "n_pisos_cargados": len(zg) - 1,
+            "carga_losa_total_kN": kN(expected_tip * (len(zg) - 1)),
+            "suma_areas_tributarias_vigas_m2": sum(
+                el["trib_area_m2"] for el in elements.values() if el["type"] == "beam"
+            ),
+            "area_losa_total_m2": area_tip * (len(zg) - 1),
         },
         "checks": {
             "conservacion_carga_error_kN": kN(conservation_error),
@@ -367,6 +411,11 @@ def main() -> None:
              "trib_area_m2": el["trib_area_m2"]}
             for tag, el in elements.items() if el["type"] == "beam"
         ],
+        "walls": [
+            {"id": tag, "i": el["nodes"][0], "j": el["nodes"][1], "name": el["name"],
+             "t": 0.25}
+            for tag, el in elements.items() if el["type"] == "wall"
+        ],
         "supports": [
             {"node": n, "fixes": [1, 1, 1, 1, 1, 1]} for n in base_nodes
         ],
@@ -393,13 +442,19 @@ def main() -> None:
     assert max_diaphragm_inplane_diff < 1e-4, f"Diafragma no compatible en plano: {max_diaphragm_inplane_diff:.3e} m"
     assert max_col_hand_err < 0.05 * max(sum_axial_hand, 1.0), \
         f"Chequeo manual de axial en columnas fallo: {kN(max_col_hand_err):.3f} kN"
+    # Carga total de losa por piso y suma de areas tributarias
+    sum_trib = sum(el["trib_area_m2"] for el in elements.values() if el["type"] == "beam")
+    area_total = area_tip * (len(zg) - 1)
+    assert abs(sum_trib - area_total) < 1e-6, \
+        f"Suma de areas tributarias no cierra: {sum_trib:.6f} vs {area_total:.6f} m2"
 
     print("Modelo edificio Semana 2 (bloque principal)")
-    for k in ("niveles_losa", "nodos", "elementos", "num_columnas", "num_vigas"):
+    for k in ("niveles_losa", "nodos", "elementos", "num_columnas", "num_vigas", "num_muros"):
         print(f"  {k}={verification['counts'][k]}")
     print(f"  area piso tipico = {area_tip:.2f} m2")
     print(f"  carga piso tipico = {kN(expected_tip):.3f} kN")
     print(f"  carga acumulada vigas = {kN(load_sum):.3f} kN")
+    print(f"  suma areas tributarias vigas = {sum_trib:.3f} m2  (area losa total {area_total:.3f} m2)")
     print(f"  sum reacciones Z = {kN(sum_rz):.3f} kN")
     print(f"  conservacion error = {kN(conservation_error):.3e} kN")
     print(f"  equilibrio error = {kN(equilibrium_error):.3e} kN")

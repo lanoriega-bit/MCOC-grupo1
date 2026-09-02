@@ -47,9 +47,10 @@
   "counts": {
     "niveles_losa": 5,
     "nodos": 90,
-    "elementos": 180,
+    "elementos": 188,
     "num_columnas": 72,
-    "num_vigas": 108
+    "num_vigas": 108,
+    "num_muros": 8
   },
   "loads": {
     "qG_kN_m2": 6.35,
@@ -59,13 +60,20 @@
     "carga_piso_tipico_kN": 6431.737499999999,
     "carga_acumulada_vigas_kN": 25726.95
   },
+  "tributary_areas": {
+    "carga_losa_por_piso_kN": 6431.737499999999,
+    "n_pisos_cargados": 4,
+    "carga_losa_total_kN": 25726.949999999997,
+    "suma_areas_tributarias_vigas_m2": 2907.0,
+    "area_losa_total_m2": 2906.9999999999995
+  },
   "checks": {
     "conservacion_carga_error_kN": 3.725290298461914e-12,
-    "equilibrio_vertical_error_kN": 2.2351741790771485e-11,
-    "sum_reacciones_Z_kN": 25726.950000000023,
-    "max_diaphragm_inplane_diff_piso4_m": 7.33924520056703e-06,
+    "equilibrio_vertical_error_kN": 1.4901161193847657e-11,
+    "sum_reacciones_Z_kN": 25726.950000000015,
+    "max_diaphragm_inplane_diff_piso4_m": 2.1653349022472576e-05,
     "n_diaphragms": 5,
-    "handcalc_max_col_axial_error_kN": 50.00408652989287,
+    "handcalc_max_col_axial_error_kN": 85.34303381111263,
     "handcalc_sum_col_axial_kN": 25726.95
   },
   "geometry_diagram": "entregas/semana2/results/geometria_edificio.png"

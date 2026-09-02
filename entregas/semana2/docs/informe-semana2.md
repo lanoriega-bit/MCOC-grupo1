@@ -45,9 +45,13 @@ ajusta la carga; solo cambia el factor de escala de resultados).
 ## 3. Modelo
 
 - Script: `entregas/semana2/opensees/edificio_completo.py`
-- **90 nodos, 180 elementos** (72 columnas + 108 vigas).
+- **90 nodos, 188 elementos** (72 columnas + 108 vigas + **8 muros equivalentes**).
 - Elementos `forceBeamColumn` / `elasticBeamColumn` 3D con secciones y materiales
   definidos en `CONFIG`.
+- **Muros equivalentes del 1° Subterráneo**: según la convención del curso, los muros
+  de contención del perímetro (−4.01 a −0.05) se representan como 8 elementos lineales
+  verticales con sección de muro (e = 0.25 m) sobre las líneas de columna del perímetro,
+  reproduciendo la caja de contención. Aportan rigidez (no carga tributaria).
 - **Diafragmas rígidos** (`rigidDiaphragm`) en los 5 niveles de losa: los nodos de
   cada piso comparten los grados en el plano (movimiento como sólido rígido en x-y).
 - **Apoyos**: base empotrada en el nivel inferior (fundación).
@@ -73,6 +77,8 @@ carga de losa como piso típico.
 | Verificación | Método | Resultado |
 |--------------|--------|-----------|
 | Conservación de carga | Σ carga en vigas vs. 4×carga de piso | error **3.7e-12 kN** ✓ |
+| Carga total de losa por piso | 4 pisos × 726.75 m² × 8.85 kN/m² | **25726.95 kN** ✓ |
+| Suma de áreas tributarias | Σ trib_area de vigas vs. área de losa total | **2907.0 = 2907.0 m²** ✓ |
 | Equilibrio vertical | Σ reacciones Z vs. Σ cargas | 25726.95 = 25726.95 kN, error **2.2e-11 kN** ✓ |
 | Compatibilidad de diafragma | ux,uy iguales en todos los nodos de un piso (sólido rígido) | dif. en plano **7.3e-6 m** (< 0.1 mm) ✓ |
 | Cálculo manual independiente (axial en columnas) | Σ axial manual por área tributaria (Voronoi) vs. reacciones en base de cada columna | Σ manual = **25726.95 kN** = Σ OpenSees; máx. error por columna **50.0 kN** (~1.2% en columnas mayores) ✓ |
@@ -105,8 +111,8 @@ python entregas/semana2/opensees/edificio_completo.py
   cotas reales (vanos Y ~7.25 y ~8.90 m detectados).
 - La **techumbre** usa solo 2 filas de columnas (x 6); las filas de cubierta/penthouse
   se modelan en la etapa de interface/penthouse.
-- El **1°S** está modelado geométricamente pero sin carga de losa ni columnas propias
-  (muros de contención no incluidos como elementos en esta etapa).
+- El **1°S** está modelado geométricamente, con sus **muros de contención como 8 muros
+  equivalentes** y sin carga de losa típica (nivel de estacionamiento).
 - `q_G` y `SC` son valores representativos por zona; los textos finos del plano 700
   (SC y PM por zona) y la asignación por área tributaria por vigueta deben validarse.
 - Falta validación visual humana del PNG (este agente no interpreta imágenes).
