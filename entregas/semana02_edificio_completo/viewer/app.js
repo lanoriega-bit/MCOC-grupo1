@@ -424,6 +424,25 @@ function topView() {
   controls.update();
 }
 
+function sideView(side) {
+  if (!modelBounds) return;
+  const center = modelBounds.getCenter(new THREE.Vector3());
+  const size = modelBounds.getSize(new THREE.Vector3());
+  const dist = Math.max(size.x, size.y, size.z) * 1.4;
+  controls.target.copy(center);
+  const lift = size.z * 0.08;
+  if (side === "A") {
+    camera.position.set(center.x + dist, center.y, center.z + lift); // +X
+  } else if (side === "B") {
+    camera.position.set(center.x, center.y + dist, center.z + lift); // +Y
+  } else if (side === "C") {
+    camera.position.set(center.x - dist, center.y, center.z + lift); // -X
+  } else if (side === "D") {
+    camera.position.set(center.x, center.y - dist, center.z + lift); // -Y
+  }
+  controls.update();
+}
+
 function onPointerDown(event) {
   const rect = renderer.domElement.getBoundingClientRect();
   pointer.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
@@ -489,8 +508,10 @@ async function boot() {
   resize();
   window.addEventListener("resize", resize);
   renderer.domElement.addEventListener("pointerdown", onPointerDown);
-  document.querySelector("#reset-view").addEventListener("click", fitView);
-  document.querySelector("#fit-view").addEventListener("click", fitView);
+  document.querySelector("#view-side-A").addEventListener("click", sideView.bind(null, "A"));
+  document.querySelector("#view-side-B").addEventListener("click", sideView.bind(null, "B"));
+  document.querySelector("#view-side-C").addEventListener("click", sideView.bind(null, "C"));
+  document.querySelector("#view-side-D").addEventListener("click", sideView.bind(null, "D"));
   document.querySelector("#top-view").addEventListener("click", topView);
   document.querySelector("#search-button").addEventListener("click", searchTag);
   tagSearchEl.addEventListener("keydown", (event) => {
