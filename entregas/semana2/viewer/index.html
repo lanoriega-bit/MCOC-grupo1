@@ -99,42 +99,56 @@ function resize(){ W=innerWidth; H=innerHeight;
   cv.width=W; cv.height=H; cv.style.width=W+'px'; cv.style.height=H+'px'; }
 window.addEventListener('resize',resize); resize();
 
-/* ---- camara orbital (yaw, pitch, distancia, target) ---- */
-const cam = { yaw:-0.9, pitch:0.55, dist:130, target:[22.5,6,4] };
-function resetView(){ cam.yaw=-0.9; cam.pitch=0.55; cam.dist=130; cam.target=[22.5,6,4]; render(); }
+/* ---- datos indexados ---- */
+const NODES={}; GEO.nodes.forEach(n=>NODES[n.id]={x:n.x,y:n.y,z:n.z});
+let allX=GEO.nodes.map(n=>n.x), allY=GEO.nodes.map(n=>n.y), allZ=GEO.nodes.map(n=>n.z);
+const CX=0.5*(Math.min(...allX)+Math.max(...allX)),
+      CY=0.5*(Math.min(...allY)+Math.max(...allY)),
+      CZ=0.5*(Math.min(...allZ)+Math.max(...allZ));
+const DIAG=Math.hypot(Math.max(...allX)-Math.min(...allX),
+                     Math.max(...allY)-Math.min(...allY),
+                     Math.max(...allZ)-Math.min(...allZ));
+
+/* ---- camara orbital pinhole (yaw, pitch, distancia, target) ---- */
+const cam = { yaw:-0.9, pitch:0.5, dist:1.7*DIAG, target:[CX,CY,CZ] };
+function resetView(){ cam.yaw=-0.9; cam.pitch=0.5; cam.dist=1.7*DIAG; cam.target=[CX,CY,CZ]; render(); }
 let drag=null;
 cv.addEventListener('mousedown',e=>{ drag={x:e.clientX,y:e.clientY}; });
 window.addEventListener('mousemove',e=>{ if(!drag)return;
   cam.yaw+=(e.clientX-drag.x)*0.006; cam.pitch+=(e.clientY-drag.y)*0.006;
-  cam.pitch=Math.max(-1.3,Math.min(1.3,cam.pitch)); drag={x:e.clientX,y:e.clientY}; render(); });
+  cam.pitch=Math.max(-1.35,Math.min(1.35,cam.pitch)); drag={x:e.clientX,y:e.clientY}; render(); });
 window.addEventListener('mouseup',()=>drag=null);
 cv.addEventListener('wheel',e=>{ e.preventDefault(); cam.dist*=(1+e.deltaY*0.001);
-  cam.dist=Math.max(25,Math.min(450,cam.dist)); render(); },{passive:false});
+  cam.dist=Math.max(0.25*DIAG,Math.min(6*DIAG,cam.dist)); render(); },{passive:false});
 window.addEventListener('keydown',e=>{ if(e.key==='f'||e.key==='F') resetView(); });
 
-/* ---- datos indexados ---- */
-const NODES={}; GEO.nodes.forEach(n=>NODES[n.id]={x:n.x,y:n.y,z:n.z});
-let allX=GEO.nodes.map(n=>n.x), allY=GEO.nodes.map(n=>n.y), allZ=GEO.nodes.map(n=>n.z);
-const cX=0.5*(Math.min(...allX)+Math.max(...allX)), cY=0.5*(Math.min(...allY)+Math.max(...allY)),
-      cZ=0.5*(Math.min(...allZ)+Math.max(...allZ));
-
-/* ---- proyeccion perspectiva manual ---- */
-function proj(x,y,z){
-  const cy=Math.cos(cam.yaw),sy=Math.sin(cam.yaw),cp=Math.cos(cam.pitch),sp=Math.sin(cam.pitch);
-  let dx=x-cX-dx0(), dy=y-cY-dy0(), dz=z-cZ-dz0();
-  let xr=dx*cy-dz*sy;
-  let z1=dx*sy+dz*cy;
-  let yr=dy*cp+z1*sp;
-  let zc=-dy*sp+z1*cp;
-  const f=W*0.5+180;
-  const sc=Math.max(W,H)*0.22;
-  const sx=W/2+(xr/(zc+cam.dist))*f*0.35;
-  const sy2=H/2-(yr/(zc+cam.dist))*f*0.35;
-  return [sx,sy2,zc];
+/* ---- proyeccion perspectiva pinhole real ---- */
+let camPos=[0,0,0], camR=[1,0,0], camU=[0,1,0], camF=[0,0,1];
+function updateCamera(){
+  const sp=Math.sin(cam.pitch), cp=Math.cos(cam.pitch), sy=Math.sin(cam.yaw), cy=Math.cos(cam.yaw);
+  const ex=cam.target[0]+cam.dist*cp*sy;
+  const ey=cam.target[1]+cam.dist*sp;
+  const ez=cam.target[2]+cam.dist*cp*cy;
+  camPos=[ex,ey,ez];
+  let f=[cam.target[0]-ex, cam.target[1]-ey, cam.target[2]-ez];
+  const fl=Math.hypot(f[0],f[1],f[2])||1; f=[f[0]/fl,f[1]/fl,f[2]/fl];
+  let up=[0,0,1];
+  let r=[ f[1]*up[2]-f[2]*up[1], f[2]*up[0]-f[0]*up[2], f[0]*up[1]-f[1]*up[0] ];
+  const rl=Math.hypot(r[0],r[1],r[2])||1; r=[r[0]/rl,r[1]/rl,r[2]/rl];
+  let u=[ r[1]*f[2]-r[2]*f[1], r[2]*f[0]-r[0]*f[2], r[0]*f[1]-r[1]*f[0] ];
+  camR=r; camU=u; camF=f;
 }
-function dx0(){ return cam.target[0]-cX; }
-function dy0(){ return cam.target[1]-cY; }
-function dz0(){ return cam.target[2]-cZ; }
+function proj(x,y,z){
+  updateCamera();
+  const vx=x-camPos[0], vy=y-camPos[1], vz=z-camPos[2];
+  const depth=vx*camF[0]+vy*camF[1]+vz*camF[2];
+  const sx=vx*camR[0]+vy*camR[1]+vz*camR[2];
+  const sy=vx*camU[0]+vy*camU[1]+vz*camU[2];
+  const d=Math.max(depth,1e-6);
+  const focal=Math.min(W,H)*0.9;
+  const k=focal/d;
+  return [W/2+sx*k, H/2-sy*k, depth];
+}
 
 /* ---- colores por capa ---- */
 const COL={ nodes:'#66ff99', cols:'#5aa9ff', beams:'#c9a35c', walls:'#b48cff',
