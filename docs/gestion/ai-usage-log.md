@@ -51,3 +51,14 @@
 - Verificacion: equilibrio vertical, simetria de reacciones, cierre de diagramas de fuerza y cierre de diagramas de momento.
 - Resultado: `entregas/p1l1_benchmark_3d_2/`.
 - Limitacion: las dimensiones y cargas siguen siendo preliminares hasta confirmacion manual desde planos.
+
+## Semana 2 - Extraccion de geometria del edificio (etapa 1)
+
+- Objetivo: obtener datos reales y trazables del edificio desde los planos para el modelo completo de la Semana 2.
+- Encargo a IA: instalar `ODA File Converter`, convertir los DWG clave a DXF, mapear reticulas y niveles, y construir un pipeline de extraccion de geometria por piso validado.
+- Resultado:
+  - `entregas/semana2/docs/mapeo-planos-reticulas.md` con reticulas, niveles de piso y alturas de entrepiso (H = 3.96 m; 5 niveles).
+  - `tools/extraer_geometria.py` y `tools/extraer_piso_json.py` (pipeline a JSON por piso).
+  - `entregas/semana2/data/piso3_raw.json` (18 columnas 70x70, reticula 6x3, vigas y muros).
+- Verificacion: correlacion del plano 102 piso 3 contra los rotulos de nivel de los planos 101-103 (losas -4.01 / -0.05 / +3.91 / +7.87 / +11.83) que dan alturas de 3.96 m constantes.
+- Limitacion: las elevaciones 300-310 traen su dibujo como bloques anidados no traducidos; los niveles reales se obtuvieron de los propios planos de piso. Las cotas finas (vanos) deben cruzarse con las cotas reales del plano en la etapa de modelado.

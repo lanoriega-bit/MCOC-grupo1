@@ -80,6 +80,44 @@ python entregas/p1l0/opensees/ejemplo_minimo_2d.py
 
 - Los PDFs se leen principalmente como imagen; las cotas y textos pequenos deben verificarse manualmente antes de usarlos como datos definitivos.
 
+## Semana 2 - Modelo del edificio completo (avance por etapas)
+
+### Alcance
+
+- Construir el modelo OpenSeesPy del edificio completo (geometria total, cargas gravitacionales, areas tributarias, diafragmas rigidos, salidas para viewer Unity) con datos reales trazables desde los planos.
+
+### Fuente de datos
+
+- Se extrajeron los DWG originales del edificio desde `planos_edificio_ing.rar` (en Descargas) hacia `C:\Users\josel\AppData\Local\Temp\opencode\planos_dwg\` (38 DWG).
+- Se instalo el `ODA File Converter` y se convirtieron 11 DWG clave a DXF (`planos_dxf/`): 100, 101, 102, 103, 300, 302, 303, 306, 307, 310, 700. Vias de conversion: `ezdxf.addons.odafc.convert` (CLI directa falla; colocar el dir del exe en `PATH`).
+
+### Unidades y trazabilidad
+
+- Unidades del dibujo: **1 unidad = 1 cm** (cota 500.0 = 5.00 m; ancho total 45.00 m).
+
+### Niveles de piso y alturas (trazables)
+
+- 5 niveles de losa: 1 Subterraneo `-4.01`, 1 `-0.05`, 2 `+3.91`, 3 `+7.87`, 4/techumbre `+11.83` m.
+- Altura de entrepiso tipica `H = 3.96 m` (constante, verificada por diferencias de cotas).
+
+### Reticulas por plano
+
+- 101: 1S + 1 (dos bloques, dilatacion 10 cm; ejes E-I / 1-3 y variantes).
+- 102: 2 y 3 piso (reticula regular E-J x 1-2-3).
+- 103: 4 piso + cubierta.
+- Columnas 70x70 (dominante), 30x30, 20x50; vigas 60/80, 20/80, 20/130, VSI 20/150, 20/VAR; muros MHA e=20/25/30, MI e=20; losa e=15.
+
+### Pipeline de extraccion y validacion
+
+- `tools/extraer_geometria.py`: reticula, nombres de ejes, niveles y secciones.
+- `tools/extraer_piso_json.py`: columnas/vigas/muros a JSON por piso (filtro por copia de planta).
+- Validado en piso 3 (planta inferior de 102): 18 columnas 70x70 en reticula 6x3 + vigas + muros.
+- Resultado crudo: `entregas/semana2/data/piso3_raw.json`.
+
+### Pendiente (proximas etapas)
+
+- Reticula fina y coordenadas por piso/bloque; cargas del plano 700 (q_G); JSON limpio por piso (interfaz OpenSees-Unity); modelo OpenSeesPy completo con diafragmas rigidos, areas tributarias y verificaciones; informe de entrega.
+
 ## Semana 1 - P1L1 Benchmark 3D 2
 
 ### Alcance
