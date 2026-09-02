@@ -1,0 +1,93 @@
+{
+  "model": "Edificio Semana 2 - dos bloques (bloque A torre + bloque B muros 1S)",
+  "units": "m, N, Pa",
+  "config": {
+    "x_grid": [
+      0.0,
+      10.0,
+      20.0,
+      30.0,
+      40.0,
+      45.0
+    ],
+    "y_grid": [
+      0.0,
+      7.25,
+      16.15
+    ],
+    "z_levels": [
+      -4.01,
+      -0.05,
+      3.91,
+      7.87,
+      11.83
+    ],
+    "col_rows_at_piso4": [
+      0,
+      1,
+      2
+    ],
+    "blockB_dilation": 0.1,
+    "blockB_y0": 16.25,
+    "blockB_Lx": 21.9,
+    "blockB_Ly": 27.32,
+    "col": {
+      "b": 0.7,
+      "h": 0.7
+    },
+    "beam_primary": {
+      "b": 0.6,
+      "h": 0.8
+    },
+    "beam_sec": {
+      "b": 0.2,
+      "h": 0.8
+    },
+    "wall": {
+      "t": 0.25,
+      "h": 3.0
+    },
+    "E": 25000000000.0,
+    "nu": 0.2,
+    "q_G": 6350.0,
+    "SC": 2500.0
+  },
+  "counts": {
+    "niveles_losa": 5,
+    "nodos": 98,
+    "elementos": 192,
+    "num_columnas": 72,
+    "num_vigas": 108,
+    "num_muros": 12,
+    "num_bloques": 2,
+    "blockA_area_m2": 726.7499999999999,
+    "blockB_Lx_m": 21.9,
+    "blockB_Ly_m": 27.32,
+    "dilatacion_m": 0.1
+  },
+  "loads": {
+    "qG_kN_m2": 6.35,
+    "SC_kN_m2": 2.5,
+    "total_unit_kN_m2": 8.85,
+    "area_piso_tipico_bloqueA_m2": 726.7499999999999,
+    "carga_piso_tipico_kN": 6431.737499999999,
+    "carga_acumulada_vigas_kN": 25726.95
+  },
+  "tributary_areas": {
+    "carga_losa_por_piso_kN": 6431.737499999999,
+    "n_pisos_cargados": 4,
+    "carga_losa_total_kN": 25726.949999999997,
+    "suma_areas_tributarias_vigas_m2": 2907.0,
+    "area_losa_total_m2": 2906.9999999999995
+  },
+  "checks": {
+    "conservacion_carga_error_kN": 3.725290298461914e-12,
+    "equilibrio_vertical_error_kN": 1.4901161193847657e-11,
+    "sum_reacciones_Z_kN": 25726.950000000015,
+    "max_diaphragm_inplane_diff_piso4_m": 2.1653349022472576e-05,
+    "n_diaphragms": 5,
+    "handcalc_max_col_axial_error_kN": 85.34303381111263,
+    "handcalc_sum_col_axial_kN": 25726.95
+  },
+  "geometry_diagram": "entregas/semana2/results/geometria_edificio_2bloques.png"
+}

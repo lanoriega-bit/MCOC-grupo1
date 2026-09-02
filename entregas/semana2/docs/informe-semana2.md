@@ -2,10 +2,16 @@
 
 ## 1. Alcance
 
-Modelo **lineal elástico 3D** del bloque principal del Edificio de Ingeniería con:
+Modelo **lineal elástico 3D** de los **DOS bloques** del Edificio de Ingeniería con:
 geometría completa, carga gravitacional transferida por **áreas tributarias**,
 **diafragmas rígidos**, apoyos de fundación y salidas para el **viewer Unity**.
 Los datos de entrada son trazables desde los planos originales (DWG→DXF vía ODA).
+
+El edificio está formado por **dos bloques en planta** (plano 101) separados por una
+**junta de dilatación de 10 cm** (confirmado por el cliente): el **bloque A** (torre
+principal de columnas 70×70 cm, pisos subterráneo a 4°) y el **bloque B** (zona del
+1° Subterráneo de **muros de contención**, sin columnas 70×70 propias), ubicado **al
+lado** del bloque A (desplazado en +Y).
 
 ## 2. Datos de entrada (trazables)
 
@@ -44,19 +50,29 @@ ajusta la carga; solo cambia el factor de escala de resultados).
 
 ## 3. Modelo
 
-- Script: `entregas/semana2/opensees/edificio_completo.py`
-- **90 nodos, 188 elementos** (72 columnas + 108 vigas + **8 muros equivalentes**).
+- Script: `entregas/semana2/opensees/edificio_completo_2bloques.py`
+- **98 nodos, 192 elementos** (72 columnas + 108 vigas + **12 muros equivalentes**).
 - Elementos `forceBeamColumn` / `elasticBeamColumn` 3D con secciones y materiales
   definidos en `CONFIG`.
+- **Dos bloques en planta**:
+  - **Bloque A (torre principal)**: retícula X `0,10,20,30,40,45` m, Y `0,7.25,16.15` m,
+    niveles `−4.01` a `+11.83` m. Columnas 70×70, vigas, diafragmas y carga tributaria.
+  - **Bloque B (1°S, muros de contención)**: caja rectangular de muros perimetrales al
+    lado del bloque A (desplazada en +Y), separada por junta de dilatación de 10 cm.
+    Dimensiones extraídas de `data/piso1S_raw.json` (plano 101): Lx = 21.90 m,
+    Ly = 27.32 m. Solo existe en el nivel subterráneo (z −4.01 a −0.05). No aporta
+    carga de losa típica ni tiene columnas 70×70 propias.
 - **Muros equivalentes del 1° Subterráneo**: según la convención del curso, los muros
-  de contención del perímetro (−4.01 a −0.05) se representan como 8 elementos lineales
-  verticales con sección de muro (e = 0.25 m) sobre las líneas de columna del perímetro,
-  reproduciendo la caja de contención. Aportan rigidez (no carga tributaria).
-- **Diafragmas rígidos** (`rigidDiaphragm`) en los 5 niveles de losa: los nodos de
-  cada piso comparten los grados en el plano (movimiento como sólido rígido en x-y).
-- **Apoyos**: base empotrada en el nivel inferior (fundación).
+  de contención del perímetro (−4.01 a −0.05) se representan como elementos lineales
+  verticales con sección de muro (e = 0.25 m): 8 muros sobre las líneas de columna del
+  perímetro del bloque A + 4 muros perimetrales de la caja del bloque B. Aportan rigidez
+  (no carga tributaria).
+- **Diafragmas rígidos** (`rigidDiaphragm`) en los 5 niveles de losa del bloque A: los
+  nodos de cada piso comparten los grados en el plano (movimiento como sólido rígido en x-y).
+- **Apoyos**: base empotrada en el nivel inferior (fundación) de ambos bloques.
 - Las **losas no se modelan como elementos finitos**; su carga se transfiere a las
   vigas mediante **áreas tributarias**.
+- Ambos bloques **no comparten nodos** en la junta de dilatación (separación de 10 cm).
 
 ## 4. Área tributaria y transferencia de carga
 
@@ -78,10 +94,10 @@ carga de losa como piso típico.
 |--------------|--------|-----------|
 | Conservación de carga | Σ carga en vigas vs. 4×carga de piso | error **3.7e-12 kN** ✓ |
 | Carga total de losa por piso | 4 pisos × 726.75 m² × 8.85 kN/m² | **25726.95 kN** ✓ |
-| Suma de áreas tributarias | Σ trib_area de vigas vs. área de losa total | **2907.0 = 2907.0 m²** ✓ |
-| Equilibrio vertical | Σ reacciones Z vs. Σ cargas | 25726.95 = 25726.95 kN, error **2.2e-11 kN** ✓ |
-| Compatibilidad de diafragma | ux,uy iguales en todos los nodos de un piso (sólido rígido) | dif. en plano **7.3e-6 m** (< 0.1 mm) ✓ |
-| Cálculo manual independiente (axial en columnas) | Σ axial manual por área tributaria (Voronoi) vs. reacciones en base de cada columna | Σ manual = **25726.95 kN** = Σ OpenSees; máx. error por columna **50.0 kN** (~1.2% en columnas mayores) ✓ |
+| Suma de áreas tributarias | Σ trib_area de vigas vs. área de losa total (bloque A) | **2907.0 = 2907.0 m²** ✓ |
+| Equilibrio vertical | Σ reacciones Z vs. Σ cargas | 25726.95 = 25726.95 kN, error **1.5e-11 kN** ✓ |
+| Compatibilidad de diafragma | ux,uy iguales en todos los nodos de un piso (sólido rígido) | dif. en plano **2.2e-5 m** (< 0.1 mm) ✓ |
+| Cálculo manual independiente (axial en columnas) | Σ axial manual por área tributaria (Voronoi) vs. reacciones en base de cada columna | Σ manual = **25726.95 kN** = Σ OpenSees; máx. error por columna **85.3 kN** ✓ |
 | Convergencia del análisis | análisis elástico completo | convergente ✓ |
 
 El script lanza **assert** y aborta si falla alguna, garantizando que los resultados
@@ -91,18 +107,19 @@ entregados están verificados.
 
 | Archivo | Contenido |
 |---------|-----------|
-| `opensees/edificio_completo.py` | Modelo completo (configuración y verificación) |
-| `results/verificacion.json` | Resumen de conteos, cargas y checks |
-| `results/geometria_edificio.png` | Vista 3D de la geometría |
-| `results/geometria_unity.json` | **Contrato JSON OpenSees → Unity** (nodos, columnas, vigas, apoyos, diafragmas, cargas, desplazamientos) |
+| `opensees/edificio_completo_2bloques.py` | Modelo completo de los 2 bloques (configuración y verificación) |
+| `results/verificacion_2bloques.json` | Resumen de conteos, cargas y checks |
+| `results/geometria_edificio_2bloques.png` | Vista 3D de la geometría |
+| `results/geometria_unity_2bloques.json` | **Contrato JSON OpenSees → Unity** (nodos, columnas, vigas, muros, apoyos, diafragmas, cargas, desplazamientos) |
 
-El `geometria_unity.json` es el contrato consumible por el **viewer Unity** para
+El `geometria_unity_2bloques.json` es el contrato consumible por el **viewer Unity** para
 orbitar la geometría y alternar nodos/vigas/columnas/muros/apoyos/diafragmas/IDs.
 
 ## 7. Comando de ejecución
 
 ```powershell
-python entregas/semana2/opensees/edificio_completo.py
+python entregas/semana2/opensees/edificio_completo_2bloques.py
+python tools/build_viewer.py   # regenera viewer/index.html con los 2 bloques
 ```
 
 ## 8. Supuestos y pendientes (revisión humana)
@@ -111,14 +128,17 @@ python entregas/semana2/opensees/edificio_completo.py
   cotas reales (vanos Y ~7.25 y ~8.90 m detectados).
 - La **techumbre** usa solo 2 filas de columnas (x 6); las filas de cubierta/penthouse
   se modelan en la etapa de interface/penthouse.
-- El **1°S** está modelado geométricamente, con sus **muros de contención como 8 muros
-  equivalentes** y sin carga de losa típica (nivel de estacionamiento).
+- El **1°S** está modelado geométricamente, con sus **muros de contención como 12 muros
+  equivalentes** (8 del bloque A + 4 del bloque B) y sin carga de losa típica.
+- El **bloque B (muros 1°S)** se posicionó al lado del bloque A con su propia retícula
+  (Lx = 21.90 m, Ly = 27.32 m) extraída de `piso1S_raw.json`; su posición exacta en Y
+  relativa al bloque principal debe validarse visualmente contra el plano 101.
 - `q_G` y `SC` son valores representativos por zona; los textos finos del plano 700
   (SC y PM por zona) y la asignación por área tributaria por vigueta deben validarse.
 - Falta validación visual humana del PNG (este agente no interpreta imágenes).
 
 ## 9. Estado
 
-Modelo completo, validado numéricamente (conservación, equilibrio y diafragma rígido) y
-commiteado. Pendiente: validación humana de geometría/cargas y siguientes etapas
-(diafragmas por bloque, interface Unity completa, análisis modal y sísmico).
+Modelo de **dos bloques** completo, validado numéricamente (conservación, equilibrio y
+diafragma rígido) y commiteado. Pendiente: validación humana de geometría/cargas y
+siguientes etapas (interface Unity completa, análisis modal y sísmico).

@@ -222,3 +222,35 @@ python entregas/p1l0/opensees/ejemplo_minimo_2d.py
 ```powershell
 python entregas/p1l1_benchmark_3d_2/opensees/benchmark_3d_2.py
 ```
+
+
+## Semana 2 - Ampliacion a DOS bloques (bloque A torre + bloque B muros 1S)
+
+### Alcance
+
+- El cliente confirmo que el edificio son DOS bloques en planta (plano 101) separados por una junta de dilatacion de 10 cm, dispuestos side-by-side en Y.
+- Bloque A: torre principal de columnas 70x70 (subterraneo a 4 piso), ya modelado en Semana 2.
+- Bloque B: zona del 1 Subterraneo de MUROS de contencion (sin columnas 70x70 propias), al lado del bloque A, solo en el nivel subterraneo.
+
+### Resultado
+
+- Geometria del bloque B extraida de `entregas/semana2/data/piso1S_raw.json` (plano 101): Lx = 21.90 m (X: 10.26..32.16), Ly = 27.32 m (Y: 55.15..82.47 en papel), re-posicionado junto al bloque A: Y: 16.25..43.57 m, X: 0..21.90 m.
+- Nuevo modelo `edificio_completo_2bloques.py`: 98 nodos, 192 elementos = 72 columnas + 108 vigas + 12 muros (8 bloque A + 4 bloque B).
+- Bloque B como caja de 4 muros perimetrales equivalentes (e=0.25 m) en el nivel subterraneo (z -4.01 a -0.05); no aporta carga de losa tipica.
+- Verificaciones (asserts): conservacion 3.7e-12 kN; equilibrio 1.5e-11 kN; diafragma 2.2e-5 m; suma areas tributarias 2907.0 m2 = area losa total (bloque A). Carga por piso 25726.95 kN.
+- Viewer regenerado con los 2 bloques (`viewer/index.html`).
+
+### Archivos
+
+- Script: `entregas/semana2/opensees/edificio_completo_2bloques.py`.
+- Verificacion: `entregas/semana2/results/verificacion_2bloques.json`.
+- Contrato Unity: `entregas/semana2/results/geometria_unity_2bloques.json`.
+- Diagrama 3D: `entregas/semana2/results/geometria_edificio_2bloques.png`.
+- Informe: `entregas/semana2/docs/informe-semana2.md`.
+
+### Comando de verificacion
+
+```powershell
+python entregas/semana2/opensees/edificio_completo_2bloques.py
+python tools/build_viewer.py
+```

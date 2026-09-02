@@ -375,8 +375,8 @@ HTML_TAIL = r"""</script>
 """
 
 def main():
-    geo_path = RESULTS / "geometria_unity.json"
-    verif_path = RESULTS / "verificacion.json"
+    geo_path = RESULTS / "geometria_unity_2bloques.json"
+    verif_path = RESULTS / "verificacion_2bloques.json"
     geo = json.loads(geo_path.read_text(encoding="utf-8"))
     verif = json.loads(verif_path.read_text(encoding="utf-8"))
 

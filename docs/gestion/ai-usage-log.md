@@ -114,3 +114,15 @@
   - `docs/informe-tarea8.md`.
 - Verificacion (asserts): superposicion R: 1.50e-11 kN; desplazamientos: 2.4e-18 m; combinaciones (1.4G, 1.2G+1.6Q, 1.4G+1.4Q): errores ~1e-12 kN.
 - Limitacion: se reconstruye el modelo por caso (equivalente en resultados; mas lento que reusar patrones, pero inequivoco). El conteo de niveles (1 sub + 4 pisos) se reutiliza del modelo de Semana 2.
+
+
+## Semana 2 - Ampliacion a DOS bloques (bloque A torre + bloque B muros 1S)
+
+- Objetivo: ampliar el modelo de Semana 2 para cubrir los DOS bloques del edificio (plano 101) tras confirmacion del cliente (bloques side-by-side con dilatacion de 10 cm).
+- Encargo a IA: modelar el bloque B (1 Subterraneo de muros de contencion) al lado del bloque A, manteniendo verificaciones y contrato Unity.
+- Resultado:
+  - `edificio_completo_2bloques.py`: 98 nodos, 192 elementos (72 col + 108 vigas + 12 muros).
+  - Bloque B: caja de 4 muros perimetrales equivalentes (e=0.25 m) en el nivel subterraneo; Lx=21.90 m, Ly=27.32 m extraidos de piso1S_raw.json; dilatacion 10 cm.
+  - `verificacion_2bloques.json`, `geometria_unity_2bloques.json`, `geometria_edificio_2bloques.png`, viewer actualizado.
+- Verificacion (asserts): conservacion 3.7e-12 kN; equilibrio 1.5e-11 kN; diafragma 2.2e-5 m; suma areas tributarias = area losa total (bloque A) 2907.0 m2; carga por piso 25726.95 kN.
+- Limitacion: la posicion exacta del bloque B en Y relativa al bloque principal y la reticulacion interna completa deben validarse visualmente contra el plano 101 (este agente no interpreta imagenes).
