@@ -118,6 +118,19 @@ python entregas/p1l0/opensees/ejemplo_minimo_2d.py
 
 - Reticula fina y coordenadas por piso/bloque; cargas del plano 700 (q_G); JSON limpio por piso (interfaz OpenSees-Unity); modelo OpenSeesPy completo con diafragmas rigidos, areas tributarias y verificaciones; informe de entrega.
 
+### Modelo del edificio completo (bloque principal) — resultado
+
+- Script: `entregas/semana2/opensees/edificio_completo.py`.
+- **90 nodos, 180 elementos** (72 columnas, 108 vigas), 5 niveles de losa, 5 diafragmas rigidos.
+- Reticula X: `0,10,20,30,40,45 m` × Y: `0,7.25,16.15 m`.
+- Carga gravitacional transferida por **areas tributarias**; q_G = 6.35 kN/m² (losa 15cm + PM adic) + SC 2.50 kN/m² → total 8.85 kN/m².
+- Area piso tipico 726.75 m²; carga piso 6431.74 kN; carga acumulada vigas 25726.95 kN (4 pisos × 6431.74).
+- **Verificaciones (asserts)**: conservacion error 3.7e-12 kN; equilibrio vertical error 2.2e-11 kN; compatibilidad diafragma rigido (ux/uy en plano) 7.3e-6 m. Todo ✓.
+- Salidas: `results/geometria_edificio.png` (vista 3D), `results/verificacion.json`, `results/geometria_unity.json` (contrato OpenSees→Unity).
+- El 1°S (z=-4.01) se incluye en geometria pero **no** carga losa tipica (nivel de muros de contencion sin columnas 70×70 propias).
+- Informe: `entregas/semana2/docs/informe-semana2.md`.
+- **Revision humana pendiente**: validar geometrica (PNG) y supuestos de carga/vanos Y y techumbre.
+
 ## Semana 1 - P1L1 Benchmark 3D 2
 
 ### Alcance

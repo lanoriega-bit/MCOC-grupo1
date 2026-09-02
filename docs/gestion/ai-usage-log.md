@@ -62,3 +62,17 @@
   - `entregas/semana2/data/piso3_raw.json` (18 columnas 70x70, reticula 6x3, vigas y muros).
 - Verificacion: correlacion del plano 102 piso 3 contra los rotulos de nivel de los planos 101-103 (losas -4.01 / -0.05 / +3.91 / +7.87 / +11.83) que dan alturas de 3.96 m constantes.
 - Limitacion: las elevaciones 300-310 traen su dibujo como bloques anidados no traducidos; los niveles reales se obtuvieron de los propios planos de piso. Las cotas finas (vanos) deben cruzarse con las cotas reales del plano en la etapa de modelado.
+
+## Semana 2 - Modelo OpenSeesPy del edificio completo (etapa 2)
+
+- Objetivo: ensamblar el modelo 3D completo del bloque principal con geometria total, cargas gravitacionales por areas tributarias, diafragmas rigidos y salidas para el viewer Unity.
+- Encargo a IA: construir `edificio_completo.py` (90 nodos, 180 elementos: 72 columnas + 108 vigas; 5 niveles de losa y 5 diafragmas rigidos) y convertir la configuracion de geometria/cargas en `CONFIG`.
+- Resultado:
+  - `entregas/semana2/opensees/edificio_completo.py`.
+  - `entregas/semana2/results/geometria_edificio.png` (vista 3D).
+  - `entregas/semana2/results/verificacion.json` (resumen).
+  - `entregas/semana2/results/geometria_unity.json` (contrato OpenSees→Unity).
+  - `entregas/semana2/docs/informe-semana2.md` (informe).
+- Verificacion (asserts automaticos): conservacion de carga (error 3.7e-12 kN), equilibrio vertical (error 2.2e-11 kN), compatibilidad de diafragma rigido (diferencia en plano 7.3e-6 m). Todo pasa.
+- Hipotesis documentadas: q_G = 6.35 kN/m² + SC 2.5 kN/m² = 8.85 kN/m²; reticula Y = 0,7.25,16.15 m; techumbre con 2 filas de columnas; el 1°S se modela como geometria pero no carga losa tipica (nivel de muros de contencion).
+- Limitacion: este agente no interpreta imagenes; la validacion visual del PNG y el cruce fino de vanos/cargas con los planos queda para revision humana.
