@@ -191,6 +191,8 @@ def main() -> None:
     ops.pattern("Plain", 1, 1)
     total = cfg["q_G"] + cfg["SC"]  # N/m2
     load_sum = 0.0
+    for el in elements.values():
+        el["trib_area_m2"] = 0.0
     for ilz in range(1, len(zg)):  # cada piso carga su losa
         rows = rows_per_level[ilz]
         for ix in range(len(xg) - 1):
@@ -206,10 +208,14 @@ def main() -> None:
                 ops.eleLoad("-ele", x_beam_tag[(ix, iy, ilz)], "-type", "-beamUniform", 0.0, -q_edge_x, 0.0)
                 ops.eleLoad("-ele", x_beam_tag[(ix, iy + 1, ilz)], "-type", "-beamUniform", 0.0, -q_edge_x, 0.0)
                 load_sum += 2 * q_edge_x * sx
+                elements[x_beam_tag[(ix, iy, ilz)]]["trib_area_m2"] += sx * sy / 4.0
+                elements[x_beam_tag[(ix, iy + 1, ilz)]]["trib_area_m2"] += sx * sy / 4.0
                 # borde Y izquierdo (ix) y derecho (ix+1)
                 ops.eleLoad("-ele", y_beam_tag[(ix, iy, ilz)], "-type", "-beamUniform", 0.0, -q_edge_y, 0.0)
                 ops.eleLoad("-ele", y_beam_tag[(ix + 1, iy, ilz)], "-type", "-beamUniform", 0.0, -q_edge_y, 0.0)
                 load_sum += 2 * q_edge_y * sy
+                elements[y_beam_tag[(ix, iy, ilz)]]["trib_area_m2"] += sx * sy / 4.0
+                elements[y_beam_tag[(ix + 1, iy, ilz)]]["trib_area_m2"] += sx * sy / 4.0
 
     area_tip = (max(xg) - min(xg)) * (max(yg) - min(yg))
     expected_tip = total * area_tip
@@ -323,7 +329,8 @@ def main() -> None:
             for tag, el in elements.items() if el["type"] == "column"
         ],
         "beams": [
-            {"id": tag, "i": el["nodes"][0], "j": el["nodes"][1], "name": el["name"]}
+            {"id": tag, "i": el["nodes"][0], "j": el["nodes"][1], "name": el["name"],
+             "trib_area_m2": el["trib_area_m2"]}
             for tag, el in elements.items() if el["type"] == "beam"
         ],
         "supports": [
