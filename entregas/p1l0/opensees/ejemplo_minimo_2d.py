@@ -1,4 +1,4 @@
-"""P1L0: ejemplo minimo 2D de OpenSeesPy basado en la Pregunta 2.
+﻿"""P1L0: ejemplo minimo 2D de OpenSeesPy basado en la Pregunta 2.
 
 Modelo: marco isostatico de tres articulaciones con carga vertical uniforme.
 La validacion se realiza contra la pauta del Control 1 de Estructuras Isostaticas.

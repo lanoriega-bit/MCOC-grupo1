@@ -6,8 +6,9 @@ namespace Mcoc.UnityViewer
 {
     /// <summary>
     /// Controlador principal del visor 3D (rol "Unity Viewer"). Construye la escena
-    /// desde el JSON, permite mostrar/ocultar por tipo y piso, y al hacer clic sobre
-    /// un elemento muestra sus datos (ID, nodos, seccion, material, longitud,
+    /// desde el JSON, permite mostrar/ocultar por tipo y piso (con boton "solo"),
+    /// vistas laterales A/B/C/D y planta, IDs on/off, y al hacer clic sobre un
+    /// elemento muestra sus datos (ID, nodos, seccion, material, longitud,
     /// area y carga tributaria cuando esten presentes en el contrato).
     /// </summary>
     public class ViewerController : MonoBehaviour
@@ -16,16 +17,16 @@ namespace Mcoc.UnityViewer
         [SerializeField] private string jsonFileName = "model_viewer.json";
 
         [Header("Camara")]
-        [SerializeField] private float orbitSpeed = 3f;
+        [SerializeField] private float orbitSpeed = 4f;
         [SerializeField] private float zoomSpeed = 1.0f;
         [SerializeField] private float minZoom = 1f;
-        [SerializeField] private float maxZoom = 200f;
+        [SerializeField] private float maxZoom = 600f;
         [SerializeField] private float panSpeed = 0.1f;
 
-        private Vector3 orbitTarget = new Vector3(24.98f, 7.3f, 9.83f);
-        private float orbitDist = 85f;
-        private float orbitYaw = 0f;
-        private float orbitPitch = 20f;
+        private Vector3 orbitTarget;
+        private float orbitDist = 160f;
+        private float yaw = 30f;      // giro horizontal (grados, continua)
+        private float pitch = 25f;    // elevacion (grados, -89..89)
 
         [Header("UI")]
         [SerializeField] private Transform tipoToggleContainer;
@@ -38,10 +39,13 @@ namespace Mcoc.UnityViewer
         private readonly Dictionary<string, List<GameObject>> byFloor = new Dictionary<string, List<GameObject>>();
         private readonly Dictionary<string, bool> typeVisible = new Dictionary<string, bool>();
         private readonly Dictionary<string, bool> floorVisible = new Dictionary<string, bool>();
+        private readonly List<ElementInfo> allElements = new List<ElementInfo>();
 
         private Camera cam;
         private Transform selected = null;
         private string lastInfo = "";
+        private bool labelsVisible = false;
+        private static Texture2D whiteTex;
 
         private static readonly Dictionary<string, string> TypeLabels = new Dictionary<string, string>
         {
@@ -51,23 +55,28 @@ namespace Mcoc.UnityViewer
             { "wall", "Muros" },
             { "support", "Apoyos" },
             { "diaphragm", "Diafragmas" },
-            { "slab", "Pisos/losas" },
+            { "slab", "Piso/techo" },
             { "axis", "Ejes CAD" },
             { "slab_edge", "Borde losa" },
             { "node", "Nodos" },
             { "cad_reference", "Lineas CAD ref." }
         };
 
+        private static readonly Dictionary<string, int> FloorOrder = new Dictionary<string, int>
+        {
+            { "base", 0 }, { "1S", 1 }, { "1", 2 }, { "2", 3 }, { "3", 4 }, { "4", 5 }
+        };
+
         void Start()
         {
             cam = Camera.main;
             if (cam == null) cam = Camera.main;
-            if (cam != null) { cam.clearFlags = CameraClearFlags.SolidColor; cam.backgroundColor = new Color(0.15f, 0.15f, 0.17f, 1f); }
+            orbitTarget = new Vector3(37.29f, 18.66f, 10.96f);
+            if (cam != null) { cam.clearFlags = CameraClearFlags.SolidColor; cam.backgroundColor = new Color(0.07f, 0.11f, 0.19f, 1f); }
             model = JsonLoader.LoadModel(jsonFileName);
             if (model == null) { SetStatus("Error: no se pudo cargar el modelo."); return; }
             BuildScene();
-            BuildToggles();
-            SetStatus($"{model.solids?.Count ?? 0} solidos, {model.segments?.Count ?? 0} lineas CAD");
+            SetStatus($"{model.solids?.Count ?? 0} solidos, {model.segments?.Count ?? 0} lineas CAD, {model.labels?.Count ?? 0} etiquetas");
         }
 
         // ---------- Construccion de escena ----------
@@ -86,8 +95,8 @@ namespace Mcoc.UnityViewer
         {
             var go = GameObject.CreatePrimitive(PrimitiveType.Cube);
             go.name = solid.solidTag;
-            Register(go, solid.category, solid.floor);
             var data = go.AddComponent<ElementInfo>();
+            data.go = go;
             data.kind = solid.kind;
             data.id = solid.solidTag;
             data.category = solid.category;
@@ -121,6 +130,8 @@ namespace Mcoc.UnityViewer
             }
             var rnd = go.GetComponent<Renderer>();
             if (rnd != null) rnd.material.color = ColorFor(solid.category);
+            Register(go, solid.category, solid.floor);
+            allElements.Add(data);
             return go;
         }
 
@@ -128,25 +139,25 @@ namespace Mcoc.UnityViewer
         {
             if (seg.points == null || seg.points.Count < 2) return;
             var go = new GameObject("seg_" + seg.elementTag);
-            Register(go, seg.category == "axis" ? "axis" : "cad_reference", seg.floor);
             var lr = go.AddComponent<LineRenderer>();
             lr.positionCount = seg.points.Count;
             for (int i = 0; i < seg.points.Count; i++) lr.SetPosition(i, V(seg.points[i]));
             lr.startWidth = 0.03f; lr.endWidth = 0.03f;
             lr.material = LineMaterial(ColorFor(seg.category == "axis" ? "axis" : "cad_reference"));
+            Register(go, seg.category == "axis" ? "axis" : "cad_reference", seg.floor);
         }
 
         void CreateDiaphragm(DiaphragmData dia)
         {
             if (dia.points == null || dia.points.Count < 2) return;
             var go = new GameObject("dia_" + dia.floor);
-            Register(go, "diaphragm", dia.floor);
             var lr = go.AddComponent<LineRenderer>();
             lr.positionCount = dia.points.Count;
             lr.loop = true;
             for (int i = 0; i < dia.points.Count; i++) lr.SetPosition(i, V(dia.points[i]));
             lr.startWidth = 0.06f; lr.endWidth = 0.06f;
             lr.material = LineMaterial(ColorFor("diaphragm"));
+            Register(go, "diaphragm", dia.floor);
         }
 
         void CreateNodes()
@@ -169,7 +180,14 @@ namespace Mcoc.UnityViewer
                     go.transform.position = p;
                     go.transform.localScale = Vector3.one * 0.28f;
                     go.GetComponent<Renderer>().material.color = ColorFor("node");
+                    var ei = go.AddComponent<ElementInfo>();
+                    ei.id = "NOD_" + key.Replace("|", "_").Replace(",", "_");
+                    ei.category = "node";
+                    ei.floor = solid.floor;
+                    ei.materialName = "generado";
+                    ei.go = go;
                     Register(go, "node", solid.floor);
+                    allElements.Add(ei);
                 }
             }
         }
@@ -181,7 +199,7 @@ namespace Mcoc.UnityViewer
             byType[type].Add(go);
             if (!byFloor.ContainsKey(floor)) byFloor.Add(floor, new List<GameObject>());
             byFloor[floor].Add(go);
-            if (!typeVisible.ContainsKey(type)) typeVisible[type] = true;
+            if (!typeVisible.ContainsKey(type)) typeVisible[type] = type != "cad_reference";
             if (!floorVisible.ContainsKey(floor)) floorVisible[floor] = true;
             ApplyVisibility(go, type, floor);
         }
@@ -193,45 +211,6 @@ namespace Mcoc.UnityViewer
             go.SetActive(vis);
         }
 
-        // ---------- UI toggles ----------
-        void BuildToggles()
-        {
-            if (tipoToggleContainer != null)
-            {
-                foreach (var kv in byType)
-                {
-                    if (!TypeLabels.ContainsKey(kv.Key)) continue;
-                    var label = TypeLabels[kv.Key];
-                    var go = CreateToggle(label, kv.Key, true, tipoToggleContainer);
-                    if (go != null) go.name = "tt_" + kv.Key;
-                }
-            }
-            if (pisoToggleContainer != null)
-            {
-                foreach (var kv in byFloor)
-                {
-                    var go = CreateToggle($"Piso {kv.Key}", kv.Key, false, pisoToggleContainer);
-                    if (go != null) go.name = "ft_" + kv.Key;
-                }
-            }
-        }
-
-        GameObject CreateToggle(string labelText, string key, bool isType, Transform parent)
-        {
-            var go = new GameObject("toggle", typeof(Toggle), typeof(RectTransform));
-            go.transform.SetParent(parent, false);
-            var lbl = new GameObject("label", typeof(Text), typeof(RectTransform));
-            lbl.transform.SetParent(go.transform, false);
-            var t = go.GetComponent<Toggle>();
-            if (isType) t.onValueChanged.AddListener(v => ToggleType(key, v));
-            else t.onValueChanged.AddListener(v => ToggleFloor(key, v));
-            t.isOn = true;
-            return go;
-        }
-
-        void ToggleType(string type, bool visible) { typeVisible[type] = visible; ReapplyAll(); }
-        void ToggleFloor(string floor, bool visible) { floorVisible[floor] = visible; ReapplyAll(); }
-
         void ReapplyAll()
         {
             foreach (var kv in byType)
@@ -242,8 +221,21 @@ namespace Mcoc.UnityViewer
         // ---------- Seleccion por clic ----------
         void Update()
         {
-            if (Input.GetMouseButtonDown(0)) TrySelect(Input.mousePosition);
+            if (Input.GetMouseButtonDown(0) && !IsMouseOverUI()) TrySelect(Input.mousePosition);
             PolarCam();
+        }
+
+        bool IsMouseOverUI()
+        {
+            Vector2 m = Input.mousePosition;
+            m.y = Screen.height - m.y;
+            // Zona panel derecho (navegacion, arriba)
+            if (m.x > Screen.width - 260 && m.y < 92) return true;
+            // Zona panel izquierdo (pisos y tipos)
+            if (m.x < 260 && m.y > 225 && m.y < 705) return true;
+            // Zona panel de info (arriba izquierda)
+            if (m.x < 370 && m.y < 210) return true;
+            return false;
         }
 
         void TrySelect(Vector2 screenPos)
@@ -284,23 +276,140 @@ namespace Mcoc.UnityViewer
             if (infoText != null) infoText.text = lastInfo;
         }
 
+        // ---------- Vistas ----------
+        void TopView()
+        {
+            yaw = 30f;
+            pitch = 89f;
+            orbitDist = 150f;
+        }
+
+        void SideView(string side)
+        {
+            // D = sur: caja desde +Z; A este: desde +X; B norte: desde -Z; C oeste: desde -X
+            var angles = new Dictionary<string, float> { { "D", 0f }, { "A", 90f }, { "B", 180f }, { "C", 270f } };
+            yaw = angles.ContainsKey(side) ? angles[side] : 0f;
+            pitch = 6f;
+            orbitDist = 185f;
+        }
+
+        // ---------- UI (IMGUI garantiza visibilidad en build) ----------
         void OnGUI()
+        {
+            if (whiteTex == null) whiteTex = MakeTex(2, 2, Color.white);
+            DrawPanelInfo();
+            DrawControls();
+            if (labelsVisible) DrawLabels();
+        }
+
+        void DrawPanelInfo()
         {
             if (string.IsNullOrEmpty(lastInfo)) return;
             var style = new GUIStyle(GUI.skin.box);
-            style.fontSize = 14;
+            style.fontSize = 13;
+            style.alignment = TextAnchor.UpperLeft;
             style.normal.textColor = Color.white;
-            style.normal.background = MakeTex(2, 2, new Color(0f, 0f, 0f, 0.75f));
-            GUI.Box(new Rect(10, 10, 380, 220), lastInfo, style);
+            style.normal.background = whiteTex;
+            var tex = MakeTex(2, 2, new Color(0f, 0f, 0f, 0.78f));
+            GUI.Box(new Rect(10, 10, 360, 200), "");
+            GUI.DrawTexture(new Rect(10, 10, 360, 200), tex);
+            var lbl = new GUIStyle(GUI.skin.label);
+            lbl.fontSize = 13;
+            lbl.normal.textColor = Color.white;
+            GUI.Label(new Rect(20, 16, 340, 190), lastInfo, lbl);
         }
 
-        static Texture2D MakeTex(int w, int h, Color col)
+        void DrawControls()
         {
-            var t = new Texture2D(w, h);
-            for (int y = 0; y < h; y++) for (int x = 0; x < w; x++) t.SetPixel(x, y, col);
-            t.Apply();
-            return t;
+            float x = Screen.width - 260;
+            float y = 10;
+
+            // --- Botones de vista ---
+            var btn = new GUIStyle(GUI.skin.button);
+            btn.fontSize = 12;
+            GUI.Box(new Rect(x, y, 250, 82), "");
+            GUI.DrawTexture(new Rect(x, y, 250, 82), MakeTex(2, 2, new Color(0.02f, 0.04f, 0.08f, 0.85f)));
+            var ttl = new GUIStyle(GUI.skin.label);
+            ttl.fontSize = 12; ttl.fontStyle = FontStyle.Bold; ttl.normal.textColor = Color.white;
+            GUI.Label(new Rect(x + 8, y + 4, 240, 18), "Navegacion", ttl);
+            var t1 = new GUIStyle(btn); var t2 = new GUIStyle(btn); var t3 = new GUIStyle(btn); var t4 = new GUIStyle(btn); var t5 = new GUIStyle(btn);
+            if (GUI.Button(new Rect(x + 8, y + 24, 44, 24), "Lado A", t1)) SideView("A");
+            if (GUI.Button(new Rect(x + 56, y + 24, 44, 24), "Lado B", t2)) SideView("B");
+            if (GUI.Button(new Rect(x + 104, y + 24, 44, 24), "Lado C", t3)) SideView("C");
+            if (GUI.Button(new Rect(x + 152, y + 24, 44, 24), "Lado D", t4)) SideView("D");
+            if (GUI.Button(new Rect(x + 8, y + 52, 120, 24), "Vista planta", t5)) TopView();
+            if (GUI.Button(new Rect(x + 132, y + 52, 108, 24), labelsVisible ? "IDs: on" : "IDs: off", t1)) labelsVisible = !labelsVisible;
+
+            // --- Panel izquierdo: Pisos y Tipos ---
+            float lx = 10;
+            float ly = 225;
+            GUI.Box(new Rect(lx, ly, 250, 480), "");
+            GUI.DrawTexture(new Rect(lx, ly, 250, 480), MakeTex(2, 2, new Color(0.02f, 0.04f, 0.08f, 0.85f)));
+            var sect = new GUIStyle(GUI.skin.label);
+            sect.fontSize = 12; sect.fontStyle = FontStyle.Bold; sect.normal.textColor = Color.white;
+
+            GUI.Label(new Rect(lx + 8, ly + 4, 240, 18), "Pisos", sect);
+            var floors = SortedFloors();
+            float iy = ly + 24;
+            foreach (var f in floors)
+            {
+                bool vis = floorVisible.ContainsKey(f) && floorVisible[f];
+                bool novo = GUI.Toggle(new Rect(lx + 8, iy, 150, 20), vis, "Piso " + f);
+                if (novo != vis) { floorVisible[f] = novo; ReapplyAll(); }
+                if (GUI.Button(new Rect(lx + 160, iy, 70, 20), "solo"))
+                {
+                    foreach (var k in floorVisible.Keys) floorVisible[k] = (k == f);
+                    ReapplyAll();
+                }
+                iy += 22;
+            }
+
+            iy += 10;
+            GUI.Label(new Rect(lx + 8, iy, 240, 18), "Tipos", sect);
+            iy += 22;
+            float ty = iy;
+            foreach (var kv in byType)
+            {
+                if (!TypeLabels.ContainsKey(kv.Key)) continue;
+                bool vis = typeVisible.ContainsKey(kv.Key) && typeVisible[kv.Key];
+                bool novo = GUI.Toggle(new Rect(lx + 8, ty, 220, 20), vis, TypeLabels[kv.Key]);
+                if (novo != vis) { typeVisible[kv.Key] = novo; ReapplyAll(); }
+                ty += 22;
+            }
         }
+
+        List<string> SortedFloors()
+        {
+            var list = new List<string>(byFloor.Keys);
+            list.Sort((a, b) => (FloorOrder.ContainsKey(a) ? FloorOrder[a] : 99).CompareTo(FloorOrder.ContainsKey(b) ? FloorOrder[b] : 99));
+            return list;
+        }
+
+        void DrawLabels()
+        {
+            if (cam == null) return;
+            GUIStyle ls = new GUIStyle(GUI.skin.label);
+            ls.fontSize = 10;
+            ls.normal.textColor = new Color(1f, 0.82f, 0.3f);
+            var sw = Screen.width; var sh = Screen.height;
+            foreach (var ei in allElements)
+            {
+                if (ei.go == null || !ei.go.activeInHierarchy) continue;
+                Vector3 cp = ei.nodeI + (ei.nodeJ - ei.nodeI) * 0.5f;
+                Vector3 sp = cam.WorldToScreenPoint(cp);
+                if (sp.z <= 0) continue;
+                sp.y = sh - sp.y;
+                if (sp.x < 0 || sp.x > sw || sp.y < 0 || sp.y > sh) continue;
+                GUI.Label(new Rect(sp.x - 30, sp.y - 8, 80, 16), ShortTag(ei.id), ls);
+            }
+        }
+
+        static string ShortTag(string tag) => tag.Replace("SOL_", "").Replace("CAD_", "").Replace("seg_", "");
+
+        // ---------- Camara orbital (esferica: estable, gira en todos los sentidos) ----------
+        private Vector2 lastMouse = new Vector2(-1f, -1f);
+        private float velYaw = 0f;
+        private float velPitch = 0f;
 
         void PolarCam()
         {
@@ -309,30 +418,64 @@ namespace Mcoc.UnityViewer
             float scroll = Input.GetAxis("Mouse ScrollWheel");
             if (Mathf.Abs(scroll) > 0.001f)
             {
-                orbitDist = Mathf.Clamp(orbitDist - scroll * zoomSpeed * 30f, minZoom, maxZoom);
+                orbitDist = Mathf.Clamp(orbitDist - scroll * zoomSpeed * 25f, 3f, maxZoom);
             }
 
-            if (Input.GetMouseButton(1))
+            bool orb = false;
+            if (Input.GetMouseButton(0) && !IsMouseOverUI()) orb = true;
+            if (Input.GetMouseButton(1)) orb = true;
+
+            Vector2 cur = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+            Vector2 delta = (lastMouse.x >= 0f) ? cur - lastMouse : Vector2.zero;
+            lastMouse = cur;
+
+            const float sens = 0.15f;
+
+            if (orb)
             {
-                orbitYaw += Input.GetAxis("Mouse X") * orbitSpeed;
-                orbitPitch -= Input.GetAxis("Mouse Y") * orbitSpeed;
-                orbitPitch = Mathf.Clamp(orbitPitch, -89f, 89f);
+                // Rotacion directa: X gira horizontal, Y sube/baja. Inercia capturada.
+                velYaw = delta.x * sens;
+                velPitch = delta.y * sens;
+                yaw += velYaw;
+                pitch += velPitch;
+                pitch = Mathf.Clamp(pitch, -89f, 89f);
+            }
+            else
+            {
+                lastMouse = cur;
+                // Inercia suave: sigue deslizandose y frena gradualmente
+                if (Mathf.Abs(velYaw) > 0.02f || Mathf.Abs(velPitch) > 0.02f)
+                {
+                    yaw += velYaw;
+                    pitch += velPitch;
+                    pitch = Mathf.Clamp(pitch, -89f, 89f);
+                    float decay = Mathf.Pow(0.3f, Time.deltaTime * 10f);
+                    velYaw *= decay;
+                    velPitch *= decay;
+                }
+                else
+                {
+                    velYaw = 0f;
+                    velPitch = 0f;
+                }
             }
 
+            // Pan con boton central + arrastrar
             if (Input.GetMouseButton(2))
             {
-                Vector3 right = cam.transform.right;
-                Vector3 up = cam.transform.up;
-                orbitTarget -= right * Input.GetAxis("Mouse X") * panSpeed * orbitDist * 0.02f;
-                orbitTarget -= up * Input.GetAxis("Mouse Y") * panSpeed * orbitDist * 0.02f;
+                Vector3 rightc = cam.transform.right;
+                Vector3 upc = cam.transform.up;
+                orbitTarget -= rightc * Input.GetAxis("Mouse X") * panSpeed * orbitDist * 0.02f;
+                orbitTarget -= upc * Input.GetAxis("Mouse Y") * panSpeed * orbitDist * 0.02f;
             }
 
-            float radYaw = orbitYaw * Mathf.Deg2Rad;
-            float radPitch = orbitPitch * Mathf.Deg2Rad;
+            // Posicion esferica determinista (sin gimbal lock, gira 360 horizontal y vertical)
+            float ry = yaw * Mathf.Deg2Rad;
+            float rp = pitch * Mathf.Deg2Rad;
             Vector3 offset = new Vector3(
-                Mathf.Sin(radYaw) * Mathf.Cos(radPitch),
-                Mathf.Sin(radPitch),
-                Mathf.Cos(radYaw) * Mathf.Cos(radPitch)
+                Mathf.Sin(ry) * Mathf.Cos(rp),
+                Mathf.Sin(rp),
+                Mathf.Cos(ry) * Mathf.Cos(rp)
             ) * orbitDist;
             cam.transform.position = orbitTarget + offset;
             cam.transform.LookAt(orbitTarget);
@@ -357,31 +500,42 @@ namespace Mcoc.UnityViewer
             return mat;
         }
 
+        static Texture2D MakeTex(int w, int h, Color col)
+        {
+            var t = new Texture2D(w, h);
+            for (int y = 0; y < h; y++) for (int x = 0; x < w; x++) t.SetPixel(x, y, col);
+            t.Apply();
+            return t;
+        }
+
+        void SetStatus(string msg) { if (statusText != null) statusText.text = msg; }
+        void ToggleType(string type, bool v) { typeVisible[type] = v; ReapplyAll(); }
+        void ToggleFloor(string floor, bool v) { floorVisible[floor] = v; ReapplyAll(); }
+
         static Color ColorFor(string category)
         {
             switch (category)
             {
-                case "beam": return new Color(0.45f, 0.75f, 1f);
-                case "column": return new Color(0.95f, 0.65f, 0.4f);
-                case "column_plan": return new Color(0.95f, 0.65f, 0.4f);
-                case "wall": return new Color(0.65f, 0.85f, 0.6f);
-                case "support": return new Color(1f, 1f, 0.9f);
+                case "beam": return new Color(1f, 0.55f, 0.1f);
+                case "column": return new Color(1f, 0.45f, 0f);
+                case "column_plan": return new Color(1f, 0.5f, 0.05f);
+                case "wall": return new Color(1f, 0.66f, 0.22f);
+                case "support": return new Color(0.85f, 0.4f, 0.05f);
                 case "diaphragm": return new Color(0.9f, 0.9f, 1f);
-                case "slab": return new Color(0.55f, 0.55f, 0.75f);
-                case "slab_edge": return new Color(0.7f, 0.7f, 1f);
+                case "slab": return new Color(1f, 0.62f, 0.15f);
+                case "slab_edge": return new Color(1f, 0.72f, 0.3f);
                 case "axis": return new Color(0.8f, 0.8f, 0.8f);
                 case "node": return new Color(1f, 0.82f, 0.3f);
                 case "cad_reference": return new Color(0.6f, 0.7f, 0.8f);
                 default: return new Color(0.7f, 0.7f, 0.7f);
             }
         }
-
-        void SetStatus(string msg) { if (statusText != null) statusText.text = msg; }
     }
 
     // Datos del elemento seleccionable, incluye campos de tributaria (contrato de Luis)
     public class ElementInfo : MonoBehaviour
     {
+        public GameObject go;
         public string id;
         public string category;
         public string kind;
