@@ -1,7 +1,9 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 
-const MODEL_URL = "../unity_export/model_viewer.json";
+const urlParams = new URLSearchParams(window.location.search);
+const modelFile = urlParams.get("model") || "model_viewer.json";
+const MODEL_URL = `../unity_export/${modelFile}`;
 const CATEGORY_LABELS = {
   axis: "Ejes CAD",
   beam: "Vigas",
@@ -379,16 +381,22 @@ function updateSelectionPanel(segment) {
   const points = segment.points ?? [];
   const start = points[0] ?? [null, null, null];
   const end = points[1] ?? [null, null, null];
+  const sec = segment.seccion_cm ?? (segment.seccion ? segment.seccion : "-");
   selectionDetailsEl.innerHTML = `
     <dt>Tag</dt><dd>${segment.elementTag}</dd>
+    <dt>ID building_master</dt><dd>${segment.building_master_id ?? "-"}</dd>
     <dt>Tipo</dt><dd>${CATEGORY_LABELS[segment.category] ?? segment.category}</dd>
-    <dt>Piso</dt><dd>${segment.floor} (${segment.floor_label ?? "sin etiqueta"})</dd>
+    <dt>Ubicacion</dt><dd>${segment.floor_id ?? segment.floor} (${segment.floor_name ?? ""})</dd>
+    <dt>Seccion</dt><dd>${sec}</dd>
+    <dt>Z (model_z_m)</dt><dd>${formatNumber(segment.model_z_m)} m / fuente ${formatNumber(segment.source_elevation_m)} m</dd>
     <dt>Capa CAD</dt><dd>${segment.source_layer ?? "generated"}</dd>
     <dt>Plano</dt><dd>${segment.source_dxf ?? "generated"}</dd>
+    <dt>Zona / sector</dt><dd>${segment.zona ?? "-"} / ${segment.sector ?? "-"}</dd>
     <dt>Longitud</dt><dd>${formatNumber(segment.length_m)} m</dd>
     <dt>Inicio</dt><dd>${formatPoint(start)}</dd>
     <dt>Fin</dt><dd>${formatPoint(end)}</dd>
-    <dt>Confianza</dt><dd>${segment.confidence ?? "-"}</dd>
+    <dt>Estado revision</dt><dd>${segment.estado_revision ?? "-"}</dd>
+    <dt>Confianza</dt><dd>${segment.confidence ?? "-"} (${formatNumber(segment.confianza_score)})</dd>
   `;
 }
 
