@@ -1258,6 +1258,14 @@ namespace Mcoc.Semana2.UnityE1
             modelBounds = initialized ? bounds : new Bounds(Vector3.zero, Vector3.one * 10f);
         }
 
+        private Vector3 GenericCenter(List<List<double>> points)
+        {
+            if (points == null || points.Count == 0) return Vector3.zero;
+            Vector3 sum = Vector3.zero;
+            foreach (List<double> p in points) sum += ToUnityPoint(p, 0);
+            return sum / points.Count;
+        }
+
         private Vector3 MeshCenter(Mesh mesh)
         {
             return mesh.bounds.center;
