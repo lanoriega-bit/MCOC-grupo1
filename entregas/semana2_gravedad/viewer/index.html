@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Semana 2 - Viewer gravedad Edificio 1</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main id="app">
+      <section id="viewport" aria-label="viewer 3D Edificio 1"></section>
+
+      <aside id="panel">
+        <header>
+          <p class="eyebrow">Semana 2 gravedad</p>
+          <h1>Edificio 1</h1>
+          <p id="status">Cargando edificio1_unity.json...</p>
+        </header>
+
+        <section class="panel-block stats-card">
+          <h2>Resumen</h2>
+          <dl id="model-summary">
+            <dt>Estado</dt>
+            <dd>Esperando JSON</dd>
+          </dl>
+        </section>
+
+        <section class="panel-block">
+          <h2>Navegacion</h2>
+          <div class="button-grid">
+            <button id="view-iso" type="button">Isometrica</button>
+            <button id="view-top" type="button">Planta</button>
+            <button id="view-north" type="button">Norte</button>
+            <button id="view-east" type="button">Este</button>
+            <button id="view-south" type="button">Sur</button>
+            <button id="view-west" type="button">Oeste</button>
+            <button id="toggle-labels" type="button">IDs: off</button>
+            <button id="show-all" type="button">Mostrar todo</button>
+          </div>
+          <p class="hint">Mouse/touch: orbitar, rueda/pinch: zoom, click derecho o dos dedos: pan.</p>
+        </section>
+
+        <section class="panel-block">
+          <h2>Pisos</h2>
+          <div id="floor-controls" class="control-list"></div>
+        </section>
+
+        <section class="panel-block">
+          <h2>Capas</h2>
+          <div id="category-controls" class="control-list"></div>
+        </section>
+
+        <section class="panel-block">
+          <h2>Buscar ID</h2>
+          <div class="search-row">
+            <input id="tag-search" type="search" placeholder="Ej: E1_F01_B0001" />
+            <button id="search-button" type="button">Ir</button>
+          </div>
+        </section>
+
+        <section class="panel-block selected-card">
+          <h2>Seleccion</h2>
+          <dl id="selection-details">
+            <dt>Estado</dt>
+            <dd>Haz click sobre una viga, losa o poligono tributario.</dd>
+          </dl>
+        </section>
+
+        <section class="panel-block blockers-card">
+          <h2>Blockers</h2>
+          <div id="blocker-list" class="blocker-list">Sin datos.</div>
+        </section>
+      </aside>
+    </main>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+        }
+      }
+    </script>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
