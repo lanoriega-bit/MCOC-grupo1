@@ -1,0 +1,4442 @@
+{
+  "piso": "1",
+  "tipo": "viga",
+  "estado": "DRAFT_NEEDS_REVIEW",
+  "total": 112,
+  "por_zona": {
+    "parte_1": 27,
+    "parte_2": 85
+  },
+  "por_estado_revision": {
+    "FRAGMENTADA": 94,
+    "POSIBLE": 7,
+    "FALSO_POSITIVO": 7,
+    "NEEDS_REVIEW": 2,
+    "CONFIRMADA": 2
+  },
+  "grupos_logicos": [
+    {
+      "id": "VIGA_GRUPO_P1_FUNDACION_0001",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "elementos": [
+        "VIGA_P1_FUNDACION_0001",
+        "VIGA_P1_FUNDACION_0026"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 9.3,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P1_FUNDACION_0002",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "elementos": [
+        "VIGA_P1_FUNDACION_0003",
+        "VIGA_P1_FUNDACION_0022",
+        "VIGA_P1_FUNDACION_0024"
+      ],
+      "cantidad_segmentos": 3,
+      "longitud_total_m": 9.3,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P1_FUNDACION_0003",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "elementos": [
+        "VIGA_P1_FUNDACION_0005",
+        "VIGA_P1_FUNDACION_0018",
+        "VIGA_P1_FUNDACION_0020"
+      ],
+      "cantidad_segmentos": 3,
+      "longitud_total_m": 9.3,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P1_FUNDACION_0004",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "elementos": [
+        "VIGA_P1_FUNDACION_0002",
+        "VIGA_P1_FUNDACION_0027"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 9.3,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P1_FUNDACION_0005",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "elementos": [
+        "VIGA_P1_FUNDACION_0004",
+        "VIGA_P1_FUNDACION_0023",
+        "VIGA_P1_FUNDACION_0025"
+      ],
+      "cantidad_segmentos": 3,
+      "longitud_total_m": 9.3,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P1_FUNDACION_0006",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "elementos": [
+        "VIGA_P1_FUNDACION_0006",
+        "VIGA_P1_FUNDACION_0019",
+        "VIGA_P1_FUNDACION_0021"
+      ],
+      "cantidad_segmentos": 3,
+      "longitud_total_m": 9.3,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P1_FUNDACION_0007",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "elementos": [
+        "VIGA_P1_FUNDACION_0011",
+        "VIGA_P1_FUNDACION_0015"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 7.323,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P1_FUNDACION_0008",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "elementos": [
+        "VIGA_P1_FUNDACION_0013",
+        "VIGA_P1_FUNDACION_0016"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 7.323,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P2_FUNDACION_0001",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "elementos": [
+        "VIGA_P2_FUNDACION_0029",
+        "VIGA_P2_FUNDACION_0030",
+        "VIGA_P2_FUNDACION_0031",
+        "VIGA_P2_FUNDACION_0032"
+      ],
+      "cantidad_segmentos": 4,
+      "longitud_total_m": 13.45,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P2_FUNDACION_0002",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "elementos": [
+        "VIGA_P2_FUNDACION_0001",
+        "VIGA_P2_FUNDACION_0002",
+        "VIGA_P2_FUNDACION_0025",
+        "VIGA_P2_FUNDACION_0026",
+        "VIGA_P2_FUNDACION_0027",
+        "VIGA_P2_FUNDACION_0028"
+      ],
+      "cantidad_segmentos": 6,
+      "longitud_total_m": 18.6,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P2_FUNDACION_0003",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "elementos": [
+        "VIGA_P2_FUNDACION_0003",
+        "VIGA_P2_FUNDACION_0004",
+        "VIGA_P2_FUNDACION_0021",
+        "VIGA_P2_FUNDACION_0022",
+        "VIGA_P2_FUNDACION_0023",
+        "VIGA_P2_FUNDACION_0024"
+      ],
+      "cantidad_segmentos": 6,
+      "longitud_total_m": 18.6,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P2_FUNDACION_0004",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "elementos": [
+        "VIGA_P2_FUNDACION_0080",
+        "VIGA_P2_FUNDACION_0081",
+        "VIGA_P2_FUNDACION_0082",
+        "VIGA_P2_FUNDACION_0083",
+        "VIGA_P2_FUNDACION_0084"
+      ],
+      "cantidad_segmentos": 5,
+      "longitud_total_m": 4.1,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P2_FUNDACION_0005",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "elementos": [
+        "VIGA_P2_FUNDACION_0005",
+        "VIGA_P2_FUNDACION_0045",
+        "VIGA_P2_FUNDACION_0047"
+      ],
+      "cantidad_segmentos": 3,
+      "longitud_total_m": 8.2,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P2_FUNDACION_0006",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "elementos": [
+        "VIGA_P2_FUNDACION_0007",
+        "VIGA_P2_FUNDACION_0041",
+        "VIGA_P2_FUNDACION_0043"
+      ],
+      "cantidad_segmentos": 3,
+      "longitud_total_m": 6.55,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P2_FUNDACION_0007",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "elementos": [
+        "VIGA_P2_FUNDACION_0075",
+        "VIGA_P2_FUNDACION_0076",
+        "VIGA_P2_FUNDACION_0077",
+        "VIGA_P2_FUNDACION_0078",
+        "VIGA_P2_FUNDACION_0079"
+      ],
+      "cantidad_segmentos": 5,
+      "longitud_total_m": 4.1,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P2_FUNDACION_0008",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "elementos": [
+        "VIGA_P2_FUNDACION_0006",
+        "VIGA_P2_FUNDACION_0046",
+        "VIGA_P2_FUNDACION_0048"
+      ],
+      "cantidad_segmentos": 3,
+      "longitud_total_m": 8.2,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P2_FUNDACION_0009",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "elementos": [
+        "VIGA_P2_FUNDACION_0008",
+        "VIGA_P2_FUNDACION_0042",
+        "VIGA_P2_FUNDACION_0044"
+      ],
+      "cantidad_segmentos": 3,
+      "longitud_total_m": 6.55,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P2_FUNDACION_0010",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "elementos": [
+        "VIGA_P2_FUNDACION_0058",
+        "VIGA_P2_FUNDACION_0060"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 7.65,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P2_FUNDACION_0011",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "elementos": [
+        "VIGA_P2_FUNDACION_0009",
+        "VIGA_P2_FUNDACION_0053",
+        "VIGA_P2_FUNDACION_0055"
+      ],
+      "cantidad_segmentos": 3,
+      "longitud_total_m": 9.3,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P2_FUNDACION_0012",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "elementos": [
+        "VIGA_P2_FUNDACION_0016",
+        "VIGA_P2_FUNDACION_0050",
+        "VIGA_P2_FUNDACION_0052"
+      ],
+      "cantidad_segmentos": 3,
+      "longitud_total_m": 9.75,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P2_FUNDACION_0013",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "elementos": [
+        "VIGA_P2_FUNDACION_0057",
+        "VIGA_P2_FUNDACION_0059"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 7.65,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P2_FUNDACION_0014",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "elementos": [
+        "VIGA_P2_FUNDACION_0010",
+        "VIGA_P2_FUNDACION_0054",
+        "VIGA_P2_FUNDACION_0056"
+      ],
+      "cantidad_segmentos": 3,
+      "longitud_total_m": 9.3,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P2_FUNDACION_0015",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "elementos": [
+        "VIGA_P2_FUNDACION_0015",
+        "VIGA_P2_FUNDACION_0049",
+        "VIGA_P2_FUNDACION_0051"
+      ],
+      "cantidad_segmentos": 3,
+      "longitud_total_m": 9.75,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P2_FUNDACION_0016",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "elementos": [
+        "VIGA_P2_FUNDACION_0013",
+        "VIGA_P2_FUNDACION_0065",
+        "VIGA_P2_FUNDACION_0067"
+      ],
+      "cantidad_segmentos": 3,
+      "longitud_total_m": 8.2,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P2_FUNDACION_0017",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "elementos": [
+        "VIGA_P2_FUNDACION_0011",
+        "VIGA_P2_FUNDACION_0061",
+        "VIGA_P2_FUNDACION_0063"
+      ],
+      "cantidad_segmentos": 3,
+      "longitud_total_m": 6.55,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P2_FUNDACION_0018",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "elementos": [
+        "VIGA_P2_FUNDACION_0014",
+        "VIGA_P2_FUNDACION_0066",
+        "VIGA_P2_FUNDACION_0068"
+      ],
+      "cantidad_segmentos": 3,
+      "longitud_total_m": 8.2,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P2_FUNDACION_0019",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "elementos": [
+        "VIGA_P2_FUNDACION_0012",
+        "VIGA_P2_FUNDACION_0062",
+        "VIGA_P2_FUNDACION_0064"
+      ],
+      "cantidad_segmentos": 3,
+      "longitud_total_m": 6.55,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P2_FUNDACION_0020",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "elementos": [
+        "VIGA_P2_FUNDACION_0019",
+        "VIGA_P2_FUNDACION_0020",
+        "VIGA_P2_FUNDACION_0037",
+        "VIGA_P2_FUNDACION_0038",
+        "VIGA_P2_FUNDACION_0039",
+        "VIGA_P2_FUNDACION_0040"
+      ],
+      "cantidad_segmentos": 6,
+      "longitud_total_m": 13.6,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P2_FUNDACION_0021",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "elementos": [
+        "VIGA_P2_FUNDACION_0017",
+        "VIGA_P2_FUNDACION_0018",
+        "VIGA_P2_FUNDACION_0033",
+        "VIGA_P2_FUNDACION_0034",
+        "VIGA_P2_FUNDACION_0035",
+        "VIGA_P2_FUNDACION_0036"
+      ],
+      "cantidad_segmentos": 6,
+      "longitud_total_m": 18.6,
+      "estado_grupo": "FRAGMENTADA"
+    }
+  ],
+  "total_grupos_logicos": 29,
+  "criterio": [
+    "Debe provenir de capa RLE-VIGA.",
+    "Categorias: CONFIRMADA, POSIBLE, FALSO_POSITIVO, DUPLICADA, FRAGMENTADA, NEEDS_REVIEW.",
+    "Se marca POSIBLE si no tiene etiqueta V. cercana dentro de 2.0 m o parece cara paralela de otra viga.",
+    "Se marca FRAGMENTADA si pertenece a un grupo de segmentos colineales contiguos o solapados.",
+    "Se marca FALSO_POSITIVO si es demasiado corta o acumula baja confianza.",
+    "No se convierte automaticamente a centrolinea ni a 3D en esta etapa."
+  ],
+  "elementos": [
+    {
+      "id": "VIGA_P1_FUNDACION_0001",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "F_prime-G",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P1_FUNDACION_0001",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_FUNDACION_0004",
+        "distancia_m": 0.513
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_FUNDACION_0001",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0002"
+      ],
+      "geometria": {
+        "inicio": [
+          42.948449823053096,
+          -12.021078169434382
+        ],
+        "fin": [
+          35.248499432305486,
+          -12.0210781694344
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_FUNDACION_0002",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "F_prime-G",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P1_FUNDACION_0004",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_FUNDACION_0004",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_FUNDACION_0004",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0001"
+      ],
+      "geometria": {
+        "inicio": [
+          35.24844982293046,
+          -12.221078169434408
+        ],
+        "fin": [
+          42.948449823053096,
+          -12.221078169434382
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_FUNDACION_0003",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "F_prime-G",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P1_FUNDACION_0002",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_FUNDACION_0003",
+        "distancia_m": 0.513
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_FUNDACION_0002",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0004"
+      ],
+      "geometria": {
+        "inicio": [
+          46.848449823053095,
+          -12.021078169434372
+        ],
+        "fin": [
+          45.24844982305311,
+          -12.021078169434372
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_FUNDACION_0004",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "F_prime-G",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P1_FUNDACION_0005",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_FUNDACION_0003",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_FUNDACION_0005",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0003"
+      ],
+      "geometria": {
+        "inicio": [
+          45.24844982305311,
+          -12.221078169434373
+        ],
+        "fin": [
+          46.848449823053095,
+          -12.221078169434373
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_FUNDACION_0005",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ga-H",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P1_FUNDACION_0003",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_FUNDACION_0002",
+        "distancia_m": 0.513
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_FUNDACION_0003",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0006"
+      ],
+      "geometria": {
+        "inicio": [
+          56.84844982298189,
+          -12.021078169434327
+        ],
+        "fin": [
+          55.2484498229819,
+          -12.021078169434327
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_FUNDACION_0006",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ga-H",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P1_FUNDACION_0006",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_FUNDACION_0002",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_FUNDACION_0006",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0005"
+      ],
+      "geometria": {
+        "inicio": [
+          55.2484498229819,
+          -12.221078169434335
+        ],
+        "fin": [
+          56.84844982298189,
+          -12.221078169434335
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_FUNDACION_0007",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H2-I",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_FUNDACION_0001",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0008"
+      ],
+      "geometria": {
+        "inicio": [
+          69.54844982292083,
+          -12.22124482469821
+        ],
+        "fin": [
+          65.24844982291361,
+          -12.22124482469822
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_FUNDACION_0008",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H2-I",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_FUNDACION_0001",
+        "distancia_m": 0.513
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0007"
+      ],
+      "geometria": {
+        "inicio": [
+          65.24844982291361,
+          -12.02124482469821
+        ],
+        "fin": [
+          69.54844982292083,
+          -12.0212448246982
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_FUNDACION_0009",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "I-IA",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_FUNDACION_0001",
+        "distancia_m": 2.579
+      },
+      "confianza_score": 0.45,
+      "motivos_revision": [
+        "sin_etiqueta_viga_cercana",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0010"
+      ],
+      "geometria": {
+        "inicio": [
+          69.99844982292083,
+          -12.721244824698193
+        ],
+        "fin": [
+          69.99844982292085,
+          -19.271078169457237
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_FUNDACION_0010",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "I-IA",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_FUNDACION_0001",
+        "distancia_m": 2.38
+      },
+      "confianza_score": 0.45,
+      "motivos_revision": [
+        "sin_etiqueta_viga_cercana",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0009"
+      ],
+      "geometria": {
+        "inicio": [
+          69.79844982292084,
+          -19.271078169457237
+        ],
+        "fin": [
+          69.79844982292083,
+          -12.721244824698193
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_FUNDACION_0011",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ga-H",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P1_FUNDACION_0007",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_FUNDACION_0005",
+        "distancia_m": 0.735
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_FUNDACION_0007",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0013"
+      ],
+      "geometria": {
+        "inicio": [
+          50.52552761099219,
+          -2.3558030479481205
+        ],
+        "fin": [
+          50.5255276109922,
+          -8.178964396626947
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_FUNDACION_0012",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ga-H",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FALSO_POSITIVO",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_FUNDACION_0006",
+        "distancia_m": 0.891
+      },
+      "confianza_score": 0.3,
+      "motivos_revision": [
+        "viga_demasiado_corta"
+      ],
+      "geometria": {
+        "inicio": [
+          50.5255276109922,
+          -8.178964396626947
+        ],
+        "fin": [
+          50.2255276109922,
+          -8.178964396626947
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_FUNDACION_0013",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ga-H",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P1_FUNDACION_0008",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_FUNDACION_0005",
+        "distancia_m": 0.435
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_FUNDACION_0008",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0011"
+      ],
+      "geometria": {
+        "inicio": [
+          50.2255276109922,
+          -8.178964396626947
+        ],
+        "fin": [
+          50.22552761099219,
+          -2.3558030479481205
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_FUNDACION_0014",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ga-H",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_FUNDACION_0005",
+        "distancia_m": 2.971
+      },
+      "confianza_score": 0.4,
+      "motivos_revision": [
+        "sin_etiqueta_viga_cercana",
+        "viga_muy_corta"
+      ],
+      "geometria": {
+        "inicio": [
+          50.52552761099219,
+          -2.3558030479481205
+        ],
+        "fin": [
+          50.22552761099219,
+          -2.3558030479481205
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_FUNDACION_0015",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ga-H",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P1_FUNDACION_0007",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_FUNDACION_0006",
+        "distancia_m": 0.735
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_FUNDACION_0007",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0016"
+      ],
+      "geometria": {
+        "inicio": [
+          50.5255276109922,
+          -8.178964396626947
+        ],
+        "fin": [
+          50.5255276109922,
+          -9.67877900500142
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_FUNDACION_0016",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ga-H",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P1_FUNDACION_0008",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_FUNDACION_0006",
+        "distancia_m": 0.435
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_FUNDACION_0008",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0015"
+      ],
+      "geometria": {
+        "inicio": [
+          50.2255276109922,
+          -9.67877900500142
+        ],
+        "fin": [
+          50.2255276109922,
+          -8.178964396626947
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_FUNDACION_0017",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ga-H",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FALSO_POSITIVO",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_FUNDACION_0006",
+        "distancia_m": 0.844
+      },
+      "confianza_score": 0.3,
+      "motivos_revision": [
+        "viga_demasiado_corta"
+      ],
+      "geometria": {
+        "inicio": [
+          50.2255276109922,
+          -9.67877900500142
+        ],
+        "fin": [
+          50.5255276109922,
+          -9.67877900500142
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_FUNDACION_0018",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P1_FUNDACION_0003",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_FUNDACION_0011",
+        "distancia_m": 0.527
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_FUNDACION_0003",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0019"
+      ],
+      "geometria": {
+        "inicio": [
+          64.54844982291361,
+          -12.021078169434299
+        ],
+        "fin": [
+          63.48844982291217,
+          -12.02107816943431
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_FUNDACION_0019",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P1_FUNDACION_0006",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_FUNDACION_0011",
+        "distancia_m": 0.327
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_FUNDACION_0006",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0018"
+      ],
+      "geometria": {
+        "inicio": [
+          63.48844982291217,
+          -12.221078169434318
+        ],
+        "fin": [
+          64.54844982291361,
+          -12.221078169434318
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_FUNDACION_0020",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H-H1",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P1_FUNDACION_0003",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_FUNDACION_0008",
+        "distancia_m": 0.513
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_FUNDACION_0003",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0021"
+      ],
+      "geometria": {
+        "inicio": [
+          63.48844982291217,
+          -12.02107816943431
+        ],
+        "fin": [
+          56.84844982298189,
+          -12.021078169434327
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_FUNDACION_0021",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H-H1",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P1_FUNDACION_0006",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_FUNDACION_0008",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_FUNDACION_0006",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0020"
+      ],
+      "geometria": {
+        "inicio": [
+          56.84844982298189,
+          -12.221078169434335
+        ],
+        "fin": [
+          63.48844982291217,
+          -12.221078169434318
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_FUNDACION_0022",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ga-H",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P1_FUNDACION_0002",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_FUNDACION_0009",
+        "distancia_m": 0.513
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_FUNDACION_0002",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0023"
+      ],
+      "geometria": {
+        "inicio": [
+          54.548449822981894,
+          -12.021078169434327
+        ],
+        "fin": [
+          52.948449822981914,
+          -12.021078169434336
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_FUNDACION_0023",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ga-H",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P1_FUNDACION_0005",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_FUNDACION_0009",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_FUNDACION_0005",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0022"
+      ],
+      "geometria": {
+        "inicio": [
+          52.948449822981914,
+          -12.221078169434355
+        ],
+        "fin": [
+          54.548449822981894,
+          -12.221078169434335
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_FUNDACION_0024",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ga-H",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P1_FUNDACION_0002",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_FUNDACION_0007",
+        "distancia_m": 0.513
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_FUNDACION_0002",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0025"
+      ],
+      "geometria": {
+        "inicio": [
+          52.948449822981914,
+          -12.021078169434336
+        ],
+        "fin": [
+          46.848449823053095,
+          -12.021078169434372
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_FUNDACION_0025",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ga-H",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P1_FUNDACION_0005",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_FUNDACION_0007",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_FUNDACION_0005",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0024"
+      ],
+      "geometria": {
+        "inicio": [
+          46.848449823053095,
+          -12.221078169434373
+        ],
+        "fin": [
+          52.948449822981914,
+          -12.221078169434355
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_FUNDACION_0026",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "F_prime-G",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P1_FUNDACION_0001",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_FUNDACION_0010",
+        "distancia_m": 0.513
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_FUNDACION_0001",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0027"
+      ],
+      "geometria": {
+        "inicio": [
+          44.54844982305309,
+          -12.021078169434372
+        ],
+        "fin": [
+          42.948449823053096,
+          -12.021078169434382
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_FUNDACION_0027",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "F_prime-G",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P1_FUNDACION_0004",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_FUNDACION_0010",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_FUNDACION_0004",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0026"
+      ],
+      "geometria": {
+        "inicio": [
+          42.948449823053096,
+          -12.221078169434382
+        ],
+        "fin": [
+          44.54844982305309,
+          -12.221078169434382
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0001",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0002",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0012",
+        "distancia_m": 0.521
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0002",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0002"
+      ],
+      "geometria": {
+        "inicio": [
+          9.106993993929912,
+          0.11766819549455881
+        ],
+        "fin": [
+          7.956993993929901,
+          0.11766819549454977
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0002",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0002",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0012",
+        "distancia_m": 0.321
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0002",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0001"
+      ],
+      "geometria": {
+        "inicio": [
+          7.956993993929901,
+          -0.08233180450545025
+        ],
+        "fin": [
+          9.106993993929912,
+          -0.08233180450545025
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0003",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0003",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0014",
+        "distancia_m": 0.441
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0003",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0004"
+      ],
+      "geometria": {
+        "inicio": [
+          19.10699399304746,
+          0.11766819549459068
+        ],
+        "fin": [
+          17.95699399304748,
+          0.11766819549457702
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0004",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0003",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0014",
+        "distancia_m": 0.241
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0003",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0003"
+      ],
+      "geometria": {
+        "inicio": [
+          17.95699399304748,
+          -0.08233180450542296
+        ],
+        "fin": [
+          19.10699399304746,
+          -0.08233180450540933
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0005",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0005",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0013",
+        "distancia_m": 0.992
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0005",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0006"
+      ],
+      "geometria": {
+        "inicio": [
+          17.50699399304748,
+          1.6176681954945498
+        ],
+        "fin": [
+          17.50699399304748,
+          0.4676681954945497
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0006",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0008",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0014",
+        "distancia_m": 1.058
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0008",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0005"
+      ],
+      "geometria": {
+        "inicio": [
+          17.70699399304748,
+          0.4676681954945497
+        ],
+        "fin": [
+          17.70699399304748,
+          1.6176681954945498
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0007",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "2-2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0006",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0028",
+        "distancia_m": 0.441
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0006",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0008"
+      ],
+      "geometria": {
+        "inicio": [
+          17.50699399304746,
+          11.01766819551455
+        ],
+        "fin": [
+          17.50699399304746,
+          9.36766819551455
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0008",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "2-2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0009",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0028",
+        "distancia_m": 0.641
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0009",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0007"
+      ],
+      "geometria": {
+        "inicio": [
+          17.706993993047462,
+          9.36766819551455
+        ],
+        "fin": [
+          17.706993993047462,
+          11.01766819551455
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0009",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0011",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0030",
+        "distancia_m": 0.441
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0011",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0010"
+      ],
+      "geometria": {
+        "inicio": [
+          16.40699399304746,
+          16.367668195577757
+        ],
+        "fin": [
+          17.256993993047473,
+          16.367668195577757
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0010",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0014",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0030",
+        "distancia_m": 0.641
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0014",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0009"
+      ],
+      "geometria": {
+        "inicio": [
+          17.256993993047473,
+          16.56766819557776
+        ],
+        "fin": [
+          16.40699399304746,
+          16.56766819557776
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0011",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0017",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0022",
+        "distancia_m": 0.641
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0017",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0012"
+      ],
+      "geometria": {
+        "inicio": [
+          7.706993993929901,
+          15.067668195577731
+        ],
+        "fin": [
+          7.706993993929901,
+          15.917668195577699
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0012",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0019",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0022",
+        "distancia_m": 0.441
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0019",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0011"
+      ],
+      "geometria": {
+        "inicio": [
+          7.5069939939299015,
+          15.917668195577699
+        ],
+        "fin": [
+          7.5069939939299015,
+          15.067668195577731
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0013",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0016",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0024",
+        "distancia_m": 0.641
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0016",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0014"
+      ],
+      "geometria": {
+        "inicio": [
+          7.706993993929912,
+          7.31766819551455
+        ],
+        "fin": [
+          7.706993993929912,
+          8.667668195514551
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0014",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0018",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0024",
+        "distancia_m": 0.441
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0018",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0013"
+      ],
+      "geometria": {
+        "inicio": [
+          7.506993993929912,
+          8.667668195514551
+        ],
+        "fin": [
+          7.506993993929912,
+          7.31766819551455
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0015",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0015",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0031",
+        "distancia_m": 0.641
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0015",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0016"
+      ],
+      "geometria": {
+        "inicio": [
+          18.806993993047477,
+          16.567668195577767
+        ],
+        "fin": [
+          17.95699399304747,
+          16.567668195577767
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0016",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0012",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0031",
+        "distancia_m": 0.441
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0012",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0015"
+      ],
+      "geometria": {
+        "inicio": [
+          17.95699399304747,
+          16.367668195577767
+        ],
+        "fin": [
+          18.806993993047477,
+          16.367668195577767
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0017",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "2-2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0021",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0019",
+        "distancia_m": 0.641
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0021",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0018"
+      ],
+      "geometria": {
+        "inicio": [
+          9.306993993929881,
+          9.11766819551454
+        ],
+        "fin": [
+          7.956993993929901,
+          9.11766819551454
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0018",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "2-2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0021",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0019",
+        "distancia_m": 0.441
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0021",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0017"
+      ],
+      "geometria": {
+        "inicio": [
+          7.956993993929901,
+          8.91766819551453
+        ],
+        "fin": [
+          9.306993993929881,
+          8.91766819551453
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0019",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "2-2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0020",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0016",
+        "distancia_m": 0.641
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0020",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0020"
+      ],
+      "geometria": {
+        "inicio": [
+          1.8569939932699602,
+          9.11766819551451
+        ],
+        "fin": [
+          0.4569939932699718,
+          9.11766819551451
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0020",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "2-2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0020",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0016",
+        "distancia_m": 0.441
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0020",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0019"
+      ],
+      "geometria": {
+        "inicio": [
+          0.4569939932699718,
+          8.91766819551451
+        ],
+        "fin": [
+          1.8569939932699602,
+          8.91766819551451
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0021",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C_prime-D",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0003",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0015",
+        "distancia_m": 0.342
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0003",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0022"
+      ],
+      "geometria": {
+        "inicio": [
+          27.256991969363433,
+          0.11766819549460888
+        ],
+        "fin": [
+          24.956991969363433,
+          0.11766819549459978
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0022",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C_prime-D",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0003",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0015",
+        "distancia_m": 0.142
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0003",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0021"
+      ],
+      "geometria": {
+        "inicio": [
+          24.956991969363433,
+          -0.08233180450540023
+        ],
+        "fin": [
+          27.256991969363433,
+          -0.08233180450539115
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0023",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0003",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0003",
+        "distancia_m": 0.542
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0003",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0024"
+      ],
+      "geometria": {
+        "inicio": [
+          24.956991969363433,
+          0.11766819549459978
+        ],
+        "fin": [
+          19.10699399304746,
+          0.11766819549457702
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0024",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0003",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0003",
+        "distancia_m": 0.342
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0003",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0023"
+      ],
+      "geometria": {
+        "inicio": [
+          19.10699399304746,
+          -0.08233180450542296
+        ],
+        "fin": [
+          24.956991969363433,
+          -0.08233180450540023
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0025",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0002",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0013",
+        "distancia_m": 0.441
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0002",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0026"
+      ],
+      "geometria": {
+        "inicio": [
+          17.256993993047473,
+          0.11766819549457702
+        ],
+        "fin": [
+          16.10699399304747,
+          0.11766819549456792
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0026",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0002",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0013",
+        "distancia_m": 0.241
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0002",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0025"
+      ],
+      "geometria": {
+        "inicio": [
+          16.10699399304747,
+          -0.08233180450543207
+        ],
+        "fin": [
+          17.256993993047473,
+          -0.08233180450543207
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0027",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0002",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0002",
+        "distancia_m": 0.542
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0002",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0028"
+      ],
+      "geometria": {
+        "inicio": [
+          16.10699399304747,
+          0.11766819549456792
+        ],
+        "fin": [
+          9.106993993929912,
+          0.11766819549454977
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0028",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0002",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0002",
+        "distancia_m": 0.342
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0002",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0027"
+      ],
+      "geometria": {
+        "inicio": [
+          9.106993993929912,
+          -0.08233180450545025
+        ],
+        "fin": [
+          16.10699399304747,
+          -0.08233180450543207
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0029",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0001",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0011",
+        "distancia_m": 0.521
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0001",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0030"
+      ],
+      "geometria": {
+        "inicio": [
+          7.2569939939299015,
+          0.11766819549454977
+        ],
+        "fin": [
+          6.106993993929913,
+          0.11766819549454066
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0030",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0001",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0011",
+        "distancia_m": 0.321
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0001",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0029"
+      ],
+      "geometria": {
+        "inicio": [
+          6.106993993929913,
+          -0.08233180450545935
+        ],
+        "fin": [
+          7.2569939939299015,
+          -0.08233180450545935
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0031",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0001",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0001",
+        "distancia_m": 0.542
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0001",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0032"
+      ],
+      "geometria": {
+        "inicio": [
+          6.106993993929913,
+          0.11766819549454977
+        ],
+        "fin": [
+          0.5319919764898309,
+          0.117668195494527
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0032",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0001",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0001",
+        "distancia_m": 0.342
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0001",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0031"
+      ],
+      "geometria": {
+        "inicio": [
+          0.5319919764898309,
+          -0.082331804505473
+        ],
+        "fin": [
+          6.106993993929913,
+          -0.08233180450545935
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0033",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "2-2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0021",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0021",
+        "distancia_m": 0.641
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0021",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0034"
+      ],
+      "geometria": {
+        "inicio": [
+          17.256993993047473,
+          9.11766819551456
+        ],
+        "fin": [
+          15.606993993047462,
+          9.11766819551456
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0034",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "2-2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0021",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0021",
+        "distancia_m": 0.441
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0021",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0033"
+      ],
+      "geometria": {
+        "inicio": [
+          15.606993993047462,
+          8.91766819551456
+        ],
+        "fin": [
+          17.256993993047473,
+          8.91766819551456
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0035",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "2-2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0021",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0020",
+        "distancia_m": 0.542
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0021",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0036"
+      ],
+      "geometria": {
+        "inicio": [
+          15.606993993047462,
+          9.11766819551456
+        ],
+        "fin": [
+          9.306993993929881,
+          9.11766819551454
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0036",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "2-2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0021",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0020",
+        "distancia_m": 0.342
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0021",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0035"
+      ],
+      "geometria": {
+        "inicio": [
+          9.306993993929881,
+          8.91766819551453
+        ],
+        "fin": [
+          15.606993993047462,
+          8.917668195514551
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0037",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "2-2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0020",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0018",
+        "distancia_m": 0.641
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0020",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0038"
+      ],
+      "geometria": {
+        "inicio": [
+          7.2569939939299015,
+          9.11766819551454
+        ],
+        "fin": [
+          5.906993993929881,
+          9.11766819551453
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0038",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "2-2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0020",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0018",
+        "distancia_m": 0.441
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0020",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0037"
+      ],
+      "geometria": {
+        "inicio": [
+          5.906993993929881,
+          8.91766819551453
+        ],
+        "fin": [
+          7.2569939939299015,
+          8.91766819551453
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0039",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "2-2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0020",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0017",
+        "distancia_m": 0.542
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0020",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0040"
+      ],
+      "geometria": {
+        "inicio": [
+          5.906993993929881,
+          9.11766819551453
+        ],
+        "fin": [
+          1.8569939932699602,
+          9.11766819551451
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0040",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "2-2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0020",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0017",
+        "distancia_m": 0.342
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0020",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0039"
+      ],
+      "geometria": {
+        "inicio": [
+          1.8569939932699602,
+          8.91766819551451
+        ],
+        "fin": [
+          5.906993993929881,
+          8.91766819551453
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0041",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0006",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0029",
+        "distancia_m": 0.441
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0006",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0042"
+      ],
+      "geometria": {
+        "inicio": [
+          17.506993993047452,
+          15.917668195577749
+        ],
+        "fin": [
+          17.506993993047452,
+          15.067668195577749
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0042",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0009",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0029",
+        "distancia_m": 0.641
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0009",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0041"
+      ],
+      "geometria": {
+        "inicio": [
+          17.706993993047462,
+          15.067668195577749
+        ],
+        "fin": [
+          17.706993993047462,
+          15.917668195577749
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0043",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0006",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0007",
+        "distancia_m": 0.342
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0006",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0044"
+      ],
+      "geometria": {
+        "inicio": [
+          17.506993993047452,
+          15.067668195577749
+        ],
+        "fin": [
+          17.50699399304746,
+          11.01766819551455
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0044",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0009",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0007",
+        "distancia_m": 0.542
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0009",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0043"
+      ],
+      "geometria": {
+        "inicio": [
+          17.706993993047462,
+          11.01766819551455
+        ],
+        "fin": [
+          17.706993993047462,
+          15.067668195577749
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0045",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0005",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0027",
+        "distancia_m": 0.441
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0005",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0046"
+      ],
+      "geometria": {
+        "inicio": [
+          17.50699399304746,
+          8.667668195514551
+        ],
+        "fin": [
+          17.50699399304746,
+          7.01766819551455
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0046",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0008",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0027",
+        "distancia_m": 0.641
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0008",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0045"
+      ],
+      "geometria": {
+        "inicio": [
+          17.706993993047462,
+          7.01766819551455
+        ],
+        "fin": [
+          17.706993993047462,
+          8.667668195514551
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0047",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0005",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0004",
+        "distancia_m": 0.342
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0005",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0048"
+      ],
+      "geometria": {
+        "inicio": [
+          17.50699399304746,
+          7.01766819551455
+        ],
+        "fin": [
+          17.506993993047473,
+          1.6176681954945498
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0048",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0008",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0004",
+        "distancia_m": 0.542
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0008",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0047"
+      ],
+      "geometria": {
+        "inicio": [
+          17.70699399304747,
+          1.6176681954945498
+        ],
+        "fin": [
+          17.706993993047462,
+          7.01766819551455
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0049",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C_prime-D",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0015",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0008",
+        "distancia_m": 3.79
+      },
+      "confianza_score": 0.35,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0015",
+        "sin_etiqueta_viga_cercana",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0050"
+      ],
+      "geometria": {
+        "inicio": [
+          27.706993993865403,
+          16.5676681955778
+        ],
+        "fin": [
+          26.53199399386547,
+          16.5676681955778
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0050",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C_prime-D",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0012",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0008",
+        "distancia_m": 3.766
+      },
+      "confianza_score": 0.35,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0012",
+        "sin_etiqueta_viga_cercana",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0049"
+      ],
+      "geometria": {
+        "inicio": [
+          26.53199399386547,
+          16.367668195577796
+        ],
+        "fin": [
+          27.706993993865403,
+          16.367668195577796
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0051",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0015",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0008",
+        "distancia_m": 0.542
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0015",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0052"
+      ],
+      "geometria": {
+        "inicio": [
+          26.53199399386547,
+          16.5676681955778
+        ],
+        "fin": [
+          18.806993993047477,
+          16.567668195577767
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0052",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0012",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0008",
+        "distancia_m": 0.342
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0012",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0051"
+      ],
+      "geometria": {
+        "inicio": [
+          18.806993993047477,
+          16.367668195577767
+        ],
+        "fin": [
+          26.53199399386547,
+          16.36766819557779
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0053",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0011",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0009",
+        "distancia_m": 0.342
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0011",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0054"
+      ],
+      "geometria": {
+        "inicio": [
+          8.8069939939299,
+          16.36766819557774
+        ],
+        "fin": [
+          16.40699399304746,
+          16.367668195577757
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0054",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0014",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0009",
+        "distancia_m": 0.542
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0014",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0053"
+      ],
+      "geometria": {
+        "inicio": [
+          16.40699399304746,
+          16.56766819557776
+        ],
+        "fin": [
+          8.8069939939299,
+          16.56766819557774
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0055",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0011",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0022",
+        "distancia_m": 1.166
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0011",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0056"
+      ],
+      "geometria": {
+        "inicio": [
+          7.956993993929901,
+          16.36766819557773
+        ],
+        "fin": [
+          8.8069939939299,
+          16.36766819557774
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0056",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0014",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0022",
+        "distancia_m": 1.304
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0014",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0055"
+      ],
+      "geometria": {
+        "inicio": [
+          8.8069939939299,
+          16.56766819557774
+        ],
+        "fin": [
+          7.956993993929901,
+          16.567668195577728
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0057",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0013",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0022",
+        "distancia_m": 0.952
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0013",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0058"
+      ],
+      "geometria": {
+        "inicio": [
+          7.2569939939299015,
+          16.567668195577717
+        ],
+        "fin": [
+          6.356993993930031,
+          16.567668195577717
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0058",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0010",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0022",
+        "distancia_m": 0.752
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0010",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0057"
+      ],
+      "geometria": {
+        "inicio": [
+          6.356993993930031,
+          16.367668195577718
+        ],
+        "fin": [
+          7.2569939939299015,
+          16.367668195577718
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0059",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0013",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0010",
+        "distancia_m": 0.542
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0013",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0060"
+      ],
+      "geometria": {
+        "inicio": [
+          6.356993993930031,
+          16.567668195577717
+        ],
+        "fin": [
+          -0.39300802351019737,
+          16.567668195577696
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0060",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0010",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0010",
+        "distancia_m": 0.342
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0010",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0059"
+      ],
+      "geometria": {
+        "inicio": [
+          -0.39300802351019737,
+          16.367668195577696
+        ],
+        "fin": [
+          6.356993993930031,
+          16.367668195577718
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0061",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0017",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0006",
+        "distancia_m": 0.542
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0017",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0062"
+      ],
+      "geometria": {
+        "inicio": [
+          7.706993993929901,
+          10.71766819551455
+        ],
+        "fin": [
+          7.706993993929892,
+          15.067668195577731
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0062",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0019",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0006",
+        "distancia_m": 0.342
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0019",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0061"
+      ],
+      "geometria": {
+        "inicio": [
+          7.506993993929892,
+          15.067668195577731
+        ],
+        "fin": [
+          7.5069939939299015,
+          10.71766819551455
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0063",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "2-2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0017",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0023",
+        "distancia_m": 0.641
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0017",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0064"
+      ],
+      "geometria": {
+        "inicio": [
+          7.706993993929912,
+          9.36766819551455
+        ],
+        "fin": [
+          7.706993993929912,
+          10.71766819551455
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0064",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "2-2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0019",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0023",
+        "distancia_m": 0.441
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0019",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0063"
+      ],
+      "geometria": {
+        "inicio": [
+          7.506993993929912,
+          10.71766819551455
+        ],
+        "fin": [
+          7.506993993929912,
+          9.36766819551455
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0065",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0016",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0005",
+        "distancia_m": 0.542
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0016",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0066"
+      ],
+      "geometria": {
+        "inicio": [
+          7.706993993929931,
+          1.6176681954945498
+        ],
+        "fin": [
+          7.706993993929922,
+          7.31766819551455
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0066",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0018",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0005",
+        "distancia_m": 0.342
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0018",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0065"
+      ],
+      "geometria": {
+        "inicio": [
+          7.506993993929921,
+          7.31766819551455
+        ],
+        "fin": [
+          7.50699399392993,
+          1.6176681954945498
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0067",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0016",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0026",
+        "distancia_m": 0.641
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0016",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0068"
+      ],
+      "geometria": {
+        "inicio": [
+          7.706993993929931,
+          0.4676681954945497
+        ],
+        "fin": [
+          7.706993993929931,
+          1.6176681954945498
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0068",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0018",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0026",
+        "distancia_m": 0.441
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0018",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0067"
+      ],
+      "geometria": {
+        "inicio": [
+          7.50699399392993,
+          1.6176681954945498
+        ],
+        "fin": [
+          7.50699399392993,
+          0.4676681954945497
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0069",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "D-D_prime",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "FALSO_POSITIVO",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0008",
+        "distancia_m": 5.271
+      },
+      "confianza_score": 0.05,
+      "motivos_revision": [
+        "sin_etiqueta_viga_cercana",
+        "viga_demasiado_corta"
+      ],
+      "geometria": {
+        "inicio": [
+          27.98424492463501,
+          16.868735963469778
+        ],
+        "fin": [
+          28.17795391922068,
+          16.81896824886872
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0070",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "despues de D_prime",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "NEEDS_REVIEW",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0008",
+        "distancia_m": 5.455
+      },
+      "confianza_score": 0.4,
+      "motivos_revision": [
+        "sin_etiqueta_viga_cercana",
+        "geometria_no_ortogonal"
+      ],
+      "geometria": {
+        "inicio": [
+          28.602616341164044,
+          18.471865743808213
+        ],
+        "fin": [
+          28.17795391922068,
+          16.81896824886872
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0071",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "despues de D_prime",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "NEEDS_REVIEW",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0008",
+        "distancia_m": 5.271
+      },
+      "confianza_score": 0.4,
+      "motivos_revision": [
+        "sin_etiqueta_viga_cercana",
+        "geometria_no_ortogonal"
+      ],
+      "geometria": {
+        "inicio": [
+          27.98424492463501,
+          16.868735963469778
+        ],
+        "fin": [
+          28.40890734657836,
+          18.52163345840928
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0072",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C_prime-D",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0032",
+        "distancia_m": 0.339
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0073"
+      ],
+      "geometria": {
+        "inicio": [
+          25.06199245165865,
+          6.317878383357531
+        ],
+        "fin": [
+          27.706993993865403,
+          6.317878383357531
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0073",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C_prime-D",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0032",
+        "distancia_m": 0.139
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0072"
+      ],
+      "geometria": {
+        "inicio": [
+          25.31198931113906,
+          6.117878383357517
+        ],
+        "fin": [
+          27.706993993865403,
+          6.117878383357531
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0074",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "D-D_prime",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "CONFIRMADA",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0033",
+        "distancia_m": 0.122
+      },
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "inicio": [
+          27.70699399386541,
+          8.66766819551487
+        ],
+        "fin": [
+          27.706993993865403,
+          6.317878383357531
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0075",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FALSO_POSITIVO",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0007",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0034",
+        "distancia_m": 0.467
+      },
+      "confianza_score": 0.2,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0007",
+        "viga_demasiado_corta"
+      ],
+      "geometria": {
+        "inicio": [
+          17.682559959875007,
+          -8.3123318045048
+        ],
+        "fin": [
+          17.682559959875007,
+          -8.50219195026372
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0076",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0007",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0034",
+        "distancia_m": 0.624
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0007",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0082"
+      ],
+      "geometria": {
+        "inicio": [
+          17.682559959875007,
+          -7.052331804505291
+        ],
+        "fin": [
+          17.682559959875007,
+          -8.3123318045048
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0077",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FALSO_POSITIVO",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0007",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0034",
+        "distancia_m": 0.426
+      },
+      "confianza_score": 0.2,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0007",
+        "viga_demasiado_corta"
+      ],
+      "geometria": {
+        "inicio": [
+          17.682559959875007,
+          -8.50219195026372
+        ],
+        "fin": [
+          17.682559959875007,
+          -8.5573318045043
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0078",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0007",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0034",
+        "distancia_m": 1.831
+      },
+      "confianza_score": 0.4,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0007",
+        "viga_muy_corta",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0084"
+      ],
+      "geometria": {
+        "inicio": [
+          17.682559959875007,
+          -6.402331804505291
+        ],
+        "fin": [
+          17.682559959875007,
+          -7.052331804505291
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0079",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0007",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0034",
+        "distancia_m": 0.303
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0007",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0083"
+      ],
+      "geometria": {
+        "inicio": [
+          17.682559959875007,
+          -8.5573318045043
+        ],
+        "fin": [
+          17.682559959875007,
+          -10.5023318045053
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0080",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FALSO_POSITIVO",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0004",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0034",
+        "distancia_m": 0.472
+      },
+      "confianza_score": 0.2,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0004",
+        "viga_demasiado_corta"
+      ],
+      "geometria": {
+        "inicio": [
+          17.48255995987501,
+          -8.39733180450478
+        ],
+        "fin": [
+          17.48255995987501,
+          -8.2473318045048
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0081",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FALSO_POSITIVO",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0004",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0034",
+        "distancia_m": 0.317
+      },
+      "confianza_score": 0.2,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0004",
+        "viga_demasiado_corta"
+      ],
+      "geometria": {
+        "inicio": [
+          17.48255995987501,
+          -8.5573318045043
+        ],
+        "fin": [
+          17.48255995987501,
+          -8.39733180450478
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0082",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0004",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0034",
+        "distancia_m": 0.619
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0004",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0076"
+      ],
+      "geometria": {
+        "inicio": [
+          17.48255995987501,
+          -8.2473318045048
+        ],
+        "fin": [
+          17.48255995987501,
+          -7.052331804505291
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0083",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0004",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0034",
+        "distancia_m": 0.103
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0004",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0079"
+      ],
+      "geometria": {
+        "inicio": [
+          17.48255995987501,
+          -10.5023318045053
+        ],
+        "fin": [
+          17.48255995987501,
+          -8.5573318045043
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0084",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_FUNDACION_0004",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0034",
+        "distancia_m": 1.808
+      },
+      "confianza_score": 0.4,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0004",
+        "viga_muy_corta",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0078"
+      ],
+      "geometria": {
+        "inicio": [
+          17.48255995987501,
+          -7.052331804505291
+        ],
+        "fin": [
+          17.48255995987501,
+          -6.402331804505291
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_FUNDACION_0085",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C_prime-D",
+        "y": "antes de 1"
+      },
+      "estado_revision": "CONFIRMADA",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_FUNDACION_0035",
+        "distancia_m": 0.116
+      },
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "inicio": [
+          25.80699705322311,
+          -6.402331804505273
+        ],
+        "fin": [
+          27.606991969363182,
+          -6.402331804505259
+        ]
+      }
+    }
+  ]
+}

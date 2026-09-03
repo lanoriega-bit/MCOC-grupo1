@@ -17,6 +17,7 @@ Los planos CAD originales y DXF convertidos no se suben a GitHub. Se trabaja con
 | `unity_export/` | JSON preparado para viewer Unity/web |
 | `viewer/` | Viewer 3D interactivo del edificio |
 | `docs/` | Estado tecnico del modelo |
+| `edificio/` | Flujo estructurado: datos, validacion 2D, comparacion e issues antes del 3D |
 
 ## Archivos principales
 
@@ -30,6 +31,11 @@ Los planos CAD originales y DXF convertidos no se suben a GitHub. Se trabaja con
 | `opensees/building_gravity_skeleton.py` | Modelo OpenSees preliminar de gravedad para QA |
 | `unity_export/model_viewer.json` | Export para viewer Unity/web con colores y toggles |
 | `viewer/index.html` | Viewer web 3D interactivo tipo orbit/zoom para QA |
+| `edificio/datos/piso_01.json` | Extraccion estructurada inicial del Piso 1, separando Parte 1 y Parte 2 |
+| `edificio/validacion/piso_01_completo.svg` | Superposicion visual completa para revisar Piso 1 antes del 3D |
+| `edificio/validacion/piso_01_parte_1.svg` | Superposicion visual de Parte 1 (`2017_67`) |
+| `edificio/validacion/piso_01_parte_2.svg` | Superposicion visual de Parte 2 (`2024_22/LT2`) |
+| `edificio/issues/conflicts.json` | Comparacion Piso 1: correctos, faltantes, sobrantes y dudosos |
 
 ## Ejes X preliminares
 

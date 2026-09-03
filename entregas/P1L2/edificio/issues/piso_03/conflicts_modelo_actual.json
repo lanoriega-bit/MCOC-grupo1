@@ -1,0 +1,4610 @@
+{
+  "piso": "3",
+  "estado": "DRAFT_AUTOMATED_COMPARISON",
+  "metodo": "Comparacion por tipo y cercania del centro geometrico; no modifica el modelo 3D.",
+  "resumen": {
+    "correctos": 20,
+    "faltantes": 37,
+    "sobrantes": 142,
+    "dudosos": 7,
+    "faltantes_parte_1": 37,
+    "faltantes_parte_1_confia": 23,
+    "faltantes_por_tipo": {
+      "muro": 3,
+      "viga": 32,
+      "columna": 2
+    },
+    "sobrantes_por_tipo": {
+      "viga": 111,
+      "muro": 12,
+      "columna": 19
+    },
+    "dudosos_por_tipo": {
+      "viga": 7
+    }
+  },
+  "correctos": [
+    {
+      "extraido": "VIGA_P1_03_0001",
+      "modelo": "SOL_3_beam_0388",
+      "distancia_m": 0.449,
+      "zona": "parte_1"
+    },
+    {
+      "extraido": "VIGA_P1_03_0004",
+      "modelo": "SOL_3_beam_0393",
+      "distancia_m": 0.152,
+      "zona": "parte_1"
+    },
+    {
+      "extraido": "VIGA_P1_03_0005",
+      "modelo": "SOL_3_beam_0394",
+      "distancia_m": 0.152,
+      "zona": "parte_1"
+    },
+    {
+      "extraido": "VIGA_P1_03_0006",
+      "modelo": "SOL_3_beam_0317",
+      "distancia_m": 0.152,
+      "zona": "parte_1"
+    },
+    {
+      "extraido": "VIGA_P1_03_0007",
+      "modelo": "SOL_3_beam_0318",
+      "distancia_m": 0.152,
+      "zona": "parte_1"
+    },
+    {
+      "extraido": "VIGA_P1_03_0008",
+      "modelo": "SOL_3_beam_0321",
+      "distancia_m": 0.449,
+      "zona": "parte_1"
+    },
+    {
+      "extraido": "VIGA_P1_03_0011",
+      "modelo": "SOL_3_beam_0324",
+      "distancia_m": 0.449,
+      "zona": "parte_1"
+    },
+    {
+      "extraido": "VIGA_P1_03_0014",
+      "modelo": "SOL_3_beam_0327",
+      "distancia_m": 0.449,
+      "zona": "parte_1"
+    },
+    {
+      "extraido": "VIGA_P1_03_0017",
+      "modelo": "SOL_3_beam_0328",
+      "distancia_m": 0.152,
+      "zona": "parte_1"
+    },
+    {
+      "extraido": "VIGA_P1_03_0018",
+      "modelo": "SOL_3_beam_0329",
+      "distancia_m": 0.152,
+      "zona": "parte_1"
+    },
+    {
+      "extraido": "VIGA_P1_03_0021",
+      "modelo": "SOL_3_beam_0357",
+      "distancia_m": 0.481,
+      "zona": "parte_1"
+    },
+    {
+      "extraido": "VIGA_P1_03_0022",
+      "modelo": "SOL_3_beam_0350",
+      "distancia_m": 0.481,
+      "zona": "parte_1"
+    },
+    {
+      "extraido": "VIGA_P1_03_0024",
+      "modelo": "SOL_3_beam_0380",
+      "distancia_m": 0.343,
+      "zona": "parte_1"
+    },
+    {
+      "extraido": "C_P1_03_0001",
+      "modelo": "SOL_3_column_0001",
+      "distancia_m": 0.151,
+      "zona": "parte_1"
+    },
+    {
+      "extraido": "C_P1_03_0002",
+      "modelo": "SOL_3_column_0015",
+      "distancia_m": 0.152,
+      "zona": "parte_1"
+    },
+    {
+      "extraido": "C_P1_03_0003",
+      "modelo": "SOL_3_column_0013",
+      "distancia_m": 0.152,
+      "zona": "parte_1"
+    },
+    {
+      "extraido": "C_P1_03_0004",
+      "modelo": "SOL_3_column_0012",
+      "distancia_m": 0.152,
+      "zona": "parte_1"
+    },
+    {
+      "extraido": "C_P1_03_0005",
+      "modelo": "SOL_3_column_0016",
+      "distancia_m": 0.152,
+      "zona": "parte_1"
+    },
+    {
+      "extraido": "C_P1_03_0006",
+      "modelo": "SOL_3_column_0021",
+      "distancia_m": 0.151,
+      "zona": "parte_1"
+    },
+    {
+      "extraido": "C_P1_03_0009",
+      "modelo": "SOL_3_column_0024",
+      "distancia_m": 0.151,
+      "zona": "parte_1"
+    }
+  ],
+  "faltantes": [
+    {
+      "id": "CONFLICT_P1_0001",
+      "elemento": "MURO_P1_03_0001",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre Eb-Ec y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.85,
+      "estado": "PENDING_MODEL_UPDATE",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [],
+      "geometria": {
+        "inicio": [
+          34.332277268892874,
+          -2.1748965757390177
+        ],
+        "fin": [
+          30.63227726866646,
+          -2.1748965757390177
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0002",
+      "elemento": "MURO_P1_03_0002",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre E-Ea y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.65,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana"
+      ],
+      "geometria": {
+        "inicio": [
+          30.63227726866646,
+          -2.1748965757390177
+        ],
+        "fin": [
+          30.63227726866646,
+          -3.853691794798939
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0003",
+      "elemento": "MURO_P1_03_0003",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre Ed-F y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.65,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana"
+      ],
+      "geometria": {
+        "inicio": [
+          34.332277268892874,
+          -3.8536917947977027
+        ],
+        "fin": [
+          34.332277268892874,
+          -2.1748965757390177
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0004",
+      "elemento": "VIGA_P1_03_0002",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre IB-J y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.7,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_03_0003"
+      ],
+      "geometria": {
+        "inicio": [
+          77.08224484570397,
+          -6.920063428424214
+        ],
+        "fin": [
+          77.08224484570394,
+          -0.27006342836090624
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0005",
+      "elemento": "VIGA_P1_03_0003",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre despues de J y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.7,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_03_0002"
+      ],
+      "geometria": {
+        "inicio": [
+          77.68224484570398,
+          -16.420063428444035
+        ],
+        "fin": [
+          77.68224484570393,
+          0.32993657163911294
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0012",
+      "elemento": "VIGA_P1_03_0019",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre Ed-F y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.45,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_viga_cercana",
+        "posible_cara_paralela_de_VIGA_P1_03_0020"
+      ],
+      "geometria": {
+        "inicio": [
+          37.182277268896385,
+          -6.870063428424334
+        ],
+        "fin": [
+          37.18227726889637,
+          -0.319896773097085
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0013",
+      "elemento": "VIGA_P1_03_0020",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre F_prime-G y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.45,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_viga_cercana",
+        "posible_cara_paralela_de_VIGA_P1_03_0019"
+      ],
+      "geometria": {
+        "inicio": [
+          37.782277268896394,
+          -6.870063428424334
+        ],
+        "fin": [
+          37.78227726889638,
+          -0.319896773097085
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0015",
+      "elemento": "VIGA_P1_03_0025",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre F_prime-G y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.45,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_viga_cercana",
+        "posible_cara_paralela_de_VIGA_P1_03_0026"
+      ],
+      "geometria": {
+        "inicio": [
+          47.18227726901904,
+          -6.870063428424288
+        ],
+        "fin": [
+          47.182277269019025,
+          -0.31989677309704057
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0016",
+      "elemento": "VIGA_P1_03_0026",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre G-Ga y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.45,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_viga_cercana",
+        "posible_cara_paralela_de_VIGA_P1_03_0025"
+      ],
+      "geometria": {
+        "inicio": [
+          47.78227726901903,
+          -6.870063428424288
+        ],
+        "fin": [
+          47.78227726901903,
+          -0.31989677309704057
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0017",
+      "elemento": "VIGA_P1_03_0027",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre F_prime-G y 1b-2",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_03_0003",
+        "posible_cara_paralela_de_VIGA_P1_03_0028"
+      ],
+      "geometria": {
+        "inicio": [
+          47.18227726901901,
+          0.3801032269029605
+        ],
+        "fin": [
+          47.18227726901901,
+          3.850103226958584
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0018",
+      "elemento": "VIGA_P1_03_0028",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre G-Ga y 1b-2",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_03_0004",
+        "posible_cara_paralela_de_VIGA_P1_03_0027"
+      ],
+      "geometria": {
+        "inicio": [
+          47.78227726901902,
+          0.3801032269029605
+        ],
+        "fin": [
+          47.78227726901901,
+          3.850103226958603
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0019",
+      "elemento": "VIGA_P1_03_0029",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre Ga-H y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.45,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_viga_cercana",
+        "posible_cara_paralela_de_VIGA_P1_03_0030"
+      ],
+      "geometria": {
+        "inicio": [
+          57.182277268947836,
+          -6.8700634284242525
+        ],
+        "fin": [
+          57.18227726894783,
+          -0.3198967730970228
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0020",
+      "elemento": "VIGA_P1_03_0030",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre H-H1 y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.45,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_viga_cercana",
+        "posible_cara_paralela_de_VIGA_P1_03_0029"
+      ],
+      "geometria": {
+        "inicio": [
+          57.78227726894784,
+          -6.8700634284242525
+        ],
+        "fin": [
+          57.78227726894782,
+          -0.3198967730970228
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0021",
+      "elemento": "VIGA_P1_03_0031",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre H2-I y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.45,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_viga_cercana",
+        "posible_cara_paralela_de_VIGA_P1_03_0032"
+      ],
+      "geometria": {
+        "inicio": [
+          67.1822772688795,
+          -6.869896773119969
+        ],
+        "fin": [
+          67.18227726887949,
+          -0.3198967730969855
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0022",
+      "elemento": "VIGA_P1_03_0032",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre I-IA y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.45,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_viga_cercana",
+        "posible_cara_paralela_de_VIGA_P1_03_0031"
+      ],
+      "geometria": {
+        "inicio": [
+          67.78227726887951,
+          -6.869896773119969
+        ],
+        "fin": [
+          67.78227726887951,
+          -0.3198967730969855
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0023",
+      "elemento": "VIGA_P1_03_0033",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre IA-I_prime y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.7,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_03_0034"
+      ],
+      "geometria": {
+        "inicio": [
+          72.18227726888674,
+          -6.86989677311994
+        ],
+        "fin": [
+          72.18227726888674,
+          -0.3198967730971134
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0024",
+      "elemento": "VIGA_P1_03_0034",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre I_prime-IB y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.7,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_03_0033"
+      ],
+      "geometria": {
+        "inicio": [
+          72.78227726888673,
+          -6.86989677311994
+        ],
+        "fin": [
+          72.78227726888674,
+          -0.3198967730971134
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0025",
+      "elemento": "VIGA_P1_03_0035",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre F_prime-G y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.7,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_03_0036"
+      ],
+      "geometria": {
+        "inicio": [
+          42.18227726895771,
+          -6.920063428424317
+        ],
+        "fin": [
+          42.182277268957705,
+          -0.2700634283609791
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0026",
+      "elemento": "VIGA_P1_03_0036",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre F_prime-G y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.45,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_viga_cercana",
+        "posible_cara_paralela_de_VIGA_P1_03_0035"
+      ],
+      "geometria": {
+        "inicio": [
+          42.78227726895772,
+          -6.920063428424317
+        ],
+        "fin": [
+          42.78227726895771,
+          -0.2700634283609791
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0027",
+      "elemento": "VIGA_P1_03_0037",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre Ga-H y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.7,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_03_0038"
+      ],
+      "geometria": {
+        "inicio": [
+          52.182277268886516,
+          -6.920063428424278
+        ],
+        "fin": [
+          52.18227726888651,
+          -0.2700634283609684
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0028",
+      "elemento": "VIGA_P1_03_0038",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre Ga-H y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.7,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_03_0037"
+      ],
+      "geometria": {
+        "inicio": [
+          52.782277268886524,
+          -6.920063428424271
+        ],
+        "fin": [
+          52.7822772688865,
+          -0.2700634283609684
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0029",
+      "elemento": "VIGA_P1_03_0039",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre H_prime-H2 y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.45,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_viga_cercana",
+        "posible_cara_paralela_de_VIGA_P1_03_0040"
+      ],
+      "geometria": {
+        "inicio": [
+          62.18227726881818,
+          -6.920063428424243
+        ],
+        "fin": [
+          62.182277268818176,
+          -0.27006342836094177
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0030",
+      "elemento": "VIGA_P1_03_0040",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre H_prime-H2 y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.7,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_03_0039"
+      ],
+      "geometria": {
+        "inicio": [
+          62.78227726881819,
+          -6.920063428424243
+        ],
+        "fin": [
+          62.78227726881818,
+          -0.27006342836094177
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0031",
+      "elemento": "VIGA_P1_03_0041",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre Ga-H y 1b-2",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_03_0005",
+        "posible_cara_paralela_de_VIGA_P1_03_0042"
+      ],
+      "geometria": {
+        "inicio": [
+          57.182277268947814,
+          0.38010322690298715
+        ],
+        "fin": [
+          57.182277268947814,
+          3.8501032269586304
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0032",
+      "elemento": "VIGA_P1_03_0042",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre H-H1 y 1b-2",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_03_0002",
+        "posible_cara_paralela_de_VIGA_P1_03_0041"
+      ],
+      "geometria": {
+        "inicio": [
+          57.78227726894782,
+          0.38010322690298715
+        ],
+        "fin": [
+          57.782277268947816,
+          3.8501032269586304
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0033",
+      "elemento": "VIGA_P1_03_0043",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre F_prime-G y 1b-2",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_03_0003",
+        "posible_cara_paralela_de_VIGA_P1_03_0027"
+      ],
+      "geometria": {
+        "inicio": [
+          47.332277269019016,
+          1.4000689198136786
+        ],
+        "fin": [
+          47.332277269019016,
+          0.3801032269028415
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0034",
+      "elemento": "VIGA_P1_03_0044",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre G-Ga y 1b-2",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_03_0004",
+        "posible_cara_paralela_de_VIGA_P1_03_0027"
+      ],
+      "geometria": {
+        "inicio": [
+          47.63227726901901,
+          0.3801032269028415
+        ],
+        "fin": [
+          47.63227726901901,
+          1.4000689198136786
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0035",
+      "elemento": "VIGA_P1_03_0045",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre Ga-H y 1b-2",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_03_0005",
+        "posible_cara_paralela_de_VIGA_P1_03_0041"
+      ],
+      "geometria": {
+        "inicio": [
+          57.33227726894783,
+          1.4000689198136964
+        ],
+        "fin": [
+          57.33227726894783,
+          0.38010322690285037
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0036",
+      "elemento": "VIGA_P1_03_0046",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre H-H1 y 1b-2",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_03_0002",
+        "posible_cara_paralela_de_VIGA_P1_03_0041"
+      ],
+      "geometria": {
+        "inicio": [
+          57.632277268947824,
+          0.38010322690285037
+        ],
+        "fin": [
+          57.632277268947824,
+          1.4000689198136964
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0037",
+      "elemento": "VIGA_P1_03_0047",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre IB-J y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.7,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_03_0048"
+      ],
+      "geometria": {
+        "inicio": [
+          74.83227726888674,
+          -6.920063428424214
+        ],
+        "fin": [
+          74.83227726888673,
+          -0.27006342836090624
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0038",
+      "elemento": "VIGA_P1_03_0048",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre IB-J y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.7,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_03_0047"
+      ],
+      "geometria": {
+        "inicio": [
+          75.23227726888673,
+          -6.920063428424214
+        ],
+        "fin": [
+          75.23227726888672,
+          -0.27006342836090624
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0039",
+      "elemento": "VIGA_P1_03_0049",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre IB-J y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.4,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_03_0006",
+        "viga_muy_corta",
+        "posible_cara_paralela_de_VIGA_P1_03_0004"
+      ],
+      "geometria": {
+        "inicio": [
+          74.34150071381796,
+          -0.12006342836096096
+        ],
+        "fin": [
+          74.88227726888675,
+          -0.12006342836096096
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0040",
+      "elemento": "VIGA_P1_03_0050",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre IB-J y 1-1_prime",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.4,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_03_0001",
+        "viga_muy_corta",
+        "posible_cara_paralela_de_VIGA_P1_03_0004"
+      ],
+      "geometria": {
+        "inicio": [
+          74.88227726888675,
+          0.17993657163903976
+        ],
+        "fin": [
+          74.34150071381796,
+          0.17993657163903976
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0041",
+      "elemento": "VIGA_P1_03_0051",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre IB-J y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.4,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_03_0006",
+        "viga_muy_corta",
+        "posible_cara_paralela_de_VIGA_P1_03_0004"
+      ],
+      "geometria": {
+        "inicio": [
+          75.18227726888684,
+          -0.12006342836096096
+        ],
+        "fin": [
+          75.72305382395561,
+          -0.12006342836096096
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0042",
+      "elemento": "VIGA_P1_03_0052",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre IB-J y 1-1_prime",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.4,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_03_0001",
+        "viga_muy_corta",
+        "posible_cara_paralela_de_VIGA_P1_03_0004"
+      ],
+      "geometria": {
+        "inicio": [
+          75.72305382395561,
+          0.17993657163903976
+        ],
+        "fin": [
+          75.18227726888684,
+          0.17993657163903976
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0043",
+      "elemento": "C_P1_03_0007",
+      "tipo": "faltante",
+      "elemento_tipo": "columna",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre Ga-H y 1b-2",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.85,
+      "estado": "PENDING_MODEL_UPDATE",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P1_03_0029",
+          "COLUMNA_RAW_P1_03_0030",
+          "COLUMNA_RAW_P1_03_0031",
+          "COLUMNA_RAW_P1_03_0032",
+          "COLUMNA_RAW_P1_03_0033",
+          "COLUMNA_RAW_P1_03_0034",
+          "COLUMNA_RAW_P1_03_0035",
+          "COLUMNA_RAW_P1_03_0036"
+        ]
+      },
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          57.48227726904474,
+          4.150103226958551
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0044",
+      "elemento": "C_P1_03_0008",
+      "tipo": "faltante",
+      "elemento_tipo": "columna",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre F_prime-G y 1b-2",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.85,
+      "estado": "PENDING_MODEL_UPDATE",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P1_03_0037",
+          "COLUMNA_RAW_P1_03_0038",
+          "COLUMNA_RAW_P1_03_0039",
+          "COLUMNA_RAW_P1_03_0040",
+          "COLUMNA_RAW_P1_03_0041",
+          "COLUMNA_RAW_P1_03_0042",
+          "COLUMNA_RAW_P1_03_0043",
+          "COLUMNA_RAW_P1_03_0044"
+        ]
+      },
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          47.48227726892209,
+          4.150103226958516
+        ]
+      }
+    }
+  ],
+  "sobrantes": [
+    {
+      "id": "CONFLICT_P1_0045",
+      "elemento": "SOL_3_beam_0300",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre Eb-Ec y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          27.84086743869815,
+          9.381341343081285
+        ],
+        "fin": [
+          37.140867438669424,
+          9.381341343081317
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0046",
+      "elemento": "SOL_3_beam_0301",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre Eb-Ec y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          27.84086743869815,
+          8.781341343081285
+        ],
+        "fin": [
+          37.140867438669424,
+          8.781341343081317
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0047",
+      "elemento": "SOL_3_beam_0302",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre F_prime-G y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          42.790867438730764,
+          9.381341343081335
+        ],
+        "fin": [
+          47.14086743879205,
+          9.381341343081353
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0048",
+      "elemento": "SOL_3_beam_0303",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre F_prime-G y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          39.9909192603844,
+          9.381341343081317
+        ],
+        "fin": [
+          42.190867438730756,
+          9.381341343081326
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0049",
+      "elemento": "SOL_3_beam_0304",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre F_prime-G y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          37.84086743866942,
+          9.381341343081317
+        ],
+        "fin": [
+          39.39091926038439,
+          9.381341343081317
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0050",
+      "elemento": "SOL_3_beam_0305",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre F_prime-G y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          42.790867438730764,
+          8.781341343081326
+        ],
+        "fin": [
+          47.14086743879205,
+          8.781341343081344
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0051",
+      "elemento": "SOL_3_beam_0306",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre F_prime-G y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          37.84086743866942,
+          8.781341343081317
+        ],
+        "fin": [
+          42.19086743873076,
+          8.781341343081326
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0052",
+      "elemento": "SOL_3_beam_0307",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre Ga-H y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          52.79086743865956,
+          9.381341343081367
+        ],
+        "fin": [
+          57.140867438720875,
+          9.381341343081376
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0053",
+      "elemento": "SOL_3_beam_0308",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre Ga-H y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          47.84086743879205,
+          9.381341343081353
+        ],
+        "fin": [
+          52.19086743865955,
+          9.381341343081367
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0054",
+      "elemento": "SOL_3_beam_0309",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre Ga-H y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          52.79086743865956,
+          8.781341343081353
+        ],
+        "fin": [
+          57.140867438720875,
+          8.781341343081376
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0055",
+      "elemento": "SOL_3_beam_0310",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre Ga-H y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          47.84086743879205,
+          8.781341343081344
+        ],
+        "fin": [
+          52.19086743865955,
+          8.781341343081353
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0056",
+      "elemento": "SOL_3_beam_0311",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre H_prime-H2 y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          62.79086743859121,
+          9.381341343081395
+        ],
+        "fin": [
+          67.14086743865255,
+          9.381341343081404
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0057",
+      "elemento": "SOL_3_beam_0312",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre H-H1 y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          57.84086743872088,
+          9.381341343081376
+        ],
+        "fin": [
+          62.19086743859121,
+          9.381341343081385
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0058",
+      "elemento": "SOL_3_beam_0313",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre H_prime-H2 y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          62.79086743859122,
+          8.781341343081385
+        ],
+        "fin": [
+          67.14086743865255,
+          8.781341343081394
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0059",
+      "elemento": "SOL_3_beam_0314",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre H-H1 y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          57.84086743872088,
+          8.781341343081367
+        ],
+        "fin": [
+          62.190867438591226,
+          8.781341343081385
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0060",
+      "elemento": "SOL_3_beam_0315",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre I-IA y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          67.84086743865255,
+          9.381341343081395
+        ],
+        "fin": [
+          72.140867438659,
+          9.381341343081425
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0061",
+      "elemento": "SOL_3_beam_0316",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre I-IA y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          67.84086743865255,
+          8.781341343081394
+        ],
+        "fin": [
+          72.140867438659,
+          8.781341343081417
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0062",
+      "elemento": "SOL_3_beam_0319",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre F_prime-G y 1_prime-1b",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          42.790867438730785,
+          0.4813413430615037
+        ],
+        "fin": [
+          47.14086743879207,
+          0.48134134306152193
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0063",
+      "elemento": "SOL_3_beam_0320",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre F_prime-G y 1_prime-1b",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          37.84086743866944,
+          0.4813413430614946
+        ],
+        "fin": [
+          42.190867438730784,
+          0.4813413430615037
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0064",
+      "elemento": "SOL_3_beam_0322",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre Ga-H y 1_prime-1b",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          52.790867438659575,
+          0.48134134306152193
+        ],
+        "fin": [
+          57.14086743872089,
+          0.4813413430615583
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0065",
+      "elemento": "SOL_3_beam_0323",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre Ga-H y 1_prime-1b",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          47.840867438792074,
+          0.48134134306152193
+        ],
+        "fin": [
+          52.19086743865957,
+          0.48134134306152193
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0066",
+      "elemento": "SOL_3_beam_0325",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre H_prime-H2 y 1_prime-1b",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          62.79086743859125,
+          0.4813413430615674
+        ],
+        "fin": [
+          67.14086743865256,
+          0.4813413430615856
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0067",
+      "elemento": "SOL_3_beam_0326",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre H-H1 y 1_prime-1b",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          57.84086743872089,
+          0.4813413430615583
+        ],
+        "fin": [
+          62.19086743859124,
+          0.4813413430615583
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0068",
+      "elemento": "SOL_3_beam_0330",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre Eb-Ec y 2a-3",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          27.84086743869814,
+          16.631341343144605
+        ],
+        "fin": [
+          37.14086743866942,
+          16.631341343144637
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0069",
+      "elemento": "SOL_3_beam_0331",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre Eb-Ec y 2a-3",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          27.84086743869814,
+          16.031341343144597
+        ],
+        "fin": [
+          37.14086743866942,
+          16.03134134314463
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0070",
+      "elemento": "SOL_3_beam_0332",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre F_prime-G y 2a-3",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          39.99091926038438,
+          16.631341343144644
+        ],
+        "fin": [
+          47.14086743879204,
+          16.631341343144662
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0071",
+      "elemento": "SOL_3_beam_0333",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre F_prime-G y 2a-3",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          37.84086743866941,
+          16.631341343144637
+        ],
+        "fin": [
+          39.39091926038438,
+          16.631341343144637
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0072",
+      "elemento": "SOL_3_beam_0334",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre F_prime-G y 2a-3",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          42.79086743873075,
+          16.031341343144646
+        ],
+        "fin": [
+          47.14086743879204,
+          16.031341343144653
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0073",
+      "elemento": "SOL_3_beam_0335",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre F_prime-G y 2a-3",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          39.99091926038438,
+          16.031341343144636
+        ],
+        "fin": [
+          42.19086743873074,
+          16.031341343144646
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0074",
+      "elemento": "SOL_3_beam_0336",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre F_prime-G y 2a-3",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          37.84086743866941,
+          16.03134134314463
+        ],
+        "fin": [
+          39.39091926038438,
+          16.031341343144636
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0075",
+      "elemento": "SOL_3_beam_0337",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre Ga-H y 2a-3",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          47.840867438792046,
+          16.631341343144662
+        ],
+        "fin": [
+          57.140867438721294,
+          16.631341343144687
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0076",
+      "elemento": "SOL_3_beam_0338",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre Ga-H y 2a-3",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          47.840867438792046,
+          16.031341343144653
+        ],
+        "fin": [
+          52.19086743865954,
+          16.03134134314468
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0077",
+      "elemento": "SOL_3_beam_0339",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre H_prime-H2 y 2a-3",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          57.84086743872088,
+          16.631341343144687
+        ],
+        "fin": [
+          67.14086743865293,
+          16.631341343144726
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0078",
+      "elemento": "SOL_3_beam_0340",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre H_prime-H2 y 2a-3",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          62.79086743859121,
+          16.031341343144703
+        ],
+        "fin": [
+          67.14086743865293,
+          16.031341343144728
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0079",
+      "elemento": "SOL_3_beam_0341",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre H-H1 y 2a-3",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          57.84086743872088,
+          16.031341343144696
+        ],
+        "fin": [
+          62.1908674385912,
+          16.031341343144703
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0080",
+      "elemento": "SOL_3_beam_0342",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre Ed-F y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          37.19086743866944,
+          0.5313413430615037
+        ],
+        "fin": [
+          37.190867438669436,
+          8.731341343081304
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0081",
+      "elemento": "SOL_3_beam_0343",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre F_prime-G y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          37.79086743866945,
+          0.5313413430615037
+        ],
+        "fin": [
+          37.79086743866944,
+          8.731341343081304
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0082",
+      "elemento": "SOL_3_beam_0344",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre Ed-F y 2-2a",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          37.19086743866942,
+          9.431341343081304
+        ],
+        "fin": [
+          37.190867438669414,
+          15.981507998408556
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0083",
+      "elemento": "SOL_3_beam_0345",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre F_prime-G y 2-2a",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          37.79086743866942,
+          9.431341343081304
+        ],
+        "fin": [
+          37.79086743866941,
+          15.981507998408556
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0084",
+      "elemento": "SOL_3_beam_0346",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre H-H1 y despues de 3_prime",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          57.79086743872085,
+          20.151507998464268
+        ],
+        "fin": [
+          57.79086743872085,
+          20.751507998464277
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0085",
+      "elemento": "SOL_3_beam_0347",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre F_prime-G y despues de 3_prime",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          47.19086743879204,
+          20.751507998464234
+        ],
+        "fin": [
+          47.19086743879204,
+          20.151507998464236
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0086",
+      "elemento": "SOL_3_beam_0348",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre Ga-H y despues de 3_prime",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          57.19086743872083,
+          20.151507998464268
+        ],
+        "fin": [
+          47.79086743879204,
+          20.151507998464236
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0087",
+      "elemento": "SOL_3_beam_0349",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre Ga-H y despues de 3_prime",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          57.79086743872085,
+          20.751507998464266
+        ],
+        "fin": [
+          47.19086743879204,
+          20.751507998464234
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0088",
+      "elemento": "SOL_3_beam_0351",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre G-Ga y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          47.79086743879209,
+          0.531507998351899
+        ],
+        "fin": [
+          47.790867438792084,
+          8.731341343081345
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0089",
+      "elemento": "SOL_3_beam_0352",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre F_prime-G y 2-2a",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          47.190867438792075,
+          9.431341343081344
+        ],
+        "fin": [
+          47.19086743879207,
+          15.981507998408588
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0090",
+      "elemento": "SOL_3_beam_0353",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre G-Ga y 2-2a",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          47.79086743879208,
+          9.431341343081344
+        ],
+        "fin": [
+          47.79086743879206,
+          15.981507998408588
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0091",
+      "elemento": "SOL_3_beam_0354",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre F_prime-G y despues de 3_prime",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          47.190867438792054,
+          16.6815079984086
+        ],
+        "fin": [
+          47.19086743879204,
+          20.151507998464236
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0092",
+      "elemento": "SOL_3_beam_0355",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre G-Ga y despues de 3_prime",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          47.79086743879205,
+          16.6815079984086
+        ],
+        "fin": [
+          47.79086743879205,
+          20.151507998464236
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0093",
+      "elemento": "SOL_3_beam_0356",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre Ga-H y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          57.19086743872089,
+          0.5315079983519354
+        ],
+        "fin": [
+          57.19086743872087,
+          8.731341343081375
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0094",
+      "elemento": "SOL_3_beam_0358",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre Ga-H y 2-2a",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          57.190867438720865,
+          9.431341343081376
+        ],
+        "fin": [
+          57.19086743872085,
+          15.981507998408615
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0095",
+      "elemento": "SOL_3_beam_0359",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre H-H1 y 2-2a",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          57.790867438720866,
+          9.431341343081376
+        ],
+        "fin": [
+          57.790867438720866,
+          15.981507998408615
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0096",
+      "elemento": "SOL_3_beam_0360",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre H2-I y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          67.79086743865254,
+          8.731341343081404
+        ],
+        "fin": [
+          67.19086743865255,
+          8.731341343081404
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0097",
+      "elemento": "SOL_3_beam_0361",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre H2-I y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          67.19086743865256,
+          0.5315079983519536
+        ],
+        "fin": [
+          67.19086743865255,
+          8.731341343081404
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0098",
+      "elemento": "SOL_3_beam_0362",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre I-IA y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          67.79086743865255,
+          0.5315079983519536
+        ],
+        "fin": [
+          67.79086743865254,
+          8.731341343081404
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0099",
+      "elemento": "SOL_3_beam_0363",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre H2-I y 2-2a",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          67.19086743865253,
+          9.431507998385678
+        ],
+        "fin": [
+          67.19086743865253,
+          15.981507998408656
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0100",
+      "elemento": "SOL_3_beam_0364",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre I-IA y 2-2a",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          67.79086743865254,
+          9.431507998385678
+        ],
+        "fin": [
+          67.79086743865254,
+          15.981507998408656
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0101",
+      "elemento": "SOL_3_beam_0365",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre antes de E_prime y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          27.190867438698195,
+          0.5313413430614764
+        ],
+        "fin": [
+          27.190867438698188,
+          3.9815159910983446
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0102",
+      "elemento": "SOL_3_beam_0366",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre E-Ea y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          27.790867438698193,
+          0.5313413430614764
+        ],
+        "fin": [
+          27.79086743869819,
+          3.981515991098354
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0103",
+      "elemento": "SOL_3_beam_0367",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre antes de E_prime y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          27.190867438698188,
+          4.181515991098354
+        ],
+        "fin": [
+          27.19086743869818,
+          8.731341343081276
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0104",
+      "elemento": "SOL_3_beam_0368",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre E-Ea y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          27.79086743869819,
+          4.181515991098354
+        ],
+        "fin": [
+          27.79086743869818,
+          8.731341343081276
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0105",
+      "elemento": "SOL_3_beam_0369",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre antes de E_prime y 2-2a",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          27.190867438698174,
+          9.431341343081277
+        ],
+        "fin": [
+          27.190867438698167,
+          15.981507998408524
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0106",
+      "elemento": "SOL_3_beam_0370",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre E-Ea y 2-2a",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          27.790867438698182,
+          9.431341343081277
+        ],
+        "fin": [
+          27.79086743869817,
+          15.981507998408524
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0107",
+      "elemento": "SOL_3_beam_0371",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre IA-I_prime y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          72.79086743865979,
+          8.731341343081427
+        ],
+        "fin": [
+          72.1908674386598,
+          8.731341343081427
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0108",
+      "elemento": "SOL_3_beam_0372",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre IA-I_prime y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          72.1908674386598,
+          0.5315079983519627
+        ],
+        "fin": [
+          72.1908674386598,
+          8.731341343081427
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0109",
+      "elemento": "SOL_3_beam_0373",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre I_prime-IB y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          72.79086743865979,
+          0.5315079983519627
+        ],
+        "fin": [
+          72.79086743865979,
+          8.731341343081427
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0110",
+      "elemento": "SOL_3_beam_0374",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre IA-I_prime y 2-2a",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          72.1908674386598,
+          9.431507998385687
+        ],
+        "fin": [
+          72.1908674386598,
+          15.981507998408665
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0111",
+      "elemento": "SOL_3_beam_0375",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre I_prime-IB y 2-2a",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          72.79086743865979,
+          9.431507998385687
+        ],
+        "fin": [
+          72.79086743865977,
+          15.981507998408665
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0112",
+      "elemento": "SOL_3_beam_0376",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre F_prime-G y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          42.190867438730784,
+          0.4813413430615037
+        ],
+        "fin": [
+          42.19086743873076,
+          8.781341343081326
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0113",
+      "elemento": "SOL_3_beam_0377",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre F_prime-G y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          42.790867438730785,
+          0.4813413430615037
+        ],
+        "fin": [
+          42.790867438730764,
+          8.781341343081326
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0114",
+      "elemento": "SOL_3_beam_0378",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre F_prime-G y 2-2a",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          42.190867438730756,
+          9.381341343081326
+        ],
+        "fin": [
+          42.19086743873074,
+          16.031341343144646
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0115",
+      "elemento": "SOL_3_beam_0379",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre F_prime-G y 2-2a",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          42.790867438730764,
+          9.381341343081335
+        ],
+        "fin": [
+          42.79086743873075,
+          16.031341343144646
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0116",
+      "elemento": "SOL_3_beam_0381",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre Ga-H y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          52.790867438659575,
+          0.48134134306152193
+        ],
+        "fin": [
+          52.79086743865956,
+          8.781341343081353
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0117",
+      "elemento": "SOL_3_beam_0382",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre Ga-H y 2-2a",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          52.19086743865955,
+          9.381341343081367
+        ],
+        "fin": [
+          52.19086743865954,
+          16.03134134314468
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0118",
+      "elemento": "SOL_3_beam_0383",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre Ga-H y 2-2a",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          52.79086743865956,
+          9.381341343081367
+        ],
+        "fin": [
+          52.79086743865955,
+          16.03134134314468
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0119",
+      "elemento": "SOL_3_beam_0384",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre H_prime-H2 y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          62.19086743859124,
+          0.4813413430615583
+        ],
+        "fin": [
+          62.190867438591226,
+          8.781341343081385
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0120",
+      "elemento": "SOL_3_beam_0385",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre H_prime-H2 y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          62.79086743859125,
+          0.4813413430615674
+        ],
+        "fin": [
+          62.79086743859122,
+          8.781341343081385
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0121",
+      "elemento": "SOL_3_beam_0386",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre H_prime-H2 y 2-2a",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          62.19086743859121,
+          9.381341343081395
+        ],
+        "fin": [
+          62.1908674385912,
+          16.031341343144703
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0122",
+      "elemento": "SOL_3_beam_0387",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre H_prime-H2 y 2-2a",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          62.79086743859121,
+          9.381341343081395
+        ],
+        "fin": [
+          62.79086743859121,
+          16.031341343144703
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0123",
+      "elemento": "SOL_3_beam_0389",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre IB-J y 2a-3",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          77.69083501547699,
+          16.631518202033075
+        ],
+        "fin": [
+          77.09083501547698,
+          16.631497795131043
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0124",
+      "elemento": "SOL_3_beam_0390",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre IB-J y 2-2a",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          77.09083501547698,
+          9.381352415268324
+        ],
+        "fin": [
+          77.09083501547698,
+          16.031497794784006
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0125",
+      "elemento": "SOL_3_beam_0391",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre IB-J y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          77.090835015477,
+          0.48134134306160375
+        ],
+        "fin": [
+          77.09083501547698,
+          8.781352414859693
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0126",
+      "elemento": "SOL_3_beam_0392",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre despues de J y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          77.690835015477,
+          -0.11865865693839624
+        ],
+        "fin": [
+          77.69083501547699,
+          16.631518202033075
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0127",
+      "elemento": "SOL_3_beam_0395",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre IB-J y 2a-3",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          72.84086743865977,
+          16.631353247344435
+        ],
+        "fin": [
+          77.09083501547698,
+          16.631497795131043
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0128",
+      "elemento": "SOL_3_beam_0396",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre IB-J y 2a-3",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          72.84086743865977,
+          16.031353246997398
+        ],
+        "fin": [
+          77.09083501547698,
+          16.031497794784006
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0129",
+      "elemento": "SOL_3_beam_0397",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre IB-J y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          72.840867438659,
+          9.381341343081425
+        ],
+        "fin": [
+          75.24086743943406,
+          9.381341343081425
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0130",
+      "elemento": "SOL_3_beam_0398",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre IB-J y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          72.840867438659,
+          8.781341343081426
+        ],
+        "fin": [
+          75.24086743938356,
+          8.781341343081426
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0131",
+      "elemento": "SOL_3_beam_0399",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre IB-J y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          75.24086743943406,
+          9.381420691297585
+        ],
+        "fin": [
+          77.09083501547698,
+          9.381352415268324
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0132",
+      "elemento": "SOL_3_beam_0400",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre IB-J y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          75.24086743938356,
+          8.781420690888954
+        ],
+        "fin": [
+          77.09083501547698,
+          8.781352414859708
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0133",
+      "elemento": "SOL_3_beam_0401",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre IB-J y 2-2a",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          74.84086743943404,
+          9.381341343081425
+        ],
+        "fin": [
+          74.8408674399937,
+          16.031421270004206
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0134",
+      "elemento": "SOL_3_beam_0402",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre IB-J y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          74.84086743868504,
+          0.48134134306159465
+        ],
+        "fin": [
+          74.84086743938356,
+          8.781341343081426
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0135",
+      "elemento": "SOL_3_beam_0403",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre IB-J y 2-2a",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          75.24086743943406,
+          9.381420691297585
+        ],
+        "fin": [
+          75.2408674399937,
+          16.031434874605566
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0136",
+      "elemento": "SOL_3_beam_0404",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre IB-J y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          75.24086743868506,
+          0.48134134306160375
+        ],
+        "fin": [
+          75.24086743938356,
+          8.781341343081426
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0137",
+      "elemento": "SOL_3_beam_0405",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre F_prime-G y despues de 3_prime",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          39.99091926038438,
+          18.641341343144646
+        ],
+        "fin": [
+          39.39091926038438,
+          18.641341343144646
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0138",
+      "elemento": "SOL_3_beam_0406",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre F_prime-G y despues de 3_prime",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          39.39091926038438,
+          16.631341343144637
+        ],
+        "fin": [
+          39.39091926038438,
+          18.641341343144646
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0139",
+      "elemento": "SOL_3_beam_0407",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre F_prime-G y despues de 3_prime",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          39.99091926038438,
+          16.631341343144644
+        ],
+        "fin": [
+          39.99091926038438,
+          18.641341343144646
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0140",
+      "elemento": "SOL_3_beam_0408",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre F_prime-G y 2-2a",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          39.39091926038439,
+          9.381341343081317
+        ],
+        "fin": [
+          39.39091926038438,
+          16.031341343144636
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0141",
+      "elemento": "SOL_3_beam_0409",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre F_prime-G y 2-2a",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          39.9909192603844,
+          9.381341343081317
+        ],
+        "fin": [
+          39.99091926038438,
+          16.031341343144636
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0142",
+      "elemento": "SOL_3_beam_0410",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre Ed-F y despues de 3_prime",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          37.790870702028926,
+          18.641341343144646
+        ],
+        "fin": [
+          37.19087070202891,
+          18.641341343144646
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0143",
+      "elemento": "SOL_3_beam_0411",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre Ed-F y despues de 3_prime",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          37.190870702028924,
+          16.681507998408556
+        ],
+        "fin": [
+          37.19087070202891,
+          18.641341343144646
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0144",
+      "elemento": "SOL_3_beam_0412",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre F_prime-G y despues de 3_prime",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          37.790870702028926,
+          16.681507998408556
+        ],
+        "fin": [
+          37.790870702028926,
+          18.641341343144646
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0145",
+      "elemento": "SOL_3_beam_0413",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre Ed-F y despues de 3_prime",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          37.1908674386694,
+          19.241341343144637
+        ],
+        "fin": [
+          37.1908674386694,
+          18.641341343144635
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0146",
+      "elemento": "SOL_3_beam_0414",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre F_prime-G y despues de 3_prime",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          39.99091926038438,
+          18.641341343144646
+        ],
+        "fin": [
+          39.99091926038438,
+          19.241341343144644
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0147",
+      "elemento": "SOL_3_beam_0415",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre F_prime-G y despues de 3_prime",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          37.1908674386694,
+          19.241341343144637
+        ],
+        "fin": [
+          39.99091926038438,
+          19.241341343144644
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0148",
+      "elemento": "SOL_3_beam_0416",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre F_prime-G y despues de 3_prime",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          37.1908674386694,
+          18.641341343144635
+        ],
+        "fin": [
+          39.99091926038438,
+          18.641341343144646
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0149",
+      "elemento": "SOL_3_beam_0417",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre IA-I_prime y 2a-3",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          68.34086743865255,
+          16.631341343144737
+        ],
+        "fin": [
+          72.14086743865977,
+          16.631341343144744
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0150",
+      "elemento": "SOL_3_beam_0418",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre IA-I_prime y 2a-3",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          68.34086743865255,
+          16.031341343144728
+        ],
+        "fin": [
+          72.14086743865977,
+          16.031341343144735
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0151",
+      "elemento": "SOL_3_beam_0419",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre I-IA y 2a-3",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          67.84086743865295,
+          16.631341343144726
+        ],
+        "fin": [
+          68.34086743865255,
+          16.631341343144726
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0152",
+      "elemento": "SOL_3_beam_0420",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre I-IA y 2a-3",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          67.84086743865295,
+          16.031341343144728
+        ],
+        "fin": [
+          68.34086743865255,
+          16.031341343144728
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0153",
+      "elemento": "SOL_3_beam_0421",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre H-H1 y despues de 3_prime",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          57.79086743872085,
+          16.631341343144687
+        ],
+        "fin": [
+          57.79086743872085,
+          20.751507998464266
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0154",
+      "elemento": "SOL_3_beam_0422",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre Ga-H y 2a-3",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          52.79086743865955,
+          16.03134134314468
+        ],
+        "fin": [
+          57.14086743872086,
+          16.031341343144696
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0155",
+      "elemento": "SOL_3_beam_0423",
+      "tipo": "sobrante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre Ga-H y despues de 3_prime",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          57.19086743872085,
+          16.631341343144676
+        ],
+        "fin": [
+          57.19086743872084,
+          20.151507998464254
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0156",
+      "elemento": "SOL_3_wall_0111",
+      "tipo": "sobrante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre Eb-Ec y 2-2a",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          30.640867438439486,
+          14.1
+        ],
+        "fin": [
+          34.34086743866591,
+          14.1
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0157",
+      "elemento": "SOL_3_wall_0112",
+      "tipo": "sobrante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre Eb-Ec y 2-2a",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          30.89086743843948,
+          13.95
+        ],
+        "fin": [
+          34.090867438665924,
+          13.95
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0158",
+      "elemento": "SOL_3_wall_0113",
+      "tipo": "sobrante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre E-Ea y 2-2a",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          30.641000000000002,
+          12.447712976706734
+        ],
+        "fin": [
+          30.641000000000002,
+          14.126508195766574
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0159",
+      "elemento": "SOL_3_wall_0114",
+      "tipo": "sobrante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre Ea-Eb y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          30.941000000000003,
+          4.181515991098368
+        ],
+        "fin": [
+          30.941000000000003,
+          6.3315081956765065
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0160",
+      "elemento": "SOL_3_wall_0115",
+      "tipo": "sobrante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre Ea-Eb y 2-2a",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          30.941000000000003,
+          12.447712976706734
+        ],
+        "fin": [
+          30.941000000000003,
+          13.926508195766623
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0161",
+      "elemento": "SOL_3_wall_0116",
+      "tipo": "sobrante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre Ec-Ed y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          34.091,
+          3.9815159910983766
+        ],
+        "fin": [
+          34.091,
+          6.3315081956765065
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0162",
+      "elemento": "SOL_3_wall_0117",
+      "tipo": "sobrante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre Ec-Ed y 2-2a",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          34.091,
+          12.447712976707908
+        ],
+        "fin": [
+          34.091,
+          13.926508195766623
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0163",
+      "elemento": "SOL_3_wall_0118",
+      "tipo": "sobrante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre Ed-F y 2-2a",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          34.391000000000005,
+          12.447712976707908
+        ],
+        "fin": [
+          34.391000000000005,
+          14.126508195766647
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0164",
+      "elemento": "SOL_3_wall_0119",
+      "tipo": "sobrante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre Eb-Ec y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          31.241000000000003,
+          4.181515991098368
+        ],
+        "fin": [
+          31.241000000000003,
+          6.3315081956765065
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0165",
+      "elemento": "SOL_3_wall_0120",
+      "tipo": "sobrante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre Eb-Ec y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          33.791000000000004,
+          4.181515991098368
+        ],
+        "fin": [
+          33.791000000000004,
+          6.3315081956765065
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0166",
+      "elemento": "SOL_3_wall_0121",
+      "tipo": "sobrante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre E-Ea y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          27.140863404891363,
+          4.05
+        ],
+        "fin": [
+          34.09086743866944,
+          4.05
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0167",
+      "elemento": "SOL_3_wall_0122",
+      "tipo": "sobrante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre E-Ea y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "inicio": [
+          27.140863404891363,
+          4.2
+        ],
+        "fin": [
+          33.79086743866942,
+          4.2
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0168",
+      "elemento": "SOL_3_column_0002",
+      "tipo": "sobrante",
+      "elemento_tipo": "columna",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre Ed-F y 2a-3",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "centro": [
+          37.49086743866941,
+          16.331507998408558
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0169",
+      "elemento": "SOL_3_column_0003",
+      "tipo": "sobrante",
+      "elemento_tipo": "columna",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre Ed-F y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "centro": [
+          37.49086743866943,
+          9.081341343081315
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0170",
+      "elemento": "SOL_3_column_0004",
+      "tipo": "sobrante",
+      "elemento_tipo": "columna",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre E_prime-E y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "centro": [
+          27.490867438698164,
+          9.081341343081277
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0171",
+      "elemento": "SOL_3_column_0005",
+      "tipo": "sobrante",
+      "elemento_tipo": "columna",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre E_prime-E y 1-1_prime",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "centro": [
+          27.49086743869818,
+          0.18134134306147187
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0172",
+      "elemento": "SOL_3_column_0006",
+      "tipo": "sobrante",
+      "elemento_tipo": "columna",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre E_prime-E y 2a-3",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "centro": [
+          27.49086743869811,
+          16.331507998408522
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0173",
+      "elemento": "SOL_3_column_0007",
+      "tipo": "sobrante",
+      "elemento_tipo": "columna",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre F_prime-G y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "centro": [
+          47.490867438792066,
+          9.081341343081352
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0174",
+      "elemento": "SOL_3_column_0008",
+      "tipo": "sobrante",
+      "elemento_tipo": "columna",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre F_prime-G y 2a-3",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "centro": [
+          47.49086743879248,
+          16.331507998408448
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0175",
+      "elemento": "SOL_3_column_0009",
+      "tipo": "sobrante",
+      "elemento_tipo": "columna",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre Ga-H y 2a-3",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "centro": [
+          57.49086743872128,
+          16.331507998408483
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0176",
+      "elemento": "SOL_3_column_0010",
+      "tipo": "sobrante",
+      "elemento_tipo": "columna",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre H2-I y 2a-3",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "centro": [
+          67.49086743865294,
+          16.331507998408522
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0177",
+      "elemento": "SOL_3_column_0011",
+      "tipo": "sobrante",
+      "elemento_tipo": "columna",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre H2-I y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "centro": [
+          67.49086743865254,
+          9.081507998385671
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0178",
+      "elemento": "SOL_3_column_0014",
+      "tipo": "sobrante",
+      "elemento_tipo": "columna",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre Ga-H y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "centro": [
+          57.49086743872088,
+          9.081341343081352
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0179",
+      "elemento": "SOL_3_column_0017",
+      "tipo": "sobrante",
+      "elemento_tipo": "columna",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre IA-I_prime y 2a-3",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "centro": [
+          72.49086743865978,
+          16.331507998408522
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0180",
+      "elemento": "SOL_3_column_0018",
+      "tipo": "sobrante",
+      "elemento_tipo": "columna",
+      "zona": "parte_1",
+      "plano": "2017_67-102.dxf",
+      "ubicacion": "entre IA-I_prime y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "centro": [
+          72.49086743865901,
+          9.081507998385705
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0181",
+      "elemento": "SOL_3_column_0019",
+      "tipo": "sobrante",
+      "elemento_tipo": "columna",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre IB-J y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "centro": [
+          77.39084821128715,
+          9.081383303107533
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0182",
+      "elemento": "SOL_3_column_0020",
+      "tipo": "sobrante",
+      "elemento_tipo": "columna",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre IB-J y 2a-3",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "centro": [
+          77.39084821128715,
+          16.331487657401528
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0183",
+      "elemento": "SOL_3_column_0022",
+      "tipo": "sobrante",
+      "elemento_tipo": "columna",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre Ga-H y despues de 3_prime",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "centro": [
+          57.49088063462794,
+          20.45148765745718
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0184",
+      "elemento": "SOL_3_column_0023",
+      "tipo": "sobrante",
+      "elemento_tipo": "columna",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre F_prime-G y despues de 3_prime",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "centro": [
+          47.490880634505295,
+          20.451487657457143
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0185",
+      "elemento": "SOL_3_column_0025",
+      "tipo": "sobrante",
+      "elemento_tipo": "columna",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre IB-J y 2a-3",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "centro": [
+          75.04088063497804,
+          16.331457778549133
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0186",
+      "elemento": "SOL_3_column_0026",
+      "tipo": "sobrante",
+      "elemento_tipo": "columna",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre IB-J y 1b-2",
+      "descripcion": "Elemento existe en el modelo 3D actual pero no fue encontrado en la extraccion estructurada del Piso 1.",
+      "confianza": 0.7,
+      "estado": "EXTRA_IN_MODEL_NEEDS_REVIEW",
+      "geometria": {
+        "centro": [
+          75.04088063477747,
+          9.081356609425377
+        ]
+      }
+    }
+  ],
+  "dudosos": [
+    {
+      "id": "CONFLICT_P1_0006",
+      "elemento": "VIGA_P1_03_0009",
+      "tipo": "dudoso",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre F_prime-G y antes de 1",
+      "descripcion": "Elemento detectado cerca de SOL_3_beam_0319 pero con desfase 0.75 m.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_03_0008"
+      ],
+      "geometria": {
+        "inicio": [
+          42.78227726895771,
+          -0.2700634283609791
+        ],
+        "fin": [
+          47.13227726901901,
+          -0.2700634283609684
+        ]
+      },
+      "modelo_cercano": "SOL_3_beam_0319",
+      "distancia_m": 0.751
+    },
+    {
+      "id": "CONFLICT_P1_0007",
+      "elemento": "VIGA_P1_03_0010",
+      "tipo": "dudoso",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre F_prime-G y antes de 1",
+      "descripcion": "Elemento detectado cerca de SOL_3_beam_0320 pero con desfase 0.75 m.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_03_0008"
+      ],
+      "geometria": {
+        "inicio": [
+          37.832277268896384,
+          -0.2700634283610146
+        ],
+        "fin": [
+          42.182277268957705,
+          -0.2700634283609791
+        ]
+      },
+      "modelo_cercano": "SOL_3_beam_0320",
+      "distancia_m": 0.751
+    },
+    {
+      "id": "CONFLICT_P1_0008",
+      "elemento": "VIGA_P1_03_0012",
+      "tipo": "dudoso",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre Ga-H y antes de 1",
+      "descripcion": "Elemento detectado cerca de SOL_3_beam_0322 pero con desfase 0.75 m.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_03_0011"
+      ],
+      "geometria": {
+        "inicio": [
+          52.78227726888652,
+          -0.2700634283609684
+        ],
+        "fin": [
+          57.13227726894783,
+          -0.27006342836094177
+        ]
+      },
+      "modelo_cercano": "SOL_3_beam_0322",
+      "distancia_m": 0.751
+    },
+    {
+      "id": "CONFLICT_P1_0009",
+      "elemento": "VIGA_P1_03_0013",
+      "tipo": "dudoso",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre Ga-H y antes de 1",
+      "descripcion": "Elemento detectado cerca de SOL_3_beam_0323 pero con desfase 0.75 m.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_03_0011"
+      ],
+      "geometria": {
+        "inicio": [
+          47.832277269019016,
+          -0.2700634283609791
+        ],
+        "fin": [
+          52.18227726888651,
+          -0.2700634283609684
+        ]
+      },
+      "modelo_cercano": "SOL_3_beam_0323",
+      "distancia_m": 0.751
+    },
+    {
+      "id": "CONFLICT_P1_0010",
+      "elemento": "VIGA_P1_03_0015",
+      "tipo": "dudoso",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre H_prime-H2 y antes de 1",
+      "descripcion": "Elemento detectado cerca de SOL_3_beam_0325 pero con desfase 0.75 m.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_03_0014"
+      ],
+      "geometria": {
+        "inicio": [
+          62.78227726881818,
+          -0.27006342836094177
+        ],
+        "fin": [
+          67.1322772688795,
+          -0.2700634283609151
+        ]
+      },
+      "modelo_cercano": "SOL_3_beam_0325",
+      "distancia_m": 0.751
+    },
+    {
+      "id": "CONFLICT_P1_0011",
+      "elemento": "VIGA_P1_03_0016",
+      "tipo": "dudoso",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre H-H1 y antes de 1",
+      "descripcion": "Elemento detectado cerca de SOL_3_beam_0326 pero con desfase 0.75 m.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_03_0014"
+      ],
+      "geometria": {
+        "inicio": [
+          57.83227726894783,
+          -0.27006342836094177
+        ],
+        "fin": [
+          62.182277268818176,
+          -0.27006342836094177
+        ]
+      },
+      "modelo_cercano": "SOL_3_beam_0326",
+      "distancia_m": 0.751
+    },
+    {
+      "id": "CONFLICT_P1_0014",
+      "elemento": "VIGA_P1_03_0023",
+      "tipo": "dudoso",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-103.dxf",
+      "ubicacion": "entre Ga-H y 1b-2",
+      "descripcion": "Elemento detectado cerca de SOL_3_beam_0380 pero con desfase 0.83 m.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_03_0024"
+      ],
+      "geometria": {
+        "inicio": [
+          57.182277268947814,
+          3.8501032269586304
+        ],
+        "fin": [
+          47.78227726901901,
+          3.850103226958603
+        ]
+      },
+      "modelo_cercano": "SOL_3_beam_0380",
+      "distancia_m": 0.834
+    }
+  ]
+}

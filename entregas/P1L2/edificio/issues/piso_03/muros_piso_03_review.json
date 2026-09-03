@@ -1,0 +1,128 @@
+{
+  "piso": "1",
+  "tipo": "muro",
+  "estado": "DRAFT_NEEDS_REVIEW",
+  "total": 3,
+  "por_zona": {
+    "parte_1": 3
+  },
+  "por_estado_revision": {
+    "CONFIRMADO": 1,
+    "POSIBLE": 2
+  },
+  "grupos_logicos": [],
+  "total_grupos_logicos": 0,
+  "criterio": [
+    "Debe provenir de capa RLE-MURO.",
+    "Categorias: CONFIRMADO, POSIBLE, FALSO_POSITIVO, DUPLICADO, FRAGMENTADO, NEEDS_REVIEW.",
+    "Se revisa contra etiquetas M.H.A/M.I cercanas.",
+    "Se marca POSIBLE si parece doble cara grafica de un mismo muro o no tiene etiqueta cercana.",
+    "Se marca FRAGMENTADO si pertenece a un grupo de segmentos colineales contiguos o solapados.",
+    "La agrupacion no se lleva a 3D hasta validar la planta 2D."
+  ],
+  "elementos": [
+    {
+      "id": "MURO_P1_03_0001",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Eb-Ec",
+        "y": "antes de 1"
+      },
+      "estado_revision": "CONFIRMADO",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_03_0002",
+        "distancia_m": 0.096
+      },
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "inicio": [
+          34.332277268892874,
+          -2.1748965757390177
+        ],
+        "fin": [
+          30.63227726866646,
+          -2.1748965757390177
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_03_0002",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "E-Ea",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_03_0002",
+        "distancia_m": 1.816
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana"
+      ],
+      "geometria": {
+        "inicio": [
+          30.63227726866646,
+          -2.1748965757390177
+        ],
+        "fin": [
+          30.63227726866646,
+          -3.853691794798939
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_03_0003",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-103.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ed-F",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_03_0002",
+        "distancia_m": 1.889
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana"
+      ],
+      "geometria": {
+        "inicio": [
+          34.332277268892874,
+          -3.8536917947977027
+        ],
+        "fin": [
+          34.332277268892874,
+          -2.1748965757390177
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "estado": "DRAFT_AUTOMATED",
+  "total": 11,
+  "por_severidad": {
+    "MEDIUM": 7,
+    "LOW": 4
+  },
+  "conflictos": [
+    {
+      "id": "GCONFLICT_0001",
+      "categoria": "transformacion_acuerdo_parcial",
+      "severidad": "MEDIUM",
+      "elementos_o_planos_involucrados": [],
+      "descripcion": "Calce parte_1/parte_2 apoyado por controles no colineales (columnas + muros en filas Y distintas); residuos transversales pendientes de confirmacion final sobre planos generales.",
+      "confianza": 0.7,
+      "estado": "OPEN_TRACKED"
+    },
+    {
+      "id": "GCONFLICT_0002",
+      "categoria": "rotulo_o_nivel_incierto",
+      "severidad": "MEDIUM",
+      "elementos_o_planos_involucrados": [
+        "2017_67-103"
+      ],
+      "descripcion": "La interpretacion de 2017_67-103.dxf requiere confirmacion manual.",
+      "confianza": 0.65,
+      "estado": "OPEN_TRACKED"
+    },
+    {
+      "id": "GCONFLICT_0003",
+      "categoria": "fragmentacion_resuelta_en_entidades_logicas",
+      "severidad": "LOW",
+      "elementos_o_planos_involucrados": [
+        "fundacion"
+      ],
+      "descripcion": "Nivel fundacion tenia 104 segmentos fragmentados agrupados en 34 entidades/grupos logicos.",
+      "confianza": 0.85,
+      "estado": "OPEN_TRACKED"
+    },
+    {
+      "id": "GCONFLICT_0004",
+      "categoria": "diferencia_con_modelo_actual",
+      "severidad": "MEDIUM",
+      "elementos_o_planos_involucrados": [
+        "fundacion"
+      ],
+      "descripcion": "Nivel fundacion tiene 35 elementos estruturales Parte 1 confirmados no encontrados en el modelo 3D actual (re-extraccion pendiente); 68 faltantes Parte 1 totales, 180 diferencias de referencia.",
+      "confianza": 0.78,
+      "estado": "OPEN_TRACKED"
+    },
+    {
+      "id": "GCONFLICT_0005",
+      "categoria": "fragmentacion_resuelta_en_entidades_logicas",
+      "severidad": "LOW",
+      "elementos_o_planos_involucrados": [
+        "1"
+      ],
+      "descripcion": "Nivel 1 tenia 62 segmentos fragmentados agrupados en 28 entidades/grupos logicos.",
+      "confianza": 0.85,
+      "estado": "OPEN_TRACKED"
+    },
+    {
+      "id": "GCONFLICT_0006",
+      "categoria": "diferencia_con_modelo_actual",
+      "severidad": "MEDIUM",
+      "elementos_o_planos_involucrados": [
+        "1"
+      ],
+      "descripcion": "Nivel 1 tiene 4 elementos estruturales Parte 1 confirmados no encontrados en el modelo 3D actual (re-extraccion pendiente); 7 faltantes Parte 1 totales, 162 diferencias de referencia.",
+      "confianza": 0.78,
+      "estado": "OPEN_TRACKED"
+    },
+    {
+      "id": "GCONFLICT_0007",
+      "categoria": "fragmentacion_resuelta_en_entidades_logicas",
+      "severidad": "LOW",
+      "elementos_o_planos_involucrados": [
+        "2"
+      ],
+      "descripcion": "Nivel 2 tenia 139 segmentos fragmentados agrupados en 39 entidades/grupos logicos.",
+      "confianza": 0.85,
+      "estado": "OPEN_TRACKED"
+    },
+    {
+      "id": "GCONFLICT_0008",
+      "categoria": "diferencia_con_modelo_actual",
+      "severidad": "MEDIUM",
+      "elementos_o_planos_involucrados": [
+        "2"
+      ],
+      "descripcion": "Nivel 2 tiene 54 elementos estruturales Parte 1 confirmados no encontrados en el modelo 3D actual (re-extraccion pendiente); 65 faltantes Parte 1 totales, 353 diferencias de referencia.",
+      "confianza": 0.78,
+      "estado": "OPEN_TRACKED"
+    },
+    {
+      "id": "GCONFLICT_0009",
+      "categoria": "fragmentacion_resuelta_en_entidades_logicas",
+      "severidad": "LOW",
+      "elementos_o_planos_involucrados": [
+        "3"
+      ],
+      "descripcion": "Nivel 3 tenia 16 segmentos fragmentados agrupados en 6 entidades/grupos logicos.",
+      "confianza": 0.85,
+      "estado": "OPEN_TRACKED"
+    },
+    {
+      "id": "GCONFLICT_0010",
+      "categoria": "diferencia_con_modelo_actual",
+      "severidad": "MEDIUM",
+      "elementos_o_planos_involucrados": [
+        "3"
+      ],
+      "descripcion": "Nivel 3 tiene 23 elementos estruturales Parte 1 confirmados no encontrados en el modelo 3D actual (re-extraccion pendiente); 37 faltantes Parte 1 totales, 186 diferencias de referencia.",
+      "confianza": 0.78,
+      "estado": "OPEN_TRACKED"
+    },
+    {
+      "id": "GCONFLICT_0011",
+      "categoria": "columnas_sin_continuidad_vertical",
+      "severidad": "MEDIUM",
+      "elementos_o_planos_involucrados": [
+        "REL_COL_0001",
+        "REL_COL_0002",
+        "REL_COL_0018",
+        "REL_COL_0019",
+        "REL_COL_0025",
+        "REL_COL_0026",
+        "REL_COL_0027",
+        "REL_COL_0028",
+        "REL_COL_0029",
+        "REL_COL_0030",
+        "REL_COL_0031",
+        "REL_COL_0033",
+        "REL_COL_0034",
+        "REL_COL_0035",
+        "REL_COL_0036",
+        "REL_COL_0037",
+        "REL_COL_0038",
+        "REL_COL_0039"
+      ],
+      "descripcion": "18 grupos de columnas aisladas: INICIO LEGITIMO: 2, TERMINO LEGITIMO: 4, REQUIERE REVISION DATOS: 12.",
+      "confianza": 0.8,
+      "estado": "OPEN_TRACKED"
+    }
+  ]
+}
