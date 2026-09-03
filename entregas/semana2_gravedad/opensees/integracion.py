@@ -28,6 +28,7 @@ from carga_gravedad import (
     VigaInput,
     polygon_area_xy,
     calcular_largo_viga,
+    opening_in_slab,
 )
 
 
@@ -37,7 +38,14 @@ from carga_gravedad import (
 
 @dataclass
 class StructuralSlab:
-    """Losa definida por el modelo estructural."""
+    """Losa definida por el modelo estructural.
+
+    ``openings`` es una lista de poligonos (cada uno en XY) que representan
+    aberturas/shafts/pasadas dentro del contorno de la losa. Cada abertura:
+      - debe estar contenida dentro del poligono de la losa,
+      - se resta del area efectiva (no soporta carga),
+      - no forma parte del area tributaria asociada a vigas receptoras.
+    """
     building_id: str
     floor_id: int
     slab_id: str
@@ -45,6 +53,8 @@ class StructuralSlab:
     thickness_m: float
     finishes_kN_m2: float = 0.0
     concrete_density_kg_m3: float = CONCRETE_DENSITY
+    openings: list[list[tuple[float, float]]] = field(default_factory=list)
+    normalize_tributary_to_effective_area: bool = False
 
 
 @dataclass
@@ -186,6 +196,8 @@ def validar_modelo(inp: StructuralModelInput) -> IntegrationReport:
     # 12. Nodos sin coordenadas (ya cubierto por node_references)
     # 13. Politgonos tributarios entregados vs. calculados
     _check_provided_vs_computed_polygons(inp, report)
+    # 14. Aberturas: poligono valido y contenido dentro de la losa
+    _check_openings_valid(inp, report)
 
     return report
 
@@ -332,6 +344,46 @@ def _check_provided_vs_computed_polygons(inp: StructuralModelInput, r: Integrati
                    "todos los poligonos tributarios entregados tienen area > 0")
 
 
+def _check_openings_valid(inp: StructuralModelInput, r: IntegrationReport) -> None:
+    """Valida las aberturas de cada losa (openings).
+
+    Cada abertura debe:
+      - ser un poligono con al menos 3 vertices,
+      - tener area > 0,
+      - estar contenida dentro del poligono de su losa,
+      - no exceder el area de la losa (suma de aberturas < area del contorno).
+    """
+    for s in inp.slabs:
+        if not s.openings:
+            continue
+        gross = polygon_area_xy(s.vertices)
+        op_area_sum = 0.0
+        for i, op in enumerate(s.openings, start=1):
+            tag = f"{s.slab_id}:opening_{i}"
+            if len(op) < 3:
+                r.add_error("opening_invalido",
+                            f"{tag}: menos de 3 vertices")
+                continue
+            area = polygon_area_xy(op)
+            if area <= 0:
+                r.add_error("opening_area_cero",
+                            f"{tag}: area = {area:.6f} m2")
+                continue
+            if not opening_in_slab(op, s.vertices):
+                r.add_error("opening_fuera_de_losa",
+                            f"{tag}: abertura fuera del contorno de la losa")
+                continue
+            op_area_sum += area
+        if op_area_sum >= gross:
+            r.add_error("opening_excede_losa",
+                        f"Losa {s.slab_id}: suma de aberturas "
+                        f"({op_area_sum:.3f} m2) >= area del contorno ({gross:.3f} m2)")
+    if not any(e.check.startswith("opening_") for e in r.errors):
+        n = sum(len(s.openings) for s in inp.slabs)
+        r.add_pass("openings_validos",
+                   f"{n} aberturas validas (contenidas y con area > 0)")
+
+
 # ---------------------------------------------------------------------------
 # Conversion: StructuralModelInput -> GravityLoadInput
 # ---------------------------------------------------------------------------
@@ -360,6 +412,8 @@ def convertir_a_gravity_input(inp: StructuralModelInput) -> GravityLoadInput:
             thickness_m=s.thickness_m,
             finishes_kN_m2=s.finishes_kN_m2,
             concrete_density_kg_m3=s.concrete_density_kg_m3,
+            openings=[list(op) for op in s.openings],
+            normalize_tributary_to_effective_area=s.normalize_tributary_to_effective_area,
         )
         for s in inp.slabs
     ]

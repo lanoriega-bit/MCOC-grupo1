@@ -60,6 +60,11 @@ class AdapterSettings:
     min_segment_length_m: float = 0.20
     max_beam_outline_width_m: float = 1.20
     beam_outline_min_overlap_ratio: float = 0.70
+    # Tolerancia geometrica para confirmar centroide/eje de viga por grilla:
+    # |ancho_seccion/2 - distancia_cara_a_eje| <= axis_centroid_tolerance_m.
+    # Solo cuando HAY UN UNICO eje que cumple se coloca el centroide sobre el
+    # eje; si hay 0 o >=2 ejes, o falta el ancho de seccion, la viga queda PENDIENTE.
+    axis_centroid_tolerance_m: float = 0.05
     slab_association_tolerance_m: float = 0.15
     min_edge_coverage_ratio: float = 0.80
     min_slab_area_m2: float = 0.50
@@ -339,6 +344,17 @@ def construir_modelo_edificio1_desde_fuentes(
     _identify_closed_plan_elements(segments_by_category["column_plan"], "column_plan", report, settings)
     _identify_closed_plan_elements(segments_by_category["support"], "support", report, settings)
     _associate_labels(labels, beam_candidates, wall_candidates, report, settings)
+
+    # Resolucion de centroide en orden de evidencia CAD:
+    #   Metodo A (dos caras paralelas) primero; luego
+    #   Metodo C (eje de grilla + ancho/2). Se conserva el criterio conservador:
+    #   si falta evidencia UNICA, la viga queda PENDIENTE (no se fabrica).
+    beam_candidates = _resolve_beam_centroids_via_parallel_face(
+        beam_candidates, labels, cad_payload, report, settings
+    )
+    beam_candidates = _resolve_beam_centroids_via_axis(
+        beam_candidates, labels, cad_payload, report, settings
+    )
 
     nodes, point_to_node = _build_nodes(beam_candidates, wall_candidates, slab_candidates, settings, floor_z)
 
@@ -934,6 +950,770 @@ def _trace_label_to_nearest(
         report.add_trace("source_label", label.source_id, target_type, None, label.floor, PENDING, "dos elementos a distancia similar")
         return
     report.add_trace("source_label", label.source_id, target_type, candidates[0][0], label.floor, RESOLVED, label.text)
+
+
+MANUAL_BEAM_SECTIONS: dict[str, dict[str, Any]] = {
+    # Secciones confirmadas visualmente por el usuario en los planos
+    # estructurales 2017_67-102 (pisos 2/3) y 2017_67-103 (piso 4).
+    # Estas vedas no tienen label CAD asociado (Grupo B) o tienen un label que
+    # NO corresponde / fue mal parseado (Grupo A). Cada entrada anula el width
+    # que el parser dedujo del label.
+    #
+    # Para Group B las vigas principales de grilla se rotulan `V.60/80`:
+    #   width = 0.60 m, distance cara-eje = 0.30 m = width/2 => centroide sobre eje.
+    #
+    # Grupo A - vigas excentricas confirmadas (NO se fuerza el centroide al eje):
+    #   el centroide se coloca a width/2 desde la cara CAD hacia el eje/interior.
+    #   - E1_F03_B0013 / B0041 / E1_F04_B0063: V.60/80, width 0.60, cara x=49.60, eje ~50.00.
+    #   - E1_F03_B0070: V.M.300x300x5 corregido (300 mm = 0.30 m, no 3.00 m), cara x=20.30.
+    #
+    # Grupo A - reasociacion de label (6 vigas F4): el label `+V.I.20/90 (2ºETAPA)`
+    #   NO corresponde a la linea CAD principal (que es V.60/80); se corrige la
+    #   asociacion sin eliminar las V.I.20/90 reales del plano.
+    "E1_F02_B0006": {"width_m": 0.60, "eccentric": False, "section": "V.60/80"},
+    "E1_F02_B0007": {"width_m": 0.60, "eccentric": False, "section": "V.60/80"},
+    "E1_F02_B0008": {"width_m": 0.60, "eccentric": False, "section": "V.60/80"},
+    "E1_F02_B0009": {"width_m": 0.60, "eccentric": False, "section": "V.60/80"},
+    "E1_F02_B0012": {"width_m": 0.60, "eccentric": False, "section": "V.60/80"},
+    "E1_F02_B0033": {"width_m": 0.60, "eccentric": False, "section": "V.60/80"},
+    "E1_F02_B0034": {"width_m": 0.60, "eccentric": False, "section": "V.60/80"},
+    "E1_F02_B0035": {"width_m": 0.60, "eccentric": False, "section": "V.60/80"},
+    "E1_F03_B0007": {"width_m": 0.60, "eccentric": False, "section": "V.60/80"},
+    "E1_F03_B0008": {"width_m": 0.60, "eccentric": False, "section": "V.60/80"},
+    "E1_F03_B0009": {"width_m": 0.60, "eccentric": False, "section": "V.60/80"},
+    "E1_F03_B0010": {"width_m": 0.60, "eccentric": False, "section": "V.60/80"},
+    "E1_F03_B0011": {"width_m": 0.60, "eccentric": False, "section": "V.60/80"},
+    "E1_F03_B0012": {"width_m": 0.60, "eccentric": False, "section": "V.60/80"},
+    "E1_F03_B0016": {"width_m": 0.60, "eccentric": False, "section": "V.60/80"},
+    "E1_F03_B0021": {"width_m": 0.60, "eccentric": False, "section": "V.60/80"},
+    "E1_F03_B0039": {"width_m": 0.60, "eccentric": False, "section": "V.60/80"},
+    "E1_F03_B0040": {"width_m": 0.60, "eccentric": False, "section": "V.60/80"},
+    "E1_F03_B0044": {"width_m": 0.60, "eccentric": False, "section": "V.60/80"},
+    "E1_F03_B0048": {"width_m": 0.60, "eccentric": False, "section": "V.60/80"},
+    "E1_F04_B0018": {"width_m": 0.60, "eccentric": False, "section": "V.60/80"},
+    "E1_F04_B0023": {"width_m": 0.60, "eccentric": False, "section": "V.60/80"},
+    "E1_F04_B0026": {"width_m": 0.60, "eccentric": False, "section": "V.60/80"},
+    "E1_F04_B0047": {"width_m": 0.60, "eccentric": False, "section": "V.60/80"},
+    "E1_F04_B0052": {"width_m": 0.60, "eccentric": False, "section": "V.60/80"},
+    "E1_F04_B0054": {"width_m": 0.60, "eccentric": False, "section": "V.60/80"},
+    "E1_F04_B0077": {"width_m": 0.60, "eccentric": False, "section": "V.60/80"},
+    # Grupo A - excentricas V.60/80 (cara x=49.60, eje ~50.00 => centroide 49.90).
+    "E1_F03_B0013": {"width_m": 0.60, "eccentric": True, "section": "V.60/80"},
+    "E1_F03_B0041": {"width_m": 0.60, "eccentric": True, "section": "V.60/80"},
+    "E1_F04_B0063": {"width_m": 0.60, "eccentric": True, "section": "V.60/80"},
+    # Grupo A - metalica corregida: V.M.300x300x5 => width 0.30 m (cara x=20.30 => centroide 20.15).
+    "E1_F03_B0070": {"width_m": 0.30, "eccentric": True, "section": "V.M.300x300x5 -> width 0.300 m"},
+    # Grupo A - reasociacion F4: linea CAD principal es V.60/80, no V.I.20/90.
+    "E1_F04_B0011": {"width_m": 0.60, "eccentric": False, "section": "V.60/80 (reasociada, no V.I.20/90)"},
+    "E1_F04_B0012": {"width_m": 0.60, "eccentric": False, "section": "V.60/80 (reasociada, no V.I.20/90)"},
+    "E1_F04_B0013": {"width_m": 0.60, "eccentric": False, "section": "V.60/80 (reasociada, no V.I.20/90)"},
+    "E1_F04_B0014": {"width_m": 0.60, "eccentric": False, "section": "V.60/80 (reasociada, no V.I.20/90)"},
+    "E1_F04_B0015": {"width_m": 0.60, "eccentric": False, "section": "V.60/80 (reasociada, no V.I.20/90)"},
+    "E1_F04_B0016": {"width_m": 0.60, "eccentric": False, "section": "V.60/80 (reasociada, no V.I.20/90)"},
+    #
+    # P1 - B0021: viga corta (stub) sobre eje I (x=40.0), cara x=39.7 = 40.0 - 0.3
+    #   (b/2=0.3 => ancho 0.60 m). La cara 39.7 coincide con la cara de la viga
+    #   vertical contigua B0022 (ya resuelta cent x=40.0, w0.6): continuidad de
+    #   elemento, no defecto. Eje I + b/2 => centroide sobre eje x=40.0.
+    #   El segmento CAD 0171 (40.0,8.55)->(39.7,8.55) es un sliver horizontal de
+    #   remate; su centroide se alinea con B0022 a x=40.0 (eje I).
+    "E1_F01_B0021": {"width_m": 0.60, "snap": "direction", "snap_axis_x": 40.0, "section": "V.60/80 (continuidad B0022, eje I x=40.0)"},
+    # 1S - B0037 / B0040: vigas excentricas de eje/paramento (cara x=0.25) sin
+    #   contracara CAD. Muro exterior al OESTE (x=-0.35/-0.15), interior/losas al
+    #   ESTE (+x, losas L713/716/717 desde x=0.25). Ancho 0.60 m (labels rect
+    #   LBL_0022/0027) => centroide a width/2 +x: x = 0.25 + 0.30 = 0.55.
+    "E1_F1S_B0037": {"width_m": 0.60, "eccentric": True, "toward": "+x", "section": "V.60/80 (cara x=0.25, interior este)"},
+    "E1_F1S_B0040": {"width_m": 0.60, "eccentric": True, "toward": "+x", "section": "V.60/80 (cara x=0.25, interior este)"},
+}
+
+
+def _beam_section_width_from_label(beam_id: str, labels_by_id: dict[str, CadLabel],
+                                   report: AdapterReport) -> float | None:
+    """Ancho de seccion (m) de una viga a partir de su label CAD asociado.
+
+    Solo acepta `section_hint.kind == 'rectangular'` con `width_m > 0`.
+    Si no hay label asociado o no es rectangular, retorna None (no se puede
+    confirmar el centroide por este criterio).
+    """
+    for trace in report.traceability:
+        if trace.target_type != "beam" or trace.target_id != beam_id:
+            continue
+        if trace.source_type != "source_label":
+            continue
+        label = labels_by_id.get(trace.source_id)
+        if label is None:
+            continue
+        hint = label.section_hint
+        if not hint or hint.get("kind") != "rectangular":
+            continue
+        width = hint.get("width_m")
+        if isinstance(width, (int, float)) and width > 0.0:
+            return float(width)
+    return None
+
+
+def _resolve_eccentric_beam(
+    beam: BeamCandidate,
+    width: float,
+    manual: dict[str, Any],
+    axis_by_floor: dict[str, list[tuple[Point2D, Point2D, str]]],
+    report: AdapterReport,
+    settings: AdapterSettings,
+) -> BeamCandidate:
+    """Coloca el centroide de una viga excentrica a width/2 desde la cara CAD
+    hacia el eje/interior estructural mas cercano. NO fuerza el centroide al eje.
+
+    La cara (p0,p1) define la linea. Se busca un eje paralelo solapado para
+    determinar el sentido hacia el interior. Si no hay eje que indique el
+    interior, la viga queda PENDIENTE (no se fabrica centroide).
+    """
+    half_width = width / 2.0
+    face0 = _xy(beam.p0)
+    face1 = _xy(beam.p1)
+    u0 = _canonical_unit(face0, face1)
+    n0 = (-u0[1], u0[0])
+    c_face = _dot(face0, n0)
+
+    best: tuple[float, Point2D, Point2D, str] | None = None
+    for a0, a1, axis_tag in axis_by_floor.get(beam.floor, []):
+        ua = _canonical_unit(a0, a1)
+        if _parallel_angle(u0, ua) > math.radians(settings.angle_tolerance_deg):
+            continue
+        overlap = _interval_overlap(
+            min(_dot(face0, u0), _dot(face1, u0)),
+            max(_dot(face0, u0), _dot(face1, u0)),
+            min(_dot(a0, u0), _dot(a1, u0)),
+            max(_dot(a0, u0), _dot(a1, u0)),
+        )
+        if overlap <= 0.0:
+            continue
+        c_axis = _dot(a0, n0)
+        dist = abs(c_axis - c_face)
+        if best is None or dist < best[0]:
+            best = (dist, a0, a1, axis_tag)
+
+    if best is None and not manual.get("toward"):
+        # Sin eje que indique el interior (y sin direccion explicita): PENDIENTE.
+        return beam
+
+    toward = manual.get("toward")
+    if toward in ("+x", "-x", "+y", "-y"):
+        # Direccion explicita del interior estructural (evidencia documentada).
+        tv = {"+x": (1.0, 0.0), "-x": (-1.0, 0.0), "+y": (0.0, 1.0), "-y": (0.0, -1.0)}[toward]
+        z = (beam.p0[2] + beam.p1[2]) / 2.0
+        centroid0 = (face0[0] + tv[0] * half_width, face0[1] + tv[1] * half_width, z)
+        centroid1 = (face1[0] + tv[0] * half_width, face1[1] + tv[1] * half_width, z)
+        reason = (
+            f"ECCENTRIC_BEAM_CONFIRMED_FROM_PLAN: seccion {manual['section']}; "
+            f"centroide a {half_width:.3f} m desde cara CAD hacia {toward} "
+            f"(x={centroid0[0]:.3f}); NO forzado al eje de grilla"
+        )
+    else:
+        dist, a0, a1, axis_tag = best
+        # Sentido desde la cara hacia el eje => interior estructural.
+        c_axis = _dot(a0, n0)
+        direction = 1.0 if c_axis > c_face else -1.0
+        centroid_c = c_face + direction * half_width
+        z = (beam.p0[2] + beam.p1[2]) / 2.0
+        centroid0 = (*_point_from_line(u0, n0, centroid_c, _dot(face0, u0)), z)
+        centroid1 = (*_point_from_line(u0, n0, centroid_c, _dot(face1, u0)), z)
+        reason = (
+            f"ECCENTRIC_BEAM_CONFIRMED_FROM_PLAN: seccion {manual['section']}; "
+            f"centroide a {half_width:.3f} m desde cara CAD (x={centroid0[0]:.3f}) hacia "
+            f"eje {axis_tag}; NO forzado al eje de grilla"
+        )
+    report.add_pending(
+        "viga_centroide_confirmado_excentrico",
+        list(beam.source_ids),
+        beam.floor,
+        f"{beam.beam_id}: {reason}",
+    )
+    updated_traces: list[TraceEntry] = []
+    for trace in report.traceability:
+        if trace.target_type == "beam" and trace.target_id == beam.beam_id:
+            updated_traces.append(
+                TraceEntry(
+                    source_type=trace.source_type,
+                    source_id=trace.source_id,
+                    target_type=trace.target_type,
+                    target_id=trace.target_id,
+                    floor=trace.floor,
+                    status=RESOLVED,
+                    reason=reason,
+                )
+            )
+        else:
+            updated_traces.append(trace)
+    report.traceability = updated_traces
+    return BeamCandidate(
+        beam_id=beam.beam_id,
+        floor=beam.floor,
+        floor_id=beam.floor_id,
+        p0=centroid0,
+        p1=centroid1,
+        source_ids=beam.source_ids,
+        status=RESOLVED,
+        reason=reason,
+    )
+
+
+def _segment_line_2d(
+    a0: Point2D, a1: Point2D,
+) -> tuple[Point2D, Point2D, float]:
+    """Devuelve (u, n, c) de la linea de un segmento CAD 2D."""
+    u = _canonical_unit(a0, a1)
+    n = (-u[1], u[0])
+    c = _dot(a0, n)
+    return u, n, c
+
+
+def _resolve_beam_centroids_via_parallel_face(
+    beams: list[BeamCandidate],
+    labels: list[CadLabel],
+    cad_payload: dict[str, Any],
+    report: AdapterReport,
+    settings: AdapterSettings,
+) -> list[BeamCandidate]:
+    """Metodo A: resuelve el centroide de una viga con DOS caras CAD paralelas.
+
+    Criterio (fuertemente trazable, sin fabricacion):
+      - La viga tiene una cara CAD (beam.p0-p1) que es UNO de los dos bordes del
+        elemento.
+      - Se buscan en el CAD todas las lineas de viga paralelas y solapadas en el
+        mismo piso, y se mide su distancia perpendicular a la cara (la separacion
+        entre cara y contracara = ancho real del elemento medido en el CAD).
+      - El ancho de seccion se toma del label rectangular asociado (o de
+        MANUAL_BEAM_SECTIONS). Se elige como contracara la linea cuya distancia
+        == ancho (dentro de una tolerancia). Si hay una UNICA contracara valida,
+        el centroide es la linea media entre ambas caras. Con 0 o >=2 candidatas
+        ambiguas, se deja PENDIENTE (no se fabrica).
+
+    Se llama ANTES del criterio por eje (metodo C), porque dos caras CAD reales
+    son evidencia mas directa que la grilla. Cada resolucion conserva trazabilidad
+    al segmento CAD de la cara y a la contracara que la confirmo.
+    """
+    tol = settings.axis_centroid_tolerance_m
+    labels_by_id = {label.source_id: label for label in labels}
+
+    # Indexar segmentos CAD de viga por piso como lineas 2D + fuente.
+    beam_seg_by_floor: dict[str, list[tuple[Point2D, Point2D, str]]] = {}
+    for segment in cad_payload.get("segments", []):
+        if segment.get("category") != "beam":
+            continue
+        floor = str(segment.get("floor", ""))
+        points = segment.get("points") or []
+        if len(points) < 2:
+            continue
+        a0 = _xy(_to_point3d(points[0]))
+        a1 = _xy(_to_point3d(points[1]))
+        beam_seg_by_floor.setdefault(floor, []).append((a0, a1, str(segment.get("elementTag", ""))))
+
+    # Label rectangular mas cercano (evidencia de ancho de seccion).
+    def _nearby_rect_widths(beam: BeamCandidate) -> set[float]:
+        cx = (beam.p0[0] + beam.p1[0]) / 2.0
+        cy = (beam.p0[1] + beam.p1[1]) / 2.0
+        widths: set[float] = set()
+        for label in labels:
+            if label.floor != beam.floor or label.category != "beam_label":
+                continue
+            hint = label.section_hint
+            if not hint or hint.get("kind") != "rectangular":
+                continue
+            w = hint.get("width_m")
+            if not (isinstance(w, (int, float)) and w > 0.0):
+                continue
+            pt = _xy(_to_point3d(label.point))
+            d = math.hypot(pt[0] - cx, pt[1] - cy)
+            if d <= settings.label_search_radius_m:
+                widths.add(round(float(w), 4))
+        return widths
+
+    def _nearby_rect_width(beam: BeamCandidate, used_probe: str) -> float | None:
+        widths = _nearby_rect_widths(beam)
+        if len(widths) == 1:
+            return next(iter(widths))
+        return None
+
+    # Indice de lineas por etiqueta de segmento (para cross-reference).
+    seg_pts: dict[str, tuple[Point2D, Point2D]] = {}
+    for a0, a1, tag in (
+        item for items in beam_seg_by_floor.values() for item in items
+    ):
+        seg_pts[tag] = (a0, a1)
+
+    resolved: list[BeamCandidate] = []
+    resolved_ids: set[str] = set()
+    resolved_by_id: dict[str, BeamCandidate] = {}
+    for beam in beams:
+        if beam.status != PENDING:
+            resolved.append(beam)
+            resolved_ids.add(beam.beam_id)
+            resolved_by_id[beam.beam_id] = beam
+            continue
+
+        width = _beam_section_width_from_label(beam.beam_id, labels_by_id, report)
+        manual = MANUAL_BEAM_SECTIONS.get(beam.beam_id)
+        if manual is not None:
+            width = float(manual["width_m"])
+        if width is None or width <= 0.0:
+            width = _nearby_rect_width(beam, "")
+
+
+        face0 = _xy(beam.p0)
+        face1 = _xy(beam.p1)
+        u0, n0, c_face = _segment_line_2d(face0, face1)
+
+        # Todas las contracaras candidatas (paralelas, solapadas y a distancia
+        # de elemento). El ancho real se obtiene de la evidencia: o de un label
+        # rectangular (label_width), o de la propia separacion medida cuando hay
+        # una UNICA contracara valida.
+        all_partners: list[tuple[float, Point2D, Point2D, str]] = []
+        for a0, a1, tag in beam_seg_by_floor.get(beam.floor, []):
+            ua, na, c_a = _segment_line_2d(a0, a1)
+            if _parallel_angle(u0, ua) > math.radians(settings.angle_tolerance_deg):
+                continue
+            # Distancia perpendicular firmada respecto a la cara. Se usa la
+            # proyeccion de la contracara sobre la normal de la cara (no la
+            # resta de c), para ser insensible al sentido de las lineas
+            # paralelas (anti-paralelas dan c con signos opuestos).
+            sdist = _dot((a0[0] - face0[0], a0[1] - face0[1]), n0)
+            distance = abs(sdist)
+            if abs(sdist) <= settings.node_tolerance_m:
+                # Misma linea / cara repetida: no es una contracara.
+                continue
+            if distance > settings.max_beam_outline_width_m:
+                continue
+            proj_face_lo = min(_dot(face0, u0), _dot(face1, u0))
+            proj_face_hi = max(_dot(face0, u0), _dot(face1, u0))
+            proj_a_lo = min(_dot(a0, u0), _dot(a1, u0))
+            proj_a_hi = max(_dot(a0, u0), _dot(a1, u0))
+            overlap = _interval_overlap(proj_face_lo, proj_face_hi, proj_a_lo, proj_a_hi)
+            if overlap <= 0.0:
+                continue
+            all_partners.append((distance, sdist, a0, a1, tag))
+
+        def _own_face_separation(owner: BeamCandidate) -> float | None:
+            """Separa las dos caras paralelas de un beam ya confirmado respecto
+            de la cara actual (medida segun sdist normalizado por linea).
+
+            Si el beam confirmado solo conserva UNA cara CAD (una de sus dos
+            caras la comparte/provee el beam actual), su ancho se infiere como
+            el doble de la distancia de esa cara a su centroide ya resuelto
+            (continuidad: mismo elemento, evidencia no fabricada)."""
+            offsets: set[tuple[float, float]] = set()
+            for sid in owner.source_ids:
+                pts = seg_pts.get(sid)
+                if pts is None:
+                    continue
+                q0, q1 = pts
+                uq, _nq, _cq = _segment_line_2d(q0, q1)
+                if _parallel_angle(u0, uq) > math.radians(settings.angle_tolerance_deg):
+                    continue
+                sd = _dot((q0[0] - face0[0], q0[1] - face0[1]), n0)
+                key = round(sd / (settings.node_tolerance_m * 2.0))
+                if not any(abs(key - k) <= 1 for (k, _s) in offsets):
+                    offsets.add((key, sd))
+            if len(offsets) == 2:
+                return abs(list(offsets)[0][1] - list(offsets)[1][1])
+            if len(offsets) == 1:
+                # Dos veces la distancia de la cara CAD al centroide resuelto.
+                c0, c1 = _xy(owner.p0), _xy(owner.p1)
+                du, _dn, dc = _segment_line_2d(c0, c1)
+                if _parallel_angle(u0, du) > math.radians(settings.angle_tolerance_deg):
+                    return None
+                # Distancia firma de la cara al eje del vecino resuelto (en la
+                # normal de la cara): el ancho es el doble de esa distancia.
+                face_to_axis = _dot((c0[0] - face0[0], c0[1] - face0[1]), n0)
+                return 2.0 * abs(face_to_axis)
+            return None
+
+        def _pick_resolved_neighbour() -> tuple[float, Point2D, Point2D, str] | None:
+            """Cross-reference: si una contracara candidata es a su vez cara de
+            una viga ALREADY confirmada con el mismo ancho (o ancho infirable por
+            continuidad), es la pareja real (evidencia de continuidad, sin
+            fabricar el ancho)."""
+            for dist, _sd, a0, a1, tag in all_partners:
+                for other in resolved_by_id.values():
+                    if other.beam_id == beam.beam_id:
+                        continue
+                    if tag not in set(other.source_ids):
+                        continue
+                    sep = _own_face_separation(other)
+                    if sep is not None and abs(sep - dist) <= tol:
+                        return (dist, a0, a1, tag)
+            return None
+            return None
+
+        if not all_partners:
+            # Sin contracara CAD: no hay evidencia de dos caras. Se deja
+            # PENDIENTE (lo manejaran el metodo por eje o el block).
+            resolved.append(beam)
+            continue
+
+        # Agrupar contracaras por linea (misma distancia perpendicular firmada).
+        def _unique_lines(cands: list[tuple[float, float, Point2D, Point2D, str]]) -> list[tuple[float, Point2D, Point2D, str]]:
+            out: list[tuple[float, Point2D, Point2D, str]] = []
+            seensd: list[float] = []
+            for dist, sdist, a0, a1, tag in cands:
+                if not any(
+                    abs(sdist - sd) <= settings.node_tolerance_m
+                    for sd in seensd
+                ):
+                    seensd.append(sdist)
+                    out.append((dist, a0, a1, tag))
+            return out
+
+        if width is not None and width > 0.0:
+            candidates = [p for p in all_partners if abs(p[0] - width) <= tol]
+            if not candidates:
+                resolved.append(beam)
+                continue
+            unique = _unique_lines(candidates)
+            if len(unique) != 1:
+                resolved.append(beam)
+                continue
+            resolvable_width = width
+        else:
+            # Sin label unico que fije el ancho: se acepta el ancho MEDIDO entre
+            # las dos caras solo si hay una UNICA contracara (0 o >=2 => ambiguo).
+            unique = _unique_lines(all_partners)
+            if len(unique) == 1:
+                resolvable_width = unique[0][0]
+            elif _nearby_rect_widths(beam):
+                # Con varios anchos rectangulares documentados proximos, se puede
+                # cruzar la distancia medida de cada contracara con esos anchos:
+                # si EXACTAMENTE UNA distancia de contracara coincide con un ancho
+                # documentado, esa es la pareja valida (evidencia cruzada, sin
+                # fabricar un ancho).
+                documented = _nearby_rect_widths(beam)
+                matches = []
+                for dist, sdist, a0, a1, tag in all_partners:
+                    if any(abs(dist - w) <= tol for w in documented):
+                        matches.append((dist, sdist, a0, a1, tag))
+                uniq_m = _unique_lines(matches)
+                if len(uniq_m) == 1:
+                    unique = uniq_m
+                    resolvable_width = uniq_m[0][0]
+                else:
+                    resolved.append(beam)
+                    continue
+            else:
+                # Sin label: queda solo la evidencia CAD de la separacion medida.
+                # (a) Distancia respaldada por 2+ segmentos CAD independientes:
+                #     dos contracaras coinciden en la misma separacion => ancho
+                #     medido robusto (p.ej. contracara compuesta por 2 tramos).
+                # (b) Contracara que es a su vez cara de una viga YA confirmada a
+                #     la misma separacion (cross-reference con elemento resuelto).
+                resolved_pair = _pick_resolved_neighbour()
+                counts: dict[float, int] = {}
+                for dist, _sdist, _a0, _a1, _tag in all_partners:
+                    # Agrupar por distancia dentro de la tolerancia (no por valor
+                    # flotante exacto): varias contracaras componen un mismo borde
+                    # y su distancia puede diferir en eps flotante.
+                    bucket = next(
+                        (k for k in counts if abs(dist - k) <= tol), None
+                    )
+                    if bucket is None:
+                        counts[dist] = 1
+                    else:
+                        counts[bucket] += 1
+                multi = [dist for dist, n in counts.items() if n >= 2]
+                if resolved_pair is not None:
+                    unique = [resolved_pair]
+                    resolvable_width = resolved_pair[0]
+                elif len(multi) == 1 and len(_unique_lines(all_partners)) >= 2:
+                    matches = [p for p in all_partners if abs(p[0] - multi[0]) <= tol]
+                    uniq_m = _unique_lines(matches)
+                    if len(uniq_m) == 1:
+                        unique = uniq_m
+                        resolvable_width = uniq_m[0][0]
+                    else:
+                        resolved.append(beam)
+                        continue
+                else:
+                    resolved.append(beam)
+                    continue
+
+        dist, a0, a1, partner_tag = unique[0]
+        width = resolvable_width
+        if width <= 0.0:
+            resolved.append(beam)
+            continue
+
+        ua, na, c_a = _segment_line_2d(a0, a1)
+        # Distancia perpendicular firmada de la contracara respecto a la cara,
+        # en el sistema de la normal de la cara. Da el lado hacia el cual
+        # debe desplazarse el centroide (robusto a contracaras anti-paralelas,
+        # cuyo c tendria signo opuesto).
+        sdist_partner = _dot((a0[0] - face0[0], a0[1] - face0[1]), n0)
+        if abs(sdist_partner) <= settings.node_tolerance_m:
+            sdist_partner = _dot((a1[0] - face0[0], a1[1] - face0[1]), n0)
+        direction = 1.0 if sdist_partner >= 0.0 else -1.0
+        centroid_c = c_face + direction * (width / 2.0)
+        z = (beam.p0[2] + beam.p1[2]) / 2.0
+        centroid0 = (*_point_from_line(u0, n0, centroid_c, _dot(face0, u0)), z)
+        centroid1 = (*_point_from_line(u0, n0, centroid_c, _dot(face1, u0)), z)
+
+        reason = (
+            f"centroide confirmado entre dos caras CAD paralelas "
+            f"(ancho {width:.3f} m = distancia cara-contracara {dist:.3f}; "
+            f"contracara {partner_tag}; tol {tol})"
+        )
+        report.add_pending(
+            "viga_centroide_confirmado_dos_caras",
+            list(beam.source_ids) + [partner_tag],
+            beam.floor,
+            f"{beam.beam_id}: {reason}",
+        )
+        updated_traces: list[TraceEntry] = []
+        for trace in report.traceability:
+            if trace.target_type == "beam" and trace.target_id == beam.beam_id:
+                updated_traces.append(
+                    TraceEntry(
+                        source_type=trace.source_type,
+                        source_id=trace.source_id,
+                        target_type=trace.target_type,
+                        target_id=trace.target_id,
+                        floor=trace.floor,
+                        status=RESOLVED,
+                        reason=reason,
+                    )
+                )
+            else:
+                updated_traces.append(trace)
+        # Trazabilidad adicional de la contracara que confirma el centroide.
+        updated_traces.append(
+            TraceEntry(
+                source_type="source_segment",
+                source_id=partner_tag,
+                target_type="beam",
+                target_id=beam.beam_id,
+                floor=beam.floor,
+                status=RESOLVED,
+                reason=reason,
+            )
+        )
+        report.traceability = updated_traces
+        new_resolved = BeamCandidate(
+            beam_id=beam.beam_id,
+            floor=beam.floor,
+            floor_id=beam.floor_id,
+            p0=centroid0,
+            p1=centroid1,
+            source_ids=beam.source_ids,
+            status=RESOLVED,
+            reason=reason,
+        )
+        resolved.append(new_resolved)
+        resolved_ids.add(beam.beam_id)
+        resolved_by_id[beam.beam_id] = new_resolved
+    return resolved
+
+
+def _seg_len(a0: Point2D, a1: Point2D, u: Point2D) -> float:
+    return abs(_dot(a1, u) - _dot(a0, u))
+
+
+def _resolve_beam_centroids_via_axis(
+    beams: list[BeamCandidate],
+    labels: list[CadLabel],
+    cad_payload: dict[str, Any],
+    report: AdapterReport,
+    settings: AdapterSettings,
+) -> list[BeamCandidate]:
+    """Confirma determinísticamente el centroide/eje de vigas de cara simple.
+
+    Criterio (documentado en AdapterSettings):
+        |ancho_seccion/2 - distancia(cara_viga, eje_paralelo)| <= tol
+    con `tol = settings.axis_centroid_tolerance_m` (default 0.05 m).
+
+    Reglas:
+      - Se resuelve SOLO si existe UN UNICO eje CAD paralelo que cumple el
+        criterio. El centroide se coloca sobre ese eje, preservando las
+        coordenadas a lo largo del eje y el baricentro vertical de la viga.
+      - Con 0 o >=2 ejes que cumplen, o si falta el ancho de seccion, la viga
+        queda PENDIENTE_CONFIRMAR (no se fabrica ningun centroide).
+      - Cada resolucion conserva trazabilidad al segmento CAD y al eje de la
+        grilla que la confirmo.
+
+    Antes del criterio geometrico se consultan `MANUAL_BEAM_SECTIONS`:
+      - Secciones confirmadas visualmente por el usuario en 2017_67-102/103
+        para viguas sin label CAD o con label mal asociado/parseado.
+      - Si `eccentric` es True, el centroide NO se fuerza al eje: se coloca a
+        width/2 desde la cara CAD hacia el eje/interior (viguas excentricas).
+        La correccion se marca con tracer `ECCENTRIC_BEAM_CONFIRMED_FROM_PLAN`.
+
+    Devuelve una nueva lista de BeamCandidate con las vigas resueltas
+    actualizadas.
+    """
+    tol = settings.axis_centroid_tolerance_m
+    labels_by_id = {label.source_id: label for label in labels}
+
+    # Indexar ejes de grilla (category axis) por piso como lineas 2D.
+    axis_by_floor: dict[str, list[tuple[Point2D, Point2D, str]]] = {}
+    for segment in cad_payload.get("segments", []):
+        if segment.get("category") != "axis":
+            continue
+        floor = str(segment.get("floor", ""))
+        points = segment.get("points") or []
+        if len(points) < 2:
+            continue
+        a0 = _xy(_to_point3d(points[0]))
+        a1 = _xy(_to_point3d(points[1]))
+        axis_by_floor.setdefault(floor, []).append((a0, a1, str(segment.get("elementTag", ""))))
+
+    resolved: list[BeamCandidate] = []
+    for beam in beams:
+        if beam.status != PENDING:
+            resolved.append(beam)
+            continue
+
+        manual = MANUAL_BEAM_SECTIONS.get(beam.beam_id)
+        if manual is not None:
+            width = float(manual["width_m"])
+            if manual.get("eccentric"):
+                # Viga excentrica: centroide a width/2 desde la cara CAD hacia
+                # el eje/interior estructural. NO se fuerza al eje de grilla.
+                resolved.append(
+                    _resolve_eccentric_beam(beam, width, manual, axis_by_floor, report, settings)
+                )
+                continue
+        else:
+            width = _beam_section_width_from_label(beam.beam_id, labels_by_id, report)
+        if width is None or width <= 0.0:
+            resolved.append(beam)
+            continue
+        half_width = width / 2.0
+        face0 = _xy(beam.p0)
+        face1 = _xy(beam.p1)
+        u0 = _canonical_unit(face0, face1)
+        n0 = (-u0[1], u0[0])
+        c_face = _dot(face0, n0)
+
+        if manual is not None and manual.get("snap") == "direction":
+            # Remate/stub corto: se alinea el centroide con el eje documentado
+            # (p.ej. continuidad con viga contigua ya resuelta en x=40.0).
+            # Se conserva el sentido y la longitud a lo largo de la viga.
+            z = (beam.p0[2] + beam.p1[2]) / 2.0
+            if "snap_axis_x" in manual:
+                xa = float(manual["snap_axis_x"])
+                # Conservar la longitud/sentido original del segmento y trasladar
+                # su centroide a x = xa (continuidad con el eje de la viga vecina).
+                midx = (face0[0] + face1[0]) / 2.0
+                dx = xa - midx
+                c0 = (face0[0] + dx, face0[1], z)
+                c1 = (face1[0] + dx, face1[1], z)
+                axis_note = f"eje I x={xa:.3f}"
+            else:
+                resolved.append(beam)
+                continue
+            reason = (
+                f"SNAP_BEAM_CONFIRMED_FROM_CONTINUITY: seccion {manual['section']}; "
+                f"centroide alineado con {axis_note} (ancho {width:.3f} m, "
+                f"plana por continuidad con viga contigua ya resuelta)"
+            )
+            updated_traces: list[TraceEntry] = []
+            for trace in report.traceability:
+                if trace.target_type == "beam" and trace.target_id == beam.beam_id:
+                    updated_traces.append(
+                        TraceEntry(
+                            source_type=trace.source_type,
+                            source_id=trace.source_id,
+                            target_type=trace.target_type,
+                            target_id=trace.target_id,
+                            floor=trace.floor,
+                            status=RESOLVED,
+                            reason=reason,
+                        )
+                    )
+                else:
+                    updated_traces.append(trace)
+            report.traceability = updated_traces
+            resolved.append(
+                BeamCandidate(
+                    beam_id=beam.beam_id,
+                    floor=beam.floor,
+                    floor_id=beam.floor_id,
+                    p0=(c0[0], c0[1], c0[2]),
+                    p1=(c1[0], c1[1], c1[2]),
+                    source_ids=beam.source_ids,
+                    status=RESOLVED,
+                    reason=reason,
+                )
+            )
+            continue
+
+        candidates: list[tuple[float, Point2D, Point2D, str]] = []
+        for a0, a1, axis_tag in axis_by_floor.get(beam.floor, []):
+            ua = _canonical_unit(a0, a1)
+            if _parallel_angle(u0, ua) > math.radians(settings.angle_tolerance_deg):
+                continue
+            c_axis = _dot(a0, n0)
+            overlap = _interval_overlap(
+                min(_dot(face0, u0), _dot(face1, u0)),
+                max(_dot(face0, u0), _dot(face1, u0)),
+                min(_dot(a0, u0), _dot(a1, u0)),
+                max(_dot(a0, u0), _dot(a1, u0)),
+            )
+            if overlap <= 0.0:
+                continue
+            distance = abs(c_axis - c_face)
+            if abs(half_width - distance) <= tol:
+                candidates.append((distance, a0, a1, axis_tag))
+
+        if len(candidates) != 1:
+            # 0 o >=2 ejes: inconsistente o ambiguo -> queda PENDIENTE (conservador).
+            resolved.append(beam)
+            continue
+        distance, a0, a1, axis_tag = candidates[0]
+        ua = _canonical_unit(a0, a1)
+        na = (-ua[1], ua[0])
+        c_axis = _dot(a0, na)
+        z = (beam.p0[2] + beam.p1[2]) / 2.0
+        centroid0 = (*_point_from_line(ua, na, c_axis, _dot(face0, ua)), z)
+        centroid1 = (*_point_from_line(ua, na, c_axis, _dot(face1, ua)), z)
+        section_txt = manual["section"] if manual is not None else "label"
+        reason = (
+            f"centroide confirmado sobre eje {axis_tag} "
+            f"(distancia cara-eje {distance:.3f} = ancho/2 {half_width:.3f}, tol {tol}, "
+            f"seccion {section_txt})"
+        )
+        report.add_pending(
+            "viga_centroide_confirmado_eje",
+            list(beam.source_ids),
+            beam.floor,
+            f"{beam.beam_id}: {reason}",
+        )
+        updated_traces: list[TraceEntry] = []
+        for trace in report.traceability:
+            if trace.target_type == "beam" and trace.target_id == beam.beam_id:
+                updated_traces.append(
+                    TraceEntry(
+                        source_type=trace.source_type,
+                        source_id=trace.source_id,
+                        target_type=trace.target_type,
+                        target_id=trace.target_id,
+                        floor=trace.floor,
+                        status=RESOLVED,
+                        reason=reason,
+                    )
+                )
+            else:
+                updated_traces.append(trace)
+        report.traceability = updated_traces
+        resolved.append(
+            BeamCandidate(
+                beam_id=beam.beam_id,
+                floor=beam.floor,
+                floor_id=beam.floor_id,
+                p0=centroid0,
+                p1=centroid1,
+                source_ids=beam.source_ids,
+                status=RESOLVED,
+                reason=reason,
+            )
+        )
+    return resolved
 
 
 def _build_nodes(

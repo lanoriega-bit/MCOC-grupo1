@@ -40,6 +40,8 @@ class LosaDef:
     thickness_m: float
     finishes_kN_m2: float = 0.0  # PM.ADIC.
     concrete_density_kg_m3: float = CONCRETE_DENSITY
+    openings: list[list[tuple[float, float]]] = field(default_factory=list)
+    normalize_tributary_to_effective_area: bool = False
 
 
 @dataclass
@@ -119,6 +121,7 @@ class SlabInfo:
     slab_id: str
     floor_id: int
     area_m2: float
+    openings_area_m2: float
     thickness_m: float
     pp_kN_m2: float
     pm_kN_m2: float
@@ -176,6 +179,56 @@ def polygon_centroid(vertices: list[tuple[float, float]]) -> tuple[float, float]
     cx = sum(v[0] for v in vertices) / n
     cy = sum(v[1] for v in vertices) / n
     return cx, cy
+
+
+def point_in_polygon_xy(point: tuple[float, float], polygon: list[tuple[float, float]]) -> bool:
+    """Ray-casting: determina si un punto esta dentro de un poligono en XY.
+
+    Un punto exactamente sobre el borde cuenta como dentro (>= 0), para no
+    dejar huecos numericos en los bordes de aberturas.
+    """
+    x, y = point
+    n = len(polygon)
+    inside = False
+    for i in range(n):
+        x1, y1 = polygon[i]
+        x2, y2 = polygon[(i + 1) % n]
+        if (y1 > y) != (y2 > y):
+            x_intersect = x1 + (y - y1) / (y2 - y1) * (x2 - x1)
+            if x < x_intersect:
+                inside = not inside
+    return inside
+
+
+def opening_in_slab(opening: list[tuple[float, float]], slab_vertices: list[tuple[float, float]]) -> bool:
+    """Verifica que todos los vertices de una abertura esten dentro de la losa.
+
+    Se usa una tolerancia numerica grande (mitad del area minima razonable) para
+    tolerar vertices que comparten exactamente el borde con el contorno (comunes
+    en aberturas adosadas a un muro).
+    """
+    if len(opening) < 3 or len(slab_vertices) < 3:
+        return False
+    return all(
+        point_in_polygon_xy(vert, slab_vertices)
+        for vert in opening
+    )
+
+
+def area_efectiva_losa(slab: "LosaDef") -> float:
+    """Area efectiva de una losa = area del contorno - suma de aberturas.
+
+    Las aberturas no reciben carga y no participan en areas tributarias.
+    """
+    area = polygon_area_xy(slab.vertices)
+    for opening in slab.openings:
+        area -= polygon_area_xy(opening)
+    return max(0.0, area)
+
+
+def superficie_opening(slab: "LosaDef") -> float:
+    """Suma de areas de las aberturas de una losa (para reportes)."""
+    return sum(polygon_area_xy(opening) for opening in slab.openings)
 
 
 def calcular_pp_losa(espesor_m: float, densidad_kg_m3: float) -> float:
@@ -406,36 +459,52 @@ def calcular_tributarias_para_losa(
         pt_a = vertices[idx]
         pt_b = vertices[(idx + 1) % n]
 
-        matching_beam = _find_beam_for_edge(pt_a, pt_b, beams, [slab.slab_id])
-        if matching_beam is None:
+        matches = _find_beams_for_edge(pt_a, pt_b, beams, [slab.slab_id])
+        if not matches:
             continue
 
         trib_polygon = _tributary_polygon_for_edge(vertices, idx)
         trib_area = polygon_area_xy(trib_polygon)
 
-        if matching_beam.beam_id not in result:
-            result[matching_beam.beam_id] = []
-        result[matching_beam.beam_id].append(
-            TributaryArea(
-                slab_id=slab.slab_id,
-                area_m2=trib_area,
-                polygon=trib_polygon,
+        # Un borde con una sola viga receptora: toda el area tributaria va a esa viga.
+        # Con varias vigas superpuestas sobre el mismo borde (bordes partidos por
+        # tramos de viga), el area tributaria del borde se reparte proporcionalmente
+        # al solape de cada viga con el borde.  La suma de fracciones == area total
+        # del poligono tributario del borde (conservacion exacta).
+        total_overlap = sum(ov for _, ov in matches)
+        for beam, overlap_len in matches:
+            frac = (overlap_len / total_overlap) if total_overlap > 0 else 0.0
+            if beam.beam_id not in result:
+                result[beam.beam_id] = []
+            result[beam.beam_id].append(
+                TributaryArea(
+                    slab_id=slab.slab_id,
+                    area_m2=trib_area * frac,
+                    polygon=trib_polygon,
+                )
             )
-        )
 
     return result
 
 
-def _find_beam_for_edge(
+def _find_beams_for_edge(
     pt_a: tuple[float, float],
     pt_b: tuple[float, float],
     beams: list[VigaInput],
     slab_ids: list[str],
-) -> VigaInput | None:
-    """Busca una viga que conecte pt_a y pt_b (en cualquier orden).
+) -> list[tuple[VigaInput, float]]:
+    """Busca las vigas receptoras de un borde de losa.
 
-    Solo considera vigas que esten asociadas a al menos una de las losas
-    indicadas en slab_ids.
+    Asociacion por colinealidad + solape: la viga debe quedar sobre la misma
+    linea del borde (mismo X para un borde vertical, mismo Y para un borde
+    horizontal) y su proyeccion debe solapar al borde en una longitud positiva.
+
+    Se usa para el edificio real, donde las vigas tienen tramos acortados
+    (terminan en columnas/muros) y no coinciden extremo a extremo con las
+    aristas envolventes de la losa.  La asociacion por colinealidad+solape es
+    robusta a esa divergencia.
+
+    Solo considera vigas asociadas a al menos una de las losas en slab_ids.
 
     Atributos:
         pt_a, pt_b: Puntos extremos del borde (solo XY).
@@ -443,27 +512,46 @@ def _find_beam_for_edge(
         slab_ids: IDs de las losas para filtrar.
 
     Retorna:
-        La VigaInput encontrada, o None.
+        Lista de (VigaInput, longitud_solape) de las vigas que receptan el borde.
     """
-    tol = 1e-6
-    for beam in beams:
-        if not any(sid in beam.slab_ids for sid in slab_ids):
-            continue
+    COLLINEAR_TOL = 0.35  # m: offset entre arista de losa y ojo de viga (eccentricidad)
+    candidates = [
+        beam for beam in beams if any(sid in beam.slab_ids for sid in slab_ids)
+    ]
+    matches: list[tuple[VigaInput, float]] = []
+    dx = pt_b[0] - pt_a[0]
+    dy = pt_b[1] - pt_a[1]
+
+    for beam in candidates:
         bi = (beam.node_i[0], beam.node_i[1])
         bj = (beam.node_j[0], beam.node_j[1])
-        if (_pts_close(bi, pt_a, tol) and _pts_close(bj, pt_b, tol)) or (
-            _pts_close(bi, pt_b, tol) and _pts_close(bj, pt_a, tol)
-        ):
-            return beam
-    return None
+        ex = bj[0] - bi[0]
+        ey = bj[1] - bi[1]
+
+        if abs(dy) < 1e-6 and abs(ey) < 0.10:
+            # Borde horizontal y viga horizontal: deben compartir Y.
+            if abs(pt_a[1] - bi[1]) > COLLINEAR_TOL:
+                continue
+            overlap_len = _overlap_length(pt_a[0], pt_b[0], bi[0], bj[0])
+        elif abs(dx) < 1e-6 and abs(ex) < 0.10:
+            # Borde vertical y viga vertical: deben compartir X.
+            if abs(pt_a[0] - bi[0]) > COLLINEAR_TOL:
+                continue
+            overlap_len = _overlap_length(pt_a[1], pt_b[1], bi[1], bj[1])
+        else:
+            continue
+
+        if overlap_len > 1e-6:
+            matches.append((beam, overlap_len))
+
+    return matches
 
 
-def _pts_close(
-    a: tuple[float, float],
-    b: tuple[float, float],
-    tol: float,
-) -> bool:
-    return abs(a[0] - b[0]) < tol and abs(a[1] - b[1]) < tol
+def _overlap_length(a_lo: float, a_hi: float, b_lo: float, b_hi: float) -> float:
+    """Longitud de solape entre dos intervalos 1D."""
+    start = max(min(a_lo, a_hi), min(b_lo, b_hi))
+    end = min(max(a_lo, a_hi), max(b_lo, b_hi))
+    return max(0.0, end - start)
 
 
 def calcular_largo_viga(
@@ -505,17 +593,20 @@ def calcular_cargas_gravitacionales(
     # --- Paso 1: Informacion por losa ---
     slab_infos: dict[str, SlabInfo] = {}
     for slab in inp.slabs:
-        area = polygon_area_xy(slab.vertices)
+        gross_area = polygon_area_xy(slab.vertices)
+        effective_area = area_efectiva_losa(slab)
+        opening_area = gross_area - effective_area
         pp_N_m2 = calcular_pp_losa(slab.thickness_m, slab.concrete_density_kg_m3)
         pp_kN = pp_N_m2 / KN
         pm_kN = slab.finishes_kN_m2
         qG_N = calcular_qG(pp_N_m2, pm_kN * KN)
-        total_N = qG_N * area
+        total_N = qG_N * effective_area
 
         slab_infos[slab.slab_id] = SlabInfo(
             slab_id=slab.slab_id,
             floor_id=slab.floor_id,
-            area_m2=area,
+            area_m2=effective_area,
+            openings_area_m2=opening_area,
             thickness_m=slab.thickness_m,
             pp_kN_m2=pp_kN,
             pm_kN_m2=pm_kN,
@@ -527,10 +618,25 @@ def calcular_cargas_gravitacionales(
     beam_tributaries: dict[str, list[TributaryArea]] = {}
     for slab in inp.slabs:
         trib = calcular_tributarias_para_losa(slab, inp.beams)
+        effective = area_efectiva_losa(slab)
+        raw_trib_area = sum(t.area_m2 for areas in trib.values() for t in areas)
+        if slab.normalize_tributary_to_effective_area:
+            scale = (effective / raw_trib_area) if raw_trib_area > 0 else 0.0
+        else:
+            gross = polygon_area_xy(slab.vertices)
+            scale = (effective / gross) if gross > 0 else 0.0
         for beam_id, areas in trib.items():
+            scaled = [
+                TributaryArea(
+                    slab_id=t.slab_id,
+                    area_m2=t.area_m2 * scale,
+                    polygon=t.polygon,
+                )
+                for t in areas
+            ]
             if beam_id not in beam_tributaries:
                 beam_tributaries[beam_id] = []
-            beam_tributaries[beam_id].extend(areas)
+            beam_tributaries[beam_id].extend(scaled)
 
     # --- Paso 3: Calcular carga por viga ---
     beam_results: list[BeamGravityResult] = []

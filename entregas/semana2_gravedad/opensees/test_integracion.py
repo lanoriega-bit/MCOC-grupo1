@@ -39,6 +39,7 @@ from integracion import (
 from carga_gravedad import (
     calcular_cargas_gravitacionales,
     polygon_area_xy,
+    area_efectiva_losa,
 )
 from exportar_unity import exportar_gravedad_json
 from qa_verificaciones import ejecutar_qa_completo
@@ -326,6 +327,108 @@ def test_O_tributary_polygon_valid():
 
 
 # ===================================================================
+# P. Apertura valida contenida en la losa (reduce area efectiva)
+# ===================================================================
+
+def test_P_opening_valid_reduces_area():
+    separator("P. Apertura valida contenida en la losa")
+
+    demo = construir_modelo_demo()
+    # Losa 6x4 = 24 m2; aperture central 2x1 = 2 m2
+    demo.slabs[0].openings = [
+        [(2.0, 1.0), (4.0, 1.0), (4.0, 2.0), (2.0, 2.0)],
+    ]
+    r = validar_modelo(demo)
+    report("Apertura contenida -> validacion OK", r.passed)
+    report("Sin errores de opening", not any("opening" in e.check for e in r.errors))
+
+    gravity_inp = convertir_a_gravity_input(demo)
+    eff = area_efectiva_losa(gravity_inp.slabs[0])
+    report("Area efectiva = 24 - 2 = 22 m2", abs(eff - 22.0) < 1e-9)
+    report("Total delacarga usa area efectiva",
+           abs(gravity_inp.slabs[0].vertices is not None) == 1)
+
+    out = calcular_cargas_gravitacionales(gravity_inp)
+    slab = next(s for s in out.slabs if s.slab_id == "DEMO_L3_01")
+    report("openings_area registrado = 2 m2", abs(slab.openings_area_m2 - 2.0) < 1e-9)
+    report("area_m2 (efectiva) = 22 m2", abs(slab.area_m2 - 22.0) < 1e-9)
+
+    total_trib_all_beams = sum(b.A_tributaria_total_m2 for b in out.beams)
+    report("Suma de areas tributarias = area efectiva (22 m2)",
+           abs(total_trib_all_beams - 22.0) < 1e-6)
+
+    # Conservacion: suma P sobre vigas = qG * area efectiva
+    qG_N = slab.qG_kN_m2 * 1000.0  # kN/m2 -> N/m2
+    total_P_beams = sum(b.P_total_N for b in out.beams)
+    report("Conservacion P = qG * A_efectiva",
+           abs(total_P_beams - qG_N * 22.0) < 1.0)
+
+
+# ===================================================================
+# Q. Apertura fuera de la losa (debe fallar)
+# ===================================================================
+
+def test_Q_opening_outside_slab():
+    separator("Q. Apertura fuera del contorno de la losa")
+
+    demo = construir_modelo_demo()
+    demo.slabs[0].openings = [
+        [(10.0, 10.0), (12.0, 10.0), (12.0, 11.0), (10.0, 11.0)],  # fuera
+    ]
+    r = validar_modelo(demo)
+    report("Detecta opening fuera de la losa", _check_error(r, "opening_fuera_de_losa"))
+    report("Reporte no pasa", not r.passed)
+
+
+# ===================================================================
+# R. Apertura con area <= 0 (debe fallar)
+# ===================================================================
+
+def test_R_opening_invalid_polygon():
+    separator("R. Apertura degenerada (menos de 3 vertices)")
+
+    demo = construir_modelo_demo()
+    demo.slabs[0].openings = [[(1.0, 1.0), (2.0, 1.0)]]  # 2 vertices
+    r = validar_modelo(demo)
+    report("Detecta opening con < 3 vertices", _check_error(r, "opening_invalido"))
+    report("Reporte no pasa", not r.passed)
+
+
+# ===================================================================
+# S. Aperturas (4 reales Edificio 1) se descuentan y son validas
+# ===================================================================
+
+def test_S_real_openings_polygons_valid():
+    separator("S. Poligonos reales de aberturas Edificio 1 (descuento)")
+
+    # Los poligonos reales extraidos del CAD de Matias (renombrados por piso).
+    real_openings_by_floor = {
+        "2": [[(3.344861415664309, 14.126524604294946),
+               (6.65486141589178, 14.126524604294946),
+               (6.65486141589178, 14.526024406876013),
+               (3.344861415664309, 14.526024406876013)]],
+        "3": [[(3.344867438438566, 14.126508195766615),
+               (6.65486743866604, 14.126508195766615),
+               (6.65486743866604, 14.526007998347696),
+               (3.344867438438566, 14.526007998347696)]],
+        "4": [[(0.6306950183458155, 10.660581379296463),
+               (1.2958872765708798, 10.660581379296463),
+               (1.2958872765708798, 11.324900171961735),
+               (0.6306950183458155, 11.324900171961735)],
+               [(12.39388063447995, 5.196487657377884),
+               (14.07688063460221, 5.196487657377884),
+               (14.07688063460221, 7.2734872575023015),
+               (12.39388063447995, 7.2734872575023015)]],
+    }
+
+    for floor, openings in real_openings_by_floor.items():
+        for op in openings:
+            area = polygon_area_xy(op)
+            report(f"F{floor} opening area>0 y poligono valido", area > 0)
+            report(f"F{floor} opening area coherente (< 30 m2)", area < 30.0)
+
+
+# ===================================================================
 # Main
 # ===================================================================
 
@@ -349,6 +452,10 @@ def main():
     test_M_length_from_nodes()
     test_N_tributary_polygon_invalid_area()
     test_O_tributary_polygon_valid()
+    test_P_opening_valid_reduces_area()
+    test_Q_opening_outside_slab()
+    test_R_opening_invalid_polygon()
+    test_S_real_openings_polygons_valid()
 
     print(f"\n{'='*70}")
     print(f"  RESUMEN INTEGRACION:  {PASS} PASARON,  {FAIL} FALLARON")

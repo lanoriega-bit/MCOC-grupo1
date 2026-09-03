@@ -1,7 +1,7 @@
 """Tests del pre-QA Edificio 1 para pisos 2, 3 y 4.
 
-Valida que las observaciones reales quedan trazables y que el pipeline no
-genera StructuralModelInput mientras existan ambiguedades.
+Valida que las observaciones reales quedan trazables y que el pipeline genera
+StructuralModelInput una vez resueltas todas las ambiguedades de centroide/eje.
 """
 
 from __future__ import annotations
@@ -83,14 +83,18 @@ def test_C_referencias_catalogo() -> None:
     report("observaciones resueltas tienen carga", len(resolved_with_load) == sum(1 for obs in PANEL_OBSERVATIONS if obs.load_status == RESOLVED))
 
 
-def test_D_pre_qa_bloquea_gravedad() -> None:
-    separator("D. Pre-QA bloquea gravedad")
+def test_D_pre_qa_genera_modelo() -> None:
+    separator("D. Pre-QA genera StructuralModelInput")
     output = _build_output()
-    report("no genera StructuralModelInput", output.model is None)
-    report("gravity_ready false", not output.report.gravity_ready)
-    report("74 paneles observados en reporte", output.report.counts["observed_panels"] == 74)
-    report("0 losas estructurales generadas", output.report.counts["structural_model_slabs"] == 0)
-    report("pisos 2/3/4 pendientes", all(output.report.floor_status[f]["status"] == PENDING for f in ["2", "3", "4"]))
+    report("gestiona StructuralModelInput", output.model is not None)
+    report("gravity_ready true", output.report.gravity_ready)
+    report("64 losas/bahia tras colapso (17 sub-paneles de 74 -> 7 bahias)", output.report.counts["observed_panels"] == 64)
+    report("64 paneles/bahia resueltos", output.report.counts["resolved_panels"] == 64)
+    report("64 losas estructurales generadas", output.report.counts["structural_model_slabs"] == 64)
+    report("180 vigas estructurales generadas", output.report.counts["structural_model_beams"] == 180)
+    report("pisos 2/3/4 con paneles resueltos", all(output.report.floor_status[f]["resolved_panels"] == output.report.floor_status[f]["observed_panels"] for f in ["2", "3", "4"]))
+    bay_members = sum(1 for p in output.report.panels if p.member_slab_ids)
+    report(f"7 sub-paneles agrupados en bahias (metadata)", bay_members == 7)
 
 
 def test_E_reporte_serializable_y_pendientes() -> None:
@@ -100,7 +104,7 @@ def test_E_reporte_serializable_y_pendientes() -> None:
     json.dumps(payload)
     pending_by_type = Counter(item["item_type"] for item in payload["pending"])
     report("dict serializable", isinstance(payload, dict))
-    report("pendientes de panel", pending_by_type["panel_losa"] > 0)
+    report("sin pendientes de panel", pending_by_type["panel_losa"] == 0)
     report("pendientes de openings por piso", pending_by_type["openings_piso"] == 3)
     report("notas declaran no OCR", any("No se usa OCR" in note for note in payload["notes"]))
 
@@ -112,7 +116,7 @@ def main() -> None:
     test_A_observaciones_trazables()
     test_B_espesores_especiales()
     test_C_referencias_catalogo()
-    test_D_pre_qa_bloquea_gravedad()
+    test_D_pre_qa_genera_modelo()
     test_E_reporte_serializable_y_pendientes()
     print(f"\n{'='*70}")
     print(f"  RESUMEN PRE-QA:  {PASS} PASARON,  {FAIL} FALLARON")
