@@ -13,6 +13,7 @@ const CATEGORY_LABELS = {
   slab_edge: "Borde losa CAD",
   support: "Apoyos/fundaciones",
   wall: "Muros",
+  node: "Nodos",
 };
 
 const viewport = document.querySelector("#viewport");
@@ -143,6 +144,51 @@ function addSolid(model, root, solid) {
   selectable.push(object);
 }
 
+function nodeKey(point, floor) {
+  return `${floor}|${point.map((value) => value.toFixed(3)).join(",")}`;
+}
+
+function addNodes(model, root) {
+  const seen = new Set();
+  const nodeColor = "#ffd24d";
+  for (const solid of model.solids ?? []) {
+    if (!["beam", "wall", "column", "column_plan", "support"].includes(solid.category)) continue;
+    const candidates = [];
+    if (solid.kind === "linear_prism") {
+      candidates.push(solid.start, solid.end);
+    } else if (solid.center) {
+      candidates.push(solid.center);
+    }
+    for (const point of candidates) {
+      const key = nodeKey(point, solid.floor);
+      if (seen.has(key)) continue;
+      seen.add(key);
+      const sphere = new THREE.Mesh(
+        new THREE.SphereGeometry(0.14, 12, 8),
+        new THREE.MeshBasicMaterial({ color: nodeColor })
+      );
+      sphere.position.set(point[0], point[1], point[2]);
+      sphere.userData.segment = {
+        elementTag: `NOD_${key.replace(/[|,]/g, "_")}`,
+        floor: solid.floor,
+        floor_label: `Nodo ${solid.floor}`,
+        category: "node",
+        source_layer: "generated",
+        source_dxf: "generated",
+        length_m: 0,
+        confidence: "derived",
+        points: [point, point],
+      };
+      sphere.userData.floor = solid.floor;
+      sphere.userData.category = "node";
+      root.add(sphere);
+      rememberObject(sphere, solid.floor, "node");
+      objectByTag.set(sphere.userData.segment.elementTag.toLowerCase(), sphere);
+    }
+  }
+}
+
+
 function makeCadLine(model, segment) {
   const points = segment.points.map((point) => new THREE.Vector3(point[0], point[1], point[2]));
   const geometry = new THREE.BufferGeometry().setFromPoints(points);
@@ -179,10 +225,13 @@ function makeDiaphragm(model, diaphragm) {
 }
 
 function addModel(model) {
+  if (!model.colors) model.colors = {};
+  if (!model.colors.node) model.colors.node = "#ffd24d";
   const root = new THREE.Group();
   root.name = "Solid building model";
 
   for (const solid of model.solids ?? []) addSolid(model, root, solid);
+  addNodes(model, root);
 
   for (const segment of model.segments) {
     const line = makeCadLine(model, segment);
@@ -375,19 +424,55 @@ function drawLocalAxes(segment) {
   scene.add(localAxesGroup);
 }
 
+function sectionFromSegment(segment) {
+  // Seccion transversal (b x h) de la pieza lineal. Prioridad: campo explicito
+  // `section`, luego dimensiones del solido (width_m = ancho, height_m = alto).
+  if (segment.section) {
+    const w = segment.section.width_m ?? segment.section.b ?? segment.section.base;
+    const h = segment.section.height_m ?? segment.section.h ?? segment.section.alto;
+    if (w != null && h != null) return `${formatNumber(w)} x ${formatNumber(h)} m`;
+  }
+  const w = segment.width_m ?? segment.section?.width_m;
+  const h = segment.height_m ?? segment.depth_m ?? segment.section?.height_m;
+  if (w == null || h == null) return "-";
+  return `${formatNumber(w)} x ${formatNumber(h)} m`;
+}
+
+function tribFromSegment(segment) {
+  // Datos de area/carga tributaria (formato del contrato de gravedad de Luis:
+  // "MCOC-grupo1-gravity-v1"). Mostrados solo si el elemento los incluye.
+  const A = segment.A_tributaria_total_m2 ?? segment.A_trib_total_m2 ?? segment.trib_area_m2;
+  const P = segment.P_total_kN ?? segment.carga_total_kN ?? segment.P_kN;
+  const wLineal = segment.w_lineal_kN_m ?? segment.w_kN_m;
+  const qG = segment.qG_kN_m2 ?? segment.qG;
+  const rows = [];
+  if (A != null) rows.push(`<dt>Area tributaria</dt><dd>${formatNumber(A)} m²</dd>`);
+  if (qG != null) rows.push(`<dt>Carga unitaria qG</dt><dd>${formatNumber(qG)} kN/m²</dd>`);
+  if (P != null) rows.push(`<dt>Carga tributaria total</dt><dd>${formatNumber(P)} kN</dd>`);
+  if (wLineal != null) rows.push(`<dt>Carga lineal</dt><dd>${formatNumber(wLineal)} kN/m</dd>`);
+  if (P == null && wLineal == null) {
+    rows.push(`<dt>Carga tributaria</dt><dd class="pending">pendiente (contrato gravedad)</dd>`);
+  }
+  return rows.join("");
+}
+
 function updateSelectionPanel(segment) {
   const points = segment.points ?? [];
   const start = points[0] ?? [null, null, null];
   const end = points[1] ?? [null, null, null];
+  const material = segment.material ?? segment.material_name ?? null;
   selectionDetailsEl.innerHTML = `
     <dt>Tag</dt><dd>${segment.elementTag}</dd>
     <dt>Tipo</dt><dd>${CATEGORY_LABELS[segment.category] ?? segment.category}</dd>
     <dt>Piso</dt><dd>${segment.floor} (${segment.floor_label ?? "sin etiqueta"})</dd>
+    <dt>Seccion (b x h)</dt><dd>${sectionFromSegment(segment)}</dd>
+    <dt>Material</dt><dd>${material ?? "hormigon (por definir en contrato)"}</dd>
     <dt>Capa CAD</dt><dd>${segment.source_layer ?? "generated"}</dd>
     <dt>Plano</dt><dd>${segment.source_dxf ?? "generated"}</dd>
     <dt>Longitud</dt><dd>${formatNumber(segment.length_m)} m</dd>
-    <dt>Inicio</dt><dd>${formatPoint(start)}</dd>
-    <dt>Fin</dt><dd>${formatPoint(end)}</dd>
+    <dt>Nodo inicial (i)</dt><dd>${formatPoint(start)}</dd>
+    <dt>Nodo final (j)</dt><dd>${formatPoint(end)}</dd>
+    ${tribFromSegment(segment)}
     <dt>Confianza</dt><dd>${segment.confidence ?? "-"}</dd>
   `;
 }

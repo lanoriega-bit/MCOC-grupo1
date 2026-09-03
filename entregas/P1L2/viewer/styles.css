@@ -7,6 +7,7 @@
   --accent: #6db6ff;
   --accent-2: #ffb454;
   --danger: #ff6b6b;
+  --warn: #f0b35f;
 }
 
 * {
@@ -178,6 +179,11 @@ dd {
   min-width: 0;
   margin: 0;
   overflow-wrap: anywhere;
+}
+
+.pending {
+  color: var(--warn, #f0b35f);
+  font-style: italic;
 }
 
 .viewer-label {
