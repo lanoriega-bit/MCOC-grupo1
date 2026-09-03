@@ -81,11 +81,11 @@ Reportes de investigacion:
 | Archivo | Uso |
 | --- | --- |
 | `datos/piso_01.json` | Datos estructurados completos del Piso 1 |
-| `issues/conflicts.json` | Conflictos con ID, fuente, ubicacion aproximada y geometria |
+| `issues/piso_01/conflicts_modelo_actual.json` | Conflictos del Piso 1: correctos, faltantes, sobrantes y dudosos |
 | `issues/quality_piso_01.md` | Resumen humano del control de extraccion |
-| `issues/vigas_piso_01_review.json` | Revision especifica de vigas |
-| `issues/muros_piso_01_review.json` | Revision especifica de muros |
-| `issues/columnas_piso_01_review.json` | Revision especifica de columnas |
+| `issues/piso_01/vigas_piso_01_review.json` | Revision especifica de vigas |
+| `issues/piso_01/muros_piso_01_review.json` | Revision especifica de muros |
+| `issues/piso_01/columnas_piso_01_review.json` | Revision especifica de columnas |
 | `issues/calce_parte_1_parte_2.json` | Transformacion Parte 1 / Parte 2 y evidencia disponible |
 
 ## Ejecucion
