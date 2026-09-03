@@ -16,10 +16,16 @@ namespace Mcoc.UnityViewer
         [SerializeField] private string jsonFileName = "model_viewer.json";
 
         [Header("Camara")]
-        [SerializeField] private float orbitSpeed = 0.5f;
+        [SerializeField] private float orbitSpeed = 3f;
         [SerializeField] private float zoomSpeed = 1.0f;
         [SerializeField] private float minZoom = 1f;
         [SerializeField] private float maxZoom = 200f;
+        [SerializeField] private float panSpeed = 0.1f;
+
+        private Vector3 orbitTarget = new Vector3(24.98f, 7.3f, 9.83f);
+        private float orbitDist = 85f;
+        private float orbitYaw = 0f;
+        private float orbitPitch = 20f;
 
         [Header("UI")]
         [SerializeField] private Transform tipoToggleContainer;
@@ -35,6 +41,7 @@ namespace Mcoc.UnityViewer
 
         private Camera cam;
         private Transform selected = null;
+        private string lastInfo = "";
 
         private static readonly Dictionary<string, string> TypeLabels = new Dictionary<string, string>
         {
@@ -55,6 +62,7 @@ namespace Mcoc.UnityViewer
         {
             cam = Camera.main;
             if (cam == null) cam = Camera.main;
+            if (cam != null) { cam.clearFlags = CameraClearFlags.SolidColor; cam.backgroundColor = new Color(0.15f, 0.15f, 0.17f, 1f); }
             model = JsonLoader.LoadModel(jsonFileName);
             if (model == null) { SetStatus("Error: no se pudo cargar el modelo."); return; }
             BuildScene();
@@ -125,8 +133,7 @@ namespace Mcoc.UnityViewer
             lr.positionCount = seg.points.Count;
             for (int i = 0; i < seg.points.Count; i++) lr.SetPosition(i, V(seg.points[i]));
             lr.startWidth = 0.03f; lr.endWidth = 0.03f;
-            lr.material = new Material(Shader.Find("Sprites/Default"));
-            lr.startColor = lr.endColor = ColorFor(seg.category == "axis" ? "axis" : "cad_reference");
+            lr.material = LineMaterial(ColorFor(seg.category == "axis" ? "axis" : "cad_reference"));
         }
 
         void CreateDiaphragm(DiaphragmData dia)
@@ -139,8 +146,7 @@ namespace Mcoc.UnityViewer
             lr.loop = true;
             for (int i = 0; i < dia.points.Count; i++) lr.SetPosition(i, V(dia.points[i]));
             lr.startWidth = 0.06f; lr.endWidth = 0.06f;
-            lr.material = new Material(Shader.Find("Sprites/Default"));
-            lr.startColor = lr.endColor = ColorFor("diaphragm");
+            lr.material = LineMaterial(ColorFor("diaphragm"));
         }
 
         void CreateNodes()
@@ -242,24 +248,31 @@ namespace Mcoc.UnityViewer
 
         void TrySelect(Vector2 screenPos)
         {
+            if (cam == null) return;
             Ray ray = cam.ScreenPointToRay(screenPos);
-            if (Physics.Raycast(ray, out RaycastHit hit, 500f))
+            RaycastHit[] hits = Physics.RaycastAll(ray, 1000f);
+            if (hits.Length == 0) return;
+            System.Array.Sort(hits, (a, b) => a.distance.CompareTo(b.distance));
+            foreach (var hit in hits)
             {
                 var ei = hit.collider.GetComponentInParent<ElementInfo>();
-                selected = hit.collider.transform;
-                if (ei != null) ShowInfo(ei);
+                if (ei != null)
+                {
+                    selected = hit.collider.transform;
+                    ShowInfo(ei);
+                    return;
+                }
             }
         }
 
         void ShowInfo(ElementInfo ei)
         {
-            if (infoText == null) return;
             string cat = TypeLabels.ContainsKey(ei.category) ? TypeLabels[ei.category] : ei.category;
             string section = "-";
             if (ei.widthM > 0 && ei.heightM > 0) section = ei.widthM.ToString("F3") + " x " + ei.heightM.ToString("F3") + " m";
             string tributaria = "pendiente (contrato gravedad)";
             if (ei.tribAreaM2 > 0) tributaria = ei.tribAreaM2.ToString("F3") + " m2 / " + ei.tribLoadKN.ToString("F3") + " kN";
-            infoText.text = $"Tag: {ei.id}\n" +
+            lastInfo = $"Tag: {ei.id}\n" +
                 $"Tipo: {cat}\n" +
                 $"Piso: {ei.floor}\n" +
                 $"Seccion: {section}\n" +
@@ -268,16 +281,61 @@ namespace Mcoc.UnityViewer
                 $"Nodo j: {P(ei.nodeJ)}\n" +
                 $"Longitud: {ei.lengthM.ToString("F3")} m\n" +
                 $"Tributaria: {tributaria}";
+            if (infoText != null) infoText.text = lastInfo;
+        }
+
+        void OnGUI()
+        {
+            if (string.IsNullOrEmpty(lastInfo)) return;
+            var style = new GUIStyle(GUI.skin.box);
+            style.fontSize = 14;
+            style.normal.textColor = Color.white;
+            style.normal.background = MakeTex(2, 2, new Color(0f, 0f, 0f, 0.75f));
+            GUI.Box(new Rect(10, 10, 380, 220), lastInfo, style);
+        }
+
+        static Texture2D MakeTex(int w, int h, Color col)
+        {
+            var t = new Texture2D(w, h);
+            for (int y = 0; y < h; y++) for (int x = 0; x < w; x++) t.SetPixel(x, y, col);
+            t.Apply();
+            return t;
         }
 
         void PolarCam()
         {
             if (cam == null) return;
+
             float scroll = Input.GetAxis("Mouse ScrollWheel");
             if (Mathf.Abs(scroll) > 0.001f)
             {
-                cam.fieldOfView = Mathf.Clamp(cam.fieldOfView - scroll * zoomSpeed * 8f, minZoom, maxZoom);
+                orbitDist = Mathf.Clamp(orbitDist - scroll * zoomSpeed * 30f, minZoom, maxZoom);
             }
+
+            if (Input.GetMouseButton(1))
+            {
+                orbitYaw += Input.GetAxis("Mouse X") * orbitSpeed;
+                orbitPitch -= Input.GetAxis("Mouse Y") * orbitSpeed;
+                orbitPitch = Mathf.Clamp(orbitPitch, -89f, 89f);
+            }
+
+            if (Input.GetMouseButton(2))
+            {
+                Vector3 right = cam.transform.right;
+                Vector3 up = cam.transform.up;
+                orbitTarget -= right * Input.GetAxis("Mouse X") * panSpeed * orbitDist * 0.02f;
+                orbitTarget -= up * Input.GetAxis("Mouse Y") * panSpeed * orbitDist * 0.02f;
+            }
+
+            float radYaw = orbitYaw * Mathf.Deg2Rad;
+            float radPitch = orbitPitch * Mathf.Deg2Rad;
+            Vector3 offset = new Vector3(
+                Mathf.Sin(radYaw) * Mathf.Cos(radPitch),
+                Mathf.Sin(radPitch),
+                Mathf.Cos(radYaw) * Mathf.Cos(radPitch)
+            ) * orbitDist;
+            cam.transform.position = orbitTarget + offset;
+            cam.transform.LookAt(orbitTarget);
         }
 
         // ---------- helpers ----------
@@ -288,6 +346,16 @@ namespace Mcoc.UnityViewer
         }
 
         static string P(Vector3 v) => "(" + v.x.ToString("F3") + ", " + v.y.ToString("F3") + ", " + v.z.ToString("F3") + ")";
+
+        static Material LineMaterial(Color color)
+        {
+            var sh = Shader.Find("Sprites/Default");
+            if (sh == null) sh = Shader.Find("Legacy Shaders/Particles/Alpha Blended");
+            if (sh == null) sh = Shader.Find("Standard");
+            var mat = new Material(sh);
+            mat.color = color;
+            return mat;
+        }
 
         static Color ColorFor(string category)
         {
