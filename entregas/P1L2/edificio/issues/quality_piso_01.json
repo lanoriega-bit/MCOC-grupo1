@@ -1,0 +1,641 @@
+{
+  "titulo": "PISO 1 - CONTROL DE EXTRACCION",
+  "elementos_inicialmente_detectados": 490,
+  "recomendacion_3d": "AÚN NO LISTO",
+  "motivo_recomendacion_3d": "El calce sigue NEEDS_REVIEW y/o existen elementos POSIBLE/FRAGMENTADO/NEEDS_REVIEW/conflictos contra el modelo actual.",
+  "confirmados": {
+    "viga": 4,
+    "muro": 10,
+    "columna": 31
+  },
+  "posibles": {
+    "muro": 67,
+    "viga": 140
+  },
+  "posibles_falsos_positivos": {
+    "muro": 10,
+    "viga": 6
+  },
+  "duplicados": {},
+  "fragmentados": {
+    "muro": 9,
+    "viga": 53
+  },
+  "needs_review": {
+    "perimetro_losa": 70,
+    "viga": 2,
+    "vano": 20,
+    "eje_grafico": 68
+  },
+  "duplicados_detectados": 0,
+  "duplicados_detalle": [],
+  "grupos_logicos_detectados": {
+    "viga": 24,
+    "muro": 4
+  },
+  "grupos_logicos_detalle": [
+    {
+      "id": "VIGA_GRUPO_P1_01_0001",
+      "tipo": "viga",
+      "piso": "1",
+      "zona": "parte_1",
+      "orientacion": "H",
+      "criterio": "segmentos_colineales_contiguos_o_solapados",
+      "elementos": [
+        "VIGA_P1_01_0013",
+        "VIGA_P1_01_0059",
+        "VIGA_P1_01_0016"
+      ],
+      "cantidad_segmentos": 3,
+      "longitud_total_m": 8.95,
+      "largo_envuelto_m": 9.35
+    },
+    {
+      "id": "VIGA_GRUPO_P1_01_0002",
+      "tipo": "viga",
+      "piso": "1",
+      "zona": "parte_1",
+      "orientacion": "H",
+      "criterio": "segmentos_colineales_contiguos_o_solapados",
+      "elementos": [
+        "VIGA_P1_01_0036",
+        "VIGA_P1_01_0092",
+        "VIGA_P1_01_0039"
+      ],
+      "cantidad_segmentos": 3,
+      "longitud_total_m": 16.05,
+      "largo_envuelto_m": 14.3
+    },
+    {
+      "id": "VIGA_GRUPO_P1_01_0003",
+      "tipo": "viga",
+      "piso": "1",
+      "zona": "parte_1",
+      "orientacion": "H",
+      "criterio": "segmentos_colineales_contiguos_o_solapados",
+      "elementos": [
+        "VIGA_P1_01_0046",
+        "VIGA_P1_01_0049"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 8.09,
+      "largo_envuelto_m": 8.09
+    },
+    {
+      "id": "VIGA_GRUPO_P1_01_0004",
+      "tipo": "viga",
+      "piso": "1",
+      "zona": "parte_1",
+      "orientacion": "V",
+      "criterio": "segmentos_colineales_contiguos_o_solapados",
+      "elementos": [
+        "VIGA_P1_01_0063",
+        "VIGA_P1_01_0065"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 8.0,
+      "largo_envuelto_m": 8.2
+    },
+    {
+      "id": "VIGA_GRUPO_P1_01_0005",
+      "tipo": "viga",
+      "piso": "1",
+      "zona": "parte_1",
+      "orientacion": "V",
+      "criterio": "segmentos_colineales_contiguos_o_solapados",
+      "elementos": [
+        "VIGA_P1_01_0064",
+        "VIGA_P1_01_0066"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 8.0,
+      "largo_envuelto_m": 8.2
+    },
+    {
+      "id": "VIGA_GRUPO_P1_01_0006",
+      "tipo": "viga",
+      "piso": "1",
+      "zona": "parte_1",
+      "orientacion": "V",
+      "criterio": "segmentos_colineales_contiguos_o_solapados",
+      "elementos": [
+        "VIGA_P1_01_0084",
+        "VIGA_P1_01_0087"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 8.824,
+      "largo_envuelto_m": 9.124
+    },
+    {
+      "id": "VIGA_GRUPO_P1_01_0007",
+      "tipo": "viga",
+      "piso": "1",
+      "zona": "parte_1",
+      "orientacion": "V",
+      "criterio": "segmentos_colineales_contiguos_o_solapados",
+      "elementos": [
+        "VIGA_P1_01_0085",
+        "VIGA_P1_01_0088",
+        "VIGA_P1_01_0089"
+      ],
+      "cantidad_segmentos": 3,
+      "longitud_total_m": 8.878,
+      "largo_envuelto_m": 9.444
+    },
+    {
+      "id": "VIGA_GRUPO_P1_01_0008",
+      "tipo": "viga",
+      "piso": "1",
+      "zona": "parte_1",
+      "orientacion": "H",
+      "criterio": "segmentos_colineales_contiguos_o_solapados",
+      "elementos": [
+        "VIGA_P1_01_0094",
+        "VIGA_P1_01_0095"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 5.173,
+      "largo_envuelto_m": 5.373
+    },
+    {
+      "id": "VIGA_GRUPO_P2_01_0001",
+      "tipo": "viga",
+      "piso": "1",
+      "zona": "parte_2",
+      "orientacion": "H",
+      "criterio": "segmentos_colineales_contiguos_o_solapados",
+      "elementos": [
+        "VIGA_P2_01_0087",
+        "VIGA_P2_01_0001",
+        "VIGA_P2_01_0057"
+      ],
+      "cantidad_segmentos": 3,
+      "longitud_total_m": 9.05,
+      "largo_envuelto_m": 9.05
+    },
+    {
+      "id": "VIGA_GRUPO_P2_01_0002",
+      "tipo": "viga",
+      "piso": "1",
+      "zona": "parte_2",
+      "orientacion": "H",
+      "criterio": "segmentos_colineales_contiguos_o_solapados",
+      "elementos": [
+        "VIGA_P2_01_0003",
+        "VIGA_P2_01_0038",
+        "VIGA_P2_01_0063"
+      ],
+      "cantidad_segmentos": 3,
+      "longitud_total_m": 9.3,
+      "largo_envuelto_m": 9.3
+    },
+    {
+      "id": "VIGA_GRUPO_P2_01_0003",
+      "tipo": "viga",
+      "piso": "1",
+      "zona": "parte_2",
+      "orientacion": "H",
+      "criterio": "segmentos_colineales_contiguos_o_solapados",
+      "elementos": [
+        "VIGA_P2_01_0005",
+        "VIGA_P2_01_0021"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 9.75,
+      "largo_envuelto_m": 9.75
+    },
+    {
+      "id": "VIGA_GRUPO_P2_01_0004",
+      "tipo": "viga",
+      "piso": "1",
+      "zona": "parte_2",
+      "orientacion": "H",
+      "criterio": "segmentos_colineales_contiguos_o_solapados",
+      "elementos": [
+        "VIGA_P2_01_0089",
+        "VIGA_P2_01_0049",
+        "VIGA_P2_01_0048"
+      ],
+      "cantidad_segmentos": 3,
+      "longitud_total_m": 9.05,
+      "largo_envuelto_m": 9.05
+    },
+    {
+      "id": "VIGA_GRUPO_P2_01_0005",
+      "tipo": "viga",
+      "piso": "1",
+      "zona": "parte_2",
+      "orientacion": "H",
+      "criterio": "segmentos_colineales_contiguos_o_solapados",
+      "elementos": [
+        "VIGA_P2_01_0032",
+        "VIGA_P2_01_0011",
+        "VIGA_P2_01_0030"
+      ],
+      "cantidad_segmentos": 3,
+      "longitud_total_m": 9.3,
+      "largo_envuelto_m": 9.3
+    },
+    {
+      "id": "VIGA_GRUPO_P2_01_0006",
+      "tipo": "viga",
+      "piso": "1",
+      "zona": "parte_2",
+      "orientacion": "H",
+      "criterio": "segmentos_colineales_contiguos_o_solapados",
+      "elementos": [
+        "VIGA_P2_01_0026",
+        "VIGA_P2_01_0014",
+        "VIGA_P2_01_0029"
+      ],
+      "cantidad_segmentos": 3,
+      "longitud_total_m": 9.3,
+      "largo_envuelto_m": 9.3
+    },
+    {
+      "id": "VIGA_GRUPO_P2_01_0007",
+      "tipo": "viga",
+      "piso": "1",
+      "zona": "parte_2",
+      "orientacion": "V",
+      "criterio": "segmentos_colineales_contiguos_o_solapados",
+      "elementos": [
+        "VIGA_P2_01_0085",
+        "VIGA_P2_01_0045"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 8.3,
+      "largo_envuelto_m": 8.3
+    },
+    {
+      "id": "VIGA_GRUPO_P2_01_0008",
+      "tipo": "viga",
+      "piso": "1",
+      "zona": "parte_2",
+      "orientacion": "V",
+      "criterio": "segmentos_colineales_contiguos_o_solapados",
+      "elementos": [
+        "VIGA_P2_01_0077",
+        "VIGA_P2_01_0041"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 6.65,
+      "largo_envuelto_m": 6.65
+    },
+    {
+      "id": "VIGA_GRUPO_P2_01_0009",
+      "tipo": "viga",
+      "piso": "1",
+      "zona": "parte_2",
+      "orientacion": "V",
+      "criterio": "segmentos_colineales_contiguos_o_solapados",
+      "elementos": [
+        "VIGA_P2_01_0086",
+        "VIGA_P2_01_0046"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 8.0,
+      "largo_envuelto_m": 8.3
+    },
+    {
+      "id": "VIGA_GRUPO_P2_01_0010",
+      "tipo": "viga",
+      "piso": "1",
+      "zona": "parte_2",
+      "orientacion": "V",
+      "criterio": "segmentos_colineales_contiguos_o_solapados",
+      "elementos": [
+        "VIGA_P2_01_0078",
+        "VIGA_P2_01_0042"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 6.35,
+      "largo_envuelto_m": 6.65
+    },
+    {
+      "id": "VIGA_GRUPO_P2_01_0011",
+      "tipo": "viga",
+      "piso": "1",
+      "zona": "parte_2",
+      "orientacion": "V",
+      "criterio": "segmentos_colineales_contiguos_o_solapados",
+      "elementos": [
+        "VIGA_P2_01_0051",
+        "VIGA_P2_01_0083"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 7.95,
+      "largo_envuelto_m": 8.25
+    },
+    {
+      "id": "VIGA_GRUPO_P2_01_0012",
+      "tipo": "viga",
+      "piso": "1",
+      "zona": "parte_2",
+      "orientacion": "V",
+      "criterio": "segmentos_colineales_contiguos_o_solapados",
+      "elementos": [
+        "VIGA_P2_01_0055",
+        "VIGA_P2_01_0073"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 6.3,
+      "largo_envuelto_m": 6.6
+    },
+    {
+      "id": "VIGA_GRUPO_P2_01_0013",
+      "tipo": "viga",
+      "piso": "1",
+      "zona": "parte_2",
+      "orientacion": "V",
+      "criterio": "segmentos_colineales_contiguos_o_solapados",
+      "elementos": [
+        "VIGA_P2_01_0052",
+        "VIGA_P2_01_0084"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 7.95,
+      "largo_envuelto_m": 8.25
+    },
+    {
+      "id": "VIGA_GRUPO_P2_01_0014",
+      "tipo": "viga",
+      "piso": "1",
+      "zona": "parte_2",
+      "orientacion": "V",
+      "criterio": "segmentos_colineales_contiguos_o_solapados",
+      "elementos": [
+        "VIGA_P2_01_0056",
+        "VIGA_P2_01_0074"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 6.3,
+      "largo_envuelto_m": 6.6
+    },
+    {
+      "id": "VIGA_GRUPO_P2_01_0015",
+      "tipo": "viga",
+      "piso": "1",
+      "zona": "parte_2",
+      "orientacion": "V",
+      "criterio": "segmentos_colineales_contiguos_o_solapados",
+      "elementos": [
+        "VIGA_P2_01_0069",
+        "VIGA_P2_01_0067",
+        "VIGA_P2_01_0065"
+      ],
+      "cantidad_segmentos": 3,
+      "longitud_total_m": 11.9,
+      "largo_envuelto_m": 12.5
+    },
+    {
+      "id": "VIGA_GRUPO_P2_01_0016",
+      "tipo": "viga",
+      "piso": "1",
+      "zona": "parte_2",
+      "orientacion": "V",
+      "criterio": "segmentos_colineales_contiguos_o_solapados",
+      "elementos": [
+        "VIGA_P2_01_0070",
+        "VIGA_P2_01_0068",
+        "VIGA_P2_01_0066"
+      ],
+      "cantidad_segmentos": 3,
+      "longitud_total_m": 12.5,
+      "largo_envuelto_m": 12.5
+    },
+    {
+      "id": "MURO_GRUPO_P1_01_0001",
+      "tipo": "muro",
+      "piso": "1",
+      "zona": "parte_1",
+      "orientacion": "H",
+      "criterio": "segmentos_colineales_contiguos_o_solapados",
+      "elementos": [
+        "MURO_P1_01_0026",
+        "MURO_P1_01_0050",
+        "MURO_P1_01_0028"
+      ],
+      "cantidad_segmentos": 3,
+      "longitud_total_m": 25.395,
+      "largo_envuelto_m": 15.195
+    },
+    {
+      "id": "MURO_GRUPO_P1_01_0002",
+      "tipo": "muro",
+      "piso": "1",
+      "zona": "parte_1",
+      "orientacion": "V",
+      "criterio": "segmentos_colineales_contiguos_o_solapados",
+      "elementos": [
+        "MURO_P1_01_0038",
+        "MURO_P1_01_0035"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 1.21,
+      "largo_envuelto_m": 1.41
+    },
+    {
+      "id": "MURO_GRUPO_P2_01_0001",
+      "tipo": "muro",
+      "piso": "1",
+      "zona": "parte_2",
+      "orientacion": "H",
+      "criterio": "segmentos_colineales_contiguos_o_solapados",
+      "elementos": [
+        "MURO_P2_01_0032",
+        "MURO_P2_01_0031"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 9.244,
+      "largo_envuelto_m": 9.444
+    },
+    {
+      "id": "MURO_GRUPO_P2_01_0002",
+      "tipo": "muro",
+      "piso": "1",
+      "zona": "parte_2",
+      "orientacion": "H",
+      "criterio": "segmentos_colineales_contiguos_o_solapados",
+      "elementos": [
+        "MURO_P2_01_0034",
+        "MURO_P2_01_0035"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 11.194,
+      "largo_envuelto_m": 11.394
+    }
+  ],
+  "coincidencia_con_modelo_actual": {
+    "correctos": 167,
+    "faltantes": 146,
+    "sobrantes": 13,
+    "dudosos": 3,
+    "faltantes_por_tipo": {
+      "muro": 46,
+      "viga": 92,
+      "columna": 8
+    },
+    "sobrantes_por_tipo": {
+      "viga": 1,
+      "muro": 1,
+      "columna": 11
+    },
+    "dudosos_por_tipo": {
+      "muro": 3
+    },
+    "no_comparados_con_modelo_3d": {
+      "perimetro_losa": 70,
+      "eje_grafico": 68
+    }
+  },
+  "revision_especifica": {
+    "vigas": {
+      "detectadas": 205,
+      "por_categoria": {
+        "POSIBLE": 140,
+        "FRAGMENTADA": 53,
+        "CONFIRMADA": 4,
+        "FALSO_POSITIVO": 6,
+        "NEEDS_REVIEW": 2
+      },
+      "confirmadas": 4,
+      "posibles": 140,
+      "fragmentadas": 53,
+      "duplicadas": 0,
+      "needs_review": 2,
+      "posibles_falsos_positivos": 6,
+      "criterios": [
+        "capa RLE-VIGA",
+        "longitud minima",
+        "etiqueta de viga cercana",
+        "duplicados exactos",
+        "posibles caras paralelas"
+      ]
+    },
+    "muros": {
+      "detectados": 96,
+      "por_categoria": {
+        "POSIBLE": 67,
+        "FALSO_POSITIVO": 10,
+        "FRAGMENTADO": 9,
+        "CONFIRMADO": 10
+      },
+      "confirmados": 10,
+      "posibles": 67,
+      "fragmentados": 9,
+      "duplicados": 0,
+      "needs_review": 0,
+      "posibles_falsos_positivos": 10,
+      "criterios": [
+        "capa RLE-MURO",
+        "longitud minima",
+        "etiqueta de muro cercana",
+        "posibles dobles caras",
+        "duplicados exactos"
+      ]
+    },
+    "columnas": {
+      "detectadas": 31,
+      "por_categoria": {
+        "CONFIRMADA": 31
+      },
+      "confirmadas": 31,
+      "needs_review": 0,
+      "posibles_falsos_positivos": 0,
+      "criterios": [
+        "cluster de lineas RLE-PILAR",
+        "posicion relativa a ejes",
+        "dimensiones del cluster"
+      ]
+    }
+  },
+  "calce_parte_1_parte_2": {
+    "estado": "NEEDS_REVIEW",
+    "sistema_global": "Eje A-1 de Parte 2 / LT2 = (0, 0, 0)",
+    "referencia_principal": "columnas",
+    "transformacion_candidata_parte_1_respecto_parte_2": {
+      "traslacion_x_m": 27.491000000000003,
+      "traslacion_y_m": 0.0,
+      "rotacion_grados": 0.0,
+      "escala": 1.0
+    },
+    "transformacion_parte_1_respecto_parte_2": {
+      "traslacion_x_m": 27.491000000000003,
+      "traslacion_y_m": 0.0,
+      "rotacion_grados": 0.0,
+      "escala": 1.0,
+      "estado": "HIPOTESIS_NO_CONFIRMADA"
+    },
+    "evidencia": [
+      "En 2024_22-101 se identifican ejes A, B, C, C', D y D' en la planta LT2.",
+      "En 2017_67-101 la Parte 1 usa ejes E a J.",
+      "La hipotesis actual alinea D de Parte 2 con E de Parte 1 para continuidad de edificio.",
+      "La escala se mantiene 1:1 porque ambas fuentes estan en cm CAD transformados a m."
+    ],
+    "evidencia_columnas": {
+      "criterio": "Control primario: columnas cercanas a la interfaz D/E. Control secundario: muros verticales adyacentes a la interfaz, que aportan puntos en filas Y distintas para evaluar no colinealidad.",
+      "columnas_por_zona": {
+        "parte_1": 23,
+        "parte_2": 8
+      },
+      "columnas_interfaz_por_zona": {
+        "parte_1": 3,
+        "parte_2": 1
+      },
+      "pares_columnas_interfaz_por_y": [
+        {
+          "parte_2": "C_P2_01_0008",
+          "parte_1": "C_P1_01_0005",
+          "piso": "1",
+          "delta_y_m": 0.118,
+          "delta_x_interfaz_m": 0.085,
+          "usable_para_calce": true
+        }
+      ],
+      "pares_usables": 1,
+      "pares_muros_interfaz": [
+        {
+          "parte_2": "MURO_P2_01_0001+MURO_P2_01_0003",
+          "parte_1": "MURO_P1_01_0019+MURO_P1_01_0020",
+          "piso": "1",
+          "banda_y": 3,
+          "y_p2": [
+            8.668,
+            16.618
+          ],
+          "y_p1": [
+            9.25,
+            15.8
+          ],
+          "overlap_y_m": 6.55,
+          "delta_y_centrolinea_m": 0.118,
+          "delta_x_centrolinea_m": 0.591,
+          "x_centrolinea_p2": 27.832,
+          "x_centrolinea_p1": 27.241,
+          "segmentos_p2": 2,
+          "segmentos_p1": 2,
+          "nota": "Residuo X entre nucleos en lados opuestos de la linea de columnas puede reflejar nucleos de planta distintos; la continuidad Y confirma el calce en esta banda.",
+          "usable_para_calce": true
+        }
+      ],
+      "muros_verticales_interfaz_por_zona": {
+        "parte_1": 14,
+        "parte_2": 21
+      },
+      "controles_no_colineales": {
+        "estado": "CON_CONTROLES_NO_COLINEALES",
+        "filas_y_distintas": [
+          0.118,
+          14.0
+        ]
+      },
+      "conclusion": "Controles no colineales en filas Y distintas: columnas en la interfaz confirman la alineacion X (residuo ~0.1 m) en la fila baja; los nucleos de muro adyacentes confirman la continuidad longitudinal Y (residuo de centrolinea ~0.118 m) en la banda media. Los residuos X entre nucleos opuestos de la linea de columnas reflejan nucleos de planta distintos, no un error de calce. CALCE_POSIBLE_NEEDS_REVIEW: requiere confirmacion final sobre planos generales."
+    },
+    "faltante_para_confirmar": [
+      "Plano general con ambas etapas o referencia explicita D/E.",
+      "Verificacion manual de al menos dos puntos coincidentes no colineales entre Parte 1 y Parte 2.",
+      "Confirmar si Y=1 de Parte 2 coincide exactamente con Y=1 de Parte 1 o requiere traslacion transversal."
+    ]
+  }
+}

@@ -1,0 +1,2791 @@
+{
+  "piso": "1",
+  "tipo": "muro",
+  "estado": "DRAFT_NEEDS_REVIEW",
+  "total": 75,
+  "por_zona": {
+    "parte_1": 43,
+    "parte_2": 32
+  },
+  "por_estado_revision": {
+    "POSIBLE": 56,
+    "FRAGMENTADO": 10,
+    "DUPLICADO": 1,
+    "FALSO_POSITIVO": 8
+  },
+  "grupos_logicos": [
+    {
+      "id": "MURO_GRUPO_P1_FUNDACION_0001",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "elementos": [
+        "MURO_P1_FUNDACION_0006",
+        "MURO_P1_FUNDACION_0030"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 14.5,
+      "estado_grupo": "FRAGMENTADO"
+    },
+    {
+      "id": "MURO_GRUPO_P1_FUNDACION_0002",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "elementos": [
+        "MURO_P1_FUNDACION_0008",
+        "MURO_P1_FUNDACION_0009",
+        "MURO_P1_FUNDACION_0011",
+        "MURO_P1_FUNDACION_0031"
+      ],
+      "cantidad_segmentos": 4,
+      "longitud_total_m": 12.507,
+      "estado_grupo": "FRAGMENTADO"
+    },
+    {
+      "id": "MURO_GRUPO_P1_FUNDACION_0003",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "elementos": [
+        "MURO_P1_FUNDACION_0021",
+        "MURO_P1_FUNDACION_0029"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 0.9,
+      "estado_grupo": "FRAGMENTADO"
+    },
+    {
+      "id": "MURO_GRUPO_P2_FUNDACION_0001",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "elementos": [
+        "MURO_P2_FUNDACION_0017",
+        "MURO_P2_FUNDACION_0018"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 9.244,
+      "estado_grupo": "FRAGMENTADO"
+    },
+    {
+      "id": "MURO_GRUPO_P2_FUNDACION_0002",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "elementos": [
+        "MURO_P2_FUNDACION_0020",
+        "MURO_P2_FUNDACION_0021"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 11.194,
+      "estado_grupo": "FRAGMENTADO"
+    }
+  ],
+  "total_grupos_logicos": 5,
+  "criterio": [
+    "Debe provenir de capa RLE-MURO.",
+    "Categorias: CONFIRMADO, POSIBLE, FALSO_POSITIVO, DUPLICADO, FRAGMENTADO, NEEDS_REVIEW.",
+    "Se revisa contra etiquetas M.H.A/M.I cercanas.",
+    "Se marca POSIBLE si parece doble cara grafica de un mismo muro o no tiene etiqueta cercana.",
+    "Se marca FRAGMENTADO si pertenece a un grupo de segmentos colineales contiguos o solapados.",
+    "La agrupacion no se lleva a 3D hasta validar la planta 2D."
+  ],
+  "elementos": [
+    {
+      "id": "MURO_P1_FUNDACION_0001",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ed-F",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.4,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          34.94844982293046,
+          -12.721078169434382
+        ],
+        "fin": [
+          34.54844982293047,
+          -12.721078169434382
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_FUNDACION_0002",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ed-F",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.4,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          34.548449822930465,
+          -12.721078169434382
+        ],
+        "fin": [
+          34.548449822930465,
+          -12.321127778809382
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_FUNDACION_0003",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "antes de E_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.4,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          25.248449822959167,
+          -12.321078169434408
+        ],
+        "fin": [
+          25.248449822959167,
+          -12.721078169434408
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_FUNDACION_0004",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "antes de E_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana"
+      ],
+      "geometria": {
+        "inicio": [
+          25.248449822959167,
+          -12.721078169434408
+        ],
+        "fin": [
+          24.748445789146444,
+          -12.721078169434408
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_FUNDACION_0005",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ed-F",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.45,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P1_FUNDACION_0025"
+      ],
+      "geometria": {
+        "inicio": [
+          34.94844982293049,
+          -12.721078169434382
+        ],
+        "fin": [
+          34.94844982293049,
+          -19.27124482476162
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_FUNDACION_0006",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "antes de E_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADO",
+      "grupo_logico": "MURO_GRUPO_P1_FUNDACION_0001",
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.35,
+      "motivos_revision": [
+        "fragmento_de_MURO_GRUPO_P1_FUNDACION_0001",
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P1_FUNDACION_0007"
+      ],
+      "geometria": {
+        "inicio": [
+          24.54844578914649,
+          -19.27124482476162
+        ],
+        "fin": [
+          24.54844578914649,
+          -12.721078169434437
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_FUNDACION_0007",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "antes de E_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.45,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P1_FUNDACION_0006"
+      ],
+      "geometria": {
+        "inicio": [
+          24.748445789146444,
+          -12.721078169434437
+        ],
+        "fin": [
+          24.748445789146444,
+          -19.27124482476162
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_FUNDACION_0008",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Eb-Ec",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADO",
+      "grupo_logico": "MURO_GRUPO_P1_FUNDACION_0002",
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.35,
+      "motivos_revision": [
+        "fragmento_de_MURO_GRUPO_P1_FUNDACION_0002",
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P1_FUNDACION_0010"
+      ],
+      "geometria": {
+        "inicio": [
+          34.548449822930465,
+          -12.021078169434372
+        ],
+        "fin": [
+          32.74126660147017,
+          -12.021078169434382
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_FUNDACION_0009",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "E-Ea",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADO",
+      "grupo_logico": "MURO_GRUPO_P1_FUNDACION_0002",
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.35,
+      "motivos_revision": [
+        "fragmento_de_MURO_GRUPO_P1_FUNDACION_0002",
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P1_FUNDACION_0010"
+      ],
+      "geometria": {
+        "inicio": [
+          24.548449822959235,
+          -12.0210781694344
+        ],
+        "fin": [
+          32.741266601470166,
+          -12.021078169434382
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_FUNDACION_0010",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "E-Ea",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.45,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P1_FUNDACION_0008"
+      ],
+      "geometria": {
+        "inicio": [
+          25.248449822959167,
+          -12.321078169434408
+        ],
+        "fin": [
+          34.548449822930465,
+          -12.321078169434372
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_FUNDACION_0011",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Eb-Ec",
+        "y": "antes de 1"
+      },
+      "estado_revision": "DUPLICADO",
+      "grupo_logico": "MURO_GRUPO_P1_FUNDACION_0002",
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.05,
+      "motivos_revision": [
+        "duplicado_geometrico",
+        "fragmento_de_MURO_GRUPO_P1_FUNDACION_0002",
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P1_FUNDACION_0010"
+      ],
+      "geometria": {
+        "inicio": [
+          34.548449822930465,
+          -12.021244824698282
+        ],
+        "fin": [
+          32.74126660147017,
+          -12.021244824698282
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_FUNDACION_0012",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "F_prime-G",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana"
+      ],
+      "geometria": {
+        "inicio": [
+          45.248449823053534,
+          -12.721078169434481
+        ],
+        "fin": [
+          44.54844982305353,
+          -12.721078169434481
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_FUNDACION_0013",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "F_prime-G",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana"
+      ],
+      "geometria": {
+        "inicio": [
+          44.54844982305353,
+          -12.721078169434481
+        ],
+        "fin": [
+          44.54844982305353,
+          -12.021078169434473
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_FUNDACION_0014",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "F_prime-G",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana"
+      ],
+      "geometria": {
+        "inicio": [
+          44.54844982305353,
+          -12.021078169434473
+        ],
+        "fin": [
+          45.248449823053534,
+          -12.021078169434473
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_FUNDACION_0015",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "F_prime-G",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana"
+      ],
+      "geometria": {
+        "inicio": [
+          45.248449823053534,
+          -12.021078169434473
+        ],
+        "fin": [
+          45.248449823053534,
+          -12.721078169434481
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_FUNDACION_0016",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ga-H",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana"
+      ],
+      "geometria": {
+        "inicio": [
+          55.24844982298234,
+          -12.721078169434454
+        ],
+        "fin": [
+          54.548449822982334,
+          -12.721078169434454
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_FUNDACION_0017",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ga-H",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana"
+      ],
+      "geometria": {
+        "inicio": [
+          54.548449822982334,
+          -12.721078169434454
+        ],
+        "fin": [
+          54.548449822982334,
+          -12.021078169434436
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_FUNDACION_0018",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ga-H",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana"
+      ],
+      "geometria": {
+        "inicio": [
+          54.548449822982334,
+          -12.021078169434436
+        ],
+        "fin": [
+          55.24844982298234,
+          -12.021078169434436
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_FUNDACION_0019",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ga-H",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana"
+      ],
+      "geometria": {
+        "inicio": [
+          55.24844982298234,
+          -12.021078169434436
+        ],
+        "fin": [
+          55.24844982298234,
+          -12.721078169434454
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_FUNDACION_0020",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana"
+      ],
+      "geometria": {
+        "inicio": [
+          64.54844982291401,
+          -12.721078169434408
+        ],
+        "fin": [
+          65.24844982291401,
+          -12.721078169434408
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_FUNDACION_0021",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADO",
+      "grupo_logico": "MURO_GRUPO_P1_FUNDACION_0003",
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.55,
+      "motivos_revision": [
+        "fragmento_de_MURO_GRUPO_P1_FUNDACION_0003",
+        "sin_etiqueta_muro_cercana"
+      ],
+      "geometria": {
+        "inicio": [
+          65.24844982291401,
+          -12.021078169434409
+        ],
+        "fin": [
+          64.54844982291401,
+          -12.021078169434409
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_FUNDACION_0022",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana"
+      ],
+      "geometria": {
+        "inicio": [
+          64.54844982291401,
+          -12.721078169434408
+        ],
+        "fin": [
+          64.54844982291401,
+          -12.221078169434318
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_FUNDACION_0023",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.45,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P1_FUNDACION_0024"
+      ],
+      "geometria": {
+        "inicio": [
+          64.89844982291352,
+          -12.721244824698202
+        ],
+        "fin": [
+          64.89844982291352,
+          -19.271078169457265
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_FUNDACION_0024",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.45,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P1_FUNDACION_0023"
+      ],
+      "geometria": {
+        "inicio": [
+          65.19844982291352,
+          -19.271078169457265
+        ],
+        "fin": [
+          65.19844982291352,
+          -12.721244824698202
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_FUNDACION_0025",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ed-F",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.45,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P1_FUNDACION_0005"
+      ],
+      "geometria": {
+        "inicio": [
+          35.24844982293048,
+          -28.871244824781456
+        ],
+        "fin": [
+          35.24844982293048,
+          -12.0210781694344
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_FUNDACION_0026",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.45,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P1_FUNDACION_0027"
+      ],
+      "geometria": {
+        "inicio": [
+          64.89844982291352,
+          -2.1954398618801725
+        ],
+        "fin": [
+          64.89844982291352,
+          -12.001078169434264
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_FUNDACION_0027",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.45,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P1_FUNDACION_0026"
+      ],
+      "geometria": {
+        "inicio": [
+          65.1984498229135,
+          -11.801078169434263
+        ],
+        "fin": [
+          65.1984498229135,
+          -2.1954398618801725
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_FUNDACION_0028",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.4,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          64.89844982291352,
+          -2.1954398618801725
+        ],
+        "fin": [
+          65.1984498229135,
+          -2.1954398618801725
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_FUNDACION_0029",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FALSO_POSITIVO",
+      "grupo_logico": "MURO_GRUPO_P1_FUNDACION_0003",
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.05,
+      "motivos_revision": [
+        "fragmento_de_MURO_GRUPO_P1_FUNDACION_0003",
+        "sin_etiqueta_muro_cercana",
+        "muro_demasiado_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          64.89844982291352,
+          -12.001078169434264
+        ],
+        "fin": [
+          65.09844982291351,
+          -12.001078169434264
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_FUNDACION_0030",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "antes de E_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADO",
+      "grupo_logico": "MURO_GRUPO_P1_FUNDACION_0001",
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.35,
+      "motivos_revision": [
+        "fragmento_de_MURO_GRUPO_P1_FUNDACION_0001",
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P1_FUNDACION_0007"
+      ],
+      "geometria": {
+        "inicio": [
+          24.548449822959235,
+          -19.971244824761648
+        ],
+        "fin": [
+          24.548449822959235,
+          -12.0210781694344
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_FUNDACION_0031",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ed-F",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADO",
+      "grupo_logico": "MURO_GRUPO_P1_FUNDACION_0002",
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.55,
+      "motivos_revision": [
+        "fragmento_de_MURO_GRUPO_P1_FUNDACION_0002",
+        "sin_etiqueta_muro_cercana"
+      ],
+      "geometria": {
+        "inicio": [
+          34.548449822930465,
+          -12.021078169434372
+        ],
+        "fin": [
+          35.24844982293048,
+          -12.021078169434372
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_FUNDACION_0032",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H-H1",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.4,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          59.52552725816224,
+          -9.758797703671902
+        ],
+        "fin": [
+          59.22552725816256,
+          -9.758797275611583
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_FUNDACION_0033",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H-H1",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.4,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          59.22552725816256,
+          -9.758797275611583
+        ],
+        "fin": [
+          59.22552768622287,
+          -9.458797275611891
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_FUNDACION_0034",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H-H1",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.4,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          59.22552768622287,
+          -9.458797275611891
+        ],
+        "fin": [
+          59.52552768622256,
+          -9.458797703672222
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_FUNDACION_0035",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H-H1",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.4,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          59.52552768622256,
+          -9.458797703672222
+        ],
+        "fin": [
+          59.52552725816224,
+          -9.758797703671902
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_FUNDACION_0036",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H-H1",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.4,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          59.52553408337117,
+          -5.046659395460693
+        ],
+        "fin": [
+          59.22553408337119,
+          -5.046659395460693
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_FUNDACION_0037",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H-H1",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.4,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          59.22553408337119,
+          -5.046659395460693
+        ],
+        "fin": [
+          59.22553408337119,
+          -4.746659395460693
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_FUNDACION_0038",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H-H1",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.4,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          59.22553408337119,
+          -4.746659395460693
+        ],
+        "fin": [
+          59.52553408337117,
+          -4.746659395460693
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_FUNDACION_0039",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H-H1",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.4,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          59.52553408337117,
+          -4.746659395460693
+        ],
+        "fin": [
+          59.52553408337117,
+          -5.046659395460693
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_FUNDACION_0040",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H-H1",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.4,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          59.525540195144956,
+          -0.33452108724916796
+        ],
+        "fin": [
+          59.22554019514525,
+          -0.3345206591888518
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_FUNDACION_0041",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H-H1",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.4,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          59.22554019514525,
+          -0.3345206591888518
+        ],
+        "fin": [
+          59.225540623205575,
+          -0.03452065918916105
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_FUNDACION_0042",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H-H1",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.4,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          59.225540623205575,
+          -0.03452065918916105
+        ],
+        "fin": [
+          59.52554062320526,
+          -0.03452108724946811
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_FUNDACION_0043",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H-H1",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.4,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          59.52554062320526,
+          -0.03452108724946811
+        ],
+        "fin": [
+          59.525540195144956,
+          -0.33452108724916796
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_FUNDACION_0001",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "D-D_prime",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.45,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P2_FUNDACION_0003"
+      ],
+      "geometria": {
+        "inicio": [
+          27.95699399386542,
+          16.61766819557768
+        ],
+        "fin": [
+          27.95699399386542,
+          8.66766819551487
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_FUNDACION_0002",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "D-D_prime",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.4,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          27.95699399386542,
+          8.66766819551487
+        ],
+        "fin": [
+          27.70699399386541,
+          8.66766819551487
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_FUNDACION_0003",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "D-D_prime",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.45,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P2_FUNDACION_0001"
+      ],
+      "geometria": {
+        "inicio": [
+          27.70699399386541,
+          8.66766819551487
+        ],
+        "fin": [
+          27.706993993865403,
+          16.61766819557768
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_FUNDACION_0004",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "D-D_prime",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.4,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          27.706993993865403,
+          16.61766819557768
+        ],
+        "fin": [
+          27.95699399386542,
+          16.61766819557768
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_FUNDACION_0005",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C_prime-D",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.45,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P2_FUNDACION_0006"
+      ],
+      "geometria": {
+        "inicio": [
+          25.31198931113906,
+          6.2678348508187876
+        ],
+        "fin": [
+          25.311989311139072,
+          3.447678383357517
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_FUNDACION_0006",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C_prime-D",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.45,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P2_FUNDACION_0005"
+      ],
+      "geometria": {
+        "inicio": [
+          25.06198931113906,
+          3.1476783833575173
+        ],
+        "fin": [
+          25.06198931113906,
+          6.2678348508187876
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_FUNDACION_0007",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C_prime-D",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.4,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          25.06198931113906,
+          6.2678348508187876
+        ],
+        "fin": [
+          25.31198931113906,
+          6.2678348508187876
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_FUNDACION_0008",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C_prime-D",
+        "y": "1_prime-1A_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.45,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P2_FUNDACION_0009"
+      ],
+      "geometria": {
+        "inicio": [
+          25.311989311139072,
+          3.447678383357517
+        ],
+        "fin": [
+          27.70699399386541,
+          3.447678383357531
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_FUNDACION_0009",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C_prime-D",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.45,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P2_FUNDACION_0008"
+      ],
+      "geometria": {
+        "inicio": [
+          27.70699399386541,
+          3.147678383357531
+        ],
+        "fin": [
+          25.06198931113906,
+          3.1476783833575173
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_FUNDACION_0010",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "D-D_prime",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.45,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P2_FUNDACION_0013"
+      ],
+      "geometria": {
+        "inicio": [
+          27.70699399386542,
+          0.4676681954945497
+        ],
+        "fin": [
+          27.70699399386541,
+          3.147678383357531
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_FUNDACION_0011",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "D-D_prime",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.45,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P2_FUNDACION_0013"
+      ],
+      "geometria": {
+        "inicio": [
+          27.70699399386541,
+          3.447678383357531
+        ],
+        "fin": [
+          27.706993993865403,
+          6.267668195514559
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_FUNDACION_0012",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "D-D_prime",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.4,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          27.706993993865403,
+          6.267668195514559
+        ],
+        "fin": [
+          27.95699399386542,
+          6.267668195514559
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_FUNDACION_0013",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "D-D_prime",
+        "y": "1_prime-1A_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.45,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P2_FUNDACION_0010"
+      ],
+      "geometria": {
+        "inicio": [
+          27.95699399386542,
+          6.267668195514559
+        ],
+        "fin": [
+          27.95699399386542,
+          0.4676681954945497
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_FUNDACION_0014",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "D-D_prime",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.4,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          27.95699399386542,
+          0.4676681954945497
+        ],
+        "fin": [
+          27.70699399386542,
+          0.4676681954945497
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_FUNDACION_0015",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.45,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P2_FUNDACION_0017"
+      ],
+      "geometria": {
+        "inicio": [
+          16.36255995987501,
+          -6.202331804505291
+        ],
+        "fin": [
+          25.806997053223128,
+          -6.202331804505273
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_FUNDACION_0016",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C_prime-D",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FALSO_POSITIVO",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.1,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_demasiado_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          25.806997053223128,
+          -6.202331804505273
+        ],
+        "fin": [
+          25.806997053223128,
+          -6.402331804505259
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_FUNDACION_0017",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADO",
+      "grupo_logico": "MURO_GRUPO_P2_FUNDACION_0001",
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.35,
+      "motivos_revision": [
+        "fragmento_de_MURO_GRUPO_P2_FUNDACION_0001",
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P2_FUNDACION_0015"
+      ],
+      "geometria": {
+        "inicio": [
+          25.806997053223128,
+          -6.402331804505259
+        ],
+        "fin": [
+          20.90699399303606,
+          -6.402331804505282
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_FUNDACION_0018",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADO",
+      "grupo_logico": "MURO_GRUPO_P2_FUNDACION_0001",
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.35,
+      "motivos_revision": [
+        "fragmento_de_MURO_GRUPO_P2_FUNDACION_0001",
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P2_FUNDACION_0015"
+      ],
+      "geometria": {
+        "inicio": [
+          20.70699399303606,
+          -6.402331804505291
+        ],
+        "fin": [
+          16.36255995987501,
+          -6.4023318045053
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_FUNDACION_0019",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FALSO_POSITIVO",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.1,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_demasiado_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          16.36255995987501,
+          -6.4023318045053
+        ],
+        "fin": [
+          16.36255995987501,
+          -6.202331804505291
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_FUNDACION_0020",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADO",
+      "grupo_logico": "MURO_GRUPO_P2_FUNDACION_0002",
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.35,
+      "motivos_revision": [
+        "fragmento_de_MURO_GRUPO_P2_FUNDACION_0002",
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P2_FUNDACION_0022"
+      ],
+      "geometria": {
+        "inicio": [
+          16.36255995987501,
+          -10.502331804505308
+        ],
+        "fin": [
+          20.70699399303606,
+          -10.5023318045053
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_FUNDACION_0021",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADO",
+      "grupo_logico": "MURO_GRUPO_P2_FUNDACION_0002",
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.35,
+      "motivos_revision": [
+        "fragmento_de_MURO_GRUPO_P2_FUNDACION_0002",
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P2_FUNDACION_0022"
+      ],
+      "geometria": {
+        "inicio": [
+          20.90699399303608,
+          -10.50233180450529
+        ],
+        "fin": [
+          27.756993993884862,
+          -10.502331804505259
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_FUNDACION_0022",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.45,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P2_FUNDACION_0020"
+      ],
+      "geometria": {
+        "inicio": [
+          27.95699399388485,
+          -10.702331804505258
+        ],
+        "fin": [
+          16.36255995987501,
+          -10.702331804505322
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_FUNDACION_0023",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FALSO_POSITIVO",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.1,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_demasiado_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          17.712732113313063,
+          -10.702331804505299
+        ],
+        "fin": [
+          17.712732113313063,
+          -10.5023318045053
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_FUNDACION_0024",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FALSO_POSITIVO",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.1,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_demasiado_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          16.9121071133143,
+          -10.502331804505308
+        ],
+        "fin": [
+          16.9121071133143,
+          -10.702331804505322
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_FUNDACION_0025",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FALSO_POSITIVO",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.1,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_demasiado_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          16.36255995987501,
+          -10.502331804505308
+        ],
+        "fin": [
+          16.36255995987501,
+          -10.702331804505322
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_FUNDACION_0026",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.45,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P2_FUNDACION_0027"
+      ],
+      "geometria": {
+        "inicio": [
+          20.70699399303606,
+          -10.50233180450529
+        ],
+        "fin": [
+          20.70699399303606,
+          -6.402331804505291
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_FUNDACION_0027",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.45,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P2_FUNDACION_0026"
+      ],
+      "geometria": {
+        "inicio": [
+          20.90699399303606,
+          -6.402331804505291
+        ],
+        "fin": [
+          20.90699399303606,
+          -10.50233180450529
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_FUNDACION_0028",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "D-D_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.45,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P2_FUNDACION_0029"
+      ],
+      "geometria": {
+        "inicio": [
+          27.756993993884862,
+          -10.502331804505259
+        ],
+        "fin": [
+          27.756993993884862,
+          -6.402331804505232
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_FUNDACION_0029",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "D-D_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.45,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P2_FUNDACION_0028"
+      ],
+      "geometria": {
+        "inicio": [
+          27.95699399388485,
+          -6.202331804505232
+        ],
+        "fin": [
+          27.95699399388485,
+          -10.702331804505258
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_FUNDACION_0030",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "D-D_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.4,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          27.606991969363182,
+          -6.202331804505232
+        ],
+        "fin": [
+          27.95699399388485,
+          -6.202331804505232
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_FUNDACION_0031",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "D-D_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FALSO_POSITIVO",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.1,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_demasiado_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          27.756993993884862,
+          -6.402331804505232
+        ],
+        "fin": [
+          27.606991969363182,
+          -6.402331804505232
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_FUNDACION_0032",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "D-D_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FALSO_POSITIVO",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": null,
+        "distancia_m": null
+      },
+      "confianza_score": 0.1,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_demasiado_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          27.606991969363182,
+          -6.402331804505232
+        ],
+        "fin": [
+          27.606991969363182,
+          -6.202331804505232
+        ]
+      }
+    }
+  ]
+}

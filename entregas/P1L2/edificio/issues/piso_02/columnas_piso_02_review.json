@@ -1,0 +1,736 @@
+{
+  "piso": "1",
+  "tipo": "columna",
+  "estado": "DRAFT_NEEDS_REVIEW",
+  "total": 23,
+  "por_zona": {
+    "parte_1": 15,
+    "parte_2": 8
+  },
+  "por_estado_revision": {
+    "CONFIRMADA": 23
+  },
+  "grupos_logicos": [],
+  "total_grupos_logicos": 0,
+  "criterio": [
+    "Se obtiene por cluster de segmentos RLE-PILAR.",
+    "Se registra centro, dimensiones aproximadas y ejes cercanos.",
+    "Debe usarse como control fuerte del sistema de coordenadas.",
+    "La continuidad vertical se revisara con pisos superiores antes de 3D."
+  ],
+  "elementos": [
+    {
+      "id": "C_P1_02_0001",
+      "tipo": "columna",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-102.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P1_02_0001",
+          "COLUMNA_RAW_P1_02_0002",
+          "COLUMNA_RAW_P1_02_0003",
+          "COLUMNA_RAW_P1_02_0004"
+        ]
+      },
+      "ejes_aproximados": {
+        "x": "E-Ea",
+        "y": "antes de 1"
+      },
+      "estado_revision": "CONFIRMADA",
+      "grupo_logico": null,
+      "etiqueta_cercana": null,
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          27.495572723462473,
+          -6.0398292647256824e-05
+        ]
+      }
+    },
+    {
+      "id": "C_P1_02_0002",
+      "tipo": "columna",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-102.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P1_02_0005",
+          "COLUMNA_RAW_P1_02_0006",
+          "COLUMNA_RAW_P1_02_0007",
+          "COLUMNA_RAW_P1_02_0008"
+        ]
+      },
+      "ejes_aproximados": {
+        "x": "E-Ea",
+        "y": "2a-3"
+      },
+      "estado_revision": "CONFIRMADA",
+      "grupo_logico": null,
+      "etiqueta_cercana": null,
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          27.495572723462455,
+          16.15010625705441
+        ]
+      }
+    },
+    {
+      "id": "C_P1_02_0003",
+      "tipo": "columna",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-102.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P1_02_0009",
+          "COLUMNA_RAW_P1_02_0010",
+          "COLUMNA_RAW_P1_02_0011",
+          "COLUMNA_RAW_P1_02_0012"
+        ]
+      },
+      "ejes_aproximados": {
+        "x": "E-Ea",
+        "y": "1b-2"
+      },
+      "estado_revision": "CONFIRMADA",
+      "grupo_logico": null,
+      "etiqueta_cercana": null,
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          27.495572723462473,
+          8.89993960172717
+        ]
+      }
+    },
+    {
+      "id": "C_P1_02_0004",
+      "tipo": "columna",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-102.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P1_02_0013",
+          "COLUMNA_RAW_P1_02_0014",
+          "COLUMNA_RAW_P1_02_0015",
+          "COLUMNA_RAW_P1_02_0016"
+        ]
+      },
+      "ejes_aproximados": {
+        "x": "F-F_prime",
+        "y": "1b-2"
+      },
+      "estado_revision": "CONFIRMADA",
+      "grupo_logico": null,
+      "etiqueta_cercana": null,
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          37.495572723585106,
+          8.899939601727205
+        ]
+      }
+    },
+    {
+      "id": "C_P1_02_0005",
+      "tipo": "columna",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-102.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P1_02_0017",
+          "COLUMNA_RAW_P1_02_0018",
+          "COLUMNA_RAW_P1_02_0019",
+          "COLUMNA_RAW_P1_02_0020"
+        ]
+      },
+      "ejes_aproximados": {
+        "x": "F-F_prime",
+        "y": "2a-3"
+      },
+      "estado_revision": "CONFIRMADA",
+      "grupo_logico": null,
+      "etiqueta_cercana": null,
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          37.495572723585525,
+          16.150106257054304
+        ]
+      }
+    },
+    {
+      "id": "C_P1_02_0006",
+      "tipo": "columna",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-102.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P1_02_0021",
+          "COLUMNA_RAW_P1_02_0022",
+          "COLUMNA_RAW_P1_02_0023",
+          "COLUMNA_RAW_P1_02_0024"
+        ]
+      },
+      "ejes_aproximados": {
+        "x": "G-Ga",
+        "y": "2a-3"
+      },
+      "estado_revision": "CONFIRMADA",
+      "grupo_logico": null,
+      "etiqueta_cercana": null,
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          47.49557272351433,
+          16.15010625705434
+        ]
+      }
+    },
+    {
+      "id": "C_P1_02_0007",
+      "tipo": "columna",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-102.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P1_02_0025",
+          "COLUMNA_RAW_P1_02_0026",
+          "COLUMNA_RAW_P1_02_0027",
+          "COLUMNA_RAW_P1_02_0028"
+        ]
+      },
+      "ejes_aproximados": {
+        "x": "H-H1",
+        "y": "2a-3"
+      },
+      "estado_revision": "CONFIRMADA",
+      "grupo_logico": null,
+      "etiqueta_cercana": null,
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          57.49557272344599,
+          16.150106257054375
+        ]
+      }
+    },
+    {
+      "id": "C_P1_02_0008",
+      "tipo": "columna",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-102.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P1_02_0029",
+          "COLUMNA_RAW_P1_02_0030",
+          "COLUMNA_RAW_P1_02_0031",
+          "COLUMNA_RAW_P1_02_0032"
+        ]
+      },
+      "ejes_aproximados": {
+        "x": "H-H1",
+        "y": "1b-2"
+      },
+      "estado_revision": "CONFIRMADA",
+      "grupo_logico": null,
+      "etiqueta_cercana": null,
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          57.49557272344559,
+          8.900106257031524
+        ]
+      }
+    },
+    {
+      "id": "C_P1_02_0009",
+      "tipo": "columna",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-102.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P1_02_0033",
+          "COLUMNA_RAW_P1_02_0034",
+          "COLUMNA_RAW_P1_02_0035",
+          "COLUMNA_RAW_P1_02_0036"
+        ]
+      },
+      "ejes_aproximados": {
+        "x": "H-H1",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "CONFIRMADA",
+      "grupo_logico": null,
+      "etiqueta_cercana": null,
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          57.495572723445605,
+          0.0001062569978027561
+        ]
+      }
+    },
+    {
+      "id": "C_P1_02_0010",
+      "tipo": "columna",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-102.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P1_02_0037",
+          "COLUMNA_RAW_P1_02_0038",
+          "COLUMNA_RAW_P1_02_0039",
+          "COLUMNA_RAW_P1_02_0040"
+        ]
+      },
+      "ejes_aproximados": {
+        "x": "G-Ga",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "CONFIRMADA",
+      "grupo_logico": null,
+      "etiqueta_cercana": null,
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          47.49557272351393,
+          0.00010625699777966346
+        ]
+      }
+    },
+    {
+      "id": "C_P1_02_0011",
+      "tipo": "columna",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-102.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P1_02_0041",
+          "COLUMNA_RAW_P1_02_0042",
+          "COLUMNA_RAW_P1_02_0043",
+          "COLUMNA_RAW_P1_02_0044"
+        ]
+      },
+      "ejes_aproximados": {
+        "x": "G-Ga",
+        "y": "1b-2"
+      },
+      "estado_revision": "CONFIRMADA",
+      "grupo_logico": null,
+      "etiqueta_cercana": null,
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          47.49557272351393,
+          8.899939601727205
+        ]
+      }
+    },
+    {
+      "id": "C_P1_02_0012",
+      "tipo": "columna",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-102.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P1_02_0045",
+          "COLUMNA_RAW_P1_02_0046",
+          "COLUMNA_RAW_P1_02_0047",
+          "COLUMNA_RAW_P1_02_0048"
+        ]
+      },
+      "ejes_aproximados": {
+        "x": "F-F_prime",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "CONFIRMADA",
+      "grupo_logico": null,
+      "etiqueta_cercana": null,
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          37.49557272351393,
+          0.00010625699776145581
+        ]
+      }
+    },
+    {
+      "id": "C_P1_02_0013",
+      "tipo": "columna",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-102.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P1_02_0049",
+          "COLUMNA_RAW_P1_02_0050",
+          "COLUMNA_RAW_P1_02_0051",
+          "COLUMNA_RAW_P1_02_0052"
+        ]
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "CONFIRMADA",
+      "grupo_logico": null,
+      "etiqueta_cercana": null,
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          62.49557272345285,
+          0.00010625699782540465
+        ]
+      }
+    },
+    {
+      "id": "C_P1_02_0014",
+      "tipo": "columna",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-102.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P1_02_0053",
+          "COLUMNA_RAW_P1_02_0054",
+          "COLUMNA_RAW_P1_02_0055",
+          "COLUMNA_RAW_P1_02_0056"
+        ]
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "2a-3"
+      },
+      "estado_revision": "CONFIRMADA",
+      "grupo_logico": null,
+      "etiqueta_cercana": null,
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          62.495572723452824,
+          16.150106257054375
+        ]
+      }
+    },
+    {
+      "id": "C_P1_02_0015",
+      "tipo": "columna",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-102.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P1_02_0057",
+          "COLUMNA_RAW_P1_02_0058",
+          "COLUMNA_RAW_P1_02_0059",
+          "COLUMNA_RAW_P1_02_0060"
+        ]
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "1b-2"
+      },
+      "estado_revision": "CONFIRMADA",
+      "grupo_logico": null,
+      "etiqueta_cercana": null,
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          62.49557272345206,
+          8.90010625703156
+        ]
+      }
+    },
+    {
+      "id": "C_P2_02_0001",
+      "tipo": "columna",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-102.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P2_02_0001",
+          "COLUMNA_RAW_P2_02_0002",
+          "COLUMNA_RAW_P2_02_0003",
+          "COLUMNA_RAW_P2_02_0004"
+        ]
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "CONFIRMADA",
+      "grupo_logico": null,
+      "etiqueta_cercana": null,
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          7.6030877755627415,
+          0.11766819549454732
+        ]
+      }
+    },
+    {
+      "id": "C_P2_02_0002",
+      "tipo": "columna",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-102.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P2_02_0005",
+          "COLUMNA_RAW_P2_02_0006",
+          "COLUMNA_RAW_P2_02_0007",
+          "COLUMNA_RAW_P2_02_0008"
+        ]
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "CONFIRMADA",
+      "grupo_logico": null,
+      "etiqueta_cercana": null,
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          17.60308777468032,
+          0.11766819549454732
+        ]
+      }
+    },
+    {
+      "id": "C_P2_02_0003",
+      "tipo": "columna",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-102.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P2_02_0009",
+          "COLUMNA_RAW_P2_02_0010",
+          "COLUMNA_RAW_P2_02_0011",
+          "COLUMNA_RAW_P2_02_0012"
+        ]
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "2-2A_prime"
+      },
+      "estado_revision": "CONFIRMADA",
+      "grupo_logico": null,
+      "etiqueta_cercana": null,
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          17.60308777468032,
+          9.017668195514547
+        ]
+      }
+    },
+    {
+      "id": "C_P2_02_0004",
+      "tipo": "columna",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-102.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P2_02_0013",
+          "COLUMNA_RAW_P2_02_0014",
+          "COLUMNA_RAW_P2_02_0015",
+          "COLUMNA_RAW_P2_02_0016"
+        ]
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "2-2A_prime"
+      },
+      "estado_revision": "CONFIRMADA",
+      "grupo_logico": null,
+      "etiqueta_cercana": null,
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          7.6030877755627415,
+          9.017668195514547
+        ]
+      }
+    },
+    {
+      "id": "C_P2_02_0005",
+      "tipo": "columna",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-102.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P2_02_0017",
+          "COLUMNA_RAW_P2_02_0018",
+          "COLUMNA_RAW_P2_02_0019",
+          "COLUMNA_RAW_P2_02_0020"
+        ]
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "2-2A_prime"
+      },
+      "estado_revision": "CONFIRMADA",
+      "grupo_logico": null,
+      "etiqueta_cercana": null,
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          0.10308777490281504,
+          9.017668195514547
+        ]
+      }
+    },
+    {
+      "id": "C_P2_02_0006",
+      "tipo": "columna",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-102.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P2_02_0021",
+          "COLUMNA_RAW_P2_02_0022",
+          "COLUMNA_RAW_P2_02_0023",
+          "COLUMNA_RAW_P2_02_0024"
+        ]
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "CONFIRMADA",
+      "grupo_logico": null,
+      "etiqueta_cercana": null,
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          7.6030877755627415,
+          16.2676681955777
+        ]
+      }
+    },
+    {
+      "id": "C_P2_02_0007",
+      "tipo": "columna",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-102.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P2_02_0025",
+          "COLUMNA_RAW_P2_02_0026",
+          "COLUMNA_RAW_P2_02_0027",
+          "COLUMNA_RAW_P2_02_0028"
+        ]
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "CONFIRMADA",
+      "grupo_logico": null,
+      "etiqueta_cercana": null,
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          17.603087774680308,
+          16.26766819557775
+        ]
+      }
+    },
+    {
+      "id": "C_P2_02_0008",
+      "tipo": "columna",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-102.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P2_02_0029",
+          "COLUMNA_RAW_P2_02_0030",
+          "COLUMNA_RAW_P2_02_0031",
+          "COLUMNA_RAW_P2_02_0032"
+        ]
+      },
+      "ejes_aproximados": {
+        "x": "D-D_prime",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "CONFIRMADA",
+      "grupo_logico": null,
+      "etiqueta_cercana": null,
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          27.60308575099627,
+          0.11766819549454732
+        ]
+      }
+    }
+  ]
+}

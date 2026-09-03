@@ -1,0 +1,7561 @@
+{
+  "piso": "1",
+  "tipo": "viga",
+  "estado": "DRAFT_NEEDS_REVIEW",
+  "total": 205,
+  "por_zona": {
+    "parte_1": 111,
+    "parte_2": 94
+  },
+  "por_estado_revision": {
+    "POSIBLE": 140,
+    "FRAGMENTADA": 53,
+    "CONFIRMADA": 4,
+    "FALSO_POSITIVO": 6,
+    "NEEDS_REVIEW": 2
+  },
+  "grupos_logicos": [
+    {
+      "id": "VIGA_GRUPO_P1_01_0001",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "elementos": [
+        "VIGA_P1_01_0013",
+        "VIGA_P1_01_0016",
+        "VIGA_P1_01_0059"
+      ],
+      "cantidad_segmentos": 3,
+      "longitud_total_m": 8.95,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P1_01_0002",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "elementos": [
+        "VIGA_P1_01_0036",
+        "VIGA_P1_01_0039",
+        "VIGA_P1_01_0092"
+      ],
+      "cantidad_segmentos": 3,
+      "longitud_total_m": 16.05,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P1_01_0003",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "elementos": [
+        "VIGA_P1_01_0046",
+        "VIGA_P1_01_0049"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 8.09,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P1_01_0004",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "elementos": [
+        "VIGA_P1_01_0063",
+        "VIGA_P1_01_0065"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 8.0,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P1_01_0005",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "elementos": [
+        "VIGA_P1_01_0064",
+        "VIGA_P1_01_0066"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 8.0,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P1_01_0006",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "elementos": [
+        "VIGA_P1_01_0084",
+        "VIGA_P1_01_0087"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 8.824,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P1_01_0007",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "elementos": [
+        "VIGA_P1_01_0085",
+        "VIGA_P1_01_0088",
+        "VIGA_P1_01_0089"
+      ],
+      "cantidad_segmentos": 3,
+      "longitud_total_m": 8.878,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P1_01_0008",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "elementos": [
+        "VIGA_P1_01_0094",
+        "VIGA_P1_01_0095"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 5.173,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P2_01_0001",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "elementos": [
+        "VIGA_P2_01_0001",
+        "VIGA_P2_01_0057",
+        "VIGA_P2_01_0087"
+      ],
+      "cantidad_segmentos": 3,
+      "longitud_total_m": 9.05,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P2_01_0002",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "elementos": [
+        "VIGA_P2_01_0003",
+        "VIGA_P2_01_0038",
+        "VIGA_P2_01_0063"
+      ],
+      "cantidad_segmentos": 3,
+      "longitud_total_m": 9.3,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P2_01_0003",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "elementos": [
+        "VIGA_P2_01_0005",
+        "VIGA_P2_01_0021"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 9.75,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P2_01_0004",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "elementos": [
+        "VIGA_P2_01_0048",
+        "VIGA_P2_01_0049",
+        "VIGA_P2_01_0089"
+      ],
+      "cantidad_segmentos": 3,
+      "longitud_total_m": 9.05,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P2_01_0005",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "elementos": [
+        "VIGA_P2_01_0011",
+        "VIGA_P2_01_0030",
+        "VIGA_P2_01_0032"
+      ],
+      "cantidad_segmentos": 3,
+      "longitud_total_m": 9.3,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P2_01_0006",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "elementos": [
+        "VIGA_P2_01_0014",
+        "VIGA_P2_01_0026",
+        "VIGA_P2_01_0029"
+      ],
+      "cantidad_segmentos": 3,
+      "longitud_total_m": 9.3,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P2_01_0007",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "elementos": [
+        "VIGA_P2_01_0045",
+        "VIGA_P2_01_0085"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 8.3,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P2_01_0008",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "elementos": [
+        "VIGA_P2_01_0041",
+        "VIGA_P2_01_0077"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 6.65,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P2_01_0009",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "elementos": [
+        "VIGA_P2_01_0046",
+        "VIGA_P2_01_0086"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 8.0,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P2_01_0010",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "elementos": [
+        "VIGA_P2_01_0042",
+        "VIGA_P2_01_0078"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 6.35,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P2_01_0011",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "elementos": [
+        "VIGA_P2_01_0051",
+        "VIGA_P2_01_0083"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 7.95,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P2_01_0012",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "elementos": [
+        "VIGA_P2_01_0055",
+        "VIGA_P2_01_0073"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 6.3,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P2_01_0013",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "elementos": [
+        "VIGA_P2_01_0052",
+        "VIGA_P2_01_0084"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 7.95,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P2_01_0014",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "elementos": [
+        "VIGA_P2_01_0056",
+        "VIGA_P2_01_0074"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 6.3,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P2_01_0015",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "elementos": [
+        "VIGA_P2_01_0065",
+        "VIGA_P2_01_0067",
+        "VIGA_P2_01_0069"
+      ],
+      "cantidad_segmentos": 3,
+      "longitud_total_m": 11.9,
+      "estado_grupo": "FRAGMENTADA"
+    },
+    {
+      "id": "VIGA_GRUPO_P2_01_0016",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "elementos": [
+        "VIGA_P2_01_0066",
+        "VIGA_P2_01_0068",
+        "VIGA_P2_01_0070"
+      ],
+      "cantidad_segmentos": 3,
+      "longitud_total_m": 12.5,
+      "estado_grupo": "FRAGMENTADA"
+    }
+  ],
+  "total_grupos_logicos": 24,
+  "criterio": [
+    "Debe provenir de capa RLE-VIGA.",
+    "Categorias: CONFIRMADA, POSIBLE, FALSO_POSITIVO, DUPLICADA, FRAGMENTADA, NEEDS_REVIEW.",
+    "Se marca POSIBLE si no tiene etiqueta V. cercana dentro de 2.0 m o parece cara paralela de otra viga.",
+    "Se marca FRAGMENTADA si pertenece a un grupo de segmentos colineales contiguos o solapados.",
+    "Se marca FALSO_POSITIVO si es demasiado corta o acumula baja confianza.",
+    "No se convierte automaticamente a centrolinea ni a 3D en esta etapa."
+  ],
+  "elementos": [
+    {
+      "id": "VIGA_P1_01_0001",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Eb-Ec",
+        "y": "1b-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0031",
+        "distancia_m": 0.913
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0002"
+      ],
+      "geometria": {
+        "inicio": [
+          27.841027268939552,
+          9.19996990269031
+        ],
+        "fin": [
+          37.141027268910825,
+          9.199969902690341
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0002",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Eb-Ec",
+        "y": "1b-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0031",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0001"
+      ],
+      "geometria": {
+        "inicio": [
+          27.841027268939552,
+          8.59996990269031
+        ],
+        "fin": [
+          37.141027268910825,
+          8.59996990269034
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0003",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "F_prime-G",
+        "y": "1b-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0029",
+        "distancia_m": 0.918
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0005"
+      ],
+      "geometria": {
+        "inicio": [
+          42.791027268972165,
+          9.19996990269036
+        ],
+        "fin": [
+          44.681027268916154,
+          9.199969902690368
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0004",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "F_prime-G",
+        "y": "1b-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0030",
+        "distancia_m": 0.913
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0006"
+      ],
+      "geometria": {
+        "inicio": [
+          37.841027268910835,
+          9.199969902690341
+        ],
+        "fin": [
+          42.191027268972164,
+          9.19996990269036
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0005",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "F_prime-G",
+        "y": "1b-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0029",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0003"
+      ],
+      "geometria": {
+        "inicio": [
+          42.79102726897217,
+          8.59996990269036
+        ],
+        "fin": [
+          47.14102726903346,
+          8.59996990269036
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0006",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "F_prime-G",
+        "y": "1b-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0030",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0004"
+      ],
+      "geometria": {
+        "inicio": [
+          37.841027268910835,
+          8.59996990269034
+        ],
+        "fin": [
+          42.191027268972164,
+          8.59996990269035
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0007",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ga-H",
+        "y": "1b-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0027",
+        "distancia_m": 0.913
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0009"
+      ],
+      "geometria": {
+        "inicio": [
+          52.79102726890096,
+          9.199969902690391
+        ],
+        "fin": [
+          57.141027268962276,
+          9.1999699026904
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0008",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ga-H",
+        "y": "1b-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0028",
+        "distancia_m": 0.913
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0010"
+      ],
+      "geometria": {
+        "inicio": [
+          47.841027269033454,
+          9.199969902690368
+        ],
+        "fin": [
+          52.19102726890095,
+          9.199969902690391
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0009",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ga-H",
+        "y": "1b-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0027",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0007"
+      ],
+      "geometria": {
+        "inicio": [
+          52.79102726890097,
+          8.599969902690383
+        ],
+        "fin": [
+          57.141027268962276,
+          8.5999699026904
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0010",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ga-H",
+        "y": "1b-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0028",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0008"
+      ],
+      "geometria": {
+        "inicio": [
+          47.841027269033454,
+          8.59996990269036
+        ],
+        "fin": [
+          52.19102726890095,
+          8.599969902690383
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0011",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "1b-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0026",
+        "distancia_m": 0.913
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0013"
+      ],
+      "geometria": {
+        "inicio": [
+          62.79102726883261,
+          9.199969902690418
+        ],
+        "fin": [
+          67.14102726889396,
+          9.199969902690432
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0012",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H-H1",
+        "y": "1b-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0025",
+        "distancia_m": 0.913
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0014"
+      ],
+      "geometria": {
+        "inicio": [
+          57.84102726896228,
+          9.1999699026904
+        ],
+        "fin": [
+          62.19102726883263,
+          9.199969902690409
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0013",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "1b-2"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P1_01_0001",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0026",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_01_0001",
+        "posible_cara_paralela_de_VIGA_P1_01_0011"
+      ],
+      "geometria": {
+        "inicio": [
+          62.79102726883262,
+          8.59996990269041
+        ],
+        "fin": [
+          67.14102726889396,
+          8.599969902690432
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0014",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H-H1",
+        "y": "1b-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0025",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0012"
+      ],
+      "geometria": {
+        "inicio": [
+          57.84102726896228,
+          8.5999699026904
+        ],
+        "fin": [
+          62.19102726883264,
+          8.59996990269041
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0015",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "I-IA",
+        "y": "1b-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0024",
+        "distancia_m": 0.913
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0016"
+      ],
+      "geometria": {
+        "inicio": [
+          67.84102726889395,
+          9.199969902690432
+        ],
+        "fin": [
+          72.1410272689012,
+          9.199969902690441
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0016",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "I-IA",
+        "y": "1b-2"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P1_01_0001",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0024",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_01_0001",
+        "posible_cara_paralela_de_VIGA_P1_01_0015"
+      ],
+      "geometria": {
+        "inicio": [
+          67.84102726889395,
+          8.599969902690432
+        ],
+        "fin": [
+          72.1410272689012,
+          8.599969902690441
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0017",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Eb-Ec",
+        "y": "1_prime-1b"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0017",
+        "distancia_m": 0.913
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0018"
+      ],
+      "geometria": {
+        "inicio": [
+          27.841027268939566,
+          0.2999699026704911
+        ],
+        "fin": [
+          37.14102726891085,
+          0.29996990267051843
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0018",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Eb-Ec",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0017",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0017"
+      ],
+      "geometria": {
+        "inicio": [
+          27.841027268939566,
+          -0.30003009732951796
+        ],
+        "fin": [
+          37.14102726891085,
+          -0.30003009732949065
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0019",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "F_prime-G",
+        "y": "1_prime-1b"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0019",
+        "distancia_m": 0.913
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0021"
+      ],
+      "geometria": {
+        "inicio": [
+          42.79102726897219,
+          0.2999699026705321
+        ],
+        "fin": [
+          47.14102726903347,
+          0.29996990267054113
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0020",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "F_prime-G",
+        "y": "1_prime-1b"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0018",
+        "distancia_m": 0.913
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0021"
+      ],
+      "geometria": {
+        "inicio": [
+          37.84102726891085,
+          0.2999699026705093
+        ],
+        "fin": [
+          42.191027268972185,
+          0.2999699026705321
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0021",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "F_prime-G",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0018",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0019"
+      ],
+      "geometria": {
+        "inicio": [
+          37.84102726891085,
+          -0.30003009732949065
+        ],
+        "fin": [
+          47.14102726903347,
+          -0.30003009732945884
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0022",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ga-H",
+        "y": "1_prime-1b"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0021",
+        "distancia_m": 0.913
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0024"
+      ],
+      "geometria": {
+        "inicio": [
+          52.791027268900976,
+          0.29996990267055934
+        ],
+        "fin": [
+          57.141027268962276,
+          0.29996990267056844
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0023",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ga-H",
+        "y": "1_prime-1b"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0020",
+        "distancia_m": 0.913
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0024"
+      ],
+      "geometria": {
+        "inicio": [
+          47.841027269033475,
+          0.29996990267054113
+        ],
+        "fin": [
+          52.19102726890098,
+          0.29996990267055934
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0024",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ga-H",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0020",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0022"
+      ],
+      "geometria": {
+        "inicio": [
+          47.841027269033475,
+          -0.30003009732945884
+        ],
+        "fin": [
+          57.141027268962276,
+          -0.30003009732943153
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0025",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "1_prime-1b"
+      },
+      "estado_revision": "CONFIRMADA",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0002",
+        "distancia_m": 0.119
+      },
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "inicio": [
+          62.79102726883265,
+          0.2999699026705821
+        ],
+        "fin": [
+          67.14102726889398,
+          0.29996990267060936
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0026",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H-H1",
+        "y": "1_prime-1b"
+      },
+      "estado_revision": "CONFIRMADA",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0003",
+        "distancia_m": 0.119
+      },
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "inicio": [
+          57.84102726896229,
+          0.29996990267056844
+        ],
+        "fin": [
+          62.191027268832656,
+          0.2999699026705821
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0027",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "I-IA",
+        "y": "1_prime-1b"
+      },
+      "estado_revision": "CONFIRMADA",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0056",
+        "distancia_m": 0.122
+      },
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "inicio": [
+          67.84102726889398,
+          0.29996990267060025
+        ],
+        "fin": [
+          72.14102726890121,
+          0.29996990267060936
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0028",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Eb-Ec",
+        "y": "2a-3"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0032",
+        "distancia_m": 0.913
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0029"
+      ],
+      "geometria": {
+        "inicio": [
+          27.841027268939545,
+          16.44996990275363
+        ],
+        "fin": [
+          37.14102726891081,
+          16.44996990275366
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0029",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Eb-Ec",
+        "y": "2a-3"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0032",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0028"
+      ],
+      "geometria": {
+        "inicio": [
+          27.841027268939545,
+          15.84996990275362
+        ],
+        "fin": [
+          37.14102726891081,
+          15.84996990275366
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0030",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "F_prime-G",
+        "y": "2a-3"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0046",
+        "distancia_m": 0.913
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0031"
+      ],
+      "geometria": {
+        "inicio": [
+          37.841027268910814,
+          16.44996990275366
+        ],
+        "fin": [
+          44.681027268916154,
+          16.44996990275368
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0031",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "F_prime-G",
+        "y": "2a-3"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0047",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0030"
+      ],
+      "geometria": {
+        "inicio": [
+          42.79102726897216,
+          15.849969902753669
+        ],
+        "fin": [
+          44.681027268916154,
+          15.84996990275368
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0032",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "F_prime-G",
+        "y": "2a-3"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0046",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0030"
+      ],
+      "geometria": {
+        "inicio": [
+          37.841027268910814,
+          15.84996990275366
+        ],
+        "fin": [
+          42.19102726897215,
+          15.849969902753669
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0033",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ga-H",
+        "y": "2a-3"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0048",
+        "distancia_m": 0.913
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0034"
+      ],
+      "geometria": {
+        "inicio": [
+          47.84102726903345,
+          16.44996990275369
+        ],
+        "fin": [
+          57.14102726896227,
+          16.44996990275371
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0034",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ga-H",
+        "y": "2a-3"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0049",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0033"
+      ],
+      "geometria": {
+        "inicio": [
+          52.79102726890095,
+          15.8499699027537
+        ],
+        "fin": [
+          57.14102726896227,
+          15.849969902753719
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0035",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ga-H",
+        "y": "2a-3"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0048",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0033"
+      ],
+      "geometria": {
+        "inicio": [
+          47.84102726903345,
+          15.84996990275368
+        ],
+        "fin": [
+          52.19102726890094,
+          15.8499699027537
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0036",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "2a-3"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P1_01_0002",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0090",
+        "distancia_m": 0.346
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_01_0002",
+        "posible_cara_paralela_de_VIGA_P1_01_0037"
+      ],
+      "geometria": {
+        "inicio": [
+          57.84102726896227,
+          16.44996990275371
+        ],
+        "fin": [
+          67.14102726889395,
+          16.44996990275375
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0037",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "2a-3"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0051",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0036"
+      ],
+      "geometria": {
+        "inicio": [
+          62.79102726883261,
+          15.849969902753731
+        ],
+        "fin": [
+          67.14102726889395,
+          15.84996990275374
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0038",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H-H1",
+        "y": "2a-3"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0050",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0036"
+      ],
+      "geometria": {
+        "inicio": [
+          57.84102726896227,
+          15.849969902753719
+        ],
+        "fin": [
+          62.1910272688326,
+          15.849969902753731
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0039",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "I-IA",
+        "y": "2a-3"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P1_01_0002",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0057",
+        "distancia_m": 0.913
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_01_0002",
+        "posible_cara_paralela_de_VIGA_P1_01_0040"
+      ],
+      "geometria": {
+        "inicio": [
+          67.84102726889395,
+          16.44996990275375
+        ],
+        "fin": [
+          72.14102726890118,
+          16.44996990275376
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0040",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "I-IA",
+        "y": "2a-3"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0057",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0039"
+      ],
+      "geometria": {
+        "inicio": [
+          67.84102726889395,
+          15.84996990275374
+        ],
+        "fin": [
+          72.14102726890118,
+          15.84996990275376
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0041",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ed-F",
+        "y": "1b-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0015",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0042"
+      ],
+      "geometria": {
+        "inicio": [
+          37.19102726891086,
+          0.3499699026705184
+        ],
+        "fin": [
+          37.19102726891083,
+          8.549969902690341
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0042",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "F_prime-G",
+        "y": "1b-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0015",
+        "distancia_m": 0.913
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0041"
+      ],
+      "geometria": {
+        "inicio": [
+          37.79102726891085,
+          0.3499699026705184
+        ],
+        "fin": [
+          37.791027268910845,
+          8.549969902690341
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0043",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ed-F",
+        "y": "2-2a"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0014",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0044"
+      ],
+      "geometria": {
+        "inicio": [
+          37.19102726891082,
+          9.24996990269034
+        ],
+        "fin": [
+          37.191027268910815,
+          15.800136558017579
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0044",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "F_prime-G",
+        "y": "2-2a"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0014",
+        "distancia_m": 0.913
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0043"
+      ],
+      "geometria": {
+        "inicio": [
+          37.791027268910824,
+          9.24996990269034
+        ],
+        "fin": [
+          37.79102726891081,
+          15.800136558017579
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0045",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ed-F",
+        "y": "despues de 3_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0043",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0047"
+      ],
+      "geometria": {
+        "inicio": [
+          37.1910272689108,
+          16.50013655801758
+        ],
+        "fin": [
+          37.1910272689108,
+          20.57013655807322
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0046",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "F-F_prime",
+        "y": "despues de 3_prime"
+      },
+      "estado_revision": "FALSO_POSITIVO",
+      "grupo_logico": "VIGA_GRUPO_P1_01_0003",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0043",
+        "distancia_m": 2.086
+      },
+      "confianza_score": 0.3,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_01_0003",
+        "sin_etiqueta_viga_cercana",
+        "viga_muy_corta"
+      ],
+      "geometria": {
+        "inicio": [
+          37.7910272689108,
+          20.570136558073226
+        ],
+        "fin": [
+          37.1910272689108,
+          20.57013655807322
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0047",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "F_prime-G",
+        "y": "despues de 3_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0078",
+        "distancia_m": 0.166
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0045"
+      ],
+      "geometria": {
+        "inicio": [
+          37.79102726891081,
+          16.50013655801758
+        ],
+        "fin": [
+          37.7910272689108,
+          19.97013655807323
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0048",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "F_prime-G",
+        "y": "despues de 3_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0044",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0049"
+      ],
+      "geometria": {
+        "inicio": [
+          44.681027268916154,
+          19.97013655807325
+        ],
+        "fin": [
+          37.7910272689108,
+          19.97013655807323
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0049",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "F_prime-G",
+        "y": "despues de 3_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P1_01_0003",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0044",
+        "distancia_m": 0.913
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_01_0003",
+        "posible_cara_paralela_de_VIGA_P1_01_0048"
+      ],
+      "geometria": {
+        "inicio": [
+          45.28102726891615,
+          20.57013655807326
+        ],
+        "fin": [
+          37.7910272689108,
+          20.570136558073226
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0050",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "F_prime-G",
+        "y": "1b-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0011",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0051"
+      ],
+      "geometria": {
+        "inicio": [
+          47.1910272690335,
+          0.35013655796090914
+        ],
+        "fin": [
+          47.19102726903348,
+          8.549969902690368
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0051",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "G-Ga",
+        "y": "1b-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0011",
+        "distancia_m": 0.913
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0050"
+      ],
+      "geometria": {
+        "inicio": [
+          47.791027269033506,
+          0.35013655796090914
+        ],
+        "fin": [
+          47.791027269033485,
+          8.549969902690368
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0052",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "F_prime-G",
+        "y": "2-2a"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0010",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0053"
+      ],
+      "geometria": {
+        "inicio": [
+          47.19102726903347,
+          9.249969902690369
+        ],
+        "fin": [
+          47.19102726903346,
+          15.80013655801762
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0053",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "G-Ga",
+        "y": "2-2a"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0010",
+        "distancia_m": 0.913
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0052"
+      ],
+      "geometria": {
+        "inicio": [
+          47.79102726903347,
+          9.249969902690369
+        ],
+        "fin": [
+          47.791027269033464,
+          15.80013655801762
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0054",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ga-H",
+        "y": "1b-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0007",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0055"
+      ],
+      "geometria": {
+        "inicio": [
+          57.1910272689623,
+          0.3501365579609501
+        ],
+        "fin": [
+          57.19102726896227,
+          8.549969902690409
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0055",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H-H1",
+        "y": "1b-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0007",
+        "distancia_m": 0.913
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0054"
+      ],
+      "geometria": {
+        "inicio": [
+          57.791027268962296,
+          0.3501365579609501
+        ],
+        "fin": [
+          57.79102726896228,
+          8.549969902690409
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0056",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ga-H",
+        "y": "2-2a"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0006",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0057"
+      ],
+      "geometria": {
+        "inicio": [
+          57.19102726896227,
+          9.2499699026904
+        ],
+        "fin": [
+          57.19102726896226,
+          15.80013655801764
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0057",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H-H1",
+        "y": "2-2a"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0006",
+        "distancia_m": 0.913
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0056"
+      ],
+      "geometria": {
+        "inicio": [
+          57.79102726896226,
+          9.2499699026904
+        ],
+        "fin": [
+          57.79102726896225,
+          15.80013655801764
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0058",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H2-I",
+        "y": "1b-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0055",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0060"
+      ],
+      "geometria": {
+        "inicio": [
+          67.19102726889396,
+          0.3501365579609819
+        ],
+        "fin": [
+          67.19102726889396,
+          8.54996990269044
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0059",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H2-I",
+        "y": "1b-2"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P1_01_0001",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0026",
+        "distancia_m": 1.757
+      },
+      "confianza_score": 0.55,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_01_0001",
+        "viga_muy_corta"
+      ],
+      "geometria": {
+        "inicio": [
+          67.49102726889456,
+          8.54996990269044
+        ],
+        "fin": [
+          67.19102726889396,
+          8.54996990269044
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0060",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "I-IA",
+        "y": "1b-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0055",
+        "distancia_m": 0.913
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0058"
+      ],
+      "geometria": {
+        "inicio": [
+          67.79102726889397,
+          0.3501365579609819
+        ],
+        "fin": [
+          67.79102726889396,
+          8.54996990269044
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0061",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H2-I",
+        "y": "2-2a"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0052",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0062"
+      ],
+      "geometria": {
+        "inicio": [
+          67.19102726889396,
+          9.250136557994688
+        ],
+        "fin": [
+          67.19102726889392,
+          15.80013655801768
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0062",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "I-IA",
+        "y": "2-2a"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0052",
+        "distancia_m": 0.913
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0061"
+      ],
+      "geometria": {
+        "inicio": [
+          67.79102726889396,
+          9.250136557994688
+        ],
+        "fin": [
+          67.79102726889394,
+          15.80013655801768
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0063",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "antes de E_prime",
+        "y": "1b-2"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P1_01_0004",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0042",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_01_0004",
+        "posible_cara_paralela_de_VIGA_P1_01_0064"
+      ],
+      "geometria": {
+        "inicio": [
+          27.191027268939596,
+          0.34996990267049116
+        ],
+        "fin": [
+          27.191027268939596,
+          3.800144550707378
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0064",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "E-Ea",
+        "y": "1b-2"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P1_01_0005",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0042",
+        "distancia_m": 0.913
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_01_0005",
+        "posible_cara_paralela_de_VIGA_P1_01_0063"
+      ],
+      "geometria": {
+        "inicio": [
+          27.791027268939594,
+          0.34996990267049116
+        ],
+        "fin": [
+          27.791027268939594,
+          3.800144550707378
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0065",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "antes de E_prime",
+        "y": "1b-2"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P1_01_0004",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0016",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_01_0004",
+        "posible_cara_paralela_de_VIGA_P1_01_0066"
+      ],
+      "geometria": {
+        "inicio": [
+          27.191027268939596,
+          4.000144550707378
+        ],
+        "fin": [
+          27.19102726893958,
+          8.5499699026903
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0066",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "E-Ea",
+        "y": "1b-2"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P1_01_0005",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0016",
+        "distancia_m": 0.913
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_01_0005",
+        "posible_cara_paralela_de_VIGA_P1_01_0065"
+      ],
+      "geometria": {
+        "inicio": [
+          27.791027268939594,
+          4.000144550707378
+        ],
+        "fin": [
+          27.791027268939583,
+          8.5499699026903
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0067",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "E-Ea",
+        "y": "2-2a"
+      },
+      "estado_revision": "CONFIRMADA",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0033",
+        "distancia_m": 0.078
+      },
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "inicio": [
+          27.791027268939583,
+          9.249969902690308
+        ],
+        "fin": [
+          27.791027268939573,
+          15.80013655801755
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0068",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "IA-I_prime",
+        "y": "1b-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0022",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0069"
+      ],
+      "geometria": {
+        "inicio": [
+          72.19102726889948,
+          0.350136557960991
+        ],
+        "fin": [
+          72.19102726890019,
+          8.55013655799471
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0069",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "I_prime-IB",
+        "y": "1b-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0022",
+        "distancia_m": 0.913
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0068"
+      ],
+      "geometria": {
+        "inicio": [
+          72.79102726889946,
+          0.350136557960991
+        ],
+        "fin": [
+          72.7910272689002,
+          8.55013655799471
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0070",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "IA-I_prime",
+        "y": "2-2a"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0023",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0071"
+      ],
+      "geometria": {
+        "inicio": [
+          72.19102726890121,
+          9.250136557994711
+        ],
+        "fin": [
+          72.19102726890044,
+          15.800136558017659
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0071",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "I_prime-IB",
+        "y": "2-2a"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0023",
+        "distancia_m": 0.913
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0070"
+      ],
+      "geometria": {
+        "inicio": [
+          72.7910272689012,
+          9.250136557994711
+        ],
+        "fin": [
+          72.79102726890044,
+          15.80013655801773
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0072",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "F_prime-G",
+        "y": "1b-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0012",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0073"
+      ],
+      "geometria": {
+        "inicio": [
+          42.191027268972185,
+          0.2999699026705321
+        ],
+        "fin": [
+          42.191027268972164,
+          8.59996990269035
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0073",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "F_prime-G",
+        "y": "1b-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0012",
+        "distancia_m": 0.913
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0072"
+      ],
+      "geometria": {
+        "inicio": [
+          42.79102726897219,
+          0.2999699026705321
+        ],
+        "fin": [
+          42.79102726897217,
+          8.59996990269036
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0074",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "F_prime-G",
+        "y": "2-2a"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0013",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0075"
+      ],
+      "geometria": {
+        "inicio": [
+          42.191027268972164,
+          9.19996990269036
+        ],
+        "fin": [
+          42.19102726897215,
+          15.849969902753669
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0075",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "F_prime-G",
+        "y": "2-2a"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0013",
+        "distancia_m": 0.913
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0074"
+      ],
+      "geometria": {
+        "inicio": [
+          42.791027268972165,
+          9.19996990269036
+        ],
+        "fin": [
+          42.79102726897216,
+          15.849969902753669
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0076",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ga-H",
+        "y": "1b-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0008",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0077"
+      ],
+      "geometria": {
+        "inicio": [
+          52.19102726890098,
+          0.29996990267055934
+        ],
+        "fin": [
+          52.19102726890095,
+          8.599969902690383
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0077",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ga-H",
+        "y": "1b-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0008",
+        "distancia_m": 0.913
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0076"
+      ],
+      "geometria": {
+        "inicio": [
+          52.791027268900976,
+          0.29996990267055934
+        ],
+        "fin": [
+          52.79102726890097,
+          8.599969902690383
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0078",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ga-H",
+        "y": "2-2a"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0009",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0079"
+      ],
+      "geometria": {
+        "inicio": [
+          52.19102726890095,
+          9.199969902690391
+        ],
+        "fin": [
+          52.19102726890094,
+          15.8499699027537
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0079",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ga-H",
+        "y": "2-2a"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0009",
+        "distancia_m": 0.913
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0078"
+      ],
+      "geometria": {
+        "inicio": [
+          52.79102726890096,
+          9.199969902690391
+        ],
+        "fin": [
+          52.79102726890095,
+          15.8499699027537
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0080",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "1b-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0004",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0081"
+      ],
+      "geometria": {
+        "inicio": [
+          62.191027268832656,
+          0.2999699026705821
+        ],
+        "fin": [
+          62.19102726883264,
+          8.59996990269041
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0081",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "1b-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0004",
+        "distancia_m": 0.913
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0080"
+      ],
+      "geometria": {
+        "inicio": [
+          62.79102726883265,
+          0.2999699026705821
+        ],
+        "fin": [
+          62.79102726883262,
+          8.59996990269041
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0082",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "2-2a"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0005",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0083"
+      ],
+      "geometria": {
+        "inicio": [
+          62.19102726883263,
+          9.199969902690409
+        ],
+        "fin": [
+          62.1910272688326,
+          15.849969902753731
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0083",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "2-2a"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0005",
+        "distancia_m": 0.913
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0082"
+      ],
+      "geometria": {
+        "inicio": [
+          62.79102726883261,
+          9.199969902690418
+        ],
+        "fin": [
+          62.79102726883261,
+          15.849969902753731
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0084",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H1-H_prime",
+        "y": "despues de 3_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P1_01_0006",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0083",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_01_0006",
+        "posible_cara_paralela_de_VIGA_P1_01_0085"
+      ],
+      "geometria": {
+        "inicio": [
+          61.86811152935152,
+          19.06241738048755
+        ],
+        "fin": [
+          61.86811152935152,
+          23.47455533199127
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0085",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "despues de 3_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P1_01_0007",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0083",
+        "distancia_m": 0.513
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_01_0007",
+        "posible_cara_paralela_de_VIGA_P1_01_0084"
+      ],
+      "geometria": {
+        "inicio": [
+          62.06811152935154,
+          19.06241723780078
+        ],
+        "fin": [
+          62.06811152935154,
+          23.47455533199127
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0086",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "despues de 3_prime"
+      },
+      "estado_revision": "FALSO_POSITIVO",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0082",
+        "distancia_m": 2.423
+      },
+      "confianza_score": 0.05,
+      "motivos_revision": [
+        "sin_etiqueta_viga_cercana",
+        "viga_demasiado_corta"
+      ],
+      "geometria": {
+        "inicio": [
+          62.068111529351555,
+          28.50639318618822
+        ],
+        "fin": [
+          61.86811152935155,
+          28.50639318618822
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0087",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H1-H_prime",
+        "y": "despues de 3_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P1_01_0006",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0082",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_01_0006",
+        "posible_cara_paralela_de_VIGA_P1_01_0088"
+      ],
+      "geometria": {
+        "inicio": [
+          61.86811152935154,
+          23.77455533199127
+        ],
+        "fin": [
+          61.86811152935155,
+          28.18669399692844
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0088",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "despues de 3_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P1_01_0007",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0082",
+        "distancia_m": 0.513
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_01_0007",
+        "posible_cara_paralela_de_VIGA_P1_01_0087"
+      ],
+      "geometria": {
+        "inicio": [
+          62.06811152935154,
+          23.77455533199127
+        ],
+        "fin": [
+          62.068111529351555,
+          28.186693711554895
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0089",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "despues de 3_prime"
+      },
+      "estado_revision": "FALSO_POSITIVO",
+      "grupo_logico": "VIGA_GRUPO_P1_01_0007",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0082",
+        "distancia_m": 2.449
+      },
+      "confianza_score": 0.05,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_01_0007",
+        "sin_etiqueta_viga_cercana",
+        "viga_demasiado_corta"
+      ],
+      "geometria": {
+        "inicio": [
+          62.1181180691856,
+          28.48669364020249
+        ],
+        "fin": [
+          62.068111529351555,
+          28.50639318618822
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0090",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "despues de 3_prime"
+      },
+      "estado_revision": "NEEDS_REVIEW",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0081",
+        "distancia_m": 0.513
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "geometria_no_ortogonal"
+      ],
+      "geometria": {
+        "inicio": [
+          62.1181180691856,
+          28.48669364020249
+        ],
+        "fin": [
+          67.60340133747759,
+          26.3258244749468
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0091",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "despues de 3_prime"
+      },
+      "estado_revision": "NEEDS_REVIEW",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0081",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "geometria_no_ortogonal"
+      ],
+      "geometria": {
+        "inicio": [
+          67.49102726889386,
+          26.155133679521235
+        ],
+        "fin": [
+          62.11811776246719,
+          28.271734393154325
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0092",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "2a-3"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P1_01_0002",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0090",
+        "distancia_m": 0.276
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_01_0002",
+        "posible_cara_paralela_de_VIGA_P1_01_0037"
+      ],
+      "geometria": {
+        "inicio": [
+          67.49102726889386,
+          16.5201365580177
+        ],
+        "fin": [
+          65.04097125946556,
+          16.52013655801769
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0093",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H2-I",
+        "y": "2a-3"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0090",
+        "distancia_m": 0.076
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0036"
+      ],
+      "geometria": {
+        "inicio": [
+          67.49102726889386,
+          16.7201365580177
+        ],
+        "fin": [
+          65.24097154483933,
+          16.7201365580177
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0094",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "despues de 3_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P1_01_0008",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0088",
+        "distancia_m": 0.273
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_01_0008",
+        "posible_cara_paralela_de_VIGA_P1_01_0096"
+      ],
+      "geometria": {
+        "inicio": [
+          65.0409744588972,
+          18.7624128532316
+        ],
+        "fin": [
+          62.118104704142596,
+          18.76241702378005
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0095",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H2-I",
+        "y": "despues de 3_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P1_01_0008",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0089",
+        "distancia_m": 0.273
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_01_0008",
+        "posible_cara_paralela_de_VIGA_P1_01_0096"
+      ],
+      "geometria": {
+        "inicio": [
+          67.49102726889386,
+          18.76240935733037
+        ],
+        "fin": [
+          65.240974458897,
+          18.76241256785805
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0096",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "despues de 3_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0089",
+        "distancia_m": 0.473
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0094"
+      ],
+      "geometria": {
+        "inicio": [
+          67.49102726889386,
+          18.96240935733058
+        ],
+        "fin": [
+          62.11810498951613,
+          18.96241702377985
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0097",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "despues de 3_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0087",
+        "distancia_m": 0.475
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0098"
+      ],
+      "geometria": {
+        "inicio": [
+          65.240974458897,
+          18.76241256785805
+        ],
+        "fin": [
+          65.24097154483933,
+          16.7201365580177
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0098",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "despues de 3_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0087",
+        "distancia_m": 0.275
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0097"
+      ],
+      "geometria": {
+        "inicio": [
+          65.0409744588972,
+          18.7624128532316
+        ],
+        "fin": [
+          65.04097125946556,
+          16.52013655801769
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0099",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "F_prime-G",
+        "y": "despues de 3_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0077",
+        "distancia_m": 0.113
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0100"
+      ],
+      "geometria": {
+        "inicio": [
+          45.28102726891615,
+          20.57013655807326
+        ],
+        "fin": [
+          45.28102726891615,
+          16.44996990275369
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0100",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "F_prime-G",
+        "y": "despues de 3_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0045",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0099"
+      ],
+      "geometria": {
+        "inicio": [
+          44.681027268916154,
+          19.97013655807325
+        ],
+        "fin": [
+          44.681027268916154,
+          16.44996990275368
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0101",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "F_prime-G",
+        "y": "2-2a"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0106",
+        "distancia_m": 0.913
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0102"
+      ],
+      "geometria": {
+        "inicio": [
+          45.28102726891616,
+          15.84996990275368
+        ],
+        "fin": [
+          45.28102726891615,
+          9.199969902690368
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0102",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "F_prime-G",
+        "y": "2-2a"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0106",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0101"
+      ],
+      "geometria": {
+        "inicio": [
+          44.681027268916154,
+          15.84996990275368
+        ],
+        "fin": [
+          44.681027268916154,
+          9.199969902690368
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0103",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "F_prime-G",
+        "y": "2a-3"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0047",
+        "distancia_m": 1.742
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0104"
+      ],
+      "geometria": {
+        "inicio": [
+          45.28102726891615,
+          16.44996990275368
+        ],
+        "fin": [
+          47.14102726903346,
+          16.4499699027537
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0104",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "F_prime-G",
+        "y": "2a-3"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0047",
+        "distancia_m": 1.516
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0103"
+      ],
+      "geometria": {
+        "inicio": [
+          45.28102726891616,
+          15.84996990275368
+        ],
+        "fin": [
+          47.14102726903346,
+          15.84996990275369
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0105",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "I-IA",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0103",
+        "distancia_m": 0.257
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0107"
+      ],
+      "geometria": {
+        "inicio": [
+          72.73626130281649,
+          -3.6498911795604316
+        ],
+        "fin": [
+          66.39102726871951,
+          -3.6498911795604316
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0106",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H1-H_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0102",
+        "distancia_m": 0.463
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0109"
+      ],
+      "geometria": {
+        "inicio": [
+          61.391027268930486,
+          -0.5998634420390409
+        ],
+        "fin": [
+          61.3910272689305,
+          -3.4998911795604317
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0107",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "I-IA",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0103",
+        "distancia_m": 0.407
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0105"
+      ],
+      "geometria": {
+        "inicio": [
+          72.73626130281649,
+          -3.4998911795604317
+        ],
+        "fin": [
+          66.39102726871951,
+          -3.4998911795604317
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0108",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "F_prime-G",
+        "y": "1b-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0029",
+        "distancia_m": 1.044
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0005"
+      ],
+      "geometria": {
+        "inicio": [
+          45.28102726891615,
+          9.199969902690382
+        ],
+        "fin": [
+          47.14102726903346,
+          9.199969902690368
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0109",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H-H1",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0102",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0106"
+      ],
+      "geometria": {
+        "inicio": [
+          61.24102726893048,
+          -0.5998634420390409
+        ],
+        "fin": [
+          61.24102726893052,
+          -3.6498911795604316
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0110",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0110",
+        "distancia_m": 0.257
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0111"
+      ],
+      "geometria": {
+        "inicio": [
+          62.757314386208705,
+          -3.6498911795604316
+        ],
+        "fin": [
+          61.24102726893048,
+          -3.6498911795604316
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P1_01_0111",
+      "tipo": "viga",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0110",
+        "distancia_m": 0.407
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_01_0110"
+      ],
+      "geometria": {
+        "inicio": [
+          62.757314386208705,
+          -3.4998911795604317
+        ],
+        "fin": [
+          61.391027268930486,
+          -3.4998911795604317
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0001",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_01_0001",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0029",
+        "distancia_m": 0.71
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_01_0001",
+        "posible_cara_paralela_de_VIGA_P2_01_0002"
+      ],
+      "geometria": {
+        "inicio": [
+          -0.19300600673004964,
+          16.5676681955777
+        ],
+        "fin": [
+          4.156993993599931,
+          16.56766819557772
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0002",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0029",
+        "distancia_m": 0.11
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0001"
+      ],
+      "geometria": {
+        "inicio": [
+          0.40699399326995944,
+          15.967668195577698
+        ],
+        "fin": [
+          3.5569939935999195,
+          15.967668195577708
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0003",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_01_0002",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0025",
+        "distancia_m": 0.71
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_01_0002",
+        "posible_cara_paralela_de_VIGA_P2_01_0004"
+      ],
+      "geometria": {
+        "inicio": [
+          7.9569939939299,
+          16.567668195577728
+        ],
+        "fin": [
+          12.306993993423639,
+          16.56766819557774
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0004",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0025",
+        "distancia_m": 0.11
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0003"
+      ],
+      "geometria": {
+        "inicio": [
+          7.9569939939299,
+          15.967668195577719
+        ],
+        "fin": [
+          12.306993993423639,
+          15.967668195577737
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0005",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_01_0003",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0027",
+        "distancia_m": 0.71
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_01_0003",
+        "posible_cara_paralela_de_VIGA_P2_01_0006"
+      ],
+      "geometria": {
+        "inicio": [
+          17.956993993047472,
+          16.56766819557775
+        ],
+        "fin": [
+          22.906993992917368,
+          16.56766819557777
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0006",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0027",
+        "distancia_m": 0.11
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0005"
+      ],
+      "geometria": {
+        "inicio": [
+          17.956993993047472,
+          15.96766819557775
+        ],
+        "fin": [
+          22.306993992917377,
+          15.967668195577769
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0007",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0020",
+        "distancia_m": 0.775
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0008"
+      ],
+      "geometria": {
+        "inicio": [
+          17.906993993047458,
+          15.917668195577749
+        ],
+        "fin": [
+          17.90699399304747,
+          9.367668195514547
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0008",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0020",
+        "distancia_m": 0.175
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0007"
+      ],
+      "geometria": {
+        "inicio": [
+          17.30699399304746,
+          15.917668195577749
+        ],
+        "fin": [
+          17.30699399304746,
+          9.367668195514547
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0009",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "2-2A_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0018",
+        "distancia_m": 0.723
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0010"
+      ],
+      "geometria": {
+        "inicio": [
+          17.956993993047472,
+          9.317668195514559
+        ],
+        "fin": [
+          22.30699399291739,
+          9.317668195514567
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0010",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0018",
+        "distancia_m": 0.123
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0009"
+      ],
+      "geometria": {
+        "inicio": [
+          17.956993993047472,
+          8.717668195514548
+        ],
+        "fin": [
+          22.306993992917377,
+          8.717668195514568
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0011",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FALSO_POSITIVO",
+      "grupo_logico": "VIGA_GRUPO_P2_01_0005",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0002",
+        "distancia_m": 2.096
+      },
+      "confianza_score": 0.3,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_01_0005",
+        "sin_etiqueta_viga_cercana",
+        "viga_muy_corta"
+      ],
+      "geometria": {
+        "inicio": [
+          12.306993993047481,
+          -0.18233180450544295
+        ],
+        "fin": [
+          12.90699399304748,
+          -0.18233180450544295
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0012",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0006",
+        "distancia_m": 0.718
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0013"
+      ],
+      "geometria": {
+        "inicio": [
+          12.906993993047472,
+          8.717668195514568
+        ],
+        "fin": [
+          12.90699399304748,
+          0.417668195494557
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0013",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0006",
+        "distancia_m": 0.118
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0012"
+      ],
+      "geometria": {
+        "inicio": [
+          12.306993993047458,
+          8.717668195514568
+        ],
+        "fin": [
+          12.306993993047481,
+          0.417668195494557
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0014",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FALSO_POSITIVO",
+      "grupo_logico": "VIGA_GRUPO_P2_01_0006",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0009",
+        "distancia_m": 2.037
+      },
+      "confianza_score": 0.3,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_01_0006",
+        "sin_etiqueta_viga_cercana",
+        "viga_muy_corta"
+      ],
+      "geometria": {
+        "inicio": [
+          22.30699399291739,
+          -0.18233180450541112
+        ],
+        "fin": [
+          22.906993992917393,
+          -0.18233180450541112
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0015",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0010",
+        "distancia_m": 0.757
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0016"
+      ],
+      "geometria": {
+        "inicio": [
+          22.90699399291738,
+          8.717668195514568
+        ],
+        "fin": [
+          22.906993992917393,
+          0.417668195494598
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0016",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0010",
+        "distancia_m": 0.157
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0015"
+      ],
+      "geometria": {
+        "inicio": [
+          22.306993992917377,
+          8.717668195514568
+        ],
+        "fin": [
+          22.30699399291739,
+          0.4176681954945889
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0017",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0019",
+        "distancia_m": 0.152
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0018"
+      ],
+      "geometria": {
+        "inicio": [
+          22.30699399291739,
+          9.317668195514567
+        ],
+        "fin": [
+          22.306993992917377,
+          15.967668195577769
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0018",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0019",
+        "distancia_m": 0.752
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0017"
+      ],
+      "geometria": {
+        "inicio": [
+          22.906993992917393,
+          9.317668195514567
+        ],
+        "fin": [
+          22.90699399291738,
+          15.967668195577769
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0019",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C_prime-D",
+        "y": "2-2A_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0017",
+        "distancia_m": 0.72
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0020"
+      ],
+      "geometria": {
+        "inicio": [
+          22.906993992917393,
+          9.317668195514567
+        ],
+        "fin": [
+          27.706993993865407,
+          9.317668195514589
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0020",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C_prime-D",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0017",
+        "distancia_m": 0.12
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0019"
+      ],
+      "geometria": {
+        "inicio": [
+          22.906993992917393,
+          8.717668195514568
+        ],
+        "fin": [
+          27.706993993865407,
+          8.71766819551459
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0021",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C_prime-D",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_01_0003",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0028",
+        "distancia_m": 0.71
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_01_0003",
+        "posible_cara_paralela_de_VIGA_P2_01_0022"
+      ],
+      "geometria": {
+        "inicio": [
+          22.90699399291738,
+          16.56766819557777
+        ],
+        "fin": [
+          27.7069939938654,
+          16.567668195577788
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0022",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C_prime-D",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0028",
+        "distancia_m": 0.11
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0021"
+      ],
+      "geometria": {
+        "inicio": [
+          22.90699399291738,
+          15.967668195577769
+        ],
+        "fin": [
+          27.7069939938654,
+          15.967668195577778
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0023",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0011",
+        "distancia_m": 0.742
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0024"
+      ],
+      "geometria": {
+        "inicio": [
+          17.90699399304747,
+          8.667668195514548
+        ],
+        "fin": [
+          17.90699399304749,
+          0.46766819549454797
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0024",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0011",
+        "distancia_m": 0.142
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0023"
+      ],
+      "geometria": {
+        "inicio": [
+          17.30699399304748,
+          8.667668195514548
+        ],
+        "fin": [
+          17.30699399304749,
+          0.46766819549454797
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0025",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0008",
+        "distancia_m": 0.721
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0026"
+      ],
+      "geometria": {
+        "inicio": [
+          17.956993993047472,
+          0.4176681954945798
+        ],
+        "fin": [
+          22.30699399291739,
+          0.4176681954945889
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0026",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_01_0006",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0008",
+        "distancia_m": 0.121
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_01_0006",
+        "posible_cara_paralela_de_VIGA_P2_01_0025"
+      ],
+      "geometria": {
+        "inicio": [
+          17.956993993047472,
+          -0.18233180450542022
+        ],
+        "fin": [
+          22.30699399291739,
+          -0.18233180450541112
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0027",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0008",
+        "distancia_m": 1.072
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "viga_muy_corta"
+      ],
+      "geometria": {
+        "inicio": [
+          21.28199399406904,
+          -0.18233180450542022
+        ],
+        "fin": [
+          21.28199399406904,
+          0.4176681954945889
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0028",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C_prime-D",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0009",
+        "distancia_m": 0.715
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0029"
+      ],
+      "geometria": {
+        "inicio": [
+          22.906993992917393,
+          0.417668195494598
+        ],
+        "fin": [
+          27.256991969363416,
+          0.41766819549460704
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0029",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C_prime-D",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_01_0006",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0009",
+        "distancia_m": 0.115
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_01_0006",
+        "posible_cara_paralela_de_VIGA_P2_01_0028"
+      ],
+      "geometria": {
+        "inicio": [
+          22.906993992917393,
+          -0.18233180450541112
+        ],
+        "fin": [
+          27.256991969363416,
+          -0.18233180450539294
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0030",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_01_0005",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0007",
+        "distancia_m": 0.123
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_01_0005",
+        "posible_cara_paralela_de_VIGA_P2_01_0031"
+      ],
+      "geometria": {
+        "inicio": [
+          17.256993993047473,
+          -0.18233180450542022
+        ],
+        "fin": [
+          12.90699399304748,
+          -0.18233180450544295
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0031",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0007",
+        "distancia_m": 0.723
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0030"
+      ],
+      "geometria": {
+        "inicio": [
+          17.256993993047473,
+          0.4176681954945798
+        ],
+        "fin": [
+          12.90699399304748,
+          0.41766819549456613
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0032",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_01_0005",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0002",
+        "distancia_m": 0.164
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_01_0005",
+        "posible_cara_paralela_de_VIGA_P2_01_0033"
+      ],
+      "geometria": {
+        "inicio": [
+          12.306993993047481,
+          -0.18233180450544295
+        ],
+        "fin": [
+          7.9569939939299,
+          -0.18233180450545206
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0033",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0002",
+        "distancia_m": 0.764
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0032"
+      ],
+      "geometria": {
+        "inicio": [
+          12.306993993047481,
+          0.417668195494557
+        ],
+        "fin": [
+          7.9569939939299,
+          0.4176681954945479
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0034",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "2-2A_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0021",
+        "distancia_m": 0.718
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0035"
+      ],
+      "geometria": {
+        "inicio": [
+          7.9569939939299,
+          9.317668195514559
+        ],
+        "fin": [
+          12.306993993047458,
+          9.317668195514567
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0035",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0021",
+        "distancia_m": 0.118
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0034"
+      ],
+      "geometria": {
+        "inicio": [
+          7.9569939939299,
+          8.717668195514548
+        ],
+        "fin": [
+          12.306993993047458,
+          8.717668195514559
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0036",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "2-2A_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0033",
+        "distancia_m": 0.715
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0037"
+      ],
+      "geometria": {
+        "inicio": [
+          12.906993993047472,
+          9.317668195514567
+        ],
+        "fin": [
+          17.256993993047473,
+          9.317668195514578
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0037",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0033",
+        "distancia_m": 0.115
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0036"
+      ],
+      "geometria": {
+        "inicio": [
+          12.906993993047472,
+          8.717668195514568
+        ],
+        "fin": [
+          17.256993993047473,
+          8.717668195514577
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0038",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "FALSO_POSITIVO",
+      "grupo_logico": "VIGA_GRUPO_P2_01_0002",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0025",
+        "distancia_m": 2.207
+      },
+      "confianza_score": 0.3,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_01_0002",
+        "sin_etiqueta_viga_cercana",
+        "viga_muy_corta"
+      ],
+      "geometria": {
+        "inicio": [
+          12.906993993423638,
+          16.56766819557774
+        ],
+        "fin": [
+          12.306993993423639,
+          16.56766819557774
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0039",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0032",
+        "distancia_m": 0.14
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0040"
+      ],
+      "geometria": {
+        "inicio": [
+          12.306993993423648,
+          9.317668195514567
+        ],
+        "fin": [
+          12.306993993423639,
+          15.967668195577737
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0040",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0032",
+        "distancia_m": 0.74
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0039"
+      ],
+      "geometria": {
+        "inicio": [
+          12.906993993423647,
+          9.317668195514567
+        ],
+        "fin": [
+          12.906993993423638,
+          15.967668195577728
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0041",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_01_0008",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0041",
+        "distancia_m": 0.699
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_01_0008",
+        "posible_cara_paralela_de_VIGA_P2_01_0042"
+      ],
+      "geometria": {
+        "inicio": [
+          4.156993993599931,
+          15.967668195577708
+        ],
+        "fin": [
+          4.156993993599931,
+          11.852668195495669
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0042",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_01_0010",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0041",
+        "distancia_m": 0.099
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_01_0010",
+        "posible_cara_paralela_de_VIGA_P2_01_0041"
+      ],
+      "geometria": {
+        "inicio": [
+          3.5569939935999195,
+          15.967668195577708
+        ],
+        "fin": [
+          3.5569939935999195,
+          12.15266819549567
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0043",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "2-2A_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0022",
+        "distancia_m": 0.757
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0044"
+      ],
+      "geometria": {
+        "inicio": [
+          4.156993993599931,
+          9.317668195514559
+        ],
+        "fin": [
+          7.2569939939299,
+          9.317668195514559
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0044",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0022",
+        "distancia_m": 0.157
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0043"
+      ],
+      "geometria": {
+        "inicio": [
+          4.156993993599931,
+          8.717668195514548
+        ],
+        "fin": [
+          7.2569939939299,
+          8.717668195514559
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0045",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_01_0007",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0047",
+        "distancia_m": 0.713
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_01_0007",
+        "posible_cara_paralela_de_VIGA_P2_01_0046"
+      ],
+      "geometria": {
+        "inicio": [
+          4.156993993599931,
+          8.717668195514548
+        ],
+        "fin": [
+          4.15699399359994,
+          4.232668195494807
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0046",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_01_0009",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0047",
+        "distancia_m": 0.113
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_01_0009",
+        "posible_cara_paralela_de_VIGA_P2_01_0045"
+      ],
+      "geometria": {
+        "inicio": [
+          3.5569939935999195,
+          8.717668195514548
+        ],
+        "fin": [
+          3.556993993599931,
+          4.532668195494816
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0047",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0001",
+        "distancia_m": 0.712
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0048"
+      ],
+      "geometria": {
+        "inicio": [
+          4.15699399359994,
+          0.4176681954945479
+        ],
+        "fin": [
+          7.2569939939299,
+          0.4176681954945479
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0048",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_01_0004",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0001",
+        "distancia_m": 0.112
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_01_0004",
+        "posible_cara_paralela_de_VIGA_P2_01_0047"
+      ],
+      "geometria": {
+        "inicio": [
+          3.5569939935999493,
+          -0.18233180450546116
+        ],
+        "fin": [
+          7.2569939939299,
+          -0.18233180450544295
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0049",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_01_0004",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0003",
+        "distancia_m": 0.089
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_01_0004",
+        "posible_cara_paralela_de_VIGA_P2_01_0050"
+      ],
+      "geometria": {
+        "inicio": [
+          3.5569939935999493,
+          -0.18233180450547024
+        ],
+        "fin": [
+          -0.19300600673002918,
+          -0.1823318045054839
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0050",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0003",
+        "distancia_m": 0.689
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0049"
+      ],
+      "geometria": {
+        "inicio": [
+          3.5569939935999493,
+          0.4176681954945389
+        ],
+        "fin": [
+          0.40699399326995944,
+          0.4176681954945161
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0051",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A_prime-A",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_01_0011",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0004",
+        "distancia_m": 0.115
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_01_0011",
+        "posible_cara_paralela_de_VIGA_P2_01_0052"
+      ],
+      "geometria": {
+        "inicio": [
+          -0.19300600673004964,
+          0.4176681954945161
+        ],
+        "fin": [
+          -0.19300600673004964,
+          4.232668195494839
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0052",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_01_0013",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0004",
+        "distancia_m": 0.715
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_01_0013",
+        "posible_cara_paralela_de_VIGA_P2_01_0051"
+      ],
+      "geometria": {
+        "inicio": [
+          0.40699399326995944,
+          0.4176681954945161
+        ],
+        "fin": [
+          0.40699399326995944,
+          4.232668195494816
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0053",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "2-2A_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0031",
+        "distancia_m": 0.759
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0054"
+      ],
+      "geometria": {
+        "inicio": [
+          0.4569939932699708,
+          9.317668195514559
+        ],
+        "fin": [
+          3.556993993599931,
+          9.317668195514559
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0054",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0031",
+        "distancia_m": 0.159
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0053"
+      ],
+      "geometria": {
+        "inicio": [
+          0.4569939932699708,
+          8.717668195514548
+        ],
+        "fin": [
+          3.556993993599931,
+          8.717668195514548
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0055",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A_prime-A",
+        "y": "2-2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_01_0012",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0042",
+        "distancia_m": 0.097
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_01_0012",
+        "posible_cara_paralela_de_VIGA_P2_01_0056"
+      ],
+      "geometria": {
+        "inicio": [
+          -0.19300600673002918,
+          9.367668195514547
+        ],
+        "fin": [
+          -0.19300600673002918,
+          11.8526681954957
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0056",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "2-2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_01_0014",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0042",
+        "distancia_m": 0.697
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_01_0014",
+        "posible_cara_paralela_de_VIGA_P2_01_0055"
+      ],
+      "geometria": {
+        "inicio": [
+          0.4069939932699799,
+          9.367668195514547
+        ],
+        "fin": [
+          0.4069939932699708,
+          11.852668195495678
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0057",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_01_0001",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0024",
+        "distancia_m": 0.71
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_01_0001",
+        "posible_cara_paralela_de_VIGA_P2_01_0058"
+      ],
+      "geometria": {
+        "inicio": [
+          4.156993993599931,
+          16.567668195577706
+        ],
+        "fin": [
+          7.2569939939299,
+          16.567668195577728
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0058",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0024",
+        "distancia_m": 0.11
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0057"
+      ],
+      "geometria": {
+        "inicio": [
+          4.156993993599931,
+          15.967668195577708
+        ],
+        "fin": [
+          7.2569939939299,
+          15.967668195577719
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0059",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0005",
+        "distancia_m": 0.163
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0060"
+      ],
+      "geometria": {
+        "inicio": [
+          7.306993993929891,
+          0.46766819549454797
+        ],
+        "fin": [
+          7.3069939939298685,
+          8.667668195514548
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0060",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0005",
+        "distancia_m": 0.763
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0059"
+      ],
+      "geometria": {
+        "inicio": [
+          7.906993993929891,
+          0.46766819549454797
+        ],
+        "fin": [
+          7.906993993929868,
+          8.667668195514548
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0061",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0023",
+        "distancia_m": 0.124
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0062"
+      ],
+      "geometria": {
+        "inicio": [
+          7.306993993929909,
+          9.367668195514547
+        ],
+        "fin": [
+          7.306993993929891,
+          15.917668195577699
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0062",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0023",
+        "distancia_m": 0.724
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0061"
+      ],
+      "geometria": {
+        "inicio": [
+          7.906993993929909,
+          9.367668195514547
+        ],
+        "fin": [
+          7.906993993929891,
+          15.917668195577699
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0063",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_01_0002",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0026",
+        "distancia_m": 0.71
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_01_0002",
+        "posible_cara_paralela_de_VIGA_P2_01_0064"
+      ],
+      "geometria": {
+        "inicio": [
+          12.90699399342363,
+          16.56766819557774
+        ],
+        "fin": [
+          17.256993993047473,
+          16.56766819557775
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0064",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0026",
+        "distancia_m": 0.11
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0063"
+      ],
+      "geometria": {
+        "inicio": [
+          12.90699399342363,
+          15.967668195577737
+        ],
+        "fin": [
+          17.256993993047473,
+          15.96766819557775
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0065",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A_prime-A",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_01_0015",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0035",
+        "distancia_m": 0.534
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_01_0015",
+        "posible_cara_paralela_de_VIGA_P2_01_0066"
+      ],
+      "geometria": {
+        "inicio": [
+          -3.243008023517989,
+          14.442668195577978
+        ],
+        "fin": [
+          -3.243008023517989,
+          12.152668195495687
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0066",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A_prime-A",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_01_0016",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0035",
+        "distancia_m": 0.134
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_01_0016",
+        "posible_cara_paralela_de_VIGA_P2_01_0065"
+      ],
+      "geometria": {
+        "inicio": [
+          -3.6430080235180093,
+          14.442668195577978
+        ],
+        "fin": [
+          -3.6430080235180093,
+          11.852668195495687
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0067",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A_prime-A",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_01_0015",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0036",
+        "distancia_m": 0.553
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_01_0015",
+        "posible_cara_paralela_de_VIGA_P2_01_0068"
+      ],
+      "geometria": {
+        "inicio": [
+          -3.243008023517989,
+          11.852668195495687
+        ],
+        "fin": [
+          -3.243008023517989,
+          4.532668195494839
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0068",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A_prime-A",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_01_0016",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0036",
+        "distancia_m": 0.153
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_01_0016",
+        "posible_cara_paralela_de_VIGA_P2_01_0067"
+      ],
+      "geometria": {
+        "inicio": [
+          -3.6430080235180093,
+          11.852668195495687
+        ],
+        "fin": [
+          -3.6430080235180093,
+          4.2326681954948295
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0069",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A_prime-A",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_01_0015",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0037",
+        "distancia_m": 0.531
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_01_0015",
+        "posible_cara_paralela_de_VIGA_P2_01_0070"
+      ],
+      "geometria": {
+        "inicio": [
+          -3.243008023517989,
+          4.2326681954948295
+        ],
+        "fin": [
+          -3.243008023517989,
+          1.9426656760976766
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0070",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A_prime-A",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_01_0016",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0037",
+        "distancia_m": 0.131
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_01_0016",
+        "posible_cara_paralela_de_VIGA_P2_01_0069"
+      ],
+      "geometria": {
+        "inicio": [
+          -3.6430080235100193,
+          4.2326681954948295
+        ],
+        "fin": [
+          -3.6430080235100193,
+          1.9426656760976766
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0071",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A_prime-A",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0043",
+        "distancia_m": 0.147
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0072"
+      ],
+      "geometria": {
+        "inicio": [
+          -3.243008023517989,
+          12.152668195495687
+        ],
+        "fin": [
+          -0.19300600673002918,
+          12.152668195495698
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0072",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A_prime-A",
+        "y": "2-2A_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0043",
+        "distancia_m": 0.447
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0071"
+      ],
+      "geometria": {
+        "inicio": [
+          -3.243008023517989,
+          11.852668195495687
+        ],
+        "fin": [
+          -0.19300600673002918,
+          11.8526681954957
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0073",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A_prime-A",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_01_0012",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0030",
+        "distancia_m": 0.129
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_01_0012",
+        "posible_cara_paralela_de_VIGA_P2_01_0074"
+      ],
+      "geometria": {
+        "inicio": [
+          -0.19300600673002918,
+          12.152668195495698
+        ],
+        "fin": [
+          -0.19300600673004964,
+          15.967668195577698
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0074",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_01_0014",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0030",
+        "distancia_m": 0.729
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_01_0014",
+        "posible_cara_paralela_de_VIGA_P2_01_0073"
+      ],
+      "geometria": {
+        "inicio": [
+          0.40699399326995944,
+          12.152668195495698
+        ],
+        "fin": [
+          0.40699399326995944,
+          15.967668195577698
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0075",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0045",
+        "distancia_m": 0.141
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0076"
+      ],
+      "geometria": {
+        "inicio": [
+          0.4069939932699708,
+          12.152668195495679
+        ],
+        "fin": [
+          3.5569939935999195,
+          12.15266819549567
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0076",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "2-2A_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0045",
+        "distancia_m": 0.441
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0075"
+      ],
+      "geometria": {
+        "inicio": [
+          0.4069939932699708,
+          11.852668195495678
+        ],
+        "fin": [
+          3.5569939935999195,
+          11.852668195495669
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0077",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "2-2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_01_0008",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0044",
+        "distancia_m": 0.739
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_01_0008",
+        "posible_cara_paralela_de_VIGA_P2_01_0078"
+      ],
+      "geometria": {
+        "inicio": [
+          4.156993993599931,
+          11.852668195495669
+        ],
+        "fin": [
+          4.156993993599931,
+          9.317668195514559
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0078",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "2-2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_01_0010",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0044",
+        "distancia_m": 0.139
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_01_0010",
+        "posible_cara_paralela_de_VIGA_P2_01_0077"
+      ],
+      "geometria": {
+        "inicio": [
+          3.5569939935999195,
+          11.852668195495669
+        ],
+        "fin": [
+          3.5569939935999195,
+          9.317668195514559
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0079",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A_prime-A",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0048",
+        "distancia_m": 0.428
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0080"
+      ],
+      "geometria": {
+        "inicio": [
+          -3.243008023517989,
+          4.532668195494839
+        ],
+        "fin": [
+          -0.19300600673004964,
+          4.532668195494839
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0080",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A_prime-A",
+        "y": "1_prime-1A_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0048",
+        "distancia_m": 0.128
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0079"
+      ],
+      "geometria": {
+        "inicio": [
+          -3.243008023517989,
+          4.2326681954948295
+        ],
+        "fin": [
+          -0.19300600673004964,
+          4.232668195494839
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0081",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0049",
+        "distancia_m": 0.441
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0082"
+      ],
+      "geometria": {
+        "inicio": [
+          0.40699399326995944,
+          4.532668195494816
+        ],
+        "fin": [
+          3.556993993599931,
+          4.532668195494816
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0082",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "1_prime-1A_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0049",
+        "distancia_m": 0.141
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0081"
+      ],
+      "geometria": {
+        "inicio": [
+          0.40699399326995944,
+          4.232668195494816
+        ],
+        "fin": [
+          3.556993993599931,
+          4.232668195494807
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0083",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A_prime-A",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_01_0011",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0046",
+        "distancia_m": 0.105
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_01_0011",
+        "posible_cara_paralela_de_VIGA_P2_01_0084"
+      ],
+      "geometria": {
+        "inicio": [
+          -0.19300600673007012,
+          4.532668195494839
+        ],
+        "fin": [
+          -0.19300600673007012,
+          8.667668195514548
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0084",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_01_0013",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0046",
+        "distancia_m": 0.705
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_01_0013",
+        "posible_cara_paralela_de_VIGA_P2_01_0083"
+      ],
+      "geometria": {
+        "inicio": [
+          0.40699399326995034,
+          4.532668195494839
+        ],
+        "fin": [
+          0.40699399326993896,
+          8.667668195514548
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0085",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_01_0007",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0040",
+        "distancia_m": 0.709
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_01_0007",
+        "posible_cara_paralela_de_VIGA_P2_01_0086"
+      ],
+      "geometria": {
+        "inicio": [
+          4.15699399359994,
+          4.232668195494807
+        ],
+        "fin": [
+          4.15699399359994,
+          0.4176681954945479
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0086",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A-B",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_01_0009",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0040",
+        "distancia_m": 0.109
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_01_0009",
+        "posible_cara_paralela_de_VIGA_P2_01_0085"
+      ],
+      "geometria": {
+        "inicio": [
+          3.556993993599931,
+          4.232668195494807
+        ],
+        "fin": [
+          3.5569939935999493,
+          0.4176681954945389
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0087",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A_prime-A",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_01_0001",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0051",
+        "distancia_m": 0.726
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_01_0001",
+        "posible_cara_paralela_de_VIGA_P2_01_0088"
+      ],
+      "geometria": {
+        "inicio": [
+          -1.79300802351019,
+          16.5676681955777
+        ],
+        "fin": [
+          -0.19300600673004964,
+          16.5676681955777
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0088",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A_prime-A",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0051",
+        "distancia_m": 0.105
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0087"
+      ],
+      "geometria": {
+        "inicio": [
+          -3.243008023510181,
+          15.967668195577687
+        ],
+        "fin": [
+          -0.19300600673004964,
+          15.967668195577698
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0089",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A_prime-A",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADA",
+      "grupo_logico": "VIGA_GRUPO_P2_01_0004",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0003",
+        "distancia_m": 1.803
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_01_0004",
+        "posible_cara_paralela_de_VIGA_P2_01_0090"
+      ],
+      "geometria": {
+        "inicio": [
+          -0.19300600673002918,
+          -0.18233180450547024
+        ],
+        "fin": [
+          -1.79300802351019,
+          -0.18233180450547024
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0090",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A_prime-A",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0003",
+        "distancia_m": 1.928
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0089"
+      ],
+      "geometria": {
+        "inicio": [
+          -0.19300600673002918,
+          0.41766819549452977
+        ],
+        "fin": [
+          -3.243008023510181,
+          0.4176681954945161
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0091",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0007",
+        "distancia_m": 6.803
+      },
+      "confianza_score": 0.45,
+      "motivos_revision": [
+        "sin_etiqueta_viga_cercana",
+        "posible_cara_paralela_de_VIGA_P2_01_0092"
+      ],
+      "geometria": {
+        "inicio": [
+          17.48255995987501,
+          -6.702331804504093
+        ],
+        "fin": [
+          17.48255995987501,
+          -10.502331804505292
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0092",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0007",
+        "distancia_m": 6.874
+      },
+      "confianza_score": 0.45,
+      "motivos_revision": [
+        "sin_etiqueta_viga_cercana",
+        "posible_cara_paralela_de_VIGA_P2_01_0091"
+      ],
+      "geometria": {
+        "inicio": [
+          17.68255995987501,
+          -10.502331804505292
+        ],
+        "fin": [
+          17.68255995987501,
+          -6.702331804504093
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0093",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C_prime-D",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0058",
+        "distancia_m": 0.351
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0094"
+      ],
+      "geometria": {
+        "inicio": [
+          27.60699196936318,
+          -6.202331804505252
+        ],
+        "fin": [
+          25.8069970532231,
+          -6.202331804505252
+        ]
+      }
+    },
+    {
+      "id": "VIGA_P2_01_0094",
+      "tipo": "viga",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C_prime-D",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0058",
+        "distancia_m": 0.151
+      },
+      "confianza_score": 0.7,
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_01_0093"
+      ],
+      "geometria": {
+        "inicio": [
+          27.60699196936318,
+          -6.402331804505252
+        ],
+        "fin": [
+          25.8069970532231,
+          -6.402331804505261
+        ]
+      }
+    }
+  ]
+}

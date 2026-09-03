@@ -1,0 +1,3438 @@
+{
+  "piso": "1",
+  "tipo": "muro",
+  "estado": "DRAFT_NEEDS_REVIEW",
+  "total": 96,
+  "por_zona": {
+    "parte_1": 53,
+    "parte_2": 43
+  },
+  "por_estado_revision": {
+    "POSIBLE": 67,
+    "FALSO_POSITIVO": 10,
+    "FRAGMENTADO": 9,
+    "CONFIRMADO": 10
+  },
+  "grupos_logicos": [
+    {
+      "id": "MURO_GRUPO_P1_01_0001",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "elementos": [
+        "MURO_P1_01_0026",
+        "MURO_P1_01_0028",
+        "MURO_P1_01_0050"
+      ],
+      "cantidad_segmentos": 3,
+      "longitud_total_m": 25.395,
+      "estado_grupo": "FRAGMENTADO"
+    },
+    {
+      "id": "MURO_GRUPO_P1_01_0002",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "elementos": [
+        "MURO_P1_01_0035",
+        "MURO_P1_01_0038"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 1.21,
+      "estado_grupo": "FRAGMENTADO"
+    },
+    {
+      "id": "MURO_GRUPO_P2_01_0001",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "elementos": [
+        "MURO_P2_01_0031",
+        "MURO_P2_01_0032"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 9.244,
+      "estado_grupo": "FRAGMENTADO"
+    },
+    {
+      "id": "MURO_GRUPO_P2_01_0002",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "elementos": [
+        "MURO_P2_01_0034",
+        "MURO_P2_01_0035"
+      ],
+      "cantidad_segmentos": 2,
+      "longitud_total_m": 11.194,
+      "estado_grupo": "FRAGMENTADO"
+    }
+  ],
+  "total_grupos_logicos": 4,
+  "criterio": [
+    "Debe provenir de capa RLE-MURO.",
+    "Categorias: CONFIRMADO, POSIBLE, FALSO_POSITIVO, DUPLICADO, FRAGMENTADO, NEEDS_REVIEW.",
+    "Se revisa contra etiquetas M.H.A/M.I cercanas.",
+    "Se marca POSIBLE si parece doble cara grafica de un mismo muro o no tiene etiqueta cercana.",
+    "Se marca FRAGMENTADO si pertenece a un grupo de segmentos colineales contiguos o solapados.",
+    "La agrupacion no se lleva a 3D hasta validar la planta 2D."
+  ],
+  "elementos": [
+    {
+      "id": "MURO_P1_01_0001",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Eb-Ec",
+        "y": "2-2a"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0035",
+        "distancia_m": 0.47
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P1_01_0002"
+      ],
+      "geometria": {
+        "inicio": [
+          34.34102726890731,
+          13.945136755375652
+        ],
+        "fin": [
+          30.641027268680894,
+          13.945136755375637
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0002",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Eb-Ec",
+        "y": "2-2a"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0035",
+        "distancia_m": 0.27
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P1_01_0001"
+      ],
+      "geometria": {
+        "inicio": [
+          30.891027268680894,
+          13.745136755375638
+        ],
+        "fin": [
+          34.09102726890731,
+          13.745136755375652
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0003",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "E-Ea",
+        "y": "2-2a"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0036",
+        "distancia_m": 0.261
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P1_01_0005"
+      ],
+      "geometria": {
+        "inicio": [
+          30.641027268680894,
+          13.945136755375637
+        ],
+        "fin": [
+          30.641027268680894,
+          12.26634153631573
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0004",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "E-Ea",
+        "y": "2-2a"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0036",
+        "distancia_m": 0.841
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          30.641027268680894,
+          12.26634153631573
+        ],
+        "fin": [
+          30.891027268680894,
+          12.26634153631573
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0005",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ea-Eb",
+        "y": "2-2a"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0036",
+        "distancia_m": 0.511
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P1_01_0003"
+      ],
+      "geometria": {
+        "inicio": [
+          30.891027268680894,
+          12.26634153631573
+        ],
+        "fin": [
+          30.891027268680894,
+          13.745136755375638
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0006",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ec-Ed",
+        "y": "2-2a"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0037",
+        "distancia_m": 0.245
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P1_01_0008"
+      ],
+      "geometria": {
+        "inicio": [
+          34.09102726890731,
+          13.745136755375652
+        ],
+        "fin": [
+          34.09102726890731,
+          12.26634153631696
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0007",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ed-F",
+        "y": "2-2a"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0037",
+        "distancia_m": 0.744
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          34.09102726890731,
+          12.26634153631696
+        ],
+        "fin": [
+          34.34102726890731,
+          12.26634153631696
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0008",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ed-F",
+        "y": "2-2a"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0037",
+        "distancia_m": 0.495
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P1_01_0006"
+      ],
+      "geometria": {
+        "inicio": [
+          34.34102726890731,
+          12.26634153631696
+        ],
+        "fin": [
+          34.34102726890731,
+          13.945136755375652
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0009",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ea-Eb",
+        "y": "1b-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0039",
+        "distancia_m": 0.231
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P1_01_0010"
+      ],
+      "geometria": {
+        "inicio": [
+          30.891027325097333,
+          6.150136755285521
+        ],
+        "fin": [
+          30.891027325097333,
+          4.000144550707378
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0010",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Eb-Ec",
+        "y": "1b-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0039",
+        "distancia_m": 0.531
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P1_01_0009"
+      ],
+      "geometria": {
+        "inicio": [
+          31.191027325097334,
+          4.000144550707391
+        ],
+        "fin": [
+          31.191027325097334,
+          6.150136755285521
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0011",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ea-Eb",
+        "y": "1b-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0039",
+        "distancia_m": 1.104
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          31.191027325097334,
+          6.150136755285521
+        ],
+        "fin": [
+          30.891027325097333,
+          6.150136755285521
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0012",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Eb-Ec",
+        "y": "1b-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0040",
+        "distancia_m": 0.224
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P1_01_0013"
+      ],
+      "geometria": {
+        "inicio": [
+          33.79102726891083,
+          6.15013675528553
+        ],
+        "fin": [
+          33.79102726891083,
+          4.0001445507074
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0013",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ec-Ed",
+        "y": "1b-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0040",
+        "distancia_m": 0.524
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P1_01_0012"
+      ],
+      "geometria": {
+        "inicio": [
+          34.09102726891084,
+          3.8001445507074005
+        ],
+        "fin": [
+          34.09102726891084,
+          6.15013675528553
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0014",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Ec-Ed",
+        "y": "1b-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0040",
+        "distancia_m": 1.172
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          34.09102726891084,
+          6.15013675528553
+        ],
+        "fin": [
+          33.79102726891083,
+          6.15013675528553
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0015",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "E-Ea",
+        "y": "1b-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0041",
+        "distancia_m": 0.261
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P1_01_0016"
+      ],
+      "geometria": {
+        "inicio": [
+          27.141023235132764,
+          3.800144550707378
+        ],
+        "fin": [
+          34.09102726891084,
+          3.8001445507074005
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0016",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "Eb-Ec",
+        "y": "1b-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0041",
+        "distancia_m": 0.461
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P1_01_0015"
+      ],
+      "geometria": {
+        "inicio": [
+          33.79102726891083,
+          4.0001445507074
+        ],
+        "fin": [
+          31.191027325097334,
+          4.000144550707378
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0017",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "E-Ea",
+        "y": "1b-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0038",
+        "distancia_m": 0.461
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P1_01_0015"
+      ],
+      "geometria": {
+        "inicio": [
+          30.891027325097326,
+          4.000144550707378
+        ],
+        "fin": [
+          27.141023235132764,
+          4.000144550707378
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0018",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "antes de E_prime",
+        "y": "1b-2"
+      },
+      "estado_revision": "FALSO_POSITIVO",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0038",
+        "distancia_m": 1.929
+      },
+      "confianza_score": 0.1,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_demasiado_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          27.141023235132764,
+          4.000144550707378
+        ],
+        "fin": [
+          27.141023235132764,
+          3.800144550707378
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0019",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "antes de E_prime",
+        "y": "2-2a"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0034",
+        "distancia_m": 0.242
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P1_01_0020"
+      ],
+      "geometria": {
+        "inicio": [
+          27.141027268939563,
+          15.80013655801755
+        ],
+        "fin": [
+          27.141027268939563,
+          9.249969902690308
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0020",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "E_prime-E",
+        "y": "2-2a"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0034",
+        "distancia_m": 0.442
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P1_01_0019"
+      ],
+      "geometria": {
+        "inicio": [
+          27.341027268939552,
+          9.249969902690308
+        ],
+        "fin": [
+          27.341027268939552,
+          15.80013655801755
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0021",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "I-IA",
+        "y": "2-2a"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0053",
+        "distancia_m": 0.423
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P1_01_0022"
+      ],
+      "geometria": {
+        "inicio": [
+          67.49102726889387,
+          15.799969902753752
+        ],
+        "fin": [
+          67.49102726889387,
+          9.250136557994688
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0022",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "I-IA",
+        "y": "2-2a"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0053",
+        "distancia_m": 0.123
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P1_01_0021"
+      ],
+      "geometria": {
+        "inicio": [
+          67.79102726889387,
+          9.250136557994688
+        ],
+        "fin": [
+          67.79102726889387,
+          15.799969902753752
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0023",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "I-IA",
+        "y": "2a-3"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0053",
+        "distancia_m": 3.241
+      },
+      "confianza_score": 0.4,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          67.79102726889387,
+          15.799969902753752
+        ],
+        "fin": [
+          67.49102726889387,
+          15.799969902753752
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0024",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "I-IA",
+        "y": "1b-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0054",
+        "distancia_m": 0.411
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P1_01_0025"
+      ],
+      "geometria": {
+        "inicio": [
+          67.49102726889456,
+          8.550136557994701
+        ],
+        "fin": [
+          67.49102726889456,
+          0.3501365579609819
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0025",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "I-IA",
+        "y": "1b-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0054",
+        "distancia_m": 0.111
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P1_01_0024"
+      ],
+      "geometria": {
+        "inicio": [
+          67.79102726889455,
+          0.3501365579609819
+        ],
+        "fin": [
+          67.79102726889455,
+          8.550136557994701
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0026",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADO",
+      "grupo_logico": "MURO_GRUPO_P1_01_0001",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0001",
+        "distancia_m": 0.342
+      },
+      "confianza_score": 0.55,
+      "motivos_revision": [
+        "fragmento_de_MURO_GRUPO_P1_01_0001",
+        "posible_doble_cara_de_MURO_P1_01_0027"
+      ],
+      "geometria": {
+        "inicio": [
+          57.84102726896229,
+          -0.3498634420390499
+        ],
+        "fin": [
+          67.14102726889398,
+          -0.3498634420390499
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0027",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0001",
+        "distancia_m": 0.042
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P1_01_0026"
+      ],
+      "geometria": {
+        "inicio": [
+          67.14102726889398,
+          -0.04986344203904992
+        ],
+        "fin": [
+          57.84102726896229,
+          -0.04986344203904992
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0028",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "I-IA",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADO",
+      "grupo_logico": "MURO_GRUPO_P1_01_0001",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0109",
+        "distancia_m": 0.342
+      },
+      "confianza_score": 0.55,
+      "motivos_revision": [
+        "fragmento_de_MURO_GRUPO_P1_01_0001",
+        "posible_doble_cara_de_MURO_P1_01_0050"
+      ],
+      "geometria": {
+        "inicio": [
+          67.84102726889398,
+          -0.3498634420390181
+        ],
+        "fin": [
+          72.14102726890121,
+          -0.349863442039009
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0029",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "I-IA",
+        "y": "despues de 3_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0079",
+        "distancia_m": 0.291
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P1_01_0031"
+      ],
+      "geometria": {
+        "inicio": [
+          67.49102726889386,
+          26.3257748655718
+        ],
+        "fin": [
+          67.49102726889386,
+          16.52013655801769
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0030",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "I-IA",
+        "y": "2a-3"
+      },
+      "estado_revision": "FALSO_POSITIVO",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0053",
+        "distancia_m": 3.965
+      },
+      "confianza_score": 0.1,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_demasiado_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          67.49102726889386,
+          16.52013655801769
+        ],
+        "fin": [
+          67.69102726889386,
+          16.52013655801769
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0031",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "I-IA",
+        "y": "despues de 3_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0079",
+        "distancia_m": 0.591
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P1_01_0029"
+      ],
+      "geometria": {
+        "inicio": [
+          67.79102726889386,
+          16.72013655801769
+        ],
+        "fin": [
+          67.79102726889386,
+          26.3257748655718
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0032",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "I-IA",
+        "y": "despues de 3_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0079",
+        "distancia_m": 4.381
+      },
+      "confianza_score": 0.4,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          67.79102726889386,
+          26.3257748655718
+        ],
+        "fin": [
+          67.49102726889386,
+          26.3257748655718
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0033",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H-H1",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FALSO_POSITIVO",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0001",
+        "distancia_m": 1.095
+      },
+      "confianza_score": 0.3,
+      "motivos_revision": [
+        "muro_demasiado_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          61.24102726893048,
+          -0.44986344203904993
+        ],
+        "fin": [
+          61.24102726893048,
+          -0.5998634420390409
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0034",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "IA-I_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FALSO_POSITIVO",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0098",
+        "distancia_m": 0.921
+      },
+      "confianza_score": 0.3,
+      "motivos_revision": [
+        "muro_demasiado_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          69.9910272691625,
+          -10.06509217389666
+        ],
+        "fin": [
+          70.19102726916249,
+          -10.065092173919261
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0035",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "IA-I_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADO",
+      "grupo_logico": "MURO_GRUPO_P1_01_0002",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0098",
+        "distancia_m": 0.615
+      },
+      "confianza_score": 0.55,
+      "motivos_revision": [
+        "fragmento_de_MURO_GRUPO_P1_01_0002",
+        "posible_doble_cara_de_MURO_P1_01_0039"
+      ],
+      "geometria": {
+        "inicio": [
+          70.19102726916249,
+          -10.065092173919261
+        ],
+        "fin": [
+          70.1910272691196,
+          -10.596960107569462
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0036",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "IA-I_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0092",
+        "distancia_m": 0.444
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P1_01_0037"
+      ],
+      "geometria": {
+        "inicio": [
+          70.1910272691196,
+          -10.596960107569462
+        ],
+        "fin": [
+          72.73626130281652,
+          -10.59696010751381
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0037",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "IA-I_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0092",
+        "distancia_m": 0.244
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P1_01_0036"
+      ],
+      "geometria": {
+        "inicio": [
+          72.73626130281649,
+          -10.796960107544232
+        ],
+        "fin": [
+          70.19102726910323,
+          -10.796960107599903
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0038",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "IA-I_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADO",
+      "grupo_logico": "MURO_GRUPO_P1_01_0002",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0098",
+        "distancia_m": 0.517
+      },
+      "confianza_score": 0.55,
+      "motivos_revision": [
+        "fragmento_de_MURO_GRUPO_P1_01_0002",
+        "posible_doble_cara_de_MURO_P1_01_0039"
+      ],
+      "geometria": {
+        "inicio": [
+          70.19102726910323,
+          -10.796960107599903
+        ],
+        "fin": [
+          70.19102726910323,
+          -11.475385613407656
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0039",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "I-IA",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0098",
+        "distancia_m": 0.317
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P1_01_0035"
+      ],
+      "geometria": {
+        "inicio": [
+          69.9910272691625,
+          -10.06509217389666
+        ],
+        "fin": [
+          69.9910272691625,
+          -11.475385613407656
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0040",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "IB-J",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0099",
+        "distancia_m": 0.53
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P1_01_0041"
+      ],
+      "geometria": {
+        "inicio": [
+          73.0362613028165,
+          -11.475385613373778
+        ],
+        "fin": [
+          73.03626130281648,
+          -0.44986344203904993
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0041",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "I_prime-IB",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0099",
+        "distancia_m": 0.23
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P1_01_0040"
+      ],
+      "geometria": {
+        "inicio": [
+          72.73626130281652,
+          -11.475385613373778
+        ],
+        "fin": [
+          72.73626130281649,
+          -0.44986344203904993
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0042",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0094",
+        "distancia_m": 0.313
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P1_01_0043"
+      ],
+      "geometria": {
+        "inicio": [
+          66.24102726871952,
+          -3.4998911795604317
+        ],
+        "fin": [
+          66.24102726871952,
+          -0.5998634420390591
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0043",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H2-I",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0094",
+        "distancia_m": 0.463
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P1_01_0042"
+      ],
+      "geometria": {
+        "inicio": [
+          66.39102726871951,
+          -3.6498911795604316
+        ],
+        "fin": [
+          66.39102726871953,
+          -0.5998634420390591
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0044",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H2-I",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0100",
+        "distancia_m": 0.257
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P1_01_0046"
+      ],
+      "geometria": {
+        "inicio": [
+          70.21126130243535,
+          -6.299892174034853
+        ],
+        "fin": [
+          62.757314386208705,
+          -6.299892174034853
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0045",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FALSO_POSITIVO",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0101",
+        "distancia_m": 2.645
+      },
+      "confianza_score": 0.1,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_demasiado_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          62.757314386208705,
+          -6.149892174034844
+        ],
+        "fin": [
+          62.757314386208705,
+          -6.299892174034853
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0046",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H2-I",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0100",
+        "distancia_m": 0.407
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P1_01_0044"
+      ],
+      "geometria": {
+        "inicio": [
+          62.757314386208705,
+          -6.149892174034844
+        ],
+        "fin": [
+          70.21126130243535,
+          -6.149892174034844
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0047",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "IA-I_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FALSO_POSITIVO",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0099",
+        "distancia_m": 3.111
+      },
+      "confianza_score": 0.1,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_demasiado_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          70.21126130243535,
+          -6.149892174034844
+        ],
+        "fin": [
+          70.21126130243535,
+          -6.299892174034853
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0048",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0101",
+        "distancia_m": 0.257
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P1_01_0049"
+      ],
+      "geometria": {
+        "inicio": [
+          66.39102726871951,
+          -3.6498911795604316
+        ],
+        "fin": [
+          62.757314386208705,
+          -3.6498911795604316
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0049",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0101",
+        "distancia_m": 0.407
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P1_01_0048"
+      ],
+      "geometria": {
+        "inicio": [
+          66.24102726871952,
+          -3.4998911795604317
+        ],
+        "fin": [
+          62.757314386208705,
+          -3.4998911795604317
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0050",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H2-I",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADO",
+      "grupo_logico": "MURO_GRUPO_P1_01_0001",
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0108",
+        "distancia_m": 0.407
+      },
+      "confianza_score": 0.55,
+      "motivos_revision": [
+        "fragmento_de_MURO_GRUPO_P1_01_0001",
+        "posible_doble_cara_de_MURO_P1_01_0026"
+      ],
+      "geometria": {
+        "inicio": [
+          61.24102726893048,
+          -0.44986344203904993
+        ],
+        "fin": [
+          73.03626130281648,
+          -0.44986344203904993
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0051",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "I-IA",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0109",
+        "distancia_m": 0.042
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P1_01_0028"
+      ],
+      "geometria": {
+        "inicio": [
+          67.84102726889398,
+          -0.04986344203901808
+        ],
+        "fin": [
+          72.14102726890121,
+          -0.049863442039008984
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0052",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H2-I",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0108",
+        "distancia_m": 0.257
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P1_01_0026"
+      ],
+      "geometria": {
+        "inicio": [
+          61.24102726893048,
+          -0.5998634420390409
+        ],
+        "fin": [
+          72.73626130281649,
+          -0.5998634420390409
+        ]
+      }
+    },
+    {
+      "id": "MURO_P1_01_0053",
+      "tipo": "muro",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-101.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FALSO_POSITIVO",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P1_01_0101",
+        "distancia_m": 1.426
+      },
+      "confianza_score": 0.3,
+      "motivos_revision": [
+        "muro_demasiado_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          62.757314386208705,
+          -3.6498911795604316
+        ],
+        "fin": [
+          62.757314386208705,
+          -3.4998911795604317
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0001",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "D-D_prime",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0016",
+        "distancia_m": 0.364
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P2_01_0003"
+      ],
+      "geometria": {
+        "inicio": [
+          27.956993993865407,
+          8.667668195514869
+        ],
+        "fin": [
+          27.9569939938654,
+          16.61766819557768
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0002",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "D-D_prime",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0016",
+        "distancia_m": 3.937
+      },
+      "confianza_score": 0.4,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          27.9569939938654,
+          16.61766819557768
+        ],
+        "fin": [
+          27.7069939938654,
+          16.61766819557768
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0003",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "D-D_prime",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0016",
+        "distancia_m": 0.114
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P2_01_0001"
+      ],
+      "geometria": {
+        "inicio": [
+          27.7069939938654,
+          16.61766819557768
+        ],
+        "fin": [
+          27.706993993865407,
+          8.667668195514869
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0004",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "D-D_prime",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0015",
+        "distancia_m": 3.788
+      },
+      "confianza_score": 0.4,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          27.706993993865407,
+          8.667668195514869
+        ],
+        "fin": [
+          27.956993993865407,
+          8.667668195514869
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0005",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C_prime-D",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0014",
+        "distancia_m": 0.345
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P2_01_0007"
+      ],
+      "geometria": {
+        "inicio": [
+          25.31198931113907,
+          3.44767838335752
+        ],
+        "fin": [
+          25.311989311139058,
+          6.26783485081879
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0006",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C_prime-D",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0014",
+        "distancia_m": 1.699
+      },
+      "confianza_score": 0.4,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          25.311989311139058,
+          6.26783485081879
+        ],
+        "fin": [
+          25.06198931113905,
+          6.26783485081879
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0007",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C_prime-D",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0014",
+        "distancia_m": 0.095
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P2_01_0005"
+      ],
+      "geometria": {
+        "inicio": [
+          25.06198931113905,
+          6.26783485081879
+        ],
+        "fin": [
+          25.061989311139058,
+          3.14767838335752
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0008",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C_prime-D",
+        "y": "1_prime-1A_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0013",
+        "distancia_m": 0.4
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P2_01_0009"
+      ],
+      "geometria": {
+        "inicio": [
+          27.706993993865407,
+          3.447678383357529
+        ],
+        "fin": [
+          25.31198931113907,
+          3.44767838335752
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0009",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C_prime-D",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0013",
+        "distancia_m": 0.1
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P2_01_0008"
+      ],
+      "geometria": {
+        "inicio": [
+          25.061989311139058,
+          3.14767838335752
+        ],
+        "fin": [
+          27.706993993865407,
+          3.1476783833575293
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0010",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "D-D_prime",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0015",
+        "distancia_m": 0.117
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P2_01_0012"
+      ],
+      "geometria": {
+        "inicio": [
+          27.7069939938654,
+          6.267668195514557
+        ],
+        "fin": [
+          27.706993993865407,
+          3.447678383357529
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0011",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "D-D_prime",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0012",
+        "distancia_m": 0.106
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P2_01_0012"
+      ],
+      "geometria": {
+        "inicio": [
+          27.706993993865407,
+          3.1476783833575293
+        ],
+        "fin": [
+          27.706993993865417,
+          0.46766819549454797
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0012",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "D-D_prime",
+        "y": "1_prime-1A_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0012",
+        "distancia_m": 0.356
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P2_01_0010"
+      ],
+      "geometria": {
+        "inicio": [
+          27.956993993865407,
+          0.46766819549454797
+        ],
+        "fin": [
+          27.9569939938654,
+          6.267668195514557
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0013",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "D-D_prime",
+        "y": "1A_prime-2"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0015",
+        "distancia_m": 1.391
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          27.9569939938654,
+          6.267668195514557
+        ],
+        "fin": [
+          27.7069939938654,
+          6.267668195514557
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0014",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A_prime-A",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0034",
+        "distancia_m": 0.089
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P2_01_0016"
+      ],
+      "geometria": {
+        "inicio": [
+          -3.243008023510181,
+          16.267668195577688
+        ],
+        "fin": [
+          -1.79300802351019,
+          16.2676681955777
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0015",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A_prime-A",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0034",
+        "distancia_m": 0.631
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          -1.79300802351019,
+          16.2676681955777
+        ],
+        "fin": [
+          -1.79300802351019,
+          16.5676681955777
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0016",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A_prime-A",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0034",
+        "distancia_m": 0.389
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P2_01_0014"
+      ],
+      "geometria": {
+        "inicio": [
+          -1.79300802351019,
+          16.5676681955777
+        ],
+        "fin": [
+          -3.243008023510181,
+          16.56766819557769
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0017",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A_prime-A",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "CONFIRMADO",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0050",
+        "distancia_m": 0.683
+      },
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "inicio": [
+          -3.243008023510181,
+          14.442668195577978
+        ],
+        "fin": [
+          -3.243008023510181,
+          16.267668195577688
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0018",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A_prime-A",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "CONFIRMADO",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0034",
+        "distancia_m": 0.912
+      },
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "inicio": [
+          -3.243008023510181,
+          16.56766819557769
+        ],
+        "fin": [
+          -3.243008023510181,
+          17.357668195577972
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0019",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A_prime-A",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "CONFIRMADO",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0034",
+        "distancia_m": 1.439
+      },
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "inicio": [
+          -3.243008023510181,
+          17.357668195577972
+        ],
+        "fin": [
+          -3.84300802351019,
+          17.357668195577972
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0020",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "antes de A_prime",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "CONFIRMADO",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0050",
+        "distancia_m": 0.083
+      },
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "inicio": [
+          -3.84300802351019,
+          17.357668195577972
+        ],
+        "fin": [
+          -3.84300802351019,
+          14.442668195577978
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0021",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A_prime-A",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "CONFIRMADO",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0050",
+        "distancia_m": 1.203
+      },
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "inicio": [
+          -3.84300802351019,
+          14.442668195577978
+        ],
+        "fin": [
+          -3.243008023510181,
+          14.442668195577978
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0022",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A_prime-A",
+        "y": "antes de 1"
+      },
+      "estado_revision": "CONFIRMADO",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0038",
+        "distancia_m": 0.828
+      },
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "inicio": [
+          -3.243008023510181,
+          -0.9773318045051701
+        ],
+        "fin": [
+          -3.243008023510181,
+          -0.182331804505493
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0023",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A_prime-A",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "CONFIRMADO",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0039",
+        "distancia_m": 0.69
+      },
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "inicio": [
+          -3.243008023510181,
+          0.11766819549451611
+        ],
+        "fin": [
+          -3.243008023510181,
+          1.9426656760976766
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0024",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A_prime-A",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "CONFIRMADO",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0039",
+        "distancia_m": 1.333
+      },
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "inicio": [
+          -3.243008023510181,
+          1.9426656760976766
+        ],
+        "fin": [
+          -3.84300802351019,
+          1.9426656760976766
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0025",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "antes de A_prime",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "CONFIRMADO",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0039",
+        "distancia_m": 0.09
+      },
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "inicio": [
+          -3.84300802351019,
+          1.9426656760976766
+        ],
+        "fin": [
+          -3.84300802351019,
+          -0.9773318045051701
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0026",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A_prime-A",
+        "y": "antes de 1"
+      },
+      "estado_revision": "CONFIRMADO",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0038",
+        "distancia_m": 1.081
+      },
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "inicio": [
+          -3.84300802351019,
+          -0.9773318045051701
+        ],
+        "fin": [
+          -3.243008023510181,
+          -0.9773318045051701
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0027",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A_prime-A",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0038",
+        "distancia_m": 0.4
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P2_01_0028"
+      ],
+      "geometria": {
+        "inicio": [
+          -1.79300802351019,
+          0.11766819549451611
+        ],
+        "fin": [
+          -3.243008023510181,
+          0.11766819549451611
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0028",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A_prime-A",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0038",
+        "distancia_m": 0.1
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P2_01_0027"
+      ],
+      "geometria": {
+        "inicio": [
+          -3.243008023510181,
+          -0.182331804505493
+        ],
+        "fin": [
+          -1.79300802351019,
+          -0.1823318045054839
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0029",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "A_prime-A",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0038",
+        "distancia_m": 0.63
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          -1.79300802351019,
+          -0.1823318045054839
+        ],
+        "fin": [
+          -1.79300802351019,
+          0.11766819549451611
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0030",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0059",
+        "distancia_m": 0.312
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P2_01_0031"
+      ],
+      "geometria": {
+        "inicio": [
+          25.80699705322312,
+          -6.202331804505252
+        ],
+        "fin": [
+          16.36255995987501,
+          -6.202331804505284
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0031",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADO",
+      "grupo_logico": "MURO_GRUPO_P2_01_0001",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0059",
+        "distancia_m": 0.112
+      },
+      "confianza_score": 0.55,
+      "motivos_revision": [
+        "fragmento_de_MURO_GRUPO_P2_01_0001",
+        "posible_doble_cara_de_MURO_P2_01_0030"
+      ],
+      "geometria": {
+        "inicio": [
+          20.906993993036057,
+          -6.402331804505284
+        ],
+        "fin": [
+          25.80699705322312,
+          -6.402331804505252
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0032",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADO",
+      "grupo_logico": "MURO_GRUPO_P2_01_0001",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0060",
+        "distancia_m": 0.112
+      },
+      "confianza_score": 0.55,
+      "motivos_revision": [
+        "fragmento_de_MURO_GRUPO_P2_01_0001",
+        "posible_doble_cara_de_MURO_P2_01_0030"
+      ],
+      "geometria": {
+        "inicio": [
+          16.36255995987501,
+          -6.402331804505293
+        ],
+        "fin": [
+          20.706993993036058,
+          -6.402331804505284
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0033",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FALSO_POSITIVO",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0060",
+        "distancia_m": 2.965
+      },
+      "confianza_score": 0.1,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_demasiado_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          16.36255995987501,
+          -6.202331804505284
+        ],
+        "fin": [
+          16.36255995987501,
+          -6.402331804505293
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0034",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADO",
+      "grupo_logico": "MURO_GRUPO_P2_01_0002",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0052",
+        "distancia_m": 0.349
+      },
+      "confianza_score": 0.55,
+      "motivos_revision": [
+        "fragmento_de_MURO_GRUPO_P2_01_0002",
+        "posible_doble_cara_de_MURO_P2_01_0037"
+      ],
+      "geometria": {
+        "inicio": [
+          20.706993993036058,
+          -10.502331804505284
+        ],
+        "fin": [
+          16.36255995987501,
+          -10.502331804505301
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0035",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FRAGMENTADO",
+      "grupo_logico": "MURO_GRUPO_P2_01_0002",
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0062",
+        "distancia_m": 0.294
+      },
+      "confianza_score": 0.55,
+      "motivos_revision": [
+        "fragmento_de_MURO_GRUPO_P2_01_0002",
+        "posible_doble_cara_de_MURO_P2_01_0037"
+      ],
+      "geometria": {
+        "inicio": [
+          27.75699399388485,
+          -10.50233180450526
+        ],
+        "fin": [
+          20.906993993036057,
+          -10.502331804505284
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0036",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FALSO_POSITIVO",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0052",
+        "distancia_m": 2.718
+      },
+      "confianza_score": 0.1,
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_demasiado_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          16.36255995987501,
+          -10.502331804505301
+        ],
+        "fin": [
+          16.36255995987501,
+          -10.702331804505302
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0037",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0062",
+        "distancia_m": 0.094
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P2_01_0034"
+      ],
+      "geometria": {
+        "inicio": [
+          16.36255995987501,
+          -10.702331804505302
+        ],
+        "fin": [
+          27.956993993884854,
+          -10.702331804505262
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0038",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0053",
+        "distancia_m": 0.12
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P2_01_0039"
+      ],
+      "geometria": {
+        "inicio": [
+          20.706993993036058,
+          -6.402331804505284
+        ],
+        "fin": [
+          20.706993993036058,
+          -10.502331804505284
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0039",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0053",
+        "distancia_m": 0.32
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P2_01_0038"
+      ],
+      "geometria": {
+        "inicio": [
+          20.906993993036057,
+          -10.502331804505284
+        ],
+        "fin": [
+          20.906993993036057,
+          -6.402331804505284
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0040",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "D-D_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0054",
+        "distancia_m": 0.1
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P2_01_0041"
+      ],
+      "geometria": {
+        "inicio": [
+          27.75699399388485,
+          -6.40233180450522
+        ],
+        "fin": [
+          27.75699399388485,
+          -10.50233180450526
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0041",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "D-D_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0061",
+        "distancia_m": 0.261
+      },
+      "confianza_score": 0.65,
+      "motivos_revision": [
+        "posible_doble_cara_de_MURO_P2_01_0040"
+      ],
+      "geometria": {
+        "inicio": [
+          27.956993993884854,
+          -10.702331804505262
+        ],
+        "fin": [
+          27.956993993884854,
+          -6.20233180450522
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0042",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "D-D_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "POSIBLE",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0061",
+        "distancia_m": 0.185
+      },
+      "confianza_score": 0.6,
+      "motivos_revision": [
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          27.956993993884854,
+          -6.20233180450522
+        ],
+        "fin": [
+          27.60699196936318,
+          -6.20233180450522
+        ]
+      }
+    },
+    {
+      "id": "MURO_P2_01_0043",
+      "tipo": "muro",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-101.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "ejes_aproximados": {
+        "x": "D-D_prime",
+        "y": "antes de 1"
+      },
+      "estado_revision": "FALSO_POSITIVO",
+      "grupo_logico": null,
+      "etiqueta_cercana": {
+        "id": "LBL_P2_01_0061",
+        "distancia_m": 0.385
+      },
+      "confianza_score": 0.3,
+      "motivos_revision": [
+        "muro_demasiado_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          27.60699196936318,
+          -6.40233180450522
+        ],
+        "fin": [
+          27.75699399388485,
+          -6.40233180450522
+        ]
+      }
+    }
+  ]
+}

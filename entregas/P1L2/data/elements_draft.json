@@ -1,0 +1,46 @@
+{
+  "source": "Extraccion preliminar desde planos actuales y aclaraciones del usuario.",
+  "status": "draft",
+  "units": "m",
+  "coordinate_sources": {
+    "x": "grid_axes_draft.json",
+    "y": "grid_axes_draft.json",
+    "z": "levels_draft.json"
+  },
+  "notes": [
+    "Este archivo es un inventario inicial; todavia no es el modelo final OpenSees.",
+    "Los elementos con confidence=medium o low requieren revision visual antes de la entrega.",
+    "Los muros largos pueden partirse despues en segmentos entre nodos de grilla para conectar con vigas y diafragmas."
+  ],
+  "elements": [
+    {
+      "id": "W_L1_Y3_E_Iprime",
+      "plan": "2017_67-101-Model.pdf",
+      "level": "1",
+      "type": "wall_equivalent",
+      "stage": "1_or_2_current",
+      "axis_line": "Y=3",
+      "start_axis": "E",
+      "end_axis": "I_prime",
+      "section": "M.H.A. e=20/25/30 por confirmar por tramos",
+      "confidence": "medium",
+      "comment": "Muro verde indicado por usuario sobre eje 3, desde I' hacia E. Falta separar por cambios de espesor y vanos si aparecen."
+    },
+    {
+      "id": "B_L1_Iprime_Y3_local",
+      "plan": "2017_67-101-Model.pdf",
+      "level": "1",
+      "type": "beam",
+      "stage": "1_or_2_current",
+      "near_axes": ["I_prime", "3"],
+      "section": "V. 60/80 o seccion visible por confirmar",
+      "confidence": "medium",
+      "comment": "Elemento azul visible cerca de la interseccion I' con 3 segun aclaracion del usuario. Falta confirmar direccion y nodos extremos."
+    }
+  ],
+  "pending_clarifications": [
+    "Confirmar si el muro sobre eje 3 desde E a I' tiene espesor constante o cambia entre tramos.",
+    "Confirmar si el elemento azul en I' con 3 es una viga, columna/pilar o encuentro de viga con apoyo.",
+    "Confirmar en que planta exacta se esta mirando el ejemplo: cielo piso 1, cielo piso 2/3 o cielo piso 4."
+  ]
+}
