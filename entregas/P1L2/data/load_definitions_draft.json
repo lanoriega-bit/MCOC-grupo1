@@ -1,0 +1,71 @@
+{
+  "source": "Plano CAD 2017_67-700.dwg convertido a DXF y etiquetas de losa en planos 101-103.",
+  "status": "draft",
+  "units": {
+    "input_loads": "kgf/m2",
+    "model_loads": "kN/m2",
+    "length": "m"
+  },
+  "gravity_definition": "qG = peso propio de losa + terminaciones uniformes. La sobrecarga SC se registra aparte y no entra en qG base.",
+  "conversion": {
+    "gamma_concrete_kgf_m3": 2500.0,
+    "kgf_to_kN": 0.00980665
+  },
+  "load_patterns_from_plan_700": [
+    {
+      "id": "G_general_pm260",
+      "pp_losa": "e_m * 2500 kgf/m2",
+      "pm_adic_kgf_m2": 260.0,
+      "sc_kgf_m2": "variable: 250, 300, 400 o 500 segun zona",
+      "use_for_gravity_model": true
+    },
+    {
+      "id": "G_terminacion_liviana_pm200",
+      "pp_losa": "e_m * 2500 kgf/m2",
+      "pm_adic_kgf_m2": 200.0,
+      "sc_kgf_m2": "variable",
+      "use_for_gravity_model": false
+    },
+    {
+      "id": "G_terminacion_pesada_pm300",
+      "pp_losa": "e_m * 2500 kgf/m2",
+      "pm_adic_kgf_m2": 300.0,
+      "sc_kgf_m2": "variable",
+      "use_for_gravity_model": false
+    }
+  ],
+  "qG_by_slab_thickness_general_pm260": [
+    {
+      "slab_thickness_cm": 12,
+      "self_weight_kgf_m2": 300.0,
+      "pm_adic_kgf_m2": 260.0,
+      "qG_kgf_m2": 560.0,
+      "qG_kN_m2": 5.492
+    },
+    {
+      "slab_thickness_cm": 15,
+      "self_weight_kgf_m2": 375.0,
+      "pm_adic_kgf_m2": 260.0,
+      "qG_kgf_m2": 635.0,
+      "qG_kN_m2": 6.227
+    },
+    {
+      "slab_thickness_cm": 18,
+      "self_weight_kgf_m2": 450.0,
+      "pm_adic_kgf_m2": 260.0,
+      "qG_kgf_m2": 710.0,
+      "qG_kN_m2": 6.963
+    },
+    {
+      "slab_thickness_cm": 25,
+      "self_weight_kgf_m2": 625.0,
+      "pm_adic_kgf_m2": 260.0,
+      "qG_kgf_m2": 885.0,
+      "qG_kN_m2": 8.679
+    }
+  ],
+  "pending_clarifications": [
+    "Asignar automaticamente cada zona hatch del plano 700 a los poligonos de losa si se necesita separar PM.ADIC por zona.",
+    "Confirmar si el caso de gravedad de la entrega debe excluir siempre SC o si el profesor quiere ver tambien un caso G+SC."
+  ]
+}

@@ -1,0 +1,5757 @@
+{
+  "piso": "fundacion",
+  "estado": "DRAFT_AUTOMATED_COMPARISON",
+  "metodo": "Comparacion por tipo y cercania del centro geometrico; no modifica el modelo 3D.",
+  "resumen": {
+    "correctos": 0,
+    "faltantes": 180,
+    "sobrantes": 0,
+    "dudosos": 0,
+    "faltantes_parte_1": 68,
+    "faltantes_parte_1_confia": 35,
+    "faltantes_por_tipo": {
+      "muro": 66,
+      "viga": 105,
+      "columna": 9
+    },
+    "sobrantes_por_tipo": {},
+    "dudosos_por_tipo": {}
+  },
+  "correctos": [],
+  "faltantes": [
+    {
+      "id": "CONFLICT_P1_0001",
+      "elemento": "MURO_P1_FUNDACION_0001",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre Ed-F y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.4,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          34.94844982293046,
+          -12.721078169434382
+        ],
+        "fin": [
+          34.54844982293047,
+          -12.721078169434382
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0002",
+      "elemento": "MURO_P1_FUNDACION_0002",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre Ed-F y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.4,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          34.548449822930465,
+          -12.721078169434382
+        ],
+        "fin": [
+          34.548449822930465,
+          -12.321127778809382
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0003",
+      "elemento": "MURO_P1_FUNDACION_0003",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre antes de E_prime y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.4,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          25.248449822959167,
+          -12.321078169434408
+        ],
+        "fin": [
+          25.248449822959167,
+          -12.721078169434408
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0004",
+      "elemento": "MURO_P1_FUNDACION_0004",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre antes de E_prime y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.65,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana"
+      ],
+      "geometria": {
+        "inicio": [
+          25.248449822959167,
+          -12.721078169434408
+        ],
+        "fin": [
+          24.748445789146444,
+          -12.721078169434408
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0005",
+      "elemento": "MURO_P1_FUNDACION_0005",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre Ed-F y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.45,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P1_FUNDACION_0025"
+      ],
+      "geometria": {
+        "inicio": [
+          34.94844982293049,
+          -12.721078169434382
+        ],
+        "fin": [
+          34.94844982293049,
+          -19.27124482476162
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0006",
+      "elemento": "MURO_P1_FUNDACION_0006",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre antes de E_prime y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.35,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_MURO_GRUPO_P1_FUNDACION_0001",
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P1_FUNDACION_0007"
+      ],
+      "geometria": {
+        "inicio": [
+          24.54844578914649,
+          -19.27124482476162
+        ],
+        "fin": [
+          24.54844578914649,
+          -12.721078169434437
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0007",
+      "elemento": "MURO_P1_FUNDACION_0007",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre antes de E_prime y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.45,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P1_FUNDACION_0006"
+      ],
+      "geometria": {
+        "inicio": [
+          24.748445789146444,
+          -12.721078169434437
+        ],
+        "fin": [
+          24.748445789146444,
+          -19.27124482476162
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0008",
+      "elemento": "MURO_P1_FUNDACION_0008",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre Eb-Ec y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.35,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_MURO_GRUPO_P1_FUNDACION_0002",
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P1_FUNDACION_0010"
+      ],
+      "geometria": {
+        "inicio": [
+          34.548449822930465,
+          -12.021078169434372
+        ],
+        "fin": [
+          32.74126660147017,
+          -12.021078169434382
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0009",
+      "elemento": "MURO_P1_FUNDACION_0009",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre E-Ea y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.35,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_MURO_GRUPO_P1_FUNDACION_0002",
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P1_FUNDACION_0010"
+      ],
+      "geometria": {
+        "inicio": [
+          24.548449822959235,
+          -12.0210781694344
+        ],
+        "fin": [
+          32.741266601470166,
+          -12.021078169434382
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0010",
+      "elemento": "MURO_P1_FUNDACION_0010",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre E-Ea y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.45,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P1_FUNDACION_0008"
+      ],
+      "geometria": {
+        "inicio": [
+          25.248449822959167,
+          -12.321078169434408
+        ],
+        "fin": [
+          34.548449822930465,
+          -12.321078169434372
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0011",
+      "elemento": "MURO_P1_FUNDACION_0012",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre F_prime-G y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.65,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana"
+      ],
+      "geometria": {
+        "inicio": [
+          45.248449823053534,
+          -12.721078169434481
+        ],
+        "fin": [
+          44.54844982305353,
+          -12.721078169434481
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0012",
+      "elemento": "MURO_P1_FUNDACION_0013",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre F_prime-G y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.65,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana"
+      ],
+      "geometria": {
+        "inicio": [
+          44.54844982305353,
+          -12.721078169434481
+        ],
+        "fin": [
+          44.54844982305353,
+          -12.021078169434473
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0013",
+      "elemento": "MURO_P1_FUNDACION_0014",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre F_prime-G y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.65,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana"
+      ],
+      "geometria": {
+        "inicio": [
+          44.54844982305353,
+          -12.021078169434473
+        ],
+        "fin": [
+          45.248449823053534,
+          -12.021078169434473
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0014",
+      "elemento": "MURO_P1_FUNDACION_0015",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre F_prime-G y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.65,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana"
+      ],
+      "geometria": {
+        "inicio": [
+          45.248449823053534,
+          -12.021078169434473
+        ],
+        "fin": [
+          45.248449823053534,
+          -12.721078169434481
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0015",
+      "elemento": "MURO_P1_FUNDACION_0016",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre Ga-H y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.65,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana"
+      ],
+      "geometria": {
+        "inicio": [
+          55.24844982298234,
+          -12.721078169434454
+        ],
+        "fin": [
+          54.548449822982334,
+          -12.721078169434454
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0016",
+      "elemento": "MURO_P1_FUNDACION_0017",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre Ga-H y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.65,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana"
+      ],
+      "geometria": {
+        "inicio": [
+          54.548449822982334,
+          -12.721078169434454
+        ],
+        "fin": [
+          54.548449822982334,
+          -12.021078169434436
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0017",
+      "elemento": "MURO_P1_FUNDACION_0018",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre Ga-H y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.65,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana"
+      ],
+      "geometria": {
+        "inicio": [
+          54.548449822982334,
+          -12.021078169434436
+        ],
+        "fin": [
+          55.24844982298234,
+          -12.021078169434436
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0018",
+      "elemento": "MURO_P1_FUNDACION_0019",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre Ga-H y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.65,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana"
+      ],
+      "geometria": {
+        "inicio": [
+          55.24844982298234,
+          -12.021078169434436
+        ],
+        "fin": [
+          55.24844982298234,
+          -12.721078169434454
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0019",
+      "elemento": "MURO_P1_FUNDACION_0020",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre H_prime-H2 y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.65,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana"
+      ],
+      "geometria": {
+        "inicio": [
+          64.54844982291401,
+          -12.721078169434408
+        ],
+        "fin": [
+          65.24844982291401,
+          -12.721078169434408
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0020",
+      "elemento": "MURO_P1_FUNDACION_0021",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre H_prime-H2 y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.55,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_MURO_GRUPO_P1_FUNDACION_0003",
+        "sin_etiqueta_muro_cercana"
+      ],
+      "geometria": {
+        "inicio": [
+          65.24844982291401,
+          -12.021078169434409
+        ],
+        "fin": [
+          64.54844982291401,
+          -12.021078169434409
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0021",
+      "elemento": "MURO_P1_FUNDACION_0022",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre H_prime-H2 y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.65,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana"
+      ],
+      "geometria": {
+        "inicio": [
+          64.54844982291401,
+          -12.721078169434408
+        ],
+        "fin": [
+          64.54844982291401,
+          -12.221078169434318
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0022",
+      "elemento": "MURO_P1_FUNDACION_0023",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre H_prime-H2 y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.45,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P1_FUNDACION_0024"
+      ],
+      "geometria": {
+        "inicio": [
+          64.89844982291352,
+          -12.721244824698202
+        ],
+        "fin": [
+          64.89844982291352,
+          -19.271078169457265
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0023",
+      "elemento": "MURO_P1_FUNDACION_0024",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre H_prime-H2 y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.45,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P1_FUNDACION_0023"
+      ],
+      "geometria": {
+        "inicio": [
+          65.19844982291352,
+          -19.271078169457265
+        ],
+        "fin": [
+          65.19844982291352,
+          -12.721244824698202
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0024",
+      "elemento": "MURO_P1_FUNDACION_0025",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre Ed-F y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.45,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P1_FUNDACION_0005"
+      ],
+      "geometria": {
+        "inicio": [
+          35.24844982293048,
+          -28.871244824781456
+        ],
+        "fin": [
+          35.24844982293048,
+          -12.0210781694344
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0025",
+      "elemento": "MURO_P1_FUNDACION_0026",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre H_prime-H2 y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.45,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P1_FUNDACION_0027"
+      ],
+      "geometria": {
+        "inicio": [
+          64.89844982291352,
+          -2.1954398618801725
+        ],
+        "fin": [
+          64.89844982291352,
+          -12.001078169434264
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0026",
+      "elemento": "MURO_P1_FUNDACION_0027",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre H_prime-H2 y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.45,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P1_FUNDACION_0026"
+      ],
+      "geometria": {
+        "inicio": [
+          65.1984498229135,
+          -11.801078169434263
+        ],
+        "fin": [
+          65.1984498229135,
+          -2.1954398618801725
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0027",
+      "elemento": "MURO_P1_FUNDACION_0028",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre H_prime-H2 y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.4,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          64.89844982291352,
+          -2.1954398618801725
+        ],
+        "fin": [
+          65.1984498229135,
+          -2.1954398618801725
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0028",
+      "elemento": "MURO_P1_FUNDACION_0030",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre antes de E_prime y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.35,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_MURO_GRUPO_P1_FUNDACION_0001",
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P1_FUNDACION_0007"
+      ],
+      "geometria": {
+        "inicio": [
+          24.548449822959235,
+          -19.971244824761648
+        ],
+        "fin": [
+          24.548449822959235,
+          -12.0210781694344
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0029",
+      "elemento": "MURO_P1_FUNDACION_0031",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre Ed-F y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.55,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_MURO_GRUPO_P1_FUNDACION_0002",
+        "sin_etiqueta_muro_cercana"
+      ],
+      "geometria": {
+        "inicio": [
+          34.548449822930465,
+          -12.021078169434372
+        ],
+        "fin": [
+          35.24844982293048,
+          -12.021078169434372
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0030",
+      "elemento": "VIGA_P1_FUNDACION_0001",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre F_prime-G y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_FUNDACION_0001",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0002"
+      ],
+      "geometria": {
+        "inicio": [
+          42.948449823053096,
+          -12.021078169434382
+        ],
+        "fin": [
+          35.248499432305486,
+          -12.0210781694344
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0031",
+      "elemento": "VIGA_P1_FUNDACION_0002",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre F_prime-G y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_FUNDACION_0004",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0001"
+      ],
+      "geometria": {
+        "inicio": [
+          35.24844982293046,
+          -12.221078169434408
+        ],
+        "fin": [
+          42.948449823053096,
+          -12.221078169434382
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0032",
+      "elemento": "VIGA_P1_FUNDACION_0003",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre F_prime-G y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_FUNDACION_0002",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0004"
+      ],
+      "geometria": {
+        "inicio": [
+          46.848449823053095,
+          -12.021078169434372
+        ],
+        "fin": [
+          45.24844982305311,
+          -12.021078169434372
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0033",
+      "elemento": "VIGA_P1_FUNDACION_0004",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre F_prime-G y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_FUNDACION_0005",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0003"
+      ],
+      "geometria": {
+        "inicio": [
+          45.24844982305311,
+          -12.221078169434373
+        ],
+        "fin": [
+          46.848449823053095,
+          -12.221078169434373
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0034",
+      "elemento": "VIGA_P1_FUNDACION_0005",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre Ga-H y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_FUNDACION_0003",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0006"
+      ],
+      "geometria": {
+        "inicio": [
+          56.84844982298189,
+          -12.021078169434327
+        ],
+        "fin": [
+          55.2484498229819,
+          -12.021078169434327
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0035",
+      "elemento": "VIGA_P1_FUNDACION_0006",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre Ga-H y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_FUNDACION_0006",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0005"
+      ],
+      "geometria": {
+        "inicio": [
+          55.2484498229819,
+          -12.221078169434335
+        ],
+        "fin": [
+          56.84844982298189,
+          -12.221078169434335
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0036",
+      "elemento": "VIGA_P1_FUNDACION_0007",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre H2-I y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.7,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0008"
+      ],
+      "geometria": {
+        "inicio": [
+          69.54844982292083,
+          -12.22124482469821
+        ],
+        "fin": [
+          65.24844982291361,
+          -12.22124482469822
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0037",
+      "elemento": "VIGA_P1_FUNDACION_0008",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre H2-I y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.7,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0007"
+      ],
+      "geometria": {
+        "inicio": [
+          65.24844982291361,
+          -12.02124482469821
+        ],
+        "fin": [
+          69.54844982292083,
+          -12.0212448246982
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0038",
+      "elemento": "VIGA_P1_FUNDACION_0009",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre I-IA y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.45,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_viga_cercana",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0010"
+      ],
+      "geometria": {
+        "inicio": [
+          69.99844982292083,
+          -12.721244824698193
+        ],
+        "fin": [
+          69.99844982292085,
+          -19.271078169457237
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0039",
+      "elemento": "VIGA_P1_FUNDACION_0010",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre I-IA y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.45,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_viga_cercana",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0009"
+      ],
+      "geometria": {
+        "inicio": [
+          69.79844982292084,
+          -19.271078169457237
+        ],
+        "fin": [
+          69.79844982292083,
+          -12.721244824698193
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0040",
+      "elemento": "VIGA_P1_FUNDACION_0011",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre Ga-H y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_FUNDACION_0007",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0013"
+      ],
+      "geometria": {
+        "inicio": [
+          50.52552761099219,
+          -2.3558030479481205
+        ],
+        "fin": [
+          50.5255276109922,
+          -8.178964396626947
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0041",
+      "elemento": "VIGA_P1_FUNDACION_0013",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre Ga-H y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_FUNDACION_0008",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0011"
+      ],
+      "geometria": {
+        "inicio": [
+          50.2255276109922,
+          -8.178964396626947
+        ],
+        "fin": [
+          50.22552761099219,
+          -2.3558030479481205
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0042",
+      "elemento": "VIGA_P1_FUNDACION_0014",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre Ga-H y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.4,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_viga_cercana",
+        "viga_muy_corta"
+      ],
+      "geometria": {
+        "inicio": [
+          50.52552761099219,
+          -2.3558030479481205
+        ],
+        "fin": [
+          50.22552761099219,
+          -2.3558030479481205
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0043",
+      "elemento": "VIGA_P1_FUNDACION_0015",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre Ga-H y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_FUNDACION_0007",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0016"
+      ],
+      "geometria": {
+        "inicio": [
+          50.5255276109922,
+          -8.178964396626947
+        ],
+        "fin": [
+          50.5255276109922,
+          -9.67877900500142
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0044",
+      "elemento": "VIGA_P1_FUNDACION_0016",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre Ga-H y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_FUNDACION_0008",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0015"
+      ],
+      "geometria": {
+        "inicio": [
+          50.2255276109922,
+          -9.67877900500142
+        ],
+        "fin": [
+          50.2255276109922,
+          -8.178964396626947
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0045",
+      "elemento": "MURO_P1_FUNDACION_0032",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre H-H1 y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.4,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          59.52552725816224,
+          -9.758797703671902
+        ],
+        "fin": [
+          59.22552725816256,
+          -9.758797275611583
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0046",
+      "elemento": "MURO_P1_FUNDACION_0033",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre H-H1 y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.4,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          59.22552725816256,
+          -9.758797275611583
+        ],
+        "fin": [
+          59.22552768622287,
+          -9.458797275611891
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0047",
+      "elemento": "MURO_P1_FUNDACION_0034",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre H-H1 y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.4,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          59.22552768622287,
+          -9.458797275611891
+        ],
+        "fin": [
+          59.52552768622256,
+          -9.458797703672222
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0048",
+      "elemento": "MURO_P1_FUNDACION_0035",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre H-H1 y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.4,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          59.52552768622256,
+          -9.458797703672222
+        ],
+        "fin": [
+          59.52552725816224,
+          -9.758797703671902
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0049",
+      "elemento": "MURO_P1_FUNDACION_0036",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre H-H1 y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.4,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          59.52553408337117,
+          -5.046659395460693
+        ],
+        "fin": [
+          59.22553408337119,
+          -5.046659395460693
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0050",
+      "elemento": "MURO_P1_FUNDACION_0037",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre H-H1 y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.4,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          59.22553408337119,
+          -5.046659395460693
+        ],
+        "fin": [
+          59.22553408337119,
+          -4.746659395460693
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0051",
+      "elemento": "MURO_P1_FUNDACION_0038",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre H-H1 y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.4,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          59.22553408337119,
+          -4.746659395460693
+        ],
+        "fin": [
+          59.52553408337117,
+          -4.746659395460693
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0052",
+      "elemento": "MURO_P1_FUNDACION_0039",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre H-H1 y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.4,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          59.52553408337117,
+          -4.746659395460693
+        ],
+        "fin": [
+          59.52553408337117,
+          -5.046659395460693
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0053",
+      "elemento": "MURO_P1_FUNDACION_0040",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre H-H1 y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.4,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          59.525540195144956,
+          -0.33452108724916796
+        ],
+        "fin": [
+          59.22554019514525,
+          -0.3345206591888518
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0054",
+      "elemento": "MURO_P1_FUNDACION_0041",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre H-H1 y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.4,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          59.22554019514525,
+          -0.3345206591888518
+        ],
+        "fin": [
+          59.225540623205575,
+          -0.03452065918916105
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0055",
+      "elemento": "MURO_P1_FUNDACION_0042",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre H-H1 y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.4,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          59.225540623205575,
+          -0.03452065918916105
+        ],
+        "fin": [
+          59.52554062320526,
+          -0.03452108724946811
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0056",
+      "elemento": "MURO_P1_FUNDACION_0043",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre H-H1 y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.4,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          59.52554062320526,
+          -0.03452108724946811
+        ],
+        "fin": [
+          59.525540195144956,
+          -0.33452108724916796
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0057",
+      "elemento": "VIGA_P1_FUNDACION_0018",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre H_prime-H2 y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_FUNDACION_0003",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0019"
+      ],
+      "geometria": {
+        "inicio": [
+          64.54844982291361,
+          -12.021078169434299
+        ],
+        "fin": [
+          63.48844982291217,
+          -12.02107816943431
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0058",
+      "elemento": "VIGA_P1_FUNDACION_0019",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre H_prime-H2 y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_FUNDACION_0006",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0018"
+      ],
+      "geometria": {
+        "inicio": [
+          63.48844982291217,
+          -12.221078169434318
+        ],
+        "fin": [
+          64.54844982291361,
+          -12.221078169434318
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0059",
+      "elemento": "VIGA_P1_FUNDACION_0020",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre H-H1 y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_FUNDACION_0003",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0021"
+      ],
+      "geometria": {
+        "inicio": [
+          63.48844982291217,
+          -12.02107816943431
+        ],
+        "fin": [
+          56.84844982298189,
+          -12.021078169434327
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0060",
+      "elemento": "VIGA_P1_FUNDACION_0021",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre H-H1 y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_FUNDACION_0006",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0020"
+      ],
+      "geometria": {
+        "inicio": [
+          56.84844982298189,
+          -12.221078169434335
+        ],
+        "fin": [
+          63.48844982291217,
+          -12.221078169434318
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0061",
+      "elemento": "VIGA_P1_FUNDACION_0022",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre Ga-H y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_FUNDACION_0002",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0023"
+      ],
+      "geometria": {
+        "inicio": [
+          54.548449822981894,
+          -12.021078169434327
+        ],
+        "fin": [
+          52.948449822981914,
+          -12.021078169434336
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0062",
+      "elemento": "VIGA_P1_FUNDACION_0023",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre Ga-H y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_FUNDACION_0005",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0022"
+      ],
+      "geometria": {
+        "inicio": [
+          52.948449822981914,
+          -12.221078169434355
+        ],
+        "fin": [
+          54.548449822981894,
+          -12.221078169434335
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0063",
+      "elemento": "VIGA_P1_FUNDACION_0024",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre Ga-H y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_FUNDACION_0002",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0025"
+      ],
+      "geometria": {
+        "inicio": [
+          52.948449822981914,
+          -12.021078169434336
+        ],
+        "fin": [
+          46.848449823053095,
+          -12.021078169434372
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0064",
+      "elemento": "VIGA_P1_FUNDACION_0025",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre Ga-H y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_FUNDACION_0005",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0024"
+      ],
+      "geometria": {
+        "inicio": [
+          46.848449823053095,
+          -12.221078169434373
+        ],
+        "fin": [
+          52.948449822981914,
+          -12.221078169434355
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0065",
+      "elemento": "VIGA_P1_FUNDACION_0026",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre F_prime-G y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_FUNDACION_0001",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0027"
+      ],
+      "geometria": {
+        "inicio": [
+          44.54844982305309,
+          -12.021078169434372
+        ],
+        "fin": [
+          42.948449823053096,
+          -12.021078169434382
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0066",
+      "elemento": "VIGA_P1_FUNDACION_0027",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre F_prime-G y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P1_FUNDACION_0004",
+        "posible_cara_paralela_de_VIGA_P1_FUNDACION_0026"
+      ],
+      "geometria": {
+        "inicio": [
+          42.948449823053096,
+          -12.221078169434382
+        ],
+        "fin": [
+          44.54844982305309,
+          -12.221078169434382
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0067",
+      "elemento": "MURO_P2_FUNDACION_0001",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre D-D_prime y despues de 2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.45,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P2_FUNDACION_0003"
+      ],
+      "geometria": {
+        "inicio": [
+          27.95699399386542,
+          16.61766819557768
+        ],
+        "fin": [
+          27.95699399386542,
+          8.66766819551487
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0068",
+      "elemento": "MURO_P2_FUNDACION_0002",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre D-D_prime y 1A_prime-2",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.4,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          27.95699399386542,
+          8.66766819551487
+        ],
+        "fin": [
+          27.70699399386541,
+          8.66766819551487
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0069",
+      "elemento": "MURO_P2_FUNDACION_0003",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre D-D_prime y despues de 2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.45,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P2_FUNDACION_0001"
+      ],
+      "geometria": {
+        "inicio": [
+          27.70699399386541,
+          8.66766819551487
+        ],
+        "fin": [
+          27.706993993865403,
+          16.61766819557768
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0070",
+      "elemento": "MURO_P2_FUNDACION_0004",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre D-D_prime y despues de 2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.4,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          27.706993993865403,
+          16.61766819557768
+        ],
+        "fin": [
+          27.95699399386542,
+          16.61766819557768
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0071",
+      "elemento": "MURO_P2_FUNDACION_0005",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C_prime-D y 1A_prime-2",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.45,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P2_FUNDACION_0006"
+      ],
+      "geometria": {
+        "inicio": [
+          25.31198931113906,
+          6.2678348508187876
+        ],
+        "fin": [
+          25.311989311139072,
+          3.447678383357517
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0072",
+      "elemento": "MURO_P2_FUNDACION_0006",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C_prime-D y 1A_prime-2",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.45,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P2_FUNDACION_0005"
+      ],
+      "geometria": {
+        "inicio": [
+          25.06198931113906,
+          3.1476783833575173
+        ],
+        "fin": [
+          25.06198931113906,
+          6.2678348508187876
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0073",
+      "elemento": "MURO_P2_FUNDACION_0007",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C_prime-D y 1A_prime-2",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.4,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          25.06198931113906,
+          6.2678348508187876
+        ],
+        "fin": [
+          25.31198931113906,
+          6.2678348508187876
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0074",
+      "elemento": "MURO_P2_FUNDACION_0008",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C_prime-D y 1_prime-1A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.45,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P2_FUNDACION_0009"
+      ],
+      "geometria": {
+        "inicio": [
+          25.311989311139072,
+          3.447678383357517
+        ],
+        "fin": [
+          27.70699399386541,
+          3.447678383357531
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0075",
+      "elemento": "MURO_P2_FUNDACION_0009",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C_prime-D y 1-1_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.45,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P2_FUNDACION_0008"
+      ],
+      "geometria": {
+        "inicio": [
+          27.70699399386541,
+          3.147678383357531
+        ],
+        "fin": [
+          25.06198931113906,
+          3.1476783833575173
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0076",
+      "elemento": "MURO_P2_FUNDACION_0010",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre D-D_prime y 1-1_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.45,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P2_FUNDACION_0013"
+      ],
+      "geometria": {
+        "inicio": [
+          27.70699399386542,
+          0.4676681954945497
+        ],
+        "fin": [
+          27.70699399386541,
+          3.147678383357531
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0077",
+      "elemento": "MURO_P2_FUNDACION_0011",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre D-D_prime y 1A_prime-2",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.45,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P2_FUNDACION_0013"
+      ],
+      "geometria": {
+        "inicio": [
+          27.70699399386541,
+          3.447678383357531
+        ],
+        "fin": [
+          27.706993993865403,
+          6.267668195514559
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0078",
+      "elemento": "MURO_P2_FUNDACION_0012",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre D-D_prime y 1A_prime-2",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.4,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          27.706993993865403,
+          6.267668195514559
+        ],
+        "fin": [
+          27.95699399386542,
+          6.267668195514559
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0079",
+      "elemento": "MURO_P2_FUNDACION_0013",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre D-D_prime y 1_prime-1A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.45,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P2_FUNDACION_0010"
+      ],
+      "geometria": {
+        "inicio": [
+          27.95699399386542,
+          6.267668195514559
+        ],
+        "fin": [
+          27.95699399386542,
+          0.4676681954945497
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0080",
+      "elemento": "MURO_P2_FUNDACION_0014",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre D-D_prime y 1-1_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.4,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          27.95699399386542,
+          0.4676681954945497
+        ],
+        "fin": [
+          27.70699399386542,
+          0.4676681954945497
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0081",
+      "elemento": "VIGA_P2_FUNDACION_0001",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre B-C y 1-1_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0002",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0002"
+      ],
+      "geometria": {
+        "inicio": [
+          9.106993993929912,
+          0.11766819549455881
+        ],
+        "fin": [
+          7.956993993929901,
+          0.11766819549454977
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0082",
+      "elemento": "VIGA_P2_FUNDACION_0002",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre B-C y antes de 1",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0002",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0001"
+      ],
+      "geometria": {
+        "inicio": [
+          7.956993993929901,
+          -0.08233180450545025
+        ],
+        "fin": [
+          9.106993993929912,
+          -0.08233180450545025
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0083",
+      "elemento": "VIGA_P2_FUNDACION_0003",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C-C_prime y 1-1_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0003",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0004"
+      ],
+      "geometria": {
+        "inicio": [
+          19.10699399304746,
+          0.11766819549459068
+        ],
+        "fin": [
+          17.95699399304748,
+          0.11766819549457702
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0084",
+      "elemento": "VIGA_P2_FUNDACION_0004",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C-C_prime y antes de 1",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0003",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0003"
+      ],
+      "geometria": {
+        "inicio": [
+          17.95699399304748,
+          -0.08233180450542296
+        ],
+        "fin": [
+          19.10699399304746,
+          -0.08233180450540933
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0085",
+      "elemento": "VIGA_P2_FUNDACION_0005",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C-C_prime y 1-1_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0005",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0006"
+      ],
+      "geometria": {
+        "inicio": [
+          17.50699399304748,
+          1.6176681954945498
+        ],
+        "fin": [
+          17.50699399304748,
+          0.4676681954945497
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0086",
+      "elemento": "VIGA_P2_FUNDACION_0006",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C-C_prime y 1-1_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0008",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0005"
+      ],
+      "geometria": {
+        "inicio": [
+          17.70699399304748,
+          0.4676681954945497
+        ],
+        "fin": [
+          17.70699399304748,
+          1.6176681954945498
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0087",
+      "elemento": "VIGA_P2_FUNDACION_0007",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C-C_prime y 2-2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0006",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0008"
+      ],
+      "geometria": {
+        "inicio": [
+          17.50699399304746,
+          11.01766819551455
+        ],
+        "fin": [
+          17.50699399304746,
+          9.36766819551455
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0088",
+      "elemento": "VIGA_P2_FUNDACION_0008",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C-C_prime y 2-2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0009",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0007"
+      ],
+      "geometria": {
+        "inicio": [
+          17.706993993047462,
+          9.36766819551455
+        ],
+        "fin": [
+          17.706993993047462,
+          11.01766819551455
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0089",
+      "elemento": "VIGA_P2_FUNDACION_0009",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre B-C y despues de 2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0011",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0010"
+      ],
+      "geometria": {
+        "inicio": [
+          16.40699399304746,
+          16.367668195577757
+        ],
+        "fin": [
+          17.256993993047473,
+          16.367668195577757
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0090",
+      "elemento": "VIGA_P2_FUNDACION_0010",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre B-C y despues de 2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0014",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0009"
+      ],
+      "geometria": {
+        "inicio": [
+          17.256993993047473,
+          16.56766819557776
+        ],
+        "fin": [
+          16.40699399304746,
+          16.56766819557776
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0091",
+      "elemento": "VIGA_P2_FUNDACION_0011",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre B-C y despues de 2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0017",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0012"
+      ],
+      "geometria": {
+        "inicio": [
+          7.706993993929901,
+          15.067668195577731
+        ],
+        "fin": [
+          7.706993993929901,
+          15.917668195577699
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0092",
+      "elemento": "VIGA_P2_FUNDACION_0012",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre B-C y despues de 2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0019",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0011"
+      ],
+      "geometria": {
+        "inicio": [
+          7.5069939939299015,
+          15.917668195577699
+        ],
+        "fin": [
+          7.5069939939299015,
+          15.067668195577731
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0093",
+      "elemento": "VIGA_P2_FUNDACION_0013",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre B-C y 1A_prime-2",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0016",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0014"
+      ],
+      "geometria": {
+        "inicio": [
+          7.706993993929912,
+          7.31766819551455
+        ],
+        "fin": [
+          7.706993993929912,
+          8.667668195514551
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0094",
+      "elemento": "VIGA_P2_FUNDACION_0014",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre B-C y 1A_prime-2",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0018",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0013"
+      ],
+      "geometria": {
+        "inicio": [
+          7.506993993929912,
+          8.667668195514551
+        ],
+        "fin": [
+          7.506993993929912,
+          7.31766819551455
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0095",
+      "elemento": "VIGA_P2_FUNDACION_0015",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C-C_prime y despues de 2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0015",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0016"
+      ],
+      "geometria": {
+        "inicio": [
+          18.806993993047477,
+          16.567668195577767
+        ],
+        "fin": [
+          17.95699399304747,
+          16.567668195577767
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0096",
+      "elemento": "VIGA_P2_FUNDACION_0016",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C-C_prime y despues de 2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0012",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0015"
+      ],
+      "geometria": {
+        "inicio": [
+          17.95699399304747,
+          16.367668195577767
+        ],
+        "fin": [
+          18.806993993047477,
+          16.367668195577767
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0097",
+      "elemento": "VIGA_P2_FUNDACION_0017",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre B-C y 2-2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0021",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0018"
+      ],
+      "geometria": {
+        "inicio": [
+          9.306993993929881,
+          9.11766819551454
+        ],
+        "fin": [
+          7.956993993929901,
+          9.11766819551454
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0098",
+      "elemento": "VIGA_P2_FUNDACION_0018",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre B-C y 2-2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0021",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0017"
+      ],
+      "geometria": {
+        "inicio": [
+          7.956993993929901,
+          8.91766819551453
+        ],
+        "fin": [
+          9.306993993929881,
+          8.91766819551453
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0099",
+      "elemento": "VIGA_P2_FUNDACION_0019",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre A-B y 2-2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0020",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0020"
+      ],
+      "geometria": {
+        "inicio": [
+          1.8569939932699602,
+          9.11766819551451
+        ],
+        "fin": [
+          0.4569939932699718,
+          9.11766819551451
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0100",
+      "elemento": "VIGA_P2_FUNDACION_0020",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre A-B y 2-2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0020",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0019"
+      ],
+      "geometria": {
+        "inicio": [
+          0.4569939932699718,
+          8.91766819551451
+        ],
+        "fin": [
+          1.8569939932699602,
+          8.91766819551451
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0101",
+      "elemento": "VIGA_P2_FUNDACION_0021",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C_prime-D y 1-1_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0003",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0022"
+      ],
+      "geometria": {
+        "inicio": [
+          27.256991969363433,
+          0.11766819549460888
+        ],
+        "fin": [
+          24.956991969363433,
+          0.11766819549459978
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0102",
+      "elemento": "VIGA_P2_FUNDACION_0022",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C_prime-D y antes de 1",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0003",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0021"
+      ],
+      "geometria": {
+        "inicio": [
+          24.956991969363433,
+          -0.08233180450540023
+        ],
+        "fin": [
+          27.256991969363433,
+          -0.08233180450539115
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0103",
+      "elemento": "VIGA_P2_FUNDACION_0023",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C-C_prime y 1-1_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0003",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0024"
+      ],
+      "geometria": {
+        "inicio": [
+          24.956991969363433,
+          0.11766819549459978
+        ],
+        "fin": [
+          19.10699399304746,
+          0.11766819549457702
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0104",
+      "elemento": "VIGA_P2_FUNDACION_0024",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C-C_prime y antes de 1",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0003",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0023"
+      ],
+      "geometria": {
+        "inicio": [
+          19.10699399304746,
+          -0.08233180450542296
+        ],
+        "fin": [
+          24.956991969363433,
+          -0.08233180450540023
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0105",
+      "elemento": "VIGA_P2_FUNDACION_0025",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre B-C y 1-1_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0002",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0026"
+      ],
+      "geometria": {
+        "inicio": [
+          17.256993993047473,
+          0.11766819549457702
+        ],
+        "fin": [
+          16.10699399304747,
+          0.11766819549456792
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0106",
+      "elemento": "VIGA_P2_FUNDACION_0026",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre B-C y antes de 1",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0002",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0025"
+      ],
+      "geometria": {
+        "inicio": [
+          16.10699399304747,
+          -0.08233180450543207
+        ],
+        "fin": [
+          17.256993993047473,
+          -0.08233180450543207
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0107",
+      "elemento": "VIGA_P2_FUNDACION_0027",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre B-C y 1-1_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0002",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0028"
+      ],
+      "geometria": {
+        "inicio": [
+          16.10699399304747,
+          0.11766819549456792
+        ],
+        "fin": [
+          9.106993993929912,
+          0.11766819549454977
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0108",
+      "elemento": "VIGA_P2_FUNDACION_0028",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre B-C y antes de 1",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0002",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0027"
+      ],
+      "geometria": {
+        "inicio": [
+          9.106993993929912,
+          -0.08233180450545025
+        ],
+        "fin": [
+          16.10699399304747,
+          -0.08233180450543207
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0109",
+      "elemento": "VIGA_P2_FUNDACION_0029",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre A-B y 1-1_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0001",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0030"
+      ],
+      "geometria": {
+        "inicio": [
+          7.2569939939299015,
+          0.11766819549454977
+        ],
+        "fin": [
+          6.106993993929913,
+          0.11766819549454066
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0110",
+      "elemento": "VIGA_P2_FUNDACION_0030",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre A-B y antes de 1",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0001",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0029"
+      ],
+      "geometria": {
+        "inicio": [
+          6.106993993929913,
+          -0.08233180450545935
+        ],
+        "fin": [
+          7.2569939939299015,
+          -0.08233180450545935
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0111",
+      "elemento": "VIGA_P2_FUNDACION_0031",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre A-B y 1-1_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0001",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0032"
+      ],
+      "geometria": {
+        "inicio": [
+          6.106993993929913,
+          0.11766819549454977
+        ],
+        "fin": [
+          0.5319919764898309,
+          0.117668195494527
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0112",
+      "elemento": "VIGA_P2_FUNDACION_0032",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre A-B y antes de 1",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0001",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0031"
+      ],
+      "geometria": {
+        "inicio": [
+          0.5319919764898309,
+          -0.082331804505473
+        ],
+        "fin": [
+          6.106993993929913,
+          -0.08233180450545935
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0113",
+      "elemento": "VIGA_P2_FUNDACION_0033",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre B-C y 2-2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0021",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0034"
+      ],
+      "geometria": {
+        "inicio": [
+          17.256993993047473,
+          9.11766819551456
+        ],
+        "fin": [
+          15.606993993047462,
+          9.11766819551456
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0114",
+      "elemento": "VIGA_P2_FUNDACION_0034",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre B-C y 2-2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0021",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0033"
+      ],
+      "geometria": {
+        "inicio": [
+          15.606993993047462,
+          8.91766819551456
+        ],
+        "fin": [
+          17.256993993047473,
+          8.91766819551456
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0115",
+      "elemento": "VIGA_P2_FUNDACION_0035",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre B-C y 2-2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0021",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0036"
+      ],
+      "geometria": {
+        "inicio": [
+          15.606993993047462,
+          9.11766819551456
+        ],
+        "fin": [
+          9.306993993929881,
+          9.11766819551454
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0116",
+      "elemento": "VIGA_P2_FUNDACION_0036",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre B-C y 2-2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0021",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0035"
+      ],
+      "geometria": {
+        "inicio": [
+          9.306993993929881,
+          8.91766819551453
+        ],
+        "fin": [
+          15.606993993047462,
+          8.917668195514551
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0117",
+      "elemento": "VIGA_P2_FUNDACION_0037",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre A-B y 2-2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0020",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0038"
+      ],
+      "geometria": {
+        "inicio": [
+          7.2569939939299015,
+          9.11766819551454
+        ],
+        "fin": [
+          5.906993993929881,
+          9.11766819551453
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0118",
+      "elemento": "VIGA_P2_FUNDACION_0038",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre A-B y 2-2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0020",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0037"
+      ],
+      "geometria": {
+        "inicio": [
+          5.906993993929881,
+          8.91766819551453
+        ],
+        "fin": [
+          7.2569939939299015,
+          8.91766819551453
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0119",
+      "elemento": "VIGA_P2_FUNDACION_0039",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre A-B y 2-2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0020",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0040"
+      ],
+      "geometria": {
+        "inicio": [
+          5.906993993929881,
+          9.11766819551453
+        ],
+        "fin": [
+          1.8569939932699602,
+          9.11766819551451
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0120",
+      "elemento": "VIGA_P2_FUNDACION_0040",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre A-B y 2-2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0020",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0039"
+      ],
+      "geometria": {
+        "inicio": [
+          1.8569939932699602,
+          8.91766819551451
+        ],
+        "fin": [
+          5.906993993929881,
+          8.91766819551453
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0121",
+      "elemento": "VIGA_P2_FUNDACION_0041",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C-C_prime y despues de 2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0006",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0042"
+      ],
+      "geometria": {
+        "inicio": [
+          17.506993993047452,
+          15.917668195577749
+        ],
+        "fin": [
+          17.506993993047452,
+          15.067668195577749
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0122",
+      "elemento": "VIGA_P2_FUNDACION_0042",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C-C_prime y despues de 2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0009",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0041"
+      ],
+      "geometria": {
+        "inicio": [
+          17.706993993047462,
+          15.067668195577749
+        ],
+        "fin": [
+          17.706993993047462,
+          15.917668195577749
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0123",
+      "elemento": "VIGA_P2_FUNDACION_0043",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C-C_prime y despues de 2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0006",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0044"
+      ],
+      "geometria": {
+        "inicio": [
+          17.506993993047452,
+          15.067668195577749
+        ],
+        "fin": [
+          17.50699399304746,
+          11.01766819551455
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0124",
+      "elemento": "VIGA_P2_FUNDACION_0044",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C-C_prime y despues de 2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0009",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0043"
+      ],
+      "geometria": {
+        "inicio": [
+          17.706993993047462,
+          11.01766819551455
+        ],
+        "fin": [
+          17.706993993047462,
+          15.067668195577749
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0125",
+      "elemento": "VIGA_P2_FUNDACION_0045",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C-C_prime y 1A_prime-2",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0005",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0046"
+      ],
+      "geometria": {
+        "inicio": [
+          17.50699399304746,
+          8.667668195514551
+        ],
+        "fin": [
+          17.50699399304746,
+          7.01766819551455
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0126",
+      "elemento": "VIGA_P2_FUNDACION_0046",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C-C_prime y 1A_prime-2",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0008",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0045"
+      ],
+      "geometria": {
+        "inicio": [
+          17.706993993047462,
+          7.01766819551455
+        ],
+        "fin": [
+          17.706993993047462,
+          8.667668195514551
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0127",
+      "elemento": "VIGA_P2_FUNDACION_0047",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C-C_prime y 1A_prime-2",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0005",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0048"
+      ],
+      "geometria": {
+        "inicio": [
+          17.50699399304746,
+          7.01766819551455
+        ],
+        "fin": [
+          17.506993993047473,
+          1.6176681954945498
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0128",
+      "elemento": "VIGA_P2_FUNDACION_0048",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C-C_prime y 1A_prime-2",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0008",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0047"
+      ],
+      "geometria": {
+        "inicio": [
+          17.70699399304747,
+          1.6176681954945498
+        ],
+        "fin": [
+          17.706993993047462,
+          7.01766819551455
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0129",
+      "elemento": "VIGA_P2_FUNDACION_0049",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C_prime-D y despues de 2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.35,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0015",
+        "sin_etiqueta_viga_cercana",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0050"
+      ],
+      "geometria": {
+        "inicio": [
+          27.706993993865403,
+          16.5676681955778
+        ],
+        "fin": [
+          26.53199399386547,
+          16.5676681955778
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0130",
+      "elemento": "VIGA_P2_FUNDACION_0050",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C_prime-D y despues de 2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.35,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0012",
+        "sin_etiqueta_viga_cercana",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0049"
+      ],
+      "geometria": {
+        "inicio": [
+          26.53199399386547,
+          16.367668195577796
+        ],
+        "fin": [
+          27.706993993865403,
+          16.367668195577796
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0131",
+      "elemento": "VIGA_P2_FUNDACION_0051",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C-C_prime y despues de 2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0015",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0052"
+      ],
+      "geometria": {
+        "inicio": [
+          26.53199399386547,
+          16.5676681955778
+        ],
+        "fin": [
+          18.806993993047477,
+          16.567668195577767
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0132",
+      "elemento": "VIGA_P2_FUNDACION_0052",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C-C_prime y despues de 2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0012",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0051"
+      ],
+      "geometria": {
+        "inicio": [
+          18.806993993047477,
+          16.367668195577767
+        ],
+        "fin": [
+          26.53199399386547,
+          16.36766819557779
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0133",
+      "elemento": "VIGA_P2_FUNDACION_0053",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre B-C y despues de 2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0011",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0054"
+      ],
+      "geometria": {
+        "inicio": [
+          8.8069939939299,
+          16.36766819557774
+        ],
+        "fin": [
+          16.40699399304746,
+          16.367668195577757
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0134",
+      "elemento": "VIGA_P2_FUNDACION_0054",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre B-C y despues de 2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0014",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0053"
+      ],
+      "geometria": {
+        "inicio": [
+          16.40699399304746,
+          16.56766819557776
+        ],
+        "fin": [
+          8.8069939939299,
+          16.56766819557774
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0135",
+      "elemento": "VIGA_P2_FUNDACION_0055",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre B-C y despues de 2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0011",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0056"
+      ],
+      "geometria": {
+        "inicio": [
+          7.956993993929901,
+          16.36766819557773
+        ],
+        "fin": [
+          8.8069939939299,
+          16.36766819557774
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0136",
+      "elemento": "VIGA_P2_FUNDACION_0056",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre B-C y despues de 2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0014",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0055"
+      ],
+      "geometria": {
+        "inicio": [
+          8.8069939939299,
+          16.56766819557774
+        ],
+        "fin": [
+          7.956993993929901,
+          16.567668195577728
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0137",
+      "elemento": "VIGA_P2_FUNDACION_0057",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre A-B y despues de 2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0013",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0058"
+      ],
+      "geometria": {
+        "inicio": [
+          7.2569939939299015,
+          16.567668195577717
+        ],
+        "fin": [
+          6.356993993930031,
+          16.567668195577717
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0138",
+      "elemento": "VIGA_P2_FUNDACION_0058",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre A-B y despues de 2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0010",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0057"
+      ],
+      "geometria": {
+        "inicio": [
+          6.356993993930031,
+          16.367668195577718
+        ],
+        "fin": [
+          7.2569939939299015,
+          16.367668195577718
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0139",
+      "elemento": "VIGA_P2_FUNDACION_0059",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre A-B y despues de 2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0013",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0060"
+      ],
+      "geometria": {
+        "inicio": [
+          6.356993993930031,
+          16.567668195577717
+        ],
+        "fin": [
+          -0.39300802351019737,
+          16.567668195577696
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0140",
+      "elemento": "VIGA_P2_FUNDACION_0060",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre A-B y despues de 2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0010",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0059"
+      ],
+      "geometria": {
+        "inicio": [
+          -0.39300802351019737,
+          16.367668195577696
+        ],
+        "fin": [
+          6.356993993930031,
+          16.367668195577718
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0141",
+      "elemento": "VIGA_P2_FUNDACION_0061",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre B-C y despues de 2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0017",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0062"
+      ],
+      "geometria": {
+        "inicio": [
+          7.706993993929901,
+          10.71766819551455
+        ],
+        "fin": [
+          7.706993993929892,
+          15.067668195577731
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0142",
+      "elemento": "VIGA_P2_FUNDACION_0062",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre B-C y despues de 2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0019",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0061"
+      ],
+      "geometria": {
+        "inicio": [
+          7.506993993929892,
+          15.067668195577731
+        ],
+        "fin": [
+          7.5069939939299015,
+          10.71766819551455
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0143",
+      "elemento": "VIGA_P2_FUNDACION_0063",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre B-C y 2-2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0017",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0064"
+      ],
+      "geometria": {
+        "inicio": [
+          7.706993993929912,
+          9.36766819551455
+        ],
+        "fin": [
+          7.706993993929912,
+          10.71766819551455
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0144",
+      "elemento": "VIGA_P2_FUNDACION_0064",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre B-C y 2-2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0019",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0063"
+      ],
+      "geometria": {
+        "inicio": [
+          7.506993993929912,
+          10.71766819551455
+        ],
+        "fin": [
+          7.506993993929912,
+          9.36766819551455
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0145",
+      "elemento": "VIGA_P2_FUNDACION_0065",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre B-C y 1A_prime-2",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0016",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0066"
+      ],
+      "geometria": {
+        "inicio": [
+          7.706993993929931,
+          1.6176681954945498
+        ],
+        "fin": [
+          7.706993993929922,
+          7.31766819551455
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0146",
+      "elemento": "VIGA_P2_FUNDACION_0066",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre B-C y 1A_prime-2",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0018",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0065"
+      ],
+      "geometria": {
+        "inicio": [
+          7.506993993929921,
+          7.31766819551455
+        ],
+        "fin": [
+          7.50699399392993,
+          1.6176681954945498
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0147",
+      "elemento": "VIGA_P2_FUNDACION_0067",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre B-C y 1-1_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0016",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0068"
+      ],
+      "geometria": {
+        "inicio": [
+          7.706993993929931,
+          0.4676681954945497
+        ],
+        "fin": [
+          7.706993993929931,
+          1.6176681954945498
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0148",
+      "elemento": "VIGA_P2_FUNDACION_0068",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre B-C y 1-1_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0018",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0067"
+      ],
+      "geometria": {
+        "inicio": [
+          7.50699399392993,
+          1.6176681954945498
+        ],
+        "fin": [
+          7.50699399392993,
+          0.4676681954945497
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0149",
+      "elemento": "VIGA_P2_FUNDACION_0070",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre despues de D_prime y despues de 2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.4,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_viga_cercana",
+        "geometria_no_ortogonal"
+      ],
+      "geometria": {
+        "inicio": [
+          28.602616341164044,
+          18.471865743808213
+        ],
+        "fin": [
+          28.17795391922068,
+          16.81896824886872
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0150",
+      "elemento": "VIGA_P2_FUNDACION_0071",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre despues de D_prime y despues de 2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.4,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_viga_cercana",
+        "geometria_no_ortogonal"
+      ],
+      "geometria": {
+        "inicio": [
+          27.98424492463501,
+          16.868735963469778
+        ],
+        "fin": [
+          28.40890734657836,
+          18.52163345840928
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0151",
+      "elemento": "VIGA_P2_FUNDACION_0072",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C_prime-D y 1A_prime-2",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.7,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0073"
+      ],
+      "geometria": {
+        "inicio": [
+          25.06199245165865,
+          6.317878383357531
+        ],
+        "fin": [
+          27.706993993865403,
+          6.317878383357531
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0152",
+      "elemento": "VIGA_P2_FUNDACION_0073",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C_prime-D y 1A_prime-2",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.7,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0072"
+      ],
+      "geometria": {
+        "inicio": [
+          25.31198931113906,
+          6.117878383357517
+        ],
+        "fin": [
+          27.706993993865403,
+          6.117878383357531
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0153",
+      "elemento": "VIGA_P2_FUNDACION_0074",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre D-D_prime y 1A_prime-2",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.85,
+      "estado": "PENDING_MODEL_UPDATE",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [],
+      "geometria": {
+        "inicio": [
+          27.70699399386541,
+          8.66766819551487
+        ],
+        "fin": [
+          27.706993993865403,
+          6.317878383357531
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0154",
+      "elemento": "MURO_P2_FUNDACION_0015",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C-C_prime y antes de 1",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.45,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P2_FUNDACION_0017"
+      ],
+      "geometria": {
+        "inicio": [
+          16.36255995987501,
+          -6.202331804505291
+        ],
+        "fin": [
+          25.806997053223128,
+          -6.202331804505273
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0155",
+      "elemento": "MURO_P2_FUNDACION_0017",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C-C_prime y antes de 1",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.35,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_MURO_GRUPO_P2_FUNDACION_0001",
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P2_FUNDACION_0015"
+      ],
+      "geometria": {
+        "inicio": [
+          25.806997053223128,
+          -6.402331804505259
+        ],
+        "fin": [
+          20.90699399303606,
+          -6.402331804505282
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0156",
+      "elemento": "MURO_P2_FUNDACION_0018",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C-C_prime y antes de 1",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.35,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_MURO_GRUPO_P2_FUNDACION_0001",
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P2_FUNDACION_0015"
+      ],
+      "geometria": {
+        "inicio": [
+          20.70699399303606,
+          -6.402331804505291
+        ],
+        "fin": [
+          16.36255995987501,
+          -6.4023318045053
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0157",
+      "elemento": "MURO_P2_FUNDACION_0020",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C-C_prime y antes de 1",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.35,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_MURO_GRUPO_P2_FUNDACION_0002",
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P2_FUNDACION_0022"
+      ],
+      "geometria": {
+        "inicio": [
+          16.36255995987501,
+          -10.502331804505308
+        ],
+        "fin": [
+          20.70699399303606,
+          -10.5023318045053
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0158",
+      "elemento": "MURO_P2_FUNDACION_0021",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C-C_prime y antes de 1",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.35,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_MURO_GRUPO_P2_FUNDACION_0002",
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P2_FUNDACION_0022"
+      ],
+      "geometria": {
+        "inicio": [
+          20.90699399303608,
+          -10.50233180450529
+        ],
+        "fin": [
+          27.756993993884862,
+          -10.502331804505259
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0159",
+      "elemento": "MURO_P2_FUNDACION_0022",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C-C_prime y antes de 1",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.45,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P2_FUNDACION_0020"
+      ],
+      "geometria": {
+        "inicio": [
+          27.95699399388485,
+          -10.702331804505258
+        ],
+        "fin": [
+          16.36255995987501,
+          -10.702331804505322
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0160",
+      "elemento": "MURO_P2_FUNDACION_0026",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C-C_prime y antes de 1",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.45,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P2_FUNDACION_0027"
+      ],
+      "geometria": {
+        "inicio": [
+          20.70699399303606,
+          -10.50233180450529
+        ],
+        "fin": [
+          20.70699399303606,
+          -6.402331804505291
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0161",
+      "elemento": "MURO_P2_FUNDACION_0027",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C-C_prime y antes de 1",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.45,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P2_FUNDACION_0026"
+      ],
+      "geometria": {
+        "inicio": [
+          20.90699399303606,
+          -6.402331804505291
+        ],
+        "fin": [
+          20.90699399303606,
+          -10.50233180450529
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0162",
+      "elemento": "MURO_P2_FUNDACION_0028",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre D-D_prime y antes de 1",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.45,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P2_FUNDACION_0029"
+      ],
+      "geometria": {
+        "inicio": [
+          27.756993993884862,
+          -10.502331804505259
+        ],
+        "fin": [
+          27.756993993884862,
+          -6.402331804505232
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0163",
+      "elemento": "MURO_P2_FUNDACION_0029",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre D-D_prime y antes de 1",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.45,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "posible_doble_cara_de_MURO_P2_FUNDACION_0028"
+      ],
+      "geometria": {
+        "inicio": [
+          27.95699399388485,
+          -6.202331804505232
+        ],
+        "fin": [
+          27.95699399388485,
+          -10.702331804505258
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0164",
+      "elemento": "MURO_P2_FUNDACION_0030",
+      "tipo": "faltante",
+      "elemento_tipo": "muro",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre D-D_prime y antes de 1",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.4,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-MURO",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "sin_etiqueta_muro_cercana",
+        "muro_muy_corto"
+      ],
+      "geometria": {
+        "inicio": [
+          27.606991969363182,
+          -6.202331804505232
+        ],
+        "fin": [
+          27.95699399388485,
+          -6.202331804505232
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0165",
+      "elemento": "VIGA_P2_FUNDACION_0076",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C-C_prime y antes de 1",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0007",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0082"
+      ],
+      "geometria": {
+        "inicio": [
+          17.682559959875007,
+          -7.052331804505291
+        ],
+        "fin": [
+          17.682559959875007,
+          -8.3123318045048
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0166",
+      "elemento": "VIGA_P2_FUNDACION_0078",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C-C_prime y antes de 1",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.4,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0007",
+        "viga_muy_corta",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0084"
+      ],
+      "geometria": {
+        "inicio": [
+          17.682559959875007,
+          -6.402331804505291
+        ],
+        "fin": [
+          17.682559959875007,
+          -7.052331804505291
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0167",
+      "elemento": "VIGA_P2_FUNDACION_0079",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C-C_prime y antes de 1",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0007",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0083"
+      ],
+      "geometria": {
+        "inicio": [
+          17.682559959875007,
+          -8.5573318045043
+        ],
+        "fin": [
+          17.682559959875007,
+          -10.5023318045053
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0168",
+      "elemento": "VIGA_P2_FUNDACION_0082",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre B-C y antes de 1",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0004",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0076"
+      ],
+      "geometria": {
+        "inicio": [
+          17.48255995987501,
+          -8.2473318045048
+        ],
+        "fin": [
+          17.48255995987501,
+          -7.052331804505291
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0169",
+      "elemento": "VIGA_P2_FUNDACION_0083",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre B-C y antes de 1",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.6,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0004",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0079"
+      ],
+      "geometria": {
+        "inicio": [
+          17.48255995987501,
+          -10.5023318045053
+        ],
+        "fin": [
+          17.48255995987501,
+          -8.5573318045043
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0170",
+      "elemento": "VIGA_P2_FUNDACION_0084",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre B-C y antes de 1",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.4,
+      "estado": "NEEDS_REVIEW",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [
+        "fragmento_de_VIGA_GRUPO_P2_FUNDACION_0004",
+        "viga_muy_corta",
+        "posible_cara_paralela_de_VIGA_P2_FUNDACION_0078"
+      ],
+      "geometria": {
+        "inicio": [
+          17.48255995987501,
+          -7.052331804505291
+        ],
+        "fin": [
+          17.48255995987501,
+          -6.402331804505291
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0171",
+      "elemento": "VIGA_P2_FUNDACION_0085",
+      "tipo": "faltante",
+      "elemento_tipo": "viga",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C_prime-D y antes de 1",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.85,
+      "estado": "PENDING_MODEL_UPDATE",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-VIGA",
+        "sector": "planta"
+      },
+      "motivos_revision": [],
+      "geometria": {
+        "inicio": [
+          25.80699705322311,
+          -6.402331804505273
+        ],
+        "fin": [
+          27.606991969363182,
+          -6.402331804505259
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0172",
+      "elemento": "C_P1_FUNDACION_0001",
+      "tipo": "faltante",
+      "elemento_tipo": "columna",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre H_prime-H2 y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.85,
+      "estado": "PENDING_MODEL_UPDATE",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P1_FUNDACION_0001",
+          "COLUMNA_RAW_P1_FUNDACION_0006",
+          "COLUMNA_RAW_P1_FUNDACION_0007",
+          "COLUMNA_RAW_P1_FUNDACION_0008"
+        ]
+      },
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          65.29844982291362,
+          -12.0185781694343
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0173",
+      "elemento": "C_P1_FUNDACION_0002",
+      "tipo": "faltante",
+      "elemento_tipo": "columna",
+      "zona": "parte_1",
+      "plano": "2017_67-100.dxf",
+      "ubicacion": "entre I-IA y antes de 1",
+      "descripcion": "Elemento detectado en datos estructurados pero no encontrado en el modelo 3D actual.",
+      "confianza": 0.85,
+      "estado": "PENDING_MODEL_UPDATE",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P1_FUNDACION_0002",
+          "COLUMNA_RAW_P1_FUNDACION_0003",
+          "COLUMNA_RAW_P1_FUNDACION_0004",
+          "COLUMNA_RAW_P1_FUNDACION_0005"
+        ]
+      },
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          69.89844982292084,
+          -12.371078169434405
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0174",
+      "elemento": "C_P2_FUNDACION_0001",
+      "tipo": "faltante",
+      "elemento_tipo": "columna",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre B-C y 1-1_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.85,
+      "estado": "PENDING_MODEL_UPDATE",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P2_FUNDACION_0001",
+          "COLUMNA_RAW_P2_FUNDACION_0002",
+          "COLUMNA_RAW_P2_FUNDACION_0003",
+          "COLUMNA_RAW_P2_FUNDACION_0004"
+        ]
+      },
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          7.606993993929901,
+          0.11766819549454971
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0175",
+      "elemento": "C_P2_FUNDACION_0002",
+      "tipo": "faltante",
+      "elemento_tipo": "columna",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C-C_prime y 1-1_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.85,
+      "estado": "PENDING_MODEL_UPDATE",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P2_FUNDACION_0005",
+          "COLUMNA_RAW_P2_FUNDACION_0006",
+          "COLUMNA_RAW_P2_FUNDACION_0007",
+          "COLUMNA_RAW_P2_FUNDACION_0008"
+        ]
+      },
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          17.606993993047475,
+          0.11766819549454971
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0176",
+      "elemento": "C_P2_FUNDACION_0003",
+      "tipo": "faltante",
+      "elemento_tipo": "columna",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C-C_prime y 2-2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.85,
+      "estado": "PENDING_MODEL_UPDATE",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P2_FUNDACION_0009",
+          "COLUMNA_RAW_P2_FUNDACION_0010",
+          "COLUMNA_RAW_P2_FUNDACION_0011",
+          "COLUMNA_RAW_P2_FUNDACION_0012"
+        ]
+      },
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          17.606993993047475,
+          9.01766819551455
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0177",
+      "elemento": "C_P2_FUNDACION_0004",
+      "tipo": "faltante",
+      "elemento_tipo": "columna",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre B-C y 2-2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.85,
+      "estado": "PENDING_MODEL_UPDATE",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P2_FUNDACION_0013",
+          "COLUMNA_RAW_P2_FUNDACION_0014",
+          "COLUMNA_RAW_P2_FUNDACION_0015",
+          "COLUMNA_RAW_P2_FUNDACION_0016"
+        ]
+      },
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          7.606993993929901,
+          9.01766819551455
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0178",
+      "elemento": "C_P2_FUNDACION_0005",
+      "tipo": "faltante",
+      "elemento_tipo": "columna",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre B-C y despues de 2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.85,
+      "estado": "PENDING_MODEL_UPDATE",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P2_FUNDACION_0017",
+          "COLUMNA_RAW_P2_FUNDACION_0018",
+          "COLUMNA_RAW_P2_FUNDACION_0019",
+          "COLUMNA_RAW_P2_FUNDACION_0027"
+        ]
+      },
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          7.606993993929901,
+          16.267668195577688
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0179",
+      "elemento": "C_P2_FUNDACION_0006",
+      "tipo": "faltante",
+      "elemento_tipo": "columna",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C-C_prime y despues de 2A_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.85,
+      "estado": "PENDING_MODEL_UPDATE",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P2_FUNDACION_0020",
+          "COLUMNA_RAW_P2_FUNDACION_0021",
+          "COLUMNA_RAW_P2_FUNDACION_0022",
+          "COLUMNA_RAW_P2_FUNDACION_0026"
+        ]
+      },
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          17.60699399304747,
+          16.26766819557775
+        ]
+      }
+    },
+    {
+      "id": "CONFLICT_P1_0180",
+      "elemento": "C_P2_FUNDACION_0007",
+      "tipo": "faltante",
+      "elemento_tipo": "columna",
+      "zona": "parte_2",
+      "plano": "2024_22-100.dxf",
+      "ubicacion": "entre C_prime-D y 1-1_prime",
+      "descripcion": "Elemento detectado en planos LT2/Parte 2 pero no existe en el modelo 3D actual.",
+      "confianza": 0.85,
+      "estado": "PENDING_MODEL_UPDATE",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P2_FUNDACION_0023",
+          "COLUMNA_RAW_P2_FUNDACION_0024",
+          "COLUMNA_RAW_P2_FUNDACION_0025"
+        ]
+      },
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          27.448658973447095,
+          0.11766819549454971
+        ]
+      }
+    }
+  ],
+  "sobrantes": [],
+  "dudosos": []
+}

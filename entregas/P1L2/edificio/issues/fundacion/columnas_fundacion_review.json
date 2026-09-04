@@ -1,0 +1,301 @@
+{
+  "piso": "1",
+  "tipo": "columna",
+  "estado": "DRAFT_NEEDS_REVIEW",
+  "total": 9,
+  "por_zona": {
+    "parte_1": 2,
+    "parte_2": 7
+  },
+  "por_estado_revision": {
+    "CONFIRMADA": 9
+  },
+  "grupos_logicos": [],
+  "total_grupos_logicos": 0,
+  "criterio": [
+    "Se obtiene por cluster de segmentos RLE-PILAR.",
+    "Se registra centro, dimensiones aproximadas y ejes cercanos.",
+    "Debe usarse como control fuerte del sistema de coordenadas.",
+    "La continuidad vertical se revisara con pisos superiores antes de 3D."
+  ],
+  "elementos": [
+    {
+      "id": "C_P1_FUNDACION_0001",
+      "tipo": "columna",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P1_FUNDACION_0001",
+          "COLUMNA_RAW_P1_FUNDACION_0006",
+          "COLUMNA_RAW_P1_FUNDACION_0007",
+          "COLUMNA_RAW_P1_FUNDACION_0008"
+        ]
+      },
+      "ejes_aproximados": {
+        "x": "H_prime-H2",
+        "y": "antes de 1"
+      },
+      "estado_revision": "CONFIRMADA",
+      "grupo_logico": null,
+      "etiqueta_cercana": null,
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          65.29844982291362,
+          -12.0185781694343
+        ]
+      }
+    },
+    {
+      "id": "C_P1_FUNDACION_0002",
+      "tipo": "columna",
+      "zona": "parte_1",
+      "fuente": {
+        "plano": "2017_67-100.dxf",
+        "source_key": "2017_67",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P1_FUNDACION_0002",
+          "COLUMNA_RAW_P1_FUNDACION_0003",
+          "COLUMNA_RAW_P1_FUNDACION_0004",
+          "COLUMNA_RAW_P1_FUNDACION_0005"
+        ]
+      },
+      "ejes_aproximados": {
+        "x": "I-IA",
+        "y": "antes de 1"
+      },
+      "estado_revision": "CONFIRMADA",
+      "grupo_logico": null,
+      "etiqueta_cercana": null,
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          69.89844982292084,
+          -12.371078169434405
+        ]
+      }
+    },
+    {
+      "id": "C_P2_FUNDACION_0001",
+      "tipo": "columna",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P2_FUNDACION_0001",
+          "COLUMNA_RAW_P2_FUNDACION_0002",
+          "COLUMNA_RAW_P2_FUNDACION_0003",
+          "COLUMNA_RAW_P2_FUNDACION_0004"
+        ]
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "CONFIRMADA",
+      "grupo_logico": null,
+      "etiqueta_cercana": null,
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          7.606993993929901,
+          0.11766819549454971
+        ]
+      }
+    },
+    {
+      "id": "C_P2_FUNDACION_0002",
+      "tipo": "columna",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P2_FUNDACION_0005",
+          "COLUMNA_RAW_P2_FUNDACION_0006",
+          "COLUMNA_RAW_P2_FUNDACION_0007",
+          "COLUMNA_RAW_P2_FUNDACION_0008"
+        ]
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "CONFIRMADA",
+      "grupo_logico": null,
+      "etiqueta_cercana": null,
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          17.606993993047475,
+          0.11766819549454971
+        ]
+      }
+    },
+    {
+      "id": "C_P2_FUNDACION_0003",
+      "tipo": "columna",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P2_FUNDACION_0009",
+          "COLUMNA_RAW_P2_FUNDACION_0010",
+          "COLUMNA_RAW_P2_FUNDACION_0011",
+          "COLUMNA_RAW_P2_FUNDACION_0012"
+        ]
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "2-2A_prime"
+      },
+      "estado_revision": "CONFIRMADA",
+      "grupo_logico": null,
+      "etiqueta_cercana": null,
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          17.606993993047475,
+          9.01766819551455
+        ]
+      }
+    },
+    {
+      "id": "C_P2_FUNDACION_0004",
+      "tipo": "columna",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P2_FUNDACION_0013",
+          "COLUMNA_RAW_P2_FUNDACION_0014",
+          "COLUMNA_RAW_P2_FUNDACION_0015",
+          "COLUMNA_RAW_P2_FUNDACION_0016"
+        ]
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "2-2A_prime"
+      },
+      "estado_revision": "CONFIRMADA",
+      "grupo_logico": null,
+      "etiqueta_cercana": null,
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          7.606993993929901,
+          9.01766819551455
+        ]
+      }
+    },
+    {
+      "id": "C_P2_FUNDACION_0005",
+      "tipo": "columna",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P2_FUNDACION_0017",
+          "COLUMNA_RAW_P2_FUNDACION_0018",
+          "COLUMNA_RAW_P2_FUNDACION_0019",
+          "COLUMNA_RAW_P2_FUNDACION_0027"
+        ]
+      },
+      "ejes_aproximados": {
+        "x": "B-C",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "CONFIRMADA",
+      "grupo_logico": null,
+      "etiqueta_cercana": null,
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          7.606993993929901,
+          16.267668195577688
+        ]
+      }
+    },
+    {
+      "id": "C_P2_FUNDACION_0006",
+      "tipo": "columna",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P2_FUNDACION_0020",
+          "COLUMNA_RAW_P2_FUNDACION_0021",
+          "COLUMNA_RAW_P2_FUNDACION_0022",
+          "COLUMNA_RAW_P2_FUNDACION_0026"
+        ]
+      },
+      "ejes_aproximados": {
+        "x": "C-C_prime",
+        "y": "despues de 2A_prime"
+      },
+      "estado_revision": "CONFIRMADA",
+      "grupo_logico": null,
+      "etiqueta_cercana": null,
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          17.60699399304747,
+          16.26766819557775
+        ]
+      }
+    },
+    {
+      "id": "C_P2_FUNDACION_0007",
+      "tipo": "columna",
+      "zona": "parte_2",
+      "fuente": {
+        "plano": "2024_22-100.dxf",
+        "source_key": "2024_22",
+        "capa": "RLE-PILAR",
+        "elementos_raw": [
+          "COLUMNA_RAW_P2_FUNDACION_0023",
+          "COLUMNA_RAW_P2_FUNDACION_0024",
+          "COLUMNA_RAW_P2_FUNDACION_0025"
+        ]
+      },
+      "ejes_aproximados": {
+        "x": "C_prime-D",
+        "y": "1-1_prime"
+      },
+      "estado_revision": "CONFIRMADA",
+      "grupo_logico": null,
+      "etiqueta_cercana": null,
+      "confianza_score": 0.85,
+      "motivos_revision": [],
+      "geometria": {
+        "centro": [
+          27.448658973447095,
+          0.11766819549454971
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "source": "Lectura manual usuario desde elevaciones de planos actuales.",
+  "status": "draft",
+  "input_units": "cm",
+  "model_units": "m",
+  "notes": [
+    "Todos los valores entregados por el usuario se consideran en cm salvo indicacion contraria.",
+    "Se incluyen niveles de la primera y segunda etapa existentes en los planos actuales.",
+    "La tercera etapa/no construida queda fuera hasta recibir planos nuevos."
+  ],
+  "levels": {
+    "base": 0.0,
+    "1S": 3.96,
+    "1": 7.92,
+    "2": 11.88,
+    "3": 15.84,
+    "4": 19.8
+  },
+  "spans_raw_cm": {
+    "base-1S": "396",
+    "1S-1": "396",
+    "1-2": "396",
+    "2-3": "396",
+    "3-4": "396"
+  },
+  "pending_clarifications": [
+    "Confirmar si la base del modelo corresponde al nivel de fundacion/apoyo o si existe una cota inferior para fundaciones profundas.",
+    "Confirmar si el nivel 4 corresponde a cielo piso 4 o a piso 4 terminado, segun la convencion de los planos."
+  ]
+}

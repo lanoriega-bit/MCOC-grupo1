@@ -7,9 +7,9 @@ Repositorio de trabajo para el Proyecto 1 del curso. El grupo desarrollara duran
 - Enunciado completo organizado: `docs/gestion/enunciado-proyecto-p1.md`.
 - Entrega P1L0: `entregas/p1l0/`.
 - Entrega P1L1 benchmark 3D: `entregas/p1l1_benchmark_3d/`.
+- P1L2 edificio completo desde CAD: `entregas/P1L2/`.
 - Entrega P1L1 benchmark 3D 2: `entregas/p1l1_benchmark_3d_2/`.
 - Ejercicio adicional columna-viga: `entregas/ejercicios/columna_viga/`.
-- Indice preliminar de planos: `recursos/planos/notas/indice-planos.md`.
 - Registro semanal: `docs/gestion/weekly-log.md`.
 - Registro de uso de IA: `docs/gestion/ai-usage-log.md`.
 - Reglas para agentes IA: `AGENTS.md`.
@@ -20,6 +20,7 @@ Repositorio de trabajo para el Proyecto 1 del curso. El grupo desarrollara duran
 | --- | --- | --- | --- |
 | P1L0 | Benchmark 2D basado en Pregunta 2 del Control 1. | `entregas/p1l0/opensees/ejemplo_minimo_2d.py` | `entregas/p1l0/results/` |
 | P1L1 | Benchmark 3D del sector `P1L1-S01`: pano entre ejes `F-G` y `2-3`. | `entregas/p1l1_benchmark_3d/opensees/benchmark_3d.py` | `entregas/p1l1_benchmark_3d/results/` |
+| P1L2 | Edificio completo preliminar desde CAD, con viewer 3D volumetrico, export web y esqueleto OpenSees de gravedad. | `entregas/P1L2/opensees/extract_cad_model.py` | `entregas/P1L2/viewer/` |
 | P1L1 3D 2 | Benchmark 3D del sector `P1L1-S02`: dos panos entre ejes `F-G-H` y `2-3`. | `entregas/p1l1_benchmark_3d_2/opensees/benchmark_3d_2.py` | `entregas/p1l1_benchmark_3d_2/results/` |
 | Ejercicio adicional | Modelo 2D columna-viga de acero. | `entregas/ejercicios/columna_viga/opensees/columna_viga_2d.py` | `entregas/ejercicios/columna_viga/results/` |
 
@@ -41,6 +42,12 @@ entregas/
     docs/
     opensees/
     results/
+  P1L2/
+    data/
+    docs/
+    opensees/
+    unity_export/
+    viewer/
   p1l1_benchmark_3d_2/
     docs/
     opensees/
@@ -50,11 +57,6 @@ entregas/
       docs/
       opensees/
       results/
-recursos/
-  planos/
-    pdf/        planos originales
-    notas/      indices y observaciones
-    logs/       archivos auxiliares no estructurales
 docs/gestion/   bitacoras, enunciado y registros generales
 ```
 
@@ -93,6 +95,30 @@ Para ejecutar el benchmark 3D P1L1 2:
 
 ```powershell
 python entregas/p1l1_benchmark_3d_2/opensees/benchmark_3d_2.py
+```
+
+Para generar el modelo 3D preliminar de P1L2 desde DXF locales:
+
+```powershell
+python entregas/P1L2/opensees/extract_cad_model.py
+```
+
+Para correr el esqueleto OpenSees de gravedad de P1L2:
+
+```powershell
+python entregas/P1L2/opensees/building_gravity_skeleton.py
+```
+
+Para abrir el viewer web 3D de P1L2:
+
+```powershell
+python -m http.server 8000
+```
+
+Abrir luego:
+
+```text
+http://localhost:8000/entregas/P1L2/viewer/
 ```
 
 Al ejecutarlo, ademas de imprimir la verificacion numerica, se genera una imagen con el resultado fisico del modelo:

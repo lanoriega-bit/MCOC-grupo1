@@ -1,0 +1,408 @@
+{
+  "estado": "CALCE_A_CONFIRMADO_HUMANAMENTE",
+  "unidades": "m",
+  "origen_global": "Eje A-1 de Parte 2 / LT2 = (0, 0, 0)",
+  "orientacion": "X paralelo a ejes alfabeticos principales; Y paralelo a ejes numericos. Rotacion 0, escala 1.",
+  "calce": {
+    "modelo": "CALCE_A",
+    "estado": "CONFIRMADO_HUMANAMENTE",
+    "rotacion_grados": 0.0,
+    "escala": 1.0,
+    "traslacion_base_parte_1_x_m": 27.491,
+    "traslacion_base_parte_1_y_m": 0.0,
+    "nota": "No se usa la diferencia entre nucleos para desplazar artificialmente; se mantienen residuos como control."
+  },
+  "niveles": {
+    "units": "m",
+    "z_offset_m": 7.97,
+    "niveles": {
+      "fundacion": 0.0,
+      "1S": 3.96,
+      "1": 7.92,
+      "2": 11.88,
+      "3": 15.84,
+      "4": 19.8
+    },
+    "source_elevation_m": {
+      "fundacion": -7.97,
+      "1S": -4.01,
+      "1": -0.05,
+      "2": 3.91,
+      "3": 7.87,
+      "4": 11.83
+    }
+  },
+  "transformaciones_region": {
+    "alignment_version": "CALCE_A_REGION_FINAL_2026_09_03",
+    "floors": {
+      "fundacion": {
+        "file": "fundacion.json",
+        "before_columns": {
+          "parte_1": {
+            "n": 6,
+            "x_range_m": [
+              65.248,
+              69.898
+            ],
+            "y_range_m": [
+              -28.588,
+              -12.019
+            ]
+          },
+          "parte_2": {
+            "n": 8,
+            "x_range_m": [
+              -4.893,
+              22.449
+            ],
+            "y_range_m": [
+              0.418,
+              16.568
+            ]
+          }
+        },
+        "after_columns": {
+          "parte_1": {
+            "n": 6,
+            "x_range_m": [
+              65.248,
+              69.898
+            ],
+            "y_range_m": [
+              0.118,
+              16.687
+            ]
+          },
+          "parte_2": {
+            "n": 8,
+            "x_range_m": [
+              0.107,
+              27.449
+            ],
+            "y_range_m": [
+              0.118,
+              16.268
+            ]
+          }
+        },
+        "bbox": [
+          -7.043,
+          -15.115,
+          73.999,
+          31.637
+        ],
+        "resumen": {
+          "muro": 210,
+          "perimetro_losa": 21,
+          "fundacion": 314,
+          "viga": 169,
+          "eje_grafico": 90,
+          "columna": 14
+        }
+      },
+      "1S": {
+        "file": "subterraneo_01.json",
+        "before_columns": {
+          "parte_2": {
+            "n": 8,
+            "x_range_m": [
+              0.107,
+              27.576
+            ],
+            "y_range_m": [
+              0.118,
+              16.268
+            ]
+          }
+        },
+        "after_columns": {
+          "parte_2": {
+            "n": 8,
+            "x_range_m": [
+              0.107,
+              27.576
+            ],
+            "y_range_m": [
+              0.118,
+              16.268
+            ]
+          }
+        },
+        "bbox": [
+          -7.043,
+          -12.793,
+          76.591,
+          80.195
+        ],
+        "resumen": {
+          "muro": 136,
+          "perimetro_losa": 56,
+          "viga": 177,
+          "vano": 18,
+          "eje_grafico": 93,
+          "columna": 8
+        }
+      },
+      "1": {
+        "file": "piso_01.json",
+        "before_columns": {
+          "parte_1": {
+            "n": 23,
+            "x_range_m": [
+              27.491,
+              72.491
+            ],
+            "y_range_m": [
+              -0.0,
+              28.337
+            ]
+          },
+          "parte_2": {
+            "n": 8,
+            "x_range_m": [
+              0.107,
+              27.576
+            ],
+            "y_range_m": [
+              0.118,
+              16.268
+            ]
+          }
+        },
+        "after_columns": {
+          "parte_1": {
+            "n": 23,
+            "x_range_m": [
+              27.491,
+              72.491
+            ],
+            "y_range_m": [
+              -0.0,
+              28.337
+            ]
+          },
+          "parte_2": {
+            "n": 8,
+            "x_range_m": [
+              0.107,
+              27.576
+            ],
+            "y_range_m": [
+              0.118,
+              16.268
+            ]
+          }
+        },
+        "bbox": [
+          -7.043,
+          -13.446,
+          76.591,
+          30.706
+        ],
+        "resumen": {
+          "muro": 89,
+          "perimetro_losa": 70,
+          "viga": 205,
+          "vano": 20,
+          "eje_grafico": 74,
+          "columna": 31
+        }
+      },
+      "2": {
+        "file": "piso_02.json",
+        "before_columns": {
+          "parte_1": {
+            "n": 21,
+            "x_range_m": [
+              25.81,
+              70.81
+            ],
+            "y_range_m": [
+              -43.269,
+              -22.999
+            ]
+          },
+          "parte_2": {
+            "n": 8,
+            "x_range_m": [
+              0.107,
+              27.576
+            ],
+            "y_range_m": [
+              0.118,
+              16.268
+            ]
+          }
+        },
+        "after_columns": {
+          "parte_1": {
+            "n": 21,
+            "x_range_m": [
+              21.078,
+              66.078
+            ],
+            "y_range_m": [
+              0.118,
+              20.388
+            ]
+          },
+          "parte_2": {
+            "n": 8,
+            "x_range_m": [
+              0.107,
+              27.576
+            ],
+            "y_range_m": [
+              0.118,
+              16.268
+            ]
+          }
+        },
+        "bbox": [
+          -7.043,
+          -12.793,
+          70.178,
+          25.238
+        ],
+        "resumen": {
+          "muro": 61,
+          "perimetro_losa": 66,
+          "viga": 205,
+          "eje_grafico": 45,
+          "vano": 35,
+          "columna": 29
+        }
+      },
+      "3": {
+        "file": "piso_03.json",
+        "before_columns": {
+          "parte_1": {
+            "n": 18,
+            "x_range_m": [
+              23.086,
+              68.086
+            ],
+            "y_range_m": [
+              -12.229,
+              3.921
+            ]
+          },
+          "parte_2": {
+            "n": 8,
+            "x_range_m": [
+              0.107,
+              27.576
+            ],
+            "y_range_m": [
+              0.118,
+              16.268
+            ]
+          }
+        },
+        "after_columns": {
+          "parte_1": {
+            "n": 18,
+            "x_range_m": [
+              17.495,
+              62.495
+            ],
+            "y_range_m": [
+              0.118,
+              16.268
+            ]
+          },
+          "parte_2": {
+            "n": 8,
+            "x_range_m": [
+              0.107,
+              27.576
+            ],
+            "y_range_m": [
+              0.118,
+              16.268
+            ]
+          }
+        },
+        "bbox": [
+          -7.043,
+          -12.793,
+          71.738,
+          25.238
+        ],
+        "resumen": {
+          "muro": 61,
+          "perimetro_losa": 70,
+          "viga": 213,
+          "vano": 22,
+          "eje_grafico": 41,
+          "columna": 26
+        }
+      },
+      "4": {
+        "file": "piso_04.json",
+        "before_columns": {
+          "parte_1": {
+            "n": 26,
+            "x_range_m": [
+              21.781,
+              71.681
+            ],
+            "y_range_m": [
+              -27.212,
+              -6.941
+            ]
+          },
+          "parte_2": {
+            "n": 8,
+            "x_range_m": [
+              0.107,
+              27.607
+            ],
+            "y_range_m": [
+              -3.082,
+              13.068
+            ]
+          }
+        },
+        "after_columns": {
+          "parte_1": {
+            "n": 26,
+            "x_range_m": [
+              27.482,
+              77.382
+            ],
+            "y_range_m": [
+              0.118,
+              20.389
+            ]
+          },
+          "parte_2": {
+            "n": 8,
+            "x_range_m": [
+              0.103,
+              27.603
+            ],
+            "y_range_m": [
+              0.118,
+              16.268
+            ]
+          }
+        },
+        "bbox": [
+          -7.047,
+          -5.581,
+          82.336,
+          25.239
+        ],
+        "resumen": {
+          "muro": 46,
+          "perimetro_losa": 105,
+          "viga": 282,
+          "vano": 67,
+          "eje_grafico": 52,
+          "columna": 34
+        }
+      }
+    }
+  }
+}
