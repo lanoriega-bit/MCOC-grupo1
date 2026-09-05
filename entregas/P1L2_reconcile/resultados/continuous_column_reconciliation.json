@@ -1,0 +1,5417 @@
+{
+  "report_id": "CONTINUOUS_COLUMN_RECONCILIATION_E1",
+  "generated_using": [
+    "model_viewer_candidate.json",
+    "relaciones_verticales.json",
+    "piso_01.json",
+    "piso_02.json",
+    "piso_03.json",
+    "piso_04.json",
+    "fundacion.json",
+    "subterraneo_01.json",
+    "region_specs.json",
+    "calibration_offsets.json"
+  ],
+  "levels": {
+    "base": 0.0,
+    "1S": 3.96,
+    "1": 7.92,
+    "2": 11.88,
+    "3": 15.84,
+    "4": 19.8
+  },
+  "story_height_m": 3.96,
+  "regions": {
+    "parte_1": {
+      "global_x_offset_m": 27.491,
+      "global_y_offset_m": 0.0,
+      "per_floor_offsets": {
+        "base": {
+          "med_x_offset_m": -2.225,
+          "med_y_offset_m": -0.049,
+          "n_columns": 6
+        },
+        "1S": {},
+        "1": {
+          "med_x_offset_m": 0.3,
+          "med_y_offset_m": -0.262,
+          "n_columns": 20
+        },
+        "2": {
+          "med_x_offset_m": 0.15,
+          "med_y_offset_m": -0.3,
+          "n_columns": 21
+        },
+        "3": {
+          "med_x_offset_m": 0.559,
+          "med_y_offset_m": 1.744,
+          "n_columns": 18
+        },
+        "4": {
+          "med_x_offset_m": 0.2,
+          "med_y_offset_m": -0.149,
+          "n_columns": 26
+        }
+      }
+    },
+    "parte_2": {
+      "global_x_offset_m": 0.0,
+      "global_y_offset_m": 0.0,
+      "per_floor_offsets": {
+        "base": {
+          "med_x_offset_m": -0.088,
+          "med_y_offset_m": -0.0625,
+          "n_columns": 8
+        },
+        "1S": {
+          "med_x_offset_m": 0.3,
+          "med_y_offset_m": -0.3,
+          "n_columns": 8
+        },
+        "1": {
+          "med_x_offset_m": 0.3,
+          "med_y_offset_m": -0.3,
+          "n_columns": 8
+        },
+        "2": {
+          "med_x_offset_m": 0.3,
+          "med_y_offset_m": -0.3,
+          "n_columns": 8
+        },
+        "3": {
+          "med_x_offset_m": 0.3,
+          "med_y_offset_m": -0.3,
+          "n_columns": 8
+        },
+        "4": {
+          "med_x_offset_m": 0.3,
+          "med_y_offset_m": -0.3,
+          "n_columns": 8
+        }
+      }
+    }
+  },
+  "offset_analysis": {
+    "parte_1": {
+      "base": {
+        "med_x_offset_m": -2.225,
+        "med_y_offset_m": -0.049,
+        "n_columns": 6
+      },
+      "1": {
+        "med_x_offset_m": 0.3,
+        "med_y_offset_m": -0.262,
+        "n_columns": 20
+      },
+      "2": {
+        "med_x_offset_m": 0.15,
+        "med_y_offset_m": -0.3,
+        "n_columns": 21
+      },
+      "3": {
+        "med_x_offset_m": 0.559,
+        "med_y_offset_m": 1.744,
+        "n_columns": 18
+      },
+      "4": {
+        "med_x_offset_m": 0.2,
+        "med_y_offset_m": -0.149,
+        "n_columns": 26
+      }
+    },
+    "parte_2": {
+      "base": {
+        "med_x_offset_m": -0.088,
+        "med_y_offset_m": -0.0625,
+        "n_columns": 8
+      },
+      "1S": {
+        "med_x_offset_m": 0.3,
+        "med_y_offset_m": -0.3,
+        "n_columns": 8
+      },
+      "1": {
+        "med_x_offset_m": 0.3,
+        "med_y_offset_m": -0.3,
+        "n_columns": 8
+      },
+      "2": {
+        "med_x_offset_m": 0.3,
+        "med_y_offset_m": -0.3,
+        "n_columns": 8
+      },
+      "3": {
+        "med_x_offset_m": 0.3,
+        "med_y_offset_m": -0.3,
+        "n_columns": 8
+      },
+      "4": {
+        "med_x_offset_m": 0.3,
+        "med_y_offset_m": -0.3,
+        "n_columns": 8
+      }
+    }
+  },
+  "summary": {
+    "raw_column_solids": 139,
+    "xy_clusters": 80,
+    "CONFIRMED_CONTINUOUS": 31,
+    "PROBABLE_CONTINUOUS": 8,
+    "FRAGMENT_ONLY": 41,
+    "reconstructed_story_columns": 88,
+    "parte_1_stacks": 72,
+    "parte_2_stacks": 8,
+    "join_region_stacks": 6,
+    "med_snap_distance_m": 0.0,
+    "max_accepted_snap_distance_m": 0.1454,
+    "floating_columns_remaining": 43,
+    "unsupported_beams": 0,
+    "artificial_ground_connectors_used": 0,
+    "walls_used_structurally": 6,
+    "major_blockers": [
+      "STK_0008 class C isolated at (18.4,-5.1) levels ['3']",
+      "STK_0009 class C isolated at (18.4,3.8) levels ['3']",
+      "STK_0010 class C isolated at (18.4,11.1) levels ['3']",
+      "STK_0011 class C isolated at (21.1,0.1) levels ['2']",
+      "STK_0012 class C isolated at (21.1,9.0) levels ['2']",
+      "STK_0013 class C isolated at (21.1,16.3) levels ['2']",
+      "STK_0020 class C isolated at (31.1,16.4) levels ['2']",
+      "STK_0021 class C isolated at (31.1,0.1) levels ['2']",
+      "STK_0022 class C isolated at (31.1,9.0) levels ['2']",
+      "STK_0023 class C isolated at (31.1,20.4) levels ['2']",
+      "STK_0030 class C isolated at (38.6,16.3) levels ['2']",
+      "STK_0031 class C isolated at (38.6,20.4) levels ['2']",
+      "STK_0032 class C isolated at (41.1,16.4) levels ['2']",
+      "STK_0033 class C isolated at (41.1,0.1) levels ['2']",
+      "STK_0034 class C isolated at (41.1,9.0) levels ['2']",
+      "STK_0035 class C isolated at (47.5,20.4) levels ['4']",
+      "STK_0042 class C isolated at (51.1,0.1) levels ['2']",
+      "STK_0043 class C isolated at (51.1,9.0) levels ['2']",
+      "STK_0044 class C isolated at (51.1,16.3) levels ['2']",
+      "STK_0045 class C isolated at (57.5,20.4) levels ['4']",
+      "STK_0049 class C isolated at (57.5,18.8) levels ['1']",
+      "STK_0053 class C isolated at (61.1,0.1) levels ['2']",
+      "STK_0054 class C isolated at (61.1,9.0) levels ['2']",
+      "STK_0055 class C isolated at (61.1,16.3) levels ['2']",
+      "STK_0056 class C isolated at (62.0,18.9) levels ['1']",
+      "STK_0057 class C isolated at (63.4,-5.1) levels ['3']",
+      "STK_0058 class C isolated at (63.4,3.8) levels ['3']",
+      "STK_0059 class C isolated at (63.4,11.1) levels ['3']",
+      "STK_0060 class C isolated at (65.2,0.3) levels ['base']",
+      "STK_0061 class B at (65.2,9.1) - no wall/beam/column evidence for any level pair",
+      "STK_0062 class C isolated at (65.3,16.7) levels ['base']",
+      "STK_0063 class C isolated at (66.1,0.1) levels ['2']",
+      "STK_0064 class B at (66.1,9.0) - no wall/beam/column evidence for any level pair",
+      "STK_0065 class C isolated at (66.1,16.3) levels ['2']",
+      "STK_0069 class C isolated at (69.8,9.1) levels ['base']",
+      "STK_0070 class C isolated at (69.9,0.1) levels ['base']",
+      "STK_0071 class C isolated at (69.9,16.3) levels ['base']",
+      "STK_0075 class C isolated at (75.0,0.1) levels ['4']",
+      "STK_0076 class C isolated at (75.0,9.0) levels ['4']",
+      "STK_0077 class C isolated at (75.0,16.3) levels ['4']",
+      "STK_0078 class C isolated at (77.4,0.1) levels ['4']",
+      "STK_0079 class C isolated at (77.4,9.0) levels ['4']",
+      "STK_0080 class C isolated at (77.4,16.3) levels ['4']"
+    ]
+  },
+  "stacks": [
+    {
+      "stack_id": "STK_0001",
+      "region": "parte_2",
+      "class": "A",
+      "class_evidence": [
+        "REL_COL_0006 CONTINUA_DESDE_FUNDACION_A_PISO_4 conf0.95"
+      ],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_base_columna_0011",
+          "level": "base",
+          "xy": [
+            0.107,
+            9.093
+          ]
+        },
+        {
+          "solidTag": "SOL_1S_columna_0005",
+          "level": "1S",
+          "xy": [
+            0.107,
+            9.018
+          ]
+        },
+        {
+          "solidTag": "SOL_1_columna_0025",
+          "level": "1",
+          "xy": [
+            0.107,
+            9.018
+          ]
+        },
+        {
+          "solidTag": "SOL_2_columna_0026",
+          "level": "2",
+          "xy": [
+            0.107,
+            9.018
+          ]
+        },
+        {
+          "solidTag": "SOL_3_columna_0023",
+          "level": "3",
+          "xy": [
+            0.107,
+            9.018
+          ]
+        },
+        {
+          "solidTag": "SOL_4_columna_0031",
+          "level": "4",
+          "xy": [
+            0.103,
+            9.018
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 0.107,
+        "y": 9.018,
+        "base_z": 0.0,
+        "top_z": 23.76,
+        "levels": [
+          "base",
+          "1S",
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "section": {
+        "b_m": 0.7,
+        "d_m": 0.6999999999999993,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [
+        {
+          "column_id": "STK_0001_story_base_1S",
+          "level_bottom": "base",
+          "level_top": "1S",
+          "node_bottom": [
+            0.107,
+            9.018,
+            0.0
+          ],
+          "node_top": [
+            0.107,
+            9.018,
+            3.96
+          ],
+          "section": {
+            "b_m": 0.7,
+            "d_m": 0.6999999999999993,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0001_story_1S_1",
+          "level_bottom": "1S",
+          "level_top": "1",
+          "node_bottom": [
+            0.107,
+            9.018,
+            3.96
+          ],
+          "node_top": [
+            0.107,
+            9.018,
+            7.92
+          ],
+          "section": {
+            "b_m": 0.7,
+            "d_m": 0.6999999999999993,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0001_story_1_2",
+          "level_bottom": "1",
+          "level_top": "2",
+          "node_bottom": [
+            0.107,
+            9.018,
+            7.92
+          ],
+          "node_top": [
+            0.107,
+            9.018,
+            11.88
+          ],
+          "section": {
+            "b_m": 0.7,
+            "d_m": 0.6999999999999993,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0001_story_2_3",
+          "level_bottom": "2",
+          "level_top": "3",
+          "node_bottom": [
+            0.107,
+            9.018,
+            11.88
+          ],
+          "node_top": [
+            0.107,
+            9.018,
+            15.84
+          ],
+          "section": {
+            "b_m": 0.7,
+            "d_m": 0.6999999999999993,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0001_story_3_4",
+          "level_bottom": "3",
+          "level_top": "4",
+          "node_bottom": [
+            0.107,
+            9.018,
+            15.84
+          ],
+          "node_top": [
+            0.107,
+            9.018,
+            19.8
+          ],
+          "section": {
+            "b_m": 0.7,
+            "d_m": 0.6999999999999993,
+            "source": "most_common_in_stack"
+          }
+        }
+      ],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0002",
+      "region": "parte_2",
+      "class": "A",
+      "class_evidence": [
+        "REL_COL_0002 CONTINUA_DESDE_FUNDACION_A_PISO_4 conf0.95"
+      ],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_base_columna_0007",
+          "level": "base",
+          "xy": [
+            7.607,
+            0.118
+          ]
+        },
+        {
+          "solidTag": "SOL_1S_columna_0001",
+          "level": "1S",
+          "xy": [
+            7.607,
+            0.118
+          ]
+        },
+        {
+          "solidTag": "SOL_1_columna_0021",
+          "level": "1",
+          "xy": [
+            7.607,
+            0.118
+          ]
+        },
+        {
+          "solidTag": "SOL_2_columna_0022",
+          "level": "2",
+          "xy": [
+            7.607,
+            0.118
+          ]
+        },
+        {
+          "solidTag": "SOL_3_columna_0019",
+          "level": "3",
+          "xy": [
+            7.607,
+            0.118
+          ]
+        },
+        {
+          "solidTag": "SOL_4_columna_0027",
+          "level": "4",
+          "xy": [
+            7.603,
+            0.118
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 7.607,
+        "y": 0.118,
+        "base_z": 0.0,
+        "top_z": 23.76,
+        "levels": [
+          "base",
+          "1S",
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "section": {
+        "b_m": 0.7000000000000002,
+        "d_m": 0.7,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [
+        {
+          "column_id": "STK_0002_story_base_1S",
+          "level_bottom": "base",
+          "level_top": "1S",
+          "node_bottom": [
+            7.607,
+            0.118,
+            0.0
+          ],
+          "node_top": [
+            7.607,
+            0.118,
+            3.96
+          ],
+          "section": {
+            "b_m": 0.7000000000000002,
+            "d_m": 0.7,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0002_story_1S_1",
+          "level_bottom": "1S",
+          "level_top": "1",
+          "node_bottom": [
+            7.607,
+            0.118,
+            3.96
+          ],
+          "node_top": [
+            7.607,
+            0.118,
+            7.92
+          ],
+          "section": {
+            "b_m": 0.7000000000000002,
+            "d_m": 0.7,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0002_story_1_2",
+          "level_bottom": "1",
+          "level_top": "2",
+          "node_bottom": [
+            7.607,
+            0.118,
+            7.92
+          ],
+          "node_top": [
+            7.607,
+            0.118,
+            11.88
+          ],
+          "section": {
+            "b_m": 0.7000000000000002,
+            "d_m": 0.7,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0002_story_2_3",
+          "level_bottom": "2",
+          "level_top": "3",
+          "node_bottom": [
+            7.607,
+            0.118,
+            11.88
+          ],
+          "node_top": [
+            7.607,
+            0.118,
+            15.84
+          ],
+          "section": {
+            "b_m": 0.7000000000000002,
+            "d_m": 0.7,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0002_story_3_4",
+          "level_bottom": "3",
+          "level_top": "4",
+          "node_bottom": [
+            7.607,
+            0.118,
+            15.84
+          ],
+          "node_top": [
+            7.607,
+            0.118,
+            19.8
+          ],
+          "section": {
+            "b_m": 0.7000000000000002,
+            "d_m": 0.7,
+            "source": "most_common_in_stack"
+          }
+        }
+      ],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0003",
+      "region": "parte_2",
+      "class": "A",
+      "class_evidence": [
+        "REL_COL_0005 CONTINUA_DESDE_FUNDACION_A_PISO_4 conf0.95"
+      ],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_base_columna_0010",
+          "level": "base",
+          "xy": [
+            7.607,
+            9.018
+          ]
+        },
+        {
+          "solidTag": "SOL_1S_columna_0004",
+          "level": "1S",
+          "xy": [
+            7.607,
+            9.018
+          ]
+        },
+        {
+          "solidTag": "SOL_1_columna_0024",
+          "level": "1",
+          "xy": [
+            7.607,
+            9.018
+          ]
+        },
+        {
+          "solidTag": "SOL_2_columna_0025",
+          "level": "2",
+          "xy": [
+            7.607,
+            9.018
+          ]
+        },
+        {
+          "solidTag": "SOL_3_columna_0022",
+          "level": "3",
+          "xy": [
+            7.607,
+            9.018
+          ]
+        },
+        {
+          "solidTag": "SOL_4_columna_0030",
+          "level": "4",
+          "xy": [
+            7.603,
+            9.018
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 7.607,
+        "y": 9.018,
+        "base_z": 0.0,
+        "top_z": 23.76,
+        "levels": [
+          "base",
+          "1S",
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "section": {
+        "b_m": 0.7000000000000002,
+        "d_m": 0.6999999999999993,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [
+        {
+          "column_id": "STK_0003_story_base_1S",
+          "level_bottom": "base",
+          "level_top": "1S",
+          "node_bottom": [
+            7.607,
+            9.018,
+            0.0
+          ],
+          "node_top": [
+            7.607,
+            9.018,
+            3.96
+          ],
+          "section": {
+            "b_m": 0.7000000000000002,
+            "d_m": 0.6999999999999993,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0003_story_1S_1",
+          "level_bottom": "1S",
+          "level_top": "1",
+          "node_bottom": [
+            7.607,
+            9.018,
+            3.96
+          ],
+          "node_top": [
+            7.607,
+            9.018,
+            7.92
+          ],
+          "section": {
+            "b_m": 0.7000000000000002,
+            "d_m": 0.6999999999999993,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0003_story_1_2",
+          "level_bottom": "1",
+          "level_top": "2",
+          "node_bottom": [
+            7.607,
+            9.018,
+            7.92
+          ],
+          "node_top": [
+            7.607,
+            9.018,
+            11.88
+          ],
+          "section": {
+            "b_m": 0.7000000000000002,
+            "d_m": 0.6999999999999993,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0003_story_2_3",
+          "level_bottom": "2",
+          "level_top": "3",
+          "node_bottom": [
+            7.607,
+            9.018,
+            11.88
+          ],
+          "node_top": [
+            7.607,
+            9.018,
+            15.84
+          ],
+          "section": {
+            "b_m": 0.7000000000000002,
+            "d_m": 0.6999999999999993,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0003_story_3_4",
+          "level_bottom": "3",
+          "level_top": "4",
+          "node_bottom": [
+            7.607,
+            9.018,
+            15.84
+          ],
+          "node_top": [
+            7.607,
+            9.018,
+            19.8
+          ],
+          "section": {
+            "b_m": 0.7000000000000002,
+            "d_m": 0.6999999999999993,
+            "source": "most_common_in_stack"
+          }
+        }
+      ],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0004",
+      "region": "parte_2",
+      "class": "A",
+      "class_evidence": [
+        "REL_COL_0007 CONTINUA_DESDE_FUNDACION_A_PISO_4 conf0.95"
+      ],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_base_columna_0012",
+          "level": "base",
+          "xy": [
+            7.607,
+            16.268
+          ]
+        },
+        {
+          "solidTag": "SOL_1S_columna_0006",
+          "level": "1S",
+          "xy": [
+            7.607,
+            16.268
+          ]
+        },
+        {
+          "solidTag": "SOL_1_columna_0026",
+          "level": "1",
+          "xy": [
+            7.607,
+            16.268
+          ]
+        },
+        {
+          "solidTag": "SOL_2_columna_0027",
+          "level": "2",
+          "xy": [
+            7.607,
+            16.268
+          ]
+        },
+        {
+          "solidTag": "SOL_3_columna_0024",
+          "level": "3",
+          "xy": [
+            7.607,
+            16.268
+          ]
+        },
+        {
+          "solidTag": "SOL_4_columna_0032",
+          "level": "4",
+          "xy": [
+            7.603,
+            16.268
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 7.607,
+        "y": 16.268,
+        "base_z": 0.0,
+        "top_z": 23.76,
+        "levels": [
+          "base",
+          "1S",
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "section": {
+        "b_m": 0.7000000000000002,
+        "d_m": 0.7000000000000011,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [
+        {
+          "column_id": "STK_0004_story_base_1S",
+          "level_bottom": "base",
+          "level_top": "1S",
+          "node_bottom": [
+            7.607,
+            16.268,
+            0.0
+          ],
+          "node_top": [
+            7.607,
+            16.268,
+            3.96
+          ],
+          "section": {
+            "b_m": 0.7000000000000002,
+            "d_m": 0.7000000000000011,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0004_story_1S_1",
+          "level_bottom": "1S",
+          "level_top": "1",
+          "node_bottom": [
+            7.607,
+            16.268,
+            3.96
+          ],
+          "node_top": [
+            7.607,
+            16.268,
+            7.92
+          ],
+          "section": {
+            "b_m": 0.7000000000000002,
+            "d_m": 0.7000000000000011,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0004_story_1_2",
+          "level_bottom": "1",
+          "level_top": "2",
+          "node_bottom": [
+            7.607,
+            16.268,
+            7.92
+          ],
+          "node_top": [
+            7.607,
+            16.268,
+            11.88
+          ],
+          "section": {
+            "b_m": 0.7000000000000002,
+            "d_m": 0.7000000000000011,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0004_story_2_3",
+          "level_bottom": "2",
+          "level_top": "3",
+          "node_bottom": [
+            7.607,
+            16.268,
+            11.88
+          ],
+          "node_top": [
+            7.607,
+            16.268,
+            15.84
+          ],
+          "section": {
+            "b_m": 0.7000000000000002,
+            "d_m": 0.7000000000000011,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0004_story_3_4",
+          "level_bottom": "3",
+          "level_top": "4",
+          "node_bottom": [
+            7.607,
+            16.268,
+            15.84
+          ],
+          "node_top": [
+            7.607,
+            16.268,
+            19.8
+          ],
+          "section": {
+            "b_m": 0.7000000000000002,
+            "d_m": 0.7000000000000011,
+            "source": "most_common_in_stack"
+          }
+        }
+      ],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0005",
+      "region": "parte_2",
+      "class": "A",
+      "class_evidence": [
+        "REL_COL_0003 CONTINUA_DESDE_FUNDACION_A_PISO_4 conf0.95"
+      ],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_base_columna_0008",
+          "level": "base",
+          "xy": [
+            17.607,
+            0.118
+          ]
+        },
+        {
+          "solidTag": "SOL_1S_columna_0002",
+          "level": "1S",
+          "xy": [
+            17.607,
+            0.118
+          ]
+        },
+        {
+          "solidTag": "SOL_1_columna_0022",
+          "level": "1",
+          "xy": [
+            17.607,
+            0.118
+          ]
+        },
+        {
+          "solidTag": "SOL_2_columna_0023",
+          "level": "2",
+          "xy": [
+            17.607,
+            0.118
+          ]
+        },
+        {
+          "solidTag": "SOL_3_columna_0020",
+          "level": "3",
+          "xy": [
+            17.607,
+            0.118
+          ]
+        },
+        {
+          "solidTag": "SOL_4_columna_0028",
+          "level": "4",
+          "xy": [
+            17.603,
+            0.118
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 17.607,
+        "y": 0.118,
+        "base_z": 0.0,
+        "top_z": 23.76,
+        "levels": [
+          "base",
+          "1S",
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "section": {
+        "b_m": 0.6999999999999993,
+        "d_m": 0.7,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [
+        {
+          "column_id": "STK_0005_story_base_1S",
+          "level_bottom": "base",
+          "level_top": "1S",
+          "node_bottom": [
+            17.607,
+            0.118,
+            0.0
+          ],
+          "node_top": [
+            17.607,
+            0.118,
+            3.96
+          ],
+          "section": {
+            "b_m": 0.6999999999999993,
+            "d_m": 0.7,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0005_story_1S_1",
+          "level_bottom": "1S",
+          "level_top": "1",
+          "node_bottom": [
+            17.607,
+            0.118,
+            3.96
+          ],
+          "node_top": [
+            17.607,
+            0.118,
+            7.92
+          ],
+          "section": {
+            "b_m": 0.6999999999999993,
+            "d_m": 0.7,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0005_story_1_2",
+          "level_bottom": "1",
+          "level_top": "2",
+          "node_bottom": [
+            17.607,
+            0.118,
+            7.92
+          ],
+          "node_top": [
+            17.607,
+            0.118,
+            11.88
+          ],
+          "section": {
+            "b_m": 0.6999999999999993,
+            "d_m": 0.7,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0005_story_2_3",
+          "level_bottom": "2",
+          "level_top": "3",
+          "node_bottom": [
+            17.607,
+            0.118,
+            11.88
+          ],
+          "node_top": [
+            17.607,
+            0.118,
+            15.84
+          ],
+          "section": {
+            "b_m": 0.6999999999999993,
+            "d_m": 0.7,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0005_story_3_4",
+          "level_bottom": "3",
+          "level_top": "4",
+          "node_bottom": [
+            17.607,
+            0.118,
+            15.84
+          ],
+          "node_top": [
+            17.607,
+            0.118,
+            19.8
+          ],
+          "section": {
+            "b_m": 0.6999999999999993,
+            "d_m": 0.7,
+            "source": "most_common_in_stack"
+          }
+        }
+      ],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0006",
+      "region": "parte_2",
+      "class": "A",
+      "class_evidence": [
+        "REL_COL_0004 CONTINUA_DESDE_FUNDACION_A_PISO_4 conf0.95"
+      ],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_base_columna_0009",
+          "level": "base",
+          "xy": [
+            17.607,
+            9.018
+          ]
+        },
+        {
+          "solidTag": "SOL_1S_columna_0003",
+          "level": "1S",
+          "xy": [
+            17.607,
+            9.018
+          ]
+        },
+        {
+          "solidTag": "SOL_1_columna_0023",
+          "level": "1",
+          "xy": [
+            17.607,
+            9.018
+          ]
+        },
+        {
+          "solidTag": "SOL_2_columna_0024",
+          "level": "2",
+          "xy": [
+            17.607,
+            9.018
+          ]
+        },
+        {
+          "solidTag": "SOL_3_columna_0021",
+          "level": "3",
+          "xy": [
+            17.607,
+            9.018
+          ]
+        },
+        {
+          "solidTag": "SOL_4_columna_0029",
+          "level": "4",
+          "xy": [
+            17.603,
+            9.018
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 17.607,
+        "y": 9.018,
+        "base_z": 0.0,
+        "top_z": 23.76,
+        "levels": [
+          "base",
+          "1S",
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "section": {
+        "b_m": 0.6999999999999993,
+        "d_m": 0.6999999999999993,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [
+        {
+          "column_id": "STK_0006_story_base_1S",
+          "level_bottom": "base",
+          "level_top": "1S",
+          "node_bottom": [
+            17.607,
+            9.018,
+            0.0
+          ],
+          "node_top": [
+            17.607,
+            9.018,
+            3.96
+          ],
+          "section": {
+            "b_m": 0.6999999999999993,
+            "d_m": 0.6999999999999993,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0006_story_1S_1",
+          "level_bottom": "1S",
+          "level_top": "1",
+          "node_bottom": [
+            17.607,
+            9.018,
+            3.96
+          ],
+          "node_top": [
+            17.607,
+            9.018,
+            7.92
+          ],
+          "section": {
+            "b_m": 0.6999999999999993,
+            "d_m": 0.6999999999999993,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0006_story_1_2",
+          "level_bottom": "1",
+          "level_top": "2",
+          "node_bottom": [
+            17.607,
+            9.018,
+            7.92
+          ],
+          "node_top": [
+            17.607,
+            9.018,
+            11.88
+          ],
+          "section": {
+            "b_m": 0.6999999999999993,
+            "d_m": 0.6999999999999993,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0006_story_2_3",
+          "level_bottom": "2",
+          "level_top": "3",
+          "node_bottom": [
+            17.607,
+            9.018,
+            11.88
+          ],
+          "node_top": [
+            17.607,
+            9.018,
+            15.84
+          ],
+          "section": {
+            "b_m": 0.6999999999999993,
+            "d_m": 0.6999999999999993,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0006_story_3_4",
+          "level_bottom": "3",
+          "level_top": "4",
+          "node_bottom": [
+            17.607,
+            9.018,
+            15.84
+          ],
+          "node_top": [
+            17.607,
+            9.018,
+            19.8
+          ],
+          "section": {
+            "b_m": 0.6999999999999993,
+            "d_m": 0.6999999999999993,
+            "source": "most_common_in_stack"
+          }
+        }
+      ],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0007",
+      "region": "parte_2",
+      "class": "A",
+      "class_evidence": [
+        "REL_COL_0008 CONTINUA_DESDE_FUNDACION_A_PISO_4 conf0.95"
+      ],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_base_columna_0013",
+          "level": "base",
+          "xy": [
+            17.607,
+            16.268
+          ]
+        },
+        {
+          "solidTag": "SOL_1S_columna_0007",
+          "level": "1S",
+          "xy": [
+            17.607,
+            16.268
+          ]
+        },
+        {
+          "solidTag": "SOL_1_columna_0027",
+          "level": "1",
+          "xy": [
+            17.607,
+            16.268
+          ]
+        },
+        {
+          "solidTag": "SOL_2_columna_0028",
+          "level": "2",
+          "xy": [
+            17.607,
+            16.268
+          ]
+        },
+        {
+          "solidTag": "SOL_3_columna_0025",
+          "level": "3",
+          "xy": [
+            17.607,
+            16.268
+          ]
+        },
+        {
+          "solidTag": "SOL_4_columna_0033",
+          "level": "4",
+          "xy": [
+            17.603,
+            16.268
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 17.607,
+        "y": 16.268,
+        "base_z": 0.0,
+        "top_z": 23.76,
+        "levels": [
+          "base",
+          "1S",
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "section": {
+        "b_m": 0.6999999999999993,
+        "d_m": 0.7000000000000011,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [
+        {
+          "column_id": "STK_0007_story_base_1S",
+          "level_bottom": "base",
+          "level_top": "1S",
+          "node_bottom": [
+            17.607,
+            16.268,
+            0.0
+          ],
+          "node_top": [
+            17.607,
+            16.268,
+            3.96
+          ],
+          "section": {
+            "b_m": 0.6999999999999993,
+            "d_m": 0.7000000000000011,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0007_story_1S_1",
+          "level_bottom": "1S",
+          "level_top": "1",
+          "node_bottom": [
+            17.607,
+            16.268,
+            3.96
+          ],
+          "node_top": [
+            17.607,
+            16.268,
+            7.92
+          ],
+          "section": {
+            "b_m": 0.6999999999999993,
+            "d_m": 0.7000000000000011,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0007_story_1_2",
+          "level_bottom": "1",
+          "level_top": "2",
+          "node_bottom": [
+            17.607,
+            16.268,
+            7.92
+          ],
+          "node_top": [
+            17.607,
+            16.268,
+            11.88
+          ],
+          "section": {
+            "b_m": 0.6999999999999993,
+            "d_m": 0.7000000000000011,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0007_story_2_3",
+          "level_bottom": "2",
+          "level_top": "3",
+          "node_bottom": [
+            17.607,
+            16.268,
+            11.88
+          ],
+          "node_top": [
+            17.607,
+            16.268,
+            15.84
+          ],
+          "section": {
+            "b_m": 0.6999999999999993,
+            "d_m": 0.7000000000000011,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0007_story_3_4",
+          "level_bottom": "3",
+          "level_top": "4",
+          "node_bottom": [
+            17.607,
+            16.268,
+            15.84
+          ],
+          "node_top": [
+            17.607,
+            16.268,
+            19.8
+          ],
+          "section": {
+            "b_m": 0.6999999999999993,
+            "d_m": 0.7000000000000011,
+            "source": "most_common_in_stack"
+          }
+        }
+      ],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0008",
+      "region": "parte_1",
+      "class": "C",
+      "class_evidence": [],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_3_columna_0005",
+          "level": "3",
+          "xy": [
+            17.495,
+            0.118
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 18.354,
+        "y": -5.088,
+        "base_z": 15.84,
+        "top_z": 19.8,
+        "levels": [
+          "3"
+        ]
+      },
+      "section": {
+        "b_m": 0.7000000000000135,
+        "d_m": 0.7000000000000091,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0009",
+      "region": "parte_1",
+      "class": "C",
+      "class_evidence": [],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_3_columna_0004",
+          "level": "3",
+          "xy": [
+            17.495,
+            9.018
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 18.354,
+        "y": 3.812,
+        "base_z": 15.84,
+        "top_z": 19.8,
+        "levels": [
+          "3"
+        ]
+      },
+      "section": {
+        "b_m": 0.699999999999978,
+        "d_m": 0.7000000000000499,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0010",
+      "region": "parte_1",
+      "class": "C",
+      "class_evidence": [],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_3_columna_0006",
+          "level": "3",
+          "xy": [
+            17.495,
+            16.268
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 18.354,
+        "y": 11.062,
+        "base_z": 15.84,
+        "top_z": 19.8,
+        "levels": [
+          "3"
+        ]
+      },
+      "section": {
+        "b_m": 0.700000000000017,
+        "d_m": 0.7000000000000508,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0011",
+      "region": "parte_1",
+      "class": "C",
+      "class_evidence": [],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_2_columna_0005",
+          "level": "2",
+          "xy": [
+            21.078,
+            0.118
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 21.078,
+        "y": 0.118,
+        "base_z": 11.88,
+        "top_z": 15.84,
+        "levels": [
+          "2"
+        ]
+      },
+      "section": {
+        "b_m": 0.7000000000000135,
+        "d_m": 0.6999999999999957,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0012",
+      "region": "parte_1",
+      "class": "C",
+      "class_evidence": [],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_2_columna_0004",
+          "level": "2",
+          "xy": [
+            21.078,
+            9.018
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 21.078,
+        "y": 9.018,
+        "base_z": 11.88,
+        "top_z": 15.84,
+        "levels": [
+          "2"
+        ]
+      },
+      "section": {
+        "b_m": 0.7000000000000135,
+        "d_m": 0.6999999999999744,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0013",
+      "region": "parte_1",
+      "class": "C",
+      "class_evidence": [],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_2_columna_0006",
+          "level": "2",
+          "xy": [
+            21.078,
+            16.268
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 21.078,
+        "y": 16.268,
+        "base_z": 11.88,
+        "top_z": 15.84,
+        "levels": [
+          "2"
+        ]
+      },
+      "section": {
+        "b_m": 0.7000000000000135,
+        "d_m": 0.6999999999999815,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0014",
+      "region": "parte_1",
+      "class": "A",
+      "class_evidence": [
+        "REL_COL_0013 CONTINUA conf0.85"
+      ],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_1_columna_0004",
+          "level": "1",
+          "xy": [
+            27.516,
+            8.9
+          ]
+        },
+        {
+          "solidTag": "SOL_4_columna_0004",
+          "level": "4",
+          "xy": [
+            27.482,
+            9.018
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 27.499,
+        "y": 8.959,
+        "base_z": 7.92,
+        "top_z": 23.76,
+        "levels": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "section": {
+        "b_m": 0.6999999999999886,
+        "d_m": 0.7000000000000082,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [
+        {
+          "column_id": "STK_0014_story_1_2",
+          "level_bottom": "1",
+          "level_top": "2",
+          "node_bottom": [
+            27.499,
+            8.959,
+            7.92
+          ],
+          "node_top": [
+            27.499,
+            8.959,
+            11.88
+          ],
+          "section": {
+            "b_m": 0.6999999999999886,
+            "d_m": 0.7000000000000082,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0014_story_2_3",
+          "level_bottom": "2",
+          "level_top": "3",
+          "node_bottom": [
+            27.499,
+            8.959,
+            11.88
+          ],
+          "node_top": [
+            27.499,
+            8.959,
+            15.84
+          ],
+          "section": {
+            "b_m": 0.6999999999999886,
+            "d_m": 0.7000000000000082,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0014_story_3_4",
+          "level_bottom": "3",
+          "level_top": "4",
+          "node_bottom": [
+            27.499,
+            8.959,
+            15.84
+          ],
+          "node_top": [
+            27.499,
+            8.959,
+            19.8
+          ],
+          "section": {
+            "b_m": 0.6999999999999886,
+            "d_m": 0.7000000000000082,
+            "source": "most_common_in_stack"
+          }
+        }
+      ],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0015",
+      "region": "parte_1",
+      "class": "A",
+      "class_evidence": [
+        "REL_COL_0015 CONTINUA conf0.85"
+      ],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_1_columna_0006",
+          "level": "1",
+          "xy": [
+            27.516,
+            16.15
+          ]
+        },
+        {
+          "solidTag": "SOL_4_columna_0006",
+          "level": "4",
+          "xy": [
+            27.482,
+            16.269
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 27.499,
+        "y": 16.209,
+        "base_z": 7.92,
+        "top_z": 23.76,
+        "levels": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "section": {
+        "b_m": 0.7000000000000028,
+        "d_m": 0.7000000000000082,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [
+        {
+          "column_id": "STK_0015_story_1_2",
+          "level_bottom": "1",
+          "level_top": "2",
+          "node_bottom": [
+            27.499,
+            16.209,
+            7.92
+          ],
+          "node_top": [
+            27.499,
+            16.209,
+            11.88
+          ],
+          "section": {
+            "b_m": 0.7000000000000028,
+            "d_m": 0.7000000000000082,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0015_story_2_3",
+          "level_bottom": "2",
+          "level_top": "3",
+          "node_bottom": [
+            27.499,
+            16.209,
+            11.88
+          ],
+          "node_top": [
+            27.499,
+            16.209,
+            15.84
+          ],
+          "section": {
+            "b_m": 0.7000000000000028,
+            "d_m": 0.7000000000000082,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0015_story_3_4",
+          "level_bottom": "3",
+          "level_top": "4",
+          "node_bottom": [
+            27.499,
+            16.209,
+            15.84
+          ],
+          "node_top": [
+            27.499,
+            16.209,
+            19.8
+          ],
+          "section": {
+            "b_m": 0.7000000000000028,
+            "d_m": 0.7000000000000082,
+            "source": "most_common_in_stack"
+          }
+        }
+      ],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0016",
+      "region": "parte_2",
+      "class": "A",
+      "class_evidence": [
+        "REL_COL_0009 CONTINUA_DESDE_FUNDACION_A_PISO_4 conf0.95",
+        "REL_COL_0014 CONTINUA conf0.85"
+      ],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_base_columna_0014",
+          "level": "base",
+          "xy": [
+            27.449,
+            0.118
+          ]
+        },
+        {
+          "solidTag": "SOL_1S_columna_0008",
+          "level": "1S",
+          "xy": [
+            27.576,
+            0.118
+          ]
+        },
+        {
+          "solidTag": "SOL_1_columna_0005",
+          "level": "1",
+          "xy": [
+            27.491,
+            -0.0
+          ]
+        },
+        {
+          "solidTag": "SOL_1_columna_0028",
+          "level": "1",
+          "xy": [
+            27.576,
+            0.118
+          ]
+        },
+        {
+          "solidTag": "SOL_2_columna_0029",
+          "level": "2",
+          "xy": [
+            27.576,
+            0.118
+          ]
+        },
+        {
+          "solidTag": "SOL_3_columna_0026",
+          "level": "3",
+          "xy": [
+            27.576,
+            0.118
+          ]
+        },
+        {
+          "solidTag": "SOL_4_columna_0005",
+          "level": "4",
+          "xy": [
+            27.482,
+            0.118
+          ]
+        },
+        {
+          "solidTag": "SOL_4_columna_0034",
+          "level": "4",
+          "xy": [
+            27.603,
+            0.118
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 27.576,
+        "y": 0.118,
+        "base_z": 0.0,
+        "top_z": 23.76,
+        "levels": [
+          "base",
+          "1S",
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "section": {
+        "b_m": 0.6999999999999993,
+        "d_m": 0.7,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [
+        {
+          "column_id": "STK_0016_story_base_1S",
+          "level_bottom": "base",
+          "level_top": "1S",
+          "node_bottom": [
+            27.576,
+            0.118,
+            0.0
+          ],
+          "node_top": [
+            27.576,
+            0.118,
+            3.96
+          ],
+          "section": {
+            "b_m": 0.6999999999999993,
+            "d_m": 0.7,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0016_story_1S_1",
+          "level_bottom": "1S",
+          "level_top": "1",
+          "node_bottom": [
+            27.576,
+            0.118,
+            3.96
+          ],
+          "node_top": [
+            27.576,
+            0.118,
+            7.92
+          ],
+          "section": {
+            "b_m": 0.6999999999999993,
+            "d_m": 0.7,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0016_story_1_2",
+          "level_bottom": "1",
+          "level_top": "2",
+          "node_bottom": [
+            27.576,
+            0.118,
+            7.92
+          ],
+          "node_top": [
+            27.576,
+            0.118,
+            11.88
+          ],
+          "section": {
+            "b_m": 0.6999999999999993,
+            "d_m": 0.7,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0016_story_2_3",
+          "level_bottom": "2",
+          "level_top": "3",
+          "node_bottom": [
+            27.576,
+            0.118,
+            11.88
+          ],
+          "node_top": [
+            27.576,
+            0.118,
+            15.84
+          ],
+          "section": {
+            "b_m": 0.6999999999999993,
+            "d_m": 0.7,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0016_story_3_4",
+          "level_bottom": "3",
+          "level_top": "4",
+          "node_bottom": [
+            27.576,
+            0.118,
+            15.84
+          ],
+          "node_top": [
+            27.576,
+            0.118,
+            19.8
+          ],
+          "section": {
+            "b_m": 0.6999999999999993,
+            "d_m": 0.7,
+            "source": "most_common_in_stack"
+          }
+        }
+      ],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0017",
+      "region": "parte_1",
+      "class": "A",
+      "class_evidence": [
+        "REL_COL_0014 CONTINUA conf0.85"
+      ],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_3_columna_0001",
+          "level": "3",
+          "xy": [
+            27.495,
+            0.118
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 28.354,
+        "y": -5.088,
+        "base_z": 15.84,
+        "top_z": 19.8,
+        "levels": [
+          "3"
+        ]
+      },
+      "section": {
+        "b_m": 0.700000000000017,
+        "d_m": 0.7000000000000277,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0018",
+      "region": "parte_1",
+      "class": "A",
+      "class_evidence": [
+        "REL_COL_0013 CONTINUA conf0.85"
+      ],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_3_columna_0003",
+          "level": "3",
+          "xy": [
+            27.495,
+            9.018
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 28.354,
+        "y": 3.812,
+        "base_z": 15.84,
+        "top_z": 19.8,
+        "levels": [
+          "3"
+        ]
+      },
+      "section": {
+        "b_m": 0.700000000000017,
+        "d_m": 0.6999999999999771,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0019",
+      "region": "parte_1",
+      "class": "A",
+      "class_evidence": [
+        "REL_COL_0015 CONTINUA conf0.85"
+      ],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_3_columna_0002",
+          "level": "3",
+          "xy": [
+            27.495,
+            16.268
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 28.354,
+        "y": 11.062,
+        "base_z": 15.84,
+        "top_z": 19.8,
+        "levels": [
+          "3"
+        ]
+      },
+      "section": {
+        "b_m": 0.6999999999999815,
+        "d_m": 0.6999999999999815,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0020",
+      "region": "parte_1",
+      "class": "C",
+      "class_evidence": [],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_2_columna_0002",
+          "level": "2",
+          "xy": [
+            31.077,
+            16.385
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 31.077,
+        "y": 16.385,
+        "base_z": 11.88,
+        "top_z": 15.84,
+        "levels": [
+          "2"
+        ]
+      },
+      "section": {
+        "b_m": 0.7000000000000028,
+        "d_m": 0.6999999999999993,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0021",
+      "region": "parte_1",
+      "class": "C",
+      "class_evidence": [],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_2_columna_0001",
+          "level": "2",
+          "xy": [
+            31.078,
+            0.118
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 31.078,
+        "y": 0.118,
+        "base_z": 11.88,
+        "top_z": 15.84,
+        "levels": [
+          "2"
+        ]
+      },
+      "section": {
+        "b_m": 0.7000000000000028,
+        "d_m": 0.700000000000017,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0022",
+      "region": "parte_1",
+      "class": "C",
+      "class_evidence": [],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_2_columna_0003",
+          "level": "2",
+          "xy": [
+            31.078,
+            9.018
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 31.078,
+        "y": 9.018,
+        "base_z": 11.88,
+        "top_z": 15.84,
+        "levels": [
+          "2"
+        ]
+      },
+      "section": {
+        "b_m": 0.7000000000000028,
+        "d_m": 0.6999999999999815,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0023",
+      "region": "parte_1",
+      "class": "C",
+      "class_evidence": [],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_2_columna_0019",
+          "level": "2",
+          "xy": [
+            31.078,
+            20.388
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 31.078,
+        "y": 20.388,
+        "base_z": 11.88,
+        "top_z": 15.84,
+        "levels": [
+          "2"
+        ]
+      },
+      "section": {
+        "b_m": 0.35,
+        "d_m": 0.35,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0024",
+      "region": "parte_1",
+      "class": "A",
+      "class_evidence": [
+        "REL_COL_0010 CONTINUA conf0.85"
+      ],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_1_columna_0001",
+          "level": "1",
+          "xy": [
+            37.491,
+            -0.0
+          ]
+        },
+        {
+          "solidTag": "SOL_4_columna_0001",
+          "level": "4",
+          "xy": [
+            37.482,
+            0.118
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 37.486,
+        "y": 0.059,
+        "base_z": 7.92,
+        "top_z": 23.76,
+        "levels": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "section": {
+        "b_m": 0.7000000000000028,
+        "d_m": 0.7,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [
+        {
+          "column_id": "STK_0024_story_1_2",
+          "level_bottom": "1",
+          "level_top": "2",
+          "node_bottom": [
+            37.486,
+            0.059,
+            7.92
+          ],
+          "node_top": [
+            37.486,
+            0.059,
+            11.88
+          ],
+          "section": {
+            "b_m": 0.7000000000000028,
+            "d_m": 0.7,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0024_story_2_3",
+          "level_bottom": "2",
+          "level_top": "3",
+          "node_bottom": [
+            37.486,
+            0.059,
+            11.88
+          ],
+          "node_top": [
+            37.486,
+            0.059,
+            15.84
+          ],
+          "section": {
+            "b_m": 0.7000000000000028,
+            "d_m": 0.7,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0024_story_3_4",
+          "level_bottom": "3",
+          "level_top": "4",
+          "node_bottom": [
+            37.486,
+            0.059,
+            15.84
+          ],
+          "node_top": [
+            37.486,
+            0.059,
+            19.8
+          ],
+          "section": {
+            "b_m": 0.7000000000000028,
+            "d_m": 0.7,
+            "source": "most_common_in_stack"
+          }
+        }
+      ],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0025",
+      "region": "parte_1",
+      "class": "A",
+      "class_evidence": [
+        "REL_COL_0012 CONTINUA conf0.85"
+      ],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_1_columna_0003",
+          "level": "1",
+          "xy": [
+            37.491,
+            8.9
+          ]
+        },
+        {
+          "solidTag": "SOL_4_columna_0003",
+          "level": "4",
+          "xy": [
+            37.482,
+            9.018
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 37.486,
+        "y": 8.959,
+        "base_z": 7.92,
+        "top_z": 23.76,
+        "levels": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "section": {
+        "b_m": 0.700000000000017,
+        "d_m": 0.6999999999999993,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [
+        {
+          "column_id": "STK_0025_story_1_2",
+          "level_bottom": "1",
+          "level_top": "2",
+          "node_bottom": [
+            37.486,
+            8.959,
+            7.92
+          ],
+          "node_top": [
+            37.486,
+            8.959,
+            11.88
+          ],
+          "section": {
+            "b_m": 0.700000000000017,
+            "d_m": 0.6999999999999993,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0025_story_2_3",
+          "level_bottom": "2",
+          "level_top": "3",
+          "node_bottom": [
+            37.486,
+            8.959,
+            11.88
+          ],
+          "node_top": [
+            37.486,
+            8.959,
+            15.84
+          ],
+          "section": {
+            "b_m": 0.700000000000017,
+            "d_m": 0.6999999999999993,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0025_story_3_4",
+          "level_bottom": "3",
+          "level_top": "4",
+          "node_bottom": [
+            37.486,
+            8.959,
+            15.84
+          ],
+          "node_top": [
+            37.486,
+            8.959,
+            19.8
+          ],
+          "section": {
+            "b_m": 0.700000000000017,
+            "d_m": 0.6999999999999993,
+            "source": "most_common_in_stack"
+          }
+        }
+      ],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0026",
+      "region": "parte_1",
+      "class": "A",
+      "class_evidence": [
+        "REL_COL_0011 CONTINUA conf0.85"
+      ],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_1_columna_0002",
+          "level": "1",
+          "xy": [
+            37.491,
+            16.15
+          ]
+        },
+        {
+          "solidTag": "SOL_4_columna_0002",
+          "level": "4",
+          "xy": [
+            37.482,
+            16.269
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 37.486,
+        "y": 16.209,
+        "base_z": 7.92,
+        "top_z": 23.76,
+        "levels": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "section": {
+        "b_m": 0.6999999999999957,
+        "d_m": 0.7000000000000011,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [
+        {
+          "column_id": "STK_0026_story_1_2",
+          "level_bottom": "1",
+          "level_top": "2",
+          "node_bottom": [
+            37.486,
+            16.209,
+            7.92
+          ],
+          "node_top": [
+            37.486,
+            16.209,
+            11.88
+          ],
+          "section": {
+            "b_m": 0.6999999999999957,
+            "d_m": 0.7000000000000011,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0026_story_2_3",
+          "level_bottom": "2",
+          "level_top": "3",
+          "node_bottom": [
+            37.486,
+            16.209,
+            11.88
+          ],
+          "node_top": [
+            37.486,
+            16.209,
+            15.84
+          ],
+          "section": {
+            "b_m": 0.6999999999999957,
+            "d_m": 0.7000000000000011,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0026_story_3_4",
+          "level_bottom": "3",
+          "level_top": "4",
+          "node_bottom": [
+            37.486,
+            16.209,
+            15.84
+          ],
+          "node_top": [
+            37.486,
+            16.209,
+            19.8
+          ],
+          "section": {
+            "b_m": 0.6999999999999957,
+            "d_m": 0.7000000000000011,
+            "source": "most_common_in_stack"
+          }
+        }
+      ],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0027",
+      "region": "parte_1",
+      "class": "A",
+      "class_evidence": [
+        "REL_COL_0010 CONTINUA conf0.85"
+      ],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_3_columna_0015",
+          "level": "3",
+          "xy": [
+            37.495,
+            0.118
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 38.354,
+        "y": -5.088,
+        "base_z": 15.84,
+        "top_z": 19.8,
+        "levels": [
+          "3"
+        ]
+      },
+      "section": {
+        "b_m": 0.6999999999999744,
+        "d_m": 0.6999999999999815,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0028",
+      "region": "parte_1",
+      "class": "A",
+      "class_evidence": [
+        "REL_COL_0012 CONTINUA conf0.85"
+      ],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_3_columna_0007",
+          "level": "3",
+          "xy": [
+            37.495,
+            9.018
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 38.354,
+        "y": 3.812,
+        "base_z": 15.84,
+        "top_z": 19.8,
+        "levels": [
+          "3"
+        ]
+      },
+      "section": {
+        "b_m": 0.6999999999999744,
+        "d_m": 0.7000000000000499,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0029",
+      "region": "parte_1",
+      "class": "A",
+      "class_evidence": [
+        "REL_COL_0011 CONTINUA conf0.85"
+      ],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_3_columna_0008",
+          "level": "3",
+          "xy": [
+            37.495,
+            16.268
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 38.354,
+        "y": 11.062,
+        "base_z": 15.84,
+        "top_z": 19.8,
+        "levels": [
+          "3"
+        ]
+      },
+      "section": {
+        "b_m": 0.6999999999999886,
+        "d_m": 0.7000000000000508,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0030",
+      "region": "parte_1",
+      "class": "C",
+      "class_evidence": [],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_2_columna_0021",
+          "level": "2",
+          "xy": [
+            38.568,
+            16.268
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 38.568,
+        "y": 16.268,
+        "base_z": 11.88,
+        "top_z": 15.84,
+        "levels": [
+          "2"
+        ]
+      },
+      "section": {
+        "b_m": 0.35,
+        "d_m": 0.35,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0031",
+      "region": "parte_1",
+      "class": "C",
+      "class_evidence": [],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_2_columna_0018",
+          "level": "2",
+          "xy": [
+            38.568,
+            20.388
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 38.568,
+        "y": 20.388,
+        "base_z": 11.88,
+        "top_z": 15.84,
+        "levels": [
+          "2"
+        ]
+      },
+      "section": {
+        "b_m": 0.35,
+        "d_m": 0.35,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0032",
+      "region": "parte_1",
+      "class": "C",
+      "class_evidence": [],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_2_columna_0008",
+          "level": "2",
+          "xy": [
+            41.077,
+            16.385
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 41.077,
+        "y": 16.385,
+        "base_z": 11.88,
+        "top_z": 15.84,
+        "levels": [
+          "2"
+        ]
+      },
+      "section": {
+        "b_m": 0.6999999999999957,
+        "d_m": 0.6999999999999993,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0033",
+      "region": "parte_1",
+      "class": "C",
+      "class_evidence": [],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_2_columna_0015",
+          "level": "2",
+          "xy": [
+            41.078,
+            0.118
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 41.078,
+        "y": 0.118,
+        "base_z": 11.88,
+        "top_z": 15.84,
+        "levels": [
+          "2"
+        ]
+      },
+      "section": {
+        "b_m": 0.6999999999999815,
+        "d_m": 0.6999999999999602,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0034",
+      "region": "parte_1",
+      "class": "C",
+      "class_evidence": [],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_2_columna_0007",
+          "level": "2",
+          "xy": [
+            41.078,
+            9.018
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 41.078,
+        "y": 9.018,
+        "base_z": 11.88,
+        "top_z": 15.84,
+        "levels": [
+          "2"
+        ]
+      },
+      "section": {
+        "b_m": 0.6999999999999815,
+        "d_m": 0.6999999999999957,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0035",
+      "region": "parte_1",
+      "class": "C",
+      "class_evidence": [],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_4_columna_0022",
+          "level": "4",
+          "xy": [
+            47.482,
+            20.389
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 47.482,
+        "y": 20.389,
+        "base_z": 19.8,
+        "top_z": 23.76,
+        "levels": [
+          "4"
+        ]
+      },
+      "section": {
+        "b_m": 0.35,
+        "d_m": 0.35,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0036",
+      "region": "parte_1",
+      "class": "A",
+      "class_evidence": [
+        "REL_COL_0024 CONTINUA conf0.85"
+      ],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_1_columna_0015",
+          "level": "1",
+          "xy": [
+            47.491,
+            0.0
+          ]
+        },
+        {
+          "solidTag": "SOL_4_columna_0015",
+          "level": "4",
+          "xy": [
+            47.482,
+            0.119
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 47.486,
+        "y": 0.059,
+        "base_z": 7.92,
+        "top_z": 23.76,
+        "levels": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "section": {
+        "b_m": 0.7000000000000028,
+        "d_m": 0.7,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [
+        {
+          "column_id": "STK_0036_story_1_2",
+          "level_bottom": "1",
+          "level_top": "2",
+          "node_bottom": [
+            47.486,
+            0.059,
+            7.92
+          ],
+          "node_top": [
+            47.486,
+            0.059,
+            11.88
+          ],
+          "section": {
+            "b_m": 0.7000000000000028,
+            "d_m": 0.7,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0036_story_2_3",
+          "level_bottom": "2",
+          "level_top": "3",
+          "node_bottom": [
+            47.486,
+            0.059,
+            11.88
+          ],
+          "node_top": [
+            47.486,
+            0.059,
+            15.84
+          ],
+          "section": {
+            "b_m": 0.7000000000000028,
+            "d_m": 0.7,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0036_story_3_4",
+          "level_bottom": "3",
+          "level_top": "4",
+          "node_bottom": [
+            47.486,
+            0.059,
+            15.84
+          ],
+          "node_top": [
+            47.486,
+            0.059,
+            19.8
+          ],
+          "section": {
+            "b_m": 0.7000000000000028,
+            "d_m": 0.7,
+            "source": "most_common_in_stack"
+          }
+        }
+      ],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0037",
+      "region": "parte_1",
+      "class": "A",
+      "class_evidence": [
+        "REL_COL_0016 CONTINUA conf0.85"
+      ],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_1_columna_0007",
+          "level": "1",
+          "xy": [
+            47.491,
+            8.9
+          ]
+        },
+        {
+          "solidTag": "SOL_4_columna_0007",
+          "level": "4",
+          "xy": [
+            47.482,
+            9.018
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 47.486,
+        "y": 8.959,
+        "base_z": 7.92,
+        "top_z": 23.76,
+        "levels": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "section": {
+        "b_m": 0.6999999999999957,
+        "d_m": 0.7000000000000011,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [
+        {
+          "column_id": "STK_0037_story_1_2",
+          "level_bottom": "1",
+          "level_top": "2",
+          "node_bottom": [
+            47.486,
+            8.959,
+            7.92
+          ],
+          "node_top": [
+            47.486,
+            8.959,
+            11.88
+          ],
+          "section": {
+            "b_m": 0.6999999999999957,
+            "d_m": 0.7000000000000011,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0037_story_2_3",
+          "level_bottom": "2",
+          "level_top": "3",
+          "node_bottom": [
+            47.486,
+            8.959,
+            11.88
+          ],
+          "node_top": [
+            47.486,
+            8.959,
+            15.84
+          ],
+          "section": {
+            "b_m": 0.6999999999999957,
+            "d_m": 0.7000000000000011,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0037_story_3_4",
+          "level_bottom": "3",
+          "level_top": "4",
+          "node_bottom": [
+            47.486,
+            8.959,
+            15.84
+          ],
+          "node_top": [
+            47.486,
+            8.959,
+            19.8
+          ],
+          "section": {
+            "b_m": 0.6999999999999957,
+            "d_m": 0.7000000000000011,
+            "source": "most_common_in_stack"
+          }
+        }
+      ],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0038",
+      "region": "parte_1",
+      "class": "A",
+      "class_evidence": [
+        "REL_COL_0017 CONTINUA conf0.85"
+      ],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_1_columna_0008",
+          "level": "1",
+          "xy": [
+            47.491,
+            16.15
+          ]
+        },
+        {
+          "solidTag": "SOL_4_columna_0008",
+          "level": "4",
+          "xy": [
+            47.482,
+            16.269
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 47.486,
+        "y": 16.209,
+        "base_z": 7.92,
+        "top_z": 23.76,
+        "levels": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "section": {
+        "b_m": 0.6999999999999957,
+        "d_m": 0.7000000000000011,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [
+        {
+          "column_id": "STK_0038_story_1_2",
+          "level_bottom": "1",
+          "level_top": "2",
+          "node_bottom": [
+            47.486,
+            16.209,
+            7.92
+          ],
+          "node_top": [
+            47.486,
+            16.209,
+            11.88
+          ],
+          "section": {
+            "b_m": 0.6999999999999957,
+            "d_m": 0.7000000000000011,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0038_story_2_3",
+          "level_bottom": "2",
+          "level_top": "3",
+          "node_bottom": [
+            47.486,
+            16.209,
+            11.88
+          ],
+          "node_top": [
+            47.486,
+            16.209,
+            15.84
+          ],
+          "section": {
+            "b_m": 0.6999999999999957,
+            "d_m": 0.7000000000000011,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0038_story_3_4",
+          "level_bottom": "3",
+          "level_top": "4",
+          "node_bottom": [
+            47.486,
+            16.209,
+            15.84
+          ],
+          "node_top": [
+            47.486,
+            16.209,
+            19.8
+          ],
+          "section": {
+            "b_m": 0.6999999999999957,
+            "d_m": 0.7000000000000011,
+            "source": "most_common_in_stack"
+          }
+        }
+      ],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0039",
+      "region": "parte_1",
+      "class": "A",
+      "class_evidence": [
+        "REL_COL_0024 CONTINUA conf0.85"
+      ],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_3_columna_0013",
+          "level": "3",
+          "xy": [
+            47.495,
+            0.118
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 48.354,
+        "y": -5.088,
+        "base_z": 15.84,
+        "top_z": 19.8,
+        "levels": [
+          "3"
+        ]
+      },
+      "section": {
+        "b_m": 0.700000000000017,
+        "d_m": 0.7000000000000179,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0040",
+      "region": "parte_1",
+      "class": "A",
+      "class_evidence": [
+        "REL_COL_0016 CONTINUA conf0.85"
+      ],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_3_columna_0014",
+          "level": "3",
+          "xy": [
+            47.495,
+            9.018
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 48.354,
+        "y": 3.812,
+        "base_z": 15.84,
+        "top_z": 19.8,
+        "levels": [
+          "3"
+        ]
+      },
+      "section": {
+        "b_m": 0.700000000000017,
+        "d_m": 0.7000000000000499,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0041",
+      "region": "parte_1",
+      "class": "A",
+      "class_evidence": [
+        "REL_COL_0017 CONTINUA conf0.85"
+      ],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_3_columna_0009",
+          "level": "3",
+          "xy": [
+            47.495,
+            16.268
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 48.354,
+        "y": 11.062,
+        "base_z": 15.84,
+        "top_z": 19.8,
+        "levels": [
+          "3"
+        ]
+      },
+      "section": {
+        "b_m": 0.6999999999999744,
+        "d_m": 0.699999999999978,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0042",
+      "region": "parte_1",
+      "class": "C",
+      "class_evidence": [],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_2_columna_0013",
+          "level": "2",
+          "xy": [
+            51.078,
+            0.118
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 51.078,
+        "y": 0.118,
+        "base_z": 11.88,
+        "top_z": 15.84,
+        "levels": [
+          "2"
+        ]
+      },
+      "section": {
+        "b_m": 0.6999999999999815,
+        "d_m": 0.700000000000017,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0043",
+      "region": "parte_1",
+      "class": "C",
+      "class_evidence": [],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_2_columna_0014",
+          "level": "2",
+          "xy": [
+            51.078,
+            9.018
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 51.078,
+        "y": 9.018,
+        "base_z": 11.88,
+        "top_z": 15.84,
+        "levels": [
+          "2"
+        ]
+      },
+      "section": {
+        "b_m": 0.7000000000000526,
+        "d_m": 0.6999999999999602,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0044",
+      "region": "parte_1",
+      "class": "C",
+      "class_evidence": [],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_2_columna_0009",
+          "level": "2",
+          "xy": [
+            51.078,
+            16.268
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 51.078,
+        "y": 16.268,
+        "base_z": 11.88,
+        "top_z": 15.84,
+        "levels": [
+          "2"
+        ]
+      },
+      "section": {
+        "b_m": 0.7000000000000597,
+        "d_m": 0.6999999999999815,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0045",
+      "region": "parte_1",
+      "class": "C",
+      "class_evidence": [],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_4_columna_0021",
+          "level": "4",
+          "xy": [
+            57.482,
+            20.389
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 57.482,
+        "y": 20.389,
+        "base_z": 19.8,
+        "top_z": 23.76,
+        "levels": [
+          "4"
+        ]
+      },
+      "section": {
+        "b_m": 0.35,
+        "d_m": 0.35,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0046",
+      "region": "parte_1",
+      "class": "A",
+      "class_evidence": [
+        "REL_COL_0022 CONTINUA conf0.85"
+      ],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_1_columna_0013",
+          "level": "1",
+          "xy": [
+            57.491,
+            0.038
+          ]
+        },
+        {
+          "solidTag": "SOL_4_columna_0013",
+          "level": "4",
+          "xy": [
+            57.482,
+            0.119
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 57.486,
+        "y": 0.079,
+        "base_z": 7.92,
+        "top_z": 23.76,
+        "levels": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "section": {
+        "b_m": 0.700000000000017,
+        "d_m": 0.7,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [
+        {
+          "column_id": "STK_0046_story_1_2",
+          "level_bottom": "1",
+          "level_top": "2",
+          "node_bottom": [
+            57.486,
+            0.079,
+            7.92
+          ],
+          "node_top": [
+            57.486,
+            0.079,
+            11.88
+          ],
+          "section": {
+            "b_m": 0.700000000000017,
+            "d_m": 0.7,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0046_story_2_3",
+          "level_bottom": "2",
+          "level_top": "3",
+          "node_bottom": [
+            57.486,
+            0.079,
+            11.88
+          ],
+          "node_top": [
+            57.486,
+            0.079,
+            15.84
+          ],
+          "section": {
+            "b_m": 0.700000000000017,
+            "d_m": 0.7,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0046_story_3_4",
+          "level_bottom": "3",
+          "level_top": "4",
+          "node_bottom": [
+            57.486,
+            0.079,
+            15.84
+          ],
+          "node_top": [
+            57.486,
+            0.079,
+            19.8
+          ],
+          "section": {
+            "b_m": 0.700000000000017,
+            "d_m": 0.7,
+            "source": "most_common_in_stack"
+          }
+        }
+      ],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0047",
+      "region": "parte_1",
+      "class": "A",
+      "class_evidence": [
+        "REL_COL_0023 CONTINUA conf0.85"
+      ],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_1_columna_0014",
+          "level": "1",
+          "xy": [
+            57.491,
+            8.9
+          ]
+        },
+        {
+          "solidTag": "SOL_4_columna_0014",
+          "level": "4",
+          "xy": [
+            57.482,
+            9.018
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 57.486,
+        "y": 8.959,
+        "base_z": 7.92,
+        "top_z": 23.76,
+        "levels": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "section": {
+        "b_m": 0.7000000000000028,
+        "d_m": 0.7000000000000135,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [
+        {
+          "column_id": "STK_0047_story_1_2",
+          "level_bottom": "1",
+          "level_top": "2",
+          "node_bottom": [
+            57.486,
+            8.959,
+            7.92
+          ],
+          "node_top": [
+            57.486,
+            8.959,
+            11.88
+          ],
+          "section": {
+            "b_m": 0.7000000000000028,
+            "d_m": 0.7000000000000135,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0047_story_2_3",
+          "level_bottom": "2",
+          "level_top": "3",
+          "node_bottom": [
+            57.486,
+            8.959,
+            11.88
+          ],
+          "node_top": [
+            57.486,
+            8.959,
+            15.84
+          ],
+          "section": {
+            "b_m": 0.7000000000000028,
+            "d_m": 0.7000000000000135,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0047_story_3_4",
+          "level_bottom": "3",
+          "level_top": "4",
+          "node_bottom": [
+            57.486,
+            8.959,
+            15.84
+          ],
+          "node_top": [
+            57.486,
+            8.959,
+            19.8
+          ],
+          "section": {
+            "b_m": 0.7000000000000028,
+            "d_m": 0.7000000000000135,
+            "source": "most_common_in_stack"
+          }
+        }
+      ],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0048",
+      "region": "parte_1",
+      "class": "A",
+      "class_evidence": [
+        "REL_COL_0018 CONTINUA conf0.85"
+      ],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_1_columna_0009",
+          "level": "1",
+          "xy": [
+            57.491,
+            16.15
+          ]
+        },
+        {
+          "solidTag": "SOL_4_columna_0009",
+          "level": "4",
+          "xy": [
+            57.482,
+            16.269
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 57.486,
+        "y": 16.209,
+        "base_z": 7.92,
+        "top_z": 23.76,
+        "levels": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "section": {
+        "b_m": 0.70000000000001,
+        "d_m": 0.6999999999999993,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [
+        {
+          "column_id": "STK_0048_story_1_2",
+          "level_bottom": "1",
+          "level_top": "2",
+          "node_bottom": [
+            57.486,
+            16.209,
+            7.92
+          ],
+          "node_top": [
+            57.486,
+            16.209,
+            11.88
+          ],
+          "section": {
+            "b_m": 0.70000000000001,
+            "d_m": 0.6999999999999993,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0048_story_2_3",
+          "level_bottom": "2",
+          "level_top": "3",
+          "node_bottom": [
+            57.486,
+            16.209,
+            11.88
+          ],
+          "node_top": [
+            57.486,
+            16.209,
+            15.84
+          ],
+          "section": {
+            "b_m": 0.70000000000001,
+            "d_m": 0.6999999999999993,
+            "source": "most_common_in_stack"
+          }
+        },
+        {
+          "column_id": "STK_0048_story_3_4",
+          "level_bottom": "3",
+          "level_top": "4",
+          "node_bottom": [
+            57.486,
+            16.209,
+            15.84
+          ],
+          "node_top": [
+            57.486,
+            16.209,
+            19.8
+          ],
+          "section": {
+            "b_m": 0.70000000000001,
+            "d_m": 0.6999999999999993,
+            "source": "most_common_in_stack"
+          }
+        }
+      ],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0049",
+      "region": "parte_1",
+      "class": "C",
+      "class_evidence": [],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_1_columna_0020",
+          "level": "1",
+          "xy": [
+            57.518,
+            18.843
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 57.518,
+        "y": 18.843,
+        "base_z": 7.92,
+        "top_z": 11.879999999999999,
+        "levels": [
+          "1"
+        ]
+      },
+      "section": {
+        "b_m": 0.35,
+        "d_m": 0.35,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0050",
+      "region": "parte_1",
+      "class": "A",
+      "class_evidence": [
+        "REL_COL_0022 CONTINUA conf0.85"
+      ],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_3_columna_0012",
+          "level": "3",
+          "xy": [
+            57.495,
+            0.118
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 58.354,
+        "y": -5.088,
+        "base_z": 15.84,
+        "top_z": 19.8,
+        "levels": [
+          "3"
+        ]
+      },
+      "section": {
+        "b_m": 0.700000000000017,
+        "d_m": 0.7000000000000091,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0051",
+      "region": "parte_1",
+      "class": "A",
+      "class_evidence": [
+        "REL_COL_0023 CONTINUA conf0.85"
+      ],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_3_columna_0011",
+          "level": "3",
+          "xy": [
+            57.495,
+            9.018
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 58.354,
+        "y": 3.812,
+        "base_z": 15.84,
+        "top_z": 19.8,
+        "levels": [
+          "3"
+        ]
+      },
+      "section": {
+        "b_m": 0.6999999999999815,
+        "d_m": 0.7000000000000501,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0052",
+      "region": "parte_1",
+      "class": "A",
+      "class_evidence": [
+        "REL_COL_0018 CONTINUA conf0.85"
+      ],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_3_columna_0010",
+          "level": "3",
+          "xy": [
+            57.495,
+            16.268
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 58.354,
+        "y": 11.062,
+        "base_z": 15.84,
+        "top_z": 19.8,
+        "levels": [
+          "3"
+        ]
+      },
+      "section": {
+        "b_m": 0.700000000000017,
+        "d_m": 0.7000000000000508,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0053",
+      "region": "parte_1",
+      "class": "C",
+      "class_evidence": [],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_2_columna_0012",
+          "level": "2",
+          "xy": [
+            61.078,
+            0.118
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 61.078,
+        "y": 0.118,
+        "base_z": 11.88,
+        "top_z": 15.84,
+        "levels": [
+          "2"
+        ]
+      },
+      "section": {
+        "b_m": 0.6999999999999744,
+        "d_m": 0.6999999999999957,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0054",
+      "region": "parte_1",
+      "class": "C",
+      "class_evidence": [],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_2_columna_0011",
+          "level": "2",
+          "xy": [
+            61.078,
+            9.018
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 61.078,
+        "y": 9.018,
+        "base_z": 11.88,
+        "top_z": 15.84,
+        "levels": [
+          "2"
+        ]
+      },
+      "section": {
+        "b_m": 0.7000000000000455,
+        "d_m": 0.6999999999999744,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0055",
+      "region": "parte_1",
+      "class": "C",
+      "class_evidence": [],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_2_columna_0010",
+          "level": "2",
+          "xy": [
+            61.078,
+            16.268
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 61.078,
+        "y": 16.268,
+        "base_z": 11.88,
+        "top_z": 15.84,
+        "levels": [
+          "2"
+        ]
+      },
+      "section": {
+        "b_m": 0.6999999999999744,
+        "d_m": 0.7000000000000064,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0056",
+      "region": "parte_1",
+      "class": "C",
+      "class_evidence": [],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_1_columna_0019",
+          "level": "1",
+          "xy": [
+            61.968,
+            18.912
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 61.968,
+        "y": 18.912,
+        "base_z": 7.92,
+        "top_z": 11.879999999999999,
+        "levels": [
+          "1"
+        ]
+      },
+      "section": {
+        "b_m": 0.35,
+        "d_m": 0.35,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0057",
+      "region": "parte_1",
+      "class": "C",
+      "class_evidence": [],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_3_columna_0016",
+          "level": "3",
+          "xy": [
+            62.495,
+            0.118
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 63.354,
+        "y": -5.088,
+        "base_z": 15.84,
+        "top_z": 19.8,
+        "levels": [
+          "3"
+        ]
+      },
+      "section": {
+        "b_m": 0.7000000000000028,
+        "d_m": 0.6999999999999638,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0058",
+      "region": "parte_1",
+      "class": "C",
+      "class_evidence": [],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_3_columna_0018",
+          "level": "3",
+          "xy": [
+            62.495,
+            9.018
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 63.354,
+        "y": 3.812,
+        "base_z": 15.84,
+        "top_z": 19.8,
+        "levels": [
+          "3"
+        ]
+      },
+      "section": {
+        "b_m": 0.700000000000017,
+        "d_m": 0.699999999999982,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0059",
+      "region": "parte_1",
+      "class": "C",
+      "class_evidence": [],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_3_columna_0017",
+          "level": "3",
+          "xy": [
+            62.495,
+            16.268
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 63.354,
+        "y": 11.062,
+        "base_z": 15.84,
+        "top_z": 19.8,
+        "levels": [
+          "3"
+        ]
+      },
+      "section": {
+        "b_m": 0.7000000000000028,
+        "d_m": 0.7000000000000508,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0060",
+      "region": "parte_1",
+      "class": "C",
+      "class_evidence": [],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_base_columna_0003",
+          "level": "base",
+          "xy": [
+            65.248,
+            0.335
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 65.248,
+        "y": 0.335,
+        "base_z": 0.0,
+        "top_z": 3.96,
+        "levels": [
+          "base"
+        ]
+      },
+      "section": {
+        "b_m": 0.35,
+        "d_m": 0.399999999966969,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0061",
+      "region": "parte_1",
+      "class": "B",
+      "class_evidence": [
+        "REL_COL_0001 PARCIAL conf0.75"
+      ],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_base_columna_0002",
+          "level": "base",
+          "xy": [
+            65.248,
+            9.085
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 65.248,
+        "y": 9.085,
+        "base_z": 0.0,
+        "top_z": 3.96,
+        "levels": [
+          "base"
+        ]
+      },
+      "section": {
+        "b_m": 0.35,
+        "d_m": 0.6999999999999815,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": [
+        "base:MURO_P1_FUNDACION_0068",
+        "base:MURO_P1_FUNDACION_0071",
+        "base:MURO_P1_FUNDACION_0089",
+        "base:MURO_P1_FUNDACION_0070",
+        "base:MURO_P1_FUNDACION_0069",
+        "base:MURO_P1_FUNDACION_0087",
+        "base:MURO_P1_FUNDACION_0086",
+        "base:MURO_P1_FUNDACION_0088"
+      ]
+    },
+    {
+      "stack_id": "STK_0062",
+      "region": "parte_1",
+      "class": "C",
+      "class_evidence": [],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_base_columna_0001",
+          "level": "base",
+          "xy": [
+            65.298,
+            16.687
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 65.298,
+        "y": 16.687,
+        "base_z": 0.0,
+        "top_z": 3.96,
+        "levels": [
+          "base"
+        ]
+      },
+      "section": {
+        "b_m": 0.35,
+        "d_m": 0.9200000000001456,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0063",
+      "region": "parte_1",
+      "class": "C",
+      "class_evidence": [],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_2_columna_0016",
+          "level": "2",
+          "xy": [
+            66.078,
+            0.118
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 66.078,
+        "y": 0.118,
+        "base_z": 11.88,
+        "top_z": 15.84,
+        "levels": [
+          "2"
+        ]
+      },
+      "section": {
+        "b_m": 0.6999999999999744,
+        "d_m": 0.6999999999999602,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0064",
+      "region": "parte_1",
+      "class": "B",
+      "class_evidence": [
+        "REL_COL_0001 PARCIAL conf0.75"
+      ],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_2_columna_0020",
+          "level": "2",
+          "xy": [
+            66.078,
+            9.018
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 66.078,
+        "y": 9.018,
+        "base_z": 11.88,
+        "top_z": 15.84,
+        "levels": [
+          "2"
+        ]
+      },
+      "section": {
+        "b_m": 0.6999999999999744,
+        "d_m": 0.700000000000017,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": [
+        "base:MURO_P1_FUNDACION_0089",
+        "base:MURO_P1_FUNDACION_0070",
+        "base:MURO_P1_FUNDACION_0087"
+      ]
+    },
+    {
+      "stack_id": "STK_0065",
+      "region": "parte_1",
+      "class": "C",
+      "class_evidence": [],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_2_columna_0017",
+          "level": "2",
+          "xy": [
+            66.078,
+            16.268
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 66.078,
+        "y": 16.268,
+        "base_z": 11.88,
+        "top_z": 15.84,
+        "levels": [
+          "2"
+        ]
+      },
+      "section": {
+        "b_m": 0.6999999999999886,
+        "d_m": 0.7000000000000206,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0066",
+      "region": "parte_1",
+      "class": "B",
+      "class_evidence": [
+        "REL_COL_0020 PARCIAL conf0.75"
+      ],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_1_columna_0011",
+          "level": "1",
+          "xy": [
+            67.404,
+            8.9
+          ]
+        },
+        {
+          "solidTag": "SOL_4_columna_0011",
+          "level": "4",
+          "xy": [
+            67.482,
+            9.019
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 67.443,
+        "y": 8.96,
+        "base_z": 7.92,
+        "top_z": 23.76,
+        "levels": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "section": {
+        "b_m": 0.6999999999999886,
+        "d_m": 0.6999999999999869,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [
+        {
+          "column_id": "STK_0066_story_1_2",
+          "level_bottom": "1",
+          "level_top": "2",
+          "node_bottom": [
+            67.443,
+            8.96,
+            7.92
+          ],
+          "node_top": [
+            67.443,
+            8.96,
+            11.88
+          ],
+          "section": {
+            "b_m": 0.6999999999999886,
+            "d_m": 0.6999999999999869,
+            "source": "most_common_in_stack"
+          },
+          "justification": [
+            "wall:MURO_P1_01_0022",
+            "column:C_P1_01_0011",
+            "viga:VIGA_P1_01_0060",
+            "wall:MURO_P1_01_0021",
+            "viga:VIGA_P1_01_0059",
+            "viga:VIGA_P1_01_0061",
+            "viga:VIGA_P1_01_0058",
+            "wall:MURO_P1_01_0025",
+            "viga:VIGA_P1_01_0011",
+            "viga:VIGA_P1_01_0013",
+            "viga:VIGA_P1_01_0015",
+            "wall:MURO_P1_01_0024",
+            "viga:VIGA_P1_01_0062",
+            "viga:VIGA_P1_01_0016"
+          ]
+        },
+        {
+          "column_id": "STK_0066_story_2_3",
+          "level_bottom": "2",
+          "level_top": "3",
+          "node_bottom": [
+            67.443,
+            8.96,
+            11.88
+          ],
+          "node_top": [
+            67.443,
+            8.96,
+            15.84
+          ],
+          "section": {
+            "b_m": 0.6999999999999886,
+            "d_m": 0.6999999999999869,
+            "source": "most_common_in_stack"
+          },
+          "justification": [
+            "viga:VIGA_P1_03_0088",
+            "viga:VIGA_P1_03_0097",
+            "viga:VIGA_P1_03_0087",
+            "viga:VIGA_P1_03_0096"
+          ]
+        },
+        {
+          "column_id": "STK_0066_story_3_4",
+          "level_bottom": "3",
+          "level_top": "4",
+          "node_bottom": [
+            67.443,
+            8.96,
+            15.84
+          ],
+          "node_top": [
+            67.443,
+            8.96,
+            19.8
+          ],
+          "section": {
+            "b_m": 0.6999999999999886,
+            "d_m": 0.6999999999999869,
+            "source": "most_common_in_stack"
+          },
+          "justification": [
+            "viga:VIGA_P1_03_0088",
+            "viga:VIGA_P1_03_0097",
+            "viga:VIGA_P1_03_0087",
+            "viga:VIGA_P1_04_0022",
+            "column:C_P1_04_0011",
+            "viga:VIGA_P1_03_0096",
+            "viga:VIGA_P1_04_0020",
+            "viga:VIGA_P1_04_0072",
+            "viga:VIGA_P1_04_0073",
+            "viga:VIGA_P1_04_0025",
+            "viga:VIGA_P1_04_0074",
+            "viga:VIGA_P1_04_0024",
+            "viga:VIGA_P1_04_0071",
+            "viga:VIGA_P1_04_0070"
+          ]
+        }
+      ],
+      "walls_as_evidence": [
+        "1:MURO_P1_01_0022",
+        "1:MURO_P1_01_0025",
+        "1:MURO_P1_01_0021",
+        "1:MURO_P1_01_0024"
+      ]
+    },
+    {
+      "stack_id": "STK_0067",
+      "region": "parte_1",
+      "class": "B",
+      "class_evidence": [
+        "REL_COL_0021 PARCIAL conf0.75"
+      ],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_1_columna_0012",
+          "level": "1",
+          "xy": [
+            67.447,
+            0.075
+          ]
+        },
+        {
+          "solidTag": "SOL_4_columna_0012",
+          "level": "4",
+          "xy": [
+            67.482,
+            0.119
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 67.465,
+        "y": 0.097,
+        "base_z": 7.92,
+        "top_z": 23.76,
+        "levels": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "section": {
+        "b_m": 0.700000000000017,
+        "d_m": 0.7,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [
+        {
+          "column_id": "STK_0067_story_1_2",
+          "level_bottom": "1",
+          "level_top": "2",
+          "node_bottom": [
+            67.465,
+            0.097,
+            7.92
+          ],
+          "node_top": [
+            67.465,
+            0.097,
+            11.88
+          ],
+          "section": {
+            "b_m": 0.700000000000017,
+            "d_m": 0.7,
+            "source": "most_common_in_stack"
+          },
+          "justification": [
+            "viga:VIGA_P1_01_0060",
+            "wall:MURO_P1_01_0026",
+            "wall:MURO_P1_01_0044",
+            "column:C_P1_01_0012",
+            "viga:VIGA_P1_01_0025",
+            "viga:VIGA_P1_01_0058",
+            "wall:MURO_P1_01_0025",
+            "wall:MURO_P1_01_0024",
+            "wall:MURO_P1_01_0027",
+            "wall:MURO_P1_01_0028",
+            "viga:VIGA_P1_01_0027"
+          ]
+        },
+        {
+          "column_id": "STK_0067_story_2_3",
+          "level_bottom": "2",
+          "level_top": "3",
+          "node_bottom": [
+            67.465,
+            0.097,
+            11.88
+          ],
+          "node_top": [
+            67.465,
+            0.097,
+            15.84
+          ],
+          "section": {
+            "b_m": 0.700000000000017,
+            "d_m": 0.7,
+            "source": "most_common_in_stack"
+          },
+          "justification": [
+            "viga:VIGA_P1_03_0088",
+            "viga:VIGA_P1_03_0091",
+            "viga:VIGA_P1_03_0090",
+            "viga:VIGA_P1_03_0085",
+            "viga:VIGA_P1_03_0089"
+          ]
+        },
+        {
+          "column_id": "STK_0067_story_3_4",
+          "level_bottom": "3",
+          "level_top": "4",
+          "node_bottom": [
+            67.465,
+            0.097,
+            15.84
+          ],
+          "node_top": [
+            67.465,
+            0.097,
+            19.8
+          ],
+          "section": {
+            "b_m": 0.700000000000017,
+            "d_m": 0.7,
+            "source": "most_common_in_stack"
+          },
+          "justification": [
+            "viga:VIGA_P1_03_0088",
+            "column:C_P1_04_0012",
+            "viga:VIGA_P1_03_0091",
+            "viga:VIGA_P1_04_0034",
+            "viga:VIGA_P1_03_0090",
+            "viga:VIGA_P1_04_0038",
+            "viga:VIGA_P1_04_0037",
+            "viga:VIGA_P1_04_0072",
+            "viga:VIGA_P1_03_0085",
+            "viga:VIGA_P1_04_0036",
+            "viga:VIGA_P1_04_0071",
+            "viga:VIGA_P1_03_0089"
+          ]
+        }
+      ],
+      "walls_as_evidence": [
+        "1:MURO_P1_01_0044",
+        "1:MURO_P1_01_0025",
+        "1:MURO_P1_01_0024",
+        "1:MURO_P1_01_0026",
+        "1:MURO_P1_01_0027",
+        "1:MURO_P1_01_0028"
+      ]
+    },
+    {
+      "stack_id": "STK_0068",
+      "region": "parte_1",
+      "class": "B",
+      "class_evidence": [
+        "REL_COL_0019 PARCIAL conf0.75"
+      ],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_1_columna_0010",
+          "level": "1",
+          "xy": [
+            67.67,
+            16.352
+          ]
+        },
+        {
+          "solidTag": "SOL_4_columna_0010",
+          "level": "4",
+          "xy": [
+            67.482,
+            16.269
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 67.576,
+        "y": 16.31,
+        "base_z": 7.92,
+        "top_z": 23.76,
+        "levels": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "section": {
+        "b_m": 0.8499999999994827,
+        "d_m": 0.9200000000001598,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [
+        {
+          "column_id": "STK_0068_story_1_2",
+          "level_bottom": "1",
+          "level_top": "2",
+          "node_bottom": [
+            67.576,
+            16.31,
+            7.92
+          ],
+          "node_top": [
+            67.576,
+            16.31,
+            11.88
+          ],
+          "section": {
+            "b_m": 0.8499999999994827,
+            "d_m": 0.9200000000001598,
+            "source": "most_common_in_stack"
+          },
+          "justification": [
+            "wall:MURO_P1_01_0022",
+            "viga:VIGA_P1_01_0037",
+            "wall:MURO_P1_01_0021",
+            "viga:VIGA_P1_01_0061",
+            "viga:VIGA_P1_01_0039",
+            "viga:VIGA_P1_01_0062",
+            "viga:VIGA_P1_01_0093",
+            "viga:VIGA_P1_01_0092",
+            "wall:MURO_P1_01_0031",
+            "viga:VIGA_P1_01_0036",
+            "wall:MURO_P1_01_0023",
+            "viga:VIGA_P1_01_0040",
+            "column:C_P1_01_0010",
+            "wall:MURO_P1_01_0030",
+            "wall:MURO_P1_01_0029"
+          ]
+        },
+        {
+          "column_id": "STK_0068_story_2_3",
+          "level_bottom": "2",
+          "level_top": "3",
+          "node_bottom": [
+            67.576,
+            16.31,
+            11.88
+          ],
+          "node_top": [
+            67.576,
+            16.31,
+            15.84
+          ],
+          "section": {
+            "b_m": 0.8499999999994827,
+            "d_m": 0.9200000000001598,
+            "source": "most_common_in_stack"
+          },
+          "justification": [
+            "viga:VIGA_P1_03_0087",
+            "viga:VIGA_P1_03_0092",
+            "viga:VIGA_P1_03_0086",
+            "viga:VIGA_P1_03_0093",
+            "viga:VIGA_P1_03_0089"
+          ]
+        },
+        {
+          "column_id": "STK_0068_story_3_4",
+          "level_bottom": "3",
+          "level_top": "4",
+          "node_bottom": [
+            67.576,
+            16.31,
+            15.84
+          ],
+          "node_top": [
+            67.576,
+            16.31,
+            19.8
+          ],
+          "section": {
+            "b_m": 0.8499999999994827,
+            "d_m": 0.9200000000001598,
+            "source": "most_common_in_stack"
+          },
+          "justification": [
+            "column:C_P1_04_0010",
+            "viga:VIGA_P1_04_0051",
+            "viga:VIGA_P1_03_0087",
+            "viga:VIGA_P1_04_0047",
+            "viga:VIGA_P1_03_0092",
+            "viga:VIGA_P1_03_0086",
+            "viga:VIGA_P1_04_0073",
+            "viga:VIGA_P1_03_0093",
+            "viga:VIGA_P1_04_0050",
+            "viga:VIGA_P1_04_0074",
+            "viga:VIGA_P1_04_0048",
+            "viga:VIGA_P1_03_0089"
+          ]
+        }
+      ],
+      "walls_as_evidence": [
+        "1:MURO_P1_01_0030",
+        "1:MURO_P1_01_0029",
+        "1:MURO_P1_01_0031",
+        "1:MURO_P1_01_0022",
+        "1:MURO_P1_01_0023",
+        "1:MURO_P1_01_0021"
+      ]
+    },
+    {
+      "stack_id": "STK_0069",
+      "region": "parte_1",
+      "class": "C",
+      "class_evidence": [],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_base_columna_0006",
+          "level": "base",
+          "xy": [
+            69.848,
+            9.085
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 69.848,
+        "y": 9.085,
+        "base_z": 0.0,
+        "top_z": 3.96,
+        "levels": [
+          "base"
+        ]
+      },
+      "section": {
+        "b_m": 0.6999999999999886,
+        "d_m": 0.6999999999999993,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0070",
+      "region": "parte_1",
+      "class": "C",
+      "class_evidence": [],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_base_columna_0004",
+          "level": "base",
+          "xy": [
+            69.898,
+            0.118
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 69.898,
+        "y": 0.118,
+        "base_z": 0.0,
+        "top_z": 3.96,
+        "levels": [
+          "base"
+        ]
+      },
+      "section": {
+        "b_m": 0.7000000000000028,
+        "d_m": 0.70000000000001,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0071",
+      "region": "parte_1",
+      "class": "C",
+      "class_evidence": [],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_base_columna_0005",
+          "level": "base",
+          "xy": [
+            69.898,
+            16.335
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 69.898,
+        "y": 16.335,
+        "base_z": 0.0,
+        "top_z": 3.96,
+        "levels": [
+          "base"
+        ]
+      },
+      "section": {
+        "b_m": 0.700000000000017,
+        "d_m": 0.7000000000000082,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0072",
+      "region": "parte_1",
+      "class": "B",
+      "class_evidence": [
+        "REL_COL_0025 PARCIAL conf0.75"
+      ],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_1_columna_0016",
+          "level": "1",
+          "xy": [
+            72.491,
+            0.038
+          ]
+        },
+        {
+          "solidTag": "SOL_4_columna_0016",
+          "level": "4",
+          "xy": [
+            72.482,
+            0.119
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 72.487,
+        "y": 0.079,
+        "base_z": 7.92,
+        "top_z": 23.76,
+        "levels": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "section": {
+        "b_m": 0.700000000000017,
+        "d_m": 0.7,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [
+        {
+          "column_id": "STK_0072_story_1_2",
+          "level_bottom": "1",
+          "level_top": "2",
+          "node_bottom": [
+            72.487,
+            0.079,
+            7.92
+          ],
+          "node_top": [
+            72.487,
+            0.079,
+            11.88
+          ],
+          "section": {
+            "b_m": 0.700000000000017,
+            "d_m": 0.7,
+            "source": "most_common_in_stack"
+          },
+          "justification": [
+            "wall:MURO_P1_01_0043",
+            "column:C_P1_01_0016",
+            "wall:MURO_P1_01_0044",
+            "viga:VIGA_P1_01_0069",
+            "viga:VIGA_P1_01_0068",
+            "wall:MURO_P1_01_0034",
+            "wall:MURO_P1_01_0035",
+            "wall:MURO_P1_01_0045",
+            "wall:MURO_P1_01_0028",
+            "viga:VIGA_P1_01_0027"
+          ]
+        },
+        {
+          "column_id": "STK_0072_story_3_4",
+          "level_bottom": "3",
+          "level_top": "4",
+          "node_bottom": [
+            72.487,
+            0.079,
+            15.84
+          ],
+          "node_top": [
+            72.487,
+            0.079,
+            19.8
+          ],
+          "section": {
+            "b_m": 0.700000000000017,
+            "d_m": 0.7,
+            "source": "most_common_in_stack"
+          },
+          "justification": [
+            "viga:VIGA_P1_04_0007",
+            "viga:VIGA_P1_04_0038",
+            "viga:VIGA_P1_04_0082",
+            "viga:VIGA_P1_04_0037",
+            "column:C_P1_04_0016",
+            "viga:VIGA_P1_04_0081",
+            "viga:VIGA_P1_04_0006"
+          ]
+        }
+      ],
+      "walls_as_evidence": [
+        "1:MURO_P1_01_0045",
+        "1:MURO_P1_01_0044",
+        "1:MURO_P1_01_0034",
+        "1:MURO_P1_01_0043",
+        "1:MURO_P1_01_0035",
+        "1:MURO_P1_01_0028"
+      ]
+    },
+    {
+      "stack_id": "STK_0073",
+      "region": "parte_1",
+      "class": "B",
+      "class_evidence": [
+        "REL_COL_0027 PARCIAL conf0.75"
+      ],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_1_columna_0018",
+          "level": "1",
+          "xy": [
+            72.491,
+            8.9
+          ]
+        },
+        {
+          "solidTag": "SOL_4_columna_0026",
+          "level": "4",
+          "xy": [
+            72.482,
+            9.019
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 72.487,
+        "y": 8.96,
+        "base_z": 7.92,
+        "top_z": 23.76,
+        "levels": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "section": {
+        "b_m": 0.7000000000000028,
+        "d_m": 0.7000000000000011,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [
+        {
+          "column_id": "STK_0073_story_1_2",
+          "level_bottom": "1",
+          "level_top": "2",
+          "node_bottom": [
+            72.487,
+            8.96,
+            7.92
+          ],
+          "node_top": [
+            72.487,
+            8.96,
+            11.88
+          ],
+          "section": {
+            "b_m": 0.7000000000000028,
+            "d_m": 0.7000000000000011,
+            "source": "most_common_in_stack"
+          },
+          "justification": [
+            "column:C_P1_01_0018",
+            "viga:VIGA_P1_01_0071",
+            "viga:VIGA_P1_01_0070",
+            "viga:VIGA_P1_01_0069",
+            "viga:VIGA_P1_01_0068",
+            "viga:VIGA_P1_01_0015",
+            "viga:VIGA_P1_01_0016"
+          ]
+        },
+        {
+          "column_id": "STK_0073_story_3_4",
+          "level_bottom": "3",
+          "level_top": "4",
+          "node_bottom": [
+            72.487,
+            8.96,
+            15.84
+          ],
+          "node_top": [
+            72.487,
+            8.96,
+            19.8
+          ],
+          "section": {
+            "b_m": 0.7000000000000028,
+            "d_m": 0.7000000000000011,
+            "source": "most_common_in_stack"
+          },
+          "justification": [
+            "column:C_P1_04_0026",
+            "viga:VIGA_P1_04_0106",
+            "viga:VIGA_P1_04_0105",
+            "viga:VIGA_P1_04_0082",
+            "viga:VIGA_P1_04_0084",
+            "viga:VIGA_P1_04_0025",
+            "viga:VIGA_P1_04_0024",
+            "viga:VIGA_P1_04_0081",
+            "viga:VIGA_P1_04_0083"
+          ]
+        }
+      ],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0074",
+      "region": "parte_1",
+      "class": "B",
+      "class_evidence": [
+        "REL_COL_0026 PARCIAL conf0.75"
+      ],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_1_columna_0017",
+          "level": "1",
+          "xy": [
+            72.491,
+            16.15
+          ]
+        },
+        {
+          "solidTag": "SOL_4_columna_0017",
+          "level": "4",
+          "xy": [
+            72.482,
+            16.269
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 72.487,
+        "y": 16.209,
+        "base_z": 7.92,
+        "top_z": 23.76,
+        "levels": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "section": {
+        "b_m": 0.6999999999999886,
+        "d_m": 0.7000000000000082,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [
+        {
+          "column_id": "STK_0074_story_1_2",
+          "level_bottom": "1",
+          "level_top": "2",
+          "node_bottom": [
+            72.487,
+            16.209,
+            7.92
+          ],
+          "node_top": [
+            72.487,
+            16.209,
+            11.88
+          ],
+          "section": {
+            "b_m": 0.6999999999999886,
+            "d_m": 0.7000000000000082,
+            "source": "most_common_in_stack"
+          },
+          "justification": [
+            "viga:VIGA_P1_01_0071",
+            "viga:VIGA_P1_01_0070",
+            "column:C_P1_01_0017",
+            "viga:VIGA_P1_01_0039",
+            "viga:VIGA_P1_01_0040"
+          ]
+        },
+        {
+          "column_id": "STK_0074_story_3_4",
+          "level_bottom": "3",
+          "level_top": "4",
+          "node_bottom": [
+            72.487,
+            16.209,
+            15.84
+          ],
+          "node_top": [
+            72.487,
+            16.209,
+            19.8
+          ],
+          "section": {
+            "b_m": 0.6999999999999886,
+            "d_m": 0.7000000000000082,
+            "source": "most_common_in_stack"
+          },
+          "justification": [
+            "viga:VIGA_P1_04_0051",
+            "viga:VIGA_P1_04_0084",
+            "viga:VIGA_P1_04_0008",
+            "viga:VIGA_P1_04_0050",
+            "viga:VIGA_P1_04_0009",
+            "viga:VIGA_P1_04_0083",
+            "column:C_P1_04_0017"
+          ]
+        }
+      ],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0075",
+      "region": "parte_1",
+      "class": "C",
+      "class_evidence": [],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_4_columna_0023",
+          "level": "4",
+          "xy": [
+            75.032,
+            0.118
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 75.032,
+        "y": 0.118,
+        "base_z": 19.8,
+        "top_z": 23.76,
+        "levels": [
+          "4"
+        ]
+      },
+      "section": {
+        "b_m": 0.35,
+        "d_m": 0.35,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0076",
+      "region": "parte_1",
+      "class": "C",
+      "class_evidence": [],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_4_columna_0025",
+          "level": "4",
+          "xy": [
+            75.032,
+            9.018
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 75.032,
+        "y": 9.018,
+        "base_z": 19.8,
+        "top_z": 23.76,
+        "levels": [
+          "4"
+        ]
+      },
+      "section": {
+        "b_m": 0.35,
+        "d_m": 0.35,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0077",
+      "region": "parte_1",
+      "class": "C",
+      "class_evidence": [],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_4_columna_0024",
+          "level": "4",
+          "xy": [
+            75.032,
+            16.269
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 75.032,
+        "y": 16.269,
+        "base_z": 19.8,
+        "top_z": 23.76,
+        "levels": [
+          "4"
+        ]
+      },
+      "section": {
+        "b_m": 0.35,
+        "d_m": 0.35,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0078",
+      "region": "parte_1",
+      "class": "C",
+      "class_evidence": [],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_4_columna_0020",
+          "level": "4",
+          "xy": [
+            77.382,
+            0.118
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 77.382,
+        "y": 0.118,
+        "base_z": 19.8,
+        "top_z": 23.76,
+        "levels": [
+          "4"
+        ]
+      },
+      "section": {
+        "b_m": 0.35,
+        "d_m": 0.35,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0079",
+      "region": "parte_1",
+      "class": "C",
+      "class_evidence": [],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_4_columna_0018",
+          "level": "4",
+          "xy": [
+            77.382,
+            9.018
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 77.382,
+        "y": 9.018,
+        "base_z": 19.8,
+        "top_z": 23.76,
+        "levels": [
+          "4"
+        ]
+      },
+      "section": {
+        "b_m": 0.35,
+        "d_m": 0.35,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    },
+    {
+      "stack_id": "STK_0080",
+      "region": "parte_1",
+      "class": "C",
+      "class_evidence": [],
+      "original_coordinates": [
+        {
+          "solidTag": "SOL_4_columna_0019",
+          "level": "4",
+          "xy": [
+            77.382,
+            16.269
+          ]
+        }
+      ],
+      "reconciled_analysis_coordinates": {
+        "x": 77.382,
+        "y": 16.269,
+        "base_z": 19.8,
+        "top_z": 23.76,
+        "levels": [
+          "4"
+        ]
+      },
+      "section": {
+        "b_m": 0.35,
+        "d_m": 0.35,
+        "source": "most_common_in_stack"
+      },
+      "story_members": [],
+      "walls_as_evidence": []
+    }
+  ],
+  "instructions": {
+    "reconstruct_auto": "stacks where class==A",
+    "reconstruct_with_additional_evidence_only": "stacks class==B plus evidence strings",
+    "do_not_reconstruct": "stacks class==C"
+  }
+}
