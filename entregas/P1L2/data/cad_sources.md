@@ -31,7 +31,7 @@ C:\Program Files\Autodesk\AutoCAD 2026\accoreconsole.exe
 Herramienta creada:
 
 ```text
-tools/convert_dwg_to_dxf.py
+entregas/P1L2/tools/convert_dwg_to_dxf.py
 ```
 
 Planos convertidos inicialmente:

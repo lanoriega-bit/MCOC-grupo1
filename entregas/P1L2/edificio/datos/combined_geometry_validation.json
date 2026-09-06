@@ -1,0 +1,124 @@
+{
+  "status": "PASS",
+  "check": "COMBINED_GEOMETRY_VALIDATION",
+  "floor_contract": {
+    "status": "PASS",
+    "expected_floors": [
+      "S1",
+      "P1",
+      "P2",
+      "P3",
+      "P4"
+    ],
+    "actual_floors": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "S1"
+    ],
+    "errors": []
+  },
+  "source_floor_audit": {
+    "status": "PASS",
+    "auxiliary_source_floor_counts": {
+      "base": 996
+    },
+    "issues": []
+  },
+  "axis_envelope": {
+    "status": "PASS",
+    "margins_m": {
+      "x": 5.0,
+      "y": 15.0
+    },
+    "checked_collections": [
+      "solids"
+    ],
+    "checked_categories": [
+      "beam",
+      "column",
+      "support",
+      "wall"
+    ],
+    "extents": {
+      "EDIFICIO_1": {
+        "axis_bbox_m": [
+          27.491,
+          0.0,
+          77.491,
+          16.15
+        ],
+        "allowed_bbox_m": [
+          22.491,
+          -15.0,
+          82.491,
+          31.15
+        ],
+        "actual_all_collections_bbox_m": [
+          22.591,
+          -16.103,
+          82.345,
+          30.706
+        ],
+        "actual_checked_structural_bbox_m": [
+          27.141,
+          -11.475,
+          77.691,
+          28.487
+        ]
+      },
+      "EDIFICIO_2": {
+        "axis_bbox_m": [
+          0.0,
+          0.0,
+          27.5,
+          16.15
+        ],
+        "allowed_bbox_m": [
+          -5.0,
+          -15.0,
+          32.5,
+          31.15
+        ],
+        "actual_all_collections_bbox_m": [
+          -7.148,
+          -12.81,
+          33.852,
+          21.551
+        ],
+        "actual_checked_structural_bbox_m": [
+          -3.948,
+          -1.094,
+          27.9,
+          17.25
+        ]
+      }
+    },
+    "issues": [],
+    "issue_count": 0
+  },
+  "double_offset": {
+    "status": "PASS",
+    "ed2_D_x_m": 27.5,
+    "ed1_E_expected_global_x_m": 27.491,
+    "D_E_residual_m": 0.009,
+    "min_ed1_column_x_m": 27.491,
+    "issues": []
+  },
+  "duplicate_floor_geometry": {
+    "status": "PASS",
+    "duplicates": [
+      {
+        "building": "EDIFICIO_2",
+        "floors": [
+          "P1",
+          "P2",
+          "P3"
+        ],
+        "status": "DOCUMENTED_SUPERPOSITION"
+      }
+    ],
+    "issues": []
+  }
+}

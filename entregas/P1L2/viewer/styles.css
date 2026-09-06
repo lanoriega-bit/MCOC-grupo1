@@ -22,7 +22,8 @@ body {
 }
 
 button,
-input {
+input,
+select {
   font: inherit;
 }
 
@@ -101,6 +102,18 @@ h2 {
   gap: 8px;
 }
 
+.section-heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.section-heading-row h2 {
+  margin-bottom: 0;
+}
+
 button {
   min-height: 36px;
   border: 1px solid rgba(109, 182, 255, 0.35);
@@ -113,6 +126,11 @@ button {
 button:hover {
   border-color: rgba(109, 182, 255, 0.85);
   background: rgba(109, 182, 255, 0.22);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
 }
 
 .control-list {
@@ -162,6 +180,21 @@ input[type="search"] {
   color: var(--text);
 }
 
+.model-select {
+  width: 100%;
+  min-height: 36px;
+  padding: 0 10px;
+  border: 1px solid var(--panel-border);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.22);
+  color: var(--text);
+}
+
+.model-select option {
+  background: #0d1829;
+  color: var(--text);
+}
+
 dl {
   display: grid;
   grid-template-columns: 96px 1fr;
@@ -191,6 +224,24 @@ dd {
   pointer-events: none;
   transform: translate(-50%, -50%);
   white-space: nowrap;
+}
+
+.selected-card {
+  border-color: rgba(255, 180, 84, 0.42);
+}
+
+.selected-label {
+  border-color: rgba(255, 216, 102, 0.9);
+  background: rgba(3, 8, 15, 0.92);
+  color: #ffe082;
+  font-size: 12px;
+  font-weight: 700;
+  z-index: 4;
+}
+
+.copy-flash {
+  border-color: rgba(70, 211, 138, 0.85);
+  background: rgba(70, 211, 138, 0.18);
 }
 
 @media (max-width: 900px) {

@@ -1,0 +1,87 @@
+{
+  "status": "PASS",
+  "check": "ENRICHED_MODEL_METADATA_VALIDATION",
+  "geometry_hash_before": "f4921e2b768c6fa2359e0d0af6da2e61a097f2c2845e876d9b89a308f098cf48",
+  "geometry_hash_after": "f4921e2b768c6fa2359e0d0af6da2e61a097f2c2845e876d9b89a308f098cf48",
+  "geometry_preserved": true,
+  "floor_contract": {
+    "status": "PASS",
+    "expected_floors": [
+      "S1",
+      "P1",
+      "P2",
+      "P3",
+      "P4"
+    ],
+    "actual_floors": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "S1"
+    ],
+    "errors": []
+  },
+  "element_id_format": "E{1|2}-{S1|P1|P2|P3|P4}-{C|V|M|A|L|D}-###",
+  "selectable_element_count": 1603,
+  "elements_with_id": 1603,
+  "elements_with_elementTag": 1603,
+  "elements_with_axis_location": 1603,
+  "duplicate_element_ids": [],
+  "duplicate_element_tags": [],
+  "missing_element_ids": [],
+  "missing_element_tags": [],
+  "solid_counts_by_category": {
+    "beam": 1060,
+    "column": 176,
+    "slab": 10,
+    "support": 113,
+    "wall": 234
+  },
+  "property_coverage": {
+    "beam": {
+      "total": 1060,
+      "known": 431,
+      "confirmed_from_label": 431,
+      "cad_geometry": 0,
+      "unknown": 629,
+      "known_percent": 40.7,
+      "confirmed_from_label_percent": 40.7
+    },
+    "column": {
+      "total": 176,
+      "known": 176,
+      "confirmed_from_label": 84,
+      "cad_geometry": 92,
+      "unknown": 0,
+      "known_percent": 100.0,
+      "confirmed_from_label_percent": 47.7
+    },
+    "wall": {
+      "total": 234,
+      "known": 73,
+      "confirmed_from_label": 73,
+      "unknown": 161,
+      "known_percent": 31.2,
+      "confirmed_from_label_percent": 31.2
+    },
+    "support": {
+      "total": 113,
+      "known": 3,
+      "confirmed_from_label": 3,
+      "cad_geometry": 0,
+      "unknown": 110,
+      "known_percent": 2.7,
+      "confirmed_from_label_percent": 2.7
+    }
+  },
+  "off_axis_column_count": 31,
+  "off_axis_column_classifications": {
+    "OFF_AXIS_LEGITIMATE": 13,
+    "SPECIAL_POSITION_CONFIRMED": 18
+  },
+  "parsed_property_labels": 777,
+  "associated_property_labels": 689,
+  "ambiguous_property_labels": 67,
+  "errors": []
+}

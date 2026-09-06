@@ -29,6 +29,18 @@ SI: m, N, Pa.
 - Check superposition.
 - Never modify reference benchmark results without justification.
 
+# Git Sync Rules
+
+- Keep GitHub updated during development so teammates can review a recent model.
+- After each coherent functional milestone, run relevant checks, commit descriptively, and push.
+- During long audits, create clear checkpoint commits before too much local work accumulates.
+- Do not force push.
+- Do not overwrite or delete other contributors' work.
+- Fetch before integrating remote changes when needed.
+- Do not modify Luis's original `entregas/P1L2/unity_export/model_viewer.json`; `LUIS_REFERENCE_FILES_MODIFIED = 0` must remain true.
+- If geometry changes, regenerate `model_1_audited_corrected.json` and, when applicable, `model_combined_viewer.json` before pushing.
+- Keep `entregas/P1L2/STATUS.md` current at important checkpoints.
+
 # P1L0 Scope
 
 - Keep the 2D benchmark minimal and explainable.

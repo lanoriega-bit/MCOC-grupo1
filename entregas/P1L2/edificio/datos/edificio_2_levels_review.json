@@ -1,0 +1,45 @@
+{
+  "status": "SOURCE_ELEVATIONS_REVIEWED",
+  "datum": {
+    "level_kind": "FOUNDATION_LEVEL",
+    "source_elevation_m": -7.97,
+    "model_z_m": 0.0,
+    "evidence": "2024_22-100: (NIVEL SUPERIOR RADIER -7.97); fundacion/radier no es piso."
+  },
+  "floors": [
+    {
+      "floor_name": "S1",
+      "source_elevation_m": -4.01,
+      "model_z_m": 3.96,
+      "evidence": "Inferido desde P4=+11.83 y datum radier=-7.97 con modulo 3.96 m; lamina 101 superpone cielos S1..P3 y no entrega valor individual legible."
+    },
+    {
+      "floor_name": "P1",
+      "source_elevation_m": -0.05,
+      "model_z_m": 7.92,
+      "evidence": "Inferido desde P4=+11.83 y datum radier=-7.97 con modulo 3.96 m; lamina 101 superpone cielos S1..P3."
+    },
+    {
+      "floor_name": "P2",
+      "source_elevation_m": 3.91,
+      "model_z_m": 11.88,
+      "evidence": "Inferido desde P4=+11.83 y datum radier=-7.97 con modulo 3.96 m; lamina 101 superpone cielos S1..P3."
+    },
+    {
+      "floor_name": "P3",
+      "source_elevation_m": 7.87,
+      "model_z_m": 15.84,
+      "evidence": "Inferido desde P4=+11.83 y datum radier=-7.97 con modulo 3.96 m; lamina 101 superpone cielos S1..P3."
+    },
+    {
+      "floor_name": "P4",
+      "source_elevation_m": 11.83,
+      "model_z_m": 19.8,
+      "evidence": "2024_22-102: (NIVEL SUPERIOR LOSA + 11.83); 11.83 - (-7.97) = 19.80 m."
+    }
+  ],
+  "non_floor_level_notes": [
+    "2024_22-100: N.R.=-8.12 y N.O.G.=-9.37 son cotas tecnicas de fundacion/terreno, no pisos.",
+    "2024_22-101: N.O.G.=-5.945/VAR y N.S.M.=-3.23 aparecen como notas locales; no se usaron para crear pisos adicionales."
+  ]
+}

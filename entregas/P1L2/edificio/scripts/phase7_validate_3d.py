@@ -28,6 +28,8 @@ import os
 import sys
 from collections import Counter
 
+from model_contract import EXPECTED_FLOORS, assert_expected_floors
+
 REPO = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..", ".."))
 MASTER = os.path.join(REPO, "entregas", "P1L2", "edificio", "datos", "building_master.json")
 CANDIDATE = os.path.join(REPO, "entregas", "P1L2", "unity_export", "model_viewer_candidate.json")
@@ -112,6 +114,7 @@ def segment_center(s):
 def main():
     master = load(MASTER)
     cand = load(CANDIDATE)
+    floor_contract = assert_expected_floors(cand, CANDIDATE)
 
     bm_models = {}
     axis_ids = set()
@@ -227,13 +230,14 @@ def main():
     A("")
     A(f"| {'Piso':<10} | {'Col':>5} | {'Viga':>6} | {'Muro':>5} | {'LosaBorde':>10} | {'Fund':>5} | {'SlabFill':>8} |")
     A("|---|---|---|---|---|---|---|")
-    for fv in ["base", "1S", "1", "2", "3", "4"]:
+    for fv in EXPECTED_FLOORS:
         A(f"| {fv:<10} | {solid_counts[(fv,'column')]:>5} | {solid_counts[(fv,'beam')]:>6} | "
           f"{solid_counts[(fv,'wall')]:>5} | {solid_counts[(fv,'slab_edge')]:>10} | "
           f"{solid_counts[(fv,'support')]:>5} | {solid_counts[(fv,'slab')]:>8} |")
     A("")
 
     A("## Notas")
+    A(f"- FLOOR_CONTRACT: {floor_contract['status']} con pisos {floor_contract['actual_floors']}.")
     A("- Vigas modeladas con seccion confirmada V.60/80 (0.60 x 0.80 m); el default de linea en "
       "building_master (0.32) no se usa para la seccion estructural.")
     A("- Muros con espesor 0.22 m (datos master); las etiquetas M.H.A. del DXF indican e=15/20/25/30 "

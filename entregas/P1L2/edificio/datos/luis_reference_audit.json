@@ -1,0 +1,4266 @@
+{
+  "status": "PASS_WITH_REVIEW_NOTES",
+  "reference_status": "LUIS_REFERENCE_PROVISIONAL",
+  "units": "m",
+  "source_model": "entregas/P1L2/unity_export/model_viewer.json",
+  "audited_model": "entregas/P1L2/unity_export/model_1_audited.json",
+  "scope": "EDIFICIO_1 local Luis viewer export. Geometry is not edited by this audit.",
+  "evidence_hierarchy": [
+    "PLANOS_ORIGINALES_DXF_DWG_PDF",
+    "EJES",
+    "COTAS",
+    "TEXTOS_NOTAS_ETIQUETAS",
+    "DETALLES_ESTRUCTURALES",
+    "CONTINUIDAD_ENTRE_PLANOS",
+    "MODELO_DE_LUIS",
+    "INFERENCIA"
+  ],
+  "rules": {
+    "direct_match_tolerance_m": 0.3,
+    "station_stack_tolerance_m": 0.85,
+    "edificio_1_global_to_luis_local_dx_m": -27.491,
+    "outboard_reference": {
+      "axis": "Y3",
+      "axis_y_m": 16.15,
+      "tolerance_m": 0.35,
+      "limit_y_m": 16.5
+    }
+  },
+  "summary": {
+    "solids_total": 927,
+    "categories": {
+      "beam": 545,
+      "wall": 134,
+      "column": 149,
+      "support": 94,
+      "slab": 5
+    },
+    "columns_total": 149,
+    "columns_inferred": 61,
+    "columns_outboard_y_gt_limit": 26,
+    "columns_outboard_inferred": 17,
+    "supports_from_inferred_columns": 34,
+    "findings_total": 95,
+    "findings_by_severity": {
+      "HIGH": 76,
+      "MEDIUM": 19
+    },
+    "findings_by_code": {
+      "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE": 61,
+      "SUPPORT_GENERATED_FROM_INFERRED_COLUMN": 34
+    }
+  },
+  "column_by_floor": {
+    "1S": {
+      "floor_export": "S1",
+      "total": 34,
+      "by_confidence": {
+        "inferred_from_floor_1": 23,
+        "inferred_from_above_1": 11
+      },
+      "inferred": 34,
+      "outboard_y_gt_limit": 9,
+      "outboard_inferred": 9
+    },
+    "1": {
+      "floor_export": "P1",
+      "total": 34,
+      "by_confidence": {
+        "medium": 23,
+        "inferred_from_above_2": 11
+      },
+      "inferred": 11,
+      "outboard_y_gt_limit": 9,
+      "outboard_inferred": 4
+    },
+    "2": {
+      "floor_export": "P2",
+      "total": 29,
+      "by_confidence": {
+        "medium": 21,
+        "inferred_from_above_3": 8
+      },
+      "inferred": 8,
+      "outboard_y_gt_limit": 4,
+      "outboard_inferred": 2
+    },
+    "3": {
+      "floor_export": "P3",
+      "total": 26,
+      "by_confidence": {
+        "medium": 18,
+        "inferred_from_above_4": 8
+      },
+      "inferred": 8,
+      "outboard_y_gt_limit": 2,
+      "outboard_inferred": 2
+    },
+    "4": {
+      "floor_export": "P4",
+      "total": 26,
+      "by_confidence": {
+        "medium": 26
+      },
+      "inferred": 0,
+      "outboard_y_gt_limit": 2,
+      "outboard_inferred": 0
+    }
+  },
+  "direct_plan_column_counts": {
+    "1S": 0,
+    "1": 20,
+    "2": 21,
+    "3": 18,
+    "4": 26
+  },
+  "direct_plan_match_summary": {
+    "1S": {
+      "floor_export": "S1",
+      "luis_medium_columns": 0,
+      "direct_plan_columns": 0,
+      "matched_within_m": 0.3,
+      "matched_count": 0,
+      "nearest_distance_median_m": null,
+      "status": "NO_DIRECT_ED1_COLUMN_PLAN_ELEMENTS"
+    },
+    "1": {
+      "floor_export": "P1",
+      "luis_medium_columns": 23,
+      "direct_plan_columns": 20,
+      "matched_within_m": 0.3,
+      "matched_count": 20,
+      "nearest_distance_median_m": 0.0,
+      "status": "PARTIAL_DIRECT_MATCH_REVIEW"
+    },
+    "2": {
+      "floor_export": "P2",
+      "luis_medium_columns": 21,
+      "direct_plan_columns": 21,
+      "matched_within_m": 0.3,
+      "matched_count": 0,
+      "nearest_distance_median_m": 3.588,
+      "status": "CALIBRATION_CAVEAT_DO_NOT_USE_AS_DEFECT"
+    },
+    "3": {
+      "floor_export": "P3",
+      "luis_medium_columns": 18,
+      "direct_plan_columns": 18,
+      "matched_within_m": 0.3,
+      "matched_count": 12,
+      "nearest_distance_median_m": 0.064,
+      "status": "PARTIAL_DIRECT_MATCH_REVIEW"
+    },
+    "4": {
+      "floor_export": "P4",
+      "luis_medium_columns": 26,
+      "direct_plan_columns": 26,
+      "matched_within_m": 0.3,
+      "matched_count": 26,
+      "nearest_distance_median_m": 0.063,
+      "status": "DIRECT_MATCH_GOOD"
+    }
+  },
+  "column_stations": [
+    {
+      "station_id": "ST-001",
+      "center_local_m": [
+        0.01,
+        16.259
+      ],
+      "floors": [
+        "1S",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "floor_confidence": {
+        "1S": "inferred_from_floor_1",
+        "1": "medium",
+        "2": "medium",
+        "3": "medium",
+        "4": "medium"
+      },
+      "inferred_count": 1,
+      "solidTags": [
+        "SOL_2_column_0006",
+        "SOL_3_column_0006",
+        "SOL_4_column_0006",
+        "SOL_1_column_0006",
+        "SOL_1S_column_0006"
+      ]
+    },
+    {
+      "station_id": "ST-002",
+      "center_local_m": [
+        0.01,
+        9.009
+      ],
+      "floors": [
+        "1S",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "floor_confidence": {
+        "1S": "inferred_from_floor_1",
+        "1": "medium",
+        "2": "medium",
+        "3": "medium",
+        "4": "medium"
+      },
+      "inferred_count": 1,
+      "solidTags": [
+        "SOL_2_column_0004",
+        "SOL_3_column_0004",
+        "SOL_4_column_0004",
+        "SOL_1_column_0004",
+        "SOL_1S_column_0004"
+      ]
+    },
+    {
+      "station_id": "ST-003",
+      "center_local_m": [
+        -0.0,
+        0.109
+      ],
+      "floors": [
+        "1S",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "floor_confidence": {
+        "1S": "inferred_from_floor_1",
+        "1": "medium",
+        "2": "medium",
+        "3": "medium",
+        "4": "medium"
+      },
+      "inferred_count": 1,
+      "solidTags": [
+        "SOL_2_column_0005",
+        "SOL_3_column_0005",
+        "SOL_4_column_0005",
+        "SOL_1_column_0005",
+        "SOL_1S_column_0005"
+      ]
+    },
+    {
+      "station_id": "ST-004",
+      "center_local_m": [
+        10.0,
+        16.282
+      ],
+      "floors": [
+        "1S",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "floor_confidence": {
+        "1S": "inferred_from_floor_1",
+        "1": "medium",
+        "2": "medium",
+        "3": "medium",
+        "4": "medium"
+      },
+      "inferred_count": 1,
+      "solidTags": [
+        "SOL_2_column_0002",
+        "SOL_3_column_0002",
+        "SOL_4_column_0002",
+        "SOL_1_column_0002",
+        "SOL_1S_column_0002"
+      ]
+    },
+    {
+      "station_id": "ST-005",
+      "center_local_m": [
+        10.0,
+        0.109
+      ],
+      "floors": [
+        "1S",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "floor_confidence": {
+        "1S": "inferred_from_floor_1",
+        "1": "medium",
+        "2": "medium",
+        "3": "medium",
+        "4": "medium"
+      },
+      "inferred_count": 1,
+      "solidTags": [
+        "SOL_2_column_0001",
+        "SOL_3_column_0001",
+        "SOL_4_column_0001",
+        "SOL_1_column_0001",
+        "SOL_1S_column_0001"
+      ]
+    },
+    {
+      "station_id": "ST-006",
+      "center_local_m": [
+        10.0,
+        9.009
+      ],
+      "floors": [
+        "1S",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "floor_confidence": {
+        "1S": "inferred_from_floor_1",
+        "1": "medium",
+        "2": "medium",
+        "3": "medium",
+        "4": "medium"
+      },
+      "inferred_count": 1,
+      "solidTags": [
+        "SOL_2_column_0003",
+        "SOL_3_column_0003",
+        "SOL_4_column_0003",
+        "SOL_1_column_0003",
+        "SOL_1S_column_0003"
+      ]
+    },
+    {
+      "station_id": "ST-007",
+      "center_local_m": [
+        10.0,
+        20.452
+      ],
+      "floors": [
+        "1S",
+        "1",
+        "2"
+      ],
+      "floor_confidence": {
+        "1S": "inferred_from_above_1",
+        "1": "inferred_from_above_2",
+        "2": "medium"
+      },
+      "inferred_count": 2,
+      "solidTags": [
+        "SOL_1_column_0025",
+        "SOL_1S_column_0025",
+        "SOL_2_column_0019"
+      ]
+    },
+    {
+      "station_id": "ST-008",
+      "center_local_m": [
+        17.49,
+        20.452
+      ],
+      "floors": [
+        "1S",
+        "1",
+        "2"
+      ],
+      "floor_confidence": {
+        "1S": "inferred_from_above_1",
+        "1": "inferred_from_above_2",
+        "2": "medium"
+      },
+      "inferred_count": 2,
+      "solidTags": [
+        "SOL_1_column_0024",
+        "SOL_1S_column_0024",
+        "SOL_2_column_0018"
+      ]
+    },
+    {
+      "station_id": "ST-009",
+      "center_local_m": [
+        17.49,
+        16.332
+      ],
+      "floors": [
+        "1S",
+        "1",
+        "2"
+      ],
+      "floor_confidence": {
+        "1S": "inferred_from_above_1",
+        "1": "inferred_from_above_2",
+        "2": "medium"
+      },
+      "inferred_count": 2,
+      "solidTags": [
+        "SOL_1_column_0026",
+        "SOL_1S_column_0026",
+        "SOL_2_column_0021"
+      ]
+    },
+    {
+      "station_id": "ST-010",
+      "center_local_m": [
+        20.0,
+        16.282
+      ],
+      "floors": [
+        "1S",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "floor_confidence": {
+        "1S": "inferred_from_floor_1",
+        "1": "medium",
+        "2": "medium",
+        "3": "medium",
+        "4": "medium"
+      },
+      "inferred_count": 1,
+      "solidTags": [
+        "SOL_2_column_0008",
+        "SOL_3_column_0008",
+        "SOL_4_column_0008",
+        "SOL_1_column_0008",
+        "SOL_1S_column_0008"
+      ]
+    },
+    {
+      "station_id": "ST-011",
+      "center_local_m": [
+        20.0,
+        0.109
+      ],
+      "floors": [
+        "1S",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "floor_confidence": {
+        "1S": "inferred_from_floor_1",
+        "1": "medium",
+        "2": "medium",
+        "3": "medium",
+        "4": "medium"
+      },
+      "inferred_count": 1,
+      "solidTags": [
+        "SOL_2_column_0015",
+        "SOL_3_column_0015",
+        "SOL_4_column_0015",
+        "SOL_1_column_0015",
+        "SOL_1S_column_0015"
+      ]
+    },
+    {
+      "station_id": "ST-012",
+      "center_local_m": [
+        20.0,
+        9.009
+      ],
+      "floors": [
+        "1S",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "floor_confidence": {
+        "1S": "inferred_from_floor_1",
+        "1": "medium",
+        "2": "medium",
+        "3": "medium",
+        "4": "medium"
+      },
+      "inferred_count": 1,
+      "solidTags": [
+        "SOL_2_column_0007",
+        "SOL_3_column_0007",
+        "SOL_4_column_0007",
+        "SOL_1_column_0007",
+        "SOL_1S_column_0007"
+      ]
+    },
+    {
+      "station_id": "ST-013",
+      "center_local_m": [
+        20.0,
+        20.451
+      ],
+      "floors": [
+        "1S",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "floor_confidence": {
+        "1S": "inferred_from_above_1",
+        "1": "inferred_from_above_2",
+        "2": "inferred_from_above_3",
+        "3": "inferred_from_above_4",
+        "4": "medium"
+      },
+      "inferred_count": 4,
+      "solidTags": [
+        "SOL_1_column_0031",
+        "SOL_1S_column_0031",
+        "SOL_2_column_0026",
+        "SOL_3_column_0023",
+        "SOL_4_column_0022"
+      ]
+    },
+    {
+      "station_id": "ST-014",
+      "center_local_m": [
+        30.0,
+        9.009
+      ],
+      "floors": [
+        "1S",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "floor_confidence": {
+        "1S": "inferred_from_floor_1",
+        "1": "medium",
+        "2": "medium",
+        "3": "medium",
+        "4": "medium"
+      },
+      "inferred_count": 1,
+      "solidTags": [
+        "SOL_2_column_0014",
+        "SOL_3_column_0014",
+        "SOL_4_column_0014",
+        "SOL_1_column_0014",
+        "SOL_1S_column_0014"
+      ]
+    },
+    {
+      "station_id": "ST-015",
+      "center_local_m": [
+        30.0,
+        0.124
+      ],
+      "floors": [
+        "1S",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "floor_confidence": {
+        "1S": "inferred_from_floor_1",
+        "1": "medium",
+        "2": "medium",
+        "3": "medium",
+        "4": "medium"
+      },
+      "inferred_count": 1,
+      "solidTags": [
+        "SOL_2_column_0013",
+        "SOL_3_column_0013",
+        "SOL_4_column_0013",
+        "SOL_1_column_0013",
+        "SOL_1S_column_0013"
+      ]
+    },
+    {
+      "station_id": "ST-016",
+      "center_local_m": [
+        30.0,
+        16.259
+      ],
+      "floors": [
+        "1S",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "floor_confidence": {
+        "1S": "inferred_from_floor_1",
+        "1": "medium",
+        "2": "medium",
+        "3": "medium",
+        "4": "medium"
+      },
+      "inferred_count": 1,
+      "solidTags": [
+        "SOL_2_column_0009",
+        "SOL_3_column_0009",
+        "SOL_4_column_0009",
+        "SOL_1_column_0009",
+        "SOL_1S_column_0009"
+      ]
+    },
+    {
+      "station_id": "ST-017",
+      "center_local_m": [
+        30.0,
+        20.451
+      ],
+      "floors": [
+        "1S",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "floor_confidence": {
+        "1S": "inferred_from_above_1",
+        "1": "inferred_from_above_2",
+        "2": "inferred_from_above_3",
+        "3": "inferred_from_above_4",
+        "4": "medium"
+      },
+      "inferred_count": 4,
+      "solidTags": [
+        "SOL_1_column_0030",
+        "SOL_1S_column_0030",
+        "SOL_2_column_0025",
+        "SOL_3_column_0022",
+        "SOL_4_column_0021"
+      ]
+    },
+    {
+      "station_id": "ST-018",
+      "center_local_m": [
+        30.027,
+        18.843
+      ],
+      "floors": [
+        "1S",
+        "1"
+      ],
+      "floor_confidence": {
+        "1S": "inferred_from_floor_1",
+        "1": "medium"
+      },
+      "inferred_count": 1,
+      "solidTags": [
+        "SOL_1_column_0022",
+        "SOL_1S_column_0022"
+      ]
+    },
+    {
+      "station_id": "ST-019",
+      "center_local_m": [
+        30.027,
+        26.176
+      ],
+      "floors": [
+        "1S",
+        "1"
+      ],
+      "floor_confidence": {
+        "1S": "inferred_from_floor_1",
+        "1": "medium"
+      },
+      "inferred_count": 1,
+      "solidTags": [
+        "SOL_1_column_0023",
+        "SOL_1S_column_0023"
+      ]
+    },
+    {
+      "station_id": "ST-020",
+      "center_local_m": [
+        34.477,
+        18.912
+      ],
+      "floors": [
+        "1S",
+        "1"
+      ],
+      "floor_confidence": {
+        "1S": "inferred_from_floor_1",
+        "1": "medium"
+      },
+      "inferred_count": 1,
+      "solidTags": [
+        "SOL_1_column_0019",
+        "SOL_1S_column_0019"
+      ]
+    },
+    {
+      "station_id": "ST-021",
+      "center_local_m": [
+        34.477,
+        23.625
+      ],
+      "floors": [
+        "1S",
+        "1"
+      ],
+      "floor_confidence": {
+        "1S": "inferred_from_floor_1",
+        "1": "medium"
+      },
+      "inferred_count": 1,
+      "solidTags": [
+        "SOL_1_column_0020",
+        "SOL_1S_column_0020"
+      ]
+    },
+    {
+      "station_id": "ST-022",
+      "center_local_m": [
+        34.477,
+        28.337
+      ],
+      "floors": [
+        "1S",
+        "1"
+      ],
+      "floor_confidence": {
+        "1S": "inferred_from_floor_1",
+        "1": "medium"
+      },
+      "inferred_count": 1,
+      "solidTags": [
+        "SOL_1_column_0021",
+        "SOL_1S_column_0021"
+      ]
+    },
+    {
+      "station_id": "ST-023",
+      "center_local_m": [
+        39.965,
+        9.009
+      ],
+      "floors": [
+        "1S",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "floor_confidence": {
+        "1S": "inferred_from_floor_1",
+        "1": "medium",
+        "2": "medium",
+        "3": "medium",
+        "4": "medium"
+      },
+      "inferred_count": 1,
+      "solidTags": [
+        "SOL_1_column_0011",
+        "SOL_1S_column_0011",
+        "SOL_2_column_0011",
+        "SOL_3_column_0011",
+        "SOL_4_column_0011"
+      ]
+    },
+    {
+      "station_id": "ST-024",
+      "center_local_m": [
+        39.982,
+        0.139
+      ],
+      "floors": [
+        "1S",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "floor_confidence": {
+        "1S": "inferred_from_floor_1",
+        "1": "medium",
+        "2": "medium",
+        "3": "medium",
+        "4": "medium"
+      },
+      "inferred_count": 1,
+      "solidTags": [
+        "SOL_1_column_0012",
+        "SOL_1S_column_0012",
+        "SOL_2_column_0012",
+        "SOL_3_column_0012",
+        "SOL_4_column_0012"
+      ]
+    },
+    {
+      "station_id": "ST-025",
+      "center_local_m": [
+        40.071,
+        16.34
+      ],
+      "floors": [
+        "1S",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "floor_confidence": {
+        "1S": "inferred_from_floor_1",
+        "1": "medium",
+        "2": "medium",
+        "3": "medium",
+        "4": "medium"
+      },
+      "inferred_count": 1,
+      "solidTags": [
+        "SOL_2_column_0010",
+        "SOL_3_column_0010",
+        "SOL_4_column_0010",
+        "SOL_1_column_0010",
+        "SOL_1S_column_0010"
+      ]
+    },
+    {
+      "station_id": "ST-026",
+      "center_local_m": [
+        45.0,
+        9.009
+      ],
+      "floors": [
+        "1S",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "floor_confidence": {
+        "1S": "inferred_from_floor_1",
+        "1": "medium",
+        "2": "medium",
+        "3": "medium",
+        "4": "medium"
+      },
+      "inferred_count": 1,
+      "solidTags": [
+        "SOL_2_column_0020",
+        "SOL_3_column_0018",
+        "SOL_4_column_0026",
+        "SOL_1_column_0018",
+        "SOL_1S_column_0018"
+      ]
+    },
+    {
+      "station_id": "ST-027",
+      "center_local_m": [
+        45.0,
+        16.259
+      ],
+      "floors": [
+        "1S",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "floor_confidence": {
+        "1S": "inferred_from_floor_1",
+        "1": "medium",
+        "2": "medium",
+        "3": "medium",
+        "4": "medium"
+      },
+      "inferred_count": 1,
+      "solidTags": [
+        "SOL_2_column_0017",
+        "SOL_3_column_0017",
+        "SOL_4_column_0017",
+        "SOL_1_column_0017",
+        "SOL_1S_column_0017"
+      ]
+    },
+    {
+      "station_id": "ST-028",
+      "center_local_m": [
+        45.0,
+        0.124
+      ],
+      "floors": [
+        "1S",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "floor_confidence": {
+        "1S": "inferred_from_floor_1",
+        "1": "medium",
+        "2": "medium",
+        "3": "medium",
+        "4": "medium"
+      },
+      "inferred_count": 1,
+      "solidTags": [
+        "SOL_2_column_0016",
+        "SOL_3_column_0016",
+        "SOL_4_column_0016",
+        "SOL_1_column_0016",
+        "SOL_1S_column_0016"
+      ]
+    },
+    {
+      "station_id": "ST-029",
+      "center_local_m": [
+        47.55,
+        0.181
+      ],
+      "floors": [
+        "1S",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "floor_confidence": {
+        "1S": "inferred_from_above_1",
+        "1": "inferred_from_above_2",
+        "2": "inferred_from_above_3",
+        "3": "inferred_from_above_4",
+        "4": "medium"
+      },
+      "inferred_count": 4,
+      "solidTags": [
+        "SOL_1_column_0032",
+        "SOL_1S_column_0032",
+        "SOL_2_column_0027",
+        "SOL_3_column_0024",
+        "SOL_4_column_0023"
+      ]
+    },
+    {
+      "station_id": "ST-030",
+      "center_local_m": [
+        47.55,
+        9.081
+      ],
+      "floors": [
+        "1S",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "floor_confidence": {
+        "1S": "inferred_from_above_1",
+        "1": "inferred_from_above_2",
+        "2": "inferred_from_above_3",
+        "3": "inferred_from_above_4",
+        "4": "medium"
+      },
+      "inferred_count": 4,
+      "solidTags": [
+        "SOL_1_column_0034",
+        "SOL_1S_column_0034",
+        "SOL_2_column_0029",
+        "SOL_3_column_0026",
+        "SOL_4_column_0025"
+      ]
+    },
+    {
+      "station_id": "ST-031",
+      "center_local_m": [
+        47.55,
+        16.331
+      ],
+      "floors": [
+        "1S",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "floor_confidence": {
+        "1S": "inferred_from_above_1",
+        "1": "inferred_from_above_2",
+        "2": "inferred_from_above_3",
+        "3": "inferred_from_above_4",
+        "4": "medium"
+      },
+      "inferred_count": 4,
+      "solidTags": [
+        "SOL_1_column_0033",
+        "SOL_1S_column_0033",
+        "SOL_2_column_0028",
+        "SOL_3_column_0025",
+        "SOL_4_column_0024"
+      ]
+    },
+    {
+      "station_id": "ST-032",
+      "center_local_m": [
+        49.9,
+        9.081
+      ],
+      "floors": [
+        "1S",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "floor_confidence": {
+        "1S": "inferred_from_above_1",
+        "1": "inferred_from_above_2",
+        "2": "inferred_from_above_3",
+        "3": "inferred_from_above_4",
+        "4": "medium"
+      },
+      "inferred_count": 4,
+      "solidTags": [
+        "SOL_1_column_0027",
+        "SOL_1S_column_0027",
+        "SOL_2_column_0022",
+        "SOL_3_column_0019",
+        "SOL_4_column_0018"
+      ]
+    },
+    {
+      "station_id": "ST-033",
+      "center_local_m": [
+        49.9,
+        16.331
+      ],
+      "floors": [
+        "1S",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "floor_confidence": {
+        "1S": "inferred_from_above_1",
+        "1": "inferred_from_above_2",
+        "2": "inferred_from_above_3",
+        "3": "inferred_from_above_4",
+        "4": "medium"
+      },
+      "inferred_count": 4,
+      "solidTags": [
+        "SOL_1_column_0028",
+        "SOL_1S_column_0028",
+        "SOL_2_column_0023",
+        "SOL_3_column_0020",
+        "SOL_4_column_0019"
+      ]
+    },
+    {
+      "station_id": "ST-034",
+      "center_local_m": [
+        49.9,
+        0.181
+      ],
+      "floors": [
+        "1S",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "floor_confidence": {
+        "1S": "inferred_from_above_1",
+        "1": "inferred_from_above_2",
+        "2": "inferred_from_above_3",
+        "3": "inferred_from_above_4",
+        "4": "medium"
+      },
+      "inferred_count": 4,
+      "solidTags": [
+        "SOL_1_column_0029",
+        "SOL_1S_column_0029",
+        "SOL_2_column_0024",
+        "SOL_3_column_0021",
+        "SOL_4_column_0020"
+      ]
+    }
+  ],
+  "generator_hotspots": [
+    {
+      "path": "entregas/P1L2/opensees/extract_cad_model.py",
+      "lines": "337-371",
+      "issue": "Missing column clusters are copied/interpolated across floors."
+    },
+    {
+      "path": "entregas/P1L2/opensees/extract_cad_model.py",
+      "lines": "506-548",
+      "issue": "Base supports are generated from bottom columns/walls, including inferred columns."
+    }
+  ],
+  "interpretation_notes": [
+    "Luis's original model_viewer.json remains unchanged and is treated as provisional, not golden.",
+    "The audited copy is metadata-only; geometry hashes cover solids, segments, labels, and diaphragms.",
+    "Only inferred columns and supports generated from inferred columns are findings.",
+    "Partial direct matches in P1/P3 are review context and do not automatically invalidate medium-confidence geometry.",
+    "P2 direct matching has a known calibration caveat in the re-extracted floor JSON and is not counted as a defect."
+  ],
+  "findings": [
+    {
+      "id": "AUD-LUIS-0001",
+      "severity": "HIGH",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1S_column_0001",
+      "category": "column",
+      "floor": "1S",
+      "floor_export": "S1",
+      "center_local_m": [
+        10.0,
+        -0.0
+      ],
+      "confidence": "inferred_from_floor_1",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "NO_DIRECT_ED1_COLUMN_PLAN_ON_1S",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": null,
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_1_column_plan_0001",
+        "CAD_1_column_plan_0002",
+        "CAD_1_column_plan_0003",
+        "CAD_1_column_plan_0004"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0002",
+      "severity": "HIGH",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1S_column_0002",
+      "category": "column",
+      "floor": "1S",
+      "floor_export": "S1",
+      "center_local_m": [
+        10.0,
+        16.15
+      ],
+      "confidence": "inferred_from_floor_1",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "NO_DIRECT_ED1_COLUMN_PLAN_ON_1S",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": null,
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_1_column_plan_0005",
+        "CAD_1_column_plan_0006",
+        "CAD_1_column_plan_0007",
+        "CAD_1_column_plan_0008"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0003",
+      "severity": "HIGH",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1S_column_0003",
+      "category": "column",
+      "floor": "1S",
+      "floor_export": "S1",
+      "center_local_m": [
+        10.0,
+        8.9
+      ],
+      "confidence": "inferred_from_floor_1",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "NO_DIRECT_ED1_COLUMN_PLAN_ON_1S",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": null,
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_1_column_plan_0009",
+        "CAD_1_column_plan_0010",
+        "CAD_1_column_plan_0011",
+        "CAD_1_column_plan_0012"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0004",
+      "severity": "HIGH",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1S_column_0004",
+      "category": "column",
+      "floor": "1S",
+      "floor_export": "S1",
+      "center_local_m": [
+        0.025,
+        8.9
+      ],
+      "confidence": "inferred_from_floor_1",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "NO_DIRECT_ED1_COLUMN_PLAN_ON_1S",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": null,
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_1_column_plan_0013",
+        "CAD_1_column_plan_0014",
+        "CAD_1_column_plan_0015",
+        "CAD_1_column_plan_0016"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0005",
+      "severity": "HIGH",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1S_column_0005",
+      "category": "column",
+      "floor": "1S",
+      "floor_export": "S1",
+      "center_local_m": [
+        0.0,
+        -0.0
+      ],
+      "confidence": "inferred_from_floor_1",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "NO_DIRECT_ED1_COLUMN_PLAN_ON_1S",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": null,
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_1_column_plan_0017",
+        "CAD_1_column_plan_0018",
+        "CAD_1_column_plan_0019",
+        "CAD_1_column_plan_0020"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0006",
+      "severity": "HIGH",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1S_column_0006",
+      "category": "column",
+      "floor": "1S",
+      "floor_export": "S1",
+      "center_local_m": [
+        0.025,
+        16.15
+      ],
+      "confidence": "inferred_from_floor_1",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "NO_DIRECT_ED1_COLUMN_PLAN_ON_1S",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": null,
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_1_column_plan_0021",
+        "CAD_1_column_plan_0022",
+        "CAD_1_column_plan_0023",
+        "CAD_1_column_plan_0024"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0007",
+      "severity": "HIGH",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1S_column_0007",
+      "category": "column",
+      "floor": "1S",
+      "floor_export": "S1",
+      "center_local_m": [
+        20.0,
+        8.9
+      ],
+      "confidence": "inferred_from_floor_1",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "NO_DIRECT_ED1_COLUMN_PLAN_ON_1S",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": null,
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_1_column_plan_0043",
+        "CAD_1_column_plan_0044",
+        "CAD_1_column_plan_0045",
+        "CAD_1_column_plan_0046"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0008",
+      "severity": "HIGH",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1S_column_0008",
+      "category": "column",
+      "floor": "1S",
+      "floor_export": "S1",
+      "center_local_m": [
+        20.0,
+        16.15
+      ],
+      "confidence": "inferred_from_floor_1",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "NO_DIRECT_ED1_COLUMN_PLAN_ON_1S",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": null,
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_1_column_plan_0047",
+        "CAD_1_column_plan_0048",
+        "CAD_1_column_plan_0049",
+        "CAD_1_column_plan_0050"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0009",
+      "severity": "HIGH",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1S_column_0009",
+      "category": "column",
+      "floor": "1S",
+      "floor_export": "S1",
+      "center_local_m": [
+        30.0,
+        16.15
+      ],
+      "confidence": "inferred_from_floor_1",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "NO_DIRECT_ED1_COLUMN_PLAN_ON_1S",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": null,
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_1_column_plan_0051",
+        "CAD_1_column_plan_0052",
+        "CAD_1_column_plan_0053",
+        "CAD_1_column_plan_0054"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0010",
+      "severity": "HIGH",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1S_column_0010",
+      "category": "column",
+      "floor": "1S",
+      "floor_export": "S1",
+      "center_local_m": [
+        40.179,
+        16.352
+      ],
+      "confidence": "inferred_from_floor_1",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "NO_DIRECT_ED1_COLUMN_PLAN_ON_1S",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": null,
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_1_column_plan_0055",
+        "CAD_1_column_plan_0056",
+        "CAD_1_column_plan_0057",
+        "CAD_1_column_plan_0058",
+        "CAD_1_column_plan_0224",
+        "CAD_1_column_plan_0225",
+        "CAD_1_column_plan_0226"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0011",
+      "severity": "HIGH",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1S_column_0011",
+      "category": "column",
+      "floor": "1S",
+      "floor_export": "S1",
+      "center_local_m": [
+        39.913,
+        8.9
+      ],
+      "confidence": "inferred_from_floor_1",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "NO_DIRECT_ED1_COLUMN_PLAN_ON_1S",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": null,
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_1_column_plan_0059",
+        "CAD_1_column_plan_0060",
+        "CAD_1_column_plan_0062",
+        "CAD_1_column_plan_0063"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0012",
+      "severity": "HIGH",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1S_column_0012",
+      "category": "column",
+      "floor": "1S",
+      "floor_export": "S1",
+      "center_local_m": [
+        39.956,
+        0.075
+      ],
+      "confidence": "inferred_from_floor_1",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "NO_DIRECT_ED1_COLUMN_PLAN_ON_1S",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": null,
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_1_column_plan_0064",
+        "CAD_1_column_plan_0065",
+        "CAD_1_column_plan_0066",
+        "CAD_1_column_plan_0067"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0013",
+      "severity": "HIGH",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1S_column_0013",
+      "category": "column",
+      "floor": "1S",
+      "floor_export": "S1",
+      "center_local_m": [
+        30.0,
+        0.038
+      ],
+      "confidence": "inferred_from_floor_1",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "NO_DIRECT_ED1_COLUMN_PLAN_ON_1S",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": null,
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_1_column_plan_0068",
+        "CAD_1_column_plan_0069",
+        "CAD_1_column_plan_0070",
+        "CAD_1_column_plan_0071"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0014",
+      "severity": "HIGH",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1S_column_0014",
+      "category": "column",
+      "floor": "1S",
+      "floor_export": "S1",
+      "center_local_m": [
+        30.0,
+        8.9
+      ],
+      "confidence": "inferred_from_floor_1",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "NO_DIRECT_ED1_COLUMN_PLAN_ON_1S",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": null,
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_1_column_plan_0072",
+        "CAD_1_column_plan_0073",
+        "CAD_1_column_plan_0074",
+        "CAD_1_column_plan_0075"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0015",
+      "severity": "HIGH",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1S_column_0015",
+      "category": "column",
+      "floor": "1S",
+      "floor_export": "S1",
+      "center_local_m": [
+        20.0,
+        0.0
+      ],
+      "confidence": "inferred_from_floor_1",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "NO_DIRECT_ED1_COLUMN_PLAN_ON_1S",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": null,
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_1_column_plan_0076",
+        "CAD_1_column_plan_0077",
+        "CAD_1_column_plan_0078",
+        "CAD_1_column_plan_0079"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0016",
+      "severity": "HIGH",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1S_column_0016",
+      "category": "column",
+      "floor": "1S",
+      "floor_export": "S1",
+      "center_local_m": [
+        45.0,
+        0.038
+      ],
+      "confidence": "inferred_from_floor_1",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "NO_DIRECT_ED1_COLUMN_PLAN_ON_1S",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": null,
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_1_column_plan_0095",
+        "CAD_1_column_plan_0096",
+        "CAD_1_column_plan_0097",
+        "CAD_1_column_plan_0098"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0017",
+      "severity": "HIGH",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1S_column_0017",
+      "category": "column",
+      "floor": "1S",
+      "floor_export": "S1",
+      "center_local_m": [
+        45.0,
+        16.15
+      ],
+      "confidence": "inferred_from_floor_1",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "NO_DIRECT_ED1_COLUMN_PLAN_ON_1S",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": null,
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_1_column_plan_0099",
+        "CAD_1_column_plan_0100",
+        "CAD_1_column_plan_0101",
+        "CAD_1_column_plan_0102"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0018",
+      "severity": "HIGH",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1S_column_0018",
+      "category": "column",
+      "floor": "1S",
+      "floor_export": "S1",
+      "center_local_m": [
+        45.0,
+        8.9
+      ],
+      "confidence": "inferred_from_floor_1",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "NO_DIRECT_ED1_COLUMN_PLAN_ON_1S",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": null,
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_1_column_plan_0200",
+        "CAD_1_column_plan_0201",
+        "CAD_1_column_plan_0202",
+        "CAD_1_column_plan_0203"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0019",
+      "severity": "HIGH",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1S_column_0019",
+      "category": "column",
+      "floor": "1S",
+      "floor_export": "S1",
+      "center_local_m": [
+        34.477,
+        18.912
+      ],
+      "confidence": "inferred_from_floor_1",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "NO_DIRECT_ED1_COLUMN_PLAN_ON_1S",
+        "OUTBOARD_OF_CONFIRMED_Y3_PLUS_TOLERANCE",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": null,
+      "outboard_limit": {
+        "axis": "Y3",
+        "axis_y_m": 16.15,
+        "tolerance_m": 0.35,
+        "limit_y_m": 16.5
+      },
+      "sourceTags": [
+        "CAD_1_column_plan_0204",
+        "CAD_1_column_plan_0205",
+        "CAD_1_column_plan_0206",
+        "CAD_1_column_plan_0207"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0020",
+      "severity": "HIGH",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1S_column_0020",
+      "category": "column",
+      "floor": "1S",
+      "floor_export": "S1",
+      "center_local_m": [
+        34.477,
+        23.625
+      ],
+      "confidence": "inferred_from_floor_1",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "NO_DIRECT_ED1_COLUMN_PLAN_ON_1S",
+        "OUTBOARD_OF_CONFIRMED_Y3_PLUS_TOLERANCE",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": null,
+      "outboard_limit": {
+        "axis": "Y3",
+        "axis_y_m": 16.15,
+        "tolerance_m": 0.35,
+        "limit_y_m": 16.5
+      },
+      "sourceTags": [
+        "CAD_1_column_plan_0208",
+        "CAD_1_column_plan_0209",
+        "CAD_1_column_plan_0210",
+        "CAD_1_column_plan_0211"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0021",
+      "severity": "HIGH",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1S_column_0021",
+      "category": "column",
+      "floor": "1S",
+      "floor_export": "S1",
+      "center_local_m": [
+        34.477,
+        28.337
+      ],
+      "confidence": "inferred_from_floor_1",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "NO_DIRECT_ED1_COLUMN_PLAN_ON_1S",
+        "OUTBOARD_OF_CONFIRMED_Y3_PLUS_TOLERANCE",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": null,
+      "outboard_limit": {
+        "axis": "Y3",
+        "axis_y_m": 16.15,
+        "tolerance_m": 0.35,
+        "limit_y_m": 16.5
+      },
+      "sourceTags": [
+        "CAD_1_column_plan_0212",
+        "CAD_1_column_plan_0213",
+        "CAD_1_column_plan_0214",
+        "CAD_1_column_plan_0215"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0022",
+      "severity": "HIGH",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1S_column_0022",
+      "category": "column",
+      "floor": "1S",
+      "floor_export": "S1",
+      "center_local_m": [
+        30.027,
+        18.843
+      ],
+      "confidence": "inferred_from_floor_1",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "NO_DIRECT_ED1_COLUMN_PLAN_ON_1S",
+        "OUTBOARD_OF_CONFIRMED_Y3_PLUS_TOLERANCE",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": null,
+      "outboard_limit": {
+        "axis": "Y3",
+        "axis_y_m": 16.15,
+        "tolerance_m": 0.35,
+        "limit_y_m": 16.5
+      },
+      "sourceTags": [
+        "CAD_1_column_plan_0293"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0023",
+      "severity": "HIGH",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1S_column_0023",
+      "category": "column",
+      "floor": "1S",
+      "floor_export": "S1",
+      "center_local_m": [
+        30.027,
+        26.176
+      ],
+      "confidence": "inferred_from_floor_1",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "NO_DIRECT_ED1_COLUMN_PLAN_ON_1S",
+        "OUTBOARD_OF_CONFIRMED_Y3_PLUS_TOLERANCE",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": null,
+      "outboard_limit": {
+        "axis": "Y3",
+        "axis_y_m": 16.15,
+        "tolerance_m": 0.35,
+        "limit_y_m": 16.5
+      },
+      "sourceTags": [
+        "CAD_1_column_plan_0295"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0024",
+      "severity": "HIGH",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1S_column_0024",
+      "category": "column",
+      "floor": "1S",
+      "floor_export": "S1",
+      "center_local_m": [
+        17.49,
+        20.452
+      ],
+      "confidence": "inferred_from_above_1",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "NO_DIRECT_ED1_COLUMN_PLAN_ON_1S",
+        "OUTBOARD_OF_CONFIRMED_Y3_PLUS_TOLERANCE",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": null,
+      "outboard_limit": {
+        "axis": "Y3",
+        "axis_y_m": 16.15,
+        "tolerance_m": 0.35,
+        "limit_y_m": 16.5
+      },
+      "sourceTags": [
+        "CAD_2_column_plan_0192",
+        "CAD_2_column_plan_0193",
+        "CAD_2_column_plan_0194",
+        "CAD_2_column_plan_0195",
+        "CAD_2_column_plan_0196",
+        "CAD_2_column_plan_0197",
+        "CAD_2_column_plan_0198",
+        "CAD_2_column_plan_0199"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0025",
+      "severity": "HIGH",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1S_column_0025",
+      "category": "column",
+      "floor": "1S",
+      "floor_export": "S1",
+      "center_local_m": [
+        10.0,
+        20.452
+      ],
+      "confidence": "inferred_from_above_1",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "NO_DIRECT_ED1_COLUMN_PLAN_ON_1S",
+        "OUTBOARD_OF_CONFIRMED_Y3_PLUS_TOLERANCE",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": null,
+      "outboard_limit": {
+        "axis": "Y3",
+        "axis_y_m": 16.15,
+        "tolerance_m": 0.35,
+        "limit_y_m": 16.5
+      },
+      "sourceTags": [
+        "CAD_2_column_plan_0200",
+        "CAD_2_column_plan_0201",
+        "CAD_2_column_plan_0202",
+        "CAD_2_column_plan_0203",
+        "CAD_2_column_plan_0204",
+        "CAD_2_column_plan_0205",
+        "CAD_2_column_plan_0206",
+        "CAD_2_column_plan_0207"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0026",
+      "severity": "HIGH",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1S_column_0026",
+      "category": "column",
+      "floor": "1S",
+      "floor_export": "S1",
+      "center_local_m": [
+        17.49,
+        16.332
+      ],
+      "confidence": "inferred_from_above_1",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "NO_DIRECT_ED1_COLUMN_PLAN_ON_1S",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": null,
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_2_column_plan_0285",
+        "CAD_2_column_plan_0286",
+        "CAD_2_column_plan_0287",
+        "CAD_2_column_plan_0288",
+        "CAD_2_column_plan_0289",
+        "CAD_2_column_plan_0290",
+        "CAD_2_column_plan_0291",
+        "CAD_2_column_plan_0292"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0027",
+      "severity": "HIGH",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1S_column_0027",
+      "category": "column",
+      "floor": "1S",
+      "floor_export": "S1",
+      "center_local_m": [
+        49.9,
+        9.081
+      ],
+      "confidence": "inferred_from_above_1",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "NO_DIRECT_ED1_COLUMN_PLAN_ON_1S",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": null,
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_4_column_plan_0134",
+        "CAD_4_column_plan_0135",
+        "CAD_4_column_plan_0136",
+        "CAD_4_column_plan_0137",
+        "CAD_4_column_plan_0138",
+        "CAD_4_column_plan_0139",
+        "CAD_4_column_plan_0140",
+        "CAD_4_column_plan_0141"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0028",
+      "severity": "HIGH",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1S_column_0028",
+      "category": "column",
+      "floor": "1S",
+      "floor_export": "S1",
+      "center_local_m": [
+        49.9,
+        16.331
+      ],
+      "confidence": "inferred_from_above_1",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "NO_DIRECT_ED1_COLUMN_PLAN_ON_1S",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": null,
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_4_column_plan_0142",
+        "CAD_4_column_plan_0143",
+        "CAD_4_column_plan_0144",
+        "CAD_4_column_plan_0145",
+        "CAD_4_column_plan_0146",
+        "CAD_4_column_plan_0147",
+        "CAD_4_column_plan_0148",
+        "CAD_4_column_plan_0149"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0029",
+      "severity": "HIGH",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1S_column_0029",
+      "category": "column",
+      "floor": "1S",
+      "floor_export": "S1",
+      "center_local_m": [
+        49.9,
+        0.181
+      ],
+      "confidence": "inferred_from_above_1",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "NO_DIRECT_ED1_COLUMN_PLAN_ON_1S",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": null,
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_4_column_plan_0150",
+        "CAD_4_column_plan_0151",
+        "CAD_4_column_plan_0152",
+        "CAD_4_column_plan_0153",
+        "CAD_4_column_plan_0154",
+        "CAD_4_column_plan_0155",
+        "CAD_4_column_plan_0156",
+        "CAD_4_column_plan_0157"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0030",
+      "severity": "HIGH",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1S_column_0030",
+      "category": "column",
+      "floor": "1S",
+      "floor_export": "S1",
+      "center_local_m": [
+        30.0,
+        20.451
+      ],
+      "confidence": "inferred_from_above_1",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "NO_DIRECT_ED1_COLUMN_PLAN_ON_1S",
+        "OUTBOARD_OF_CONFIRMED_Y3_PLUS_TOLERANCE",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": null,
+      "outboard_limit": {
+        "axis": "Y3",
+        "axis_y_m": 16.15,
+        "tolerance_m": 0.35,
+        "limit_y_m": 16.5
+      },
+      "sourceTags": [
+        "CAD_4_column_plan_0256",
+        "CAD_4_column_plan_0257",
+        "CAD_4_column_plan_0258",
+        "CAD_4_column_plan_0259",
+        "CAD_4_column_plan_0260",
+        "CAD_4_column_plan_0261",
+        "CAD_4_column_plan_0262",
+        "CAD_4_column_plan_0263"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0031",
+      "severity": "HIGH",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1S_column_0031",
+      "category": "column",
+      "floor": "1S",
+      "floor_export": "S1",
+      "center_local_m": [
+        20.0,
+        20.451
+      ],
+      "confidence": "inferred_from_above_1",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "NO_DIRECT_ED1_COLUMN_PLAN_ON_1S",
+        "OUTBOARD_OF_CONFIRMED_Y3_PLUS_TOLERANCE",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": null,
+      "outboard_limit": {
+        "axis": "Y3",
+        "axis_y_m": 16.15,
+        "tolerance_m": 0.35,
+        "limit_y_m": 16.5
+      },
+      "sourceTags": [
+        "CAD_4_column_plan_0264",
+        "CAD_4_column_plan_0265",
+        "CAD_4_column_plan_0266",
+        "CAD_4_column_plan_0267",
+        "CAD_4_column_plan_0268",
+        "CAD_4_column_plan_0269",
+        "CAD_4_column_plan_0270",
+        "CAD_4_column_plan_0271"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0032",
+      "severity": "HIGH",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1S_column_0032",
+      "category": "column",
+      "floor": "1S",
+      "floor_export": "S1",
+      "center_local_m": [
+        47.55,
+        0.181
+      ],
+      "confidence": "inferred_from_above_1",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "NO_DIRECT_ED1_COLUMN_PLAN_ON_1S",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": null,
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_4_column_plan_0282",
+        "CAD_4_column_plan_0283",
+        "CAD_4_column_plan_0284",
+        "CAD_4_column_plan_0285",
+        "CAD_4_column_plan_0286",
+        "CAD_4_column_plan_0287",
+        "CAD_4_column_plan_0288",
+        "CAD_4_column_plan_0289"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0033",
+      "severity": "HIGH",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1S_column_0033",
+      "category": "column",
+      "floor": "1S",
+      "floor_export": "S1",
+      "center_local_m": [
+        47.55,
+        16.331
+      ],
+      "confidence": "inferred_from_above_1",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "NO_DIRECT_ED1_COLUMN_PLAN_ON_1S",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": null,
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_4_column_plan_0294",
+        "CAD_4_column_plan_0295",
+        "CAD_4_column_plan_0296",
+        "CAD_4_column_plan_0297",
+        "CAD_4_column_plan_0298",
+        "CAD_4_column_plan_0299",
+        "CAD_4_column_plan_0300",
+        "CAD_4_column_plan_0301"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0034",
+      "severity": "HIGH",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1S_column_0034",
+      "category": "column",
+      "floor": "1S",
+      "floor_export": "S1",
+      "center_local_m": [
+        47.55,
+        9.081
+      ],
+      "confidence": "inferred_from_above_1",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "NO_DIRECT_ED1_COLUMN_PLAN_ON_1S",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": null,
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_4_column_plan_0302",
+        "CAD_4_column_plan_0303",
+        "CAD_4_column_plan_0304",
+        "CAD_4_column_plan_0305",
+        "CAD_4_column_plan_0306",
+        "CAD_4_column_plan_0307",
+        "CAD_4_column_plan_0308",
+        "CAD_4_column_plan_0309"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0035",
+      "severity": "HIGH",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1_column_0024",
+      "category": "column",
+      "floor": "1",
+      "floor_export": "P1",
+      "center_local_m": [
+        17.49,
+        20.452
+      ],
+      "confidence": "inferred_from_above_2",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "OUTBOARD_OF_CONFIRMED_Y3_PLUS_TOLERANCE",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": {
+        "id": "C_P1_01_0008",
+        "distance_m": 4.98,
+        "matched": false
+      },
+      "outboard_limit": {
+        "axis": "Y3",
+        "axis_y_m": 16.15,
+        "tolerance_m": 0.35,
+        "limit_y_m": 16.5
+      },
+      "sourceTags": [
+        "CAD_2_column_plan_0192",
+        "CAD_2_column_plan_0193",
+        "CAD_2_column_plan_0194",
+        "CAD_2_column_plan_0195",
+        "CAD_2_column_plan_0196",
+        "CAD_2_column_plan_0197",
+        "CAD_2_column_plan_0198",
+        "CAD_2_column_plan_0199"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0036",
+      "severity": "HIGH",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1_column_0025",
+      "category": "column",
+      "floor": "1",
+      "floor_export": "P1",
+      "center_local_m": [
+        10.0,
+        20.452
+      ],
+      "confidence": "inferred_from_above_2",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "OUTBOARD_OF_CONFIRMED_Y3_PLUS_TOLERANCE",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": {
+        "id": "C_P1_01_0002",
+        "distance_m": 4.302,
+        "matched": false
+      },
+      "outboard_limit": {
+        "axis": "Y3",
+        "axis_y_m": 16.15,
+        "tolerance_m": 0.35,
+        "limit_y_m": 16.5
+      },
+      "sourceTags": [
+        "CAD_2_column_plan_0200",
+        "CAD_2_column_plan_0201",
+        "CAD_2_column_plan_0202",
+        "CAD_2_column_plan_0203",
+        "CAD_2_column_plan_0204",
+        "CAD_2_column_plan_0205",
+        "CAD_2_column_plan_0206",
+        "CAD_2_column_plan_0207"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0037",
+      "severity": "MEDIUM",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1_column_0026",
+      "category": "column",
+      "floor": "1",
+      "floor_export": "P1",
+      "center_local_m": [
+        17.49,
+        16.332
+      ],
+      "confidence": "inferred_from_above_2",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": {
+        "id": "C_P1_01_0008",
+        "distance_m": 2.517,
+        "matched": false
+      },
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_2_column_plan_0285",
+        "CAD_2_column_plan_0286",
+        "CAD_2_column_plan_0287",
+        "CAD_2_column_plan_0288",
+        "CAD_2_column_plan_0289",
+        "CAD_2_column_plan_0290",
+        "CAD_2_column_plan_0291",
+        "CAD_2_column_plan_0292"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0038",
+      "severity": "MEDIUM",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1_column_0027",
+      "category": "column",
+      "floor": "1",
+      "floor_export": "P1",
+      "center_local_m": [
+        49.9,
+        9.081
+      ],
+      "confidence": "inferred_from_above_2",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": {
+        "id": "C_P1_01_0018",
+        "distance_m": 4.903,
+        "matched": false
+      },
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_4_column_plan_0134",
+        "CAD_4_column_plan_0135",
+        "CAD_4_column_plan_0136",
+        "CAD_4_column_plan_0137",
+        "CAD_4_column_plan_0138",
+        "CAD_4_column_plan_0139",
+        "CAD_4_column_plan_0140",
+        "CAD_4_column_plan_0141"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0039",
+      "severity": "MEDIUM",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1_column_0028",
+      "category": "column",
+      "floor": "1",
+      "floor_export": "P1",
+      "center_local_m": [
+        49.9,
+        16.331
+      ],
+      "confidence": "inferred_from_above_2",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": {
+        "id": "C_P1_01_0017",
+        "distance_m": 4.903,
+        "matched": false
+      },
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_4_column_plan_0142",
+        "CAD_4_column_plan_0143",
+        "CAD_4_column_plan_0144",
+        "CAD_4_column_plan_0145",
+        "CAD_4_column_plan_0146",
+        "CAD_4_column_plan_0147",
+        "CAD_4_column_plan_0148",
+        "CAD_4_column_plan_0149"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0040",
+      "severity": "MEDIUM",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1_column_0029",
+      "category": "column",
+      "floor": "1",
+      "floor_export": "P1",
+      "center_local_m": [
+        49.9,
+        0.181
+      ],
+      "confidence": "inferred_from_above_2",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": {
+        "id": "C_P1_01_0016",
+        "distance_m": 4.902,
+        "matched": false
+      },
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_4_column_plan_0150",
+        "CAD_4_column_plan_0151",
+        "CAD_4_column_plan_0152",
+        "CAD_4_column_plan_0153",
+        "CAD_4_column_plan_0154",
+        "CAD_4_column_plan_0155",
+        "CAD_4_column_plan_0156",
+        "CAD_4_column_plan_0157"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0041",
+      "severity": "HIGH",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1_column_0030",
+      "category": "column",
+      "floor": "1",
+      "floor_export": "P1",
+      "center_local_m": [
+        30.0,
+        20.451
+      ],
+      "confidence": "inferred_from_above_2",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "OUTBOARD_OF_CONFIRMED_Y3_PLUS_TOLERANCE",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": {
+        "id": "C_P1_01_0022",
+        "distance_m": 1.609,
+        "matched": false
+      },
+      "outboard_limit": {
+        "axis": "Y3",
+        "axis_y_m": 16.15,
+        "tolerance_m": 0.35,
+        "limit_y_m": 16.5
+      },
+      "sourceTags": [
+        "CAD_4_column_plan_0256",
+        "CAD_4_column_plan_0257",
+        "CAD_4_column_plan_0258",
+        "CAD_4_column_plan_0259",
+        "CAD_4_column_plan_0260",
+        "CAD_4_column_plan_0261",
+        "CAD_4_column_plan_0262",
+        "CAD_4_column_plan_0263"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0042",
+      "severity": "HIGH",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1_column_0031",
+      "category": "column",
+      "floor": "1",
+      "floor_export": "P1",
+      "center_local_m": [
+        20.0,
+        20.451
+      ],
+      "confidence": "inferred_from_above_2",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "OUTBOARD_OF_CONFIRMED_Y3_PLUS_TOLERANCE",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": {
+        "id": "C_P1_01_0008",
+        "distance_m": 4.301,
+        "matched": false
+      },
+      "outboard_limit": {
+        "axis": "Y3",
+        "axis_y_m": 16.15,
+        "tolerance_m": 0.35,
+        "limit_y_m": 16.5
+      },
+      "sourceTags": [
+        "CAD_4_column_plan_0264",
+        "CAD_4_column_plan_0265",
+        "CAD_4_column_plan_0266",
+        "CAD_4_column_plan_0267",
+        "CAD_4_column_plan_0268",
+        "CAD_4_column_plan_0269",
+        "CAD_4_column_plan_0270",
+        "CAD_4_column_plan_0271"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0043",
+      "severity": "MEDIUM",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1_column_0032",
+      "category": "column",
+      "floor": "1",
+      "floor_export": "P1",
+      "center_local_m": [
+        47.55,
+        0.181
+      ],
+      "confidence": "inferred_from_above_2",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": {
+        "id": "C_P1_01_0016",
+        "distance_m": 2.554,
+        "matched": false
+      },
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_4_column_plan_0282",
+        "CAD_4_column_plan_0283",
+        "CAD_4_column_plan_0284",
+        "CAD_4_column_plan_0285",
+        "CAD_4_column_plan_0286",
+        "CAD_4_column_plan_0287",
+        "CAD_4_column_plan_0288",
+        "CAD_4_column_plan_0289"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0044",
+      "severity": "MEDIUM",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1_column_0033",
+      "category": "column",
+      "floor": "1",
+      "floor_export": "P1",
+      "center_local_m": [
+        47.55,
+        16.331
+      ],
+      "confidence": "inferred_from_above_2",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": {
+        "id": "C_P1_01_0017",
+        "distance_m": 2.556,
+        "matched": false
+      },
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_4_column_plan_0294",
+        "CAD_4_column_plan_0295",
+        "CAD_4_column_plan_0296",
+        "CAD_4_column_plan_0297",
+        "CAD_4_column_plan_0298",
+        "CAD_4_column_plan_0299",
+        "CAD_4_column_plan_0300",
+        "CAD_4_column_plan_0301"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0045",
+      "severity": "MEDIUM",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_1_column_0034",
+      "category": "column",
+      "floor": "1",
+      "floor_export": "P1",
+      "center_local_m": [
+        47.55,
+        9.081
+      ],
+      "confidence": "inferred_from_above_2",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": {
+        "id": "C_P1_01_0018",
+        "distance_m": 2.556,
+        "matched": false
+      },
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_4_column_plan_0302",
+        "CAD_4_column_plan_0303",
+        "CAD_4_column_plan_0304",
+        "CAD_4_column_plan_0305",
+        "CAD_4_column_plan_0306",
+        "CAD_4_column_plan_0307",
+        "CAD_4_column_plan_0308",
+        "CAD_4_column_plan_0309"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0046",
+      "severity": "MEDIUM",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_2_column_0022",
+      "category": "column",
+      "floor": "2",
+      "floor_export": "P2",
+      "center_local_m": [
+        49.9,
+        9.081
+      ],
+      "confidence": "inferred_from_above_3",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": {
+        "id": "C_P1_02_0020",
+        "distance_m": 11.313,
+        "matched": false
+      },
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_4_column_plan_0134",
+        "CAD_4_column_plan_0135",
+        "CAD_4_column_plan_0136",
+        "CAD_4_column_plan_0137",
+        "CAD_4_column_plan_0138",
+        "CAD_4_column_plan_0139",
+        "CAD_4_column_plan_0140",
+        "CAD_4_column_plan_0141"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0047",
+      "severity": "MEDIUM",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_2_column_0023",
+      "category": "column",
+      "floor": "2",
+      "floor_export": "P2",
+      "center_local_m": [
+        49.9,
+        16.331
+      ],
+      "confidence": "inferred_from_above_3",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": {
+        "id": "C_P1_02_0017",
+        "distance_m": 11.313,
+        "matched": false
+      },
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_4_column_plan_0142",
+        "CAD_4_column_plan_0143",
+        "CAD_4_column_plan_0144",
+        "CAD_4_column_plan_0145",
+        "CAD_4_column_plan_0146",
+        "CAD_4_column_plan_0147",
+        "CAD_4_column_plan_0148",
+        "CAD_4_column_plan_0149"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0048",
+      "severity": "MEDIUM",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_2_column_0024",
+      "category": "column",
+      "floor": "2",
+      "floor_export": "P2",
+      "center_local_m": [
+        49.9,
+        0.181
+      ],
+      "confidence": "inferred_from_above_3",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": {
+        "id": "C_P1_02_0016",
+        "distance_m": 11.313,
+        "matched": false
+      },
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_4_column_plan_0150",
+        "CAD_4_column_plan_0151",
+        "CAD_4_column_plan_0152",
+        "CAD_4_column_plan_0153",
+        "CAD_4_column_plan_0154",
+        "CAD_4_column_plan_0155",
+        "CAD_4_column_plan_0156",
+        "CAD_4_column_plan_0157"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0049",
+      "severity": "HIGH",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_2_column_0025",
+      "category": "column",
+      "floor": "2",
+      "floor_export": "P2",
+      "center_local_m": [
+        30.0,
+        20.451
+      ],
+      "confidence": "inferred_from_above_3",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "OUTBOARD_OF_CONFIRMED_Y3_PLUS_TOLERANCE",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": {
+        "id": "C_P1_02_0010",
+        "distance_m": 5.511,
+        "matched": false
+      },
+      "outboard_limit": {
+        "axis": "Y3",
+        "axis_y_m": 16.15,
+        "tolerance_m": 0.35,
+        "limit_y_m": 16.5
+      },
+      "sourceTags": [
+        "CAD_4_column_plan_0256",
+        "CAD_4_column_plan_0257",
+        "CAD_4_column_plan_0258",
+        "CAD_4_column_plan_0259",
+        "CAD_4_column_plan_0260",
+        "CAD_4_column_plan_0261",
+        "CAD_4_column_plan_0262",
+        "CAD_4_column_plan_0263"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0050",
+      "severity": "HIGH",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_2_column_0026",
+      "category": "column",
+      "floor": "2",
+      "floor_export": "P2",
+      "center_local_m": [
+        20.0,
+        20.451
+      ],
+      "confidence": "inferred_from_above_3",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "OUTBOARD_OF_CONFIRMED_Y3_PLUS_TOLERANCE",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": {
+        "id": "C_P1_02_0009",
+        "distance_m": 5.511,
+        "matched": false
+      },
+      "outboard_limit": {
+        "axis": "Y3",
+        "axis_y_m": 16.15,
+        "tolerance_m": 0.35,
+        "limit_y_m": 16.5
+      },
+      "sourceTags": [
+        "CAD_4_column_plan_0264",
+        "CAD_4_column_plan_0265",
+        "CAD_4_column_plan_0266",
+        "CAD_4_column_plan_0267",
+        "CAD_4_column_plan_0268",
+        "CAD_4_column_plan_0269",
+        "CAD_4_column_plan_0270",
+        "CAD_4_column_plan_0271"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0051",
+      "severity": "MEDIUM",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_2_column_0027",
+      "category": "column",
+      "floor": "2",
+      "floor_export": "P2",
+      "center_local_m": [
+        47.55,
+        0.181
+      ],
+      "confidence": "inferred_from_above_3",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": {
+        "id": "C_P1_02_0016",
+        "distance_m": 8.963,
+        "matched": false
+      },
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_4_column_plan_0282",
+        "CAD_4_column_plan_0283",
+        "CAD_4_column_plan_0284",
+        "CAD_4_column_plan_0285",
+        "CAD_4_column_plan_0286",
+        "CAD_4_column_plan_0287",
+        "CAD_4_column_plan_0288",
+        "CAD_4_column_plan_0289"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0052",
+      "severity": "MEDIUM",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_2_column_0028",
+      "category": "column",
+      "floor": "2",
+      "floor_export": "P2",
+      "center_local_m": [
+        47.55,
+        16.331
+      ],
+      "confidence": "inferred_from_above_3",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": {
+        "id": "C_P1_02_0017",
+        "distance_m": 8.963,
+        "matched": false
+      },
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_4_column_plan_0294",
+        "CAD_4_column_plan_0295",
+        "CAD_4_column_plan_0296",
+        "CAD_4_column_plan_0297",
+        "CAD_4_column_plan_0298",
+        "CAD_4_column_plan_0299",
+        "CAD_4_column_plan_0300",
+        "CAD_4_column_plan_0301"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0053",
+      "severity": "MEDIUM",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_2_column_0029",
+      "category": "column",
+      "floor": "2",
+      "floor_export": "P2",
+      "center_local_m": [
+        47.55,
+        9.081
+      ],
+      "confidence": "inferred_from_above_3",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": {
+        "id": "C_P1_02_0020",
+        "distance_m": 8.963,
+        "matched": false
+      },
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_4_column_plan_0302",
+        "CAD_4_column_plan_0303",
+        "CAD_4_column_plan_0304",
+        "CAD_4_column_plan_0305",
+        "CAD_4_column_plan_0306",
+        "CAD_4_column_plan_0307",
+        "CAD_4_column_plan_0308",
+        "CAD_4_column_plan_0309"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0054",
+      "severity": "MEDIUM",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_3_column_0019",
+      "category": "column",
+      "floor": "3",
+      "floor_export": "P3",
+      "center_local_m": [
+        49.9,
+        9.081
+      ],
+      "confidence": "inferred_from_above_4",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": {
+        "id": "C_P1_03_0018",
+        "distance_m": 14.896,
+        "matched": false
+      },
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_4_column_plan_0134",
+        "CAD_4_column_plan_0135",
+        "CAD_4_column_plan_0136",
+        "CAD_4_column_plan_0137",
+        "CAD_4_column_plan_0138",
+        "CAD_4_column_plan_0139",
+        "CAD_4_column_plan_0140",
+        "CAD_4_column_plan_0141"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0055",
+      "severity": "MEDIUM",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_3_column_0020",
+      "category": "column",
+      "floor": "3",
+      "floor_export": "P3",
+      "center_local_m": [
+        49.9,
+        16.331
+      ],
+      "confidence": "inferred_from_above_4",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": {
+        "id": "C_P1_03_0017",
+        "distance_m": 14.896,
+        "matched": false
+      },
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_4_column_plan_0142",
+        "CAD_4_column_plan_0143",
+        "CAD_4_column_plan_0144",
+        "CAD_4_column_plan_0145",
+        "CAD_4_column_plan_0146",
+        "CAD_4_column_plan_0147",
+        "CAD_4_column_plan_0148",
+        "CAD_4_column_plan_0149"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0056",
+      "severity": "MEDIUM",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_3_column_0021",
+      "category": "column",
+      "floor": "3",
+      "floor_export": "P3",
+      "center_local_m": [
+        49.9,
+        0.181
+      ],
+      "confidence": "inferred_from_above_4",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": {
+        "id": "C_P1_03_0016",
+        "distance_m": 14.896,
+        "matched": false
+      },
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_4_column_plan_0150",
+        "CAD_4_column_plan_0151",
+        "CAD_4_column_plan_0152",
+        "CAD_4_column_plan_0153",
+        "CAD_4_column_plan_0154",
+        "CAD_4_column_plan_0155",
+        "CAD_4_column_plan_0156",
+        "CAD_4_column_plan_0157"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0057",
+      "severity": "HIGH",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_3_column_0022",
+      "category": "column",
+      "floor": "3",
+      "floor_export": "P3",
+      "center_local_m": [
+        30.0,
+        20.451
+      ],
+      "confidence": "inferred_from_above_4",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "OUTBOARD_OF_CONFIRMED_Y3_PLUS_TOLERANCE",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": {
+        "id": "C_P1_03_0010",
+        "distance_m": 4.183,
+        "matched": false
+      },
+      "outboard_limit": {
+        "axis": "Y3",
+        "axis_y_m": 16.15,
+        "tolerance_m": 0.35,
+        "limit_y_m": 16.5
+      },
+      "sourceTags": [
+        "CAD_4_column_plan_0256",
+        "CAD_4_column_plan_0257",
+        "CAD_4_column_plan_0258",
+        "CAD_4_column_plan_0259",
+        "CAD_4_column_plan_0260",
+        "CAD_4_column_plan_0261",
+        "CAD_4_column_plan_0262",
+        "CAD_4_column_plan_0263"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0058",
+      "severity": "HIGH",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_3_column_0023",
+      "category": "column",
+      "floor": "3",
+      "floor_export": "P3",
+      "center_local_m": [
+        20.0,
+        20.451
+      ],
+      "confidence": "inferred_from_above_4",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "OUTBOARD_OF_CONFIRMED_Y3_PLUS_TOLERANCE",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": {
+        "id": "C_P1_03_0009",
+        "distance_m": 4.183,
+        "matched": false
+      },
+      "outboard_limit": {
+        "axis": "Y3",
+        "axis_y_m": 16.15,
+        "tolerance_m": 0.35,
+        "limit_y_m": 16.5
+      },
+      "sourceTags": [
+        "CAD_4_column_plan_0264",
+        "CAD_4_column_plan_0265",
+        "CAD_4_column_plan_0266",
+        "CAD_4_column_plan_0267",
+        "CAD_4_column_plan_0268",
+        "CAD_4_column_plan_0269",
+        "CAD_4_column_plan_0270",
+        "CAD_4_column_plan_0271"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0059",
+      "severity": "MEDIUM",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_3_column_0024",
+      "category": "column",
+      "floor": "3",
+      "floor_export": "P3",
+      "center_local_m": [
+        47.55,
+        0.181
+      ],
+      "confidence": "inferred_from_above_4",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": {
+        "id": "C_P1_03_0016",
+        "distance_m": 12.546,
+        "matched": false
+      },
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_4_column_plan_0282",
+        "CAD_4_column_plan_0283",
+        "CAD_4_column_plan_0284",
+        "CAD_4_column_plan_0285",
+        "CAD_4_column_plan_0286",
+        "CAD_4_column_plan_0287",
+        "CAD_4_column_plan_0288",
+        "CAD_4_column_plan_0289"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0060",
+      "severity": "MEDIUM",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_3_column_0025",
+      "category": "column",
+      "floor": "3",
+      "floor_export": "P3",
+      "center_local_m": [
+        47.55,
+        16.331
+      ],
+      "confidence": "inferred_from_above_4",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": {
+        "id": "C_P1_03_0017",
+        "distance_m": 12.546,
+        "matched": false
+      },
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_4_column_plan_0294",
+        "CAD_4_column_plan_0295",
+        "CAD_4_column_plan_0296",
+        "CAD_4_column_plan_0297",
+        "CAD_4_column_plan_0298",
+        "CAD_4_column_plan_0299",
+        "CAD_4_column_plan_0300",
+        "CAD_4_column_plan_0301"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0061",
+      "severity": "MEDIUM",
+      "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+      "solidTag": "SOL_3_column_0026",
+      "category": "column",
+      "floor": "3",
+      "floor_export": "P3",
+      "center_local_m": [
+        47.55,
+        9.081
+      ],
+      "confidence": "inferred_from_above_4",
+      "flags": [
+        "INFERRED_COLUMN_CLUSTER",
+        "SOURCE_TAGS_BORROWED_FROM_GENERATOR_INPUT"
+      ],
+      "reason": "Column was generated by vertical continuity inference, not by a direct same-floor RLE-PILAR cluster.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:337-371",
+        "entregas/P1L2/unity_export/model_viewer.json confidence field"
+      ],
+      "nearest_direct_plan_column": {
+        "id": "C_P1_03_0018",
+        "distance_m": 12.546,
+        "matched": false
+      },
+      "outboard_limit": null,
+      "sourceTags": [
+        "CAD_4_column_plan_0302",
+        "CAD_4_column_plan_0303",
+        "CAD_4_column_plan_0304",
+        "CAD_4_column_plan_0305",
+        "CAD_4_column_plan_0306",
+        "CAD_4_column_plan_0307",
+        "CAD_4_column_plan_0308",
+        "CAD_4_column_plan_0309"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0062",
+      "severity": "HIGH",
+      "code": "SUPPORT_GENERATED_FROM_INFERRED_COLUMN",
+      "solidTag": "SOL_base_support_0061",
+      "category": "support",
+      "floor": "base",
+      "floor_export": "base",
+      "center_local_m": [
+        10.0,
+        -0.0
+      ],
+      "confidence": "qa_connected",
+      "flags": [
+        "SUPPORT_SOURCE_COLUMN_IS_INFERRED"
+      ],
+      "reason": "Base support was generated below a column whose same-floor plan evidence is inferred.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:506-548",
+        "support sourceTags/sourceTag references inferred column solidTag"
+      ],
+      "source_column_tags": [
+        "SOL_1S_column_0001"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0063",
+      "severity": "HIGH",
+      "code": "SUPPORT_GENERATED_FROM_INFERRED_COLUMN",
+      "solidTag": "SOL_base_support_0062",
+      "category": "support",
+      "floor": "base",
+      "floor_export": "base",
+      "center_local_m": [
+        10.0,
+        16.15
+      ],
+      "confidence": "qa_connected",
+      "flags": [
+        "SUPPORT_SOURCE_COLUMN_IS_INFERRED"
+      ],
+      "reason": "Base support was generated below a column whose same-floor plan evidence is inferred.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:506-548",
+        "support sourceTags/sourceTag references inferred column solidTag"
+      ],
+      "source_column_tags": [
+        "SOL_1S_column_0002"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0064",
+      "severity": "HIGH",
+      "code": "SUPPORT_GENERATED_FROM_INFERRED_COLUMN",
+      "solidTag": "SOL_base_support_0063",
+      "category": "support",
+      "floor": "base",
+      "floor_export": "base",
+      "center_local_m": [
+        10.0,
+        8.9
+      ],
+      "confidence": "qa_connected",
+      "flags": [
+        "SUPPORT_SOURCE_COLUMN_IS_INFERRED"
+      ],
+      "reason": "Base support was generated below a column whose same-floor plan evidence is inferred.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:506-548",
+        "support sourceTags/sourceTag references inferred column solidTag"
+      ],
+      "source_column_tags": [
+        "SOL_1S_column_0003"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0065",
+      "severity": "HIGH",
+      "code": "SUPPORT_GENERATED_FROM_INFERRED_COLUMN",
+      "solidTag": "SOL_base_support_0064",
+      "category": "support",
+      "floor": "base",
+      "floor_export": "base",
+      "center_local_m": [
+        0.025,
+        8.9
+      ],
+      "confidence": "qa_connected",
+      "flags": [
+        "SUPPORT_SOURCE_COLUMN_IS_INFERRED"
+      ],
+      "reason": "Base support was generated below a column whose same-floor plan evidence is inferred.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:506-548",
+        "support sourceTags/sourceTag references inferred column solidTag"
+      ],
+      "source_column_tags": [
+        "SOL_1S_column_0004"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0066",
+      "severity": "HIGH",
+      "code": "SUPPORT_GENERATED_FROM_INFERRED_COLUMN",
+      "solidTag": "SOL_base_support_0065",
+      "category": "support",
+      "floor": "base",
+      "floor_export": "base",
+      "center_local_m": [
+        0.0,
+        -0.0
+      ],
+      "confidence": "qa_connected",
+      "flags": [
+        "SUPPORT_SOURCE_COLUMN_IS_INFERRED"
+      ],
+      "reason": "Base support was generated below a column whose same-floor plan evidence is inferred.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:506-548",
+        "support sourceTags/sourceTag references inferred column solidTag"
+      ],
+      "source_column_tags": [
+        "SOL_1S_column_0005"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0067",
+      "severity": "HIGH",
+      "code": "SUPPORT_GENERATED_FROM_INFERRED_COLUMN",
+      "solidTag": "SOL_base_support_0066",
+      "category": "support",
+      "floor": "base",
+      "floor_export": "base",
+      "center_local_m": [
+        0.025,
+        16.15
+      ],
+      "confidence": "qa_connected",
+      "flags": [
+        "SUPPORT_SOURCE_COLUMN_IS_INFERRED"
+      ],
+      "reason": "Base support was generated below a column whose same-floor plan evidence is inferred.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:506-548",
+        "support sourceTags/sourceTag references inferred column solidTag"
+      ],
+      "source_column_tags": [
+        "SOL_1S_column_0006"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0068",
+      "severity": "HIGH",
+      "code": "SUPPORT_GENERATED_FROM_INFERRED_COLUMN",
+      "solidTag": "SOL_base_support_0067",
+      "category": "support",
+      "floor": "base",
+      "floor_export": "base",
+      "center_local_m": [
+        20.0,
+        8.9
+      ],
+      "confidence": "qa_connected",
+      "flags": [
+        "SUPPORT_SOURCE_COLUMN_IS_INFERRED"
+      ],
+      "reason": "Base support was generated below a column whose same-floor plan evidence is inferred.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:506-548",
+        "support sourceTags/sourceTag references inferred column solidTag"
+      ],
+      "source_column_tags": [
+        "SOL_1S_column_0007"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0069",
+      "severity": "HIGH",
+      "code": "SUPPORT_GENERATED_FROM_INFERRED_COLUMN",
+      "solidTag": "SOL_base_support_0068",
+      "category": "support",
+      "floor": "base",
+      "floor_export": "base",
+      "center_local_m": [
+        20.0,
+        16.15
+      ],
+      "confidence": "qa_connected",
+      "flags": [
+        "SUPPORT_SOURCE_COLUMN_IS_INFERRED"
+      ],
+      "reason": "Base support was generated below a column whose same-floor plan evidence is inferred.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:506-548",
+        "support sourceTags/sourceTag references inferred column solidTag"
+      ],
+      "source_column_tags": [
+        "SOL_1S_column_0008"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0070",
+      "severity": "HIGH",
+      "code": "SUPPORT_GENERATED_FROM_INFERRED_COLUMN",
+      "solidTag": "SOL_base_support_0069",
+      "category": "support",
+      "floor": "base",
+      "floor_export": "base",
+      "center_local_m": [
+        30.0,
+        16.15
+      ],
+      "confidence": "qa_connected",
+      "flags": [
+        "SUPPORT_SOURCE_COLUMN_IS_INFERRED"
+      ],
+      "reason": "Base support was generated below a column whose same-floor plan evidence is inferred.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:506-548",
+        "support sourceTags/sourceTag references inferred column solidTag"
+      ],
+      "source_column_tags": [
+        "SOL_1S_column_0009"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0071",
+      "severity": "HIGH",
+      "code": "SUPPORT_GENERATED_FROM_INFERRED_COLUMN",
+      "solidTag": "SOL_base_support_0070",
+      "category": "support",
+      "floor": "base",
+      "floor_export": "base",
+      "center_local_m": [
+        40.179,
+        16.352
+      ],
+      "confidence": "qa_connected",
+      "flags": [
+        "SUPPORT_SOURCE_COLUMN_IS_INFERRED"
+      ],
+      "reason": "Base support was generated below a column whose same-floor plan evidence is inferred.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:506-548",
+        "support sourceTags/sourceTag references inferred column solidTag"
+      ],
+      "source_column_tags": [
+        "SOL_1S_column_0010"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0072",
+      "severity": "HIGH",
+      "code": "SUPPORT_GENERATED_FROM_INFERRED_COLUMN",
+      "solidTag": "SOL_base_support_0071",
+      "category": "support",
+      "floor": "base",
+      "floor_export": "base",
+      "center_local_m": [
+        39.913,
+        8.9
+      ],
+      "confidence": "qa_connected",
+      "flags": [
+        "SUPPORT_SOURCE_COLUMN_IS_INFERRED"
+      ],
+      "reason": "Base support was generated below a column whose same-floor plan evidence is inferred.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:506-548",
+        "support sourceTags/sourceTag references inferred column solidTag"
+      ],
+      "source_column_tags": [
+        "SOL_1S_column_0011"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0073",
+      "severity": "HIGH",
+      "code": "SUPPORT_GENERATED_FROM_INFERRED_COLUMN",
+      "solidTag": "SOL_base_support_0072",
+      "category": "support",
+      "floor": "base",
+      "floor_export": "base",
+      "center_local_m": [
+        39.956,
+        0.075
+      ],
+      "confidence": "qa_connected",
+      "flags": [
+        "SUPPORT_SOURCE_COLUMN_IS_INFERRED"
+      ],
+      "reason": "Base support was generated below a column whose same-floor plan evidence is inferred.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:506-548",
+        "support sourceTags/sourceTag references inferred column solidTag"
+      ],
+      "source_column_tags": [
+        "SOL_1S_column_0012"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0074",
+      "severity": "HIGH",
+      "code": "SUPPORT_GENERATED_FROM_INFERRED_COLUMN",
+      "solidTag": "SOL_base_support_0073",
+      "category": "support",
+      "floor": "base",
+      "floor_export": "base",
+      "center_local_m": [
+        30.0,
+        0.038
+      ],
+      "confidence": "qa_connected",
+      "flags": [
+        "SUPPORT_SOURCE_COLUMN_IS_INFERRED"
+      ],
+      "reason": "Base support was generated below a column whose same-floor plan evidence is inferred.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:506-548",
+        "support sourceTags/sourceTag references inferred column solidTag"
+      ],
+      "source_column_tags": [
+        "SOL_1S_column_0013"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0075",
+      "severity": "HIGH",
+      "code": "SUPPORT_GENERATED_FROM_INFERRED_COLUMN",
+      "solidTag": "SOL_base_support_0074",
+      "category": "support",
+      "floor": "base",
+      "floor_export": "base",
+      "center_local_m": [
+        30.0,
+        8.9
+      ],
+      "confidence": "qa_connected",
+      "flags": [
+        "SUPPORT_SOURCE_COLUMN_IS_INFERRED"
+      ],
+      "reason": "Base support was generated below a column whose same-floor plan evidence is inferred.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:506-548",
+        "support sourceTags/sourceTag references inferred column solidTag"
+      ],
+      "source_column_tags": [
+        "SOL_1S_column_0014"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0076",
+      "severity": "HIGH",
+      "code": "SUPPORT_GENERATED_FROM_INFERRED_COLUMN",
+      "solidTag": "SOL_base_support_0075",
+      "category": "support",
+      "floor": "base",
+      "floor_export": "base",
+      "center_local_m": [
+        20.0,
+        0.0
+      ],
+      "confidence": "qa_connected",
+      "flags": [
+        "SUPPORT_SOURCE_COLUMN_IS_INFERRED"
+      ],
+      "reason": "Base support was generated below a column whose same-floor plan evidence is inferred.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:506-548",
+        "support sourceTags/sourceTag references inferred column solidTag"
+      ],
+      "source_column_tags": [
+        "SOL_1S_column_0015"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0077",
+      "severity": "HIGH",
+      "code": "SUPPORT_GENERATED_FROM_INFERRED_COLUMN",
+      "solidTag": "SOL_base_support_0076",
+      "category": "support",
+      "floor": "base",
+      "floor_export": "base",
+      "center_local_m": [
+        45.0,
+        0.038
+      ],
+      "confidence": "qa_connected",
+      "flags": [
+        "SUPPORT_SOURCE_COLUMN_IS_INFERRED"
+      ],
+      "reason": "Base support was generated below a column whose same-floor plan evidence is inferred.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:506-548",
+        "support sourceTags/sourceTag references inferred column solidTag"
+      ],
+      "source_column_tags": [
+        "SOL_1S_column_0016"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0078",
+      "severity": "HIGH",
+      "code": "SUPPORT_GENERATED_FROM_INFERRED_COLUMN",
+      "solidTag": "SOL_base_support_0077",
+      "category": "support",
+      "floor": "base",
+      "floor_export": "base",
+      "center_local_m": [
+        45.0,
+        16.15
+      ],
+      "confidence": "qa_connected",
+      "flags": [
+        "SUPPORT_SOURCE_COLUMN_IS_INFERRED"
+      ],
+      "reason": "Base support was generated below a column whose same-floor plan evidence is inferred.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:506-548",
+        "support sourceTags/sourceTag references inferred column solidTag"
+      ],
+      "source_column_tags": [
+        "SOL_1S_column_0017"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0079",
+      "severity": "HIGH",
+      "code": "SUPPORT_GENERATED_FROM_INFERRED_COLUMN",
+      "solidTag": "SOL_base_support_0078",
+      "category": "support",
+      "floor": "base",
+      "floor_export": "base",
+      "center_local_m": [
+        45.0,
+        8.9
+      ],
+      "confidence": "qa_connected",
+      "flags": [
+        "SUPPORT_SOURCE_COLUMN_IS_INFERRED"
+      ],
+      "reason": "Base support was generated below a column whose same-floor plan evidence is inferred.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:506-548",
+        "support sourceTags/sourceTag references inferred column solidTag"
+      ],
+      "source_column_tags": [
+        "SOL_1S_column_0018"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0080",
+      "severity": "HIGH",
+      "code": "SUPPORT_GENERATED_FROM_INFERRED_COLUMN",
+      "solidTag": "SOL_base_support_0079",
+      "category": "support",
+      "floor": "base",
+      "floor_export": "base",
+      "center_local_m": [
+        34.477,
+        18.912
+      ],
+      "confidence": "qa_connected",
+      "flags": [
+        "SUPPORT_SOURCE_COLUMN_IS_INFERRED"
+      ],
+      "reason": "Base support was generated below a column whose same-floor plan evidence is inferred.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:506-548",
+        "support sourceTags/sourceTag references inferred column solidTag"
+      ],
+      "source_column_tags": [
+        "SOL_1S_column_0019"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0081",
+      "severity": "HIGH",
+      "code": "SUPPORT_GENERATED_FROM_INFERRED_COLUMN",
+      "solidTag": "SOL_base_support_0080",
+      "category": "support",
+      "floor": "base",
+      "floor_export": "base",
+      "center_local_m": [
+        34.477,
+        23.625
+      ],
+      "confidence": "qa_connected",
+      "flags": [
+        "SUPPORT_SOURCE_COLUMN_IS_INFERRED"
+      ],
+      "reason": "Base support was generated below a column whose same-floor plan evidence is inferred.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:506-548",
+        "support sourceTags/sourceTag references inferred column solidTag"
+      ],
+      "source_column_tags": [
+        "SOL_1S_column_0020"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0082",
+      "severity": "HIGH",
+      "code": "SUPPORT_GENERATED_FROM_INFERRED_COLUMN",
+      "solidTag": "SOL_base_support_0081",
+      "category": "support",
+      "floor": "base",
+      "floor_export": "base",
+      "center_local_m": [
+        34.477,
+        28.337
+      ],
+      "confidence": "qa_connected",
+      "flags": [
+        "SUPPORT_SOURCE_COLUMN_IS_INFERRED"
+      ],
+      "reason": "Base support was generated below a column whose same-floor plan evidence is inferred.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:506-548",
+        "support sourceTags/sourceTag references inferred column solidTag"
+      ],
+      "source_column_tags": [
+        "SOL_1S_column_0021"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0083",
+      "severity": "HIGH",
+      "code": "SUPPORT_GENERATED_FROM_INFERRED_COLUMN",
+      "solidTag": "SOL_base_support_0082",
+      "category": "support",
+      "floor": "base",
+      "floor_export": "base",
+      "center_local_m": [
+        30.027,
+        18.843
+      ],
+      "confidence": "qa_connected",
+      "flags": [
+        "SUPPORT_SOURCE_COLUMN_IS_INFERRED"
+      ],
+      "reason": "Base support was generated below a column whose same-floor plan evidence is inferred.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:506-548",
+        "support sourceTags/sourceTag references inferred column solidTag"
+      ],
+      "source_column_tags": [
+        "SOL_1S_column_0022"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0084",
+      "severity": "HIGH",
+      "code": "SUPPORT_GENERATED_FROM_INFERRED_COLUMN",
+      "solidTag": "SOL_base_support_0083",
+      "category": "support",
+      "floor": "base",
+      "floor_export": "base",
+      "center_local_m": [
+        30.027,
+        26.176
+      ],
+      "confidence": "qa_connected",
+      "flags": [
+        "SUPPORT_SOURCE_COLUMN_IS_INFERRED"
+      ],
+      "reason": "Base support was generated below a column whose same-floor plan evidence is inferred.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:506-548",
+        "support sourceTags/sourceTag references inferred column solidTag"
+      ],
+      "source_column_tags": [
+        "SOL_1S_column_0023"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0085",
+      "severity": "HIGH",
+      "code": "SUPPORT_GENERATED_FROM_INFERRED_COLUMN",
+      "solidTag": "SOL_base_support_0084",
+      "category": "support",
+      "floor": "base",
+      "floor_export": "base",
+      "center_local_m": [
+        17.49,
+        20.452
+      ],
+      "confidence": "qa_connected",
+      "flags": [
+        "SUPPORT_SOURCE_COLUMN_IS_INFERRED"
+      ],
+      "reason": "Base support was generated below a column whose same-floor plan evidence is inferred.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:506-548",
+        "support sourceTags/sourceTag references inferred column solidTag"
+      ],
+      "source_column_tags": [
+        "SOL_1S_column_0024"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0086",
+      "severity": "HIGH",
+      "code": "SUPPORT_GENERATED_FROM_INFERRED_COLUMN",
+      "solidTag": "SOL_base_support_0085",
+      "category": "support",
+      "floor": "base",
+      "floor_export": "base",
+      "center_local_m": [
+        10.0,
+        20.452
+      ],
+      "confidence": "qa_connected",
+      "flags": [
+        "SUPPORT_SOURCE_COLUMN_IS_INFERRED"
+      ],
+      "reason": "Base support was generated below a column whose same-floor plan evidence is inferred.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:506-548",
+        "support sourceTags/sourceTag references inferred column solidTag"
+      ],
+      "source_column_tags": [
+        "SOL_1S_column_0025"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0087",
+      "severity": "HIGH",
+      "code": "SUPPORT_GENERATED_FROM_INFERRED_COLUMN",
+      "solidTag": "SOL_base_support_0086",
+      "category": "support",
+      "floor": "base",
+      "floor_export": "base",
+      "center_local_m": [
+        17.49,
+        16.332
+      ],
+      "confidence": "qa_connected",
+      "flags": [
+        "SUPPORT_SOURCE_COLUMN_IS_INFERRED"
+      ],
+      "reason": "Base support was generated below a column whose same-floor plan evidence is inferred.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:506-548",
+        "support sourceTags/sourceTag references inferred column solidTag"
+      ],
+      "source_column_tags": [
+        "SOL_1S_column_0026"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0088",
+      "severity": "HIGH",
+      "code": "SUPPORT_GENERATED_FROM_INFERRED_COLUMN",
+      "solidTag": "SOL_base_support_0087",
+      "category": "support",
+      "floor": "base",
+      "floor_export": "base",
+      "center_local_m": [
+        49.9,
+        9.081
+      ],
+      "confidence": "qa_connected",
+      "flags": [
+        "SUPPORT_SOURCE_COLUMN_IS_INFERRED"
+      ],
+      "reason": "Base support was generated below a column whose same-floor plan evidence is inferred.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:506-548",
+        "support sourceTags/sourceTag references inferred column solidTag"
+      ],
+      "source_column_tags": [
+        "SOL_1S_column_0027"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0089",
+      "severity": "HIGH",
+      "code": "SUPPORT_GENERATED_FROM_INFERRED_COLUMN",
+      "solidTag": "SOL_base_support_0088",
+      "category": "support",
+      "floor": "base",
+      "floor_export": "base",
+      "center_local_m": [
+        49.9,
+        16.331
+      ],
+      "confidence": "qa_connected",
+      "flags": [
+        "SUPPORT_SOURCE_COLUMN_IS_INFERRED"
+      ],
+      "reason": "Base support was generated below a column whose same-floor plan evidence is inferred.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:506-548",
+        "support sourceTags/sourceTag references inferred column solidTag"
+      ],
+      "source_column_tags": [
+        "SOL_1S_column_0028"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0090",
+      "severity": "HIGH",
+      "code": "SUPPORT_GENERATED_FROM_INFERRED_COLUMN",
+      "solidTag": "SOL_base_support_0089",
+      "category": "support",
+      "floor": "base",
+      "floor_export": "base",
+      "center_local_m": [
+        49.9,
+        0.181
+      ],
+      "confidence": "qa_connected",
+      "flags": [
+        "SUPPORT_SOURCE_COLUMN_IS_INFERRED"
+      ],
+      "reason": "Base support was generated below a column whose same-floor plan evidence is inferred.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:506-548",
+        "support sourceTags/sourceTag references inferred column solidTag"
+      ],
+      "source_column_tags": [
+        "SOL_1S_column_0029"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0091",
+      "severity": "HIGH",
+      "code": "SUPPORT_GENERATED_FROM_INFERRED_COLUMN",
+      "solidTag": "SOL_base_support_0090",
+      "category": "support",
+      "floor": "base",
+      "floor_export": "base",
+      "center_local_m": [
+        30.0,
+        20.451
+      ],
+      "confidence": "qa_connected",
+      "flags": [
+        "SUPPORT_SOURCE_COLUMN_IS_INFERRED"
+      ],
+      "reason": "Base support was generated below a column whose same-floor plan evidence is inferred.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:506-548",
+        "support sourceTags/sourceTag references inferred column solidTag"
+      ],
+      "source_column_tags": [
+        "SOL_1S_column_0030"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0092",
+      "severity": "HIGH",
+      "code": "SUPPORT_GENERATED_FROM_INFERRED_COLUMN",
+      "solidTag": "SOL_base_support_0091",
+      "category": "support",
+      "floor": "base",
+      "floor_export": "base",
+      "center_local_m": [
+        20.0,
+        20.451
+      ],
+      "confidence": "qa_connected",
+      "flags": [
+        "SUPPORT_SOURCE_COLUMN_IS_INFERRED"
+      ],
+      "reason": "Base support was generated below a column whose same-floor plan evidence is inferred.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:506-548",
+        "support sourceTags/sourceTag references inferred column solidTag"
+      ],
+      "source_column_tags": [
+        "SOL_1S_column_0031"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0093",
+      "severity": "HIGH",
+      "code": "SUPPORT_GENERATED_FROM_INFERRED_COLUMN",
+      "solidTag": "SOL_base_support_0092",
+      "category": "support",
+      "floor": "base",
+      "floor_export": "base",
+      "center_local_m": [
+        47.55,
+        0.181
+      ],
+      "confidence": "qa_connected",
+      "flags": [
+        "SUPPORT_SOURCE_COLUMN_IS_INFERRED"
+      ],
+      "reason": "Base support was generated below a column whose same-floor plan evidence is inferred.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:506-548",
+        "support sourceTags/sourceTag references inferred column solidTag"
+      ],
+      "source_column_tags": [
+        "SOL_1S_column_0032"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0094",
+      "severity": "HIGH",
+      "code": "SUPPORT_GENERATED_FROM_INFERRED_COLUMN",
+      "solidTag": "SOL_base_support_0093",
+      "category": "support",
+      "floor": "base",
+      "floor_export": "base",
+      "center_local_m": [
+        47.55,
+        16.331
+      ],
+      "confidence": "qa_connected",
+      "flags": [
+        "SUPPORT_SOURCE_COLUMN_IS_INFERRED"
+      ],
+      "reason": "Base support was generated below a column whose same-floor plan evidence is inferred.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:506-548",
+        "support sourceTags/sourceTag references inferred column solidTag"
+      ],
+      "source_column_tags": [
+        "SOL_1S_column_0033"
+      ]
+    },
+    {
+      "id": "AUD-LUIS-0095",
+      "severity": "HIGH",
+      "code": "SUPPORT_GENERATED_FROM_INFERRED_COLUMN",
+      "solidTag": "SOL_base_support_0094",
+      "category": "support",
+      "floor": "base",
+      "floor_export": "base",
+      "center_local_m": [
+        47.55,
+        9.081
+      ],
+      "confidence": "qa_connected",
+      "flags": [
+        "SUPPORT_SOURCE_COLUMN_IS_INFERRED"
+      ],
+      "reason": "Base support was generated below a column whose same-floor plan evidence is inferred.",
+      "evidence": [
+        "entregas/P1L2/opensees/extract_cad_model.py:506-548",
+        "support sourceTags/sourceTag references inferred column solidTag"
+      ],
+      "source_column_tags": [
+        "SOL_1S_column_0034"
+      ]
+    }
+  ],
+  "geometry_preservation": {
+    "status": "PASS",
+    "source_hash": "f78c1bb6eec7d357aa20926933afbe14de25d3dbdaf08b5d05bfea008de0ef34",
+    "audited_hash": "f78c1bb6eec7d357aa20926933afbe14de25d3dbdaf08b5d05bfea008de0ef34",
+    "geometry_keys": [
+      "solidTag",
+      "elementTag",
+      "sourceTag",
+      "category",
+      "kind",
+      "floor",
+      "center",
+      "start",
+      "end",
+      "point",
+      "points",
+      "width_m",
+      "depth_m",
+      "height_m",
+      "length_m",
+      "area_m2"
+    ]
+  }
+}

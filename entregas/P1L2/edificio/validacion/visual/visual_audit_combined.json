@@ -1,0 +1,129 @@
+{
+  "status": "PASS",
+  "floor_contract": {
+    "status": "PASS",
+    "expected_floors": [
+      "S1",
+      "P1",
+      "P2",
+      "P3",
+      "P4"
+    ],
+    "actual_floors": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "S1"
+    ],
+    "errors": []
+  },
+  "counts": {
+    "by_floor": {
+      "S1": {
+        "beam": 169,
+        "wall": 80,
+        "column": 33,
+        "support": 113,
+        "slab": 2
+      },
+      "P1": {
+        "beam": 198,
+        "wall": 58,
+        "column": 40,
+        "slab": 2
+      },
+      "P2": {
+        "beam": 202,
+        "wall": 32,
+        "column": 37,
+        "slab": 2
+      },
+      "P3": {
+        "beam": 214,
+        "wall": 32,
+        "column": 32,
+        "slab": 2
+      },
+      "P4": {
+        "beam": 277,
+        "wall": 32,
+        "column": 34,
+        "slab": 2
+      }
+    },
+    "by_building_floor": {
+      "EDIFICIO_1:P1": {
+        "beam": 108,
+        "wall": 38,
+        "column": 32,
+        "slab": 1
+      },
+      "EDIFICIO_1:P2": {
+        "beam": 112,
+        "wall": 12,
+        "column": 29,
+        "slab": 1
+      },
+      "EDIFICIO_1:P3": {
+        "beam": 124,
+        "wall": 12,
+        "column": 24,
+        "slab": 1
+      },
+      "EDIFICIO_1:P4": {
+        "beam": 122,
+        "wall": 12,
+        "column": 26,
+        "slab": 1
+      },
+      "EDIFICIO_1:S1": {
+        "beam": 79,
+        "wall": 60,
+        "column": 25,
+        "support": 85,
+        "slab": 1
+      },
+      "EDIFICIO_2:P1": {
+        "beam": 90,
+        "wall": 20,
+        "column": 8,
+        "slab": 1
+      },
+      "EDIFICIO_2:P2": {
+        "beam": 90,
+        "wall": 20,
+        "column": 8,
+        "slab": 1
+      },
+      "EDIFICIO_2:P3": {
+        "beam": 90,
+        "wall": 20,
+        "column": 8,
+        "slab": 1
+      },
+      "EDIFICIO_2:P4": {
+        "beam": 155,
+        "wall": 20,
+        "column": 8,
+        "slab": 1
+      },
+      "EDIFICIO_2:S1": {
+        "beam": 90,
+        "wall": 20,
+        "column": 8,
+        "support": 28,
+        "slab": 1
+      }
+    }
+  },
+  "images": [
+    "entregas\\P1L2\\edificio\\validacion\\visual\\01_plantas_por_piso.png",
+    "entregas\\P1L2\\edificio\\validacion\\visual\\02_elevacion_longitudinal_xz.png",
+    "entregas\\P1L2\\edificio\\validacion\\visual\\03_elevacion_transversal_yz.png",
+    "entregas\\P1L2\\edificio\\validacion\\visual\\04_isometrico.png",
+    "entregas\\P1L2\\edificio\\validacion\\visual\\05_tipos_estructurales.png",
+    "entregas\\P1L2\\edificio\\validacion\\visual\\06_nucleo_aislado.png"
+  ],
+  "viewer_url": "entregas/P1L2/viewer/?model=model_combined_viewer.json"
+}

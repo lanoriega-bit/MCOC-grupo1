@@ -2,7 +2,8 @@ import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 
 const urlParams = new URLSearchParams(window.location.search);
-const modelFile = urlParams.get("model") || "model_viewer.json";
+const DEFAULT_MODEL_FILE = "model_combined_viewer.json";
+const modelFile = urlParams.get("model") || DEFAULT_MODEL_FILE;
 const MODEL_URL = `../unity_export/${modelFile}`;
 const CATEGORY_LABELS = {
   axis: "Ejes CAD",
@@ -24,6 +25,8 @@ const categoryControlsEl = document.querySelector("#category-controls");
 const selectionDetailsEl = document.querySelector("#selection-details");
 const tagSearchEl = document.querySelector("#tag-search");
 const toggleLabelsButton = document.querySelector("#toggle-labels");
+const modelSelectEl = document.querySelector("#model-select");
+const copyIdentificationButton = document.querySelector("#copy-identification");
 
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0x07111f);
@@ -51,13 +54,20 @@ const objectsByCategory = new Map();
 const objectByTag = new Map();
 const labels = [];
 const labelLayer = document.createElement("div");
+const selectedLabel = document.createElement("div");
 let labelsVisible = false;
 let selectedOutline = null;
 let localAxesGroup = null;
 let modelBounds = null;
+let selectedObject = null;
+let selectedSegment = null;
+let pointerDown = null;
 
 labelLayer.className = "label-layer";
 viewport.appendChild(labelLayer);
+selectedLabel.className = "viewer-label selected-label";
+selectedLabel.style.display = "none";
+viewport.appendChild(selectedLabel);
 
 function addLights() {
   scene.add(new THREE.HemisphereLight(0xd8ecff, 0x172332, 0.85));
@@ -76,6 +86,22 @@ function rememberObject(object, floor, category) {
   if (!objectsByCategory.has(category)) objectsByCategory.set(category, []);
   objectsByFloor.get(floor).push(object);
   objectsByCategory.get(category).push(object);
+}
+
+function registerObjectAliases(object, segment) {
+  for (const key of [segment.id, segment.human_id, segment.elementTag, segment.solidTag, segment.legacy_solidTag]) {
+    if (!key) continue;
+    const normalized = String(key).toLowerCase();
+    if (!objectByTag.has(normalized)) objectByTag.set(normalized, object);
+  }
+}
+
+function primaryElementId(segment) {
+  return segment?.id ?? segment?.human_id ?? segment?.building_master_id ?? segment?.elementTag ?? segment?.solidTag ?? "-";
+}
+
+function legacyElementTag(segment) {
+  return segment?.elementTag ?? segment?.solidTag ?? segment?.legacy_solidTag ?? "-";
 }
 
 function materialFor(model, category) {
@@ -120,7 +146,7 @@ function makeSlab(model, solid) {
 }
 
 function normalizeSolidAsSelection(solid) {
-  const tag = solid.solidTag;
+  const tag = solid.elementTag ?? solid.solidTag ?? solid.id;
   if (solid.kind === "linear_prism") {
     return { ...solid, elementTag: tag, points: [solid.start, solid.end] };
   }
@@ -141,7 +167,7 @@ function addSolid(model, root, solid) {
   object.userData.category = solid.category;
   root.add(object);
   rememberObject(object, solid.floor, solid.category);
-  objectByTag.set(selection.elementTag.toLowerCase(), object);
+  registerObjectAliases(object, selection);
   selectable.push(object);
 }
 
@@ -165,14 +191,13 @@ function makeDiaphragm(model, diaphragm) {
   const line = new THREE.Line(geometry, material);
   line.computeLineDistances();
   line.userData.segment = {
-    elementTag: `DIA_${diaphragm.floor}`,
-    floor: diaphragm.floor,
-    floor_label: `Diafragma ${diaphragm.floor}`,
-    category: "diaphragm",
-    source_layer: "generated",
-    source_dxf: "generated",
-    length_m: 0,
-    confidence: "qa",
+    ...diaphragm,
+    elementTag: diaphragm.elementTag ?? diaphragm.id ?? `DIA_${diaphragm.building}_${diaphragm.floor}`,
+    floor_label: diaphragm.floor_label ?? `Diafragma ${diaphragm.floor}`,
+    source_layer: diaphragm.source_layer ?? "generated",
+    source_dxf: diaphragm.source_dxf ?? "generated",
+    length_m: diaphragm.length_m ?? 0,
+    confidence: diaphragm.confidence ?? "qa",
     points: diaphragm.points,
   };
   line.userData.floor = diaphragm.floor;
@@ -190,14 +215,14 @@ function addModel(model) {
     const line = makeCadLine(model, segment);
     root.add(line);
     rememberObject(line, segment.floor, line.userData.category);
-    objectByTag.set(segment.elementTag.toLowerCase(), line);
+    registerObjectAliases(line, line.userData.segment);
   }
 
   for (const diaphragm of model.diaphragms ?? []) {
     const line = makeDiaphragm(model, diaphragm);
     root.add(line);
     rememberObject(line, diaphragm.floor, "diaphragm");
-    objectByTag.set(line.userData.segment.elementTag.toLowerCase(), line);
+    registerObjectAliases(line, line.userData.segment);
     selectable.push(line);
   }
 
@@ -206,7 +231,7 @@ function addModel(model) {
   buildControls(model);
   buildIdLabels(model);
   fitView();
-  statusEl.textContent = `${model.solids?.length ?? 0} solidos, ${model.segments.length} lineas CAD, ${model.labels?.length ?? 0} etiquetas.`;
+  statusEl.textContent = `${modelFile}: ${model.solids?.length ?? 0} solidos, ${model.segments.length} lineas CAD, ${model.labels?.length ?? 0} etiquetas.`;
 }
 
 function buildControls(model) {
@@ -218,7 +243,7 @@ function buildControls(model) {
 }
 
 function floorOrder(floor) {
-  const order = { base: 0, "1S": 1, "1": 2, "2": 3, "3": 4, "4": 5 };
+  const order = { S1: 0, P1: 1, P2: 2, P3: 3, P4: 4, base: -1, "1S": 0, "1": 1, "2": 2, "3": 3, "4": 4 };
   return order[floor] ?? 99;
 }
 
@@ -302,10 +327,10 @@ function buildIdLabels(model) {
     const point = solid.center ? new THREE.Vector3(...solid.center) : midpoint(solid.start, solid.end);
     const div = document.createElement("div");
     div.className = "viewer-label";
-    div.textContent = shortTag(solid.solidTag);
+    div.textContent = primaryElementId(solid);
     div.style.display = "none";
     labelLayer.appendChild(div);
-    labels.push({ div, point, tag: solid.solidTag });
+    labels.push({ div, point, tag: primaryElementId(solid) });
   }
 }
 
@@ -314,12 +339,13 @@ function midpoint(start, end) {
 }
 
 function shortTag(tag) {
-  return tag.replace("SOL_", "").replace("CAD_", "");
+  return String(tag).replace("SOL_", "").replace("CAD_", "");
 }
 
 function updateLabels() {
   if (!labelsVisible) {
     for (const label of labels) label.div.style.display = "none";
+    updateSelectedLabel();
     return;
   }
   const width = viewport.clientWidth;
@@ -336,14 +362,48 @@ function updateLabels() {
     label.div.style.left = `${(projected.x * 0.5 + 0.5) * width}px`;
     label.div.style.top = `${(-projected.y * 0.5 + 0.5) * height}px`;
   }
+  updateSelectedLabel();
+}
+
+function updateSelectedLabel() {
+  if (!selectedObject || !selectedSegment || !selectedObject.visible) {
+    selectedLabel.style.display = "none";
+    return;
+  }
+  const box = new THREE.Box3().setFromObject(selectedObject);
+  const point = box.getCenter(new THREE.Vector3());
+  point.z = box.max.z + 0.55;
+  const projected = point.project(camera);
+  const visible = projected.z >= -1 && projected.z <= 1;
+  selectedLabel.style.display = visible ? "block" : "none";
+  selectedLabel.textContent = primaryElementId(selectedSegment);
+  selectedLabel.style.left = `${(projected.x * 0.5 + 0.5) * viewport.clientWidth}px`;
+  selectedLabel.style.top = `${(-projected.y * 0.5 + 0.5) * viewport.clientHeight}px`;
 }
 
 function selectObject(object) {
   if (!object) return;
   const selected = object.userData.segment;
+  selectedObject = object;
+  selectedSegment = selected;
   drawSelectedOutline(object, selected);
   drawLocalAxes(selected);
   updateSelectionPanel(selected);
+  updateSelectedLabel();
+}
+
+function clearSelection() {
+  selectedObject = null;
+  selectedSegment = null;
+  if (selectedOutline) scene.remove(selectedOutline);
+  if (localAxesGroup) scene.remove(localAxesGroup);
+  selectedOutline = null;
+  localAxesGroup = null;
+  selectedLabel.style.display = "none";
+  if (copyIdentificationButton) copyIdentificationButton.disabled = true;
+  const fragment = document.createDocumentFragment();
+  addDetailRow(fragment, "Estado", "Haz click sobre una viga, muro, pilar o apoyo.");
+  selectionDetailsEl.replaceChildren(fragment);
 }
 
 function drawSelectedOutline(object, selected) {
@@ -352,7 +412,7 @@ function drawSelectedOutline(object, selected) {
     const box = new THREE.BoxHelper(object, 0xffff00);
     selectedOutline = box;
   } else {
-    const points = selected.points.slice(0, 2).map((point) => new THREE.Vector3(point[0], point[1], point[2]));
+    const points = selected.points.map((point) => new THREE.Vector3(point[0], point[1], point[2]));
     const geometry = new THREE.BufferGeometry().setFromPoints(points);
     selectedOutline = new THREE.Line(geometry, new THREE.LineBasicMaterial({ color: 0xffff00 }));
   }
@@ -378,35 +438,164 @@ function drawLocalAxes(segment) {
 }
 
 function updateSelectionPanel(segment) {
+  const fragment = document.createDocumentFragment();
+  addDetailRow(fragment, "ID", primaryElementId(segment));
+  addDetailRow(fragment, "elementTag", legacyElementTag(segment));
+  addDetailRow(fragment, "Tipo", CATEGORY_LABELS[segment.category] ?? segment.category);
+  addDetailRow(fragment, "Edificio", segment.building ?? "-");
+  addDetailRow(fragment, "Piso", `${segment.floor_id ?? segment.floor}${segment.source_floor ? ` (fuente ${segment.source_floor})` : ""}`);
+  addDetailRow(fragment, "Ubicacion", segment.location_description ?? "-");
+  addDetailRow(fragment, "Ejes", formatAxes(segment));
+  addDetailRow(fragment, "Coordenadas", formatCoordinates(segment));
+  addDetailRow(fragment, "Propiedades", formatSection(segment));
+  addDetailRow(fragment, "Material", formatMaterial(segment));
+  addDetailRow(fragment, "Fuente label", formatSourceLabel(segment));
+  addDetailRow(fragment, "Plano", `${segment.source_dxf ?? "generated"}${segment.source_sheet ? ` (${segment.source_sheet})` : ""}`);
+  addDetailRow(fragment, "Capa CAD", segment.source_layer ?? "generated");
+  addDetailRow(fragment, "Source tags", formatSourceTags(segment));
+  addDetailRow(fragment, "Nivel", segment.level_kind ?? "FLOOR");
+  addDetailRow(fragment, "Clasificacion", formatClassification(segment));
+  addDetailRow(fragment, "Confianza", `${segment.confidence ?? "-"}${segment.section_confidence ? `; seccion ${segment.section_confidence}` : ""}${segment.thickness_confidence ? `; espesor ${segment.thickness_confidence}` : ""}`);
+  selectionDetailsEl.replaceChildren(fragment);
+  if (copyIdentificationButton) copyIdentificationButton.disabled = false;
+}
+
+function addDetailRow(fragment, key, value) {
+  const dt = document.createElement("dt");
+  const dd = document.createElement("dd");
+  dt.textContent = key;
+  dd.textContent = value ?? "-";
+  if (String(value ?? "").includes("\n")) dd.style.whiteSpace = "pre-line";
+  fragment.append(dt, dd);
+}
+
+function formatSection(segment) {
+  const parts = [];
+  if (Number.isFinite(segment.section_width_m) && Number.isFinite(segment.section_height_m)) {
+    parts.push(`Seccion ${formatCm(segment.section_width_m)} x ${formatCm(segment.section_height_m)} cm`);
+  } else if (segment.category === "beam" || segment.category === "support") {
+    parts.push("Seccion UNKNOWN");
+  }
+  if (Number.isFinite(segment.section_depth_m)) parts.push(`prof=${formatCm(segment.section_depth_m)} cm`);
+  if (Number.isFinite(segment.wall_thickness_m)) parts.push(`Espesor ${formatCm(segment.wall_thickness_m)} cm`);
+  else if (segment.category === "wall") parts.push("Espesor UNKNOWN");
+  if (Number.isFinite(segment.length_m)) parts.push(`L=${formatNumber(segment.length_m)} m`);
+  if (segment.section_source) parts.push(`section_source=${segment.section_source}`);
+  if (segment.section_confidence) parts.push(`section_confidence=${segment.section_confidence}`);
+  if (segment.thickness_source) parts.push(`thickness_source=${segment.thickness_source}`);
+  if (segment.thickness_confidence) parts.push(`thickness_confidence=${segment.thickness_confidence}`);
+  return parts.length ? parts.join("; ") : "-";
+}
+
+function formatMaterial(segment) {
+  if (!segment.material || segment.material === "UNKNOWN") return `UNKNOWN (${segment.material_source ?? "UNKNOWN"})`;
+  return `${segment.material}; fuente=${segment.material_source ?? "-"}; confianza=${segment.material_confidence ?? "-"}`;
+}
+
+function formatSourceLabel(segment) {
+  if (!segment.source_label && !segment.source_label_tag) return "-";
+  return `${segment.source_label ?? "-"} | ${segment.source_label_tag ?? "-"} | d=${formatNumber(segment.source_label_distance_m)} m`;
+}
+
+function formatSourceTags(segment) {
+  const tags = segment.sourceTags ?? segment.sourceTag ?? segment.legacy_solidTag ?? null;
+  if (!tags) return "-";
+  return Array.isArray(tags) ? tags.join(", ") : String(tags);
+}
+
+function formatClassification(segment) {
+  const parts = [];
+  if (segment.axis_status) parts.push(segment.axis_status);
+  if (segment.position_classification) parts.push(segment.position_classification);
+  if (segment.position_classification_confidence) parts.push(segment.position_classification_confidence);
+  if (segment.position_classification_reason) parts.push(segment.position_classification_reason);
+  return parts.length ? parts.join("; ") : "-";
+}
+
+function formatCoordinates(segment) {
+  const coords = segment.coordinates ?? {};
+  if (segment.category === "column") {
+    return `Centro ${formatPoint(coords.center ?? segment.center)}\nZ inferior ${formatNumber(coords.z_bottom_m)} m\nZ superior ${formatNumber(coords.z_top_m)} m`;
+  }
+  if (segment.category === "beam" || segment.category === "support") {
+    return `Nodo i ${formatPoint(coords.start ?? segment.start)}\nNodo j ${formatPoint(coords.end ?? segment.end)}\nCentro ${formatPoint(coords.center)}`;
+  }
+  if (segment.category === "wall") {
+    return `Desde ${formatPoint(coords.start ?? segment.start)}\nHasta ${formatPoint(coords.end ?? segment.end)}\nCentro ${formatPoint(coords.center)}\nZ inferior ${formatNumber(coords.z_bottom_m)} m\nZ superior ${formatNumber(coords.z_top_m)} m`;
+  }
+  if (coords.center) return `Centro ${formatPoint(coords.center)}`;
   const points = segment.points ?? [];
-  const start = points[0] ?? [null, null, null];
-  const end = points[1] ?? [null, null, null];
-  const sec = segment.seccion_cm ?? (segment.seccion ? segment.seccion : "-");
-  selectionDetailsEl.innerHTML = `
-    <dt>Tag</dt><dd>${segment.elementTag}</dd>
-    <dt>ID building_master</dt><dd>${segment.building_master_id ?? "-"}</dd>
-    <dt>Tipo</dt><dd>${CATEGORY_LABELS[segment.category] ?? segment.category}</dd>
-    <dt>Ubicacion</dt><dd>${segment.floor_id ?? segment.floor} (${segment.floor_name ?? ""})</dd>
-    <dt>Seccion</dt><dd>${sec}</dd>
-    <dt>Z (model_z_m)</dt><dd>${formatNumber(segment.model_z_m)} m / fuente ${formatNumber(segment.source_elevation_m)} m</dd>
-    <dt>Capa CAD</dt><dd>${segment.source_layer ?? "generated"}</dd>
-    <dt>Plano</dt><dd>${segment.source_dxf ?? "generated"}</dd>
-    <dt>Zona / sector</dt><dd>${segment.zona ?? "-"} / ${segment.sector ?? "-"}</dd>
-    <dt>Longitud</dt><dd>${formatNumber(segment.length_m)} m</dd>
-    <dt>Inicio</dt><dd>${formatPoint(start)}</dd>
-    <dt>Fin</dt><dd>${formatPoint(end)}</dd>
-    <dt>Estado revision</dt><dd>${segment.estado_revision ?? "-"}</dd>
-    <dt>Confianza</dt><dd>${segment.confidence ?? "-"} (${formatNumber(segment.confianza_score)})</dd>
-  `;
+  return points.length ? points.map((point, index) => `P${index + 1} ${formatPoint(point)}`).join("\n") : "-";
+}
+
+function formatAxes(segment) {
+  const axes = segment.axis_location ?? segment.axes ?? segment.ejes_aproximados;
+  if (!axes) return "-";
+  if (typeof axes === "string") return axes;
+  if (Array.isArray(axes)) return axes.join(", ");
+  if (axes.center?.X && axes.center?.Y) {
+    const rows = [`Centro: X ${formatAxisRelation(axes.center.X)} / Y ${formatAxisRelation(axes.center.Y)}`];
+    if (axes.start?.X && axes.start?.Y) rows.push(`Inicio: X ${formatAxisRelation(axes.start.X)} / Y ${formatAxisRelation(axes.start.Y)}`);
+    if (axes.end?.X && axes.end?.Y) rows.push(`Fin: X ${formatAxisRelation(axes.end.X)} / Y ${formatAxisRelation(axes.end.Y)}`);
+    return rows.join("\n");
+  }
+  return Object.entries(axes).map(([key, value]) => `${key}: ${JSON.stringify(value)}`).join("; ");
+}
+
+function formatAxisRelation(axis) {
+  const base = axis.relation ?? axis.axis ?? "-";
+  if (Number.isFinite(axis.offset_m) && Math.abs(axis.offset_m) > 0.001) return `${base} (offset ${axis.offset_m >= 0 ? "+" : ""}${formatNumber(axis.offset_m)} m desde ${axis.axis})`;
+  return base;
 }
 
 function formatNumber(value) {
   return Number.isFinite(value) ? value.toFixed(3) : "-";
 }
 
+function formatCm(value) {
+  return Number.isFinite(value) ? Math.round(value * 100).toString() : "-";
+}
+
 function formatPoint(point) {
-  if (!point || point.some((value) => value === null)) return "-";
+  if (!point || point.some((value) => value === null || value === undefined)) return "-";
   return `(${point.map((value) => formatNumber(value)).join(", ")})`;
+}
+
+function compactAxisId(segment) {
+  const center = segment.axis_location?.center;
+  if (!center?.X || !center?.Y) return "ejes -";
+  if (center.X.status === "ON_AXIS" && center.Y.status === "ON_AXIS") return `${center.X.axis}-${center.Y.axis}`;
+  return `X ${center.X.relation ?? center.X.axis} / Y ${center.Y.relation ?? center.Y.axis}`;
+}
+
+function compactCoordinates(segment) {
+  const center = segment.coordinates?.center ?? segment.center;
+  if (!center) return "X=- Y=-";
+  return `X=${formatNumber(center[0])} Y=${formatNumber(center[1])}${Number.isFinite(center[2]) ? ` Z=${formatNumber(center[2])}` : ""}`;
+}
+
+function identificationText(segment) {
+  return [
+    primaryElementId(segment),
+    CATEGORY_LABELS[segment.category] ?? segment.category,
+    compactAxisId(segment),
+    compactCoordinates(segment),
+    segment.floor ?? "-",
+    legacyElementTag(segment),
+  ].join(" | ");
+}
+
+async function copySelectedIdentification() {
+  if (!selectedSegment) return;
+  const text = identificationText(selectedSegment);
+  try {
+    await navigator.clipboard.writeText(text);
+    statusEl.textContent = `Copiado: ${text}`;
+    copyIdentificationButton?.classList.add("copy-flash");
+    window.setTimeout(() => copyIdentificationButton?.classList.remove("copy-flash"), 700);
+  } catch (_error) {
+    window.prompt("Copia la identificacion:", text);
+  }
 }
 
 function fitView() {
@@ -457,12 +646,34 @@ function sideView(side) {
 }
 
 function onPointerDown(event) {
+  pointerDown = { x: event.clientX, y: event.clientY, time: performance.now() };
+}
+
+function onPointerUp(event) {
+  if (!pointerDown) return;
+  const moved = Math.hypot(event.clientX - pointerDown.x, event.clientY - pointerDown.y);
+  const elapsed = performance.now() - pointerDown.time;
+  pointerDown = null;
+  if (moved > 4 || elapsed > 650) return;
+
   const rect = renderer.domElement.getBoundingClientRect();
   pointer.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
   pointer.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
   raycaster.setFromCamera(pointer, camera);
   const hits = raycaster.intersectObjects(selectable.filter((object) => object.visible), false);
-  if (hits.length) selectObject(hits[0].object);
+  const hit = chooseSelectionHit(hits);
+  if (hit) selectObject(hit.object);
+  else clearSelection();
+}
+
+function chooseSelectionHit(hits) {
+  if (!hits.length) return null;
+  const priority = { column: 0, beam: 1, wall: 2, support: 3, diaphragm: 4, slab: 5 };
+  return [...hits].sort((a, b) => {
+    const pa = priority[a.object.userData.category] ?? 9;
+    const pb = priority[b.object.userData.category] ?? 9;
+    return pa === pb ? a.distance - b.distance : pa - pb;
+  })[0];
 }
 
 function searchTag() {
@@ -471,7 +682,7 @@ function searchTag() {
   const exact = objectByTag.get(query);
   const match = exact ?? [...objectByTag.entries()].find(([tag]) => tag.includes(query))?.[1];
   if (!match) {
-    statusEl.textContent = `No encontre elementTag que contenga: ${query}`;
+    statusEl.textContent = `No encontre ID/elementTag que contenga: ${query}`;
     return;
   }
   revealObject(match);
@@ -517,16 +728,25 @@ function animate() {
 }
 
 async function boot() {
+  if (modelSelectEl) {
+    modelSelectEl.value = modelFile;
+    modelSelectEl.addEventListener("change", () => {
+      const next = modelSelectEl.value;
+      window.location.href = `?model=${encodeURIComponent(next)}`;
+    });
+  }
   addLights();
   resize();
   window.addEventListener("resize", resize);
   renderer.domElement.addEventListener("pointerdown", onPointerDown);
+  renderer.domElement.addEventListener("pointerup", onPointerUp);
   document.querySelector("#view-side-A").addEventListener("click", sideView.bind(null, "A"));
   document.querySelector("#view-side-B").addEventListener("click", sideView.bind(null, "B"));
   document.querySelector("#view-side-C").addEventListener("click", sideView.bind(null, "C"));
   document.querySelector("#view-side-D").addEventListener("click", sideView.bind(null, "D"));
   document.querySelector("#top-view").addEventListener("click", topView);
   document.querySelector("#search-button").addEventListener("click", searchTag);
+  copyIdentificationButton?.addEventListener("click", copySelectedIdentification);
   tagSearchEl.addEventListener("keydown", (event) => {
     if (event.key === "Enter") searchTag();
   });

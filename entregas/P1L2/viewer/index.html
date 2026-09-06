@@ -18,6 +18,17 @@
         </header>
 
         <section class="panel-block">
+          <h2>Modelo</h2>
+          <select id="model-select" class="model-select" aria-label="modelo a cargar">
+            <option value="model_combined_viewer.json">EDIFICIO_1 + EDIFICIO_2 combinado</option>
+            <option value="model_viewer_candidate.json">EDIFICIO_1 candidato</option>
+            <option value="model_2_viewer.json">EDIFICIO_2</option>
+            <option value="model_viewer.json">GOLDEN EDIFICIO_1 (solo referencia)</option>
+          </select>
+          <p class="hint">El GOLDEN se puede abrir para comparar, pero no se modifica.</p>
+        </section>
+
+        <section class="panel-block">
           <h2>Navegacion</h2>
           <div class="button-grid">
             <button id="view-side-A">Lado A</button>
@@ -43,13 +54,16 @@
         <section class="panel-block">
           <h2>Buscar elemento</h2>
           <div class="search-row">
-            <input id="tag-search" type="search" placeholder="Ej: CAD_1_beam_0042" />
+            <input id="tag-search" type="search" placeholder="Ej: E1-P2-C-034" />
             <button id="search-button">Ir</button>
           </div>
         </section>
 
         <section class="panel-block selected-card">
-          <h2>Seleccion</h2>
+          <div class="section-heading-row">
+            <h2>Seleccion</h2>
+            <button id="copy-identification" class="small-button" type="button" disabled>Copiar identificacion</button>
+          </div>
           <dl id="selection-details">
             <dt>Estado</dt>
             <dd>Haz click sobre una viga, muro, pilar o apoyo.</dd>

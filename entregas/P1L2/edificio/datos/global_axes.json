@@ -1,0 +1,1972 @@
+{
+  "status": "AXES_CANONICALIZED_FROM_DXF",
+  "units": "m",
+  "expected_floors": [
+    "S1",
+    "P1",
+    "P2",
+    "P3",
+    "P4"
+  ],
+  "rules": [
+    "Los ejes son la referencia principal del calce.",
+    "Un mismo eje conserva XY identico en S1/P1/P2/P3/P4.",
+    "Fundacion/radier no se cuenta como piso."
+  ],
+  "buildings": {
+    "EDIFICIO_1": {
+      "description": "Parte 1, serie 2017_67, ejes E-J",
+      "source_dxf": "2017_67-100/101/102/103",
+      "axis_reference": "Ejes DXF RLE-EJE/RLE-EJES normalizados como sistema global por edificio.",
+      "axes": {
+        "X": {
+          "E": 0.0,
+          "Ea": 3.3,
+          "Eb": 3.6,
+          "Ec": 6.4,
+          "Ed": 6.7,
+          "F": 10.0,
+          "G": 20.0,
+          "Ga": 21.45,
+          "H": 30.0,
+          "H1": 33.825,
+          "H'": 34.477,
+          "H2": 38.825,
+          "I": 40.0,
+          "IA": 42.6,
+          "I'": 45.0,
+          "IB": 45.875,
+          "J": 50.0
+        },
+        "Y": {
+          "1": 0.0,
+          "1''": 3.9,
+          "2": 8.9,
+          "2a": 13.845,
+          "3": 16.15
+        }
+      },
+      "axis_metadata": {
+        "X": {
+          "E": {
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE labels; calce D/E"
+          },
+          "Ea": {
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota E-Ea=330 cm"
+          },
+          "Eb": {
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota E-Eb=250+110 cm"
+          },
+          "Ec": {
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota Eb-Ec=140+140 cm"
+          },
+          "Ed": {
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota Ea-Ed=340 cm"
+          },
+          "F": {
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "G": {
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "Ga": {
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota G-Ga=145 cm"
+          },
+          "H": {
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "H1": {
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota H-H1=382.5 cm"
+          },
+          "H'": {
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota H-H'=447.7 cm"
+          },
+          "H2": {
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota H1-H2=117.5+382.5 cm"
+          },
+          "I": {
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "IA": {
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota I-IA=260 cm"
+          },
+          "I'": {
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota IA-I'=240 cm"
+          },
+          "IB": {
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; coordenada DXF consistente respecto a I'"
+          },
+          "J": {
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          }
+        },
+        "Y": {
+          "1": {
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "1''": {
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "2": {
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "2a": {
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "3": {
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          }
+        }
+      },
+      "floors": {
+        "S1": {
+          "E": {
+            "orientation": "X",
+            "x_m": 0.0,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE labels; calce D/E"
+          },
+          "Ea": {
+            "orientation": "X",
+            "x_m": 3.3,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota E-Ea=330 cm"
+          },
+          "Eb": {
+            "orientation": "X",
+            "x_m": 3.6,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota E-Eb=250+110 cm"
+          },
+          "Ec": {
+            "orientation": "X",
+            "x_m": 6.4,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota Eb-Ec=140+140 cm"
+          },
+          "Ed": {
+            "orientation": "X",
+            "x_m": 6.7,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota Ea-Ed=340 cm"
+          },
+          "F": {
+            "orientation": "X",
+            "x_m": 10.0,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "G": {
+            "orientation": "X",
+            "x_m": 20.0,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "Ga": {
+            "orientation": "X",
+            "x_m": 21.45,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota G-Ga=145 cm"
+          },
+          "H": {
+            "orientation": "X",
+            "x_m": 30.0,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "H1": {
+            "orientation": "X",
+            "x_m": 33.825,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota H-H1=382.5 cm"
+          },
+          "H'": {
+            "orientation": "X",
+            "x_m": 34.477,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota H-H'=447.7 cm"
+          },
+          "H2": {
+            "orientation": "X",
+            "x_m": 38.825,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota H1-H2=117.5+382.5 cm"
+          },
+          "I": {
+            "orientation": "X",
+            "x_m": 40.0,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "IA": {
+            "orientation": "X",
+            "x_m": 42.6,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota I-IA=260 cm"
+          },
+          "I'": {
+            "orientation": "X",
+            "x_m": 45.0,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota IA-I'=240 cm"
+          },
+          "IB": {
+            "orientation": "X",
+            "x_m": 45.875,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; coordenada DXF consistente respecto a I'"
+          },
+          "J": {
+            "orientation": "X",
+            "x_m": 50.0,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "1": {
+            "orientation": "Y",
+            "y_m": 0.0,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "1''": {
+            "orientation": "Y",
+            "y_m": 3.9,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "2": {
+            "orientation": "Y",
+            "y_m": 8.9,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "2a": {
+            "orientation": "Y",
+            "y_m": 13.845,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "3": {
+            "orientation": "Y",
+            "y_m": 16.15,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          }
+        },
+        "P1": {
+          "E": {
+            "orientation": "X",
+            "x_m": 0.0,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE labels; calce D/E"
+          },
+          "Ea": {
+            "orientation": "X",
+            "x_m": 3.3,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota E-Ea=330 cm"
+          },
+          "Eb": {
+            "orientation": "X",
+            "x_m": 3.6,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota E-Eb=250+110 cm"
+          },
+          "Ec": {
+            "orientation": "X",
+            "x_m": 6.4,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota Eb-Ec=140+140 cm"
+          },
+          "Ed": {
+            "orientation": "X",
+            "x_m": 6.7,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota Ea-Ed=340 cm"
+          },
+          "F": {
+            "orientation": "X",
+            "x_m": 10.0,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "G": {
+            "orientation": "X",
+            "x_m": 20.0,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "Ga": {
+            "orientation": "X",
+            "x_m": 21.45,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota G-Ga=145 cm"
+          },
+          "H": {
+            "orientation": "X",
+            "x_m": 30.0,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "H1": {
+            "orientation": "X",
+            "x_m": 33.825,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota H-H1=382.5 cm"
+          },
+          "H'": {
+            "orientation": "X",
+            "x_m": 34.477,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota H-H'=447.7 cm"
+          },
+          "H2": {
+            "orientation": "X",
+            "x_m": 38.825,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota H1-H2=117.5+382.5 cm"
+          },
+          "I": {
+            "orientation": "X",
+            "x_m": 40.0,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "IA": {
+            "orientation": "X",
+            "x_m": 42.6,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota I-IA=260 cm"
+          },
+          "I'": {
+            "orientation": "X",
+            "x_m": 45.0,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota IA-I'=240 cm"
+          },
+          "IB": {
+            "orientation": "X",
+            "x_m": 45.875,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; coordenada DXF consistente respecto a I'"
+          },
+          "J": {
+            "orientation": "X",
+            "x_m": 50.0,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "1": {
+            "orientation": "Y",
+            "y_m": 0.0,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "1''": {
+            "orientation": "Y",
+            "y_m": 3.9,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "2": {
+            "orientation": "Y",
+            "y_m": 8.9,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "2a": {
+            "orientation": "Y",
+            "y_m": 13.845,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "3": {
+            "orientation": "Y",
+            "y_m": 16.15,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          }
+        },
+        "P2": {
+          "E": {
+            "orientation": "X",
+            "x_m": 0.0,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE labels; calce D/E"
+          },
+          "Ea": {
+            "orientation": "X",
+            "x_m": 3.3,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota E-Ea=330 cm"
+          },
+          "Eb": {
+            "orientation": "X",
+            "x_m": 3.6,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota E-Eb=250+110 cm"
+          },
+          "Ec": {
+            "orientation": "X",
+            "x_m": 6.4,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota Eb-Ec=140+140 cm"
+          },
+          "Ed": {
+            "orientation": "X",
+            "x_m": 6.7,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota Ea-Ed=340 cm"
+          },
+          "F": {
+            "orientation": "X",
+            "x_m": 10.0,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "G": {
+            "orientation": "X",
+            "x_m": 20.0,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "Ga": {
+            "orientation": "X",
+            "x_m": 21.45,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota G-Ga=145 cm"
+          },
+          "H": {
+            "orientation": "X",
+            "x_m": 30.0,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "H1": {
+            "orientation": "X",
+            "x_m": 33.825,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota H-H1=382.5 cm"
+          },
+          "H'": {
+            "orientation": "X",
+            "x_m": 34.477,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota H-H'=447.7 cm"
+          },
+          "H2": {
+            "orientation": "X",
+            "x_m": 38.825,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota H1-H2=117.5+382.5 cm"
+          },
+          "I": {
+            "orientation": "X",
+            "x_m": 40.0,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "IA": {
+            "orientation": "X",
+            "x_m": 42.6,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota I-IA=260 cm"
+          },
+          "I'": {
+            "orientation": "X",
+            "x_m": 45.0,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota IA-I'=240 cm"
+          },
+          "IB": {
+            "orientation": "X",
+            "x_m": 45.875,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; coordenada DXF consistente respecto a I'"
+          },
+          "J": {
+            "orientation": "X",
+            "x_m": 50.0,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "1": {
+            "orientation": "Y",
+            "y_m": 0.0,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "1''": {
+            "orientation": "Y",
+            "y_m": 3.9,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "2": {
+            "orientation": "Y",
+            "y_m": 8.9,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "2a": {
+            "orientation": "Y",
+            "y_m": 13.845,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "3": {
+            "orientation": "Y",
+            "y_m": 16.15,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          }
+        },
+        "P3": {
+          "E": {
+            "orientation": "X",
+            "x_m": 0.0,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE labels; calce D/E"
+          },
+          "Ea": {
+            "orientation": "X",
+            "x_m": 3.3,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota E-Ea=330 cm"
+          },
+          "Eb": {
+            "orientation": "X",
+            "x_m": 3.6,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota E-Eb=250+110 cm"
+          },
+          "Ec": {
+            "orientation": "X",
+            "x_m": 6.4,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota Eb-Ec=140+140 cm"
+          },
+          "Ed": {
+            "orientation": "X",
+            "x_m": 6.7,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota Ea-Ed=340 cm"
+          },
+          "F": {
+            "orientation": "X",
+            "x_m": 10.0,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "G": {
+            "orientation": "X",
+            "x_m": 20.0,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "Ga": {
+            "orientation": "X",
+            "x_m": 21.45,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota G-Ga=145 cm"
+          },
+          "H": {
+            "orientation": "X",
+            "x_m": 30.0,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "H1": {
+            "orientation": "X",
+            "x_m": 33.825,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota H-H1=382.5 cm"
+          },
+          "H'": {
+            "orientation": "X",
+            "x_m": 34.477,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota H-H'=447.7 cm"
+          },
+          "H2": {
+            "orientation": "X",
+            "x_m": 38.825,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota H1-H2=117.5+382.5 cm"
+          },
+          "I": {
+            "orientation": "X",
+            "x_m": 40.0,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "IA": {
+            "orientation": "X",
+            "x_m": 42.6,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota I-IA=260 cm"
+          },
+          "I'": {
+            "orientation": "X",
+            "x_m": 45.0,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota IA-I'=240 cm"
+          },
+          "IB": {
+            "orientation": "X",
+            "x_m": 45.875,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; coordenada DXF consistente respecto a I'"
+          },
+          "J": {
+            "orientation": "X",
+            "x_m": 50.0,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "1": {
+            "orientation": "Y",
+            "y_m": 0.0,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "1''": {
+            "orientation": "Y",
+            "y_m": 3.9,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "2": {
+            "orientation": "Y",
+            "y_m": 8.9,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "2a": {
+            "orientation": "Y",
+            "y_m": 13.845,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "3": {
+            "orientation": "Y",
+            "y_m": 16.15,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          }
+        },
+        "P4": {
+          "E": {
+            "orientation": "X",
+            "x_m": 0.0,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE labels; calce D/E"
+          },
+          "Ea": {
+            "orientation": "X",
+            "x_m": 3.3,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota E-Ea=330 cm"
+          },
+          "Eb": {
+            "orientation": "X",
+            "x_m": 3.6,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota E-Eb=250+110 cm"
+          },
+          "Ec": {
+            "orientation": "X",
+            "x_m": 6.4,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota Eb-Ec=140+140 cm"
+          },
+          "Ed": {
+            "orientation": "X",
+            "x_m": 6.7,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota Ea-Ed=340 cm"
+          },
+          "F": {
+            "orientation": "X",
+            "x_m": 10.0,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "G": {
+            "orientation": "X",
+            "x_m": 20.0,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "Ga": {
+            "orientation": "X",
+            "x_m": 21.45,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota G-Ga=145 cm"
+          },
+          "H": {
+            "orientation": "X",
+            "x_m": 30.0,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "H1": {
+            "orientation": "X",
+            "x_m": 33.825,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota H-H1=382.5 cm"
+          },
+          "H'": {
+            "orientation": "X",
+            "x_m": 34.477,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota H-H'=447.7 cm"
+          },
+          "H2": {
+            "orientation": "X",
+            "x_m": 38.825,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota H1-H2=117.5+382.5 cm"
+          },
+          "I": {
+            "orientation": "X",
+            "x_m": 40.0,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "IA": {
+            "orientation": "X",
+            "x_m": 42.6,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota I-IA=260 cm"
+          },
+          "I'": {
+            "orientation": "X",
+            "x_m": 45.0,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; cota IA-I'=240 cm"
+          },
+          "IB": {
+            "orientation": "X",
+            "x_m": 45.875,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label; coordenada DXF consistente respecto a I'"
+          },
+          "J": {
+            "orientation": "X",
+            "x_m": 50.0,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "1": {
+            "orientation": "Y",
+            "y_m": 0.0,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "1''": {
+            "orientation": "Y",
+            "y_m": 3.9,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "2": {
+            "orientation": "Y",
+            "y_m": 8.9,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "2a": {
+            "orientation": "Y",
+            "y_m": 13.845,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "SECONDARY_AXIS",
+            "evidence": "RLE-EJE label"
+          },
+          "3": {
+            "orientation": "Y",
+            "y_m": 16.15,
+            "reference": "AXIS_CANONICAL",
+            "axis_type": "PRIMARY_AXIS",
+            "evidence": "RLE-EJE label"
+          }
+        }
+      }
+    },
+    "EDIFICIO_2": {
+      "description": "Parte 2 / LT2, serie 2024_22, ejes A-D",
+      "source_dxf": "2024_22-100/101/102",
+      "axis_reference": "Ejes DXF RLE-EJE/RLE-EJES normalizados como sistema global por edificio.",
+      "axes": {
+        "X": {
+          "A": 0.0,
+          "B": 7.5,
+          "C": 17.5,
+          "D": 27.5
+        },
+        "Y": {
+          "1": 0.0,
+          "2": 8.9,
+          "3": 16.15
+        }
+      },
+      "axis_metadata": {},
+      "floors": {
+        "S1": {
+          "A": {
+            "orientation": "X",
+            "x_m": 0.0,
+            "reference": "AXIS_CANONICAL"
+          },
+          "B": {
+            "orientation": "X",
+            "x_m": 7.5,
+            "reference": "AXIS_CANONICAL"
+          },
+          "C": {
+            "orientation": "X",
+            "x_m": 17.5,
+            "reference": "AXIS_CANONICAL"
+          },
+          "D": {
+            "orientation": "X",
+            "x_m": 27.5,
+            "reference": "AXIS_CANONICAL"
+          },
+          "1": {
+            "orientation": "Y",
+            "y_m": 0.0,
+            "reference": "AXIS_CANONICAL"
+          },
+          "2": {
+            "orientation": "Y",
+            "y_m": 8.9,
+            "reference": "AXIS_CANONICAL"
+          },
+          "3": {
+            "orientation": "Y",
+            "y_m": 16.15,
+            "reference": "AXIS_CANONICAL"
+          }
+        },
+        "P1": {
+          "A": {
+            "orientation": "X",
+            "x_m": 0.0,
+            "reference": "AXIS_CANONICAL"
+          },
+          "B": {
+            "orientation": "X",
+            "x_m": 7.5,
+            "reference": "AXIS_CANONICAL"
+          },
+          "C": {
+            "orientation": "X",
+            "x_m": 17.5,
+            "reference": "AXIS_CANONICAL"
+          },
+          "D": {
+            "orientation": "X",
+            "x_m": 27.5,
+            "reference": "AXIS_CANONICAL"
+          },
+          "1": {
+            "orientation": "Y",
+            "y_m": 0.0,
+            "reference": "AXIS_CANONICAL"
+          },
+          "2": {
+            "orientation": "Y",
+            "y_m": 8.9,
+            "reference": "AXIS_CANONICAL"
+          },
+          "3": {
+            "orientation": "Y",
+            "y_m": 16.15,
+            "reference": "AXIS_CANONICAL"
+          }
+        },
+        "P2": {
+          "A": {
+            "orientation": "X",
+            "x_m": 0.0,
+            "reference": "AXIS_CANONICAL"
+          },
+          "B": {
+            "orientation": "X",
+            "x_m": 7.5,
+            "reference": "AXIS_CANONICAL"
+          },
+          "C": {
+            "orientation": "X",
+            "x_m": 17.5,
+            "reference": "AXIS_CANONICAL"
+          },
+          "D": {
+            "orientation": "X",
+            "x_m": 27.5,
+            "reference": "AXIS_CANONICAL"
+          },
+          "1": {
+            "orientation": "Y",
+            "y_m": 0.0,
+            "reference": "AXIS_CANONICAL"
+          },
+          "2": {
+            "orientation": "Y",
+            "y_m": 8.9,
+            "reference": "AXIS_CANONICAL"
+          },
+          "3": {
+            "orientation": "Y",
+            "y_m": 16.15,
+            "reference": "AXIS_CANONICAL"
+          }
+        },
+        "P3": {
+          "A": {
+            "orientation": "X",
+            "x_m": 0.0,
+            "reference": "AXIS_CANONICAL"
+          },
+          "B": {
+            "orientation": "X",
+            "x_m": 7.5,
+            "reference": "AXIS_CANONICAL"
+          },
+          "C": {
+            "orientation": "X",
+            "x_m": 17.5,
+            "reference": "AXIS_CANONICAL"
+          },
+          "D": {
+            "orientation": "X",
+            "x_m": 27.5,
+            "reference": "AXIS_CANONICAL"
+          },
+          "1": {
+            "orientation": "Y",
+            "y_m": 0.0,
+            "reference": "AXIS_CANONICAL"
+          },
+          "2": {
+            "orientation": "Y",
+            "y_m": 8.9,
+            "reference": "AXIS_CANONICAL"
+          },
+          "3": {
+            "orientation": "Y",
+            "y_m": 16.15,
+            "reference": "AXIS_CANONICAL"
+          }
+        },
+        "P4": {
+          "A": {
+            "orientation": "X",
+            "x_m": 0.0,
+            "reference": "AXIS_CANONICAL"
+          },
+          "B": {
+            "orientation": "X",
+            "x_m": 7.5,
+            "reference": "AXIS_CANONICAL"
+          },
+          "C": {
+            "orientation": "X",
+            "x_m": 17.5,
+            "reference": "AXIS_CANONICAL"
+          },
+          "D": {
+            "orientation": "X",
+            "x_m": 27.5,
+            "reference": "AXIS_CANONICAL"
+          },
+          "1": {
+            "orientation": "Y",
+            "y_m": 0.0,
+            "reference": "AXIS_CANONICAL"
+          },
+          "2": {
+            "orientation": "Y",
+            "y_m": 8.9,
+            "reference": "AXIS_CANONICAL"
+          },
+          "3": {
+            "orientation": "Y",
+            "y_m": 16.15,
+            "reference": "AXIS_CANONICAL"
+          }
+        }
+      }
+    }
+  },
+  "raw_observations": {
+    "EDIFICIO_1": {
+      "floors": {
+        "S1": {
+          "1": {
+            "orientation": "Y",
+            "observed_y_m": 0.238,
+            "n_labels": 2,
+            "source_dxf": "2017_67-101.dxf"
+          },
+          "1''": {
+            "orientation": "Y",
+            "observed_y_m": 3.9,
+            "n_labels": 1,
+            "source_dxf": "2017_67-101.dxf"
+          },
+          "2": {
+            "orientation": "Y",
+            "observed_y_m": 8.9,
+            "n_labels": 2,
+            "source_dxf": "2017_67-101.dxf"
+          },
+          "2a": {
+            "orientation": "Y",
+            "observed_y_m": 13.845,
+            "n_labels": 1,
+            "source_dxf": "2017_67-101.dxf"
+          },
+          "3": {
+            "orientation": "Y",
+            "observed_y_m": 16.15,
+            "n_labels": 2,
+            "source_dxf": "2017_67-101.dxf"
+          },
+          "E": {
+            "orientation": "X",
+            "observed_x_m": 0.0,
+            "n_labels": 1,
+            "source_dxf": "2017_67-101.dxf"
+          },
+          "Ea": {
+            "orientation": "X",
+            "observed_x_m": 3.3,
+            "n_labels": 1,
+            "source_dxf": "2017_67-101.dxf"
+          },
+          "Ed": {
+            "orientation": "X",
+            "observed_x_m": 6.7,
+            "n_labels": 1,
+            "source_dxf": "2017_67-101.dxf"
+          },
+          "F": {
+            "orientation": "X",
+            "observed_x_m": 10.0,
+            "n_labels": 1,
+            "source_dxf": "2017_67-101.dxf"
+          },
+          "G": {
+            "orientation": "X",
+            "observed_x_m": 20.0,
+            "n_labels": 1,
+            "source_dxf": "2017_67-101.dxf"
+          },
+          "Ga": {
+            "orientation": "X",
+            "observed_x_m": 21.45,
+            "n_labels": 1,
+            "source_dxf": "2017_67-101.dxf"
+          }
+        },
+        "P1": {
+          "1": {
+            "orientation": "Y",
+            "observed_y_m": -0.181,
+            "n_labels": 2,
+            "source_dxf": "2017_67-101.dxf"
+          },
+          "1''": {
+            "orientation": "Y",
+            "observed_y_m": 3.719,
+            "n_labels": 1,
+            "source_dxf": "2017_67-101.dxf"
+          },
+          "2": {
+            "orientation": "Y",
+            "observed_y_m": 8.719,
+            "n_labels": 2,
+            "source_dxf": "2017_67-101.dxf"
+          },
+          "2a": {
+            "orientation": "Y",
+            "observed_y_m": 13.664,
+            "n_labels": 1,
+            "source_dxf": "2017_67-101.dxf"
+          },
+          "3": {
+            "orientation": "Y",
+            "observed_y_m": 15.969,
+            "n_labels": 2,
+            "source_dxf": "2017_67-101.dxf"
+          },
+          "E": {
+            "orientation": "X",
+            "observed_x_m": 0.0,
+            "n_labels": 1,
+            "source_dxf": "2017_67-101.dxf"
+          },
+          "Ea": {
+            "orientation": "X",
+            "observed_x_m": 3.3,
+            "n_labels": 1,
+            "source_dxf": "2017_67-101.dxf"
+          },
+          "Ed": {
+            "orientation": "X",
+            "observed_x_m": 6.7,
+            "n_labels": 1,
+            "source_dxf": "2017_67-101.dxf"
+          },
+          "F": {
+            "orientation": "X",
+            "observed_x_m": 10.0,
+            "n_labels": 1,
+            "source_dxf": "2017_67-101.dxf"
+          },
+          "G": {
+            "orientation": "X",
+            "observed_x_m": 20.0,
+            "n_labels": 1,
+            "source_dxf": "2017_67-101.dxf"
+          },
+          "H": {
+            "orientation": "X",
+            "observed_x_m": 30.0,
+            "n_labels": 1,
+            "source_dxf": "2017_67-101.dxf"
+          },
+          "H'": {
+            "orientation": "X",
+            "observed_x_m": 34.477,
+            "n_labels": 1,
+            "source_dxf": "2017_67-101.dxf"
+          },
+          "I": {
+            "orientation": "X",
+            "observed_x_m": 40.0,
+            "n_labels": 1,
+            "source_dxf": "2017_67-101.dxf"
+          },
+          "I'": {
+            "orientation": "X",
+            "observed_x_m": 45.0,
+            "n_labels": 1,
+            "source_dxf": "2017_67-101.dxf"
+          }
+        },
+        "P2": {
+          "1": {
+            "orientation": "Y",
+            "observed_y_m": 0.0,
+            "n_labels": 2,
+            "source_dxf": "2017_67-102.dxf"
+          },
+          "1''": {
+            "orientation": "Y",
+            "observed_y_m": 3.9,
+            "n_labels": 1,
+            "source_dxf": "2017_67-102.dxf"
+          },
+          "2": {
+            "orientation": "Y",
+            "observed_y_m": 8.9,
+            "n_labels": 2,
+            "source_dxf": "2017_67-102.dxf"
+          },
+          "2a": {
+            "orientation": "Y",
+            "observed_y_m": 13.845,
+            "n_labels": 1,
+            "source_dxf": "2017_67-102.dxf"
+          },
+          "3": {
+            "orientation": "Y",
+            "observed_y_m": 16.15,
+            "n_labels": 2,
+            "source_dxf": "2017_67-102.dxf"
+          },
+          "E": {
+            "orientation": "X",
+            "observed_x_m": -0.0,
+            "n_labels": 1,
+            "source_dxf": "2017_67-102.dxf"
+          },
+          "Ea": {
+            "orientation": "X",
+            "observed_x_m": 3.3,
+            "n_labels": 1,
+            "source_dxf": "2017_67-102.dxf"
+          },
+          "Ed": {
+            "orientation": "X",
+            "observed_x_m": 6.7,
+            "n_labels": 1,
+            "source_dxf": "2017_67-102.dxf"
+          },
+          "F": {
+            "orientation": "X",
+            "observed_x_m": 10.0,
+            "n_labels": 1,
+            "source_dxf": "2017_67-102.dxf"
+          },
+          "G": {
+            "orientation": "X",
+            "observed_x_m": 20.0,
+            "n_labels": 1,
+            "source_dxf": "2017_67-102.dxf"
+          },
+          "H": {
+            "orientation": "X",
+            "observed_x_m": 30.0,
+            "n_labels": 1,
+            "source_dxf": "2017_67-102.dxf"
+          },
+          "I": {
+            "orientation": "X",
+            "observed_x_m": 40.0,
+            "n_labels": 1,
+            "source_dxf": "2017_67-102.dxf"
+          },
+          "I'": {
+            "orientation": "X",
+            "observed_x_m": 45.0,
+            "n_labels": 1,
+            "source_dxf": "2017_67-102.dxf"
+          }
+        },
+        "P3": {
+          "1": {
+            "orientation": "Y",
+            "observed_y_m": 0.0,
+            "n_labels": 2,
+            "source_dxf": "2017_67-102.dxf"
+          },
+          "1''": {
+            "orientation": "Y",
+            "observed_y_m": 3.9,
+            "n_labels": 1,
+            "source_dxf": "2017_67-102.dxf"
+          },
+          "2": {
+            "orientation": "Y",
+            "observed_y_m": 8.9,
+            "n_labels": 2,
+            "source_dxf": "2017_67-102.dxf"
+          },
+          "2a": {
+            "orientation": "Y",
+            "observed_y_m": 13.845,
+            "n_labels": 1,
+            "source_dxf": "2017_67-102.dxf"
+          },
+          "3": {
+            "orientation": "Y",
+            "observed_y_m": 16.15,
+            "n_labels": 2,
+            "source_dxf": "2017_67-102.dxf"
+          },
+          "E": {
+            "orientation": "X",
+            "observed_x_m": -0.0,
+            "n_labels": 2,
+            "source_dxf": "2017_67-102.dxf"
+          },
+          "Ea": {
+            "orientation": "X",
+            "observed_x_m": 3.3,
+            "n_labels": 1,
+            "source_dxf": "2017_67-102.dxf"
+          },
+          "Eb": {
+            "orientation": "X",
+            "observed_x_m": 3.6,
+            "n_labels": 1,
+            "source_dxf": "2017_67-102.dxf"
+          },
+          "Ec": {
+            "orientation": "X",
+            "observed_x_m": 6.4,
+            "n_labels": 1,
+            "source_dxf": "2017_67-102.dxf"
+          },
+          "Ed": {
+            "orientation": "X",
+            "observed_x_m": 6.7,
+            "n_labels": 1,
+            "source_dxf": "2017_67-102.dxf"
+          },
+          "F": {
+            "orientation": "X",
+            "observed_x_m": 10.0,
+            "n_labels": 2,
+            "source_dxf": "2017_67-102.dxf"
+          },
+          "G": {
+            "orientation": "X",
+            "observed_x_m": 20.0,
+            "n_labels": 2,
+            "source_dxf": "2017_67-102.dxf"
+          },
+          "H": {
+            "orientation": "X",
+            "observed_x_m": 30.0,
+            "n_labels": 2,
+            "source_dxf": "2017_67-102.dxf"
+          },
+          "I": {
+            "orientation": "X",
+            "observed_x_m": 40.0,
+            "n_labels": 2,
+            "source_dxf": "2017_67-102.dxf"
+          },
+          "I'": {
+            "orientation": "X",
+            "observed_x_m": 45.0,
+            "n_labels": 2,
+            "source_dxf": "2017_67-102.dxf"
+          },
+          "J": {
+            "orientation": "X",
+            "observed_x_m": 50.0,
+            "n_labels": 2,
+            "source_dxf": "2017_67-102.dxf"
+          }
+        },
+        "P4": {
+          "1": {
+            "orientation": "Y",
+            "observed_y_m": 0.0,
+            "n_labels": 2,
+            "source_dxf": "2017_67-103.dxf"
+          },
+          "1''": {
+            "orientation": "Y",
+            "observed_y_m": 3.9,
+            "n_labels": 1,
+            "source_dxf": "2017_67-103.dxf"
+          },
+          "2": {
+            "orientation": "Y",
+            "observed_y_m": 8.9,
+            "n_labels": 2,
+            "source_dxf": "2017_67-103.dxf"
+          },
+          "2a": {
+            "orientation": "Y",
+            "observed_y_m": 13.845,
+            "n_labels": 1,
+            "source_dxf": "2017_67-103.dxf"
+          },
+          "3": {
+            "orientation": "Y",
+            "observed_y_m": 16.15,
+            "n_labels": 2,
+            "source_dxf": "2017_67-103.dxf"
+          },
+          "E": {
+            "orientation": "X",
+            "observed_x_m": -0.0,
+            "n_labels": 1,
+            "source_dxf": "2017_67-103.dxf"
+          },
+          "Ea": {
+            "orientation": "X",
+            "observed_x_m": 3.3,
+            "n_labels": 1,
+            "source_dxf": "2017_67-103.dxf"
+          },
+          "Ed": {
+            "orientation": "X",
+            "observed_x_m": 6.7,
+            "n_labels": 1,
+            "source_dxf": "2017_67-103.dxf"
+          },
+          "F": {
+            "orientation": "X",
+            "observed_x_m": 10.0,
+            "n_labels": 1,
+            "source_dxf": "2017_67-103.dxf"
+          },
+          "G": {
+            "orientation": "X",
+            "observed_x_m": 20.0,
+            "n_labels": 1,
+            "source_dxf": "2017_67-103.dxf"
+          },
+          "H": {
+            "orientation": "X",
+            "observed_x_m": 30.0,
+            "n_labels": 1,
+            "source_dxf": "2017_67-103.dxf"
+          },
+          "I": {
+            "orientation": "X",
+            "observed_x_m": 40.0,
+            "n_labels": 1,
+            "source_dxf": "2017_67-103.dxf"
+          },
+          "I'": {
+            "orientation": "X",
+            "observed_x_m": 45.0,
+            "n_labels": 1,
+            "source_dxf": "2017_67-103.dxf"
+          },
+          "J": {
+            "orientation": "X",
+            "observed_x_m": 50.0,
+            "n_labels": 1,
+            "source_dxf": "2017_67-103.dxf"
+          }
+        }
+      },
+      "auxiliary_observations": {
+        "foundation": {
+          "1": {
+            "orientation": "Y",
+            "observed_y_m": -0.492,
+            "n_labels": 2,
+            "source_dxf": "2017_67-100.dxf"
+          },
+          "1''": {
+            "orientation": "Y",
+            "observed_y_m": 2.915,
+            "n_labels": 1,
+            "source_dxf": "2017_67-100.dxf"
+          },
+          "2": {
+            "orientation": "Y",
+            "observed_y_m": 7.915,
+            "n_labels": 2,
+            "source_dxf": "2017_67-100.dxf"
+          },
+          "2a": {
+            "orientation": "Y",
+            "observed_y_m": 12.86,
+            "n_labels": 1,
+            "source_dxf": "2017_67-100.dxf"
+          },
+          "3": {
+            "orientation": "Y",
+            "observed_y_m": 15.165,
+            "n_labels": 2,
+            "source_dxf": "2017_67-100.dxf"
+          },
+          "E": {
+            "orientation": "X",
+            "observed_x_m": 0.0,
+            "n_labels": 2,
+            "source_dxf": "2017_67-100.dxf"
+          },
+          "Ea": {
+            "orientation": "X",
+            "observed_x_m": 3.3,
+            "n_labels": 1,
+            "source_dxf": "2017_67-100.dxf"
+          },
+          "Eb": {
+            "orientation": "X",
+            "observed_x_m": 3.6,
+            "n_labels": 1,
+            "source_dxf": "2017_67-100.dxf"
+          },
+          "Ec": {
+            "orientation": "X",
+            "observed_x_m": 6.4,
+            "n_labels": 1,
+            "source_dxf": "2017_67-100.dxf"
+          },
+          "Ed": {
+            "orientation": "X",
+            "observed_x_m": 6.7,
+            "n_labels": 1,
+            "source_dxf": "2017_67-100.dxf"
+          },
+          "F": {
+            "orientation": "X",
+            "observed_x_m": 10.0,
+            "n_labels": 2,
+            "source_dxf": "2017_67-100.dxf"
+          },
+          "G": {
+            "orientation": "X",
+            "observed_x_m": 20.0,
+            "n_labels": 2,
+            "source_dxf": "2017_67-100.dxf"
+          },
+          "Ga": {
+            "orientation": "X",
+            "observed_x_m": 21.45,
+            "n_labels": 1,
+            "source_dxf": "2017_67-100.dxf"
+          },
+          "H": {
+            "orientation": "X",
+            "observed_x_m": 30.0,
+            "n_labels": 2,
+            "source_dxf": "2017_67-100.dxf"
+          },
+          "H'": {
+            "orientation": "X",
+            "observed_x_m": 34.477,
+            "n_labels": 1,
+            "source_dxf": "2017_67-100.dxf"
+          },
+          "H1": {
+            "orientation": "X",
+            "observed_x_m": 33.825,
+            "n_labels": 1,
+            "source_dxf": "2017_67-100.dxf"
+          },
+          "H2": {
+            "orientation": "X",
+            "observed_x_m": 38.825,
+            "n_labels": 1,
+            "source_dxf": "2017_67-100.dxf"
+          },
+          "I": {
+            "orientation": "X",
+            "observed_x_m": 40.0,
+            "n_labels": 2,
+            "source_dxf": "2017_67-100.dxf"
+          },
+          "I'": {
+            "orientation": "X",
+            "observed_x_m": 45.065,
+            "n_labels": 2,
+            "source_dxf": "2017_67-100.dxf"
+          },
+          "IA": {
+            "orientation": "X",
+            "observed_x_m": 42.6,
+            "n_labels": 1,
+            "source_dxf": "2017_67-100.dxf"
+          },
+          "IB": {
+            "orientation": "X",
+            "observed_x_m": 45.875,
+            "n_labels": 1,
+            "source_dxf": "2017_67-100.dxf"
+          }
+        }
+      }
+    },
+    "EDIFICIO_2": {
+      "floors": {
+        "S1": {
+          "1": {
+            "orientation": "Y",
+            "observed_y_m": -0.117,
+            "n_labels": 2,
+            "source_dxf": "2024_22-101.dxf"
+          },
+          "2": {
+            "orientation": "Y",
+            "observed_y_m": 8.783,
+            "n_labels": 2,
+            "source_dxf": "2024_22-101.dxf"
+          },
+          "3": {
+            "orientation": "Y",
+            "observed_y_m": 16.033,
+            "n_labels": 2,
+            "source_dxf": "2024_22-101.dxf"
+          },
+          "A": {
+            "orientation": "X",
+            "observed_x_m": -0.105,
+            "n_labels": 2,
+            "source_dxf": "2024_22-101.dxf"
+          },
+          "B": {
+            "orientation": "X",
+            "observed_x_m": 7.395,
+            "n_labels": 2,
+            "source_dxf": "2024_22-101.dxf"
+          },
+          "C": {
+            "orientation": "X",
+            "observed_x_m": 17.386,
+            "n_labels": 2,
+            "source_dxf": "2024_22-101.dxf"
+          },
+          "D": {
+            "orientation": "X",
+            "observed_x_m": 27.386,
+            "n_labels": 2,
+            "source_dxf": "2024_22-101.dxf"
+          }
+        },
+        "P1": {
+          "1": {
+            "orientation": "Y",
+            "observed_y_m": -0.117,
+            "n_labels": 2,
+            "source_dxf": "2024_22-101.dxf"
+          },
+          "2": {
+            "orientation": "Y",
+            "observed_y_m": 8.783,
+            "n_labels": 2,
+            "source_dxf": "2024_22-101.dxf"
+          },
+          "3": {
+            "orientation": "Y",
+            "observed_y_m": 16.033,
+            "n_labels": 2,
+            "source_dxf": "2024_22-101.dxf"
+          },
+          "A": {
+            "orientation": "X",
+            "observed_x_m": -0.105,
+            "n_labels": 2,
+            "source_dxf": "2024_22-101.dxf"
+          },
+          "B": {
+            "orientation": "X",
+            "observed_x_m": 7.395,
+            "n_labels": 2,
+            "source_dxf": "2024_22-101.dxf"
+          },
+          "C": {
+            "orientation": "X",
+            "observed_x_m": 17.386,
+            "n_labels": 2,
+            "source_dxf": "2024_22-101.dxf"
+          },
+          "D": {
+            "orientation": "X",
+            "observed_x_m": 27.386,
+            "n_labels": 2,
+            "source_dxf": "2024_22-101.dxf"
+          }
+        },
+        "P2": {
+          "1": {
+            "orientation": "Y",
+            "observed_y_m": -0.117,
+            "n_labels": 2,
+            "source_dxf": "2024_22-101.dxf"
+          },
+          "2": {
+            "orientation": "Y",
+            "observed_y_m": 8.783,
+            "n_labels": 2,
+            "source_dxf": "2024_22-101.dxf"
+          },
+          "3": {
+            "orientation": "Y",
+            "observed_y_m": 16.033,
+            "n_labels": 2,
+            "source_dxf": "2024_22-101.dxf"
+          },
+          "A": {
+            "orientation": "X",
+            "observed_x_m": -0.105,
+            "n_labels": 2,
+            "source_dxf": "2024_22-101.dxf"
+          },
+          "B": {
+            "orientation": "X",
+            "observed_x_m": 7.395,
+            "n_labels": 2,
+            "source_dxf": "2024_22-101.dxf"
+          },
+          "C": {
+            "orientation": "X",
+            "observed_x_m": 17.386,
+            "n_labels": 2,
+            "source_dxf": "2024_22-101.dxf"
+          },
+          "D": {
+            "orientation": "X",
+            "observed_x_m": 27.386,
+            "n_labels": 2,
+            "source_dxf": "2024_22-101.dxf"
+          }
+        },
+        "P3": {
+          "1": {
+            "orientation": "Y",
+            "observed_y_m": -0.117,
+            "n_labels": 2,
+            "source_dxf": "2024_22-101.dxf"
+          },
+          "2": {
+            "orientation": "Y",
+            "observed_y_m": 8.783,
+            "n_labels": 2,
+            "source_dxf": "2024_22-101.dxf"
+          },
+          "3": {
+            "orientation": "Y",
+            "observed_y_m": 16.033,
+            "n_labels": 2,
+            "source_dxf": "2024_22-101.dxf"
+          },
+          "A": {
+            "orientation": "X",
+            "observed_x_m": -0.105,
+            "n_labels": 2,
+            "source_dxf": "2024_22-101.dxf"
+          },
+          "B": {
+            "orientation": "X",
+            "observed_x_m": 7.395,
+            "n_labels": 2,
+            "source_dxf": "2024_22-101.dxf"
+          },
+          "C": {
+            "orientation": "X",
+            "observed_x_m": 17.386,
+            "n_labels": 2,
+            "source_dxf": "2024_22-101.dxf"
+          },
+          "D": {
+            "orientation": "X",
+            "observed_x_m": 27.386,
+            "n_labels": 2,
+            "source_dxf": "2024_22-101.dxf"
+          }
+        },
+        "P4": {
+          "1": {
+            "orientation": "Y",
+            "observed_y_m": -0.117,
+            "n_labels": 2,
+            "source_dxf": "2024_22-102.dxf"
+          },
+          "2": {
+            "orientation": "Y",
+            "observed_y_m": 8.783,
+            "n_labels": 2,
+            "source_dxf": "2024_22-102.dxf"
+          },
+          "3": {
+            "orientation": "Y",
+            "observed_y_m": 16.033,
+            "n_labels": 2,
+            "source_dxf": "2024_22-102.dxf"
+          },
+          "A": {
+            "orientation": "X",
+            "observed_x_m": -0.105,
+            "n_labels": 2,
+            "source_dxf": "2024_22-102.dxf"
+          },
+          "B": {
+            "orientation": "X",
+            "observed_x_m": 7.395,
+            "n_labels": 2,
+            "source_dxf": "2024_22-102.dxf"
+          },
+          "C": {
+            "orientation": "X",
+            "observed_x_m": 17.386,
+            "n_labels": 2,
+            "source_dxf": "2024_22-102.dxf"
+          },
+          "D": {
+            "orientation": "X",
+            "observed_x_m": 27.386,
+            "n_labels": 2,
+            "source_dxf": "2024_22-102.dxf"
+          }
+        }
+      },
+      "auxiliary_observations": {
+        "foundation": {
+          "1": {
+            "orientation": "Y",
+            "observed_y_m": -0.017,
+            "n_labels": 1,
+            "source_dxf": "2024_22-100.dxf"
+          },
+          "2": {
+            "orientation": "Y",
+            "observed_y_m": 8.883,
+            "n_labels": 1,
+            "source_dxf": "2024_22-100.dxf"
+          },
+          "3": {
+            "orientation": "Y",
+            "observed_y_m": 16.133,
+            "n_labels": 1,
+            "source_dxf": "2024_22-100.dxf"
+          },
+          "A": {
+            "orientation": "X",
+            "observed_x_m": -0.105,
+            "n_labels": 1,
+            "source_dxf": "2024_22-100.dxf"
+          },
+          "B": {
+            "orientation": "X",
+            "observed_x_m": 7.395,
+            "n_labels": 1,
+            "source_dxf": "2024_22-100.dxf"
+          },
+          "C": {
+            "orientation": "X",
+            "observed_x_m": 17.386,
+            "n_labels": 1,
+            "source_dxf": "2024_22-100.dxf"
+          },
+          "D": {
+            "orientation": "X",
+            "observed_x_m": 27.386,
+            "n_labels": 1,
+            "source_dxf": "2024_22-100.dxf"
+          }
+        }
+      }
+    }
+  },
+  "validation": {
+    "code": "AXIS_VERTICAL_ALIGNMENT",
+    "tolerance_m": 0.001,
+    "buildings": {
+      "EDIFICIO_1": {
+        "status": "PASS",
+        "issues": []
+      },
+      "EDIFICIO_2": {
+        "status": "PASS",
+        "issues": []
+      }
+    },
+    "status": "PASS"
+  }
+}

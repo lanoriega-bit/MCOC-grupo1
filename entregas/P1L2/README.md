@@ -13,6 +13,7 @@ Los planos CAD originales y DXF convertidos no se suben a GitHub. Se trabaja con
 | Carpeta | Contenido |
 | --- | --- |
 | `data/` | Datos trazables: ejes, niveles, reglas de extraccion, cargas preliminares y fuentes CAD |
+| `tools/` | Herramientas CAD/DXF especificas de P1L2 |
 | `opensees/` | Scripts Python para extraer modelo CAD y correr esqueleto OpenSees |
 | `unity_export/` | JSON preparado para viewer Unity/web |
 | `viewer/` | Viewer 3D interactivo del edificio |
@@ -27,15 +28,24 @@ Los planos CAD originales y DXF convertidos no se suben a GitHub. Se trabaja con
 | `data/levels_draft.json` | Niveles Z en metros |
 | `data/load_definitions_draft.json` | Cargas gravitacionales preliminares desde plano 700 |
 | `data/cad_sources.md` | Registro de DWG encontrados, conversion DXF y capas usadas |
+| `tools/convert_dwg_to_dxf.py` | Conversion local DWG->DXF con AutoCAD Core Console |
+| `tools/inspect_dxf.py` | Inspeccion rapida de capas/textos de DXF |
 | `opensees/extract_cad_model.py` | Extrae segmentos CAD por capas y genera el modelo 3D del edificio |
 | `opensees/building_gravity_skeleton.py` | Modelo OpenSees preliminar de gravedad para QA |
-| `unity_export/model_viewer.json` | Export para viewer Unity/web con colores y toggles |
+| `unity_export/model_viewer.json` | GOLDEN reference EDIFICIO_1; no modificar sin justificacion |
+| `unity_export/model_viewer_candidate.json` | EDIFICIO_1 regenerado/canonicalizado |
+| `unity_export/model_2_viewer.json` | EDIFICIO_2 desde DXF 2024_22 |
+| `unity_export/model_combined_viewer.json` | Modelo combinado EDIFICIO_1+EDIFICIO_2 por ejes |
 | `viewer/index.html` | Viewer web 3D interactivo tipo orbit/zoom para QA |
 | `edificio/datos/piso_01.json` | Extraccion estructurada inicial del Piso 1, separando Parte 1 y Parte 2 |
 | `edificio/validacion/piso_01_completo.svg` | Superposicion visual completa para revisar Piso 1 antes del 3D |
 | `edificio/validacion/piso_01_parte_1.svg` | Superposicion visual de Parte 1 (`2017_67`) |
 | `edificio/validacion/piso_01_parte_2.svg` | Superposicion visual de Parte 2 (`2024_22/LT2`) |
 | `edificio/issues/conflicts.json` | Comparacion Piso 1: correctos, faltantes, sobrantes y dudosos |
+
+## Regla de pisos
+
+El viewer debe contener exactamente cinco pisos reales: `S1`, `P1`, `P2`, `P3`, `P4`. Fundacion, radier, techo, cielo, losa superior y diafragmas son niveles/elementos auxiliares, no pisos adicionales.
 
 ## Ejes X preliminares
 
@@ -75,7 +85,7 @@ Todas las cotas entregadas por el usuario se interpretan en cm y se convierten a
 | `3` | `17.250` |
 | `3_prime` | `17.500` |
 
-## Niveles Z preliminares
+## Niveles Z preliminares historicos
 
 | Nivel | Z [m] |
 | --- | ---: |
@@ -146,10 +156,16 @@ Luego abrir en el navegador:
 http://localhost:8000/entregas/P1L2/viewer/
 ```
 
+Tambien se puede usar:
+
+```powershell
+entregas/P1L2/Abrir_Viewer_P1L2.bat
+```
+
 El viewer permite:
 
 1. Orbitar, acercar, alejar y hacer pan con controles tipo Google Earth.
-2. Activar/desactivar pisos: `base`, `1S`, `1`, `2`, `3`, `4`.
+2. Activar/desactivar pisos canonicos: `S1`, `P1`, `P2`, `P3`, `P4`.
 3. Activar/desactivar categorias: vigas, muros, pilares, apoyos, ejes, diafragmas y bordes de losa.
 4. Aislar un piso con el boton `solo`.
 5. Buscar un `elementTag`, por ejemplo `CAD_1_beam_0042`.

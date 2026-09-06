@@ -1,0 +1,89 @@
+{
+  "status": "PASS",
+  "check": "LUIS_REFERENCE_DIFF_REPLACES_GOLDEN_EQUALITY",
+  "luis_reference_files_modified": 0,
+  "corrected_model": "entregas/P1L2/unity_export/model_1_audited_corrected.json",
+  "combined_model": "entregas/P1L2/unity_export/model_combined_viewer.json",
+  "calce_removed_for_comparison": {
+    "dx_m": 27.491000000000003,
+    "dy_m": 0.0
+  },
+  "corrected_vs_combined": {
+    "solids": {
+      "status": "PASS",
+      "missing_count": 0,
+      "extra_count": 0,
+      "missing_sample": [],
+      "extra_sample": []
+    },
+    "segments": {
+      "status": "PASS",
+      "missing_count": 0,
+      "extra_count": 0,
+      "missing_sample": [],
+      "extra_sample": []
+    },
+    "labels": {
+      "status": "PASS",
+      "missing_count": 0,
+      "extra_count": 0,
+      "missing_sample": [],
+      "extra_sample": []
+    },
+    "diaphragms": {
+      "status": "PASS",
+      "missing_count": 0,
+      "extra_count": 0,
+      "missing_sample": [],
+      "extra_sample": []
+    }
+  },
+  "luis_vs_corrected": {
+    "solids": {
+      "status": "FAIL",
+      "missing_count": 22,
+      "extra_count": 0,
+      "missing_sample": [
+        "('S1', 'column', 'box', ('center', (34.477, 18.912, 1.98), 0.35, 0.35, 3.96))",
+        "('S1', 'column', 'box', ('center', (34.477, 23.625, 1.98), 0.35, 0.35, 3.96))",
+        "('S1', 'column', 'box', ('center', (34.477, 28.337, 1.98), 0.35, 0.35, 3.96))",
+        "('S1', 'column', 'box', ('center', (30.027, 18.843, 1.98), 0.35, 0.35, 3.96))",
+        "('S1', 'column', 'box', ('center', (30.027, 26.176, 1.98), 0.35, 0.35, 3.96))",
+        "('S1', 'column', 'box', ('center', (17.49, 20.452, 1.98), 0.35, 0.35, 3.96))",
+        "('S1', 'column', 'box', ('center', (10.0, 20.452, 1.98), 0.35, 0.35, 3.96))",
+        "('S1', 'column', 'box', ('center', (30.0, 20.451, 1.98), 0.35, 0.35, 3.96))",
+        "('S1', 'column', 'box', ('center', (20.0, 20.451, 1.98), 0.35, 0.35, 3.96))",
+        "('P1', 'column', 'box', ('center', (30.0, 20.451, 5.94), 0.35, 0.35, 3.96))"
+      ],
+      "extra_sample": []
+    },
+    "segments": {
+      "status": "PASS",
+      "missing_count": 0,
+      "extra_count": 0,
+      "missing_sample": [],
+      "extra_sample": []
+    },
+    "labels": {
+      "status": "PASS",
+      "missing_count": 0,
+      "extra_count": 0,
+      "missing_sample": [],
+      "extra_sample": []
+    },
+    "diaphragms": {
+      "status": "PASS",
+      "missing_count": 0,
+      "extra_count": 0,
+      "missing_sample": [],
+      "extra_sample": []
+    }
+  },
+  "documented_diff": {
+    "change_count": 22,
+    "removed_columns": 13,
+    "removed_supports": 9,
+    "matches_solid_diff": true
+  },
+  "errors": []
+}

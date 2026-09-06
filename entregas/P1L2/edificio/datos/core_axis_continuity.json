@@ -1,0 +1,195 @@
+{
+  "status": "PASS",
+  "check": "CORE_AXIS_CONTINUITY",
+  "method": "Identifica nucleo como bay de ejes y verifica presencia de muros en S1/P1/P2/P3/P4.",
+  "zones": {
+    "EDIFICIO_1_CORE_E_Ed_1pp_2a": {
+      "building": "EDIFICIO_1",
+      "axis_relation": "entre D/E(E transformado)-Ed y 1''-2a",
+      "bounds_m": [
+        27.491,
+        3.9,
+        34.191,
+        13.845
+      ],
+      "margin_m": 0.45,
+      "floors": {
+        "S1": {
+          "wall_count": 17,
+          "wall_center_bbox_m": [
+            27.191,
+            4.05,
+            34.391,
+            14.1
+          ],
+          "raw_wall_extent_m": [
+            27.141,
+            3.981,
+            34.391,
+            16.681
+          ],
+          "status": "PASS"
+        },
+        "P1": {
+          "wall_count": 14,
+          "wall_center_bbox_m": [
+            27.191,
+            3.75,
+            34.391,
+            13.95
+          ],
+          "raw_wall_extent_m": [
+            27.141,
+            3.75,
+            34.391,
+            15.8
+          ],
+          "status": "PASS"
+        },
+        "P2": {
+          "wall_count": 12,
+          "wall_center_bbox_m": [
+            30.466,
+            4.05,
+            34.391,
+            14.1
+          ],
+          "raw_wall_extent_m": [
+            27.141,
+            3.982,
+            34.391,
+            14.127
+          ],
+          "status": "PASS"
+        },
+        "P3": {
+          "wall_count": 12,
+          "wall_center_bbox_m": [
+            30.466,
+            4.05,
+            34.391,
+            14.1
+          ],
+          "raw_wall_extent_m": [
+            27.141,
+            3.982,
+            34.391,
+            14.127
+          ],
+          "status": "PASS"
+        },
+        "P4": {
+          "wall_count": 12,
+          "wall_center_bbox_m": [
+            30.466,
+            4.05,
+            34.391,
+            14.1
+          ],
+          "raw_wall_extent_m": [
+            27.141,
+            3.981,
+            34.391,
+            14.126
+          ],
+          "status": "PASS"
+        }
+      },
+      "status": "PASS"
+    },
+    "EDIFICIO_2_CORE_C_D_1_3": {
+      "building": "EDIFICIO_2",
+      "axis_relation": "entre C-D y 1-3",
+      "bounds_m": [
+        17.5,
+        0.0,
+        27.5,
+        16.15
+      ],
+      "margin_m": 0.45,
+      "floors": {
+        "S1": {
+          "wall_count": 8,
+          "wall_center_bbox_m": [
+            24.9,
+            3.0,
+            27.9,
+            12.526
+          ],
+          "raw_wall_extent_m": [
+            24.9,
+            0.351,
+            27.9,
+            16.501
+          ],
+          "status": "PASS"
+        },
+        "P1": {
+          "wall_count": 8,
+          "wall_center_bbox_m": [
+            24.9,
+            3.0,
+            27.9,
+            12.526
+          ],
+          "raw_wall_extent_m": [
+            24.9,
+            0.351,
+            27.9,
+            16.501
+          ],
+          "status": "PASS"
+        },
+        "P2": {
+          "wall_count": 8,
+          "wall_center_bbox_m": [
+            24.9,
+            3.0,
+            27.9,
+            12.526
+          ],
+          "raw_wall_extent_m": [
+            24.9,
+            0.351,
+            27.9,
+            16.501
+          ],
+          "status": "PASS"
+        },
+        "P3": {
+          "wall_count": 8,
+          "wall_center_bbox_m": [
+            24.9,
+            3.0,
+            27.9,
+            12.526
+          ],
+          "raw_wall_extent_m": [
+            24.9,
+            0.351,
+            27.9,
+            16.501
+          ],
+          "status": "PASS"
+        },
+        "P4": {
+          "wall_count": 8,
+          "wall_center_bbox_m": [
+            24.9,
+            3.0,
+            27.9,
+            12.526
+          ],
+          "raw_wall_extent_m": [
+            24.9,
+            3.0,
+            27.9,
+            16.501
+          ],
+          "status": "PASS"
+        }
+      },
+      "status": "PASS"
+    }
+  }
+}

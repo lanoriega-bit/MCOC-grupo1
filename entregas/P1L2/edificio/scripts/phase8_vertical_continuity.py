@@ -17,13 +17,15 @@ import os
 import sys
 from collections import Counter, defaultdict
 
+from model_contract import EXPECTED_FLOORS, is_auxiliary_level, normalize_floor_id
+
 REPO = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..", ".."))
 MASTER = os.path.join(REPO, "entregas", "P1L2", "edificio", "datos", "building_master.json")
 CANDIDATE = os.path.join(REPO, "entregas", "P1L2", "unity_export", "model_viewer_candidate.json")
 OUT = os.path.join(REPO, "entregas", "P1L2", "edificio", "validacion", "continuidad_vertical.md")
 
-FLOOR_SEQ = ["fundacion", "1S", "1", "2", "3", "4"]
-Z = {"fundacion": 0.0, "1S": 3.96, "1": 7.92, "2": 11.88, "3": 15.84, "4": 19.8}
+FLOOR_SEQ = list(EXPECTED_FLOORS)
+Z = {"S1": 3.96, "P1": 7.92, "P2": 11.88, "P3": 15.84, "P4": 19.8}
 STORY = 3.96
 TOL_XY = 0.35
 
@@ -55,7 +57,8 @@ def main():
     A = lines.append
     A("# Continuidad vertical de columnas")
     A("")
-    A(f"- Mapeo de pisos: {' -> '.join(FLOOR_SEQ)}")
+    A(f"- Mapeo de pisos reales: {' -> '.join(FLOOR_SEQ)}")
+    A("- Fundacion/radier se trata como FOUNDATION_LEVEL auxiliar, no como piso.")
     A(f"- Altura de entrepiso: {STORY} m")
     A(f"- Tolerancia XY: {TOL_XY} m")
     A("")
@@ -68,14 +71,16 @@ def main():
     issue_lines = []
     for rel in rels:
         pid = rel.get("id")
-        pisos = rel.get("pisos", [])
+        raw_pisos = rel.get("pisos", [])
+        pisos = [normalize_floor_id(p) for p in raw_pisos if normalize_floor_id(p)]
+        aux_pisos = [p for p in raw_pisos if is_auxiliary_level(p)]
         col_ids = rel.get("elementos", [])
         cont = rel.get("continuidad", "")
         cx, cy = rel.get("centro_promedio", [None, None])
         # verificar que los pisos declarados estan en secuencia
         orden = [FLOOR_SEQ.index(p) for p in pisos if p in FLOOR_SEQ]
         sort_ok = orden == sorted(orden)
-        continuos = len(pisos) == 6 and set(pisos) == set(FLOOR_SEQ)
+        continuos = len(pisos) == 5 and set(pisos) == set(FLOOR_SEQ)
 
         # verificar coherencia XY entre columnas consecutivas de la relacion
         xys = []
@@ -111,7 +116,8 @@ def main():
             estado = "REVISAR"
 
         mark = "OK" if (ok_xy and sort_ok and (continuos or contiguo)) else "REVISAR"
-        A(f"| {pid} | {';'.join(pisos)} | {cont} | {len(col_ids)} | "
+        piso_txt = ";".join(pisos) + ((" aux=" + ";".join(aux_pisos)) if aux_pisos else "")
+        A(f"| {pid} | {piso_txt} | {cont} | {len(col_ids)} | "
           f"{cx:.3f},{cy:.3f} | {mark} |")
         if mark == "REVISAR":
             reason = []
@@ -121,7 +127,7 @@ def main():
                 reason.append("hueco")
             if not ok_xy:
                 reason.append("xy_incoherente")
-            issues.append((pid, ";".join(pisos), cont, reason))
+            issues.append((pid, piso_txt, cont, reason))
 
     # columnas no cubiertas por ninguna relacion
     todas_col = [e["id"] for e in master["elementos"] if e["tipo"] == "columna" and e.get("modelable_3d")]
@@ -130,7 +136,7 @@ def main():
     A("")
     A("## Resumen")
     A("")
-    A(f"- Relaciones continuas Fundacion->Piso4: **{stats['continua_fundacion_a_4']}**")
+    A(f"- Relaciones continuas S1->P4: **{stats['continua_fundacion_a_4']}**")
     A(f"- Relaciones parciales contiguas: **{stats['parcial']}**")
     A(f"- Relaciones con hueco (soltura): **{stats['soltura_baja']}**")
     A(f"- Columnas modelables cubiertas por alguna relacion: **{len(stats['columnas_cubiertas'])}/{len(todas_col)}**")

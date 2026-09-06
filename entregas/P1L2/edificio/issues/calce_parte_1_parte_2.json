@@ -1,7 +1,7 @@
 {
-  "estado": "NEEDS_REVIEW",
+  "estado": "AXIS_CONFIRMED",
   "sistema_global": "Eje A-1 de Parte 2 / LT2 = (0, 0, 0)",
-  "referencia_principal": "columnas",
+  "referencia_principal": "ejes",
   "transformacion_candidata_parte_1_respecto_parte_2": {
     "traslacion_x_m": 27.491000000000003,
     "traslacion_y_m": 0.0,
@@ -13,7 +13,7 @@
     "traslacion_y_m": 0.0,
     "rotacion_grados": 0.0,
     "escala": 1.0,
-    "estado": "HIPOTESIS_NO_CONFIRMADA"
+    "estado": "AXIS_CONFIRMED"
   },
   "evidencia": [
     "En 2024_22-101 se identifican ejes A, B, C, C', D y D' en la planta LT2.",
@@ -157,9 +157,146 @@
     },
     "conclusion": "Controles no colineales en filas Y distintas: columnas en la interfaz confirman la alineacion X (residuo ~0.1 m) en la fila baja; los nucleos de muro adyacentes confirman la continuidad longitudinal Y (residuo de centrolinea ~0.118 m) en la banda media. Los residuos X entre nucleos opuestos de la linea de columnas reflejan nucleos de planta distintos, no un error de calce. CALCE_POSIBLE_NEEDS_REVIEW: requiere confirmacion final sobre planos generales."
   },
-  "faltante_para_confirmar": [
-    "Plano general con ambas etapas o referencia explicita D/E.",
-    "Verificacion manual de al menos dos puntos coincidentes no colineales entre Parte 1 y Parte 2.",
-    "Confirmar si Y=1 de Parte 2 coincide exactamente con Y=1 de Parte 1 o requiere traslacion transversal."
-  ]
+  "faltante_para_confirmar": [],
+  "evidencia_axis_calce": {
+    "status": "AXIS_CONFIRMED",
+    "check": "CALCE_A_D_E_AXIS_HYPOTHESIS",
+    "transform": {
+      "dx_m": 27.491000000000003,
+      "dy_m": 0.0,
+      "rotation_deg": 0.0,
+      "scale": 1.0
+    },
+    "residuals": {
+      "D_E_m": 0.009,
+      "Y_common_m": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0
+      },
+      "scale_residual": 0.0
+    },
+    "tolerances": {
+      "D_E_m": 0.02,
+      "Y_common_m": 0.001
+    },
+    "evidence": {
+      "axis_labels_and_lines": "ED2 D=27.500 m; ED1 E+dx=27.491 m; ejes Y 1/2/3 coinciden en 0/8.90/16.15; rotacion=0; escala=1.",
+      "plan_sources": "cad_sources.md identifica 2017_67 como planos estructurales actuales y 2024_22 como especialidades/calculo LT2 del mismo Edificio de Ingenieria; la secuencia de ejes A-D/E-J respalda continuidad de alas.",
+      "dimensions": {
+        "EDIFICIO_1": [
+          3.9,
+          8.9,
+          16.15,
+          50.0
+        ],
+        "EDIFICIO_2": [
+          7.5,
+          8.9,
+          10.0,
+          16.15
+        ]
+      },
+      "columns_near_interface": {
+        "EDIFICIO_2_D": {
+          "S1": 1,
+          "P1": 1,
+          "P2": 1,
+          "P3": 1,
+          "P4": 1
+        },
+        "EDIFICIO_1_E_transformed": {
+          "S1": 3,
+          "P1": 3,
+          "P2": 3,
+          "P3": 3,
+          "P4": 3
+        }
+      },
+      "linear_near_interface": {
+        "EDIFICIO_2_D": {
+          "S1": {
+            "wall": 4
+          },
+          "P1": {
+            "wall": 4
+          },
+          "P2": {
+            "wall": 4
+          },
+          "P3": {
+            "wall": 4
+          },
+          "P4": {
+            "wall": 4
+          }
+        },
+        "EDIFICIO_1_E_transformed": {
+          "S1": {
+            "beam": 4,
+            "wall": 14
+          },
+          "P1": {
+            "beam": 5,
+            "wall": 2
+          },
+          "P2": {
+            "beam": 6
+          },
+          "P3": {
+            "beam": 6
+          },
+          "P4": {
+            "beam": 6
+          }
+        }
+      },
+      "segments_near_interface": {
+        "EDIFICIO_2_D": {
+          "S1": {
+            "slab_edge": 9,
+            "axis": 11
+          },
+          "P1": {
+            "slab_edge": 7,
+            "axis": 6
+          },
+          "P2": {
+            "slab_edge": 7,
+            "axis": 6
+          },
+          "P3": {
+            "slab_edge": 7,
+            "axis": 6
+          },
+          "P4": {
+            "slab_edge": 3,
+            "axis": 7
+          }
+        },
+        "EDIFICIO_1_E_transformed": {
+          "S1": {
+            "axis": 4
+          },
+          "P1": {
+            "slab_edge": 3,
+            "axis": 2
+          },
+          "P2": {
+            "slab_edge": 4,
+            "axis": 1
+          },
+          "P3": {
+            "slab_edge": 4,
+            "axis": 1
+          },
+          "P4": {
+            "slab_edge": 4,
+            "axis": 1
+          }
+        }
+      }
+    },
+    "decision": "Se conserva dx=27.491 m; no se normaliza a 27.500 m. El residuo de 9 mm queda documentado como tolerancia CAD/extraccion hasta evidencia de cota que exija correccion exacta."
+  }
 }
