@@ -70,6 +70,18 @@ FLOOR_SOURCE_DXF = {
 }
 P2_CAVEAT = "CALIBRATION_CAVEAT_DO_NOT_USE_AS_DEFECT"
 
+VIEWER_META_KEYS = (
+    "viewer_id",
+    "id",
+    "human_id",
+    "elementTag",
+    "legacy_solidTag",
+    "floor",
+    "building",
+    "axis_location",
+    "location_description",
+)
+
 OUTBOARD_WINDOW = {
     "x_min": 34.0,
     "x_max": 68.5,
@@ -378,13 +390,35 @@ def source_tags(solid: dict[str, object]) -> list[str]:
     return tags
 
 
-def build_id_map(combined: dict[str, object]) -> dict[str, dict[str, object]]:
+def build_id_map(combined: dict[str, object], audited: dict[str, object] | None = None, previous: dict[str, object] | None = None) -> dict[str, dict[str, object]]:
     id_map = {}
     for solid in combined.get("solids", []):
         if solid.get("building") != "EDIFICIO_1":
             continue
         tag = str(solid.get("legacy_solidTag") or solid.get("solidTag") or solid.get("elementTag"))
         id_map[tag] = solid
+    if audited is None:
+        return id_map
+    previous_by_tag: dict[str, dict[str, object]] = {}
+    if previous:
+        for row in previous.get("columns", []) + previous.get("derived_supports", []):
+            tag = str(row.get("legacy_solidTag") or row.get("solidTag"))
+            previous_by_tag[tag] = row
+    for solid in audited.get("solids", []):
+        tag = str(solid.get("solidTag"))
+        if tag in id_map:
+            continue
+        enriched = copy.deepcopy(solid)
+        prior = previous_by_tag.get(tag) or {}
+        for key, value in prior.items():
+            if key in VIEWER_META_KEYS and value is not None:
+                enriched[key] = value
+        enriched.setdefault("axis_location", {})
+        if isinstance(enriched.get("axis_location"), dict) and not enriched["axis_location"].get("center") and prior.get("ejes_bay"):
+            enriched["axis_location"]["center"] = prior["ejes_bay"]
+        if not enriched.get("location_description") and prior.get("location_description"):
+            enriched["location_description"] = prior["location_description"]
+        id_map[tag] = enriched
     return id_map
 
 
@@ -405,13 +439,13 @@ def classify_column(evidence: dict[str, object]) -> tuple[str, str, list[str]]:
     if match_status(foundation_column, FOUNDATION_COLUMN_TOL_M):
         return "CONFIRMED_BY_SECTION_OR_DETAIL", "near foundation RLE-PILAR/pedestal evidence", ["foundation_column_match"]
 
-    if floor == "P2":
-        return "UNRESOLVED", P2_CAVEAT, [P2_CAVEAT]
-
     if outboard:
         reasons.append("outboard of confirmed Y3 axis")
         reasons.append("no same-floor RLE-PILAR match")
         reasons.append("no foundation RLE-PILAR/pedestal match")
+        if floor == "P2":
+            reasons.append(P2_CAVEAT)
+            return "UNSUPPORTED_VERTICAL_EXTENSION", "; ".join(reasons), ["outboard_no_same_floor_or_foundation_column", P2_CAVEAT]
         return "UNSUPPORTED_VERTICAL_EXTENSION", "; ".join(reasons), ["outboard_no_same_floor_or_foundation_column"]
 
     if match_status(foundation_element, FOUNDATION_ELEMENT_TOL_M) or match_status(same_floor_structure, STRONG_LINE_TOL_M):
@@ -422,11 +456,13 @@ def classify_column(evidence: dict[str, object]) -> tuple[str, str, list[str]]:
 
 def resolve_columns(
     luis: dict[str, object],
+    audited: dict[str, object],
     combined: dict[str, object],
     floor_extracts: dict[str, dict[str, object]],
     dxf_scan: dict[str, object],
+    previous: dict[str, object] | None = None,
 ) -> list[dict[str, object]]:
-    id_map = build_id_map(combined)
+    id_map = build_id_map(combined, audited, previous)
     rows = []
     for source_solid in luis.get("solids", []):
         if not is_inferred_column(source_solid):
@@ -705,7 +741,9 @@ def outboard_floor_interpretation(floor: str, outboard_column_symbols: list[dict
     if floor == "S1":
         return "No same-floor ED1 RLE-PILAR columns in the extracted S1 plan; outboard inferred columns are rejected where no independent column/pedestal evidence exists."
     if floor == "P2":
-        return "P2 has a known calibration caveat; inferred outboard columns remain unresolved unless direct relative/eje evidence is reviewed in the original drawing."
+        if direct_columns:
+            return f"P2 outboard columns resolved by same-floor RLE-PILAR evidence: {len(direct_columns)} direct outboard column(s); inferred G/H outboard stations have no same-floor column and are rejected (calibration caveat noted)."
+        return "P2 outboard inferred columns rejected: no same-floor outboard RLE-PILAR evidence (calibration caveat noted)."
     if nonmodelable:
         return f"Outboard column symbols include {len(nonmodelable)} non-modelable/detail items; these are additional sector review findings and are not removed by the inferred-column correction."
     if direct_columns and not unsupported:
@@ -721,7 +759,7 @@ def top_geometry_findings(column_rows: list[dict[str, object]], support_rows: li
     outboard_rejected = [row for row in column_rows if row["classification"] == "UNSUPPORTED_VERTICAL_EXTENSION" and row["Y"] > OUTBOARD_LIMIT_Y_M]
     s1_rejected = [row for row in outboard_rejected if row["piso"] == "S1"]
     derived_invalid = [row for row in support_rows if row["classification"] == "INVALID_DERIVED_ELEMENT"]
-    p2_unresolved = [row for row in column_rows if row["piso"] == "P2" and row["Y"] > OUTBOARD_LIMIT_Y_M and row["classification"] == "UNRESOLVED"]
+    p2_rejected = [row for row in column_rows if row["piso"] == "P2" and row["Y"] > OUTBOARD_LIMIT_Y_M and row["classification"] == "UNSUPPORTED_VERTICAL_EXTENSION"]
     detail_imports: list[str] = []
     if outboard:
         for floor, floor_data in outboard.get("by_floor", {}).items():
@@ -772,10 +810,10 @@ def top_geometry_findings(column_rows: list[dict[str, object]], support_rows: li
         },
         {
             "rank": 5,
-            "code": "P2_OUTBOARD_CALIBRATION_BLOCKER",
-            "impact": "medium",
-            "summary": "P2 outboard inferred columns are not corrected automatically because of the known calibration caveat.",
-            "affected_ids": [row["id"] for row in p2_unresolved],
+            "code": "P2_OUTBOARD_CALIBRATION_APPLIED_TO_REJECTION",
+            "impact": "info",
+            "summary": "P2 outboard G/H inferred columns rejected using the same floor RLE-PILAR evidence rule; the calibration caveat is retained as a Y-registration note, not as a blocker.",
+            "affected_ids": [row["id"] for row in p2_rejected],
         },
     ]
     return [finding for finding in findings if finding.get("affected_ids") or finding.get("affected_supports")]
@@ -852,7 +890,7 @@ def write_resolution_markdown(report: dict[str, object]) -> None:
         ftext = "none" if not fcol else f"{fcol['id']} ({fcol['distance_m']} m)"
         stext = "none" if not scol else f"{scol['id']} ({scol['distance_m']} m)"
         lines.append(f"| {row['id']} | {row['X']} | {row['Y']} | {row['confidence_original']} | {row['classification']} | {ftext} | {stext} | {row['reason']} |")
-    lines.extend(["", "## Caveats", "P2 retains `CALIBRATION_CAVEAT_DO_NOT_USE_AS_DEFECT`."])
+    lines.extend(["", "## Caveats", "P2 outboard columns are resolved with the same same-floor RLE-PILAR evidence rule as other floors; P2 retains `CALIBRATION_CAVEAT_DO_NOT_USE_AS_DEFECT` as a calibration-registration note for Y placement, not as a classification blocker."])
     lines.append(report["dxf_availability"]["note"])
     OUT_MD.parent.mkdir(parents=True, exist_ok=True)
     OUT_MD.write_text("\n".join(lines) + "\n", encoding="utf-8")
@@ -978,11 +1016,12 @@ def main() -> int:
     luis = load(LUIS_MODEL)
     audited = load(AUDITED_MODEL)
     combined = load(COMBINED_MODEL)
+    previous = json.loads(OUT_JSON.read_text(encoding="utf-8")) if OUT_JSON.exists() else None
     floor_extracts = load_floor_extracts()
     dxf_status = dxf_availability(floor_extracts)
     dxf_scan = direct_dxf_region_scan(dxf_status)
 
-    column_rows = resolve_columns(luis, combined, floor_extracts, dxf_scan)
+    column_rows = resolve_columns(luis, audited, combined, floor_extracts, dxf_scan, previous)
     support_rows = support_resolutions(audited, column_rows)
     corrected, changes = corrected_model(audited, column_rows, support_rows, combined)
     overlays = make_overlays(floor_extracts, combined, column_rows)

@@ -10,15 +10,15 @@ Direct S1 DXF `RLE-PILAR` entities inside region: `0`
 | --- | ---: |
 | CONFIRMED_BY_PLAN_NOTE | 3 |
 | LIKELY_CORRECT | 16 |
-| UNRESOLVED | 29 |
-| UNSUPPORTED_VERTICAL_EXTENSION | 13 |
+| UNRESOLVED | 27 |
+| UNSUPPORTED_VERTICAL_EXTENSION | 15 |
 
 ## Resolution Groups
 | Group | Count |
 | --- | ---: |
 | CONFIRMED_CORRECT | 3 |
-| CONFIRMED_WRONG_AND_CORRECTED | 13 |
-| UNRESOLVED_REQUIRES_REVIEW | 45 |
+| CONFIRMED_WRONG_AND_CORRECTED | 15 |
+| UNRESOLVED_REQUIRES_REVIEW | 43 |
 
 ## Supports
 | Classification | Count |
@@ -29,32 +29,32 @@ Direct S1 DXF `RLE-PILAR` entities inside region: `0`
 ## TOP_GEOMETRY_FINDINGS
 | Rank | Code | Impact | Affected |
 | ---: | --- | --- | --- |
-| 1 | OUTBOARD_ROOM_FALSE_VERTICAL_EXTENSION | high | E1-S1-C-018, E1-S1-C-020, E1-S1-C-013, E1-S1-C-017, E1-S1-C-007, E1-S1-C-009, E1-S1-C-021, E1-S1-C-019, E1-S1-C-022, E1-P1-C-013, E1-P1-C-017, E1-P3-C-010, E1-P3-C-014 |
+| 1 | OUTBOARD_ROOM_FALSE_VERTICAL_EXTENSION | high | E1-S1-C-018, E1-S1-C-020, E1-S1-C-013, E1-S1-C-017, E1-S1-C-007, E1-S1-C-009, E1-S1-C-021, E1-S1-C-019, E1-S1-C-022, E1-P1-C-013, E1-P1-C-017, E1-P2-C-013, E1-P2-C-017, E1-P3-C-010, E1-P3-C-014 |
 | 2 | S1_OUTBOARD_INFERRED_COLUMNS_REJECTED | high | E1-S1-C-018, E1-S1-C-020, E1-S1-C-013, E1-S1-C-017, E1-S1-C-007, E1-S1-C-009, E1-S1-C-021, E1-S1-C-019, E1-S1-C-022 |
 | 3 | DERIVED_SUPPORTS_FROM_REJECTED_COLUMNS | high | SOL_base_support_0079, SOL_base_support_0080, SOL_base_support_0081, SOL_base_support_0082, SOL_base_support_0083, SOL_base_support_0084, SOL_base_support_0085, SOL_base_support_0090, SOL_base_support_0091 |
 | 4 | OUTBOARD_DETAIL_SYMBOLS_IMPORTED_AS_COLUMNS_REVIEW | medium | P1:E1-P1-C-021 from C_P1_01_0020, P1:E1-P1-C-022 from C_P1_01_0021, P1:E1-P1-C-019 from C_P1_01_0023 |
-| 5 | P2_OUTBOARD_CALIBRATION_BLOCKER | medium | E1-P2-C-013, E1-P2-C-017 |
+| 5 | P2_OUTBOARD_CALIBRATION_APPLIED_TO_REJECTION | info | E1-P2-C-013, E1-P2-C-017 |
 
 ## Priority Outboard Columns
 | ID | Floor | X | Y | Confidence | Classification | Reason |
 | --- | --- | ---: | ---: | --- | --- | --- |
-| E1-S1-C-018 | S1 | 57.518 | 18.843 | inferred_from_floor_1 | UNSUPPORTED_VERTICAL_EXTENSION | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
-| E1-S1-C-020 | S1 | 61.968 | 18.912 | inferred_from_floor_1 | UNSUPPORTED_VERTICAL_EXTENSION | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
-| E1-S1-C-013 | S1 | 47.491 | 20.451 | inferred_from_above_1 | UNSUPPORTED_VERTICAL_EXTENSION | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
-| E1-S1-C-017 | S1 | 57.491 | 20.451 | inferred_from_above_1 | UNSUPPORTED_VERTICAL_EXTENSION | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
-| E1-S1-C-007 | S1 | 37.491 | 20.452 | inferred_from_above_1 | UNSUPPORTED_VERTICAL_EXTENSION | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
-| E1-S1-C-009 | S1 | 44.981 | 20.452 | inferred_from_above_1 | UNSUPPORTED_VERTICAL_EXTENSION | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
-| E1-S1-C-021 | S1 | 61.968 | 23.625 | inferred_from_floor_1 | UNSUPPORTED_VERTICAL_EXTENSION | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
-| E1-S1-C-019 | S1 | 57.518 | 26.176 | inferred_from_floor_1 | UNSUPPORTED_VERTICAL_EXTENSION | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
-| E1-S1-C-022 | S1 | 61.968 | 28.337 | inferred_from_floor_1 | UNSUPPORTED_VERTICAL_EXTENSION | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
-| E1-P1-C-013 | P1 | 47.491 | 20.451 | inferred_from_above_2 | UNSUPPORTED_VERTICAL_EXTENSION | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
-| E1-P1-C-017 | P1 | 57.491 | 20.451 | inferred_from_above_2 | UNSUPPORTED_VERTICAL_EXTENSION | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
+| E1-S1-C-018 | S1 | 30.027 | 18.843 | inferred_from_floor_1 | UNSUPPORTED_VERTICAL_EXTENSION | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
+| E1-S1-C-020 | S1 | 34.477 | 18.912 | inferred_from_floor_1 | UNSUPPORTED_VERTICAL_EXTENSION | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
+| E1-S1-C-013 | S1 | 20.0 | 20.451 | inferred_from_above_1 | UNSUPPORTED_VERTICAL_EXTENSION | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
+| E1-S1-C-017 | S1 | 30.0 | 20.451 | inferred_from_above_1 | UNSUPPORTED_VERTICAL_EXTENSION | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
+| E1-S1-C-007 | S1 | 10.0 | 20.452 | inferred_from_above_1 | UNSUPPORTED_VERTICAL_EXTENSION | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
+| E1-S1-C-009 | S1 | 17.49 | 20.452 | inferred_from_above_1 | UNSUPPORTED_VERTICAL_EXTENSION | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
+| E1-S1-C-021 | S1 | 34.477 | 23.625 | inferred_from_floor_1 | UNSUPPORTED_VERTICAL_EXTENSION | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
+| E1-S1-C-019 | S1 | 30.027 | 26.176 | inferred_from_floor_1 | UNSUPPORTED_VERTICAL_EXTENSION | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
+| E1-S1-C-022 | S1 | 34.477 | 28.337 | inferred_from_floor_1 | UNSUPPORTED_VERTICAL_EXTENSION | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
+| E1-P1-C-013 | P1 | 20.0 | 20.451 | inferred_from_above_2 | UNSUPPORTED_VERTICAL_EXTENSION | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
+| E1-P1-C-017 | P1 | 30.0 | 20.451 | inferred_from_above_2 | UNSUPPORTED_VERTICAL_EXTENSION | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
 | E1-P1-C-007 | P1 | 37.491 | 20.452 | inferred_from_above_2 | CONFIRMED_BY_PLAN_NOTE | near same-floor column label/note |
 | E1-P1-C-009 | P1 | 44.981 | 20.452 | inferred_from_above_2 | CONFIRMED_BY_PLAN_NOTE | near same-floor column label/note |
-| E1-P2-C-013 | P2 | 47.491 | 20.451 | inferred_from_above_3 | UNRESOLVED | CALIBRATION_CAVEAT_DO_NOT_USE_AS_DEFECT |
-| E1-P2-C-017 | P2 | 57.491 | 20.451 | inferred_from_above_3 | UNRESOLVED | CALIBRATION_CAVEAT_DO_NOT_USE_AS_DEFECT |
-| E1-P3-C-010 | P3 | 47.491 | 20.451 | inferred_from_above_4 | UNSUPPORTED_VERTICAL_EXTENSION | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
-| E1-P3-C-014 | P3 | 57.491 | 20.451 | inferred_from_above_4 | UNSUPPORTED_VERTICAL_EXTENSION | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
+| E1-P2-C-013 | P2 | 47.491 | 20.451 | inferred_from_above_3 | UNSUPPORTED_VERTICAL_EXTENSION | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match; CALIBRATION_CAVEAT_DO_NOT_USE_AS_DEFECT |
+| E1-P2-C-017 | P2 | 57.491 | 20.451 | inferred_from_above_3 | UNSUPPORTED_VERTICAL_EXTENSION | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match; CALIBRATION_CAVEAT_DO_NOT_USE_AS_DEFECT |
+| E1-P3-C-010 | P3 | 20.0 | 20.451 | inferred_from_above_4 | UNSUPPORTED_VERTICAL_EXTENSION | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
+| E1-P3-C-014 | P3 | 30.0 | 20.451 | inferred_from_above_4 | UNSUPPORTED_VERTICAL_EXTENSION | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
 
 ## S1 Inferred Columns
 | ID | X | Y | Confidence | Classification | Nearest foundation column | Nearest S1 column | Reason |
@@ -84,16 +84,16 @@ Direct S1 DXF `RLE-PILAR` entities inside region: `0`
 | E1-S1-C-034 | 77.391 | 16.331 | inferred_from_above_1 | UNRESOLVED | C_P1_FUNDACION_0005 (7.493 m) | none | no primary same-floor/foundation column evidence in available extracts |
 | E1-S1-C-008 | 44.981 | 16.332 | inferred_from_above_1 | LIKELY_CORRECT | C_P1_FUNDACION_0001 (20.32 m) | none | near same-floor structural line and/or foundation element, but no direct column symbol |
 | E1-S1-C-025 | 67.67 | 16.352 | inferred_from_floor_1 | LIKELY_CORRECT | C_P1_FUNDACION_0005 (2.228 m) | none | near same-floor structural line and/or foundation element, but no direct column symbol |
-| E1-S1-C-018 | 57.518 | 18.843 | inferred_from_floor_1 | UNSUPPORTED_VERTICAL_EXTENSION | C_P1_FUNDACION_0001 (8.073 m) | none | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
-| E1-S1-C-020 | 61.968 | 18.912 | inferred_from_floor_1 | UNSUPPORTED_VERTICAL_EXTENSION | C_P1_FUNDACION_0001 (4.005 m) | none | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
-| E1-S1-C-013 | 47.491 | 20.451 | inferred_from_above_1 | UNSUPPORTED_VERTICAL_EXTENSION | C_P1_FUNDACION_0001 (18.201 m) | none | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
-| E1-S1-C-017 | 57.491 | 20.451 | inferred_from_above_1 | UNSUPPORTED_VERTICAL_EXTENSION | C_P1_FUNDACION_0001 (8.667 m) | none | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
-| E1-S1-C-007 | 37.491 | 20.452 | inferred_from_above_1 | UNSUPPORTED_VERTICAL_EXTENSION | C_P1_FUNDACION_0001 (28.061 m) | none | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
-| E1-S1-C-009 | 44.981 | 20.452 | inferred_from_above_1 | UNSUPPORTED_VERTICAL_EXTENSION | C_P1_FUNDACION_0001 (20.663 m) | none | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
-| E1-S1-C-021 | 61.968 | 23.625 | inferred_from_floor_1 | UNSUPPORTED_VERTICAL_EXTENSION | C_P1_FUNDACION_0001 (7.695 m) | none | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
-| E1-S1-C-019 | 57.518 | 26.176 | inferred_from_floor_1 | UNSUPPORTED_VERTICAL_EXTENSION | C_P1_FUNDACION_0001 (12.27 m) | none | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
-| E1-S1-C-022 | 61.968 | 28.337 | inferred_from_floor_1 | UNSUPPORTED_VERTICAL_EXTENSION | C_P1_FUNDACION_0001 (12.116 m) | none | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
+| E1-S1-C-018 | 30.027 | 18.843 | inferred_from_floor_1 | UNSUPPORTED_VERTICAL_EXTENSION | C_P1_FUNDACION_0001 (35.337 m) | none | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
+| E1-S1-C-020 | 34.477 | 18.912 | inferred_from_floor_1 | UNSUPPORTED_VERTICAL_EXTENSION | C_P1_FUNDACION_0001 (30.901 m) | none | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
+| E1-S1-C-013 | 20.0 | 20.451 | inferred_from_above_1 | UNSUPPORTED_VERTICAL_EXTENSION | C_P1_FUNDACION_0001 (45.454 m) | none | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
+| E1-S1-C-017 | 30.0 | 20.451 | inferred_from_above_1 | UNSUPPORTED_VERTICAL_EXTENSION | C_P1_FUNDACION_0001 (35.498 m) | none | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
+| E1-S1-C-007 | 10.0 | 20.452 | inferred_from_above_1 | UNSUPPORTED_VERTICAL_EXTENSION | C_P1_FUNDACION_0001 (55.426 m) | none | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
+| E1-S1-C-009 | 17.49 | 20.452 | inferred_from_above_1 | UNSUPPORTED_VERTICAL_EXTENSION | C_P1_FUNDACION_0001 (47.956 m) | none | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
+| E1-S1-C-021 | 34.477 | 23.625 | inferred_from_floor_1 | UNSUPPORTED_VERTICAL_EXTENSION | C_P1_FUNDACION_0001 (31.592 m) | none | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
+| E1-S1-C-019 | 30.027 | 26.176 | inferred_from_floor_1 | UNSUPPORTED_VERTICAL_EXTENSION | C_P1_FUNDACION_0001 (36.525 m) | none | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
+| E1-S1-C-022 | 34.477 | 28.337 | inferred_from_floor_1 | UNSUPPORTED_VERTICAL_EXTENSION | C_P1_FUNDACION_0001 (32.949 m) | none | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match |
 
 ## Caveats
-P2 retains `CALIBRATION_CAVEAT_DO_NOT_USE_AS_DEFECT`.
+P2 outboard columns are resolved with the same same-floor RLE-PILAR evidence rule as other floors; P2 retains `CALIBRATION_CAVEAT_DO_NOT_USE_AS_DEFECT` as a calibration-registration note for Y placement, not as a classification blocker.
 Direct DXF files are available by exact configured path; this script still records the DXF-derived JSON evidence used for automated matching.

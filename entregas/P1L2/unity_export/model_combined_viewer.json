@@ -199551,7 +199551,7 @@
       "audit_resolution": {
         "classification": "UNRESOLVED",
         "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-        "reason": "CALIBRATION_CAVEAT_DO_NOT_USE_AS_DEFECT"
+        "reason": "no primary same-floor/foundation column evidence in available extracts"
       },
       "source_floor": "2",
       "level_kind": "FLOOR",
@@ -199654,7 +199654,7 @@
       "audit_resolution": {
         "classification": "UNRESOLVED",
         "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-        "reason": "CALIBRATION_CAVEAT_DO_NOT_USE_AS_DEFECT"
+        "reason": "no primary same-floor/foundation column evidence in available extracts"
       },
       "source_floor": "2",
       "level_kind": "FLOOR",
@@ -199757,7 +199757,7 @@
       "audit_resolution": {
         "classification": "UNRESOLVED",
         "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-        "reason": "CALIBRATION_CAVEAT_DO_NOT_USE_AS_DEFECT"
+        "reason": "no primary same-floor/foundation column evidence in available extracts"
       },
       "source_floor": "2",
       "level_kind": "FLOOR",
@@ -199819,220 +199819,6 @@
       "section_confidence": "CAD_GEOMETRY"
     },
     {
-      "solidTag": "SOL_2_column_0025",
-      "category": "column",
-      "kind": "box",
-      "floor": "P2",
-      "center": [
-        57.49088063462794,
-        20.45148765745718,
-        9.9
-      ],
-      "width_m": 0.35,
-      "depth_m": 0.35,
-      "height_m": 3.960000000000001,
-      "length_m": 3.960000000000001,
-      "source_layer": "RLE-PILAR",
-      "source_dxf": "2017_67-103.dxf",
-      "sourceTags": [
-        "CAD_4_column_plan_0256",
-        "CAD_4_column_plan_0257",
-        "CAD_4_column_plan_0258",
-        "CAD_4_column_plan_0259",
-        "CAD_4_column_plan_0260",
-        "CAD_4_column_plan_0261",
-        "CAD_4_column_plan_0262",
-        "CAD_4_column_plan_0263"
-      ],
-      "confidence": "inferred_from_above_3",
-      "audit": {
-        "status": "REVIEW_HIGH",
-        "reference_status": "PROVISIONAL_GEOMETRY_REVIEW",
-        "findings": [
-          {
-            "finding_id": "AUD-LUIS-0049",
-            "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
-            "severity": "HIGH"
-          }
-        ]
-      },
-      "preserved_viewer_id": "E1-P2-C-017",
-      "audit_resolution": {
-        "classification": "UNRESOLVED",
-        "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-        "reason": "CALIBRATION_CAVEAT_DO_NOT_USE_AS_DEFECT"
-      },
-      "source_floor": "2",
-      "level_kind": "FLOOR",
-      "building": "EDIFICIO_1",
-      "id": "E1-P2-C-017",
-      "human_id": "E1-P2-C-017",
-      "elementTag": "SOL_2_column_0025",
-      "legacy_solidTag": "SOL_2_column_0025",
-      "model_z_m": 9.9,
-      "source_elevation_m": 9.9,
-      "source_sheet": "2017_67-103",
-      "coordinates": {
-        "center": [
-          57.491,
-          20.451,
-          9.9
-        ],
-        "z_bottom_m": 7.92,
-        "z_top_m": 11.88
-      },
-      "axis_x": "H",
-      "axis_y": null,
-      "axis_location": {
-        "center": {
-          "X": {
-            "axis": "H",
-            "axis_coord_m": 57.491,
-            "offset_m": 0.0,
-            "abs_offset_m": 0.0,
-            "status": "ON_AXIS",
-            "relation": "H",
-            "span": null
-          },
-          "Y": {
-            "axis": "3",
-            "axis_coord_m": 16.15,
-            "offset_m": 4.301,
-            "abs_offset_m": 4.301,
-            "status": "BETWEEN_OR_OFFSET",
-            "relation": "> 3",
-            "span": [
-              "3",
-              null
-            ],
-            "lower_axis_coord_m": 16.15
-          }
-        }
-      },
-      "location_description": "EDIFICIO_1 / P2 / Eje X H / Y > 3",
-      "axis_x_matrix": "H",
-      "axis_y_matrix": "Y=20.45 near 3 +4.30m",
-      "axis_status": "OFF_AXIS_REFERENCE",
-      "position_classification": "OFF_AXIS_LEGITIMATE",
-      "position_classification_confidence": "NEEDS_REVIEW_GEOMETRY_ONLY",
-      "position_classification_reason": "Columna alineada a eje X real y repetida en posicion Y exterior al eje 3; no hay etiqueta de eje Y para promoverla.",
-      "material": "UNKNOWN",
-      "material_source": "UNKNOWN",
-      "material_confidence": "UNKNOWN",
-      "section_width_m": 0.35,
-      "section_height_m": 0.35,
-      "section_depth_m": 0.35,
-      "section_source": "CAD_GEOMETRY_RLE-PILAR",
-      "section_confidence": "CAD_GEOMETRY"
-    },
-    {
-      "solidTag": "SOL_2_column_0026",
-      "category": "column",
-      "kind": "box",
-      "floor": "P2",
-      "center": [
-        47.490880634505295,
-        20.451487657457143,
-        9.9
-      ],
-      "width_m": 0.35,
-      "depth_m": 0.35,
-      "height_m": 3.960000000000001,
-      "length_m": 3.960000000000001,
-      "source_layer": "RLE-PILAR",
-      "source_dxf": "2017_67-103.dxf",
-      "sourceTags": [
-        "CAD_4_column_plan_0264",
-        "CAD_4_column_plan_0265",
-        "CAD_4_column_plan_0266",
-        "CAD_4_column_plan_0267",
-        "CAD_4_column_plan_0268",
-        "CAD_4_column_plan_0269",
-        "CAD_4_column_plan_0270",
-        "CAD_4_column_plan_0271"
-      ],
-      "confidence": "inferred_from_above_3",
-      "audit": {
-        "status": "REVIEW_HIGH",
-        "reference_status": "PROVISIONAL_GEOMETRY_REVIEW",
-        "findings": [
-          {
-            "finding_id": "AUD-LUIS-0050",
-            "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
-            "severity": "HIGH"
-          }
-        ]
-      },
-      "preserved_viewer_id": "E1-P2-C-013",
-      "audit_resolution": {
-        "classification": "UNRESOLVED",
-        "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-        "reason": "CALIBRATION_CAVEAT_DO_NOT_USE_AS_DEFECT"
-      },
-      "source_floor": "2",
-      "level_kind": "FLOOR",
-      "building": "EDIFICIO_1",
-      "id": "E1-P2-C-013",
-      "human_id": "E1-P2-C-013",
-      "elementTag": "SOL_2_column_0026",
-      "legacy_solidTag": "SOL_2_column_0026",
-      "model_z_m": 9.9,
-      "source_elevation_m": 9.9,
-      "source_sheet": "2017_67-103",
-      "coordinates": {
-        "center": [
-          47.491,
-          20.451,
-          9.9
-        ],
-        "z_bottom_m": 7.92,
-        "z_top_m": 11.88
-      },
-      "axis_x": "G",
-      "axis_y": null,
-      "axis_location": {
-        "center": {
-          "X": {
-            "axis": "G",
-            "axis_coord_m": 47.491,
-            "offset_m": 0.0,
-            "abs_offset_m": 0.0,
-            "status": "ON_AXIS",
-            "relation": "G",
-            "span": null
-          },
-          "Y": {
-            "axis": "3",
-            "axis_coord_m": 16.15,
-            "offset_m": 4.301,
-            "abs_offset_m": 4.301,
-            "status": "BETWEEN_OR_OFFSET",
-            "relation": "> 3",
-            "span": [
-              "3",
-              null
-            ],
-            "lower_axis_coord_m": 16.15
-          }
-        }
-      },
-      "location_description": "EDIFICIO_1 / P2 / Eje X G / Y > 3",
-      "axis_x_matrix": "G",
-      "axis_y_matrix": "Y=20.45 near 3 +4.30m",
-      "axis_status": "OFF_AXIS_REFERENCE",
-      "position_classification": "OFF_AXIS_LEGITIMATE",
-      "position_classification_confidence": "NEEDS_REVIEW_GEOMETRY_ONLY",
-      "position_classification_reason": "Columna alineada a eje X real y repetida en posicion Y exterior al eje 3; no hay etiqueta de eje Y para promoverla.",
-      "material": "UNKNOWN",
-      "material_source": "UNKNOWN",
-      "material_confidence": "UNKNOWN",
-      "section_width_m": 0.35,
-      "section_height_m": 0.35,
-      "section_depth_m": 0.35,
-      "section_source": "CAD_GEOMETRY_RLE-PILAR",
-      "section_confidence": "CAD_GEOMETRY"
-    },
-    {
       "solidTag": "SOL_2_column_0027",
       "category": "column",
       "kind": "box",
@@ -200074,7 +199860,7 @@
       "audit_resolution": {
         "classification": "UNRESOLVED",
         "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-        "reason": "CALIBRATION_CAVEAT_DO_NOT_USE_AS_DEFECT"
+        "reason": "no primary same-floor/foundation column evidence in available extracts"
       },
       "source_floor": "2",
       "level_kind": "FLOOR",
@@ -200182,7 +199968,7 @@
       "audit_resolution": {
         "classification": "UNRESOLVED",
         "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-        "reason": "CALIBRATION_CAVEAT_DO_NOT_USE_AS_DEFECT"
+        "reason": "no primary same-floor/foundation column evidence in available extracts"
       },
       "source_floor": "2",
       "level_kind": "FLOOR",
@@ -200290,7 +200076,7 @@
       "audit_resolution": {
         "classification": "UNRESOLVED",
         "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-        "reason": "CALIBRATION_CAVEAT_DO_NOT_USE_AS_DEFECT"
+        "reason": "no primary same-floor/foundation column evidence in available extracts"
       },
       "source_floor": "2",
       "level_kind": "FLOOR",

@@ -3,7 +3,7 @@
 - Estado: **SUPERSEDED_BY_LUIS_REFERENCE_DIFF**
 - Estado comparacion geometrica legacy: **FAIL**
 - Transformacion removida: dx=27.491000000000003 m, dy=0.0 m
-- Solids: FAIL missing=22 extra=0
+- Solids: FAIL missing=24 extra=0
 - Segments: PASS missing=0 extra=0
 - Criterio obligatorio: **False**
 
@@ -38,7 +38,7 @@
 - P1:slab: 1
 - P1:wall: 38
 - P2:beam: 112
-- P2:column: 29
+- P2:column: 27
 - P2:slab: 1
 - P2:wall: 12
 - P3:beam: 124

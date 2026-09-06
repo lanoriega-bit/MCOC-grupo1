@@ -176,13 +176,13 @@
   },
   "classification_counts": {
     "LIKELY_CORRECT": 16,
-    "UNRESOLVED": 29,
-    "UNSUPPORTED_VERTICAL_EXTENSION": 13,
+    "UNRESOLVED": 27,
+    "UNSUPPORTED_VERTICAL_EXTENSION": 15,
     "CONFIRMED_BY_PLAN_NOTE": 3
   },
   "resolution_groups": {
-    "UNRESOLVED_REQUIRES_REVIEW": 45,
-    "CONFIRMED_WRONG_AND_CORRECTED": 13,
+    "UNRESOLVED_REQUIRES_REVIEW": 43,
+    "CONFIRMED_WRONG_AND_CORRECTED": 15,
     "CONFIRMED_CORRECT": 3
   },
   "support_classification_counts": {
@@ -191,7 +191,7 @@
   },
   "columns_total_resolved": 61,
   "supports_total_resolved": 34,
-  "geometry_changes": 22,
+  "geometry_changes": 24,
   "corrected_model": "entregas/P1L2/unity_export/model_1_audited_corrected.json",
   "outboard_reconstruction": "entregas/P1L2/edificio/datos/outboard_room_reconstruction.json",
   "overlays_dir": "entregas/P1L2/edificio/validacion/luis_reference_overlays",
@@ -213,6 +213,8 @@
         "E1-S1-C-022",
         "E1-P1-C-013",
         "E1-P1-C-017",
+        "E1-P2-C-013",
+        "E1-P2-C-017",
         "E1-P3-C-010",
         "E1-P3-C-014"
       ]
@@ -275,9 +277,9 @@
     },
     {
       "rank": 5,
-      "code": "P2_OUTBOARD_CALIBRATION_BLOCKER",
-      "impact": "medium",
-      "summary": "P2 outboard inferred columns are not corrected automatically because of the known calibration caveat.",
+      "code": "P2_OUTBOARD_CALIBRATION_APPLIED_TO_REJECTION",
+      "impact": "info",
+      "summary": "P2 outboard G/H inferred columns rejected using the same floor RLE-PILAR evidence rule; the calibration caveat is retained as a Y-registration note, not as a blocker.",
       "affected_ids": [
         "E1-P2-C-013",
         "E1-P2-C-017"
@@ -4469,9 +4471,9 @@
       "legacy_solidTag": "SOL_1S_column_0022",
       "piso": "S1",
       "source_floor_luis": "1S",
-      "X": 57.518,
+      "X": 30.027,
       "Y": 18.843,
-      "x_m": 57.518,
+      "x_m": 30.027,
       "y_m": 18.843,
       "local_luis_xy_m": [
         30.027,
@@ -4540,30 +4542,30 @@
           },
           "nearest_column": null,
           "nearest_column_label": {
-            "id": "LBL_P1_1S_0015",
+            "id": "LBL_P1_1S_0014",
             "tipo": "columna",
             "texto": "P. 70x70",
-            "distance_m": 45.143,
+            "distance_m": 39.821,
             "source_dxf": "2017_67-101.dxf",
             "source_layer": "RLE-TEXTO-1",
             "point_m": [
-              36.143,
-              -20.919
+              27.875,
+              -20.921
             ]
           },
           "nearest_structure": {
-            "id": "MURO_P1_1S_0004",
+            "id": "MURO_P1_1S_0052",
             "tipo": "muro",
-            "distance_m": 10.314,
+            "distance_m": 0.864,
             "source_dxf": "2017_67-101.dxf",
             "source_layer": "RLE-MURO",
             "ejes_aproximados": {
-              "x": "F_prime-G",
+              "x": "Ea-Eb",
               "y": "antes de 1"
             },
             "point_or_mid_m": [
-              41.504,
-              12.968
+              30.891,
+              18.393
             ]
           },
           "direct_column_count": 0
@@ -4595,7 +4597,7 @@
           "nearest_column": {
             "id": "C_P1_FUNDACION_0001",
             "tipo": "columna",
-            "distance_m": 8.073,
+            "distance_m": 35.337,
             "source_dxf": "2017_67-100.dxf",
             "source_layer": "RLE-PILAR",
             "ejes_aproximados": {
@@ -4608,18 +4610,18 @@
             ]
           },
           "nearest_foundation_element": {
-            "id": "FUNDACION_P1_FUNDACION_0094",
+            "id": "FUNDACION_P1_FUNDACION_0009",
             "tipo": "fundacion",
-            "distance_m": 0.801,
+            "distance_m": 1.258,
             "source_dxf": "2017_67-100.dxf",
             "source_layer": "RLE-FUNDACION",
             "ejes_aproximados": {
-              "x": "Ga-H",
+              "x": "E-Ea",
               "y": "antes de 1"
             },
             "point_or_mid_m": [
-              54.898,
-              18.335
+              29.898,
+              17.585
             ]
           },
           "direct_column_count": 6
@@ -4635,9 +4637,9 @@
       "legacy_solidTag": "SOL_1S_column_0019",
       "piso": "S1",
       "source_floor_luis": "1S",
-      "X": 61.968,
+      "X": 34.477,
       "Y": 18.912,
-      "x_m": 61.968,
+      "x_m": 34.477,
       "y_m": 18.912,
       "local_luis_xy_m": [
         34.477,
@@ -4712,7 +4714,7 @@
             "id": "LBL_P1_1S_0015",
             "tipo": "columna",
             "texto": "P. 70x70",
-            "distance_m": 47.471,
+            "distance_m": 39.866,
             "source_dxf": "2017_67-101.dxf",
             "source_layer": "RLE-TEXTO-1",
             "point_m": [
@@ -4721,18 +4723,18 @@
             ]
           },
           "nearest_structure": {
-            "id": "MURO_P1_1S_0004",
+            "id": "MURO_P1_1S_0056",
             "tipo": "muro",
-            "distance_m": 14.228,
+            "distance_m": 0.386,
             "source_dxf": "2017_67-101.dxf",
             "source_layer": "RLE-MURO",
             "ejes_aproximados": {
-              "x": "F_prime-G",
+              "x": "Ec-Ed",
               "y": "antes de 1"
             },
             "point_or_mid_m": [
-              41.504,
-              12.968
+              34.091,
+              18.393
             ]
           },
           "direct_column_count": 0
@@ -4764,7 +4766,7 @@
           "nearest_column": {
             "id": "C_P1_FUNDACION_0001",
             "tipo": "columna",
-            "distance_m": 4.005,
+            "distance_m": 30.901,
             "source_dxf": "2017_67-100.dxf",
             "source_layer": "RLE-PILAR",
             "ejes_aproximados": {
@@ -4777,18 +4779,18 @@
             ]
           },
           "nearest_foundation_element": {
-            "id": "FUNDACION_P1_FUNDACION_0123",
-            "tipo": "fundacion",
-            "distance_m": 1.827,
+            "id": "PERIMETRO_LOSA_P1_FUNDACION_0002",
+            "tipo": "perimetro_losa",
+            "distance_m": 0.137,
             "source_dxf": "2017_67-100.dxf",
-            "source_layer": "RLE-FUNDACION",
+            "source_layer": "RLE-LOSA",
             "ejes_aproximados": {
-              "x": "H-H1",
+              "x": "Ed-F",
               "y": "antes de 1"
             },
             "point_or_mid_m": [
-              60.186,
-              17.085
+              34.614,
+              22.999
             ]
           },
           "direct_column_count": 6
@@ -4804,9 +4806,9 @@
       "legacy_solidTag": "SOL_1S_column_0031",
       "piso": "S1",
       "source_floor_luis": "1S",
-      "X": 47.491,
+      "X": 20.0,
       "Y": 20.451,
-      "x_m": 47.491,
+      "x_m": 20.0,
       "y_m": 20.451,
       "local_luis_xy_m": [
         20.0,
@@ -4882,30 +4884,30 @@
           },
           "nearest_column": null,
           "nearest_column_label": {
-            "id": "LBL_P1_1S_0015",
+            "id": "LBL_P1_1S_0014",
             "tipo": "columna",
             "texto": "P. 70x70",
-            "distance_m": 42.899,
+            "distance_m": 42.115,
             "source_dxf": "2017_67-101.dxf",
             "source_layer": "RLE-TEXTO-1",
             "point_m": [
-              36.143,
-              -20.919
+              27.875,
+              -20.921
             ]
           },
           "nearest_structure": {
-            "id": "MURO_P1_1S_0065",
+            "id": "MURO_P1_1S_0039",
             "tipo": "muro",
-            "distance_m": 6.683,
+            "distance_m": 7.196,
             "source_dxf": "2017_67-101.dxf",
             "source_layer": "RLE-MURO",
             "ejes_aproximados": {
-              "x": "G-Ga",
+              "x": "antes de E_prime",
               "y": "antes de 1"
             },
             "point_or_mid_m": [
-              47.491,
-              13.768
+              27.141,
+              16.668
             ]
           },
           "direct_column_count": 0
@@ -4937,7 +4939,7 @@
           "nearest_column": {
             "id": "C_P1_FUNDACION_0001",
             "tipo": "columna",
-            "distance_m": 18.201,
+            "distance_m": 45.454,
             "source_dxf": "2017_67-100.dxf",
             "source_layer": "RLE-PILAR",
             "ejes_aproximados": {
@@ -4950,18 +4952,18 @@
             ]
           },
           "nearest_foundation_element": {
-            "id": "FUNDACION_P1_FUNDACION_0082",
+            "id": "FUNDACION_P1_FUNDACION_0043",
             "tipo": "fundacion",
-            "distance_m": 2.198,
+            "distance_m": 4.289,
             "source_dxf": "2017_67-100.dxf",
             "source_layer": "RLE-FUNDACION",
             "ejes_aproximados": {
-              "x": "F_prime-G",
+              "x": "antes de E_prime",
               "y": "antes de 1"
             },
             "point_or_mid_m": [
-              44.898,
-              18.335
+              23.398,
+              16.335
             ]
           },
           "direct_column_count": 6
@@ -4977,9 +4979,9 @@
       "legacy_solidTag": "SOL_1S_column_0030",
       "piso": "S1",
       "source_floor_luis": "1S",
-      "X": 57.491,
+      "X": 30.0,
       "Y": 20.451,
-      "x_m": 57.491,
+      "x_m": 30.0,
       "y_m": 20.451,
       "local_luis_xy_m": [
         30.0,
@@ -5055,30 +5057,30 @@
           },
           "nearest_column": null,
           "nearest_column_label": {
-            "id": "LBL_P1_1S_0015",
+            "id": "LBL_P1_1S_0014",
             "tipo": "columna",
             "texto": "P. 70x70",
-            "distance_m": 46.554,
+            "distance_m": 41.427,
             "source_dxf": "2017_67-101.dxf",
             "source_layer": "RLE-TEXTO-1",
             "point_m": [
-              36.143,
-              -20.919
+              27.875,
+              -20.921
             ]
           },
           "nearest_structure": {
-            "id": "MURO_P1_1S_0004",
+            "id": "MURO_P1_1S_0052",
             "tipo": "muro",
-            "distance_m": 11.287,
+            "distance_m": 1.255,
             "source_dxf": "2017_67-101.dxf",
             "source_layer": "RLE-MURO",
             "ejes_aproximados": {
-              "x": "F_prime-G",
+              "x": "Ea-Eb",
               "y": "antes de 1"
             },
             "point_or_mid_m": [
-              41.504,
-              12.968
+              30.891,
+              18.393
             ]
           },
           "direct_column_count": 0
@@ -5110,7 +5112,7 @@
           "nearest_column": {
             "id": "C_P1_FUNDACION_0001",
             "tipo": "columna",
-            "distance_m": 8.667,
+            "distance_m": 35.498,
             "source_dxf": "2017_67-100.dxf",
             "source_layer": "RLE-PILAR",
             "ejes_aproximados": {
@@ -5123,18 +5125,18 @@
             ]
           },
           "nearest_foundation_element": {
-            "id": "FUNDACION_P1_FUNDACION_0159",
+            "id": "FUNDACION_P1_FUNDACION_0009",
             "tipo": "fundacion",
-            "distance_m": 1.627,
+            "distance_m": 2.866,
             "source_dxf": "2017_67-100.dxf",
             "source_layer": "RLE-FUNDACION",
             "ejes_aproximados": {
-              "x": "H-H1",
+              "x": "E-Ea",
               "y": "antes de 1"
             },
             "point_or_mid_m": [
-              58.876,
-              19.097
+              29.898,
+              17.585
             ]
           },
           "direct_column_count": 6
@@ -5150,9 +5152,9 @@
       "legacy_solidTag": "SOL_1S_column_0025",
       "piso": "S1",
       "source_floor_luis": "1S",
-      "X": 37.491,
+      "X": 10.0,
       "Y": 20.452,
-      "x_m": 37.491,
+      "x_m": 10.0,
       "y_m": 20.452,
       "local_luis_xy_m": [
         10.0,
@@ -5228,30 +5230,30 @@
           },
           "nearest_column": null,
           "nearest_column_label": {
-            "id": "LBL_P1_1S_0015",
+            "id": "LBL_P1_1S_0014",
             "tipo": "columna",
             "texto": "P. 70x70",
-            "distance_m": 41.393,
+            "distance_m": 45.068,
             "source_dxf": "2017_67-101.dxf",
             "source_layer": "RLE-TEXTO-1",
             "point_m": [
-              36.143,
-              -20.919
+              27.875,
+              -20.921
             ]
           },
           "nearest_structure": {
-            "id": "MURO_P1_1S_0033",
+            "id": "MURO_P1_1S_0039",
             "tipo": "muro",
-            "distance_m": 0.05,
+            "distance_m": 17.164,
             "source_dxf": "2017_67-101.dxf",
             "source_layer": "RLE-MURO",
             "ejes_aproximados": {
-              "x": "F-F_prime",
+              "x": "antes de E_prime",
               "y": "antes de 1"
             },
             "point_or_mid_m": [
-              37.541,
-              17.868
+              27.141,
+              16.668
             ]
           },
           "direct_column_count": 0
@@ -5283,7 +5285,7 @@
           "nearest_column": {
             "id": "C_P1_FUNDACION_0001",
             "tipo": "columna",
-            "distance_m": 28.061,
+            "distance_m": 55.426,
             "source_dxf": "2017_67-100.dxf",
             "source_layer": "RLE-PILAR",
             "ejes_aproximados": {
@@ -5296,18 +5298,18 @@
             ]
           },
           "nearest_foundation_element": {
-            "id": "FUNDACION_P1_FUNDACION_0011",
+            "id": "FUNDACION_P1_FUNDACION_0043",
             "tipo": "fundacion",
-            "distance_m": 2.836,
+            "distance_m": 13.651,
             "source_dxf": "2017_67-100.dxf",
             "source_layer": "RLE-FUNDACION",
             "ejes_aproximados": {
-              "x": "Ed-F",
+              "x": "antes de E_prime",
               "y": "antes de 1"
             },
             "point_or_mid_m": [
-              34.898,
-              17.835
+              23.398,
+              16.335
             ]
           },
           "direct_column_count": 6
@@ -5323,9 +5325,9 @@
       "legacy_solidTag": "SOL_1S_column_0024",
       "piso": "S1",
       "source_floor_luis": "1S",
-      "X": 44.981,
+      "X": 17.49,
       "Y": 20.452,
-      "x_m": 44.981,
+      "x_m": 17.49,
       "y_m": 20.452,
       "local_luis_xy_m": [
         17.49,
@@ -5406,30 +5408,30 @@
           },
           "nearest_column": null,
           "nearest_column_label": {
-            "id": "LBL_P1_1S_0015",
+            "id": "LBL_P1_1S_0014",
             "tipo": "columna",
             "texto": "P. 70x70",
-            "distance_m": 42.304,
+            "distance_m": 42.656,
             "source_dxf": "2017_67-101.dxf",
             "source_layer": "RLE-TEXTO-1",
             "point_m": [
-              36.143,
-              -20.919
+              27.875,
+              -20.921
             ]
           },
           "nearest_structure": {
-            "id": "MURO_P1_1S_0064",
+            "id": "MURO_P1_1S_0039",
             "tipo": "muro",
-            "distance_m": 7.024,
+            "distance_m": 9.691,
             "source_dxf": "2017_67-101.dxf",
             "source_layer": "RLE-MURO",
             "ejes_aproximados": {
-              "x": "F_prime-G",
+              "x": "antes de E_prime",
               "y": "antes de 1"
             },
             "point_or_mid_m": [
-              47.141,
-              13.418
+              27.141,
+              16.668
             ]
           },
           "direct_column_count": 0
@@ -5461,7 +5463,7 @@
           "nearest_column": {
             "id": "C_P1_FUNDACION_0001",
             "tipo": "columna",
-            "distance_m": 20.663,
+            "distance_m": 47.956,
             "source_dxf": "2017_67-100.dxf",
             "source_layer": "RLE-PILAR",
             "ejes_aproximados": {
@@ -5474,18 +5476,18 @@
             ]
           },
           "nearest_foundation_element": {
-            "id": "FUNDACION_P1_FUNDACION_0082",
+            "id": "FUNDACION_P1_FUNDACION_0043",
             "tipo": "fundacion",
-            "distance_m": 2.117,
+            "distance_m": 6.462,
             "source_dxf": "2017_67-100.dxf",
             "source_layer": "RLE-FUNDACION",
             "ejes_aproximados": {
-              "x": "F_prime-G",
+              "x": "antes de E_prime",
               "y": "antes de 1"
             },
             "point_or_mid_m": [
-              44.898,
-              18.335
+              23.398,
+              16.335
             ]
           },
           "direct_column_count": 6
@@ -5501,9 +5503,9 @@
       "legacy_solidTag": "SOL_1S_column_0020",
       "piso": "S1",
       "source_floor_luis": "1S",
-      "X": 61.968,
+      "X": 34.477,
       "Y": 23.625,
-      "x_m": 61.968,
+      "x_m": 34.477,
       "y_m": 23.625,
       "local_luis_xy_m": [
         34.477,
@@ -5578,7 +5580,7 @@
             "id": "LBL_P1_1S_0015",
             "tipo": "columna",
             "texto": "P. 70x70",
-            "distance_m": 51.489,
+            "distance_m": 44.575,
             "source_dxf": "2017_67-101.dxf",
             "source_layer": "RLE-TEXTO-1",
             "point_m": [
@@ -5587,18 +5589,18 @@
             ]
           },
           "nearest_structure": {
-            "id": "MURO_P1_1S_0079",
-            "tipo": "muro",
-            "distance_m": 16.475,
+            "id": "PERIMETRO_LOSA_P1_1S_0003",
+            "tipo": "perimetro_losa",
+            "distance_m": 0.386,
             "source_dxf": "2017_67-101.dxf",
-            "source_layer": "RLE-MURO",
+            "source_layer": "RLE-LOSA",
             "ejes_aproximados": {
-              "x": "I-IA",
+              "x": "Ec-Ed",
               "y": "antes de 1"
             },
             "point_or_mid_m": [
-              69.991,
-              38.719
+              34.091,
+              24.184
             ]
           },
           "direct_column_count": 0
@@ -5630,7 +5632,7 @@
           "nearest_column": {
             "id": "C_P1_FUNDACION_0001",
             "tipo": "columna",
-            "distance_m": 7.695,
+            "distance_m": 31.592,
             "source_dxf": "2017_67-100.dxf",
             "source_layer": "RLE-PILAR",
             "ejes_aproximados": {
@@ -5643,18 +5645,18 @@
             ]
           },
           "nearest_foundation_element": {
-            "id": "FUNDACION_P1_FUNDACION_0168",
-            "tipo": "fundacion",
-            "distance_m": 2.092,
+            "id": "PERIMETRO_LOSA_P1_FUNDACION_0002",
+            "tipo": "perimetro_losa",
+            "distance_m": 0.137,
             "source_dxf": "2017_67-100.dxf",
-            "source_layer": "RLE-FUNDACION",
+            "source_layer": "RLE-LOSA",
             "ejes_aproximados": {
-              "x": "H-H1",
+              "x": "Ed-F",
               "y": "antes de 1"
             },
             "point_or_mid_m": [
-              59.876,
-              23.809
+              34.614,
+              22.999
             ]
           },
           "direct_column_count": 6
@@ -5670,9 +5672,9 @@
       "legacy_solidTag": "SOL_1S_column_0023",
       "piso": "S1",
       "source_floor_luis": "1S",
-      "X": 57.518,
+      "X": 30.027,
       "Y": 26.176,
-      "x_m": 57.518,
+      "x_m": 30.027,
       "y_m": 26.176,
       "local_luis_xy_m": [
         30.027,
@@ -5741,30 +5743,30 @@
           },
           "nearest_column": null,
           "nearest_column_label": {
-            "id": "LBL_P1_1S_0015",
+            "id": "LBL_P1_1S_0014",
             "tipo": "columna",
             "texto": "P. 70x70",
-            "distance_m": 51.719,
+            "distance_m": 47.145,
             "source_dxf": "2017_67-101.dxf",
             "source_layer": "RLE-TEXTO-1",
             "point_m": [
-              36.143,
-              -20.919
+              27.875,
+              -20.921
             ]
           },
           "nearest_structure": {
-            "id": "MURO_P1_1S_0004",
+            "id": "MURO_P1_1S_0046",
             "tipo": "muro",
-            "distance_m": 15.694,
+            "distance_m": 0.614,
             "source_dxf": "2017_67-101.dxf",
             "source_layer": "RLE-MURO",
             "ejes_aproximados": {
-              "x": "F_prime-G",
+              "x": "E-Ea",
               "y": "antes de 1"
             },
             "point_or_mid_m": [
-              41.504,
-              12.968
+              30.641,
+              26.523
             ]
           },
           "direct_column_count": 0
@@ -5796,7 +5798,7 @@
           "nearest_column": {
             "id": "C_P1_FUNDACION_0001",
             "tipo": "columna",
-            "distance_m": 12.27,
+            "distance_m": 36.525,
             "source_dxf": "2017_67-100.dxf",
             "source_layer": "RLE-PILAR",
             "ejes_aproximados": {
@@ -5809,18 +5811,18 @@
             ]
           },
           "nearest_foundation_element": {
-            "id": "FUNDACION_P1_FUNDACION_0161",
-            "tipo": "fundacion",
-            "distance_m": 2.291,
+            "id": "PERIMETRO_LOSA_P1_FUNDACION_0002",
+            "tipo": "perimetro_losa",
+            "distance_m": 4.587,
             "source_dxf": "2017_67-100.dxf",
-            "source_layer": "RLE-FUNDACION",
+            "source_layer": "RLE-LOSA",
             "ejes_aproximados": {
-              "x": "H-H1",
+              "x": "Ed-F",
               "y": "antes de 1"
             },
             "point_or_mid_m": [
-              58.876,
-              28.521
+              34.614,
+              22.999
             ]
           },
           "direct_column_count": 6
@@ -5836,9 +5838,9 @@
       "legacy_solidTag": "SOL_1S_column_0021",
       "piso": "S1",
       "source_floor_luis": "1S",
-      "X": 61.968,
+      "X": 34.477,
       "Y": 28.337,
-      "x_m": 61.968,
+      "x_m": 34.477,
       "y_m": 28.337,
       "local_luis_xy_m": [
         34.477,
@@ -5913,7 +5915,7 @@
             "id": "LBL_P1_1S_0015",
             "tipo": "columna",
             "texto": "P. 70x70",
-            "distance_m": 55.616,
+            "distance_m": 49.284,
             "source_dxf": "2017_67-101.dxf",
             "source_layer": "RLE-TEXTO-1",
             "point_m": [
@@ -5922,18 +5924,18 @@
             ]
           },
           "nearest_structure": {
-            "id": "MURO_P1_1S_0079",
-            "tipo": "muro",
-            "distance_m": 12.57,
+            "id": "PERIMETRO_LOSA_P1_1S_0025",
+            "tipo": "perimetro_losa",
+            "distance_m": 0.663,
             "source_dxf": "2017_67-101.dxf",
-            "source_layer": "RLE-MURO",
+            "source_layer": "RLE-LOSA",
             "ejes_aproximados": {
-              "x": "I-IA",
+              "x": "Ec-Ed",
               "y": "antes de 1"
             },
             "point_or_mid_m": [
-              69.991,
-              38.719
+              34.146,
+              27.562
             ]
           },
           "direct_column_count": 0
@@ -5965,7 +5967,7 @@
           "nearest_column": {
             "id": "C_P1_FUNDACION_0001",
             "tipo": "columna",
-            "distance_m": 12.116,
+            "distance_m": 32.949,
             "source_dxf": "2017_67-100.dxf",
             "source_layer": "RLE-PILAR",
             "ejes_aproximados": {
@@ -5978,18 +5980,18 @@
             ]
           },
           "nearest_foundation_element": {
-            "id": "PERIMETRO_LOSA_P1_FUNDACION_0003",
+            "id": "PERIMETRO_LOSA_P1_FUNDACION_0002",
             "tipo": "perimetro_losa",
-            "distance_m": 0.584,
+            "distance_m": 0.137,
             "source_dxf": "2017_67-100.dxf",
             "source_layer": "RLE-LOSA",
             "ejes_aproximados": {
-              "x": "H1-H_prime",
+              "x": "Ed-F",
               "y": "antes de 1"
             },
             "point_or_mid_m": [
-              61.498,
-              27.895
+              34.614,
+              22.999
             ]
           },
           "direct_column_count": 6
@@ -7313,9 +7315,9 @@
       "legacy_solidTag": "SOL_1_column_0031",
       "piso": "P1",
       "source_floor_luis": "1",
-      "X": 47.491,
+      "X": 20.0,
       "Y": 20.451,
-      "x_m": 47.491,
+      "x_m": 20.0,
       "y_m": 20.451,
       "local_luis_xy_m": [
         20.0,
@@ -7391,45 +7393,45 @@
             }
           },
           "nearest_column": {
-            "id": "C_P1_01_0008",
+            "id": "C_P1_01_0006",
             "tipo": "columna",
-            "distance_m": 4.301,
+            "distance_m": 8.66,
             "source_dxf": "2017_67-101.dxf",
             "source_layer": "RLE-PILAR",
             "ejes_aproximados": {
-              "x": "G-Ga",
+              "x": "E-Ea",
               "y": "2a-3"
             },
             "point_or_mid_m": [
-              47.491,
+              27.516,
               16.15
             ]
           },
           "nearest_column_label": {
-            "id": "LBL_P1_01_0076",
+            "id": "LBL_P1_01_0072",
             "tipo": "columna",
-            "texto": "P.M.I.",
-            "distance_m": 2.048,
+            "texto": "P. 70x70",
+            "distance_m": 9.759,
             "source_dxf": "2017_67-101.dxf",
             "source_layer": "RLE-TEXTO-1",
             "point_m": [
-              45.456,
-              20.682
+              28.155,
+              15.091
             ]
           },
           "nearest_structure": {
-            "id": "VIGA_P1_01_0099",
-            "tipo": "viga",
-            "distance_m": 2.21,
+            "id": "MURO_P1_01_0019",
+            "tipo": "muro",
+            "distance_m": 8.522,
             "source_dxf": "2017_67-101.dxf",
-            "source_layer": "RLE-VIGA",
+            "source_layer": "RLE-MURO",
             "ejes_aproximados": {
-              "x": "F_prime-G",
-              "y": "despues de 3_prime"
+              "x": "antes de E_prime",
+              "y": "2-2a"
             },
             "point_or_mid_m": [
-              45.281,
-              18.51
+              27.141,
+              12.525
             ]
           },
           "direct_column_count": 20
@@ -7461,7 +7463,7 @@
           "nearest_column": {
             "id": "C_P1_FUNDACION_0001",
             "tipo": "columna",
-            "distance_m": 18.201,
+            "distance_m": 45.454,
             "source_dxf": "2017_67-100.dxf",
             "source_layer": "RLE-PILAR",
             "ejes_aproximados": {
@@ -7474,18 +7476,18 @@
             ]
           },
           "nearest_foundation_element": {
-            "id": "FUNDACION_P1_FUNDACION_0082",
+            "id": "FUNDACION_P1_FUNDACION_0043",
             "tipo": "fundacion",
-            "distance_m": 2.198,
+            "distance_m": 4.289,
             "source_dxf": "2017_67-100.dxf",
             "source_layer": "RLE-FUNDACION",
             "ejes_aproximados": {
-              "x": "F_prime-G",
+              "x": "antes de E_prime",
               "y": "antes de 1"
             },
             "point_or_mid_m": [
-              44.898,
-              18.335
+              23.398,
+              16.335
             ]
           },
           "direct_column_count": 6
@@ -7501,9 +7503,9 @@
       "legacy_solidTag": "SOL_1_column_0030",
       "piso": "P1",
       "source_floor_luis": "1",
-      "X": 57.491,
+      "X": 30.0,
       "Y": 20.451,
-      "x_m": 57.491,
+      "x_m": 30.0,
       "y_m": 20.451,
       "local_luis_xy_m": [
         30.0,
@@ -7579,45 +7581,45 @@
             }
           },
           "nearest_column": {
-            "id": "C_P1_01_0022",
+            "id": "C_P1_01_0006",
             "tipo": "columna",
-            "distance_m": 1.609,
+            "distance_m": 4.967,
             "source_dxf": "2017_67-101.dxf",
             "source_layer": "RLE-PILAR",
             "ejes_aproximados": {
-              "x": "H-H1",
-              "y": "despues de 3_prime"
+              "x": "E-Ea",
+              "y": "2a-3"
             },
             "point_or_mid_m": [
-              57.518,
-              18.843
+              27.516,
+              16.15
             ]
           },
           "nearest_column_label": {
-            "id": "LBL_P1_01_0084",
+            "id": "LBL_P1_01_0072",
             "tipo": "columna",
-            "texto": "P. 30x30",
-            "distance_m": 4.749,
+            "texto": "P. 70x70",
+            "distance_m": 5.669,
             "source_dxf": "2017_67-101.dxf",
             "source_layer": "RLE-TEXTO-1",
             "point_m": [
-              61.599,
-              18.07
+              28.155,
+              15.091
             ]
           },
           "nearest_structure": {
-            "id": "PERIMETRO_LOSA_P1_01_0013",
+            "id": "PERIMETRO_LOSA_P1_01_0004",
             "tipo": "perimetro_losa",
-            "distance_m": 3.727,
+            "distance_m": 3.951,
             "source_dxf": "2017_67-101.dxf",
             "source_layer": "RLE-LOSA",
             "ejes_aproximados": {
-              "x": "H-H1",
-              "y": "despues de 3_prime"
+              "x": "Eb-Ec",
+              "y": "2a-3"
             },
             "point_or_mid_m": [
-              61.218,
-              24.591
+              32.491,
+              16.5
             ]
           },
           "direct_column_count": 20
@@ -7649,7 +7651,7 @@
           "nearest_column": {
             "id": "C_P1_FUNDACION_0001",
             "tipo": "columna",
-            "distance_m": 8.667,
+            "distance_m": 35.498,
             "source_dxf": "2017_67-100.dxf",
             "source_layer": "RLE-PILAR",
             "ejes_aproximados": {
@@ -7662,18 +7664,18 @@
             ]
           },
           "nearest_foundation_element": {
-            "id": "FUNDACION_P1_FUNDACION_0159",
+            "id": "FUNDACION_P1_FUNDACION_0009",
             "tipo": "fundacion",
-            "distance_m": 1.627,
+            "distance_m": 2.866,
             "source_dxf": "2017_67-100.dxf",
             "source_layer": "RLE-FUNDACION",
             "ejes_aproximados": {
-              "x": "H-H1",
+              "x": "E-Ea",
               "y": "antes de 1"
             },
             "point_or_mid_m": [
-              58.876,
-              19.097
+              29.898,
+              17.585
             ]
           },
           "direct_column_count": 6
@@ -8119,9 +8121,9 @@
       ],
       "classification": "UNRESOLVED",
       "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-      "reason": "CALIBRATION_CAVEAT_DO_NOT_USE_AS_DEFECT",
+      "reason": "no primary same-floor/foundation column evidence in available extracts",
       "reason_codes": [
-        "CALIBRATION_CAVEAT_DO_NOT_USE_AS_DEFECT"
+        "needs_original_dxf_review"
       ],
       "evidence": {
         "floor": "P2",
@@ -8303,9 +8305,9 @@
       ],
       "classification": "UNRESOLVED",
       "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-      "reason": "CALIBRATION_CAVEAT_DO_NOT_USE_AS_DEFECT",
+      "reason": "no primary same-floor/foundation column evidence in available extracts",
       "reason_codes": [
-        "CALIBRATION_CAVEAT_DO_NOT_USE_AS_DEFECT"
+        "needs_original_dxf_review"
       ],
       "evidence": {
         "floor": "P2",
@@ -8492,9 +8494,9 @@
       ],
       "classification": "UNRESOLVED",
       "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-      "reason": "CALIBRATION_CAVEAT_DO_NOT_USE_AS_DEFECT",
+      "reason": "no primary same-floor/foundation column evidence in available extracts",
       "reason_codes": [
-        "CALIBRATION_CAVEAT_DO_NOT_USE_AS_DEFECT"
+        "needs_original_dxf_review"
       ],
       "evidence": {
         "floor": "P2",
@@ -8676,9 +8678,9 @@
       ],
       "classification": "UNRESOLVED",
       "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-      "reason": "CALIBRATION_CAVEAT_DO_NOT_USE_AS_DEFECT",
+      "reason": "no primary same-floor/foundation column evidence in available extracts",
       "reason_codes": [
-        "CALIBRATION_CAVEAT_DO_NOT_USE_AS_DEFECT"
+        "needs_original_dxf_review"
       ],
       "evidence": {
         "floor": "P2",
@@ -8865,9 +8867,9 @@
       ],
       "classification": "UNRESOLVED",
       "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-      "reason": "CALIBRATION_CAVEAT_DO_NOT_USE_AS_DEFECT",
+      "reason": "no primary same-floor/foundation column evidence in available extracts",
       "reason_codes": [
-        "CALIBRATION_CAVEAT_DO_NOT_USE_AS_DEFECT"
+        "needs_original_dxf_review"
       ],
       "evidence": {
         "floor": "P2",
@@ -9049,9 +9051,9 @@
       ],
       "classification": "UNRESOLVED",
       "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-      "reason": "CALIBRATION_CAVEAT_DO_NOT_USE_AS_DEFECT",
+      "reason": "no primary same-floor/foundation column evidence in available extracts",
       "reason_codes": [
-        "CALIBRATION_CAVEAT_DO_NOT_USE_AS_DEFECT"
+        "needs_original_dxf_review"
       ],
       "evidence": {
         "floor": "P2",
@@ -9235,10 +9237,11 @@
         "CAD_4_column_plan_0270",
         "CAD_4_column_plan_0271"
       ],
-      "classification": "UNRESOLVED",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-      "reason": "CALIBRATION_CAVEAT_DO_NOT_USE_AS_DEFECT",
+      "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+      "resolution_group": "CONFIRMED_WRONG_AND_CORRECTED",
+      "reason": "outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match; CALIBRATION_CAVEAT_DO_NOT_USE_AS_DEFECT",
       "reason_codes": [
+        "outboard_no_same_floor_or_foundation_column",
         "CALIBRATION_CAVEAT_DO_NOT_USE_AS_DEFECT"
       ],
       "evidence": {
@@ -9423,10 +9426,11 @@
         "CAD_4_column_plan_0262",
         "CAD_4_column_plan_0263"
       ],
-      "classification": "UNRESOLVED",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-      "reason": "CALIBRATION_CAVEAT_DO_NOT_USE_AS_DEFECT",
+      "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+      "resolution_group": "CONFIRMED_WRONG_AND_CORRECTED",
+      "reason": "outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match; CALIBRATION_CAVEAT_DO_NOT_USE_AS_DEFECT",
       "reason_codes": [
+        "outboard_no_same_floor_or_foundation_column",
         "CALIBRATION_CAVEAT_DO_NOT_USE_AS_DEFECT"
       ],
       "evidence": {
@@ -10684,9 +10688,9 @@
       "legacy_solidTag": "SOL_3_column_0023",
       "piso": "P3",
       "source_floor_luis": "3",
-      "X": 47.491,
+      "X": 20.0,
       "Y": 20.451,
-      "x_m": 47.491,
+      "x_m": 20.0,
       "y_m": 20.451,
       "local_luis_xy_m": [
         20.0,
@@ -10762,45 +10766,45 @@
             }
           },
           "nearest_column": {
-            "id": "C_P1_03_0009",
+            "id": "C_P1_03_0006",
             "tipo": "columna",
-            "distance_m": 4.183,
+            "distance_m": 4.876,
             "source_dxf": "2017_67-102.dxf",
             "source_layer": "RLE-PILAR",
             "ejes_aproximados": {
-              "x": "Ga-H",
+              "x": "antes de E_prime",
               "y": "1b-2"
             },
             "point_or_mid_m": [
-              47.495,
+              17.495,
               16.268
             ]
           },
           "nearest_column_label": {
-            "id": "LBL_P1_03_0056",
+            "id": "LBL_P1_03_0063",
             "tipo": "columna",
             "texto": "P. 70x70",
-            "distance_m": 13.091,
+            "distance_m": 12.735,
             "source_dxf": "2017_67-102.dxf",
             "source_layer": "RLE-TEXTO-1",
             "point_m": [
-              42.961,
-              8.169
+              22.969,
+              8.067
             ]
           },
           "nearest_structure": {
-            "id": "VIGA_P1_03_0117",
-            "tipo": "viga",
-            "distance_m": 0.304,
+            "id": "PERIMETRO_LOSA_P1_03_0005",
+            "tipo": "perimetro_losa",
+            "distance_m": 3.833,
             "source_dxf": "2017_67-102.dxf",
-            "source_layer": "RLE-VIGA",
+            "source_layer": "RLE-LOSA",
             "ejes_aproximados": {
-              "x": "Ga-H",
-              "y": "2-2a"
+              "x": "antes de E_prime",
+              "y": "1b-2"
             },
             "point_or_mid_m": [
-              47.795,
-              18.628
+              22.495,
+              16.618
             ]
           },
           "direct_column_count": 18
@@ -10832,7 +10836,7 @@
           "nearest_column": {
             "id": "C_P1_FUNDACION_0001",
             "tipo": "columna",
-            "distance_m": 18.201,
+            "distance_m": 45.454,
             "source_dxf": "2017_67-100.dxf",
             "source_layer": "RLE-PILAR",
             "ejes_aproximados": {
@@ -10845,18 +10849,18 @@
             ]
           },
           "nearest_foundation_element": {
-            "id": "FUNDACION_P1_FUNDACION_0082",
+            "id": "FUNDACION_P1_FUNDACION_0043",
             "tipo": "fundacion",
-            "distance_m": 2.198,
+            "distance_m": 4.289,
             "source_dxf": "2017_67-100.dxf",
             "source_layer": "RLE-FUNDACION",
             "ejes_aproximados": {
-              "x": "F_prime-G",
+              "x": "antes de E_prime",
               "y": "antes de 1"
             },
             "point_or_mid_m": [
-              44.898,
-              18.335
+              23.398,
+              16.335
             ]
           },
           "direct_column_count": 6
@@ -10872,9 +10876,9 @@
       "legacy_solidTag": "SOL_3_column_0022",
       "piso": "P3",
       "source_floor_luis": "3",
-      "X": 57.491,
+      "X": 30.0,
       "Y": 20.451,
-      "x_m": 57.491,
+      "x_m": 30.0,
       "y_m": 20.451,
       "local_luis_xy_m": [
         30.0,
@@ -10950,45 +10954,45 @@
             }
           },
           "nearest_column": {
-            "id": "C_P1_03_0010",
+            "id": "C_P1_03_0002",
             "tipo": "columna",
-            "distance_m": 4.183,
+            "distance_m": 4.876,
             "source_dxf": "2017_67-102.dxf",
             "source_layer": "RLE-PILAR",
             "ejes_aproximados": {
-              "x": "H_prime-H2",
+              "x": "Eb-Ec",
               "y": "1b-2"
             },
             "point_or_mid_m": [
-              57.495,
+              27.495,
               16.268
             ]
           },
           "nearest_column_label": {
-            "id": "LBL_P1_03_0087",
+            "id": "LBL_P1_03_0061",
             "tipo": "columna",
             "texto": "P. 70x70",
-            "distance_m": 12.971,
+            "distance_m": 12.386,
             "source_dxf": "2017_67-102.dxf",
             "source_layer": "RLE-TEXTO-1",
             "point_m": [
-              61.476,
-              8.108
+              31.463,
+              8.152
             ]
           },
           "nearest_structure": {
-            "id": "PERIMETRO_LOSA_P1_03_0003",
-            "tipo": "perimetro_losa",
-            "distance_m": 3.849,
+            "id": "VIGA_P1_03_0111",
+            "tipo": "viga",
+            "distance_m": 1.273,
             "source_dxf": "2017_67-102.dxf",
-            "source_layer": "RLE-LOSA",
+            "source_layer": "RLE-VIGA",
             "ejes_aproximados": {
-              "x": "Ga-H",
-              "y": "1b-2"
+              "x": "Ed-F",
+              "y": "2-2a"
             },
             "point_or_mid_m": [
-              52.495,
-              16.618
+              29.996,
+              18.878
             ]
           },
           "direct_column_count": 18
@@ -11020,7 +11024,7 @@
           "nearest_column": {
             "id": "C_P1_FUNDACION_0001",
             "tipo": "columna",
-            "distance_m": 8.667,
+            "distance_m": 35.498,
             "source_dxf": "2017_67-100.dxf",
             "source_layer": "RLE-PILAR",
             "ejes_aproximados": {
@@ -11033,18 +11037,18 @@
             ]
           },
           "nearest_foundation_element": {
-            "id": "FUNDACION_P1_FUNDACION_0159",
+            "id": "FUNDACION_P1_FUNDACION_0009",
             "tipo": "fundacion",
-            "distance_m": 1.627,
+            "distance_m": 2.866,
             "source_dxf": "2017_67-100.dxf",
             "source_layer": "RLE-FUNDACION",
             "ejes_aproximados": {
-              "x": "H-H1",
+              "x": "E-Ea",
               "y": "antes de 1"
             },
             "point_or_mid_m": [
-              58.876,
-              19.097
+              29.898,
+              17.585
             ]
           },
           "direct_column_count": 6

@@ -2,7 +2,7 @@
 
 Status: `LUIS_REFERENCE_DIFF_CREATED`
 Luis original modified: `0`
-Removed solids: `22`
+Removed solids: `24`
 
 | ID | SolidTag | Category | New Geometry | Reason | Source DXF |
 | --- | --- | --- | --- | --- | --- |
@@ -17,6 +17,8 @@ Removed solids: `22`
 | E1-S1-C-013 | SOL_1S_column_0031 | column | REMOVED | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match | 2017_67-103.dxf |
 | E1-P1-C-017 | SOL_1_column_0030 | column | REMOVED | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match | 2017_67-103.dxf |
 | E1-P1-C-013 | SOL_1_column_0031 | column | REMOVED | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match | 2017_67-103.dxf |
+| E1-P2-C-017 | SOL_2_column_0025 | column | REMOVED | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match; CALIBRATION_CAVEAT_DO_NOT_USE_AS_DEFECT | 2017_67-103.dxf |
+| E1-P2-C-013 | SOL_2_column_0026 | column | REMOVED | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match; CALIBRATION_CAVEAT_DO_NOT_USE_AS_DEFECT | 2017_67-103.dxf |
 | E1-P3-C-014 | SOL_3_column_0022 | column | REMOVED | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match | 2017_67-103.dxf |
 | E1-P3-C-010 | SOL_3_column_0023 | column | REMOVED | outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match | 2017_67-103.dxf |
 | SOL_base_support_0079 | SOL_base_support_0079 | support | REMOVED | derived from inferred column resolution | 2017_67-100.dxf |

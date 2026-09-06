@@ -10,15 +10,16 @@
 ## Luis Audit
 - Inferred columns reviewed: 61
 - Confirmed correct: 3
-- Wrong and corrected: 13
-- Still unresolved/requires review: 45
+- Wrong and corrected: 15
+- Still unresolved/requires review: 43
 - Derived supports invalid and removed: 9
 - Luis original modified: 0
 
 ## Last Important Change
-- Removed 13 unsupported vertical-extension columns.
+- Removed 15 unsupported vertical-extension columns (added P2 C-013/C-017 to the 13 already removed).
 - Removed 9 supports derived from rejected inferred columns.
-- Rebuilt corrected EDIFICIO_1 and combined viewer.
+- P2 outboard inferred columns now resolved with the same same-floor `RLE-PILAR` evidence rule as other floors; `CALIBRATION_CAVEAT_DO_NOT_USE_AS_DEFECT` retained as a Y-registration note, not a classification blocker.
+- Rebuilt corrected EDIFICIO_1 (903 solids, 134 columns) and combined viewer (1591 solids), re-enriched.
 - Replaced mandatory Luis equality with `LUIS_REFERENCE_DIFF_VALIDATION`.
 
 ## Viewer
@@ -38,5 +39,5 @@
 - GOLDEN_IN_COMBINED_LEGACY: SUPERSEDED_BY_LUIS_REFERENCE_DIFF
 
 ## Next Work
-- Continue resolving 45 `UNRESOLVED_REQUIRES_REVIEW` inferred columns.
-- Prioritize P2 outboard cases with calibration caveat and P1/P3/P4 detail/import review.
+- Continue resolving 43 `UNRESOLVED_REQUIRES_REVIEW` inferred columns.
+- Review P1 outboard non-modelable/detail imports (C-021, C-022, C-019) and P1/P3/P4 border columns near `IB/J`.
