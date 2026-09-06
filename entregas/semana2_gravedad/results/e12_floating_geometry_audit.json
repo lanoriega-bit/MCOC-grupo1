@@ -1,0 +1,261 @@
+{
+  "formato": "E12_FLOATING_GEOMETRY_AUDIT_v1",
+  "fecha": "2026-09-05",
+  "alcance": "Geometria planimetrica y cotas z de la vista E12 (E1 congelado c0c0cdb, E2 regenerado determinista).",
+  "floor_levels_table": [
+    {
+      "building": "E2",
+      "raw_floor": "fundacion",
+      "floor_id": 0,
+      "display_floor": "fundacion",
+      "expected_z_m": 0.0,
+      "source_elevation_m": -7.97,
+      "z_offset_m": 7.97,
+      "rule": "model_z = source_elevation + z_offset"
+    },
+    {
+      "building": "E2",
+      "raw_floor": "1S",
+      "floor_id": -1,
+      "display_floor": "1S",
+      "expected_z_m": 3.96,
+      "source_elevation_m": -4.01,
+      "z_offset_m": 7.97,
+      "rule": "model_z = source_elevation + z_offset"
+    },
+    {
+      "building": "E2",
+      "raw_floor": "1",
+      "floor_id": 1,
+      "display_floor": "1",
+      "expected_z_m": 7.92,
+      "source_elevation_m": -0.05,
+      "z_offset_m": 7.97,
+      "rule": "model_z = source_elevation + z_offset"
+    },
+    {
+      "building": "E2",
+      "raw_floor": "2",
+      "floor_id": 2,
+      "display_floor": "2",
+      "expected_z_m": 11.88,
+      "source_elevation_m": 3.91,
+      "z_offset_m": 7.97,
+      "rule": "model_z = source_elevation + z_offset"
+    },
+    {
+      "building": "E2",
+      "raw_floor": "3",
+      "floor_id": 3,
+      "display_floor": "3",
+      "expected_z_m": 15.84,
+      "source_elevation_m": 7.87,
+      "z_offset_m": 7.97,
+      "rule": "model_z = source_elevation + z_offset"
+    },
+    {
+      "building": "E2",
+      "raw_floor": "4",
+      "floor_id": 4,
+      "display_floor": "4",
+      "expected_z_m": 19.8,
+      "source_elevation_m": 11.83,
+      "z_offset_m": 7.97,
+      "rule": "model_z = source_elevation + z_offset"
+    },
+    {
+      "building": "E2",
+      "raw_floor": "-1",
+      "floor_id": -1,
+      "display_floor": "1S",
+      "expected_z_m": 3.96,
+      "source_elevation_m": null,
+      "z_offset_m": null,
+      "rule": "FLOOR_Z pipeline constant"
+    },
+    {
+      "building": "E2",
+      "raw_floor": "1",
+      "floor_id": 1,
+      "display_floor": "1",
+      "expected_z_m": 7.92,
+      "source_elevation_m": null,
+      "z_offset_m": null,
+      "rule": "FLOOR_Z pipeline constant"
+    },
+    {
+      "building": "E2",
+      "raw_floor": "2",
+      "floor_id": 2,
+      "display_floor": "2",
+      "expected_z_m": 11.88,
+      "source_elevation_m": null,
+      "z_offset_m": null,
+      "rule": "FLOOR_Z pipeline constant"
+    },
+    {
+      "building": "E2",
+      "raw_floor": "3",
+      "floor_id": 3,
+      "display_floor": "3",
+      "expected_z_m": 15.84,
+      "source_elevation_m": null,
+      "z_offset_m": null,
+      "rule": "FLOOR_Z pipeline constant"
+    },
+    {
+      "building": "E2",
+      "raw_floor": "4",
+      "floor_id": 4,
+      "display_floor": "4",
+      "expected_z_m": 19.8,
+      "source_elevation_m": null,
+      "z_offset_m": null,
+      "rule": "FLOOR_Z pipeline constant"
+    }
+  ],
+  "e2_column_frame": {
+    "anchor_count": 101,
+    "bbox_m": {
+      "xmin": 0.103,
+      "xmax": 77.382,
+      "ymin": -0.0,
+      "ymax": 20.389
+    },
+    "fe_stacked_grid": [
+      [
+        0.106,
+        9.018
+      ],
+      [
+        7.606,
+        0.118
+      ],
+      [
+        7.606,
+        9.018
+      ],
+      [
+        7.606,
+        16.268
+      ],
+      [
+        17.588,
+        0.118
+      ],
+      [
+        17.588,
+        9.018
+      ],
+      [
+        17.588,
+        16.268
+      ],
+      [
+        27.547,
+        0.103
+      ]
+    ],
+    "fe_column_stacks": 8,
+    "rule": "columna E2 = referencia estructural; vigas/muros/soportes fuera de su huella = CONTEXTO"
+  },
+  "e12_kept": {
+    "columns": {
+      "E1": 149,
+      "E2": 125
+    },
+    "vigas": {
+      "E1": 265,
+      "E2": 999
+    },
+    "walls": {
+      "E1": 134,
+      "E2": 211
+    },
+    "supports": {
+      "E1": 94,
+      "E2": 201
+    }
+  },
+  "elementos_contexto": {
+    "count": 365,
+    "by_tipo": {
+      "viga": 73,
+      "muro": 179,
+      "support": 113
+    },
+    "by_floor": {
+      "-1": 82,
+      "0": 113,
+      "1": 50,
+      "2": 40,
+      "3": 40,
+      "4": 40
+    },
+    "by_reason": {
+      "whole span lies outside the E2 column-frame footprint (pad=1.20 m)": 252,
+      "support symbol not associated to a FE base node nor a real column base within 2.50 m": 113
+    },
+    "plan_bbox_m": {
+      "xmin": -4.043,
+      "xmax": 73.036,
+      "ymin": -11.71,
+      "ymax": 49.039
+    },
+    "goto": "e12_unity.elementos_contexto[] (365 registros completos con geometrica, zona origen y motivo)"
+  },
+  "classification_rule": {
+    "criterio": "E2 column-frame footprint + support association",
+    "footprint_pad_m": 1.2,
+    "support_base_tol_m": 2.5,
+    "frame_bbox_m": {
+      "xmin": 0.103,
+      "xmax": 77.382,
+      "ymin": -0.0,
+      "ymax": 20.389
+    },
+    "column_anchor_count": 125,
+    "mapped_fe_supports": [
+      "FUNDACION_P1_FUNDACION_0057",
+      "FUNDACION_P2_FUNDACION_0011",
+      "FUNDACION_P2_FUNDACION_0017",
+      "FUNDACION_P2_FUNDACION_0028",
+      "FUNDACION_P2_FUNDACION_0029",
+      "FUNDACION_P2_FUNDACION_0036",
+      "FUNDACION_P2_FUNDACION_0053",
+      "FUNDACION_P2_FUNDACION_0060"
+    ]
+  },
+  "outliers_geometricos": {
+    "zero_length": 0,
+    "nan_inf": 0,
+    "duplicates_3d_span": 0,
+    "z_fuera_stack": 0,
+    "floor_plane_delta_gt_0_10": 0,
+    "detalle": "reglas verificadas por openseas/validate_e12_geometry.py (SIN ERRORES)."
+  },
+  "qa_snapshot": {
+    "E1_applied_gravity_kN": 21189.35966569308,
+    "E2_applied_gravity_kN": 3023.097,
+    "E1_equilibrium": {
+      "applied_gravity_kN": 21189.36,
+      "sum_support_reaction_z_kN": 21189.36,
+      "residual_fz_kN": 2e-06,
+      "relative_error_pct": 0.0,
+      "status": "PASS"
+    },
+    "E2_equilibrium": {
+      "applied_gravity_kN": 3023.0970050000037,
+      "sum_Rz_kN": 3023.0970050000014,
+      "residual_Fz_kN": 2.2737367544323206e-12,
+      "equilibrium_error_pct": 7.521216655210565e-14,
+      "status": "PASS"
+    }
+  },
+  "garantias": [
+    "edificio2_opensees_analysis.json byte-identico (FE congelado).",
+    "edificio2_gravity.json byte-identico (17 blockers / 60 losas / 1072 vigas de carga intactos).",
+    "edificio1_*.json sin cambios (c0c0cdb).",
+    "El filtro SOLO elimina del payload visual Unity los elementos marcados CONTEXTO en E2."
+  ]
+}

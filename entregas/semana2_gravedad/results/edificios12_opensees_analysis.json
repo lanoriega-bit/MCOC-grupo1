@@ -1,0 +1,45 @@
+{
+  "formato": "E12_OPENSEES_AGGREGATE_v1",
+  "integrated_fe_model": false,
+  "reason": "No source file demonstrates structural continuity/equalDOF/member sharing across E1/E2 interface; aggregate preserves two verified submodels in one global viewer.",
+  "E1": {
+    "source_commit": "c0c0cdb",
+    "analysis_file": "edificio1_opensees_analysis.json",
+    "global_equilibrium": {
+      "sum_Rx_kN": -1e-06,
+      "sum_Ry_kN": 1e-06,
+      "sum_Rz_kN": 21189.360002,
+      "sum_Fz_applied_kN": 21189.36,
+      "residual_Fx_kN": -1e-06,
+      "residual_Fy_kN": 1e-06,
+      "residual_Fz_kN": 2e-06,
+      "equilibrium_error_pct": 1e-08
+    }
+  },
+  "E2": {
+    "analysis_file": "edificio2_opensees_analysis.json",
+    "global_equilibrium": {
+      "applied_gravity_kN": 3023.0970050000037,
+      "sum_Rz_kN": 3023.0970050000014,
+      "residual_Fz_kN": 2.2737367544323206e-12,
+      "equilibrium_error_pct": 7.521216655210565e-14,
+      "status": "PASS"
+    }
+  },
+  "E12_GLOBAL_QA": {
+    "E1_applied_gravity_kN": 21189.36,
+    "E2_applied_gravity_kN": 3023.0970050000037,
+    "TOTAL_applied_gravity_kN": 24212.457005000004,
+    "E1_support_reactions_kN": 21189.36,
+    "E2_support_reactions_kN": 3023.0970050000014,
+    "TOTAL_support_reactions_kN": 24212.457005000004,
+    "global_residual_kN": 2.0000022737367543e-06,
+    "relative_error_pct": 8.260220238382841e-09,
+    "status": "PASS",
+    "interface_status": "UNRESOLVED_INTERFACE",
+    "E1_verified_max_displacement_m": 0.018001,
+    "E2_verified_max_displacement_m": 0.001428949547637551,
+    "combined_verified_max_displacement_m": 0.018001
+  },
+  "interface_status": "UNRESOLVED_INTERFACE"
+}
