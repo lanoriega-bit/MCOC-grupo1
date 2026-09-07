@@ -9,9 +9,9 @@
 
 ## Luis Audit
 - Inferred columns reviewed: 61
-- Confirmed correct: 3
+- Confirmed correct: 13 (10 by S1 basement evidence + 3 by plan note)
 - Wrong and corrected: 39
-- Still unresolved/requires review: 19
+- Still unresolved/requires review: 9
 - Derived supports invalid and removed: 15
 - Luis original modified: 0
 
@@ -21,6 +21,9 @@
 - Removed 6 supports derived from the rejected S1 IB/J columns (`SOL_base_support_0087..0089, 0092..0094`).
 - Rebuilt corrected EDIFICIO_1 (873 solids, 110 columns) and combined viewer (1561 solids), re-enriched; all validations PASS.
 - Fixed `build_id_map` re-runnability: it now merges previously-recorded viewer metadata for combined solids too, so `id`/`human_id` are preserved for every solid (was silently `None` for some, which broke the support-derived diff when more columns were removed).
+  - Also normalized audited-sourced solids (LOCAL frame) to GLOBAL when they fall back into the ID map, so rejected east-edge/IB/J columns are re-detectable on re-runs.
+- Added S1 basement-context classification: the S1 ceiling panel never drafts column symbols, so the P1 ceiling plan on the same sheet is the primary evidence. Re-ran with a model-based P1 upper-floor check (not just DXF symbols) so every S1 column standing on a confirmed P1 column at the same station is classified by the basement rule.
+  - S1 result: 10 west `CONFIRMED_BY_BASEMENT_EVIDENCE` (X<=49.2), 3 slab-edge `LIKELY_CORRECT` (49.2<X<=60), 6 east `UNRESOLVED` (X>60). East-edge/IB/J stations stay `UNSUPPORTED_VERTICAL_EXTENSION`.
 - Added `EAST_EDGE_OVERHANG_P4_ONLY_STATIONS_REJECTED` finding (rank 6) to the resolution report.
 - Replaced mandatory Luis equality with `LUIS_REFERENCE_DIFF_VALIDATION`.
 
@@ -41,5 +44,5 @@
 - GOLDEN_IN_COMBINED_LEGACY: SUPERSEDED_BY_LUIS_REFERENCE_DIFF
 
 ## Next Work
-- Continue resolving the remaining 19 `UNRESOLVED_REQUIRES_REVIEW` S1 grid columns (main body, `inferred_from_floor_1`); these need whole-basement decision (S1 plan shows no `RLE-PILAR` anywhere in the extract panel) and registration/calibration review against the S1 sheet before confirming or removing.
+- The remaining 9 `UNRESOLVED_REQUIRES_REVIEW` S1 columns (6 east stations X>60 and 3 slab-edge/transitional) still need whole-basement registration/calibration review against the S1 sheet before confirming or removing.
 - Review P1 outboard non-modelable/detail imports (C-021, C-022, C-019).

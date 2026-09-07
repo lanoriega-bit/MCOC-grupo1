@@ -52,6 +52,8 @@ PLAN_NOTE_TOL_M = 1.00
 FOUNDATION_COLUMN_TOL_M = 0.90
 STRONG_LINE_TOL_M = 0.35
 FOUNDATION_ELEMENT_TOL_M = 0.85
+S1_SLAB_GRID_MAX_X_M = 49.2
+S1_EAST_NO_STRUCTURE_MIN_X_M = 60.0
 
 FLOORS = ("S1", "P1", "P2", "P3", "P4")
 COMBINED_TO_LUIS_FLOOR = {"S1": "1S", "P1": "1", "P2": "2", "P3": "3", "P4": "4"}
@@ -430,6 +432,10 @@ def build_id_map(combined: dict[str, object], audited: dict[str, object] | None 
             if tag in id_map:
                 continue
             enriched = copy.deepcopy(solid)
+            for xy_key in ("center", "start", "end"):
+                if enriched.get(xy_key):
+                    xy = enriched[xy_key]
+                    enriched[xy_key] = [xy[0] + CALCE_A_DX_M, xy[1], xy[2] if len(xy) > 2 else None]
             enriched = merge_prior(enriched, previous_by_tag.get(tag) or {}, override=True)
             enriched.setdefault("axis_location", {})
             prior = previous_by_tag.get(tag) or {}
@@ -475,6 +481,13 @@ def classify_column(evidence: dict[str, object]) -> tuple[str, str, list[str]]:
         reasons.append("no foundation RLE-PILAR/pedestal within tolerance")
         return "UNSUPPORTED_VERTICAL_EXTENSION", "; ".join(reasons), ["east_edge_overhang_no_same_floor_or_foundation_column"]
 
+    if floor == "S1" and match_status(evidence.get("upper_floor", {}).get("nearest_column"), DIRECT_COLUMN_TOL_M):
+        if station_x <= S1_SLAB_GRID_MAX_X_M:
+            return "CONFIRMED_BY_BASEMENT_EVIDENCE", "S1 ceiling panel never drafts column symbols; the P1 ceiling plan on the same sheet draws the column at the exact station and the S1 basement slab/beam grid covers this station", ["s1_upper_floor_column_within_basement_grid"]
+        if station_x <= S1_EAST_NO_STRUCTURE_MIN_X_M:
+            return "LIKELY_CORRECT", "S1 panel never drafts columns; the P1 plan on the same sheet draws the column at the exact station, but the station sits at/outside the S1 drawn slab-and-beam footprint", ["s1_upper_floor_column_at_s1_slab_edge"]
+        return "UNRESOLVED", "station east of the S1 basement structural footprint; no S1 beam/wall/los evidence in that zone; column exists only in upper-floor panels", ["s1_station_east_of_basement_footprint_no_s1_structure"]
+
     if match_status(foundation_element, FOUNDATION_ELEMENT_TOL_M) or match_status(same_floor_structure, STRONG_LINE_TOL_M):
         return "LIKELY_CORRECT", "near same-floor structural line and/or foundation element, but no direct column symbol", ["secondary_plan_evidence_only"]
 
@@ -517,9 +530,39 @@ def resolve_columns(
             element for element in plan_elements(floor_extracts, "fundacion")
             if element.get("tipo") in {"fundacion", "muro", "viga", "perimetro_losa"}
         ]
+        upper_floor_columns = (
+            [
+                element for element in plan_elements(floor_extracts, "P1", "columna")
+                if element.get("modelable_3d", False)
+            ]
+            if floor == "S1"
+            else []
+        )
+        if floor == "S1":
+            for model_tag, model_solid in id_map.items():
+                if (
+                    str(model_solid.get("floor")) in ("P1", "1")
+                    and model_solid.get("category") == "column"
+                    and model_solid.get("center")
+                ):
+                    center = model_solid["center"]
+                    upper_floor_columns.append(
+                        {
+                            "id": model_solid.get("id") or model_tag,
+                            "tipo": "columna",
+                            "centro": [float(center[0]), float(center[1])],
+                            "modelable_3d": True,
+                            "fuente": {"plano": "modelo_p1", "capa": "modelo"},
+                        }
+                    )
         evidence = {
             "floor": floor,
             "station_x_m": r3(point[0]),
+            "upper_floor": {
+                "source_dxf": FLOOR_SOURCE_DXF["P1"],
+                "nearest_column": nearest_element(point, upper_floor_columns),
+                "direct_column_count": len(upper_floor_columns),
+            },
             "same_floor": {
                 "source_dxf": FLOOR_SOURCE_DXF.get(floor),
                 "direct_dxf_region_scan": dxf_scan.get("regions", {}).get(floor),
