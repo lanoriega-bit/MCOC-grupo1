@@ -42,8 +42,8 @@ namespace Mcoc.UnityViewer.EditorTools
             cam.fieldOfView = 45f;
             cam.clearFlags = CameraClearFlags.SolidColor;
             cam.backgroundColor = new Color(0.15f, 0.15f, 0.17f, 1f);
-            Vector3 target = new Vector3(37.29f, 18.66f, 10.96f);
-            camGo.transform.position = target + new Vector3(-70f, 50f, -90f);
+            Vector3 target = new Vector3(16.41f, 14.73f, 5.99f);
+            camGo.transform.position = target + new Vector3(-50f, 40f, -65f);
             camGo.transform.LookAt(target);
 
             // Luz direccional

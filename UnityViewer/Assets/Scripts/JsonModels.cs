@@ -52,6 +52,14 @@ namespace Mcoc.UnityViewer
         public double length_m;
         public string confidence;
         public string material;
+        public string id;
+        public string human_id;
+        public string elementTag;
+        public string building;
+        public string axis_x;
+        public string axis_y;
+        public string source_elevation_m;
+        public double model_z_m;
     }
 
     [Serializable]
@@ -104,5 +112,76 @@ namespace Mcoc.UnityViewer
         public string id;
         public List<double> point;
         public string floor;
+    }
+
+    [Serializable]
+    public class TributaryData
+    {
+        public string units;
+        public double qG_kN_m2;
+        public double total_area_m2;
+        public double total_load_kN;
+        public TributaryFloorMap buildings;
+        public List<TributaryArea> areas;
+        public List<TributaryPointArea> point_areas;
+    }
+
+    [Serializable]
+    public class TributaryFloorMap
+    {
+        public TributaryBuildingMap EDIFICIO_1;
+        public TributaryBuildingMap EDIFICIO_2;
+    }
+
+    [Serializable]
+    public class TributaryBuildingMap
+    {
+        public TributaryFloor S1;
+        public TributaryFloor P1;
+        public TributaryFloor P2;
+        public TributaryFloor P3;
+        public TributaryFloor P4;
+    }
+
+    [Serializable]
+    public class TributaryFloor
+    {
+        public double area_m2;
+        public double load_kN;
+    }
+
+    [Serializable]
+    public class TributaryArea
+    {
+        public string building;
+        public string floor;
+        public string beam_id;
+        public string elementTag;
+        public List<double> start;
+        public List<double> end;
+        public List<double> mid;
+        public double area_m2;
+        public double load_kN;
+        public List<Point2D> polygon;
+    }
+
+    [Serializable]
+    public class TributaryPointArea
+    {
+        public string building;
+        public string floor;
+        public string member_category;
+        public string member_id;
+        public string elementTag;
+        public double area_m2;
+        public double load_kN;
+        public List<Point2D> polygon;
+    }
+
+    [Serializable]
+    public class Point2D
+    {
+        public double x;
+        public double y;
     }
 }

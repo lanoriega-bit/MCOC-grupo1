@@ -50,5 +50,28 @@ namespace Mcoc.UnityViewer
             }
             return "{}";
         }
+
+        public static TributaryData LoadTributaries(string fileName = "tributary_areas.json")
+        {
+            string path = Path.Combine(Application.streamingAssetsPath, fileName);
+            if (!File.Exists(path))
+            {
+                Debug.LogWarning($"[JsonLoader] No existe tributary_areas.json: {path}");
+                return null;
+            }
+            string json = File.ReadAllText(path);
+            try
+            {
+                TributaryData data = JsonUtility.FromJson<TributaryData>(json);
+                data.buildings = JsonUtility.FromJson<TributaryFloorMap>(ExtractObject(json, "buildings"));
+                Debug.Log($"[JsonLoader] Tributarias cargadas: {data.areas?.Count} areas, carga total {data.total_load_kN:F1} kN");
+                return data;
+            }
+            catch (System.Exception ex)
+            {
+                Debug.LogError($"[JsonLoader] Error al parsear tributary_areas.json: {ex.Message}");
+                return null;
+            }
+        }
     }
 }
