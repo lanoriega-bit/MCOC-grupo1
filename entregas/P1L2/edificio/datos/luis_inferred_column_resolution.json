@@ -176,22 +176,22 @@
   },
   "classification_counts": {
     "LIKELY_CORRECT": 16,
-    "UNRESOLVED": 27,
-    "UNSUPPORTED_VERTICAL_EXTENSION": 15,
+    "UNRESOLVED": 3,
+    "UNSUPPORTED_VERTICAL_EXTENSION": 39,
     "CONFIRMED_BY_PLAN_NOTE": 3
   },
   "resolution_groups": {
-    "UNRESOLVED_REQUIRES_REVIEW": 43,
-    "CONFIRMED_WRONG_AND_CORRECTED": 15,
+    "UNRESOLVED_REQUIRES_REVIEW": 19,
+    "CONFIRMED_WRONG_AND_CORRECTED": 39,
     "CONFIRMED_CORRECT": 3
   },
   "support_classification_counts": {
-    "UNRESOLVED_DERIVED_ELEMENT": 25,
-    "INVALID_DERIVED_ELEMENT": 9
+    "UNRESOLVED_DERIVED_ELEMENT": 19,
+    "INVALID_DERIVED_ELEMENT": 15
   },
   "columns_total_resolved": 61,
   "supports_total_resolved": 34,
-  "geometry_changes": 24,
+  "geometry_changes": 54,
   "corrected_model": "entregas/P1L2/unity_export/model_1_audited_corrected.json",
   "outboard_reconstruction": "entregas/P1L2/edificio/datos/outboard_room_reconstruction.json",
   "overlays_dir": "entregas/P1L2/edificio/validacion/luis_reference_overlays",
@@ -249,8 +249,14 @@
         "SOL_base_support_0083",
         "SOL_base_support_0084",
         "SOL_base_support_0085",
+        "SOL_base_support_0087",
+        "SOL_base_support_0088",
+        "SOL_base_support_0089",
         "SOL_base_support_0090",
-        "SOL_base_support_0091"
+        "SOL_base_support_0091",
+        "SOL_base_support_0092",
+        "SOL_base_support_0093",
+        "SOL_base_support_0094"
       ],
       "source_column_ids": [
         "E1-S1-C-007",
@@ -261,7 +267,13 @@
         "E1-S1-C-019",
         "E1-S1-C-020",
         "E1-S1-C-021",
-        "E1-S1-C-022"
+        "E1-S1-C-022",
+        "E1-S1-C-029",
+        "E1-S1-C-030",
+        "E1-S1-C-031",
+        "E1-S1-C-032",
+        "E1-S1-C-033",
+        "E1-S1-C-034"
       ]
     },
     {
@@ -270,9 +282,9 @@
       "impact": "medium",
       "summary": "Some outboard column symbols are marked non-modelable/detail in the plan extract but align with Luis medium columns; they are surfaced for manual review, not removed automatically.",
       "affected_ids": [
-        "P1:E1-P1-C-021 from C_P1_01_0020",
-        "P1:E1-P1-C-022 from C_P1_01_0021",
-        "P1:E1-P1-C-019 from C_P1_01_0023"
+        "P1:None from C_P1_01_0020",
+        "P1:None from C_P1_01_0021",
+        "P1:None from C_P1_01_0023"
       ]
     },
     {
@@ -283,6 +295,38 @@
       "affected_ids": [
         "E1-P2-C-013",
         "E1-P2-C-017"
+      ]
+    },
+    {
+      "rank": 6,
+      "code": "EAST_EDGE_OVERHANG_P4_ONLY_STATIONS_REJECTED",
+      "impact": "high",
+      "summary": "Inferred columns at the right/east overhang stations between IB and J on S1/P1/P2/P3 have no same-floor column symbol (verified directly on the DXF floor panels) and no foundation pedestal; those stations appear only on the top-floor P4 plan and are rejected as vertical propagations of a P4-only feature.",
+      "affected_ids": [
+        "E1-S1-C-029",
+        "E1-S1-C-032",
+        "E1-S1-C-030",
+        "E1-S1-C-033",
+        "E1-S1-C-031",
+        "E1-S1-C-034",
+        "E1-P1-C-029",
+        "E1-P1-C-032",
+        "E1-P1-C-030",
+        "E1-P1-C-033",
+        "E1-P1-C-031",
+        "E1-P1-C-034",
+        "E1-P2-C-024",
+        "E1-P2-C-027",
+        "E1-P2-C-025",
+        "E1-P2-C-028",
+        "E1-P2-C-026",
+        "E1-P2-C-029",
+        "E1-P3-C-021",
+        "E1-P3-C-024",
+        "E1-P3-C-022",
+        "E1-P3-C-025",
+        "E1-P3-C-023",
+        "E1-P3-C-026"
       ]
     }
   ],
@@ -341,6 +385,7 @@
       ],
       "evidence": {
         "floor": "S1",
+        "station_x_m": 27.491,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -506,6 +551,7 @@
       ],
       "evidence": {
         "floor": "S1",
+        "station_x_m": 37.491,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -671,6 +717,7 @@
       ],
       "evidence": {
         "floor": "S1",
+        "station_x_m": 47.491,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -836,6 +883,7 @@
       ],
       "evidence": {
         "floor": "S1",
+        "station_x_m": 57.491,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -1001,6 +1049,7 @@
       ],
       "evidence": {
         "floor": "S1",
+        "station_x_m": 72.491,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -1166,6 +1215,7 @@
       ],
       "evidence": {
         "floor": "S1",
+        "station_x_m": 67.447,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -1332,14 +1382,15 @@
         "CAD_4_column_plan_0288",
         "CAD_4_column_plan_0289"
       ],
-      "classification": "UNRESOLVED",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-      "reason": "no primary same-floor/foundation column evidence in available extracts",
+      "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+      "resolution_group": "CONFIRMED_WRONG_AND_CORRECTED",
+      "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
       "reason_codes": [
-        "needs_original_dxf_review"
+        "east_edge_overhang_no_same_floor_or_foundation_column"
       ],
       "evidence": {
         "floor": "S1",
+        "station_x_m": 75.041,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -1501,14 +1552,15 @@
         "CAD_4_column_plan_0156",
         "CAD_4_column_plan_0157"
       ],
-      "classification": "UNRESOLVED",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-      "reason": "no primary same-floor/foundation column evidence in available extracts",
+      "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+      "resolution_group": "CONFIRMED_WRONG_AND_CORRECTED",
+      "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
       "reason_codes": [
-        "needs_original_dxf_review"
+        "east_edge_overhang_no_same_floor_or_foundation_column"
       ],
       "evidence": {
         "floor": "S1",
+        "station_x_m": 77.391,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -1674,6 +1726,7 @@
       ],
       "evidence": {
         "floor": "S1",
+        "station_x_m": 27.516,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -1839,6 +1892,7 @@
       ],
       "evidence": {
         "floor": "S1",
+        "station_x_m": 37.491,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -2004,6 +2058,7 @@
       ],
       "evidence": {
         "floor": "S1",
+        "station_x_m": 47.491,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -2169,6 +2224,7 @@
       ],
       "evidence": {
         "floor": "S1",
+        "station_x_m": 57.491,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -2334,6 +2390,7 @@
       ],
       "evidence": {
         "floor": "S1",
+        "station_x_m": 67.404,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -2499,6 +2556,7 @@
       ],
       "evidence": {
         "floor": "S1",
+        "station_x_m": 72.491,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -2665,14 +2723,15 @@
         "CAD_4_column_plan_0308",
         "CAD_4_column_plan_0309"
       ],
-      "classification": "UNRESOLVED",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-      "reason": "no primary same-floor/foundation column evidence in available extracts",
+      "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+      "resolution_group": "CONFIRMED_WRONG_AND_CORRECTED",
+      "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
       "reason_codes": [
-        "needs_original_dxf_review"
+        "east_edge_overhang_no_same_floor_or_foundation_column"
       ],
       "evidence": {
         "floor": "S1",
+        "station_x_m": 75.041,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -2834,14 +2893,15 @@
         "CAD_4_column_plan_0140",
         "CAD_4_column_plan_0141"
       ],
-      "classification": "UNRESOLVED",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-      "reason": "no primary same-floor/foundation column evidence in available extracts",
+      "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+      "resolution_group": "CONFIRMED_WRONG_AND_CORRECTED",
+      "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
       "reason_codes": [
-        "needs_original_dxf_review"
+        "east_edge_overhang_no_same_floor_or_foundation_column"
       ],
       "evidence": {
         "floor": "S1",
+        "station_x_m": 77.391,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -3007,6 +3067,7 @@
       ],
       "evidence": {
         "floor": "S1",
+        "station_x_m": 27.516,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -3172,6 +3233,7 @@
       ],
       "evidence": {
         "floor": "S1",
+        "station_x_m": 37.491,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -3337,6 +3399,7 @@
       ],
       "evidence": {
         "floor": "S1",
+        "station_x_m": 47.491,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -3502,6 +3565,7 @@
       ],
       "evidence": {
         "floor": "S1",
+        "station_x_m": 57.491,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -3667,6 +3731,7 @@
       ],
       "evidence": {
         "floor": "S1",
+        "station_x_m": 72.491,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -3833,14 +3898,15 @@
         "CAD_4_column_plan_0300",
         "CAD_4_column_plan_0301"
       ],
-      "classification": "UNRESOLVED",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-      "reason": "no primary same-floor/foundation column evidence in available extracts",
+      "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+      "resolution_group": "CONFIRMED_WRONG_AND_CORRECTED",
+      "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
       "reason_codes": [
-        "needs_original_dxf_review"
+        "east_edge_overhang_no_same_floor_or_foundation_column"
       ],
       "evidence": {
         "floor": "S1",
+        "station_x_m": 75.041,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -4002,14 +4068,15 @@
         "CAD_4_column_plan_0148",
         "CAD_4_column_plan_0149"
       ],
-      "classification": "UNRESOLVED",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-      "reason": "no primary same-floor/foundation column evidence in available extracts",
+      "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+      "resolution_group": "CONFIRMED_WRONG_AND_CORRECTED",
+      "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
       "reason_codes": [
-        "needs_original_dxf_review"
+        "east_edge_overhang_no_same_floor_or_foundation_column"
       ],
       "evidence": {
         "floor": "S1",
+        "station_x_m": 77.391,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -4184,6 +4251,7 @@
       ],
       "evidence": {
         "floor": "S1",
+        "station_x_m": 44.981,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -4352,6 +4420,7 @@
       ],
       "evidence": {
         "floor": "S1",
+        "station_x_m": 67.67,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -4518,6 +4587,7 @@
       ],
       "evidence": {
         "floor": "S1",
+        "station_x_m": 30.027,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -4687,6 +4757,7 @@
       ],
       "evidence": {
         "floor": "S1",
+        "station_x_m": 34.477,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -4860,6 +4931,7 @@
       ],
       "evidence": {
         "floor": "S1",
+        "station_x_m": 20.0,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -5033,6 +5105,7 @@
       ],
       "evidence": {
         "floor": "S1",
+        "station_x_m": 30.0,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -5206,6 +5279,7 @@
       ],
       "evidence": {
         "floor": "S1",
+        "station_x_m": 10.0,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -5384,6 +5458,7 @@
       ],
       "evidence": {
         "floor": "S1",
+        "station_x_m": 17.49,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -5553,6 +5628,7 @@
       ],
       "evidence": {
         "floor": "S1",
+        "station_x_m": 34.477,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -5719,6 +5795,7 @@
       ],
       "evidence": {
         "floor": "S1",
+        "station_x_m": 30.027,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -5888,6 +5965,7 @@
       ],
       "evidence": {
         "floor": "S1",
+        "station_x_m": 34.477,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -6054,14 +6132,15 @@
         "CAD_4_column_plan_0288",
         "CAD_4_column_plan_0289"
       ],
-      "classification": "UNRESOLVED",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-      "reason": "no primary same-floor/foundation column evidence in available extracts",
+      "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+      "resolution_group": "CONFIRMED_WRONG_AND_CORRECTED",
+      "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
       "reason_codes": [
-        "needs_original_dxf_review"
+        "east_edge_overhang_no_same_floor_or_foundation_column"
       ],
       "evidence": {
         "floor": "P1",
+        "station_x_m": 75.041,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -6238,14 +6317,15 @@
         "CAD_4_column_plan_0156",
         "CAD_4_column_plan_0157"
       ],
-      "classification": "UNRESOLVED",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-      "reason": "no primary same-floor/foundation column evidence in available extracts",
+      "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+      "resolution_group": "CONFIRMED_WRONG_AND_CORRECTED",
+      "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
       "reason_codes": [
-        "needs_original_dxf_review"
+        "east_edge_overhang_no_same_floor_or_foundation_column"
       ],
       "evidence": {
         "floor": "P1",
+        "station_x_m": 77.391,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -6427,14 +6507,15 @@
         "CAD_4_column_plan_0308",
         "CAD_4_column_plan_0309"
       ],
-      "classification": "UNRESOLVED",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-      "reason": "no primary same-floor/foundation column evidence in available extracts",
+      "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+      "resolution_group": "CONFIRMED_WRONG_AND_CORRECTED",
+      "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
       "reason_codes": [
-        "needs_original_dxf_review"
+        "east_edge_overhang_no_same_floor_or_foundation_column"
       ],
       "evidence": {
         "floor": "P1",
+        "station_x_m": 75.041,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -6611,14 +6692,15 @@
         "CAD_4_column_plan_0140",
         "CAD_4_column_plan_0141"
       ],
-      "classification": "UNRESOLVED",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-      "reason": "no primary same-floor/foundation column evidence in available extracts",
+      "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+      "resolution_group": "CONFIRMED_WRONG_AND_CORRECTED",
+      "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
       "reason_codes": [
-        "needs_original_dxf_review"
+        "east_edge_overhang_no_same_floor_or_foundation_column"
       ],
       "evidence": {
         "floor": "P1",
+        "station_x_m": 77.391,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -6800,14 +6882,15 @@
         "CAD_4_column_plan_0300",
         "CAD_4_column_plan_0301"
       ],
-      "classification": "UNRESOLVED",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-      "reason": "no primary same-floor/foundation column evidence in available extracts",
+      "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+      "resolution_group": "CONFIRMED_WRONG_AND_CORRECTED",
+      "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
       "reason_codes": [
-        "needs_original_dxf_review"
+        "east_edge_overhang_no_same_floor_or_foundation_column"
       ],
       "evidence": {
         "floor": "P1",
+        "station_x_m": 75.041,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -6984,14 +7067,15 @@
         "CAD_4_column_plan_0148",
         "CAD_4_column_plan_0149"
       ],
-      "classification": "UNRESOLVED",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-      "reason": "no primary same-floor/foundation column evidence in available extracts",
+      "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+      "resolution_group": "CONFIRMED_WRONG_AND_CORRECTED",
+      "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
       "reason_codes": [
-        "needs_original_dxf_review"
+        "east_edge_overhang_no_same_floor_or_foundation_column"
       ],
       "evidence": {
         "floor": "P1",
+        "station_x_m": 77.391,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -7181,6 +7265,7 @@
       ],
       "evidence": {
         "floor": "P1",
+        "station_x_m": 44.981,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -7369,6 +7454,7 @@
       ],
       "evidence": {
         "floor": "P1",
+        "station_x_m": 20.0,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -7557,6 +7643,7 @@
       ],
       "evidence": {
         "floor": "P1",
+        "station_x_m": 30.0,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -7745,6 +7832,7 @@
       ],
       "evidence": {
         "floor": "P1",
+        "station_x_m": 37.491,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -7938,6 +8026,7 @@
       ],
       "evidence": {
         "floor": "P1",
+        "station_x_m": 44.981,
         "same_floor": {
           "source_dxf": "2017_67-101.dxf",
           "direct_dxf_region_scan": {
@@ -8119,14 +8208,15 @@
         "CAD_4_column_plan_0288",
         "CAD_4_column_plan_0289"
       ],
-      "classification": "UNRESOLVED",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-      "reason": "no primary same-floor/foundation column evidence in available extracts",
+      "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+      "resolution_group": "CONFIRMED_WRONG_AND_CORRECTED",
+      "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
       "reason_codes": [
-        "needs_original_dxf_review"
+        "east_edge_overhang_no_same_floor_or_foundation_column"
       ],
       "evidence": {
         "floor": "P2",
+        "station_x_m": 75.041,
         "same_floor": {
           "source_dxf": "2017_67-102.dxf",
           "direct_dxf_region_scan": {
@@ -8303,14 +8393,15 @@
         "CAD_4_column_plan_0156",
         "CAD_4_column_plan_0157"
       ],
-      "classification": "UNRESOLVED",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-      "reason": "no primary same-floor/foundation column evidence in available extracts",
+      "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+      "resolution_group": "CONFIRMED_WRONG_AND_CORRECTED",
+      "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
       "reason_codes": [
-        "needs_original_dxf_review"
+        "east_edge_overhang_no_same_floor_or_foundation_column"
       ],
       "evidence": {
         "floor": "P2",
+        "station_x_m": 77.391,
         "same_floor": {
           "source_dxf": "2017_67-102.dxf",
           "direct_dxf_region_scan": {
@@ -8492,14 +8583,15 @@
         "CAD_4_column_plan_0308",
         "CAD_4_column_plan_0309"
       ],
-      "classification": "UNRESOLVED",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-      "reason": "no primary same-floor/foundation column evidence in available extracts",
+      "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+      "resolution_group": "CONFIRMED_WRONG_AND_CORRECTED",
+      "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
       "reason_codes": [
-        "needs_original_dxf_review"
+        "east_edge_overhang_no_same_floor_or_foundation_column"
       ],
       "evidence": {
         "floor": "P2",
+        "station_x_m": 75.041,
         "same_floor": {
           "source_dxf": "2017_67-102.dxf",
           "direct_dxf_region_scan": {
@@ -8676,14 +8768,15 @@
         "CAD_4_column_plan_0140",
         "CAD_4_column_plan_0141"
       ],
-      "classification": "UNRESOLVED",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-      "reason": "no primary same-floor/foundation column evidence in available extracts",
+      "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+      "resolution_group": "CONFIRMED_WRONG_AND_CORRECTED",
+      "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
       "reason_codes": [
-        "needs_original_dxf_review"
+        "east_edge_overhang_no_same_floor_or_foundation_column"
       ],
       "evidence": {
         "floor": "P2",
+        "station_x_m": 77.391,
         "same_floor": {
           "source_dxf": "2017_67-102.dxf",
           "direct_dxf_region_scan": {
@@ -8865,14 +8958,15 @@
         "CAD_4_column_plan_0300",
         "CAD_4_column_plan_0301"
       ],
-      "classification": "UNRESOLVED",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-      "reason": "no primary same-floor/foundation column evidence in available extracts",
+      "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+      "resolution_group": "CONFIRMED_WRONG_AND_CORRECTED",
+      "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
       "reason_codes": [
-        "needs_original_dxf_review"
+        "east_edge_overhang_no_same_floor_or_foundation_column"
       ],
       "evidence": {
         "floor": "P2",
+        "station_x_m": 75.041,
         "same_floor": {
           "source_dxf": "2017_67-102.dxf",
           "direct_dxf_region_scan": {
@@ -9049,14 +9143,15 @@
         "CAD_4_column_plan_0148",
         "CAD_4_column_plan_0149"
       ],
-      "classification": "UNRESOLVED",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-      "reason": "no primary same-floor/foundation column evidence in available extracts",
+      "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+      "resolution_group": "CONFIRMED_WRONG_AND_CORRECTED",
+      "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
       "reason_codes": [
-        "needs_original_dxf_review"
+        "east_edge_overhang_no_same_floor_or_foundation_column"
       ],
       "evidence": {
         "floor": "P2",
+        "station_x_m": 77.391,
         "same_floor": {
           "source_dxf": "2017_67-102.dxf",
           "direct_dxf_region_scan": {
@@ -9191,9 +9286,9 @@
       "legacy_solidTag": "SOL_2_column_0026",
       "piso": "P2",
       "source_floor_luis": "2",
-      "X": 47.491,
+      "X": 20.0,
       "Y": 20.451,
-      "x_m": 47.491,
+      "x_m": 20.0,
       "y_m": 20.451,
       "local_luis_xy_m": [
         20.0,
@@ -9246,6 +9341,7 @@
       ],
       "evidence": {
         "floor": "P2",
+        "station_x_m": 20.0,
         "same_floor": {
           "source_dxf": "2017_67-102.dxf",
           "direct_dxf_region_scan": {
@@ -9270,45 +9366,45 @@
             }
           },
           "nearest_column": {
-            "id": "C_P1_02_0009",
+            "id": "C_P1_02_0006",
             "tipo": "columna",
-            "distance_m": 5.511,
+            "distance_m": 4.32,
             "source_dxf": "2017_67-102.dxf",
             "source_layer": "RLE-PILAR",
             "ejes_aproximados": {
-              "x": "Ga-H",
+              "x": "antes de E_prime",
               "y": "antes de 1"
             },
             "point_or_mid_m": [
-              51.078,
+              21.078,
               16.268
             ]
           },
           "nearest_column_label": {
-            "id": "LBL_P1_02_0057",
+            "id": "LBL_P1_02_0064",
             "tipo": "columna",
             "texto": "P. 70x70",
-            "distance_m": 48.539,
+            "distance_m": 49.061,
             "source_dxf": "2017_67-102.dxf",
             "source_layer": "RLE-TEXTO-1",
             "point_m": [
-              46.48,
-              -28.077
+              26.488,
+              -28.178
             ]
           },
           "nearest_structure": {
-            "id": "VIGA_P1_02_0099",
-            "tipo": "viga",
-            "distance_m": 1.573,
+            "id": "PERIMETRO_LOSA_P1_02_0007",
+            "tipo": "perimetro_losa",
+            "distance_m": 4.091,
             "source_dxf": "2017_67-102.dxf",
-            "source_layer": "RLE-VIGA",
+            "source_layer": "RLE-LOSA",
             "ejes_aproximados": {
-              "x": "Ga-H",
+              "x": "Ea-Eb",
               "y": "antes de 1"
             },
             "point_or_mid_m": [
-              48.578,
-              18.878
+              26.078,
+              16.618
             ]
           },
           "direct_column_count": 21
@@ -9340,7 +9436,7 @@
           "nearest_column": {
             "id": "C_P1_FUNDACION_0001",
             "tipo": "columna",
-            "distance_m": 18.201,
+            "distance_m": 45.454,
             "source_dxf": "2017_67-100.dxf",
             "source_layer": "RLE-PILAR",
             "ejes_aproximados": {
@@ -9353,18 +9449,18 @@
             ]
           },
           "nearest_foundation_element": {
-            "id": "FUNDACION_P1_FUNDACION_0082",
+            "id": "FUNDACION_P1_FUNDACION_0043",
             "tipo": "fundacion",
-            "distance_m": 2.198,
+            "distance_m": 4.289,
             "source_dxf": "2017_67-100.dxf",
             "source_layer": "RLE-FUNDACION",
             "ejes_aproximados": {
-              "x": "F_prime-G",
+              "x": "antes de E_prime",
               "y": "antes de 1"
             },
             "point_or_mid_m": [
-              44.898,
-              18.335
+              23.398,
+              16.335
             ]
           },
           "direct_column_count": 6
@@ -9380,9 +9476,9 @@
       "legacy_solidTag": "SOL_2_column_0025",
       "piso": "P2",
       "source_floor_luis": "2",
-      "X": 57.491,
+      "X": 30.0,
       "Y": 20.451,
-      "x_m": 57.491,
+      "x_m": 30.0,
       "y_m": 20.451,
       "local_luis_xy_m": [
         30.0,
@@ -9435,6 +9531,7 @@
       ],
       "evidence": {
         "floor": "P2",
+        "station_x_m": 30.0,
         "same_floor": {
           "source_dxf": "2017_67-102.dxf",
           "direct_dxf_region_scan": {
@@ -9459,45 +9556,45 @@
             }
           },
           "nearest_column": {
-            "id": "C_P1_02_0010",
+            "id": "C_P1_02_0019",
             "tipo": "columna",
-            "distance_m": 5.511,
+            "distance_m": 1.08,
             "source_dxf": "2017_67-102.dxf",
             "source_layer": "RLE-PILAR",
             "ejes_aproximados": {
-              "x": "H_prime-H2",
+              "x": "Ed-F",
               "y": "antes de 1"
             },
             "point_or_mid_m": [
-              61.078,
-              16.268
+              31.078,
+              20.388
             ]
           },
           "nearest_column_label": {
-            "id": "LBL_P1_02_0055",
+            "id": "LBL_P1_02_0064",
             "tipo": "columna",
             "texto": "P. 70x70",
-            "distance_m": 48.539,
+            "distance_m": 48.757,
             "source_dxf": "2017_67-102.dxf",
             "source_layer": "RLE-TEXTO-1",
             "point_m": [
-              56.469,
-              -28.077
+              26.488,
+              -28.178
             ]
           },
           "nearest_structure": {
-            "id": "PERIMETRO_LOSA_P1_02_0006",
-            "tipo": "perimetro_losa",
-            "distance_m": 3.833,
+            "id": "VIGA_P1_02_0043",
+            "tipo": "viga",
+            "distance_m": 0.778,
             "source_dxf": "2017_67-102.dxf",
-            "source_layer": "RLE-LOSA",
+            "source_layer": "RLE-VIGA",
             "ejes_aproximados": {
-              "x": "H-H1",
+              "x": "Ed-F",
               "y": "antes de 1"
             },
             "point_or_mid_m": [
-              56.078,
-              16.618
+              30.778,
+              18.653
             ]
           },
           "direct_column_count": 21
@@ -9529,7 +9626,7 @@
           "nearest_column": {
             "id": "C_P1_FUNDACION_0001",
             "tipo": "columna",
-            "distance_m": 8.667,
+            "distance_m": 35.498,
             "source_dxf": "2017_67-100.dxf",
             "source_layer": "RLE-PILAR",
             "ejes_aproximados": {
@@ -9542,18 +9639,18 @@
             ]
           },
           "nearest_foundation_element": {
-            "id": "FUNDACION_P1_FUNDACION_0159",
+            "id": "FUNDACION_P1_FUNDACION_0009",
             "tipo": "fundacion",
-            "distance_m": 1.627,
+            "distance_m": 2.866,
             "source_dxf": "2017_67-100.dxf",
             "source_layer": "RLE-FUNDACION",
             "ejes_aproximados": {
-              "x": "H-H1",
+              "x": "E-Ea",
               "y": "antes de 1"
             },
             "point_or_mid_m": [
-              58.876,
-              19.097
+              29.898,
+              17.585
             ]
           },
           "direct_column_count": 6
@@ -9616,14 +9713,15 @@
         "CAD_4_column_plan_0288",
         "CAD_4_column_plan_0289"
       ],
-      "classification": "UNRESOLVED",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-      "reason": "no primary same-floor/foundation column evidence in available extracts",
+      "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+      "resolution_group": "CONFIRMED_WRONG_AND_CORRECTED",
+      "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
       "reason_codes": [
-        "needs_original_dxf_review"
+        "east_edge_overhang_no_same_floor_or_foundation_column"
       ],
       "evidence": {
         "floor": "P3",
+        "station_x_m": 75.041,
         "same_floor": {
           "source_dxf": "2017_67-102.dxf",
           "direct_dxf_region_scan": {
@@ -9800,14 +9898,15 @@
         "CAD_4_column_plan_0156",
         "CAD_4_column_plan_0157"
       ],
-      "classification": "UNRESOLVED",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-      "reason": "no primary same-floor/foundation column evidence in available extracts",
+      "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+      "resolution_group": "CONFIRMED_WRONG_AND_CORRECTED",
+      "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
       "reason_codes": [
-        "needs_original_dxf_review"
+        "east_edge_overhang_no_same_floor_or_foundation_column"
       ],
       "evidence": {
         "floor": "P3",
+        "station_x_m": 77.391,
         "same_floor": {
           "source_dxf": "2017_67-102.dxf",
           "direct_dxf_region_scan": {
@@ -9989,14 +10088,15 @@
         "CAD_4_column_plan_0308",
         "CAD_4_column_plan_0309"
       ],
-      "classification": "UNRESOLVED",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-      "reason": "no primary same-floor/foundation column evidence in available extracts",
+      "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+      "resolution_group": "CONFIRMED_WRONG_AND_CORRECTED",
+      "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
       "reason_codes": [
-        "needs_original_dxf_review"
+        "east_edge_overhang_no_same_floor_or_foundation_column"
       ],
       "evidence": {
         "floor": "P3",
+        "station_x_m": 75.041,
         "same_floor": {
           "source_dxf": "2017_67-102.dxf",
           "direct_dxf_region_scan": {
@@ -10173,14 +10273,15 @@
         "CAD_4_column_plan_0140",
         "CAD_4_column_plan_0141"
       ],
-      "classification": "UNRESOLVED",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-      "reason": "no primary same-floor/foundation column evidence in available extracts",
+      "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+      "resolution_group": "CONFIRMED_WRONG_AND_CORRECTED",
+      "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
       "reason_codes": [
-        "needs_original_dxf_review"
+        "east_edge_overhang_no_same_floor_or_foundation_column"
       ],
       "evidence": {
         "floor": "P3",
+        "station_x_m": 77.391,
         "same_floor": {
           "source_dxf": "2017_67-102.dxf",
           "direct_dxf_region_scan": {
@@ -10362,14 +10463,15 @@
         "CAD_4_column_plan_0300",
         "CAD_4_column_plan_0301"
       ],
-      "classification": "UNRESOLVED",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-      "reason": "no primary same-floor/foundation column evidence in available extracts",
+      "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+      "resolution_group": "CONFIRMED_WRONG_AND_CORRECTED",
+      "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
       "reason_codes": [
-        "needs_original_dxf_review"
+        "east_edge_overhang_no_same_floor_or_foundation_column"
       ],
       "evidence": {
         "floor": "P3",
+        "station_x_m": 75.041,
         "same_floor": {
           "source_dxf": "2017_67-102.dxf",
           "direct_dxf_region_scan": {
@@ -10546,14 +10648,15 @@
         "CAD_4_column_plan_0148",
         "CAD_4_column_plan_0149"
       ],
-      "classification": "UNRESOLVED",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-      "reason": "no primary same-floor/foundation column evidence in available extracts",
+      "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+      "resolution_group": "CONFIRMED_WRONG_AND_CORRECTED",
+      "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
       "reason_codes": [
-        "needs_original_dxf_review"
+        "east_edge_overhang_no_same_floor_or_foundation_column"
       ],
       "evidence": {
         "floor": "P3",
+        "station_x_m": 77.391,
         "same_floor": {
           "source_dxf": "2017_67-102.dxf",
           "direct_dxf_region_scan": {
@@ -10742,6 +10845,7 @@
       ],
       "evidence": {
         "floor": "P3",
+        "station_x_m": 20.0,
         "same_floor": {
           "source_dxf": "2017_67-102.dxf",
           "direct_dxf_region_scan": {
@@ -10930,6 +11034,7 @@
       ],
       "evidence": {
         "floor": "P3",
+        "station_x_m": 30.0,
         "same_floor": {
           "source_dxf": "2017_67-102.dxf",
           "direct_dxf_region_scan": {
@@ -11561,8 +11666,8 @@
       "source_column_ids": [
         "E1-S1-C-033"
       ],
-      "classification": "UNRESOLVED_DERIVED_ELEMENT",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
+      "classification": "INVALID_DERIVED_ELEMENT",
+      "resolution_group": "CONFIRMED_WRONG_AND_CORRECTED",
       "X": 77.391,
       "Y": 9.081,
       "local_luis_xy_m": [
@@ -11580,8 +11685,8 @@
       "source_column_ids": [
         "E1-S1-C-034"
       ],
-      "classification": "UNRESOLVED_DERIVED_ELEMENT",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
+      "classification": "INVALID_DERIVED_ELEMENT",
+      "resolution_group": "CONFIRMED_WRONG_AND_CORRECTED",
       "X": 77.391,
       "Y": 16.331,
       "local_luis_xy_m": [
@@ -11599,8 +11704,8 @@
       "source_column_ids": [
         "E1-S1-C-032"
       ],
-      "classification": "UNRESOLVED_DERIVED_ELEMENT",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
+      "classification": "INVALID_DERIVED_ELEMENT",
+      "resolution_group": "CONFIRMED_WRONG_AND_CORRECTED",
       "X": 77.391,
       "Y": 0.181,
       "local_luis_xy_m": [
@@ -11656,8 +11761,8 @@
       "source_column_ids": [
         "E1-S1-C-029"
       ],
-      "classification": "UNRESOLVED_DERIVED_ELEMENT",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
+      "classification": "INVALID_DERIVED_ELEMENT",
+      "resolution_group": "CONFIRMED_WRONG_AND_CORRECTED",
       "X": 75.041,
       "Y": 0.181,
       "local_luis_xy_m": [
@@ -11675,8 +11780,8 @@
       "source_column_ids": [
         "E1-S1-C-031"
       ],
-      "classification": "UNRESOLVED_DERIVED_ELEMENT",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
+      "classification": "INVALID_DERIVED_ELEMENT",
+      "resolution_group": "CONFIRMED_WRONG_AND_CORRECTED",
       "X": 75.041,
       "Y": 16.331,
       "local_luis_xy_m": [
@@ -11694,8 +11799,8 @@
       "source_column_ids": [
         "E1-S1-C-030"
       ],
-      "classification": "UNRESOLVED_DERIVED_ELEMENT",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
+      "classification": "INVALID_DERIVED_ELEMENT",
+      "resolution_group": "CONFIRMED_WRONG_AND_CORRECTED",
       "X": 75.041,
       "Y": 9.081,
       "local_luis_xy_m": [

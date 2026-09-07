@@ -3,38 +3,38 @@
   "method": "Asigna cada columna al eje X/Y mas cercano por edificio; agrupa estaciones por referencia eje/offset y piso canonico.",
   "summary": {
     "status": "PASS_WITH_OFF_AXIS_NOTES",
-    "column_count": 176,
+    "column_count": 150,
     "station_count": 42,
     "axis_tolerance_m": 0.35,
     "station_round_m": 0.05,
     "columns_by_floor": {
-      "S1": 33,
-      "P1": 40,
-      "P2": 37,
-      "P3": 32,
+      "S1": 27,
+      "P1": 34,
+      "P2": 29,
+      "P3": 26,
       "P4": 34
     },
     "columns_by_building": {
-      "EDIFICIO_1": 136,
+      "EDIFICIO_1": 110,
       "EDIFICIO_2": 40
     },
     "columns_by_building_floor": {
-      "EDIFICIO_1:P1": 32,
-      "EDIFICIO_1:P2": 29,
-      "EDIFICIO_1:P3": 24,
+      "EDIFICIO_1:P1": 26,
+      "EDIFICIO_1:P2": 21,
+      "EDIFICIO_1:P3": 18,
       "EDIFICIO_1:P4": 26,
-      "EDIFICIO_1:S1": 25,
+      "EDIFICIO_1:S1": 19,
       "EDIFICIO_2:P1": 8,
       "EDIFICIO_2:P2": 8,
       "EDIFICIO_2:P3": 8,
       "EDIFICIO_2:P4": 8,
       "EDIFICIO_2:S1": 8
     },
-    "off_axis_reference_count": 31,
+    "off_axis_reference_count": 17,
     "off_axis_classification_counts": {
-      "OFF_AXIS_LEGITIMATE": 13,
-      "ON_CANONICAL_AXIS": 145,
-      "SPECIAL_POSITION_CONFIRMED": 18
+      "OFF_AXIS_LEGITIMATE": 11,
+      "ON_CANONICAL_AXIS": 133,
+      "SPECIAL_POSITION_CONFIRMED": 6
     },
     "off_axis_reference_sample": [
       {
@@ -310,108 +310,6 @@
         "classification_reason": "Columna alineada a eje X real y repetida en posicion Y exterior al eje 3; no hay etiqueta de eje Y para promoverla."
       },
       {
-        "solidTag": "SOL_1_column_0032",
-        "building": "EDIFICIO_1",
-        "floor": "P1",
-        "x_m": 75.041,
-        "y_m": 0.181,
-        "z_m": 5.94,
-        "width_m": 0.35,
-        "depth_m": 0.35,
-        "height_m": 3.96,
-        "x_axis_matrix": "X=75.05 near IB +1.68m",
-        "y_axis_matrix": "1",
-        "nearest_x_axis": {
-          "axis": "IB",
-          "axis_coord_m": 73.366,
-          "offset_m": 1.675,
-          "abs_offset_m": 1.675,
-          "status": "OFF_AXIS_REFERENCE"
-        },
-        "nearest_y_axis": {
-          "axis": "1",
-          "axis_coord_m": 0.0,
-          "offset_m": 0.181,
-          "abs_offset_m": 0.181,
-          "status": "ON_AXIS"
-        },
-        "axis_status": "OFF_AXIS_REFERENCE",
-        "source_dxf": "2017_67-103.dxf",
-        "source_floor": "1",
-        "confidence": "inferred_from_above_2",
-        "classification": "SPECIAL_POSITION_CONFIRMED",
-        "classification_confidence": "GEOMETRY_CONFIRMED",
-        "classification_reason": "Columna repetida en los cinco pisos sobre eje Y primario, pero sin etiqueta de eje X respaldada."
-      },
-      {
-        "solidTag": "SOL_1_column_0034",
-        "building": "EDIFICIO_1",
-        "floor": "P1",
-        "x_m": 75.041,
-        "y_m": 9.081,
-        "z_m": 5.94,
-        "width_m": 0.35,
-        "depth_m": 0.35,
-        "height_m": 3.96,
-        "x_axis_matrix": "X=75.05 near IB +1.68m",
-        "y_axis_matrix": "2",
-        "nearest_x_axis": {
-          "axis": "IB",
-          "axis_coord_m": 73.366,
-          "offset_m": 1.675,
-          "abs_offset_m": 1.675,
-          "status": "OFF_AXIS_REFERENCE"
-        },
-        "nearest_y_axis": {
-          "axis": "2",
-          "axis_coord_m": 8.9,
-          "offset_m": 0.181,
-          "abs_offset_m": 0.181,
-          "status": "ON_AXIS"
-        },
-        "axis_status": "OFF_AXIS_REFERENCE",
-        "source_dxf": "2017_67-103.dxf",
-        "source_floor": "1",
-        "confidence": "inferred_from_above_2",
-        "classification": "SPECIAL_POSITION_CONFIRMED",
-        "classification_confidence": "GEOMETRY_CONFIRMED",
-        "classification_reason": "Columna repetida en los cinco pisos sobre eje Y primario, pero sin etiqueta de eje X respaldada."
-      },
-      {
-        "solidTag": "SOL_1_column_0033",
-        "building": "EDIFICIO_1",
-        "floor": "P1",
-        "x_m": 75.041,
-        "y_m": 16.331,
-        "z_m": 5.94,
-        "width_m": 0.35,
-        "depth_m": 0.35,
-        "height_m": 3.96,
-        "x_axis_matrix": "X=75.05 near IB +1.68m",
-        "y_axis_matrix": "3",
-        "nearest_x_axis": {
-          "axis": "IB",
-          "axis_coord_m": 73.366,
-          "offset_m": 1.675,
-          "abs_offset_m": 1.675,
-          "status": "OFF_AXIS_REFERENCE"
-        },
-        "nearest_y_axis": {
-          "axis": "3",
-          "axis_coord_m": 16.15,
-          "offset_m": 0.181,
-          "abs_offset_m": 0.181,
-          "status": "ON_AXIS"
-        },
-        "axis_status": "OFF_AXIS_REFERENCE",
-        "source_dxf": "2017_67-103.dxf",
-        "source_floor": "1",
-        "confidence": "inferred_from_above_2",
-        "classification": "SPECIAL_POSITION_CONFIRMED",
-        "classification_confidence": "GEOMETRY_CONFIRMED",
-        "classification_reason": "Columna repetida en los cinco pisos sobre eje Y primario, pero sin etiqueta de eje X respaldada."
-      },
-      {
         "solidTag": "SOL_2_column_0019",
         "building": "EDIFICIO_1",
         "floor": "P2",
@@ -514,12 +412,12 @@
         "classification_reason": "Posicion fuera de la grilla canonica actual, repetida por geometria; no se inventa eje sin etiqueta/cota nominal."
       },
       {
-        "solidTag": "SOL_2_column_0026",
+        "solidTag": "SOL_4_column_0022",
         "building": "EDIFICIO_1",
-        "floor": "P2",
+        "floor": "P4",
         "x_m": 47.491,
         "y_m": 20.451,
-        "z_m": 9.9,
+        "z_m": 17.82,
         "width_m": 0.35,
         "depth_m": 0.35,
         "height_m": 3.96,
@@ -541,19 +439,19 @@
         },
         "axis_status": "OFF_AXIS_REFERENCE",
         "source_dxf": "2017_67-103.dxf",
-        "source_floor": "2",
-        "confidence": "inferred_from_above_3",
+        "source_floor": "4",
+        "confidence": "medium",
         "classification": "OFF_AXIS_LEGITIMATE",
         "classification_confidence": "NEEDS_REVIEW_GEOMETRY_ONLY",
         "classification_reason": "Columna alineada a eje X real y repetida en posicion Y exterior al eje 3; no hay etiqueta de eje Y para promoverla."
       },
       {
-        "solidTag": "SOL_2_column_0025",
+        "solidTag": "SOL_4_column_0021",
         "building": "EDIFICIO_1",
-        "floor": "P2",
+        "floor": "P4",
         "x_m": 57.491,
         "y_m": 20.451,
-        "z_m": 9.9,
+        "z_m": 17.82,
         "width_m": 0.35,
         "depth_m": 0.35,
         "height_m": 3.96,
@@ -575,19 +473,19 @@
         },
         "axis_status": "OFF_AXIS_REFERENCE",
         "source_dxf": "2017_67-103.dxf",
-        "source_floor": "2",
-        "confidence": "inferred_from_above_3",
+        "source_floor": "4",
+        "confidence": "medium",
         "classification": "OFF_AXIS_LEGITIMATE",
         "classification_confidence": "NEEDS_REVIEW_GEOMETRY_ONLY",
         "classification_reason": "Columna alineada a eje X real y repetida en posicion Y exterior al eje 3; no hay etiqueta de eje Y para promoverla."
       },
       {
-        "solidTag": "SOL_2_column_0027",
+        "solidTag": "SOL_4_column_0023",
         "building": "EDIFICIO_1",
-        "floor": "P2",
+        "floor": "P4",
         "x_m": 75.041,
         "y_m": 0.181,
-        "z_m": 9.9,
+        "z_m": 17.82,
         "width_m": 0.35,
         "depth_m": 0.35,
         "height_m": 3.96,
@@ -609,19 +507,19 @@
         },
         "axis_status": "OFF_AXIS_REFERENCE",
         "source_dxf": "2017_67-103.dxf",
-        "source_floor": "2",
-        "confidence": "inferred_from_above_3",
+        "source_floor": "4",
+        "confidence": "medium",
         "classification": "SPECIAL_POSITION_CONFIRMED",
-        "classification_confidence": "GEOMETRY_CONFIRMED",
-        "classification_reason": "Columna repetida en los cinco pisos sobre eje Y primario, pero sin etiqueta de eje X respaldada."
+        "classification_confidence": "NEEDS_REVIEW_GEOMETRY_ONLY",
+        "classification_reason": "Posicion especial sobre eje Y real; falta respaldo nominal para eje X secundario."
       },
       {
-        "solidTag": "SOL_2_column_0029",
+        "solidTag": "SOL_4_column_0025",
         "building": "EDIFICIO_1",
-        "floor": "P2",
+        "floor": "P4",
         "x_m": 75.041,
         "y_m": 9.081,
-        "z_m": 9.9,
+        "z_m": 17.82,
         "width_m": 0.35,
         "depth_m": 0.35,
         "height_m": 3.96,
@@ -643,19 +541,19 @@
         },
         "axis_status": "OFF_AXIS_REFERENCE",
         "source_dxf": "2017_67-103.dxf",
-        "source_floor": "2",
-        "confidence": "inferred_from_above_3",
+        "source_floor": "4",
+        "confidence": "medium",
         "classification": "SPECIAL_POSITION_CONFIRMED",
-        "classification_confidence": "GEOMETRY_CONFIRMED",
-        "classification_reason": "Columna repetida en los cinco pisos sobre eje Y primario, pero sin etiqueta de eje X respaldada."
+        "classification_confidence": "NEEDS_REVIEW_GEOMETRY_ONLY",
+        "classification_reason": "Posicion especial sobre eje Y real; falta respaldo nominal para eje X secundario."
       },
       {
-        "solidTag": "SOL_2_column_0028",
+        "solidTag": "SOL_4_column_0024",
         "building": "EDIFICIO_1",
-        "floor": "P2",
+        "floor": "P4",
         "x_m": 75.041,
         "y_m": 16.331,
-        "z_m": 9.9,
+        "z_m": 17.82,
         "width_m": 0.35,
         "depth_m": 0.35,
         "height_m": 3.96,
@@ -677,45 +575,45 @@
         },
         "axis_status": "OFF_AXIS_REFERENCE",
         "source_dxf": "2017_67-103.dxf",
-        "source_floor": "2",
-        "confidence": "inferred_from_above_3",
+        "source_floor": "4",
+        "confidence": "medium",
         "classification": "SPECIAL_POSITION_CONFIRMED",
-        "classification_confidence": "GEOMETRY_CONFIRMED",
-        "classification_reason": "Columna repetida en los cinco pisos sobre eje Y primario, pero sin etiqueta de eje X respaldada."
+        "classification_confidence": "NEEDS_REVIEW_GEOMETRY_ONLY",
+        "classification_reason": "Posicion especial sobre eje Y real; falta respaldo nominal para eje X secundario."
       },
       {
-        "solidTag": "SOL_3_column_0024",
+        "solidTag": "SOL_1S_column_0026",
         "building": "EDIFICIO_1",
-        "floor": "P3",
-        "x_m": 75.041,
-        "y_m": 0.181,
-        "z_m": 13.86,
+        "floor": "S1",
+        "x_m": 44.981,
+        "y_m": 16.332,
+        "z_m": 1.98,
         "width_m": 0.35,
         "depth_m": 0.35,
         "height_m": 3.96,
-        "x_axis_matrix": "X=75.05 near IB +1.68m",
-        "y_axis_matrix": "1",
+        "x_axis_matrix": "X=45.00 near G -2.51m",
+        "y_axis_matrix": "3",
         "nearest_x_axis": {
-          "axis": "IB",
-          "axis_coord_m": 73.366,
-          "offset_m": 1.675,
-          "abs_offset_m": 1.675,
+          "axis": "G",
+          "axis_coord_m": 47.491,
+          "offset_m": -2.51,
+          "abs_offset_m": 2.51,
           "status": "OFF_AXIS_REFERENCE"
         },
         "nearest_y_axis": {
-          "axis": "1",
-          "axis_coord_m": 0.0,
-          "offset_m": 0.181,
-          "abs_offset_m": 0.181,
+          "axis": "3",
+          "axis_coord_m": 16.15,
+          "offset_m": 0.182,
+          "abs_offset_m": 0.182,
           "status": "ON_AXIS"
         },
         "axis_status": "OFF_AXIS_REFERENCE",
-        "source_dxf": "2017_67-103.dxf",
-        "source_floor": "3",
-        "confidence": "inferred_from_above_4",
+        "source_dxf": "2017_67-102.dxf",
+        "source_floor": "1S",
+        "confidence": "inferred_from_above_1",
         "classification": "SPECIAL_POSITION_CONFIRMED",
-        "classification_confidence": "GEOMETRY_CONFIRMED",
-        "classification_reason": "Columna repetida en los cinco pisos sobre eje Y primario, pero sin etiqueta de eje X respaldada."
+        "classification_confidence": "NEEDS_REVIEW_GEOMETRY_ONLY",
+        "classification_reason": "Posicion especial sobre eje Y real; falta respaldo nominal para eje X secundario."
       }
     ]
   },
@@ -1837,15 +1735,12 @@
       "floor_counts": {
         "S1": 0,
         "P1": 0,
-        "P2": 1,
+        "P2": 0,
         "P3": 0,
         "P4": 1
       },
-      "total_columns": 2,
+      "total_columns": 1,
       "dimensions_by_floor": {
-        "P2": [
-          "0.35x0.35"
-        ],
         "P4": [
           "0.35x0.35"
         ]
@@ -1853,9 +1748,7 @@
       "solid_tags_by_floor": {
         "S1": [],
         "P1": [],
-        "P2": [
-          "SOL_2_column_0026"
-        ],
+        "P2": [],
         "P3": [],
         "P4": [
           "SOL_4_column_0022"
@@ -2087,15 +1980,12 @@
       "floor_counts": {
         "S1": 0,
         "P1": 0,
-        "P2": 1,
+        "P2": 0,
         "P3": 0,
         "P4": 1
       },
-      "total_columns": 2,
+      "total_columns": 1,
       "dimensions_by_floor": {
-        "P2": [
-          "0.35x0.35"
-        ],
         "P4": [
           "0.35x0.35"
         ]
@@ -2103,9 +1993,7 @@
       "solid_tags_by_floor": {
         "S1": [],
         "P1": [],
-        "P2": [
-          "SOL_2_column_0025"
-        ],
+        "P2": [],
         "P3": [],
         "P4": [
           "SOL_4_column_0021"
@@ -2614,46 +2502,26 @@
       "max_abs_y_offset_m": 0.181,
       "axis_status": "OFF_AXIS_REFERENCE",
       "classification": "SPECIAL_POSITION_CONFIRMED",
-      "classification_confidence": "GEOMETRY_CONFIRMED",
-      "classification_reason": "Columna repetida en los cinco pisos sobre eje Y primario, pero sin etiqueta de eje X respaldada.",
+      "classification_confidence": "NEEDS_REVIEW_GEOMETRY_ONLY",
+      "classification_reason": "Posicion especial sobre eje Y real; falta respaldo nominal para eje X secundario.",
       "floor_counts": {
-        "S1": 1,
-        "P1": 1,
-        "P2": 1,
-        "P3": 1,
+        "S1": 0,
+        "P1": 0,
+        "P2": 0,
+        "P3": 0,
         "P4": 1
       },
-      "total_columns": 5,
+      "total_columns": 1,
       "dimensions_by_floor": {
-        "S1": [
-          "0.35x0.35"
-        ],
-        "P1": [
-          "0.35x0.35"
-        ],
-        "P2": [
-          "0.35x0.35"
-        ],
-        "P3": [
-          "0.35x0.35"
-        ],
         "P4": [
           "0.35x0.35"
         ]
       },
       "solid_tags_by_floor": {
-        "S1": [
-          "SOL_1S_column_0032"
-        ],
-        "P1": [
-          "SOL_1_column_0032"
-        ],
-        "P2": [
-          "SOL_2_column_0027"
-        ],
-        "P3": [
-          "SOL_3_column_0024"
-        ],
+        "S1": [],
+        "P1": [],
+        "P2": [],
+        "P3": [],
         "P4": [
           "SOL_4_column_0023"
         ]
@@ -2671,46 +2539,26 @@
       "max_abs_y_offset_m": 0.181,
       "axis_status": "OFF_AXIS_REFERENCE",
       "classification": "SPECIAL_POSITION_CONFIRMED",
-      "classification_confidence": "GEOMETRY_CONFIRMED",
-      "classification_reason": "Columna repetida en los cinco pisos sobre eje Y primario, pero sin etiqueta de eje X respaldada.",
+      "classification_confidence": "NEEDS_REVIEW_GEOMETRY_ONLY",
+      "classification_reason": "Posicion especial sobre eje Y real; falta respaldo nominal para eje X secundario.",
       "floor_counts": {
-        "S1": 1,
-        "P1": 1,
-        "P2": 1,
-        "P3": 1,
+        "S1": 0,
+        "P1": 0,
+        "P2": 0,
+        "P3": 0,
         "P4": 1
       },
-      "total_columns": 5,
+      "total_columns": 1,
       "dimensions_by_floor": {
-        "S1": [
-          "0.35x0.35"
-        ],
-        "P1": [
-          "0.35x0.35"
-        ],
-        "P2": [
-          "0.35x0.35"
-        ],
-        "P3": [
-          "0.35x0.35"
-        ],
         "P4": [
           "0.35x0.35"
         ]
       },
       "solid_tags_by_floor": {
-        "S1": [
-          "SOL_1S_column_0034"
-        ],
-        "P1": [
-          "SOL_1_column_0034"
-        ],
-        "P2": [
-          "SOL_2_column_0029"
-        ],
-        "P3": [
-          "SOL_3_column_0026"
-        ],
+        "S1": [],
+        "P1": [],
+        "P2": [],
+        "P3": [],
         "P4": [
           "SOL_4_column_0025"
         ]
@@ -2728,46 +2576,26 @@
       "max_abs_y_offset_m": 0.181,
       "axis_status": "OFF_AXIS_REFERENCE",
       "classification": "SPECIAL_POSITION_CONFIRMED",
-      "classification_confidence": "GEOMETRY_CONFIRMED",
-      "classification_reason": "Columna repetida en los cinco pisos sobre eje Y primario, pero sin etiqueta de eje X respaldada.",
+      "classification_confidence": "NEEDS_REVIEW_GEOMETRY_ONLY",
+      "classification_reason": "Posicion especial sobre eje Y real; falta respaldo nominal para eje X secundario.",
       "floor_counts": {
-        "S1": 1,
-        "P1": 1,
-        "P2": 1,
-        "P3": 1,
+        "S1": 0,
+        "P1": 0,
+        "P2": 0,
+        "P3": 0,
         "P4": 1
       },
-      "total_columns": 5,
+      "total_columns": 1,
       "dimensions_by_floor": {
-        "S1": [
-          "0.35x0.35"
-        ],
-        "P1": [
-          "0.35x0.35"
-        ],
-        "P2": [
-          "0.35x0.35"
-        ],
-        "P3": [
-          "0.35x0.35"
-        ],
         "P4": [
           "0.35x0.35"
         ]
       },
       "solid_tags_by_floor": {
-        "S1": [
-          "SOL_1S_column_0033"
-        ],
-        "P1": [
-          "SOL_1_column_0033"
-        ],
-        "P2": [
-          "SOL_2_column_0028"
-        ],
-        "P3": [
-          "SOL_3_column_0025"
-        ],
+        "S1": [],
+        "P1": [],
+        "P2": [],
+        "P3": [],
         "P4": [
           "SOL_4_column_0024"
         ]
@@ -2788,43 +2616,23 @@
       "classification_confidence": "CONFIRMED",
       "classification_reason": "Centro dentro de tolerancia de ejes canonicos X/Y.",
       "floor_counts": {
-        "S1": 1,
-        "P1": 1,
-        "P2": 1,
-        "P3": 1,
+        "S1": 0,
+        "P1": 0,
+        "P2": 0,
+        "P3": 0,
         "P4": 1
       },
-      "total_columns": 5,
+      "total_columns": 1,
       "dimensions_by_floor": {
-        "S1": [
-          "0.35x0.35"
-        ],
-        "P1": [
-          "0.35x0.35"
-        ],
-        "P2": [
-          "0.35x0.35"
-        ],
-        "P3": [
-          "0.35x0.35"
-        ],
         "P4": [
           "0.35x0.35"
         ]
       },
       "solid_tags_by_floor": {
-        "S1": [
-          "SOL_1S_column_0029"
-        ],
-        "P1": [
-          "SOL_1_column_0029"
-        ],
-        "P2": [
-          "SOL_2_column_0024"
-        ],
-        "P3": [
-          "SOL_3_column_0021"
-        ],
+        "S1": [],
+        "P1": [],
+        "P2": [],
+        "P3": [],
         "P4": [
           "SOL_4_column_0020"
         ]
@@ -2845,43 +2653,23 @@
       "classification_confidence": "CONFIRMED",
       "classification_reason": "Centro dentro de tolerancia de ejes canonicos X/Y.",
       "floor_counts": {
-        "S1": 1,
-        "P1": 1,
-        "P2": 1,
-        "P3": 1,
+        "S1": 0,
+        "P1": 0,
+        "P2": 0,
+        "P3": 0,
         "P4": 1
       },
-      "total_columns": 5,
+      "total_columns": 1,
       "dimensions_by_floor": {
-        "S1": [
-          "0.35x0.35"
-        ],
-        "P1": [
-          "0.35x0.35"
-        ],
-        "P2": [
-          "0.35x0.35"
-        ],
-        "P3": [
-          "0.35x0.35"
-        ],
         "P4": [
           "0.35x0.35"
         ]
       },
       "solid_tags_by_floor": {
-        "S1": [
-          "SOL_1S_column_0027"
-        ],
-        "P1": [
-          "SOL_1_column_0027"
-        ],
-        "P2": [
-          "SOL_2_column_0022"
-        ],
-        "P3": [
-          "SOL_3_column_0019"
-        ],
+        "S1": [],
+        "P1": [],
+        "P2": [],
+        "P3": [],
         "P4": [
           "SOL_4_column_0018"
         ]
@@ -2902,43 +2690,23 @@
       "classification_confidence": "CONFIRMED",
       "classification_reason": "Centro dentro de tolerancia de ejes canonicos X/Y.",
       "floor_counts": {
-        "S1": 1,
-        "P1": 1,
-        "P2": 1,
-        "P3": 1,
+        "S1": 0,
+        "P1": 0,
+        "P2": 0,
+        "P3": 0,
         "P4": 1
       },
-      "total_columns": 5,
+      "total_columns": 1,
       "dimensions_by_floor": {
-        "S1": [
-          "0.35x0.35"
-        ],
-        "P1": [
-          "0.35x0.35"
-        ],
-        "P2": [
-          "0.35x0.35"
-        ],
-        "P3": [
-          "0.35x0.35"
-        ],
         "P4": [
           "0.35x0.35"
         ]
       },
       "solid_tags_by_floor": {
-        "S1": [
-          "SOL_1S_column_0028"
-        ],
-        "P1": [
-          "SOL_1_column_0028"
-        ],
-        "P2": [
-          "SOL_2_column_0023"
-        ],
-        "P3": [
-          "SOL_3_column_0020"
-        ],
+        "S1": [],
+        "P1": [],
+        "P2": [],
+        "P3": [],
         "P4": [
           "SOL_4_column_0019"
         ]
@@ -3831,210 +3599,6 @@
       "classification_reason": "Centro dentro de tolerancia de ejes canonicos X/Y."
     },
     {
-      "solidTag": "SOL_1_column_0032",
-      "building": "EDIFICIO_1",
-      "floor": "P1",
-      "x_m": 75.041,
-      "y_m": 0.181,
-      "z_m": 5.94,
-      "width_m": 0.35,
-      "depth_m": 0.35,
-      "height_m": 3.96,
-      "x_axis_matrix": "X=75.05 near IB +1.68m",
-      "y_axis_matrix": "1",
-      "nearest_x_axis": {
-        "axis": "IB",
-        "axis_coord_m": 73.366,
-        "offset_m": 1.675,
-        "abs_offset_m": 1.675,
-        "status": "OFF_AXIS_REFERENCE"
-      },
-      "nearest_y_axis": {
-        "axis": "1",
-        "axis_coord_m": 0.0,
-        "offset_m": 0.181,
-        "abs_offset_m": 0.181,
-        "status": "ON_AXIS"
-      },
-      "axis_status": "OFF_AXIS_REFERENCE",
-      "source_dxf": "2017_67-103.dxf",
-      "source_floor": "1",
-      "confidence": "inferred_from_above_2",
-      "classification": "SPECIAL_POSITION_CONFIRMED",
-      "classification_confidence": "GEOMETRY_CONFIRMED",
-      "classification_reason": "Columna repetida en los cinco pisos sobre eje Y primario, pero sin etiqueta de eje X respaldada."
-    },
-    {
-      "solidTag": "SOL_1_column_0034",
-      "building": "EDIFICIO_1",
-      "floor": "P1",
-      "x_m": 75.041,
-      "y_m": 9.081,
-      "z_m": 5.94,
-      "width_m": 0.35,
-      "depth_m": 0.35,
-      "height_m": 3.96,
-      "x_axis_matrix": "X=75.05 near IB +1.68m",
-      "y_axis_matrix": "2",
-      "nearest_x_axis": {
-        "axis": "IB",
-        "axis_coord_m": 73.366,
-        "offset_m": 1.675,
-        "abs_offset_m": 1.675,
-        "status": "OFF_AXIS_REFERENCE"
-      },
-      "nearest_y_axis": {
-        "axis": "2",
-        "axis_coord_m": 8.9,
-        "offset_m": 0.181,
-        "abs_offset_m": 0.181,
-        "status": "ON_AXIS"
-      },
-      "axis_status": "OFF_AXIS_REFERENCE",
-      "source_dxf": "2017_67-103.dxf",
-      "source_floor": "1",
-      "confidence": "inferred_from_above_2",
-      "classification": "SPECIAL_POSITION_CONFIRMED",
-      "classification_confidence": "GEOMETRY_CONFIRMED",
-      "classification_reason": "Columna repetida en los cinco pisos sobre eje Y primario, pero sin etiqueta de eje X respaldada."
-    },
-    {
-      "solidTag": "SOL_1_column_0033",
-      "building": "EDIFICIO_1",
-      "floor": "P1",
-      "x_m": 75.041,
-      "y_m": 16.331,
-      "z_m": 5.94,
-      "width_m": 0.35,
-      "depth_m": 0.35,
-      "height_m": 3.96,
-      "x_axis_matrix": "X=75.05 near IB +1.68m",
-      "y_axis_matrix": "3",
-      "nearest_x_axis": {
-        "axis": "IB",
-        "axis_coord_m": 73.366,
-        "offset_m": 1.675,
-        "abs_offset_m": 1.675,
-        "status": "OFF_AXIS_REFERENCE"
-      },
-      "nearest_y_axis": {
-        "axis": "3",
-        "axis_coord_m": 16.15,
-        "offset_m": 0.181,
-        "abs_offset_m": 0.181,
-        "status": "ON_AXIS"
-      },
-      "axis_status": "OFF_AXIS_REFERENCE",
-      "source_dxf": "2017_67-103.dxf",
-      "source_floor": "1",
-      "confidence": "inferred_from_above_2",
-      "classification": "SPECIAL_POSITION_CONFIRMED",
-      "classification_confidence": "GEOMETRY_CONFIRMED",
-      "classification_reason": "Columna repetida en los cinco pisos sobre eje Y primario, pero sin etiqueta de eje X respaldada."
-    },
-    {
-      "solidTag": "SOL_1_column_0029",
-      "building": "EDIFICIO_1",
-      "floor": "P1",
-      "x_m": 77.391,
-      "y_m": 0.181,
-      "z_m": 5.94,
-      "width_m": 0.35,
-      "depth_m": 0.35,
-      "height_m": 3.96,
-      "x_axis_matrix": "J",
-      "y_axis_matrix": "1",
-      "nearest_x_axis": {
-        "axis": "J",
-        "axis_coord_m": 77.491,
-        "offset_m": -0.1,
-        "abs_offset_m": 0.1,
-        "status": "ON_AXIS"
-      },
-      "nearest_y_axis": {
-        "axis": "1",
-        "axis_coord_m": 0.0,
-        "offset_m": 0.181,
-        "abs_offset_m": 0.181,
-        "status": "ON_AXIS"
-      },
-      "axis_status": "ON_AXIS",
-      "source_dxf": "2017_67-103.dxf",
-      "source_floor": "1",
-      "confidence": "inferred_from_above_2",
-      "classification": "ON_CANONICAL_AXIS",
-      "classification_confidence": "CONFIRMED",
-      "classification_reason": "Centro dentro de tolerancia de ejes canonicos X/Y."
-    },
-    {
-      "solidTag": "SOL_1_column_0027",
-      "building": "EDIFICIO_1",
-      "floor": "P1",
-      "x_m": 77.391,
-      "y_m": 9.081,
-      "z_m": 5.94,
-      "width_m": 0.35,
-      "depth_m": 0.35,
-      "height_m": 3.96,
-      "x_axis_matrix": "J",
-      "y_axis_matrix": "2",
-      "nearest_x_axis": {
-        "axis": "J",
-        "axis_coord_m": 77.491,
-        "offset_m": -0.1,
-        "abs_offset_m": 0.1,
-        "status": "ON_AXIS"
-      },
-      "nearest_y_axis": {
-        "axis": "2",
-        "axis_coord_m": 8.9,
-        "offset_m": 0.181,
-        "abs_offset_m": 0.181,
-        "status": "ON_AXIS"
-      },
-      "axis_status": "ON_AXIS",
-      "source_dxf": "2017_67-103.dxf",
-      "source_floor": "1",
-      "confidence": "inferred_from_above_2",
-      "classification": "ON_CANONICAL_AXIS",
-      "classification_confidence": "CONFIRMED",
-      "classification_reason": "Centro dentro de tolerancia de ejes canonicos X/Y."
-    },
-    {
-      "solidTag": "SOL_1_column_0028",
-      "building": "EDIFICIO_1",
-      "floor": "P1",
-      "x_m": 77.391,
-      "y_m": 16.331,
-      "z_m": 5.94,
-      "width_m": 0.35,
-      "depth_m": 0.35,
-      "height_m": 3.96,
-      "x_axis_matrix": "J",
-      "y_axis_matrix": "3",
-      "nearest_x_axis": {
-        "axis": "J",
-        "axis_coord_m": 77.491,
-        "offset_m": -0.1,
-        "abs_offset_m": 0.1,
-        "status": "ON_AXIS"
-      },
-      "nearest_y_axis": {
-        "axis": "3",
-        "axis_coord_m": 16.15,
-        "offset_m": 0.181,
-        "abs_offset_m": 0.181,
-        "status": "ON_AXIS"
-      },
-      "axis_status": "ON_AXIS",
-      "source_dxf": "2017_67-103.dxf",
-      "source_floor": "1",
-      "confidence": "inferred_from_above_2",
-      "classification": "ON_CANONICAL_AXIS",
-      "classification_confidence": "CONFIRMED",
-      "classification_reason": "Centro dentro de tolerancia de ejes canonicos X/Y."
-    },
-    {
       "solidTag": "SOL_2_column_0005",
       "building": "EDIFICIO_1",
       "floor": "P2",
@@ -4443,40 +4007,6 @@
       "classification_reason": "Centro dentro de tolerancia de ejes canonicos X/Y."
     },
     {
-      "solidTag": "SOL_2_column_0026",
-      "building": "EDIFICIO_1",
-      "floor": "P2",
-      "x_m": 47.491,
-      "y_m": 20.451,
-      "z_m": 9.9,
-      "width_m": 0.35,
-      "depth_m": 0.35,
-      "height_m": 3.96,
-      "x_axis_matrix": "G",
-      "y_axis_matrix": "Y=20.45 near 3 +4.30m",
-      "nearest_x_axis": {
-        "axis": "G",
-        "axis_coord_m": 47.491,
-        "offset_m": -0.0,
-        "abs_offset_m": 0.0,
-        "status": "ON_AXIS"
-      },
-      "nearest_y_axis": {
-        "axis": "3",
-        "axis_coord_m": 16.15,
-        "offset_m": 4.301,
-        "abs_offset_m": 4.301,
-        "status": "OFF_AXIS_REFERENCE"
-      },
-      "axis_status": "OFF_AXIS_REFERENCE",
-      "source_dxf": "2017_67-103.dxf",
-      "source_floor": "2",
-      "confidence": "inferred_from_above_3",
-      "classification": "OFF_AXIS_LEGITIMATE",
-      "classification_confidence": "NEEDS_REVIEW_GEOMETRY_ONLY",
-      "classification_reason": "Columna alineada a eje X real y repetida en posicion Y exterior al eje 3; no hay etiqueta de eje Y para promoverla."
-    },
-    {
       "solidTag": "SOL_2_column_0013",
       "building": "EDIFICIO_1",
       "floor": "P2",
@@ -4577,40 +4107,6 @@
       "classification": "ON_CANONICAL_AXIS",
       "classification_confidence": "CONFIRMED",
       "classification_reason": "Centro dentro de tolerancia de ejes canonicos X/Y."
-    },
-    {
-      "solidTag": "SOL_2_column_0025",
-      "building": "EDIFICIO_1",
-      "floor": "P2",
-      "x_m": 57.491,
-      "y_m": 20.451,
-      "z_m": 9.9,
-      "width_m": 0.35,
-      "depth_m": 0.35,
-      "height_m": 3.96,
-      "x_axis_matrix": "H",
-      "y_axis_matrix": "Y=20.45 near 3 +4.30m",
-      "nearest_x_axis": {
-        "axis": "H",
-        "axis_coord_m": 57.491,
-        "offset_m": -0.0,
-        "abs_offset_m": 0.0,
-        "status": "ON_AXIS"
-      },
-      "nearest_y_axis": {
-        "axis": "3",
-        "axis_coord_m": 16.15,
-        "offset_m": 4.301,
-        "abs_offset_m": 4.301,
-        "status": "OFF_AXIS_REFERENCE"
-      },
-      "axis_status": "OFF_AXIS_REFERENCE",
-      "source_dxf": "2017_67-103.dxf",
-      "source_floor": "2",
-      "confidence": "inferred_from_above_3",
-      "classification": "OFF_AXIS_LEGITIMATE",
-      "classification_confidence": "NEEDS_REVIEW_GEOMETRY_ONLY",
-      "classification_reason": "Columna alineada a eje X real y repetida en posicion Y exterior al eje 3; no hay etiqueta de eje Y para promoverla."
     },
     {
       "solidTag": "SOL_2_column_0012",
@@ -4812,210 +4308,6 @@
       "source_dxf": "2017_67-102.dxf",
       "source_floor": "2",
       "confidence": "medium",
-      "classification": "ON_CANONICAL_AXIS",
-      "classification_confidence": "CONFIRMED",
-      "classification_reason": "Centro dentro de tolerancia de ejes canonicos X/Y."
-    },
-    {
-      "solidTag": "SOL_2_column_0027",
-      "building": "EDIFICIO_1",
-      "floor": "P2",
-      "x_m": 75.041,
-      "y_m": 0.181,
-      "z_m": 9.9,
-      "width_m": 0.35,
-      "depth_m": 0.35,
-      "height_m": 3.96,
-      "x_axis_matrix": "X=75.05 near IB +1.68m",
-      "y_axis_matrix": "1",
-      "nearest_x_axis": {
-        "axis": "IB",
-        "axis_coord_m": 73.366,
-        "offset_m": 1.675,
-        "abs_offset_m": 1.675,
-        "status": "OFF_AXIS_REFERENCE"
-      },
-      "nearest_y_axis": {
-        "axis": "1",
-        "axis_coord_m": 0.0,
-        "offset_m": 0.181,
-        "abs_offset_m": 0.181,
-        "status": "ON_AXIS"
-      },
-      "axis_status": "OFF_AXIS_REFERENCE",
-      "source_dxf": "2017_67-103.dxf",
-      "source_floor": "2",
-      "confidence": "inferred_from_above_3",
-      "classification": "SPECIAL_POSITION_CONFIRMED",
-      "classification_confidence": "GEOMETRY_CONFIRMED",
-      "classification_reason": "Columna repetida en los cinco pisos sobre eje Y primario, pero sin etiqueta de eje X respaldada."
-    },
-    {
-      "solidTag": "SOL_2_column_0029",
-      "building": "EDIFICIO_1",
-      "floor": "P2",
-      "x_m": 75.041,
-      "y_m": 9.081,
-      "z_m": 9.9,
-      "width_m": 0.35,
-      "depth_m": 0.35,
-      "height_m": 3.96,
-      "x_axis_matrix": "X=75.05 near IB +1.68m",
-      "y_axis_matrix": "2",
-      "nearest_x_axis": {
-        "axis": "IB",
-        "axis_coord_m": 73.366,
-        "offset_m": 1.675,
-        "abs_offset_m": 1.675,
-        "status": "OFF_AXIS_REFERENCE"
-      },
-      "nearest_y_axis": {
-        "axis": "2",
-        "axis_coord_m": 8.9,
-        "offset_m": 0.181,
-        "abs_offset_m": 0.181,
-        "status": "ON_AXIS"
-      },
-      "axis_status": "OFF_AXIS_REFERENCE",
-      "source_dxf": "2017_67-103.dxf",
-      "source_floor": "2",
-      "confidence": "inferred_from_above_3",
-      "classification": "SPECIAL_POSITION_CONFIRMED",
-      "classification_confidence": "GEOMETRY_CONFIRMED",
-      "classification_reason": "Columna repetida en los cinco pisos sobre eje Y primario, pero sin etiqueta de eje X respaldada."
-    },
-    {
-      "solidTag": "SOL_2_column_0028",
-      "building": "EDIFICIO_1",
-      "floor": "P2",
-      "x_m": 75.041,
-      "y_m": 16.331,
-      "z_m": 9.9,
-      "width_m": 0.35,
-      "depth_m": 0.35,
-      "height_m": 3.96,
-      "x_axis_matrix": "X=75.05 near IB +1.68m",
-      "y_axis_matrix": "3",
-      "nearest_x_axis": {
-        "axis": "IB",
-        "axis_coord_m": 73.366,
-        "offset_m": 1.675,
-        "abs_offset_m": 1.675,
-        "status": "OFF_AXIS_REFERENCE"
-      },
-      "nearest_y_axis": {
-        "axis": "3",
-        "axis_coord_m": 16.15,
-        "offset_m": 0.181,
-        "abs_offset_m": 0.181,
-        "status": "ON_AXIS"
-      },
-      "axis_status": "OFF_AXIS_REFERENCE",
-      "source_dxf": "2017_67-103.dxf",
-      "source_floor": "2",
-      "confidence": "inferred_from_above_3",
-      "classification": "SPECIAL_POSITION_CONFIRMED",
-      "classification_confidence": "GEOMETRY_CONFIRMED",
-      "classification_reason": "Columna repetida en los cinco pisos sobre eje Y primario, pero sin etiqueta de eje X respaldada."
-    },
-    {
-      "solidTag": "SOL_2_column_0024",
-      "building": "EDIFICIO_1",
-      "floor": "P2",
-      "x_m": 77.391,
-      "y_m": 0.181,
-      "z_m": 9.9,
-      "width_m": 0.35,
-      "depth_m": 0.35,
-      "height_m": 3.96,
-      "x_axis_matrix": "J",
-      "y_axis_matrix": "1",
-      "nearest_x_axis": {
-        "axis": "J",
-        "axis_coord_m": 77.491,
-        "offset_m": -0.1,
-        "abs_offset_m": 0.1,
-        "status": "ON_AXIS"
-      },
-      "nearest_y_axis": {
-        "axis": "1",
-        "axis_coord_m": 0.0,
-        "offset_m": 0.181,
-        "abs_offset_m": 0.181,
-        "status": "ON_AXIS"
-      },
-      "axis_status": "ON_AXIS",
-      "source_dxf": "2017_67-103.dxf",
-      "source_floor": "2",
-      "confidence": "inferred_from_above_3",
-      "classification": "ON_CANONICAL_AXIS",
-      "classification_confidence": "CONFIRMED",
-      "classification_reason": "Centro dentro de tolerancia de ejes canonicos X/Y."
-    },
-    {
-      "solidTag": "SOL_2_column_0022",
-      "building": "EDIFICIO_1",
-      "floor": "P2",
-      "x_m": 77.391,
-      "y_m": 9.081,
-      "z_m": 9.9,
-      "width_m": 0.35,
-      "depth_m": 0.35,
-      "height_m": 3.96,
-      "x_axis_matrix": "J",
-      "y_axis_matrix": "2",
-      "nearest_x_axis": {
-        "axis": "J",
-        "axis_coord_m": 77.491,
-        "offset_m": -0.1,
-        "abs_offset_m": 0.1,
-        "status": "ON_AXIS"
-      },
-      "nearest_y_axis": {
-        "axis": "2",
-        "axis_coord_m": 8.9,
-        "offset_m": 0.181,
-        "abs_offset_m": 0.181,
-        "status": "ON_AXIS"
-      },
-      "axis_status": "ON_AXIS",
-      "source_dxf": "2017_67-103.dxf",
-      "source_floor": "2",
-      "confidence": "inferred_from_above_3",
-      "classification": "ON_CANONICAL_AXIS",
-      "classification_confidence": "CONFIRMED",
-      "classification_reason": "Centro dentro de tolerancia de ejes canonicos X/Y."
-    },
-    {
-      "solidTag": "SOL_2_column_0023",
-      "building": "EDIFICIO_1",
-      "floor": "P2",
-      "x_m": 77.391,
-      "y_m": 16.331,
-      "z_m": 9.9,
-      "width_m": 0.35,
-      "depth_m": 0.35,
-      "height_m": 3.96,
-      "x_axis_matrix": "J",
-      "y_axis_matrix": "3",
-      "nearest_x_axis": {
-        "axis": "J",
-        "axis_coord_m": 77.491,
-        "offset_m": -0.1,
-        "abs_offset_m": 0.1,
-        "status": "ON_AXIS"
-      },
-      "nearest_y_axis": {
-        "axis": "3",
-        "axis_coord_m": 16.15,
-        "offset_m": 0.181,
-        "abs_offset_m": 0.181,
-        "status": "ON_AXIS"
-      },
-      "axis_status": "ON_AXIS",
-      "source_dxf": "2017_67-103.dxf",
-      "source_floor": "2",
-      "confidence": "inferred_from_above_3",
       "classification": "ON_CANONICAL_AXIS",
       "classification_confidence": "CONFIRMED",
       "classification_reason": "Centro dentro de tolerancia de ejes canonicos X/Y."
@@ -5628,210 +4920,6 @@
       "source_dxf": "2017_67-102.dxf",
       "source_floor": "3",
       "confidence": "medium",
-      "classification": "ON_CANONICAL_AXIS",
-      "classification_confidence": "CONFIRMED",
-      "classification_reason": "Centro dentro de tolerancia de ejes canonicos X/Y."
-    },
-    {
-      "solidTag": "SOL_3_column_0024",
-      "building": "EDIFICIO_1",
-      "floor": "P3",
-      "x_m": 75.041,
-      "y_m": 0.181,
-      "z_m": 13.86,
-      "width_m": 0.35,
-      "depth_m": 0.35,
-      "height_m": 3.96,
-      "x_axis_matrix": "X=75.05 near IB +1.68m",
-      "y_axis_matrix": "1",
-      "nearest_x_axis": {
-        "axis": "IB",
-        "axis_coord_m": 73.366,
-        "offset_m": 1.675,
-        "abs_offset_m": 1.675,
-        "status": "OFF_AXIS_REFERENCE"
-      },
-      "nearest_y_axis": {
-        "axis": "1",
-        "axis_coord_m": 0.0,
-        "offset_m": 0.181,
-        "abs_offset_m": 0.181,
-        "status": "ON_AXIS"
-      },
-      "axis_status": "OFF_AXIS_REFERENCE",
-      "source_dxf": "2017_67-103.dxf",
-      "source_floor": "3",
-      "confidence": "inferred_from_above_4",
-      "classification": "SPECIAL_POSITION_CONFIRMED",
-      "classification_confidence": "GEOMETRY_CONFIRMED",
-      "classification_reason": "Columna repetida en los cinco pisos sobre eje Y primario, pero sin etiqueta de eje X respaldada."
-    },
-    {
-      "solidTag": "SOL_3_column_0026",
-      "building": "EDIFICIO_1",
-      "floor": "P3",
-      "x_m": 75.041,
-      "y_m": 9.081,
-      "z_m": 13.86,
-      "width_m": 0.35,
-      "depth_m": 0.35,
-      "height_m": 3.96,
-      "x_axis_matrix": "X=75.05 near IB +1.68m",
-      "y_axis_matrix": "2",
-      "nearest_x_axis": {
-        "axis": "IB",
-        "axis_coord_m": 73.366,
-        "offset_m": 1.675,
-        "abs_offset_m": 1.675,
-        "status": "OFF_AXIS_REFERENCE"
-      },
-      "nearest_y_axis": {
-        "axis": "2",
-        "axis_coord_m": 8.9,
-        "offset_m": 0.181,
-        "abs_offset_m": 0.181,
-        "status": "ON_AXIS"
-      },
-      "axis_status": "OFF_AXIS_REFERENCE",
-      "source_dxf": "2017_67-103.dxf",
-      "source_floor": "3",
-      "confidence": "inferred_from_above_4",
-      "classification": "SPECIAL_POSITION_CONFIRMED",
-      "classification_confidence": "GEOMETRY_CONFIRMED",
-      "classification_reason": "Columna repetida en los cinco pisos sobre eje Y primario, pero sin etiqueta de eje X respaldada."
-    },
-    {
-      "solidTag": "SOL_3_column_0025",
-      "building": "EDIFICIO_1",
-      "floor": "P3",
-      "x_m": 75.041,
-      "y_m": 16.331,
-      "z_m": 13.86,
-      "width_m": 0.35,
-      "depth_m": 0.35,
-      "height_m": 3.96,
-      "x_axis_matrix": "X=75.05 near IB +1.68m",
-      "y_axis_matrix": "3",
-      "nearest_x_axis": {
-        "axis": "IB",
-        "axis_coord_m": 73.366,
-        "offset_m": 1.675,
-        "abs_offset_m": 1.675,
-        "status": "OFF_AXIS_REFERENCE"
-      },
-      "nearest_y_axis": {
-        "axis": "3",
-        "axis_coord_m": 16.15,
-        "offset_m": 0.181,
-        "abs_offset_m": 0.181,
-        "status": "ON_AXIS"
-      },
-      "axis_status": "OFF_AXIS_REFERENCE",
-      "source_dxf": "2017_67-103.dxf",
-      "source_floor": "3",
-      "confidence": "inferred_from_above_4",
-      "classification": "SPECIAL_POSITION_CONFIRMED",
-      "classification_confidence": "GEOMETRY_CONFIRMED",
-      "classification_reason": "Columna repetida en los cinco pisos sobre eje Y primario, pero sin etiqueta de eje X respaldada."
-    },
-    {
-      "solidTag": "SOL_3_column_0021",
-      "building": "EDIFICIO_1",
-      "floor": "P3",
-      "x_m": 77.391,
-      "y_m": 0.181,
-      "z_m": 13.86,
-      "width_m": 0.35,
-      "depth_m": 0.35,
-      "height_m": 3.96,
-      "x_axis_matrix": "J",
-      "y_axis_matrix": "1",
-      "nearest_x_axis": {
-        "axis": "J",
-        "axis_coord_m": 77.491,
-        "offset_m": -0.1,
-        "abs_offset_m": 0.1,
-        "status": "ON_AXIS"
-      },
-      "nearest_y_axis": {
-        "axis": "1",
-        "axis_coord_m": 0.0,
-        "offset_m": 0.181,
-        "abs_offset_m": 0.181,
-        "status": "ON_AXIS"
-      },
-      "axis_status": "ON_AXIS",
-      "source_dxf": "2017_67-103.dxf",
-      "source_floor": "3",
-      "confidence": "inferred_from_above_4",
-      "classification": "ON_CANONICAL_AXIS",
-      "classification_confidence": "CONFIRMED",
-      "classification_reason": "Centro dentro de tolerancia de ejes canonicos X/Y."
-    },
-    {
-      "solidTag": "SOL_3_column_0019",
-      "building": "EDIFICIO_1",
-      "floor": "P3",
-      "x_m": 77.391,
-      "y_m": 9.081,
-      "z_m": 13.86,
-      "width_m": 0.35,
-      "depth_m": 0.35,
-      "height_m": 3.96,
-      "x_axis_matrix": "J",
-      "y_axis_matrix": "2",
-      "nearest_x_axis": {
-        "axis": "J",
-        "axis_coord_m": 77.491,
-        "offset_m": -0.1,
-        "abs_offset_m": 0.1,
-        "status": "ON_AXIS"
-      },
-      "nearest_y_axis": {
-        "axis": "2",
-        "axis_coord_m": 8.9,
-        "offset_m": 0.181,
-        "abs_offset_m": 0.181,
-        "status": "ON_AXIS"
-      },
-      "axis_status": "ON_AXIS",
-      "source_dxf": "2017_67-103.dxf",
-      "source_floor": "3",
-      "confidence": "inferred_from_above_4",
-      "classification": "ON_CANONICAL_AXIS",
-      "classification_confidence": "CONFIRMED",
-      "classification_reason": "Centro dentro de tolerancia de ejes canonicos X/Y."
-    },
-    {
-      "solidTag": "SOL_3_column_0020",
-      "building": "EDIFICIO_1",
-      "floor": "P3",
-      "x_m": 77.391,
-      "y_m": 16.331,
-      "z_m": 13.86,
-      "width_m": 0.35,
-      "depth_m": 0.35,
-      "height_m": 3.96,
-      "x_axis_matrix": "J",
-      "y_axis_matrix": "3",
-      "nearest_x_axis": {
-        "axis": "J",
-        "axis_coord_m": 77.491,
-        "offset_m": -0.1,
-        "abs_offset_m": 0.1,
-        "status": "ON_AXIS"
-      },
-      "nearest_y_axis": {
-        "axis": "3",
-        "axis_coord_m": 16.15,
-        "offset_m": 0.181,
-        "abs_offset_m": 0.181,
-        "status": "ON_AXIS"
-      },
-      "axis_status": "ON_AXIS",
-      "source_dxf": "2017_67-103.dxf",
-      "source_floor": "3",
-      "confidence": "inferred_from_above_4",
       "classification": "ON_CANONICAL_AXIS",
       "classification_confidence": "CONFIRMED",
       "classification_reason": "Centro dentro de tolerancia de ejes canonicos X/Y."
@@ -6547,8 +5635,8 @@
       "source_floor": "4",
       "confidence": "medium",
       "classification": "SPECIAL_POSITION_CONFIRMED",
-      "classification_confidence": "GEOMETRY_CONFIRMED",
-      "classification_reason": "Columna repetida en los cinco pisos sobre eje Y primario, pero sin etiqueta de eje X respaldada."
+      "classification_confidence": "NEEDS_REVIEW_GEOMETRY_ONLY",
+      "classification_reason": "Posicion especial sobre eje Y real; falta respaldo nominal para eje X secundario."
     },
     {
       "solidTag": "SOL_4_column_0025",
@@ -6581,8 +5669,8 @@
       "source_floor": "4",
       "confidence": "medium",
       "classification": "SPECIAL_POSITION_CONFIRMED",
-      "classification_confidence": "GEOMETRY_CONFIRMED",
-      "classification_reason": "Columna repetida en los cinco pisos sobre eje Y primario, pero sin etiqueta de eje X respaldada."
+      "classification_confidence": "NEEDS_REVIEW_GEOMETRY_ONLY",
+      "classification_reason": "Posicion especial sobre eje Y real; falta respaldo nominal para eje X secundario."
     },
     {
       "solidTag": "SOL_4_column_0024",
@@ -6615,8 +5703,8 @@
       "source_floor": "4",
       "confidence": "medium",
       "classification": "SPECIAL_POSITION_CONFIRMED",
-      "classification_confidence": "GEOMETRY_CONFIRMED",
-      "classification_reason": "Columna repetida en los cinco pisos sobre eje Y primario, pero sin etiqueta de eje X respaldada."
+      "classification_confidence": "NEEDS_REVIEW_GEOMETRY_ONLY",
+      "classification_reason": "Posicion especial sobre eje Y real; falta respaldo nominal para eje X secundario."
     },
     {
       "solidTag": "SOL_4_column_0020",
@@ -7362,210 +6450,6 @@
       "source_dxf": "2017_67-101.dxf",
       "source_floor": "1S",
       "confidence": "inferred_from_floor_1",
-      "classification": "ON_CANONICAL_AXIS",
-      "classification_confidence": "CONFIRMED",
-      "classification_reason": "Centro dentro de tolerancia de ejes canonicos X/Y."
-    },
-    {
-      "solidTag": "SOL_1S_column_0032",
-      "building": "EDIFICIO_1",
-      "floor": "S1",
-      "x_m": 75.041,
-      "y_m": 0.181,
-      "z_m": 1.98,
-      "width_m": 0.35,
-      "depth_m": 0.35,
-      "height_m": 3.96,
-      "x_axis_matrix": "X=75.05 near IB +1.68m",
-      "y_axis_matrix": "1",
-      "nearest_x_axis": {
-        "axis": "IB",
-        "axis_coord_m": 73.366,
-        "offset_m": 1.675,
-        "abs_offset_m": 1.675,
-        "status": "OFF_AXIS_REFERENCE"
-      },
-      "nearest_y_axis": {
-        "axis": "1",
-        "axis_coord_m": 0.0,
-        "offset_m": 0.181,
-        "abs_offset_m": 0.181,
-        "status": "ON_AXIS"
-      },
-      "axis_status": "OFF_AXIS_REFERENCE",
-      "source_dxf": "2017_67-103.dxf",
-      "source_floor": "1S",
-      "confidence": "inferred_from_above_1",
-      "classification": "SPECIAL_POSITION_CONFIRMED",
-      "classification_confidence": "GEOMETRY_CONFIRMED",
-      "classification_reason": "Columna repetida en los cinco pisos sobre eje Y primario, pero sin etiqueta de eje X respaldada."
-    },
-    {
-      "solidTag": "SOL_1S_column_0034",
-      "building": "EDIFICIO_1",
-      "floor": "S1",
-      "x_m": 75.041,
-      "y_m": 9.081,
-      "z_m": 1.98,
-      "width_m": 0.35,
-      "depth_m": 0.35,
-      "height_m": 3.96,
-      "x_axis_matrix": "X=75.05 near IB +1.68m",
-      "y_axis_matrix": "2",
-      "nearest_x_axis": {
-        "axis": "IB",
-        "axis_coord_m": 73.366,
-        "offset_m": 1.675,
-        "abs_offset_m": 1.675,
-        "status": "OFF_AXIS_REFERENCE"
-      },
-      "nearest_y_axis": {
-        "axis": "2",
-        "axis_coord_m": 8.9,
-        "offset_m": 0.181,
-        "abs_offset_m": 0.181,
-        "status": "ON_AXIS"
-      },
-      "axis_status": "OFF_AXIS_REFERENCE",
-      "source_dxf": "2017_67-103.dxf",
-      "source_floor": "1S",
-      "confidence": "inferred_from_above_1",
-      "classification": "SPECIAL_POSITION_CONFIRMED",
-      "classification_confidence": "GEOMETRY_CONFIRMED",
-      "classification_reason": "Columna repetida en los cinco pisos sobre eje Y primario, pero sin etiqueta de eje X respaldada."
-    },
-    {
-      "solidTag": "SOL_1S_column_0033",
-      "building": "EDIFICIO_1",
-      "floor": "S1",
-      "x_m": 75.041,
-      "y_m": 16.331,
-      "z_m": 1.98,
-      "width_m": 0.35,
-      "depth_m": 0.35,
-      "height_m": 3.96,
-      "x_axis_matrix": "X=75.05 near IB +1.68m",
-      "y_axis_matrix": "3",
-      "nearest_x_axis": {
-        "axis": "IB",
-        "axis_coord_m": 73.366,
-        "offset_m": 1.675,
-        "abs_offset_m": 1.675,
-        "status": "OFF_AXIS_REFERENCE"
-      },
-      "nearest_y_axis": {
-        "axis": "3",
-        "axis_coord_m": 16.15,
-        "offset_m": 0.181,
-        "abs_offset_m": 0.181,
-        "status": "ON_AXIS"
-      },
-      "axis_status": "OFF_AXIS_REFERENCE",
-      "source_dxf": "2017_67-103.dxf",
-      "source_floor": "1S",
-      "confidence": "inferred_from_above_1",
-      "classification": "SPECIAL_POSITION_CONFIRMED",
-      "classification_confidence": "GEOMETRY_CONFIRMED",
-      "classification_reason": "Columna repetida en los cinco pisos sobre eje Y primario, pero sin etiqueta de eje X respaldada."
-    },
-    {
-      "solidTag": "SOL_1S_column_0029",
-      "building": "EDIFICIO_1",
-      "floor": "S1",
-      "x_m": 77.391,
-      "y_m": 0.181,
-      "z_m": 1.98,
-      "width_m": 0.35,
-      "depth_m": 0.35,
-      "height_m": 3.96,
-      "x_axis_matrix": "J",
-      "y_axis_matrix": "1",
-      "nearest_x_axis": {
-        "axis": "J",
-        "axis_coord_m": 77.491,
-        "offset_m": -0.1,
-        "abs_offset_m": 0.1,
-        "status": "ON_AXIS"
-      },
-      "nearest_y_axis": {
-        "axis": "1",
-        "axis_coord_m": 0.0,
-        "offset_m": 0.181,
-        "abs_offset_m": 0.181,
-        "status": "ON_AXIS"
-      },
-      "axis_status": "ON_AXIS",
-      "source_dxf": "2017_67-103.dxf",
-      "source_floor": "1S",
-      "confidence": "inferred_from_above_1",
-      "classification": "ON_CANONICAL_AXIS",
-      "classification_confidence": "CONFIRMED",
-      "classification_reason": "Centro dentro de tolerancia de ejes canonicos X/Y."
-    },
-    {
-      "solidTag": "SOL_1S_column_0027",
-      "building": "EDIFICIO_1",
-      "floor": "S1",
-      "x_m": 77.391,
-      "y_m": 9.081,
-      "z_m": 1.98,
-      "width_m": 0.35,
-      "depth_m": 0.35,
-      "height_m": 3.96,
-      "x_axis_matrix": "J",
-      "y_axis_matrix": "2",
-      "nearest_x_axis": {
-        "axis": "J",
-        "axis_coord_m": 77.491,
-        "offset_m": -0.1,
-        "abs_offset_m": 0.1,
-        "status": "ON_AXIS"
-      },
-      "nearest_y_axis": {
-        "axis": "2",
-        "axis_coord_m": 8.9,
-        "offset_m": 0.181,
-        "abs_offset_m": 0.181,
-        "status": "ON_AXIS"
-      },
-      "axis_status": "ON_AXIS",
-      "source_dxf": "2017_67-103.dxf",
-      "source_floor": "1S",
-      "confidence": "inferred_from_above_1",
-      "classification": "ON_CANONICAL_AXIS",
-      "classification_confidence": "CONFIRMED",
-      "classification_reason": "Centro dentro de tolerancia de ejes canonicos X/Y."
-    },
-    {
-      "solidTag": "SOL_1S_column_0028",
-      "building": "EDIFICIO_1",
-      "floor": "S1",
-      "x_m": 77.391,
-      "y_m": 16.331,
-      "z_m": 1.98,
-      "width_m": 0.35,
-      "depth_m": 0.35,
-      "height_m": 3.96,
-      "x_axis_matrix": "J",
-      "y_axis_matrix": "3",
-      "nearest_x_axis": {
-        "axis": "J",
-        "axis_coord_m": 77.491,
-        "offset_m": -0.1,
-        "abs_offset_m": 0.1,
-        "status": "ON_AXIS"
-      },
-      "nearest_y_axis": {
-        "axis": "3",
-        "axis_coord_m": 16.15,
-        "offset_m": 0.181,
-        "abs_offset_m": 0.181,
-        "status": "ON_AXIS"
-      },
-      "axis_status": "ON_AXIS",
-      "source_dxf": "2017_67-103.dxf",
-      "source_floor": "1S",
-      "confidence": "inferred_from_above_1",
       "classification": "ON_CANONICAL_AXIS",
       "classification_confidence": "CONFIRMED",
       "classification_reason": "Centro dentro de tolerancia de ejes canonicos X/Y."

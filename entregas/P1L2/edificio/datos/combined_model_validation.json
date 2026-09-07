@@ -219,7 +219,7 @@
     "audited_checkpoint": "entregas/P1L2/unity_export/model_1_audited.json",
     "corrected_model": "entregas/P1L2/unity_export/model_1_audited_corrected.json",
     "geometry_hash_before": "058b16eb552af995b0bf3f835ea787a6cd4eb4f3e6627ae56874b8395fbe502b",
-    "geometry_hash_after": "cdacb32cf6b0887c2a90972be89c8cb353e0b3fdb5273e60f0da6fb8d69c01a6",
+    "geometry_hash_after": "6b1db287ec87589429c889abfd3732a03c2c4cc67614b342778c605245b4de29",
     "geometry_changed": true,
     "changes": [
       {
@@ -247,6 +247,7 @@
         "source_dxf": "2017_67-101.dxf",
         "evidence": {
           "floor": "S1",
+          "station_x_m": 34.477,
           "same_floor": {
             "source_dxf": "2017_67-101.dxf",
             "direct_dxf_region_scan": {
@@ -384,6 +385,7 @@
         "source_dxf": "2017_67-101.dxf",
         "evidence": {
           "floor": "S1",
+          "station_x_m": 34.477,
           "same_floor": {
             "source_dxf": "2017_67-101.dxf",
             "direct_dxf_region_scan": {
@@ -521,6 +523,7 @@
         "source_dxf": "2017_67-101.dxf",
         "evidence": {
           "floor": "S1",
+          "station_x_m": 34.477,
           "same_floor": {
             "source_dxf": "2017_67-101.dxf",
             "direct_dxf_region_scan": {
@@ -658,6 +661,7 @@
         "source_dxf": "2017_67-101.dxf",
         "evidence": {
           "floor": "S1",
+          "station_x_m": 30.027,
           "same_floor": {
             "source_dxf": "2017_67-101.dxf",
             "direct_dxf_region_scan": {
@@ -795,6 +799,7 @@
         "source_dxf": "2017_67-101.dxf",
         "evidence": {
           "floor": "S1",
+          "station_x_m": 30.027,
           "same_floor": {
             "source_dxf": "2017_67-101.dxf",
             "direct_dxf_region_scan": {
@@ -932,6 +937,7 @@
         "source_dxf": "2017_67-102.dxf",
         "evidence": {
           "floor": "S1",
+          "station_x_m": 17.49,
           "same_floor": {
             "source_dxf": "2017_67-101.dxf",
             "direct_dxf_region_scan": {
@@ -1069,6 +1075,7 @@
         "source_dxf": "2017_67-102.dxf",
         "evidence": {
           "floor": "S1",
+          "station_x_m": 10.0,
           "same_floor": {
             "source_dxf": "2017_67-101.dxf",
             "direct_dxf_region_scan": {
@@ -1182,6 +1189,420 @@
         "confidence": "HIGH"
       },
       {
+        "id": "E1-S1-C-033",
+        "solidTag": "SOL_1S_column_0027",
+        "category": "column",
+        "old_geometry": {
+          "solidTag": "SOL_1S_column_0027",
+          "category": "column",
+          "kind": "box",
+          "floor": "1S",
+          "center": [
+            49.89984821128715,
+            9.081383303107533,
+            1.98
+          ],
+          "width_m": 0.35,
+          "depth_m": 0.35,
+          "height_m": 3.96,
+          "length_m": 3.96
+        },
+        "new_geometry": "REMOVED",
+        "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
+        "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+        "source_dxf": "2017_67-103.dxf",
+        "evidence": {
+          "floor": "S1",
+          "station_x_m": 77.391,
+          "same_floor": {
+            "source_dxf": "2017_67-101.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-101.dxf",
+              "region_key": "2017_67-101_s1",
+              "bbox_cm": [
+                528,
+                4565,
+                6015,
+                8539
+              ],
+              "title": "PLANTA CIELO 1º SUBTERRANEO",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 27,
+                "RLE-EJES": 62,
+                "RLE-LOSA": 5,
+                "RLE-MURO": 91,
+                "RLE-TEXTO-1": 143,
+                "RLE-VIGA": 85
+              }
+            },
+            "nearest_column": null,
+            "nearest_column_label": {
+              "id": "LBL_P1_1S_0015",
+              "tipo": "columna",
+              "texto": "P. 70x70",
+              "distance_m": 51.004,
+              "source_dxf": "2017_67-101.dxf",
+              "source_layer": "RLE-TEXTO-1",
+              "point_m": [
+                36.143,
+                -20.919
+              ]
+            },
+            "nearest_structure": {
+              "id": "MURO_P1_1S_0007",
+              "tipo": "muro",
+              "distance_m": 28.35,
+              "source_dxf": "2017_67-101.dxf",
+              "source_layer": "RLE-MURO",
+              "ejes_aproximados": {
+                "x": "Ga-H",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                49.041,
+                8.818
+              ]
+            },
+            "direct_column_count": 0
+          },
+          "foundation": {
+            "source_dxf": "2017_67-100.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-100.dxf",
+              "region_key": "2017_67-100",
+              "bbox_cm": [
+                268,
+                3221,
+                5756,
+                7984
+              ],
+              "title": "PLANTA FUNDACIONES",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 30,
+                "RLE-EJES": 63,
+                "RLE-FUNDACION": 199,
+                "RLE-LOSA": 14,
+                "RLE-MURO": 158,
+                "RLE-PILAR": 24,
+                "RLE-TEXTO-1": 79,
+                "RLE-VIGA": 69
+              }
+            },
+            "nearest_column": {
+              "id": "C_P1_FUNDACION_0006",
+              "tipo": "columna",
+              "distance_m": 7.543,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-PILAR",
+              "ejes_aproximados": {
+                "x": "I-IA",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                69.848,
+                9.085
+              ]
+            },
+            "nearest_foundation_element": {
+              "id": "FUNDACION_P1_FUNDACION_0104",
+              "tipo": "fundacion",
+              "distance_m": 6.543,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-FUNDACION",
+              "ejes_aproximados": {
+                "x": "IA-I_prime",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                70.848,
+                9.085
+              ]
+            },
+            "direct_column_count": 6
+          },
+          "outboard_y_gt_y3_plus_tolerance": false
+        },
+        "confidence": "HIGH"
+      },
+      {
+        "id": "E1-S1-C-034",
+        "solidTag": "SOL_1S_column_0028",
+        "category": "column",
+        "old_geometry": {
+          "solidTag": "SOL_1S_column_0028",
+          "category": "column",
+          "kind": "box",
+          "floor": "1S",
+          "center": [
+            49.89984821128715,
+            16.331487657401528,
+            1.98
+          ],
+          "width_m": 0.35,
+          "depth_m": 0.35,
+          "height_m": 3.96,
+          "length_m": 3.96
+        },
+        "new_geometry": "REMOVED",
+        "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
+        "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+        "source_dxf": "2017_67-103.dxf",
+        "evidence": {
+          "floor": "S1",
+          "station_x_m": 77.391,
+          "same_floor": {
+            "source_dxf": "2017_67-101.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-101.dxf",
+              "region_key": "2017_67-101_s1",
+              "bbox_cm": [
+                528,
+                4565,
+                6015,
+                8539
+              ],
+              "title": "PLANTA CIELO 1º SUBTERRANEO",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 27,
+                "RLE-EJES": 62,
+                "RLE-LOSA": 5,
+                "RLE-MURO": 91,
+                "RLE-TEXTO-1": 143,
+                "RLE-VIGA": 85
+              }
+            },
+            "nearest_column": null,
+            "nearest_column_label": {
+              "id": "LBL_P1_1S_0015",
+              "tipo": "columna",
+              "texto": "P. 70x70",
+              "distance_m": 55.579,
+              "source_dxf": "2017_67-101.dxf",
+              "source_layer": "RLE-TEXTO-1",
+              "point_m": [
+                36.143,
+                -20.919
+              ]
+            },
+            "nearest_structure": {
+              "id": "MURO_P1_1S_0080",
+              "tipo": "muro",
+              "distance_m": 22.116,
+              "source_dxf": "2017_67-101.dxf",
+              "source_layer": "RLE-MURO",
+              "ejes_aproximados": {
+                "x": "IB-J",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                73.036,
+                43.526
+              ]
+            },
+            "direct_column_count": 0
+          },
+          "foundation": {
+            "source_dxf": "2017_67-100.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-100.dxf",
+              "region_key": "2017_67-100",
+              "bbox_cm": [
+                268,
+                3221,
+                5756,
+                7984
+              ],
+              "title": "PLANTA FUNDACIONES",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 30,
+                "RLE-EJES": 63,
+                "RLE-FUNDACION": 199,
+                "RLE-LOSA": 14,
+                "RLE-MURO": 158,
+                "RLE-PILAR": 24,
+                "RLE-TEXTO-1": 79,
+                "RLE-VIGA": 69
+              }
+            },
+            "nearest_column": {
+              "id": "C_P1_FUNDACION_0005",
+              "tipo": "columna",
+              "distance_m": 7.493,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-PILAR",
+              "ejes_aproximados": {
+                "x": "I-IA",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                69.898,
+                16.335
+              ]
+            },
+            "nearest_foundation_element": {
+              "id": "FUNDACION_P1_FUNDACION_0143",
+              "tipo": "fundacion",
+              "distance_m": 6.068,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-FUNDACION",
+              "ejes_aproximados": {
+                "x": "IA-I_prime",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                71.323,
+                16.335
+              ]
+            },
+            "direct_column_count": 6
+          },
+          "outboard_y_gt_y3_plus_tolerance": false
+        },
+        "confidence": "HIGH"
+      },
+      {
+        "id": "E1-S1-C-032",
+        "solidTag": "SOL_1S_column_0029",
+        "category": "column",
+        "old_geometry": {
+          "solidTag": "SOL_1S_column_0029",
+          "category": "column",
+          "kind": "box",
+          "floor": "1S",
+          "center": [
+            49.89984821128718,
+            0.18132100205450286,
+            1.98
+          ],
+          "width_m": 0.35,
+          "depth_m": 0.35,
+          "height_m": 3.96,
+          "length_m": 3.96
+        },
+        "new_geometry": "REMOVED",
+        "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
+        "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+        "source_dxf": "2017_67-103.dxf",
+        "evidence": {
+          "floor": "S1",
+          "station_x_m": 77.391,
+          "same_floor": {
+            "source_dxf": "2017_67-101.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-101.dxf",
+              "region_key": "2017_67-101_s1",
+              "bbox_cm": [
+                528,
+                4565,
+                6015,
+                8539
+              ],
+              "title": "PLANTA CIELO 1º SUBTERRANEO",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 27,
+                "RLE-EJES": 62,
+                "RLE-LOSA": 5,
+                "RLE-MURO": 91,
+                "RLE-TEXTO-1": 143,
+                "RLE-VIGA": 85
+              }
+            },
+            "nearest_column": null,
+            "nearest_column_label": {
+              "id": "LBL_P1_1S_0015",
+              "tipo": "columna",
+              "texto": "P. 70x70",
+              "distance_m": 46.332,
+              "source_dxf": "2017_67-101.dxf",
+              "source_layer": "RLE-TEXTO-1",
+              "point_m": [
+                36.143,
+                -20.919
+              ]
+            },
+            "nearest_structure": {
+              "id": "VIGA_P1_1S_0037",
+              "tipo": "viga",
+              "distance_m": 28.453,
+              "source_dxf": "2017_67-101.dxf",
+              "source_layer": "RLE-VIGA",
+              "ejes_aproximados": {
+                "x": "Ga-H",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                48.941,
+                2.598
+              ]
+            },
+            "direct_column_count": 0
+          },
+          "foundation": {
+            "source_dxf": "2017_67-100.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-100.dxf",
+              "region_key": "2017_67-100",
+              "bbox_cm": [
+                268,
+                3221,
+                5756,
+                7984
+              ],
+              "title": "PLANTA FUNDACIONES",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 30,
+                "RLE-EJES": 63,
+                "RLE-FUNDACION": 199,
+                "RLE-LOSA": 14,
+                "RLE-MURO": 158,
+                "RLE-PILAR": 24,
+                "RLE-TEXTO-1": 79,
+                "RLE-VIGA": 69
+              }
+            },
+            "nearest_column": {
+              "id": "C_P1_FUNDACION_0004",
+              "tipo": "columna",
+              "distance_m": 7.493,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-PILAR",
+              "ejes_aproximados": {
+                "x": "I-IA",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                69.898,
+                0.118
+              ]
+            },
+            "nearest_foundation_element": {
+              "id": "FUNDACION_P1_FUNDACION_0190",
+              "tipo": "fundacion",
+              "distance_m": 5.745,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-FUNDACION",
+              "ejes_aproximados": {
+                "x": "IA-I_prime",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                71.844,
+                -6.513
+              ]
+            },
+            "direct_column_count": 6
+          },
+          "outboard_y_gt_y3_plus_tolerance": false
+        },
+        "confidence": "HIGH"
+      },
+      {
         "id": "E1-S1-C-017",
         "solidTag": "SOL_1S_column_0030",
         "category": "column",
@@ -1206,6 +1627,7 @@
         "source_dxf": "2017_67-103.dxf",
         "evidence": {
           "floor": "S1",
+          "station_x_m": 30.0,
           "same_floor": {
             "source_dxf": "2017_67-101.dxf",
             "direct_dxf_region_scan": {
@@ -1343,6 +1765,7 @@
         "source_dxf": "2017_67-103.dxf",
         "evidence": {
           "floor": "S1",
+          "station_x_m": 20.0,
           "same_floor": {
             "source_dxf": "2017_67-101.dxf",
             "direct_dxf_region_scan": {
@@ -1456,6 +1879,879 @@
         "confidence": "HIGH"
       },
       {
+        "id": "E1-S1-C-029",
+        "solidTag": "SOL_1S_column_0032",
+        "category": "column",
+        "old_geometry": {
+          "solidTag": "SOL_1S_column_0032",
+          "category": "column",
+          "kind": "box",
+          "floor": "1S",
+          "center": [
+            47.54988063446994,
+            0.181321002054583,
+            1.98
+          ],
+          "width_m": 0.35,
+          "depth_m": 0.35,
+          "height_m": 3.96,
+          "length_m": 3.96
+        },
+        "new_geometry": "REMOVED",
+        "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
+        "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+        "source_dxf": "2017_67-103.dxf",
+        "evidence": {
+          "floor": "S1",
+          "station_x_m": 75.041,
+          "same_floor": {
+            "source_dxf": "2017_67-101.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-101.dxf",
+              "region_key": "2017_67-101_s1",
+              "bbox_cm": [
+                528,
+                4565,
+                6015,
+                8539
+              ],
+              "title": "PLANTA CIELO 1º SUBTERRANEO",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 27,
+                "RLE-EJES": 62,
+                "RLE-LOSA": 5,
+                "RLE-MURO": 91,
+                "RLE-TEXTO-1": 143,
+                "RLE-VIGA": 85
+              }
+            },
+            "nearest_column": null,
+            "nearest_column_label": {
+              "id": "LBL_P1_1S_0015",
+              "tipo": "columna",
+              "texto": "P. 70x70",
+              "distance_m": 44.253,
+              "source_dxf": "2017_67-101.dxf",
+              "source_layer": "RLE-TEXTO-1",
+              "point_m": [
+                36.143,
+                -20.919
+              ]
+            },
+            "nearest_structure": {
+              "id": "VIGA_P1_1S_0037",
+              "tipo": "viga",
+              "distance_m": 26.112,
+              "source_dxf": "2017_67-101.dxf",
+              "source_layer": "RLE-VIGA",
+              "ejes_aproximados": {
+                "x": "Ga-H",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                48.941,
+                2.598
+              ]
+            },
+            "direct_column_count": 0
+          },
+          "foundation": {
+            "source_dxf": "2017_67-100.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-100.dxf",
+              "region_key": "2017_67-100",
+              "bbox_cm": [
+                268,
+                3221,
+                5756,
+                7984
+              ],
+              "title": "PLANTA FUNDACIONES",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 30,
+                "RLE-EJES": 63,
+                "RLE-FUNDACION": 199,
+                "RLE-LOSA": 14,
+                "RLE-MURO": 158,
+                "RLE-PILAR": 24,
+                "RLE-TEXTO-1": 79,
+                "RLE-VIGA": 69
+              }
+            },
+            "nearest_column": {
+              "id": "C_P1_FUNDACION_0004",
+              "tipo": "columna",
+              "distance_m": 5.143,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-PILAR",
+              "ejes_aproximados": {
+                "x": "I-IA",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                69.898,
+                0.118
+              ]
+            },
+            "nearest_foundation_element": {
+              "id": "FUNDACION_P1_FUNDACION_0190",
+              "tipo": "fundacion",
+              "distance_m": 3.53,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-FUNDACION",
+              "ejes_aproximados": {
+                "x": "IA-I_prime",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                71.844,
+                -6.513
+              ]
+            },
+            "direct_column_count": 6
+          },
+          "outboard_y_gt_y3_plus_tolerance": false
+        },
+        "confidence": "HIGH"
+      },
+      {
+        "id": "E1-S1-C-031",
+        "solidTag": "SOL_1S_column_0033",
+        "category": "column",
+        "old_geometry": {
+          "solidTag": "SOL_1S_column_0033",
+          "category": "column",
+          "kind": "box",
+          "floor": "1S",
+          "center": [
+            47.54988063497803,
+            16.331457778549133,
+            1.98
+          ],
+          "width_m": 0.35,
+          "depth_m": 0.35,
+          "height_m": 3.96,
+          "length_m": 3.96
+        },
+        "new_geometry": "REMOVED",
+        "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
+        "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+        "source_dxf": "2017_67-103.dxf",
+        "evidence": {
+          "floor": "S1",
+          "station_x_m": 75.041,
+          "same_floor": {
+            "source_dxf": "2017_67-101.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-101.dxf",
+              "region_key": "2017_67-101_s1",
+              "bbox_cm": [
+                528,
+                4565,
+                6015,
+                8539
+              ],
+              "title": "PLANTA CIELO 1º SUBTERRANEO",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 27,
+                "RLE-EJES": 62,
+                "RLE-LOSA": 5,
+                "RLE-MURO": 91,
+                "RLE-TEXTO-1": 143,
+                "RLE-VIGA": 85
+              }
+            },
+            "nearest_column": null,
+            "nearest_column_label": {
+              "id": "LBL_P1_1S_0015",
+              "tipo": "columna",
+              "texto": "P. 70x70",
+              "distance_m": 53.858,
+              "source_dxf": "2017_67-101.dxf",
+              "source_layer": "RLE-TEXTO-1",
+              "point_m": [
+                36.143,
+                -20.919
+              ]
+            },
+            "nearest_structure": {
+              "id": "MURO_P1_1S_0080",
+              "tipo": "muro",
+              "distance_m": 21.775,
+              "source_dxf": "2017_67-101.dxf",
+              "source_layer": "RLE-MURO",
+              "ejes_aproximados": {
+                "x": "IB-J",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                73.036,
+                43.526
+              ]
+            },
+            "direct_column_count": 0
+          },
+          "foundation": {
+            "source_dxf": "2017_67-100.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-100.dxf",
+              "region_key": "2017_67-100",
+              "bbox_cm": [
+                268,
+                3221,
+                5756,
+                7984
+              ],
+              "title": "PLANTA FUNDACIONES",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 30,
+                "RLE-EJES": 63,
+                "RLE-FUNDACION": 199,
+                "RLE-LOSA": 14,
+                "RLE-MURO": 158,
+                "RLE-PILAR": 24,
+                "RLE-TEXTO-1": 79,
+                "RLE-VIGA": 69
+              }
+            },
+            "nearest_column": {
+              "id": "C_P1_FUNDACION_0005",
+              "tipo": "columna",
+              "distance_m": 5.143,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-PILAR",
+              "ejes_aproximados": {
+                "x": "I-IA",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                69.898,
+                16.335
+              ]
+            },
+            "nearest_foundation_element": {
+              "id": "FUNDACION_P1_FUNDACION_0143",
+              "tipo": "fundacion",
+              "distance_m": 3.718,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-FUNDACION",
+              "ejes_aproximados": {
+                "x": "IA-I_prime",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                71.323,
+                16.335
+              ]
+            },
+            "direct_column_count": 6
+          },
+          "outboard_y_gt_y3_plus_tolerance": false
+        },
+        "confidence": "HIGH"
+      },
+      {
+        "id": "E1-S1-C-030",
+        "solidTag": "SOL_1S_column_0034",
+        "category": "column",
+        "old_geometry": {
+          "solidTag": "SOL_1S_column_0034",
+          "category": "column",
+          "kind": "box",
+          "floor": "1S",
+          "center": [
+            47.549880634777466,
+            9.081356609425377,
+            1.98
+          ],
+          "width_m": 0.35,
+          "depth_m": 0.35,
+          "height_m": 3.96,
+          "length_m": 3.96
+        },
+        "new_geometry": "REMOVED",
+        "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
+        "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+        "source_dxf": "2017_67-103.dxf",
+        "evidence": {
+          "floor": "S1",
+          "station_x_m": 75.041,
+          "same_floor": {
+            "source_dxf": "2017_67-101.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-101.dxf",
+              "region_key": "2017_67-101_s1",
+              "bbox_cm": [
+                528,
+                4565,
+                6015,
+                8539
+              ],
+              "title": "PLANTA CIELO 1º SUBTERRANEO",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 27,
+                "RLE-EJES": 62,
+                "RLE-LOSA": 5,
+                "RLE-MURO": 91,
+                "RLE-TEXTO-1": 143,
+                "RLE-VIGA": 85
+              }
+            },
+            "nearest_column": null,
+            "nearest_column_label": {
+              "id": "LBL_P1_1S_0015",
+              "tipo": "columna",
+              "texto": "P. 70x70",
+              "distance_m": 49.123,
+              "source_dxf": "2017_67-101.dxf",
+              "source_layer": "RLE-TEXTO-1",
+              "point_m": [
+                36.143,
+                -20.919
+              ]
+            },
+            "nearest_structure": {
+              "id": "MURO_P1_1S_0007",
+              "tipo": "muro",
+              "distance_m": 26.0,
+              "source_dxf": "2017_67-101.dxf",
+              "source_layer": "RLE-MURO",
+              "ejes_aproximados": {
+                "x": "Ga-H",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                49.041,
+                8.818
+              ]
+            },
+            "direct_column_count": 0
+          },
+          "foundation": {
+            "source_dxf": "2017_67-100.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-100.dxf",
+              "region_key": "2017_67-100",
+              "bbox_cm": [
+                268,
+                3221,
+                5756,
+                7984
+              ],
+              "title": "PLANTA FUNDACIONES",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 30,
+                "RLE-EJES": 63,
+                "RLE-FUNDACION": 199,
+                "RLE-LOSA": 14,
+                "RLE-MURO": 158,
+                "RLE-PILAR": 24,
+                "RLE-TEXTO-1": 79,
+                "RLE-VIGA": 69
+              }
+            },
+            "nearest_column": {
+              "id": "C_P1_FUNDACION_0006",
+              "tipo": "columna",
+              "distance_m": 5.193,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-PILAR",
+              "ejes_aproximados": {
+                "x": "I-IA",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                69.848,
+                9.085
+              ]
+            },
+            "nearest_foundation_element": {
+              "id": "FUNDACION_P1_FUNDACION_0104",
+              "tipo": "fundacion",
+              "distance_m": 4.193,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-FUNDACION",
+              "ejes_aproximados": {
+                "x": "IA-I_prime",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                70.848,
+                9.085
+              ]
+            },
+            "direct_column_count": 6
+          },
+          "outboard_y_gt_y3_plus_tolerance": false
+        },
+        "confidence": "HIGH"
+      },
+      {
+        "id": "E1-P1-C-033",
+        "solidTag": "SOL_1_column_0027",
+        "category": "column",
+        "old_geometry": {
+          "solidTag": "SOL_1_column_0027",
+          "category": "column",
+          "kind": "box",
+          "floor": "1",
+          "center": [
+            49.89984821128715,
+            9.081383303107533,
+            5.9399999999999995
+          ],
+          "width_m": 0.35,
+          "depth_m": 0.35,
+          "height_m": 3.96,
+          "length_m": 3.96
+        },
+        "new_geometry": "REMOVED",
+        "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
+        "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+        "source_dxf": "2017_67-103.dxf",
+        "evidence": {
+          "floor": "P1",
+          "station_x_m": 77.391,
+          "same_floor": {
+            "source_dxf": "2017_67-101.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-101.dxf",
+              "region_key": "2017_67-101_p1",
+              "bbox_cm": [
+                528,
+                444,
+                6015,
+                4188
+              ],
+              "title": "PLANTA CIELO PISO 1º",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 16,
+                "RLE-EJES": 43,
+                "RLE-LOSA": 22,
+                "RLE-MURO": 46,
+                "RLE-PILAR": 94,
+                "RLE-TEXTO-1": 237,
+                "RLE-VIGA": 112
+              }
+            },
+            "nearest_column": {
+              "id": "C_P1_01_0018",
+              "tipo": "columna",
+              "distance_m": 4.903,
+              "source_dxf": "2017_67-101.dxf",
+              "source_layer": "RLE-PILAR",
+              "ejes_aproximados": {
+                "x": "I_prime-IB",
+                "y": "1b-2"
+              },
+              "point_or_mid_m": [
+                72.491,
+                8.9
+              ]
+            },
+            "nearest_column_label": {
+              "id": "LBL_P1_01_0080",
+              "tipo": "columna",
+              "texto": "P. 70x70",
+              "distance_m": 4.281,
+              "source_dxf": "2017_67-101.dxf",
+              "source_layer": "RLE-TEXTO-1",
+              "point_m": [
+                73.264,
+                7.942
+              ]
+            },
+            "nearest_structure": {
+              "id": "PERIMETRO_LOSA_P1_01_0017",
+              "tipo": "perimetro_losa",
+              "distance_m": 4.553,
+              "source_dxf": "2017_67-101.dxf",
+              "source_layer": "RLE-LOSA",
+              "ejes_aproximados": {
+                "x": "IB-J",
+                "y": "2-2a"
+              },
+              "point_or_mid_m": [
+                72.841,
+                12.525
+              ]
+            },
+            "direct_column_count": 20
+          },
+          "foundation": {
+            "source_dxf": "2017_67-100.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-100.dxf",
+              "region_key": "2017_67-100",
+              "bbox_cm": [
+                268,
+                3221,
+                5756,
+                7984
+              ],
+              "title": "PLANTA FUNDACIONES",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 30,
+                "RLE-EJES": 63,
+                "RLE-FUNDACION": 199,
+                "RLE-LOSA": 14,
+                "RLE-MURO": 158,
+                "RLE-PILAR": 24,
+                "RLE-TEXTO-1": 79,
+                "RLE-VIGA": 69
+              }
+            },
+            "nearest_column": {
+              "id": "C_P1_FUNDACION_0006",
+              "tipo": "columna",
+              "distance_m": 7.543,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-PILAR",
+              "ejes_aproximados": {
+                "x": "I-IA",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                69.848,
+                9.085
+              ]
+            },
+            "nearest_foundation_element": {
+              "id": "FUNDACION_P1_FUNDACION_0104",
+              "tipo": "fundacion",
+              "distance_m": 6.543,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-FUNDACION",
+              "ejes_aproximados": {
+                "x": "IA-I_prime",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                70.848,
+                9.085
+              ]
+            },
+            "direct_column_count": 6
+          },
+          "outboard_y_gt_y3_plus_tolerance": false
+        },
+        "confidence": "HIGH"
+      },
+      {
+        "id": "E1-P1-C-034",
+        "solidTag": "SOL_1_column_0028",
+        "category": "column",
+        "old_geometry": {
+          "solidTag": "SOL_1_column_0028",
+          "category": "column",
+          "kind": "box",
+          "floor": "1",
+          "center": [
+            49.89984821128715,
+            16.331487657401528,
+            5.9399999999999995
+          ],
+          "width_m": 0.35,
+          "depth_m": 0.35,
+          "height_m": 3.96,
+          "length_m": 3.96
+        },
+        "new_geometry": "REMOVED",
+        "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
+        "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+        "source_dxf": "2017_67-103.dxf",
+        "evidence": {
+          "floor": "P1",
+          "station_x_m": 77.391,
+          "same_floor": {
+            "source_dxf": "2017_67-101.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-101.dxf",
+              "region_key": "2017_67-101_p1",
+              "bbox_cm": [
+                528,
+                444,
+                6015,
+                4188
+              ],
+              "title": "PLANTA CIELO PISO 1º",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 16,
+                "RLE-EJES": 43,
+                "RLE-LOSA": 22,
+                "RLE-MURO": 46,
+                "RLE-PILAR": 94,
+                "RLE-TEXTO-1": 237,
+                "RLE-VIGA": 112
+              }
+            },
+            "nearest_column": {
+              "id": "C_P1_01_0017",
+              "tipo": "columna",
+              "distance_m": 4.903,
+              "source_dxf": "2017_67-101.dxf",
+              "source_layer": "RLE-PILAR",
+              "ejes_aproximados": {
+                "x": "I_prime-IB",
+                "y": "2a-3"
+              },
+              "point_or_mid_m": [
+                72.491,
+                16.15
+              ]
+            },
+            "nearest_column_label": {
+              "id": "LBL_P1_01_0063",
+              "tipo": "columna",
+              "texto": "P. 70x70",
+              "distance_m": 4.207,
+              "source_dxf": "2017_67-101.dxf",
+              "source_layer": "RLE-TEXTO-1",
+              "point_m": [
+                73.305,
+                15.33
+              ]
+            },
+            "nearest_structure": {
+              "id": "PERIMETRO_LOSA_P1_01_0017",
+              "tipo": "perimetro_losa",
+              "distance_m": 4.581,
+              "source_dxf": "2017_67-101.dxf",
+              "source_layer": "RLE-LOSA",
+              "ejes_aproximados": {
+                "x": "IB-J",
+                "y": "2-2a"
+              },
+              "point_or_mid_m": [
+                72.841,
+                12.525
+              ]
+            },
+            "direct_column_count": 20
+          },
+          "foundation": {
+            "source_dxf": "2017_67-100.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-100.dxf",
+              "region_key": "2017_67-100",
+              "bbox_cm": [
+                268,
+                3221,
+                5756,
+                7984
+              ],
+              "title": "PLANTA FUNDACIONES",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 30,
+                "RLE-EJES": 63,
+                "RLE-FUNDACION": 199,
+                "RLE-LOSA": 14,
+                "RLE-MURO": 158,
+                "RLE-PILAR": 24,
+                "RLE-TEXTO-1": 79,
+                "RLE-VIGA": 69
+              }
+            },
+            "nearest_column": {
+              "id": "C_P1_FUNDACION_0005",
+              "tipo": "columna",
+              "distance_m": 7.493,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-PILAR",
+              "ejes_aproximados": {
+                "x": "I-IA",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                69.898,
+                16.335
+              ]
+            },
+            "nearest_foundation_element": {
+              "id": "FUNDACION_P1_FUNDACION_0143",
+              "tipo": "fundacion",
+              "distance_m": 6.068,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-FUNDACION",
+              "ejes_aproximados": {
+                "x": "IA-I_prime",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                71.323,
+                16.335
+              ]
+            },
+            "direct_column_count": 6
+          },
+          "outboard_y_gt_y3_plus_tolerance": false
+        },
+        "confidence": "HIGH"
+      },
+      {
+        "id": "E1-P1-C-032",
+        "solidTag": "SOL_1_column_0029",
+        "category": "column",
+        "old_geometry": {
+          "solidTag": "SOL_1_column_0029",
+          "category": "column",
+          "kind": "box",
+          "floor": "1",
+          "center": [
+            49.89984821128718,
+            0.18132100205450286,
+            5.9399999999999995
+          ],
+          "width_m": 0.35,
+          "depth_m": 0.35,
+          "height_m": 3.96,
+          "length_m": 3.96
+        },
+        "new_geometry": "REMOVED",
+        "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
+        "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+        "source_dxf": "2017_67-103.dxf",
+        "evidence": {
+          "floor": "P1",
+          "station_x_m": 77.391,
+          "same_floor": {
+            "source_dxf": "2017_67-101.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-101.dxf",
+              "region_key": "2017_67-101_p1",
+              "bbox_cm": [
+                528,
+                444,
+                6015,
+                4188
+              ],
+              "title": "PLANTA CIELO PISO 1º",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 16,
+                "RLE-EJES": 43,
+                "RLE-LOSA": 22,
+                "RLE-MURO": 46,
+                "RLE-PILAR": 94,
+                "RLE-TEXTO-1": 237,
+                "RLE-VIGA": 112
+              }
+            },
+            "nearest_column": {
+              "id": "C_P1_01_0016",
+              "tipo": "columna",
+              "distance_m": 4.902,
+              "source_dxf": "2017_67-101.dxf",
+              "source_layer": "RLE-PILAR",
+              "ejes_aproximados": {
+                "x": "I_prime-IB",
+                "y": "1-1_prime"
+              },
+              "point_or_mid_m": [
+                72.491,
+                0.038
+              ]
+            },
+            "nearest_column_label": {
+              "id": "LBL_P1_01_0060",
+              "tipo": "columna",
+              "texto": "P. 70x70",
+              "distance_m": 4.095,
+              "source_dxf": "2017_67-101.dxf",
+              "source_layer": "RLE-TEXTO-1",
+              "point_m": [
+                73.296,
+                0.112
+              ]
+            },
+            "nearest_structure": {
+              "id": "MURO_P1_01_0034",
+              "tipo": "muro",
+              "distance_m": 4.4,
+              "source_dxf": "2017_67-101.dxf",
+              "source_layer": "RLE-MURO",
+              "ejes_aproximados": {
+                "x": "IB-J",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                73.036,
+                -5.962
+              ]
+            },
+            "direct_column_count": 20
+          },
+          "foundation": {
+            "source_dxf": "2017_67-100.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-100.dxf",
+              "region_key": "2017_67-100",
+              "bbox_cm": [
+                268,
+                3221,
+                5756,
+                7984
+              ],
+              "title": "PLANTA FUNDACIONES",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 30,
+                "RLE-EJES": 63,
+                "RLE-FUNDACION": 199,
+                "RLE-LOSA": 14,
+                "RLE-MURO": 158,
+                "RLE-PILAR": 24,
+                "RLE-TEXTO-1": 79,
+                "RLE-VIGA": 69
+              }
+            },
+            "nearest_column": {
+              "id": "C_P1_FUNDACION_0004",
+              "tipo": "columna",
+              "distance_m": 7.493,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-PILAR",
+              "ejes_aproximados": {
+                "x": "I-IA",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                69.898,
+                0.118
+              ]
+            },
+            "nearest_foundation_element": {
+              "id": "FUNDACION_P1_FUNDACION_0190",
+              "tipo": "fundacion",
+              "distance_m": 5.745,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-FUNDACION",
+              "ejes_aproximados": {
+                "x": "IA-I_prime",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                71.844,
+                -6.513
+              ]
+            },
+            "direct_column_count": 6
+          },
+          "outboard_y_gt_y3_plus_tolerance": false
+        },
+        "confidence": "HIGH"
+      },
+      {
         "id": "E1-P1-C-017",
         "solidTag": "SOL_1_column_0030",
         "category": "column",
@@ -1480,6 +2776,7 @@
         "source_dxf": "2017_67-103.dxf",
         "evidence": {
           "floor": "P1",
+          "station_x_m": 30.0,
           "same_floor": {
             "source_dxf": "2017_67-101.dxf",
             "direct_dxf_region_scan": {
@@ -1632,6 +2929,7 @@
         "source_dxf": "2017_67-103.dxf",
         "evidence": {
           "floor": "P1",
+          "station_x_m": 20.0,
           "same_floor": {
             "source_dxf": "2017_67-101.dxf",
             "direct_dxf_region_scan": {
@@ -1760,17 +3058,476 @@
         "confidence": "HIGH"
       },
       {
-        "id": "E1-P2-C-017",
-        "solidTag": "SOL_2_column_0025",
+        "id": "E1-P1-C-029",
+        "solidTag": "SOL_1_column_0032",
         "category": "column",
         "old_geometry": {
-          "solidTag": "SOL_2_column_0025",
+          "solidTag": "SOL_1_column_0032",
+          "category": "column",
+          "kind": "box",
+          "floor": "1",
+          "center": [
+            47.54988063446994,
+            0.181321002054583,
+            5.9399999999999995
+          ],
+          "width_m": 0.35,
+          "depth_m": 0.35,
+          "height_m": 3.96,
+          "length_m": 3.96
+        },
+        "new_geometry": "REMOVED",
+        "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
+        "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+        "source_dxf": "2017_67-103.dxf",
+        "evidence": {
+          "floor": "P1",
+          "station_x_m": 75.041,
+          "same_floor": {
+            "source_dxf": "2017_67-101.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-101.dxf",
+              "region_key": "2017_67-101_p1",
+              "bbox_cm": [
+                528,
+                444,
+                6015,
+                4188
+              ],
+              "title": "PLANTA CIELO PISO 1º",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 16,
+                "RLE-EJES": 43,
+                "RLE-LOSA": 22,
+                "RLE-MURO": 46,
+                "RLE-PILAR": 94,
+                "RLE-TEXTO-1": 237,
+                "RLE-VIGA": 112
+              }
+            },
+            "nearest_column": {
+              "id": "C_P1_01_0016",
+              "tipo": "columna",
+              "distance_m": 2.554,
+              "source_dxf": "2017_67-101.dxf",
+              "source_layer": "RLE-PILAR",
+              "ejes_aproximados": {
+                "x": "I_prime-IB",
+                "y": "1-1_prime"
+              },
+              "point_or_mid_m": [
+                72.491,
+                0.038
+              ]
+            },
+            "nearest_column_label": {
+              "id": "LBL_P1_01_0060",
+              "tipo": "columna",
+              "texto": "P. 70x70",
+              "distance_m": 1.746,
+              "source_dxf": "2017_67-101.dxf",
+              "source_layer": "RLE-TEXTO-1",
+              "point_m": [
+                73.296,
+                0.112
+              ]
+            },
+            "nearest_structure": {
+              "id": "MURO_P1_01_0034",
+              "tipo": "muro",
+              "distance_m": 2.102,
+              "source_dxf": "2017_67-101.dxf",
+              "source_layer": "RLE-MURO",
+              "ejes_aproximados": {
+                "x": "IB-J",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                73.036,
+                -5.962
+              ]
+            },
+            "direct_column_count": 20
+          },
+          "foundation": {
+            "source_dxf": "2017_67-100.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-100.dxf",
+              "region_key": "2017_67-100",
+              "bbox_cm": [
+                268,
+                3221,
+                5756,
+                7984
+              ],
+              "title": "PLANTA FUNDACIONES",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 30,
+                "RLE-EJES": 63,
+                "RLE-FUNDACION": 199,
+                "RLE-LOSA": 14,
+                "RLE-MURO": 158,
+                "RLE-PILAR": 24,
+                "RLE-TEXTO-1": 79,
+                "RLE-VIGA": 69
+              }
+            },
+            "nearest_column": {
+              "id": "C_P1_FUNDACION_0004",
+              "tipo": "columna",
+              "distance_m": 5.143,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-PILAR",
+              "ejes_aproximados": {
+                "x": "I-IA",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                69.898,
+                0.118
+              ]
+            },
+            "nearest_foundation_element": {
+              "id": "FUNDACION_P1_FUNDACION_0190",
+              "tipo": "fundacion",
+              "distance_m": 3.53,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-FUNDACION",
+              "ejes_aproximados": {
+                "x": "IA-I_prime",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                71.844,
+                -6.513
+              ]
+            },
+            "direct_column_count": 6
+          },
+          "outboard_y_gt_y3_plus_tolerance": false
+        },
+        "confidence": "HIGH"
+      },
+      {
+        "id": "E1-P1-C-031",
+        "solidTag": "SOL_1_column_0033",
+        "category": "column",
+        "old_geometry": {
+          "solidTag": "SOL_1_column_0033",
+          "category": "column",
+          "kind": "box",
+          "floor": "1",
+          "center": [
+            47.54988063497803,
+            16.331457778549133,
+            5.9399999999999995
+          ],
+          "width_m": 0.35,
+          "depth_m": 0.35,
+          "height_m": 3.96,
+          "length_m": 3.96
+        },
+        "new_geometry": "REMOVED",
+        "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
+        "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+        "source_dxf": "2017_67-103.dxf",
+        "evidence": {
+          "floor": "P1",
+          "station_x_m": 75.041,
+          "same_floor": {
+            "source_dxf": "2017_67-101.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-101.dxf",
+              "region_key": "2017_67-101_p1",
+              "bbox_cm": [
+                528,
+                444,
+                6015,
+                4188
+              ],
+              "title": "PLANTA CIELO PISO 1º",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 16,
+                "RLE-EJES": 43,
+                "RLE-LOSA": 22,
+                "RLE-MURO": 46,
+                "RLE-PILAR": 94,
+                "RLE-TEXTO-1": 237,
+                "RLE-VIGA": 112
+              }
+            },
+            "nearest_column": {
+              "id": "C_P1_01_0017",
+              "tipo": "columna",
+              "distance_m": 2.556,
+              "source_dxf": "2017_67-101.dxf",
+              "source_layer": "RLE-PILAR",
+              "ejes_aproximados": {
+                "x": "I_prime-IB",
+                "y": "2a-3"
+              },
+              "point_or_mid_m": [
+                72.491,
+                16.15
+              ]
+            },
+            "nearest_column_label": {
+              "id": "LBL_P1_01_0063",
+              "tipo": "columna",
+              "texto": "P. 70x70",
+              "distance_m": 2.004,
+              "source_dxf": "2017_67-101.dxf",
+              "source_layer": "RLE-TEXTO-1",
+              "point_m": [
+                73.305,
+                15.33
+              ]
+            },
+            "nearest_structure": {
+              "id": "PERIMETRO_LOSA_P1_01_0017",
+              "tipo": "perimetro_losa",
+              "distance_m": 2.263,
+              "source_dxf": "2017_67-101.dxf",
+              "source_layer": "RLE-LOSA",
+              "ejes_aproximados": {
+                "x": "IB-J",
+                "y": "2-2a"
+              },
+              "point_or_mid_m": [
+                72.841,
+                12.525
+              ]
+            },
+            "direct_column_count": 20
+          },
+          "foundation": {
+            "source_dxf": "2017_67-100.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-100.dxf",
+              "region_key": "2017_67-100",
+              "bbox_cm": [
+                268,
+                3221,
+                5756,
+                7984
+              ],
+              "title": "PLANTA FUNDACIONES",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 30,
+                "RLE-EJES": 63,
+                "RLE-FUNDACION": 199,
+                "RLE-LOSA": 14,
+                "RLE-MURO": 158,
+                "RLE-PILAR": 24,
+                "RLE-TEXTO-1": 79,
+                "RLE-VIGA": 69
+              }
+            },
+            "nearest_column": {
+              "id": "C_P1_FUNDACION_0005",
+              "tipo": "columna",
+              "distance_m": 5.143,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-PILAR",
+              "ejes_aproximados": {
+                "x": "I-IA",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                69.898,
+                16.335
+              ]
+            },
+            "nearest_foundation_element": {
+              "id": "FUNDACION_P1_FUNDACION_0143",
+              "tipo": "fundacion",
+              "distance_m": 3.718,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-FUNDACION",
+              "ejes_aproximados": {
+                "x": "IA-I_prime",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                71.323,
+                16.335
+              ]
+            },
+            "direct_column_count": 6
+          },
+          "outboard_y_gt_y3_plus_tolerance": false
+        },
+        "confidence": "HIGH"
+      },
+      {
+        "id": "E1-P1-C-030",
+        "solidTag": "SOL_1_column_0034",
+        "category": "column",
+        "old_geometry": {
+          "solidTag": "SOL_1_column_0034",
+          "category": "column",
+          "kind": "box",
+          "floor": "1",
+          "center": [
+            47.549880634777466,
+            9.081356609425377,
+            5.9399999999999995
+          ],
+          "width_m": 0.35,
+          "depth_m": 0.35,
+          "height_m": 3.96,
+          "length_m": 3.96
+        },
+        "new_geometry": "REMOVED",
+        "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
+        "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+        "source_dxf": "2017_67-103.dxf",
+        "evidence": {
+          "floor": "P1",
+          "station_x_m": 75.041,
+          "same_floor": {
+            "source_dxf": "2017_67-101.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-101.dxf",
+              "region_key": "2017_67-101_p1",
+              "bbox_cm": [
+                528,
+                444,
+                6015,
+                4188
+              ],
+              "title": "PLANTA CIELO PISO 1º",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 16,
+                "RLE-EJES": 43,
+                "RLE-LOSA": 22,
+                "RLE-MURO": 46,
+                "RLE-PILAR": 94,
+                "RLE-TEXTO-1": 237,
+                "RLE-VIGA": 112
+              }
+            },
+            "nearest_column": {
+              "id": "C_P1_01_0018",
+              "tipo": "columna",
+              "distance_m": 2.556,
+              "source_dxf": "2017_67-101.dxf",
+              "source_layer": "RLE-PILAR",
+              "ejes_aproximados": {
+                "x": "I_prime-IB",
+                "y": "1b-2"
+              },
+              "point_or_mid_m": [
+                72.491,
+                8.9
+              ]
+            },
+            "nearest_column_label": {
+              "id": "LBL_P1_01_0080",
+              "tipo": "columna",
+              "texto": "P. 70x70",
+              "distance_m": 2.111,
+              "source_dxf": "2017_67-101.dxf",
+              "source_layer": "RLE-TEXTO-1",
+              "point_m": [
+                73.264,
+                7.942
+              ]
+            },
+            "nearest_structure": {
+              "id": "PERIMETRO_LOSA_P1_01_0017",
+              "tipo": "perimetro_losa",
+              "distance_m": 2.206,
+              "source_dxf": "2017_67-101.dxf",
+              "source_layer": "RLE-LOSA",
+              "ejes_aproximados": {
+                "x": "IB-J",
+                "y": "2-2a"
+              },
+              "point_or_mid_m": [
+                72.841,
+                12.525
+              ]
+            },
+            "direct_column_count": 20
+          },
+          "foundation": {
+            "source_dxf": "2017_67-100.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-100.dxf",
+              "region_key": "2017_67-100",
+              "bbox_cm": [
+                268,
+                3221,
+                5756,
+                7984
+              ],
+              "title": "PLANTA FUNDACIONES",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 30,
+                "RLE-EJES": 63,
+                "RLE-FUNDACION": 199,
+                "RLE-LOSA": 14,
+                "RLE-MURO": 158,
+                "RLE-PILAR": 24,
+                "RLE-TEXTO-1": 79,
+                "RLE-VIGA": 69
+              }
+            },
+            "nearest_column": {
+              "id": "C_P1_FUNDACION_0006",
+              "tipo": "columna",
+              "distance_m": 5.193,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-PILAR",
+              "ejes_aproximados": {
+                "x": "I-IA",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                69.848,
+                9.085
+              ]
+            },
+            "nearest_foundation_element": {
+              "id": "FUNDACION_P1_FUNDACION_0104",
+              "tipo": "fundacion",
+              "distance_m": 4.193,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-FUNDACION",
+              "ejes_aproximados": {
+                "x": "IA-I_prime",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                70.848,
+                9.085
+              ]
+            },
+            "direct_column_count": 6
+          },
+          "outboard_y_gt_y3_plus_tolerance": false
+        },
+        "confidence": "HIGH"
+      },
+      {
+        "id": "E1-P2-C-028",
+        "solidTag": "SOL_2_column_0022",
+        "category": "column",
+        "old_geometry": {
+          "solidTag": "SOL_2_column_0022",
           "category": "column",
           "kind": "box",
           "floor": "2",
           "center": [
-            29.999880634627935,
-            20.45148765745718,
+            49.89984821128715,
+            9.081383303107533,
             9.9
           ],
           "width_m": 0.35,
@@ -1779,11 +3536,12 @@
           "length_m": 3.960000000000001
         },
         "new_geometry": "REMOVED",
-        "reason": "outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match; CALIBRATION_CAVEAT_DO_NOT_USE_AS_DEFECT",
+        "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
         "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
         "source_dxf": "2017_67-103.dxf",
         "evidence": {
           "floor": "P2",
+          "station_x_m": 77.391,
           "same_floor": {
             "source_dxf": "2017_67-102.dxf",
             "direct_dxf_region_scan": {
@@ -1808,45 +3566,504 @@
               }
             },
             "nearest_column": {
-              "id": "C_P1_02_0010",
+              "id": "C_P1_02_0020",
               "tipo": "columna",
-              "distance_m": 5.511,
+              "distance_m": 11.313,
               "source_dxf": "2017_67-102.dxf",
               "source_layer": "RLE-PILAR",
               "ejes_aproximados": {
-                "x": "H_prime-H2",
+                "x": "IA-I_prime",
                 "y": "antes de 1"
               },
               "point_or_mid_m": [
-                61.078,
+                66.078,
+                9.018
+              ]
+            },
+            "nearest_column_label": {
+              "id": "LBL_P1_02_0054",
+              "tipo": "columna",
+              "texto": "P. 70x70",
+              "distance_m": 37.477,
+              "source_dxf": "2017_67-102.dxf",
+              "source_layer": "RLE-TEXTO-1",
+              "point_m": [
+                71.557,
+                -27.939
+              ]
+            },
+            "nearest_structure": {
+              "id": "PERIMETRO_LOSA_P1_02_0004",
+              "tipo": "perimetro_losa",
+              "distance_m": 10.967,
+              "source_dxf": "2017_67-102.dxf",
+              "source_layer": "RLE-LOSA",
+              "ejes_aproximados": {
+                "x": "IA-I_prime",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                66.428,
+                12.643
+              ]
+            },
+            "direct_column_count": 21
+          },
+          "foundation": {
+            "source_dxf": "2017_67-100.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-100.dxf",
+              "region_key": "2017_67-100",
+              "bbox_cm": [
+                268,
+                3221,
+                5756,
+                7984
+              ],
+              "title": "PLANTA FUNDACIONES",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 30,
+                "RLE-EJES": 63,
+                "RLE-FUNDACION": 199,
+                "RLE-LOSA": 14,
+                "RLE-MURO": 158,
+                "RLE-PILAR": 24,
+                "RLE-TEXTO-1": 79,
+                "RLE-VIGA": 69
+              }
+            },
+            "nearest_column": {
+              "id": "C_P1_FUNDACION_0006",
+              "tipo": "columna",
+              "distance_m": 7.543,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-PILAR",
+              "ejes_aproximados": {
+                "x": "I-IA",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                69.848,
+                9.085
+              ]
+            },
+            "nearest_foundation_element": {
+              "id": "FUNDACION_P1_FUNDACION_0104",
+              "tipo": "fundacion",
+              "distance_m": 6.543,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-FUNDACION",
+              "ejes_aproximados": {
+                "x": "IA-I_prime",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                70.848,
+                9.085
+              ]
+            },
+            "direct_column_count": 6
+          },
+          "outboard_y_gt_y3_plus_tolerance": false
+        },
+        "confidence": "HIGH"
+      },
+      {
+        "id": "E1-P2-C-029",
+        "solidTag": "SOL_2_column_0023",
+        "category": "column",
+        "old_geometry": {
+          "solidTag": "SOL_2_column_0023",
+          "category": "column",
+          "kind": "box",
+          "floor": "2",
+          "center": [
+            49.89984821128715,
+            16.331487657401528,
+            9.9
+          ],
+          "width_m": 0.35,
+          "depth_m": 0.35,
+          "height_m": 3.960000000000001,
+          "length_m": 3.960000000000001
+        },
+        "new_geometry": "REMOVED",
+        "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
+        "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+        "source_dxf": "2017_67-103.dxf",
+        "evidence": {
+          "floor": "P2",
+          "station_x_m": 77.391,
+          "same_floor": {
+            "source_dxf": "2017_67-102.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-102.dxf",
+              "region_key": "2017_67-102_p2",
+              "bbox_cm": [
+                359,
+                5828,
+                5847,
+                8000
+              ],
+              "title": "PLANTA CIELO PISO 2º",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 8,
+                "RLE-EJES": 14,
+                "RLE-LOSA": 16,
+                "RLE-MURO": 18,
+                "RLE-PILAR": 100,
+                "RLE-TEXTO-1": 275,
+                "RLE-VIGA": 111
+              }
+            },
+            "nearest_column": {
+              "id": "C_P1_02_0017",
+              "tipo": "columna",
+              "distance_m": 11.313,
+              "source_dxf": "2017_67-102.dxf",
+              "source_layer": "RLE-PILAR",
+              "ejes_aproximados": {
+                "x": "IA-I_prime",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                66.078,
                 16.268
               ]
             },
             "nearest_column_label": {
-              "id": "LBL_P1_02_0055",
+              "id": "LBL_P1_02_0054",
               "tipo": "columna",
               "texto": "P. 70x70",
-              "distance_m": 48.539,
+              "distance_m": 44.653,
               "source_dxf": "2017_67-102.dxf",
               "source_layer": "RLE-TEXTO-1",
               "point_m": [
-                56.469,
-                -28.077
+                71.557,
+                -27.939
               ]
             },
             "nearest_structure": {
-              "id": "PERIMETRO_LOSA_P1_02_0006",
+              "id": "PERIMETRO_LOSA_P1_02_0004",
               "tipo": "perimetro_losa",
-              "distance_m": 3.833,
+              "distance_m": 10.971,
               "source_dxf": "2017_67-102.dxf",
               "source_layer": "RLE-LOSA",
               "ejes_aproximados": {
-                "x": "H-H1",
+                "x": "IA-I_prime",
                 "y": "antes de 1"
               },
               "point_or_mid_m": [
-                56.078,
-                16.618
+                66.428,
+                12.643
+              ]
+            },
+            "direct_column_count": 21
+          },
+          "foundation": {
+            "source_dxf": "2017_67-100.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-100.dxf",
+              "region_key": "2017_67-100",
+              "bbox_cm": [
+                268,
+                3221,
+                5756,
+                7984
+              ],
+              "title": "PLANTA FUNDACIONES",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 30,
+                "RLE-EJES": 63,
+                "RLE-FUNDACION": 199,
+                "RLE-LOSA": 14,
+                "RLE-MURO": 158,
+                "RLE-PILAR": 24,
+                "RLE-TEXTO-1": 79,
+                "RLE-VIGA": 69
+              }
+            },
+            "nearest_column": {
+              "id": "C_P1_FUNDACION_0005",
+              "tipo": "columna",
+              "distance_m": 7.493,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-PILAR",
+              "ejes_aproximados": {
+                "x": "I-IA",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                69.898,
+                16.335
+              ]
+            },
+            "nearest_foundation_element": {
+              "id": "FUNDACION_P1_FUNDACION_0143",
+              "tipo": "fundacion",
+              "distance_m": 6.068,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-FUNDACION",
+              "ejes_aproximados": {
+                "x": "IA-I_prime",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                71.323,
+                16.335
+              ]
+            },
+            "direct_column_count": 6
+          },
+          "outboard_y_gt_y3_plus_tolerance": false
+        },
+        "confidence": "HIGH"
+      },
+      {
+        "id": "E1-P2-C-027",
+        "solidTag": "SOL_2_column_0024",
+        "category": "column",
+        "old_geometry": {
+          "solidTag": "SOL_2_column_0024",
+          "category": "column",
+          "kind": "box",
+          "floor": "2",
+          "center": [
+            49.89984821128718,
+            0.18132100205450286,
+            9.9
+          ],
+          "width_m": 0.35,
+          "depth_m": 0.35,
+          "height_m": 3.960000000000001,
+          "length_m": 3.960000000000001
+        },
+        "new_geometry": "REMOVED",
+        "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
+        "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+        "source_dxf": "2017_67-103.dxf",
+        "evidence": {
+          "floor": "P2",
+          "station_x_m": 77.391,
+          "same_floor": {
+            "source_dxf": "2017_67-102.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-102.dxf",
+              "region_key": "2017_67-102_p2",
+              "bbox_cm": [
+                359,
+                5828,
+                5847,
+                8000
+              ],
+              "title": "PLANTA CIELO PISO 2º",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 8,
+                "RLE-EJES": 14,
+                "RLE-LOSA": 16,
+                "RLE-MURO": 18,
+                "RLE-PILAR": 100,
+                "RLE-TEXTO-1": 275,
+                "RLE-VIGA": 111
+              }
+            },
+            "nearest_column": {
+              "id": "C_P1_02_0016",
+              "tipo": "columna",
+              "distance_m": 11.313,
+              "source_dxf": "2017_67-102.dxf",
+              "source_layer": "RLE-PILAR",
+              "ejes_aproximados": {
+                "x": "IA-I_prime",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                66.078,
+                0.118
+              ]
+            },
+            "nearest_column_label": {
+              "id": "LBL_P1_02_0054",
+              "tipo": "columna",
+              "texto": "P. 70x70",
+              "distance_m": 28.719,
+              "source_dxf": "2017_67-102.dxf",
+              "source_layer": "RLE-TEXTO-1",
+              "point_m": [
+                71.557,
+                -27.939
+              ]
+            },
+            "nearest_structure": {
+              "id": "PERIMETRO_LOSA_P1_02_0003",
+              "tipo": "perimetro_losa",
+              "distance_m": 10.967,
+              "source_dxf": "2017_67-102.dxf",
+              "source_layer": "RLE-LOSA",
+              "ejes_aproximados": {
+                "x": "IA-I_prime",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                66.428,
+                4.568
+              ]
+            },
+            "direct_column_count": 21
+          },
+          "foundation": {
+            "source_dxf": "2017_67-100.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-100.dxf",
+              "region_key": "2017_67-100",
+              "bbox_cm": [
+                268,
+                3221,
+                5756,
+                7984
+              ],
+              "title": "PLANTA FUNDACIONES",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 30,
+                "RLE-EJES": 63,
+                "RLE-FUNDACION": 199,
+                "RLE-LOSA": 14,
+                "RLE-MURO": 158,
+                "RLE-PILAR": 24,
+                "RLE-TEXTO-1": 79,
+                "RLE-VIGA": 69
+              }
+            },
+            "nearest_column": {
+              "id": "C_P1_FUNDACION_0004",
+              "tipo": "columna",
+              "distance_m": 7.493,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-PILAR",
+              "ejes_aproximados": {
+                "x": "I-IA",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                69.898,
+                0.118
+              ]
+            },
+            "nearest_foundation_element": {
+              "id": "FUNDACION_P1_FUNDACION_0190",
+              "tipo": "fundacion",
+              "distance_m": 5.745,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-FUNDACION",
+              "ejes_aproximados": {
+                "x": "IA-I_prime",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                71.844,
+                -6.513
+              ]
+            },
+            "direct_column_count": 6
+          },
+          "outboard_y_gt_y3_plus_tolerance": false
+        },
+        "confidence": "HIGH"
+      },
+      {
+        "id": "E1-P2-C-017",
+        "solidTag": "SOL_2_column_0025",
+        "category": "column",
+        "old_geometry": {
+          "solidTag": "SOL_2_column_0025",
+          "category": "column",
+          "kind": "box",
+          "floor": "2",
+          "center": [
+            29.999880634627935,
+            20.45148765745718,
+            9.9
+          ],
+          "width_m": 0.35,
+          "depth_m": 0.35,
+          "height_m": 3.960000000000001,
+          "length_m": 3.960000000000001
+        },
+        "new_geometry": "REMOVED",
+        "reason": "outboard of confirmed Y3 axis; no same-floor RLE-PILAR match; no foundation RLE-PILAR/pedestal match; CALIBRATION_CAVEAT_DO_NOT_USE_AS_DEFECT",
+        "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+        "source_dxf": "2017_67-103.dxf",
+        "evidence": {
+          "floor": "P2",
+          "station_x_m": 30.0,
+          "same_floor": {
+            "source_dxf": "2017_67-102.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-102.dxf",
+              "region_key": "2017_67-102_p2",
+              "bbox_cm": [
+                359,
+                5828,
+                5847,
+                8000
+              ],
+              "title": "PLANTA CIELO PISO 2º",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 8,
+                "RLE-EJES": 14,
+                "RLE-LOSA": 16,
+                "RLE-MURO": 18,
+                "RLE-PILAR": 100,
+                "RLE-TEXTO-1": 275,
+                "RLE-VIGA": 111
+              }
+            },
+            "nearest_column": {
+              "id": "C_P1_02_0019",
+              "tipo": "columna",
+              "distance_m": 1.08,
+              "source_dxf": "2017_67-102.dxf",
+              "source_layer": "RLE-PILAR",
+              "ejes_aproximados": {
+                "x": "Ed-F",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                31.078,
+                20.388
+              ]
+            },
+            "nearest_column_label": {
+              "id": "LBL_P1_02_0064",
+              "tipo": "columna",
+              "texto": "P. 70x70",
+              "distance_m": 48.757,
+              "source_dxf": "2017_67-102.dxf",
+              "source_layer": "RLE-TEXTO-1",
+              "point_m": [
+                26.488,
+                -28.178
+              ]
+            },
+            "nearest_structure": {
+              "id": "VIGA_P1_02_0043",
+              "tipo": "viga",
+              "distance_m": 0.778,
+              "source_dxf": "2017_67-102.dxf",
+              "source_layer": "RLE-VIGA",
+              "ejes_aproximados": {
+                "x": "Ed-F",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                30.778,
+                18.653
               ]
             },
             "direct_column_count": 21
@@ -1878,7 +4095,7 @@
             "nearest_column": {
               "id": "C_P1_FUNDACION_0001",
               "tipo": "columna",
-              "distance_m": 8.667,
+              "distance_m": 35.498,
               "source_dxf": "2017_67-100.dxf",
               "source_layer": "RLE-PILAR",
               "ejes_aproximados": {
@@ -1891,18 +4108,18 @@
               ]
             },
             "nearest_foundation_element": {
-              "id": "FUNDACION_P1_FUNDACION_0159",
+              "id": "FUNDACION_P1_FUNDACION_0009",
               "tipo": "fundacion",
-              "distance_m": 1.627,
+              "distance_m": 2.866,
               "source_dxf": "2017_67-100.dxf",
               "source_layer": "RLE-FUNDACION",
               "ejes_aproximados": {
-                "x": "H-H1",
+                "x": "E-Ea",
                 "y": "antes de 1"
               },
               "point_or_mid_m": [
-                58.876,
-                19.097
+                29.898,
+                17.585
               ]
             },
             "direct_column_count": 6
@@ -1936,6 +4153,7 @@
         "source_dxf": "2017_67-103.dxf",
         "evidence": {
           "floor": "P2",
+          "station_x_m": 20.0,
           "same_floor": {
             "source_dxf": "2017_67-102.dxf",
             "direct_dxf_region_scan": {
@@ -1960,45 +4178,45 @@
               }
             },
             "nearest_column": {
-              "id": "C_P1_02_0009",
+              "id": "C_P1_02_0006",
               "tipo": "columna",
-              "distance_m": 5.511,
+              "distance_m": 4.32,
               "source_dxf": "2017_67-102.dxf",
               "source_layer": "RLE-PILAR",
               "ejes_aproximados": {
-                "x": "Ga-H",
+                "x": "antes de E_prime",
                 "y": "antes de 1"
               },
               "point_or_mid_m": [
-                51.078,
+                21.078,
                 16.268
               ]
             },
             "nearest_column_label": {
-              "id": "LBL_P1_02_0057",
+              "id": "LBL_P1_02_0064",
               "tipo": "columna",
               "texto": "P. 70x70",
-              "distance_m": 48.539,
+              "distance_m": 49.061,
               "source_dxf": "2017_67-102.dxf",
               "source_layer": "RLE-TEXTO-1",
               "point_m": [
-                46.48,
-                -28.077
+                26.488,
+                -28.178
               ]
             },
             "nearest_structure": {
-              "id": "VIGA_P1_02_0099",
-              "tipo": "viga",
-              "distance_m": 1.573,
+              "id": "PERIMETRO_LOSA_P1_02_0007",
+              "tipo": "perimetro_losa",
+              "distance_m": 4.091,
               "source_dxf": "2017_67-102.dxf",
-              "source_layer": "RLE-VIGA",
+              "source_layer": "RLE-LOSA",
               "ejes_aproximados": {
-                "x": "Ga-H",
+                "x": "Ea-Eb",
                 "y": "antes de 1"
               },
               "point_or_mid_m": [
-                48.578,
-                18.878
+                26.078,
+                16.618
               ]
             },
             "direct_column_count": 21
@@ -2030,7 +4248,7 @@
             "nearest_column": {
               "id": "C_P1_FUNDACION_0001",
               "tipo": "columna",
-              "distance_m": 18.201,
+              "distance_m": 45.454,
               "source_dxf": "2017_67-100.dxf",
               "source_layer": "RLE-PILAR",
               "ejes_aproximados": {
@@ -2043,23 +4261,941 @@
               ]
             },
             "nearest_foundation_element": {
-              "id": "FUNDACION_P1_FUNDACION_0082",
+              "id": "FUNDACION_P1_FUNDACION_0043",
               "tipo": "fundacion",
-              "distance_m": 2.198,
+              "distance_m": 4.289,
               "source_dxf": "2017_67-100.dxf",
               "source_layer": "RLE-FUNDACION",
               "ejes_aproximados": {
-                "x": "F_prime-G",
+                "x": "antes de E_prime",
                 "y": "antes de 1"
               },
               "point_or_mid_m": [
-                44.898,
-                18.335
+                23.398,
+                16.335
               ]
             },
             "direct_column_count": 6
           },
           "outboard_y_gt_y3_plus_tolerance": true
+        },
+        "confidence": "HIGH"
+      },
+      {
+        "id": "E1-P2-C-024",
+        "solidTag": "SOL_2_column_0027",
+        "category": "column",
+        "old_geometry": {
+          "solidTag": "SOL_2_column_0027",
+          "category": "column",
+          "kind": "box",
+          "floor": "2",
+          "center": [
+            47.54988063446994,
+            0.181321002054583,
+            9.9
+          ],
+          "width_m": 0.35,
+          "depth_m": 0.35,
+          "height_m": 3.960000000000001,
+          "length_m": 3.960000000000001
+        },
+        "new_geometry": "REMOVED",
+        "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
+        "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+        "source_dxf": "2017_67-103.dxf",
+        "evidence": {
+          "floor": "P2",
+          "station_x_m": 75.041,
+          "same_floor": {
+            "source_dxf": "2017_67-102.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-102.dxf",
+              "region_key": "2017_67-102_p2",
+              "bbox_cm": [
+                359,
+                5828,
+                5847,
+                8000
+              ],
+              "title": "PLANTA CIELO PISO 2º",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 8,
+                "RLE-EJES": 14,
+                "RLE-LOSA": 16,
+                "RLE-MURO": 18,
+                "RLE-PILAR": 100,
+                "RLE-TEXTO-1": 275,
+                "RLE-VIGA": 111
+              }
+            },
+            "nearest_column": {
+              "id": "C_P1_02_0016",
+              "tipo": "columna",
+              "distance_m": 8.963,
+              "source_dxf": "2017_67-102.dxf",
+              "source_layer": "RLE-PILAR",
+              "ejes_aproximados": {
+                "x": "IA-I_prime",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                66.078,
+                0.118
+              ]
+            },
+            "nearest_column_label": {
+              "id": "LBL_P1_02_0054",
+              "tipo": "columna",
+              "texto": "P. 70x70",
+              "distance_m": 28.335,
+              "source_dxf": "2017_67-102.dxf",
+              "source_layer": "RLE-TEXTO-1",
+              "point_m": [
+                71.557,
+                -27.939
+              ]
+            },
+            "nearest_structure": {
+              "id": "PERIMETRO_LOSA_P1_02_0003",
+              "tipo": "perimetro_losa",
+              "distance_m": 8.618,
+              "source_dxf": "2017_67-102.dxf",
+              "source_layer": "RLE-LOSA",
+              "ejes_aproximados": {
+                "x": "IA-I_prime",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                66.428,
+                4.568
+              ]
+            },
+            "direct_column_count": 21
+          },
+          "foundation": {
+            "source_dxf": "2017_67-100.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-100.dxf",
+              "region_key": "2017_67-100",
+              "bbox_cm": [
+                268,
+                3221,
+                5756,
+                7984
+              ],
+              "title": "PLANTA FUNDACIONES",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 30,
+                "RLE-EJES": 63,
+                "RLE-FUNDACION": 199,
+                "RLE-LOSA": 14,
+                "RLE-MURO": 158,
+                "RLE-PILAR": 24,
+                "RLE-TEXTO-1": 79,
+                "RLE-VIGA": 69
+              }
+            },
+            "nearest_column": {
+              "id": "C_P1_FUNDACION_0004",
+              "tipo": "columna",
+              "distance_m": 5.143,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-PILAR",
+              "ejes_aproximados": {
+                "x": "I-IA",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                69.898,
+                0.118
+              ]
+            },
+            "nearest_foundation_element": {
+              "id": "FUNDACION_P1_FUNDACION_0190",
+              "tipo": "fundacion",
+              "distance_m": 3.53,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-FUNDACION",
+              "ejes_aproximados": {
+                "x": "IA-I_prime",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                71.844,
+                -6.513
+              ]
+            },
+            "direct_column_count": 6
+          },
+          "outboard_y_gt_y3_plus_tolerance": false
+        },
+        "confidence": "HIGH"
+      },
+      {
+        "id": "E1-P2-C-026",
+        "solidTag": "SOL_2_column_0028",
+        "category": "column",
+        "old_geometry": {
+          "solidTag": "SOL_2_column_0028",
+          "category": "column",
+          "kind": "box",
+          "floor": "2",
+          "center": [
+            47.54988063497803,
+            16.331457778549133,
+            9.9
+          ],
+          "width_m": 0.35,
+          "depth_m": 0.35,
+          "height_m": 3.960000000000001,
+          "length_m": 3.960000000000001
+        },
+        "new_geometry": "REMOVED",
+        "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
+        "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+        "source_dxf": "2017_67-103.dxf",
+        "evidence": {
+          "floor": "P2",
+          "station_x_m": 75.041,
+          "same_floor": {
+            "source_dxf": "2017_67-102.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-102.dxf",
+              "region_key": "2017_67-102_p2",
+              "bbox_cm": [
+                359,
+                5828,
+                5847,
+                8000
+              ],
+              "title": "PLANTA CIELO PISO 2º",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 8,
+                "RLE-EJES": 14,
+                "RLE-LOSA": 16,
+                "RLE-MURO": 18,
+                "RLE-PILAR": 100,
+                "RLE-TEXTO-1": 275,
+                "RLE-VIGA": 111
+              }
+            },
+            "nearest_column": {
+              "id": "C_P1_02_0017",
+              "tipo": "columna",
+              "distance_m": 8.963,
+              "source_dxf": "2017_67-102.dxf",
+              "source_layer": "RLE-PILAR",
+              "ejes_aproximados": {
+                "x": "IA-I_prime",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                66.078,
+                16.268
+              ]
+            },
+            "nearest_column_label": {
+              "id": "LBL_P1_02_0054",
+              "tipo": "columna",
+              "texto": "P. 70x70",
+              "distance_m": 44.407,
+              "source_dxf": "2017_67-102.dxf",
+              "source_layer": "RLE-TEXTO-1",
+              "point_m": [
+                71.557,
+                -27.939
+              ]
+            },
+            "nearest_structure": {
+              "id": "PERIMETRO_LOSA_P1_02_0004",
+              "tipo": "perimetro_losa",
+              "distance_m": 8.623,
+              "source_dxf": "2017_67-102.dxf",
+              "source_layer": "RLE-LOSA",
+              "ejes_aproximados": {
+                "x": "IA-I_prime",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                66.428,
+                12.643
+              ]
+            },
+            "direct_column_count": 21
+          },
+          "foundation": {
+            "source_dxf": "2017_67-100.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-100.dxf",
+              "region_key": "2017_67-100",
+              "bbox_cm": [
+                268,
+                3221,
+                5756,
+                7984
+              ],
+              "title": "PLANTA FUNDACIONES",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 30,
+                "RLE-EJES": 63,
+                "RLE-FUNDACION": 199,
+                "RLE-LOSA": 14,
+                "RLE-MURO": 158,
+                "RLE-PILAR": 24,
+                "RLE-TEXTO-1": 79,
+                "RLE-VIGA": 69
+              }
+            },
+            "nearest_column": {
+              "id": "C_P1_FUNDACION_0005",
+              "tipo": "columna",
+              "distance_m": 5.143,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-PILAR",
+              "ejes_aproximados": {
+                "x": "I-IA",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                69.898,
+                16.335
+              ]
+            },
+            "nearest_foundation_element": {
+              "id": "FUNDACION_P1_FUNDACION_0143",
+              "tipo": "fundacion",
+              "distance_m": 3.718,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-FUNDACION",
+              "ejes_aproximados": {
+                "x": "IA-I_prime",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                71.323,
+                16.335
+              ]
+            },
+            "direct_column_count": 6
+          },
+          "outboard_y_gt_y3_plus_tolerance": false
+        },
+        "confidence": "HIGH"
+      },
+      {
+        "id": "E1-P2-C-025",
+        "solidTag": "SOL_2_column_0029",
+        "category": "column",
+        "old_geometry": {
+          "solidTag": "SOL_2_column_0029",
+          "category": "column",
+          "kind": "box",
+          "floor": "2",
+          "center": [
+            47.549880634777466,
+            9.081356609425377,
+            9.9
+          ],
+          "width_m": 0.35,
+          "depth_m": 0.35,
+          "height_m": 3.960000000000001,
+          "length_m": 3.960000000000001
+        },
+        "new_geometry": "REMOVED",
+        "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
+        "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+        "source_dxf": "2017_67-103.dxf",
+        "evidence": {
+          "floor": "P2",
+          "station_x_m": 75.041,
+          "same_floor": {
+            "source_dxf": "2017_67-102.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-102.dxf",
+              "region_key": "2017_67-102_p2",
+              "bbox_cm": [
+                359,
+                5828,
+                5847,
+                8000
+              ],
+              "title": "PLANTA CIELO PISO 2º",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 8,
+                "RLE-EJES": 14,
+                "RLE-LOSA": 16,
+                "RLE-MURO": 18,
+                "RLE-PILAR": 100,
+                "RLE-TEXTO-1": 275,
+                "RLE-VIGA": 111
+              }
+            },
+            "nearest_column": {
+              "id": "C_P1_02_0020",
+              "tipo": "columna",
+              "distance_m": 8.963,
+              "source_dxf": "2017_67-102.dxf",
+              "source_layer": "RLE-PILAR",
+              "ejes_aproximados": {
+                "x": "IA-I_prime",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                66.078,
+                9.018
+              ]
+            },
+            "nearest_column_label": {
+              "id": "LBL_P1_02_0054",
+              "tipo": "columna",
+              "texto": "P. 70x70",
+              "distance_m": 37.184,
+              "source_dxf": "2017_67-102.dxf",
+              "source_layer": "RLE-TEXTO-1",
+              "point_m": [
+                71.557,
+                -27.939
+              ]
+            },
+            "nearest_structure": {
+              "id": "PERIMETRO_LOSA_P1_02_0004",
+              "tipo": "perimetro_losa",
+              "distance_m": 8.618,
+              "source_dxf": "2017_67-102.dxf",
+              "source_layer": "RLE-LOSA",
+              "ejes_aproximados": {
+                "x": "IA-I_prime",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                66.428,
+                12.643
+              ]
+            },
+            "direct_column_count": 21
+          },
+          "foundation": {
+            "source_dxf": "2017_67-100.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-100.dxf",
+              "region_key": "2017_67-100",
+              "bbox_cm": [
+                268,
+                3221,
+                5756,
+                7984
+              ],
+              "title": "PLANTA FUNDACIONES",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 30,
+                "RLE-EJES": 63,
+                "RLE-FUNDACION": 199,
+                "RLE-LOSA": 14,
+                "RLE-MURO": 158,
+                "RLE-PILAR": 24,
+                "RLE-TEXTO-1": 79,
+                "RLE-VIGA": 69
+              }
+            },
+            "nearest_column": {
+              "id": "C_P1_FUNDACION_0006",
+              "tipo": "columna",
+              "distance_m": 5.193,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-PILAR",
+              "ejes_aproximados": {
+                "x": "I-IA",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                69.848,
+                9.085
+              ]
+            },
+            "nearest_foundation_element": {
+              "id": "FUNDACION_P1_FUNDACION_0104",
+              "tipo": "fundacion",
+              "distance_m": 4.193,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-FUNDACION",
+              "ejes_aproximados": {
+                "x": "IA-I_prime",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                70.848,
+                9.085
+              ]
+            },
+            "direct_column_count": 6
+          },
+          "outboard_y_gt_y3_plus_tolerance": false
+        },
+        "confidence": "HIGH"
+      },
+      {
+        "id": "E1-P3-C-025",
+        "solidTag": "SOL_3_column_0019",
+        "category": "column",
+        "old_geometry": {
+          "solidTag": "SOL_3_column_0019",
+          "category": "column",
+          "kind": "box",
+          "floor": "3",
+          "center": [
+            49.89984821128715,
+            9.081383303107533,
+            13.86
+          ],
+          "width_m": 0.35,
+          "depth_m": 0.35,
+          "height_m": 3.959999999999999,
+          "length_m": 3.959999999999999
+        },
+        "new_geometry": "REMOVED",
+        "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
+        "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+        "source_dxf": "2017_67-103.dxf",
+        "evidence": {
+          "floor": "P3",
+          "station_x_m": 77.391,
+          "same_floor": {
+            "source_dxf": "2017_67-102.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-102.dxf",
+              "region_key": "2017_67-102_p3",
+              "bbox_cm": [
+                76,
+                2414,
+                6003,
+                4375
+              ],
+              "title": "PLANTA CIELO PISO 3º",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 8,
+                "RLE-EJES": 10,
+                "RLE-LOSA": 18,
+                "RLE-MURO": 18,
+                "RLE-PILAR": 72,
+                "RLE-TEXTO-1": 291,
+                "RLE-VIGA": 119
+              }
+            },
+            "nearest_column": {
+              "id": "C_P1_03_0018",
+              "tipo": "columna",
+              "distance_m": 14.896,
+              "source_dxf": "2017_67-102.dxf",
+              "source_layer": "RLE-PILAR",
+              "ejes_aproximados": {
+                "x": "H2-I",
+                "y": "1b-2"
+              },
+              "point_or_mid_m": [
+                62.495,
+                9.018
+              ]
+            },
+            "nearest_column_label": {
+              "id": "LBL_P1_03_0083",
+              "tipo": "columna",
+              "texto": "P.M.I.",
+              "distance_m": 4.458,
+              "source_dxf": "2017_67-102.dxf",
+              "source_layer": "RLE-TEXTO-1",
+              "point_m": [
+                72.94,
+                8.829
+              ]
+            },
+            "nearest_structure": {
+              "id": "PERIMETRO_LOSA_P1_03_0014",
+              "tipo": "perimetro_losa",
+              "distance_m": 8.746,
+              "source_dxf": "2017_67-102.dxf",
+              "source_layer": "RLE-LOSA",
+              "ejes_aproximados": {
+                "x": "IB-J",
+                "y": "1b-2"
+              },
+              "point_or_mid_m": [
+                68.645,
+                8.193
+              ]
+            },
+            "direct_column_count": 18
+          },
+          "foundation": {
+            "source_dxf": "2017_67-100.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-100.dxf",
+              "region_key": "2017_67-100",
+              "bbox_cm": [
+                268,
+                3221,
+                5756,
+                7984
+              ],
+              "title": "PLANTA FUNDACIONES",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 30,
+                "RLE-EJES": 63,
+                "RLE-FUNDACION": 199,
+                "RLE-LOSA": 14,
+                "RLE-MURO": 158,
+                "RLE-PILAR": 24,
+                "RLE-TEXTO-1": 79,
+                "RLE-VIGA": 69
+              }
+            },
+            "nearest_column": {
+              "id": "C_P1_FUNDACION_0006",
+              "tipo": "columna",
+              "distance_m": 7.543,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-PILAR",
+              "ejes_aproximados": {
+                "x": "I-IA",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                69.848,
+                9.085
+              ]
+            },
+            "nearest_foundation_element": {
+              "id": "FUNDACION_P1_FUNDACION_0104",
+              "tipo": "fundacion",
+              "distance_m": 6.543,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-FUNDACION",
+              "ejes_aproximados": {
+                "x": "IA-I_prime",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                70.848,
+                9.085
+              ]
+            },
+            "direct_column_count": 6
+          },
+          "outboard_y_gt_y3_plus_tolerance": false
+        },
+        "confidence": "HIGH"
+      },
+      {
+        "id": "E1-P3-C-026",
+        "solidTag": "SOL_3_column_0020",
+        "category": "column",
+        "old_geometry": {
+          "solidTag": "SOL_3_column_0020",
+          "category": "column",
+          "kind": "box",
+          "floor": "3",
+          "center": [
+            49.89984821128715,
+            16.331487657401528,
+            13.86
+          ],
+          "width_m": 0.35,
+          "depth_m": 0.35,
+          "height_m": 3.959999999999999,
+          "length_m": 3.959999999999999
+        },
+        "new_geometry": "REMOVED",
+        "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
+        "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+        "source_dxf": "2017_67-103.dxf",
+        "evidence": {
+          "floor": "P3",
+          "station_x_m": 77.391,
+          "same_floor": {
+            "source_dxf": "2017_67-102.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-102.dxf",
+              "region_key": "2017_67-102_p3",
+              "bbox_cm": [
+                76,
+                2414,
+                6003,
+                4375
+              ],
+              "title": "PLANTA CIELO PISO 3º",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 8,
+                "RLE-EJES": 10,
+                "RLE-LOSA": 18,
+                "RLE-MURO": 18,
+                "RLE-PILAR": 72,
+                "RLE-TEXTO-1": 291,
+                "RLE-VIGA": 119
+              }
+            },
+            "nearest_column": {
+              "id": "C_P1_03_0017",
+              "tipo": "columna",
+              "distance_m": 14.896,
+              "source_dxf": "2017_67-102.dxf",
+              "source_layer": "RLE-PILAR",
+              "ejes_aproximados": {
+                "x": "H2-I",
+                "y": "1b-2"
+              },
+              "point_or_mid_m": [
+                62.495,
+                16.268
+              ]
+            },
+            "nearest_column_label": {
+              "id": "LBL_P1_03_0083",
+              "tipo": "columna",
+              "texto": "P.M.I.",
+              "distance_m": 8.724,
+              "source_dxf": "2017_67-102.dxf",
+              "source_layer": "RLE-TEXTO-1",
+              "point_m": [
+                72.94,
+                8.829
+              ]
+            },
+            "nearest_structure": {
+              "id": "PERIMETRO_LOSA_P1_03_0014",
+              "tipo": "perimetro_losa",
+              "distance_m": 8.746,
+              "source_dxf": "2017_67-102.dxf",
+              "source_layer": "RLE-LOSA",
+              "ejes_aproximados": {
+                "x": "IB-J",
+                "y": "1b-2"
+              },
+              "point_or_mid_m": [
+                68.645,
+                8.193
+              ]
+            },
+            "direct_column_count": 18
+          },
+          "foundation": {
+            "source_dxf": "2017_67-100.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-100.dxf",
+              "region_key": "2017_67-100",
+              "bbox_cm": [
+                268,
+                3221,
+                5756,
+                7984
+              ],
+              "title": "PLANTA FUNDACIONES",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 30,
+                "RLE-EJES": 63,
+                "RLE-FUNDACION": 199,
+                "RLE-LOSA": 14,
+                "RLE-MURO": 158,
+                "RLE-PILAR": 24,
+                "RLE-TEXTO-1": 79,
+                "RLE-VIGA": 69
+              }
+            },
+            "nearest_column": {
+              "id": "C_P1_FUNDACION_0005",
+              "tipo": "columna",
+              "distance_m": 7.493,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-PILAR",
+              "ejes_aproximados": {
+                "x": "I-IA",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                69.898,
+                16.335
+              ]
+            },
+            "nearest_foundation_element": {
+              "id": "FUNDACION_P1_FUNDACION_0143",
+              "tipo": "fundacion",
+              "distance_m": 6.068,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-FUNDACION",
+              "ejes_aproximados": {
+                "x": "IA-I_prime",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                71.323,
+                16.335
+              ]
+            },
+            "direct_column_count": 6
+          },
+          "outboard_y_gt_y3_plus_tolerance": false
+        },
+        "confidence": "HIGH"
+      },
+      {
+        "id": "E1-P3-C-024",
+        "solidTag": "SOL_3_column_0021",
+        "category": "column",
+        "old_geometry": {
+          "solidTag": "SOL_3_column_0021",
+          "category": "column",
+          "kind": "box",
+          "floor": "3",
+          "center": [
+            49.89984821128718,
+            0.18132100205450286,
+            13.86
+          ],
+          "width_m": 0.35,
+          "depth_m": 0.35,
+          "height_m": 3.959999999999999,
+          "length_m": 3.959999999999999
+        },
+        "new_geometry": "REMOVED",
+        "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
+        "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+        "source_dxf": "2017_67-103.dxf",
+        "evidence": {
+          "floor": "P3",
+          "station_x_m": 77.391,
+          "same_floor": {
+            "source_dxf": "2017_67-102.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-102.dxf",
+              "region_key": "2017_67-102_p3",
+              "bbox_cm": [
+                76,
+                2414,
+                6003,
+                4375
+              ],
+              "title": "PLANTA CIELO PISO 3º",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 8,
+                "RLE-EJES": 10,
+                "RLE-LOSA": 18,
+                "RLE-MURO": 18,
+                "RLE-PILAR": 72,
+                "RLE-TEXTO-1": 291,
+                "RLE-VIGA": 119
+              }
+            },
+            "nearest_column": {
+              "id": "C_P1_03_0016",
+              "tipo": "columna",
+              "distance_m": 14.896,
+              "source_dxf": "2017_67-102.dxf",
+              "source_layer": "RLE-PILAR",
+              "ejes_aproximados": {
+                "x": "H2-I",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                62.495,
+                0.118
+              ]
+            },
+            "nearest_column_label": {
+              "id": "LBL_P1_03_0082",
+              "tipo": "columna",
+              "texto": "P.M.I.",
+              "distance_m": 4.567,
+              "source_dxf": "2017_67-102.dxf",
+              "source_layer": "RLE-TEXTO-1",
+              "point_m": [
+                73.044,
+                1.582
+              ]
+            },
+            "nearest_structure": {
+              "id": "PERIMETRO_LOSA_P1_03_0014",
+              "tipo": "perimetro_losa",
+              "distance_m": 8.746,
+              "source_dxf": "2017_67-102.dxf",
+              "source_layer": "RLE-LOSA",
+              "ejes_aproximados": {
+                "x": "IB-J",
+                "y": "1b-2"
+              },
+              "point_or_mid_m": [
+                68.645,
+                8.193
+              ]
+            },
+            "direct_column_count": 18
+          },
+          "foundation": {
+            "source_dxf": "2017_67-100.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-100.dxf",
+              "region_key": "2017_67-100",
+              "bbox_cm": [
+                268,
+                3221,
+                5756,
+                7984
+              ],
+              "title": "PLANTA FUNDACIONES",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 30,
+                "RLE-EJES": 63,
+                "RLE-FUNDACION": 199,
+                "RLE-LOSA": 14,
+                "RLE-MURO": 158,
+                "RLE-PILAR": 24,
+                "RLE-TEXTO-1": 79,
+                "RLE-VIGA": 69
+              }
+            },
+            "nearest_column": {
+              "id": "C_P1_FUNDACION_0004",
+              "tipo": "columna",
+              "distance_m": 7.493,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-PILAR",
+              "ejes_aproximados": {
+                "x": "I-IA",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                69.898,
+                0.118
+              ]
+            },
+            "nearest_foundation_element": {
+              "id": "FUNDACION_P1_FUNDACION_0190",
+              "tipo": "fundacion",
+              "distance_m": 5.745,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-FUNDACION",
+              "ejes_aproximados": {
+                "x": "IA-I_prime",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                71.844,
+                -6.513
+              ]
+            },
+            "direct_column_count": 6
+          },
+          "outboard_y_gt_y3_plus_tolerance": false
         },
         "confidence": "HIGH"
       },
@@ -2088,6 +5224,7 @@
         "source_dxf": "2017_67-103.dxf",
         "evidence": {
           "floor": "P3",
+          "station_x_m": 30.0,
           "same_floor": {
             "source_dxf": "2017_67-102.dxf",
             "direct_dxf_region_scan": {
@@ -2240,6 +5377,7 @@
         "source_dxf": "2017_67-103.dxf",
         "evidence": {
           "floor": "P3",
+          "station_x_m": 20.0,
           "same_floor": {
             "source_dxf": "2017_67-102.dxf",
             "direct_dxf_region_scan": {
@@ -2364,6 +5502,465 @@
             "direct_column_count": 6
           },
           "outboard_y_gt_y3_plus_tolerance": true
+        },
+        "confidence": "HIGH"
+      },
+      {
+        "id": "E1-P3-C-021",
+        "solidTag": "SOL_3_column_0024",
+        "category": "column",
+        "old_geometry": {
+          "solidTag": "SOL_3_column_0024",
+          "category": "column",
+          "kind": "box",
+          "floor": "3",
+          "center": [
+            47.54988063446994,
+            0.181321002054583,
+            13.86
+          ],
+          "width_m": 0.35,
+          "depth_m": 0.35,
+          "height_m": 3.959999999999999,
+          "length_m": 3.959999999999999
+        },
+        "new_geometry": "REMOVED",
+        "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
+        "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+        "source_dxf": "2017_67-103.dxf",
+        "evidence": {
+          "floor": "P3",
+          "station_x_m": 75.041,
+          "same_floor": {
+            "source_dxf": "2017_67-102.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-102.dxf",
+              "region_key": "2017_67-102_p3",
+              "bbox_cm": [
+                76,
+                2414,
+                6003,
+                4375
+              ],
+              "title": "PLANTA CIELO PISO 3º",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 8,
+                "RLE-EJES": 10,
+                "RLE-LOSA": 18,
+                "RLE-MURO": 18,
+                "RLE-PILAR": 72,
+                "RLE-TEXTO-1": 291,
+                "RLE-VIGA": 119
+              }
+            },
+            "nearest_column": {
+              "id": "C_P1_03_0016",
+              "tipo": "columna",
+              "distance_m": 12.546,
+              "source_dxf": "2017_67-102.dxf",
+              "source_layer": "RLE-PILAR",
+              "ejes_aproximados": {
+                "x": "H2-I",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                62.495,
+                0.118
+              ]
+            },
+            "nearest_column_label": {
+              "id": "LBL_P1_03_0082",
+              "tipo": "columna",
+              "texto": "P.M.I.",
+              "distance_m": 2.439,
+              "source_dxf": "2017_67-102.dxf",
+              "source_layer": "RLE-TEXTO-1",
+              "point_m": [
+                73.044,
+                1.582
+              ]
+            },
+            "nearest_structure": {
+              "id": "PERIMETRO_LOSA_P1_03_0014",
+              "tipo": "perimetro_losa",
+              "distance_m": 6.396,
+              "source_dxf": "2017_67-102.dxf",
+              "source_layer": "RLE-LOSA",
+              "ejes_aproximados": {
+                "x": "IB-J",
+                "y": "1b-2"
+              },
+              "point_or_mid_m": [
+                68.645,
+                8.193
+              ]
+            },
+            "direct_column_count": 18
+          },
+          "foundation": {
+            "source_dxf": "2017_67-100.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-100.dxf",
+              "region_key": "2017_67-100",
+              "bbox_cm": [
+                268,
+                3221,
+                5756,
+                7984
+              ],
+              "title": "PLANTA FUNDACIONES",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 30,
+                "RLE-EJES": 63,
+                "RLE-FUNDACION": 199,
+                "RLE-LOSA": 14,
+                "RLE-MURO": 158,
+                "RLE-PILAR": 24,
+                "RLE-TEXTO-1": 79,
+                "RLE-VIGA": 69
+              }
+            },
+            "nearest_column": {
+              "id": "C_P1_FUNDACION_0004",
+              "tipo": "columna",
+              "distance_m": 5.143,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-PILAR",
+              "ejes_aproximados": {
+                "x": "I-IA",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                69.898,
+                0.118
+              ]
+            },
+            "nearest_foundation_element": {
+              "id": "FUNDACION_P1_FUNDACION_0190",
+              "tipo": "fundacion",
+              "distance_m": 3.53,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-FUNDACION",
+              "ejes_aproximados": {
+                "x": "IA-I_prime",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                71.844,
+                -6.513
+              ]
+            },
+            "direct_column_count": 6
+          },
+          "outboard_y_gt_y3_plus_tolerance": false
+        },
+        "confidence": "HIGH"
+      },
+      {
+        "id": "E1-P3-C-023",
+        "solidTag": "SOL_3_column_0025",
+        "category": "column",
+        "old_geometry": {
+          "solidTag": "SOL_3_column_0025",
+          "category": "column",
+          "kind": "box",
+          "floor": "3",
+          "center": [
+            47.54988063497803,
+            16.331457778549133,
+            13.86
+          ],
+          "width_m": 0.35,
+          "depth_m": 0.35,
+          "height_m": 3.959999999999999,
+          "length_m": 3.959999999999999
+        },
+        "new_geometry": "REMOVED",
+        "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
+        "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+        "source_dxf": "2017_67-103.dxf",
+        "evidence": {
+          "floor": "P3",
+          "station_x_m": 75.041,
+          "same_floor": {
+            "source_dxf": "2017_67-102.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-102.dxf",
+              "region_key": "2017_67-102_p3",
+              "bbox_cm": [
+                76,
+                2414,
+                6003,
+                4375
+              ],
+              "title": "PLANTA CIELO PISO 3º",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 8,
+                "RLE-EJES": 10,
+                "RLE-LOSA": 18,
+                "RLE-MURO": 18,
+                "RLE-PILAR": 72,
+                "RLE-TEXTO-1": 291,
+                "RLE-VIGA": 119
+              }
+            },
+            "nearest_column": {
+              "id": "C_P1_03_0017",
+              "tipo": "columna",
+              "distance_m": 12.546,
+              "source_dxf": "2017_67-102.dxf",
+              "source_layer": "RLE-PILAR",
+              "ejes_aproximados": {
+                "x": "H2-I",
+                "y": "1b-2"
+              },
+              "point_or_mid_m": [
+                62.495,
+                16.268
+              ]
+            },
+            "nearest_column_label": {
+              "id": "LBL_P1_03_0083",
+              "tipo": "columna",
+              "texto": "P.M.I.",
+              "distance_m": 7.791,
+              "source_dxf": "2017_67-102.dxf",
+              "source_layer": "RLE-TEXTO-1",
+              "point_m": [
+                72.94,
+                8.829
+              ]
+            },
+            "nearest_structure": {
+              "id": "PERIMETRO_LOSA_P1_03_0014",
+              "tipo": "perimetro_losa",
+              "distance_m": 6.396,
+              "source_dxf": "2017_67-102.dxf",
+              "source_layer": "RLE-LOSA",
+              "ejes_aproximados": {
+                "x": "IB-J",
+                "y": "1b-2"
+              },
+              "point_or_mid_m": [
+                68.645,
+                8.193
+              ]
+            },
+            "direct_column_count": 18
+          },
+          "foundation": {
+            "source_dxf": "2017_67-100.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-100.dxf",
+              "region_key": "2017_67-100",
+              "bbox_cm": [
+                268,
+                3221,
+                5756,
+                7984
+              ],
+              "title": "PLANTA FUNDACIONES",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 30,
+                "RLE-EJES": 63,
+                "RLE-FUNDACION": 199,
+                "RLE-LOSA": 14,
+                "RLE-MURO": 158,
+                "RLE-PILAR": 24,
+                "RLE-TEXTO-1": 79,
+                "RLE-VIGA": 69
+              }
+            },
+            "nearest_column": {
+              "id": "C_P1_FUNDACION_0005",
+              "tipo": "columna",
+              "distance_m": 5.143,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-PILAR",
+              "ejes_aproximados": {
+                "x": "I-IA",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                69.898,
+                16.335
+              ]
+            },
+            "nearest_foundation_element": {
+              "id": "FUNDACION_P1_FUNDACION_0143",
+              "tipo": "fundacion",
+              "distance_m": 3.718,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-FUNDACION",
+              "ejes_aproximados": {
+                "x": "IA-I_prime",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                71.323,
+                16.335
+              ]
+            },
+            "direct_column_count": 6
+          },
+          "outboard_y_gt_y3_plus_tolerance": false
+        },
+        "confidence": "HIGH"
+      },
+      {
+        "id": "E1-P3-C-022",
+        "solidTag": "SOL_3_column_0026",
+        "category": "column",
+        "old_geometry": {
+          "solidTag": "SOL_3_column_0026",
+          "category": "column",
+          "kind": "box",
+          "floor": "3",
+          "center": [
+            47.549880634777466,
+            9.081356609425377,
+            13.86
+          ],
+          "width_m": 0.35,
+          "depth_m": 0.35,
+          "height_m": 3.959999999999999,
+          "length_m": 3.959999999999999
+        },
+        "new_geometry": "REMOVED",
+        "reason": "right/east overhang station beyond the drawn column grid of this floor; no same-floor RLE-PILAR direct column within tolerance; no foundation RLE-PILAR/pedestal within tolerance",
+        "classification": "UNSUPPORTED_VERTICAL_EXTENSION",
+        "source_dxf": "2017_67-103.dxf",
+        "evidence": {
+          "floor": "P3",
+          "station_x_m": 75.041,
+          "same_floor": {
+            "source_dxf": "2017_67-102.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-102.dxf",
+              "region_key": "2017_67-102_p3",
+              "bbox_cm": [
+                76,
+                2414,
+                6003,
+                4375
+              ],
+              "title": "PLANTA CIELO PISO 3º",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 8,
+                "RLE-EJES": 10,
+                "RLE-LOSA": 18,
+                "RLE-MURO": 18,
+                "RLE-PILAR": 72,
+                "RLE-TEXTO-1": 291,
+                "RLE-VIGA": 119
+              }
+            },
+            "nearest_column": {
+              "id": "C_P1_03_0018",
+              "tipo": "columna",
+              "distance_m": 12.546,
+              "source_dxf": "2017_67-102.dxf",
+              "source_layer": "RLE-PILAR",
+              "ejes_aproximados": {
+                "x": "H2-I",
+                "y": "1b-2"
+              },
+              "point_or_mid_m": [
+                62.495,
+                9.018
+              ]
+            },
+            "nearest_column_label": {
+              "id": "LBL_P1_03_0083",
+              "tipo": "columna",
+              "texto": "P.M.I.",
+              "distance_m": 2.116,
+              "source_dxf": "2017_67-102.dxf",
+              "source_layer": "RLE-TEXTO-1",
+              "point_m": [
+                72.94,
+                8.829
+              ]
+            },
+            "nearest_structure": {
+              "id": "PERIMETRO_LOSA_P1_03_0014",
+              "tipo": "perimetro_losa",
+              "distance_m": 6.396,
+              "source_dxf": "2017_67-102.dxf",
+              "source_layer": "RLE-LOSA",
+              "ejes_aproximados": {
+                "x": "IB-J",
+                "y": "1b-2"
+              },
+              "point_or_mid_m": [
+                68.645,
+                8.193
+              ]
+            },
+            "direct_column_count": 18
+          },
+          "foundation": {
+            "source_dxf": "2017_67-100.dxf",
+            "direct_dxf_region_scan": {
+              "status": "SCANNED_DIRECT_DXF_REGION",
+              "dxf_name": "2017_67-100.dxf",
+              "region_key": "2017_67-100",
+              "bbox_cm": [
+                268,
+                3221,
+                5756,
+                7984
+              ],
+              "title": "PLANTA FUNDACIONES",
+              "layer_counts_inside_region": {
+                "RLE-EJE": 30,
+                "RLE-EJES": 63,
+                "RLE-FUNDACION": 199,
+                "RLE-LOSA": 14,
+                "RLE-MURO": 158,
+                "RLE-PILAR": 24,
+                "RLE-TEXTO-1": 79,
+                "RLE-VIGA": 69
+              }
+            },
+            "nearest_column": {
+              "id": "C_P1_FUNDACION_0006",
+              "tipo": "columna",
+              "distance_m": 5.193,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-PILAR",
+              "ejes_aproximados": {
+                "x": "I-IA",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                69.848,
+                9.085
+              ]
+            },
+            "nearest_foundation_element": {
+              "id": "FUNDACION_P1_FUNDACION_0104",
+              "tipo": "fundacion",
+              "distance_m": 4.193,
+              "source_dxf": "2017_67-100.dxf",
+              "source_layer": "RLE-FUNDACION",
+              "ejes_aproximados": {
+                "x": "IA-I_prime",
+                "y": "antes de 1"
+              },
+              "point_or_mid_m": [
+                70.848,
+                9.085
+              ]
+            },
+            "direct_column_count": 6
+          },
+          "outboard_y_gt_y3_plus_tolerance": false
         },
         "confidence": "HIGH"
       },
@@ -2578,6 +6175,96 @@
         "confidence": "HIGH"
       },
       {
+        "id": "SOL_base_support_0087",
+        "solidTag": "SOL_base_support_0087",
+        "category": "support",
+        "old_geometry": {
+          "solidTag": "SOL_base_support_0087",
+          "category": "support",
+          "kind": "box",
+          "floor": "base",
+          "center": [
+            49.89984821128715,
+            9.081383303107533,
+            -0.15
+          ],
+          "width_m": 0.9,
+          "depth_m": 0.9,
+          "height_m": 0.3,
+          "length_m": 0.3
+        },
+        "new_geometry": "REMOVED",
+        "reason": "derived from inferred column resolution",
+        "classification": "INVALID_DERIVED_ELEMENT",
+        "source_dxf": "2017_67-100.dxf",
+        "evidence": {
+          "source_column_ids": [
+            "E1-S1-C-033"
+          ]
+        },
+        "confidence": "HIGH"
+      },
+      {
+        "id": "SOL_base_support_0088",
+        "solidTag": "SOL_base_support_0088",
+        "category": "support",
+        "old_geometry": {
+          "solidTag": "SOL_base_support_0088",
+          "category": "support",
+          "kind": "box",
+          "floor": "base",
+          "center": [
+            49.89984821128715,
+            16.331487657401528,
+            -0.15
+          ],
+          "width_m": 0.9,
+          "depth_m": 0.9,
+          "height_m": 0.3,
+          "length_m": 0.3
+        },
+        "new_geometry": "REMOVED",
+        "reason": "derived from inferred column resolution",
+        "classification": "INVALID_DERIVED_ELEMENT",
+        "source_dxf": "2017_67-100.dxf",
+        "evidence": {
+          "source_column_ids": [
+            "E1-S1-C-034"
+          ]
+        },
+        "confidence": "HIGH"
+      },
+      {
+        "id": "SOL_base_support_0089",
+        "solidTag": "SOL_base_support_0089",
+        "category": "support",
+        "old_geometry": {
+          "solidTag": "SOL_base_support_0089",
+          "category": "support",
+          "kind": "box",
+          "floor": "base",
+          "center": [
+            49.89984821128718,
+            0.18132100205450286,
+            -0.15
+          ],
+          "width_m": 0.9,
+          "depth_m": 0.9,
+          "height_m": 0.3,
+          "length_m": 0.3
+        },
+        "new_geometry": "REMOVED",
+        "reason": "derived from inferred column resolution",
+        "classification": "INVALID_DERIVED_ELEMENT",
+        "source_dxf": "2017_67-100.dxf",
+        "evidence": {
+          "source_column_ids": [
+            "E1-S1-C-032"
+          ]
+        },
+        "confidence": "HIGH"
+      },
+      {
         "id": "SOL_base_support_0090",
         "solidTag": "SOL_base_support_0090",
         "category": "support",
@@ -2636,6 +6323,96 @@
           ]
         },
         "confidence": "HIGH"
+      },
+      {
+        "id": "SOL_base_support_0092",
+        "solidTag": "SOL_base_support_0092",
+        "category": "support",
+        "old_geometry": {
+          "solidTag": "SOL_base_support_0092",
+          "category": "support",
+          "kind": "box",
+          "floor": "base",
+          "center": [
+            47.54988063446994,
+            0.181321002054583,
+            -0.15
+          ],
+          "width_m": 0.9,
+          "depth_m": 0.9,
+          "height_m": 0.3,
+          "length_m": 0.3
+        },
+        "new_geometry": "REMOVED",
+        "reason": "derived from inferred column resolution",
+        "classification": "INVALID_DERIVED_ELEMENT",
+        "source_dxf": "2017_67-100.dxf",
+        "evidence": {
+          "source_column_ids": [
+            "E1-S1-C-029"
+          ]
+        },
+        "confidence": "HIGH"
+      },
+      {
+        "id": "SOL_base_support_0093",
+        "solidTag": "SOL_base_support_0093",
+        "category": "support",
+        "old_geometry": {
+          "solidTag": "SOL_base_support_0093",
+          "category": "support",
+          "kind": "box",
+          "floor": "base",
+          "center": [
+            47.54988063497803,
+            16.331457778549133,
+            -0.15
+          ],
+          "width_m": 0.9,
+          "depth_m": 0.9,
+          "height_m": 0.3,
+          "length_m": 0.3
+        },
+        "new_geometry": "REMOVED",
+        "reason": "derived from inferred column resolution",
+        "classification": "INVALID_DERIVED_ELEMENT",
+        "source_dxf": "2017_67-100.dxf",
+        "evidence": {
+          "source_column_ids": [
+            "E1-S1-C-031"
+          ]
+        },
+        "confidence": "HIGH"
+      },
+      {
+        "id": "SOL_base_support_0094",
+        "solidTag": "SOL_base_support_0094",
+        "category": "support",
+        "old_geometry": {
+          "solidTag": "SOL_base_support_0094",
+          "category": "support",
+          "kind": "box",
+          "floor": "base",
+          "center": [
+            47.549880634777466,
+            9.081356609425377,
+            -0.15
+          ],
+          "width_m": 0.9,
+          "depth_m": 0.9,
+          "height_m": 0.3,
+          "length_m": 0.3
+        },
+        "new_geometry": "REMOVED",
+        "reason": "derived from inferred column resolution",
+        "classification": "INVALID_DERIVED_ELEMENT",
+        "source_dxf": "2017_67-100.dxf",
+        "evidence": {
+          "source_column_ids": [
+            "E1-S1-C-030"
+          ]
+        },
+        "confidence": "HIGH"
       }
     ]
   },
@@ -2654,26 +6431,26 @@
     "S1": {
       "beam": 169,
       "wall": 80,
-      "column": 33,
-      "support": 113,
+      "column": 27,
+      "support": 107,
       "slab": 2
     },
     "P1": {
       "beam": 198,
       "wall": 58,
-      "column": 40,
+      "column": 34,
       "slab": 2
     },
     "P2": {
       "beam": 202,
       "wall": 32,
-      "column": 35,
+      "column": 29,
       "slab": 2
     },
     "P3": {
       "beam": 214,
       "wall": 32,
-      "column": 32,
+      "column": 26,
       "slab": 2
     },
     "P4": {
@@ -2681,130 +6458,6 @@
       "wall": 32,
       "column": 34,
       "slab": 2
-    }
-  },
-  "combined_geometry_validation": {
-    "status": "PASS",
-    "check": "COMBINED_GEOMETRY_VALIDATION",
-    "floor_contract": {
-      "status": "PASS",
-      "expected_floors": [
-        "S1",
-        "P1",
-        "P2",
-        "P3",
-        "P4"
-      ],
-      "actual_floors": [
-        "P1",
-        "P2",
-        "P3",
-        "P4",
-        "S1"
-      ],
-      "errors": []
-    },
-    "source_floor_audit": {
-      "status": "PASS",
-      "auxiliary_source_floor_counts": {
-        "base": 996
-      },
-      "issues": []
-    },
-    "axis_envelope": {
-      "status": "PASS",
-      "margins_m": {
-        "x": 5.0,
-        "y": 15.0
-      },
-      "checked_collections": [
-        "solids"
-      ],
-      "checked_categories": [
-        "beam",
-        "column",
-        "support",
-        "wall"
-      ],
-      "extents": {
-        "EDIFICIO_1": {
-          "axis_bbox_m": [
-            27.491,
-            0.0,
-            77.491,
-            16.15
-          ],
-          "allowed_bbox_m": [
-            22.491,
-            -15.0,
-            82.491,
-            31.15
-          ],
-          "actual_all_collections_bbox_m": [
-            22.591,
-            -16.103,
-            82.345,
-            30.706
-          ],
-          "actual_checked_structural_bbox_m": [
-            27.141,
-            -11.475,
-            77.691,
-            28.487
-          ]
-        },
-        "EDIFICIO_2": {
-          "axis_bbox_m": [
-            0.0,
-            0.0,
-            27.5,
-            16.15
-          ],
-          "allowed_bbox_m": [
-            -5.0,
-            -15.0,
-            32.5,
-            31.15
-          ],
-          "actual_all_collections_bbox_m": [
-            -7.148,
-            -12.81,
-            33.852,
-            21.551
-          ],
-          "actual_checked_structural_bbox_m": [
-            -3.948,
-            -1.094,
-            27.9,
-            17.25
-          ]
-        }
-      },
-      "issues": [],
-      "issue_count": 0
-    },
-    "double_offset": {
-      "status": "PASS",
-      "ed2_D_x_m": 27.5,
-      "ed1_E_expected_global_x_m": 27.491,
-      "D_E_residual_m": 0.009,
-      "min_ed1_column_x_m": 27.491,
-      "issues": []
-    },
-    "duplicate_floor_geometry": {
-      "status": "PASS",
-      "duplicates": [
-        {
-          "building": "EDIFICIO_2",
-          "floors": [
-            "P1",
-            "P2",
-            "P3"
-          ],
-          "status": "DOCUMENTED_SUPERPOSITION"
-        }
-      ],
-      "issues": []
     }
   },
   "core_axis_continuity": {
@@ -3000,6 +6653,130 @@
         },
         "status": "PASS"
       }
+    }
+  },
+  "combined_geometry_validation": {
+    "status": "PASS",
+    "check": "COMBINED_GEOMETRY_VALIDATION",
+    "floor_contract": {
+      "status": "PASS",
+      "expected_floors": [
+        "S1",
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ],
+      "actual_floors": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "S1"
+      ],
+      "errors": []
+    },
+    "source_floor_audit": {
+      "status": "PASS",
+      "auxiliary_source_floor_counts": {
+        "base": 990
+      },
+      "issues": []
+    },
+    "axis_envelope": {
+      "status": "PASS",
+      "margins_m": {
+        "x": 5.0,
+        "y": 15.0
+      },
+      "checked_collections": [
+        "solids"
+      ],
+      "checked_categories": [
+        "beam",
+        "column",
+        "support",
+        "wall"
+      ],
+      "extents": {
+        "EDIFICIO_1": {
+          "axis_bbox_m": [
+            27.491,
+            0.0,
+            77.491,
+            16.15
+          ],
+          "allowed_bbox_m": [
+            22.491,
+            -15.0,
+            82.491,
+            31.15
+          ],
+          "actual_all_collections_bbox_m": [
+            22.591,
+            -16.103,
+            82.345,
+            30.706
+          ],
+          "actual_checked_structural_bbox_m": [
+            27.141,
+            -11.475,
+            77.691,
+            28.487
+          ]
+        },
+        "EDIFICIO_2": {
+          "axis_bbox_m": [
+            0.0,
+            0.0,
+            27.5,
+            16.15
+          ],
+          "allowed_bbox_m": [
+            -5.0,
+            -15.0,
+            32.5,
+            31.15
+          ],
+          "actual_all_collections_bbox_m": [
+            -7.148,
+            -12.81,
+            33.852,
+            21.551
+          ],
+          "actual_checked_structural_bbox_m": [
+            -3.948,
+            -1.094,
+            27.9,
+            17.25
+          ]
+        }
+      },
+      "issues": [],
+      "issue_count": 0
+    },
+    "double_offset": {
+      "status": "PASS",
+      "ed2_D_x_m": 27.5,
+      "ed1_E_expected_global_x_m": 27.491,
+      "D_E_residual_m": 0.009,
+      "min_ed1_column_x_m": 27.491,
+      "issues": []
+    },
+    "duplicate_floor_geometry": {
+      "status": "PASS",
+      "duplicates": [
+        {
+          "building": "EDIFICIO_2",
+          "floors": [
+            "P1",
+            "P2",
+            "P3"
+          ],
+          "status": "DOCUMENTED_SUPERPOSITION"
+        }
+      ],
+      "issues": []
     }
   }
 }

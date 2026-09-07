@@ -10,16 +10,18 @@
 ## Luis Audit
 - Inferred columns reviewed: 61
 - Confirmed correct: 3
-- Wrong and corrected: 15
-- Still unresolved/requires review: 43
-- Derived supports invalid and removed: 9
+- Wrong and corrected: 39
+- Still unresolved/requires review: 19
+- Derived supports invalid and removed: 15
 - Luis original modified: 0
 
 ## Last Important Change
-- Removed 15 unsupported vertical-extension columns (added P2 C-013/C-017 to the 13 already removed).
-- Removed 9 supports derived from rejected inferred columns.
-- P2 outboard inferred columns now resolved with the same same-floor `RLE-PILAR` evidence rule as other floors; `CALIBRATION_CAVEAT_DO_NOT_USE_AS_DEFECT` retained as a Y-registration note, not a classification blocker.
-- Rebuilt corrected EDIFICIO_1 (903 solids, 134 columns) and combined viewer (1591 solids), re-enriched.
+- Removed 24 right/east overhang inferred columns (`IB`/`J` stations X=75.041/77.391) on S1/P1/P2/P3.
+  - Evidence: direct DXF scan of the 100/101/102 sheets shows no `RLE-PILAR` at those stations on those floors and no foundation pedestal; the stations appear only on the top-floor P4 plan (2017_67-103) and are therefore vertical propagations of a P4-only feature.
+- Removed 6 supports derived from the rejected S1 IB/J columns (`SOL_base_support_0087..0089, 0092..0094`).
+- Rebuilt corrected EDIFICIO_1 (873 solids, 110 columns) and combined viewer (1561 solids), re-enriched; all validations PASS.
+- Fixed `build_id_map` re-runnability: it now merges previously-recorded viewer metadata for combined solids too, so `id`/`human_id` are preserved for every solid (was silently `None` for some, which broke the support-derived diff when more columns were removed).
+- Added `EAST_EDGE_OVERHANG_P4_ONLY_STATIONS_REJECTED` finding (rank 6) to the resolution report.
 - Replaced mandatory Luis equality with `LUIS_REFERENCE_DIFF_VALIDATION`.
 
 ## Viewer
@@ -39,5 +41,5 @@
 - GOLDEN_IN_COMBINED_LEGACY: SUPERSEDED_BY_LUIS_REFERENCE_DIFF
 
 ## Next Work
-- Continue resolving 43 `UNRESOLVED_REQUIRES_REVIEW` inferred columns.
-- Review P1 outboard non-modelable/detail imports (C-021, C-022, C-019) and P1/P3/P4 border columns near `IB/J`.
+- Continue resolving the remaining 19 `UNRESOLVED_REQUIRES_REVIEW` S1 grid columns (main body, `inferred_from_floor_1`); these need whole-basement decision (S1 plan shows no `RLE-PILAR` anywhere in the extract panel) and registration/calibration review against the S1 sheet before confirming or removing.
+- Review P1 outboard non-modelable/detail imports (C-021, C-022, C-019).

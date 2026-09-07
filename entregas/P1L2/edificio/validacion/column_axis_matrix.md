@@ -1,28 +1,28 @@
 # Matriz columnas-ejes-pisos
 
 - Estado: **PASS_WITH_OFF_AXIS_NOTES**
-- Columnas: 176
+- Columnas: 150
 - Estaciones de columna: 42
 - Tolerancia eje-columna: 0.35 m
 - Redondeo de estacion: 0.05 m
-- Columnas fuera de ejes canonicos: 31
+- Columnas fuera de ejes canonicos: 17
 - CSV: `entregas\P1L2\edificio\datos\column_axis_matrix.csv`
 
 ## Columnas por piso
 
 | Piso | Columnas |
 |---|---:|
-| S1 | 33 |
-| P1 | 40 |
-| P2 | 37 |
-| P3 | 32 |
+| S1 | 27 |
+| P1 | 34 |
+| P2 | 29 |
+| P3 | 26 |
 | P4 | 34 |
 
 ## Columnas por edificio
 
 | Edificio | Columnas |
 |---|---:|
-| EDIFICIO_1 | 136 |
+| EDIFICIO_1 | 110 |
 | EDIFICIO_2 | 40 |
 
 ## Matriz
@@ -51,12 +51,12 @@ Celdas S1/P1/P2/P3/P4 indican cantidad de columnas en esa estacion. `OFF_AXIS_RE
 | EDIFICIO_1 | G | 1 | 47.50 | 0.00 | 1 | 1 | 1 | 1 | 1 | ON_AXIS | ON_CANONICAL_AXIS |
 | EDIFICIO_1 | G | 2 | 47.50 | 8.90 | 1 | 1 | 1 | 1 | 1 | ON_AXIS | ON_CANONICAL_AXIS |
 | EDIFICIO_1 | G | 3 | 47.50 | 16.15 | 1 | 1 | 1 | 1 | 1 | ON_AXIS | ON_CANONICAL_AXIS |
-| EDIFICIO_1 | G | Y=20.45 near 3 +4.30m | 47.50 | 20.45 |  |  | 1 |  | 1 | OFF_AXIS_REFERENCE | OFF_AXIS_LEGITIMATE |
+| EDIFICIO_1 | G | Y=20.45 near 3 +4.30m | 47.50 | 20.45 |  |  |  |  | 1 | OFF_AXIS_REFERENCE | OFF_AXIS_LEGITIMATE |
 | EDIFICIO_1 | H | 1 | 57.50 | 0.05 | 1 | 1 | 1 | 1 | 1 | ON_AXIS | ON_CANONICAL_AXIS |
 | EDIFICIO_1 | H | 2 | 57.50 | 8.90 | 1 | 1 | 1 | 1 | 1 | ON_AXIS | ON_CANONICAL_AXIS |
 | EDIFICIO_1 | H | 3 | 57.50 | 16.15 | 1 | 1 | 1 | 1 | 1 | ON_AXIS | ON_CANONICAL_AXIS |
 | EDIFICIO_1 | H | Y=18.85 near 3 +2.69m | 57.50 | 18.85 |  | 1 |  |  |  | OFF_AXIS_REFERENCE | OFF_AXIS_LEGITIMATE |
-| EDIFICIO_1 | H | Y=20.45 near 3 +4.30m | 57.50 | 20.45 |  |  | 1 |  | 1 | OFF_AXIS_REFERENCE | OFF_AXIS_LEGITIMATE |
+| EDIFICIO_1 | H | Y=20.45 near 3 +4.30m | 57.50 | 20.45 |  |  |  |  | 1 | OFF_AXIS_REFERENCE | OFF_AXIS_LEGITIMATE |
 | EDIFICIO_1 | H | Y=26.20 near 3 +10.03m | 57.50 | 26.20 |  | 1 |  |  |  | OFF_AXIS_REFERENCE | OFF_AXIS_LEGITIMATE |
 | EDIFICIO_1 | H' | Y=18.90 near 3 +2.76m | 61.95 | 18.90 |  | 1 |  |  |  | OFF_AXIS_REFERENCE | OFF_AXIS_LEGITIMATE |
 | EDIFICIO_1 | H' | Y=23.60 near 3 +7.47m | 61.95 | 23.60 |  | 1 |  |  |  | OFF_AXIS_REFERENCE | OFF_AXIS_LEGITIMATE |
@@ -67,19 +67,19 @@ Celdas S1/P1/P2/P3/P4 indican cantidad de columnas en esa estacion. `OFF_AXIS_RE
 | EDIFICIO_1 | I' | 1 | 72.50 | 0.05 | 1 | 1 | 1 | 1 | 1 | ON_AXIS | ON_CANONICAL_AXIS |
 | EDIFICIO_1 | I' | 2 | 72.50 | 8.90 | 1 | 1 | 1 | 1 | 1 | ON_AXIS | ON_CANONICAL_AXIS |
 | EDIFICIO_1 | I' | 3 | 72.50 | 16.15 | 1 | 1 | 1 | 1 | 1 | ON_AXIS | ON_CANONICAL_AXIS |
-| EDIFICIO_1 | X=75.05 near IB +1.68m | 1 | 75.05 | 0.20 | 1 | 1 | 1 | 1 | 1 | OFF_AXIS_REFERENCE | SPECIAL_POSITION_CONFIRMED |
-| EDIFICIO_1 | X=75.05 near IB +1.68m | 2 | 75.05 | 9.10 | 1 | 1 | 1 | 1 | 1 | OFF_AXIS_REFERENCE | SPECIAL_POSITION_CONFIRMED |
-| EDIFICIO_1 | X=75.05 near IB +1.68m | 3 | 75.05 | 16.35 | 1 | 1 | 1 | 1 | 1 | OFF_AXIS_REFERENCE | SPECIAL_POSITION_CONFIRMED |
-| EDIFICIO_1 | J | 1 | 77.40 | 0.20 | 1 | 1 | 1 | 1 | 1 | ON_AXIS | ON_CANONICAL_AXIS |
-| EDIFICIO_1 | J | 2 | 77.40 | 9.10 | 1 | 1 | 1 | 1 | 1 | ON_AXIS | ON_CANONICAL_AXIS |
-| EDIFICIO_1 | J | 3 | 77.40 | 16.35 | 1 | 1 | 1 | 1 | 1 | ON_AXIS | ON_CANONICAL_AXIS |
+| EDIFICIO_1 | X=75.05 near IB +1.68m | 1 | 75.05 | 0.20 |  |  |  |  | 1 | OFF_AXIS_REFERENCE | SPECIAL_POSITION_CONFIRMED |
+| EDIFICIO_1 | X=75.05 near IB +1.68m | 2 | 75.05 | 9.10 |  |  |  |  | 1 | OFF_AXIS_REFERENCE | SPECIAL_POSITION_CONFIRMED |
+| EDIFICIO_1 | X=75.05 near IB +1.68m | 3 | 75.05 | 16.35 |  |  |  |  | 1 | OFF_AXIS_REFERENCE | SPECIAL_POSITION_CONFIRMED |
+| EDIFICIO_1 | J | 1 | 77.40 | 0.20 |  |  |  |  | 1 | ON_AXIS | ON_CANONICAL_AXIS |
+| EDIFICIO_1 | J | 2 | 77.40 | 9.10 |  |  |  |  | 1 | ON_AXIS | ON_CANONICAL_AXIS |
+| EDIFICIO_1 | J | 3 | 77.40 | 16.35 |  |  |  |  | 1 | ON_AXIS | ON_CANONICAL_AXIS |
 
 ## Clasificacion off-axis
 
 | Clasificacion | Columnas |
 |---|---:|
-| OFF_AXIS_LEGITIMATE | 13 |
-| SPECIAL_POSITION_CONFIRMED | 18 |
+| OFF_AXIS_LEGITIMATE | 11 |
+| SPECIAL_POSITION_CONFIRMED | 6 |
 
 ## Notas fuera de eje
 
@@ -95,15 +95,12 @@ Las columnas fuera de eje no se eliminan ni se corrigen. Se reportan porque el s
 | SOL_1_column_0019 | EDIFICIO_1 | P1 | 61.968 | 18.912 | H' | 0.000 | 3 | 2.762 | OFF_AXIS_LEGITIMATE |
 | SOL_1_column_0020 | EDIFICIO_1 | P1 | 61.968 | 23.625 | H' | 0.000 | 3 | 7.475 | OFF_AXIS_LEGITIMATE |
 | SOL_1_column_0021 | EDIFICIO_1 | P1 | 61.968 | 28.337 | H' | 0.000 | 3 | 12.187 | OFF_AXIS_LEGITIMATE |
-| SOL_1_column_0032 | EDIFICIO_1 | P1 | 75.041 | 0.181 | IB | 1.675 | 1 | 0.181 | SPECIAL_POSITION_CONFIRMED |
-| SOL_1_column_0034 | EDIFICIO_1 | P1 | 75.041 | 9.081 | IB | 1.675 | 2 | 0.181 | SPECIAL_POSITION_CONFIRMED |
-| SOL_1_column_0033 | EDIFICIO_1 | P1 | 75.041 | 16.331 | IB | 1.675 | 3 | 0.181 | SPECIAL_POSITION_CONFIRMED |
 | SOL_2_column_0019 | EDIFICIO_1 | P2 | 37.491 | 20.452 | F | -0.000 | 3 | 4.302 | OFF_AXIS_LEGITIMATE |
 | SOL_2_column_0021 | EDIFICIO_1 | P2 | 44.981 | 16.332 | G | -2.510 | 3 | 0.182 | SPECIAL_POSITION_CONFIRMED |
 | SOL_2_column_0018 | EDIFICIO_1 | P2 | 44.981 | 20.452 | G | -2.510 | 3 | 4.302 | OFF_AXIS_LEGITIMATE |
-| SOL_2_column_0026 | EDIFICIO_1 | P2 | 47.491 | 20.451 | G | -0.000 | 3 | 4.301 | OFF_AXIS_LEGITIMATE |
-| SOL_2_column_0025 | EDIFICIO_1 | P2 | 57.491 | 20.451 | H | -0.000 | 3 | 4.301 | OFF_AXIS_LEGITIMATE |
-| SOL_2_column_0027 | EDIFICIO_1 | P2 | 75.041 | 0.181 | IB | 1.675 | 1 | 0.181 | SPECIAL_POSITION_CONFIRMED |
-| SOL_2_column_0029 | EDIFICIO_1 | P2 | 75.041 | 9.081 | IB | 1.675 | 2 | 0.181 | SPECIAL_POSITION_CONFIRMED |
-| SOL_2_column_0028 | EDIFICIO_1 | P2 | 75.041 | 16.331 | IB | 1.675 | 3 | 0.181 | SPECIAL_POSITION_CONFIRMED |
-| SOL_3_column_0024 | EDIFICIO_1 | P3 | 75.041 | 0.181 | IB | 1.675 | 1 | 0.181 | SPECIAL_POSITION_CONFIRMED |
+| SOL_4_column_0022 | EDIFICIO_1 | P4 | 47.491 | 20.451 | G | -0.000 | 3 | 4.301 | OFF_AXIS_LEGITIMATE |
+| SOL_4_column_0021 | EDIFICIO_1 | P4 | 57.491 | 20.451 | H | -0.000 | 3 | 4.301 | OFF_AXIS_LEGITIMATE |
+| SOL_4_column_0023 | EDIFICIO_1 | P4 | 75.041 | 0.181 | IB | 1.675 | 1 | 0.181 | SPECIAL_POSITION_CONFIRMED |
+| SOL_4_column_0025 | EDIFICIO_1 | P4 | 75.041 | 9.081 | IB | 1.675 | 2 | 0.181 | SPECIAL_POSITION_CONFIRMED |
+| SOL_4_column_0024 | EDIFICIO_1 | P4 | 75.041 | 16.331 | IB | 1.675 | 3 | 0.181 | SPECIAL_POSITION_CONFIRMED |
+| SOL_1S_column_0026 | EDIFICIO_1 | S1 | 44.981 | 16.332 | G | -2.510 | 3 | 0.182 | SPECIAL_POSITION_CONFIRMED |

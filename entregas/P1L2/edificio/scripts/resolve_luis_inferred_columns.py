@@ -45,6 +45,8 @@ OVERLAY_DIR = VALID / "luis_reference_overlays"
 CALCE_A_DX_M = 27.491
 Y3_M = 16.15
 OUTBOARD_LIMIT_Y_M = 16.50
+EAST_EDGE_LIMIT_X_M = 73.0
+EAST_EDGE_FLOORS = ("S1", "P1", "P2", "P3")
 DIRECT_COLUMN_TOL_M = 0.35
 PLAN_NOTE_TOL_M = 1.00
 FOUNDATION_COLUMN_TOL_M = 0.90
@@ -391,34 +393,51 @@ def source_tags(solid: dict[str, object]) -> list[str]:
 
 
 def build_id_map(combined: dict[str, object], audited: dict[str, object] | None = None, previous: dict[str, object] | None = None) -> dict[str, dict[str, object]]:
-    id_map = {}
-    for solid in combined.get("solids", []):
-        if solid.get("building") != "EDIFICIO_1":
-            continue
-        tag = str(solid.get("legacy_solidTag") or solid.get("solidTag") or solid.get("elementTag"))
-        id_map[tag] = solid
-    if audited is None:
-        return id_map
     previous_by_tag: dict[str, dict[str, object]] = {}
     if previous:
         for row in previous.get("columns", []) + previous.get("derived_supports", []):
             tag = str(row.get("legacy_solidTag") or row.get("solidTag"))
-            previous_by_tag[tag] = row
-    for solid in audited.get("solids", []):
-        tag = str(solid.get("solidTag"))
-        if tag in id_map:
+            if tag:
+                previous_by_tag[tag] = row
+    id_map: dict[str, dict[str, object]] = {}
+
+    def merge_prior(enriched: dict[str, object], prior: dict[str, object], override: bool) -> dict[str, object]:
+        for key, value in prior.items():
+            if key not in VIEWER_META_KEYS or value is None:
+                continue
+            if override or key not in enriched or enriched.get(key) is None:
+                enriched[key] = value
+        return enriched
+
+    for solid in combined.get("solids", []):
+        if solid.get("building") != "EDIFICIO_1":
+            continue
+        tag = str(solid.get("legacy_solidTag") or solid.get("solidTag") or solid.get("elementTag"))
+        if not tag:
             continue
         enriched = copy.deepcopy(solid)
-        prior = previous_by_tag.get(tag) or {}
-        for key, value in prior.items():
-            if key in VIEWER_META_KEYS and value is not None:
-                enriched[key] = value
+        enriched = merge_prior(enriched, previous_by_tag.get(tag) or {}, override=False)
         enriched.setdefault("axis_location", {})
+        prior = previous_by_tag.get(tag) or {}
         if isinstance(enriched.get("axis_location"), dict) and not enriched["axis_location"].get("center") and prior.get("ejes_bay"):
             enriched["axis_location"]["center"] = prior["ejes_bay"]
         if not enriched.get("location_description") and prior.get("location_description"):
             enriched["location_description"] = prior["location_description"]
         id_map[tag] = enriched
+    if audited is not None:
+        for solid in audited.get("solids", []):
+            tag = str(solid.get("solidTag"))
+            if tag in id_map:
+                continue
+            enriched = copy.deepcopy(solid)
+            enriched = merge_prior(enriched, previous_by_tag.get(tag) or {}, override=True)
+            enriched.setdefault("axis_location", {})
+            prior = previous_by_tag.get(tag) or {}
+            if isinstance(enriched.get("axis_location"), dict) and not enriched["axis_location"].get("center") and prior.get("ejes_bay"):
+                enriched["axis_location"]["center"] = prior["ejes_bay"]
+            if not enriched.get("location_description") and prior.get("location_description"):
+                enriched["location_description"] = prior["location_description"]
+            id_map[tag] = enriched
     return id_map
 
 
@@ -430,6 +449,8 @@ def classify_column(evidence: dict[str, object]) -> tuple[str, str, list[str]]:
     same_floor_structure = evidence["same_floor"]["nearest_structure"]
     floor = str(evidence["floor"])
     outboard = bool(evidence["outboard_y_gt_y3_plus_tolerance"])
+    station_x = float(evidence.get("station_x_m", 0.0))
+    east_edge = floor in EAST_EDGE_FLOORS and station_x > EAST_EDGE_LIMIT_X_M
 
     reasons = []
     if match_status(same_floor_column, DIRECT_COLUMN_TOL_M):
@@ -447,6 +468,12 @@ def classify_column(evidence: dict[str, object]) -> tuple[str, str, list[str]]:
             reasons.append(P2_CAVEAT)
             return "UNSUPPORTED_VERTICAL_EXTENSION", "; ".join(reasons), ["outboard_no_same_floor_or_foundation_column", P2_CAVEAT]
         return "UNSUPPORTED_VERTICAL_EXTENSION", "; ".join(reasons), ["outboard_no_same_floor_or_foundation_column"]
+
+    if east_edge:
+        reasons = ["right/east overhang station beyond the drawn column grid of this floor"]
+        reasons.append("no same-floor RLE-PILAR direct column within tolerance")
+        reasons.append("no foundation RLE-PILAR/pedestal within tolerance")
+        return "UNSUPPORTED_VERTICAL_EXTENSION", "; ".join(reasons), ["east_edge_overhang_no_same_floor_or_foundation_column"]
 
     if match_status(foundation_element, FOUNDATION_ELEMENT_TOL_M) or match_status(same_floor_structure, STRONG_LINE_TOL_M):
         return "LIKELY_CORRECT", "near same-floor structural line and/or foundation element, but no direct column symbol", ["secondary_plan_evidence_only"]
@@ -492,6 +519,7 @@ def resolve_columns(
         ]
         evidence = {
             "floor": floor,
+            "station_x_m": r3(point[0]),
             "same_floor": {
                 "source_dxf": FLOOR_SOURCE_DXF.get(floor),
                 "direct_dxf_region_scan": dxf_scan.get("regions", {}).get(floor),
@@ -760,6 +788,7 @@ def top_geometry_findings(column_rows: list[dict[str, object]], support_rows: li
     s1_rejected = [row for row in outboard_rejected if row["piso"] == "S1"]
     derived_invalid = [row for row in support_rows if row["classification"] == "INVALID_DERIVED_ELEMENT"]
     p2_rejected = [row for row in column_rows if row["piso"] == "P2" and row["Y"] > OUTBOARD_LIMIT_Y_M and row["classification"] == "UNSUPPORTED_VERTICAL_EXTENSION"]
+    east_edge_rejected = [row for row in column_rows if row["piso"] in EAST_EDGE_FLOORS and row["X"] > EAST_EDGE_LIMIT_X_M and row["classification"] == "UNSUPPORTED_VERTICAL_EXTENSION"]
     detail_imports: list[str] = []
     if outboard:
         for floor, floor_data in outboard.get("by_floor", {}).items():
@@ -814,6 +843,13 @@ def top_geometry_findings(column_rows: list[dict[str, object]], support_rows: li
             "impact": "info",
             "summary": "P2 outboard G/H inferred columns rejected using the same floor RLE-PILAR evidence rule; the calibration caveat is retained as a Y-registration note, not as a blocker.",
             "affected_ids": [row["id"] for row in p2_rejected],
+        },
+        {
+            "rank": 6,
+            "code": "EAST_EDGE_OVERHANG_P4_ONLY_STATIONS_REJECTED",
+            "impact": "high",
+            "summary": "Inferred columns at the right/east overhang stations between IB and J on S1/P1/P2/P3 have no same-floor column symbol (verified directly on the DXF floor panels) and no foundation pedestal; those stations appear only on the top-floor P4 plan and are rejected as vertical propagations of a P4-only feature.",
+            "affected_ids": [row["id"] for row in east_edge_rejected],
         },
     ]
     return [finding for finding in findings if finding.get("affected_ids") or finding.get("affected_supports")]
@@ -882,6 +918,10 @@ def write_resolution_markdown(report: dict[str, object]) -> None:
     lines.extend(["", "## Priority Outboard Columns", "| ID | Floor | X | Y | Confidence | Classification | Reason |", "| --- | --- | ---: | ---: | --- | --- | --- |"])
     priority = [row for row in report["columns"] if row["Y"] > OUTBOARD_LIMIT_Y_M]
     for row in priority:
+        lines.append(f"| {row['id']} | {row['piso']} | {row['X']} | {row['Y']} | {row['confidence_original']} | {row['classification']} | {row['reason']} |")
+    lines.extend(["", "## East-Edge Overhang Rejected Columns", "| ID | Floor | X | Y | Confidence | Classification | Reason |", "| --- | --- | ---: | ---: | --- | --- | --- |"])
+    east_rows = [row for row in report["columns"] if row["piso"] in EAST_EDGE_FLOORS and row["X"] > EAST_EDGE_LIMIT_X_M]
+    for row in east_rows:
         lines.append(f"| {row['id']} | {row['piso']} | {row['X']} | {row['Y']} | {row['confidence_original']} | {row['classification']} | {row['reason']} |")
     lines.extend(["", "## S1 Inferred Columns", "| ID | X | Y | Confidence | Classification | Nearest foundation column | Nearest S1 column | Reason |", "| --- | ---: | ---: | --- | --- | --- | --- | --- |"])
     for row in [item for item in report["columns"] if item["piso"] == "S1"]:
