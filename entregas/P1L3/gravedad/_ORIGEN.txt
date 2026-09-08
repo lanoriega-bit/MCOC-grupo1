@@ -1,0 +1,30 @@
+ORIGEN DEL MOTOR TRIBUTARIO
+===========================
+
+Fuente: rama `origin/luis-gravedad-tributarias` (commit c0c0cdb), carpeta
+        `entregas/semana2_gravedad/opensees/`.
+
+Archivos portados (extraccion byte-exacta via git cat-file):
+  - carga_gravedad.py        (blob 4921b5657c, 22334 bytes)
+  - integracion.py           (blob 676194d86b, 18215 bytes)
+  - qa_verificaciones.py     (blob 883fe23b17, 15120 bytes)
+  - catalogo_cargas_edificio1.py (blob 6dc00eec0f, 9508 bytes)
+
+No portado (especifico de semana2, no usado por P1L3):
+  - enrich_response.py, main.py, exportar_unity.py, template_entrada.py,
+    adaptador_edificio1_cad.py, modelo_opensees_candidate.py,
+    preparar_revision_p1_1s.py, downstream_*.py, edificio1_pisos_2_3_4.py
+
+Adaptaciones realizadas
+=======================
+1. Docstring de MuroInput en carga_gravedad.py: se corrigio el glifo corrupto
+   "carga轴ial" -> "carga axial" (mojibake presente en la rama origen). No
+   afecta el comportamiento (texto de documentacion solamente).
+
+Notas de uso
+============
+- Los modulos se importan entre si con imports planos
+  (ej. `from carga_gravedad import ...`). Agregar este directorio a sys.path.
+- Unidades: m, N, Pa, kN (SI).
+- q_G = PP.LOSA + PM.ADIC. SC queda SEPARADA (q_G no incluye sobrecarga).
+- El modulo NO depende de OpenSees.
