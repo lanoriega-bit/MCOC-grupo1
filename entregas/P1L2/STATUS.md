@@ -1,5 +1,8 @@
 # P1L2 Status
 
+## Transferencia
+- Documento maestro: `PROJECT_HANDOFF.md` (raiz del repositorio) + plan P1L3 en `entregas/P1L3/PLANIFICACION.md`. Leerlos antes de modificar geometria o iniciar P1L3.
+
 ## Current Model
 - Floors: S1 / P1 / P2 / P3 / P4
 - EDIFICIO_1: audited corrected model in progress
