@@ -1,0 +1,51 @@
+{
+  "hitos": "A3-A4",
+  "analysis_model": "C:\\Users\\matis\\OneDrive\\Documentos\\Proyecto_1_MCOC\\entregas\\P1L3\\results\\a3a4\\analysis_model.json",
+  "resumen": {
+    "n_nodes": 813,
+    "n_elements": 1312,
+    "n_supports": 106,
+    "by_type": {
+      "column": 148,
+      "wall": 163,
+      "beam": 1001
+    },
+    "excluidos_flotantes": 93
+  },
+  "idealizaciones": [
+    "nodos de viga al nivel estructural del piso (centrolineas)",
+    "extremos de viga snap al nodo estructural (columna/muro) dentro de snap_radius",
+    "fusion de nodos estructurales casi coincidentes en el mismo nivel (merge_tol)",
+    "losas no modeladas en FE (solo areas tributarias); carga del piso aplicada como nodal P/2 en extremos de viga",
+    "muros como miembros equivalentes con eje fuerte a lo largo del muro",
+    "J de seccion rectangular por formula de Timoshenko (no J=Iy+Iz)",
+    "componentes sin ruta de carga al apoyo se EXCLUYEN del analisis (ver floating_excluded); IDs no se renumeran"
+  ],
+  "config": {
+    "E_N_m2": 25000000000.0,
+    "nu": 0.2,
+    "G_N_m2": 10416666666.666668,
+    "snap_radius_m": 0.6,
+    "torsional_formula": "timoshenko_rect"
+  },
+  "crosswalk_rows": 1312,
+  "contrato_resultados": {
+    "formato": "P1L3_RESULT_v1",
+    "estructura": [
+      "manifest.json",
+      "nodes.json",
+      "elements.json",
+      "reactions.json"
+    ],
+    "por_elemento": [
+      "case",
+      "element_id",
+      "analysis_id",
+      "opensees_tag",
+      "floor",
+      "result",
+      "units"
+    ],
+    "nota": "Mismo esquema para G, Q, EX, EY y combinaciones R = lG*G + lQ*Q + lEX*EX + lEY*EY."
+  }
+}
