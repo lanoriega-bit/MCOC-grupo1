@@ -73,5 +73,27 @@ namespace Mcoc.UnityViewer
                 return null;
             }
         }
+
+        public static SeismicData LoadSeismic(string fileName = "seismic_ex_ey.json")
+        {
+            string path = Path.Combine(Application.streamingAssetsPath, fileName);
+            if (!File.Exists(path))
+            {
+                Debug.LogWarning($"[JsonLoader] No existe seismic_ex_ey.json: {path}");
+                return null;
+            }
+            string json = File.ReadAllText(path);
+            try
+            {
+                SeismicData data = JsonUtility.FromJson<SeismicData>(json);
+                Debug.Log($"[JsonLoader] Sismico cargado: {data.floors?.Count} pisos");
+                return data;
+            }
+            catch (System.Exception ex)
+            {
+                Debug.LogError($"[JsonLoader] Error al parsear seismic_ex_ey.json: {ex.Message}");
+                return null;
+            }
+        }
     }
 }

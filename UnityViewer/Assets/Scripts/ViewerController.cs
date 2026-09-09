@@ -36,6 +36,7 @@ namespace Mcoc.UnityViewer
 
         private ModelData model;
         private TributaryData tributaries;
+        private SeismicData seismic;
         private readonly Dictionary<string, Vector2> memberTrib = new Dictionary<string, Vector2>();
         private readonly Dictionary<string, List<GameObject>> byType = new Dictionary<string, List<GameObject>>();
         private readonly Dictionary<string, List<GameObject>> byFloor = new Dictionary<string, List<GameObject>>();
@@ -66,7 +67,14 @@ namespace Mcoc.UnityViewer
             { "slab_edge", "Borde losa" },
             { "node", "Nodos" },
             { "cad_reference", "Lineas CAD ref." },
-            { "tributary", "Areas tributarias" }
+            { "tributary", "Areas tributarias" },
+            { "seismic_arrow", "Sismo EX/EY" },
+            { "seismic_cm", "Centros de masa" },
+            { "seismic_mass", "Masa por piso" },
+            { "seismic_shear", "Corte basal" },
+            { "seismic_pattern", "Patron sismico" },
+            { "seismic_deform", "Deformada (sentido)" },
+            { "seismic_torsion", "Torsion de piso" }
         };
 
         private static readonly Dictionary<string, int> FloorOrder = new Dictionary<string, int>
@@ -109,6 +117,8 @@ namespace Mcoc.UnityViewer
             }
             BuildScene();
             if (tributaries != null) BuildTributaries();
+            seismic = JsonLoader.LoadSeismic();
+            if (seismic != null) BuildSeismic();
             SetStatus($"{model.solids?.Count ?? 0} solidos, {model.segments?.Count ?? 0} lineas CAD, {model.labels?.Count ?? 0} etiquetas");
         }
 
@@ -287,6 +297,284 @@ namespace Mcoc.UnityViewer
                     idx++;
                 }
             }
+        }
+
+        // ---------- Sismo EX/EY (Integrante B) ----------
+        void BuildSeismic()
+        {
+            if (seismic == null || seismic.floors == null) return;
+            float maxF = 1f;
+            float maxMass = 1f;
+            float maxTor = 1f;
+            foreach (var f in seismic.floors)
+            {
+                maxF = Mathf.Max(maxF, (float)f.F_EX_kN);
+                maxF = Mathf.Max(maxF, (float)f.F_EY_kN);
+                maxMass = Mathf.Max(maxMass, (float)f.mass_ton);
+                maxTor = Mathf.Max(maxTor, (float)f.M_torsion_EX_kNm);
+                maxTor = Mathf.Max(maxTor, (float)f.M_torsion_EY_kNm);
+            }
+            foreach (var f in seismic.floors)
+            {
+                float z = (float)f.z_m;
+                Vector3 cm = new Vector3((float)f.cm_x, (float)f.cm_y, z);
+                CreateArrow("sismo_EX_" + f.building + "_" + f.floor, cm, Vector3.right, (float)f.F_EX_kN, maxF, new Color(1f, 0.3f, 0.2f), "seismic_arrow", f.floor, f.building, "EX");
+                CreateArrow("sismo_EY_" + f.building + "_" + f.floor, cm, Vector3.up, (float)f.F_EY_kN, maxF, new Color(0.3f, 0.5f, 1f), "seismic_arrow", f.floor, f.building, "EY");
+                CreateCmMarker("sismo_CM_" + f.building + "_" + f.floor, cm, f);
+                CreateMassBar("sismo_M_" + f.building + "_" + f.floor, cm, (float)f.mass_ton, maxMass);
+                CreatePatternBar("sismo_patron_EX_" + f.building + "_" + f.floor, cm, Vector3.right, (float)f.F_EX_kN, maxF, new Color(1f, 0.35f, 0.25f), f);
+                CreatePatternBar("sismo_patron_EY_" + f.building + "_" + f.floor, cm, Vector3.up, (float)f.F_EY_kN, maxF, new Color(0.35f, 0.55f, 1f), f);
+                CreateTorsionArc("sismo_T_EX_" + f.building + "_" + f.floor, cm, (float)f.M_torsion_EX_kNm, maxTor, 0f, f);
+                CreateTorsionArc("sismo_T_EY_" + f.building + "_" + f.floor, cm, (float)f.M_torsion_EY_kNm, maxTor, 180f, f);
+            }
+            foreach (var b in seismic.buildings)
+            {
+                CreateBuildingLevelVisuals(b);
+                CreateDeformFrame(b, true);
+                CreateDeformFrame(b, false);
+            }
+        }
+
+        void CreateBuildingLevelVisuals(SeismicBuilding b)
+        {
+            if (b == null || b.floors_EX == null || b.floors_EX.Count == 0) return;
+            Vector3 cmG = new Vector3((float)b.cm_x_m, (float)b.cm_y_m, 0f);
+            float vMax = Mathf.Max(1f, (float)b.V_EX_kN);
+
+            CreateArrow("sismo_V_EX_" + b.building, cmG, Vector3.right, (float)b.V_EX_kN, vMax, new Color(1f, 0.2f, 0.15f), "seismic_shear", "S1", b.building, "V_EX");
+            CreateArrow("sismo_V_EY_" + b.building, cmG, Vector3.up, (float)b.V_EY_kN, vMax, new Color(0.2f, 0.4f, 1f), "seismic_shear", "S1", b.building, "V_EY");
+
+            _shearLabels.Add(new Label2D((float)b.cm_x_m, (float)b.cm_y_m, 0f, $"Corte basal EX: {b.V_EX_kN:F1} kN", new Color(1f, 0.4f, 0.3f)));
+            _shearLabels.Add(new Label2D((float)b.cm_x_m, (float)b.cm_y_m, 0f, $"Corte basal EY: {b.V_EY_kN:F1} kN", new Color(0.4f, 0.6f, 1f)));
+        }
+
+        // Patrón sísmico: barra horizontal proporcional a F EN el centro de masa de cada piso
+        void CreatePatternBar(string name, Vector3 cm, Vector3 dir, float forceKN, float maxForce, Color color, SeismicFloor f)
+        {
+            float len = Mathf.Clamp(forceKN / maxForce * 14f, 0.3f, 14f);
+            var go = new GameObject(name);
+            var lr = go.AddComponent<LineRenderer>();
+            lr.useWorldSpace = false;
+            lr.positionCount = 2;
+            lr.SetPosition(0, cm + new Vector3(0f, 0f, 0.4f));
+            lr.SetPosition(1, cm + dir * len + new Vector3(0f, 0f, 0.4f));
+            lr.startWidth = 0.4f; lr.endWidth = 0.4f;
+            lr.material = SeismicLineMat(color);
+            var ei = go.AddComponent<ElementInfo>();
+            ei.go = go;
+            ei.id = name;
+            ei.humanId = "Patron " + name.Replace("sismo_patron_", "");
+            ei.category = "seismic_pattern";
+            ei.floor = f.floor;
+            ei.building = f.building;
+            ei.isSeismic = true;
+            ei.seismicForceKN = forceKN;
+            ei.baseColor = color;
+            ei.nodeI = cm;
+            ei.nodeJ = cm;
+            Register(go, "seismic_pattern", f.floor);
+            allElements.Add(ei);
+        }
+
+        // Deformada: dibuja CADA pilar, viga, muro, apoyo y losa desplazado lateralmente segun perfil u(z)
+        void CreateDeformFrame(SeismicBuilding b, bool ex)
+        {
+            if (model == null || model.solids == null) return;
+            float dx = ex ? 1f : 0f;
+            float dy = ex ? 0f : 1f;
+            Color color = ex ? new Color(1f, 0.15f, 0.1f) : new Color(0.2f, 0.55f, 1f);
+            foreach (var s in model.solids)
+            {
+                if (s == null) continue;
+                if ((s.building ?? "") != b.building) continue;
+                string cat = s.category ?? "";
+                if (cat != "beam" && cat != "column" && cat != "column_plan" && cat != "wall" && cat != "support" && cat != "slab") continue;
+                Vector3 p0, p1;
+                float z0, z1;
+                if (s.kind == "linear_prism")
+                {
+                    p0 = V(s.start); p1 = V(s.end);
+                    z0 = Mathf.Min(p0.z, p1.z); z1 = Mathf.Max(p0.z, p1.z);
+                }
+                else
+                {
+                    Vector3 c = V(s.center);
+                    float h = cat == "slab" ? 0.2f : (float)(s.height_m <= 0 ? 0.6 : s.height_m);
+                    z0 = c.z - h * 0.5f; z1 = c.z + h * 0.5f;
+                    p0 = new Vector3(c.x, c.y, z0);
+                    p1 = new Vector3(c.x, c.y, z1);
+                }
+                float u0 = DeformU(z0);
+                float u1 = DeformU(z1);
+                CreateDeformLine(p0 + new Vector3(u0 * dx, u0 * dy, 0f), p1 + new Vector3(u1 * dx, u1 * dy, 0f), color, s.building, s.floor ?? "");
+            }
+        }
+
+        float DeformU(float z)
+        {
+            const float uTop = 8f;      // desplazamiento visual maximo en el tope
+            const float hTop = 19.76f;  // altura total (S1..P4)
+            float t = Mathf.Clamp01(z / hTop);
+            return uTop * t * t;        // perfil ~ cuadrado: mas desplazamiento arriba
+        }
+
+        void CreateDeformLine(Vector3 p0, Vector3 p1, Color color, string building, string floor)
+        {
+            var go = new GameObject("def_" + building + "_" + floor);
+            var lr = go.AddComponent<LineRenderer>();
+            lr.useWorldSpace = false;
+            lr.positionCount = 2;
+            lr.SetPosition(0, p0);
+            lr.SetPosition(1, p1);
+            lr.startWidth = 0.28f; lr.endWidth = 0.28f;
+            lr.material = SeismicLineMat(color);
+            var ei = go.AddComponent<ElementInfo>();
+            ei.go = go;
+            ei.id = go.name;
+            ei.humanId = "Deformada " + building + " " + floor;
+            ei.category = "seismic_deform";
+            ei.floor = floor;
+            ei.building = building;
+            ei.isSeismic = true;
+            ei.baseColor = color;
+            ei.nodeI = p0;
+            ei.nodeJ = p1;
+            Register(go, "seismic_deform", floor);
+            allElements.Add(ei);
+        }
+
+        // Torsión de piso: arco horizontal con flecha que muestra giro del diafragma, radio ∝ Mt
+        void CreateTorsionArc(string name, Vector3 cm, float torKNm, float maxTor, float startDeg, SeismicFloor f)
+        {
+            float r = 1.2f + (torKNm / Mathf.Max(1f, maxTor)) * 4f;
+            int n = 24;
+            var go = new GameObject(name);
+            var lr = go.AddComponent<LineRenderer>();
+            lr.useWorldSpace = false;
+            lr.positionCount = n + 2;
+            float a0 = startDeg * Mathf.Deg2Rad;
+            for (int i = 0; i <= n; i++)
+            {
+                float a = a0 + i * (300f * Mathf.Deg2Rad / n);
+                lr.SetPosition(i, cm + new Vector3(Mathf.Cos(a) * r, Mathf.Sin(a) * r, 0.5f));
+            }
+            float tipA = a0 + 300f * Mathf.Deg2Rad;
+            Vector3 tip = cm + new Vector3(Mathf.Cos(tipA) * r, Mathf.Sin(tipA) * r, 0.5f);
+            Vector3 tangent = new Vector3(-Mathf.Sin(tipA), Mathf.Cos(tipA), 0f);
+            lr.SetPosition(n + 1, tip + tangent * r * 0.5f);
+            lr.startWidth = 0.22f; lr.endWidth = 0.22f;
+            lr.material = SeismicLineMat(new Color(1f, 0.3f, 0.6f));
+            var ei = go.AddComponent<ElementInfo>();
+            ei.go = go;
+            ei.id = name;
+            ei.humanId = "Torsion " + f.building + " " + f.floor;
+            ei.category = "seismic_torsion";
+            ei.floor = f.floor;
+            ei.building = f.building;
+            ei.isSeismic = true;
+            ei.seismicForceKN = torKNm;
+            ei.baseColor = new Color(1f, 0.3f, 0.6f);
+            ei.nodeI = cm;
+            ei.nodeJ = cm;
+            Register(go, "seismic_torsion", f.floor);
+            allElements.Add(ei);
+        }
+
+        void CreateMassBar(string name, Vector3 cm, float massTon, float maxMass)
+        {
+            float h = 0.4f + (massTon / maxMass) * 8f;
+            var go = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            go.name = name;
+            go.transform.position = cm + new Vector3(0.5f, -0.5f, h * 0.5f);
+            go.transform.localScale = new Vector3(0.35f, 0.35f, h);
+            var rnd = go.GetComponent<Renderer>();
+            rnd.sharedMaterial = SeismicLineMat(new Color(1f, 0.65f, 0.1f));
+            var ei = go.AddComponent<ElementInfo>();
+            ei.go = go;
+            ei.id = name;
+            ei.humanId = "Masa " + name.Replace("sismo_M_", "");
+            ei.category = "seismic_mass";
+            ei.floor = "S1";
+            ei.building = "";
+            ei.coordCenter = cm;
+            ei.baseColor = rnd.sharedMaterial.color;
+            ei.isSeismic = true;
+            Register(go, "seismic_mass", "S1");
+            allElements.Add(ei);
+        }
+
+        struct Label2D { public float x; public float y; public float z; public string text; public Color color; public Label2D(float x, float y, float z, string t, Color c) { this.x = x; this.y = y; this.z = z; this.text = t; this.color = c; } }
+        private readonly List<Label2D> _shearLabels = new List<Label2D>();
+
+        void CreateArrow(string name, Vector3 origin, Vector3 dir, float forceKN, float maxForce, Color color, string cat, string floor, string building, string caseName)
+        {
+            float length = Mathf.Clamp(forceKN / maxForce * 12f, 0.3f, 12f);
+            Vector3 p0 = origin;
+            Vector3 p1 = origin + dir * length;
+            var go = new GameObject(name);
+            var lr = go.AddComponent<LineRenderer>();
+            lr.useWorldSpace = false;
+            lr.positionCount = 4;
+            lr.SetPosition(0, p0);
+            lr.SetPosition(1, p1);
+            float shaft = length * 0.35f;
+            Vector3 perp = new Vector3(-dir.y, dir.x, 0f).normalized * length * 0.12f;
+            lr.SetPosition(2, p1 - dir * shaft + perp);
+            lr.SetPosition(3, p1 - dir * shaft - perp);
+            lr.startWidth = 0.18f; lr.endWidth = 0.18f;
+            lr.material = SeismicLineMat(color);
+            var ei = go.AddComponent<ElementInfo>();
+            ei.go = go;
+            ei.id = name;
+            ei.humanId = "F_" + caseName + " " + building + " " + floor;
+            ei.category = cat;
+            ei.floor = floor;
+            ei.building = building;
+            ei.baseColor = color;
+            ei.coordCenter = (p0 + p1) * 0.5f;
+            ei.nodeI = p0;
+            ei.nodeJ = p1;
+            ei.isSeismic = true;
+            ei.seismicForceKN = forceKN;
+            ei.seismicCase = caseName;
+            Register(go, cat, floor);
+            allElements.Add(ei);
+        }
+
+        void CreateCmMarker(string name, Vector3 cm, SeismicFloor f)
+        {
+            var go = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+            go.name = name;
+            go.transform.position = cm + new Vector3(0f, 0f, 0.35f);
+            go.transform.localScale = Vector3.one * 0.5f;
+            var rnd = go.GetComponent<Renderer>();
+            rnd.sharedMaterial = SeismicLineMat(new Color(1f, 0.9f, 0.2f));
+            var ei = go.AddComponent<ElementInfo>();
+            ei.go = go;
+            ei.id = name;
+            ei.humanId = "CM " + f.building + " " + f.floor;
+            ei.category = "seismic_cm";
+            ei.floor = f.floor;
+            ei.building = f.building;
+            ei.coordCenter = cm;
+            ei.nodeI = cm;
+            ei.nodeJ = cm;
+            ei.isSeismic = true;
+            ei.seismicForceKN = f.F_EX_kN;
+            ei.baseColor = rnd.sharedMaterial.color;
+            Register(go, "seismic_cm", f.floor);
+            allElements.Add(ei);
+        }
+
+        static Material SeismicLineMat(Color color)
+        {
+            var sh = Shader.Find("Sprites/Default");
+            if (sh == null) sh = Shader.Find("Legacy Shaders/Particles/Alpha Blended");
+            if (sh == null) sh = Shader.Find("Unlit/Color");
+            if (sh == null) sh = Shader.Find("Standard");
+            var mat = new Material(sh);
+            if (mat != null) mat.color = color;
+            return mat;
         }
 
         ElementInfo CreateTribPoly(string name, List<Point2D> polygon, float z, float maxLoad, float loadKN, string cat, string building, string floor, string id, string elementTag)
@@ -513,6 +801,16 @@ namespace Mcoc.UnityViewer
                             rnd.sharedMaterial = ei.baseMat;
                             if (rnd.sharedMaterial != null) rnd.sharedMaterial.color = ei.baseColor;
                         }
+                        else if (ei.isSeismic)
+                        {
+                            // material propio por marcador/flecha sismica: restaurar su color base
+                            if (rnd.sharedMaterial != null)
+                            {
+                                rnd.sharedMaterial.color = ei.baseColor;
+                                rnd.sharedMaterial.DisableKeyword("_EMISSION");
+                                rnd.sharedMaterial.SetColor("_EmissionColor", Color.black);
+                            }
+                        }
                         else
                         {
                             // material compartido de categoria (base intacta = naranja)
@@ -550,6 +848,22 @@ namespace Mcoc.UnityViewer
             {
                 cargaLine = $"Area tributaria: {ei.tribAreaM2.ToString("F3")} m2\n" +
                     $"Carga gravitacional: {ei.tribLoadKN.ToString("F3")} kN (qG={(tributaries != null ? tributaries.qG_kN_m2.ToString("F3") : "?")} kN/m2)";
+            }
+            else if (ei.isSeismic && ei.category == "seismic_cm")
+            {
+                var sf = FindSeismicFloor(ei.building, ei.floor);
+                if (sf != null)
+                {
+                    cargaLine = $"Masa sismica: {sf.mass_ton.ToString("F3")} ton\n" +
+                        $"W sismico: {sf.w_seismic_kN.ToString("F3")} kN\n" +
+                        $"F_EX: {sf.F_EX_kN.ToString("F3")} kN   F_EY: {sf.F_EY_kN.ToString("F3")} kN\n" +
+                        $"Corte EX: {sf.story_shear_EX_kN.ToString("F3")} kN   Corte EY: {sf.story_shear_EY_kN.ToString("F3")} kN\n" +
+                        $"Torsion EX: {sf.M_torsion_EX_kNm.ToString("F3")} kNm   Torsion EY: {sf.M_torsion_EY_kNm.ToString("F3")} kNm";
+                }
+            }
+            else if (ei.isSeismic)
+            {
+                cargaLine = $"Fuerza sismica {ei.seismicCase}: {ei.seismicForceKN.ToString("F3")} kN";
             }
             else if (ei.tribFromTag)
             {
@@ -596,6 +910,7 @@ namespace Mcoc.UnityViewer
             DrawPanelInfo();
             DrawControls();
             if (labelsVisible) DrawLabels();
+            if (seismic != null) DrawSeismicValueLabels();
         }
 
         void DrawPanelInfo()
@@ -720,6 +1035,104 @@ namespace Mcoc.UnityViewer
 
         static string ShortTag(string tag) => tag.Replace("SOL_", "").Replace("CAD_", "").Replace("seg_", "");
 
+        void DrawSeismicValueLabels()
+        {
+            if (cam == null || seismic == null || seismic.floors == null) return;
+            bool cmVisible = typeVisible.ContainsKey("seismic_cm") ? typeVisible["seismic_cm"] : true;
+            bool shearVisible = typeVisible.ContainsKey("seismic_shear") ? typeVisible["seismic_shear"] : true;
+            bool arrowVisible = typeVisible.ContainsKey("seismic_arrow") ? typeVisible["seismic_arrow"] : true;
+            bool massVisible = typeVisible.ContainsKey("seismic_mass") ? typeVisible["seismic_mass"] : true;
+            bool torVisible = typeVisible.ContainsKey("seismic_torsion") ? typeVisible["seismic_torsion"] : true;
+            bool anyFloor = cmVisible || massVisible || arrowVisible || torVisible;
+            const int boxW = 240;
+            GUIStyle ls = new GUIStyle(GUI.skin.label);
+            ls.fontSize = 12;
+            var sw = Screen.width; var sh = Screen.height;
+            var drawn = new HashSet<string>();
+            int step = 0;
+            if (anyFloor)
+            foreach (var f in seismic.floors)
+            {
+                string key = f.building + "_" + f.floor;
+                if (drawn.Contains(key)) continue;
+                drawn.Add(key);
+                Vector3 cp = transform.TransformPoint(new Vector3((float)f.cm_x + 1.2f, (float)f.cm_y, (float)f.z_m));
+                Vector3 sp = cam.WorldToScreenPoint(cp);
+                if (sp.z <= 0) continue;
+                sp.y = sh - sp.y;
+                if (sp.x < 0 || sp.x > sw || sp.y < 0 || sp.y > sh) continue;
+
+                int lines = 0;
+                if (massVisible) lines++;
+                if (massVisible) lines++; // + linea de peso total
+                if (cmVisible) lines++;
+                if (arrowVisible) lines += 2;
+                if (torVisible) lines++;
+                int lineH = 17;
+                int pad = 5;
+                int boxH = lines * lineH + pad * 2;
+
+                // Lado alterno para que pisos cercanos no se tapen entre si
+                bool right = (step % 2 == 0);
+                float bx = right ? sp.x + 6 : sp.x - boxW - 6;
+                // El intervalo que cubre cada caja (para deteccion de solape vertical)
+                float boxTop = sp.y - boxH;
+                float boxBot = sp.y;
+                if (bx < 0) bx = 0; else if (bx + boxW > sw) bx = sw - boxW;
+
+                GUI.DrawTexture(new Rect(bx, boxTop, boxW, boxH), MakeTex(2, 2, new Color(0f, 0f, 0f, 0.75f)));
+
+                int line = -boxH + pad;
+                if (massVisible)
+                {
+                    double totalW = TotalWeight(f.building);
+                    ls.fontSize = 13; ls.fontStyle = FontStyle.Bold;
+                    ls.normal.textColor = new Color(1f, 0.75f, 0.15f);
+                    GUI.Label(new Rect(bx + 6, sp.y + line, boxW - 12, lineH), "MASA PISO " + f.floor + " = " + f.mass_ton.ToString("F1") + " t", ls);
+                    line += lineH;
+                    ls.fontSize = 12; ls.fontStyle = FontStyle.Normal;
+                    ls.normal.textColor = new Color(1f, 0.9f, 0.5f);
+                    GUI.Label(new Rect(bx + 6, sp.y + line, boxW - 12, lineH), "PESO TOTAL = " + totalW.ToString("F1") + " kN", ls);
+                    line += lineH;
+                }
+                ls.fontSize = 12; ls.fontStyle = FontStyle.Normal;
+                if (cmVisible)
+                {
+                    ls.normal.textColor = new Color(0.9f, 0.9f, 0.9f);
+                    GUI.Label(new Rect(bx + 6, sp.y + line, boxW - 12, lineH), "CM(" + f.cm_x.ToString("F2") + "," + f.cm_y.ToString("F2") + ")  A=" + f.area_m2.ToString("F1") + " m2", ls);
+                    line += lineH;
+                }
+                if (arrowVisible)
+                {
+                    ls.normal.textColor = new Color(1f, 0.5f, 0.5f);
+                    GUI.Label(new Rect(bx + 6, sp.y + line, boxW - 12, lineH), "EX F=" + f.F_EX_kN.ToString("F0") + " kN", ls);
+                    line += lineH;
+                    ls.normal.textColor = new Color(0.5f, 0.6f, 1f);
+                    GUI.Label(new Rect(bx + 6, sp.y + line, boxW - 12, lineH), "EY F=" + f.F_EY_kN.ToString("F0") + " kN", ls);
+                    line += lineH;
+                }
+                if (torVisible)
+                {
+                    ls.normal.textColor = new Color(1f, 0.55f, 0.85f);
+                    GUI.Label(new Rect(bx + 6, sp.y + line, boxW - 12, lineH), "Torsion EX=" + f.M_torsion_EX_kNm.ToString("F0") + "  EY=" + f.M_torsion_EY_kNm.ToString("F0") + " kNm", ls);
+                }
+                step++;
+            }
+            if (shearVisible)
+            foreach (var lb in _shearLabels)
+            {
+                Vector3 cp = transform.TransformPoint(new Vector3(lb.x, lb.y, lb.z));
+                Vector3 sp = cam.WorldToScreenPoint(cp);
+                if (sp.z <= 0) continue;
+                sp.y = sh - sp.y;
+                if (sp.x < 0 || sp.x > sw || sp.y < 0 || sp.y > sh) continue;
+                ls.normal.textColor = lb.color;
+                ls.fontSize = 14; ls.fontStyle = FontStyle.Bold;
+                GUI.Label(new Rect(sp.x - 80, sp.y + 30, 240, 18), lb.text, ls);
+                ls.fontSize = 12; ls.fontStyle = FontStyle.Normal;
+            }
+        }
+
         // ---------- Busqueda por ID ----------
         void DoSearch()
         {
@@ -836,6 +1249,29 @@ namespace Mcoc.UnityViewer
         }
 
         // ---------- helpers ----------
+        double TotalWeight(string building)
+        {
+            if (seismic == null || seismic.buildings == null) return 0.0;
+            foreach (var b in seismic.buildings)
+            {
+                if (string.Equals(b.building, building, System.StringComparison.Ordinal))
+                    return b.total_w_seismic_kN;
+            }
+            return 0.0;
+        }
+
+        SeismicFloor FindSeismicFloor(string building, string floor)
+        {
+            if (seismic == null || seismic.floors == null) return null;
+            foreach (var f in seismic.floors)
+            {
+                if (string.Equals(f.building, building, System.StringComparison.Ordinal) &&
+                    string.Equals(f.floor, floor, System.StringComparison.Ordinal))
+                    return f;
+            }
+            return null;
+        }
+
         static Vector3 V(List<double> p)
         {
             if (p == null || p.Count < 3) return Vector3.zero;
@@ -911,5 +1347,8 @@ namespace Mcoc.UnityViewer
         public Color baseColor;
         public Material baseMat;
         public bool isHighlighted = false;
+        public bool isSeismic = false;
+        public double seismicForceKN;
+        public string seismicCase;
     }
 }

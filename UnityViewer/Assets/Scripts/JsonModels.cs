@@ -184,4 +184,55 @@ namespace Mcoc.UnityViewer
         public double x;
         public double y;
     }
+
+    [Serializable]
+    public class SeismicData
+    {
+        public string units;
+        public double qG_kN_m2;
+        public double psi_Q;
+        public double base_shear_coefficient;
+        public List<SeismicBuilding> buildings;
+        public List<SeismicFloor> floors;
+    }
+
+    [Serializable]
+    public class SeismicBuilding
+    {
+        public string building;
+        public double total_w_seismic_kN;
+        public double total_mass_ton;
+        public double cm_x_m;
+        public double cm_y_m;
+        public double V_EX_kN;
+        public double V_EY_kN;
+        public List<SeismicFloor> floors_EX;
+        public List<SeismicFloor> floors_EY;
+    }
+
+    [Serializable]
+    public class SeismicFloor
+    {
+        public string building;
+        public string floor;
+        public double z_m;
+        public double area_m2;
+        public double wG_kN;
+        public double wQ_kN;
+        public double w_seismic_kN;
+        public double mass_ton;
+        public double cm_x;
+        public double cm_y;
+        public double Lx_m;
+        public double Ly_m;
+        public double F_kN;
+        public double F_EX_kN;
+        public double F_EY_kN;
+        public double story_shear_EX_kN;
+        public double story_shear_EY_kN;
+        public double e_accidental_m;
+        public double M_torsion_EX_kNm;
+        public double M_torsion_EY_kNm;
+        public double M_torsion_accidental_kNm;
+    }
 }
