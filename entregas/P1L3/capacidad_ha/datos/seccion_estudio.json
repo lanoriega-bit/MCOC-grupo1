@@ -1,0 +1,155 @@
+{
+  "section_id": "C_P2_01_0001_lab_fiber_section",
+  "building_column": {
+    "json_id": {
+      "value": "C_P2_01_0001",
+      "origin": "CONFIRMADO_EDIFICIO",
+      "source": "entregas/P1L2/edificio2/datos/1.json"
+    },
+    "plan_label": {
+      "value": "P.70x70",
+      "origin": "CONFIRMADO_EDIFICIO",
+      "source": "/home/luis/MCOC-grupo1/recursos/planos/edificio2/2024_22-101-Modelo.pdf"
+    },
+    "geometry_source": {
+      "value": "Seccion 700 x 700 mm confirmada en plano; geometria procesada desde DXF oficial en JSON.",
+      "origin": "CONFIRMADO_EDIFICIO",
+      "source": "entregas/P1L2/edificio2/datos/1.json; 2024_22-101-Modelo.pdf"
+    }
+  },
+  "geometry": {
+    "b_m": {
+      "value": 0.70,
+      "origin": "CONFIRMADO_EDIFICIO",
+      "source": "Etiqueta P.70x70 en 2024_22-101-Modelo.pdf y dimensiones en entregas/P1L2/edificio2/datos/1.json"
+    },
+    "h_m": {
+      "value": 0.70,
+      "origin": "CONFIRMADO_EDIFICIO",
+      "source": "Etiqueta P.70x70 en 2024_22-101-Modelo.pdf y dimensiones en entregas/P1L2/edificio2/datos/1.json"
+    },
+    "cover_m": {
+      "value": 0.04,
+      "origin": "ASUMIDO_LAB",
+      "source": "Hipotesis de laboratorio: recubrimiento no confirmado en planos disponibles. Se interpreta como recubrimiento libre hasta la superficie de la barra longitudinal."
+    }
+  },
+  "reinforcement": {
+    "num_bars": {
+      "value": 12,
+      "origin": "ASUMIDO_LAB",
+      "source": "Hipotesis de laboratorio: 4 esquinas + 2 adicionales por cara, sin duplicar esquinas."
+    },
+    "bar_diameter_m": {
+      "value": 0.025,
+      "origin": "ASUMIDO_LAB",
+      "source": "Hipotesis de laboratorio: Ø25."
+    },
+    "arrangement": {
+      "value": "4 corner bars plus 2 additional bars per face; symmetric about y and z axes; no duplicated corners.",
+      "origin": "ASUMIDO_LAB",
+      "source": "Hipotesis de laboratorio solicitada para demostrar OpenSees Fiber Section."
+    }
+  },
+  "materials": {
+    "concrete": {
+      "model": {
+        "value": "Concrete01",
+        "origin": "ASUMIDO_LAB",
+        "source": "Modelo simplificado sin traccion y sin confinamiento; evita inventar parametros de Concrete02 no disponibles."
+      },
+      "fc_pa": {
+        "value": 30000000.0,
+        "origin": "ASUMIDO_LAB",
+        "source": "Hipotesis de laboratorio: f'c = 30 MPa."
+      },
+      "epsc0": {
+        "value": -0.002,
+        "origin": "ASUMIDO_LAB",
+        "source": "Parametro explicito requerido por Concrete01 para ensayo de laboratorio."
+      },
+      "fpcu_ratio": {
+        "value": 0.20,
+        "origin": "ASUMIDO_LAB",
+        "source": "Parametro explicito requerido por Concrete01; resistencia residual no confinada simplificada."
+      },
+      "epsu": {
+        "value": -0.0035,
+        "origin": "ASUMIDO_LAB",
+        "source": "Parametro explicito requerido por Concrete01 para hormigon no confinado de laboratorio."
+      }
+    },
+    "steel": {
+      "model": {
+        "value": "Steel01",
+        "origin": "ASUMIDO_LAB",
+        "source": "Modelo bilineal simple para acero longitudinal; suficiente para QA de seccion."
+      },
+      "fy_pa": {
+        "value": 420000000.0,
+        "origin": "ASUMIDO_LAB",
+        "source": "Hipotesis de laboratorio: fy = 420 MPa."
+      },
+      "Es_pa": {
+        "value": 200000000000.0,
+        "origin": "ASUMIDO_LAB",
+        "source": "Hipotesis de laboratorio: Es = 200000 MPa."
+      },
+      "hardening_ratio": {
+        "value": 0.0,
+        "origin": "ASUMIDO_LAB",
+        "source": "Simplificacion elastoplastica perfecta para no introducir endurecimiento arbitrario."
+      }
+    }
+  },
+  "fiber_discretization": {
+    "num_fibers_y": {
+      "value": 28,
+      "origin": "ASUMIDO_LAB",
+      "source": "Discretizacion configurable para laboratorio."
+    },
+    "num_fibers_z": {
+      "value": 28,
+      "origin": "ASUMIDO_LAB",
+      "source": "Discretizacion configurable para laboratorio."
+    }
+  },
+  "analysis": {
+    "moment_curvature": {
+      "axial_load_n": {
+        "value": 0.0,
+        "origin": "ASUMIDO_LAB",
+        "source": "Ensayo inicial M-phi sin carga axial aplicada. Convencion: compresion negativa, traccion positiva."
+      },
+      "target_curvature_factor_phi_y": {
+        "value": 6.0,
+        "origin": "ASUMIDO_LAB",
+        "source": "Curvatura objetivo derivada como multiplo de phi_y = epsilon_y / distancia al acero extremo; cubre rango posfluencia sin forzar degradacion numerica no convergida."
+      },
+      "num_steps": {
+        "value": 240,
+        "origin": "ASUMIDO_LAB",
+        "source": "Numero de incrementos suficiente para una curva suave de laboratorio."
+      }
+    },
+    "axial_capacity": {
+      "target_strain_factor_epsu": {
+        "value": 1.00,
+        "origin": "ASUMIDO_LAB",
+        "source": "Criterio numerico de ensayo: comprimir hasta epsu de Concrete01 para observar el maximo axial y evitar la rama de rigidez tangente nula posterior."
+      },
+      "num_steps": {
+        "value": 220,
+        "origin": "ASUMIDO_LAB",
+        "source": "Numero de incrementos para el ensayo axial puro de seccion."
+      }
+    },
+    "pm_interaction": {
+      "p50_target_curvature_factor_phi_y": {
+        "value": 1.25,
+        "origin": "ASUMIDO_LAB",
+        "source": "Parametro numerico para el punto P50: el objetivo global 6 phi_y induce falla post-pico antes de completar el recorrido; 1.25 phi_y captura el maximo convergido sin inventar puntos posteriores."
+      }
+    }
+  }
+}
