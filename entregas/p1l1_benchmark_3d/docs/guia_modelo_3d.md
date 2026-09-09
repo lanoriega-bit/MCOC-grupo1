@@ -21,14 +21,13 @@
 
 ```
 MCOC-grupo1/
-  opensees/
-    modelo_3d/
-      modelo_3d.py          # modelo principal
-      visualizar_3d.py       # script de visualizacion
-  results/
-    modelo_3d/               # resultados generados
-  docs/
-    guia_modelo_3d.md        # esta guia
+  entregas/
+    p1l1_benchmark_3d/
+      opensees/
+        benchmark_3d.py      # modelo principal
+      results/               # resultados generados
+      docs/
+        guia_modelo_3d.md    # esta guia
 ```
 
 Unidades del modelo: **SI** (`m`, `N`, `Pa`). Siempre.

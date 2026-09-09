@@ -1,5 +1,7 @@
 """Genera un PDF con la explicacion del codigo P1L0 para imprimir y repasar."""
 
+from pathlib import Path
+
 from fpdf import FPDF
 
 
@@ -529,7 +531,7 @@ pdf.add_page()
 pdf.titulo("10. COMANDOS UTILES")
 
 pdf.subtitulo("Ejecutar el script")
-pdf.codigo("python opensees/p1l0/ejemplo_minimo_2d.py")
+pdf.codigo("python entregas/p1l0/opensees/ejemplo_minimo_2d.py")
 
 pdf.subtitulo("Ejecutar desde VS Code")
 pdf.codigo("Abrir terminal con Ctrl+` y pegar el comando anterior")
@@ -551,10 +553,10 @@ pdf.codigo(
 
 pdf.subtitulo("Ubicacion de archivos")
 pdf.codigo(
-    "opensees/p1l0/ejemplo_minimo_2d.py  # El script\n"
-    "results/p1l0/diagrama_pregunta_2.png # El diagrama\n"
-    "docs/p1l0-explicacion.md            # La explicacion\n"
-    "docs/p1l0-pregunta-2-control-1.md   # Ejercicio base\n"
+    "entregas/p1l0/opensees/ejemplo_minimo_2d.py  # El script\n"
+    "entregas/p1l0/results/diagrama_pregunta_2.png # El diagrama\n"
+    "entregas/p1l0/docs/explicacion.md             # La explicacion\n"
+    "entregas/p1l0/docs/enunciado-control-1-p2.md  # Ejercicio base\n"
     "AGENTS.md                           # Reglas para IA"
 )
 
@@ -572,6 +574,6 @@ pdf.codigo(
 )
 
 # Guardar
-output = "C:/Users/josel/OneDrive/Escritorio/MCOC/MCOC-grupo1/docs/P1L0_explicacion_codigo.pdf"
-pdf.output(output)
+output = Path(__file__).resolve().with_name("P1L0_explicacion_codigo.pdf")
+pdf.output(str(output))
 print(f"PDF guardado en: {output}")

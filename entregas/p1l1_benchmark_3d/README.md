@@ -22,6 +22,8 @@ Este sector es una idealizacion inicial para verificar el flujo OpenSeesPy. No r
 ## Contenido
 
 - `docs/semana01.md`: informe de la entrega.
+- `docs/semana01.pdf`: version PDF del informe semanal, si se requiere entregar en PDF.
+- `docs/guia_modelo_3d.md`: guia tecnica del benchmark 3D inicial.
 - `opensees/benchmark_3d.py`: script OpenSeesPy.
 - `results/geometria_deformada_ejes.png`: geometria, deformada, cargas y ejes locales.
 - `results/diagramas_nvm_3d.png`: diagramas espaciales de `N`, `V` y `M` sobre la geometria 3D.

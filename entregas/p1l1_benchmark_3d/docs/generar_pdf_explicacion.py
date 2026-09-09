@@ -1,5 +1,7 @@
 """Genera un PDF con la explicacion del codigo P1L1 benchmark 3D para la defensa."""
 
+from pathlib import Path
+
 from fpdf import FPDF
 
 
@@ -705,6 +707,6 @@ pdf.codigo(
 )
 
 # Guardar
-output = "C:/Users/josel/OneDrive/Escritorio/MCOC/MCOC-grupo1/entregas/p1l1_benchmark_3d/docs/P1L1_explicacion_codigo.pdf"
-pdf.output(output)
+output = Path(__file__).resolve().with_name("P1L1_explicacion_codigo.pdf")
+pdf.output(str(output))
 print(f"PDF guardado en: {output}")

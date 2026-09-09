@@ -30,6 +30,8 @@ Cada entrega se organiza igual:
 - `opensees/`: scripts OpenSeesPy.
 - `results/`: figuras, tablas y verificaciones generadas.
 
+No debe quedar material especifico de una entrega en carpetas raiz como `docs/`, `opensees/`, `tools/` o `reports/`. La raiz conserva solo configuracion/documentacion general del proyecto.
+
 ## Organizacion
 
 ```text
@@ -45,6 +47,7 @@ entregas/
   P1L2/
     data/
     docs/
+    tools/
     opensees/
     unity_export/
     viewer/
@@ -57,7 +60,7 @@ entregas/
       docs/
       opensees/
       results/
-docs/gestion/   bitacoras, enunciado y registros generales
+docs/gestion/   bitacoras, enunciado y registros generales, no archivos de entrega
 ```
 
 ## Alcance general del proyecto
@@ -112,10 +115,10 @@ python entregas/P1L2/opensees/building_gravity_skeleton.py
 Para abrir el viewer web 3D de P1L2:
 
 ```powershell
-python -m http.server 8000
+entregas/P1L2/Abrir_Viewer_P1L2.bat
 ```
 
-Abrir luego:
+O levantar servidor desde la raiz y abrir:
 
 ```text
 http://localhost:8000/entregas/P1L2/viewer/

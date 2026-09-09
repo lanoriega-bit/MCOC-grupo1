@@ -1,12 +1,16 @@
 """Genera imagenes del modelo P1L0 para presentar."""
 
 import math
+from pathlib import Path
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 import openseespy.opensees as ops
 
 def main():
+    out_dir = Path(__file__).resolve().parents[2] / "results" / "legacy"
+    out_dir.mkdir(parents=True, exist_ok=True)
+
     # Parametros
     L = 6.0
     E = 25.0e9
@@ -111,10 +115,9 @@ def main():
     ax.text(3*L/4, 0.15, 'Elemento 2', ha='center', fontsize=9, color='blue')
 
     plt.tight_layout()
-    plt.savefig('C:/Users/josel/OneDrive/Escritorio/MCOC/MCOC-grupo1/docs/p1l0_modelo.png',
-                dpi=150, bbox_inches='tight')
+    plt.savefig(out_dir / 'p1l0_modelo.png', dpi=150, bbox_inches='tight')
     plt.close()
-    print("Guardado: docs/p1l0_modelo.png")
+    print(f"Guardado: {out_dir / 'p1l0_modelo.png'}")
 
     # ========== FIGURA 2: Deformada ==========
     fig, ax = plt.subplots(1, 1, figsize=(10, 4))
@@ -166,10 +169,9 @@ def main():
 
     ax.legend(fontsize=10)
     plt.tight_layout()
-    plt.savefig('C:/Users/josel/OneDrive/Escritorio/MCOC/MCOC-grupo1/docs/p1l0_deformada.png',
-                dpi=150, bbox_inches='tight')
+    plt.savefig(out_dir / 'p1l0_deformada.png', dpi=150, bbox_inches='tight')
     plt.close()
-    print("Guardado: docs/p1l0_deformada.png")
+    print(f"Guardado: {out_dir / 'p1l0_deformada.png'}")
 
     # ========== FIGURA 3: Resultados resumen ==========
     fig, ax = plt.subplots(1, 1, figsize=(8, 3))
@@ -203,13 +205,12 @@ def main():
                  fontweight='bold', pad=20)
 
     plt.tight_layout()
-    plt.savefig('C:/Users/josel/OneDrive/Escritorio/MCOC/MCOC-grupo1/docs/p1l0_validacion.png',
-                dpi=150, bbox_inches='tight')
+    plt.savefig(out_dir / 'p1l0_validacion.png', dpi=150, bbox_inches='tight')
     plt.close()
-    print("Guardado: docs/p1l0_validacion.png")
+    print(f"Guardado: {out_dir / 'p1l0_validacion.png'}")
 
     ops.wipe()
-    print("\nListo. 3 imagenes generadas en docs/")
+    print(f"\nListo. 3 imagenes generadas en {out_dir}")
 
 if __name__ == "__main__":
     main()
