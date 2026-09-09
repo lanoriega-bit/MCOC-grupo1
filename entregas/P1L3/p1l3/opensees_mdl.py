@@ -118,7 +118,16 @@ def aplicar_nodal_loads(am, load_by_beam, silencioso=False):
             "missing_load_N": round(missing_load_N, 3)}
 
 
-def resolver(am, cfg, load_by_beam=None, silencioso=True):
+def aplicar_nodal_laterales(am, nodal_loads, silencioso=False):
+    """Aplica cargas nodales arbitrarias {node_tag: [Fx, Fy, Fz]} (EX/EY)."""
+    n = 0
+    for t, v in nodal_loads.items():
+        ops.load(int(t), float(v[0]), float(v[1]), float(v[2]), 0.0, 0.0, 0.0)
+        n += 1
+    return {"cargas_nodales_aplicadas": n}
+
+
+def resolver(am, cfg, load_by_beam=None, nodal_loads=None, silencioso=True):
     """Resuelve el modelo con las cargas dadas y devuelve resultados crudos."""
     if load_by_beam is None:
         load_by_beam = {}
@@ -126,6 +135,8 @@ def resolver(am, cfg, load_by_beam=None, silencioso=True):
     ops.timeSeries("Linear", 1)
     ops.pattern("Plain", 1, 1)
     aplicar_nodal_loads(am, load_by_beam)
+    if nodal_loads:
+        aplicar_nodal_laterales(am, nodal_loads)
     soportes = {s["node_tag"] for s in am["supports"]}
     for st in soportes:
         ops.fix(st, 1, 1, 1, 1, 1, 1)

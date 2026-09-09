@@ -52,6 +52,12 @@ const selectable = [];
 const objectsByFloor = new Map();
 const objectsByCategory = new Map();
 const objectByTag = new Map();
+
+// --- P1L3: resultados (opt-in via URL) ---
+//   ?analysis=<path|url a analysis_model.json>
+//   ?run=<path|url a results/<run_id>/>
+// Sin ambos parametros la capa de resultados queda desactivada.
+const p1l3 = { analysis: null, run: null, byElementId: new Map(), bySolidTag: new Map(), forcesByTag: new Map() };
 const labels = [];
 const labelLayer = document.createElement("div");
 const selectedLabel = document.createElement("div");
@@ -437,6 +443,59 @@ function drawLocalAxes(segment) {
   scene.add(localAxesGroup);
 }
 
+async function loadP1L3Results() {
+  const params = new URLSearchParams(window.location.search);
+  const analysisUrl = params.get("analysis");
+  const runUrl = params.get("run");
+  if (!analysisUrl || !runUrl) return;
+  const [analysisRes, runRes] = await Promise.all([
+    fetch(analysisUrl).then((res) => (res.ok ? res.json() : null)),
+    fetch(`${runUrl.replace(/\/+$/, "")}/elements.json`).then((res) => (res.ok ? res.json() : null)),
+  ]);
+  if (!analysisRes || !runRes) {
+    console.warn("P1L3 resultados: no se pudieron cargar analysis/run (feat desactivada).");
+    return;
+  }
+  p1l3.analysis = analysisRes;
+  p1l3.run = runUrl;
+  for (const entry of analysisRes.crosswalk ?? []) {
+    if (entry.element_id) p1l3.byElementId.set(entry.element_id, entry);
+    if (entry.geometry_elementTag) p1l3.bySolidTag.set(entry.geometry_elementTag, entry);
+  }
+  for (const [tag, data] of Object.entries(runRes)) {
+    p1l3.forcesByTag.set(Number(tag), data);
+  }
+  statusEl.textContent = `P1L3 resultados cargados (${p1l3.forcesByTag.size} elementos): ${p1l3.run}`;
+}
+
+function p1l3ResultFor(segment) {
+  const cross = p1l3.bySolidTag.get(segment?.solidTag) ?? p1l3.byElementId.get(segment?.id);
+  if (!cross) return null;
+  const data = p1l3.forcesByTag.get(cross.opensees_element_tag);
+  return data ? { crosswalk: cross, data } : null;
+}
+
+function formatForceVector(vec) {
+  const names = ["N", "Vy", "Vz", "Mx", "My", "Mz"];
+  return (vec ?? []).map((value, i) => {
+    const v = Math.abs(value) < 1e-9 ? 0 : value / 1000;
+    return `${names[i]}=${v.toFixed(2)}${i >= 3 ? " kN·m" : " kN"}`;
+  }).join("  ");
+}
+
+function addP1L3ResultRow(fragment, segment) {
+  const info = p1l3ResultFor(segment);
+  if (!info) {
+    addDetailRow(fragment, "P1L3 resultado", "sin mapeo analysis_model (no incluido en el modelo FE)");
+    return;
+  }
+  const d = info.data;
+  addDetailRow(fragment, "P1L3 analysis_id", info.crosswalk.analysis_id);
+  addDetailRow(fragment, "P1L3 tag FE", `elemento ${info.crosswalk.opensees_element_tag} | nodos ${info.crosswalk.opensees_node_i} - ${info.crosswalk.opensees_node_j}`);
+  addDetailRow(fragment, "P1L3 fuerzas extremo i", formatForceVector(d.localForce_end1));
+  addDetailRow(fragment, "P1L3 fuerzas extremo j", formatForceVector(d.localForce_end2));
+}
+
 function updateSelectionPanel(segment) {
   const fragment = document.createDocumentFragment();
   addDetailRow(fragment, "ID", primaryElementId(segment));
@@ -456,6 +515,7 @@ function updateSelectionPanel(segment) {
   addDetailRow(fragment, "Nivel", segment.level_kind ?? "FLOOR");
   addDetailRow(fragment, "Clasificacion", formatClassification(segment));
   addDetailRow(fragment, "Confianza", `${segment.confidence ?? "-"}${segment.section_confidence ? `; seccion ${segment.section_confidence}` : ""}${segment.thickness_confidence ? `; espesor ${segment.thickness_confidence}` : ""}`);
+  if (p1l3.run) addP1L3ResultRow(fragment, segment);
   selectionDetailsEl.replaceChildren(fragment);
   if (copyIdentificationButton) copyIdentificationButton.disabled = false;
 }
@@ -760,6 +820,7 @@ async function boot() {
   if (!response.ok) throw new Error(`No se pudo cargar ${MODEL_URL}`);
   const model = await response.json();
   addModel(model);
+  loadP1L3Results();
   animate();
 }
 

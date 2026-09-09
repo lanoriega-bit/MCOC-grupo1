@@ -1,0 +1,9 @@
+{
+  "hito": "A6",
+  "estado": "INTERFAZ SOLO - sin analisis sismico real",
+  "formato_cargas": "results_local/<dir>/{ex_loads,ey_loads}.json  -> {node_tag: [Fx, Fy, Fz]}",
+  "formato_resultados": "mismo contrato que G/Q (P1L3_RESULT_v1)",
+  "combinacion": "R = lG*G + lQ*Q + lEX*EX + lEY*EY",
+  "superposicion_lateral_demo": "EX+EY explícito == EX+EY superpuesto (modelo lineal)",
+  "nota": "No hay espectro ni analisis dinamico en P1L3: solo se deja el acople. Los datos de prueba (ficticios) viven en results_local/ y NO se versionan."
+}
