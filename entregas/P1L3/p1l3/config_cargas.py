@@ -2,7 +2,7 @@
 
 q_G = PP.LOSA (espesor x densidad x g) + PM.ADIC (terminaciones).
 q_Q = sobrecarga de uso (SC). En el catalogo de planos SC esta en kgf/m2
-(200-500); el default aqui es 2500 N/m2 = 2.5 kN/m2 (zona intermedia) y es
+(200-500); el default aqui es 250 kgf/m2 = 2451.6625 N/m2 (zona intermedia) y es
 PARAMETRICO (el profesor puede ajustarlo sin tocar logica).
 
 Unidades SI (m, N, Pa).
@@ -21,9 +21,9 @@ class CargasConfig:
     q_Q_N_m2: dict = field(default_factory=dict)        # por piso -> SC
     thickness_m: dict = field(default_factory=dict)      # por piso -> espesor losa
     finishes_kN_m2: dict = field(default_factory=dict)   # por piso -> PM.ADIC
-    q_Q_default_N_m2: float = 2500.0
+    q_Q_default_N_m2: float = 250.0 * GRAVITY
     thickness_default_m: float = 0.15
-    finishes_default_kN_m2: float = 2.55  # 260 kgf/m2 del catalogo (P1L2 draft)
+    finishes_default_kN_m2: float = 260.0 * GRAVITY / 1000.0  # 260 kgf/m2, lamina 700
     concrete_density_kg_m3: float = CONCRETE_DENSITY
 
     def __post_init__(self):

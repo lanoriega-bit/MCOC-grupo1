@@ -25,6 +25,9 @@ import csv
 import math
 from pathlib import Path
 
+import matplotlib
+
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import openseespy.opensees as ops
 
@@ -177,7 +180,11 @@ def run_moment_curvature(config: dict, axial_load_n: float, num_steps: int, targ
 def write_csv(rows: list[dict]) -> None:
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
     with CSV_PATH.open("w", newline="", encoding="utf-8") as csv_file:
-        writer = csv.DictWriter(csv_file, fieldnames=["step", "curvature_1_per_m", "moment_kNm", "converged"])
+        writer = csv.DictWriter(
+            csv_file,
+            fieldnames=["step", "curvature_1_per_m", "moment_kNm", "converged"],
+            lineterminator="\n",
+        )
         writer.writeheader()
         writer.writerows(rows)
 

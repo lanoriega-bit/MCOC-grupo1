@@ -9,24 +9,24 @@
     "plan_label": {
       "value": "P.70x70",
       "origin": "CONFIRMADO_EDIFICIO",
-      "source": "/home/luis/MCOC-grupo1/recursos/planos/edificio2/2024_22-101-Modelo.pdf"
+      "source": "Lamina 2024_22-101; evidencia indexada en entregas/P1L2/edificio/datos/planos_full_index.json"
     },
     "geometry_source": {
       "value": "Seccion 700 x 700 mm confirmada en plano; geometria procesada desde DXF oficial en JSON.",
       "origin": "CONFIRMADO_EDIFICIO",
-      "source": "entregas/P1L2/edificio2/datos/1.json; 2024_22-101-Modelo.pdf"
+      "source": "entregas/P1L2/edificio2/datos/1.json; lamina 2024_22-101"
     }
   },
   "geometry": {
     "b_m": {
       "value": 0.70,
       "origin": "CONFIRMADO_EDIFICIO",
-      "source": "Etiqueta P.70x70 en 2024_22-101-Modelo.pdf y dimensiones en entregas/P1L2/edificio2/datos/1.json"
+      "source": "Etiqueta P.70x70 en lamina 2024_22-101 y dimensiones en entregas/P1L2/edificio2/datos/1.json"
     },
     "h_m": {
       "value": 0.70,
       "origin": "CONFIRMADO_EDIFICIO",
-      "source": "Etiqueta P.70x70 en 2024_22-101-Modelo.pdf y dimensiones en entregas/P1L2/edificio2/datos/1.json"
+      "source": "Etiqueta P.70x70 en lamina 2024_22-101 y dimensiones en entregas/P1L2/edificio2/datos/1.json"
     },
     "cover_m": {
       "value": 0.04,
@@ -59,9 +59,9 @@
         "source": "Modelo simplificado sin traccion y sin confinamiento; evita inventar parametros de Concrete02 no disponibles."
       },
       "fc_pa": {
-        "value": 30000000.0,
-        "origin": "ASUMIDO_LAB",
-        "source": "Hipotesis de laboratorio: f'c = 30 MPa."
+        "value": 35000000.0,
+        "origin": "CONFIRMADO_EDIFICIO",
+        "source": "Hormigon G35_10, f'c = 35 MPa, lamina 2024_22-100 para LT2 desde fundaciones a cielo piso 4."
       },
       "epsc0": {
         "value": -0.002,
@@ -87,8 +87,8 @@
       },
       "fy_pa": {
         "value": 420000000.0,
-        "origin": "ASUMIDO_LAB",
-        "source": "Hipotesis de laboratorio: fy = 420 MPa."
+        "origin": "CONFIRMADO_EDIFICIO",
+        "source": "Acero de refuerzo A630-420H, lamina 2024_22-100."
       },
       "Es_pa": {
         "value": 200000000000.0,

@@ -88,8 +88,13 @@ def main() -> None:
         "eq_Q_err_N": round(abs(sum_rz_q) - 2 * p_q, 6),
         "suma_Rz_GQ_N": sum_rz_gq,
         "eq_GQ_err_N": round(abs(sum_rz_gq) - 2 * (p_g + p_q), 6),
-        "nota": "eq_err = |sum Rz| - carga_total_aplicada; el resto (~0.1%) corresponde a vigas cargadas excluidas del FE como componentes flotantes.",
     }
+    deficit_g_pct = 100.0 * abs(eq["eq_G_err_N"]) / eq["P_aplicado_G_N"]
+    eq["nota"] = (
+        "eq_err = |sum Rz| - carga_total_aplicada; el deficit "
+        f"({deficit_g_pct:.6f}%) corresponde a vigas cargadas excluidas del FE "
+        "como componentes flotantes."
+    )
     print("      ->", eq)
 
     print("[6/6] Escribiendo resultados (contrato resultados) ...")

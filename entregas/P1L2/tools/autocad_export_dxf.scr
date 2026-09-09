@@ -1,0 +1,10 @@
+_.FILEDIA
+0
+_.AUDIT
+_Yes
+(setq mcoc_out (strcat (getenv "MCOC_DXF_OUT") "/" (vl-filename-base (getvar "DWGNAME")) ".dxf"))
+_.DXFOUT
+!mcoc_out
+16
+_.QUIT
+_Yes

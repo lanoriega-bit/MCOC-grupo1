@@ -33,8 +33,8 @@ La vinculacion JSON/plano se usa para justificar la geometria `700 x 700 mm`. Lo
 | Seccion | `700 x 700 mm` | `CONFIRMADO EDIFICIO` |
 | Armadura longitudinal | `12Ø25` | `ASUMIDO LAB` |
 | Recubrimiento | `40 mm` | `ASUMIDO LAB` |
-| Resistencia hormigon | `f'c = 30 MPa` | `ASUMIDO LAB` |
-| Fluencia acero | `fy = 420 MPa` | `ASUMIDO LAB` |
+| Resistencia hormigon | `f'c = 35 MPa` | `CONFIRMADO EDIFICIO`, lamina 2024_22-100 |
+| Fluencia acero | `fy = 420 MPa` | `CONFIRMADO EDIFICIO`, A630-420H en lamina 2024_22-100 |
 | Modulo acero | `Es = 200 GPa` | `ASUMIDO LAB` |
 
 La armadura `12Ø25`, el recubrimiento y los materiales son hipotesis de laboratorio para demostrar capacidades no lineales de OpenSeesPy. No corresponden a armadura real confirmada del proyecto.
@@ -70,8 +70,8 @@ Resultados para `P = 0 kN`:
 | --- | ---: |
 | `epsilon_y = fy / Es` | `0.0021` |
 | `phi_y` estimada | `0.00705882 1/m` |
-| `Mmax` | `761.108104 kN*m` |
-| `phi` en `Mmax` | `0.02664706 1/m` |
+| `Mmax` | `766.076309 kN*m` |
+| `phi` en `Mmax` | `0.03105882 1/m` |
 | Pasos convergidos | `240 / 240` |
 
 La figura esta en `results/moment_curvature.png`.
@@ -84,9 +84,9 @@ La capacidad axial pura se obtuvo con un ensayo independiente de seccion en Open
 
 | Magnitud | Valor |
 | --- | ---: |
-| `P0` OpenSees | `17042.332461 kN` de compresion |
-| Estimacion simple | `17174.004215 kN` |
-| Diferencia relativa | `0.767 %` |
+| `P0` OpenSees | `19492.253367 kN` de compresion |
+| Estimacion simple | `19624.004215 kN` |
+| Diferencia relativa | `0.671 %` |
 
 La estimacion simple usa areas y resistencias como control de orden de magnitud. Es solamente QA. El punto de compresion pura usado en la interaccion proviene del analisis numerico OpenSeesPy.
 
@@ -96,14 +96,14 @@ La convencion interna de los analisis y CSV es `P < 0` para compresion y `P > 0`
 
 | Caso | `|P| [kN]` | `Mmax [kN*m]` | `phi@Mmax [1/m]` |
 | --- | ---: | ---: | ---: |
-| `P=0` | `0.000000` | `761.108104` | `0.02664706` |
-| `P25` | `4260.583115` | `1538.232777` | `0.00847059` |
-| `P50` | `8521.166230` | `1458.279690` | `0.00441176` |
-| `Compresion pura` | `17042.332461` | `0.000000` | `0.00000000` |
+| `P=0` | `0.000000` | `766.076309` | `0.03105882` |
+| `P25` | `4873.063342` | `1696.450845` | `0.00864706` |
+| `P50` | `9746.126684` | `1650.071385` | `0.00441176` |
+| `Compresion pura` | `19492.253367` | `0.000000` | `0.00000000` |
 
 La figura esta en `results/pm_interaction.png`.
 
-Estos son primeros puntos de interaccion, no una curva normativa completa. Con solo cuatro puntos no se obtiene una envolvente refinada ni una verificacion de diseno.
+Estos son primeros puntos de interaccion, no una curva normativa completa. Con solo cuatro puntos no se obtiene una envolvente refinada ni una verificacion de diseno. El caso `P50` converge 236 de 240 pasos y falla al intentar continuar despues del maximo registrado; se conserva como `PARTIAL_FAIL_STEP_237` y no debe presentarse como una corrida completamente convergida.
 
 Una compresion axial moderada puede aumentar inicialmente la capacidad flexural porque cambia la posicion del eje neutro y permite movilizar de otra forma el bloque comprimido de hormigon y el acero. A compresiones mayores la capacidad de momento puede reducirse.
 
@@ -127,7 +127,7 @@ Como la respuesta depende del historial y del nivel de deformacion alcanzado, el
 
 - La armadura `12Ø25` fue adoptada para laboratorio.
 - El recubrimiento `40 mm` fue adoptado para laboratorio.
-- Las propiedades `f'c = 30 MPa`, `fy = 420 MPa` y `Es = 200 GPa` fueron adoptadas para laboratorio.
+- `f'c = 35 MPa` y `fy = 420 MPa` estan confirmados para LT2 por la lamina 2024_22-100. `Es = 200 GPa`, los parametros constitutivos restantes y el armado longitudinal se mantienen como hipotesis de laboratorio.
 - No es un chequeo normativo.
 - No es diseno definitivo.
 - Solo se calcularon cuatro primeros puntos `P-M`.

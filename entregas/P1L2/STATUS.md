@@ -1,5 +1,16 @@
 # P1L2 Status
 
+## Auditoria completa de fuentes (2026-09-09)
+
+- Inventariados y convertidos con AutoCAD 60/60 DWG de las series
+  `2017_67` (38) y `2024_22` (22), sin modificar los archivos originales.
+- Indice CAD: `edificio/datos/planos_full_index.json`.
+- Informe y prioridades: `edificio/validacion/AUDITORIA_PLANOS_COMPLETA.md`.
+- Hallazgos principales: cajetines de nivel desfasados en 2017_67-101..103,
+  numero duplicado en el cajetin 2024_22-305, cobertura tributaria incompleta,
+  EX/EY historicos desacoplados y propiedades de material mayoritariamente
+  `UNKNOWN` en el JSON combinado.
+
 ## P1L3 (Parte A completada, commits `558874b`, `f006d3f`, `487ff69` en `main`)
 
 - A1-A2: panos analiticos (110, 3392.62 m2, 647 vigas cargadas) + casos G/Q + conservacion PASS (`rel_error=0.0`).

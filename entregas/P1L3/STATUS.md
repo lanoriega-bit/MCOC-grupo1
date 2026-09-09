@@ -1,5 +1,19 @@
 # P1L3 - Estado de integracion
 
+## Auditoria de planos 2026-09-09
+
+- Se convirtieron e indexaron con AutoCAD 60/60 DWG estructurales: 38 de
+  `2017_67` y 22 de `2024_22`; cero errores de lectura.
+- Informe: `../P1L2/edificio/validacion/AUDITORIA_PLANOS_COMPLETA.md`.
+- Corregida la entrada gravitacional segun laminas 700: peso unitario
+  equivalente a `2500 kgf/m3`, PM default `260 kgf/m2` y Q provisional
+  `250 kgf/m2`, convertidos con `g=9.80665`.
+- Resultados regenerados: `G=21126.625 kN`, `Q=8317.569 kN` sobre los
+  `3392.624 m2` de panos aceptados; conservacion y superposicion PASS.
+- Bloqueo conocido: esos panos no cubren aun toda la envolvente de losas.
+  Los EX/EY historicos usan otra area tributaria (`8565.8412 m2`) y no son
+  demanda final del modelo OpenSees integrado.
+
 Actualizado: 2026-09-09.
 
 ## Objetivo vigente
@@ -62,9 +76,13 @@ marcan como `Modelo FE: no incluido`.
 4. La columna de capacidad usa el ID historico `C_P2_01_0001`, que no esta
    mapeado a un `element_id` publico vigente. No mostrar demanda/capacidad sobre
    una columna hasta resolverlo con geometria y planos.
-5. Armadura `12Ø25`, recubrimiento 40 mm, `f'c=30 MPa` y `fy=420 MPa` son
-   hipotesis de laboratorio, no propiedades confirmadas del edificio.
-6. Faltan auditorias geometricas completas de vigas, muros, voladizos y zonas
+5. Armadura `12Ø25`, recubrimiento 40 mm y parametros constitutivos siguen
+   siendo hipotesis de laboratorio. Para LT2, `f'c=35 MPa` y `fy=420 MPa`
+   quedaron confirmados por la lamina 2024_22-100.
+6. El punto P50 de la interaccion P-M converge 236/240 pasos y queda marcado
+   `PARTIAL_FAIL_STEP_237`; no debe presentarse como validacion completa del
+   tramo post-pico.
+7. Faltan auditorias geometricas completas de vigas, muros, voladizos y zonas
    outboard. Las seis columnas S1 no resueltas solo se reabren con evidencia
    nueva.
 7. Los planos fuente estan archivados fuera de Git. El pipeline geometrico no es

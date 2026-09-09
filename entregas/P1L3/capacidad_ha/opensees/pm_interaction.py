@@ -15,6 +15,9 @@ from __future__ import annotations
 import csv
 import math
 
+import matplotlib
+
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import openseespy.opensees as ops
 
@@ -116,7 +119,11 @@ def run_axial_capacity(config: dict) -> tuple[list[dict], dict]:
 def write_axial_csv(rows: list[dict]) -> None:
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
     with AXIAL_CSV_PATH.open("w", newline="", encoding="utf-8") as csv_file:
-        writer = csv.DictWriter(csv_file, fieldnames=["step", "axial_strain", "axial_force_kN", "converged"])
+        writer = csv.DictWriter(
+            csv_file,
+            fieldnames=["step", "axial_strain", "axial_force_kN", "converged"],
+            lineterminator="\n",
+        )
         writer.writeheader()
         writer.writerows(rows)
 
@@ -190,7 +197,7 @@ def write_pm_csv(rows: list[dict]) -> None:
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
     fields = ["case", "axial_load_kN", "compression_magnitude_kN", "max_moment_kNm", "curvature_at_max_1_per_m", "converged_steps", "status"]
     with PM_CSV_PATH.open("w", newline="", encoding="utf-8") as csv_file:
-        writer = csv.DictWriter(csv_file, fieldnames=fields)
+        writer = csv.DictWriter(csv_file, fieldnames=fields, lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 
@@ -226,7 +233,17 @@ def finite_pm_points(rows: list[dict]) -> bool:
     )
 
 
-def print_qa(config: dict, axial_rows: list[dict], axial_metadata: dict, pm_rows: list[dict], p0_reference_moment_kNm: float = 761.108104) -> None:
+def reference_moment_from_csv() -> float:
+    path = RESULTS_DIR / "moment_curvature.csv"
+    with path.open(encoding="utf-8", newline="") as handle:
+        rows = list(csv.DictReader(handle))
+    converged = [float(row["moment_kNm"]) for row in rows if row["converged"] == "True"]
+    if not converged:
+        raise ValueError(f"Sin pasos convergidos en {path}")
+    return max(converged)
+
+
+def print_qa(config: dict, axial_rows: list[dict], axial_metadata: dict, pm_rows: list[dict], p0_reference_moment_kNm: float) -> None:
     b = float(value(config, "geometry", "b_m"))
     h = float(value(config, "geometry", "h_m"))
     diameter = float(value(config, "reinforcement", "bar_diameter_m"))
@@ -279,7 +296,7 @@ def main() -> None:
     pm_rows = run_pm_points(config, axial_metadata["p0_kN"])
     write_pm_csv(pm_rows)
     plot_pm_interaction(config, pm_rows)
-    print_qa(config, axial_rows, axial_metadata, pm_rows)
+    print_qa(config, axial_rows, axial_metadata, pm_rows, reference_moment_from_csv())
     ops.wipe()
 
 

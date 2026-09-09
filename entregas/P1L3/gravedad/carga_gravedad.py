@@ -20,8 +20,10 @@ from dataclasses import dataclass, field
 # ---------------------------------------------------------------------------
 
 GRAVITY = 9.80665  # m/s2
-CONCRETE_DENSITY = 2400.0  # kg/m3
-CONCRETE_UNIT_WEIGHT = CONCRETE_DENSITY * GRAVITY  # N/m3 (~23536 N/m3)
+# Lamina 700 (series 2017_67 y 2024_22): PP.LOSA = e(m) x 2500 kgf/m3.
+# Se conserva el valor del plano y se convierte a SI mediante GRAVITY.
+CONCRETE_DENSITY = 2500.0  # kg/m3 equivalente para convertir el valor en kgf/m3
+CONCRETE_UNIT_WEIGHT = CONCRETE_DENSITY * GRAVITY  # N/m3 (~24517 N/m3)
 KN = 1_000.0
 
 

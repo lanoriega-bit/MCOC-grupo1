@@ -2,36 +2,36 @@
   "hito": "A5",
   "analysis_model": "C:\\Users\\matis\\OneDrive\\Documentos\\Proyecto_1_MCOC\\entregas\\P1L3\\results\\a3a4\\analysis_model.json",
   "superposicion": {
-    "desplazamientos_rel_error": 2.2051490969284817e-12,
-    "reacciones_rel_error": 4.462878311515011e-13,
-    "fuerzas_internas_rel_error": 1.4262416300962393e-12,
+    "desplazamientos_rel_error": 2.0657591025181552e-12,
+    "reacciones_rel_error": 4.004178889615088e-13,
+    "fuerzas_internas_rel_error": 6.930992284583823e-13,
     "status": "PASS",
     "tol": 1e-09
   },
   "equilibrio": {
-    "P_aplicado_G_N": 20628490.714,
-    "P_trib_G_N": 20628490.683,
-    "suma_Rz_G_N": 20470978.915997,
-    "eq_G_err_N": -157511.798003,
-    "P_aplicado_Q_N": 8481560.046,
-    "P_trib_Q_N": 8481560.028,
-    "suma_Rz_Q_N": 8416797.874,
-    "eq_Q_err_N": -64762.172,
-    "suma_Rz_GQ_N": 28887776.790004,
-    "eq_GQ_err_N": -222273.969996,
-    "nota": "eq_err = |sum Rz| - carga_total_aplicada; el resto (~0.76% en G y Q) corresponde a vigas cargadas excluidas del FE como componentes flotantes."
+    "P_aplicado_G_N": 21126625.416,
+    "P_trib_G_N": 21126625.426,
+    "suma_Rz_G_N": 20965310.036007,
+    "eq_G_err_N": -161315.379993,
+    "P_aplicado_Q_N": 8317569.004,
+    "P_trib_Q_N": 8317569.065,
+    "suma_Rz_Q_N": 8254059.020003,
+    "eq_Q_err_N": -63509.983997,
+    "suma_Rz_GQ_N": 29219369.056003,
+    "eq_GQ_err_N": -224825.363997,
+    "nota": "eq_err = |sum Rz| - carga_total_aplicada; el deficit (0.763564%) corresponde a vigas cargadas excluidas del FE como componentes flotantes."
   },
   "resumen_caso_G": {
     "n_slabs": 110,
     "n_beams": 647,
     "A_total_m2": 3392.624011,
-    "P_total_kN": 20628.491
+    "P_total_kN": 21126.625
   },
   "resumen_caso_Q": {
     "n_slabs": 110,
     "n_beams": 647,
     "A_total_m2": 3392.624011,
-    "P_total_kN": 8481.56
+    "P_total_kN": 8317.569
   },
   "nota": "Superposicion: R(G+Q) explícito vs R(G)+R(Q). En modelo lineal elastico los errores relativos (norma euclidiana) deben ser ~0. Equilibrio FE: suma de Rz + cargas aplicadas = 0."
 }
