@@ -1,5 +1,13 @@
 # P1L2 Status
 
+## P1L3 (Parte A completada, commits `558874b`, `f006d3f`, `487ff69` en `main`)
+
+- A1-A2: panos analiticos (110, 3392.62 m2, 647 vigas cargadas) + casos G/Q + conservacion PASS (`rel_error=0.0`).
+- A3-A4: `results/a3a4/analysis_model.json` FE (813 nodos, 1312 elementos: 148 columnas, 163 muros, 1001 vigas; 106 soportes) + crosswalk `element_id`/`geometry_elementTag`/`analysis_id`/`opensees_*`. Componentes flotantes (93 elementos) excluidos e idealizados (`floating_excluded`).
+- A5: OpenSees elasticBeamColumn clasico (A,E,G,J,Iy,Iz,transf); superposicion `G/Q` PASS (rel_errors: disp 2.2e-12, reacc 4.5e-13, internas 1.4e-12). Equilibrio residual ~0.8% = carga de flotantes excluidos (documentado).
+- A6: contrato EX/EY (interfaz sola; demo FICTICIO en `entregas/P1L3/results_local/`, no versionado) + A7: viewer con capa de resultados via `?analysis=...&run=...`.
+- Detalles: `entregas/P1L3/DEFENSA.md`, `entregas/P1L3/PLANIFICACION.md`.
+
 ## Transferencia
 - Documento maestro: `PROJECT_HANDOFF.md` (raiz del repositorio) + plan P1L3 en `entregas/P1L3/PLANIFICACION.md`. Leerlos antes de modificar geometria o iniciar P1L3.
 
