@@ -95,5 +95,34 @@ namespace Mcoc.UnityViewer
                 return null;
             }
         }
+
+        public static AnalysisResultsData LoadAnalysisResults(string fileName = "analysis_results.json")
+        {
+            return LoadOptional<AnalysisResultsData>(fileName, "resultados de analisis");
+        }
+
+        public static CapacityData LoadCapacity(string fileName = "capacity_ha.json")
+        {
+            return LoadOptional<CapacityData>(fileName, "capacidad HA");
+        }
+
+        private static T LoadOptional<T>(string fileName, string label) where T : class
+        {
+            string path = Path.Combine(Application.streamingAssetsPath, fileName);
+            if (!File.Exists(path))
+            {
+                Debug.LogWarning($"[JsonLoader] No existe {label}: {path}");
+                return null;
+            }
+            try
+            {
+                return JsonUtility.FromJson<T>(File.ReadAllText(path));
+            }
+            catch (System.Exception ex)
+            {
+                Debug.LogError($"[JsonLoader] Error al parsear {label}: {ex.Message}");
+                return null;
+            }
+        }
     }
 }

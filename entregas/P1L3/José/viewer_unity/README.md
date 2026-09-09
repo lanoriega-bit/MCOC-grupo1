@@ -1,13 +1,13 @@
-# UnityViewer — Visor 3D en Unity (rol "Unity Viewer")
+# Unity P1L3 — laboratorio estructural integrado
 
 Proyecto Unity de la parte de visualizacion/interaccion del laboratorio (el lado
 "Unity" de la arquitectura OpenSees <-> Unity). Lee el mismo JSON de contrato del
 modelo (`model_viewer.json`) y permite mostrar/ocultar por tipo y piso, y hacer
 clic sobre elementos para inspeccionar sus datos.
 
-> Este repositorio preparado en la Opcion B: es una **estructura de codigo Unity
-> lista para abrir**. Para compilar/ejecutar hace falta tener el Unity Editor
-> instalado (ver seccion "Como abrir").
+Este proyecto es la interfaz visual principal de P1L3. La escena se encuentra
+versionada y los datos se regeneran desde las fuentes vigentes mediante
+`entregas/P1L3/scripts/build_unity_bundle.py`.
 
 ## Que implementa (requisitos del rol "Unity Viewer")
 
@@ -44,27 +44,21 @@ clic sobre elementos para inspeccionar sus datos.
 
 ## Requisitos
 
-- **Unity Editor 2022.3 LTS** o superior (el proyecto declara `2022.3.20f1`).
+- **Unity Editor 6000.6.0f1** (coincide con `ProjectSettings/ProjectVersion.txt`).
 - Conexion descargada de paquetes base.
 - Modelo a inspeccionar en `Assets/StreamingAssets/model_viewer.json`.
 
 ## Como abrir (Opcion A: compilar/ejecutar)
 
-1. Instala **Unity Hub** desde https://unity.com/download
-   - En Unity Hub: instala una version **2022.3 LTS** (o la que Uses el resto del grupo).
-2. En Unity Hub: **Add** -> eliges la carpeta `UnityViewer/` de este repo.
-3. Unity abre el proyecto y **regenera** automáticamente las carpetas que faltan
-   (`Library/`, `.meta`, resto de `ProjectSettings/`) y descarga los paquetes.
-4. Crea una escena (o usa la que armes):
-   - Añade un `GameObject` vacío y arregle el script `ViewerController`.
-   - Arregla los campos (contenedores de toggles, `Text` de info/status).
-   - Asigna una camara principal.
-5. Pulsa **Play**. El visor carga `model_viewer.json`, dibuja el edificio y
+1. Ejecuta `python entregas/P1L3/scripts/build_unity_bundle.py` desde la raiz.
+2. En Unity Hub: **Add** y elige esta carpeta `viewer_unity/`.
+3. Abre `Assets/Main.unity`.
+4. Pulsa **Play**. El visor carga `model_viewer.json`, dibuja el edificio y
    muestra los toggles y el panel de seleccion.
 
-> Nota: por el momento la escena UI de ejemplo no esta serializada en el repo
-> (los `.unity` y `.meta` los genera el Editor al guardar). La primera vez montas
-> la escena manualmente siguiendo el paso 4; el codigo va ya hecho.
+Los resultados EX/EY actuales describen masas y fuerzas pseudoestaticas, pero
+todavia no fueron aplicados al modelo OpenSees. Unity debe identificarlos como
+patrones de carga, no como respuesta estructural calculada.
 
 ## Contrato JSON
 

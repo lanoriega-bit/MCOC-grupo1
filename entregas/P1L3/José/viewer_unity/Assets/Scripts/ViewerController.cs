@@ -37,7 +37,11 @@ namespace Mcoc.UnityViewer
         private ModelData model;
         private TributaryData tributaries;
         private SeismicData seismic;
+        private AnalysisResultsData analysisResults;
+        private CapacityData capacity;
         private readonly Dictionary<string, Vector2> memberTrib = new Dictionary<string, Vector2>();
+        private readonly Dictionary<string, AnalysisElementResult> analysisByElementId = new Dictionary<string, AnalysisElementResult>();
+        private readonly Dictionary<string, ExcludedAnalysisElement> excludedByElementId = new Dictionary<string, ExcludedAnalysisElement>();
         private readonly Dictionary<string, List<GameObject>> byType = new Dictionary<string, List<GameObject>>();
         private readonly Dictionary<string, List<GameObject>> byFloor = new Dictionary<string, List<GameObject>>();
         private readonly Dictionary<string, bool> typeVisible = new Dictionary<string, bool>();
@@ -101,6 +105,14 @@ namespace Mcoc.UnityViewer
             LoadMaterials();
             model = JsonLoader.LoadModel(jsonFileName);
             if (model == null) { SetStatus("Error: no se pudo cargar el modelo."); return; }
+            analysisResults = JsonLoader.LoadAnalysisResults();
+            capacity = JsonLoader.LoadCapacity();
+            if (analysisResults != null && analysisResults.elements != null)
+                foreach (var result in analysisResults.elements)
+                    if (!string.IsNullOrEmpty(result.element_id)) analysisByElementId[result.element_id] = result;
+            if (analysisResults != null && analysisResults.excluded_elements != null)
+                foreach (var item in analysisResults.excluded_elements)
+                    if (!string.IsNullOrEmpty(item.element_id)) excludedByElementId[item.element_id] = item;
             tributaries = JsonLoader.LoadTributaries();
             if (tributaries != null)
             {
@@ -870,6 +882,24 @@ namespace Mcoc.UnityViewer
                 cargaLine = $"Carga tributaria que soporta: {ei.tribLoadKN.ToString("F3")} kN\n" +
                     $"Area tributaria asociada: {ei.tribAreaM2.ToString("F3")} m2";
             }
+            string analysisLine = "\nModelo FE: sin correspondencia";
+            if (analysisByElementId.TryGetValue(id, out var ar))
+            {
+                var f = ar.localForce_end1;
+                string forces = f != null && f.Count >= 6
+                    ? $"P={f[0] / 1000.0:F3} kN, Vy={f[1] / 1000.0:F3} kN, Vz={f[2] / 1000.0:F3} kN, T={f[3] / 1000.0:F3} kNm, My={f[4] / 1000.0:F3} kNm, Mz={f[5] / 1000.0:F3} kNm"
+                    : "fuerzas no disponibles";
+                analysisLine = $"\nModelo FE: incluido\nCaso: {ar.case_name}\nanalysis_id: {ar.analysis_id}\nOpenSees tag: {ar.opensees_tag}\nExtremo i: {forces}";
+            }
+            else if (excludedByElementId.TryGetValue(id, out var excluded))
+            {
+                analysisLine = $"\nModelo FE: no incluido\nMotivo: {excluded.reason}";
+            }
+            string capacityLine = "";
+            if (capacity != null && !string.IsNullOrEmpty(capacity.mapped_element_id) && capacity.mapped_element_id == id)
+            {
+                capacityLine = $"\nCapacidad HA (laboratorio): {capacity.b_m:F2} x {capacity.h_m:F2} m, {capacity.num_bars} barras, f'c={capacity.fc_pa / 1e6:F1} MPa, fy={capacity.fy_pa / 1e6:F1} MPa";
+            }
             lastInfo = $"ID: {id}\n" +
                 $"elementTag: {ei.elementTag ?? "-"}\n" +
                 $"Tipo: {cat}\n" +
@@ -881,7 +911,8 @@ namespace Mcoc.UnityViewer
                 $"Material: {ei.materialName}\n" +
                 $"Longitud: {ei.lengthM.ToString("F3")} m\n" +
                 $"Tributaria: {trib}" +
-                (string.IsNullOrEmpty(cargaLine) ? "" : "\n" + cargaLine);
+                (string.IsNullOrEmpty(cargaLine) ? "" : "\n" + cargaLine) +
+                analysisLine + capacityLine;
             if (infoText != null) infoText.text = lastInfo;
             lastSelected = ei;
         }

@@ -235,4 +235,73 @@ namespace Mcoc.UnityViewer
         public double M_torsion_EY_kNm;
         public double M_torsion_accidental_kNm;
     }
+
+    [Serializable]
+    public class AnalysisResultsData
+    {
+        public string format;
+        public string run_id;
+        public string case_name;
+        public List<AnalysisElementResult> elements;
+        public List<ExcludedAnalysisElement> excluded_elements;
+    }
+
+    [Serializable]
+    public class AnalysisElementResult
+    {
+        public string case_name;
+        public string element_id;
+        public string analysis_id;
+        public string geometry_elementTag;
+        public int opensees_tag;
+        public string type;
+        public string floor;
+        public int node_i;
+        public int node_j;
+        public List<double> localForce_end1;
+        public List<double> localForce_end2;
+    }
+
+    [Serializable]
+    public class ExcludedAnalysisElement
+    {
+        public string element_id;
+        public string analysis_id;
+        public string geometry_elementTag;
+        public string reason;
+    }
+
+    [Serializable]
+    public class CapacityData
+    {
+        public string format;
+        public string section_id;
+        public string building_column_id;
+        public string building_column_origin;
+        public string mapped_element_id;
+        public double b_m;
+        public double h_m;
+        public double cover_m;
+        public int num_bars;
+        public double bar_diameter_m;
+        public double fc_pa;
+        public double fy_pa;
+        public double Es_pa;
+        public int num_fibers_y;
+        public int num_fibers_z;
+        public List<PMPoint> pm_interaction;
+        public string disclaimer;
+    }
+
+    [Serializable]
+    public class PMPoint
+    {
+        public string case_name;
+        public double axial_load_kN;
+        public double compression_magnitude_kN;
+        public double max_moment_kNm;
+        public double curvature_at_max_1_per_m;
+        public double converged_steps;
+        public string status;
+    }
 }

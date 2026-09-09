@@ -1,0 +1,45 @@
+{
+  "format": "P1L3_UNITY_BUNDLE_v1",
+  "generated_utc": "2026-09-09T17:40:13.565136+00:00",
+  "source_of_truth": {
+    "geometry": "entregas/P1L2/unity_export/model_combined_viewer.json",
+    "analysis_model": "entregas/P1L3/results/a3a4/analysis_model.json",
+    "analysis_run": "entregas/P1L3/results/a5/superposicion_gq_v1",
+    "seismic": "entregas/P1L3/José/results/seismic_ex_ey.json",
+    "capacity": "entregas/P1L3/capacidad_ha"
+  },
+  "files": [
+    {
+      "name": "model_viewer.json",
+      "sha256": "c091f99f516bfedcc0ddd5004fa0c74fc7016a0c5df44b18a7e5ac88b6f9704a"
+    },
+    {
+      "name": "seismic_ex_ey.json",
+      "sha256": "a0b969796f9475262797aff9ecf7bce841cbeaf499afa690d5f59d94c82839ca"
+    },
+    {
+      "name": "analysis_results.json",
+      "sha256": "0d1c1f96cfa32beec8e5df71c3987a55e591a2d468183e2fac6df7cd4b5dc5ad"
+    },
+    {
+      "name": "capacity_ha.json",
+      "sha256": "87c730d66a73ab8a232048949b4e7c78069026802d7cd655a44a79529b76a0ed"
+    }
+  ],
+  "validation": {
+    "geometry_solids": 1561,
+    "geometry_floors": [
+      "S1",
+      "P1",
+      "P2",
+      "P3",
+      "P4"
+    ],
+    "analysis_elements": 1312,
+    "floating_excluded": 93,
+    "superposition_status": "PASS",
+    "gravity_reaction_deficit_percent": 0.763564,
+    "seismic_is_applied_to_opensees": false,
+    "capacity_uses_lab_assumptions": true
+  }
+}
