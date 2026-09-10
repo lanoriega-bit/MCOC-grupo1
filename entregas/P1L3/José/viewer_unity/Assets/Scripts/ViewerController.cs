@@ -35,6 +35,7 @@ namespace Mcoc.UnityViewer
         [SerializeField] private Text statusText;
 
         private ModelData model;
+        private ArchitecturalVisualModelData architecture;
         private TributaryData tributaries;
         private SeismicData seismic;
         private AnalysisResultsData analysisResults;
@@ -62,6 +63,8 @@ namespace Mcoc.UnityViewer
         private readonly Dictionary<string, List<GameObject>> byFloor = new Dictionary<string, List<GameObject>>();
         private readonly Dictionary<string, bool> typeVisible = new Dictionary<string, bool>();
         private readonly Dictionary<string, bool> floorVisible = new Dictionary<string, bool>();
+        private readonly Dictionary<GameObject, string> registeredType = new Dictionary<GameObject, string>();
+        private readonly Dictionary<GameObject, string> registeredFloor = new Dictionary<GameObject, string>();
         private readonly List<ElementInfo> allElements = new List<ElementInfo>();
         private static readonly Dictionary<string, Material> MaterialsByCat = new Dictionary<string, Material>();
 
@@ -94,10 +97,12 @@ namespace Mcoc.UnityViewer
             { "column_plan", "Pilares CAD" },
             { "wall", "Muros" },
             { "support", "Apoyos" },
-            { "diaphragm", "Diafragmas" },
-            { "slab", "Piso/techo" },
+            { "diaphragm", "Analisis - Diafragma" },
+            { "slab", "Referencia - Losa provisional" },
             { "axis", "Ejes CAD" },
-            { "slab_edge", "Borde losa" },
+            { "slab_edge", "Bordes DXF RLE-LOSA" },
+            { "architectural_slab", "Arquitectura - Losa P4" },
+            { "architectural_slab_edge", "Arquitectura - Borde reconstruido" },
             { "node", "Nodos" },
             { "cad_reference", "Lineas CAD ref." },
             { "tributary", "Areas tributarias" },
@@ -140,6 +145,13 @@ namespace Mcoc.UnityViewer
             LoadMaterials();
             model = JsonLoader.LoadModel(jsonFileName);
             if (model == null) { SetStatus("Error: no se pudo cargar el modelo."); return; }
+            var visualLines = JsonLoader.LoadVisualLines();
+            if (visualLines != null)
+            {
+                model.segments = visualLines.segments;
+                model.diaphragms = visualLines.diaphragms;
+            }
+            architecture = JsonLoader.LoadArchitecture();
             analysisResults = JsonLoader.LoadAnalysisResults();
             analysisCases = JsonLoader.LoadAnalysisCases();
             delivery = JsonLoader.LoadDelivery();
@@ -163,12 +175,13 @@ namespace Mcoc.UnityViewer
                             memberTrib[a.elementTag] = new Vector2((float)a.area_m2, (float)a.load_kN);
             }
             BuildScene();
+            if (architecture != null) BuildArchitecture();
             if (tributaries != null) BuildTributaries();
             seismic = JsonLoader.LoadSeismic();
             if (seismic != null) BuildSeismic();
             RunVisibilitySelfCheck();
             ResetPresentation();
-            SetStatus($"{model.solids?.Count ?? 0} solidos, {model.segments?.Count ?? 0} lineas CAD, {model.labels?.Count ?? 0} etiquetas");
+            SetStatus($"{model.solids?.Count ?? 0} solidos, {model.segments?.Count ?? 0} lineas CAD, {architecture?.objects?.Count ?? 0} objeto(s) arquitectonico(s)");
         }
 
         void ActivateAnalysisCase(string requested)
@@ -213,6 +226,8 @@ namespace Mcoc.UnityViewer
             MaterialsByCat["axis"] = LoadMat("MatAluminio", new Color(0.85f, 0.85f, 0.85f));
             MaterialsByCat["node"] = LoadMat("MatAcero", new Color(1f, 0.85f, 0.35f));
             MaterialsByCat["cad_reference"] = LoadMat("MatAcero", new Color(0.6f, 0.7f, 0.8f));
+            MaterialsByCat["architectural_slab"] = LoadMat("MatConcreto", new Color(0.28f, 0.72f, 0.68f));
+            MaterialsByCat["architectural_slab_edge"] = LoadMat("MatAcero", new Color(0.95f, 0.82f, 0.25f));
         }
 
         static Material LoadMat(string resName, Color tint)
@@ -235,6 +250,112 @@ namespace Mcoc.UnityViewer
             if (model.diaphragms != null)
                 foreach (var dia in model.diaphragms) CreateDiaphragm(dia);
             CreateNodes();
+        }
+
+        void BuildArchitecture()
+        {
+            if (architecture.objects == null) return;
+            foreach (var item in architecture.objects)
+            {
+                if (item == null || item.surface_vertices_xy_flat == null || item.surface_triangles == null || item.outline_xy_flat == null) continue;
+                if (item.surface_vertices_xy_flat.Count < 6 || item.surface_triangles.Count < 3 || item.outline_xy_flat.Count < 6) continue;
+                CreateArchitecturalSlab(item);
+            }
+        }
+
+        void CreateArchitecturalSlab(ArchitecturalObjectData item)
+        {
+            int n = item.surface_vertices_xy_flat.Count / 2;
+            float top = (float)item.top_z_m;
+            float bottom = top - (float)item.thickness_m;
+            var vertices = new Vector3[n * 2];
+            for (int i = 0; i < n; i++)
+            {
+                float x = (float)item.surface_vertices_xy_flat[i * 2];
+                float y = (float)item.surface_vertices_xy_flat[i * 2 + 1];
+                vertices[i] = new Vector3(x, y, top);
+                vertices[i + n] = new Vector3(x, y, bottom);
+            }
+            var triangles = new List<int>();
+            for (int i = 0; i + 2 < item.surface_triangles.Count; i += 3)
+            {
+                int a = item.surface_triangles[i];
+                int b = item.surface_triangles[i + 1];
+                int c = item.surface_triangles[i + 2];
+                triangles.Add(a); triangles.Add(b); triangles.Add(c);
+                triangles.Add(c + n); triangles.Add(b + n); triangles.Add(a + n);
+            }
+            int outlineCount = Mathf.Min(item.outline_xy_flat.Count / 2, n);
+            for (int i = 0; i < outlineCount; i++)
+            {
+                int j = (i + 1) % outlineCount;
+                triangles.Add(i); triangles.Add(j + n); triangles.Add(j);
+                triangles.Add(i); triangles.Add(i + n); triangles.Add(j + n);
+            }
+
+            var mesh = new Mesh { name = item.id + "_mesh" };
+            mesh.vertices = vertices;
+            mesh.triangles = triangles.ToArray();
+            mesh.RecalculateNormals();
+            mesh.RecalculateBounds();
+
+            var go = new GameObject(item.id);
+            go.AddComponent<MeshFilter>().sharedMesh = mesh;
+            var renderer = go.AddComponent<MeshRenderer>();
+            renderer.sharedMaterial = MatFor("architectural_slab");
+            go.AddComponent<MeshCollider>().sharedMesh = mesh;
+            var info = go.AddComponent<ElementInfo>();
+            info.go = go;
+            info.id = item.id;
+            info.humanId = item.id;
+            info.category = "architectural_slab";
+            info.kind = "extruded_polygon";
+            info.floor = item.floor;
+            info.building = item.building;
+            info.sourceLayer = item.source_layer;
+            info.sourceDxf = item.source_sheet;
+            info.materialName = "hormigon arquitectonico (visual)";
+            info.heightM = item.thickness_m;
+            info.visualAreaM2 = item.area_m2;
+            info.confidence = item.confidence;
+            info.participatesInFE = item.participates_in_FE;
+            info.hasFEParticipationFlag = true;
+            info.coordZBottom = bottom;
+            info.coordZTop = top;
+            info.coordCenter = mesh.bounds.center;
+            info.nodeI = vertices[0];
+            info.nodeJ = vertices[Mathf.Min(1, n - 1)];
+            info.baseColor = tintOf("architectural_slab");
+            Register(go, "architectural_slab", item.floor);
+            allElements.Add(info);
+
+            var edge = new GameObject(item.id + "-EDGE");
+            var line = edge.AddComponent<LineRenderer>();
+            line.positionCount = outlineCount;
+            line.loop = true;
+            for (int i = 0; i < outlineCount; i++)
+                line.SetPosition(i, new Vector3((float)item.outline_xy_flat[i * 2], (float)item.outline_xy_flat[i * 2 + 1], top + 0.01f));
+            line.startWidth = 0.08f;
+            line.endWidth = 0.08f;
+            line.material = LineMaterial(tintOf("architectural_slab_edge"));
+            var edgeInfo = edge.AddComponent<ElementInfo>();
+            edgeInfo.go = edge;
+            edgeInfo.id = item.id + "-EDGE";
+            edgeInfo.humanId = edgeInfo.id;
+            edgeInfo.category = "architectural_slab_edge";
+            edgeInfo.floor = item.floor;
+            edgeInfo.building = item.building;
+            edgeInfo.sourceLayer = item.source_layer;
+            edgeInfo.sourceDxf = item.source_sheet;
+            edgeInfo.materialName = "contorno arquitectonico (visual)";
+            edgeInfo.confidence = item.confidence;
+            edgeInfo.participatesInFE = false;
+            edgeInfo.hasFEParticipationFlag = true;
+            edgeInfo.coordCenter = mesh.bounds.center;
+            edgeInfo.nodeI = new Vector3((float)item.outline_xy_flat[0], (float)item.outline_xy_flat[1], top);
+            edgeInfo.nodeJ = edgeInfo.nodeI;
+            Register(edge, "architectural_slab_edge", item.floor);
+            allElements.Add(edgeInfo);
         }
 
         GameObject CreateSolid(SolidData solid)
@@ -300,27 +421,62 @@ namespace Mcoc.UnityViewer
 
         void CreateSegment(SegmentData seg)
         {
-            if (seg.points == null || seg.points.Count < 2) return;
-            var go = new GameObject("seg_" + seg.elementTag);
+            int pointCount = seg.points_flat != null ? seg.points_flat.Count / 3 : seg.points != null ? seg.points.Count : 0;
+            if (pointCount < 2) return;
+            string displayType = seg.category == "axis" ? "axis" : seg.category == "slab_edge" ? "slab_edge" : "cad_reference";
+            string publicId = !string.IsNullOrEmpty(seg.id) ? seg.id : !string.IsNullOrEmpty(seg.elementTag) ? seg.elementTag : "SEG";
+            var go = new GameObject("seg_" + publicId);
             var lr = go.AddComponent<LineRenderer>();
-            lr.positionCount = seg.points.Count;
-            for (int i = 0; i < seg.points.Count; i++) lr.SetPosition(i, V(seg.points[i]));
+            lr.positionCount = pointCount;
+            for (int i = 0; i < pointCount; i++) lr.SetPosition(i, SegmentPoint(seg, i));
             lr.startWidth = 0.03f; lr.endWidth = 0.03f;
-            lr.material = LineMaterial(tintOf(seg.category == "axis" ? "axis" : "cad_reference"));
-            Register(go, seg.category == "axis" ? "axis" : "cad_reference", seg.floor);
+            lr.material = LineMaterial(tintOf(displayType));
+            var data = go.AddComponent<ElementInfo>();
+            data.go = go;
+            data.id = publicId;
+            data.humanId = string.IsNullOrEmpty(seg.human_id) ? publicId : seg.human_id;
+            data.elementTag = seg.elementTag;
+            data.category = displayType;
+            data.floor = seg.floor;
+            data.building = seg.building;
+            data.sourceLayer = seg.source_layer;
+            data.sourceDxf = seg.source_dxf;
+            data.lengthM = seg.length_m;
+            data.confidence = seg.confidence;
+            data.nodeI = SegmentPoint(seg, 0);
+            data.nodeJ = SegmentPoint(seg, pointCount - 1);
+            data.coordCenter = (data.nodeI + data.nodeJ) * 0.5f;
+            data.materialName = "referencia DXF";
+            Register(go, displayType, seg.floor);
+            allElements.Add(data);
         }
 
         void CreateDiaphragm(DiaphragmData dia)
         {
-            if (dia.points == null || dia.points.Count < 2) return;
+            int pointCount = dia.points_flat != null ? dia.points_flat.Count / 3 : dia.points != null ? dia.points.Count : 0;
+            if (pointCount < 2) return;
             var go = new GameObject("dia_" + dia.floor);
             var lr = go.AddComponent<LineRenderer>();
-            lr.positionCount = dia.points.Count;
+            lr.positionCount = pointCount;
             lr.loop = true;
-            for (int i = 0; i < dia.points.Count; i++) lr.SetPosition(i, V(dia.points[i]));
+            for (int i = 0; i < pointCount; i++) lr.SetPosition(i, DiaphragmPoint(dia, i));
             lr.startWidth = 0.06f; lr.endWidth = 0.06f;
             lr.material = LineMaterial(tintOf("diaphragm"));
+            var data = go.AddComponent<ElementInfo>();
+            data.go = go;
+            data.id = !string.IsNullOrEmpty(dia.id) ? dia.id : "DIA-" + dia.floor;
+            data.humanId = string.IsNullOrEmpty(dia.human_id) ? data.id : dia.human_id;
+            data.category = "diaphragm";
+            data.floor = dia.floor;
+            data.building = dia.building;
+            data.materialName = "referencia analitica";
+            data.hasFEParticipationFlag = true;
+            data.participatesInFE = true;
+            data.nodeI = DiaphragmPoint(dia, 0);
+            data.nodeJ = DiaphragmPoint(dia, pointCount - 1);
+            data.coordCenter = (data.nodeI + data.nodeJ) * 0.5f;
             Register(go, "diaphragm", dia.floor);
+            allElements.Add(data);
         }
 
         // ---------- Areas tributarias ----------
@@ -774,7 +930,10 @@ namespace Mcoc.UnityViewer
 
         void Register(GameObject go, string type, string floor)
         {
+            floor = floor ?? "";
             go.transform.SetParent(transform, false);
+            registeredType[go] = type;
+            registeredFloor[go] = floor;
             if (!byType.ContainsKey(type)) byType.Add(type, new List<GameObject>());
             byType[type].Add(go);
             if (!byFloor.ContainsKey(floor)) byFloor.Add(floor, new List<GameObject>());
@@ -795,7 +954,9 @@ namespace Mcoc.UnityViewer
         {
             foreach (var kv in byType)
                 foreach (var go in kv.Value)
-                    ApplyVisibility(go, kv.Key, go.GetComponent<ElementInfo>()?.floor ?? "");
+                    ApplyVisibility(go,
+                        registeredType.TryGetValue(go, out var type) ? type : kv.Key,
+                        registeredFloor.TryGetValue(go, out var floor) ? floor : "");
         }
 
         // ---------- Seleccion por clic ----------
@@ -969,7 +1130,11 @@ namespace Mcoc.UnityViewer
                     $"Area tributaria asociada: {ei.tribAreaM2.ToString("F3")} m2";
             }
             string analysisLine = "\nModelo FE: sin correspondencia";
-            if (analysisByElementId.TryGetValue(id, out var ar))
+            if (ei.hasFEParticipationFlag && !ei.participatesInFE)
+            {
+                analysisLine = "\nModelo FE: no participa (capa exclusivamente visual)";
+            }
+            else if (analysisByElementId.TryGetValue(id, out var ar))
             {
                 var f = ar.localForce_end1;
                 string forces = f != null && f.Count >= 6
@@ -991,8 +1156,12 @@ namespace Mcoc.UnityViewer
                 capacityLine = $"\nCapacidad HA (laboratorio): {capacity.b_m:F2} x {capacity.h_m:F2} m, {capacity.num_bars} barras, f'c={capacity.fc_pa / 1e6:F1} MPa, fy={capacity.fy_pa / 1e6:F1} MPa";
             }
             inspectorIdentity = $"{id}\n{cat} | Piso {ei.floor} | {(string.IsNullOrEmpty(ei.building) ? "Sin edificio" : ei.building)}\nEjes: {ejes}";
-            inspectorGeometry = $"Coordenadas: {coord}\nNodo i: {P(ei.nodeI)}\nNodo j: {P(ei.nodeJ)}\nLongitud: {ei.lengthM:F3} m";
-            inspectorProperties = $"Seccion: {section}\nMaterial: {ei.materialName}\nelementTag: {ei.elementTag ?? "-"}";
+            string visualArea = ei.visualAreaM2 > 0 ? $"\nArea visual: {ei.visualAreaM2:F3} m2" : "";
+            string source = !string.IsNullOrEmpty(ei.sourceDxf) || !string.IsNullOrEmpty(ei.sourceLayer)
+                ? $"\nFuente: {ei.sourceDxf ?? "-"} / {ei.sourceLayer ?? "-"}" : "";
+            string confidence = string.IsNullOrEmpty(ei.confidence) ? "" : $"\nConfianza: {ei.confidence}";
+            inspectorGeometry = $"Coordenadas: {coord}\nNodo i: {P(ei.nodeI)}\nNodo j: {P(ei.nodeJ)}\nLongitud: {ei.lengthM:F3} m{visualArea}";
+            inspectorProperties = $"Seccion: {section}\nMaterial: {ei.materialName}\nelementTag: {ei.elementTag ?? "-"}{source}{confidence}";
             inspectorTributary = string.IsNullOrEmpty(cargaLine) ? "Sin carga tributaria asociada." : cargaLine;
             inspectorAnalysis = analysisLine.TrimStart('\n');
             inspectorCapacity = string.IsNullOrEmpty(capacityLine) ? "Este elemento no tiene un analisis de capacidad asociado." : capacityLine.TrimStart('\n');
@@ -1366,10 +1535,14 @@ namespace Mcoc.UnityViewer
             QuickTypeToggle(new Rect(lx + 8, ly + 113, 116, 20), "Torsion", "seismic_torsion");
             QuickTypeToggle(new Rect(lx + 128, ly + 113, 116, 20), "Patron sismico", "seismic_pattern");
 
-            GUI.Label(new Rect(lx + 8, ly + 140, 240, 18), "Pisos (S = mostrar solo)", sect);
+            GUI.Label(new Rect(lx + 8, ly + 139, 240, 18), "Arquitectura (solo visual)", sect);
+            QuickTypeToggle(new Rect(lx + 8, ly + 159, 116, 20), "Losa arq. P4", "architectural_slab");
+            QuickTypeToggle(new Rect(lx + 128, ly + 159, 116, 20), "Borde arq. P4", "architectural_slab_edge");
+
+            GUI.Label(new Rect(lx + 8, ly + 184, 240, 18), "Pisos (S = mostrar solo)", sect);
             var floors = SortedFloors();
             float floorX = lx + 8;
-            float floorY = ly + 161;
+            float floorY = ly + 205;
             for (int i = 0; i < floors.Count; i++)
             {
                 string f = floors[i];
@@ -1432,8 +1605,8 @@ namespace Mcoc.UnityViewer
                 case "column_plan":
                 case "wall":
                 case "support":
-                case "slab":
-                case "slab_edge":
+                case "architectural_slab":
+                case "architectural_slab_edge":
                     return true;
                 default:
                     return false;
@@ -1463,7 +1636,8 @@ namespace Mcoc.UnityViewer
         void RunVisibilitySelfCheck()
         {
             string[] requiredTypes = {
-                "beam", "column", "wall", "slab", "support", "tributary",
+                "beam", "column", "wall", "slab", "support", "slab_edge", "diaphragm",
+                "architectural_slab", "architectural_slab_edge", "tributary",
                 "seismic_arrow", "seismic_cm", "seismic_mass", "seismic_shear",
                 "seismic_torsion", "seismic_deform_ex", "seismic_deform_ey"
             };
@@ -1824,11 +1998,30 @@ namespace Mcoc.UnityViewer
             return new Vector3((float)p[0], (float)p[1], (float)p[2]);
         }
 
+        static Vector3 SegmentPoint(SegmentData segment, int index)
+        {
+            if (segment.points_flat != null && segment.points_flat.Count >= index * 3 + 3)
+                return new Vector3((float)segment.points_flat[index * 3], (float)segment.points_flat[index * 3 + 1], (float)segment.points_flat[index * 3 + 2]);
+            return segment.points != null && segment.points.Count > index ? V(segment.points[index]) : Vector3.zero;
+        }
+
+        static Vector3 DiaphragmPoint(DiaphragmData diaphragm, int index)
+        {
+            if (diaphragm.points_flat != null && diaphragm.points_flat.Count >= index * 3 + 3)
+                return new Vector3((float)diaphragm.points_flat[index * 3], (float)diaphragm.points_flat[index * 3 + 1], (float)diaphragm.points_flat[index * 3 + 2]);
+            return diaphragm.points != null && diaphragm.points.Count > index ? V(diaphragm.points[index]) : Vector3.zero;
+        }
+
         static string P(Vector3 v) => "(" + v.x.ToString("F3") + ", " + v.y.ToString("F3") + ", " + v.z.ToString("F3") + ")";
 
         static Material LineMaterial(Color color)
         {
-            if (MaterialsByCat.TryGetValue("axis", out var axisMat) && axisMat != null) return axisMat;
+            if (MaterialsByCat.TryGetValue("axis", out var axisMat) && axisMat != null)
+            {
+                var instance = UnityEngine.Object.Instantiate(axisMat);
+                instance.color = color;
+                return instance;
+            }
             var sh = Shader.Find("Sprites/Default");
             if (sh == null) sh = Shader.Find("Legacy Shaders/Particles/Alpha Blended");
             if (sh == null) sh = Shader.Find("Standard");
@@ -1890,6 +2083,10 @@ namespace Mcoc.UnityViewer
         public double tribAreaM2;
         public double tribLoadKN;
         public bool tribFromTag;
+        public double visualAreaM2;
+        public string confidence;
+        public bool participatesInFE;
+        public bool hasFEParticipationFlag;
         public Color baseColor;
         public Material baseMat;
         public bool isHighlighted = false;

@@ -7,6 +7,9 @@
 - P1L3 integra `G/Q/EX/EY/R`, capacidad HA y resultados OpenSees en Unity.
 - La renovacion UI se documenta en `../P1L3/UI_QA.md`; no modifica esta
   geometria ni la referencia original de Luis.
+- El piloto arquitectonico EDIFICIO_1/P4 vive en un JSON separado y no modifica
+  `model_combined_viewer.json`, la topologia FE, cargas, masas ni resultados.
+  La caja de losa provisional se conserva y queda apagada por defecto en Unity.
 
 ## Auditoria completa de fuentes (2026-09-09)
 

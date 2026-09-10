@@ -17,6 +17,15 @@ namespace Mcoc.UnityViewer
     }
 
     [Serializable]
+    public class VisualLinesData
+    {
+        public string format;
+        public string units;
+        public List<SegmentData> segments;
+        public List<DiaphragmData> diaphragms;
+    }
+
+    [Serializable]
     public class ModelColors
     {
         public string beam;
@@ -65,6 +74,9 @@ namespace Mcoc.UnityViewer
     [Serializable]
     public class SegmentData
     {
+        public string id;
+        public string human_id;
+        public string building;
         public string elementTag;
         public string floor;
         public string floor_label;
@@ -72,6 +84,7 @@ namespace Mcoc.UnityViewer
         public string source_layer;
         public string category;
         public List<List<double>> points;
+        public List<double> points_flat;
         public double length_m;
         public string confidence;
     }
@@ -101,9 +114,62 @@ namespace Mcoc.UnityViewer
     [Serializable]
     public class DiaphragmData
     {
+        public string id;
+        public string human_id;
+        public string building;
         public string floor;
         public string category;
         public List<List<double>> points;
+        public List<double> points_flat;
+    }
+
+    [Serializable]
+    public class ArchitecturalVisualModelData
+    {
+        public string format;
+        public string units;
+        public string scope;
+        public string analysis_contract;
+        public bool participates_in_FE;
+        public List<ArchitecturalObjectData> objects;
+    }
+
+    [Serializable]
+    public class ArchitecturalObjectData
+    {
+        public string id;
+        public string building;
+        public string floor;
+        public string category;
+        public string type;
+        public string source;
+        public string source_sheet;
+        public string source_layer;
+        public string confidence;
+        public bool participates_in_FE;
+        public double top_z_m;
+        public double thickness_m;
+        public double area_m2;
+        public List<List<double>> outline_xy;
+        public List<List<double>> surface_vertices_xy;
+        public List<double> outline_xy_flat;
+        public List<double> surface_vertices_xy_flat;
+        public List<int> surface_triangles;
+        public List<string> confirmed_source_segment_ids;
+        public List<string> supporting_beam_ids;
+        public List<ArchitecturalClosureData> inferred_closures;
+        public List<string> notes;
+    }
+
+    [Serializable]
+    public class ArchitecturalClosureData
+    {
+        public List<double> start;
+        public List<double> end;
+        public double length_m;
+        public string confidence;
+        public string reason;
+        public string evidence;
     }
 
     [Serializable]

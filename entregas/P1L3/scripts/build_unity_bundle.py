@@ -27,6 +27,7 @@ A7_DIR = P1L3 / "results" / "a7"
 A7_REPORT = A7_DIR / "a7_report.json"
 SEISMIC = P1L3 / "José" / "results" / "seismic_ex_ey.json"
 CAPACITY_DIR = P1L3 / "capacidad_ha"
+ARCHITECTURE = P1L3 / "arquitectura" / "architectural_visual_model.json"
 LEGACY_P1 = ROOT / "entregas" / "P1L2" / "edificio" / "datos" / "piso_01.json"
 
 
@@ -92,6 +93,18 @@ def validate_geometry(model: dict) -> None:
     ids = [item.get("id") for item in solids]
     assert all(ids), "Hay solidos sin id publico"
     assert len(ids) == len(set(ids)), "IDs publicos duplicados"
+
+
+def visual_lines_for_unity(model: dict) -> dict:
+    """Crea un adaptador pequeno para las listas anidadas que JsonUtility no admite."""
+    data = {"format": "P1L3_UNITY_VISUAL_LINES_v1", "units": model.get("units", "m")}
+    for collection in ("segments", "diaphragms"):
+        data[collection] = []
+        for source in model.get(collection, []):
+            item = {key: value for key, value in source.items() if key != "points"}
+            item["points_flat"] = [coordinate for point in source.get("points", []) for coordinate in point]
+            data[collection].append(item)
+    return data
 
 
 def build_analysis_results(analysis: dict, run_dir: Path) -> dict:
@@ -330,6 +343,7 @@ def main() -> None:
         CAPACITY_DIR / "results" / "fiber_section.png",
         CAPACITY_DIR / "results" / "moment_curvature.png",
         CAPACITY_DIR / "results" / "pm_interaction.png",
+        ARCHITECTURE,
         *[
             A7_DIR / "cases" / case_name / file_name
             for case_name in ("G", "Q", "EX", "EY", "R")
@@ -345,9 +359,21 @@ def main() -> None:
     analysis = load_json(ANALYSIS_MODEL)
     seismic = load_json(SEISMIC)
     a7 = load_json(A7_REPORT)
+    architecture = load_json(ARCHITECTURE)
+    assert architecture.get("scope") == "EDIFICIO_1 / P4 solamente"
+    assert architecture.get("participates_in_FE") is False
+    assert architecture.get("objects")
+    assert all(
+        item.get("building") == "EDIFICIO_1"
+        and item.get("floor") == "P4"
+        and item.get("participates_in_FE") is False
+        for item in architecture["objects"]
+    )
 
     STREAMING.mkdir(parents=True, exist_ok=True)
     write_compact_json(STREAMING / "model_viewer.json", geometry)
+    write_compact_json(STREAMING / "visual_lines.json", visual_lines_for_unity(geometry))
+    shutil.copyfile(ARCHITECTURE, STREAMING / "architectural_visual_model.json")
     shutil.copyfile(SEISMIC, STREAMING / "seismic_ex_ey.json")
     analysis_cases = build_analysis_cases(analysis)
     default_analysis = next(case for case in analysis_cases["cases"] if case["case_name"] == "CASE_R")
@@ -370,6 +396,7 @@ def main() -> None:
             "integrated_run": str(A7_DIR.relative_to(ROOT)).replace("\\", "/"),
             "seismic": str(SEISMIC.relative_to(ROOT)).replace("\\", "/"),
             "capacity": str(CAPACITY_DIR.relative_to(ROOT)).replace("\\", "/"),
+            "architecture_visual": str(ARCHITECTURE.relative_to(ROOT)).replace("\\", "/"),
         },
         "files": [
             {"name": name, "sha256": sha256(STREAMING / name)}
@@ -377,6 +404,8 @@ def main() -> None:
                 "model_viewer.json", "seismic_ex_ey.json", "analysis_results.json",
                 "analysis_cases.json", "p1l3_delivery.json", "capacity_ha.json",
                 "fiber_section.png", "moment_curvature.png", "pm_interaction.png",
+                "architectural_visual_model.json",
+                "visual_lines.json",
             )
         ],
         "validation": {
@@ -392,6 +421,8 @@ def main() -> None:
             "gravity_reaction_deficit_percent": round(100.0 * deficit_g, 6),
             "seismic_is_applied_to_opensees": True,
             "capacity_uses_lab_assumptions": True,
+            "architecture_visual_objects": len(architecture["objects"]),
+            "architecture_participates_in_FE": False,
         },
     }
     write_json(STREAMING / "integration_manifest.json", manifest)

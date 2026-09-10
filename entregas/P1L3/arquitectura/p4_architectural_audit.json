@@ -1,0 +1,192 @@
+{
+  "format": "P1L3_ARCHITECTURAL_P4_AUDIT_v1",
+  "source_files": {
+    "floor": "entregas/P1L2/edificio/datos/piso_04.json",
+    "floor_sha256": "162322d1473b64ec6615d3bc77b8588cae1af27776c3bda51af8754b97382d6e",
+    "structural_model": "entregas/P1L2/unity_export/model_combined_viewer.json",
+    "structural_model_sha256": "f05b3b6dbd4482c153d28f35c41af080eaac2c5e70938e695f9007ddb64ae9b7"
+  },
+  "scope": "EDIFICIO_1 / P4",
+  "raw_rle_topology": {
+    "segment_count": 50,
+    "open_endpoint_count": 37,
+    "junction_count": 1,
+    "closed_polygon_count": 2,
+    "closed_polygons": [
+      {
+        "area_m2": 3.495591,
+        "bounds": [
+          39.876,
+          5.134,
+          41.559,
+          7.211
+        ]
+      },
+      {
+        "area_m2": 0.44156,
+        "bounds": [
+          28.113,
+          10.598,
+          28.778,
+          11.262
+        ]
+      }
+    ],
+    "cut_count": 0,
+    "dangle_count": 42,
+    "invalid_ring_count": 0
+  },
+  "classification": {
+    "direct_outer_segment_count": 13,
+    "direct_outer_length_m": 124.799962,
+    "collinear_inferred_gap_count": 6,
+    "beam_supported_likely_edge_count": 3,
+    "supporting_beam_count": 6,
+    "interior_closed_loops_excluded": 2
+  },
+  "areas": {
+    "old_bbox_m2": 1802.478751,
+    "new_architectural_outline_m2": 958.392618,
+    "reduction_m2": 844.086133,
+    "reduction_percent": 46.829186
+  },
+  "thickness": {
+    "value_m": 0.15,
+    "source": "2017_67-103: LOSA e=15 (S.I.C.)",
+    "confidence": "CONFIRMED_AT_SHEET_LEVEL"
+  },
+  "confidence": {
+    "CONFIRMED": "13 segmentos exteriores RLE-LOSA y espesor general e=15 de la lamina.",
+    "LIKELY": "Tres lados del resalto norte respaldados por seis vigas perimetrales.",
+    "INFERRED": "Seis cierres colineales cortos entre segmentos exteriores."
+  },
+  "inferred_closures": [
+    {
+      "start": [
+        67.132,
+        16.619
+      ],
+      "end": [
+        67.832,
+        16.619
+      ],
+      "length_m": 0.7,
+      "confidence": "INFERRED",
+      "reason": "interrupcion de 0,70 m sobre borde norte",
+      "evidence": "segmentos RLE-LOSA colineales a ambos lados"
+    },
+    {
+      "start": [
+        27.132,
+        16.619
+      ],
+      "end": [
+        27.832,
+        16.619
+      ],
+      "length_m": 0.7,
+      "confidence": "INFERRED",
+      "reason": "interrupcion de 0,70 m en esquina noroeste",
+      "evidence": "segmentos RLE-LOSA colineales a ambos lados"
+    },
+    {
+      "start": [
+        27.132,
+        15.919
+      ],
+      "end": [
+        27.132,
+        16.619
+      ],
+      "length_m": 0.7,
+      "confidence": "INFERRED",
+      "reason": "interrupcion de 0,70 m sobre borde oeste",
+      "evidence": "segmentos RLE-LOSA colineales a ambos lados"
+    },
+    {
+      "start": [
+        27.132,
+        8.668
+      ],
+      "end": [
+        27.132,
+        9.368
+      ],
+      "length_m": 0.7,
+      "confidence": "INFERRED",
+      "reason": "interrupcion de 0,70 m sobre borde oeste",
+      "evidence": "segmentos RLE-LOSA colineales a ambos lados"
+    },
+    {
+      "start": [
+        27.132,
+        3.919
+      ],
+      "end": [
+        27.132,
+        4.119
+      ],
+      "length_m": 0.2,
+      "confidence": "INFERRED",
+      "reason": "interrupcion de 0,20 m sobre borde oeste",
+      "evidence": "segmentos RLE-LOSA colineales a ambos lados"
+    },
+    {
+      "start": [
+        27.132,
+        -0.232
+      ],
+      "end": [
+        27.132,
+        0.468
+      ],
+      "length_m": 0.7,
+      "confidence": "INFERRED",
+      "reason": "interrupcion de 0,70 m sobre borde oeste",
+      "evidence": "segmentos RLE-LOSA colineales a ambos lados"
+    },
+    {
+      "start": [
+        57.832,
+        16.619
+      ],
+      "end": [
+        57.832,
+        20.751488
+      ],
+      "length_m": 4.132488,
+      "confidence": "LIKELY",
+      "reason": "lado este del resalto norte",
+      "evidence": "limite del gap RLE-LOSA y vigas E1-P4-V-058/E1-P4-V-063"
+    },
+    {
+      "start": [
+        57.832,
+        20.751488
+      ],
+      "end": [
+        47.132,
+        20.751488
+      ],
+      "length_m": 10.7,
+      "confidence": "LIKELY",
+      "reason": "borde norte del resalto",
+      "evidence": "vigas E1-P4-V-048/E1-P4-V-049"
+    },
+    {
+      "start": [
+        47.132,
+        20.751488
+      ],
+      "end": [
+        47.132,
+        16.619
+      ],
+      "length_m": 4.132488,
+      "confidence": "LIKELY",
+      "reason": "lado oeste del resalto norte",
+      "evidence": "limite del gap RLE-LOSA y vigas E1-P4-V-033/E1-P4-V-039"
+    }
+  ],
+  "result": "PASS"
+}

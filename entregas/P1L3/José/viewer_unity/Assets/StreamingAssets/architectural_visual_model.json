@@ -1,0 +1,334 @@
+{
+  "format": "P1L3_ARCHITECTURAL_VISUAL_v1",
+  "units": "m",
+  "scope": "EDIFICIO_1 / P4 solamente",
+  "analysis_contract": "Visual only. No modifica OpenSees, cargas, masas, crosswalk ni resultados.",
+  "participates_in_FE": false,
+  "objects": [
+    {
+      "id": "ARCH-E1-P4-SLAB-001",
+      "building": "EDIFICIO_1",
+      "floor": "P4",
+      "category": "architectural_slab",
+      "type": "architectural_slab",
+      "source": "RLE-LOSA / 2017_67-103 + vigas perimetrales P4",
+      "source_sheet": "2017_67-103.dxf",
+      "source_layer": "RLE-LOSA",
+      "confidence": "LIKELY",
+      "participates_in_FE": false,
+      "top_z_m": 19.8,
+      "thickness_m": 0.15,
+      "area_m2": 958.392618,
+      "outline_xy": [
+        [
+          27.132,
+          -1.031
+        ],
+        [
+          78.632,
+          -1.031
+        ],
+        [
+          78.632,
+          17.419
+        ],
+        [
+          72.132,
+          17.419
+        ],
+        [
+          72.132,
+          16.619
+        ],
+        [
+          57.832,
+          16.619
+        ],
+        [
+          57.832,
+          20.751488
+        ],
+        [
+          47.132,
+          20.751488
+        ],
+        [
+          47.132,
+          16.619
+        ],
+        [
+          27.132,
+          16.619
+        ]
+      ],
+      "outline_xy_flat": [
+        27.132,
+        -1.031,
+        78.632,
+        -1.031,
+        78.632,
+        17.419,
+        72.132,
+        17.419,
+        72.132,
+        16.619,
+        57.832,
+        16.619,
+        57.832,
+        20.751488,
+        47.132,
+        20.751488,
+        47.132,
+        16.619,
+        27.132,
+        16.619
+      ],
+      "surface_vertices_xy": [
+        [
+          27.132,
+          -1.031
+        ],
+        [
+          78.632,
+          -1.031
+        ],
+        [
+          78.632,
+          17.419
+        ],
+        [
+          72.132,
+          17.419
+        ],
+        [
+          72.132,
+          16.619
+        ],
+        [
+          57.832,
+          16.619
+        ],
+        [
+          57.832,
+          20.751488
+        ],
+        [
+          47.132,
+          20.751488
+        ],
+        [
+          47.132,
+          16.619
+        ],
+        [
+          27.132,
+          16.619
+        ]
+      ],
+      "surface_vertices_xy_flat": [
+        27.132,
+        -1.031,
+        78.632,
+        -1.031,
+        78.632,
+        17.419,
+        72.132,
+        17.419,
+        72.132,
+        16.619,
+        57.832,
+        16.619,
+        57.832,
+        20.751488,
+        47.132,
+        20.751488,
+        47.132,
+        16.619,
+        27.132,
+        16.619
+      ],
+      "surface_triangles": [
+        9,
+        0,
+        8,
+        7,
+        8,
+        5,
+        7,
+        5,
+        6,
+        2,
+        3,
+        4,
+        2,
+        4,
+        1,
+        1,
+        4,
+        5,
+        1,
+        5,
+        0,
+        0,
+        5,
+        8
+      ],
+      "confirmed_source_segment_ids": [
+        "PERIMETRO_LOSA_P1_04_0001",
+        "PERIMETRO_LOSA_P1_04_0047",
+        "PERIMETRO_LOSA_P1_04_0046",
+        "PERIMETRO_LOSA_P1_04_0074",
+        "PERIMETRO_LOSA_P1_04_0075",
+        "PERIMETRO_LOSA_P1_04_0008",
+        "PERIMETRO_LOSA_P1_04_0009",
+        "PERIMETRO_LOSA_P1_04_0010",
+        "PERIMETRO_LOSA_P1_04_0011",
+        "PERIMETRO_LOSA_P1_04_0012",
+        "PERIMETRO_LOSA_P1_04_0013",
+        "PERIMETRO_LOSA_P1_04_0014",
+        "PERIMETRO_LOSA_P1_04_0015"
+      ],
+      "supporting_beam_ids": [
+        "E1-P4-V-033",
+        "E1-P4-V-039",
+        "E1-P4-V-048",
+        "E1-P4-V-049",
+        "E1-P4-V-058",
+        "E1-P4-V-063"
+      ],
+      "inferred_closures": [
+        {
+          "start": [
+            67.132,
+            16.619
+          ],
+          "end": [
+            67.832,
+            16.619
+          ],
+          "length_m": 0.7,
+          "confidence": "INFERRED",
+          "reason": "interrupcion de 0,70 m sobre borde norte",
+          "evidence": "segmentos RLE-LOSA colineales a ambos lados"
+        },
+        {
+          "start": [
+            27.132,
+            16.619
+          ],
+          "end": [
+            27.832,
+            16.619
+          ],
+          "length_m": 0.7,
+          "confidence": "INFERRED",
+          "reason": "interrupcion de 0,70 m en esquina noroeste",
+          "evidence": "segmentos RLE-LOSA colineales a ambos lados"
+        },
+        {
+          "start": [
+            27.132,
+            15.919
+          ],
+          "end": [
+            27.132,
+            16.619
+          ],
+          "length_m": 0.7,
+          "confidence": "INFERRED",
+          "reason": "interrupcion de 0,70 m sobre borde oeste",
+          "evidence": "segmentos RLE-LOSA colineales a ambos lados"
+        },
+        {
+          "start": [
+            27.132,
+            8.668
+          ],
+          "end": [
+            27.132,
+            9.368
+          ],
+          "length_m": 0.7,
+          "confidence": "INFERRED",
+          "reason": "interrupcion de 0,70 m sobre borde oeste",
+          "evidence": "segmentos RLE-LOSA colineales a ambos lados"
+        },
+        {
+          "start": [
+            27.132,
+            3.919
+          ],
+          "end": [
+            27.132,
+            4.119
+          ],
+          "length_m": 0.2,
+          "confidence": "INFERRED",
+          "reason": "interrupcion de 0,20 m sobre borde oeste",
+          "evidence": "segmentos RLE-LOSA colineales a ambos lados"
+        },
+        {
+          "start": [
+            27.132,
+            -0.232
+          ],
+          "end": [
+            27.132,
+            0.468
+          ],
+          "length_m": 0.7,
+          "confidence": "INFERRED",
+          "reason": "interrupcion de 0,70 m sobre borde oeste",
+          "evidence": "segmentos RLE-LOSA colineales a ambos lados"
+        },
+        {
+          "start": [
+            57.832,
+            16.619
+          ],
+          "end": [
+            57.832,
+            20.751488
+          ],
+          "length_m": 4.132488,
+          "confidence": "LIKELY",
+          "reason": "lado este del resalto norte",
+          "evidence": "limite del gap RLE-LOSA y vigas E1-P4-V-058/E1-P4-V-063"
+        },
+        {
+          "start": [
+            57.832,
+            20.751488
+          ],
+          "end": [
+            47.132,
+            20.751488
+          ],
+          "length_m": 10.7,
+          "confidence": "LIKELY",
+          "reason": "borde norte del resalto",
+          "evidence": "vigas E1-P4-V-048/E1-P4-V-049"
+        },
+        {
+          "start": [
+            47.132,
+            20.751488
+          ],
+          "end": [
+            47.132,
+            16.619
+          ],
+          "length_m": 4.132488,
+          "confidence": "LIKELY",
+          "reason": "lado oeste del resalto norte",
+          "evidence": "limite del gap RLE-LOSA y vigas E1-P4-V-033/E1-P4-V-039"
+        }
+      ],
+      "notes": [
+        "El espesor 0,15 m corresponde a LOSA e=15 de la lamina 2017_67-103.",
+        "Los dos lazos RLE-LOSA interiores cerrados no se restan: no existe evidencia inequivoca de que sean aberturas.",
+        "El resalto norte es LIKELY porque esta cerrado por vigas P4, pero no por segmentos RLE-LOSA completos."
+      ]
+    }
+  ]
+}

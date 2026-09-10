@@ -1,5 +1,27 @@
 # P1L3 - Estado de integracion
 
+## Piloto arquitectonico EDIFICIO_1 / P4 (2026-09-10)
+
+- Se creo `arquitectura/architectural_visual_model.json` como contrato visual
+  separado. Su unico objeto es `ARCH-E1-P4-SLAB-001`, esta marcado
+  `participates_in_FE=false` y no alimenta OpenSees, cargas ni masas.
+- La cubierta P4 reconstruida tiene `958.392618 m2` y `0.15 m` de espesor. El
+  espesor proviene de la nota `LOSA e=15` de la lamina `2017_67-103`; el
+  contorno combina 13 segmentos RLE-LOSA directos, seis cierres cortos
+  inferidos y un resalto norte probable respaldado por seis vigas P4.
+- La caja provisional `E1-P4-L-001` se conserva sin mover ni editar
+  (`1802.478751 m2`), pero queda apagada por defecto. El diafragma analitico
+  tambien permanece separado y apagado por defecto.
+- Unity expone controles propios para losa arquitectonica, borde reconstruido,
+  259 bordes DXF RLE-LOSA y diafragma analitico. El registro explicito de piso
+  corrige los filtros de objetos lineales.
+- Compilacion Unity 6000.6.0f1: PASS. Prueba Play: `[UI QA] PASS` para capas y
+  pisos, incluidas las cuatro categorias anteriores.
+- Auditoria y plano comparativo: `arquitectura/P4_AUDITORIA.md` y
+  `arquitectura/p4_architectural_plan.png`.
+- No se modificaron geometria estructural, IDs, crosswalk, resultados, capacidad
+  HA ni el archivo original de Luis.
+
 ## Checkpoint funcional integrado 2026-09-09
 
 - `run_p1l3_integrated.py` ejecuta en el mismo modelo OpenSees los casos
@@ -63,7 +85,7 @@
   historica no tiene un sesgo corregible por factor global: la razon
   HATCH/historica varia de 0.339 a 1.306.
 
-Actualizado: 2026-09-09.
+Actualizado: 2026-09-10.
 
 ## Objetivo vigente
 
@@ -93,7 +115,9 @@ python entregas/P1L3/scripts/build_unity_bundle.py
 
 El generador valida las fuentes y crea en `Assets/StreamingAssets/`:
 
-- `model_viewer.json`: copia compacta de la geometria vigente.
+- `model_viewer.json`: copia compacta semanticamente exacta de la geometria vigente.
+- `visual_lines.json`: adaptador de coordenadas lineales para `JsonUtility`.
+- `architectural_visual_model.json`: capa visual separada del piloto P4.
 - `analysis_results.json`: resultados FE aplanados por `element_id`.
 - `seismic_ex_ey.json`: definicion sismica de Jose.
 - `capacity_ha.json`: capacidad no lineal y advertencias de procedencia.
@@ -113,6 +137,7 @@ marcan como `Modelo FE: no incluido`.
 - Superposicion G/Q: `PASS`, errores del orden de `1e-12`.
 - Deficit de reaccion vertical por elementos flotantes: 0.763564 %.
 - Version Unity requerida/instalada: 6000.6.0f1.
+- Piloto arquitectonico P4: 1 objeto, 958.392618 m2, no participa en FE.
 
 ## Errores y bloqueos abiertos
 

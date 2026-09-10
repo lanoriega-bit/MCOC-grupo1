@@ -96,6 +96,16 @@ namespace Mcoc.UnityViewer
             }
         }
 
+        public static ArchitecturalVisualModelData LoadArchitecture(string fileName = "architectural_visual_model.json")
+        {
+            return LoadOptional<ArchitecturalVisualModelData>(fileName, "modelo visual arquitectonico");
+        }
+
+        public static VisualLinesData LoadVisualLines(string fileName = "visual_lines.json")
+        {
+            return LoadOptional<VisualLinesData>(fileName, "lineas visuales compatibles");
+        }
+
         public static AnalysisResultsData LoadAnalysisResults(string fileName = "analysis_results.json")
         {
             return LoadOptional<AnalysisResultsData>(fileName, "resultados de analisis");
