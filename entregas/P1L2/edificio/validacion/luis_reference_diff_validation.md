@@ -14,16 +14,16 @@ Luis original modified: `0`
 ## Luis Original Vs Corrected
 | Collection | Status | Missing From Corrected | Extra In Corrected |
 | --- | --- | ---: | ---: |
-| solids | FAIL | 58 | 4 |
+| solids | FAIL | 252 | 92 |
 | segments | PASS | 0 | 0 |
 | labels | PASS | 0 | 0 |
 | diaphragms | PASS | 0 | 0 |
 
 ## Documented Removals
-- Diff changes: 60
+- Diff changes: 254
 - Removed columns: 39
-- Removed supports: 15
-- Geometry corrections: 6
+- Removed supports: 54
+- Geometry corrections: 94
 - Match Luis-vs-corrected solid diff: True
 
 This check intentionally replaces `GOLDEN_IN_COMBINED` for corrected geometry. A documented difference from Luis is expected and is not a failure.

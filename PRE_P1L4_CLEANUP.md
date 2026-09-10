@@ -1,6 +1,6 @@
 # Consolidación POST-P1L3 / PRE-P1L4
 
-Estado: `FASE_1_COMPLETE_PHASE_2_NEXT`
+Estado: `FASE_2_COMPLETE_PHASE_3_NEXT`
 Fecha de apertura: 2026-09-10  
 Rama vigente: `codex/pre-p1l4-consolidation`
 
@@ -75,7 +75,7 @@ Prioridad: P0 bloquea la base; P1 alta; P2 media; P3 documental. Estados:
 | Issue | Origen | Evidencia disponible | Estado actual | Impacto | Prioridad | Dependencia | Solución propuesta | Estado |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | GEO-COL-S1-001 — E1-S1-C-014..019 | Inferencias verticales de Luis | Elevaciones estructurales completas 309 eje I y 310 eje I', más ejes canónicos | Seis `CONFIRMED_BY_AXIS_ELEVATION`; sección 0.70×0.70 m y centro de eje normalizados | Cierra apoyos y continuidad del ala este sin extrapolar plantas | P0 | Fuentes CAD completas | Auditoría reproducible en `validacion/s1_columns_final/`; corregido y regenerado | DONE |
-| GEO-WALL-E1-001 — muros S1-P4 | Drafts de extracción | RLE-MURO, 234 muros combinados, reviews por piso | POSIBLE/FRAGMENTADO/FALSO_POSITIVO mezclados | Rigidez y caminos de carga inciertos | P0 | GEO-COL-S1-001 | Auditoría piso a piso, duplicados y continuidad vertical | OPEN |
+| GEO-WALL-E1-001 — muros S1-P4 | Extractor histórico modelaba cada cara `RLE-MURO` como muro | DXF directo, 193 segmentos fuente, 5 overlays y crosswalk | 134 prismas ED1 consolidados en 67 segmentos analíticos; 72 cierres cortos excluidos; 0 sin resolver | Elimina doble rigidez y apoyos duplicados | P0 | GEO-COL-S1-001 | Auditoría y validación reproducibles en `validacion/ed1_walls/` | DONE |
 | GEO-BEAM-E1-001 — vigas S1-P4 | Drafts de extracción | RLE-VIGA, reviews, etiquetas y geometría combinada | POSIBLE/FRAGMENTADA/NEEDS_REVIEW | Paños, carga y conectividad dependen de ellas | P0 | GEO-WALL-E1-001 | Auditoría por piso, receptores, continuidad y vigas especiales | OPEN |
 | GEO-SPECIAL-001 — outboard/voladizos/canopias | Extracción automática deficiente fuera de grilla | `outboard_room_reconstruction.json`, planos, fotos secundarias | Grupos `UNRESOLVED_REQUIRES_REVIEW` | Forma real y elementos flotantes | P1 | Muros y vigas estabilizados | Revisar por sector con overlays y evidencia primaria | OPEN |
 | GEO-INTERFACE-001 — interfaz ED1/ED2 | Modelos extraídos por separado | Calce D/E confirmado; rama E2 antigua declara interfaz no resuelta | Alineación confirmada, conexión física no auditada | Transferencia entre bloques | P1 | Muros/vigas de ambos lados | Inventariar miembros que cruzan o terminan en junta | OPEN |
@@ -103,7 +103,7 @@ Prioridad: P0 bloquea la base; P1 alta; P2 media; P3 documental. Estados:
 | Issue | Origen | Evidencia disponible | Estado actual | Impacto | Prioridad | Dependencia | Solución propuesta | Estado |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | PROP-BEAM-001 | Etiquetas CAD parciales | `cad_property_audit.json`; ~431/1060 conocidas | Mayoría UNKNOWN | Rigidez y fuerzas FE | P1 | GEO-BEAM-E1-001 | Asociar etiquetas por planta, layer, eje y continuidad | OPEN |
-| PROP-WALL-001 | Espesores parciales | 73/234 conocidos | ~69% UNKNOWN | Rigidez equivalente | P1 | GEO-WALL-E1-001 | Mapear notas y espesores, sin propagar globalmente | OPEN |
+| PROP-WALL-001 | Espesores parciales | Pares de caras DXF y etiquetas por planta | ED1 67/67 con espesor geométrico confirmado; 58 además confirmados por etiqueta, 9 solo por contorno; ED2 pendiente | Rigidez equivalente | P1 | GEO-WALL-E1-001 | Aplicar la misma trazabilidad a ED2, sin propagar globalmente | IN_PROGRESS |
 | PROP-COL-001 | Geometría vs etiqueta | 150/150 dimensiones geométricas; etiquetas parciales | Dimensión disponible, procedencia heterogénea | Rigidez/capacidad | P1 | GEO-COL-S1-001 | Clasificar CONFIRMED_FROM_PLAN/INFERRED/DEFAULT/UNKNOWN | OPEN |
 | PROP-SUPPORT-001 | Apoyos nominales | 3/107 dimensiones conocidas | DEFAULT/UNKNOWN dominante | Condición de borde | P1 | FE-FLOAT-001 | Relacionar fundaciones/pedestales con apoyos reales | OPEN |
 | PROP-MATERIAL-001 | Datos de laboratorio y notas | LT2 f'c=35 MPa/fy=420 MPa; otras hipótesis | No hay catálogo por edificio/elemento | Rigidez y capacidad | P1 | Índice de planos/detalles | Crear catálogo trazable por fuente y alcance | OPEN |
@@ -206,7 +206,27 @@ de cada componente flotante.
   enriquecimiento y diff de referencia: `PASS`.
 - `LUIS_REFERENCE_FILES_MODIFIED = 0`.
 
+### FASE 2 — muros EDIFICIO_1
+
+- El extractor histórico convertía las dos caras de cada contorno `RLE-MURO`
+  en dos prismas resistentes de 0.22 m. La auditoría volvió a leer los DXF sin
+  el redondeo histórico.
+- `193` segmentos fuente se resolvieron en `67` segmentos analíticos de muro:
+  S1 `21`, P1 `25`, P2/P3/P4 `7` cada uno. Los `72` segmentos restantes son
+  cierres cortos de contorno registrados, no muros; no quedaron caras sin
+  clasificación.
+- Se retiraron `67` prismas duplicados y se consolidaron los apoyos lineales de
+  S1 de `60` a `21`. EDIFICIO_1 pasó de `873` a `767` sólidos y el combinado de
+  `1561` a `1455`.
+- Los `67` espesores provienen de la distancia entre caras: `58` coinciden
+  además con una etiqueta y `9` se sostienen solo en geometría, sin conflictos.
+- Calce, core, geometría combinada, enriquecimiento, diff de referencia y
+  validación específica de muros: `PASS`. `LUIS_REFERENCE_FILES_MODIFIED = 0`.
+- Evidencia: `entregas/P1L2/edificio/validacion/ed1_walls/REPORT.md`,
+  `APPLICATION.md`, `VALIDATION.md` y overlays por piso.
+
 ## Próximo hito
 
-`FASE 2 — GEO-WALL-E1-001`: auditoría piso a piso de muros EDIFICIO_1,
-incluyendo fragmentación, duplicados, falsos positivos y continuidad vertical.
+`FASE 3 — GEO-BEAM-E1-001`: auditoría piso a piso de vigas EDIFICIO_1,
+incluyendo fragmentación, etiquetas de sección, cruces, conectividad y vigas
+especiales, sin reconstruir todavía el modelo FE.

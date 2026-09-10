@@ -1,0 +1,4441 @@
+{
+  "status": "PASS",
+  "scope": "GEO-WALL-E1-001_DIAGNOSTIC",
+  "model": "entregas/P1L2/unity_export/model_viewer.json",
+  "finding": "El modelo historico representa caras de contorno RLE-MURO como muros fisicos independientes de 0.22 m.",
+  "policy": "Los pares directos del DXF definen centrolinea y espesor. Los cierres cortos sin cara opuesta se excluyen como geometria de contorno, no como muros fisicos.",
+  "totals": {
+    "source_contour_segments": 193,
+    "current_wall_prisms": 134,
+    "paired_physical_walls": 67,
+    "confirmed_physical_walls": 67,
+    "review_thickness_pairs": 0,
+    "unmatched_faces": 72,
+    "unresolved_unmatched_faces": 0,
+    "unpaired_face_length_m": 39.0808,
+    "continuing_between_adjacent_floors": 28,
+    "terminates_or_review": 32
+  },
+  "floors": {
+    "S1": {
+      "source_contour_segments": 86,
+      "current_wall_prisms": 60,
+      "confirmed_physical_walls": 21,
+      "review_thickness_pairs": 0,
+      "paired_faces": 42,
+      "unmatched_faces": 44,
+      "unmatched_ids": [
+        "S1-RLE-MURO-0003",
+        "S1-RLE-MURO-0006",
+        "S1-RLE-MURO-0009",
+        "S1-RLE-MURO-0010",
+        "S1-RLE-MURO-0011",
+        "S1-RLE-MURO-0012",
+        "S1-RLE-MURO-0013",
+        "S1-RLE-MURO-0014",
+        "S1-RLE-MURO-0015",
+        "S1-RLE-MURO-0016",
+        "S1-RLE-MURO-0017",
+        "S1-RLE-MURO-0018",
+        "S1-RLE-MURO-0019",
+        "S1-RLE-MURO-0020",
+        "S1-RLE-MURO-0021",
+        "S1-RLE-MURO-0022",
+        "S1-RLE-MURO-0023",
+        "S1-RLE-MURO-0024",
+        "S1-RLE-MURO-0025",
+        "S1-RLE-MURO-0026",
+        "S1-RLE-MURO-0027",
+        "S1-RLE-MURO-0028",
+        "S1-RLE-MURO-0029",
+        "S1-RLE-MURO-0030",
+        "S1-RLE-MURO-0031",
+        "S1-RLE-MURO-0032",
+        "S1-RLE-MURO-0041",
+        "S1-RLE-MURO-0047",
+        "S1-RLE-MURO-0050",
+        "S1-RLE-MURO-0054",
+        "S1-RLE-MURO-0057",
+        "S1-RLE-MURO-0062",
+        "S1-RLE-MURO-0063",
+        "S1-RLE-MURO-0064",
+        "S1-RLE-MURO-0065",
+        "S1-RLE-MURO-0066",
+        "S1-RLE-MURO-0068",
+        "S1-RLE-MURO-0071",
+        "S1-RLE-MURO-0075",
+        "S1-RLE-MURO-0076",
+        "S1-RLE-MURO-0079",
+        "S1-RLE-MURO-0083",
+        "S1-RLE-MURO-0085",
+        "S1-RLE-MURO-0086"
+      ],
+      "unmatched_classification": [
+        {
+          "face_id": "S1-RLE-MURO-0003",
+          "length_m": 0.2,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0006",
+          "length_m": 0.3,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0009",
+          "length_m": 0.7,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0010",
+          "length_m": 0.7,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0011",
+          "length_m": 0.4,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0012",
+          "length_m": 0.4998,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0013",
+          "length_m": 0.4,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0014",
+          "length_m": 0.7,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0015",
+          "length_m": 0.7,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0016",
+          "length_m": 0.4,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0017",
+          "length_m": 0.4,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0018",
+          "length_m": 0.7,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0019",
+          "length_m": 0.4,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0020",
+          "length_m": 0.7,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0021",
+          "length_m": 0.7,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0022",
+          "length_m": 0.7,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0023",
+          "length_m": 0.5,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0024",
+          "length_m": 0.7,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0025",
+          "length_m": 0.7,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0026",
+          "length_m": 0.7,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0027",
+          "length_m": 0.5,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0028",
+          "length_m": 0.7,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0029",
+          "length_m": 0.5,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0030",
+          "length_m": 0.4,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0031",
+          "length_m": 0.7,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0032",
+          "length_m": 0.7,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0041",
+          "length_m": 0.2,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0047",
+          "length_m": 0.25,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0050",
+          "length_m": 0.25,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0054",
+          "length_m": 0.3,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0057",
+          "length_m": 0.3,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0062",
+          "length_m": 0.2,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0063",
+          "length_m": 0.7,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0064",
+          "length_m": 0.7,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0065",
+          "length_m": 0.7,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0066",
+          "length_m": 0.7,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0068",
+          "length_m": 0.2,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0071",
+          "length_m": 0.2,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0075",
+          "length_m": 0.2,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0076",
+          "length_m": 0.2,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0079",
+          "length_m": 0.2002,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0083",
+          "length_m": 0.2,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0085",
+          "length_m": 0.2,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "S1-RLE-MURO-0086",
+          "length_m": 0.2,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        }
+      ],
+      "unresolved_unmatched_faces": 0,
+      "partially_unpaired_faces": 11,
+      "unpaired_face_length_m": 24.2,
+      "face_residuals": [
+        {
+          "face_id": "S1-RLE-MURO-0001",
+          "face_length_m": 8.2998,
+          "paired_length_m": 7.8998,
+          "unpaired_length_m": 0.4,
+          "unpaired_intervals": [
+            [
+              -8.5686,
+              -8.3686
+            ],
+            [
+              -0.4687,
+              -0.2687
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0003",
+          "face_length_m": 0.2,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.2,
+          "unpaired_intervals": [
+            [
+              27.141,
+              27.341
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0004",
+          "face_length_m": 15.0737,
+          "paired_length_m": 14.7737,
+          "unpaired_length_m": 0.3,
+          "unpaired_intervals": [
+            [
+              48.741,
+              49.041
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0006",
+          "face_length_m": 0.3,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.3,
+          "unpaired_intervals": [
+            [
+              -0.5687,
+              -0.2687
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0007",
+          "face_length_m": 8.2998,
+          "paired_length_m": 7.7998,
+          "unpaired_length_m": 0.5,
+          "unpaired_intervals": [
+            [
+              -8.5686,
+              -8.3686
+            ],
+            [
+              -0.5687,
+              -0.2687
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0009",
+          "face_length_m": 0.7,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.7,
+          "unpaired_intervals": [
+            [
+              37.141,
+              37.841
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0010",
+          "face_length_m": 0.7,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.7,
+          "unpaired_intervals": [
+            [
+              -0.1687,
+              0.5313
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0011",
+          "face_length_m": 0.4,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.4,
+          "unpaired_intervals": [
+            [
+              37.141,
+              37.541
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0012",
+          "face_length_m": 0.4998,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.4998,
+          "unpaired_intervals": [
+            [
+              0.0314,
+              0.5313
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0013",
+          "face_length_m": 0.4,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.4,
+          "unpaired_intervals": [
+            [
+              37.141,
+              37.541
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0014",
+          "face_length_m": 0.7,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.7,
+          "unpaired_intervals": [
+            [
+              15.9814,
+              16.6814
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0015",
+          "face_length_m": 0.7,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.7,
+          "unpaired_intervals": [
+            [
+              37.141,
+              37.841
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0016",
+          "face_length_m": 0.4,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.4,
+          "unpaired_intervals": [
+            [
+              15.9814,
+              16.3814
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0017",
+          "face_length_m": 0.4,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.4,
+          "unpaired_intervals": [
+            [
+              37.141,
+              37.541
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0018",
+          "face_length_m": 0.7,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.7,
+          "unpaired_intervals": [
+            [
+              8.7313,
+              9.4313
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0019",
+          "face_length_m": 0.4,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.4,
+          "unpaired_intervals": [
+            [
+              37.141,
+              37.541
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0020",
+          "face_length_m": 0.7,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.7,
+          "unpaired_intervals": [
+            [
+              8.7313,
+              9.4313
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0021",
+          "face_length_m": 0.7,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.7,
+          "unpaired_intervals": [
+            [
+              27.141,
+              27.841
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0022",
+          "face_length_m": 0.7,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.7,
+          "unpaired_intervals": [
+            [
+              8.7313,
+              9.4313
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0023",
+          "face_length_m": 0.5,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.5,
+          "unpaired_intervals": [
+            [
+              27.341,
+              27.841
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0024",
+          "face_length_m": 0.7,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.7,
+          "unpaired_intervals": [
+            [
+              8.7313,
+              9.4313
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0025",
+          "face_length_m": 0.7,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.7,
+          "unpaired_intervals": [
+            [
+              27.141,
+              27.841
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0026",
+          "face_length_m": 0.7,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.7,
+          "unpaired_intervals": [
+            [
+              -0.1687,
+              0.5313
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0027",
+          "face_length_m": 0.5,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.5,
+          "unpaired_intervals": [
+            [
+              27.341,
+              27.841
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0028",
+          "face_length_m": 0.7,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.7,
+          "unpaired_intervals": [
+            [
+              -0.1687,
+              0.5313
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0029",
+          "face_length_m": 0.5,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.5,
+          "unpaired_intervals": [
+            [
+              27.341,
+              27.841
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0030",
+          "face_length_m": 0.4,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.4,
+          "unpaired_intervals": [
+            [
+              15.9814,
+              16.3814
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0031",
+          "face_length_m": 0.7,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.7,
+          "unpaired_intervals": [
+            [
+              27.141,
+              27.841
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0032",
+          "face_length_m": 0.7,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.7,
+          "unpaired_intervals": [
+            [
+              15.9814,
+              16.6814
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0041",
+          "face_length_m": 0.2,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.2,
+          "unpaired_intervals": [
+            [
+              27.141,
+              27.341
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0044",
+          "face_length_m": 3.7,
+          "paired_length_m": 3.2,
+          "unpaired_length_m": 0.5,
+          "unpaired_intervals": [
+            [
+              30.641,
+              30.891
+            ],
+            [
+              34.091,
+              34.341
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0046",
+          "face_length_m": 1.6788,
+          "paired_length_m": 1.4788,
+          "unpaired_length_m": 0.2,
+          "unpaired_intervals": [
+            [
+              13.9264,
+              14.1264
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0047",
+          "face_length_m": 0.25,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.25,
+          "unpaired_intervals": [
+            [
+              30.641,
+              30.891
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0050",
+          "face_length_m": 0.25,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.25,
+          "unpaired_intervals": [
+            [
+              34.091,
+              34.341
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0051",
+          "face_length_m": 1.6788,
+          "paired_length_m": 1.4788,
+          "unpaired_length_m": 0.2,
+          "unpaired_intervals": [
+            [
+              13.9264,
+              14.1264
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0052",
+          "face_length_m": 2.35,
+          "paired_length_m": 2.15,
+          "unpaired_length_m": 0.2,
+          "unpaired_intervals": [
+            [
+              3.9814,
+              4.1814
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0054",
+          "face_length_m": 0.3,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.3,
+          "unpaired_intervals": [
+            [
+              30.891,
+              31.191
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0056",
+          "face_length_m": 2.35,
+          "paired_length_m": 2.15,
+          "unpaired_length_m": 0.2,
+          "unpaired_intervals": [
+            [
+              3.9814,
+              4.1814
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0057",
+          "face_length_m": 0.3,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.3,
+          "unpaired_intervals": [
+            [
+              33.791,
+              34.091
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0058",
+          "face_length_m": 3.2,
+          "paired_length_m": 2.6,
+          "unpaired_length_m": 0.6,
+          "unpaired_intervals": [
+            [
+              30.891,
+              31.191
+            ],
+            [
+              33.791,
+              34.091
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0061",
+          "face_length_m": 0.85,
+          "paired_length_m": 0.65,
+          "unpaired_length_m": 0.2,
+          "unpaired_intervals": [
+            [
+              27.141,
+              27.341
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0062",
+          "face_length_m": 0.2,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.2,
+          "unpaired_intervals": [
+            [
+              -8.5686,
+              -8.3686
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0063",
+          "face_length_m": 0.7,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.7,
+          "unpaired_intervals": [
+            [
+              47.141,
+              47.841
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0064",
+          "face_length_m": 0.7,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.7,
+          "unpaired_intervals": [
+            [
+              -0.1686,
+              0.5314
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0065",
+          "face_length_m": 0.7,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.7,
+          "unpaired_intervals": [
+            [
+              47.141,
+              47.841
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0066",
+          "face_length_m": 0.7,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.7,
+          "unpaired_intervals": [
+            [
+              -0.1686,
+              0.5314
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0068",
+          "face_length_m": 0.2,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.2,
+          "unpaired_intervals": [
+            [
+              -0.1686,
+              0.0314
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0071",
+          "face_length_m": 0.2,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.2,
+          "unpaired_intervals": [
+            [
+              -8.5686,
+              -8.3686
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0072",
+          "face_length_m": 12.0748,
+          "paired_length_m": 11.7747,
+          "unpaired_length_m": 0.3,
+          "unpaired_intervals": [
+            [
+              48.741,
+              49.041
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0075",
+          "face_length_m": 0.2,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.2,
+          "unpaired_intervals": [
+            [
+              -8.5686,
+              -8.3686
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0076",
+          "face_length_m": 0.2,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.2,
+          "unpaired_intervals": [
+            [
+              -8.5686,
+              -8.3686
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0079",
+          "face_length_m": 0.2002,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.2002,
+          "unpaired_intervals": [
+            [
+              -0.1687,
+              0.0314
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0083",
+          "face_length_m": 0.2,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.2,
+          "unpaired_intervals": [
+            [
+              -8.5686,
+              -8.3686
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0085",
+          "face_length_m": 0.2,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.2,
+          "unpaired_intervals": [
+            [
+              -8.5686,
+              -8.3686
+            ]
+          ]
+        },
+        {
+          "face_id": "S1-RLE-MURO-0086",
+          "face_length_m": 0.2,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.2,
+          "unpaired_intervals": [
+            [
+              -0.4687,
+              -0.2687
+            ]
+          ]
+        }
+      ],
+      "thicknesses_m": {
+        "0.2": 12,
+        "0.25": 2,
+        "0.3": 7
+      },
+      "pairs": [
+        {
+          "pair_id": "S1-WP-001",
+          "floor": "S1",
+          "orientation": "V",
+          "face_ids": [
+            "S1-RLE-MURO-0001",
+            "S1-RLE-MURO-0002"
+          ],
+          "source_tags": [
+            "S1-RLE-MURO-0001",
+            "S1-RLE-MURO-0002"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            27.241,
+            -8.3686
+          ],
+          "centerline_end_xy_m": [
+            27.241,
+            -0.4687
+          ],
+          "length_m": 7.8998,
+          "thickness_m": 0.2,
+          "standard_thickness_m": 0.2,
+          "standard_residual_m": 0.0,
+          "overlap_m": 7.8998,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "S1-WP-002",
+          "floor": "S1",
+          "orientation": "H",
+          "face_ids": [
+            "S1-RLE-MURO-0004",
+            "S1-RLE-MURO-0005"
+          ],
+          "source_tags": [
+            "S1-RLE-MURO-0004",
+            "S1-RLE-MURO-0005"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            33.9673,
+            -0.4187
+          ],
+          "centerline_end_xy_m": [
+            48.741,
+            -0.4187
+          ],
+          "length_m": 14.7737,
+          "thickness_m": 0.3,
+          "standard_thickness_m": 0.3,
+          "standard_residual_m": 0.0,
+          "overlap_m": 14.7737,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "S1-WP-003",
+          "floor": "S1",
+          "orientation": "V",
+          "face_ids": [
+            "S1-RLE-MURO-0007",
+            "S1-RLE-MURO-0008"
+          ],
+          "source_tags": [
+            "S1-RLE-MURO-0007",
+            "S1-RLE-MURO-0008"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            48.891,
+            -8.3686
+          ],
+          "centerline_end_xy_m": [
+            48.891,
+            -0.5687
+          ],
+          "length_m": 7.7998,
+          "thickness_m": 0.3,
+          "standard_thickness_m": 0.3,
+          "standard_residual_m": 0.0,
+          "overlap_m": 7.7998,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "S1-WP-004",
+          "floor": "S1",
+          "orientation": "V",
+          "face_ids": [
+            "S1-RLE-MURO-0033",
+            "S1-RLE-MURO-0034"
+          ],
+          "source_tags": [
+            "S1-RLE-MURO-0033",
+            "S1-RLE-MURO-0034"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            37.691,
+            0.5314
+          ],
+          "centerline_end_xy_m": [
+            37.691,
+            8.7313
+          ],
+          "length_m": 8.1998,
+          "thickness_m": 0.3,
+          "standard_thickness_m": 0.3,
+          "standard_residual_m": 0.0,
+          "overlap_m": 8.1998,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "S1-WP-005",
+          "floor": "S1",
+          "orientation": "V",
+          "face_ids": [
+            "S1-RLE-MURO-0035",
+            "S1-RLE-MURO-0036"
+          ],
+          "source_tags": [
+            "S1-RLE-MURO-0035",
+            "S1-RLE-MURO-0036"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            37.691,
+            9.4313
+          ],
+          "centerline_end_xy_m": [
+            37.691,
+            15.9814
+          ],
+          "length_m": 6.5502,
+          "thickness_m": 0.3,
+          "standard_thickness_m": 0.3,
+          "standard_residual_m": 0.0,
+          "overlap_m": 6.5502,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "S1-WP-006",
+          "floor": "S1",
+          "orientation": "V",
+          "face_ids": [
+            "S1-RLE-MURO-0037",
+            "S1-RLE-MURO-0038"
+          ],
+          "source_tags": [
+            "S1-RLE-MURO-0037",
+            "S1-RLE-MURO-0038"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            27.241,
+            9.4313
+          ],
+          "centerline_end_xy_m": [
+            27.241,
+            15.9814
+          ],
+          "length_m": 6.5502,
+          "thickness_m": 0.2,
+          "standard_thickness_m": 0.2,
+          "standard_residual_m": 0.0,
+          "overlap_m": 6.5502,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "S1-WP-007",
+          "floor": "S1",
+          "orientation": "V",
+          "face_ids": [
+            "S1-RLE-MURO-0039",
+            "S1-RLE-MURO-0040"
+          ],
+          "source_tags": [
+            "S1-RLE-MURO-0039",
+            "S1-RLE-MURO-0040"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            27.241,
+            0.5314
+          ],
+          "centerline_end_xy_m": [
+            27.241,
+            6.3314
+          ],
+          "length_m": 5.8,
+          "thickness_m": 0.2,
+          "standard_thickness_m": 0.2,
+          "standard_residual_m": 0.0,
+          "overlap_m": 5.8,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "S1-WP-008",
+          "floor": "S1",
+          "orientation": "H",
+          "face_ids": [
+            "S1-RLE-MURO-0042",
+            "S1-RLE-MURO-0043"
+          ],
+          "source_tags": [
+            "S1-RLE-MURO-0042",
+            "S1-RLE-MURO-0043"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            27.841,
+            16.5314
+          ],
+          "centerline_end_xy_m": [
+            37.141,
+            16.5314
+          ],
+          "length_m": 9.3,
+          "thickness_m": 0.3,
+          "standard_thickness_m": 0.3,
+          "standard_residual_m": 0.0,
+          "overlap_m": 9.3,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "S1-WP-009",
+          "floor": "S1",
+          "orientation": "H",
+          "face_ids": [
+            "S1-RLE-MURO-0044",
+            "S1-RLE-MURO-0045"
+          ],
+          "source_tags": [
+            "S1-RLE-MURO-0044",
+            "S1-RLE-MURO-0045"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            30.891,
+            14.0264
+          ],
+          "centerline_end_xy_m": [
+            34.091,
+            14.0264
+          ],
+          "length_m": 3.2,
+          "thickness_m": 0.2,
+          "standard_thickness_m": 0.2,
+          "standard_residual_m": 0.0,
+          "overlap_m": 3.2,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "S1-WP-010",
+          "floor": "S1",
+          "orientation": "V",
+          "face_ids": [
+            "S1-RLE-MURO-0046",
+            "S1-RLE-MURO-0048"
+          ],
+          "source_tags": [
+            "S1-RLE-MURO-0046",
+            "S1-RLE-MURO-0048"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            30.766,
+            12.4476
+          ],
+          "centerline_end_xy_m": [
+            30.766,
+            13.9264
+          ],
+          "length_m": 1.4788,
+          "thickness_m": 0.25,
+          "standard_thickness_m": 0.25,
+          "standard_residual_m": 0.0,
+          "overlap_m": 1.4788,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "S1-WP-011",
+          "floor": "S1",
+          "orientation": "V",
+          "face_ids": [
+            "S1-RLE-MURO-0049",
+            "S1-RLE-MURO-0051"
+          ],
+          "source_tags": [
+            "S1-RLE-MURO-0049",
+            "S1-RLE-MURO-0051"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            34.216,
+            12.4476
+          ],
+          "centerline_end_xy_m": [
+            34.216,
+            13.9264
+          ],
+          "length_m": 1.4788,
+          "thickness_m": 0.25,
+          "standard_thickness_m": 0.25,
+          "standard_residual_m": 0.0,
+          "overlap_m": 1.4788,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "S1-WP-012",
+          "floor": "S1",
+          "orientation": "V",
+          "face_ids": [
+            "S1-RLE-MURO-0052",
+            "S1-RLE-MURO-0053"
+          ],
+          "source_tags": [
+            "S1-RLE-MURO-0052",
+            "S1-RLE-MURO-0053"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            31.041,
+            4.1814
+          ],
+          "centerline_end_xy_m": [
+            31.041,
+            6.3314
+          ],
+          "length_m": 2.15,
+          "thickness_m": 0.3,
+          "standard_thickness_m": 0.3,
+          "standard_residual_m": 0.0,
+          "overlap_m": 2.15,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "S1-WP-013",
+          "floor": "S1",
+          "orientation": "V",
+          "face_ids": [
+            "S1-RLE-MURO-0055",
+            "S1-RLE-MURO-0056"
+          ],
+          "source_tags": [
+            "S1-RLE-MURO-0055",
+            "S1-RLE-MURO-0056"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            33.941,
+            4.1814
+          ],
+          "centerline_end_xy_m": [
+            33.941,
+            6.3314
+          ],
+          "length_m": 2.15,
+          "thickness_m": 0.3,
+          "standard_thickness_m": 0.3,
+          "standard_residual_m": 0.0,
+          "overlap_m": 2.15,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "S1-WP-014",
+          "floor": "S1",
+          "orientation": "H",
+          "face_ids": [
+            "S1-RLE-MURO-0058",
+            "S1-RLE-MURO-0059"
+          ],
+          "source_tags": [
+            "S1-RLE-MURO-0058",
+            "S1-RLE-MURO-0059"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            31.191,
+            4.0814
+          ],
+          "centerline_end_xy_m": [
+            33.791,
+            4.0814
+          ],
+          "length_m": 2.6,
+          "thickness_m": 0.2,
+          "standard_thickness_m": 0.2,
+          "standard_residual_m": 0.0,
+          "overlap_m": 2.6,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "S1-WP-015",
+          "floor": "S1",
+          "orientation": "H",
+          "face_ids": [
+            "S1-RLE-MURO-0060",
+            "S1-RLE-MURO-0078"
+          ],
+          "source_tags": [
+            "S1-RLE-MURO-0060",
+            "S1-RLE-MURO-0078"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            31.5673,
+            -8.4686
+          ],
+          "centerline_end_xy_m": [
+            32.1673,
+            -8.4686
+          ],
+          "length_m": 0.6,
+          "thickness_m": 0.2,
+          "standard_thickness_m": 0.2,
+          "standard_residual_m": 0.0,
+          "overlap_m": 0.6,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "S1-WP-016",
+          "floor": "S1",
+          "orientation": "H",
+          "face_ids": [
+            "S1-RLE-MURO-0061",
+            "S1-RLE-MURO-0077"
+          ],
+          "source_tags": [
+            "S1-RLE-MURO-0061",
+            "S1-RLE-MURO-0077"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            27.341,
+            -8.4686
+          ],
+          "centerline_end_xy_m": [
+            27.991,
+            -8.4686
+          ],
+          "length_m": 0.65,
+          "thickness_m": 0.2,
+          "standard_thickness_m": 0.2,
+          "standard_residual_m": 0.0,
+          "overlap_m": 0.65,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "S1-WP-017",
+          "floor": "S1",
+          "orientation": "H",
+          "face_ids": [
+            "S1-RLE-MURO-0067",
+            "S1-RLE-MURO-0069"
+          ],
+          "source_tags": [
+            "S1-RLE-MURO-0067",
+            "S1-RLE-MURO-0069"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            33.9673,
+            -0.0686
+          ],
+          "centerline_end_xy_m": [
+            37.141,
+            -0.0686
+          ],
+          "length_m": 3.1737,
+          "thickness_m": 0.2,
+          "standard_thickness_m": 0.2,
+          "standard_residual_m": 0.0,
+          "overlap_m": 3.1737,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "S1-WP-018",
+          "floor": "S1",
+          "orientation": "H",
+          "face_ids": [
+            "S1-RLE-MURO-0070",
+            "S1-RLE-MURO-0072"
+          ],
+          "source_tags": [
+            "S1-RLE-MURO-0070",
+            "S1-RLE-MURO-0072"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            36.9663,
+            -8.4686
+          ],
+          "centerline_end_xy_m": [
+            48.741,
+            -8.4686
+          ],
+          "length_m": 11.7748,
+          "thickness_m": 0.2,
+          "standard_thickness_m": 0.2,
+          "standard_residual_m": 0.0,
+          "overlap_m": 11.7748,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "S1-WP-019",
+          "floor": "S1",
+          "orientation": "H",
+          "face_ids": [
+            "S1-RLE-MURO-0073",
+            "S1-RLE-MURO-0074"
+          ],
+          "source_tags": [
+            "S1-RLE-MURO-0073",
+            "S1-RLE-MURO-0074"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            27.341,
+            -0.3687
+          ],
+          "centerline_end_xy_m": [
+            32.1673,
+            -0.3687
+          ],
+          "length_m": 4.8263,
+          "thickness_m": 0.2,
+          "standard_thickness_m": 0.2,
+          "standard_residual_m": 0.0,
+          "overlap_m": 4.8263,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "S1-WP-020",
+          "floor": "S1",
+          "orientation": "H",
+          "face_ids": [
+            "S1-RLE-MURO-0080",
+            "S1-RLE-MURO-0081"
+          ],
+          "source_tags": [
+            "S1-RLE-MURO-0080",
+            "S1-RLE-MURO-0081"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            27.841,
+            -0.0687
+          ],
+          "centerline_end_xy_m": [
+            32.1673,
+            -0.0687
+          ],
+          "length_m": 4.3262,
+          "thickness_m": 0.2002,
+          "standard_thickness_m": 0.2,
+          "standard_residual_m": 0.0002,
+          "overlap_m": 4.3262,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "S1-WP-021",
+          "floor": "S1",
+          "orientation": "H",
+          "face_ids": [
+            "S1-RLE-MURO-0082",
+            "S1-RLE-MURO-0084"
+          ],
+          "source_tags": [
+            "S1-RLE-MURO-0082",
+            "S1-RLE-MURO-0084"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            33.9673,
+            -8.4686
+          ],
+          "centerline_end_xy_m": [
+            34.5673,
+            -8.4686
+          ],
+          "length_m": 0.6,
+          "thickness_m": 0.2,
+          "standard_thickness_m": 0.2,
+          "standard_residual_m": 0.0,
+          "overlap_m": 0.6,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        }
+      ],
+      "overlay": "entregas/P1L2/edificio/validacion/ed1_walls/s1_wall_face_pairs.png"
+    },
+    "P1": {
+      "source_contour_segments": 53,
+      "current_wall_prisms": 38,
+      "confirmed_physical_walls": 25,
+      "review_thickness_pairs": 0,
+      "paired_faces": 50,
+      "unmatched_faces": 13,
+      "unmatched_ids": [
+        "P1-RLE-MURO-0004",
+        "P1-RLE-MURO-0007",
+        "P1-RLE-MURO-0011",
+        "P1-RLE-MURO-0014",
+        "P1-RLE-MURO-0018",
+        "P1-RLE-MURO-0023",
+        "P1-RLE-MURO-0030",
+        "P1-RLE-MURO-0032",
+        "P1-RLE-MURO-0033",
+        "P1-RLE-MURO-0034",
+        "P1-RLE-MURO-0045",
+        "P1-RLE-MURO-0047",
+        "P1-RLE-MURO-0053"
+      ],
+      "unmatched_classification": [
+        {
+          "face_id": "P1-RLE-MURO-0004",
+          "length_m": 0.25,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "P1-RLE-MURO-0007",
+          "length_m": 0.25,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "P1-RLE-MURO-0011",
+          "length_m": 0.3,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "P1-RLE-MURO-0014",
+          "length_m": 0.3,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "P1-RLE-MURO-0018",
+          "length_m": 0.2,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "P1-RLE-MURO-0023",
+          "length_m": 0.3,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "P1-RLE-MURO-0030",
+          "length_m": 0.2,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "P1-RLE-MURO-0032",
+          "length_m": 0.3,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "P1-RLE-MURO-0033",
+          "length_m": 0.15,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "P1-RLE-MURO-0034",
+          "length_m": 0.2,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "P1-RLE-MURO-0045",
+          "length_m": 0.15,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "P1-RLE-MURO-0047",
+          "length_m": 0.15,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "P1-RLE-MURO-0053",
+          "length_m": 0.15,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        }
+      ],
+      "unresolved_unmatched_faces": 0,
+      "partially_unpaired_faces": 13,
+      "unpaired_face_length_m": 5.8808,
+      "face_residuals": [
+        {
+          "face_id": "P1-RLE-MURO-0001",
+          "face_length_m": 3.7,
+          "paired_length_m": 3.2,
+          "unpaired_length_m": 0.5,
+          "unpaired_intervals": [
+            [
+              30.641,
+              30.891
+            ],
+            [
+              34.091,
+              34.341
+            ]
+          ]
+        },
+        {
+          "face_id": "P1-RLE-MURO-0003",
+          "face_length_m": 1.6788,
+          "paired_length_m": 1.4788,
+          "unpaired_length_m": 0.2,
+          "unpaired_intervals": [
+            [
+              13.7451,
+              13.9451
+            ]
+          ]
+        },
+        {
+          "face_id": "P1-RLE-MURO-0004",
+          "face_length_m": 0.25,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.25,
+          "unpaired_intervals": [
+            [
+              30.641,
+              30.891
+            ]
+          ]
+        },
+        {
+          "face_id": "P1-RLE-MURO-0007",
+          "face_length_m": 0.25,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.25,
+          "unpaired_intervals": [
+            [
+              34.091,
+              34.341
+            ]
+          ]
+        },
+        {
+          "face_id": "P1-RLE-MURO-0008",
+          "face_length_m": 1.6788,
+          "paired_length_m": 1.4788,
+          "unpaired_length_m": 0.2,
+          "unpaired_intervals": [
+            [
+              13.7451,
+              13.9451
+            ]
+          ]
+        },
+        {
+          "face_id": "P1-RLE-MURO-0011",
+          "face_length_m": 0.3,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.3,
+          "unpaired_intervals": [
+            [
+              30.891,
+              31.191
+            ]
+          ]
+        },
+        {
+          "face_id": "P1-RLE-MURO-0013",
+          "face_length_m": 2.35,
+          "paired_length_m": 2.15,
+          "unpaired_length_m": 0.2,
+          "unpaired_intervals": [
+            [
+              3.8001,
+              4.0001
+            ]
+          ]
+        },
+        {
+          "face_id": "P1-RLE-MURO-0014",
+          "face_length_m": 0.3,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.3,
+          "unpaired_intervals": [
+            [
+              33.791,
+              34.091
+            ]
+          ]
+        },
+        {
+          "face_id": "P1-RLE-MURO-0015",
+          "face_length_m": 6.95,
+          "paired_length_m": 6.35,
+          "unpaired_length_m": 0.6,
+          "unpaired_intervals": [
+            [
+              30.891,
+              31.191
+            ],
+            [
+              33.791,
+              34.091
+            ]
+          ]
+        },
+        {
+          "face_id": "P1-RLE-MURO-0018",
+          "face_length_m": 0.2,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.2,
+          "unpaired_intervals": [
+            [
+              3.8001,
+              4.0001
+            ]
+          ]
+        },
+        {
+          "face_id": "P1-RLE-MURO-0023",
+          "face_length_m": 0.3,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.3,
+          "unpaired_intervals": [
+            [
+              67.491,
+              67.791
+            ]
+          ]
+        },
+        {
+          "face_id": "P1-RLE-MURO-0029",
+          "face_length_m": 9.8056,
+          "paired_length_m": 9.6056,
+          "unpaired_length_m": 0.2,
+          "unpaired_intervals": [
+            [
+              16.5201,
+              16.7201
+            ]
+          ]
+        },
+        {
+          "face_id": "P1-RLE-MURO-0030",
+          "face_length_m": 0.2,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.2,
+          "unpaired_intervals": [
+            [
+              67.491,
+              67.691
+            ]
+          ]
+        },
+        {
+          "face_id": "P1-RLE-MURO-0032",
+          "face_length_m": 0.3,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.3,
+          "unpaired_intervals": [
+            [
+              67.491,
+              67.791
+            ]
+          ]
+        },
+        {
+          "face_id": "P1-RLE-MURO-0033",
+          "face_length_m": 0.15,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.15,
+          "unpaired_intervals": [
+            [
+              -0.5999,
+              -0.4499
+            ]
+          ]
+        },
+        {
+          "face_id": "P1-RLE-MURO-0034",
+          "face_length_m": 0.2,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.2,
+          "unpaired_intervals": [
+            [
+              69.991,
+              70.191
+            ]
+          ]
+        },
+        {
+          "face_id": "P1-RLE-MURO-0039",
+          "face_length_m": 1.4103,
+          "paired_length_m": 1.2103,
+          "unpaired_length_m": 0.2,
+          "unpaired_intervals": [
+            [
+              -10.797,
+              -10.597
+            ]
+          ]
+        },
+        {
+          "face_id": "P1-RLE-MURO-0043",
+          "face_length_m": 3.05,
+          "paired_length_m": 2.9,
+          "unpaired_length_m": 0.15,
+          "unpaired_intervals": [
+            [
+              -3.6499,
+              -3.4999
+            ]
+          ]
+        },
+        {
+          "face_id": "P1-RLE-MURO-0044",
+          "face_length_m": 7.4539,
+          "paired_length_m": 7.3837,
+          "unpaired_length_m": 0.0702,
+          "unpaired_intervals": []
+        },
+        {
+          "face_id": "P1-RLE-MURO-0045",
+          "face_length_m": 0.15,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.15,
+          "unpaired_intervals": [
+            [
+              -6.2999,
+              -6.1499
+            ]
+          ]
+        },
+        {
+          "face_id": "P1-RLE-MURO-0046",
+          "face_length_m": 7.4539,
+          "paired_length_m": 7.3837,
+          "unpaired_length_m": 0.0702,
+          "unpaired_intervals": []
+        },
+        {
+          "face_id": "P1-RLE-MURO-0047",
+          "face_length_m": 0.15,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.15,
+          "unpaired_intervals": [
+            [
+              -6.2999,
+              -6.1499
+            ]
+          ]
+        },
+        {
+          "face_id": "P1-RLE-MURO-0048",
+          "face_length_m": 3.6337,
+          "paired_length_m": 3.4837,
+          "unpaired_length_m": 0.15,
+          "unpaired_intervals": [
+            [
+              66.241,
+              66.391
+            ]
+          ]
+        },
+        {
+          "face_id": "P1-RLE-MURO-0050",
+          "face_length_m": 11.7952,
+          "paired_length_m": 11.425,
+          "unpaired_length_m": 0.3702,
+          "unpaired_intervals": [
+            [
+              72.7363,
+              73.0363
+            ]
+          ]
+        },
+        {
+          "face_id": "P1-RLE-MURO-0052",
+          "face_length_m": 11.4952,
+          "paired_length_m": 11.425,
+          "unpaired_length_m": 0.0702,
+          "unpaired_intervals": []
+        },
+        {
+          "face_id": "P1-RLE-MURO-0053",
+          "face_length_m": 0.15,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.15,
+          "unpaired_intervals": [
+            [
+              -3.6499,
+              -3.4999
+            ]
+          ]
+        }
+      ],
+      "thicknesses_m": {
+        "0.15": 7,
+        "0.2": 7,
+        "0.25": 2,
+        "0.3": 9
+      },
+      "pairs": [
+        {
+          "pair_id": "P1-WP-001",
+          "floor": "P1",
+          "orientation": "H",
+          "face_ids": [
+            "P1-RLE-MURO-0001",
+            "P1-RLE-MURO-0002"
+          ],
+          "source_tags": [
+            "P1-RLE-MURO-0001",
+            "P1-RLE-MURO-0002"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            30.891,
+            13.8451
+          ],
+          "centerline_end_xy_m": [
+            34.091,
+            13.8451
+          ],
+          "length_m": 3.2,
+          "thickness_m": 0.2,
+          "standard_thickness_m": 0.2,
+          "standard_residual_m": 0.0,
+          "overlap_m": 3.2,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "P1-WP-002",
+          "floor": "P1",
+          "orientation": "V",
+          "face_ids": [
+            "P1-RLE-MURO-0003",
+            "P1-RLE-MURO-0005"
+          ],
+          "source_tags": [
+            "P1-RLE-MURO-0003",
+            "P1-RLE-MURO-0005"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            30.766,
+            12.2663
+          ],
+          "centerline_end_xy_m": [
+            30.766,
+            13.7451
+          ],
+          "length_m": 1.4788,
+          "thickness_m": 0.25,
+          "standard_thickness_m": 0.25,
+          "standard_residual_m": 0.0,
+          "overlap_m": 1.4788,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "P1-WP-003",
+          "floor": "P1",
+          "orientation": "V",
+          "face_ids": [
+            "P1-RLE-MURO-0006",
+            "P1-RLE-MURO-0008"
+          ],
+          "source_tags": [
+            "P1-RLE-MURO-0006",
+            "P1-RLE-MURO-0008"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            34.216,
+            12.2663
+          ],
+          "centerline_end_xy_m": [
+            34.216,
+            13.7451
+          ],
+          "length_m": 1.4788,
+          "thickness_m": 0.25,
+          "standard_thickness_m": 0.25,
+          "standard_residual_m": 0.0,
+          "overlap_m": 1.4788,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "P1-WP-004",
+          "floor": "P1",
+          "orientation": "V",
+          "face_ids": [
+            "P1-RLE-MURO-0009",
+            "P1-RLE-MURO-0010"
+          ],
+          "source_tags": [
+            "P1-RLE-MURO-0009",
+            "P1-RLE-MURO-0010"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            31.041,
+            4.0001
+          ],
+          "centerline_end_xy_m": [
+            31.041,
+            6.1501
+          ],
+          "length_m": 2.15,
+          "thickness_m": 0.3,
+          "standard_thickness_m": 0.3,
+          "standard_residual_m": 0.0,
+          "overlap_m": 2.15,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "P1-WP-005",
+          "floor": "P1",
+          "orientation": "V",
+          "face_ids": [
+            "P1-RLE-MURO-0012",
+            "P1-RLE-MURO-0013"
+          ],
+          "source_tags": [
+            "P1-RLE-MURO-0012",
+            "P1-RLE-MURO-0013"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            33.941,
+            4.0001
+          ],
+          "centerline_end_xy_m": [
+            33.941,
+            6.1501
+          ],
+          "length_m": 2.15,
+          "thickness_m": 0.3,
+          "standard_thickness_m": 0.3,
+          "standard_residual_m": 0.0,
+          "overlap_m": 2.15,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "P1-WP-006",
+          "floor": "P1",
+          "orientation": "H",
+          "face_ids": [
+            "P1-RLE-MURO-0015",
+            "P1-RLE-MURO-0016"
+          ],
+          "source_tags": [
+            "P1-RLE-MURO-0015",
+            "P1-RLE-MURO-0016"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            31.191,
+            3.9001
+          ],
+          "centerline_end_xy_m": [
+            33.791,
+            3.9001
+          ],
+          "length_m": 2.6,
+          "thickness_m": 0.2,
+          "standard_thickness_m": 0.2,
+          "standard_residual_m": 0.0,
+          "overlap_m": 2.6,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "P1-WP-007",
+          "floor": "P1",
+          "orientation": "H",
+          "face_ids": [
+            "P1-RLE-MURO-0015",
+            "P1-RLE-MURO-0017"
+          ],
+          "source_tags": [
+            "P1-RLE-MURO-0015",
+            "P1-RLE-MURO-0017"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            27.141,
+            3.9001
+          ],
+          "centerline_end_xy_m": [
+            30.891,
+            3.9001
+          ],
+          "length_m": 3.75,
+          "thickness_m": 0.2,
+          "standard_thickness_m": 0.2,
+          "standard_residual_m": 0.0,
+          "overlap_m": 3.75,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "P1-WP-008",
+          "floor": "P1",
+          "orientation": "V",
+          "face_ids": [
+            "P1-RLE-MURO-0019",
+            "P1-RLE-MURO-0020"
+          ],
+          "source_tags": [
+            "P1-RLE-MURO-0019",
+            "P1-RLE-MURO-0020"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            27.241,
+            9.2501
+          ],
+          "centerline_end_xy_m": [
+            27.241,
+            15.8
+          ],
+          "length_m": 6.5498,
+          "thickness_m": 0.2,
+          "standard_thickness_m": 0.2,
+          "standard_residual_m": 0.0,
+          "overlap_m": 6.5498,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "P1-WP-009",
+          "floor": "P1",
+          "orientation": "V",
+          "face_ids": [
+            "P1-RLE-MURO-0021",
+            "P1-RLE-MURO-0022"
+          ],
+          "source_tags": [
+            "P1-RLE-MURO-0021",
+            "P1-RLE-MURO-0022"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            67.641,
+            9.2501
+          ],
+          "centerline_end_xy_m": [
+            67.641,
+            15.8
+          ],
+          "length_m": 6.5498,
+          "thickness_m": 0.3,
+          "standard_thickness_m": 0.3,
+          "standard_residual_m": 0.0,
+          "overlap_m": 6.5498,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "P1-WP-010",
+          "floor": "P1",
+          "orientation": "V",
+          "face_ids": [
+            "P1-RLE-MURO-0024",
+            "P1-RLE-MURO-0025"
+          ],
+          "source_tags": [
+            "P1-RLE-MURO-0024",
+            "P1-RLE-MURO-0025"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            67.641,
+            0.3501
+          ],
+          "centerline_end_xy_m": [
+            67.641,
+            8.5501
+          ],
+          "length_m": 8.2,
+          "thickness_m": 0.3,
+          "standard_thickness_m": 0.3,
+          "standard_residual_m": 0.0,
+          "overlap_m": 8.2,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "P1-WP-011",
+          "floor": "P1",
+          "orientation": "H",
+          "face_ids": [
+            "P1-RLE-MURO-0026",
+            "P1-RLE-MURO-0027"
+          ],
+          "source_tags": [
+            "P1-RLE-MURO-0026",
+            "P1-RLE-MURO-0027"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            57.841,
+            -0.1999
+          ],
+          "centerline_end_xy_m": [
+            67.141,
+            -0.1999
+          ],
+          "length_m": 9.3,
+          "thickness_m": 0.3,
+          "standard_thickness_m": 0.3,
+          "standard_residual_m": 0.0,
+          "overlap_m": 9.3,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "P1-WP-012",
+          "floor": "P1",
+          "orientation": "H",
+          "face_ids": [
+            "P1-RLE-MURO-0028",
+            "P1-RLE-MURO-0051"
+          ],
+          "source_tags": [
+            "P1-RLE-MURO-0028",
+            "P1-RLE-MURO-0051"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            67.841,
+            -0.1999
+          ],
+          "centerline_end_xy_m": [
+            70.191,
+            -0.1999
+          ],
+          "length_m": 2.35,
+          "thickness_m": 0.3,
+          "standard_thickness_m": 0.3,
+          "standard_residual_m": 0.0,
+          "overlap_m": 2.35,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "P1-WP-013",
+          "floor": "P1",
+          "orientation": "H",
+          "face_ids": [
+            "P1-RLE-MURO-0028",
+            "P1-RLE-MURO-0051"
+          ],
+          "source_tags": [
+            "P1-RLE-MURO-0028",
+            "P1-RLE-MURO-0051"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            70.2113,
+            -0.1999
+          ],
+          "centerline_end_xy_m": [
+            72.141,
+            -0.1999
+          ],
+          "length_m": 1.9298,
+          "thickness_m": 0.3,
+          "standard_thickness_m": 0.3,
+          "standard_residual_m": 0.0,
+          "overlap_m": 1.9298,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "P1-WP-014",
+          "floor": "P1",
+          "orientation": "V",
+          "face_ids": [
+            "P1-RLE-MURO-0029",
+            "P1-RLE-MURO-0031"
+          ],
+          "source_tags": [
+            "P1-RLE-MURO-0029",
+            "P1-RLE-MURO-0031"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            67.641,
+            16.7201
+          ],
+          "centerline_end_xy_m": [
+            67.641,
+            26.3258
+          ],
+          "length_m": 9.6056,
+          "thickness_m": 0.3,
+          "standard_thickness_m": 0.3,
+          "standard_residual_m": 0.0,
+          "overlap_m": 9.6056,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "P1-WP-015",
+          "floor": "P1",
+          "orientation": "V",
+          "face_ids": [
+            "P1-RLE-MURO-0035",
+            "P1-RLE-MURO-0039"
+          ],
+          "source_tags": [
+            "P1-RLE-MURO-0035",
+            "P1-RLE-MURO-0039"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            70.091,
+            -10.597
+          ],
+          "centerline_end_xy_m": [
+            70.091,
+            -10.0651
+          ],
+          "length_m": 0.5319,
+          "thickness_m": 0.2,
+          "standard_thickness_m": 0.2,
+          "standard_residual_m": 0.0,
+          "overlap_m": 0.5319,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "P1-WP-016",
+          "floor": "P1",
+          "orientation": "H",
+          "face_ids": [
+            "P1-RLE-MURO-0036",
+            "P1-RLE-MURO-0037"
+          ],
+          "source_tags": [
+            "P1-RLE-MURO-0036",
+            "P1-RLE-MURO-0037"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            70.2113,
+            -10.697
+          ],
+          "centerline_end_xy_m": [
+            72.7363,
+            -10.697
+          ],
+          "length_m": 2.525,
+          "thickness_m": 0.2,
+          "standard_thickness_m": 0.2,
+          "standard_residual_m": 0.0,
+          "overlap_m": 2.525,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "P1-WP-017",
+          "floor": "P1",
+          "orientation": "V",
+          "face_ids": [
+            "P1-RLE-MURO-0038",
+            "P1-RLE-MURO-0039"
+          ],
+          "source_tags": [
+            "P1-RLE-MURO-0038",
+            "P1-RLE-MURO-0039"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            70.091,
+            -11.4754
+          ],
+          "centerline_end_xy_m": [
+            70.091,
+            -10.797
+          ],
+          "length_m": 0.6784,
+          "thickness_m": 0.2,
+          "standard_thickness_m": 0.2,
+          "standard_residual_m": 0.0,
+          "overlap_m": 0.6784,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "P1-WP-018",
+          "floor": "P1",
+          "orientation": "V",
+          "face_ids": [
+            "P1-RLE-MURO-0040",
+            "P1-RLE-MURO-0041"
+          ],
+          "source_tags": [
+            "P1-RLE-MURO-0040",
+            "P1-RLE-MURO-0041"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            72.8863,
+            -11.4754
+          ],
+          "centerline_end_xy_m": [
+            72.8863,
+            -0.4499
+          ],
+          "length_m": 11.0255,
+          "thickness_m": 0.3,
+          "standard_thickness_m": 0.3,
+          "standard_residual_m": 0.0,
+          "overlap_m": 11.0255,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "P1-WP-019",
+          "floor": "P1",
+          "orientation": "V",
+          "face_ids": [
+            "P1-RLE-MURO-0042",
+            "P1-RLE-MURO-0043"
+          ],
+          "source_tags": [
+            "P1-RLE-MURO-0042",
+            "P1-RLE-MURO-0043"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            66.316,
+            -3.4999
+          ],
+          "centerline_end_xy_m": [
+            66.316,
+            -0.5999
+          ],
+          "length_m": 2.9,
+          "thickness_m": 0.15,
+          "standard_thickness_m": 0.15,
+          "standard_residual_m": 0.0,
+          "overlap_m": 2.9,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "P1-WP-020",
+          "floor": "P1",
+          "orientation": "H",
+          "face_ids": [
+            "P1-RLE-MURO-0044",
+            "P1-RLE-MURO-0046"
+          ],
+          "source_tags": [
+            "P1-RLE-MURO-0044",
+            "P1-RLE-MURO-0046"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            62.7573,
+            -6.2249
+          ],
+          "centerline_end_xy_m": [
+            67.791,
+            -6.2249
+          ],
+          "length_m": 5.0337,
+          "thickness_m": 0.15,
+          "standard_thickness_m": 0.15,
+          "standard_residual_m": 0.0,
+          "overlap_m": 5.0337,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "P1-WP-021",
+          "floor": "P1",
+          "orientation": "H",
+          "face_ids": [
+            "P1-RLE-MURO-0044",
+            "P1-RLE-MURO-0046"
+          ],
+          "source_tags": [
+            "P1-RLE-MURO-0044",
+            "P1-RLE-MURO-0046"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            67.841,
+            -6.2249
+          ],
+          "centerline_end_xy_m": [
+            70.191,
+            -6.2249
+          ],
+          "length_m": 2.35,
+          "thickness_m": 0.15,
+          "standard_thickness_m": 0.15,
+          "standard_residual_m": 0.0,
+          "overlap_m": 2.35,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "P1-WP-022",
+          "floor": "P1",
+          "orientation": "H",
+          "face_ids": [
+            "P1-RLE-MURO-0048",
+            "P1-RLE-MURO-0049"
+          ],
+          "source_tags": [
+            "P1-RLE-MURO-0048",
+            "P1-RLE-MURO-0049"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            62.7573,
+            -3.5749
+          ],
+          "centerline_end_xy_m": [
+            66.241,
+            -3.5749
+          ],
+          "length_m": 3.4837,
+          "thickness_m": 0.15,
+          "standard_thickness_m": 0.15,
+          "standard_residual_m": 0.0,
+          "overlap_m": 3.4837,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "P1-WP-023",
+          "floor": "P1",
+          "orientation": "H",
+          "face_ids": [
+            "P1-RLE-MURO-0050",
+            "P1-RLE-MURO-0052"
+          ],
+          "source_tags": [
+            "P1-RLE-MURO-0050",
+            "P1-RLE-MURO-0052"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            61.241,
+            -0.5249
+          ],
+          "centerline_end_xy_m": [
+            67.791,
+            -0.5249
+          ],
+          "length_m": 6.55,
+          "thickness_m": 0.15,
+          "standard_thickness_m": 0.15,
+          "standard_residual_m": 0.0,
+          "overlap_m": 6.55,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "P1-WP-024",
+          "floor": "P1",
+          "orientation": "H",
+          "face_ids": [
+            "P1-RLE-MURO-0050",
+            "P1-RLE-MURO-0052"
+          ],
+          "source_tags": [
+            "P1-RLE-MURO-0050",
+            "P1-RLE-MURO-0052"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            67.841,
+            -0.5249
+          ],
+          "centerline_end_xy_m": [
+            70.191,
+            -0.5249
+          ],
+          "length_m": 2.35,
+          "thickness_m": 0.15,
+          "standard_thickness_m": 0.15,
+          "standard_residual_m": 0.0,
+          "overlap_m": 2.35,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "P1-WP-025",
+          "floor": "P1",
+          "orientation": "H",
+          "face_ids": [
+            "P1-RLE-MURO-0050",
+            "P1-RLE-MURO-0052"
+          ],
+          "source_tags": [
+            "P1-RLE-MURO-0050",
+            "P1-RLE-MURO-0052"
+          ],
+          "source_sheet": "2017_67-101.dxf",
+          "centerline_start_xy_m": [
+            70.2113,
+            -0.5249
+          ],
+          "centerline_end_xy_m": [
+            72.7363,
+            -0.5249
+          ],
+          "length_m": 2.525,
+          "thickness_m": 0.15,
+          "standard_thickness_m": 0.15,
+          "standard_residual_m": 0.0,
+          "overlap_m": 2.525,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        }
+      ],
+      "overlay": "entregas/P1L2/edificio/validacion/ed1_walls/p1_wall_face_pairs.png"
+    },
+    "P2": {
+      "source_contour_segments": 18,
+      "current_wall_prisms": 12,
+      "confirmed_physical_walls": 7,
+      "review_thickness_pairs": 0,
+      "paired_faces": 14,
+      "unmatched_faces": 5,
+      "unmatched_ids": [
+        "P2-RLE-MURO-0004",
+        "P2-RLE-MURO-0007",
+        "P2-RLE-MURO-0011",
+        "P2-RLE-MURO-0014",
+        "P2-RLE-MURO-0018"
+      ],
+      "unmatched_classification": [
+        {
+          "face_id": "P2-RLE-MURO-0004",
+          "length_m": 0.25,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "P2-RLE-MURO-0007",
+          "length_m": 0.25,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "P2-RLE-MURO-0011",
+          "length_m": 0.3,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "P2-RLE-MURO-0014",
+          "length_m": 0.3,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "P2-RLE-MURO-0018",
+          "length_m": 0.2,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        }
+      ],
+      "unresolved_unmatched_faces": 0,
+      "partially_unpaired_faces": 5,
+      "unpaired_face_length_m": 3.0,
+      "face_residuals": [
+        {
+          "face_id": "P2-RLE-MURO-0001",
+          "face_length_m": 3.7,
+          "paired_length_m": 3.2,
+          "unpaired_length_m": 0.5,
+          "unpaired_intervals": [
+            [
+              30.6409,
+              30.8909
+            ],
+            [
+              34.0909,
+              34.3409
+            ]
+          ]
+        },
+        {
+          "face_id": "P2-RLE-MURO-0003",
+          "face_length_m": 1.6788,
+          "paired_length_m": 1.4788,
+          "unpaired_length_m": 0.2,
+          "unpaired_intervals": [
+            [
+              13.9265,
+              14.1265
+            ]
+          ]
+        },
+        {
+          "face_id": "P2-RLE-MURO-0004",
+          "face_length_m": 0.25,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.25,
+          "unpaired_intervals": [
+            [
+              30.6409,
+              30.8909
+            ]
+          ]
+        },
+        {
+          "face_id": "P2-RLE-MURO-0007",
+          "face_length_m": 0.25,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.25,
+          "unpaired_intervals": [
+            [
+              34.0909,
+              34.3409
+            ]
+          ]
+        },
+        {
+          "face_id": "P2-RLE-MURO-0008",
+          "face_length_m": 1.6788,
+          "paired_length_m": 1.4788,
+          "unpaired_length_m": 0.2,
+          "unpaired_intervals": [
+            [
+              13.9265,
+              14.1265
+            ]
+          ]
+        },
+        {
+          "face_id": "P2-RLE-MURO-0011",
+          "face_length_m": 0.3,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.3,
+          "unpaired_intervals": [
+            [
+              30.8909,
+              31.1909
+            ]
+          ]
+        },
+        {
+          "face_id": "P2-RLE-MURO-0013",
+          "face_length_m": 2.35,
+          "paired_length_m": 2.15,
+          "unpaired_length_m": 0.2,
+          "unpaired_intervals": [
+            [
+              3.9815,
+              4.1815
+            ]
+          ]
+        },
+        {
+          "face_id": "P2-RLE-MURO-0014",
+          "face_length_m": 0.3,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.3,
+          "unpaired_intervals": [
+            [
+              33.7909,
+              34.0909
+            ]
+          ]
+        },
+        {
+          "face_id": "P2-RLE-MURO-0015",
+          "face_length_m": 6.95,
+          "paired_length_m": 6.35,
+          "unpaired_length_m": 0.6,
+          "unpaired_intervals": [
+            [
+              30.8909,
+              31.1909
+            ],
+            [
+              33.7909,
+              34.0909
+            ]
+          ]
+        },
+        {
+          "face_id": "P2-RLE-MURO-0018",
+          "face_length_m": 0.2,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.2,
+          "unpaired_intervals": [
+            [
+              3.9815,
+              4.1815
+            ]
+          ]
+        }
+      ],
+      "thicknesses_m": {
+        "0.2": 3,
+        "0.25": 2,
+        "0.3": 2
+      },
+      "pairs": [
+        {
+          "pair_id": "P2-WP-001",
+          "floor": "P2",
+          "orientation": "H",
+          "face_ids": [
+            "P2-RLE-MURO-0001",
+            "P2-RLE-MURO-0002"
+          ],
+          "source_tags": [
+            "P2-RLE-MURO-0001",
+            "P2-RLE-MURO-0002"
+          ],
+          "source_sheet": "2017_67-102.dxf",
+          "centerline_start_xy_m": [
+            30.8909,
+            14.0265
+          ],
+          "centerline_end_xy_m": [
+            34.0909,
+            14.0265
+          ],
+          "length_m": 3.2,
+          "thickness_m": 0.2,
+          "standard_thickness_m": 0.2,
+          "standard_residual_m": 0.0,
+          "overlap_m": 3.2,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "P2-WP-002",
+          "floor": "P2",
+          "orientation": "V",
+          "face_ids": [
+            "P2-RLE-MURO-0003",
+            "P2-RLE-MURO-0005"
+          ],
+          "source_tags": [
+            "P2-RLE-MURO-0003",
+            "P2-RLE-MURO-0005"
+          ],
+          "source_sheet": "2017_67-102.dxf",
+          "centerline_start_xy_m": [
+            30.7659,
+            12.4477
+          ],
+          "centerline_end_xy_m": [
+            30.7659,
+            13.9265
+          ],
+          "length_m": 1.4788,
+          "thickness_m": 0.25,
+          "standard_thickness_m": 0.25,
+          "standard_residual_m": 0.0,
+          "overlap_m": 1.4788,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "P2-WP-003",
+          "floor": "P2",
+          "orientation": "V",
+          "face_ids": [
+            "P2-RLE-MURO-0006",
+            "P2-RLE-MURO-0008"
+          ],
+          "source_tags": [
+            "P2-RLE-MURO-0006",
+            "P2-RLE-MURO-0008"
+          ],
+          "source_sheet": "2017_67-102.dxf",
+          "centerline_start_xy_m": [
+            34.2159,
+            12.4477
+          ],
+          "centerline_end_xy_m": [
+            34.2159,
+            13.9265
+          ],
+          "length_m": 1.4788,
+          "thickness_m": 0.25,
+          "standard_thickness_m": 0.25,
+          "standard_residual_m": 0.0,
+          "overlap_m": 1.4788,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "P2-WP-004",
+          "floor": "P2",
+          "orientation": "V",
+          "face_ids": [
+            "P2-RLE-MURO-0009",
+            "P2-RLE-MURO-0010"
+          ],
+          "source_tags": [
+            "P2-RLE-MURO-0009",
+            "P2-RLE-MURO-0010"
+          ],
+          "source_sheet": "2017_67-102.dxf",
+          "centerline_start_xy_m": [
+            31.0409,
+            4.1815
+          ],
+          "centerline_end_xy_m": [
+            31.0409,
+            6.3315
+          ],
+          "length_m": 2.15,
+          "thickness_m": 0.3,
+          "standard_thickness_m": 0.3,
+          "standard_residual_m": 0.0,
+          "overlap_m": 2.15,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "P2-WP-005",
+          "floor": "P2",
+          "orientation": "V",
+          "face_ids": [
+            "P2-RLE-MURO-0012",
+            "P2-RLE-MURO-0013"
+          ],
+          "source_tags": [
+            "P2-RLE-MURO-0012",
+            "P2-RLE-MURO-0013"
+          ],
+          "source_sheet": "2017_67-102.dxf",
+          "centerline_start_xy_m": [
+            33.9409,
+            4.1815
+          ],
+          "centerline_end_xy_m": [
+            33.9409,
+            6.3315
+          ],
+          "length_m": 2.15,
+          "thickness_m": 0.3,
+          "standard_thickness_m": 0.3,
+          "standard_residual_m": 0.0,
+          "overlap_m": 2.15,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "P2-WP-006",
+          "floor": "P2",
+          "orientation": "H",
+          "face_ids": [
+            "P2-RLE-MURO-0015",
+            "P2-RLE-MURO-0016"
+          ],
+          "source_tags": [
+            "P2-RLE-MURO-0015",
+            "P2-RLE-MURO-0016"
+          ],
+          "source_sheet": "2017_67-102.dxf",
+          "centerline_start_xy_m": [
+            31.1909,
+            4.0815
+          ],
+          "centerline_end_xy_m": [
+            33.7909,
+            4.0815
+          ],
+          "length_m": 2.6,
+          "thickness_m": 0.2,
+          "standard_thickness_m": 0.2,
+          "standard_residual_m": 0.0,
+          "overlap_m": 2.6,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "P2-WP-007",
+          "floor": "P2",
+          "orientation": "H",
+          "face_ids": [
+            "P2-RLE-MURO-0015",
+            "P2-RLE-MURO-0017"
+          ],
+          "source_tags": [
+            "P2-RLE-MURO-0015",
+            "P2-RLE-MURO-0017"
+          ],
+          "source_sheet": "2017_67-102.dxf",
+          "centerline_start_xy_m": [
+            27.1409,
+            4.0815
+          ],
+          "centerline_end_xy_m": [
+            30.8909,
+            4.0815
+          ],
+          "length_m": 3.75,
+          "thickness_m": 0.2,
+          "standard_thickness_m": 0.2,
+          "standard_residual_m": 0.0,
+          "overlap_m": 3.75,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        }
+      ],
+      "overlay": "entregas/P1L2/edificio/validacion/ed1_walls/p2_wall_face_pairs.png"
+    },
+    "P3": {
+      "source_contour_segments": 18,
+      "current_wall_prisms": 12,
+      "confirmed_physical_walls": 7,
+      "review_thickness_pairs": 0,
+      "paired_faces": 14,
+      "unmatched_faces": 5,
+      "unmatched_ids": [
+        "P3-RLE-MURO-0004",
+        "P3-RLE-MURO-0007",
+        "P3-RLE-MURO-0011",
+        "P3-RLE-MURO-0014",
+        "P3-RLE-MURO-0018"
+      ],
+      "unmatched_classification": [
+        {
+          "face_id": "P3-RLE-MURO-0004",
+          "length_m": 0.25,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "P3-RLE-MURO-0007",
+          "length_m": 0.25,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "P3-RLE-MURO-0011",
+          "length_m": 0.3,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "P3-RLE-MURO-0014",
+          "length_m": 0.3,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "P3-RLE-MURO-0018",
+          "length_m": 0.2,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        }
+      ],
+      "unresolved_unmatched_faces": 0,
+      "partially_unpaired_faces": 5,
+      "unpaired_face_length_m": 3.0,
+      "face_residuals": [
+        {
+          "face_id": "P3-RLE-MURO-0001",
+          "face_length_m": 3.7,
+          "paired_length_m": 3.2,
+          "unpaired_length_m": 0.5,
+          "unpaired_intervals": [
+            [
+              30.6409,
+              30.8909
+            ],
+            [
+              34.0909,
+              34.3409
+            ]
+          ]
+        },
+        {
+          "face_id": "P3-RLE-MURO-0003",
+          "face_length_m": 1.6788,
+          "paired_length_m": 1.4788,
+          "unpaired_length_m": 0.2,
+          "unpaired_intervals": [
+            [
+              13.9265,
+              14.1265
+            ]
+          ]
+        },
+        {
+          "face_id": "P3-RLE-MURO-0004",
+          "face_length_m": 0.25,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.25,
+          "unpaired_intervals": [
+            [
+              30.6409,
+              30.8909
+            ]
+          ]
+        },
+        {
+          "face_id": "P3-RLE-MURO-0007",
+          "face_length_m": 0.25,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.25,
+          "unpaired_intervals": [
+            [
+              34.0909,
+              34.3409
+            ]
+          ]
+        },
+        {
+          "face_id": "P3-RLE-MURO-0008",
+          "face_length_m": 1.6788,
+          "paired_length_m": 1.4788,
+          "unpaired_length_m": 0.2,
+          "unpaired_intervals": [
+            [
+              13.9265,
+              14.1265
+            ]
+          ]
+        },
+        {
+          "face_id": "P3-RLE-MURO-0011",
+          "face_length_m": 0.3,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.3,
+          "unpaired_intervals": [
+            [
+              30.8909,
+              31.1909
+            ]
+          ]
+        },
+        {
+          "face_id": "P3-RLE-MURO-0013",
+          "face_length_m": 2.35,
+          "paired_length_m": 2.15,
+          "unpaired_length_m": 0.2,
+          "unpaired_intervals": [
+            [
+              3.9815,
+              4.1815
+            ]
+          ]
+        },
+        {
+          "face_id": "P3-RLE-MURO-0014",
+          "face_length_m": 0.3,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.3,
+          "unpaired_intervals": [
+            [
+              33.7909,
+              34.0909
+            ]
+          ]
+        },
+        {
+          "face_id": "P3-RLE-MURO-0015",
+          "face_length_m": 6.95,
+          "paired_length_m": 6.35,
+          "unpaired_length_m": 0.6,
+          "unpaired_intervals": [
+            [
+              30.8909,
+              31.1909
+            ],
+            [
+              33.7909,
+              34.0909
+            ]
+          ]
+        },
+        {
+          "face_id": "P3-RLE-MURO-0018",
+          "face_length_m": 0.2,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.2,
+          "unpaired_intervals": [
+            [
+              3.9815,
+              4.1815
+            ]
+          ]
+        }
+      ],
+      "thicknesses_m": {
+        "0.2": 3,
+        "0.25": 2,
+        "0.3": 2
+      },
+      "pairs": [
+        {
+          "pair_id": "P3-WP-001",
+          "floor": "P3",
+          "orientation": "H",
+          "face_ids": [
+            "P3-RLE-MURO-0001",
+            "P3-RLE-MURO-0002"
+          ],
+          "source_tags": [
+            "P3-RLE-MURO-0001",
+            "P3-RLE-MURO-0002"
+          ],
+          "source_sheet": "2017_67-102.dxf",
+          "centerline_start_xy_m": [
+            30.8909,
+            14.0265
+          ],
+          "centerline_end_xy_m": [
+            34.0909,
+            14.0265
+          ],
+          "length_m": 3.2,
+          "thickness_m": 0.2,
+          "standard_thickness_m": 0.2,
+          "standard_residual_m": 0.0,
+          "overlap_m": 3.2,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "P3-WP-002",
+          "floor": "P3",
+          "orientation": "V",
+          "face_ids": [
+            "P3-RLE-MURO-0003",
+            "P3-RLE-MURO-0005"
+          ],
+          "source_tags": [
+            "P3-RLE-MURO-0003",
+            "P3-RLE-MURO-0005"
+          ],
+          "source_sheet": "2017_67-102.dxf",
+          "centerline_start_xy_m": [
+            30.7659,
+            12.4477
+          ],
+          "centerline_end_xy_m": [
+            30.7659,
+            13.9265
+          ],
+          "length_m": 1.4788,
+          "thickness_m": 0.25,
+          "standard_thickness_m": 0.25,
+          "standard_residual_m": 0.0,
+          "overlap_m": 1.4788,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "P3-WP-003",
+          "floor": "P3",
+          "orientation": "V",
+          "face_ids": [
+            "P3-RLE-MURO-0006",
+            "P3-RLE-MURO-0008"
+          ],
+          "source_tags": [
+            "P3-RLE-MURO-0006",
+            "P3-RLE-MURO-0008"
+          ],
+          "source_sheet": "2017_67-102.dxf",
+          "centerline_start_xy_m": [
+            34.2159,
+            12.4477
+          ],
+          "centerline_end_xy_m": [
+            34.2159,
+            13.9265
+          ],
+          "length_m": 1.4788,
+          "thickness_m": 0.25,
+          "standard_thickness_m": 0.25,
+          "standard_residual_m": 0.0,
+          "overlap_m": 1.4788,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "P3-WP-004",
+          "floor": "P3",
+          "orientation": "V",
+          "face_ids": [
+            "P3-RLE-MURO-0009",
+            "P3-RLE-MURO-0010"
+          ],
+          "source_tags": [
+            "P3-RLE-MURO-0009",
+            "P3-RLE-MURO-0010"
+          ],
+          "source_sheet": "2017_67-102.dxf",
+          "centerline_start_xy_m": [
+            31.0409,
+            4.1815
+          ],
+          "centerline_end_xy_m": [
+            31.0409,
+            6.3315
+          ],
+          "length_m": 2.15,
+          "thickness_m": 0.3,
+          "standard_thickness_m": 0.3,
+          "standard_residual_m": 0.0,
+          "overlap_m": 2.15,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "P3-WP-005",
+          "floor": "P3",
+          "orientation": "V",
+          "face_ids": [
+            "P3-RLE-MURO-0012",
+            "P3-RLE-MURO-0013"
+          ],
+          "source_tags": [
+            "P3-RLE-MURO-0012",
+            "P3-RLE-MURO-0013"
+          ],
+          "source_sheet": "2017_67-102.dxf",
+          "centerline_start_xy_m": [
+            33.9409,
+            4.1815
+          ],
+          "centerline_end_xy_m": [
+            33.9409,
+            6.3315
+          ],
+          "length_m": 2.15,
+          "thickness_m": 0.3,
+          "standard_thickness_m": 0.3,
+          "standard_residual_m": 0.0,
+          "overlap_m": 2.15,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "P3-WP-006",
+          "floor": "P3",
+          "orientation": "H",
+          "face_ids": [
+            "P3-RLE-MURO-0015",
+            "P3-RLE-MURO-0016"
+          ],
+          "source_tags": [
+            "P3-RLE-MURO-0015",
+            "P3-RLE-MURO-0016"
+          ],
+          "source_sheet": "2017_67-102.dxf",
+          "centerline_start_xy_m": [
+            31.1909,
+            4.0815
+          ],
+          "centerline_end_xy_m": [
+            33.7909,
+            4.0815
+          ],
+          "length_m": 2.6,
+          "thickness_m": 0.2,
+          "standard_thickness_m": 0.2,
+          "standard_residual_m": 0.0,
+          "overlap_m": 2.6,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "P3-WP-007",
+          "floor": "P3",
+          "orientation": "H",
+          "face_ids": [
+            "P3-RLE-MURO-0015",
+            "P3-RLE-MURO-0017"
+          ],
+          "source_tags": [
+            "P3-RLE-MURO-0015",
+            "P3-RLE-MURO-0017"
+          ],
+          "source_sheet": "2017_67-102.dxf",
+          "centerline_start_xy_m": [
+            27.1409,
+            4.0815
+          ],
+          "centerline_end_xy_m": [
+            30.8909,
+            4.0815
+          ],
+          "length_m": 3.75,
+          "thickness_m": 0.2,
+          "standard_thickness_m": 0.2,
+          "standard_residual_m": 0.0,
+          "overlap_m": 3.75,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        }
+      ],
+      "overlay": "entregas/P1L2/edificio/validacion/ed1_walls/p3_wall_face_pairs.png"
+    },
+    "P4": {
+      "source_contour_segments": 18,
+      "current_wall_prisms": 12,
+      "confirmed_physical_walls": 7,
+      "review_thickness_pairs": 0,
+      "paired_faces": 14,
+      "unmatched_faces": 5,
+      "unmatched_ids": [
+        "P4-RLE-MURO-0004",
+        "P4-RLE-MURO-0007",
+        "P4-RLE-MURO-0011",
+        "P4-RLE-MURO-0014",
+        "P4-RLE-MURO-0018"
+      ],
+      "unmatched_classification": [
+        {
+          "face_id": "P4-RLE-MURO-0004",
+          "length_m": 0.25,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "P4-RLE-MURO-0007",
+          "length_m": 0.25,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "P4-RLE-MURO-0011",
+          "length_m": 0.3,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "P4-RLE-MURO-0014",
+          "length_m": 0.3,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        },
+        {
+          "face_id": "P4-RLE-MURO-0018",
+          "length_m": 0.2,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED",
+          "reason": "Tramo corto que cierra el contorno de espesor o el rectangulo de un pilar; no es una centrolinea resistente independiente."
+        }
+      ],
+      "unresolved_unmatched_faces": 0,
+      "partially_unpaired_faces": 5,
+      "unpaired_face_length_m": 3.0,
+      "face_residuals": [
+        {
+          "face_id": "P4-RLE-MURO-0001",
+          "face_length_m": 3.7,
+          "paired_length_m": 3.2,
+          "unpaired_length_m": 0.5,
+          "unpaired_intervals": [
+            [
+              30.6409,
+              30.8909
+            ],
+            [
+              34.0909,
+              34.3409
+            ]
+          ]
+        },
+        {
+          "face_id": "P4-RLE-MURO-0003",
+          "face_length_m": 1.6788,
+          "paired_length_m": 1.4788,
+          "unpaired_length_m": 0.2,
+          "unpaired_intervals": [
+            [
+              13.9265,
+              14.1265
+            ]
+          ]
+        },
+        {
+          "face_id": "P4-RLE-MURO-0004",
+          "face_length_m": 0.25,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.25,
+          "unpaired_intervals": [
+            [
+              30.6409,
+              30.8909
+            ]
+          ]
+        },
+        {
+          "face_id": "P4-RLE-MURO-0007",
+          "face_length_m": 0.25,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.25,
+          "unpaired_intervals": [
+            [
+              34.0909,
+              34.3409
+            ]
+          ]
+        },
+        {
+          "face_id": "P4-RLE-MURO-0008",
+          "face_length_m": 1.6788,
+          "paired_length_m": 1.4788,
+          "unpaired_length_m": 0.2,
+          "unpaired_intervals": [
+            [
+              13.9265,
+              14.1265
+            ]
+          ]
+        },
+        {
+          "face_id": "P4-RLE-MURO-0011",
+          "face_length_m": 0.3,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.3,
+          "unpaired_intervals": [
+            [
+              30.8909,
+              31.1909
+            ]
+          ]
+        },
+        {
+          "face_id": "P4-RLE-MURO-0013",
+          "face_length_m": 2.35,
+          "paired_length_m": 2.15,
+          "unpaired_length_m": 0.2,
+          "unpaired_intervals": [
+            [
+              3.9815,
+              4.1815
+            ]
+          ]
+        },
+        {
+          "face_id": "P4-RLE-MURO-0014",
+          "face_length_m": 0.3,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.3,
+          "unpaired_intervals": [
+            [
+              33.7909,
+              34.0909
+            ]
+          ]
+        },
+        {
+          "face_id": "P4-RLE-MURO-0015",
+          "face_length_m": 6.95,
+          "paired_length_m": 6.35,
+          "unpaired_length_m": 0.6,
+          "unpaired_intervals": [
+            [
+              30.8909,
+              31.1909
+            ],
+            [
+              33.7909,
+              34.0909
+            ]
+          ]
+        },
+        {
+          "face_id": "P4-RLE-MURO-0018",
+          "face_length_m": 0.2,
+          "paired_length_m": 0.0,
+          "unpaired_length_m": 0.2,
+          "unpaired_intervals": [
+            [
+              3.9815,
+              4.1815
+            ]
+          ]
+        }
+      ],
+      "thicknesses_m": {
+        "0.2": 3,
+        "0.25": 2,
+        "0.3": 2
+      },
+      "pairs": [
+        {
+          "pair_id": "P4-WP-001",
+          "floor": "P4",
+          "orientation": "H",
+          "face_ids": [
+            "P4-RLE-MURO-0001",
+            "P4-RLE-MURO-0002"
+          ],
+          "source_tags": [
+            "P4-RLE-MURO-0001",
+            "P4-RLE-MURO-0002"
+          ],
+          "source_sheet": "2017_67-103.dxf",
+          "centerline_start_xy_m": [
+            30.8909,
+            14.0265
+          ],
+          "centerline_end_xy_m": [
+            34.0909,
+            14.0265
+          ],
+          "length_m": 3.2,
+          "thickness_m": 0.2,
+          "standard_thickness_m": 0.2,
+          "standard_residual_m": 0.0,
+          "overlap_m": 3.2,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "P4-WP-002",
+          "floor": "P4",
+          "orientation": "V",
+          "face_ids": [
+            "P4-RLE-MURO-0003",
+            "P4-RLE-MURO-0005"
+          ],
+          "source_tags": [
+            "P4-RLE-MURO-0003",
+            "P4-RLE-MURO-0005"
+          ],
+          "source_sheet": "2017_67-103.dxf",
+          "centerline_start_xy_m": [
+            30.7659,
+            12.4477
+          ],
+          "centerline_end_xy_m": [
+            30.7659,
+            13.9265
+          ],
+          "length_m": 1.4788,
+          "thickness_m": 0.25,
+          "standard_thickness_m": 0.25,
+          "standard_residual_m": 0.0,
+          "overlap_m": 1.4788,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "P4-WP-003",
+          "floor": "P4",
+          "orientation": "V",
+          "face_ids": [
+            "P4-RLE-MURO-0006",
+            "P4-RLE-MURO-0008"
+          ],
+          "source_tags": [
+            "P4-RLE-MURO-0006",
+            "P4-RLE-MURO-0008"
+          ],
+          "source_sheet": "2017_67-103.dxf",
+          "centerline_start_xy_m": [
+            34.2159,
+            12.4477
+          ],
+          "centerline_end_xy_m": [
+            34.2159,
+            13.9265
+          ],
+          "length_m": 1.4788,
+          "thickness_m": 0.25,
+          "standard_thickness_m": 0.25,
+          "standard_residual_m": 0.0,
+          "overlap_m": 1.4788,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "P4-WP-004",
+          "floor": "P4",
+          "orientation": "V",
+          "face_ids": [
+            "P4-RLE-MURO-0009",
+            "P4-RLE-MURO-0010"
+          ],
+          "source_tags": [
+            "P4-RLE-MURO-0009",
+            "P4-RLE-MURO-0010"
+          ],
+          "source_sheet": "2017_67-103.dxf",
+          "centerline_start_xy_m": [
+            31.0409,
+            4.1815
+          ],
+          "centerline_end_xy_m": [
+            31.0409,
+            6.3315
+          ],
+          "length_m": 2.15,
+          "thickness_m": 0.3,
+          "standard_thickness_m": 0.3,
+          "standard_residual_m": 0.0,
+          "overlap_m": 2.15,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "P4-WP-005",
+          "floor": "P4",
+          "orientation": "V",
+          "face_ids": [
+            "P4-RLE-MURO-0012",
+            "P4-RLE-MURO-0013"
+          ],
+          "source_tags": [
+            "P4-RLE-MURO-0012",
+            "P4-RLE-MURO-0013"
+          ],
+          "source_sheet": "2017_67-103.dxf",
+          "centerline_start_xy_m": [
+            33.9409,
+            4.1815
+          ],
+          "centerline_end_xy_m": [
+            33.9409,
+            6.3315
+          ],
+          "length_m": 2.15,
+          "thickness_m": 0.3,
+          "standard_thickness_m": 0.3,
+          "standard_residual_m": 0.0,
+          "overlap_m": 2.15,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "P4-WP-006",
+          "floor": "P4",
+          "orientation": "H",
+          "face_ids": [
+            "P4-RLE-MURO-0015",
+            "P4-RLE-MURO-0016"
+          ],
+          "source_tags": [
+            "P4-RLE-MURO-0015",
+            "P4-RLE-MURO-0016"
+          ],
+          "source_sheet": "2017_67-103.dxf",
+          "centerline_start_xy_m": [
+            31.1909,
+            4.0815
+          ],
+          "centerline_end_xy_m": [
+            33.7909,
+            4.0815
+          ],
+          "length_m": 2.6,
+          "thickness_m": 0.2,
+          "standard_thickness_m": 0.2,
+          "standard_residual_m": 0.0,
+          "overlap_m": 2.6,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        },
+        {
+          "pair_id": "P4-WP-007",
+          "floor": "P4",
+          "orientation": "H",
+          "face_ids": [
+            "P4-RLE-MURO-0015",
+            "P4-RLE-MURO-0017"
+          ],
+          "source_tags": [
+            "P4-RLE-MURO-0015",
+            "P4-RLE-MURO-0017"
+          ],
+          "source_sheet": "2017_67-103.dxf",
+          "centerline_start_xy_m": [
+            27.1409,
+            4.0815
+          ],
+          "centerline_end_xy_m": [
+            30.8909,
+            4.0815
+          ],
+          "length_m": 3.75,
+          "thickness_m": 0.2,
+          "standard_thickness_m": 0.2,
+          "standard_residual_m": 0.0,
+          "overlap_m": 3.75,
+          "overlap_ratio": 1.0,
+          "classification": "CONFIRMED_CONTOUR_PAIR"
+        }
+      ],
+      "overlay": "entregas/P1L2/edificio/validacion/ed1_walls/p4_wall_face_pairs.png"
+    }
+  },
+  "vertical_continuity": [
+    {
+      "lower_floor": "S1",
+      "upper_floor": "P1",
+      "lower_pair_id": "S1-WP-001",
+      "upper_pair_id": null,
+      "overlap_m": 0.0,
+      "status": "TERMINATES_OR_REVIEW"
+    },
+    {
+      "lower_floor": "S1",
+      "upper_floor": "P1",
+      "lower_pair_id": "S1-WP-002",
+      "upper_pair_id": null,
+      "overlap_m": 0.0,
+      "status": "TERMINATES_OR_REVIEW"
+    },
+    {
+      "lower_floor": "S1",
+      "upper_floor": "P1",
+      "lower_pair_id": "S1-WP-003",
+      "upper_pair_id": null,
+      "overlap_m": 0.0,
+      "status": "TERMINATES_OR_REVIEW"
+    },
+    {
+      "lower_floor": "S1",
+      "upper_floor": "P1",
+      "lower_pair_id": "S1-WP-004",
+      "upper_pair_id": null,
+      "overlap_m": 0.0,
+      "status": "TERMINATES_OR_REVIEW"
+    },
+    {
+      "lower_floor": "S1",
+      "upper_floor": "P1",
+      "lower_pair_id": "S1-WP-005",
+      "upper_pair_id": null,
+      "overlap_m": 0.0,
+      "status": "TERMINATES_OR_REVIEW"
+    },
+    {
+      "lower_floor": "S1",
+      "upper_floor": "P1",
+      "lower_pair_id": "S1-WP-006",
+      "upper_pair_id": "P1-WP-008",
+      "overlap_m": 6.3687,
+      "status": "CONTINUES"
+    },
+    {
+      "lower_floor": "S1",
+      "upper_floor": "P1",
+      "lower_pair_id": "S1-WP-007",
+      "upper_pair_id": null,
+      "overlap_m": 0.0,
+      "status": "TERMINATES_OR_REVIEW"
+    },
+    {
+      "lower_floor": "S1",
+      "upper_floor": "P1",
+      "lower_pair_id": "S1-WP-008",
+      "upper_pair_id": null,
+      "overlap_m": 0.0,
+      "status": "TERMINATES_OR_REVIEW"
+    },
+    {
+      "lower_floor": "S1",
+      "upper_floor": "P1",
+      "lower_pair_id": "S1-WP-009",
+      "upper_pair_id": "P1-WP-001",
+      "overlap_m": 3.2,
+      "status": "CONTINUES"
+    },
+    {
+      "lower_floor": "S1",
+      "upper_floor": "P1",
+      "lower_pair_id": "S1-WP-010",
+      "upper_pair_id": "P1-WP-002",
+      "overlap_m": 1.2975,
+      "status": "CONTINUES"
+    },
+    {
+      "lower_floor": "S1",
+      "upper_floor": "P1",
+      "lower_pair_id": "S1-WP-011",
+      "upper_pair_id": "P1-WP-003",
+      "overlap_m": 1.2975,
+      "status": "CONTINUES"
+    },
+    {
+      "lower_floor": "S1",
+      "upper_floor": "P1",
+      "lower_pair_id": "S1-WP-012",
+      "upper_pair_id": "P1-WP-004",
+      "overlap_m": 1.9687,
+      "status": "CONTINUES"
+    },
+    {
+      "lower_floor": "S1",
+      "upper_floor": "P1",
+      "lower_pair_id": "S1-WP-013",
+      "upper_pair_id": "P1-WP-005",
+      "overlap_m": 1.9687,
+      "status": "CONTINUES"
+    },
+    {
+      "lower_floor": "S1",
+      "upper_floor": "P1",
+      "lower_pair_id": "S1-WP-014",
+      "upper_pair_id": "P1-WP-006",
+      "overlap_m": 2.6,
+      "status": "CONTINUES"
+    },
+    {
+      "lower_floor": "S1",
+      "upper_floor": "P1",
+      "lower_pair_id": "S1-WP-015",
+      "upper_pair_id": null,
+      "overlap_m": 0.0,
+      "status": "TERMINATES_OR_REVIEW"
+    },
+    {
+      "lower_floor": "S1",
+      "upper_floor": "P1",
+      "lower_pair_id": "S1-WP-016",
+      "upper_pair_id": null,
+      "overlap_m": 0.0,
+      "status": "TERMINATES_OR_REVIEW"
+    },
+    {
+      "lower_floor": "S1",
+      "upper_floor": "P1",
+      "lower_pair_id": "S1-WP-017",
+      "upper_pair_id": null,
+      "overlap_m": 0.0,
+      "status": "TERMINATES_OR_REVIEW"
+    },
+    {
+      "lower_floor": "S1",
+      "upper_floor": "P1",
+      "lower_pair_id": "S1-WP-018",
+      "upper_pair_id": null,
+      "overlap_m": 0.0,
+      "status": "TERMINATES_OR_REVIEW"
+    },
+    {
+      "lower_floor": "S1",
+      "upper_floor": "P1",
+      "lower_pair_id": "S1-WP-019",
+      "upper_pair_id": null,
+      "overlap_m": 0.0,
+      "status": "TERMINATES_OR_REVIEW"
+    },
+    {
+      "lower_floor": "S1",
+      "upper_floor": "P1",
+      "lower_pair_id": "S1-WP-020",
+      "upper_pair_id": null,
+      "overlap_m": 0.0,
+      "status": "TERMINATES_OR_REVIEW"
+    },
+    {
+      "lower_floor": "S1",
+      "upper_floor": "P1",
+      "lower_pair_id": "S1-WP-021",
+      "upper_pair_id": null,
+      "overlap_m": 0.0,
+      "status": "TERMINATES_OR_REVIEW"
+    },
+    {
+      "lower_floor": "P1",
+      "upper_floor": "P2",
+      "lower_pair_id": "P1-WP-001",
+      "upper_pair_id": "P2-WP-001",
+      "overlap_m": 3.1999,
+      "status": "CONTINUES"
+    },
+    {
+      "lower_floor": "P1",
+      "upper_floor": "P2",
+      "lower_pair_id": "P1-WP-002",
+      "upper_pair_id": "P2-WP-002",
+      "overlap_m": 1.2974,
+      "status": "CONTINUES"
+    },
+    {
+      "lower_floor": "P1",
+      "upper_floor": "P2",
+      "lower_pair_id": "P1-WP-003",
+      "upper_pair_id": "P2-WP-003",
+      "overlap_m": 1.2974,
+      "status": "CONTINUES"
+    },
+    {
+      "lower_floor": "P1",
+      "upper_floor": "P2",
+      "lower_pair_id": "P1-WP-004",
+      "upper_pair_id": "P2-WP-004",
+      "overlap_m": 1.9686,
+      "status": "CONTINUES"
+    },
+    {
+      "lower_floor": "P1",
+      "upper_floor": "P2",
+      "lower_pair_id": "P1-WP-005",
+      "upper_pair_id": "P2-WP-005",
+      "overlap_m": 1.9686,
+      "status": "CONTINUES"
+    },
+    {
+      "lower_floor": "P1",
+      "upper_floor": "P2",
+      "lower_pair_id": "P1-WP-006",
+      "upper_pair_id": "P2-WP-006",
+      "overlap_m": 2.5999,
+      "status": "CONTINUES"
+    },
+    {
+      "lower_floor": "P1",
+      "upper_floor": "P2",
+      "lower_pair_id": "P1-WP-007",
+      "upper_pair_id": "P2-WP-007",
+      "overlap_m": 3.7499,
+      "status": "CONTINUES"
+    },
+    {
+      "lower_floor": "P1",
+      "upper_floor": "P2",
+      "lower_pair_id": "P1-WP-008",
+      "upper_pair_id": null,
+      "overlap_m": 0.0,
+      "status": "TERMINATES_OR_REVIEW"
+    },
+    {
+      "lower_floor": "P1",
+      "upper_floor": "P2",
+      "lower_pair_id": "P1-WP-009",
+      "upper_pair_id": null,
+      "overlap_m": 0.0,
+      "status": "TERMINATES_OR_REVIEW"
+    },
+    {
+      "lower_floor": "P1",
+      "upper_floor": "P2",
+      "lower_pair_id": "P1-WP-010",
+      "upper_pair_id": null,
+      "overlap_m": 0.0,
+      "status": "TERMINATES_OR_REVIEW"
+    },
+    {
+      "lower_floor": "P1",
+      "upper_floor": "P2",
+      "lower_pair_id": "P1-WP-011",
+      "upper_pair_id": null,
+      "overlap_m": 0.0,
+      "status": "TERMINATES_OR_REVIEW"
+    },
+    {
+      "lower_floor": "P1",
+      "upper_floor": "P2",
+      "lower_pair_id": "P1-WP-012",
+      "upper_pair_id": null,
+      "overlap_m": 0.0,
+      "status": "TERMINATES_OR_REVIEW"
+    },
+    {
+      "lower_floor": "P1",
+      "upper_floor": "P2",
+      "lower_pair_id": "P1-WP-013",
+      "upper_pair_id": null,
+      "overlap_m": 0.0,
+      "status": "TERMINATES_OR_REVIEW"
+    },
+    {
+      "lower_floor": "P1",
+      "upper_floor": "P2",
+      "lower_pair_id": "P1-WP-014",
+      "upper_pair_id": null,
+      "overlap_m": 0.0,
+      "status": "TERMINATES_OR_REVIEW"
+    },
+    {
+      "lower_floor": "P1",
+      "upper_floor": "P2",
+      "lower_pair_id": "P1-WP-015",
+      "upper_pair_id": null,
+      "overlap_m": 0.0,
+      "status": "TERMINATES_OR_REVIEW"
+    },
+    {
+      "lower_floor": "P1",
+      "upper_floor": "P2",
+      "lower_pair_id": "P1-WP-016",
+      "upper_pair_id": null,
+      "overlap_m": 0.0,
+      "status": "TERMINATES_OR_REVIEW"
+    },
+    {
+      "lower_floor": "P1",
+      "upper_floor": "P2",
+      "lower_pair_id": "P1-WP-017",
+      "upper_pair_id": null,
+      "overlap_m": 0.0,
+      "status": "TERMINATES_OR_REVIEW"
+    },
+    {
+      "lower_floor": "P1",
+      "upper_floor": "P2",
+      "lower_pair_id": "P1-WP-018",
+      "upper_pair_id": null,
+      "overlap_m": 0.0,
+      "status": "TERMINATES_OR_REVIEW"
+    },
+    {
+      "lower_floor": "P1",
+      "upper_floor": "P2",
+      "lower_pair_id": "P1-WP-019",
+      "upper_pair_id": null,
+      "overlap_m": 0.0,
+      "status": "TERMINATES_OR_REVIEW"
+    },
+    {
+      "lower_floor": "P1",
+      "upper_floor": "P2",
+      "lower_pair_id": "P1-WP-020",
+      "upper_pair_id": null,
+      "overlap_m": 0.0,
+      "status": "TERMINATES_OR_REVIEW"
+    },
+    {
+      "lower_floor": "P1",
+      "upper_floor": "P2",
+      "lower_pair_id": "P1-WP-021",
+      "upper_pair_id": null,
+      "overlap_m": 0.0,
+      "status": "TERMINATES_OR_REVIEW"
+    },
+    {
+      "lower_floor": "P1",
+      "upper_floor": "P2",
+      "lower_pair_id": "P1-WP-022",
+      "upper_pair_id": null,
+      "overlap_m": 0.0,
+      "status": "TERMINATES_OR_REVIEW"
+    },
+    {
+      "lower_floor": "P1",
+      "upper_floor": "P2",
+      "lower_pair_id": "P1-WP-023",
+      "upper_pair_id": null,
+      "overlap_m": 0.0,
+      "status": "TERMINATES_OR_REVIEW"
+    },
+    {
+      "lower_floor": "P1",
+      "upper_floor": "P2",
+      "lower_pair_id": "P1-WP-024",
+      "upper_pair_id": null,
+      "overlap_m": 0.0,
+      "status": "TERMINATES_OR_REVIEW"
+    },
+    {
+      "lower_floor": "P1",
+      "upper_floor": "P2",
+      "lower_pair_id": "P1-WP-025",
+      "upper_pair_id": null,
+      "overlap_m": 0.0,
+      "status": "TERMINATES_OR_REVIEW"
+    },
+    {
+      "lower_floor": "P2",
+      "upper_floor": "P3",
+      "lower_pair_id": "P2-WP-001",
+      "upper_pair_id": "P3-WP-001",
+      "overlap_m": 3.2,
+      "status": "CONTINUES"
+    },
+    {
+      "lower_floor": "P2",
+      "upper_floor": "P3",
+      "lower_pair_id": "P2-WP-002",
+      "upper_pair_id": "P3-WP-002",
+      "overlap_m": 1.4788,
+      "status": "CONTINUES"
+    },
+    {
+      "lower_floor": "P2",
+      "upper_floor": "P3",
+      "lower_pair_id": "P2-WP-003",
+      "upper_pair_id": "P3-WP-003",
+      "overlap_m": 1.4788,
+      "status": "CONTINUES"
+    },
+    {
+      "lower_floor": "P2",
+      "upper_floor": "P3",
+      "lower_pair_id": "P2-WP-004",
+      "upper_pair_id": "P3-WP-004",
+      "overlap_m": 2.15,
+      "status": "CONTINUES"
+    },
+    {
+      "lower_floor": "P2",
+      "upper_floor": "P3",
+      "lower_pair_id": "P2-WP-005",
+      "upper_pair_id": "P3-WP-005",
+      "overlap_m": 2.15,
+      "status": "CONTINUES"
+    },
+    {
+      "lower_floor": "P2",
+      "upper_floor": "P3",
+      "lower_pair_id": "P2-WP-006",
+      "upper_pair_id": "P3-WP-006",
+      "overlap_m": 2.6,
+      "status": "CONTINUES"
+    },
+    {
+      "lower_floor": "P2",
+      "upper_floor": "P3",
+      "lower_pair_id": "P2-WP-007",
+      "upper_pair_id": "P3-WP-007",
+      "overlap_m": 3.75,
+      "status": "CONTINUES"
+    },
+    {
+      "lower_floor": "P3",
+      "upper_floor": "P4",
+      "lower_pair_id": "P3-WP-001",
+      "upper_pair_id": "P4-WP-001",
+      "overlap_m": 3.2,
+      "status": "CONTINUES"
+    },
+    {
+      "lower_floor": "P3",
+      "upper_floor": "P4",
+      "lower_pair_id": "P3-WP-002",
+      "upper_pair_id": "P4-WP-002",
+      "overlap_m": 1.4788,
+      "status": "CONTINUES"
+    },
+    {
+      "lower_floor": "P3",
+      "upper_floor": "P4",
+      "lower_pair_id": "P3-WP-003",
+      "upper_pair_id": "P4-WP-003",
+      "overlap_m": 1.4788,
+      "status": "CONTINUES"
+    },
+    {
+      "lower_floor": "P3",
+      "upper_floor": "P4",
+      "lower_pair_id": "P3-WP-004",
+      "upper_pair_id": "P4-WP-004",
+      "overlap_m": 2.15,
+      "status": "CONTINUES"
+    },
+    {
+      "lower_floor": "P3",
+      "upper_floor": "P4",
+      "lower_pair_id": "P3-WP-005",
+      "upper_pair_id": "P4-WP-005",
+      "overlap_m": 2.15,
+      "status": "CONTINUES"
+    },
+    {
+      "lower_floor": "P3",
+      "upper_floor": "P4",
+      "lower_pair_id": "P3-WP-006",
+      "upper_pair_id": "P4-WP-006",
+      "overlap_m": 2.6,
+      "status": "CONTINUES"
+    },
+    {
+      "lower_floor": "P3",
+      "upper_floor": "P4",
+      "lower_pair_id": "P3-WP-007",
+      "upper_pair_id": "P4-WP-007",
+      "overlap_m": 3.75,
+      "status": "CONTINUES"
+    }
+  ]
+}

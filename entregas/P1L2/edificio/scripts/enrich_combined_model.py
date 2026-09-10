@@ -349,13 +349,39 @@ def apply_property(solid: dict[str, object], assignment: dict[str, object] | Non
         return
 
     if category == "wall":
-        solid.setdefault("wall_thickness_m", None)
-        solid["thickness_source"] = "UNKNOWN"
-        solid["thickness_confidence"] = "UNKNOWN"
+        geometry_confirmation = solid.get("geometry_confirmation", {})
+        confirmed_contour = geometry_confirmation.get("status") == "CONFIRMED_CONTOUR_PAIR"
+        if confirmed_contour:
+            geometric_thickness = float(geometry_confirmation.get("thickness_m", solid.get("width_m", 0.0)))
+            solid["wall_thickness_m"] = geometric_thickness
+            solid["thickness_source"] = "CAD_CONTOUR_PAIR"
+            solid["thickness_confidence"] = "CONFIRMED_FROM_GEOMETRY"
+        else:
+            solid.setdefault("wall_thickness_m", None)
+            solid["thickness_source"] = "UNKNOWN"
+            solid["thickness_confidence"] = "UNKNOWN"
         if assignment and assignment["property_type"] == "wall_thickness":
-            solid["wall_thickness_m"] = assignment["thickness_m"]
-            solid["thickness_source"] = "TEXT_LABEL"
-            solid["thickness_confidence"] = "CONFIRMED_FROM_LABEL"
+            labelled_thickness = r3(assignment["thickness_m"])
+            if confirmed_contour and abs(float(solid["wall_thickness_m"]) - labelled_thickness) > 0.02:
+                geometry_conflict = {
+                    "status": "GEOMETRY_LABEL_THICKNESS_CONFLICT",
+                    "geometry_thickness_m": solid["wall_thickness_m"],
+                    "label_thickness_m": labelled_thickness,
+                    "labelTag": assignment["labelTag"],
+                }
+                previous_review = solid.get("property_review")
+                solid["property_review"] = {
+                    "status": "MULTIPLE_PROPERTY_REVIEWS",
+                    "reviews": [previous_review, geometry_conflict] if previous_review else [geometry_conflict],
+                }
+                solid["thickness_confidence"] = "CONFIRMED_FROM_GEOMETRY_LABEL_REVIEW"
+            elif confirmed_contour:
+                solid["thickness_source"] = "CAD_CONTOUR_PAIR+TEXT_LABEL"
+                solid["thickness_confidence"] = "CONFIRMED_FROM_GEOMETRY_AND_LABEL"
+            else:
+                solid["wall_thickness_m"] = labelled_thickness
+                solid["thickness_source"] = "TEXT_LABEL"
+                solid["thickness_confidence"] = "CONFIRMED_FROM_LABEL"
             solid["source_label"] = assignment["source_label"]
             solid["source_label_tag"] = assignment["labelTag"]
             solid["source_label_distance_m"] = assignment["association"]["distance_m"]

@@ -1,8 +1,8 @@
 {
   "status": "PASS",
   "check": "ENRICHED_MODEL_METADATA_VALIDATION",
-  "geometry_hash_before": "b953847925ee066ce3326f81997db7ef262e670f3a5f9b09f95fa3562689940c",
-  "geometry_hash_after": "b953847925ee066ce3326f81997db7ef262e670f3a5f9b09f95fa3562689940c",
+  "geometry_hash_before": "11c7a1bb065415fd9bb39f06891e5fce5500bde7f0944dec7684eb8e4c186eab",
+  "geometry_hash_after": "11c7a1bb065415fd9bb39f06891e5fce5500bde7f0944dec7684eb8e4c186eab",
   "geometry_preserved": true,
   "floor_contract": {
     "status": "PASS",
@@ -23,10 +23,10 @@
     "errors": []
   },
   "element_id_format": "E{1|2}-{S1|P1|P2|P3|P4}-{C|V|M|A|L|D}-###",
-  "selectable_element_count": 1571,
-  "elements_with_id": 1571,
-  "elements_with_elementTag": 1571,
-  "elements_with_axis_location": 1571,
+  "selectable_element_count": 1465,
+  "elements_with_id": 1465,
+  "elements_with_elementTag": 1465,
+  "elements_with_axis_location": 1465,
   "duplicate_element_ids": [],
   "duplicate_element_tags": [],
   "missing_element_ids": [],
@@ -35,8 +35,8 @@
     "beam": 1060,
     "column": 150,
     "slab": 10,
-    "support": 107,
-    "wall": 234
+    "support": 68,
+    "wall": 167
   },
   "property_coverage": {
     "beam": {
@@ -58,21 +58,21 @@
       "confirmed_from_label_percent": 56.0
     },
     "wall": {
-      "total": 234,
-      "known": 73,
-      "confirmed_from_label": 73,
-      "unknown": 161,
-      "known_percent": 31.2,
-      "confirmed_from_label_percent": 31.2
+      "total": 167,
+      "known": 107,
+      "confirmed_from_label": 107,
+      "unknown": 60,
+      "known_percent": 64.1,
+      "confirmed_from_label_percent": 64.1
     },
     "support": {
-      "total": 107,
-      "known": 3,
-      "confirmed_from_label": 3,
+      "total": 68,
+      "known": 4,
+      "confirmed_from_label": 4,
       "cad_geometry": 0,
-      "unknown": 104,
-      "known_percent": 2.8,
-      "confirmed_from_label_percent": 2.8
+      "unknown": 64,
+      "known_percent": 5.9,
+      "confirmed_from_label_percent": 5.9
     }
   },
   "off_axis_column_count": 17,
@@ -81,7 +81,7 @@
     "SPECIAL_POSITION_CONFIRMED": 6
   },
   "parsed_property_labels": 777,
-  "associated_property_labels": 689,
-  "ambiguous_property_labels": 67,
+  "associated_property_labels": 688,
+  "ambiguous_property_labels": 40,
   "errors": []
 }

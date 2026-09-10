@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "checks": {
+    "audit_pass": true,
+    "counts_match_expected": true,
+    "counts_match_audit": true,
+    "all_thicknesses_traceable": true,
+    "unique_wall_ids": true,
+    "unique_centerlines": true,
+    "s1_wall_support_count": true,
+    "luis_reference_files_modified_zero": true
+  },
+  "wall_counts_by_floor": {
+    "S1": 21,
+    "P1": 25,
+    "P2": 7,
+    "P3": 7,
+    "P4": 7
+  },
+  "wall_segments_total": 67,
+  "s1_wall_supports": 21,
+  "thicknesses_m": {
+    "0.15": 7,
+    "0.2": 27,
+    "0.2002": 1,
+    "0.25": 10,
+    "0.3": 22
+  },
+  "geometry_and_label_confirmed": 58,
+  "geometry_only_confirmed": 9,
+  "thickness_failures": [],
+  "source_audit": "entregas/P1L2/edificio/validacion/ed1_walls/ed1_wall_face_audit.json",
+  "validated_model": "entregas/P1L2/unity_export/model_combined_viewer.json"
+}

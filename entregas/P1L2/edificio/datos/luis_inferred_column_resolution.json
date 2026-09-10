@@ -176,8 +176,8 @@
   },
   "classification_counts": {
     "CONFIRMED_BY_BASEMENT_EVIDENCE": 10,
-    "LIKELY_CORRECT": 3,
     "CONFIRMED_BY_AXIS_ELEVATION": 6,
+    "LIKELY_CORRECT": 3,
     "UNSUPPORTED_VERTICAL_EXTENSION": 39,
     "CONFIRMED_BY_PLAN_NOTE": 3
   },
@@ -880,6 +880,445 @@
       }
     },
     {
+      "viewer_id": "E1-S1-C-015",
+      "id": "E1-S1-C-015",
+      "elementTag": "SOL_1S_column_0012",
+      "solidTag": "SOL_1S_column_0012",
+      "legacy_solidTag": "SOL_1S_column_0012",
+      "piso": "S1",
+      "source_floor_luis": "1S",
+      "X": 67.491,
+      "Y": 0.0,
+      "x_m": 67.491,
+      "y_m": 0.0,
+      "local_luis_xy_m": [
+        39.956,
+        0.075
+      ],
+      "ejes_bay": {
+        "X": {
+          "axis": "I",
+          "axis_coord_m": 67.491,
+          "offset_m": 0.0,
+          "abs_offset_m": 0.0,
+          "status": "ON_AXIS",
+          "relation": "I",
+          "span": null
+        },
+        "Y": {
+          "axis": "1",
+          "axis_coord_m": 0.0,
+          "offset_m": 0.0,
+          "abs_offset_m": 0.0,
+          "status": "ON_AXIS",
+          "relation": "1",
+          "span": null
+        }
+      },
+      "location_description": "EDIFICIO_1 / S1 / Eje I-1",
+      "confidence_original": "inferred_from_floor_1",
+      "inferred_from": "from_floor_1",
+      "source_dxf": "2017_67-101.dxf",
+      "sourceTags": [
+        "CAD_1_column_plan_0064",
+        "CAD_1_column_plan_0065",
+        "CAD_1_column_plan_0066",
+        "CAD_1_column_plan_0067"
+      ],
+      "classification": "CONFIRMED_BY_AXIS_ELEVATION",
+      "resolution_group": "CONFIRMED_CORRECT",
+      "reason": "La elevacion estructural del eje dibuja un pilar de 70x70 en la estacion 1/2/3, con contornos continuos bajo el primer piso hasta la viga de fundacion; las separaciones 1-2 y 2-3 coinciden exactamente con los ejes canonicos.",
+      "reason_codes": [
+        "direct_axis_elevation",
+        "lower_story_contours_to_foundation",
+        "explicit_p70x70"
+      ],
+      "evidence": {
+        "floor": "S1",
+        "station_x_m": 67.491,
+        "upper_floor": {
+          "source_dxf": "2017_67-101.dxf",
+          "nearest_column": {
+            "id": "E1-P1-C-022",
+            "tipo": "columna",
+            "distance_m": 0.087,
+            "source_dxf": "modelo_p1",
+            "source_layer": "modelo",
+            "ejes_aproximados": null,
+            "point_or_mid_m": [
+              67.447,
+              0.075
+            ]
+          },
+          "direct_column_count": 54
+        },
+        "same_floor": {
+          "source_dxf": "2017_67-101.dxf",
+          "direct_dxf_region_scan": {
+            "status": "SCANNED_DIRECT_DXF_REGION",
+            "dxf_name": "2017_67-101.dxf",
+            "region_key": "2017_67-101_s1",
+            "bbox_cm": [
+              528,
+              4565,
+              6015,
+              8539
+            ],
+            "title": "PLANTA CIELO 1º SUBTERRANEO",
+            "layer_counts_inside_region": {
+              "RLE-EJE": 27,
+              "RLE-EJES": 62,
+              "RLE-LOSA": 5,
+              "RLE-MURO": 91,
+              "RLE-TEXTO-1": 143,
+              "RLE-VIGA": 85
+            }
+          },
+          "nearest_column": null,
+          "nearest_column_label": {
+            "id": "LBL_P1_1S_0015",
+            "tipo": "columna",
+            "texto": "P. 70x70",
+            "distance_m": 37.687,
+            "source_dxf": "2017_67-101.dxf",
+            "source_layer": "RLE-TEXTO-1",
+            "point_m": [
+              36.143,
+              -20.919
+            ]
+          },
+          "nearest_structure": {
+            "id": "VIGA_P1_1S_0037",
+            "tipo": "viga",
+            "distance_m": 18.632,
+            "source_dxf": "2017_67-101.dxf",
+            "source_layer": "RLE-VIGA",
+            "ejes_aproximados": {
+              "x": "Ga-H",
+              "y": "antes de 1"
+            },
+            "point_or_mid_m": [
+              48.941,
+              2.598
+            ]
+          },
+          "direct_column_count": 0
+        },
+        "foundation": {
+          "source_dxf": "2017_67-100.dxf",
+          "direct_dxf_region_scan": {
+            "status": "SCANNED_DIRECT_DXF_REGION",
+            "dxf_name": "2017_67-100.dxf",
+            "region_key": "2017_67-100",
+            "bbox_cm": [
+              268,
+              3221,
+              5756,
+              7984
+            ],
+            "title": "PLANTA FUNDACIONES",
+            "layer_counts_inside_region": {
+              "RLE-EJE": 30,
+              "RLE-EJES": 63,
+              "RLE-FUNDACION": 199,
+              "RLE-LOSA": 14,
+              "RLE-MURO": 158,
+              "RLE-PILAR": 24,
+              "RLE-TEXTO-1": 79,
+              "RLE-VIGA": 69
+            }
+          },
+          "nearest_column": {
+            "id": "C_P1_FUNDACION_0003",
+            "tipo": "columna",
+            "distance_m": 2.268,
+            "source_dxf": "2017_67-100.dxf",
+            "source_layer": "RLE-PILAR",
+            "ejes_aproximados": {
+              "x": "H_prime-H2",
+              "y": "antes de 1"
+            },
+            "point_or_mid_m": [
+              65.248,
+              0.335
+            ]
+          },
+          "nearest_foundation_element": {
+            "id": "MURO_P1_FUNDACION_0104",
+            "tipo": "muro",
+            "distance_m": 0.135,
+            "source_dxf": "2017_67-100.dxf",
+            "source_layer": "RLE-MURO",
+            "ejes_aproximados": {
+              "x": "H2-I",
+              "y": "antes de 1"
+            },
+            "point_or_mid_m": [
+              67.398,
+              0.135
+            ]
+          },
+          "direct_column_count": 6
+        },
+        "outboard_y_gt_y3_plus_tolerance": false,
+        "final_full_plan_audit": {
+          "id": "E1-S1-C-015",
+          "building": "EDIFICIO_1",
+          "floor": "S1",
+          "axis_x": "I",
+          "axis_y": "1",
+          "canonical_center_xy_m": [
+            67.491,
+            0.0
+          ],
+          "section_m": [
+            0.7,
+            0.7
+          ],
+          "classification": "CONFIRMED",
+          "evidence": {
+            "source_sheet": "2017_67-309",
+            "elevation_title": "ELEVACION EJE I",
+            "axis_span_match": true,
+            "p70x70_label_count_at_station": 4,
+            "lower_story_contour_count": 2,
+            "foundation_beam_labels": []
+          },
+          "reason": "La elevacion estructural del eje dibuja un pilar de 70x70 en la estacion 1/2/3, con contornos continuos bajo el primer piso hasta la viga de fundacion; las separaciones 1-2 y 2-3 coinciden exactamente con los ejes canonicos."
+        }
+      }
+    },
+    {
+      "viewer_id": "E1-S1-C-017",
+      "id": "E1-S1-C-017",
+      "elementTag": "SOL_1S_column_0016",
+      "solidTag": "SOL_1S_column_0016",
+      "legacy_solidTag": "SOL_1S_column_0016",
+      "piso": "S1",
+      "source_floor_luis": "1S",
+      "X": 72.491,
+      "Y": 0.0,
+      "x_m": 72.491,
+      "y_m": 0.0,
+      "local_luis_xy_m": [
+        45.0,
+        0.038
+      ],
+      "ejes_bay": {
+        "X": {
+          "axis": "I'",
+          "axis_coord_m": 72.491,
+          "offset_m": 0.0,
+          "abs_offset_m": 0.0,
+          "status": "ON_AXIS",
+          "relation": "I'",
+          "span": null
+        },
+        "Y": {
+          "axis": "1",
+          "axis_coord_m": 0.0,
+          "offset_m": 0.0,
+          "abs_offset_m": 0.0,
+          "status": "ON_AXIS",
+          "relation": "1",
+          "span": null
+        }
+      },
+      "location_description": "EDIFICIO_1 / S1 / Eje I'-1",
+      "confidence_original": "inferred_from_floor_1",
+      "inferred_from": "from_floor_1",
+      "source_dxf": "2017_67-101.dxf",
+      "sourceTags": [
+        "CAD_1_column_plan_0095",
+        "CAD_1_column_plan_0096",
+        "CAD_1_column_plan_0097",
+        "CAD_1_column_plan_0098"
+      ],
+      "classification": "CONFIRMED_BY_AXIS_ELEVATION",
+      "resolution_group": "CONFIRMED_CORRECT",
+      "reason": "La elevacion estructural del eje dibuja un pilar de 70x70 en la estacion 1/2/3, con contornos continuos bajo el primer piso hasta la viga de fundacion; las separaciones 1-2 y 2-3 coinciden exactamente con los ejes canonicos.",
+      "reason_codes": [
+        "direct_axis_elevation",
+        "lower_story_contours_to_foundation",
+        "explicit_p70x70"
+      ],
+      "evidence": {
+        "floor": "S1",
+        "station_x_m": 72.491,
+        "upper_floor": {
+          "source_dxf": "2017_67-101.dxf",
+          "nearest_column": {
+            "id": "E1-P1-C-024",
+            "tipo": "columna",
+            "distance_m": 0.038,
+            "source_dxf": "modelo_p1",
+            "source_layer": "modelo",
+            "ejes_aproximados": null,
+            "point_or_mid_m": [
+              72.491,
+              0.038
+            ]
+          },
+          "direct_column_count": 54
+        },
+        "same_floor": {
+          "source_dxf": "2017_67-101.dxf",
+          "direct_dxf_region_scan": {
+            "status": "SCANNED_DIRECT_DXF_REGION",
+            "dxf_name": "2017_67-101.dxf",
+            "region_key": "2017_67-101_s1",
+            "bbox_cm": [
+              528,
+              4565,
+              6015,
+              8539
+            ],
+            "title": "PLANTA CIELO 1º SUBTERRANEO",
+            "layer_counts_inside_region": {
+              "RLE-EJE": 27,
+              "RLE-EJES": 62,
+              "RLE-LOSA": 5,
+              "RLE-MURO": 91,
+              "RLE-TEXTO-1": 143,
+              "RLE-VIGA": 85
+            }
+          },
+          "nearest_column": null,
+          "nearest_column_label": {
+            "id": "LBL_P1_1S_0015",
+            "tipo": "columna",
+            "texto": "P. 70x70",
+            "distance_m": 41.938,
+            "source_dxf": "2017_67-101.dxf",
+            "source_layer": "RLE-TEXTO-1",
+            "point_m": [
+              36.143,
+              -20.919
+            ]
+          },
+          "nearest_structure": {
+            "id": "VIGA_P1_1S_0037",
+            "tipo": "viga",
+            "distance_m": 23.593,
+            "source_dxf": "2017_67-101.dxf",
+            "source_layer": "RLE-VIGA",
+            "ejes_aproximados": {
+              "x": "Ga-H",
+              "y": "antes de 1"
+            },
+            "point_or_mid_m": [
+              48.941,
+              2.598
+            ]
+          },
+          "direct_column_count": 0
+        },
+        "foundation": {
+          "source_dxf": "2017_67-100.dxf",
+          "direct_dxf_region_scan": {
+            "status": "SCANNED_DIRECT_DXF_REGION",
+            "dxf_name": "2017_67-100.dxf",
+            "region_key": "2017_67-100",
+            "bbox_cm": [
+              268,
+              3221,
+              5756,
+              7984
+            ],
+            "title": "PLANTA FUNDACIONES",
+            "layer_counts_inside_region": {
+              "RLE-EJE": 30,
+              "RLE-EJES": 63,
+              "RLE-FUNDACION": 199,
+              "RLE-LOSA": 14,
+              "RLE-MURO": 158,
+              "RLE-PILAR": 24,
+              "RLE-TEXTO-1": 79,
+              "RLE-VIGA": 69
+            }
+          },
+          "nearest_column": {
+            "id": "C_P1_FUNDACION_0004",
+            "tipo": "columna",
+            "distance_m": 2.596,
+            "source_dxf": "2017_67-100.dxf",
+            "source_layer": "RLE-PILAR",
+            "ejes_aproximados": {
+              "x": "I-IA",
+              "y": "antes de 1"
+            },
+            "point_or_mid_m": [
+              69.898,
+              0.118
+            ]
+          },
+          "nearest_foundation_element": {
+            "id": "FUNDACION_P1_FUNDACION_0142",
+            "tipo": "fundacion",
+            "distance_m": 1.147,
+            "source_dxf": "2017_67-100.dxf",
+            "source_layer": "RLE-FUNDACION",
+            "ejes_aproximados": {
+              "x": "IA-I_prime",
+              "y": "antes de 1"
+            },
+            "point_or_mid_m": [
+              71.344,
+              0.185
+            ]
+          },
+          "direct_column_count": 6
+        },
+        "outboard_y_gt_y3_plus_tolerance": false,
+        "final_full_plan_audit": {
+          "id": "E1-S1-C-017",
+          "building": "EDIFICIO_1",
+          "floor": "S1",
+          "axis_x": "I'",
+          "axis_y": "1",
+          "canonical_center_xy_m": [
+            72.491,
+            0.0
+          ],
+          "section_m": [
+            0.7,
+            0.7
+          ],
+          "classification": "CONFIRMED",
+          "evidence": {
+            "source_sheet": "2017_67-310",
+            "elevation_title": "ELEVACION EJE I'",
+            "axis_span_match": true,
+            "p70x70_label_count_at_station": 4,
+            "lower_story_contour_count": 3,
+            "foundation_beam_labels": [
+              {
+                "text": "V.F. 20/120",
+                "x": -32.996,
+                "y": -353.448
+              },
+              {
+                "text": "V.F. 20/120",
+                "x": -840.487,
+                "y": -353.448
+              },
+              {
+                "text": "V.F. 20/180",
+                "x": -1087.487,
+                "y": -310.448
+              },
+              {
+                "text": "V.F. 20/180",
+                "x": 317.0,
+                "y": -346.0
+              }
+            ]
+          },
+          "reason": "La elevacion estructural del eje dibuja un pilar de 70x70 en la estacion 1/2/3, con contornos continuos bajo el primer piso hasta la viga de fundacion; las separaciones 1-2 y 2-3 coinciden exactamente con los ejes canonicos."
+        }
+      }
+    },
+    {
       "viewer_id": "E1-S1-C-011",
       "id": "E1-S1-C-011",
       "elementTag": "SOL_1S_column_0013",
@@ -1059,445 +1498,6 @@
           "direct_column_count": 6
         },
         "outboard_y_gt_y3_plus_tolerance": false
-      }
-    },
-    {
-      "viewer_id": "E1-S1-C-017",
-      "id": "E1-S1-C-017",
-      "elementTag": "SOL_1S_column_0016",
-      "solidTag": "SOL_1S_column_0016",
-      "legacy_solidTag": "SOL_1S_column_0016",
-      "piso": "S1",
-      "source_floor_luis": "1S",
-      "X": 72.491,
-      "Y": 0.038,
-      "x_m": 72.491,
-      "y_m": 0.038,
-      "local_luis_xy_m": [
-        45.0,
-        0.038
-      ],
-      "ejes_bay": {
-        "X": {
-          "axis": "I'",
-          "axis_coord_m": 72.491,
-          "offset_m": 0.0,
-          "abs_offset_m": 0.0,
-          "status": "ON_AXIS",
-          "relation": "I'",
-          "span": null
-        },
-        "Y": {
-          "axis": "1",
-          "axis_coord_m": 0.0,
-          "offset_m": 0.038,
-          "abs_offset_m": 0.038,
-          "status": "ON_AXIS",
-          "relation": "1",
-          "span": null
-        }
-      },
-      "location_description": "EDIFICIO_1 / S1 / Eje I'-1",
-      "confidence_original": "inferred_from_floor_1",
-      "inferred_from": "from_floor_1",
-      "source_dxf": "2017_67-101.dxf",
-      "sourceTags": [
-        "CAD_1_column_plan_0095",
-        "CAD_1_column_plan_0096",
-        "CAD_1_column_plan_0097",
-        "CAD_1_column_plan_0098"
-      ],
-      "classification": "CONFIRMED_BY_AXIS_ELEVATION",
-      "resolution_group": "CONFIRMED_CORRECT",
-      "reason": "La elevacion estructural del eje dibuja un pilar de 70x70 en la estacion 1/2/3, con contornos continuos bajo el primer piso hasta la viga de fundacion; las separaciones 1-2 y 2-3 coinciden exactamente con los ejes canonicos.",
-      "reason_codes": [
-        "direct_axis_elevation",
-        "lower_story_contours_to_foundation",
-        "explicit_p70x70"
-      ],
-      "evidence": {
-        "floor": "S1",
-        "station_x_m": 72.491,
-        "upper_floor": {
-          "source_dxf": "2017_67-101.dxf",
-          "nearest_column": {
-            "id": "E1-P1-C-024",
-            "tipo": "columna",
-            "distance_m": 0.0,
-            "source_dxf": "modelo_p1",
-            "source_layer": "modelo",
-            "ejes_aproximados": null,
-            "point_or_mid_m": [
-              72.491,
-              0.038
-            ]
-          },
-          "direct_column_count": 54
-        },
-        "same_floor": {
-          "source_dxf": "2017_67-101.dxf",
-          "direct_dxf_region_scan": {
-            "status": "SCANNED_DIRECT_DXF_REGION",
-            "dxf_name": "2017_67-101.dxf",
-            "region_key": "2017_67-101_s1",
-            "bbox_cm": [
-              528,
-              4565,
-              6015,
-              8539
-            ],
-            "title": "PLANTA CIELO 1º SUBTERRANEO",
-            "layer_counts_inside_region": {
-              "RLE-EJE": 27,
-              "RLE-EJES": 62,
-              "RLE-LOSA": 5,
-              "RLE-MURO": 91,
-              "RLE-TEXTO-1": 143,
-              "RLE-VIGA": 85
-            }
-          },
-          "nearest_column": null,
-          "nearest_column_label": {
-            "id": "LBL_P1_1S_0015",
-            "tipo": "columna",
-            "texto": "P. 70x70",
-            "distance_m": 41.957,
-            "source_dxf": "2017_67-101.dxf",
-            "source_layer": "RLE-TEXTO-1",
-            "point_m": [
-              36.143,
-              -20.919
-            ]
-          },
-          "nearest_structure": {
-            "id": "VIGA_P1_1S_0037",
-            "tipo": "viga",
-            "distance_m": 23.589,
-            "source_dxf": "2017_67-101.dxf",
-            "source_layer": "RLE-VIGA",
-            "ejes_aproximados": {
-              "x": "Ga-H",
-              "y": "antes de 1"
-            },
-            "point_or_mid_m": [
-              48.941,
-              2.598
-            ]
-          },
-          "direct_column_count": 0
-        },
-        "foundation": {
-          "source_dxf": "2017_67-100.dxf",
-          "direct_dxf_region_scan": {
-            "status": "SCANNED_DIRECT_DXF_REGION",
-            "dxf_name": "2017_67-100.dxf",
-            "region_key": "2017_67-100",
-            "bbox_cm": [
-              268,
-              3221,
-              5756,
-              7984
-            ],
-            "title": "PLANTA FUNDACIONES",
-            "layer_counts_inside_region": {
-              "RLE-EJE": 30,
-              "RLE-EJES": 63,
-              "RLE-FUNDACION": 199,
-              "RLE-LOSA": 14,
-              "RLE-MURO": 158,
-              "RLE-PILAR": 24,
-              "RLE-TEXTO-1": 79,
-              "RLE-VIGA": 69
-            }
-          },
-          "nearest_column": {
-            "id": "C_P1_FUNDACION_0004",
-            "tipo": "columna",
-            "distance_m": 2.594,
-            "source_dxf": "2017_67-100.dxf",
-            "source_layer": "RLE-PILAR",
-            "ejes_aproximados": {
-              "x": "I-IA",
-              "y": "antes de 1"
-            },
-            "point_or_mid_m": [
-              69.898,
-              0.118
-            ]
-          },
-          "nearest_foundation_element": {
-            "id": "FUNDACION_P1_FUNDACION_0142",
-            "tipo": "fundacion",
-            "distance_m": 1.147,
-            "source_dxf": "2017_67-100.dxf",
-            "source_layer": "RLE-FUNDACION",
-            "ejes_aproximados": {
-              "x": "IA-I_prime",
-              "y": "antes de 1"
-            },
-            "point_or_mid_m": [
-              71.344,
-              0.185
-            ]
-          },
-          "direct_column_count": 6
-        },
-        "outboard_y_gt_y3_plus_tolerance": false,
-        "final_full_plan_audit": {
-          "id": "E1-S1-C-017",
-          "building": "EDIFICIO_1",
-          "floor": "S1",
-          "axis_x": "I'",
-          "axis_y": "1",
-          "canonical_center_xy_m": [
-            72.491,
-            0.0
-          ],
-          "section_m": [
-            0.7,
-            0.7
-          ],
-          "classification": "CONFIRMED",
-          "evidence": {
-            "source_sheet": "2017_67-310",
-            "elevation_title": "ELEVACION EJE I'",
-            "axis_span_match": true,
-            "p70x70_label_count_at_station": 4,
-            "lower_story_contour_count": 3,
-            "foundation_beam_labels": [
-              {
-                "text": "V.F. 20/120",
-                "x": -32.996,
-                "y": -353.448
-              },
-              {
-                "text": "V.F. 20/120",
-                "x": -840.487,
-                "y": -353.448
-              },
-              {
-                "text": "V.F. 20/180",
-                "x": -1087.487,
-                "y": -310.448
-              },
-              {
-                "text": "V.F. 20/180",
-                "x": 317.0,
-                "y": -346.0
-              }
-            ]
-          },
-          "reason": "La elevacion estructural del eje dibuja un pilar de 70x70 en la estacion 1/2/3, con contornos continuos bajo el primer piso hasta la viga de fundacion; las separaciones 1-2 y 2-3 coinciden exactamente con los ejes canonicos."
-        }
-      }
-    },
-    {
-      "viewer_id": "E1-S1-C-015",
-      "id": "E1-S1-C-015",
-      "elementTag": "SOL_1S_column_0012",
-      "solidTag": "SOL_1S_column_0012",
-      "legacy_solidTag": "SOL_1S_column_0012",
-      "piso": "S1",
-      "source_floor_luis": "1S",
-      "X": 67.447,
-      "Y": 0.075,
-      "x_m": 67.447,
-      "y_m": 0.075,
-      "local_luis_xy_m": [
-        39.956,
-        0.075
-      ],
-      "ejes_bay": {
-        "X": {
-          "axis": "I",
-          "axis_coord_m": 67.491,
-          "offset_m": -0.044,
-          "abs_offset_m": 0.044,
-          "status": "ON_AXIS",
-          "relation": "I",
-          "span": null
-        },
-        "Y": {
-          "axis": "1",
-          "axis_coord_m": 0.0,
-          "offset_m": 0.075,
-          "abs_offset_m": 0.075,
-          "status": "ON_AXIS",
-          "relation": "1",
-          "span": null
-        }
-      },
-      "location_description": "EDIFICIO_1 / S1 / Eje I-1",
-      "confidence_original": "inferred_from_floor_1",
-      "inferred_from": "from_floor_1",
-      "source_dxf": "2017_67-101.dxf",
-      "sourceTags": [
-        "CAD_1_column_plan_0064",
-        "CAD_1_column_plan_0065",
-        "CAD_1_column_plan_0066",
-        "CAD_1_column_plan_0067"
-      ],
-      "classification": "CONFIRMED_BY_AXIS_ELEVATION",
-      "resolution_group": "CONFIRMED_CORRECT",
-      "reason": "La elevacion estructural del eje dibuja un pilar de 70x70 en la estacion 1/2/3, con contornos continuos bajo el primer piso hasta la viga de fundacion; las separaciones 1-2 y 2-3 coinciden exactamente con los ejes canonicos.",
-      "reason_codes": [
-        "direct_axis_elevation",
-        "lower_story_contours_to_foundation",
-        "explicit_p70x70"
-      ],
-      "evidence": {
-        "floor": "S1",
-        "station_x_m": 67.447,
-        "upper_floor": {
-          "source_dxf": "2017_67-101.dxf",
-          "nearest_column": {
-            "id": "E1-P1-C-022",
-            "tipo": "columna",
-            "distance_m": 0.0,
-            "source_dxf": "modelo_p1",
-            "source_layer": "modelo",
-            "ejes_aproximados": null,
-            "point_or_mid_m": [
-              67.447,
-              0.075
-            ]
-          },
-          "direct_column_count": 54
-        },
-        "same_floor": {
-          "source_dxf": "2017_67-101.dxf",
-          "direct_dxf_region_scan": {
-            "status": "SCANNED_DIRECT_DXF_REGION",
-            "dxf_name": "2017_67-101.dxf",
-            "region_key": "2017_67-101_s1",
-            "bbox_cm": [
-              528,
-              4565,
-              6015,
-              8539
-            ],
-            "title": "PLANTA CIELO 1º SUBTERRANEO",
-            "layer_counts_inside_region": {
-              "RLE-EJE": 27,
-              "RLE-EJES": 62,
-              "RLE-LOSA": 5,
-              "RLE-MURO": 91,
-              "RLE-TEXTO-1": 143,
-              "RLE-VIGA": 85
-            }
-          },
-          "nearest_column": null,
-          "nearest_column_label": {
-            "id": "LBL_P1_1S_0015",
-            "tipo": "columna",
-            "texto": "P. 70x70",
-            "distance_m": 37.693,
-            "source_dxf": "2017_67-101.dxf",
-            "source_layer": "RLE-TEXTO-1",
-            "point_m": [
-              36.143,
-              -20.919
-            ]
-          },
-          "nearest_structure": {
-            "id": "VIGA_P1_1S_0037",
-            "tipo": "viga",
-            "distance_m": 18.578,
-            "source_dxf": "2017_67-101.dxf",
-            "source_layer": "RLE-VIGA",
-            "ejes_aproximados": {
-              "x": "Ga-H",
-              "y": "antes de 1"
-            },
-            "point_or_mid_m": [
-              48.941,
-              2.598
-            ]
-          },
-          "direct_column_count": 0
-        },
-        "foundation": {
-          "source_dxf": "2017_67-100.dxf",
-          "direct_dxf_region_scan": {
-            "status": "SCANNED_DIRECT_DXF_REGION",
-            "dxf_name": "2017_67-100.dxf",
-            "region_key": "2017_67-100",
-            "bbox_cm": [
-              268,
-              3221,
-              5756,
-              7984
-            ],
-            "title": "PLANTA FUNDACIONES",
-            "layer_counts_inside_region": {
-              "RLE-EJE": 30,
-              "RLE-EJES": 63,
-              "RLE-FUNDACION": 199,
-              "RLE-LOSA": 14,
-              "RLE-MURO": 158,
-              "RLE-PILAR": 24,
-              "RLE-TEXTO-1": 79,
-              "RLE-VIGA": 69
-            }
-          },
-          "nearest_column": {
-            "id": "C_P1_FUNDACION_0003",
-            "tipo": "columna",
-            "distance_m": 2.215,
-            "source_dxf": "2017_67-100.dxf",
-            "source_layer": "RLE-PILAR",
-            "ejes_aproximados": {
-              "x": "H_prime-H2",
-              "y": "antes de 1"
-            },
-            "point_or_mid_m": [
-              65.248,
-              0.335
-            ]
-          },
-          "nearest_foundation_element": {
-            "id": "MURO_P1_FUNDACION_0104",
-            "tipo": "muro",
-            "distance_m": 0.06,
-            "source_dxf": "2017_67-100.dxf",
-            "source_layer": "RLE-MURO",
-            "ejes_aproximados": {
-              "x": "H2-I",
-              "y": "antes de 1"
-            },
-            "point_or_mid_m": [
-              67.398,
-              0.135
-            ]
-          },
-          "direct_column_count": 6
-        },
-        "outboard_y_gt_y3_plus_tolerance": false,
-        "final_full_plan_audit": {
-          "id": "E1-S1-C-015",
-          "building": "EDIFICIO_1",
-          "floor": "S1",
-          "axis_x": "I",
-          "axis_y": "1",
-          "canonical_center_xy_m": [
-            67.491,
-            0.0
-          ],
-          "section_m": [
-            0.7,
-            0.7
-          ],
-          "classification": "CONFIRMED",
-          "evidence": {
-            "source_sheet": "2017_67-309",
-            "elevation_title": "ELEVACION EJE I",
-            "axis_span_match": true,
-            "p70x70_label_count_at_station": 4,
-            "lower_story_contour_count": 2,
-            "foundation_beam_labels": []
-          },
-          "reason": "La elevacion estructural del eje dibuja un pilar de 70x70 en la estacion 1/2/3, con contornos continuos bajo el primer piso hasta la viga de fundacion; las separaciones 1-2 y 2-3 coinciden exactamente con los ejes canonicos."
-        }
       }
     },
     {
@@ -2613,9 +2613,9 @@
       "legacy_solidTag": "SOL_1S_column_0011",
       "piso": "S1",
       "source_floor_luis": "1S",
-      "X": 67.404,
+      "X": 67.491,
       "Y": 8.9,
-      "x_m": 67.404,
+      "x_m": 67.491,
       "y_m": 8.9,
       "local_luis_xy_m": [
         39.913,
@@ -2625,8 +2625,8 @@
         "X": {
           "axis": "I",
           "axis_coord_m": 67.491,
-          "offset_m": -0.087,
-          "abs_offset_m": 0.087,
+          "offset_m": 0.0,
+          "abs_offset_m": 0.0,
           "status": "ON_AXIS",
           "relation": "I",
           "span": null
@@ -2661,16 +2661,19 @@
       ],
       "evidence": {
         "floor": "S1",
-        "station_x_m": 67.404,
+        "station_x_m": 67.491,
         "upper_floor": {
           "source_dxf": "2017_67-101.dxf",
           "nearest_column": {
-            "id": "E1-P1-C-021",
+            "id": "C_P1_01_0011",
             "tipo": "columna",
-            "distance_m": 0.0,
-            "source_dxf": "modelo_p1",
-            "source_layer": "modelo",
-            "ejes_aproximados": null,
+            "distance_m": 0.087,
+            "source_dxf": "2017_67-101.dxf",
+            "source_layer": "RLE-PILAR",
+            "ejes_aproximados": {
+              "x": "H2-I",
+              "y": "1b-2"
+            },
             "point_or_mid_m": [
               67.404,
               8.9
@@ -2705,7 +2708,7 @@
             "id": "LBL_P1_1S_0015",
             "tipo": "columna",
             "texto": "P. 70x70",
-            "distance_m": 43.202,
+            "distance_m": 43.266,
             "source_dxf": "2017_67-101.dxf",
             "source_layer": "RLE-TEXTO-1",
             "point_m": [
@@ -2716,7 +2719,7 @@
           "nearest_structure": {
             "id": "MURO_P1_1S_0007",
             "tipo": "muro",
-            "distance_m": 18.363,
+            "distance_m": 18.45,
             "source_dxf": "2017_67-101.dxf",
             "source_layer": "RLE-MURO",
             "ejes_aproximados": {
@@ -2757,7 +2760,7 @@
           "nearest_column": {
             "id": "C_P1_FUNDACION_0002",
             "tipo": "columna",
-            "distance_m": 2.163,
+            "distance_m": 2.251,
             "source_dxf": "2017_67-100.dxf",
             "source_layer": "RLE-PILAR",
             "ejes_aproximados": {
@@ -2874,12 +2877,15 @@
         "upper_floor": {
           "source_dxf": "2017_67-101.dxf",
           "nearest_column": {
-            "id": "E1-P1-C-025",
+            "id": "C_P1_01_0018",
             "tipo": "columna",
             "distance_m": 0.0,
-            "source_dxf": "modelo_p1",
-            "source_layer": "modelo",
-            "ejes_aproximados": null,
+            "source_dxf": "2017_67-101.dxf",
+            "source_layer": "RLE-PILAR",
+            "ejes_aproximados": {
+              "x": "I_prime-IB",
+              "y": "1b-2"
+            },
             "point_or_mid_m": [
               72.491,
               8.9
@@ -4150,6 +4156,218 @@
       }
     },
     {
+      "viewer_id": "E1-S1-C-016",
+      "id": "E1-S1-C-016",
+      "elementTag": "SOL_1S_column_0010",
+      "solidTag": "SOL_1S_column_0010",
+      "legacy_solidTag": "SOL_1S_column_0010",
+      "piso": "S1",
+      "source_floor_luis": "1S",
+      "X": 67.491,
+      "Y": 16.15,
+      "x_m": 67.491,
+      "y_m": 16.15,
+      "local_luis_xy_m": [
+        40.179,
+        16.352
+      ],
+      "ejes_bay": {
+        "X": {
+          "axis": "I",
+          "axis_coord_m": 67.491,
+          "offset_m": 0.0,
+          "abs_offset_m": 0.0,
+          "status": "ON_AXIS",
+          "relation": "I",
+          "span": null
+        },
+        "Y": {
+          "axis": "3",
+          "axis_coord_m": 16.15,
+          "offset_m": 0.0,
+          "abs_offset_m": 0.0,
+          "status": "ON_AXIS",
+          "relation": "3",
+          "span": null
+        }
+      },
+      "location_description": "EDIFICIO_1 / S1 / Eje I-3",
+      "confidence_original": "inferred_from_floor_1",
+      "inferred_from": "from_floor_1",
+      "source_dxf": "2017_67-101.dxf",
+      "sourceTags": [
+        "CAD_1_column_plan_0055",
+        "CAD_1_column_plan_0056",
+        "CAD_1_column_plan_0057",
+        "CAD_1_column_plan_0058",
+        "CAD_1_column_plan_0224",
+        "CAD_1_column_plan_0225",
+        "CAD_1_column_plan_0226"
+      ],
+      "classification": "CONFIRMED_BY_AXIS_ELEVATION",
+      "resolution_group": "CONFIRMED_CORRECT",
+      "reason": "La elevacion estructural del eje dibuja un pilar de 70x70 en la estacion 1/2/3, con contornos continuos bajo el primer piso hasta la viga de fundacion; las separaciones 1-2 y 2-3 coinciden exactamente con los ejes canonicos.",
+      "reason_codes": [
+        "direct_axis_elevation",
+        "lower_story_contours_to_foundation",
+        "explicit_p70x70"
+      ],
+      "evidence": {
+        "floor": "S1",
+        "station_x_m": 67.491,
+        "upper_floor": {
+          "source_dxf": "2017_67-101.dxf",
+          "nearest_column": {
+            "id": "E1-P1-C-023",
+            "tipo": "columna",
+            "distance_m": 0.269,
+            "source_dxf": "modelo_p1",
+            "source_layer": "modelo",
+            "ejes_aproximados": null,
+            "point_or_mid_m": [
+              67.67,
+              16.352
+            ]
+          },
+          "direct_column_count": 54
+        },
+        "same_floor": {
+          "source_dxf": "2017_67-101.dxf",
+          "direct_dxf_region_scan": {
+            "status": "SCANNED_DIRECT_DXF_REGION",
+            "dxf_name": "2017_67-101.dxf",
+            "region_key": "2017_67-101_s1",
+            "bbox_cm": [
+              528,
+              4565,
+              6015,
+              8539
+            ],
+            "title": "PLANTA CIELO 1º SUBTERRANEO",
+            "layer_counts_inside_region": {
+              "RLE-EJE": 27,
+              "RLE-EJES": 62,
+              "RLE-LOSA": 5,
+              "RLE-MURO": 91,
+              "RLE-TEXTO-1": 143,
+              "RLE-VIGA": 85
+            }
+          },
+          "nearest_column": null,
+          "nearest_column_label": {
+            "id": "LBL_P1_1S_0015",
+            "tipo": "columna",
+            "texto": "P. 70x70",
+            "distance_m": 48.547,
+            "source_dxf": "2017_67-101.dxf",
+            "source_layer": "RLE-TEXTO-1",
+            "point_m": [
+              36.143,
+              -20.919
+            ]
+          },
+          "nearest_structure": {
+            "id": "MURO_P1_1S_0004",
+            "tipo": "muro",
+            "distance_m": 18.722,
+            "source_dxf": "2017_67-101.dxf",
+            "source_layer": "RLE-MURO",
+            "ejes_aproximados": {
+              "x": "F_prime-G",
+              "y": "antes de 1"
+            },
+            "point_or_mid_m": [
+              41.504,
+              12.968
+            ]
+          },
+          "direct_column_count": 0
+        },
+        "foundation": {
+          "source_dxf": "2017_67-100.dxf",
+          "direct_dxf_region_scan": {
+            "status": "SCANNED_DIRECT_DXF_REGION",
+            "dxf_name": "2017_67-100.dxf",
+            "region_key": "2017_67-100",
+            "bbox_cm": [
+              268,
+              3221,
+              5756,
+              7984
+            ],
+            "title": "PLANTA FUNDACIONES",
+            "layer_counts_inside_region": {
+              "RLE-EJE": 30,
+              "RLE-EJES": 63,
+              "RLE-FUNDACION": 199,
+              "RLE-LOSA": 14,
+              "RLE-MURO": 158,
+              "RLE-PILAR": 24,
+              "RLE-TEXTO-1": 79,
+              "RLE-VIGA": 69
+            }
+          },
+          "nearest_column": {
+            "id": "C_P1_FUNDACION_0001",
+            "tipo": "columna",
+            "distance_m": 2.258,
+            "source_dxf": "2017_67-100.dxf",
+            "source_layer": "RLE-PILAR",
+            "ejes_aproximados": {
+              "x": "H_prime-H2",
+              "y": "antes de 1"
+            },
+            "point_or_mid_m": [
+              65.298,
+              16.687
+            ]
+          },
+          "nearest_foundation_element": {
+            "id": "VIGA_P1_FUNDACION_0016",
+            "tipo": "viga",
+            "distance_m": 0.335,
+            "source_dxf": "2017_67-100.dxf",
+            "source_layer": "RLE-VIGA",
+            "ejes_aproximados": {
+              "x": "H2-I",
+              "y": "antes de 1"
+            },
+            "point_or_mid_m": [
+              67.398,
+              16.485
+            ]
+          },
+          "direct_column_count": 6
+        },
+        "outboard_y_gt_y3_plus_tolerance": false,
+        "final_full_plan_audit": {
+          "id": "E1-S1-C-016",
+          "building": "EDIFICIO_1",
+          "floor": "S1",
+          "axis_x": "I",
+          "axis_y": "3",
+          "canonical_center_xy_m": [
+            67.491,
+            16.15
+          ],
+          "section_m": [
+            0.7,
+            0.7
+          ],
+          "classification": "CONFIRMED",
+          "evidence": {
+            "source_sheet": "2017_67-309",
+            "elevation_title": "ELEVACION EJE I",
+            "axis_span_match": true,
+            "p70x70_label_count_at_station": 4,
+            "lower_story_contour_count": 3,
+            "foundation_beam_labels": []
+          },
+          "reason": "La elevacion estructural del eje dibuja un pilar de 70x70 en la estacion 1/2/3, con contornos continuos bajo el primer piso hasta la viga de fundacion; las separaciones 1-2 y 2-3 coinciden exactamente con los ejes canonicos."
+        }
+      }
+    },
+    {
       "viewer_id": "E1-S1-C-019",
       "id": "E1-S1-C-019",
       "elementTag": "SOL_1S_column_0017",
@@ -4209,12 +4427,15 @@
         "upper_floor": {
           "source_dxf": "2017_67-101.dxf",
           "nearest_column": {
-            "id": "E1-P1-C-026",
+            "id": "C_P1_01_0017",
             "tipo": "columna",
             "distance_m": 0.0,
-            "source_dxf": "modelo_p1",
-            "source_layer": "modelo",
-            "ejes_aproximados": null,
+            "source_dxf": "2017_67-101.dxf",
+            "source_layer": "RLE-PILAR",
+            "ejes_aproximados": {
+              "x": "I_prime-IB",
+              "y": "2a-3"
+            },
             "point_or_mid_m": [
               72.491,
               16.15
@@ -4945,218 +5166,6 @@
           "direct_column_count": 6
         },
         "outboard_y_gt_y3_plus_tolerance": false
-      }
-    },
-    {
-      "viewer_id": "E1-S1-C-016",
-      "id": "E1-S1-C-016",
-      "elementTag": "SOL_1S_column_0010",
-      "solidTag": "SOL_1S_column_0010",
-      "legacy_solidTag": "SOL_1S_column_0010",
-      "piso": "S1",
-      "source_floor_luis": "1S",
-      "X": 67.67,
-      "Y": 16.352,
-      "x_m": 67.67,
-      "y_m": 16.352,
-      "local_luis_xy_m": [
-        40.179,
-        16.352
-      ],
-      "ejes_bay": {
-        "X": {
-          "axis": "I",
-          "axis_coord_m": 67.491,
-          "offset_m": 0.179,
-          "abs_offset_m": 0.179,
-          "status": "ON_AXIS",
-          "relation": "I",
-          "span": null
-        },
-        "Y": {
-          "axis": "3",
-          "axis_coord_m": 16.15,
-          "offset_m": 0.202,
-          "abs_offset_m": 0.202,
-          "status": "ON_AXIS",
-          "relation": "3",
-          "span": null
-        }
-      },
-      "location_description": "EDIFICIO_1 / S1 / Eje I-3",
-      "confidence_original": "inferred_from_floor_1",
-      "inferred_from": "from_floor_1",
-      "source_dxf": "2017_67-101.dxf",
-      "sourceTags": [
-        "CAD_1_column_plan_0055",
-        "CAD_1_column_plan_0056",
-        "CAD_1_column_plan_0057",
-        "CAD_1_column_plan_0058",
-        "CAD_1_column_plan_0224",
-        "CAD_1_column_plan_0225",
-        "CAD_1_column_plan_0226"
-      ],
-      "classification": "CONFIRMED_BY_AXIS_ELEVATION",
-      "resolution_group": "CONFIRMED_CORRECT",
-      "reason": "La elevacion estructural del eje dibuja un pilar de 70x70 en la estacion 1/2/3, con contornos continuos bajo el primer piso hasta la viga de fundacion; las separaciones 1-2 y 2-3 coinciden exactamente con los ejes canonicos.",
-      "reason_codes": [
-        "direct_axis_elevation",
-        "lower_story_contours_to_foundation",
-        "explicit_p70x70"
-      ],
-      "evidence": {
-        "floor": "S1",
-        "station_x_m": 67.67,
-        "upper_floor": {
-          "source_dxf": "2017_67-101.dxf",
-          "nearest_column": {
-            "id": "E1-P1-C-023",
-            "tipo": "columna",
-            "distance_m": 0.0,
-            "source_dxf": "modelo_p1",
-            "source_layer": "modelo",
-            "ejes_aproximados": null,
-            "point_or_mid_m": [
-              67.67,
-              16.352
-            ]
-          },
-          "direct_column_count": 54
-        },
-        "same_floor": {
-          "source_dxf": "2017_67-101.dxf",
-          "direct_dxf_region_scan": {
-            "status": "SCANNED_DIRECT_DXF_REGION",
-            "dxf_name": "2017_67-101.dxf",
-            "region_key": "2017_67-101_s1",
-            "bbox_cm": [
-              528,
-              4565,
-              6015,
-              8539
-            ],
-            "title": "PLANTA CIELO 1º SUBTERRANEO",
-            "layer_counts_inside_region": {
-              "RLE-EJE": 27,
-              "RLE-EJES": 62,
-              "RLE-LOSA": 5,
-              "RLE-MURO": 91,
-              "RLE-TEXTO-1": 143,
-              "RLE-VIGA": 85
-            }
-          },
-          "nearest_column": null,
-          "nearest_column_label": {
-            "id": "LBL_P1_1S_0015",
-            "tipo": "columna",
-            "texto": "P. 70x70",
-            "distance_m": 48.817,
-            "source_dxf": "2017_67-101.dxf",
-            "source_layer": "RLE-TEXTO-1",
-            "point_m": [
-              36.143,
-              -20.919
-            ]
-          },
-          "nearest_structure": {
-            "id": "MURO_P1_1S_0004",
-            "tipo": "muro",
-            "distance_m": 18.933,
-            "source_dxf": "2017_67-101.dxf",
-            "source_layer": "RLE-MURO",
-            "ejes_aproximados": {
-              "x": "F_prime-G",
-              "y": "antes de 1"
-            },
-            "point_or_mid_m": [
-              41.504,
-              12.968
-            ]
-          },
-          "direct_column_count": 0
-        },
-        "foundation": {
-          "source_dxf": "2017_67-100.dxf",
-          "direct_dxf_region_scan": {
-            "status": "SCANNED_DIRECT_DXF_REGION",
-            "dxf_name": "2017_67-100.dxf",
-            "region_key": "2017_67-100",
-            "bbox_cm": [
-              268,
-              3221,
-              5756,
-              7984
-            ],
-            "title": "PLANTA FUNDACIONES",
-            "layer_counts_inside_region": {
-              "RLE-EJE": 30,
-              "RLE-EJES": 63,
-              "RLE-FUNDACION": 199,
-              "RLE-LOSA": 14,
-              "RLE-MURO": 158,
-              "RLE-PILAR": 24,
-              "RLE-TEXTO-1": 79,
-              "RLE-VIGA": 69
-            }
-          },
-          "nearest_column": {
-            "id": "C_P1_FUNDACION_0005",
-            "tipo": "columna",
-            "distance_m": 2.228,
-            "source_dxf": "2017_67-100.dxf",
-            "source_layer": "RLE-PILAR",
-            "ejes_aproximados": {
-              "x": "I-IA",
-              "y": "antes de 1"
-            },
-            "point_or_mid_m": [
-              69.898,
-              16.335
-            ]
-          },
-          "nearest_foundation_element": {
-            "id": "VIGA_P1_FUNDACION_0016",
-            "tipo": "viga",
-            "distance_m": 0.133,
-            "source_dxf": "2017_67-100.dxf",
-            "source_layer": "RLE-VIGA",
-            "ejes_aproximados": {
-              "x": "H2-I",
-              "y": "antes de 1"
-            },
-            "point_or_mid_m": [
-              67.398,
-              16.485
-            ]
-          },
-          "direct_column_count": 6
-        },
-        "outboard_y_gt_y3_plus_tolerance": false,
-        "final_full_plan_audit": {
-          "id": "E1-S1-C-016",
-          "building": "EDIFICIO_1",
-          "floor": "S1",
-          "axis_x": "I",
-          "axis_y": "3",
-          "canonical_center_xy_m": [
-            67.491,
-            16.15
-          ],
-          "section_m": [
-            0.7,
-            0.7
-          ],
-          "classification": "CONFIRMED",
-          "evidence": {
-            "source_sheet": "2017_67-309",
-            "elevation_title": "ELEVACION EJE I",
-            "axis_span_match": true,
-            "p70x70_label_count_at_station": 4,
-            "lower_story_contour_count": 3,
-            "foundation_beam_labels": []
-          },
-          "reason": "La elevacion estructural del eje dibuja un pilar de 70x70 en la estacion 1/2/3, con contornos continuos bajo el primer piso hasta la viga de fundacion; las separaciones 1-2 y 2-3 coinciden exactamente con los ejes canonicos."
-        }
       }
     },
     {
