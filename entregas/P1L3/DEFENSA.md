@@ -25,7 +25,7 @@ limites. No reemplaza a `PLANIFICACION.md`.
 planos en `kgf/m2` (rango típico 200-500) y que P1L3 parametriza en SI como `N/m2`.
 
 - `G = PP.LOSA + PM.ADIC` (peso propio de losa por espesor x densidad x g, mas terminaciones/aditamentos).
-- `Q` es una variable de configuracion; default `q_Q_default_N_m2 = 2451.6625 N/m2`, conversion SI exacta de `250 kgf/m2` (zona intermedia), parametrizable por piso en `CargasConfig.q_Q_N_m2`.
+- `Q` es una variable de configuracion; el default `q_Q_default_N_m2 = 2451.6625 N/m2` se conserva como `LEGACY_UNIFORM_Q_VALIDATION`. Sirve para validar conservacion, no representa la zonificacion real de las laminas 700.
 - En el motor tributario, Q se representa con un espesor equivalente `t = q_Q / (densidad * g)` y `PM = 0`, de modo que se integra identico a G pero sin peso propio de losa. Ver `p1l3/config_cargas.py`.
 
 ## 2. Transferencia (losa -> vigas -> columnas/muros)
@@ -89,8 +89,9 @@ leidos de `elements.json` del run indicado. El mapeo es `solidTag`/`element_id` 
 
 ## 6. Limites declarados
 
-- `q_Q` es parametrizable pero el valor default (2.4516625 kN/m2 = 250 kgf/m2) es una hipotesis de zona intermedia:
-  hay que confirmar el criterio docente/sismico.
+- El caso uniforme `q_Q=2.4516625 kN/m2` es exclusivamente
+  `LEGACY_UNIFORM_Q_VALIDATION`; la carga de proyecto por zonas permanece
+  pendiente de aprobacion y no alimenta aun Q, masas ni sismo.
 - EX/EY son SOLO una interfaz de contrato (`p1l3/sismo.py`). El demo de `run_a6.py` genera datos
   ficticios en `entregas/P1L3/results_local/` (ignorado por git) para probar el flujo; NO son
   resultados sismicos reales. Parametros sismicos = `DEPENDENCIA_PENDIENTE`.

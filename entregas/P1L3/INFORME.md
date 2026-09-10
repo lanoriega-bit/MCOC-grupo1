@@ -14,7 +14,10 @@ una certificacion final del edificio real.
 ## A. Carga viva
 
 Se usa la misma geometria tributaria de Semana 2: 110 panos aceptados, con area
-efectiva de 3392.624 m2. Para el valor parametrizado actual de `q_Q`:
+efectiva de 3392.624 m2. Este caso se conserva como
+`LEGACY_UNIFORM_Q_VALIDATION`: demuestra conservacion con un valor uniforme,
+pero no representa la zonificacion real de las laminas 700. Para el valor
+parametrizado actual de `q_Q`:
 
 - `Q transferida = 8317.569065 kN`;
 - `q_Q A = 8317.569065 kN`;

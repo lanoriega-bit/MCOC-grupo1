@@ -30,6 +30,9 @@ indicaciones locales de 20 y 25 cm.
 
 ## EDIFICIO_1 - serie 2017_67
 
+La lamina contiene **seis intensidades superficiales SC distintas**: 100, 200,
+250, 300, 400 y 500 kgf/m2. No son siete ni forman un unico `q_Q` global.
+
 ### Cielo primer subterraneo
 
 Combinaciones superficiales identificadas en la leyenda:
@@ -133,7 +136,8 @@ La leyenda `CARGAS DE DISEÑO (CARGA LINEAL)` indica:
 1. Conservar `PP`, `PM`, `SC`, cargas lineales y cargas puntuales como campos
    separados; no reducirlos anticipadamente a un unico `q` uniforme.
 2. Intersectar cada HATCH con la huella de losa del piso despues de transformar
-   y validar coordenadas con al menos dos ejes estructurales.
+   y validar coordenadas con al menos tres intersecciones de ejes estructurales
+   independientes.
 3. Resolver huecos, escaleras y juntas antes de sumar areas.
 4. Comprobar por piso que la union de zonas superficiales cubre la huella una
    sola vez, sin vacios ni solapes.
@@ -147,9 +151,11 @@ La leyenda `CARGAS DE DISEÑO (CARGA LINEAL)` indica:
 
 Se extrajeron 34 zonas directamente de la capa `HATCH CARGAS`. El factor de
 escala observado es `0.01 m/unidad`; cada planta tiene una traslacion distinta
-dentro de la lamina. Las transformaciones candidatas se contrastaron
-visualmente contra vigas y muros del JSON combinado, pero deben cerrarse con
-dos ejes rotulados antes de aplicar cargas.
+dentro de la lamina. La primera extraccion uso transformaciones candidatas y se
+conserva como antecedente. La auditoria posterior de EDIFICIO_1 confirmo las
+transformaciones mediante los xrefs 101/102/103, seis intersecciones de ejes por
+piso y `global_axes.json`. La transformacion correcta incluye inversion de Y
+(`mirror_y=true`), giro 0 grados y el calce global `dx=27.491 m`.
 
 | Edificio | Piso(s) | Zona superficial [m2] | Union de todos los HATCH [m2] | Historica [m2] | HATCH/historica |
 | --- | --- | ---: | ---: | ---: | ---: |
@@ -177,3 +183,6 @@ Archivos reproducibles:
 - `entregas/P1L3/scripts/extract_load_zones_700.py`.
 - `entregas/P1L3/results/a1a2/load_zones_700_source.json`.
 - `entregas/P1L3/results/a1a2/load_zones_700_overlay.png`.
+- `entregas/P1L3/scripts/audit_load_zones_700_alignment.py`.
+- `entregas/P1L3/results/a1a2/load_zones_700_alignment/REPORT.md`.
+- `entregas/P1L3/results/a1a2/load_zones_700_alignment/spatial_audit.json`.

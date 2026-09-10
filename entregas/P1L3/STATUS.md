@@ -1,5 +1,24 @@
 # P1L3 - Estado de integracion
 
+## Auditoria espacial de cargas 700 — EDIFICIO_1 (2026-09-10)
+
+- Se confirmaron por piso las transformaciones de `2017_67-700` contra
+  `global_axes.json` usando seis intersecciones de ejes independientes.
+- La evidencia principal son los xrefs 101/102/103 insertados 1:1, sin giro;
+  la transformacion usa escala `0.01`, inversion Y y el calce global confirmado
+  `dx=27.491 m`. Residual maximo numerico: menor que `1e-12 m`.
+- Se corrigio la cuenta: existen seis intensidades superficiales SC distintas
+  (100, 200, 250, 300, 400 y 500 kgf/m2).
+- Se generaron overlays S1/P1/P2/P3/P4 y un contrato espacial por pano con
+  areas `CONFIRMED`, `UNMAPPED`, `OVERLAP` y `REVIEW_REQUIRED`.
+- El Q uniforme vigente permanece intacto y se etiqueta
+  `LEGACY_UNIFORM_Q_VALIDATION`. No se recalcularon Q, G, masas, EX/EY,
+  superposicion ni resultados; OpenSees y Unity no se regeneraron.
+- Las cargas puntuales P2/P3 conservan texto y coordenada de anotacion, pero su
+  punto de aplicacion/receptor queda `REVIEW_REQUIRED`. La banda lineal P4 tiene
+  centrolinea geometrica candidata y tampoco se aplica.
+- Reporte: `results/a1a2/load_zones_700_alignment/REPORT.md`.
+
 ## Piloto arquitectonico EDIFICIO_1 / P4 (2026-09-10)
 
 - Se creo `arquitectura/architectural_visual_model.json` como contrato visual
