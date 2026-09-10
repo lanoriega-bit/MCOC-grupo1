@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "checks": {
+    "proposal_ready": true,
+    "counts_match_expected": true,
+    "proposal_crosswalk_complete": true,
+    "unique_viewer_ids": true,
+    "unique_solid_tags": true,
+    "unique_centerlines": true,
+    "all_widths_geometry_traceable": true,
+    "known_heights_consistent": true,
+    "unknown_heights_explicit": true,
+    "historical_id_crosswalk_declared": true,
+    "luis_reference_files_modified_zero": true
+  },
+  "beam_counts_by_floor": {
+    "S1": 53,
+    "P1": 69,
+    "P2": 64,
+    "P3": 60,
+    "P4": 54
+  },
+  "beam_centerlines_total": 300,
+  "confirmed_or_evidence_inferred_section_heights": 281,
+  "unknown_section_heights": 19,
+  "historical_id_match_quality": {
+    "GEOMETRIC_OVERLAP": 292,
+    "NEAREST_RETIRED_ID_SAME_ORIENTATION": 8
+  },
+  "failures": {
+    "geometry": [],
+    "known_height": [],
+    "unknown_height": []
+  },
+  "validated_model": "entregas/P1L2/unity_export/model_combined_viewer.json"
+}

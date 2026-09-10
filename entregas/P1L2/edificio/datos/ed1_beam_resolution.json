@@ -1,0 +1,3910 @@
+{
+  "status": "PASS",
+  "proposal_sha256": "b114e52d78e40bb307c3dd70226ccfb2bfa9655a680e75fde5f3457415e8dfc5",
+  "old_beam_prisms": 545,
+  "new_beam_centerlines": 300,
+  "removed_contour_faces_or_details": 245,
+  "new_beams_by_floor": {
+    "1S": 53,
+    "1": 69,
+    "2": 64,
+    "3": 60,
+    "4": 54
+  },
+  "confirmed_section_heights": 281,
+  "unknown_section_heights": 19,
+  "crosswalk": [
+    {
+      "proposal_id": "S1-VP-001",
+      "preserved_id": "E1-S1-V-020",
+      "solidTag": "SOL_1S_beam_0001",
+      "source_face_ids": [
+        "S1-VB-0001",
+        "S1-VB-0002"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-002",
+      "preserved_id": "E1-S1-V-019",
+      "solidTag": "SOL_1S_beam_0002",
+      "source_face_ids": [
+        "S1-VB-0001",
+        "S1-VB-0002"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-003",
+      "preserved_id": "E1-S1-V-021",
+      "solidTag": "SOL_1S_beam_0005",
+      "source_face_ids": [
+        "S1-VB-0001",
+        "S1-VB-0002"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "NEAREST_RETIRED_ID_SAME_ORIENTATION"
+    },
+    {
+      "proposal_id": "S1-VP-004",
+      "preserved_id": "E1-S1-V-018",
+      "solidTag": "SOL_1S_beam_0003",
+      "source_face_ids": [
+        "S1-VB-0001",
+        "S1-VB-0002"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "INFERRED_SECTION_HEIGHT_FROM_CONFIRMED_FAMILY",
+      "historical_id_match_quality": "NEAREST_RETIRED_ID_SAME_ORIENTATION"
+    },
+    {
+      "proposal_id": "S1-VP-005",
+      "preserved_id": "E1-S1-V-011",
+      "solidTag": "SOL_1S_beam_0004",
+      "source_face_ids": [
+        "S1-VB-0003",
+        "S1-VB-0004"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-006",
+      "preserved_id": "E1-S1-V-026",
+      "solidTag": "SOL_1S_beam_0078",
+      "source_face_ids": [
+        "S1-VB-0003",
+        "S1-VB-0004"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "NEAREST_RETIRED_ID_SAME_ORIENTATION"
+    },
+    {
+      "proposal_id": "S1-VP-007",
+      "preserved_id": "E1-S1-V-030",
+      "solidTag": "SOL_1S_beam_0077",
+      "source_face_ids": [
+        "S1-VB-0003",
+        "S1-VB-0081"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-008",
+      "preserved_id": "E1-S1-V-025",
+      "solidTag": "SOL_1S_beam_0079",
+      "source_face_ids": [
+        "S1-VB-0003",
+        "S1-VB-0081"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "NEAREST_RETIRED_ID_SAME_ORIENTATION"
+    },
+    {
+      "proposal_id": "S1-VP-009",
+      "preserved_id": "E1-S1-V-001",
+      "solidTag": "SOL_1S_beam_0010",
+      "source_face_ids": [
+        "S1-VB-0010",
+        "S1-VB-0011"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": 1.3,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-010",
+      "preserved_id": "E1-S1-V-048",
+      "solidTag": "SOL_1S_beam_0012",
+      "source_face_ids": [
+        "S1-VB-0013",
+        "S1-VB-0021"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": 1.5,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-011",
+      "preserved_id": "E1-S1-V-027",
+      "solidTag": "SOL_1S_beam_0013",
+      "source_face_ids": [
+        "S1-VB-0014",
+        "S1-VB-0016"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": 1.3,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-012",
+      "preserved_id": "E1-S1-V-014",
+      "solidTag": "SOL_1S_beam_0016",
+      "source_face_ids": [
+        "S1-VB-0014",
+        "S1-VB-0017"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": null,
+      "section_confidence": "WIDTH_CONFIRMED_HEIGHT_UNKNOWN",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-013",
+      "preserved_id": "E1-S1-V-028",
+      "solidTag": "SOL_1S_beam_0056",
+      "source_face_ids": [
+        "S1-VB-0014",
+        "S1-VB-0017"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": 1.3,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "NEAREST_RETIRED_ID_SAME_ORIENTATION"
+    },
+    {
+      "proposal_id": "S1-VP-014",
+      "preserved_id": "E1-S1-V-037",
+      "solidTag": "SOL_1S_beam_0017",
+      "source_face_ids": [
+        "S1-VB-0014",
+        "S1-VB-0018"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": 1.5,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-015",
+      "preserved_id": "E1-S1-V-046",
+      "solidTag": "SOL_1S_beam_0020",
+      "source_face_ids": [
+        "S1-VB-0014",
+        "S1-VB-0023"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": 1.5,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-016",
+      "preserved_id": "E1-S1-V-063",
+      "solidTag": "SOL_1S_beam_0014",
+      "source_face_ids": [
+        "S1-VB-0015",
+        "S1-VB-0024"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": null,
+      "section_confidence": "WIDTH_CONFIRMED_HEIGHT_UNKNOWN",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-017",
+      "preserved_id": "E1-S1-V-070",
+      "solidTag": "SOL_1S_beam_0022",
+      "source_face_ids": [
+        "S1-VB-0015",
+        "S1-VB-0025"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": null,
+      "section_confidence": "WIDTH_CONFIRMED_HEIGHT_UNKNOWN",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-018",
+      "preserved_id": "E1-S1-V-077",
+      "solidTag": "SOL_1S_beam_0023",
+      "source_face_ids": [
+        "S1-VB-0015",
+        "S1-VB-0026"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": null,
+      "section_confidence": "WIDTH_CONFIRMED_HEIGHT_UNKNOWN",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-019",
+      "preserved_id": "E1-S1-V-032",
+      "solidTag": "SOL_1S_beam_0024",
+      "source_face_ids": [
+        "S1-VB-0027",
+        "S1-VB-0028"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": 1.3,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-020",
+      "preserved_id": "E1-S1-V-041",
+      "solidTag": "SOL_1S_beam_0026",
+      "source_face_ids": [
+        "S1-VB-0029",
+        "S1-VB-0030"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": 1.3,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-021",
+      "preserved_id": "E1-S1-V-050",
+      "solidTag": "SOL_1S_beam_0028",
+      "source_face_ids": [
+        "S1-VB-0031",
+        "S1-VB-0032"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": null,
+      "section_confidence": "WIDTH_CONFIRMED_HEIGHT_UNKNOWN",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-022",
+      "preserved_id": "E1-S1-V-072",
+      "solidTag": "SOL_1S_beam_0030",
+      "source_face_ids": [
+        "S1-VB-0033",
+        "S1-VB-0034"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": null,
+      "section_confidence": "WIDTH_CONFIRMED_HEIGHT_UNKNOWN",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-023",
+      "preserved_id": "E1-S1-V-071",
+      "solidTag": "SOL_1S_beam_0032",
+      "source_face_ids": [
+        "S1-VB-0035",
+        "S1-VB-0036"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": null,
+      "section_confidence": "WIDTH_CONFIRMED_HEIGHT_UNKNOWN",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-024",
+      "preserved_id": "E1-S1-V-079",
+      "solidTag": "SOL_1S_beam_0035",
+      "source_face_ids": [
+        "S1-VB-0038",
+        "S1-VB-0039"
+      ],
+      "section_width_m": 0.3,
+      "section_height_m": null,
+      "section_confidence": "WIDTH_CONFIRMED_HEIGHT_UNKNOWN",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-025",
+      "preserved_id": "E1-S1-V-031",
+      "solidTag": "SOL_1S_beam_0036",
+      "source_face_ids": [
+        "S1-VB-0040",
+        "S1-VB-0041"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": 1.3,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-026",
+      "preserved_id": "E1-S1-V-049",
+      "solidTag": "SOL_1S_beam_0038",
+      "source_face_ids": [
+        "S1-VB-0042",
+        "S1-VB-0043"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": 1.5,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-027",
+      "preserved_id": "E1-S1-V-040",
+      "solidTag": "SOL_1S_beam_0040",
+      "source_face_ids": [
+        "S1-VB-0044",
+        "S1-VB-0045"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": 1.5,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-028",
+      "preserved_id": "E1-S1-V-013",
+      "solidTag": "SOL_1S_beam_0043",
+      "source_face_ids": [
+        "S1-VB-0046",
+        "S1-VB-0047"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": 1.3,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-029",
+      "preserved_id": "E1-S1-V-010",
+      "solidTag": "SOL_1S_beam_0046",
+      "source_face_ids": [
+        "S1-VB-0047",
+        "S1-VB-0050"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": null,
+      "section_confidence": "WIDTH_CONFIRMED_HEIGHT_UNKNOWN",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-030",
+      "preserved_id": "E1-S1-V-008",
+      "solidTag": "SOL_1S_beam_0044",
+      "source_face_ids": [
+        "S1-VB-0048",
+        "S1-VB-0049"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": 1.3,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-031",
+      "preserved_id": "E1-S1-V-033",
+      "solidTag": "SOL_1S_beam_0047",
+      "source_face_ids": [
+        "S1-VB-0051",
+        "S1-VB-0052"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-032",
+      "preserved_id": "E1-S1-V-042",
+      "solidTag": "SOL_1S_beam_0049",
+      "source_face_ids": [
+        "S1-VB-0053",
+        "S1-VB-0054"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": null,
+      "section_confidence": "WIDTH_CONFIRMED_HEIGHT_UNKNOWN",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-033",
+      "preserved_id": "E1-S1-V-051",
+      "solidTag": "SOL_1S_beam_0051",
+      "source_face_ids": [
+        "S1-VB-0055",
+        "S1-VB-0056"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": null,
+      "section_confidence": "WIDTH_CONFIRMED_HEIGHT_UNKNOWN",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-034",
+      "preserved_id": "E1-S1-V-073",
+      "solidTag": "SOL_1S_beam_0053",
+      "source_face_ids": [
+        "S1-VB-0057",
+        "S1-VB-0058"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": null,
+      "section_confidence": "WIDTH_CONFIRMED_HEIGHT_UNKNOWN",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-035",
+      "preserved_id": "E1-S1-V-029",
+      "solidTag": "SOL_1S_beam_0055",
+      "source_face_ids": [
+        "S1-VB-0059",
+        "S1-VB-0060"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": 1.3,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-036",
+      "preserved_id": "E1-S1-V-047",
+      "solidTag": "SOL_1S_beam_0019",
+      "source_face_ids": [
+        "S1-VB-0059",
+        "S1-VB-0060"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": 1.3,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "NEAREST_RETIRED_ID_SAME_ORIENTATION"
+    },
+    {
+      "proposal_id": "S1-VP-037",
+      "preserved_id": "E1-S1-V-016",
+      "solidTag": "SOL_1S_beam_0057",
+      "source_face_ids": [
+        "S1-VB-0061",
+        "S1-VB-0062"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": 1.3,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-038",
+      "preserved_id": "E1-S1-V-015",
+      "solidTag": "SOL_1S_beam_0059",
+      "source_face_ids": [
+        "S1-VB-0063",
+        "S1-VB-0064"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": 1.3,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-039",
+      "preserved_id": "E1-S1-V-017",
+      "solidTag": "SOL_1S_beam_0061",
+      "source_face_ids": [
+        "S1-VB-0065",
+        "S1-VB-0066"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-040",
+      "preserved_id": "E1-S1-V-057",
+      "solidTag": "SOL_1S_beam_0063",
+      "source_face_ids": [
+        "S1-VB-0067",
+        "S1-VB-0068"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": null,
+      "section_confidence": "WIDTH_CONFIRMED_HEIGHT_UNKNOWN",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-041",
+      "preserved_id": "E1-S1-V-056",
+      "solidTag": "SOL_1S_beam_0065",
+      "source_face_ids": [
+        "S1-VB-0069",
+        "S1-VB-0070"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": null,
+      "section_confidence": "WIDTH_CONFIRMED_HEIGHT_UNKNOWN",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-042",
+      "preserved_id": "E1-S1-V-058",
+      "solidTag": "SOL_1S_beam_0067",
+      "source_face_ids": [
+        "S1-VB-0071",
+        "S1-VB-0072"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": null,
+      "section_confidence": "WIDTH_CONFIRMED_HEIGHT_UNKNOWN",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-043",
+      "preserved_id": "E1-S1-V-065",
+      "solidTag": "SOL_1S_beam_0069",
+      "source_face_ids": [
+        "S1-VB-0073",
+        "S1-VB-0074"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": null,
+      "section_confidence": "WIDTH_CONFIRMED_HEIGHT_UNKNOWN",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-044",
+      "preserved_id": "E1-S1-V-064",
+      "solidTag": "SOL_1S_beam_0071",
+      "source_face_ids": [
+        "S1-VB-0075",
+        "S1-VB-0076"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": null,
+      "section_confidence": "WIDTH_CONFIRMED_HEIGHT_UNKNOWN",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-045",
+      "preserved_id": "E1-S1-V-066",
+      "solidTag": "SOL_1S_beam_0073",
+      "source_face_ids": [
+        "S1-VB-0077",
+        "S1-VB-0078"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": null,
+      "section_confidence": "WIDTH_CONFIRMED_HEIGHT_UNKNOWN",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-046",
+      "preserved_id": "E1-S1-V-006",
+      "solidTag": "SOL_1S_beam_0075",
+      "source_face_ids": [
+        "S1-VB-0079",
+        "S1-VB-0080"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": 1.3,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-047",
+      "preserved_id": "E1-S1-V-007",
+      "solidTag": "SOL_1S_beam_0076",
+      "source_face_ids": [
+        "S1-VB-0079",
+        "S1-VB-0080"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": 1.3,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-048",
+      "preserved_id": "E1-S1-V-005",
+      "solidTag": "SOL_1S_beam_0015",
+      "source_face_ids": [
+        "S1-VB-0082",
+        "S1-VB-0083"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "NEAREST_RETIRED_ID_SAME_ORIENTATION"
+    },
+    {
+      "proposal_id": "S1-VP-049",
+      "preserved_id": "E1-S1-V-055",
+      "solidTag": "SOL_1S_beam_0018",
+      "source_face_ids": [
+        "S1-VB-0005"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "NEAREST_RETIRED_ID_SAME_ORIENTATION"
+    },
+    {
+      "proposal_id": "S1-VP-050",
+      "preserved_id": "E1-S1-V-038",
+      "solidTag": "SOL_1S_beam_0006",
+      "source_face_ids": [
+        "S1-VB-0006"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-051",
+      "preserved_id": "E1-S1-V-039",
+      "solidTag": "SOL_1S_beam_0007",
+      "source_face_ids": [
+        "S1-VB-0007"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-052",
+      "preserved_id": "E1-S1-V-003",
+      "solidTag": "SOL_1S_beam_0008",
+      "source_face_ids": [
+        "S1-VB-0008"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "S1-VP-053",
+      "preserved_id": "E1-S1-V-004",
+      "solidTag": "SOL_1S_beam_0009",
+      "source_face_ids": [
+        "S1-VB-0009"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-001",
+      "preserved_id": "E1-P1-V-009",
+      "solidTag": "SOL_1_beam_0080",
+      "source_face_ids": [
+        "P1-VB-0001",
+        "P1-VB-0002"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-002",
+      "preserved_id": "E1-P1-V-031",
+      "solidTag": "SOL_1_beam_0082",
+      "source_face_ids": [
+        "P1-VB-0003",
+        "P1-VB-0005"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-003",
+      "preserved_id": "E1-P1-V-021",
+      "solidTag": "SOL_1_beam_0083",
+      "source_face_ids": [
+        "P1-VB-0004",
+        "P1-VB-0006"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-004",
+      "preserved_id": "E1-P1-V-036",
+      "solidTag": "SOL_1_beam_0084",
+      "source_face_ids": [
+        "P1-VB-0005",
+        "P1-VB-0108"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-005",
+      "preserved_id": "E1-P1-V-058",
+      "solidTag": "SOL_1_beam_0086",
+      "source_face_ids": [
+        "P1-VB-0007",
+        "P1-VB-0009"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-006",
+      "preserved_id": "E1-P1-V-048",
+      "solidTag": "SOL_1_beam_0087",
+      "source_face_ids": [
+        "P1-VB-0008",
+        "P1-VB-0010"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-007",
+      "preserved_id": "E1-P1-V-087",
+      "solidTag": "SOL_1_beam_0090",
+      "source_face_ids": [
+        "P1-VB-0011",
+        "P1-VB-0013"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-008",
+      "preserved_id": "E1-P1-V-086",
+      "solidTag": "SOL_1_beam_0092",
+      "source_face_ids": [
+        "P1-VB-0011",
+        "P1-VB-0013"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-009",
+      "preserved_id": "E1-P1-V-066",
+      "solidTag": "SOL_1_beam_0091",
+      "source_face_ids": [
+        "P1-VB-0012",
+        "P1-VB-0014"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-010",
+      "preserved_id": "E1-P1-V-102",
+      "solidTag": "SOL_1_beam_0094",
+      "source_face_ids": [
+        "P1-VB-0015",
+        "P1-VB-0016"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-011",
+      "preserved_id": "E1-P1-V-007",
+      "solidTag": "SOL_1_beam_0096",
+      "source_face_ids": [
+        "P1-VB-0017",
+        "P1-VB-0018"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-012",
+      "preserved_id": "E1-P1-V-028",
+      "solidTag": "SOL_1_beam_0100",
+      "source_face_ids": [
+        "P1-VB-0019",
+        "P1-VB-0021"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-013",
+      "preserved_id": "E1-P1-V-019",
+      "solidTag": "SOL_1_beam_0099",
+      "source_face_ids": [
+        "P1-VB-0020",
+        "P1-VB-0021"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-014",
+      "preserved_id": "E1-P1-V-052",
+      "solidTag": "SOL_1_beam_0103",
+      "source_face_ids": [
+        "P1-VB-0022",
+        "P1-VB-0024"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-015",
+      "preserved_id": "E1-P1-V-046",
+      "solidTag": "SOL_1_beam_0102",
+      "source_face_ids": [
+        "P1-VB-0023",
+        "P1-VB-0024"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-016",
+      "preserved_id": "E1-P1-V-011",
+      "solidTag": "SOL_1_beam_0107",
+      "source_face_ids": [
+        "P1-VB-0028",
+        "P1-VB-0029"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-017",
+      "preserved_id": "E1-P1-V-024",
+      "solidTag": "SOL_1_beam_0109",
+      "source_face_ids": [
+        "P1-VB-0030",
+        "P1-VB-0031"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-018",
+      "preserved_id": "E1-P1-V-022",
+      "solidTag": "SOL_1_beam_0111",
+      "source_face_ids": [
+        "P1-VB-0030",
+        "P1-VB-0032"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-019",
+      "preserved_id": "E1-P1-V-053",
+      "solidTag": "SOL_1_beam_0112",
+      "source_face_ids": [
+        "P1-VB-0033",
+        "P1-VB-0034"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-020",
+      "preserved_id": "E1-P1-V-049",
+      "solidTag": "SOL_1_beam_0114",
+      "source_face_ids": [
+        "P1-VB-0033",
+        "P1-VB-0035"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-021",
+      "preserved_id": "E1-P1-V-078",
+      "solidTag": "SOL_1_beam_0115",
+      "source_face_ids": [
+        "P1-VB-0036",
+        "P1-VB-0037"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-022",
+      "preserved_id": "E1-P1-V-088",
+      "solidTag": "SOL_1_beam_0116",
+      "source_face_ids": [
+        "P1-VB-0036",
+        "P1-VB-0037"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-023",
+      "preserved_id": "E1-P1-V-067",
+      "solidTag": "SOL_1_beam_0117",
+      "source_face_ids": [
+        "P1-VB-0036",
+        "P1-VB-0038"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-024",
+      "preserved_id": "E1-P1-V-104",
+      "solidTag": "SOL_1_beam_0118",
+      "source_face_ids": [
+        "P1-VB-0039",
+        "P1-VB-0040"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-025",
+      "preserved_id": "E1-P1-V-012",
+      "solidTag": "SOL_1_beam_0120",
+      "source_face_ids": [
+        "P1-VB-0041",
+        "P1-VB-0042"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-026",
+      "preserved_id": "E1-P1-V-016",
+      "solidTag": "SOL_1_beam_0121",
+      "source_face_ids": [
+        "P1-VB-0041",
+        "P1-VB-0042"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-027",
+      "preserved_id": "E1-P1-V-013",
+      "solidTag": "SOL_1_beam_0122",
+      "source_face_ids": [
+        "P1-VB-0043",
+        "P1-VB-0044"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-028",
+      "preserved_id": "E1-P1-V-014",
+      "solidTag": "SOL_1_beam_0124",
+      "source_face_ids": [
+        "P1-VB-0045",
+        "P1-VB-0047"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-029",
+      "preserved_id": "E1-P1-V-023",
+      "solidTag": "SOL_1_beam_0127",
+      "source_face_ids": [
+        "P1-VB-0048",
+        "P1-VB-0049"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-030",
+      "preserved_id": "E1-P1-V-042",
+      "solidTag": "SOL_1_beam_0129",
+      "source_face_ids": [
+        "P1-VB-0050",
+        "P1-VB-0051"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-031",
+      "preserved_id": "E1-P1-V-044",
+      "solidTag": "SOL_1_beam_0130",
+      "source_face_ids": [
+        "P1-VB-0050",
+        "P1-VB-0051"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-032",
+      "preserved_id": "E1-P1-V-043",
+      "solidTag": "SOL_1_beam_0131",
+      "source_face_ids": [
+        "P1-VB-0052",
+        "P1-VB-0053"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-033",
+      "preserved_id": "E1-P1-V-060",
+      "solidTag": "SOL_1_beam_0133",
+      "source_face_ids": [
+        "P1-VB-0054",
+        "P1-VB-0055"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-034",
+      "preserved_id": "E1-P1-V-062",
+      "solidTag": "SOL_1_beam_0134",
+      "source_face_ids": [
+        "P1-VB-0054",
+        "P1-VB-0055"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-035",
+      "preserved_id": "E1-P1-V-061",
+      "solidTag": "SOL_1_beam_0135",
+      "source_face_ids": [
+        "P1-VB-0056",
+        "P1-VB-0057"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-036",
+      "preserved_id": "E1-P1-V-094",
+      "solidTag": "SOL_1_beam_0137",
+      "source_face_ids": [
+        "P1-VB-0058",
+        "P1-VB-0060"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-037",
+      "preserved_id": "E1-P1-V-096",
+      "solidTag": "SOL_1_beam_0138",
+      "source_face_ids": [
+        "P1-VB-0058",
+        "P1-VB-0060"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-038",
+      "preserved_id": "E1-P1-V-095",
+      "solidTag": "SOL_1_beam_0139",
+      "source_face_ids": [
+        "P1-VB-0061",
+        "P1-VB-0062"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-039",
+      "preserved_id": "E1-P1-V-001",
+      "solidTag": "SOL_1_beam_0141",
+      "source_face_ids": [
+        "P1-VB-0063",
+        "P1-VB-0064"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-040",
+      "preserved_id": "E1-P1-V-002",
+      "solidTag": "SOL_1_beam_0143",
+      "source_face_ids": [
+        "P1-VB-0065",
+        "P1-VB-0066"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-041",
+      "preserved_id": "E1-P1-V-105",
+      "solidTag": "SOL_1_beam_0146",
+      "source_face_ids": [
+        "P1-VB-0068",
+        "P1-VB-0069"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-042",
+      "preserved_id": "E1-P1-V-107",
+      "solidTag": "SOL_1_beam_0147",
+      "source_face_ids": [
+        "P1-VB-0068",
+        "P1-VB-0069"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-043",
+      "preserved_id": "E1-P1-V-106",
+      "solidTag": "SOL_1_beam_0148",
+      "source_face_ids": [
+        "P1-VB-0070",
+        "P1-VB-0071"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-044",
+      "preserved_id": "E1-P1-V-026",
+      "solidTag": "SOL_1_beam_0150",
+      "source_face_ids": [
+        "P1-VB-0072",
+        "P1-VB-0073"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-045",
+      "preserved_id": "E1-P1-V-029",
+      "solidTag": "SOL_1_beam_0151",
+      "source_face_ids": [
+        "P1-VB-0072",
+        "P1-VB-0073"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-046",
+      "preserved_id": "E1-P1-V-027",
+      "solidTag": "SOL_1_beam_0152",
+      "source_face_ids": [
+        "P1-VB-0074",
+        "P1-VB-0075"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-047",
+      "preserved_id": "E1-P1-V-050",
+      "solidTag": "SOL_1_beam_0154",
+      "source_face_ids": [
+        "P1-VB-0076",
+        "P1-VB-0077"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-048",
+      "preserved_id": "E1-P1-V-054",
+      "solidTag": "SOL_1_beam_0155",
+      "source_face_ids": [
+        "P1-VB-0076",
+        "P1-VB-0077"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-049",
+      "preserved_id": "E1-P1-V-051",
+      "solidTag": "SOL_1_beam_0156",
+      "source_face_ids": [
+        "P1-VB-0078",
+        "P1-VB-0079"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-050",
+      "preserved_id": "E1-P1-V-076",
+      "solidTag": "SOL_1_beam_0158",
+      "source_face_ids": [
+        "P1-VB-0080",
+        "P1-VB-0081"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-051",
+      "preserved_id": "E1-P1-V-079",
+      "solidTag": "SOL_1_beam_0159",
+      "source_face_ids": [
+        "P1-VB-0080",
+        "P1-VB-0081"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-052",
+      "preserved_id": "E1-P1-V-077",
+      "solidTag": "SOL_1_beam_0160",
+      "source_face_ids": [
+        "P1-VB-0082",
+        "P1-VB-0083"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-053",
+      "preserved_id": "E1-P1-V-073",
+      "solidTag": "SOL_1_beam_0163",
+      "source_face_ids": [
+        "P1-VB-0084",
+        "P1-VB-0085"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-054",
+      "preserved_id": "E1-P1-V-071",
+      "solidTag": "SOL_1_beam_0164",
+      "source_face_ids": [
+        "P1-VB-0087",
+        "P1-VB-0088"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-055",
+      "preserved_id": "E1-P1-V-091",
+      "solidTag": "SOL_1_beam_0168",
+      "source_face_ids": [
+        "P1-VB-0092",
+        "P1-VB-0093"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-056",
+      "preserved_id": "E1-P1-V-082",
+      "solidTag": "SOL_1_beam_0172",
+      "source_face_ids": [
+        "P1-VB-0094",
+        "P1-VB-0096"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-057",
+      "preserved_id": "E1-P1-V-093",
+      "solidTag": "SOL_1_beam_0171",
+      "source_face_ids": [
+        "P1-VB-0095",
+        "P1-VB-0096"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-058",
+      "preserved_id": "E1-P1-V-089",
+      "solidTag": "SOL_1_beam_0174",
+      "source_face_ids": [
+        "P1-VB-0097",
+        "P1-VB-0098"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-059",
+      "preserved_id": "E1-P1-V-034",
+      "solidTag": "SOL_1_beam_0176",
+      "source_face_ids": [
+        "P1-VB-0099",
+        "P1-VB-0100"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-060",
+      "preserved_id": "E1-P1-V-033",
+      "solidTag": "SOL_1_beam_0178",
+      "source_face_ids": [
+        "P1-VB-0101",
+        "P1-VB-0102"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-061",
+      "preserved_id": "E1-P1-V-041",
+      "solidTag": "SOL_1_beam_0179",
+      "source_face_ids": [
+        "P1-VB-0103",
+        "P1-VB-0104"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-062",
+      "preserved_id": "E1-P1-V-098",
+      "solidTag": "SOL_1_beam_0181",
+      "source_face_ids": [
+        "P1-VB-0105",
+        "P1-VB-0107"
+      ],
+      "section_width_m": 0.15,
+      "section_height_m": 1.25,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-063",
+      "preserved_id": "E1-P1-V-068",
+      "solidTag": "SOL_1_beam_0185",
+      "source_face_ids": [
+        "P1-VB-0106",
+        "P1-VB-0109"
+      ],
+      "section_width_m": 0.15,
+      "section_height_m": 1.0,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-064",
+      "preserved_id": "E1-P1-V-072",
+      "solidTag": "SOL_1_beam_0186",
+      "source_face_ids": [
+        "P1-VB-0110",
+        "P1-VB-0111"
+      ],
+      "section_width_m": 0.15,
+      "section_height_m": 1.0,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-065",
+      "preserved_id": "E1-P1-V-084",
+      "solidTag": "SOL_1_beam_0166",
+      "source_face_ids": [
+        "P1-VB-0090",
+        "P1-VB-0091"
+      ],
+      "section_width_m": 0.2,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-066",
+      "preserved_id": "E1-P1-V-085",
+      "solidTag": "SOL_1_beam_0104",
+      "source_face_ids": [
+        "P1-VB-0025"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-067",
+      "preserved_id": "E1-P1-V-064",
+      "solidTag": "SOL_1_beam_0105",
+      "source_face_ids": [
+        "P1-VB-0026"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-068",
+      "preserved_id": "E1-P1-V-100",
+      "solidTag": "SOL_1_beam_0106",
+      "source_face_ids": [
+        "P1-VB-0027"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P1-VP-069",
+      "preserved_id": "E1-P1-V-005",
+      "solidTag": "SOL_1_beam_0145",
+      "source_face_ids": [
+        "P1-VB-0067"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-001",
+      "preserved_id": "E1-P2-V-010",
+      "solidTag": "SOL_2_beam_0188",
+      "source_face_ids": [
+        "P2-VB-0001",
+        "P2-VB-0002"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-002",
+      "preserved_id": "E1-P2-V-040",
+      "solidTag": "SOL_2_beam_0192",
+      "source_face_ids": [
+        "P2-VB-0003",
+        "P2-VB-0005"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-003",
+      "preserved_id": "E1-P2-V-023",
+      "solidTag": "SOL_2_beam_0193",
+      "source_face_ids": [
+        "P2-VB-0004",
+        "P2-VB-0006"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-004",
+      "preserved_id": "E1-P2-V-045",
+      "solidTag": "SOL_2_beam_0297",
+      "source_face_ids": [
+        "P2-VB-0005",
+        "P2-VB-0111"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-005",
+      "preserved_id": "E1-P2-V-073",
+      "solidTag": "SOL_2_beam_0194",
+      "source_face_ids": [
+        "P2-VB-0007",
+        "P2-VB-0009"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-006",
+      "preserved_id": "E1-P2-V-058",
+      "solidTag": "SOL_2_beam_0195",
+      "source_face_ids": [
+        "P2-VB-0008",
+        "P2-VB-0010"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-007",
+      "preserved_id": "E1-P2-V-095",
+      "solidTag": "SOL_2_beam_0198",
+      "source_face_ids": [
+        "P2-VB-0011",
+        "P2-VB-0013"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-008",
+      "preserved_id": "E1-P2-V-084",
+      "solidTag": "SOL_2_beam_0201",
+      "source_face_ids": [
+        "P2-VB-0012",
+        "P2-VB-0014"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-009",
+      "preserved_id": "E1-P2-V-105",
+      "solidTag": "SOL_2_beam_0202",
+      "source_face_ids": [
+        "P2-VB-0015",
+        "P2-VB-0016"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-010",
+      "preserved_id": "E1-P2-V-008",
+      "solidTag": "SOL_2_beam_0204",
+      "source_face_ids": [
+        "P2-VB-0017",
+        "P2-VB-0018"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-011",
+      "preserved_id": "E1-P2-V-039",
+      "solidTag": "SOL_2_beam_0206",
+      "source_face_ids": [
+        "P2-VB-0019",
+        "P2-VB-0021"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-012",
+      "preserved_id": "E1-P2-V-031",
+      "solidTag": "SOL_2_beam_0208",
+      "source_face_ids": [
+        "P2-VB-0020",
+        "P2-VB-0021"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-013",
+      "preserved_id": "E1-P2-V-071",
+      "solidTag": "SOL_2_beam_0209",
+      "source_face_ids": [
+        "P2-VB-0022",
+        "P2-VB-0024"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-014",
+      "preserved_id": "E1-P2-V-063",
+      "solidTag": "SOL_2_beam_0211",
+      "source_face_ids": [
+        "P2-VB-0023",
+        "P2-VB-0024"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-015",
+      "preserved_id": "E1-P2-V-093",
+      "solidTag": "SOL_2_beam_0212",
+      "source_face_ids": [
+        "P2-VB-0025",
+        "P2-VB-0027"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-016",
+      "preserved_id": "E1-P2-V-089",
+      "solidTag": "SOL_2_beam_0214",
+      "source_face_ids": [
+        "P2-VB-0026",
+        "P2-VB-0027"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-017",
+      "preserved_id": "E1-P2-V-103",
+      "solidTag": "SOL_2_beam_0215",
+      "source_face_ids": [
+        "P2-VB-0028",
+        "P2-VB-0029"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-018",
+      "preserved_id": "E1-P2-V-012",
+      "solidTag": "SOL_2_beam_0217",
+      "source_face_ids": [
+        "P2-VB-0030",
+        "P2-VB-0031"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-019",
+      "preserved_id": "E1-P2-V-027",
+      "solidTag": "SOL_2_beam_0219",
+      "source_face_ids": [
+        "P2-VB-0032",
+        "P2-VB-0033"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-020",
+      "preserved_id": "E1-P2-V-025",
+      "solidTag": "SOL_2_beam_0221",
+      "source_face_ids": [
+        "P2-VB-0032",
+        "P2-VB-0034"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-021",
+      "preserved_id": "E1-P2-V-064",
+      "solidTag": "SOL_2_beam_0222",
+      "source_face_ids": [
+        "P2-VB-0035",
+        "P2-VB-0036"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-022",
+      "preserved_id": "E1-P2-V-059",
+      "solidTag": "SOL_2_beam_0224",
+      "source_face_ids": [
+        "P2-VB-0035",
+        "P2-VB-0037"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-023",
+      "preserved_id": "E1-P2-V-090",
+      "solidTag": "SOL_2_beam_0282",
+      "source_face_ids": [
+        "P2-VB-0038",
+        "P2-VB-0095"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-024",
+      "preserved_id": "E1-P2-V-019",
+      "solidTag": "SOL_2_beam_0227",
+      "source_face_ids": [
+        "P2-VB-0039",
+        "P2-VB-0040"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-025",
+      "preserved_id": "E1-P2-V-013",
+      "solidTag": "SOL_2_beam_0226",
+      "source_face_ids": [
+        "P2-VB-0039",
+        "P2-VB-0040"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-026",
+      "preserved_id": "E1-P2-V-020",
+      "solidTag": "SOL_2_beam_0229",
+      "source_face_ids": [
+        "P2-VB-0041",
+        "P2-VB-0042"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-027",
+      "preserved_id": "E1-P2-V-018",
+      "solidTag": "SOL_2_beam_0277",
+      "source_face_ids": [
+        "P2-VB-0044",
+        "P2-VB-0045"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-028",
+      "preserved_id": "E1-P2-V-021",
+      "solidTag": "SOL_2_beam_0232",
+      "source_face_ids": [
+        "P2-VB-0044",
+        "P2-VB-0045"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-029",
+      "preserved_id": "E1-P2-V-028",
+      "solidTag": "SOL_2_beam_0235",
+      "source_face_ids": [
+        "P2-VB-0047",
+        "P2-VB-0048"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-030",
+      "preserved_id": "E1-P2-V-051",
+      "solidTag": "SOL_2_beam_0237",
+      "source_face_ids": [
+        "P2-VB-0049",
+        "P2-VB-0050"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-031",
+      "preserved_id": "E1-P2-V-048",
+      "solidTag": "SOL_2_beam_0236",
+      "source_face_ids": [
+        "P2-VB-0049",
+        "P2-VB-0050"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-032",
+      "preserved_id": "E1-P2-V-052",
+      "solidTag": "SOL_2_beam_0239",
+      "source_face_ids": [
+        "P2-VB-0051",
+        "P2-VB-0052"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-033",
+      "preserved_id": "E1-P2-V-042",
+      "solidTag": "SOL_2_beam_0241",
+      "source_face_ids": [
+        "P2-VB-0053",
+        "P2-VB-0054"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-034",
+      "preserved_id": "E1-P2-V-080",
+      "solidTag": "SOL_2_beam_0243",
+      "source_face_ids": [
+        "P2-VB-0055",
+        "P2-VB-0056"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-035",
+      "preserved_id": "E1-P2-V-076",
+      "solidTag": "SOL_2_beam_0242",
+      "source_face_ids": [
+        "P2-VB-0055",
+        "P2-VB-0056"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-036",
+      "preserved_id": "E1-P2-V-081",
+      "solidTag": "SOL_2_beam_0245",
+      "source_face_ids": [
+        "P2-VB-0057",
+        "P2-VB-0058"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-037",
+      "preserved_id": "E1-P2-V-100",
+      "solidTag": "SOL_2_beam_0248",
+      "source_face_ids": [
+        "P2-VB-0060",
+        "P2-VB-0061"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-038",
+      "preserved_id": "E1-P2-V-097",
+      "solidTag": "SOL_2_beam_0247",
+      "source_face_ids": [
+        "P2-VB-0060",
+        "P2-VB-0061"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-039",
+      "preserved_id": "E1-P2-V-101",
+      "solidTag": "SOL_2_beam_0250",
+      "source_face_ids": [
+        "P2-VB-0062",
+        "P2-VB-0063"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-040",
+      "preserved_id": "E1-P2-V-004",
+      "solidTag": "SOL_2_beam_0252",
+      "source_face_ids": [
+        "P2-VB-0064",
+        "P2-VB-0065"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-041",
+      "preserved_id": "E1-P2-V-005",
+      "solidTag": "SOL_2_beam_0254",
+      "source_face_ids": [
+        "P2-VB-0066",
+        "P2-VB-0067"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-042",
+      "preserved_id": "E1-P2-V-006",
+      "solidTag": "SOL_2_beam_0256",
+      "source_face_ids": [
+        "P2-VB-0068",
+        "P2-VB-0069"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-043",
+      "preserved_id": "E1-P2-V-111",
+      "solidTag": "SOL_2_beam_0259",
+      "source_face_ids": [
+        "P2-VB-0071",
+        "P2-VB-0072"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-044",
+      "preserved_id": "E1-P2-V-108",
+      "solidTag": "SOL_2_beam_0258",
+      "source_face_ids": [
+        "P2-VB-0071",
+        "P2-VB-0072"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-045",
+      "preserved_id": "E1-P2-V-112",
+      "solidTag": "SOL_2_beam_0261",
+      "source_face_ids": [
+        "P2-VB-0073",
+        "P2-VB-0074"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-046",
+      "preserved_id": "E1-P2-V-032",
+      "solidTag": "SOL_2_beam_0263",
+      "source_face_ids": [
+        "P2-VB-0075",
+        "P2-VB-0076"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-047",
+      "preserved_id": "E1-P2-V-029",
+      "solidTag": "SOL_2_beam_0262",
+      "source_face_ids": [
+        "P2-VB-0075",
+        "P2-VB-0076"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-048",
+      "preserved_id": "E1-P2-V-033",
+      "solidTag": "SOL_2_beam_0265",
+      "source_face_ids": [
+        "P2-VB-0077",
+        "P2-VB-0078"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-049",
+      "preserved_id": "E1-P2-V-067",
+      "solidTag": "SOL_2_beam_0267",
+      "source_face_ids": [
+        "P2-VB-0079",
+        "P2-VB-0080"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-050",
+      "preserved_id": "E1-P2-V-060",
+      "solidTag": "SOL_2_beam_0266",
+      "source_face_ids": [
+        "P2-VB-0079",
+        "P2-VB-0080"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-051",
+      "preserved_id": "E1-P2-V-068",
+      "solidTag": "SOL_2_beam_0269",
+      "source_face_ids": [
+        "P2-VB-0081",
+        "P2-VB-0082"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-052",
+      "preserved_id": "E1-P2-V-091",
+      "solidTag": "SOL_2_beam_0271",
+      "source_face_ids": [
+        "P2-VB-0083",
+        "P2-VB-0084"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-053",
+      "preserved_id": "E1-P2-V-087",
+      "solidTag": "SOL_2_beam_0270",
+      "source_face_ids": [
+        "P2-VB-0083",
+        "P2-VB-0084"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-054",
+      "preserved_id": "E1-P2-V-092",
+      "solidTag": "SOL_2_beam_0273",
+      "source_face_ids": [
+        "P2-VB-0085",
+        "P2-VB-0086"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-057",
+      "preserved_id": "E1-P2-V-069",
+      "solidTag": "SOL_2_beam_0279",
+      "source_face_ids": [
+        "P2-VB-0091",
+        "P2-VB-0092"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": null,
+      "section_confidence": "WIDTH_CONFIRMED_HEIGHT_UNKNOWN",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-058",
+      "preserved_id": "E1-P2-V-096",
+      "solidTag": "SOL_2_beam_0283",
+      "source_face_ids": [
+        "P2-VB-0095",
+        "P2-VB-0096"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-059",
+      "preserved_id": "E1-P2-V-106",
+      "solidTag": "SOL_2_beam_0284",
+      "source_face_ids": [
+        "P2-VB-0097",
+        "P2-VB-0106"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-060",
+      "preserved_id": "E1-P2-V-075",
+      "solidTag": "SOL_2_beam_0287",
+      "source_face_ids": [
+        "P2-VB-0098",
+        "P2-VB-0101"
+      ],
+      "section_width_m": 0.3,
+      "section_height_m": 0.45,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-061",
+      "preserved_id": "E1-P2-V-055",
+      "solidTag": "SOL_2_beam_0289",
+      "source_face_ids": [
+        "P2-VB-0102",
+        "P2-VB-0103"
+      ],
+      "section_width_m": 0.3,
+      "section_height_m": 0.45,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-062",
+      "preserved_id": "E1-P2-V-082",
+      "solidTag": "SOL_2_beam_0291",
+      "source_face_ids": [
+        "P2-VB-0104",
+        "P2-VB-0105"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "INFERRED_SECTION_HEIGHT_FROM_CONFIRMED_FAMILY",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-063",
+      "preserved_id": "E1-P2-V-047",
+      "solidTag": "SOL_2_beam_0293",
+      "source_face_ids": [
+        "P2-VB-0107",
+        "P2-VB-0110"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-064",
+      "preserved_id": "E1-P2-V-043",
+      "solidTag": "SOL_2_beam_0294",
+      "source_face_ids": [
+        "P2-VB-0108",
+        "P2-VB-0109"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-065",
+      "preserved_id": "E1-P2-V-041",
+      "solidTag": "SOL_2_beam_0275",
+      "source_face_ids": [
+        "P2-VB-0108",
+        "P2-VB-0109"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P2-VP-066",
+      "preserved_id": "E1-P2-V-053",
+      "solidTag": "SOL_2_beam_0299",
+      "source_face_ids": [
+        "P2-VB-0112",
+        "P2-VB-0113"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-001",
+      "preserved_id": "E1-P3-V-009",
+      "solidTag": "SOL_3_beam_0301",
+      "source_face_ids": [
+        "P3-VB-0001",
+        "P3-VB-0002"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-002",
+      "preserved_id": "E1-P3-V-043",
+      "solidTag": "SOL_3_beam_0305",
+      "source_face_ids": [
+        "P3-VB-0003",
+        "P3-VB-0006"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-003",
+      "preserved_id": "E1-P3-V-033",
+      "solidTag": "SOL_3_beam_0306",
+      "source_face_ids": [
+        "P3-VB-0004",
+        "P3-VB-0007"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-004",
+      "preserved_id": "E1-P3-V-023",
+      "solidTag": "SOL_3_beam_0304",
+      "source_face_ids": [
+        "P3-VB-0005",
+        "P3-VB-0007"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-005",
+      "preserved_id": "E1-P3-V-066",
+      "solidTag": "SOL_3_beam_0309",
+      "source_face_ids": [
+        "P3-VB-0008",
+        "P3-VB-0010"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-006",
+      "preserved_id": "E1-P3-V-054",
+      "solidTag": "SOL_3_beam_0310",
+      "source_face_ids": [
+        "P3-VB-0009",
+        "P3-VB-0011"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-007",
+      "preserved_id": "E1-P3-V-087",
+      "solidTag": "SOL_3_beam_0313",
+      "source_face_ids": [
+        "P3-VB-0012",
+        "P3-VB-0014"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-008",
+      "preserved_id": "E1-P3-V-077",
+      "solidTag": "SOL_3_beam_0314",
+      "source_face_ids": [
+        "P3-VB-0013",
+        "P3-VB-0015"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-009",
+      "preserved_id": "E1-P3-V-099",
+      "solidTag": "SOL_3_beam_0316",
+      "source_face_ids": [
+        "P3-VB-0016",
+        "P3-VB-0017"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-010",
+      "preserved_id": "E1-P3-V-007",
+      "solidTag": "SOL_3_beam_0318",
+      "source_face_ids": [
+        "P3-VB-0018",
+        "P3-VB-0019"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-011",
+      "preserved_id": "E1-P3-V-038",
+      "solidTag": "SOL_3_beam_0321",
+      "source_face_ids": [
+        "P3-VB-0020",
+        "P3-VB-0022"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-012",
+      "preserved_id": "E1-P3-V-032",
+      "solidTag": "SOL_3_beam_0320",
+      "source_face_ids": [
+        "P3-VB-0021",
+        "P3-VB-0022"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "INFERRED_SECTION_HEIGHT_FROM_CONFIRMED_FAMILY",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-013",
+      "preserved_id": "E1-P3-V-059",
+      "solidTag": "SOL_3_beam_0324",
+      "source_face_ids": [
+        "P3-VB-0023",
+        "P3-VB-0025"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-014",
+      "preserved_id": "E1-P3-V-053",
+      "solidTag": "SOL_3_beam_0323",
+      "source_face_ids": [
+        "P3-VB-0024",
+        "P3-VB-0025"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-015",
+      "preserved_id": "E1-P3-V-082",
+      "solidTag": "SOL_3_beam_0327",
+      "source_face_ids": [
+        "P3-VB-0026",
+        "P3-VB-0028"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-016",
+      "preserved_id": "E1-P3-V-076",
+      "solidTag": "SOL_3_beam_0326",
+      "source_face_ids": [
+        "P3-VB-0027",
+        "P3-VB-0028"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-017",
+      "preserved_id": "E1-P3-V-097",
+      "solidTag": "SOL_3_beam_0329",
+      "source_face_ids": [
+        "P3-VB-0029",
+        "P3-VB-0030"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-018",
+      "preserved_id": "E1-P3-V-011",
+      "solidTag": "SOL_3_beam_0331",
+      "source_face_ids": [
+        "P3-VB-0031",
+        "P3-VB-0032"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-019",
+      "preserved_id": "E1-P3-V-045",
+      "solidTag": "SOL_3_beam_0334",
+      "source_face_ids": [
+        "P3-VB-0033",
+        "P3-VB-0035"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-020",
+      "preserved_id": "E1-P3-V-041",
+      "solidTag": "SOL_3_beam_0332",
+      "source_face_ids": [
+        "P3-VB-0033",
+        "P3-VB-0036"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-021",
+      "preserved_id": "E1-P3-V-024",
+      "solidTag": "SOL_3_beam_0336",
+      "source_face_ids": [
+        "P3-VB-0034",
+        "P3-VB-0037"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-022",
+      "preserved_id": "E1-P3-V-060",
+      "solidTag": "SOL_3_beam_0337",
+      "source_face_ids": [
+        "P3-VB-0038",
+        "P3-VB-0039"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-023",
+      "preserved_id": "E1-P3-V-068",
+      "solidTag": "SOL_3_beam_0422",
+      "source_face_ids": [
+        "P3-VB-0038",
+        "P3-VB-0123"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-024",
+      "preserved_id": "E1-P3-V-089",
+      "solidTag": "SOL_3_beam_0340",
+      "source_face_ids": [
+        "P3-VB-0040",
+        "P3-VB-0041"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-025",
+      "preserved_id": "E1-P3-V-083",
+      "solidTag": "SOL_3_beam_0339",
+      "source_face_ids": [
+        "P3-VB-0040",
+        "P3-VB-0042"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-026",
+      "preserved_id": "E1-P3-V-018",
+      "solidTag": "SOL_3_beam_0343",
+      "source_face_ids": [
+        "P3-VB-0043",
+        "P3-VB-0044"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-027",
+      "preserved_id": "E1-P3-V-019",
+      "solidTag": "SOL_3_beam_0345",
+      "source_face_ids": [
+        "P3-VB-0045",
+        "P3-VB-0046"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-028",
+      "preserved_id": "E1-P3-V-061",
+      "solidTag": "SOL_3_beam_0348",
+      "source_face_ids": [
+        "P3-VB-0049",
+        "P3-VB-0050"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-029",
+      "preserved_id": "E1-P3-V-050",
+      "solidTag": "SOL_3_beam_0351",
+      "source_face_ids": [
+        "P3-VB-0051",
+        "P3-VB-0052"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-030",
+      "preserved_id": "E1-P3-V-051",
+      "solidTag": "SOL_3_beam_0353",
+      "source_face_ids": [
+        "P3-VB-0053",
+        "P3-VB-0054"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-031",
+      "preserved_id": "E1-P3-V-052",
+      "solidTag": "SOL_3_beam_0355",
+      "source_face_ids": [
+        "P3-VB-0055",
+        "P3-VB-0056"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-032",
+      "preserved_id": "E1-P3-V-072",
+      "solidTag": "SOL_3_beam_0357",
+      "source_face_ids": [
+        "P3-VB-0057",
+        "P3-VB-0058"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-033",
+      "preserved_id": "E1-P3-V-073",
+      "solidTag": "SOL_3_beam_0359",
+      "source_face_ids": [
+        "P3-VB-0059",
+        "P3-VB-0060"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-034",
+      "preserved_id": "E1-P3-V-093",
+      "solidTag": "SOL_3_beam_0362",
+      "source_face_ids": [
+        "P3-VB-0062",
+        "P3-VB-0063"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-035",
+      "preserved_id": "E1-P3-V-094",
+      "solidTag": "SOL_3_beam_0364",
+      "source_face_ids": [
+        "P3-VB-0064",
+        "P3-VB-0065"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-036",
+      "preserved_id": "E1-P3-V-004",
+      "solidTag": "SOL_3_beam_0366",
+      "source_face_ids": [
+        "P3-VB-0066",
+        "P3-VB-0067"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-037",
+      "preserved_id": "E1-P3-V-005",
+      "solidTag": "SOL_3_beam_0368",
+      "source_face_ids": [
+        "P3-VB-0068",
+        "P3-VB-0069"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-038",
+      "preserved_id": "E1-P3-V-006",
+      "solidTag": "SOL_3_beam_0370",
+      "source_face_ids": [
+        "P3-VB-0070",
+        "P3-VB-0071"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-039",
+      "preserved_id": "E1-P3-V-106",
+      "solidTag": "SOL_3_beam_0373",
+      "source_face_ids": [
+        "P3-VB-0073",
+        "P3-VB-0074"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-040",
+      "preserved_id": "E1-P3-V-107",
+      "solidTag": "SOL_3_beam_0375",
+      "source_face_ids": [
+        "P3-VB-0075",
+        "P3-VB-0076"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-041",
+      "preserved_id": "E1-P3-V-039",
+      "solidTag": "SOL_3_beam_0377",
+      "source_face_ids": [
+        "P3-VB-0077",
+        "P3-VB-0078"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-042",
+      "preserved_id": "E1-P3-V-040",
+      "solidTag": "SOL_3_beam_0379",
+      "source_face_ids": [
+        "P3-VB-0079",
+        "P3-VB-0080"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-043",
+      "preserved_id": "E1-P3-V-063",
+      "solidTag": "SOL_3_beam_0381",
+      "source_face_ids": [
+        "P3-VB-0081",
+        "P3-VB-0082"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-044",
+      "preserved_id": "E1-P3-V-064",
+      "solidTag": "SOL_3_beam_0383",
+      "source_face_ids": [
+        "P3-VB-0083",
+        "P3-VB-0084"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-045",
+      "preserved_id": "E1-P3-V-084",
+      "solidTag": "SOL_3_beam_0385",
+      "source_face_ids": [
+        "P3-VB-0085",
+        "P3-VB-0086"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-046",
+      "preserved_id": "E1-P3-V-085",
+      "solidTag": "SOL_3_beam_0387",
+      "source_face_ids": [
+        "P3-VB-0087",
+        "P3-VB-0088"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-047",
+      "preserved_id": "E1-P3-V-121",
+      "solidTag": "SOL_3_beam_0390",
+      "source_face_ids": [
+        "P3-VB-0091",
+        "P3-VB-0093"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-048",
+      "preserved_id": "E1-P3-V-120",
+      "solidTag": "SOL_3_beam_0391",
+      "source_face_ids": [
+        "P3-VB-0092",
+        "P3-VB-0093"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-049",
+      "preserved_id": "E1-P3-V-112",
+      "solidTag": "SOL_3_beam_0394",
+      "source_face_ids": [
+        "P3-VB-0094",
+        "P3-VB-0095"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-050",
+      "preserved_id": "E1-P3-V-114",
+      "solidTag": "SOL_3_beam_0396",
+      "source_face_ids": [
+        "P3-VB-0096",
+        "P3-VB-0097"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-051",
+      "preserved_id": "E1-P3-V-109",
+      "solidTag": "SOL_3_beam_0397",
+      "source_face_ids": [
+        "P3-VB-0098",
+        "P3-VB-0099"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-052",
+      "preserved_id": "E1-P3-V-119",
+      "solidTag": "SOL_3_beam_0399",
+      "source_face_ids": [
+        "P3-VB-0100",
+        "P3-VB-0101"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-053",
+      "preserved_id": "E1-P3-V-117",
+      "solidTag": "SOL_3_beam_0403",
+      "source_face_ids": [
+        "P3-VB-0102",
+        "P3-VB-0104"
+      ],
+      "section_width_m": 0.4,
+      "section_height_m": 0.6,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-054",
+      "preserved_id": "E1-P3-V-116",
+      "solidTag": "SOL_3_beam_0404",
+      "source_face_ids": [
+        "P3-VB-0103",
+        "P3-VB-0105"
+      ],
+      "section_width_m": 0.4,
+      "section_height_m": 0.6,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-055",
+      "preserved_id": "E1-P3-V-027",
+      "solidTag": "SOL_3_beam_0406",
+      "source_face_ids": [
+        "P3-VB-0107",
+        "P3-VB-0108"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-056",
+      "preserved_id": "E1-P3-V-026",
+      "solidTag": "SOL_3_beam_0408",
+      "source_face_ids": [
+        "P3-VB-0109",
+        "P3-VB-0110"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-057",
+      "preserved_id": "E1-P3-V-020",
+      "solidTag": "SOL_3_beam_0412",
+      "source_face_ids": [
+        "P3-VB-0112",
+        "P3-VB-0113"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-058",
+      "preserved_id": "E1-P3-V-021",
+      "solidTag": "SOL_3_beam_0416",
+      "source_face_ids": [
+        "P3-VB-0116",
+        "P3-VB-0117"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-059",
+      "preserved_id": "E1-P3-V-101",
+      "solidTag": "SOL_3_beam_0418",
+      "source_face_ids": [
+        "P3-VB-0118",
+        "P3-VB-0119"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P3-VP-060",
+      "preserved_id": "E1-P3-V-074",
+      "solidTag": "SOL_3_beam_0421",
+      "source_face_ids": [
+        "P3-VB-0122",
+        "P3-VB-0124"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-001",
+      "preserved_id": "E1-P4-V-119",
+      "solidTag": "SOL_4_beam_0425",
+      "source_face_ids": [
+        "P4-VB-0002",
+        "P4-VB-0005"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-002",
+      "preserved_id": "E1-P4-V-118",
+      "solidTag": "SOL_4_beam_0426",
+      "source_face_ids": [
+        "P4-VB-0003",
+        "P4-VB-0005"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-003",
+      "preserved_id": "E1-P4-V-104",
+      "solidTag": "SOL_4_beam_0430",
+      "source_face_ids": [
+        "P4-VB-0006",
+        "P4-VB-0007"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-004",
+      "preserved_id": "E1-P4-V-106",
+      "solidTag": "SOL_4_beam_0432",
+      "source_face_ids": [
+        "P4-VB-0008",
+        "P4-VB-0009"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-005",
+      "preserved_id": "E1-P4-V-009",
+      "solidTag": "SOL_4_beam_0434",
+      "source_face_ids": [
+        "P4-VB-0010",
+        "P4-VB-0011"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-006",
+      "preserved_id": "E1-P4-V-028",
+      "solidTag": "SOL_4_beam_0437",
+      "source_face_ids": [
+        "P4-VB-0012",
+        "P4-VB-0014"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-007",
+      "preserved_id": "E1-P4-V-018",
+      "solidTag": "SOL_4_beam_0438",
+      "source_face_ids": [
+        "P4-VB-0013",
+        "P4-VB-0015"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-008",
+      "preserved_id": "E1-P4-V-053",
+      "solidTag": "SOL_4_beam_0441",
+      "source_face_ids": [
+        "P4-VB-0016",
+        "P4-VB-0018"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-009",
+      "preserved_id": "E1-P4-V-041",
+      "solidTag": "SOL_4_beam_0442",
+      "source_face_ids": [
+        "P4-VB-0017",
+        "P4-VB-0019"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-010",
+      "preserved_id": "E1-P4-V-076",
+      "solidTag": "SOL_4_beam_0445",
+      "source_face_ids": [
+        "P4-VB-0020",
+        "P4-VB-0022"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-011",
+      "preserved_id": "E1-P4-V-066",
+      "solidTag": "SOL_4_beam_0446",
+      "source_face_ids": [
+        "P4-VB-0021",
+        "P4-VB-0023"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-012",
+      "preserved_id": "E1-P4-V-086",
+      "solidTag": "SOL_4_beam_0448",
+      "source_face_ids": [
+        "P4-VB-0024",
+        "P4-VB-0025"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-013",
+      "preserved_id": "E1-P4-V-007",
+      "solidTag": "SOL_4_beam_0450",
+      "source_face_ids": [
+        "P4-VB-0026",
+        "P4-VB-0027"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-014",
+      "preserved_id": "E1-P4-V-023",
+      "solidTag": "SOL_4_beam_0453",
+      "source_face_ids": [
+        "P4-VB-0028",
+        "P4-VB-0030"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-015",
+      "preserved_id": "E1-P4-V-017",
+      "solidTag": "SOL_4_beam_0452",
+      "source_face_ids": [
+        "P4-VB-0029",
+        "P4-VB-0030"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-016",
+      "preserved_id": "E1-P4-V-046",
+      "solidTag": "SOL_4_beam_0456",
+      "source_face_ids": [
+        "P4-VB-0031",
+        "P4-VB-0033"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-017",
+      "preserved_id": "E1-P4-V-040",
+      "solidTag": "SOL_4_beam_0455",
+      "source_face_ids": [
+        "P4-VB-0032",
+        "P4-VB-0033"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-018",
+      "preserved_id": "E1-P4-V-071",
+      "solidTag": "SOL_4_beam_0459",
+      "source_face_ids": [
+        "P4-VB-0034",
+        "P4-VB-0036"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-019",
+      "preserved_id": "E1-P4-V-065",
+      "solidTag": "SOL_4_beam_0458",
+      "source_face_ids": [
+        "P4-VB-0035",
+        "P4-VB-0036"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-020",
+      "preserved_id": "E1-P4-V-084",
+      "solidTag": "SOL_4_beam_0461",
+      "source_face_ids": [
+        "P4-VB-0037",
+        "P4-VB-0038"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-021",
+      "preserved_id": "E1-P4-V-011",
+      "solidTag": "SOL_4_beam_0463",
+      "source_face_ids": [
+        "P4-VB-0039",
+        "P4-VB-0040"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-022",
+      "preserved_id": "E1-P4-V-030",
+      "solidTag": "SOL_4_beam_0465",
+      "source_face_ids": [
+        "P4-VB-0041",
+        "P4-VB-0042"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-023",
+      "preserved_id": "E1-P4-V-024",
+      "solidTag": "SOL_4_beam_0464",
+      "source_face_ids": [
+        "P4-VB-0041",
+        "P4-VB-0043"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-024",
+      "preserved_id": "E1-P4-V-055",
+      "solidTag": "SOL_4_beam_0468",
+      "source_face_ids": [
+        "P4-VB-0044",
+        "P4-VB-0045"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-025",
+      "preserved_id": "E1-P4-V-047",
+      "solidTag": "SOL_4_beam_0467",
+      "source_face_ids": [
+        "P4-VB-0044",
+        "P4-VB-0046"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-026",
+      "preserved_id": "E1-P4-V-078",
+      "solidTag": "SOL_4_beam_0471",
+      "source_face_ids": [
+        "P4-VB-0047",
+        "P4-VB-0048"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-027",
+      "preserved_id": "E1-P4-V-072",
+      "solidTag": "SOL_4_beam_0470",
+      "source_face_ids": [
+        "P4-VB-0047",
+        "P4-VB-0049"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-028",
+      "preserved_id": "E1-P4-V-088",
+      "solidTag": "SOL_4_beam_0474",
+      "source_face_ids": [
+        "P4-VB-0050",
+        "P4-VB-0051"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-029",
+      "preserved_id": "E1-P4-V-015",
+      "solidTag": "SOL_4_beam_0476",
+      "source_face_ids": [
+        "P4-VB-0052",
+        "P4-VB-0053"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-030",
+      "preserved_id": "E1-P4-V-016",
+      "solidTag": "SOL_4_beam_0478",
+      "source_face_ids": [
+        "P4-VB-0054",
+        "P4-VB-0055"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-031",
+      "preserved_id": "E1-P4-V-049",
+      "solidTag": "SOL_4_beam_0482",
+      "source_face_ids": [
+        "P4-VB-0058",
+        "P4-VB-0059"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-032",
+      "preserved_id": "E1-P4-V-037",
+      "solidTag": "SOL_4_beam_0484",
+      "source_face_ids": [
+        "P4-VB-0060",
+        "P4-VB-0061"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-033",
+      "preserved_id": "E1-P4-V-038",
+      "solidTag": "SOL_4_beam_0486",
+      "source_face_ids": [
+        "P4-VB-0062",
+        "P4-VB-0063"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-034",
+      "preserved_id": "E1-P4-V-039",
+      "solidTag": "SOL_4_beam_0488",
+      "source_face_ids": [
+        "P4-VB-0064",
+        "P4-VB-0065"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-035",
+      "preserved_id": "E1-P4-V-061",
+      "solidTag": "SOL_4_beam_0490",
+      "source_face_ids": [
+        "P4-VB-0066",
+        "P4-VB-0067"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-036",
+      "preserved_id": "E1-P4-V-062",
+      "solidTag": "SOL_4_beam_0492",
+      "source_face_ids": [
+        "P4-VB-0068",
+        "P4-VB-0069"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-037",
+      "preserved_id": "E1-P4-V-082",
+      "solidTag": "SOL_4_beam_0495",
+      "source_face_ids": [
+        "P4-VB-0071",
+        "P4-VB-0072"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-038",
+      "preserved_id": "E1-P4-V-083",
+      "solidTag": "SOL_4_beam_0497",
+      "source_face_ids": [
+        "P4-VB-0073",
+        "P4-VB-0074"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-039",
+      "preserved_id": "E1-P4-V-004",
+      "solidTag": "SOL_4_beam_0499",
+      "source_face_ids": [
+        "P4-VB-0075",
+        "P4-VB-0076"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-040",
+      "preserved_id": "E1-P4-V-005",
+      "solidTag": "SOL_4_beam_0501",
+      "source_face_ids": [
+        "P4-VB-0077",
+        "P4-VB-0078"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-041",
+      "preserved_id": "E1-P4-V-006",
+      "solidTag": "SOL_4_beam_0503",
+      "source_face_ids": [
+        "P4-VB-0079",
+        "P4-VB-0080"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-042",
+      "preserved_id": "E1-P4-V-092",
+      "solidTag": "SOL_4_beam_0505",
+      "source_face_ids": [
+        "P4-VB-0081",
+        "P4-VB-0082"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-043",
+      "preserved_id": "E1-P4-V-093",
+      "solidTag": "SOL_4_beam_0507",
+      "source_face_ids": [
+        "P4-VB-0083",
+        "P4-VB-0084"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-044",
+      "preserved_id": "E1-P4-V-025",
+      "solidTag": "SOL_4_beam_0509",
+      "source_face_ids": [
+        "P4-VB-0085",
+        "P4-VB-0086"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-045",
+      "preserved_id": "E1-P4-V-026",
+      "solidTag": "SOL_4_beam_0511",
+      "source_face_ids": [
+        "P4-VB-0087",
+        "P4-VB-0088"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-046",
+      "preserved_id": "E1-P4-V-050",
+      "solidTag": "SOL_4_beam_0513",
+      "source_face_ids": [
+        "P4-VB-0089",
+        "P4-VB-0090"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-047",
+      "preserved_id": "E1-P4-V-051",
+      "solidTag": "SOL_4_beam_0515",
+      "source_face_ids": [
+        "P4-VB-0091",
+        "P4-VB-0092"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-048",
+      "preserved_id": "E1-P4-V-073",
+      "solidTag": "SOL_4_beam_0517",
+      "source_face_ids": [
+        "P4-VB-0093",
+        "P4-VB-0094"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-049",
+      "preserved_id": "E1-P4-V-074",
+      "solidTag": "SOL_4_beam_0519",
+      "source_face_ids": [
+        "P4-VB-0095",
+        "P4-VB-0096"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-050",
+      "preserved_id": "E1-P4-V-063",
+      "solidTag": "SOL_4_beam_0521",
+      "source_face_ids": [
+        "P4-VB-0097",
+        "P4-VB-0098"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-053",
+      "preserved_id": "E1-P4-V-094",
+      "solidTag": "SOL_4_beam_0529",
+      "source_face_ids": [
+        "P4-VB-0105",
+        "P4-VB-0106"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-054",
+      "preserved_id": "E1-P4-V-116",
+      "solidTag": "SOL_4_beam_0531",
+      "source_face_ids": [
+        "P4-VB-0107",
+        "P4-VB-0108"
+      ],
+      "section_width_m": 0.6,
+      "section_height_m": 0.8,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-055",
+      "preserved_id": "E1-P4-V-109",
+      "solidTag": "SOL_4_beam_0534",
+      "source_face_ids": [
+        "P4-VB-0109",
+        "P4-VB-0111"
+      ],
+      "section_width_m": 0.4,
+      "section_height_m": 0.6,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "proposal_id": "P4-VP-056",
+      "preserved_id": "E1-P4-V-108",
+      "solidTag": "SOL_4_beam_0535",
+      "source_face_ids": [
+        "P4-VB-0110",
+        "P4-VB-0112"
+      ],
+      "section_width_m": 0.4,
+      "section_height_m": 0.6,
+      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    }
+  ],
+  "luis_reference_files_modified": 0
+}

@@ -1,6 +1,6 @@
 # Consolidación POST-P1L3 / PRE-P1L4
 
-Estado: `FASE_3_IN_PROGRESS_BEAM_CONTOURS_DIAGNOSED`
+Estado: `FASE_3_DONE_BEAMS_CONSOLIDATED`
 Fecha de apertura: 2026-09-10  
 Rama vigente: `codex/pre-p1l4-consolidation`
 
@@ -76,7 +76,7 @@ Prioridad: P0 bloquea la base; P1 alta; P2 media; P3 documental. Estados:
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | GEO-COL-S1-001 — E1-S1-C-014..019 | Inferencias verticales de Luis | Elevaciones estructurales completas 309 eje I y 310 eje I', más ejes canónicos | Seis `CONFIRMED_BY_AXIS_ELEVATION`; sección 0.70×0.70 m y centro de eje normalizados | Cierra apoyos y continuidad del ala este sin extrapolar plantas | P0 | Fuentes CAD completas | Auditoría reproducible en `validacion/s1_columns_final/`; corregido y regenerado | DONE |
 | GEO-WALL-E1-001 — muros S1-P4 | Extractor histórico modelaba cada cara `RLE-MURO` como muro | DXF directo, 193 segmentos fuente, 5 overlays y crosswalk | 134 prismas ED1 consolidados en 67 segmentos analíticos; 72 cierres cortos excluidos; 0 sin resolver | Elimina doble rigidez y apoyos duplicados | P0 | GEO-COL-S1-001 | Auditoría y validación reproducibles en `validacion/ed1_walls/` | DONE |
-| GEO-BEAM-E1-001 — vigas S1-P4 | Extractor histórico extruye cada línea RLE-VIGA | 553 segmentos DXF, 545 prismas, etiquetas y 5 overlays | Contornos confirmados como patrón dominante; 437 líneas con par único, 78 ambiguas, 46 cierres cortos, 2 diagonales | Paños, carga y conectividad dependen de resolver centrolineas | P0 | GEO-WALL-E1-001 | Resolver ancho rotulado, continuidad, receptores y casos especiales sin pareo ciego | IN_PROGRESS |
+| GEO-BEAM-E1-001 — vigas S1-P4 | Extractor histórico extruía cada línea RLE-VIGA | 553 segmentos DXF, propuesta/validación independiente y overlays | 545 prismas consolidados en 300 centrolineas; 46 cierres y 4 detalles interiores excluidos; 0 sin resolver | Elimina doble representación y estabiliza paños/conectividad | P0 | GEO-WALL-E1-001 | Aplicación reproducible con crosswalk y validación final | DONE |
 | GEO-SPECIAL-001 — outboard/voladizos/canopias | Extracción automática deficiente fuera de grilla | `outboard_room_reconstruction.json`, planos, fotos secundarias | Grupos `UNRESOLVED_REQUIRES_REVIEW` | Forma real y elementos flotantes | P1 | Muros y vigas estabilizados | Revisar por sector con overlays y evidencia primaria | OPEN |
 | GEO-INTERFACE-001 — interfaz ED1/ED2 | Modelos extraídos por separado | Calce D/E confirmado; rama E2 antigua declara interfaz no resuelta | Alineación confirmada, conexión física no auditada | Transferencia entre bloques | P1 | Muros/vigas de ambos lados | Inventariar miembros que cruzan o terminan en junta | OPEN |
 | GEO-ID-ED2-001 — estabilidad de IDs ED2 | Regeneración actual puede renumerar | Handoff y extractor ED2 | Sin registro/tombstones formal equivalente a ED1 | Rompe crosswalk/resultados | P1 | Auditoría ED2 | Crear registro persistente antes de regenerar | OPEN |
@@ -102,7 +102,7 @@ Prioridad: P0 bloquea la base; P1 alta; P2 media; P3 documental. Estados:
 
 | Issue | Origen | Evidencia disponible | Estado actual | Impacto | Prioridad | Dependencia | Solución propuesta | Estado |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| PROP-BEAM-001 | Etiquetas CAD parciales | `cad_property_audit.json`; ~431/1060 conocidas | Mayoría UNKNOWN | Rigidez y fuerzas FE | P1 | GEO-BEAM-E1-001 | Asociar etiquetas por planta, layer, eje y continuidad | OPEN |
+| PROP-BEAM-001 | Etiquetas CAD y anchos por contorno | Propuesta ED1 y `cad_property_audit.json` | ED1: ancho 300/300; altura 281 con evidencia directa/familia inequívoca y 19 `UNKNOWN` | Rigidez y fuerzas FE | P1 | GEO-BEAM-E1-001 | Resolver solo las 19 alturas restantes desde detalle/elevación; no usar profundidad visual como sección | IN_PROGRESS |
 | PROP-WALL-001 | Espesores parciales | Pares de caras DXF y etiquetas por planta | ED1 67/67 con espesor geométrico confirmado; 58 además confirmados por etiqueta, 9 solo por contorno; ED2 pendiente | Rigidez equivalente | P1 | GEO-WALL-E1-001 | Aplicar la misma trazabilidad a ED2, sin propagar globalmente | IN_PROGRESS |
 | PROP-COL-001 | Geometría vs etiqueta | 150/150 dimensiones geométricas; etiquetas parciales | Dimensión disponible, procedencia heterogénea | Rigidez/capacidad | P1 | GEO-COL-S1-001 | Clasificar CONFIRMED_FROM_PLAN/INFERRED/DEFAULT/UNKNOWN | OPEN |
 | PROP-SUPPORT-001 | Apoyos nominales | 3/107 dimensiones conocidas | DEFAULT/UNKNOWN dominante | Condición de borde | P1 | FE-FLOAT-001 | Relacionar fundaciones/pedestales con apoyos reales | OPEN |
@@ -225,16 +225,26 @@ de cada componente flotante.
 - Evidencia: `entregas/P1L2/edificio/validacion/ed1_walls/REPORT.md`,
   `APPLICATION.md`, `VALIDATION.md` y overlays por piso.
 
+### FASE 3 — vigas EDIFICIO_1
+
+- La lectura directa de `553` segmentos `RLE-VIGA` confirmó que el extractor
+  histórico representaba mayoritariamente las dos caras del contorno.
+- La propuesta validada produce `300` centrolineas analíticas: S1 `53`, P1
+  `69`, P2 `64`, P3 `60` y P4 `54`. Se excluyeron `46` cierres cortos y `4`
+  detalles interiores; no quedan caras largas ni diagonales sin resolver.
+- Los `545` prismas históricos fueron reemplazados conservando un ID por
+  centrolinea y registrando el crosswalk. El ancho es trazable en 300/300;
+  `281` alturas tienen evidencia directa o de familia inequívoca y `19` permanecen
+  `UNKNOWN`. Para estas últimas, 0.60 m es solo profundidad visual declarada.
+- EDIFICIO_1 queda con `522` sólidos y el combinado con `1210`. Propuesta,
+  aplicación, geometría combinada, continuidad, muros, diff de Luis y auditoría
+  visual: `PASS`; `LUIS_REFERENCE_FILES_MODIFIED = 0`.
+- Evidencia: `entregas/P1L2/edificio/validacion/ed1_beams/` y
+  `entregas/P1L2/edificio/datos/ed1_beam_resolution.json`.
+
 ## Próximo hito
 
-`FASE 3 — GEO-BEAM-E1-001`: auditoría piso a piso de vigas EDIFICIO_1,
-incluyendo fragmentación, etiquetas de sección, cruces, conectividad y vigas
-especiales, sin reconstruir todavía el modelo FE.
-
-Diagnóstico inicial completado: el layer `RLE-VIGA` dibuja mayoritariamente las
-dos caras de rectángulos de viga, no centrolineas. Se localizaron `553`
-segmentos fuente frente a `545` prismas actuales: `46` son cortos menores a
-0.75 m, `437` tienen exactamente un candidato de cara opuesta, `78` tienen
-pareo múltiple, existen `2` diagonales y no hay duplicados exactos ni cruces
-ortogonales interiores sin nodo. Evidencia provisional:
-`entregas/P1L2/edificio/validacion/ed1_beams/`. Aún no se modificó geometría.
+`FASE 4 — GEO-SPECIAL-001 / GEO-INTERFACE-001`: auditar los sectores
+outboard, voladizos, canopias y la interfaz física EDIFICIO_1–EDIFICIO_2 con
+planos como fuente primaria. No reconstruir todavía el modelo FE ni recalcular
+cargas/resultados P1L3.

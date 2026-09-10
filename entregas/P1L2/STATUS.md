@@ -1,15 +1,15 @@
 # P1L2 Status
 
-## Consolidacion PRE-P1L4 — FASE 3 EN CURSO (2026-09-10)
+## Consolidacion PRE-P1L4 — FASE 3 COMPLETA (2026-09-10)
 
-- Auditoría directa de `RLE-VIGA`: 553 segmentos DXF frente a 545 prismas ED1.
-- El patrón dominante son contornos rectangulares: 437 líneas tienen un único
-  candidato de cara opuesta; 78 quedan ambiguas, hay 46 tramos cortos y 2
-  diagonales. No aparecen duplicados exactos ni cruces interiores sin nodo.
-- Se generaron diagnóstico JSON, informe y overlays S1/P1/P2/P3/P4 en
-  `edificio/validacion/ed1_beams/`.
-- Estado deliberado: `DIAGNOSTIC_COMPLETE_NO_GEOMETRY_CHANGE`; no se han
-  consolidado vigas todavía.
+- Auditoría directa de `RLE-VIGA`: 553 segmentos fuente; propuesta validada de
+  300 centrolineas (S1 53, P1 69, P2 64, P3 60, P4 54).
+- Los 545 prismas históricos se consolidaron; 46 cierres cortos y 4 detalles
+  interiores fueron excluidos. No quedan caras largas/diagonales sin resolver.
+- Ancho 300/300 trazable; altura 281 con evidencia directa o de familia inequívoca y 19
+  `UNKNOWN`. En esas 17, 0.60 m es solo profundidad visual, no sección asumida.
+- Propuesta, aplicación, geometría combinada, continuidad, muros, diff de Luis
+  y auditoría visual: `PASS`. La referencia original permanece intacta.
 
 ## Consolidacion PRE-P1L4 — FASE 2 (2026-09-10)
 
@@ -41,7 +41,7 @@
 
 ## Interfaz P1L3 vigente (2026-09-10)
 
-- El modelo combinado P1L2 vigente tiene 1455 solidos; el Unity entregado P1L3
+- El modelo combinado P1L2 vigente tiene 1210 solidos; el Unity entregado P1L3
   conserva su snapshot hasta la fase prevista de actualización de interfaz.
   por el Unity de Jose; no se reemplazo por snapshots historicos.
 - P1L3 integra `G/Q/EX/EY/R`, capacidad HA y resultados OpenSees en Unity.
@@ -94,7 +94,7 @@
   espesor medido entre caras. Los apoyos lineales S1 pasaron de 60 a 21.
 - FASE 1 confirmó `E1-S1-C-014..019` mediante las elevaciones 309/I y 310/I':
   sección 70x70 y continuidad a fundación en ejes 1/2/3.
-- Modelo vigente: ED1 767 sólidos; combinado 1455. Todas las validaciones
+- Modelo vigente: ED1 522 sólidos; combinado 1210. Todas las validaciones
   dependientes pasan y la referencia original de Luis permanece intacta.
 
 ## Viewer
@@ -114,11 +114,10 @@
 - GOLDEN_IN_COMBINED_LEGACY: SUPERSEDED_BY_LUIS_REFERENCE_DIFF
 
 ## Next Work
-- Beam structural audit by floor. P1 draft has 205 candidates: 140 POSIBLE,
-  53 FRAGMENTADA, 4 CONFIRMADA, 6 FALSO_POSITIVO y 2 NEEDS_REVIEW; only
-  40.7% of beam sections have known dimensions.
-- Consolidate beam fragments only with direct DXF evidence; validate crossings,
-  supports, continuity and special members before regenerating FE.
+- Auditar sectores especiales/outboard, voladizos, canopias y la interfaz
+  física entre EDIFICIO_1 y EDIFICIO_2 usando planos como fuente primaria.
+- Resolver las 19 alturas de viga ED1 `UNKNOWN` solo si aparece evidencia de
+  detalle/elevación; no confundir la profundidad visual con una sección.
 - Sector specials: `outboard_room_reconstruction.json` still exposes `UNRESOLVED_REQUIRES_REVIEW` groups for the east outboard/transitional zones; review overlaps with the P1 outboard non-modelable/detail imports (C-021, C-022, C-019).
 - The remaining 3 slab-edge/transitional S1 columns keep their documented
   review status; the six I/I' stations are already confirmed and must not be

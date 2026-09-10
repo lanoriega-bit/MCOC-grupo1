@@ -305,6 +305,36 @@ def apply_property(solid: dict[str, object], assignment: dict[str, object] | Non
     if conflict:
         solid["property_review"] = conflict
 
+    if category == "beam" and str(solid.get("geometry_confirmation", {}).get("status", "")).startswith("CONFIRMED_"):
+        geometric_width = r3(solid["geometry_confirmation"].get("width_m", solid.get("width_m", 0.0)))
+        solid["section_width_m"] = geometric_width
+        solid.setdefault("section_height_m", None)
+        solid.setdefault("section_source", "CAD_CONTOUR_WIDTH_ONLY")
+        solid.setdefault("section_confidence", "WIDTH_CONFIRMED_HEIGHT_UNKNOWN")
+        if assignment and assignment["property_type"] == "beam_section":
+            labelled_width = r3(assignment["width_m"])
+            labelled_height = r3(assignment["height_m"])
+            width_conflict = abs(geometric_width - labelled_width) > 0.021
+            height_conflict = (
+                solid.get("section_height_m") is not None
+                and abs(float(solid["section_height_m"]) - labelled_height) > 0.021
+            )
+            if width_conflict or height_conflict:
+                geometry_conflict = {
+                    "status": "GEOMETRY_LABEL_BEAM_SECTION_CONFLICT",
+                    "geometry_width_m": geometric_width,
+                    "confirmed_height_m": solid.get("section_height_m"),
+                    "label_width_m": labelled_width,
+                    "label_height_m": labelled_height,
+                    "labelTag": assignment["labelTag"],
+                }
+                previous_review = solid.get("property_review")
+                solid["property_review"] = {
+                    "status": "MULTIPLE_PROPERTY_REVIEWS",
+                    "reviews": [previous_review, geometry_conflict] if previous_review else [geometry_conflict],
+                }
+        return
+
     if category in {"beam", "support"}:
         solid.setdefault("section_width_m", None)
         solid.setdefault("section_height_m", None)

@@ -20,8 +20,8 @@
 
 | Estado | Conteo |
 |---|---:|
-| ASSOCIATED_NEAREST | 681 |
-| NEAREST_OVER_LIMIT | 51 |
+| ASSOCIATED_NEAREST | 680 |
+| NEAREST_OVER_LIMIT | 52 |
 | NO_TARGET | 2 |
 
 ## Evidencia textual agrupada
@@ -63,12 +63,14 @@
 | Layer | Roles detectados |
 |---|---|
 | RLE-MURO | wall |
-| RLE-MURO_merged | wall |
+| RLE-MURO_CONTOUR_PAIR | wall |
 | RLE-PILAR | column |
 | RLE-TEXTO-1 | beam_label, column_label, steel_beam_label, wall_label |
 | RLE-VIGA | beam |
+| RLE-VIGA_CONTOUR_CENTERLINE | beam |
 | generated_connected_support | support |
 | generated_diaphragm_bbox | slab |
+| generated_from_confirmed_wall_centerline | support |
 
 ## Labels a revisar
 
