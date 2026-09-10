@@ -142,3 +142,38 @@ La leyenda `CARGAS DE DISEÑO (CARGA LINEAL)` indica:
 6. Mantener toda lectura ambigua con estado `REVIEW_REQUIRED`; en particular,
    confirmar las unidades de la banda `SC=500 / PM.ADIC.=2800` en el cielo de
    piso 1 del EDIFICIO_1.
+
+## Extraccion geometrica HATCH
+
+Se extrajeron 34 zonas directamente de la capa `HATCH CARGAS`. El factor de
+escala observado es `0.01 m/unidad`; cada planta tiene una traslacion distinta
+dentro de la lamina. Las transformaciones candidatas se contrastaron
+visualmente contra vigas y muros del JSON combinado, pero deben cerrarse con
+dos ejes rotulados antes de aplicar cargas.
+
+| Edificio | Piso(s) | Zona superficial [m2] | Union de todos los HATCH [m2] | Historica [m2] | HATCH/historica |
+| --- | --- | ---: | ---: | ---: | ---: |
+| EDIFICIO_1 | S1 | 387.863 | 387.863 | 1145.088 | 0.339 |
+| EDIFICIO_1 | P1 | 967.554 | 997.042 | 1829.364 | 0.545 |
+| EDIFICIO_1 | P2 | 843.914 | 843.914 | 919.252 | 0.918 |
+| EDIFICIO_1 | P3 | 956.721 | 956.721 | 732.410 | 1.306 |
+| EDIFICIO_1 | P4 | 934.561 | 957.317 | 1018.575 | 0.940 |
+| EDIFICIO_2 | S1-P3 | 557.894 | 557.894 | 584.230 | 0.955 |
+| EDIFICIO_2 | P4 | 535.620 | 544.652 | 584.230 | 0.932 |
+
+La columna `todos los HATCH` incluye bandas lineales o ambiguas dibujadas con
+ancho solo como referencia grafica; por ello no es todavia el area fisica final
+de losa. Aun asi, el contraste prueba que el historico no tiene un factor de
+error unico: subestima EDIFICIO_1 P3 y sobrestima los demas pisos, de forma muy
+severa en S1 y P1.
+
+El overlay muestra un problema adicional en EDIFICIO_1 S1: existe zona cargada
+aproximadamente entre `X=37..49 m` y `Y=6..16 m` sin vigas o muros receptores
+visibles en el modelo combinado. Debe verificarse en las plantas estructurales
+antes de completar la transferencia.
+
+Archivos reproducibles:
+
+- `entregas/P1L3/scripts/extract_load_zones_700.py`.
+- `entregas/P1L3/results/a1a2/load_zones_700_source.json`.
+- `entregas/P1L3/results/a1a2/load_zones_700_overlay.png`.

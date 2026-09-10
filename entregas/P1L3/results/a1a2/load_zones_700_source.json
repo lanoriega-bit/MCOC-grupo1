@@ -1,0 +1,2703 @@
+{
+  "schema": "MCOC-load-zones-700-source-v1",
+  "status": "REVIEW_REQUIRED",
+  "units": {
+    "length": "m",
+    "force": "kN",
+    "pressure": "kN/m2"
+  },
+  "notes": [
+    "No aplicado a OpenSees ni a las cargas A1-A2.",
+    "PP de losa se calcula aparte como e(m)*2500 kgf/m3.",
+    "Las transformaciones candidatas requieren control contra ejes rotulados.",
+    "Las bandas lineales conservan el HATCH como referencia; falta extraer su eje."
+  ],
+  "summaries": [
+    {
+      "building": "EDIFICIO_1",
+      "floors": [
+        "S1"
+      ],
+      "zone_count": 5,
+      "surface_raw_area_m2": 387.8633844386852,
+      "surface_union_area_m2": 387.8633844386852,
+      "surface_overlap_m2": 0.0,
+      "all_hatch_union_area_m2": 387.8633844386852,
+      "historical_area_m2_per_floor": 1145.0876,
+      "all_hatch_vs_historical_ratio": 0.3387193996674885,
+      "transform_status": "REVIEW_REQUIRED_AXIS_CONTROL_POINTS"
+    },
+    {
+      "building": "EDIFICIO_1",
+      "floors": [
+        "P1"
+      ],
+      "zone_count": 8,
+      "surface_raw_area_m2": 967.5540185488353,
+      "surface_union_area_m2": 967.5540185488355,
+      "surface_overlap_m2": 0.0,
+      "all_hatch_union_area_m2": 997.0424308040141,
+      "historical_area_m2_per_floor": 1829.3641,
+      "all_hatch_vs_historical_ratio": 0.5450213168630641,
+      "transform_status": "REVIEW_REQUIRED_AXIS_CONTROL_POINTS"
+    },
+    {
+      "building": "EDIFICIO_1",
+      "floors": [
+        "P2"
+      ],
+      "zone_count": 7,
+      "surface_raw_area_m2": 843.9139570014323,
+      "surface_union_area_m2": 843.9139570014321,
+      "surface_overlap_m2": 2.2737367544323206e-13,
+      "all_hatch_union_area_m2": 843.9139570014321,
+      "historical_area_m2_per_floor": 919.2521,
+      "all_hatch_vs_historical_ratio": 0.9180440893215605,
+      "transform_status": "REVIEW_REQUIRED_AXIS_CONTROL_POINTS"
+    },
+    {
+      "building": "EDIFICIO_1",
+      "floors": [
+        "P3"
+      ],
+      "zone_count": 4,
+      "surface_raw_area_m2": 956.7207514334124,
+      "surface_union_area_m2": 956.7207514334124,
+      "surface_overlap_m2": 0.0,
+      "all_hatch_union_area_m2": 956.7207514334124,
+      "historical_area_m2_per_floor": 732.4101,
+      "all_hatch_vs_historical_ratio": 1.3062637331645377,
+      "transform_status": "REVIEW_REQUIRED_AXIS_CONTROL_POINTS"
+    },
+    {
+      "building": "EDIFICIO_1",
+      "floors": [
+        "P4"
+      ],
+      "zone_count": 4,
+      "surface_raw_area_m2": 934.5611723763338,
+      "surface_union_area_m2": 934.5611386480238,
+      "surface_overlap_m2": 3.3728310086189595e-05,
+      "all_hatch_union_area_m2": 957.3169701662246,
+      "historical_area_m2_per_floor": 1018.5753,
+      "all_hatch_vs_historical_ratio": 0.9398588107980084,
+      "transform_status": "REVIEW_REQUIRED_AXIS_CONTROL_POINTS"
+    },
+    {
+      "building": "EDIFICIO_2",
+      "floors": [
+        "S1",
+        "P1",
+        "P2",
+        "P3"
+      ],
+      "zone_count": 4,
+      "surface_raw_area_m2": 557.8942671411387,
+      "surface_union_area_m2": 557.8942671411385,
+      "surface_overlap_m2": 2.2737367544323206e-13,
+      "all_hatch_union_area_m2": 557.8942671411385,
+      "historical_area_m2_per_floor": 584.2304,
+      "all_hatch_vs_historical_ratio": 0.954921666419855,
+      "transform_status": "REVIEW_REQUIRED_AXIS_CONTROL_POINTS"
+    },
+    {
+      "building": "EDIFICIO_2",
+      "floors": [
+        "P4"
+      ],
+      "zone_count": 2,
+      "surface_raw_area_m2": 535.6199754919317,
+      "surface_union_area_m2": 535.6199754919317,
+      "surface_overlap_m2": 0.0,
+      "all_hatch_union_area_m2": 544.6523542917585,
+      "historical_area_m2_per_floor": 584.2304,
+      "all_hatch_vs_historical_ratio": 0.9322561001477473,
+      "transform_status": "REVIEW_REQUIRED_AXIS_CONTROL_POINTS"
+    }
+  ],
+  "zones": [
+    {
+      "zone_id": "L700-Z001",
+      "series": "2017_67",
+      "sheet": "700",
+      "building": "EDIFICIO_1",
+      "floors": [
+        "S1"
+      ],
+      "source_layer": "HATCH CARGAS",
+      "hatch_pattern": "_USER",
+      "load": {
+        "load_type": "surface",
+        "SC_kgf_m2": 500,
+        "PM_kgf_m2": 260,
+        "SC_kN_m2": 4.903325,
+        "PM_kN_m2": 2.549729
+      },
+      "source_area_drawing_units2": 417300.0789574364,
+      "geometry_area_m2": 41.730007895743654,
+      "geometry_global_candidate": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              37.841273270339855,
+              -0.289223950466976
+            ],
+            [
+              33.791273270339836,
+              -0.289223950466976
+            ],
+            [
+              33.791273270339836,
+              -0.1394877234718166
+            ],
+            [
+              31.19127332652637,
+              -0.1394877234718308
+            ],
+            [
+              31.19127332652637,
+              1.8607682541111359
+            ],
+            [
+              27.141269236561776,
+              1.8607682541111359
+            ],
+            [
+              27.141273270368547,
+              -3.3390570978717733
+            ],
+            [
+              37.841273270339855,
+              -3.3390570978717733
+            ],
+            [
+              37.841273270339855,
+              -0.289223950466976
+            ]
+          ]
+        ]
+      },
+      "transform": {
+        "scale_m_per_drawing_unit": 0.01,
+        "translate_m": [
+          39.431,
+          -72.499
+        ],
+        "status": "REVIEW_REQUIRED_AXIS_CONTROL_POINTS"
+      }
+    },
+    {
+      "zone_id": "L700-Z002",
+      "series": "2017_67",
+      "sheet": "700",
+      "building": "EDIFICIO_1",
+      "floors": [
+        "S1"
+      ],
+      "source_layer": "HATCH CARGAS",
+      "hatch_pattern": "AR-HBONE",
+      "load": {
+        "load_type": "surface",
+        "SC_kgf_m2": 300,
+        "PM_kgf_m2": 260,
+        "SC_kN_m2": 2.941995,
+        "PM_kN_m2": 2.549729
+      },
+      "source_area_drawing_units2": 552543.4593629339,
+      "geometry_area_m2": 55.25434593629342,
+      "geometry_global_candidate": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              37.841273270339855,
+              6.210942902148034
+            ],
+            [
+              27.141273270368586,
+              6.210942902148062
+            ],
+            [
+              27.141269236561776,
+              1.8607682541111359
+            ],
+            [
+              33.791273270339836,
+              1.8607682541111359
+            ],
+            [
+              33.791273270339836,
+              -0.289223950466976
+            ],
+            [
+              37.841273270339855,
+              -0.289223950466976
+            ],
+            [
+              37.841273270339855,
+              6.210942902148034
+            ]
+          ]
+        ]
+      },
+      "transform": {
+        "scale_m_per_drawing_unit": 0.01,
+        "translate_m": [
+          39.431,
+          -72.499
+        ],
+        "status": "REVIEW_REQUIRED_AXIS_CONTROL_POINTS"
+      }
+    },
+    {
+      "zone_id": "L700-Z003",
+      "series": "2017_67",
+      "sheet": "700",
+      "building": "EDIFICIO_1",
+      "floors": [
+        "S1"
+      ],
+      "source_layer": "HATCH CARGAS",
+      "hatch_pattern": "ANGLE",
+      "load": {
+        "load_type": "surface",
+        "SC_kgf_m2": 250,
+        "PM_kgf_m2": 260,
+        "SC_kN_m2": 2.4516625,
+        "PM_kN_m2": 2.549729
+      },
+      "source_area_drawing_units2": 637796.3850979583,
+      "geometry_area_m2": 63.77963850979576,
+      "geometry_global_candidate": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              37.84127327033982,
+              -10.639223753199026
+            ],
+            [
+              27.141273270368547,
+              -10.639223753199026
+            ],
+            [
+              27.141273270368547,
+              -3.3390570978717733
+            ],
+            [
+              37.84127327033982,
+              -3.3390570978717733
+            ],
+            [
+              37.84127327033982,
+              -10.639223753199026
+            ]
+          ],
+          [
+            [
+              34.09127327033631,
+              -3.4054287314971106
+            ],
+            [
+              30.891273270112126,
+              -3.4054287314971106
+            ],
+            [
+              30.891273270112126,
+              -7.8842239505571285
+            ],
+            [
+              34.09127327033631,
+              -7.8842239505571285
+            ],
+            [
+              34.09127327033631,
+              -3.4054287314971106
+            ]
+          ]
+        ]
+      },
+      "transform": {
+        "scale_m_per_drawing_unit": 0.01,
+        "translate_m": [
+          39.431,
+          -72.499
+        ],
+        "status": "REVIEW_REQUIRED_AXIS_CONTROL_POINTS"
+      }
+    },
+    {
+      "zone_id": "L700-Z004",
+      "series": "2017_67",
+      "sheet": "700",
+      "building": "EDIFICIO_1",
+      "floors": [
+        "S1"
+      ],
+      "source_layer": "HATCH CARGAS",
+      "hatch_pattern": "HONEY",
+      "load": {
+        "load_type": "surface",
+        "SC_kgf_m2": 500,
+        "PM_kgf_m2": 300,
+        "SC_kN_m2": 4.903325,
+        "PM_kN_m2": 2.941995
+      },
+      "source_area_drawing_units2": 2093515.5578280687,
+      "geometry_area_m2": 209.35155578280688,
+      "geometry_global_candidate": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              49.04127327012947,
+              15.870372912385392
+            ],
+            [
+              27.141269236561786,
+              15.870372912385392
+            ],
+            [
+              27.141269236561786,
+              6.310942902148
+            ],
+            [
+              49.04127327012947,
+              6.310942902148
+            ],
+            [
+              49.04127327012947,
+              15.870372912385392
+            ]
+          ]
+        ]
+      },
+      "transform": {
+        "scale_m_per_drawing_unit": 0.01,
+        "translate_m": [
+          39.431,
+          -72.499
+        ],
+        "status": "REVIEW_REQUIRED_AXIS_CONTROL_POINTS"
+      }
+    },
+    {
+      "zone_id": "L700-Z005",
+      "series": "2017_67",
+      "sheet": "700",
+      "building": "EDIFICIO_1",
+      "floors": [
+        "S1"
+      ],
+      "source_layer": "HATCH CARGAS",
+      "hatch_pattern": "AR-CONC",
+      "load": {
+        "load_type": "surface",
+        "SC_kgf_m2": 500,
+        "PM_kgf_m2": 300,
+        "SC_kN_m2": 4.903325,
+        "PM_kN_m2": 2.941995
+      },
+      "source_area_drawing_units2": 177478.3631404536,
+      "geometry_area_m2": 17.74783631404551,
+      "geometry_global_candidate": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              49.04127327012947,
+              16.680776247783967
+            ],
+            [
+              27.141269236561786,
+              16.680776247783967
+            ],
+            [
+              27.141269236561786,
+              15.870372912385392
+            ],
+            [
+              49.04127327012947,
+              15.870372912385392
+            ],
+            [
+              49.04127327012947,
+              16.680776247783967
+            ]
+          ]
+        ]
+      },
+      "transform": {
+        "scale_m_per_drawing_unit": 0.01,
+        "translate_m": [
+          39.431,
+          -72.499
+        ],
+        "status": "REVIEW_REQUIRED_AXIS_CONTROL_POINTS"
+      }
+    },
+    {
+      "zone_id": "L700-Z006",
+      "series": "2017_67",
+      "sheet": "700",
+      "building": "EDIFICIO_1",
+      "floors": [
+        "P1"
+      ],
+      "source_layer": "HATCH CARGAS",
+      "hatch_pattern": "GRAVEL",
+      "load": {
+        "load_type": "surface",
+        "SC_kgf_m2": 200,
+        "PM_kgf_m2": 200,
+        "SC_kN_m2": 1.96133,
+        "PM_kN_m2": 1.96133
+      },
+      "source_area_drawing_units2": 367161.9045450845,
+      "geometry_area_m2": 36.71619045450817,
+      "geometry_global_candidate": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.03659871372221,
+              18.516591716153584
+            ],
+            [
+              27.141360646038493,
+              18.516591716153584
+            ],
+            [
+              27.141360646038493,
+              17.716591716145714
+            ],
+            [
+              73.03659871372221,
+              17.716591716145714
+            ],
+            [
+              73.03659871372221,
+              18.516591716153584
+            ]
+          ]
+        ]
+      },
+      "transform": {
+        "scale_m_per_drawing_unit": 0.01,
+        "translate_m": [
+          -5.22,
+          -64.292
+        ],
+        "status": "REVIEW_REQUIRED_AXIS_CONTROL_POINTS"
+      }
+    },
+    {
+      "zone_id": "L700-Z007",
+      "series": "2017_67",
+      "sheet": "700",
+      "building": "EDIFICIO_1",
+      "floors": [
+        "P1"
+      ],
+      "source_layer": "HATCH CARGAS",
+      "hatch_pattern": "ANGLE",
+      "load": {
+        "load_type": "surface",
+        "SC_kgf_m2": 250,
+        "PM_kgf_m2": 260,
+        "SC_kN_m2": 2.4516625,
+        "PM_kN_m2": 2.549729
+      },
+      "source_area_drawing_units2": 642877.8257896621,
+      "geometry_area_m2": 64.28778257896614,
+      "geometry_global_candidate": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              37.84136467981651,
+              0.866591716089161
+            ],
+            [
+              27.141364679845246,
+              0.866591716089161
+            ],
+            [
+              27.141364679845246,
+              8.166758371416407
+            ],
+            [
+              37.84136467981651,
+              8.166758371416407
+            ],
+            [
+              37.84136467981651,
+              0.866591716089161
+            ]
+          ],
+          [
+            [
+              34.091364679813005,
+              3.62159151873108
+            ],
+            [
+              34.091364679813005,
+              7.941591716186423
+            ],
+            [
+              30.89136467958882,
+              7.941591716186423
+            ],
+            [
+              30.89136467958882,
+              3.62159151873108
+            ],
+            [
+              34.091364679813005,
+              3.62159151873108
+            ]
+          ]
+        ]
+      },
+      "transform": {
+        "scale_m_per_drawing_unit": 0.01,
+        "translate_m": [
+          -5.22,
+          -64.292
+        ],
+        "status": "REVIEW_REQUIRED_AXIS_CONTROL_POINTS"
+      }
+    },
+    {
+      "zone_id": "L700-Z008",
+      "series": "2017_67",
+      "sheet": "700",
+      "building": "EDIFICIO_1",
+      "floors": [
+        "P1"
+      ],
+      "source_layer": "HATCH CARGAS",
+      "hatch_pattern": "_USER",
+      "load": {
+        "load_type": "surface",
+        "SC_kgf_m2": 500,
+        "PM_kgf_m2": 260,
+        "SC_kN_m2": 4.903325,
+        "PM_kN_m2": 2.549729
+      },
+      "source_area_drawing_units2": 1008499.7385436122,
+      "geometry_area_m2": 100.8499738543612,
+      "geometry_global_candidate": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.0415228785914,
+              0.8465917160889802
+            ],
+            [
+              65.0413086703713,
+              0.846591716089037
+            ],
+            [
+              65.04131186980293,
+              -1.3956845791248895
+            ],
+            [
+              61.818440145860606,
+              -1.3956891777364717
+            ],
+            [
+              61.81844240042207,
+              -2.9757666101485327
+            ],
+            [
+              61.21844240491916,
+              -2.975750030254943
+            ],
+            [
+              61.2184424049191,
+              -11.474515971295808
+            ],
+            [
+              67.60371920529623,
+              -8.959046591465075
+            ],
+            [
+              67.7913646797996,
+              -8.959046591465075
+            ],
+            [
+              67.7913646797996,
+              -8.924576894541254
+            ],
+            [
+              72.0415228785914,
+              -7.210878210994444
+            ],
+            [
+              72.0415228785914,
+              0.8465917160889802
+            ]
+          ]
+        ]
+      },
+      "transform": {
+        "scale_m_per_drawing_unit": 0.01,
+        "translate_m": [
+          -5.22,
+          -64.292
+        ],
+        "status": "REVIEW_REQUIRED_AXIS_CONTROL_POINTS"
+      }
+    },
+    {
+      "zone_id": "L700-Z009",
+      "series": "2017_67",
+      "sheet": "700",
+      "building": "EDIFICIO_1",
+      "floors": [
+        "P1"
+      ],
+      "source_layer": "HATCH CARGAS",
+      "hatch_pattern": "_USER",
+      "load": {
+        "load_type": "surface",
+        "SC_kgf_m2": 500,
+        "PM_kgf_m2": 260,
+        "SC_kN_m2": 4.903325,
+        "PM_kN_m2": 2.549729
+      },
+      "source_area_drawing_units2": 1949582.9390717358,
+      "geometry_area_m2": 194.95829390717364,
+      "geometry_global_candidate": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.8413646798069,
+              11.21659151882119
+            ],
+            [
+              33.79136467981658,
+              11.21659151882119
+            ],
+            [
+              33.79136467981658,
+              13.366583723399302
+            ],
+            [
+              27.141360646038493,
+              13.36658372339933
+            ],
+            [
+              27.141360646038514,
+              8.166758371416407
+            ],
+            [
+              37.84136467981651,
+              8.166758371416407
+            ],
+            [
+              67.14136467979968,
+              8.166758371416279
+            ],
+            [
+              67.14136467979968,
+              8.116591716112026
+            ],
+            [
+              67.19136467979966,
+              8.116591716112026
+            ],
+            [
+              67.19136467979966,
+              1.566591716089036
+            ],
+            [
+              67.14136467980008,
+              1.566591716089036
+            ],
+            [
+              67.14136467980008,
+              0.8665917160891752
+            ],
+            [
+              72.8413646798069,
+              0.866591716089161
+            ],
+            [
+              72.8413646798069,
+              11.21659151882119
+            ]
+          ]
+        ]
+      },
+      "transform": {
+        "scale_m_per_drawing_unit": 0.01,
+        "translate_m": [
+          -5.22,
+          -64.292
+        ],
+        "status": "REVIEW_REQUIRED_AXIS_CONTROL_POINTS"
+      }
+    },
+    {
+      "zone_id": "L700-Z010",
+      "series": "2017_67",
+      "sheet": "700",
+      "building": "EDIFICIO_1",
+      "floors": [
+        "P1"
+      ],
+      "source_layer": "HATCH CARGAS",
+      "hatch_pattern": "_USER",
+      "load": {
+        "load_type": "surface",
+        "SC_kgf_m2": 500,
+        "PM_kgf_m2": 260,
+        "SC_kN_m2": 4.903325,
+        "PM_kN_m2": 2.549729
+      },
+      "source_area_drawing_units2": 409338.43874087813,
+      "geometry_area_m2": 40.933843874087934,
+      "geometry_global_candidate": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.03659871372221,
+              21.01661945366712
+            ],
+            [
+              62.75765179711445,
+              21.01661945366712
+            ],
+            [
+              62.75765179711445,
+              23.666620448141558
+            ],
+            [
+              69.99136468006822,
+              23.666620448141558
+            ],
+            [
+              69.99136468006822,
+              28.163688381700382
+            ],
+            [
+              73.03659871372221,
+              28.163688381700382
+            ],
+            [
+              73.03659871372221,
+              23.666620448141558
+            ],
+            [
+              73.03659871372221,
+              21.01661945366712
+            ]
+          ]
+        ]
+      },
+      "transform": {
+        "scale_m_per_drawing_unit": 0.01,
+        "translate_m": [
+          -5.22,
+          -64.292
+        ],
+        "status": "REVIEW_REQUIRED_AXIS_CONTROL_POINTS"
+      }
+    },
+    {
+      "zone_id": "L700-Z011",
+      "series": "2017_67",
+      "sheet": "700",
+      "building": "EDIFICIO_1",
+      "floors": [
+        "P1"
+      ],
+      "source_layer": "HATCH CARGAS",
+      "hatch_pattern": "AR-HBONE",
+      "load": {
+        "load_type": "surface",
+        "SC_kgf_m2": 300,
+        "PM_kgf_m2": 260,
+        "SC_kN_m2": 2.941995,
+        "PM_kN_m2": 2.549729
+      },
+      "source_area_drawing_units2": 2827525.6085709836,
+      "geometry_area_m2": 282.75256085709833,
+      "geometry_global_candidate": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.8413646798069,
+              17.716591716145714
+            ],
+            [
+              27.14136467984531,
+              17.716591716145714
+            ],
+            [
+              27.141364679845303,
+              13.36658372339933
+            ],
+            [
+              33.79136467981658,
+              13.366583723399302
+            ],
+            [
+              33.79136467981658,
+              11.21659151882119
+            ],
+            [
+              72.8413646798069,
+              11.21659151882119
+            ],
+            [
+              72.8413646798069,
+              17.716591716145714
+            ]
+          ]
+        ]
+      },
+      "transform": {
+        "scale_m_per_drawing_unit": 0.01,
+        "translate_m": [
+          -5.22,
+          -64.292
+        ],
+        "status": "REVIEW_REQUIRED_AXIS_CONTROL_POINTS"
+      }
+    },
+    {
+      "zone_id": "L700-Z012",
+      "series": "2017_67",
+      "sheet": "700",
+      "building": "EDIFICIO_1",
+      "floors": [
+        "P1"
+      ],
+      "source_layer": "HATCH CARGAS",
+      "hatch_pattern": "BRASS",
+      "load": {
+        "load_type": "REVIEW_REQUIRED",
+        "SC_value_kgf": 500,
+        "PM_value_kgf": 2800,
+        "reason": "DXF perdio el exponente y la leyenda no dice CARGA LINEAL"
+      },
+      "source_area_drawing_units2": 294884.1225517869,
+      "geometry_area_m2": 29.488412255178662,
+      "geometry_global_candidate": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.03659871372221,
+              21.01661945366712
+            ],
+            [
+              61.24136467983621,
+              21.01661945366712
+            ],
+            [
+              61.24136467983621,
+              18.516591716153584
+            ],
+            [
+              73.03659871372221,
+              18.516591716153584
+            ],
+            [
+              73.03659871372221,
+              21.01661945366712
+            ]
+          ]
+        ]
+      },
+      "transform": {
+        "scale_m_per_drawing_unit": 0.01,
+        "translate_m": [
+          -5.22,
+          -64.292
+        ],
+        "status": "REVIEW_REQUIRED_AXIS_CONTROL_POINTS"
+      }
+    },
+    {
+      "zone_id": "L700-Z013",
+      "series": "2017_67",
+      "sheet": "700",
+      "building": "EDIFICIO_1",
+      "floors": [
+        "P1"
+      ],
+      "source_layer": "HATCH CARGAS",
+      "hatch_pattern": "ANSI34",
+      "load": {
+        "load_type": "surface",
+        "SC_kgf_m2": 400,
+        "PM_kgf_m2": 260,
+        "SC_kN_m2": 3.92266,
+        "PM_kN_m2": 2.549729
+      },
+      "source_area_drawing_units2": 2470553.730226399,
+      "geometry_area_m2": 247.05537302263994,
+      "geometry_global_candidate": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              67.19136467979966,
+              8.116591716112026
+            ],
+            [
+              67.14136467979968,
+              8.116591716112026
+            ],
+            [
+              67.14136467979968,
+              8.166758371416279
+            ],
+            [
+              37.84136467981656,
+              8.166758371416407
+            ],
+            [
+              37.84136467981654,
+              0.8665917160891183
+            ],
+            [
+              37.19136467981654,
+              0.8665917160891183
+            ],
+            [
+              37.19136467981651,
+              -3.2034082839665246
+            ],
+            [
+              45.28136467982186,
+              -3.2034082839665388
+            ],
+            [
+              45.281364679821884,
+              0.9167583713530263
+            ],
+            [
+              47.141364679939606,
+              0.9167583713530121
+            ],
+            [
+              47.141364679939606,
+              0.8665917160891752
+            ],
+            [
+              67.14136467980008,
+              0.8665917160891752
+            ],
+            [
+              67.14136467980008,
+              1.566591716089036
+            ],
+            [
+              67.19136467979966,
+              1.566591716089036
+            ],
+            [
+              67.19136467979966,
+              8.116591716112026
+            ]
+          ]
+        ]
+      },
+      "transform": {
+        "scale_m_per_drawing_unit": 0.01,
+        "translate_m": [
+          -5.22,
+          -64.292
+        ],
+        "status": "REVIEW_REQUIRED_AXIS_CONTROL_POINTS"
+      }
+    },
+    {
+      "zone_id": "L700-Z014",
+      "series": "2017_67",
+      "sheet": "700",
+      "building": "EDIFICIO_1",
+      "floors": [
+        "P2"
+      ],
+      "source_layer": "HATCH CARGAS",
+      "hatch_pattern": "_USER",
+      "load": {
+        "load_type": "surface",
+        "SC_kgf_m2": 500,
+        "PM_kgf_m2": 260,
+        "SC_kN_m2": 4.903325,
+        "PM_kN_m2": 2.549729
+      },
+      "source_area_drawing_units2": 1484741.7854242304,
+      "geometry_area_m2": 148.4741785424231,
+      "geometry_global_candidate": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.84131821993489,
+              14.301337528779712
+            ],
+            [
+              33.79131821994534,
+              14.301337528779712
+            ],
+            [
+              33.79131821994534,
+              14.451073755774857
+            ],
+            [
+              31.191318276131824,
+              14.451073755774857
+            ],
+            [
+              31.191318276131824,
+              16.45132973335788
+            ],
+            [
+              27.141314186167264,
+              16.45132973335788
+            ],
+            [
+              27.141314186167264,
+              11.251504381374957
+            ],
+            [
+              37.84131821994521,
+              11.251504381374957
+            ],
+            [
+              72.8413182199348,
+              11.251504381374957
+            ],
+            [
+              72.84131821993489,
+              14.301337528779712
+            ]
+          ]
+        ]
+      },
+      "transform": {
+        "scale_m_per_drawing_unit": 0.01,
+        "translate_m": [
+          -65.565,
+          -68.187
+        ],
+        "status": "REVIEW_REQUIRED_AXIS_CONTROL_POINTS"
+      }
+    },
+    {
+      "zone_id": "L700-Z015",
+      "series": "2017_67",
+      "sheet": "700",
+      "building": "EDIFICIO_1",
+      "floors": [
+        "P2"
+      ],
+      "source_layer": "HATCH CARGAS",
+      "hatch_pattern": "ANGLE",
+      "load": {
+        "load_type": "surface",
+        "SC_kgf_m2": 250,
+        "PM_kgf_m2": 260,
+        "SC_kN_m2": 2.4516625,
+        "PM_kN_m2": 2.549729
+      },
+      "source_area_drawing_units2": 637446.3850979548,
+      "geometry_area_m2": 63.74463850979553,
+      "geometry_global_candidate": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              37.84131821994521,
+              3.9513377260477114
+            ],
+            [
+              27.141318219973968,
+              3.9513377260477114
+            ],
+            [
+              27.141318219973968,
+              11.201504381374946
+            ],
+            [
+              27.841318219974042,
+              11.201504381374946
+            ],
+            [
+              27.841318219974042,
+              11.251504381374957
+            ],
+            [
+              37.84131821994521,
+              11.251504381374957
+            ],
+            [
+              37.84131821994521,
+              3.9513377260477114
+            ]
+          ],
+          [
+            [
+              34.091318219941755,
+              11.185132747749591
+            ],
+            [
+              30.89131821971756,
+              11.185132747749591
+            ],
+            [
+              30.89131821971756,
+              6.706337528689616
+            ],
+            [
+              34.091318219941755,
+              6.706337528689616
+            ],
+            [
+              34.091318219941755,
+              11.185132747749591
+            ]
+          ]
+        ]
+      },
+      "transform": {
+        "scale_m_per_drawing_unit": 0.01,
+        "translate_m": [
+          -65.565,
+          -68.187
+        ],
+        "status": "REVIEW_REQUIRED_AXIS_CONTROL_POINTS"
+      }
+    },
+    {
+      "zone_id": "L700-Z016",
+      "series": "2017_67",
+      "sheet": "700",
+      "building": "EDIFICIO_1",
+      "floors": [
+        "P2"
+      ],
+      "source_layer": "HATCH CARGAS",
+      "hatch_pattern": "ANSI34",
+      "load": {
+        "load_type": "surface",
+        "SC_kgf_m2": 400,
+        "PM_kgf_m2": 260,
+        "SC_kN_m2": 3.92266,
+        "PM_kN_m2": 2.549729
+      },
+      "source_area_drawing_units2": 2555058.3293638453,
+      "geometry_area_m2": 255.50583293638448,
+      "geometry_global_candidate": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.8413182199356,
+              11.251504381374957
+            ],
+            [
+              37.84131821994521,
+              11.251504381374957
+            ],
+            [
+              37.84131821994521,
+              3.951337726047683
+            ],
+            [
+              72.8413182199356,
+              3.951337726047683
+            ],
+            [
+              72.8413182199356,
+              11.251504381374957
+            ]
+          ]
+        ]
+      },
+      "transform": {
+        "scale_m_per_drawing_unit": 0.01,
+        "translate_m": [
+          -65.565,
+          -68.187
+        ],
+        "status": "REVIEW_REQUIRED_AXIS_CONTROL_POINTS"
+      }
+    },
+    {
+      "zone_id": "L700-Z017",
+      "series": "2017_67",
+      "sheet": "700",
+      "building": "EDIFICIO_1",
+      "floors": [
+        "P2"
+      ],
+      "source_layer": "HATCH CARGAS",
+      "hatch_pattern": "_USER",
+      "load": {
+        "load_type": "surface",
+        "SC_kgf_m2": 500,
+        "PM_kgf_m2": 260,
+        "SC_kN_m2": 4.903325,
+        "PM_kN_m2": 2.549729
+      },
+      "source_area_drawing_units2": 329263.00000949495,
+      "geometry_area_m2": 32.92630000094947,
+      "geometry_global_candidate": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              45.2813182200679,
+              3.951337726047683
+            ],
+            [
+              37.84131821994521,
+              3.951337726047683
+            ],
+            [
+              37.1913182199453,
+              3.9513377260476545
+            ],
+            [
+              37.1913182199453,
+              -0.11866227400800256
+            ],
+            [
+              45.2813182200679,
+              -0.11866227400800256
+            ],
+            [
+              45.2813182200679,
+              3.951337726047683
+            ]
+          ]
+        ]
+      },
+      "transform": {
+        "scale_m_per_drawing_unit": 0.01,
+        "translate_m": [
+          -65.565,
+          -68.187
+        ],
+        "status": "REVIEW_REQUIRED_AXIS_CONTROL_POINTS"
+      }
+    },
+    {
+      "zone_id": "L700-Z018",
+      "series": "2017_67",
+      "sheet": "700",
+      "building": "EDIFICIO_1",
+      "floors": [
+        "P2"
+      ],
+      "source_layer": "HATCH CARGAS",
+      "hatch_pattern": "_USER",
+      "load": {
+        "load_type": "surface",
+        "SC_kgf_m2": 500,
+        "PM_kgf_m2": 260,
+        "SC_kN_m2": 4.903325,
+        "PM_kN_m2": 2.549729
+      },
+      "source_area_drawing_units2": 239542.3345404133,
+      "geometry_area_m2": 23.95423345404143,
+      "geometry_global_candidate": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              57.79131821999671,
+              3.951337726047683
+            ],
+            [
+              47.1913182200683,
+              3.951337726047683
+            ],
+            [
+              47.1913182200683,
+              1.6915043813115318
+            ],
+            [
+              57.79131821999671,
+              1.6915043813115318
+            ],
+            [
+              57.79131821999671,
+              3.951337726047683
+            ]
+          ]
+        ]
+      },
+      "transform": {
+        "scale_m_per_drawing_unit": 0.01,
+        "translate_m": [
+          -65.565,
+          -68.187
+        ],
+        "status": "REVIEW_REQUIRED_AXIS_CONTROL_POINTS"
+      }
+    },
+    {
+      "zone_id": "L700-Z019",
+      "series": "2017_67",
+      "sheet": "700",
+      "building": "EDIFICIO_1",
+      "floors": [
+        "P2"
+      ],
+      "source_layer": "HATCH CARGAS",
+      "hatch_pattern": "AR-HBONE",
+      "load": {
+        "load_type": "surface",
+        "SC_kgf_m2": 300,
+        "PM_kgf_m2": 260,
+        "SC_kN_m2": 2.941995,
+        "PM_kN_m2": 2.549729
+      },
+      "source_area_drawing_units2": 2827525.784041889,
+      "geometry_area_m2": 282.7525784041889,
+      "geometry_global_candidate": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.84131821993569,
+              20.801337726104265
+            ],
+            [
+              27.141314186167264,
+              20.801337726104265
+            ],
+            [
+              27.141314186167207,
+              16.45132973335788
+            ],
+            [
+              33.79131821994534,
+              16.45132973335788
+            ],
+            [
+              33.79131821994534,
+              14.301337528779712
+            ],
+            [
+              72.84131821993489,
+              14.301337528779712
+            ],
+            [
+              72.84131821993569,
+              20.801337726104265
+            ]
+          ]
+        ]
+      },
+      "transform": {
+        "scale_m_per_drawing_unit": 0.01,
+        "translate_m": [
+          -65.565,
+          -68.187
+        ],
+        "status": "REVIEW_REQUIRED_AXIS_CONTROL_POINTS"
+      }
+    },
+    {
+      "zone_id": "L700-Z020",
+      "series": "2017_67",
+      "sheet": "700",
+      "building": "EDIFICIO_1",
+      "floors": [
+        "P2"
+      ],
+      "source_layer": "HATCH CARGAS",
+      "hatch_pattern": "GRAVEL",
+      "load": {
+        "load_type": "surface",
+        "SC_kgf_m2": 200,
+        "PM_kgf_m2": 200,
+        "SC_kN_m2": 1.96133,
+        "PM_kN_m2": 1.96133
+      },
+      "source_area_drawing_units2": 365561.95153649297,
+      "geometry_area_m2": 36.55619515364939,
+      "geometry_global_candidate": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.84131821993569,
+              21.60133772611212
+            ],
+            [
+              27.141314186167264,
+              21.60133772611212
+            ],
+            [
+              27.141314186167264,
+              20.80150438139478
+            ],
+            [
+              72.84131821993569,
+              20.801337726104265
+            ],
+            [
+              72.84131821993569,
+              21.60133772611212
+            ]
+          ]
+        ]
+      },
+      "transform": {
+        "scale_m_per_drawing_unit": 0.01,
+        "translate_m": [
+          -65.565,
+          -68.187
+        ],
+        "status": "REVIEW_REQUIRED_AXIS_CONTROL_POINTS"
+      }
+    },
+    {
+      "zone_id": "L700-Z021",
+      "series": "2017_67",
+      "sheet": "700",
+      "building": "EDIFICIO_1",
+      "floors": [
+        "P3"
+      ],
+      "source_layer": "HATCH CARGAS",
+      "hatch_pattern": "ANGLE",
+      "load": {
+        "load_type": "surface",
+        "SC_kgf_m2": 250,
+        "PM_kgf_m2": 260,
+        "SC_kN_m2": 2.4516625,
+        "PM_kN_m2": 2.549729
+      },
+      "source_area_drawing_units2": 568598.121508459,
+      "geometry_area_m2": 56.85981215084583,
+      "geometry_global_candidate": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              37.190514795808596,
+              11.251478822073631
+            ],
+            [
+              34.09051380136634,
+              11.251478822073631
+            ],
+            [
+              34.09051380136634,
+              6.7063119693883415
+            ],
+            [
+              34.09051380136634,
+              6.50631196938834
+            ],
+            [
+              34.14551380136618,
+              6.50631196938831
+            ],
+            [
+              34.14551380136618,
+              6.106812166807261
+            ],
+            [
+              30.835513801138987,
+              6.106812166807261
+            ],
+            [
+              30.835513801138987,
+              6.5063119693883795
+            ],
+            [
+              30.89051380113989,
+              6.5063119693883795
+            ],
+            [
+              30.89051380113989,
+              11.25147882207367
+            ],
+            [
+              27.140513801398598,
+              11.251478822073649
+            ],
+            [
+              27.140513801398527,
+              3.951312166746421
+            ],
+            [
+              37.190517064729306,
+              3.9513121667463693
+            ],
+            [
+              37.190514795808596,
+              11.251478822073631
+            ]
+          ]
+        ]
+      },
+      "transform": {
+        "scale_m_per_drawing_unit": 0.01,
+        "translate_m": [
+          -63.295,
+          -6.388
+        ],
+        "status": "REVIEW_REQUIRED_AXIS_CONTROL_POINTS"
+      }
+    },
+    {
+      "zone_id": "L700-Z022",
+      "series": "2017_67",
+      "sheet": "700",
+      "building": "EDIFICIO_1",
+      "floors": [
+        "P3"
+      ],
+      "source_layer": "HATCH CARGAS",
+      "hatch_pattern": "AR-HBONE",
+      "load": {
+        "load_type": "surface",
+        "SC_kgf_m2": 300,
+        "PM_kgf_m2": 260,
+        "SC_kN_m2": 2.941995,
+        "PM_kN_m2": 2.549729
+      },
+      "source_area_drawing_units2": 7732831.096349561,
+      "geometry_area_m2": 773.2831096349562,
+      "geometry_global_candidate": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.69048137817738,
+              20.751478822093354
+            ],
+            [
+              27.14050976759175,
+              20.751478822093503
+            ],
+            [
+              27.14050976759175,
+              16.45130417405658
+            ],
+            [
+              30.89051380113993,
+              16.45130417405658
+            ],
+            [
+              33.790513801369855,
+              16.45130417405658
+            ],
+            [
+              33.79051380136981,
+              14.451048196473634
+            ],
+            [
+              37.190513801369804,
+              14.451048196473634
+            ],
+            [
+              37.190517064729306,
+              14.451048196473634
+            ],
+            [
+              37.190517064729306,
+              11.251478822073631
+            ],
+            [
+              37.190517064729306,
+              3.951312166746421
+            ],
+            [
+              39.990565623084805,
+              3.951312166746421
+            ],
+            [
+              47.190513801492514,
+              3.9513121667463693
+            ],
+            [
+              47.1905138014924,
+              -0.11868783330927535
+            ],
+            [
+              57.7905138014212,
+              -0.11868783330931176
+            ],
+            [
+              57.7905138014212,
+              3.951312166746421
+            ],
+            [
+              72.1405138013602,
+              3.951312166746421
+            ],
+            [
+              72.1405138013602,
+              4.001478822010219
+            ],
+            [
+              77.6899116794814,
+              4.0013019824982
+            ],
+            [
+              77.69048137817738,
+              20.751478822093354
+            ]
+          ]
+        ]
+      },
+      "transform": {
+        "scale_m_per_drawing_unit": 0.01,
+        "translate_m": [
+          -63.295,
+          -6.388
+        ],
+        "status": "REVIEW_REQUIRED_AXIS_CONTROL_POINTS"
+      }
+    },
+    {
+      "zone_id": "L700-Z023",
+      "series": "2017_67",
+      "sheet": "700",
+      "building": "EDIFICIO_1",
+      "floors": [
+        "P3"
+      ],
+      "source_layer": "HATCH CARGAS",
+      "hatch_pattern": "_USER",
+      "load": {
+        "load_type": "surface",
+        "SC_kgf_m2": 500,
+        "PM_kgf_m2": 260,
+        "SC_kN_m2": 4.903325,
+        "PM_kN_m2": 2.549729
+      },
+      "source_area_drawing_units2": 613688.4640304837,
+      "geometry_area_m2": 61.36884640304841,
+      "geometry_global_candidate": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                39.990565623084805,
+                1.3914788220103151
+              ],
+              [
+                37.190517064729306,
+                1.3914788220103151
+              ],
+              [
+                37.190517064729306,
+                3.951312166746421
+              ],
+              [
+                39.990565623084805,
+                3.951312166746421
+              ],
+              [
+                39.990565623084805,
+                1.3914788220103151
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                37.190514795808596,
+                11.251478822073631
+              ],
+              [
+                34.09051380136634,
+                11.251478822073631
+              ],
+              [
+                34.09051380136634,
+                6.7063119693883415
+              ],
+              [
+                30.890513801142134,
+                6.7063119693883415
+              ],
+              [
+                30.89051380113989,
+                11.25147882207367
+              ],
+              [
+                27.140509767591794,
+                11.251478822073649
+              ],
+              [
+                27.14050976759175,
+                16.45130417405658
+              ],
+              [
+                30.890513857556357,
+                16.45130417405658
+              ],
+              [
+                30.890513857556357,
+                14.451048196473609
+              ],
+              [
+                33.79051380136981,
+                14.451048196473634
+              ],
+              [
+                37.190513801369804,
+                14.451048196473634
+              ],
+              [
+                37.190514795808596,
+                11.251478822073631
+              ]
+            ]
+          ]
+        ]
+      },
+      "transform": {
+        "scale_m_per_drawing_unit": 0.01,
+        "translate_m": [
+          -63.295,
+          -6.388
+        ],
+        "status": "REVIEW_REQUIRED_AXIS_CONTROL_POINTS"
+      }
+    },
+    {
+      "zone_id": "L700-Z024",
+      "series": "2017_67",
+      "sheet": "700",
+      "building": "EDIFICIO_1",
+      "floors": [
+        "P3"
+      ],
+      "source_layer": "HATCH CARGAS",
+      "hatch_pattern": "GRAVEL",
+      "load": {
+        "load_type": "surface",
+        "SC_kgf_m2": 200,
+        "PM_kgf_m2": 200,
+        "SC_kN_m2": 1.96133,
+        "PM_kN_m2": 1.96133
+      },
+      "source_area_drawing_units2": 652089.8324456211,
+      "geometry_area_m2": 65.20898324456189,
+      "geometry_global_candidate": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.6404813781809,
+              21.6013121667674
+            ],
+            [
+              27.140513801398598,
+              21.6013121668109
+            ],
+            [
+              27.140513801398598,
+              20.751478822093503
+            ],
+            [
+              77.69048137817738,
+              20.751478822093354
+            ],
+            [
+              77.6899116794814,
+              4.0013019824982
+            ],
+            [
+              72.1405138013602,
+              4.001478822010219
+            ],
+            [
+              72.1405138013602,
+              3.151349497216808
+            ],
+            [
+              78.64048137816529,
+              3.1513494972142446
+            ],
+            [
+              78.6404813781809,
+              21.6013121667674
+            ]
+          ]
+        ]
+      },
+      "transform": {
+        "scale_m_per_drawing_unit": 0.01,
+        "translate_m": [
+          -63.295,
+          -6.388
+        ],
+        "status": "REVIEW_REQUIRED_AXIS_CONTROL_POINTS"
+      }
+    },
+    {
+      "zone_id": "L700-Z025",
+      "series": "2017_67",
+      "sheet": "700",
+      "building": "EDIFICIO_1",
+      "floors": [
+        "P4"
+      ],
+      "source_layer": "HATCH CARGAS",
+      "hatch_pattern": "_USER",
+      "load": {
+        "load_type": "surface",
+        "SC_kgf_m2": 100,
+        "PM_kgf_m2": 350,
+        "SC_kN_m2": 0.980665,
+        "PM_kN_m2": 3.4323275
+      },
+      "source_area_drawing_units2": 625100.2622032017,
+      "geometry_area_m2": 62.51002622032017,
+      "geometry_global_candidate": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              37.79054199630102,
+              11.251094023098945
+            ],
+            [
+              37.79054199630102,
+              4.601094023035608
+            ],
+            [
+              47.19054200139276,
+              4.601090309920561
+            ],
+            [
+              47.1905446282256,
+              11.251094023098936
+            ],
+            [
+              37.79054199630102,
+              11.251094023098945
+            ]
+          ]
+        ]
+      },
+      "transform": {
+        "scale_m_per_drawing_unit": 0.01,
+        "translate_m": [
+          46.389,
+          1.551
+        ],
+        "status": "REVIEW_REQUIRED_AXIS_CONTROL_POINTS"
+      }
+    },
+    {
+      "zone_id": "L700-Z026",
+      "series": "2017_67",
+      "sheet": "700",
+      "building": "EDIFICIO_1",
+      "floors": [
+        "P4"
+      ],
+      "source_layer": "HATCH CARGAS",
+      "hatch_pattern": "GRAVEL",
+      "load": {
+        "load_type": "surface",
+        "SC_kgf_m2": 200,
+        "PM_kgf_m2": 200,
+        "SC_kN_m2": 1.96133,
+        "PM_kN_m2": 1.96133
+      },
+      "source_area_drawing_units2": 8289091.461557134,
+      "geometry_area_m2": 828.9091461557133,
+      "geometry_global_candidate": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.64050957311207,
+              21.60094713170069
+            ],
+            [
+              27.14054199632973,
+              21.600924712407966
+            ],
+            [
+              27.140541996329652,
+              3.9509247123417532
+            ],
+            [
+              37.14054199630097,
+              3.9509247123417532
+            ],
+            [
+              37.14054199630097,
+              4.601091367605682
+            ],
+            [
+              37.790541996300966,
+              4.601091367605682
+            ],
+            [
+              37.790541996300966,
+              11.25109136766901
+            ],
+            [
+              47.190541996423626,
+              11.25109136766901
+            ],
+            [
+              47.190541996423626,
+              4.601091367605682
+            ],
+            [
+              72.14054199629133,
+              4.601091367605682
+            ],
+            [
+              72.14054199629133,
+              3.9509247123417897
+            ],
+            [
+              72.14054199629133,
+              3.1509247123417623
+            ],
+            [
+              78.64050957309647,
+              3.150924712341771
+            ],
+            [
+              78.64050957311207,
+              21.60094713170069
+            ]
+          ]
+        ]
+      },
+      "transform": {
+        "scale_m_per_drawing_unit": 0.01,
+        "translate_m": [
+          46.389,
+          1.551
+        ],
+        "status": "REVIEW_REQUIRED_AXIS_CONTROL_POINTS"
+      }
+    },
+    {
+      "zone_id": "L700-Z027",
+      "series": "2017_67",
+      "sheet": "700",
+      "building": "EDIFICIO_1",
+      "floors": [
+        "P4"
+      ],
+      "source_layer": "HATCH CARGAS",
+      "hatch_pattern": "BRASS",
+      "load": {
+        "load_type": "line",
+        "SC_kgf_m": 800,
+        "PM_kgf_m": 7600,
+        "SC_kN_m": 7.84532,
+        "PM_kN_m": 74.53054,
+        "geometry_status": "HATCH_BAND_ONLY_CENTERLINE_PENDING"
+      },
+      "source_area_drawing_units2": 227558.32934229958,
+      "geometry_area_m2": 22.75583293422997,
+      "geometry_global_candidate": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              37.14054199630097,
+              4.601091367605682
+            ],
+            [
+              37.14054199630097,
+              3.9509247123417897
+            ],
+            [
+              72.14054199629133,
+              3.9509247123417897
+            ],
+            [
+              72.14054199629133,
+              4.601091367605682
+            ],
+            [
+              37.14054199630097,
+              4.601091367605682
+            ]
+          ]
+        ]
+      },
+      "transform": {
+        "scale_m_per_drawing_unit": 0.01,
+        "translate_m": [
+          46.389,
+          1.551
+        ],
+        "status": "REVIEW_REQUIRED_AXIS_CONTROL_POINTS"
+      }
+    },
+    {
+      "zone_id": "L700-Z028",
+      "series": "2017_67",
+      "sheet": "700",
+      "building": "EDIFICIO_1",
+      "floors": [
+        "P4"
+      ],
+      "source_layer": "HATCH CARGAS",
+      "hatch_pattern": "GRAVEL",
+      "load": {
+        "load_type": "surface",
+        "SC_kgf_m2": 200,
+        "PM_kgf_m2": 200,
+        "SC_kN_m2": 1.96133,
+        "PM_kN_m2": 1.96133
+      },
+      "source_area_drawing_units2": 431420.00000300433,
+      "geometry_area_m2": 43.142000000300406,
+      "geometry_global_candidate": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              47.19054199642359,
+              3.9509247123417355
+            ],
+            [
+              47.19054199642359,
+              -0.11907528771394404
+            ],
+            [
+              57.79054199635239,
+              -0.11907528771394404
+            ],
+            [
+              57.79054199635239,
+              3.9509247123417355
+            ],
+            [
+              47.19054199642359,
+              3.9509247123417355
+            ]
+          ]
+        ]
+      },
+      "transform": {
+        "scale_m_per_drawing_unit": 0.01,
+        "translate_m": [
+          46.389,
+          1.551
+        ],
+        "status": "REVIEW_REQUIRED_AXIS_CONTROL_POINTS"
+      }
+    },
+    {
+      "zone_id": "L700-Z029",
+      "series": "2024_22",
+      "sheet": "700",
+      "building": "EDIFICIO_2",
+      "floors": [
+        "S1",
+        "P1",
+        "P2",
+        "P3"
+      ],
+      "source_layer": "HATCH CARGAS",
+      "hatch_pattern": "HONEY",
+      "load": {
+        "load_type": "surface",
+        "SC_kgf_m2": 500,
+        "PM_kgf_m2": 260,
+        "SC_kN_m2": 4.903325,
+        "PM_kN_m2": 2.549729
+      },
+      "source_area_drawing_units2": 1155850.277544659,
+      "geometry_area_m2": 115.58502775446576,
+      "geometry_global_candidate": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              28.000660844826708,
+              9.995567906453864
+            ],
+            [
+              0.5023629283768614,
+              9.995567906453864
+            ],
+            [
+              0.5023629283768614,
+              15.845734561778038
+            ],
+            [
+              -3.147639088403273,
+              15.845734561778038
+            ],
+            [
+              -3.1476390884032694,
+              11.71073456174065
+            ],
+            [
+              -1.6476390884030607,
+              11.71073456174065
+            ],
+            [
+              -1.6476390884030607,
+              4.450734561776983
+            ],
+            [
+              -3.1476390884032694,
+              4.450734561776983
+            ],
+            [
+              -3.1476390884032694,
+              -0.35426543830502766
+            ],
+            [
+              0.50236292837684,
+              -0.35426543830502766
+            ],
+            [
+              0.5023629283768507,
+              7.54573456175806
+            ],
+            [
+              27.983311031320067,
+              7.54573456175806
+            ],
+            [
+              28.000660844826708,
+              9.995567906453864
+            ]
+          ]
+        ]
+      },
+      "transform": {
+        "scale_m_per_drawing_unit": 0.01,
+        "translate_m": [
+          -9.654,
+          -40.418
+        ],
+        "status": "REVIEW_REQUIRED_AXIS_CONTROL_POINTS"
+      }
+    },
+    {
+      "zone_id": "L700-Z030",
+      "series": "2024_22",
+      "sheet": "700",
+      "building": "EDIFICIO_2",
+      "floors": [
+        "S1",
+        "P1",
+        "P2",
+        "P3"
+      ],
+      "source_layer": "HATCH CARGAS",
+      "hatch_pattern": "AR-CONC",
+      "load": {
+        "load_type": "surface",
+        "SC_kgf_m2": 300,
+        "PM_kgf_m2": 260,
+        "SC_kN_m2": 2.941995,
+        "PM_kN_m2": 2.549729
+      },
+      "source_area_drawing_units2": 108899.99999947016,
+      "geometry_area_m2": 10.889999999947017,
+      "geometry_global_candidate": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -1.6476390884030607,
+              11.71073456174065
+            ],
+            [
+              -3.1476390884032694,
+              11.71073456174065
+            ],
+            [
+              -3.1476390884032694,
+              4.450734561776983
+            ],
+            [
+              -1.6476390884030607,
+              4.450734561776983
+            ],
+            [
+              -1.6476390884030607,
+              11.71073456174065
+            ]
+          ]
+        ]
+      },
+      "transform": {
+        "scale_m_per_drawing_unit": 0.01,
+        "translate_m": [
+          -9.654,
+          -40.418
+        ],
+        "status": "REVIEW_REQUIRED_AXIS_CONTROL_POINTS"
+      }
+    },
+    {
+      "zone_id": "L700-Z031",
+      "series": "2024_22",
+      "sheet": "700",
+      "building": "EDIFICIO_2",
+      "floors": [
+        "S1",
+        "P1",
+        "P2",
+        "P3"
+      ],
+      "source_layer": "HATCH CARGAS",
+      "hatch_pattern": "_USER",
+      "load": {
+        "load_type": "surface",
+        "SC_kgf_m2": 200,
+        "PM_kgf_m2": 260,
+        "SC_kN_m2": 1.96133,
+        "PM_kN_m2": 2.549729
+      },
+      "source_area_drawing_units2": 599445.5499733641,
+      "geometry_area_m2": 59.944554997336375,
+      "geometry_global_candidate": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              28.052360904470202,
+              17.29573456177811
+            ],
+            [
+              -3.9476390884214494,
+              17.29573456177811
+            ],
+            [
+              -3.9476390884214494,
+              -1.0942654383043262
+            ],
+            [
+              -3.1476390884032677,
+              -1.0942654383053139
+            ],
+            [
+              -3.1476390884032694,
+              -0.35426543830502766
+            ],
+            [
+              -3.1476390884032677,
+              15.845734561778038
+            ],
+            [
+              28.042091948976104,
+              15.845734561778038
+            ],
+            [
+              28.052360904470202,
+              17.29573456177811
+            ]
+          ]
+        ]
+      },
+      "transform": {
+        "scale_m_per_drawing_unit": 0.01,
+        "translate_m": [
+          -9.654,
+          -40.418
+        ],
+        "status": "REVIEW_REQUIRED_AXIS_CONTROL_POINTS"
+      }
+    },
+    {
+      "zone_id": "L700-Z032",
+      "series": "2024_22",
+      "sheet": "700",
+      "building": "EDIFICIO_2",
+      "floors": [
+        "S1",
+        "P1",
+        "P2",
+        "P3"
+      ],
+      "source_layer": "HATCH CARGAS",
+      "hatch_pattern": "AR-HBONE",
+      "load": {
+        "load_type": "surface",
+        "SC_kgf_m2": 500,
+        "PM_kgf_m2": 260,
+        "SC_kN_m2": 4.903325,
+        "PM_kN_m2": 2.549729
+      },
+      "source_area_drawing_units2": 3714746.8438938945,
+      "geometry_area_m2": 371.4746843893895,
+      "geometry_global_candidate": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                0.50236292837684,
+                -0.35426543830502766
+              ],
+              [
+                0.5023629283768507,
+                7.54573456175806
+              ],
+              [
+                27.983311031320067,
+                7.54573456175806
+              ],
+              [
+                27.92736292897244,
+                -0.35426543830502766
+              ],
+              [
+                0.50236292837684,
+                -0.35426543830502766
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                0.5023629283768614,
+                9.995567906453864
+              ],
+              [
+                0.5023629283768614,
+                15.845734561778038
+              ],
+              [
+                28.042091948976104,
+                15.845734561778038
+              ],
+              [
+                28.000660844826708,
+                9.995567906453864
+              ],
+              [
+                0.5023629283768614,
+                9.995567906453864
+              ]
+            ],
+            [
+              [
+                25.407362928154402,
+                10.145734561758076
+              ],
+              [
+                27.80236292897231,
+                10.145734561758076
+              ],
+              [
+                27.80236292897231,
+                12.815724373915103
+              ],
+              [
+                25.407362928154402,
+                12.815724373915103
+              ],
+              [
+                25.407362928154402,
+                10.145734561758076
+              ]
+            ]
+          ]
+        ]
+      },
+      "transform": {
+        "scale_m_per_drawing_unit": 0.01,
+        "translate_m": [
+          -9.654,
+          -40.418
+        ],
+        "status": "REVIEW_REQUIRED_AXIS_CONTROL_POINTS"
+      }
+    },
+    {
+      "zone_id": "L700-Z033",
+      "series": "2024_22",
+      "sheet": "700",
+      "building": "EDIFICIO_2",
+      "floors": [
+        "P4"
+      ],
+      "source_layer": "HATCH CARGAS",
+      "hatch_pattern": "GRAVEL",
+      "load": {
+        "load_type": "surface",
+        "SC_kgf_m2": 200,
+        "PM_kgf_m2": 200,
+        "SC_kN_m2": 1.96133,
+        "PM_kN_m2": 1.96133
+      },
+      "source_area_drawing_units2": 5356199.754919317,
+      "geometry_area_m2": 535.6199754919317,
+      "geometry_global_candidate": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              28.051615815715166,
+              -0.35426543830502055
+            ],
+            [
+              -1.6983862016604405,
+              -0.35426543830502055
+            ],
+            [
+              -1.6983862016604405,
+              -1.0942654383053139
+            ],
+            [
+              -3.948386201656035,
+              -1.094265438302557
+            ],
+            [
+              -3.948386201656035,
+              17.29573456177812
+            ],
+            [
+              28.051615815715166,
+              17.29573456177812
+            ],
+            [
+              28.051615815715166,
+              13.115724373915143
+            ],
+            [
+              25.156611132988843,
+              13.115724373915143
+            ],
+            [
+              25.156611132988843,
+              9.995734561758113
+            ],
+            [
+              28.051615815715166,
+              9.995734561758113
+            ],
+            [
+              28.051615815715166,
+              -0.35426543830502055
+            ]
+          ],
+          [
+            [
+              7.4045599825238355,
+              6.9457345617581225
+            ],
+            [
+              5.627559982523849,
+              6.9457345617581225
+            ],
+            [
+              5.627559982523849,
+              4.8857345616073005
+            ],
+            [
+              7.4045599825238355,
+              4.8857345616073005
+            ],
+            [
+              7.4045599825238355,
+              6.9457345617581225
+            ]
+          ],
+          [
+            [
+              9.78155998252383,
+              4.8857345616073005
+            ],
+            [
+              9.78155998252383,
+              6.945734561758115
+            ],
+            [
+              8.004559982523844,
+              6.945734561758115
+            ],
+            [
+              8.004559982523844,
+              4.8857345616073005
+            ],
+            [
+              9.78155998252383,
+              4.8857345616073005
+            ]
+          ],
+          [
+            [
+              24.778615814767136,
+              4.970734561758093
+            ],
+            [
+              24.778615814767136,
+              6.945734561758115
+            ],
+            [
+              23.001615814767135,
+              6.945734561758115
+            ],
+            [
+              23.001615814767135,
+              4.970734561758093
+            ],
+            [
+              24.778615814767136,
+              4.970734561758093
+            ]
+          ],
+          [
+            [
+              7.40161581577965,
+              11.105734561758112
+            ],
+            [
+              5.624615815779649,
+              11.105734561758112
+            ],
+            [
+              5.624615815779649,
+              9.04573456160729
+            ],
+            [
+              7.40161581577965,
+              9.04573456160729
+            ],
+            [
+              7.40161581577965,
+              11.105734561758112
+            ]
+          ],
+          [
+            [
+              9.77861581577966,
+              9.04573456160729
+            ],
+            [
+              9.77861581577966,
+              11.105734561758112
+            ],
+            [
+              8.001615815779672,
+              11.105734561758112
+            ],
+            [
+              8.001615815779672,
+              9.04573456160729
+            ],
+            [
+              9.77861581577966,
+              9.04573456160729
+            ]
+          ],
+          [
+            [
+              24.77861581476715,
+              9.045734561758103
+            ],
+            [
+              24.77861581476715,
+              11.105734561758084
+            ],
+            [
+              23.001615814767163,
+              11.105734561758084
+            ],
+            [
+              23.001615814767163,
+              9.045734561758103
+            ],
+            [
+              24.77861581476715,
+              9.045734561758103
+            ]
+          ]
+        ]
+      },
+      "transform": {
+        "scale_m_per_drawing_unit": 0.01,
+        "translate_m": [
+          -59.595,
+          -40.418
+        ],
+        "status": "REVIEW_REQUIRED_AXIS_CONTROL_POINTS"
+      }
+    },
+    {
+      "zone_id": "L700-Z034",
+      "series": "2024_22",
+      "sheet": "700",
+      "building": "EDIFICIO_2",
+      "floors": [
+        "P4"
+      ],
+      "source_layer": "HATCH CARGAS",
+      "hatch_pattern": "BRASS",
+      "load": {
+        "load_type": "line",
+        "SC_kgf_m": 100,
+        "PM_kgf_m": 1500,
+        "SC_kN_m": 0.980665,
+        "PM_kN_m": 14.709975,
+        "geometry_status": "HATCH_BAND_ONLY_CENTERLINE_PENDING"
+      },
+      "source_area_drawing_units2": 90323.78799827083,
+      "geometry_area_m2": 9.03237879982707,
+      "geometry_global_candidate": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              28.051613791213057,
+              13.115724373915143
+            ],
+            [
+              25.156611132988843,
+              13.115724373915143
+            ],
+            [
+              25.156611132988843,
+              9.995734561758113
+            ],
+            [
+              28.051613791213057,
+              9.995734561758113
+            ],
+            [
+              28.051613791213057,
+              13.115724373915143
+            ]
+          ]
+        ]
+      },
+      "transform": {
+        "scale_m_per_drawing_unit": 0.01,
+        "translate_m": [
+          -59.595,
+          -40.418
+        ],
+        "status": "REVIEW_REQUIRED_AXIS_CONTROL_POINTS"
+      }
+    }
+  ]
+}

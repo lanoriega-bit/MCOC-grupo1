@@ -28,6 +28,12 @@
   puntuales de ambas laminas 700, con conversion exacta a SI, en
   `../P1L2/edificio/validacion/cargas/INTERPRETACION_LAMINAS_700.md`. Queda una
   unidad ambigua en la banda `SC=500 / PM.ADIC.=2800` de EDIFICIO_1 P1.
+- Se extrajeron 34 zonas HATCH sin solapes y se superpusieron sobre el modelo.
+  El calce es visualmente consistente en LT2 y E1 P1-P4, pendiente de cerrar
+  transformaciones con ejes rotulados. En E1 S1 aparece una zona cargada entre
+  `X=37..49 m`, `Y=6..16 m` sin receptores estructurales visibles. El area
+  historica no tiene un sesgo corregible por factor global: la razon
+  HATCH/historica varia de 0.339 a 1.306.
 
 Actualizado: 2026-09-09.
 
