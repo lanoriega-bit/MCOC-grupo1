@@ -879,11 +879,13 @@
             "CAD_1_column_plan_0225",
             "CAD_1_column_plan_0226"
           ],
-          "classification": "UNRESOLVED",
-          "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-          "reason": "station east of the S1 basement structural footprint; no S1 beam/wall/los evidence in that zone; column exists only in upper-floor panels",
+          "classification": "CONFIRMED_BY_AXIS_ELEVATION",
+          "resolution_group": "CONFIRMED_CORRECT",
+          "reason": "La elevacion estructural del eje dibuja un pilar de 70x70 en la estacion 1/2/3, con contornos continuos bajo el primer piso hasta la viga de fundacion; las separaciones 1-2 y 2-3 coinciden exactamente con los ejes canonicos.",
           "reason_codes": [
-            "s1_station_east_of_basement_footprint_no_s1_structure"
+            "direct_axis_elevation",
+            "lower_story_contours_to_foundation",
+            "explicit_p70x70"
           ],
           "evidence": {
             "floor": "S1",
@@ -1012,7 +1014,32 @@
               },
               "direct_column_count": 6
             },
-            "outboard_y_gt_y3_plus_tolerance": false
+            "outboard_y_gt_y3_plus_tolerance": false,
+            "final_full_plan_audit": {
+              "id": "E1-S1-C-016",
+              "building": "EDIFICIO_1",
+              "floor": "S1",
+              "axis_x": "I",
+              "axis_y": "3",
+              "canonical_center_xy_m": [
+                67.491,
+                16.15
+              ],
+              "section_m": [
+                0.7,
+                0.7
+              ],
+              "classification": "CONFIRMED",
+              "evidence": {
+                "source_sheet": "2017_67-309",
+                "elevation_title": "ELEVACION EJE I",
+                "axis_span_match": true,
+                "p70x70_label_count_at_station": 4,
+                "lower_story_contour_count": 3,
+                "foundation_beam_labels": []
+              },
+              "reason": "La elevacion estructural del eje dibuja un pilar de 70x70 en la estacion 1/2/3, con contornos continuos bajo el primer piso hasta la viga de fundacion; las separaciones 1-2 y 2-3 coinciden exactamente con los ejes canonicos."
+            }
           }
         },
         {

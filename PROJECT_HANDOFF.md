@@ -20,7 +20,11 @@ graficos ampliables y modo presentacion. Ver `entregas/P1L3/INFORME.md` y
 - No se inicia P1L4 y no se sobrescriben resultados A7. Las futuras salidas se
   identificaran `POST_P1L3_VALIDATED`.
 - FASE 0 cerro la preservacion y el inventario sin merges de ramas historicas.
-  Proximo hito: investigacion final de las seis columnas S1.
+- FASE 1 cerro las seis columnas S1: las elevaciones 309/I y 310/I' muestran
+  pilares 70x70 continuos hasta fundacion en 1/2/3. Los seis elementos estan
+  `CONFIRMED_BY_AXIS_ELEVATION` y normalizados a sus intersecciones canonicas.
+  Evidencia: `entregas/P1L2/edificio/validacion/s1_columns_final/REPORT.md`.
+- Proximo hito: auditoria completa de muros EDIFICIO_1 por piso.
 
 ---
 
@@ -41,7 +45,9 @@ graficos ampliables y modo presentacion. Ver `entregas/P1L3/INFORME.md` y
 7. Estado de geometria: EDIFICIO_1 auditado-corregido 873 solidos; EDIFICIO_2 688; combinado 1561 solidos en 5 pisos (S1/P1/P2/P3/P4). Ver seccion 8.
 8. Proximo trabajo recomendado: no reiniciar lo hecho. Continuar P1L2 con auditorias de muros/vigas
 
-EDIFICIO_1 (drafts por piso), revisar `outboard_room_reconstruction.json`, y luego P1L3 segun PLANIFICACION.md. No re-resolver las 6 columnas S1 `UNRESOLVED_REQUIRES_REVIEW` sin evidencia nueva real.
+EDIFICIO_1 (drafts por piso) y luego el resto de la consolidacion PRE-P1L4. No
+reabrir las seis columnas I/I' de S1 salvo contradiccion primaria: ya fueron
+confirmadas directamente en 309/310.
 
 Reglas Git obligatorias (ver seccion 20): cada hito = VALIDAR -> STATUS.md -> COMMIT -> PUSH; commits P1L2 y P1L3 separados.
 

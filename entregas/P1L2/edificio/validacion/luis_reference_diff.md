@@ -2,7 +2,7 @@
 
 Status: `LUIS_REFERENCE_DIFF_CREATED`
 Luis original modified: `0`
-Removed solids: `54`
+Removed solids: `60`
 
 | ID | SolidTag | Category | New Geometry | Reason | Source DXF |
 | --- | --- | --- | --- | --- | --- |
@@ -60,3 +60,9 @@ Removed solids: `54`
 | SOL_base_support_0092 | SOL_base_support_0092 | support | REMOVED | derived from inferred column resolution | 2017_67-100.dxf |
 | SOL_base_support_0093 | SOL_base_support_0093 | support | REMOVED | derived from inferred column resolution | 2017_67-100.dxf |
 | SOL_base_support_0094 | SOL_base_support_0094 | support | REMOVED | derived from inferred column resolution | 2017_67-100.dxf |
+| E1-S1-C-016 | SOL_1S_column_0010 | column | {'solidTag': 'SOL_1S_column_0010', 'category': 'column', 'kind': 'box', 'floor': '1S', 'center': [40.0, 16.15, 1.98], 'width_m': 0.7, 'depth_m': 0.7, 'height_m': 3.96, 'length_m': 3.96} | Centro y seccion normalizados con elevacion estructural primaria. | 2017_67-309.dxf |
+| E1-S1-C-014 | SOL_1S_column_0011 | column | {'solidTag': 'SOL_1S_column_0011', 'category': 'column', 'kind': 'box', 'floor': '1S', 'center': [40.0, 8.9, 1.98], 'width_m': 0.7, 'depth_m': 0.7, 'height_m': 3.96, 'length_m': 3.96} | Centro y seccion normalizados con elevacion estructural primaria. | 2017_67-309.dxf |
+| E1-S1-C-015 | SOL_1S_column_0012 | column | {'solidTag': 'SOL_1S_column_0012', 'category': 'column', 'kind': 'box', 'floor': '1S', 'center': [40.0, 0.0, 1.98], 'width_m': 0.7, 'depth_m': 0.7, 'height_m': 3.96, 'length_m': 3.96} | Centro y seccion normalizados con elevacion estructural primaria. | 2017_67-309.dxf |
+| E1-S1-C-017 | SOL_1S_column_0016 | column | {'solidTag': 'SOL_1S_column_0016', 'category': 'column', 'kind': 'box', 'floor': '1S', 'center': [45.0, 0.0, 1.98], 'width_m': 0.7, 'depth_m': 0.7, 'height_m': 3.96, 'length_m': 3.96} | Centro y seccion normalizados con elevacion estructural primaria. | 2017_67-310.dxf |
+| E1-S1-C-019 | SOL_1S_column_0017 | column | {'solidTag': 'SOL_1S_column_0017', 'category': 'column', 'kind': 'box', 'floor': '1S', 'center': [45.0, 16.15, 1.98], 'width_m': 0.7, 'depth_m': 0.7, 'height_m': 3.96, 'length_m': 3.96} | Centro y seccion normalizados con elevacion estructural primaria. | 2017_67-310.dxf |
+| E1-S1-C-018 | SOL_1S_column_0018 | column | {'solidTag': 'SOL_1S_column_0018', 'category': 'column', 'kind': 'box', 'floor': '1S', 'center': [45.0, 8.9, 1.98], 'width_m': 0.7, 'depth_m': 0.7, 'height_m': 3.96, 'length_m': 3.96} | Centro y seccion normalizados con elevacion estructural primaria. | 2017_67-310.dxf |

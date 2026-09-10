@@ -41,21 +41,26 @@
   "luis_vs_corrected": {
     "solids": {
       "status": "FAIL",
-      "missing_count": 54,
-      "extra_count": 0,
+      "missing_count": 58,
+      "extra_count": 4,
       "missing_sample": [
+        "('S1', 'column', 'box', ('center', (40.179, 16.352, 1.98), 0.85, 0.92, 3.96))",
+        "('S1', 'column', 'box', ('center', (39.913, 8.9, 1.98), 0.7, 0.7, 3.96))",
+        "('S1', 'column', 'box', ('center', (39.956, 0.075, 1.98), 0.7, 0.7, 3.96))",
+        "('S1', 'column', 'box', ('center', (45.0, 0.038, 1.98), 0.7, 0.7, 3.96))",
         "('S1', 'column', 'box', ('center', (34.477, 18.912, 1.98), 0.35, 0.35, 3.96))",
         "('S1', 'column', 'box', ('center', (34.477, 23.625, 1.98), 0.35, 0.35, 3.96))",
         "('S1', 'column', 'box', ('center', (34.477, 28.337, 1.98), 0.35, 0.35, 3.96))",
         "('S1', 'column', 'box', ('center', (30.027, 18.843, 1.98), 0.35, 0.35, 3.96))",
         "('S1', 'column', 'box', ('center', (30.027, 26.176, 1.98), 0.35, 0.35, 3.96))",
-        "('S1', 'column', 'box', ('center', (17.49, 20.452, 1.98), 0.35, 0.35, 3.96))",
-        "('S1', 'column', 'box', ('center', (10.0, 20.452, 1.98), 0.35, 0.35, 3.96))",
-        "('S1', 'column', 'box', ('center', (49.9, 9.081, 1.98), 0.35, 0.35, 3.96))",
-        "('S1', 'column', 'box', ('center', (49.9, 16.331, 1.98), 0.35, 0.35, 3.96))",
-        "('S1', 'column', 'box', ('center', (49.9, 0.181, 1.98), 0.35, 0.35, 3.96))"
+        "('S1', 'column', 'box', ('center', (17.49, 20.452, 1.98), 0.35, 0.35, 3.96))"
       ],
-      "extra_sample": []
+      "extra_sample": [
+        "('S1', 'column', 'box', ('center', (40.0, 16.15, 1.98), 0.7, 0.7, 3.96))",
+        "('S1', 'column', 'box', ('center', (40.0, 8.9, 1.98), 0.7, 0.7, 3.96))",
+        "('S1', 'column', 'box', ('center', (40.0, 0.0, 1.98), 0.7, 0.7, 3.96))",
+        "('S1', 'column', 'box', ('center', (45.0, 0.0, 1.98), 0.7, 0.7, 3.96))"
+      ]
     },
     "segments": {
       "status": "PASS",
@@ -80,9 +85,18 @@
     }
   },
   "documented_diff": {
-    "change_count": 54,
+    "change_count": 60,
     "removed_columns": 39,
     "removed_supports": 15,
+    "modified_geometry": 6,
+    "diff_application_errors": [],
+    "documented_delta_vs_corrected": {
+      "status": "PASS",
+      "missing_count": 0,
+      "extra_count": 0,
+      "missing_sample": [],
+      "extra_sample": []
+    },
     "matches_solid_diff": true
   },
   "errors": []

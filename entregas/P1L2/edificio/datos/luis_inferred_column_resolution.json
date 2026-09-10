@@ -177,23 +177,23 @@
   "classification_counts": {
     "CONFIRMED_BY_BASEMENT_EVIDENCE": 10,
     "LIKELY_CORRECT": 3,
-    "UNRESOLVED": 6,
+    "CONFIRMED_BY_AXIS_ELEVATION": 6,
     "UNSUPPORTED_VERTICAL_EXTENSION": 39,
     "CONFIRMED_BY_PLAN_NOTE": 3
   },
   "resolution_groups": {
-    "CONFIRMED_CORRECT": 13,
-    "UNRESOLVED_REQUIRES_REVIEW": 9,
+    "CONFIRMED_CORRECT": 19,
+    "UNRESOLVED_REQUIRES_REVIEW": 3,
     "CONFIRMED_WRONG_AND_CORRECTED": 39
   },
   "support_classification_counts": {
-    "VALID_DERIVED_SUPPORT": 10,
-    "UNRESOLVED_DERIVED_ELEMENT": 9,
+    "VALID_DERIVED_SUPPORT": 16,
+    "UNRESOLVED_DERIVED_ELEMENT": 3,
     "INVALID_DERIVED_ELEMENT": 15
   },
   "columns_total_resolved": 61,
   "supports_total_resolved": 34,
-  "geometry_changes": 54,
+  "geometry_changes": 60,
   "corrected_model": "entregas/P1L2/unity_export/model_1_audited_corrected.json",
   "outboard_reconstruction": "entregas/P1L2/edificio/datos/outboard_room_reconstruction.json",
   "overlays_dir": "entregas/P1L2/edificio/validacion/luis_reference_overlays",
@@ -1107,11 +1107,13 @@
         "CAD_1_column_plan_0097",
         "CAD_1_column_plan_0098"
       ],
-      "classification": "UNRESOLVED",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-      "reason": "station east of the S1 basement structural footprint; no S1 beam/wall/los evidence in that zone; column exists only in upper-floor panels",
+      "classification": "CONFIRMED_BY_AXIS_ELEVATION",
+      "resolution_group": "CONFIRMED_CORRECT",
+      "reason": "La elevacion estructural del eje dibuja un pilar de 70x70 en la estacion 1/2/3, con contornos continuos bajo el primer piso hasta la viga de fundacion; las separaciones 1-2 y 2-3 coinciden exactamente con los ejes canonicos.",
       "reason_codes": [
-        "s1_station_east_of_basement_footprint_no_s1_structure"
+        "direct_axis_elevation",
+        "lower_story_contours_to_foundation",
+        "explicit_p70x70"
       ],
       "evidence": {
         "floor": "S1",
@@ -1240,7 +1242,53 @@
           },
           "direct_column_count": 6
         },
-        "outboard_y_gt_y3_plus_tolerance": false
+        "outboard_y_gt_y3_plus_tolerance": false,
+        "final_full_plan_audit": {
+          "id": "E1-S1-C-017",
+          "building": "EDIFICIO_1",
+          "floor": "S1",
+          "axis_x": "I'",
+          "axis_y": "1",
+          "canonical_center_xy_m": [
+            72.491,
+            0.0
+          ],
+          "section_m": [
+            0.7,
+            0.7
+          ],
+          "classification": "CONFIRMED",
+          "evidence": {
+            "source_sheet": "2017_67-310",
+            "elevation_title": "ELEVACION EJE I'",
+            "axis_span_match": true,
+            "p70x70_label_count_at_station": 4,
+            "lower_story_contour_count": 3,
+            "foundation_beam_labels": [
+              {
+                "text": "V.F. 20/120",
+                "x": -32.996,
+                "y": -353.448
+              },
+              {
+                "text": "V.F. 20/120",
+                "x": -840.487,
+                "y": -353.448
+              },
+              {
+                "text": "V.F. 20/180",
+                "x": -1087.487,
+                "y": -310.448
+              },
+              {
+                "text": "V.F. 20/180",
+                "x": 317.0,
+                "y": -346.0
+              }
+            ]
+          },
+          "reason": "La elevacion estructural del eje dibuja un pilar de 70x70 en la estacion 1/2/3, con contornos continuos bajo el primer piso hasta la viga de fundacion; las separaciones 1-2 y 2-3 coinciden exactamente con los ejes canonicos."
+        }
       }
     },
     {
@@ -1289,11 +1337,13 @@
         "CAD_1_column_plan_0066",
         "CAD_1_column_plan_0067"
       ],
-      "classification": "UNRESOLVED",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-      "reason": "station east of the S1 basement structural footprint; no S1 beam/wall/los evidence in that zone; column exists only in upper-floor panels",
+      "classification": "CONFIRMED_BY_AXIS_ELEVATION",
+      "resolution_group": "CONFIRMED_CORRECT",
+      "reason": "La elevacion estructural del eje dibuja un pilar de 70x70 en la estacion 1/2/3, con contornos continuos bajo el primer piso hasta la viga de fundacion; las separaciones 1-2 y 2-3 coinciden exactamente con los ejes canonicos.",
       "reason_codes": [
-        "s1_station_east_of_basement_footprint_no_s1_structure"
+        "direct_axis_elevation",
+        "lower_story_contours_to_foundation",
+        "explicit_p70x70"
       ],
       "evidence": {
         "floor": "S1",
@@ -1422,7 +1472,32 @@
           },
           "direct_column_count": 6
         },
-        "outboard_y_gt_y3_plus_tolerance": false
+        "outboard_y_gt_y3_plus_tolerance": false,
+        "final_full_plan_audit": {
+          "id": "E1-S1-C-015",
+          "building": "EDIFICIO_1",
+          "floor": "S1",
+          "axis_x": "I",
+          "axis_y": "1",
+          "canonical_center_xy_m": [
+            67.491,
+            0.0
+          ],
+          "section_m": [
+            0.7,
+            0.7
+          ],
+          "classification": "CONFIRMED",
+          "evidence": {
+            "source_sheet": "2017_67-309",
+            "elevation_title": "ELEVACION EJE I",
+            "axis_span_match": true,
+            "p70x70_label_count_at_station": 4,
+            "lower_story_contour_count": 2,
+            "foundation_beam_labels": []
+          },
+          "reason": "La elevacion estructural del eje dibuja un pilar de 70x70 en la estacion 1/2/3, con contornos continuos bajo el primer piso hasta la viga de fundacion; las separaciones 1-2 y 2-3 coinciden exactamente con los ejes canonicos."
+        }
       }
     },
     {
@@ -2576,11 +2651,13 @@
         "CAD_1_column_plan_0062",
         "CAD_1_column_plan_0063"
       ],
-      "classification": "UNRESOLVED",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-      "reason": "station east of the S1 basement structural footprint; no S1 beam/wall/los evidence in that zone; column exists only in upper-floor panels",
+      "classification": "CONFIRMED_BY_AXIS_ELEVATION",
+      "resolution_group": "CONFIRMED_CORRECT",
+      "reason": "La elevacion estructural del eje dibuja un pilar de 70x70 en la estacion 1/2/3, con contornos continuos bajo el primer piso hasta la viga de fundacion; las separaciones 1-2 y 2-3 coinciden exactamente con los ejes canonicos.",
       "reason_codes": [
-        "s1_station_east_of_basement_footprint_no_s1_structure"
+        "direct_axis_elevation",
+        "lower_story_contours_to_foundation",
+        "explicit_p70x70"
       ],
       "evidence": {
         "floor": "S1",
@@ -2709,7 +2786,32 @@
           },
           "direct_column_count": 6
         },
-        "outboard_y_gt_y3_plus_tolerance": false
+        "outboard_y_gt_y3_plus_tolerance": false,
+        "final_full_plan_audit": {
+          "id": "E1-S1-C-014",
+          "building": "EDIFICIO_1",
+          "floor": "S1",
+          "axis_x": "I",
+          "axis_y": "2",
+          "canonical_center_xy_m": [
+            67.491,
+            8.9
+          ],
+          "section_m": [
+            0.7,
+            0.7
+          ],
+          "classification": "CONFIRMED",
+          "evidence": {
+            "source_sheet": "2017_67-309",
+            "elevation_title": "ELEVACION EJE I",
+            "axis_span_match": true,
+            "p70x70_label_count_at_station": 4,
+            "lower_story_contour_count": 2,
+            "foundation_beam_labels": []
+          },
+          "reason": "La elevacion estructural del eje dibuja un pilar de 70x70 en la estacion 1/2/3, con contornos continuos bajo el primer piso hasta la viga de fundacion; las separaciones 1-2 y 2-3 coinciden exactamente con los ejes canonicos."
+        }
       }
     },
     {
@@ -2758,11 +2860,13 @@
         "CAD_1_column_plan_0202",
         "CAD_1_column_plan_0203"
       ],
-      "classification": "UNRESOLVED",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-      "reason": "station east of the S1 basement structural footprint; no S1 beam/wall/los evidence in that zone; column exists only in upper-floor panels",
+      "classification": "CONFIRMED_BY_AXIS_ELEVATION",
+      "resolution_group": "CONFIRMED_CORRECT",
+      "reason": "La elevacion estructural del eje dibuja un pilar de 70x70 en la estacion 1/2/3, con contornos continuos bajo el primer piso hasta la viga de fundacion; las separaciones 1-2 y 2-3 coinciden exactamente con los ejes canonicos.",
       "reason_codes": [
-        "s1_station_east_of_basement_footprint_no_s1_structure"
+        "direct_axis_elevation",
+        "lower_story_contours_to_foundation",
+        "explicit_p70x70"
       ],
       "evidence": {
         "floor": "S1",
@@ -2891,7 +2995,53 @@
           },
           "direct_column_count": 6
         },
-        "outboard_y_gt_y3_plus_tolerance": false
+        "outboard_y_gt_y3_plus_tolerance": false,
+        "final_full_plan_audit": {
+          "id": "E1-S1-C-018",
+          "building": "EDIFICIO_1",
+          "floor": "S1",
+          "axis_x": "I'",
+          "axis_y": "2",
+          "canonical_center_xy_m": [
+            72.491,
+            8.9
+          ],
+          "section_m": [
+            0.7,
+            0.7
+          ],
+          "classification": "CONFIRMED",
+          "evidence": {
+            "source_sheet": "2017_67-310",
+            "elevation_title": "ELEVACION EJE I'",
+            "axis_span_match": true,
+            "p70x70_label_count_at_station": 4,
+            "lower_story_contour_count": 2,
+            "foundation_beam_labels": [
+              {
+                "text": "V.F. 20/120",
+                "x": -32.996,
+                "y": -353.448
+              },
+              {
+                "text": "V.F. 20/120",
+                "x": -840.487,
+                "y": -353.448
+              },
+              {
+                "text": "V.F. 20/180",
+                "x": -1087.487,
+                "y": -310.448
+              },
+              {
+                "text": "V.F. 20/180",
+                "x": 317.0,
+                "y": -346.0
+              }
+            ]
+          },
+          "reason": "La elevacion estructural del eje dibuja un pilar de 70x70 en la estacion 1/2/3, con contornos continuos bajo el primer piso hasta la viga de fundacion; las separaciones 1-2 y 2-3 coinciden exactamente con los ejes canonicos."
+        }
       }
     },
     {
@@ -4045,11 +4195,13 @@
         "CAD_1_column_plan_0101",
         "CAD_1_column_plan_0102"
       ],
-      "classification": "UNRESOLVED",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-      "reason": "station east of the S1 basement structural footprint; no S1 beam/wall/los evidence in that zone; column exists only in upper-floor panels",
+      "classification": "CONFIRMED_BY_AXIS_ELEVATION",
+      "resolution_group": "CONFIRMED_CORRECT",
+      "reason": "La elevacion estructural del eje dibuja un pilar de 70x70 en la estacion 1/2/3, con contornos continuos bajo el primer piso hasta la viga de fundacion; las separaciones 1-2 y 2-3 coinciden exactamente con los ejes canonicos.",
       "reason_codes": [
-        "s1_station_east_of_basement_footprint_no_s1_structure"
+        "direct_axis_elevation",
+        "lower_story_contours_to_foundation",
+        "explicit_p70x70"
       ],
       "evidence": {
         "floor": "S1",
@@ -4178,7 +4330,53 @@
           },
           "direct_column_count": 6
         },
-        "outboard_y_gt_y3_plus_tolerance": false
+        "outboard_y_gt_y3_plus_tolerance": false,
+        "final_full_plan_audit": {
+          "id": "E1-S1-C-019",
+          "building": "EDIFICIO_1",
+          "floor": "S1",
+          "axis_x": "I'",
+          "axis_y": "3",
+          "canonical_center_xy_m": [
+            72.491,
+            16.15
+          ],
+          "section_m": [
+            0.7,
+            0.7
+          ],
+          "classification": "CONFIRMED",
+          "evidence": {
+            "source_sheet": "2017_67-310",
+            "elevation_title": "ELEVACION EJE I'",
+            "axis_span_match": true,
+            "p70x70_label_count_at_station": 4,
+            "lower_story_contour_count": 2,
+            "foundation_beam_labels": [
+              {
+                "text": "V.F. 20/120",
+                "x": -32.996,
+                "y": -353.448
+              },
+              {
+                "text": "V.F. 20/120",
+                "x": -840.487,
+                "y": -353.448
+              },
+              {
+                "text": "V.F. 20/180",
+                "x": -1087.487,
+                "y": -310.448
+              },
+              {
+                "text": "V.F. 20/180",
+                "x": 317.0,
+                "y": -346.0
+              }
+            ]
+          },
+          "reason": "La elevacion estructural del eje dibuja un pilar de 70x70 en la estacion 1/2/3, con contornos continuos bajo el primer piso hasta la viga de fundacion; las separaciones 1-2 y 2-3 coinciden exactamente con los ejes canonicos."
+        }
       }
     },
     {
@@ -4798,11 +4996,13 @@
         "CAD_1_column_plan_0225",
         "CAD_1_column_plan_0226"
       ],
-      "classification": "UNRESOLVED",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-      "reason": "station east of the S1 basement structural footprint; no S1 beam/wall/los evidence in that zone; column exists only in upper-floor panels",
+      "classification": "CONFIRMED_BY_AXIS_ELEVATION",
+      "resolution_group": "CONFIRMED_CORRECT",
+      "reason": "La elevacion estructural del eje dibuja un pilar de 70x70 en la estacion 1/2/3, con contornos continuos bajo el primer piso hasta la viga de fundacion; las separaciones 1-2 y 2-3 coinciden exactamente con los ejes canonicos.",
       "reason_codes": [
-        "s1_station_east_of_basement_footprint_no_s1_structure"
+        "direct_axis_elevation",
+        "lower_story_contours_to_foundation",
+        "explicit_p70x70"
       ],
       "evidence": {
         "floor": "S1",
@@ -4931,7 +5131,32 @@
           },
           "direct_column_count": 6
         },
-        "outboard_y_gt_y3_plus_tolerance": false
+        "outboard_y_gt_y3_plus_tolerance": false,
+        "final_full_plan_audit": {
+          "id": "E1-S1-C-016",
+          "building": "EDIFICIO_1",
+          "floor": "S1",
+          "axis_x": "I",
+          "axis_y": "3",
+          "canonical_center_xy_m": [
+            67.491,
+            16.15
+          ],
+          "section_m": [
+            0.7,
+            0.7
+          ],
+          "classification": "CONFIRMED",
+          "evidence": {
+            "source_sheet": "2017_67-309",
+            "elevation_title": "ELEVACION EJE I",
+            "axis_span_match": true,
+            "p70x70_label_count_at_station": 4,
+            "lower_story_contour_count": 3,
+            "foundation_beam_labels": []
+          },
+          "reason": "La elevacion estructural del eje dibuja un pilar de 70x70 en la estacion 1/2/3, con contornos continuos bajo el primer piso hasta la viga de fundacion; las separaciones 1-2 y 2-3 coinciden exactamente con los ejes canonicos."
+        }
       }
     },
     {
@@ -12024,8 +12249,8 @@
       "source_column_ids": [
         "E1-S1-C-016"
       ],
-      "classification": "UNRESOLVED_DERIVED_ELEMENT",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
+      "classification": "VALID_DERIVED_SUPPORT",
+      "resolution_group": "CONFIRMED_CORRECT",
       "X": 67.67,
       "Y": 16.352,
       "local_luis_xy_m": [
@@ -12043,8 +12268,8 @@
       "source_column_ids": [
         "E1-S1-C-014"
       ],
-      "classification": "UNRESOLVED_DERIVED_ELEMENT",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
+      "classification": "VALID_DERIVED_SUPPORT",
+      "resolution_group": "CONFIRMED_CORRECT",
       "X": 67.404,
       "Y": 8.9,
       "local_luis_xy_m": [
@@ -12062,8 +12287,8 @@
       "source_column_ids": [
         "E1-S1-C-015"
       ],
-      "classification": "UNRESOLVED_DERIVED_ELEMENT",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
+      "classification": "VALID_DERIVED_SUPPORT",
+      "resolution_group": "CONFIRMED_CORRECT",
       "X": 67.447,
       "Y": 0.075,
       "local_luis_xy_m": [
@@ -12138,8 +12363,8 @@
       "source_column_ids": [
         "E1-S1-C-017"
       ],
-      "classification": "UNRESOLVED_DERIVED_ELEMENT",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
+      "classification": "VALID_DERIVED_SUPPORT",
+      "resolution_group": "CONFIRMED_CORRECT",
       "X": 72.491,
       "Y": 0.038,
       "local_luis_xy_m": [
@@ -12157,8 +12382,8 @@
       "source_column_ids": [
         "E1-S1-C-019"
       ],
-      "classification": "UNRESOLVED_DERIVED_ELEMENT",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
+      "classification": "VALID_DERIVED_SUPPORT",
+      "resolution_group": "CONFIRMED_CORRECT",
       "X": 72.491,
       "Y": 16.15,
       "local_luis_xy_m": [
@@ -12176,8 +12401,8 @@
       "source_column_ids": [
         "E1-S1-C-018"
       ],
-      "classification": "UNRESOLVED_DERIVED_ELEMENT",
-      "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
+      "classification": "VALID_DERIVED_SUPPORT",
+      "resolution_group": "CONFIRMED_CORRECT",
       "X": 72.491,
       "Y": 8.9,
       "local_luis_xy_m": [

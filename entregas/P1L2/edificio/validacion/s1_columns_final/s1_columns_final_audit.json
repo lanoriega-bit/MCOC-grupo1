@@ -1,0 +1,531 @@
+{
+  "status": "PASS",
+  "scope": "GEO-COL-S1-001",
+  "method": "direct_full_DXF_axis_elevation_cross_check",
+  "units": "m",
+  "sources": {
+    "I": {
+      "source_sheet": "2017_67-309",
+      "source_file": "recursos/planos/dxf_full/2017_67/2017_67-309.dxf",
+      "block": "EJEI",
+      "title": "ELEVACION EJE I",
+      "axis_stations_drawing_units": {
+        "1": 410.195,
+        "2": -479.822,
+        "3": -1204.822
+      },
+      "measured_spans_m": {
+        "1-2": 8.9,
+        "2-3": 7.25
+      },
+      "expected_spans_m": {
+        "1-2": 8.9,
+        "2-3": 7.25
+      },
+      "span_residual_m": {
+        "1-2": 0.0,
+        "2-3": 0.0
+      },
+      "section_labels_by_axis": {
+        "1": [
+          {
+            "text": "P. 70x70",
+            "x": 521.52,
+            "y": 1023.873
+          },
+          {
+            "text": "P. 70x70",
+            "x": 521.52,
+            "y": 627.873
+          },
+          {
+            "text": "P. 70x70",
+            "x": 521.52,
+            "y": 231.873
+          },
+          {
+            "text": "P. 70x70",
+            "x": 551.273,
+            "y": -194.127
+          }
+        ],
+        "2": [
+          {
+            "text": "P. 70x70",
+            "x": -373.405,
+            "y": -194.127
+          },
+          {
+            "text": "P. 70x70",
+            "x": -373.405,
+            "y": 231.873
+          },
+          {
+            "text": "P. 70x70",
+            "x": -373.405,
+            "y": 627.873
+          },
+          {
+            "text": "P. 70x70",
+            "x": -373.405,
+            "y": 1023.873
+          }
+        ],
+        "3": [
+          {
+            "text": "P. 70x70",
+            "x": -1100.912,
+            "y": -194.127
+          },
+          {
+            "text": "P. 70x70",
+            "x": -1100.912,
+            "y": 231.873
+          },
+          {
+            "text": "P. 70x70",
+            "x": -1100.912,
+            "y": 627.873
+          },
+          {
+            "text": "P. 70x70",
+            "x": -1100.912,
+            "y": 1023.873
+          }
+        ]
+      },
+      "lower_story_column_contours_by_axis": {
+        "1": [
+          {
+            "x": 375.184,
+            "y_min": -461.0,
+            "y_max": -20.0,
+            "layer": "EJEI$0$RLA-CONTORNO"
+          },
+          {
+            "x": 445.184,
+            "y_min": -401.0,
+            "y_max": -5.0,
+            "layer": "EJEI$0$RLA-CONTORNO"
+          }
+        ],
+        "2": [
+          {
+            "x": -514.816,
+            "y_min": -461.0,
+            "y_max": -20.0,
+            "layer": "EJEI$0$RLA-CONTORNO"
+          },
+          {
+            "x": -444.816,
+            "y_min": -461.0,
+            "y_max": -20.0,
+            "layer": "EJEI$0$RLA-CONTORNO"
+          }
+        ],
+        "3": [
+          {
+            "x": -1241.816,
+            "y_min": -461.0,
+            "y_max": -20.0,
+            "layer": "EJEI$0$RLA-CONTORNO"
+          },
+          {
+            "x": -1239.816,
+            "y_min": -461.0,
+            "y_max": -20.0,
+            "layer": "EJEI$0$RLA-CONTORNO"
+          },
+          {
+            "x": -1169.816,
+            "y_min": -461.0,
+            "y_max": -20.0,
+            "layer": "EJEI$0$RLA-CONTORNO"
+          }
+        ]
+      },
+      "foundation_beam_labels": [],
+      "render": "entregas/P1L2/edificio/validacion/s1_columns_final/2017_67-309_I_crop.png"
+    },
+    "I'": {
+      "source_sheet": "2017_67-310",
+      "source_file": "recursos/planos/dxf_full/2017_67/2017_67-310.dxf",
+      "block": "EJEIA",
+      "title": "ELEVACION EJE I'",
+      "axis_stations_drawing_units": {
+        "1": 410.195,
+        "2": -479.822,
+        "3": -1204.822
+      },
+      "measured_spans_m": {
+        "1-2": 8.9,
+        "2-3": 7.25
+      },
+      "expected_spans_m": {
+        "1-2": 8.9,
+        "2-3": 7.25
+      },
+      "span_residual_m": {
+        "1-2": 0.0,
+        "2-3": 0.0
+      },
+      "section_labels_by_axis": {
+        "1": [
+          {
+            "text": "P. 70x70",
+            "x": 519.73,
+            "y": 1019.913
+          },
+          {
+            "text": "P. 70x70",
+            "x": 519.73,
+            "y": 226.413
+          },
+          {
+            "text": "P. 70x70",
+            "x": 297.908,
+            "y": -199.587
+          },
+          {
+            "text": "P. 70x70",
+            "x": 519.73,
+            "y": 623.913
+          }
+        ],
+        "2": [
+          {
+            "text": "P. 70x70",
+            "x": -370.27,
+            "y": 1025.913
+          },
+          {
+            "text": "P. 70x70",
+            "x": -370.27,
+            "y": 623.913
+          },
+          {
+            "text": "P. 70x70",
+            "x": -370.27,
+            "y": -199.587
+          },
+          {
+            "text": "P. 70x70",
+            "x": -370.27,
+            "y": 226.413
+          }
+        ],
+        "3": [
+          {
+            "text": "P. 70x70",
+            "x": -1095.27,
+            "y": 1025.913
+          },
+          {
+            "text": "P. 70x70",
+            "x": -1095.27,
+            "y": 629.913
+          },
+          {
+            "text": "P. 70x70",
+            "x": -1095.27,
+            "y": 226.413
+          },
+          {
+            "text": "P. 70x70",
+            "x": -1095.27,
+            "y": -199.587
+          }
+        ]
+      },
+      "lower_story_column_contours_by_axis": {
+        "1": [
+          {
+            "x": 375.184,
+            "y_min": -461.0,
+            "y_max": -20.0,
+            "layer": "EJEIA$0$RLA-CONTORNO"
+          },
+          {
+            "x": 445.184,
+            "y_min": -461.0,
+            "y_max": -20.0,
+            "layer": "EJEIA$0$RLA-CONTORNO"
+          },
+          {
+            "x": 455.184,
+            "y_min": -461.0,
+            "y_max": 95.0,
+            "layer": "EJEIA$0$RLA-CONTORNO"
+          }
+        ],
+        "2": [
+          {
+            "x": -514.816,
+            "y_min": -461.0,
+            "y_max": -20.0,
+            "layer": "EJEIA$0$RLA-CONTORNO"
+          },
+          {
+            "x": -444.816,
+            "y_min": -461.0,
+            "y_max": -20.0,
+            "layer": "EJEIA$0$RLA-CONTORNO"
+          }
+        ],
+        "3": [
+          {
+            "x": -1239.816,
+            "y_min": -461.0,
+            "y_max": -20.0,
+            "layer": "EJEIA$0$RLA-CONTORNO"
+          },
+          {
+            "x": -1169.816,
+            "y_min": -461.0,
+            "y_max": -20.0,
+            "layer": "EJEIA$0$RLA-CONTORNO"
+          }
+        ]
+      },
+      "foundation_beam_labels": [
+        {
+          "text": "V.F. 20/120",
+          "x": -32.996,
+          "y": -353.448
+        },
+        {
+          "text": "V.F. 20/120",
+          "x": -840.487,
+          "y": -353.448
+        },
+        {
+          "text": "V.F. 20/180",
+          "x": -1087.487,
+          "y": -310.448
+        },
+        {
+          "text": "V.F. 20/180",
+          "x": 317.0,
+          "y": -346.0
+        }
+      ],
+      "render": "entregas/P1L2/edificio/validacion/s1_columns_final/2017_67-310_Iprime_crop.png"
+    }
+  },
+  "columns": [
+    {
+      "id": "E1-S1-C-014",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "axis_x": "I",
+      "axis_y": "2",
+      "canonical_center_xy_m": [
+        67.491,
+        8.9
+      ],
+      "section_m": [
+        0.7,
+        0.7
+      ],
+      "classification": "CONFIRMED",
+      "evidence": {
+        "source_sheet": "2017_67-309",
+        "elevation_title": "ELEVACION EJE I",
+        "axis_span_match": true,
+        "p70x70_label_count_at_station": 4,
+        "lower_story_contour_count": 2,
+        "foundation_beam_labels": []
+      },
+      "reason": "La elevacion estructural del eje dibuja un pilar de 70x70 en la estacion 1/2/3, con contornos continuos bajo el primer piso hasta la viga de fundacion; las separaciones 1-2 y 2-3 coinciden exactamente con los ejes canonicos."
+    },
+    {
+      "id": "E1-S1-C-015",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "axis_x": "I",
+      "axis_y": "1",
+      "canonical_center_xy_m": [
+        67.491,
+        0.0
+      ],
+      "section_m": [
+        0.7,
+        0.7
+      ],
+      "classification": "CONFIRMED",
+      "evidence": {
+        "source_sheet": "2017_67-309",
+        "elevation_title": "ELEVACION EJE I",
+        "axis_span_match": true,
+        "p70x70_label_count_at_station": 4,
+        "lower_story_contour_count": 2,
+        "foundation_beam_labels": []
+      },
+      "reason": "La elevacion estructural del eje dibuja un pilar de 70x70 en la estacion 1/2/3, con contornos continuos bajo el primer piso hasta la viga de fundacion; las separaciones 1-2 y 2-3 coinciden exactamente con los ejes canonicos."
+    },
+    {
+      "id": "E1-S1-C-016",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "axis_x": "I",
+      "axis_y": "3",
+      "canonical_center_xy_m": [
+        67.491,
+        16.15
+      ],
+      "section_m": [
+        0.7,
+        0.7
+      ],
+      "classification": "CONFIRMED",
+      "evidence": {
+        "source_sheet": "2017_67-309",
+        "elevation_title": "ELEVACION EJE I",
+        "axis_span_match": true,
+        "p70x70_label_count_at_station": 4,
+        "lower_story_contour_count": 3,
+        "foundation_beam_labels": []
+      },
+      "reason": "La elevacion estructural del eje dibuja un pilar de 70x70 en la estacion 1/2/3, con contornos continuos bajo el primer piso hasta la viga de fundacion; las separaciones 1-2 y 2-3 coinciden exactamente con los ejes canonicos."
+    },
+    {
+      "id": "E1-S1-C-017",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "axis_x": "I'",
+      "axis_y": "1",
+      "canonical_center_xy_m": [
+        72.491,
+        0.0
+      ],
+      "section_m": [
+        0.7,
+        0.7
+      ],
+      "classification": "CONFIRMED",
+      "evidence": {
+        "source_sheet": "2017_67-310",
+        "elevation_title": "ELEVACION EJE I'",
+        "axis_span_match": true,
+        "p70x70_label_count_at_station": 4,
+        "lower_story_contour_count": 3,
+        "foundation_beam_labels": [
+          {
+            "text": "V.F. 20/120",
+            "x": -32.996,
+            "y": -353.448
+          },
+          {
+            "text": "V.F. 20/120",
+            "x": -840.487,
+            "y": -353.448
+          },
+          {
+            "text": "V.F. 20/180",
+            "x": -1087.487,
+            "y": -310.448
+          },
+          {
+            "text": "V.F. 20/180",
+            "x": 317.0,
+            "y": -346.0
+          }
+        ]
+      },
+      "reason": "La elevacion estructural del eje dibuja un pilar de 70x70 en la estacion 1/2/3, con contornos continuos bajo el primer piso hasta la viga de fundacion; las separaciones 1-2 y 2-3 coinciden exactamente con los ejes canonicos."
+    },
+    {
+      "id": "E1-S1-C-018",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "axis_x": "I'",
+      "axis_y": "2",
+      "canonical_center_xy_m": [
+        72.491,
+        8.9
+      ],
+      "section_m": [
+        0.7,
+        0.7
+      ],
+      "classification": "CONFIRMED",
+      "evidence": {
+        "source_sheet": "2017_67-310",
+        "elevation_title": "ELEVACION EJE I'",
+        "axis_span_match": true,
+        "p70x70_label_count_at_station": 4,
+        "lower_story_contour_count": 2,
+        "foundation_beam_labels": [
+          {
+            "text": "V.F. 20/120",
+            "x": -32.996,
+            "y": -353.448
+          },
+          {
+            "text": "V.F. 20/120",
+            "x": -840.487,
+            "y": -353.448
+          },
+          {
+            "text": "V.F. 20/180",
+            "x": -1087.487,
+            "y": -310.448
+          },
+          {
+            "text": "V.F. 20/180",
+            "x": 317.0,
+            "y": -346.0
+          }
+        ]
+      },
+      "reason": "La elevacion estructural del eje dibuja un pilar de 70x70 en la estacion 1/2/3, con contornos continuos bajo el primer piso hasta la viga de fundacion; las separaciones 1-2 y 2-3 coinciden exactamente con los ejes canonicos."
+    },
+    {
+      "id": "E1-S1-C-019",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "axis_x": "I'",
+      "axis_y": "3",
+      "canonical_center_xy_m": [
+        72.491,
+        16.15
+      ],
+      "section_m": [
+        0.7,
+        0.7
+      ],
+      "classification": "CONFIRMED",
+      "evidence": {
+        "source_sheet": "2017_67-310",
+        "elevation_title": "ELEVACION EJE I'",
+        "axis_span_match": true,
+        "p70x70_label_count_at_station": 4,
+        "lower_story_contour_count": 2,
+        "foundation_beam_labels": [
+          {
+            "text": "V.F. 20/120",
+            "x": -32.996,
+            "y": -353.448
+          },
+          {
+            "text": "V.F. 20/120",
+            "x": -840.487,
+            "y": -353.448
+          },
+          {
+            "text": "V.F. 20/180",
+            "x": -1087.487,
+            "y": -310.448
+          },
+          {
+            "text": "V.F. 20/180",
+            "x": 317.0,
+            "y": -346.0
+          }
+        ]
+      },
+      "reason": "La elevacion estructural del eje dibuja un pilar de 70x70 en la estacion 1/2/3, con contornos continuos bajo el primer piso hasta la viga de fundacion; las separaciones 1-2 y 2-3 coinciden exactamente con los ejes canonicos."
+    }
+  ],
+  "conclusion": "Las seis columnas S1 quedan confirmadas por evidencia primaria en elevacion estructural."
+}

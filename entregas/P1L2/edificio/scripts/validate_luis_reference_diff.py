@@ -169,6 +169,7 @@ def write_markdown(report: dict[str, object]) -> None:
         f"- Diff changes: {report['documented_diff']['change_count']}",
         f"- Removed columns: {report['documented_diff']['removed_columns']}",
         f"- Removed supports: {report['documented_diff']['removed_supports']}",
+        f"- Geometry corrections: {report['documented_diff']['modified_geometry']}",
         f"- Match Luis-vs-corrected solid diff: {report['documented_diff']['matches_solid_diff']}",
         "",
         "This check intentionally replaces `GOLDEN_IN_COMBINED` for corrected geometry. A documented difference from Luis is expected and is not a failure.",
@@ -195,11 +196,34 @@ def main() -> int:
     corrected_vs_combined = collection_diffs(corrected, combined_ed1, dx=dx, dy=dy)
     luis_vs_corrected = collection_diffs(luis, corrected)
     changes = diff.get("changes", [])
+    expected_corrected_solids = collection_counter(luis, "solids")
+    diff_application_errors = []
+    for change in changes:
+        old_geometry = change.get("old_geometry")
+        if not isinstance(old_geometry, dict):
+            diff_application_errors.append(f"MISSING_OLD_GEOMETRY:{change.get('solidTag')}")
+            continue
+        old_signature = solid_signature(old_geometry)
+        if expected_corrected_solids[old_signature] <= 0:
+            diff_application_errors.append(f"OLD_GEOMETRY_NOT_IN_LUIS:{change.get('solidTag')}")
+            continue
+        expected_corrected_solids[old_signature] -= 1
+        if expected_corrected_solids[old_signature] == 0:
+            del expected_corrected_solids[old_signature]
+        new_geometry = change.get("new_geometry")
+        if isinstance(new_geometry, dict):
+            expected_corrected_solids[solid_signature(new_geometry)] += 1
+    documented_delta = counter_diff(expected_corrected_solids, collection_counter(corrected, "solids"))
+    removals = [change for change in changes if change.get("new_geometry") == "REMOVED"]
+    modifications = [change for change in changes if isinstance(change.get("new_geometry"), dict)]
     documented = {
         "change_count": len(changes),
-        "removed_columns": sum(1 for change in changes if change.get("category") == "column"),
-        "removed_supports": sum(1 for change in changes if change.get("category") == "support"),
-        "matches_solid_diff": luis_vs_corrected["solids"]["missing_count"] == len(changes) and luis_vs_corrected["solids"]["extra_count"] == 0,
+        "removed_columns": sum(1 for change in removals if change.get("category") == "column"),
+        "removed_supports": sum(1 for change in removals if change.get("category") == "support"),
+        "modified_geometry": len(modifications),
+        "diff_application_errors": diff_application_errors,
+        "documented_delta_vs_corrected": documented_delta,
+        "matches_solid_diff": not diff_application_errors and documented_delta["status"] == "PASS",
     }
     errors = []
     if not all_pass(corrected_vs_combined):

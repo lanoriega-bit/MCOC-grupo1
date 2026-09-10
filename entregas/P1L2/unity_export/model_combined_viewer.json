@@ -192966,12 +192966,12 @@
       "kind": "box",
       "floor": "S1",
       "center": [
-        67.66959869746557,
-        16.35156512944617,
+        67.491,
+        16.15,
         1.98
       ],
-      "width_m": 0.8499999999994898,
-      "depth_m": 0.9200000000001598,
+      "width_m": 0.7,
+      "depth_m": 0.7,
       "height_m": 3.96,
       "length_m": 3.96,
       "source_layer": "RLE-PILAR",
@@ -192999,9 +192999,20 @@
       },
       "preserved_viewer_id": "E1-S1-C-016",
       "audit_resolution": {
-        "classification": "UNRESOLVED",
-        "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-        "reason": "station east of the S1 basement structural footprint; no S1 beam/wall/los evidence in that zone; column exists only in upper-floor panels"
+        "classification": "CONFIRMED_BY_AXIS_ELEVATION",
+        "resolution_group": "CONFIRMED_CORRECT",
+        "reason": "La elevacion estructural del eje dibuja un pilar de 70x70 en la estacion 1/2/3, con contornos continuos bajo el primer piso hasta la viga de fundacion; las separaciones 1-2 y 2-3 coinciden exactamente con los ejes canonicos."
+      },
+      "geometry_confirmation": {
+        "status": "CONFIRMED_BY_AXIS_ELEVATION",
+        "source_sheet": "2017_67-309",
+        "axis_x": "I",
+        "axis_y": "3",
+        "section_m": [
+          0.7,
+          0.7
+        ],
+        "audit_file": "entregas/P1L2/edificio/validacion/s1_columns_final/s1_columns_final_audit.json"
       },
       "source_floor": "1S",
       "level_kind": "FLOOR",
@@ -193015,8 +193026,8 @@
       "source_sheet": "2017_67-101",
       "coordinates": {
         "center": [
-          67.67,
-          16.352,
+          67.491,
+          16.15,
           1.98
         ],
         "z_bottom_m": 0.0,
@@ -193029,8 +193040,8 @@
           "X": {
             "axis": "I",
             "axis_coord_m": 67.491,
-            "offset_m": 0.179,
-            "abs_offset_m": 0.179,
+            "offset_m": 0.0,
+            "abs_offset_m": 0.0,
             "status": "ON_AXIS",
             "relation": "I",
             "span": null
@@ -193038,8 +193049,8 @@
           "Y": {
             "axis": "3",
             "axis_coord_m": 16.15,
-            "offset_m": 0.202,
-            "abs_offset_m": 0.202,
+            "offset_m": 0.0,
+            "abs_offset_m": 0.0,
             "status": "ON_AXIS",
             "relation": "3",
             "span": null
@@ -193056,9 +193067,9 @@
       "material": "UNKNOWN",
       "material_source": "UNKNOWN",
       "material_confidence": "UNKNOWN",
-      "section_width_m": 0.85,
-      "section_height_m": 0.92,
-      "section_depth_m": 0.92,
+      "section_width_m": 0.7,
+      "section_height_m": 0.7,
+      "section_depth_m": 0.7,
       "section_source": "CAD_GEOMETRY_RLE-PILAR",
       "section_confidence": "CAD_GEOMETRY"
     },
@@ -193068,12 +193079,12 @@
       "kind": "box",
       "floor": "S1",
       "center": [
-        67.40352726889402,
-        8.900136557994696,
+        67.491,
+        8.9,
         1.98
       ],
-      "width_m": 0.6999999999999886,
-      "depth_m": 0.6999999999999869,
+      "width_m": 0.7,
+      "depth_m": 0.7,
       "height_m": 3.96,
       "length_m": 3.96,
       "source_layer": "RLE-PILAR",
@@ -193098,9 +193109,20 @@
       },
       "preserved_viewer_id": "E1-S1-C-014",
       "audit_resolution": {
-        "classification": "UNRESOLVED",
-        "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-        "reason": "station east of the S1 basement structural footprint; no S1 beam/wall/los evidence in that zone; column exists only in upper-floor panels"
+        "classification": "CONFIRMED_BY_AXIS_ELEVATION",
+        "resolution_group": "CONFIRMED_CORRECT",
+        "reason": "La elevacion estructural del eje dibuja un pilar de 70x70 en la estacion 1/2/3, con contornos continuos bajo el primer piso hasta la viga de fundacion; las separaciones 1-2 y 2-3 coinciden exactamente con los ejes canonicos."
+      },
+      "geometry_confirmation": {
+        "status": "CONFIRMED_BY_AXIS_ELEVATION",
+        "source_sheet": "2017_67-309",
+        "axis_x": "I",
+        "axis_y": "2",
+        "section_m": [
+          0.7,
+          0.7
+        ],
+        "audit_file": "entregas/P1L2/edificio/validacion/s1_columns_final/s1_columns_final_audit.json"
       },
       "source_floor": "1S",
       "level_kind": "FLOOR",
@@ -193114,7 +193136,7 @@
       "source_sheet": "2017_67-101",
       "coordinates": {
         "center": [
-          67.404,
+          67.491,
           8.9,
           1.98
         ],
@@ -193128,8 +193150,8 @@
           "X": {
             "axis": "I",
             "axis_coord_m": 67.491,
-            "offset_m": -0.087,
-            "abs_offset_m": 0.087,
+            "offset_m": 0.0,
+            "abs_offset_m": 0.0,
             "status": "ON_AXIS",
             "relation": "I",
             "span": null
@@ -193167,11 +193189,11 @@
       "kind": "box",
       "floor": "S1",
       "center": [
-        67.44727726889404,
-        0.07513655796097794,
+        67.491,
+        0.0,
         1.98
       ],
-      "width_m": 0.7000000000000028,
+      "width_m": 0.7,
       "depth_m": 0.7,
       "height_m": 3.96,
       "length_m": 3.96,
@@ -193197,9 +193219,20 @@
       },
       "preserved_viewer_id": "E1-S1-C-015",
       "audit_resolution": {
-        "classification": "UNRESOLVED",
-        "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-        "reason": "station east of the S1 basement structural footprint; no S1 beam/wall/los evidence in that zone; column exists only in upper-floor panels"
+        "classification": "CONFIRMED_BY_AXIS_ELEVATION",
+        "resolution_group": "CONFIRMED_CORRECT",
+        "reason": "La elevacion estructural del eje dibuja un pilar de 70x70 en la estacion 1/2/3, con contornos continuos bajo el primer piso hasta la viga de fundacion; las separaciones 1-2 y 2-3 coinciden exactamente con los ejes canonicos."
+      },
+      "geometry_confirmation": {
+        "status": "CONFIRMED_BY_AXIS_ELEVATION",
+        "source_sheet": "2017_67-309",
+        "axis_x": "I",
+        "axis_y": "1",
+        "section_m": [
+          0.7,
+          0.7
+        ],
+        "audit_file": "entregas/P1L2/edificio/validacion/s1_columns_final/s1_columns_final_audit.json"
       },
       "source_floor": "1S",
       "level_kind": "FLOOR",
@@ -193213,8 +193246,8 @@
       "source_sheet": "2017_67-101",
       "coordinates": {
         "center": [
-          67.447,
-          0.075,
+          67.491,
+          0.0,
           1.98
         ],
         "z_bottom_m": 0.0,
@@ -193227,8 +193260,8 @@
           "X": {
             "axis": "I",
             "axis_coord_m": 67.491,
-            "offset_m": -0.044,
-            "abs_offset_m": 0.044,
+            "offset_m": 0.0,
+            "abs_offset_m": 0.0,
             "status": "ON_AXIS",
             "relation": "I",
             "span": null
@@ -193236,8 +193269,8 @@
           "Y": {
             "axis": "1",
             "axis_coord_m": 0.0,
-            "offset_m": 0.075,
-            "abs_offset_m": 0.075,
+            "offset_m": 0.0,
+            "abs_offset_m": 0.0,
             "status": "ON_AXIS",
             "relation": "1",
             "span": null
@@ -193569,11 +193602,11 @@
       "kind": "box",
       "floor": "S1",
       "center": [
-        72.49102726890122,
-        0.03763655796099102,
+        72.491,
+        0.0,
         1.98
       ],
-      "width_m": 0.70000000000001,
+      "width_m": 0.7,
       "depth_m": 0.7,
       "height_m": 3.96,
       "length_m": 3.96,
@@ -193599,9 +193632,20 @@
       },
       "preserved_viewer_id": "E1-S1-C-017",
       "audit_resolution": {
-        "classification": "UNRESOLVED",
-        "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-        "reason": "station east of the S1 basement structural footprint; no S1 beam/wall/los evidence in that zone; column exists only in upper-floor panels"
+        "classification": "CONFIRMED_BY_AXIS_ELEVATION",
+        "resolution_group": "CONFIRMED_CORRECT",
+        "reason": "La elevacion estructural del eje dibuja un pilar de 70x70 en la estacion 1/2/3, con contornos continuos bajo el primer piso hasta la viga de fundacion; las separaciones 1-2 y 2-3 coinciden exactamente con los ejes canonicos."
+      },
+      "geometry_confirmation": {
+        "status": "CONFIRMED_BY_AXIS_ELEVATION",
+        "source_sheet": "2017_67-310",
+        "axis_x": "I'",
+        "axis_y": "1",
+        "section_m": [
+          0.7,
+          0.7
+        ],
+        "audit_file": "entregas/P1L2/edificio/validacion/s1_columns_final/s1_columns_final_audit.json"
       },
       "source_floor": "1S",
       "level_kind": "FLOOR",
@@ -193616,7 +193660,7 @@
       "coordinates": {
         "center": [
           72.491,
-          0.038,
+          0.0,
           1.98
         ],
         "z_bottom_m": 0.0,
@@ -193638,8 +193682,8 @@
           "Y": {
             "axis": "1",
             "axis_coord_m": 0.0,
-            "offset_m": 0.038,
-            "abs_offset_m": 0.038,
+            "offset_m": 0.0,
+            "abs_offset_m": 0.0,
             "status": "ON_AXIS",
             "relation": "1",
             "span": null
@@ -193668,12 +193712,12 @@
       "kind": "box",
       "floor": "S1",
       "center": [
-        72.49102726890118,
-        16.150136558017554,
+        72.491,
+        16.15,
         1.98
       ],
-      "width_m": 0.6999999999999815,
-      "depth_m": 0.7000000000000082,
+      "width_m": 0.7,
+      "depth_m": 0.7,
       "height_m": 3.96,
       "length_m": 3.96,
       "source_layer": "RLE-PILAR",
@@ -193698,9 +193742,20 @@
       },
       "preserved_viewer_id": "E1-S1-C-019",
       "audit_resolution": {
-        "classification": "UNRESOLVED",
-        "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-        "reason": "station east of the S1 basement structural footprint; no S1 beam/wall/los evidence in that zone; column exists only in upper-floor panels"
+        "classification": "CONFIRMED_BY_AXIS_ELEVATION",
+        "resolution_group": "CONFIRMED_CORRECT",
+        "reason": "La elevacion estructural del eje dibuja un pilar de 70x70 en la estacion 1/2/3, con contornos continuos bajo el primer piso hasta la viga de fundacion; las separaciones 1-2 y 2-3 coinciden exactamente con los ejes canonicos."
+      },
+      "geometry_confirmation": {
+        "status": "CONFIRMED_BY_AXIS_ELEVATION",
+        "source_sheet": "2017_67-310",
+        "axis_x": "I'",
+        "axis_y": "3",
+        "section_m": [
+          0.7,
+          0.7
+        ],
+        "audit_file": "entregas/P1L2/edificio/validacion/s1_columns_final/s1_columns_final_audit.json"
       },
       "source_floor": "1S",
       "level_kind": "FLOOR",
@@ -193767,12 +193822,12 @@
       "kind": "box",
       "floor": "S1",
       "center": [
-        72.49102726890119,
-        8.90013655799471,
+        72.491,
+        8.9,
         1.98
       ],
-      "width_m": 0.6999999999999957,
-      "depth_m": 0.7000000000000011,
+      "width_m": 0.7,
+      "depth_m": 0.7,
       "height_m": 3.96,
       "length_m": 3.96,
       "source_layer": "RLE-PILAR",
@@ -193797,9 +193852,20 @@
       },
       "preserved_viewer_id": "E1-S1-C-018",
       "audit_resolution": {
-        "classification": "UNRESOLVED",
-        "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-        "reason": "station east of the S1 basement structural footprint; no S1 beam/wall/los evidence in that zone; column exists only in upper-floor panels"
+        "classification": "CONFIRMED_BY_AXIS_ELEVATION",
+        "resolution_group": "CONFIRMED_CORRECT",
+        "reason": "La elevacion estructural del eje dibuja un pilar de 70x70 en la estacion 1/2/3, con contornos continuos bajo el primer piso hasta la viga de fundacion; las separaciones 1-2 y 2-3 coinciden exactamente con los ejes canonicos."
+      },
+      "geometry_confirmation": {
+        "status": "CONFIRMED_BY_AXIS_ELEVATION",
+        "source_sheet": "2017_67-310",
+        "axis_x": "I'",
+        "axis_y": "2",
+        "section_m": [
+          0.7,
+          0.7
+        ],
+        "audit_file": "entregas/P1L2/edificio/validacion/s1_columns_final/s1_columns_final_audit.json"
       },
       "source_floor": "1S",
       "level_kind": "FLOOR",
@@ -211290,8 +211356,8 @@
       },
       "preserved_viewer_id": "E1-S1-A-076",
       "audit_resolution": {
-        "classification": "UNRESOLVED_DERIVED_ELEMENT",
-        "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
+        "classification": "VALID_DERIVED_SUPPORT",
+        "resolution_group": "CONFIRMED_CORRECT",
         "reason": "derived from inferred column resolution"
       },
       "source_floor": "base",
@@ -211379,8 +211445,8 @@
       },
       "preserved_viewer_id": "E1-S1-A-074",
       "audit_resolution": {
-        "classification": "UNRESOLVED_DERIVED_ELEMENT",
-        "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
+        "classification": "VALID_DERIVED_SUPPORT",
+        "resolution_group": "CONFIRMED_CORRECT",
         "reason": "derived from inferred column resolution"
       },
       "source_floor": "base",
@@ -211468,8 +211534,8 @@
       },
       "preserved_viewer_id": "E1-S1-A-075",
       "audit_resolution": {
-        "classification": "UNRESOLVED_DERIVED_ELEMENT",
-        "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
+        "classification": "VALID_DERIVED_SUPPORT",
+        "resolution_group": "CONFIRMED_CORRECT",
         "reason": "derived from inferred column resolution"
       },
       "source_floor": "base",
@@ -211824,8 +211890,8 @@
       },
       "preserved_viewer_id": "E1-S1-A-077",
       "audit_resolution": {
-        "classification": "UNRESOLVED_DERIVED_ELEMENT",
-        "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
+        "classification": "VALID_DERIVED_SUPPORT",
+        "resolution_group": "CONFIRMED_CORRECT",
         "reason": "derived from inferred column resolution"
       },
       "source_floor": "base",
@@ -211919,8 +211985,8 @@
       },
       "preserved_viewer_id": "E1-S1-A-079",
       "audit_resolution": {
-        "classification": "UNRESOLVED_DERIVED_ELEMENT",
-        "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
+        "classification": "VALID_DERIVED_SUPPORT",
+        "resolution_group": "CONFIRMED_CORRECT",
         "reason": "derived from inferred column resolution"
       },
       "source_floor": "base",
@@ -212008,8 +212074,8 @@
       },
       "preserved_viewer_id": "E1-S1-A-078",
       "audit_resolution": {
-        "classification": "UNRESOLVED_DERIVED_ELEMENT",
-        "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
+        "classification": "VALID_DERIVED_SUPPORT",
+        "resolution_group": "CONFIRMED_CORRECT",
         "reason": "derived from inferred column resolution"
       },
       "source_floor": "base",

@@ -1,5 +1,18 @@
 # P1L2 Status
 
+## Consolidacion PRE-P1L4 — FASE 1 (2026-09-10)
+
+- Cerradas las seis columnas S1 de ejes I/I' × 1/2/3 que figuraban como
+  `UNRESOLVED_REQUIRES_REVIEW`.
+- Evidencia primaria: elevaciones `2017_67-309` (I) y `2017_67-310` (I'), con
+  luces 8.90/7.25 m, rótulos `P. 70x70` y continuidad hasta vigas de fundación.
+- Veredicto: seis `CONFIRMED_BY_AXIS_ELEVATION`; centros y secciones
+  normalizados. Informe reproducible en
+  `edificio/validacion/s1_columns_final/REPORT.md`.
+- Regenerados EDIFICIO_1 corregido y modelo combinado. Validaciones de calce,
+  ejes, continuidad, geometría, enriquecimiento y referencia Luis: `PASS`.
+- La referencia original `unity_export/model_viewer.json` permanece intacta.
+
 ## Interfaz P1L3 vigente (2026-09-10)
 
 - El modelo combinado P1L2 de 1561 solidos sigue siendo la geometria consumida

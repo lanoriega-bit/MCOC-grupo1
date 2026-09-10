@@ -219,7 +219,7 @@
     "audited_checkpoint": "entregas/P1L2/unity_export/model_1_audited.json",
     "corrected_model": "entregas/P1L2/unity_export/model_1_audited_corrected.json",
     "geometry_hash_before": "058b16eb552af995b0bf3f835ea787a6cd4eb4f3e6627ae56874b8395fbe502b",
-    "geometry_hash_after": "6b1db287ec87589429c889abfd3732a03c2c4cc67614b342778c605245b4de29",
+    "geometry_hash_after": "f7ed383a00db0d093e69b5309e9ebb1fe48bede9a244452343a2a92ea8654b37",
     "geometry_changed": true,
     "changes": [
       {
@@ -6770,6 +6770,351 @@
         "evidence": {
           "source_column_ids": [
             "E1-S1-C-030"
+          ]
+        },
+        "confidence": "HIGH"
+      },
+      {
+        "id": "E1-S1-C-016",
+        "solidTag": "SOL_1S_column_0010",
+        "category": "column",
+        "old_geometry": {
+          "solidTag": "SOL_1S_column_0010",
+          "category": "column",
+          "kind": "box",
+          "floor": "1S",
+          "center": [
+            40.178598697465574,
+            16.35156512944617,
+            1.98
+          ],
+          "width_m": 0.8499999999994898,
+          "depth_m": 0.9200000000001598,
+          "height_m": 3.96,
+          "length_m": 3.96
+        },
+        "new_geometry": {
+          "solidTag": "SOL_1S_column_0010",
+          "category": "column",
+          "kind": "box",
+          "floor": "1S",
+          "center": [
+            40.0,
+            16.15,
+            1.98
+          ],
+          "width_m": 0.7,
+          "depth_m": 0.7,
+          "height_m": 3.96,
+          "length_m": 3.96
+        },
+        "reason": "Centro y seccion normalizados con elevacion estructural primaria.",
+        "classification": "CONFIRMED_BY_AXIS_ELEVATION",
+        "source_dxf": "2017_67-309.dxf",
+        "evidence": {
+          "source_sheet": "2017_67-309",
+          "elevation_title": "ELEVACION EJE I",
+          "axis_span_match": true,
+          "p70x70_label_count_at_station": 4,
+          "lower_story_contour_count": 3,
+          "foundation_beam_labels": []
+        },
+        "confidence": "HIGH"
+      },
+      {
+        "id": "E1-S1-C-014",
+        "solidTag": "SOL_1S_column_0011",
+        "category": "column",
+        "old_geometry": {
+          "solidTag": "SOL_1S_column_0011",
+          "category": "column",
+          "kind": "box",
+          "floor": "1S",
+          "center": [
+            39.912527268894024,
+            8.900136557994696,
+            1.98
+          ],
+          "width_m": 0.6999999999999886,
+          "depth_m": 0.6999999999999869,
+          "height_m": 3.96,
+          "length_m": 3.96
+        },
+        "new_geometry": {
+          "solidTag": "SOL_1S_column_0011",
+          "category": "column",
+          "kind": "box",
+          "floor": "1S",
+          "center": [
+            40.0,
+            8.9,
+            1.98
+          ],
+          "width_m": 0.7,
+          "depth_m": 0.7,
+          "height_m": 3.96,
+          "length_m": 3.96
+        },
+        "reason": "Centro y seccion normalizados con elevacion estructural primaria.",
+        "classification": "CONFIRMED_BY_AXIS_ELEVATION",
+        "source_dxf": "2017_67-309.dxf",
+        "evidence": {
+          "source_sheet": "2017_67-309",
+          "elevation_title": "ELEVACION EJE I",
+          "axis_span_match": true,
+          "p70x70_label_count_at_station": 4,
+          "lower_story_contour_count": 2,
+          "foundation_beam_labels": []
+        },
+        "confidence": "HIGH"
+      },
+      {
+        "id": "E1-S1-C-015",
+        "solidTag": "SOL_1S_column_0012",
+        "category": "column",
+        "old_geometry": {
+          "solidTag": "SOL_1S_column_0012",
+          "category": "column",
+          "kind": "box",
+          "floor": "1S",
+          "center": [
+            39.95627726889404,
+            0.07513655796097794,
+            1.98
+          ],
+          "width_m": 0.7000000000000028,
+          "depth_m": 0.7,
+          "height_m": 3.96,
+          "length_m": 3.96
+        },
+        "new_geometry": {
+          "solidTag": "SOL_1S_column_0012",
+          "category": "column",
+          "kind": "box",
+          "floor": "1S",
+          "center": [
+            40.0,
+            0.0,
+            1.98
+          ],
+          "width_m": 0.7,
+          "depth_m": 0.7,
+          "height_m": 3.96,
+          "length_m": 3.96
+        },
+        "reason": "Centro y seccion normalizados con elevacion estructural primaria.",
+        "classification": "CONFIRMED_BY_AXIS_ELEVATION",
+        "source_dxf": "2017_67-309.dxf",
+        "evidence": {
+          "source_sheet": "2017_67-309",
+          "elevation_title": "ELEVACION EJE I",
+          "axis_span_match": true,
+          "p70x70_label_count_at_station": 4,
+          "lower_story_contour_count": 2,
+          "foundation_beam_labels": []
+        },
+        "confidence": "HIGH"
+      },
+      {
+        "id": "E1-S1-C-017",
+        "solidTag": "SOL_1S_column_0016",
+        "category": "column",
+        "old_geometry": {
+          "solidTag": "SOL_1S_column_0016",
+          "category": "column",
+          "kind": "box",
+          "floor": "1S",
+          "center": [
+            45.00002726890122,
+            0.03763655796099102,
+            1.98
+          ],
+          "width_m": 0.70000000000001,
+          "depth_m": 0.7,
+          "height_m": 3.96,
+          "length_m": 3.96
+        },
+        "new_geometry": {
+          "solidTag": "SOL_1S_column_0016",
+          "category": "column",
+          "kind": "box",
+          "floor": "1S",
+          "center": [
+            45.0,
+            0.0,
+            1.98
+          ],
+          "width_m": 0.7,
+          "depth_m": 0.7,
+          "height_m": 3.96,
+          "length_m": 3.96
+        },
+        "reason": "Centro y seccion normalizados con elevacion estructural primaria.",
+        "classification": "CONFIRMED_BY_AXIS_ELEVATION",
+        "source_dxf": "2017_67-310.dxf",
+        "evidence": {
+          "source_sheet": "2017_67-310",
+          "elevation_title": "ELEVACION EJE I'",
+          "axis_span_match": true,
+          "p70x70_label_count_at_station": 4,
+          "lower_story_contour_count": 3,
+          "foundation_beam_labels": [
+            {
+              "text": "V.F. 20/120",
+              "x": -32.996,
+              "y": -353.448
+            },
+            {
+              "text": "V.F. 20/120",
+              "x": -840.487,
+              "y": -353.448
+            },
+            {
+              "text": "V.F. 20/180",
+              "x": -1087.487,
+              "y": -310.448
+            },
+            {
+              "text": "V.F. 20/180",
+              "x": 317.0,
+              "y": -346.0
+            }
+          ]
+        },
+        "confidence": "HIGH"
+      },
+      {
+        "id": "E1-S1-C-019",
+        "solidTag": "SOL_1S_column_0017",
+        "category": "column",
+        "old_geometry": {
+          "solidTag": "SOL_1S_column_0017",
+          "category": "column",
+          "kind": "box",
+          "floor": "1S",
+          "center": [
+            45.00002726890118,
+            16.150136558017554,
+            1.98
+          ],
+          "width_m": 0.6999999999999815,
+          "depth_m": 0.7000000000000082,
+          "height_m": 3.96,
+          "length_m": 3.96
+        },
+        "new_geometry": {
+          "solidTag": "SOL_1S_column_0017",
+          "category": "column",
+          "kind": "box",
+          "floor": "1S",
+          "center": [
+            45.0,
+            16.15,
+            1.98
+          ],
+          "width_m": 0.7,
+          "depth_m": 0.7,
+          "height_m": 3.96,
+          "length_m": 3.96
+        },
+        "reason": "Centro y seccion normalizados con elevacion estructural primaria.",
+        "classification": "CONFIRMED_BY_AXIS_ELEVATION",
+        "source_dxf": "2017_67-310.dxf",
+        "evidence": {
+          "source_sheet": "2017_67-310",
+          "elevation_title": "ELEVACION EJE I'",
+          "axis_span_match": true,
+          "p70x70_label_count_at_station": 4,
+          "lower_story_contour_count": 2,
+          "foundation_beam_labels": [
+            {
+              "text": "V.F. 20/120",
+              "x": -32.996,
+              "y": -353.448
+            },
+            {
+              "text": "V.F. 20/120",
+              "x": -840.487,
+              "y": -353.448
+            },
+            {
+              "text": "V.F. 20/180",
+              "x": -1087.487,
+              "y": -310.448
+            },
+            {
+              "text": "V.F. 20/180",
+              "x": 317.0,
+              "y": -346.0
+            }
+          ]
+        },
+        "confidence": "HIGH"
+      },
+      {
+        "id": "E1-S1-C-018",
+        "solidTag": "SOL_1S_column_0018",
+        "category": "column",
+        "old_geometry": {
+          "solidTag": "SOL_1S_column_0018",
+          "category": "column",
+          "kind": "box",
+          "floor": "1S",
+          "center": [
+            45.00002726890119,
+            8.90013655799471,
+            1.98
+          ],
+          "width_m": 0.6999999999999957,
+          "depth_m": 0.7000000000000011,
+          "height_m": 3.96,
+          "length_m": 3.96
+        },
+        "new_geometry": {
+          "solidTag": "SOL_1S_column_0018",
+          "category": "column",
+          "kind": "box",
+          "floor": "1S",
+          "center": [
+            45.0,
+            8.9,
+            1.98
+          ],
+          "width_m": 0.7,
+          "depth_m": 0.7,
+          "height_m": 3.96,
+          "length_m": 3.96
+        },
+        "reason": "Centro y seccion normalizados con elevacion estructural primaria.",
+        "classification": "CONFIRMED_BY_AXIS_ELEVATION",
+        "source_dxf": "2017_67-310.dxf",
+        "evidence": {
+          "source_sheet": "2017_67-310",
+          "elevation_title": "ELEVACION EJE I'",
+          "axis_span_match": true,
+          "p70x70_label_count_at_station": 4,
+          "lower_story_contour_count": 2,
+          "foundation_beam_labels": [
+            {
+              "text": "V.F. 20/120",
+              "x": -32.996,
+              "y": -353.448
+            },
+            {
+              "text": "V.F. 20/120",
+              "x": -840.487,
+              "y": -353.448
+            },
+            {
+              "text": "V.F. 20/180",
+              "x": -1087.487,
+              "y": -310.448
+            },
+            {
+              "text": "V.F. 20/180",
+              "x": 317.0,
+              "y": -346.0
+            }
           ]
         },
         "confidence": "HIGH"

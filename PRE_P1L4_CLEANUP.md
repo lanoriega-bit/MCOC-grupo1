@@ -1,6 +1,6 @@
 # Consolidación POST-P1L3 / PRE-P1L4
 
-Estado: `FASE_0_COMPLETE_PHASE_1_NEXT`  
+Estado: `FASE_1_COMPLETE_PHASE_2_NEXT`
 Fecha de apertura: 2026-09-10  
 Rama vigente: `codex/pre-p1l4-consolidation`
 
@@ -74,7 +74,7 @@ Prioridad: P0 bloquea la base; P1 alta; P2 media; P3 documental. Estados:
 
 | Issue | Origen | Evidencia disponible | Estado actual | Impacto | Prioridad | Dependencia | Solución propuesta | Estado |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| GEO-COL-S1-001 — E1-S1-C-014..019 | Inferencias verticales de Luis | 100/101, fundación, P1, continuidad, ejes, auditoría `aed47c3` | Seis `UNRESOLVED_REQUIRES_REVIEW` | Puede cambiar apoyos, masa y conectividad del ala este | P0 | Fuentes CAD completas | Última investigación cruzada; cerrar individualmente como CONFIRMED, LIKELY_CORRECT, UNSUPPORTED o UNRESOLVED_FINAL | IN_PROGRESS |
+| GEO-COL-S1-001 — E1-S1-C-014..019 | Inferencias verticales de Luis | Elevaciones estructurales completas 309 eje I y 310 eje I', más ejes canónicos | Seis `CONFIRMED_BY_AXIS_ELEVATION`; sección 0.70×0.70 m y centro de eje normalizados | Cierra apoyos y continuidad del ala este sin extrapolar plantas | P0 | Fuentes CAD completas | Auditoría reproducible en `validacion/s1_columns_final/`; corregido y regenerado | DONE |
 | GEO-WALL-E1-001 — muros S1-P4 | Drafts de extracción | RLE-MURO, 234 muros combinados, reviews por piso | POSIBLE/FRAGMENTADO/FALSO_POSITIVO mezclados | Rigidez y caminos de carga inciertos | P0 | GEO-COL-S1-001 | Auditoría piso a piso, duplicados y continuidad vertical | OPEN |
 | GEO-BEAM-E1-001 — vigas S1-P4 | Drafts de extracción | RLE-VIGA, reviews, etiquetas y geometría combinada | POSIBLE/FRAGMENTADA/NEEDS_REVIEW | Paños, carga y conectividad dependen de ellas | P0 | GEO-WALL-E1-001 | Auditoría por piso, receptores, continuidad y vigas especiales | OPEN |
 | GEO-SPECIAL-001 — outboard/voladizos/canopias | Extracción automática deficiente fuera de grilla | `outboard_room_reconstruction.json`, planos, fotos secundarias | Grupos `UNRESOLVED_REQUIRES_REVIEW` | Forma real y elementos flotantes | P1 | Muros y vigas estabilizados | Revisar por sector con overlays y evidencia primaria | OPEN |
@@ -187,8 +187,26 @@ La conectividad se deja después de las losas visuales solo para el cierre FE;
 sin embargo, se medirá en paralelo durante muros/vigas para no perder las causas
 de cada componente flotante.
 
+## Hitos ejecutados
+
+### FASE 1 — columnas S1
+
+- `E1-S1-C-014..019` quedaron `CONFIRMED_BY_AXIS_ELEVATION`.
+- Las elevaciones 309/I y 310/I' miden 8.90 m entre ejes 1–2 y 7.25 m entre
+  2–3, residual 0.000 m respecto del sistema canónico.
+- En las seis estaciones existe rótulo `P. 70x70` y contorno continuo bajo el
+  primer piso hasta vigas de fundación.
+- Los centros se normalizaron a I/I' × 1/2/3 y la sección a 0.70×0.70 m. La
+  corrección mayor fue `E1-S1-C-016`, antes 0.85×0.92 m y fuera del centro de
+  eje por la envolvente automática de planta.
+- Evidencia: `entregas/P1L2/edificio/validacion/s1_columns_final/REPORT.md` y
+  `s1_columns_final_audit.json`.
+- Regenerados `model_1_audited_corrected.json` y
+  `model_combined_viewer.json`. Calce, continuidad, geometría combinada,
+  enriquecimiento y diff de referencia: `PASS`.
+- `LUIS_REFERENCE_FILES_MODIFIED = 0`.
+
 ## Próximo hito
 
-`FASE 1 — GEO-COL-S1-001`: última investigación exhaustiva de
-`E1-S1-C-014..019`, usando fuentes aún no correlacionadas formalmente y cerrando
-cada elemento sin inventar geometría.
+`FASE 2 — GEO-WALL-E1-001`: auditoría piso a piso de muros EDIFICIO_1,
+incluyendo fragmentación, duplicados, falsos positivos y continuidad vertical.
