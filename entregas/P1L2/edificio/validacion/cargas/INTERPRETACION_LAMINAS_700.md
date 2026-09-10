@@ -56,12 +56,12 @@ Combinaciones superficiales identificadas:
 | 2.941995 kN/m2 (300 kgf/m2) | 2.549729 kN/m2 (260 kgf/m2) |
 | 2.451663 kN/m2 (250 kgf/m2) | 2.549729 kN/m2 (260 kgf/m2) |
 
-Existe ademas una banda angosta cuya leyenda indica `SC=500` y
-`PM.ADIC.=2800`, pero la conversion DXF perdio el superindice de la unidad. A
-diferencia de las otras bandas lineales, su titulo no dice `CARGA LINEAL`.
-Ambos valores deben verificarse en el DWG original antes de clasificarlos como
-superficiales (`4.903325` y `27.458620 kN/m2`) o lineales (`4.903325` y
-`27.458620 kN/m`).
+Existe ademas una banda angosta cuya leyenda indica `SC=500 kgf/m2` y
+`PM.ADIC.=2800 kgf/m2`, equivalentes a `4.903325` y `27.458620 kN/m2`. La
+unidad quedo confirmada en la revision final: tanto el DXF como el respaldo DWG
+original de 2018 conservan el `2` como una entidad TEXT separada sobre `Kg/m`.
+La misma composicion tipografica aparece en SC, mientras que las bandas
+lineales estan tituladas explicitamente `CARGA LINEAL` y no llevan superindice.
 
 ### Cielo piso 2
 
@@ -143,9 +143,9 @@ La leyenda `CARGAS DE DISEÑO (CARGA LINEAL)` indica:
    sola vez, sin vacios ni solapes.
 5. Transferir cargas hacia vigas, muros y columnas sin duplicar las etapas de
    carga del JSON historico.
-6. Mantener toda lectura ambigua con estado `REVIEW_REQUIRED`; en particular,
-   confirmar las unidades de la banda `SC=500 / PM.ADIC.=2800` en el cielo de
-   piso 1 del EDIFICIO_1.
+6. Mantener toda lectura ambigua con estado `REVIEW_REQUIRED`; la unidad de la
+   banda `SC=500 / PM.ADIC.=2800 kgf/m2` ya fue confirmada y deja de pertenecer
+   a esta categoria.
 
 ## Extraccion geometrica HATCH
 

@@ -1,0 +1,6822 @@
+{
+  "schema": "MCOC-load-catalog-700-v1",
+  "status": "READY_FOR_Q_REVIEW_NOT_APPLIED",
+  "separation_policy": "G_AND_Q_COMPONENTS_NEVER_MERGED",
+  "allowed_load_types": [
+    "SC_SURFACE",
+    "SC_LINE",
+    "SC_POINT",
+    "PM_ADIC_SURFACE",
+    "PM_ADIC_LINE",
+    "PM_ADIC_POINT",
+    "PP_LOSA"
+  ],
+  "entries": [
+    {
+      "load_id": "L700-E1-S1-H01-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "source_sheet": "2017_67-700",
+      "source_value": 500,
+      "source_unit": "kgf/m2",
+      "SI_value": 4.903325,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              37.84102726891091,
+              6.331432316075597
+            ],
+            [
+              33.791027268910895,
+              6.331432316075597
+            ],
+            [
+              33.791027268910895,
+              6.181696089080442
+            ],
+            [
+              31.19102732509743,
+              6.18169608908046
+            ],
+            [
+              31.19102732509743,
+              4.181440111497486
+            ],
+            [
+              27.141023235132835,
+              4.181440111497486
+            ],
+            [
+              27.141027268939606,
+              9.381265463480394
+            ],
+            [
+              37.84102726891091,
+              9.381265463480394
+            ],
+            [
+              37.84102726891091,
+              6.331432316075597
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO 1° SUBTERRANEO",
+        "hatch_pattern": "_USER"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-S1-H01-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "source_sheet": "2017_67-700",
+      "source_value": 260,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.549729,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              37.84102726891091,
+              6.331432316075597
+            ],
+            [
+              33.791027268910895,
+              6.331432316075597
+            ],
+            [
+              33.791027268910895,
+              6.181696089080442
+            ],
+            [
+              31.19102732509743,
+              6.18169608908046
+            ],
+            [
+              31.19102732509743,
+              4.181440111497486
+            ],
+            [
+              27.141023235132835,
+              4.181440111497486
+            ],
+            [
+              27.141027268939606,
+              9.381265463480394
+            ],
+            [
+              37.84102726891091,
+              9.381265463480394
+            ],
+            [
+              37.84102726891091,
+              6.331432316075597
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO 1° SUBTERRANEO",
+        "hatch_pattern": "_USER"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-S1-H02-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "source_sheet": "2017_67-700",
+      "source_value": 300,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.941995,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              37.84102726891091,
+              -0.16873453653940487
+            ],
+            [
+              27.141027268939645,
+              -0.16873453653944126
+            ],
+            [
+              27.141023235132835,
+              4.181440111497486
+            ],
+            [
+              33.791027268910895,
+              4.181440111497486
+            ],
+            [
+              33.791027268910895,
+              6.331432316075597
+            ],
+            [
+              37.84102726891091,
+              6.331432316075597
+            ],
+            [
+              37.84102726891091,
+              -0.16873453653940487
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO 1° SUBTERRANEO",
+        "hatch_pattern": "AR-HBONE"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-S1-H02-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "source_sheet": "2017_67-700",
+      "source_value": 260,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.549729,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              37.84102726891091,
+              -0.16873453653940487
+            ],
+            [
+              27.141027268939645,
+              -0.16873453653944126
+            ],
+            [
+              27.141023235132835,
+              4.181440111497486
+            ],
+            [
+              33.791027268910895,
+              4.181440111497486
+            ],
+            [
+              33.791027268910895,
+              6.331432316075597
+            ],
+            [
+              37.84102726891091,
+              6.331432316075597
+            ],
+            [
+              37.84102726891091,
+              -0.16873453653940487
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO 1° SUBTERRANEO",
+        "hatch_pattern": "AR-HBONE"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-S1-H03-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "source_sheet": "2017_67-700",
+      "source_value": 250,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.4516625,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              37.84102726891088,
+              16.681432118807653
+            ],
+            [
+              27.141027268939606,
+              16.681432118807653
+            ],
+            [
+              27.141027268939606,
+              9.381265463480394
+            ],
+            [
+              37.84102726891088,
+              9.381265463480394
+            ],
+            [
+              37.84102726891088,
+              16.681432118807653
+            ]
+          ],
+          [
+            [
+              34.09102726890737,
+              9.447637097105735
+            ],
+            [
+              30.891027268683185,
+              9.447637097105735
+            ],
+            [
+              30.891027268683185,
+              13.926432316165746
+            ],
+            [
+              34.09102726890737,
+              13.926432316165746
+            ],
+            [
+              34.09102726890737,
+              9.447637097105735
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO 1° SUBTERRANEO",
+        "hatch_pattern": "ANGLE"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-S1-H03-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "source_sheet": "2017_67-700",
+      "source_value": 260,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.549729,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              37.84102726891088,
+              16.681432118807653
+            ],
+            [
+              27.141027268939606,
+              16.681432118807653
+            ],
+            [
+              27.141027268939606,
+              9.381265463480394
+            ],
+            [
+              37.84102726891088,
+              9.381265463480394
+            ],
+            [
+              37.84102726891088,
+              16.681432118807653
+            ]
+          ],
+          [
+            [
+              34.09102726890737,
+              9.447637097105735
+            ],
+            [
+              30.891027268683185,
+              9.447637097105735
+            ],
+            [
+              30.891027268683185,
+              13.926432316165746
+            ],
+            [
+              34.09102726890737,
+              13.926432316165746
+            ],
+            [
+              34.09102726890737,
+              9.447637097105735
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO 1° SUBTERRANEO",
+        "hatch_pattern": "ANGLE"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-S1-H04-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "source_sheet": "2017_67-700",
+      "source_value": 500,
+      "source_unit": "kgf/m2",
+      "SI_value": 4.903325,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              49.04102726870053,
+              -9.82816454677677
+            ],
+            [
+              27.141023235132845,
+              -9.82816454677677
+            ],
+            [
+              27.141023235132845,
+              -0.26873453653937757
+            ],
+            [
+              49.04102726870053,
+              -0.26873453653937757
+            ],
+            [
+              49.04102726870053,
+              -9.82816454677677
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO 1° SUBTERRANEO",
+        "hatch_pattern": "HONEY"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-S1-H04-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "source_sheet": "2017_67-700",
+      "source_value": 300,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.941995,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              49.04102726870053,
+              -9.82816454677677
+            ],
+            [
+              27.141023235132845,
+              -9.82816454677677
+            ],
+            [
+              27.141023235132845,
+              -0.26873453653937757
+            ],
+            [
+              49.04102726870053,
+              -0.26873453653937757
+            ],
+            [
+              49.04102726870053,
+              -9.82816454677677
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO 1° SUBTERRANEO",
+        "hatch_pattern": "HONEY"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-S1-H05-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "source_sheet": "2017_67-700",
+      "source_value": 500,
+      "source_unit": "kgf/m2",
+      "SI_value": 4.903325,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              49.04102726870053,
+              -10.63856788217533
+            ],
+            [
+              27.141023235132845,
+              -10.63856788217533
+            ],
+            [
+              27.141023235132845,
+              -9.82816454677677
+            ],
+            [
+              49.04102726870053,
+              -9.82816454677677
+            ],
+            [
+              49.04102726870053,
+              -10.63856788217533
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO 1° SUBTERRANEO",
+        "hatch_pattern": "AR-CONC"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-S1-H05-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "source_sheet": "2017_67-700",
+      "source_value": 300,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.941995,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              49.04102726870053,
+              -10.63856788217533
+            ],
+            [
+              27.141023235132845,
+              -10.63856788217533
+            ],
+            [
+              27.141023235132845,
+              -9.82816454677677
+            ],
+            [
+              49.04102726870053,
+              -9.82816454677677
+            ],
+            [
+              49.04102726870053,
+              -10.63856788217533
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO 1° SUBTERRANEO",
+        "hatch_pattern": "AR-CONC"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P1-H06-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "source_sheet": "2017_67-700",
+      "source_value": 200,
+      "source_unit": "kgf/m2",
+      "SI_value": 1.96133,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.03626130281648,
+              -1.1498634420468852
+            ],
+            [
+              27.141023235132764,
+              -1.1498634420468852
+            ],
+            [
+              27.141023235132764,
+              -0.349863442039009
+            ],
+            [
+              73.03626130281648,
+              -0.349863442039009
+            ],
+            [
+              73.03626130281648,
+              -1.1498634420468852
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 1°",
+        "hatch_pattern": "GRAVEL"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P1-H06-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "source_sheet": "2017_67-700",
+      "source_value": 200,
+      "source_unit": "kgf/m2",
+      "SI_value": 1.96133,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.03626130281648,
+              -1.1498634420468852
+            ],
+            [
+              27.141023235132764,
+              -1.1498634420468852
+            ],
+            [
+              27.141023235132764,
+              -0.349863442039009
+            ],
+            [
+              73.03626130281648,
+              -0.349863442039009
+            ],
+            [
+              73.03626130281648,
+              -1.1498634420468852
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 1°",
+        "hatch_pattern": "GRAVEL"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P1-H07-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "source_sheet": "2017_67-700",
+      "source_value": 250,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.4516625,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              37.84102726891078,
+              16.500136558017545
+            ],
+            [
+              27.141027268939517,
+              16.500136558017545
+            ],
+            [
+              27.141027268939517,
+              9.199969902690295
+            ],
+            [
+              37.84102726891078,
+              9.199969902690295
+            ],
+            [
+              37.84102726891078,
+              16.500136558017545
+            ]
+          ],
+          [
+            [
+              34.091027268907276,
+              13.74513675537562
+            ],
+            [
+              34.091027268907276,
+              9.425136557920274
+            ],
+            [
+              30.891027268683093,
+              9.425136557920274
+            ],
+            [
+              30.891027268683093,
+              13.74513675537562
+            ],
+            [
+              34.091027268907276,
+              13.74513675537562
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 1°",
+        "hatch_pattern": "ANGLE"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P1-H07-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "source_sheet": "2017_67-700",
+      "source_value": 260,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.549729,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              37.84102726891078,
+              16.500136558017545
+            ],
+            [
+              27.141027268939517,
+              16.500136558017545
+            ],
+            [
+              27.141027268939517,
+              9.199969902690295
+            ],
+            [
+              37.84102726891078,
+              9.199969902690295
+            ],
+            [
+              37.84102726891078,
+              16.500136558017545
+            ]
+          ],
+          [
+            [
+              34.091027268907276,
+              13.74513675537562
+            ],
+            [
+              34.091027268907276,
+              9.425136557920274
+            ],
+            [
+              30.891027268683093,
+              9.425136557920274
+            ],
+            [
+              30.891027268683093,
+              13.74513675537562
+            ],
+            [
+              34.091027268907276,
+              13.74513675537562
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 1°",
+        "hatch_pattern": "ANGLE"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P1-H08-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "source_sheet": "2017_67-700",
+      "source_value": 500,
+      "source_unit": "kgf/m2",
+      "SI_value": 4.903325,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.04118546768566,
+              16.520136558017715
+            ],
+            [
+              65.04097125946556,
+              16.52013655801766
+            ],
+            [
+              65.0409744588972,
+              18.762412853231595
+            ],
+            [
+              61.81810273495488,
+              18.76241745184317
+            ],
+            [
+              61.81810498951636,
+              20.342494884255235
+            ],
+            [
+              61.21810499401343,
+              20.342478304361645
+            ],
+            [
+              61.21810499401337,
+              28.841244245402507
+            ],
+            [
+              67.6033817943905,
+              26.32577486557178
+            ],
+            [
+              67.79102726889387,
+              26.32577486557178
+            ],
+            [
+              67.79102726889387,
+              26.291305168647956
+            ],
+            [
+              72.04118546768566,
+              24.577606485101146
+            ],
+            [
+              72.04118546768566,
+              16.520136558017715
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 1°",
+        "hatch_pattern": "_USER"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P1-H08-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "source_sheet": "2017_67-700",
+      "source_value": 260,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.549729,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.04118546768566,
+              16.520136558017715
+            ],
+            [
+              65.04097125946556,
+              16.52013655801766
+            ],
+            [
+              65.0409744588972,
+              18.762412853231595
+            ],
+            [
+              61.81810273495488,
+              18.76241745184317
+            ],
+            [
+              61.81810498951636,
+              20.342494884255235
+            ],
+            [
+              61.21810499401343,
+              20.342478304361645
+            ],
+            [
+              61.21810499401337,
+              28.841244245402507
+            ],
+            [
+              67.6033817943905,
+              26.32577486557178
+            ],
+            [
+              67.79102726889387,
+              26.32577486557178
+            ],
+            [
+              67.79102726889387,
+              26.291305168647956
+            ],
+            [
+              72.04118546768566,
+              24.577606485101146
+            ],
+            [
+              72.04118546768566,
+              16.520136558017715
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 1°",
+        "hatch_pattern": "_USER"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P1-H09-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "source_sheet": "2017_67-700",
+      "source_value": 500,
+      "source_unit": "kgf/m2",
+      "SI_value": 4.903325,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.84102726890119,
+              6.150136755285517
+            ],
+            [
+              33.79102726891085,
+              6.150136755285517
+            ],
+            [
+              33.79102726891085,
+              4.000144550707396
+            ],
+            [
+              27.141023235132764,
+              4.000144550707368
+            ],
+            [
+              27.141023235132785,
+              9.199969902690295
+            ],
+            [
+              37.84102726891078,
+              9.199969902690295
+            ],
+            [
+              67.14102726889395,
+              9.199969902690423
+            ],
+            [
+              67.14102726889395,
+              9.25013655799468
+            ],
+            [
+              67.19102726889393,
+              9.25013655799468
+            ],
+            [
+              67.19102726889393,
+              15.800136558017662
+            ],
+            [
+              67.14102726889435,
+              15.800136558017662
+            ],
+            [
+              67.14102726889435,
+              16.500136558017527
+            ],
+            [
+              72.84102726890119,
+              16.500136558017545
+            ],
+            [
+              72.84102726890119,
+              6.150136755285517
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 1°",
+        "hatch_pattern": "_USER"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P1-H09-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "source_sheet": "2017_67-700",
+      "source_value": 260,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.549729,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.84102726890119,
+              6.150136755285517
+            ],
+            [
+              33.79102726891085,
+              6.150136755285517
+            ],
+            [
+              33.79102726891085,
+              4.000144550707396
+            ],
+            [
+              27.141023235132764,
+              4.000144550707368
+            ],
+            [
+              27.141023235132785,
+              9.199969902690295
+            ],
+            [
+              37.84102726891078,
+              9.199969902690295
+            ],
+            [
+              67.14102726889395,
+              9.199969902690423
+            ],
+            [
+              67.14102726889395,
+              9.25013655799468
+            ],
+            [
+              67.19102726889393,
+              9.25013655799468
+            ],
+            [
+              67.19102726889393,
+              15.800136558017662
+            ],
+            [
+              67.14102726889435,
+              15.800136558017662
+            ],
+            [
+              67.14102726889435,
+              16.500136558017527
+            ],
+            [
+              72.84102726890119,
+              16.500136558017545
+            ],
+            [
+              72.84102726890119,
+              6.150136755285517
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 1°",
+        "hatch_pattern": "_USER"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P1-H10-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "source_sheet": "2017_67-700",
+      "source_value": 500,
+      "source_unit": "kgf/m2",
+      "SI_value": 4.903325,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.03626130281648,
+              -3.6498911795604227
+            ],
+            [
+              62.75731438620872,
+              -3.6498911795604227
+            ],
+            [
+              62.75731438620872,
+              -6.299892174034853
+            ],
+            [
+              69.9910272691625,
+              -6.299892174034853
+            ],
+            [
+              69.9910272691625,
+              -10.796960107593682
+            ],
+            [
+              73.03626130281648,
+              -10.796960107593682
+            ],
+            [
+              73.03626130281648,
+              -6.299892174034853
+            ],
+            [
+              73.03626130281648,
+              -3.6498911795604227
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 1°",
+        "hatch_pattern": "_USER"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P1-H10-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "source_sheet": "2017_67-700",
+      "source_value": 260,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.549729,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.03626130281648,
+              -3.6498911795604227
+            ],
+            [
+              62.75731438620872,
+              -3.6498911795604227
+            ],
+            [
+              62.75731438620872,
+              -6.299892174034853
+            ],
+            [
+              69.9910272691625,
+              -6.299892174034853
+            ],
+            [
+              69.9910272691625,
+              -10.796960107593682
+            ],
+            [
+              73.03626130281648,
+              -10.796960107593682
+            ],
+            [
+              73.03626130281648,
+              -6.299892174034853
+            ],
+            [
+              73.03626130281648,
+              -3.6498911795604227
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 1°",
+        "hatch_pattern": "_USER"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P1-H11-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "source_sheet": "2017_67-700",
+      "source_value": 300,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.941995,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.84102726890119,
+              -0.349863442039009
+            ],
+            [
+              27.141027268939585,
+              -0.349863442039009
+            ],
+            [
+              27.141027268939578,
+              4.000144550707368
+            ],
+            [
+              33.79102726891085,
+              4.000144550707396
+            ],
+            [
+              33.79102726891085,
+              6.150136755285517
+            ],
+            [
+              72.84102726890119,
+              6.150136755285517
+            ],
+            [
+              72.84102726890119,
+              -0.349863442039009
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 1°",
+        "hatch_pattern": "AR-HBONE"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P1-H11-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "source_sheet": "2017_67-700",
+      "source_value": 260,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.549729,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.84102726890119,
+              -0.349863442039009
+            ],
+            [
+              27.141027268939585,
+              -0.349863442039009
+            ],
+            [
+              27.141027268939578,
+              4.000144550707368
+            ],
+            [
+              33.79102726891085,
+              4.000144550707396
+            ],
+            [
+              33.79102726891085,
+              6.150136755285517
+            ],
+            [
+              72.84102726890119,
+              6.150136755285517
+            ],
+            [
+              72.84102726890119,
+              -0.349863442039009
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 1°",
+        "hatch_pattern": "AR-HBONE"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P1-H12-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "source_sheet": "2017_67-700",
+      "source_value": 500,
+      "source_unit": "kgf/m2",
+      "SI_value": 4.903325,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.03626130281648,
+              -3.6498911795604227
+            ],
+            [
+              61.24102726893048,
+              -3.6498911795604227
+            ],
+            [
+              61.24102726893048,
+              -1.1498634420468852
+            ],
+            [
+              73.03626130281648,
+              -1.1498634420468852
+            ],
+            [
+              73.03626130281648,
+              -3.6498911795604227
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 1°",
+        "hatch_pattern": "BRASS"
+      },
+      "confidence": "CONFIRMED_FROM_ORIGINAL_DWG_BACKUP_AND_DXF_TYPOGRAPHY",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P1-H12-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "source_sheet": "2017_67-700",
+      "source_value": 2800,
+      "source_unit": "kgf/m2",
+      "SI_value": 27.45862,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.03626130281648,
+              -3.6498911795604227
+            ],
+            [
+              61.24102726893048,
+              -3.6498911795604227
+            ],
+            [
+              61.24102726893048,
+              -1.1498634420468852
+            ],
+            [
+              73.03626130281648,
+              -1.1498634420468852
+            ],
+            [
+              73.03626130281648,
+              -3.6498911795604227
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 1°",
+        "hatch_pattern": "BRASS"
+      },
+      "confidence": "CONFIRMED_FROM_ORIGINAL_DWG_BACKUP_AND_DXF_TYPOGRAPHY",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P1-H13-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "source_sheet": "2017_67-700",
+      "source_value": 400,
+      "source_unit": "kgf/m2",
+      "SI_value": 3.92266,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              67.19102726889393,
+              9.25013655799468
+            ],
+            [
+              67.14102726889395,
+              9.25013655799468
+            ],
+            [
+              67.14102726889395,
+              9.199969902690423
+            ],
+            [
+              37.84102726891083,
+              9.199969902690295
+            ],
+            [
+              37.84102726891082,
+              16.50013655801758
+            ],
+            [
+              37.19102726891081,
+              16.50013655801758
+            ],
+            [
+              37.19102726891078,
+              20.570136558073223
+            ],
+            [
+              45.281027268916134,
+              20.57013655807324
+            ],
+            [
+              45.281027268916155,
+              16.44996990275367
+            ],
+            [
+              47.141027269033884,
+              16.449969902753697
+            ],
+            [
+              47.141027269033884,
+              16.500136558017527
+            ],
+            [
+              67.14102726889435,
+              16.500136558017527
+            ],
+            [
+              67.14102726889435,
+              15.800136558017662
+            ],
+            [
+              67.19102726889393,
+              15.800136558017662
+            ],
+            [
+              67.19102726889393,
+              9.25013655799468
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 1°",
+        "hatch_pattern": "ANSI34"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P1-H13-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "source_sheet": "2017_67-700",
+      "source_value": 260,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.549729,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              67.19102726889393,
+              9.25013655799468
+            ],
+            [
+              67.14102726889395,
+              9.25013655799468
+            ],
+            [
+              67.14102726889395,
+              9.199969902690423
+            ],
+            [
+              37.84102726891083,
+              9.199969902690295
+            ],
+            [
+              37.84102726891082,
+              16.50013655801758
+            ],
+            [
+              37.19102726891081,
+              16.50013655801758
+            ],
+            [
+              37.19102726891078,
+              20.570136558073223
+            ],
+            [
+              45.281027268916134,
+              20.57013655807324
+            ],
+            [
+              45.281027268916155,
+              16.44996990275367
+            ],
+            [
+              47.141027269033884,
+              16.449969902753697
+            ],
+            [
+              47.141027269033884,
+              16.500136558017527
+            ],
+            [
+              67.14102726889435,
+              16.500136558017527
+            ],
+            [
+              67.14102726889435,
+              15.800136558017662
+            ],
+            [
+              67.19102726889393,
+              15.800136558017662
+            ],
+            [
+              67.19102726889393,
+              9.25013655799468
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 1°",
+        "hatch_pattern": "ANSI34"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P2-H14-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "source_sheet": "2017_67-700",
+      "source_value": 500,
+      "source_unit": "kgf/m2",
+      "SI_value": 4.903325,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.84086141588476,
+              6.331524604204815
+            ],
+            [
+              33.79086141589519,
+              6.331524604204815
+            ],
+            [
+              33.79086141589519,
+              6.181788377209659
+            ],
+            [
+              31.190861472081686,
+              6.181788377209659
+            ],
+            [
+              31.190861472081686,
+              4.18153239962664
+            ],
+            [
+              27.140857382117115,
+              4.18153239962664
+            ],
+            [
+              27.140857382117115,
+              9.381357751609567
+            ],
+            [
+              37.84086141589506,
+              9.381357751609567
+            ],
+            [
+              72.84086141588466,
+              9.381357751609567
+            ],
+            [
+              72.84086141588476,
+              6.331524604204815
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 2°",
+        "hatch_pattern": "_USER"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P2-H14-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "source_sheet": "2017_67-700",
+      "source_value": 260,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.549729,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.84086141588476,
+              6.331524604204815
+            ],
+            [
+              33.79086141589519,
+              6.331524604204815
+            ],
+            [
+              33.79086141589519,
+              6.181788377209659
+            ],
+            [
+              31.190861472081686,
+              6.181788377209659
+            ],
+            [
+              31.190861472081686,
+              4.18153239962664
+            ],
+            [
+              27.140857382117115,
+              4.18153239962664
+            ],
+            [
+              27.140857382117115,
+              9.381357751609567
+            ],
+            [
+              37.84086141589506,
+              9.381357751609567
+            ],
+            [
+              72.84086141588466,
+              9.381357751609567
+            ],
+            [
+              72.84086141588476,
+              6.331524604204815
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 2°",
+        "hatch_pattern": "_USER"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P2-H15-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "source_sheet": "2017_67-700",
+      "source_value": 250,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.4516625,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              37.84086141589506,
+              16.681524406936806
+            ],
+            [
+              27.140861415923826,
+              16.681524406936806
+            ],
+            [
+              27.140861415923826,
+              9.431357751609575
+            ],
+            [
+              27.840861415923897,
+              9.431357751609575
+            ],
+            [
+              27.840861415923897,
+              9.381357751609567
+            ],
+            [
+              37.84086141589506,
+              9.381357751609567
+            ],
+            [
+              37.84086141589506,
+              16.681524406936806
+            ]
+          ],
+          [
+            [
+              34.09086141589161,
+              9.447729385234926
+            ],
+            [
+              30.89086141566742,
+              9.447729385234926
+            ],
+            [
+              30.89086141566742,
+              13.926524604294901
+            ],
+            [
+              34.09086141589161,
+              13.926524604294901
+            ],
+            [
+              34.09086141589161,
+              9.447729385234926
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 2°",
+        "hatch_pattern": "ANGLE"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P2-H15-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "source_sheet": "2017_67-700",
+      "source_value": 260,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.549729,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              37.84086141589506,
+              16.681524406936806
+            ],
+            [
+              27.140861415923826,
+              16.681524406936806
+            ],
+            [
+              27.140861415923826,
+              9.431357751609575
+            ],
+            [
+              27.840861415923897,
+              9.431357751609575
+            ],
+            [
+              27.840861415923897,
+              9.381357751609567
+            ],
+            [
+              37.84086141589506,
+              9.381357751609567
+            ],
+            [
+              37.84086141589506,
+              16.681524406936806
+            ]
+          ],
+          [
+            [
+              34.09086141589161,
+              9.447729385234926
+            ],
+            [
+              30.89086141566742,
+              9.447729385234926
+            ],
+            [
+              30.89086141566742,
+              13.926524604294901
+            ],
+            [
+              34.09086141589161,
+              13.926524604294901
+            ],
+            [
+              34.09086141589161,
+              9.447729385234926
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 2°",
+        "hatch_pattern": "ANGLE"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P2-H16-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "source_sheet": "2017_67-700",
+      "source_value": 400,
+      "source_unit": "kgf/m2",
+      "SI_value": 3.92266,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.84086141588547,
+              9.381357751609567
+            ],
+            [
+              37.84086141589506,
+              9.381357751609567
+            ],
+            [
+              37.84086141589506,
+              16.68152440693684
+            ],
+            [
+              72.84086141588547,
+              16.68152440693684
+            ],
+            [
+              72.84086141588547,
+              9.381357751609567
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 2°",
+        "hatch_pattern": "ANSI34"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P2-H16-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "source_sheet": "2017_67-700",
+      "source_value": 260,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.549729,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.84086141588547,
+              9.381357751609567
+            ],
+            [
+              37.84086141589506,
+              9.381357751609567
+            ],
+            [
+              37.84086141589506,
+              16.68152440693684
+            ],
+            [
+              72.84086141588547,
+              16.68152440693684
+            ],
+            [
+              72.84086141588547,
+              9.381357751609567
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 2°",
+        "hatch_pattern": "ANSI34"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P2-H17-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "source_sheet": "2017_67-700",
+      "source_value": 500,
+      "source_unit": "kgf/m2",
+      "SI_value": 4.903325,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              45.28086141601776,
+              16.68152440693684
+            ],
+            [
+              37.84086141589506,
+              16.68152440693684
+            ],
+            [
+              37.19086141589516,
+              16.68152440693687
+            ],
+            [
+              37.19086141589516,
+              20.75152440699253
+            ],
+            [
+              45.28086141601776,
+              20.75152440699253
+            ],
+            [
+              45.28086141601776,
+              16.68152440693684
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 2°",
+        "hatch_pattern": "_USER"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P2-H17-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "source_sheet": "2017_67-700",
+      "source_value": 260,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.549729,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              45.28086141601776,
+              16.68152440693684
+            ],
+            [
+              37.84086141589506,
+              16.68152440693684
+            ],
+            [
+              37.19086141589516,
+              16.68152440693687
+            ],
+            [
+              37.19086141589516,
+              20.75152440699253
+            ],
+            [
+              45.28086141601776,
+              20.75152440699253
+            ],
+            [
+              45.28086141601776,
+              16.68152440693684
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 2°",
+        "hatch_pattern": "_USER"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P2-H18-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "source_sheet": "2017_67-700",
+      "source_value": 500,
+      "source_unit": "kgf/m2",
+      "SI_value": 4.903325,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              57.790861415946566,
+              16.68152440693684
+            ],
+            [
+              47.19086141601816,
+              16.68152440693684
+            ],
+            [
+              47.19086141601816,
+              18.941357751672985
+            ],
+            [
+              57.790861415946566,
+              18.941357751672985
+            ],
+            [
+              57.790861415946566,
+              16.68152440693684
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 2°",
+        "hatch_pattern": "_USER"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P2-H18-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "source_sheet": "2017_67-700",
+      "source_value": 260,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.549729,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              57.790861415946566,
+              16.68152440693684
+            ],
+            [
+              47.19086141601816,
+              16.68152440693684
+            ],
+            [
+              47.19086141601816,
+              18.941357751672985
+            ],
+            [
+              57.790861415946566,
+              18.941357751672985
+            ],
+            [
+              57.790861415946566,
+              16.68152440693684
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 2°",
+        "hatch_pattern": "_USER"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P2-H19-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "source_sheet": "2017_67-700",
+      "source_value": 300,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.941995,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.84086141588556,
+              -0.1684755931197378
+            ],
+            [
+              27.140857382117115,
+              -0.1684755931197378
+            ],
+            [
+              27.140857382117062,
+              4.18153239962664
+            ],
+            [
+              33.79086141589519,
+              4.18153239962664
+            ],
+            [
+              33.79086141589519,
+              6.331524604204815
+            ],
+            [
+              72.84086141588476,
+              6.331524604204815
+            ],
+            [
+              72.84086141588556,
+              -0.1684755931197378
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 2°",
+        "hatch_pattern": "AR-HBONE"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P2-H19-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "source_sheet": "2017_67-700",
+      "source_value": 260,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.549729,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.84086141588556,
+              -0.1684755931197378
+            ],
+            [
+              27.140857382117115,
+              -0.1684755931197378
+            ],
+            [
+              27.140857382117062,
+              4.18153239962664
+            ],
+            [
+              33.79086141589519,
+              4.18153239962664
+            ],
+            [
+              33.79086141589519,
+              6.331524604204815
+            ],
+            [
+              72.84086141588476,
+              6.331524604204815
+            ],
+            [
+              72.84086141588556,
+              -0.1684755931197378
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 2°",
+        "hatch_pattern": "AR-HBONE"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P2-H20-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "source_sheet": "2017_67-700",
+      "source_value": 200,
+      "source_unit": "kgf/m2",
+      "SI_value": 1.96133,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.84086141588556,
+              -0.9684755931275959
+            ],
+            [
+              27.140857382117115,
+              -0.9684755931275959
+            ],
+            [
+              27.140857382117115,
+              -0.16864224841026043
+            ],
+            [
+              72.84086141588556,
+              -0.1684755931197378
+            ],
+            [
+              72.84086141588556,
+              -0.9684755931275959
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 2°",
+        "hatch_pattern": "GRAVEL"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P2-H20-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "source_sheet": "2017_67-700",
+      "source_value": 200,
+      "source_unit": "kgf/m2",
+      "SI_value": 1.96133,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.84086141588556,
+              -0.9684755931275959
+            ],
+            [
+              27.140857382117115,
+              -0.9684755931275959
+            ],
+            [
+              27.140857382117115,
+              -0.16864224841026043
+            ],
+            [
+              72.84086141588556,
+              -0.1684755931197378
+            ],
+            [
+              72.84086141588556,
+              -0.9684755931275959
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 2°",
+        "hatch_pattern": "GRAVEL"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P3-H21-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "source_sheet": "2017_67-700",
+      "source_value": 250,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.4516625,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              37.190868433108164,
+              9.38134134308134
+            ],
+            [
+              34.09086743866591,
+              9.38134134308134
+            ],
+            [
+              34.09086743866591,
+              13.926508195766628
+            ],
+            [
+              34.09086743866591,
+              14.126508195766627
+            ],
+            [
+              34.145867438665746,
+              14.126508195766656
+            ],
+            [
+              34.145867438665746,
+              14.526007998347705
+            ],
+            [
+              30.83586743843856,
+              14.526007998347705
+            ],
+            [
+              30.83586743843856,
+              14.126508195766586
+            ],
+            [
+              30.890867438439468,
+              14.126508195766586
+            ],
+            [
+              30.890867438439468,
+              9.381341343081294
+            ],
+            [
+              27.140867438698166,
+              9.381341343081317
+            ],
+            [
+              27.14086743869809,
+              16.68150799840855
+            ],
+            [
+              37.190870702028874,
+              16.6815079984086
+            ],
+            [
+              37.190868433108164,
+              9.38134134308134
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 3°",
+        "hatch_pattern": "ANGLE"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P3-H21-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "source_sheet": "2017_67-700",
+      "source_value": 260,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.549729,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              37.190868433108164,
+              9.38134134308134
+            ],
+            [
+              34.09086743866591,
+              9.38134134308134
+            ],
+            [
+              34.09086743866591,
+              13.926508195766628
+            ],
+            [
+              34.09086743866591,
+              14.126508195766627
+            ],
+            [
+              34.145867438665746,
+              14.126508195766656
+            ],
+            [
+              34.145867438665746,
+              14.526007998347705
+            ],
+            [
+              30.83586743843856,
+              14.526007998347705
+            ],
+            [
+              30.83586743843856,
+              14.126508195766586
+            ],
+            [
+              30.890867438439468,
+              14.126508195766586
+            ],
+            [
+              30.890867438439468,
+              9.381341343081294
+            ],
+            [
+              27.140867438698166,
+              9.381341343081317
+            ],
+            [
+              27.14086743869809,
+              16.68150799840855
+            ],
+            [
+              37.190870702028874,
+              16.6815079984086
+            ],
+            [
+              37.190868433108164,
+              9.38134134308134
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 3°",
+        "hatch_pattern": "ANGLE"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P3-H22-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "source_sheet": "2017_67-700",
+      "source_value": 300,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.941995,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.69083501547696,
+              -0.11865865693838713
+            ],
+            [
+              27.140863404891327,
+              -0.11865865693853266
+            ],
+            [
+              27.140863404891327,
+              4.181515991098386
+            ],
+            [
+              30.890867438439503,
+              4.181515991098386
+            ],
+            [
+              33.79086743866942,
+              4.181515991098386
+            ],
+            [
+              33.79086743866939,
+              6.181771968681333
+            ],
+            [
+              37.19086743866937,
+              6.181771968681333
+            ],
+            [
+              37.190870702028874,
+              6.181771968681333
+            ],
+            [
+              37.190870702028874,
+              9.38134134308134
+            ],
+            [
+              37.190870702028874,
+              16.68150799840855
+            ],
+            [
+              39.99091926038437,
+              16.68150799840855
+            ],
+            [
+              47.19086743879208,
+              16.6815079984086
+            ],
+            [
+              47.19086743879197,
+              20.75150799846424
+            ],
+            [
+              57.790867438720774,
+              20.751507998464277
+            ],
+            [
+              57.790867438720774,
+              16.68150799840855
+            ],
+            [
+              72.14086743865977,
+              16.68150799840855
+            ],
+            [
+              72.14086743865977,
+              16.63134134314475
+            ],
+            [
+              77.69026531678097,
+              16.631518182656762
+            ],
+            [
+              77.69083501547696,
+              -0.11865865693838713
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 3°",
+        "hatch_pattern": "AR-HBONE"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P3-H22-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "source_sheet": "2017_67-700",
+      "source_value": 260,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.549729,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.69083501547696,
+              -0.11865865693838713
+            ],
+            [
+              27.140863404891327,
+              -0.11865865693853266
+            ],
+            [
+              27.140863404891327,
+              4.181515991098386
+            ],
+            [
+              30.890867438439503,
+              4.181515991098386
+            ],
+            [
+              33.79086743866942,
+              4.181515991098386
+            ],
+            [
+              33.79086743866939,
+              6.181771968681333
+            ],
+            [
+              37.19086743866937,
+              6.181771968681333
+            ],
+            [
+              37.190870702028874,
+              6.181771968681333
+            ],
+            [
+              37.190870702028874,
+              9.38134134308134
+            ],
+            [
+              37.190870702028874,
+              16.68150799840855
+            ],
+            [
+              39.99091926038437,
+              16.68150799840855
+            ],
+            [
+              47.19086743879208,
+              16.6815079984086
+            ],
+            [
+              47.19086743879197,
+              20.75150799846424
+            ],
+            [
+              57.790867438720774,
+              20.751507998464277
+            ],
+            [
+              57.790867438720774,
+              16.68150799840855
+            ],
+            [
+              72.14086743865977,
+              16.68150799840855
+            ],
+            [
+              72.14086743865977,
+              16.63134134314475
+            ],
+            [
+              77.69026531678097,
+              16.631518182656762
+            ],
+            [
+              77.69083501547696,
+              -0.11865865693838713
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 3°",
+        "hatch_pattern": "AR-HBONE"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P3-H23-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "source_sheet": "2017_67-700",
+      "source_value": 500,
+      "source_unit": "kgf/m2",
+      "SI_value": 4.903325,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                39.99091926038437,
+                19.24134134314465
+              ],
+              [
+                37.190870702028874,
+                19.24134134314465
+              ],
+              [
+                37.190870702028874,
+                16.68150799840855
+              ],
+              [
+                39.99091926038437,
+                16.68150799840855
+              ],
+              [
+                39.99091926038437,
+                19.24134134314465
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                37.190868433108164,
+                9.38134134308134
+              ],
+              [
+                34.09086743866591,
+                9.38134134308134
+              ],
+              [
+                34.09086743866591,
+                13.926508195766628
+              ],
+              [
+                30.890867438441706,
+                13.926508195766628
+              ],
+              [
+                30.890867438439468,
+                9.381341343081294
+              ],
+              [
+                27.140863404891366,
+                9.381341343081317
+              ],
+              [
+                27.140863404891327,
+                4.181515991098386
+              ],
+              [
+                30.890867494855932,
+                4.181515991098386
+              ],
+              [
+                30.890867494855932,
+                6.1817719686813595
+              ],
+              [
+                33.79086743866939,
+                6.181771968681333
+              ],
+              [
+                37.19086743866937,
+                6.181771968681333
+              ],
+              [
+                37.190868433108164,
+                9.38134134308134
+              ]
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 3°",
+        "hatch_pattern": "_USER"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P3-H23-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "source_sheet": "2017_67-700",
+      "source_value": 260,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.549729,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                39.99091926038437,
+                19.24134134314465
+              ],
+              [
+                37.190870702028874,
+                19.24134134314465
+              ],
+              [
+                37.190870702028874,
+                16.68150799840855
+              ],
+              [
+                39.99091926038437,
+                16.68150799840855
+              ],
+              [
+                39.99091926038437,
+                19.24134134314465
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                37.190868433108164,
+                9.38134134308134
+              ],
+              [
+                34.09086743866591,
+                9.38134134308134
+              ],
+              [
+                34.09086743866591,
+                13.926508195766628
+              ],
+              [
+                30.890867438441706,
+                13.926508195766628
+              ],
+              [
+                30.890867438439468,
+                9.381341343081294
+              ],
+              [
+                27.140863404891366,
+                9.381341343081317
+              ],
+              [
+                27.140863404891327,
+                4.181515991098386
+              ],
+              [
+                30.890867494855932,
+                4.181515991098386
+              ],
+              [
+                30.890867494855932,
+                6.1817719686813595
+              ],
+              [
+                33.79086743866939,
+                6.181771968681333
+              ],
+              [
+                37.19086743866937,
+                6.181771968681333
+              ],
+              [
+                37.190868433108164,
+                9.38134134308134
+              ]
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 3°",
+        "hatch_pattern": "_USER"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P3-H24-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "source_sheet": "2017_67-700",
+      "source_value": 200,
+      "source_unit": "kgf/m2",
+      "SI_value": 1.96133,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.64083501548048,
+              -0.9684920016124307
+            ],
+            [
+              27.140867438698166,
+              -0.9684920016559317
+            ],
+            [
+              27.140867438698166,
+              -0.11865865693853266
+            ],
+            [
+              77.69083501547696,
+              -0.11865865693838713
+            ],
+            [
+              77.69026531678097,
+              16.631518182656762
+            ],
+            [
+              72.14086743865977,
+              16.63134134314475
+            ],
+            [
+              72.14086743865977,
+              17.48147066793816
+            ],
+            [
+              78.64083501546487,
+              17.48147066794072
+            ],
+            [
+              78.64083501548048,
+              -0.9684920016124307
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 3°",
+        "hatch_pattern": "GRAVEL"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P3-H24-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "source_sheet": "2017_67-700",
+      "source_value": 200,
+      "source_unit": "kgf/m2",
+      "SI_value": 1.96133,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.64083501548048,
+              -0.9684920016124307
+            ],
+            [
+              27.140867438698166,
+              -0.9684920016559317
+            ],
+            [
+              27.140867438698166,
+              -0.11865865693853266
+            ],
+            [
+              77.69083501547696,
+              -0.11865865693838713
+            ],
+            [
+              77.69026531678097,
+              16.631518182656762
+            ],
+            [
+              72.14086743865977,
+              16.63134134314475
+            ],
+            [
+              72.14086743865977,
+              17.48147066793816
+            ],
+            [
+              78.64083501546487,
+              17.48147066794072
+            ],
+            [
+              78.64083501548048,
+              -0.9684920016124307
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 3°",
+        "hatch_pattern": "GRAVEL"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P4-H25-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P4",
+      "source_sheet": "2017_67-700",
+      "source_value": 100,
+      "source_unit": "kgf/m2",
+      "SI_value": 0.980665,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              37.790880634479635,
+              9.381318346644347
+            ],
+            [
+              37.790880634479635,
+              16.031318346707685
+            ],
+            [
+              47.19088063957136,
+              16.03132205982273
+            ],
+            [
+              47.190883266404214,
+              9.381318346644356
+            ],
+            [
+              37.790880634479635,
+              9.381318346644347
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 4°",
+        "hatch_pattern": "_USER"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P4-H25-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P4",
+      "source_sheet": "2017_67-700",
+      "source_value": 350,
+      "source_unit": "kgf/m2",
+      "SI_value": 3.4323275,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              37.790880634479635,
+              9.381318346644347
+            ],
+            [
+              37.790880634479635,
+              16.031318346707685
+            ],
+            [
+              47.19088063957136,
+              16.03132205982273
+            ],
+            [
+              47.190883266404214,
+              9.381318346644356
+            ],
+            [
+              37.790880634479635,
+              9.381318346644347
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 4°",
+        "hatch_pattern": "_USER"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P4-H26-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P4",
+      "source_sheet": "2017_67-700",
+      "source_value": 200,
+      "source_unit": "kgf/m2",
+      "SI_value": 1.96133,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.64084821129067,
+              -0.9685347619573986
+            ],
+            [
+              27.140880634508342,
+              -0.9685123426646806
+            ],
+            [
+              27.14088063450826,
+              16.68148765740154
+            ],
+            [
+              37.14088063447958,
+              16.68148765740154
+            ],
+            [
+              37.14088063447958,
+              16.03132100213761
+            ],
+            [
+              37.79088063447958,
+              16.03132100213761
+            ],
+            [
+              37.79088063447958,
+              9.381321002074282
+            ],
+            [
+              47.19088063460224,
+              9.381321002074282
+            ],
+            [
+              47.19088063460224,
+              16.03132100213761
+            ],
+            [
+              72.14088063446994,
+              16.03132100213761
+            ],
+            [
+              72.14088063446994,
+              16.681487657401505
+            ],
+            [
+              72.14088063446994,
+              17.48148765740153
+            ],
+            [
+              78.64084821127507,
+              17.481487657401523
+            ],
+            [
+              78.64084821129067,
+              -0.9685347619573986
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 4°",
+        "hatch_pattern": "GRAVEL"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P4-H26-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P4",
+      "source_sheet": "2017_67-700",
+      "source_value": 200,
+      "source_unit": "kgf/m2",
+      "SI_value": 1.96133,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.64084821129067,
+              -0.9685347619573986
+            ],
+            [
+              27.140880634508342,
+              -0.9685123426646806
+            ],
+            [
+              27.14088063450826,
+              16.68148765740154
+            ],
+            [
+              37.14088063447958,
+              16.68148765740154
+            ],
+            [
+              37.14088063447958,
+              16.03132100213761
+            ],
+            [
+              37.79088063447958,
+              16.03132100213761
+            ],
+            [
+              37.79088063447958,
+              9.381321002074282
+            ],
+            [
+              47.19088063460224,
+              9.381321002074282
+            ],
+            [
+              47.19088063460224,
+              16.03132100213761
+            ],
+            [
+              72.14088063446994,
+              16.03132100213761
+            ],
+            [
+              72.14088063446994,
+              16.681487657401505
+            ],
+            [
+              72.14088063446994,
+              17.48148765740153
+            ],
+            [
+              78.64084821127507,
+              17.481487657401523
+            ],
+            [
+              78.64084821129067,
+              -0.9685347619573986
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 4°",
+        "hatch_pattern": "GRAVEL"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P4-H28-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P4",
+      "source_sheet": "2017_67-700",
+      "source_value": 200,
+      "source_unit": "kgf/m2",
+      "SI_value": 1.96133,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              47.190880634602195,
+              16.681487657401558
+            ],
+            [
+              47.190880634602195,
+              20.751487657457236
+            ],
+            [
+              57.790880634531,
+              20.751487657457236
+            ],
+            [
+              57.790880634531,
+              16.681487657401558
+            ],
+            [
+              47.190880634602195,
+              16.681487657401558
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 4°",
+        "hatch_pattern": "GRAVEL"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E1-P4-H28-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "P4",
+      "source_sheet": "2017_67-700",
+      "source_value": 200,
+      "source_unit": "kgf/m2",
+      "SI_value": 1.96133,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              47.190880634602195,
+              16.681487657401558
+            ],
+            [
+              47.190880634602195,
+              20.751487657457236
+            ],
+            [
+              57.790880634531,
+              20.751487657457236
+            ],
+            [
+              57.790880634531,
+              16.681487657401558
+            ],
+            [
+              47.190880634602195,
+              16.681487657401558
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO PISO 4°",
+        "hatch_pattern": "GRAVEL"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E2-S1-H01-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_2",
+      "floor": "S1",
+      "source_sheet": "2024_22-700",
+      "source_value": 500,
+      "source_unit": "kgf/m2",
+      "SI_value": 4.903325,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              27.800290064826704,
+              6.150829273546138
+            ],
+            [
+              0.30199214837685984,
+              6.150829273546138
+            ],
+            [
+              0.30199214837685984,
+              0.3006626182219634
+            ],
+            [
+              -3.3480098684032735,
+              0.3006626182219634
+            ],
+            [
+              -3.348009868403269,
+              4.435662618259353
+            ],
+            [
+              -1.84800986840306,
+              4.435662618259353
+            ],
+            [
+              -1.84800986840306,
+              11.695662618223018
+            ],
+            [
+              -3.348009868403269,
+              11.695662618223018
+            ],
+            [
+              -3.348009868403269,
+              16.500662618305032
+            ],
+            [
+              0.3019921483768394,
+              16.500662618305032
+            ],
+            [
+              0.3019921483768508,
+              8.600662618241945
+            ],
+            [
+              27.78294025132007,
+              8.600662618241945
+            ],
+            [
+              27.800290064826704,
+              6.150829273546138
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CARGAS CIELO 1° SUBTERRANEO A CIELO PISO 3°",
+        "hatch_pattern": "HONEY"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E2-S1-H01-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_2",
+      "floor": "S1",
+      "source_sheet": "2024_22-700",
+      "source_value": 260,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.549729,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              27.800290064826704,
+              6.150829273546138
+            ],
+            [
+              0.30199214837685984,
+              6.150829273546138
+            ],
+            [
+              0.30199214837685984,
+              0.3006626182219634
+            ],
+            [
+              -3.3480098684032735,
+              0.3006626182219634
+            ],
+            [
+              -3.348009868403269,
+              4.435662618259353
+            ],
+            [
+              -1.84800986840306,
+              4.435662618259353
+            ],
+            [
+              -1.84800986840306,
+              11.695662618223018
+            ],
+            [
+              -3.348009868403269,
+              11.695662618223018
+            ],
+            [
+              -3.348009868403269,
+              16.500662618305032
+            ],
+            [
+              0.3019921483768394,
+              16.500662618305032
+            ],
+            [
+              0.3019921483768508,
+              8.600662618241945
+            ],
+            [
+              27.78294025132007,
+              8.600662618241945
+            ],
+            [
+              27.800290064826704,
+              6.150829273546138
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CARGAS CIELO 1° SUBTERRANEO A CIELO PISO 3°",
+        "hatch_pattern": "HONEY"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E2-S1-H02-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_2",
+      "floor": "S1",
+      "source_sheet": "2024_22-700",
+      "source_value": 300,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.941995,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -1.84800986840306,
+              4.435662618259353
+            ],
+            [
+              -3.348009868403269,
+              4.435662618259353
+            ],
+            [
+              -3.348009868403269,
+              11.695662618223018
+            ],
+            [
+              -1.84800986840306,
+              11.695662618223018
+            ],
+            [
+              -1.84800986840306,
+              4.435662618259353
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CARGAS CIELO 1° SUBTERRANEO A CIELO PISO 3°",
+        "hatch_pattern": "AR-CONC"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E2-S1-H02-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_2",
+      "floor": "S1",
+      "source_sheet": "2024_22-700",
+      "source_value": 260,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.549729,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -1.84800986840306,
+              4.435662618259353
+            ],
+            [
+              -3.348009868403269,
+              4.435662618259353
+            ],
+            [
+              -3.348009868403269,
+              11.695662618223018
+            ],
+            [
+              -1.84800986840306,
+              11.695662618223018
+            ],
+            [
+              -1.84800986840306,
+              4.435662618259353
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CARGAS CIELO 1° SUBTERRANEO A CIELO PISO 3°",
+        "hatch_pattern": "AR-CONC"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E2-S1-H03-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_2",
+      "floor": "S1",
+      "source_sheet": "2024_22-700",
+      "source_value": 200,
+      "source_unit": "kgf/m2",
+      "SI_value": 1.96133,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              27.851990124470195,
+              -1.1493373817781094
+            ],
+            [
+              -4.14800986842145,
+              -1.1493373817781094
+            ],
+            [
+              -4.14800986842145,
+              17.24066261830433
+            ],
+            [
+              -3.348009868403267,
+              17.24066261830532
+            ],
+            [
+              -3.348009868403269,
+              16.500662618305032
+            ],
+            [
+              -3.348009868403267,
+              0.3006626182219634
+            ],
+            [
+              27.8417211689761,
+              0.3006626182219634
+            ],
+            [
+              27.851990124470195,
+              -1.1493373817781094
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CARGAS CIELO 1° SUBTERRANEO A CIELO PISO 3°",
+        "hatch_pattern": "_USER"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E2-S1-H03-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_2",
+      "floor": "S1",
+      "source_sheet": "2024_22-700",
+      "source_value": 260,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.549729,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              27.851990124470195,
+              -1.1493373817781094
+            ],
+            [
+              -4.14800986842145,
+              -1.1493373817781094
+            ],
+            [
+              -4.14800986842145,
+              17.24066261830433
+            ],
+            [
+              -3.348009868403267,
+              17.24066261830532
+            ],
+            [
+              -3.348009868403269,
+              16.500662618305032
+            ],
+            [
+              -3.348009868403267,
+              0.3006626182219634
+            ],
+            [
+              27.8417211689761,
+              0.3006626182219634
+            ],
+            [
+              27.851990124470195,
+              -1.1493373817781094
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CARGAS CIELO 1° SUBTERRANEO A CIELO PISO 3°",
+        "hatch_pattern": "_USER"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E2-S1-H04-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_2",
+      "floor": "S1",
+      "source_sheet": "2024_22-700",
+      "source_value": 500,
+      "source_unit": "kgf/m2",
+      "SI_value": 4.903325,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                0.3019921483768394,
+                16.500662618305032
+              ],
+              [
+                0.3019921483768508,
+                8.600662618241945
+              ],
+              [
+                27.78294025132007,
+                8.600662618241945
+              ],
+              [
+                27.72699214897244,
+                16.500662618305032
+              ],
+              [
+                0.3019921483768394,
+                16.500662618305032
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                0.30199214837685984,
+                6.150829273546138
+              ],
+              [
+                0.30199214837685984,
+                0.3006626182219634
+              ],
+              [
+                27.8417211689761,
+                0.3006626182219634
+              ],
+              [
+                27.800290064826704,
+                6.150829273546138
+              ],
+              [
+                0.30199214837685984,
+                6.150829273546138
+              ]
+            ],
+            [
+              [
+                25.2069921481544,
+                6.000662618241927
+              ],
+              [
+                27.601992148972315,
+                6.000662618241927
+              ],
+              [
+                27.601992148972315,
+                3.330672806084899
+              ],
+              [
+                25.2069921481544,
+                3.330672806084899
+              ],
+              [
+                25.2069921481544,
+                6.000662618241927
+              ]
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CARGAS CIELO 1° SUBTERRANEO A CIELO PISO 3°",
+        "hatch_pattern": "AR-HBONE"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E2-S1-H04-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_2",
+      "floor": "S1",
+      "source_sheet": "2024_22-700",
+      "source_value": 260,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.549729,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                0.3019921483768394,
+                16.500662618305032
+              ],
+              [
+                0.3019921483768508,
+                8.600662618241945
+              ],
+              [
+                27.78294025132007,
+                8.600662618241945
+              ],
+              [
+                27.72699214897244,
+                16.500662618305032
+              ],
+              [
+                0.3019921483768394,
+                16.500662618305032
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                0.30199214837685984,
+                6.150829273546138
+              ],
+              [
+                0.30199214837685984,
+                0.3006626182219634
+              ],
+              [
+                27.8417211689761,
+                0.3006626182219634
+              ],
+              [
+                27.800290064826704,
+                6.150829273546138
+              ],
+              [
+                0.30199214837685984,
+                6.150829273546138
+              ]
+            ],
+            [
+              [
+                25.2069921481544,
+                6.000662618241927
+              ],
+              [
+                27.601992148972315,
+                6.000662618241927
+              ],
+              [
+                27.601992148972315,
+                3.330672806084899
+              ],
+              [
+                25.2069921481544,
+                3.330672806084899
+              ],
+              [
+                25.2069921481544,
+                6.000662618241927
+              ]
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CARGAS CIELO 1° SUBTERRANEO A CIELO PISO 3°",
+        "hatch_pattern": "AR-HBONE"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E2-P1-H01-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_2",
+      "floor": "P1",
+      "source_sheet": "2024_22-700",
+      "source_value": 500,
+      "source_unit": "kgf/m2",
+      "SI_value": 4.903325,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              27.800290064826704,
+              6.150829273546138
+            ],
+            [
+              0.30199214837685984,
+              6.150829273546138
+            ],
+            [
+              0.30199214837685984,
+              0.3006626182219634
+            ],
+            [
+              -3.3480098684032735,
+              0.3006626182219634
+            ],
+            [
+              -3.348009868403269,
+              4.435662618259353
+            ],
+            [
+              -1.84800986840306,
+              4.435662618259353
+            ],
+            [
+              -1.84800986840306,
+              11.695662618223018
+            ],
+            [
+              -3.348009868403269,
+              11.695662618223018
+            ],
+            [
+              -3.348009868403269,
+              16.500662618305032
+            ],
+            [
+              0.3019921483768394,
+              16.500662618305032
+            ],
+            [
+              0.3019921483768508,
+              8.600662618241945
+            ],
+            [
+              27.78294025132007,
+              8.600662618241945
+            ],
+            [
+              27.800290064826704,
+              6.150829273546138
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CARGAS CIELO 1° SUBTERRANEO A CIELO PISO 3°",
+        "hatch_pattern": "HONEY"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E2-P1-H01-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_2",
+      "floor": "P1",
+      "source_sheet": "2024_22-700",
+      "source_value": 260,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.549729,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              27.800290064826704,
+              6.150829273546138
+            ],
+            [
+              0.30199214837685984,
+              6.150829273546138
+            ],
+            [
+              0.30199214837685984,
+              0.3006626182219634
+            ],
+            [
+              -3.3480098684032735,
+              0.3006626182219634
+            ],
+            [
+              -3.348009868403269,
+              4.435662618259353
+            ],
+            [
+              -1.84800986840306,
+              4.435662618259353
+            ],
+            [
+              -1.84800986840306,
+              11.695662618223018
+            ],
+            [
+              -3.348009868403269,
+              11.695662618223018
+            ],
+            [
+              -3.348009868403269,
+              16.500662618305032
+            ],
+            [
+              0.3019921483768394,
+              16.500662618305032
+            ],
+            [
+              0.3019921483768508,
+              8.600662618241945
+            ],
+            [
+              27.78294025132007,
+              8.600662618241945
+            ],
+            [
+              27.800290064826704,
+              6.150829273546138
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CARGAS CIELO 1° SUBTERRANEO A CIELO PISO 3°",
+        "hatch_pattern": "HONEY"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E2-P1-H02-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_2",
+      "floor": "P1",
+      "source_sheet": "2024_22-700",
+      "source_value": 300,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.941995,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -1.84800986840306,
+              4.435662618259353
+            ],
+            [
+              -3.348009868403269,
+              4.435662618259353
+            ],
+            [
+              -3.348009868403269,
+              11.695662618223018
+            ],
+            [
+              -1.84800986840306,
+              11.695662618223018
+            ],
+            [
+              -1.84800986840306,
+              4.435662618259353
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CARGAS CIELO 1° SUBTERRANEO A CIELO PISO 3°",
+        "hatch_pattern": "AR-CONC"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E2-P1-H02-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_2",
+      "floor": "P1",
+      "source_sheet": "2024_22-700",
+      "source_value": 260,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.549729,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -1.84800986840306,
+              4.435662618259353
+            ],
+            [
+              -3.348009868403269,
+              4.435662618259353
+            ],
+            [
+              -3.348009868403269,
+              11.695662618223018
+            ],
+            [
+              -1.84800986840306,
+              11.695662618223018
+            ],
+            [
+              -1.84800986840306,
+              4.435662618259353
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CARGAS CIELO 1° SUBTERRANEO A CIELO PISO 3°",
+        "hatch_pattern": "AR-CONC"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E2-P1-H03-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_2",
+      "floor": "P1",
+      "source_sheet": "2024_22-700",
+      "source_value": 200,
+      "source_unit": "kgf/m2",
+      "SI_value": 1.96133,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              27.851990124470195,
+              -1.1493373817781094
+            ],
+            [
+              -4.14800986842145,
+              -1.1493373817781094
+            ],
+            [
+              -4.14800986842145,
+              17.24066261830433
+            ],
+            [
+              -3.348009868403267,
+              17.24066261830532
+            ],
+            [
+              -3.348009868403269,
+              16.500662618305032
+            ],
+            [
+              -3.348009868403267,
+              0.3006626182219634
+            ],
+            [
+              27.8417211689761,
+              0.3006626182219634
+            ],
+            [
+              27.851990124470195,
+              -1.1493373817781094
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CARGAS CIELO 1° SUBTERRANEO A CIELO PISO 3°",
+        "hatch_pattern": "_USER"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E2-P1-H03-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_2",
+      "floor": "P1",
+      "source_sheet": "2024_22-700",
+      "source_value": 260,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.549729,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              27.851990124470195,
+              -1.1493373817781094
+            ],
+            [
+              -4.14800986842145,
+              -1.1493373817781094
+            ],
+            [
+              -4.14800986842145,
+              17.24066261830433
+            ],
+            [
+              -3.348009868403267,
+              17.24066261830532
+            ],
+            [
+              -3.348009868403269,
+              16.500662618305032
+            ],
+            [
+              -3.348009868403267,
+              0.3006626182219634
+            ],
+            [
+              27.8417211689761,
+              0.3006626182219634
+            ],
+            [
+              27.851990124470195,
+              -1.1493373817781094
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CARGAS CIELO 1° SUBTERRANEO A CIELO PISO 3°",
+        "hatch_pattern": "_USER"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E2-P1-H04-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_2",
+      "floor": "P1",
+      "source_sheet": "2024_22-700",
+      "source_value": 500,
+      "source_unit": "kgf/m2",
+      "SI_value": 4.903325,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                0.3019921483768394,
+                16.500662618305032
+              ],
+              [
+                0.3019921483768508,
+                8.600662618241945
+              ],
+              [
+                27.78294025132007,
+                8.600662618241945
+              ],
+              [
+                27.72699214897244,
+                16.500662618305032
+              ],
+              [
+                0.3019921483768394,
+                16.500662618305032
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                0.30199214837685984,
+                6.150829273546138
+              ],
+              [
+                0.30199214837685984,
+                0.3006626182219634
+              ],
+              [
+                27.8417211689761,
+                0.3006626182219634
+              ],
+              [
+                27.800290064826704,
+                6.150829273546138
+              ],
+              [
+                0.30199214837685984,
+                6.150829273546138
+              ]
+            ],
+            [
+              [
+                25.2069921481544,
+                6.000662618241927
+              ],
+              [
+                27.601992148972315,
+                6.000662618241927
+              ],
+              [
+                27.601992148972315,
+                3.330672806084899
+              ],
+              [
+                25.2069921481544,
+                3.330672806084899
+              ],
+              [
+                25.2069921481544,
+                6.000662618241927
+              ]
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CARGAS CIELO 1° SUBTERRANEO A CIELO PISO 3°",
+        "hatch_pattern": "AR-HBONE"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E2-P1-H04-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_2",
+      "floor": "P1",
+      "source_sheet": "2024_22-700",
+      "source_value": 260,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.549729,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                0.3019921483768394,
+                16.500662618305032
+              ],
+              [
+                0.3019921483768508,
+                8.600662618241945
+              ],
+              [
+                27.78294025132007,
+                8.600662618241945
+              ],
+              [
+                27.72699214897244,
+                16.500662618305032
+              ],
+              [
+                0.3019921483768394,
+                16.500662618305032
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                0.30199214837685984,
+                6.150829273546138
+              ],
+              [
+                0.30199214837685984,
+                0.3006626182219634
+              ],
+              [
+                27.8417211689761,
+                0.3006626182219634
+              ],
+              [
+                27.800290064826704,
+                6.150829273546138
+              ],
+              [
+                0.30199214837685984,
+                6.150829273546138
+              ]
+            ],
+            [
+              [
+                25.2069921481544,
+                6.000662618241927
+              ],
+              [
+                27.601992148972315,
+                6.000662618241927
+              ],
+              [
+                27.601992148972315,
+                3.330672806084899
+              ],
+              [
+                25.2069921481544,
+                3.330672806084899
+              ],
+              [
+                25.2069921481544,
+                6.000662618241927
+              ]
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CARGAS CIELO 1° SUBTERRANEO A CIELO PISO 3°",
+        "hatch_pattern": "AR-HBONE"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E2-P2-H01-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_2",
+      "floor": "P2",
+      "source_sheet": "2024_22-700",
+      "source_value": 500,
+      "source_unit": "kgf/m2",
+      "SI_value": 4.903325,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              27.800290064826704,
+              6.150829273546138
+            ],
+            [
+              0.30199214837685984,
+              6.150829273546138
+            ],
+            [
+              0.30199214837685984,
+              0.3006626182219634
+            ],
+            [
+              -3.3480098684032735,
+              0.3006626182219634
+            ],
+            [
+              -3.348009868403269,
+              4.435662618259353
+            ],
+            [
+              -1.84800986840306,
+              4.435662618259353
+            ],
+            [
+              -1.84800986840306,
+              11.695662618223018
+            ],
+            [
+              -3.348009868403269,
+              11.695662618223018
+            ],
+            [
+              -3.348009868403269,
+              16.500662618305032
+            ],
+            [
+              0.3019921483768394,
+              16.500662618305032
+            ],
+            [
+              0.3019921483768508,
+              8.600662618241945
+            ],
+            [
+              27.78294025132007,
+              8.600662618241945
+            ],
+            [
+              27.800290064826704,
+              6.150829273546138
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CARGAS CIELO 1° SUBTERRANEO A CIELO PISO 3°",
+        "hatch_pattern": "HONEY"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E2-P2-H01-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_2",
+      "floor": "P2",
+      "source_sheet": "2024_22-700",
+      "source_value": 260,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.549729,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              27.800290064826704,
+              6.150829273546138
+            ],
+            [
+              0.30199214837685984,
+              6.150829273546138
+            ],
+            [
+              0.30199214837685984,
+              0.3006626182219634
+            ],
+            [
+              -3.3480098684032735,
+              0.3006626182219634
+            ],
+            [
+              -3.348009868403269,
+              4.435662618259353
+            ],
+            [
+              -1.84800986840306,
+              4.435662618259353
+            ],
+            [
+              -1.84800986840306,
+              11.695662618223018
+            ],
+            [
+              -3.348009868403269,
+              11.695662618223018
+            ],
+            [
+              -3.348009868403269,
+              16.500662618305032
+            ],
+            [
+              0.3019921483768394,
+              16.500662618305032
+            ],
+            [
+              0.3019921483768508,
+              8.600662618241945
+            ],
+            [
+              27.78294025132007,
+              8.600662618241945
+            ],
+            [
+              27.800290064826704,
+              6.150829273546138
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CARGAS CIELO 1° SUBTERRANEO A CIELO PISO 3°",
+        "hatch_pattern": "HONEY"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E2-P2-H02-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_2",
+      "floor": "P2",
+      "source_sheet": "2024_22-700",
+      "source_value": 300,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.941995,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -1.84800986840306,
+              4.435662618259353
+            ],
+            [
+              -3.348009868403269,
+              4.435662618259353
+            ],
+            [
+              -3.348009868403269,
+              11.695662618223018
+            ],
+            [
+              -1.84800986840306,
+              11.695662618223018
+            ],
+            [
+              -1.84800986840306,
+              4.435662618259353
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CARGAS CIELO 1° SUBTERRANEO A CIELO PISO 3°",
+        "hatch_pattern": "AR-CONC"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E2-P2-H02-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_2",
+      "floor": "P2",
+      "source_sheet": "2024_22-700",
+      "source_value": 260,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.549729,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -1.84800986840306,
+              4.435662618259353
+            ],
+            [
+              -3.348009868403269,
+              4.435662618259353
+            ],
+            [
+              -3.348009868403269,
+              11.695662618223018
+            ],
+            [
+              -1.84800986840306,
+              11.695662618223018
+            ],
+            [
+              -1.84800986840306,
+              4.435662618259353
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CARGAS CIELO 1° SUBTERRANEO A CIELO PISO 3°",
+        "hatch_pattern": "AR-CONC"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E2-P2-H03-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_2",
+      "floor": "P2",
+      "source_sheet": "2024_22-700",
+      "source_value": 200,
+      "source_unit": "kgf/m2",
+      "SI_value": 1.96133,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              27.851990124470195,
+              -1.1493373817781094
+            ],
+            [
+              -4.14800986842145,
+              -1.1493373817781094
+            ],
+            [
+              -4.14800986842145,
+              17.24066261830433
+            ],
+            [
+              -3.348009868403267,
+              17.24066261830532
+            ],
+            [
+              -3.348009868403269,
+              16.500662618305032
+            ],
+            [
+              -3.348009868403267,
+              0.3006626182219634
+            ],
+            [
+              27.8417211689761,
+              0.3006626182219634
+            ],
+            [
+              27.851990124470195,
+              -1.1493373817781094
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CARGAS CIELO 1° SUBTERRANEO A CIELO PISO 3°",
+        "hatch_pattern": "_USER"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E2-P2-H03-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_2",
+      "floor": "P2",
+      "source_sheet": "2024_22-700",
+      "source_value": 260,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.549729,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              27.851990124470195,
+              -1.1493373817781094
+            ],
+            [
+              -4.14800986842145,
+              -1.1493373817781094
+            ],
+            [
+              -4.14800986842145,
+              17.24066261830433
+            ],
+            [
+              -3.348009868403267,
+              17.24066261830532
+            ],
+            [
+              -3.348009868403269,
+              16.500662618305032
+            ],
+            [
+              -3.348009868403267,
+              0.3006626182219634
+            ],
+            [
+              27.8417211689761,
+              0.3006626182219634
+            ],
+            [
+              27.851990124470195,
+              -1.1493373817781094
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CARGAS CIELO 1° SUBTERRANEO A CIELO PISO 3°",
+        "hatch_pattern": "_USER"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E2-P2-H04-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_2",
+      "floor": "P2",
+      "source_sheet": "2024_22-700",
+      "source_value": 500,
+      "source_unit": "kgf/m2",
+      "SI_value": 4.903325,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                0.3019921483768394,
+                16.500662618305032
+              ],
+              [
+                0.3019921483768508,
+                8.600662618241945
+              ],
+              [
+                27.78294025132007,
+                8.600662618241945
+              ],
+              [
+                27.72699214897244,
+                16.500662618305032
+              ],
+              [
+                0.3019921483768394,
+                16.500662618305032
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                0.30199214837685984,
+                6.150829273546138
+              ],
+              [
+                0.30199214837685984,
+                0.3006626182219634
+              ],
+              [
+                27.8417211689761,
+                0.3006626182219634
+              ],
+              [
+                27.800290064826704,
+                6.150829273546138
+              ],
+              [
+                0.30199214837685984,
+                6.150829273546138
+              ]
+            ],
+            [
+              [
+                25.2069921481544,
+                6.000662618241927
+              ],
+              [
+                27.601992148972315,
+                6.000662618241927
+              ],
+              [
+                27.601992148972315,
+                3.330672806084899
+              ],
+              [
+                25.2069921481544,
+                3.330672806084899
+              ],
+              [
+                25.2069921481544,
+                6.000662618241927
+              ]
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CARGAS CIELO 1° SUBTERRANEO A CIELO PISO 3°",
+        "hatch_pattern": "AR-HBONE"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E2-P2-H04-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_2",
+      "floor": "P2",
+      "source_sheet": "2024_22-700",
+      "source_value": 260,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.549729,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                0.3019921483768394,
+                16.500662618305032
+              ],
+              [
+                0.3019921483768508,
+                8.600662618241945
+              ],
+              [
+                27.78294025132007,
+                8.600662618241945
+              ],
+              [
+                27.72699214897244,
+                16.500662618305032
+              ],
+              [
+                0.3019921483768394,
+                16.500662618305032
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                0.30199214837685984,
+                6.150829273546138
+              ],
+              [
+                0.30199214837685984,
+                0.3006626182219634
+              ],
+              [
+                27.8417211689761,
+                0.3006626182219634
+              ],
+              [
+                27.800290064826704,
+                6.150829273546138
+              ],
+              [
+                0.30199214837685984,
+                6.150829273546138
+              ]
+            ],
+            [
+              [
+                25.2069921481544,
+                6.000662618241927
+              ],
+              [
+                27.601992148972315,
+                6.000662618241927
+              ],
+              [
+                27.601992148972315,
+                3.330672806084899
+              ],
+              [
+                25.2069921481544,
+                3.330672806084899
+              ],
+              [
+                25.2069921481544,
+                6.000662618241927
+              ]
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CARGAS CIELO 1° SUBTERRANEO A CIELO PISO 3°",
+        "hatch_pattern": "AR-HBONE"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E2-P3-H01-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_2",
+      "floor": "P3",
+      "source_sheet": "2024_22-700",
+      "source_value": 500,
+      "source_unit": "kgf/m2",
+      "SI_value": 4.903325,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              27.800290064826704,
+              6.150829273546138
+            ],
+            [
+              0.30199214837685984,
+              6.150829273546138
+            ],
+            [
+              0.30199214837685984,
+              0.3006626182219634
+            ],
+            [
+              -3.3480098684032735,
+              0.3006626182219634
+            ],
+            [
+              -3.348009868403269,
+              4.435662618259353
+            ],
+            [
+              -1.84800986840306,
+              4.435662618259353
+            ],
+            [
+              -1.84800986840306,
+              11.695662618223018
+            ],
+            [
+              -3.348009868403269,
+              11.695662618223018
+            ],
+            [
+              -3.348009868403269,
+              16.500662618305032
+            ],
+            [
+              0.3019921483768394,
+              16.500662618305032
+            ],
+            [
+              0.3019921483768508,
+              8.600662618241945
+            ],
+            [
+              27.78294025132007,
+              8.600662618241945
+            ],
+            [
+              27.800290064826704,
+              6.150829273546138
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CARGAS CIELO 1° SUBTERRANEO A CIELO PISO 3°",
+        "hatch_pattern": "HONEY"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E2-P3-H01-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_2",
+      "floor": "P3",
+      "source_sheet": "2024_22-700",
+      "source_value": 260,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.549729,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              27.800290064826704,
+              6.150829273546138
+            ],
+            [
+              0.30199214837685984,
+              6.150829273546138
+            ],
+            [
+              0.30199214837685984,
+              0.3006626182219634
+            ],
+            [
+              -3.3480098684032735,
+              0.3006626182219634
+            ],
+            [
+              -3.348009868403269,
+              4.435662618259353
+            ],
+            [
+              -1.84800986840306,
+              4.435662618259353
+            ],
+            [
+              -1.84800986840306,
+              11.695662618223018
+            ],
+            [
+              -3.348009868403269,
+              11.695662618223018
+            ],
+            [
+              -3.348009868403269,
+              16.500662618305032
+            ],
+            [
+              0.3019921483768394,
+              16.500662618305032
+            ],
+            [
+              0.3019921483768508,
+              8.600662618241945
+            ],
+            [
+              27.78294025132007,
+              8.600662618241945
+            ],
+            [
+              27.800290064826704,
+              6.150829273546138
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CARGAS CIELO 1° SUBTERRANEO A CIELO PISO 3°",
+        "hatch_pattern": "HONEY"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E2-P3-H02-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_2",
+      "floor": "P3",
+      "source_sheet": "2024_22-700",
+      "source_value": 300,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.941995,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -1.84800986840306,
+              4.435662618259353
+            ],
+            [
+              -3.348009868403269,
+              4.435662618259353
+            ],
+            [
+              -3.348009868403269,
+              11.695662618223018
+            ],
+            [
+              -1.84800986840306,
+              11.695662618223018
+            ],
+            [
+              -1.84800986840306,
+              4.435662618259353
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CARGAS CIELO 1° SUBTERRANEO A CIELO PISO 3°",
+        "hatch_pattern": "AR-CONC"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E2-P3-H02-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_2",
+      "floor": "P3",
+      "source_sheet": "2024_22-700",
+      "source_value": 260,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.549729,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -1.84800986840306,
+              4.435662618259353
+            ],
+            [
+              -3.348009868403269,
+              4.435662618259353
+            ],
+            [
+              -3.348009868403269,
+              11.695662618223018
+            ],
+            [
+              -1.84800986840306,
+              11.695662618223018
+            ],
+            [
+              -1.84800986840306,
+              4.435662618259353
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CARGAS CIELO 1° SUBTERRANEO A CIELO PISO 3°",
+        "hatch_pattern": "AR-CONC"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E2-P3-H03-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_2",
+      "floor": "P3",
+      "source_sheet": "2024_22-700",
+      "source_value": 200,
+      "source_unit": "kgf/m2",
+      "SI_value": 1.96133,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              27.851990124470195,
+              -1.1493373817781094
+            ],
+            [
+              -4.14800986842145,
+              -1.1493373817781094
+            ],
+            [
+              -4.14800986842145,
+              17.24066261830433
+            ],
+            [
+              -3.348009868403267,
+              17.24066261830532
+            ],
+            [
+              -3.348009868403269,
+              16.500662618305032
+            ],
+            [
+              -3.348009868403267,
+              0.3006626182219634
+            ],
+            [
+              27.8417211689761,
+              0.3006626182219634
+            ],
+            [
+              27.851990124470195,
+              -1.1493373817781094
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CARGAS CIELO 1° SUBTERRANEO A CIELO PISO 3°",
+        "hatch_pattern": "_USER"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E2-P3-H03-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_2",
+      "floor": "P3",
+      "source_sheet": "2024_22-700",
+      "source_value": 260,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.549729,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              27.851990124470195,
+              -1.1493373817781094
+            ],
+            [
+              -4.14800986842145,
+              -1.1493373817781094
+            ],
+            [
+              -4.14800986842145,
+              17.24066261830433
+            ],
+            [
+              -3.348009868403267,
+              17.24066261830532
+            ],
+            [
+              -3.348009868403269,
+              16.500662618305032
+            ],
+            [
+              -3.348009868403267,
+              0.3006626182219634
+            ],
+            [
+              27.8417211689761,
+              0.3006626182219634
+            ],
+            [
+              27.851990124470195,
+              -1.1493373817781094
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CARGAS CIELO 1° SUBTERRANEO A CIELO PISO 3°",
+        "hatch_pattern": "_USER"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E2-P3-H04-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_2",
+      "floor": "P3",
+      "source_sheet": "2024_22-700",
+      "source_value": 500,
+      "source_unit": "kgf/m2",
+      "SI_value": 4.903325,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                0.3019921483768394,
+                16.500662618305032
+              ],
+              [
+                0.3019921483768508,
+                8.600662618241945
+              ],
+              [
+                27.78294025132007,
+                8.600662618241945
+              ],
+              [
+                27.72699214897244,
+                16.500662618305032
+              ],
+              [
+                0.3019921483768394,
+                16.500662618305032
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                0.30199214837685984,
+                6.150829273546138
+              ],
+              [
+                0.30199214837685984,
+                0.3006626182219634
+              ],
+              [
+                27.8417211689761,
+                0.3006626182219634
+              ],
+              [
+                27.800290064826704,
+                6.150829273546138
+              ],
+              [
+                0.30199214837685984,
+                6.150829273546138
+              ]
+            ],
+            [
+              [
+                25.2069921481544,
+                6.000662618241927
+              ],
+              [
+                27.601992148972315,
+                6.000662618241927
+              ],
+              [
+                27.601992148972315,
+                3.330672806084899
+              ],
+              [
+                25.2069921481544,
+                3.330672806084899
+              ],
+              [
+                25.2069921481544,
+                6.000662618241927
+              ]
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CARGAS CIELO 1° SUBTERRANEO A CIELO PISO 3°",
+        "hatch_pattern": "AR-HBONE"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E2-P3-H04-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_2",
+      "floor": "P3",
+      "source_sheet": "2024_22-700",
+      "source_value": 260,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.549729,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                0.3019921483768394,
+                16.500662618305032
+              ],
+              [
+                0.3019921483768508,
+                8.600662618241945
+              ],
+              [
+                27.78294025132007,
+                8.600662618241945
+              ],
+              [
+                27.72699214897244,
+                16.500662618305032
+              ],
+              [
+                0.3019921483768394,
+                16.500662618305032
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                0.30199214837685984,
+                6.150829273546138
+              ],
+              [
+                0.30199214837685984,
+                0.3006626182219634
+              ],
+              [
+                27.8417211689761,
+                0.3006626182219634
+              ],
+              [
+                27.800290064826704,
+                6.150829273546138
+              ],
+              [
+                0.30199214837685984,
+                6.150829273546138
+              ]
+            ],
+            [
+              [
+                25.2069921481544,
+                6.000662618241927
+              ],
+              [
+                27.601992148972315,
+                6.000662618241927
+              ],
+              [
+                27.601992148972315,
+                3.330672806084899
+              ],
+              [
+                25.2069921481544,
+                3.330672806084899
+              ],
+              [
+                25.2069921481544,
+                6.000662618241927
+              ]
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CARGAS CIELO 1° SUBTERRANEO A CIELO PISO 3°",
+        "hatch_pattern": "AR-HBONE"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E2-P4-H05-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "source_sheet": "2024_22-700",
+      "source_value": 200,
+      "source_unit": "kgf/m2",
+      "SI_value": 1.96133,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              27.85199556571516,
+              16.50066261830502
+            ],
+            [
+              -1.8980064516604398,
+              16.50066261830502
+            ],
+            [
+              -1.8980064516604398,
+              17.24066261830532
+            ],
+            [
+              -4.1480064516560375,
+              17.24066261830256
+            ],
+            [
+              -4.1480064516560375,
+              -1.1493373817781185
+            ],
+            [
+              27.85199556571516,
+              -1.1493373817781185
+            ],
+            [
+              27.85199556571516,
+              3.030672806084863
+            ],
+            [
+              24.95699088298884,
+              3.030672806084863
+            ],
+            [
+              24.95699088298884,
+              6.15066261824189
+            ],
+            [
+              27.85199556571516,
+              6.15066261824189
+            ],
+            [
+              27.85199556571516,
+              16.50066261830502
+            ]
+          ],
+          [
+            [
+              7.204939732523835,
+              9.200662618241882
+            ],
+            [
+              5.427939732523855,
+              9.200662618241882
+            ],
+            [
+              5.427939732523855,
+              11.260662618392702
+            ],
+            [
+              7.204939732523835,
+              11.260662618392702
+            ],
+            [
+              7.204939732523835,
+              9.200662618241882
+            ]
+          ],
+          [
+            [
+              9.581939732523834,
+              11.260662618392702
+            ],
+            [
+              9.581939732523834,
+              9.200662618241891
+            ],
+            [
+              7.804939732523844,
+              9.200662618241891
+            ],
+            [
+              7.804939732523844,
+              11.260662618392702
+            ],
+            [
+              9.581939732523834,
+              11.260662618392702
+            ]
+          ],
+          [
+            [
+              24.57899556476713,
+              11.175662618241908
+            ],
+            [
+              24.57899556476713,
+              9.200662618241891
+            ],
+            [
+              22.80199556476714,
+              9.200662618241891
+            ],
+            [
+              22.80199556476714,
+              11.175662618241908
+            ],
+            [
+              24.57899556476713,
+              11.175662618241908
+            ]
+          ],
+          [
+            [
+              7.201995565779653,
+              5.040662618241891
+            ],
+            [
+              5.424995565779654,
+              5.040662618241891
+            ],
+            [
+              5.424995565779654,
+              7.100662618392712
+            ],
+            [
+              7.201995565779653,
+              7.100662618392712
+            ],
+            [
+              7.201995565779653,
+              5.040662618241891
+            ]
+          ],
+          [
+            [
+              9.57899556577966,
+              7.100662618392712
+            ],
+            [
+              9.57899556577966,
+              5.040662618241891
+            ],
+            [
+              7.801995565779671,
+              5.040662618241891
+            ],
+            [
+              7.801995565779671,
+              7.100662618392712
+            ],
+            [
+              9.57899556577966,
+              7.100662618392712
+            ]
+          ],
+          [
+            [
+              24.578995564767148,
+              7.100662618241899
+            ],
+            [
+              24.578995564767148,
+              5.040662618241917
+            ],
+            [
+              22.801995564767157,
+              5.040662618241917
+            ],
+            [
+              22.801995564767157,
+              7.100662618241899
+            ],
+            [
+              24.578995564767148,
+              7.100662618241899
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CARGAS CIELO PISO 4°",
+        "hatch_pattern": "GRAVEL"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E2-P4-H05-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "source_sheet": "2024_22-700",
+      "source_value": 200,
+      "source_unit": "kgf/m2",
+      "SI_value": 1.96133,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              27.85199556571516,
+              16.50066261830502
+            ],
+            [
+              -1.8980064516604398,
+              16.50066261830502
+            ],
+            [
+              -1.8980064516604398,
+              17.24066261830532
+            ],
+            [
+              -4.1480064516560375,
+              17.24066261830256
+            ],
+            [
+              -4.1480064516560375,
+              -1.1493373817781185
+            ],
+            [
+              27.85199556571516,
+              -1.1493373817781185
+            ],
+            [
+              27.85199556571516,
+              3.030672806084863
+            ],
+            [
+              24.95699088298884,
+              3.030672806084863
+            ],
+            [
+              24.95699088298884,
+              6.15066261824189
+            ],
+            [
+              27.85199556571516,
+              6.15066261824189
+            ],
+            [
+              27.85199556571516,
+              16.50066261830502
+            ]
+          ],
+          [
+            [
+              7.204939732523835,
+              9.200662618241882
+            ],
+            [
+              5.427939732523855,
+              9.200662618241882
+            ],
+            [
+              5.427939732523855,
+              11.260662618392702
+            ],
+            [
+              7.204939732523835,
+              11.260662618392702
+            ],
+            [
+              7.204939732523835,
+              9.200662618241882
+            ]
+          ],
+          [
+            [
+              9.581939732523834,
+              11.260662618392702
+            ],
+            [
+              9.581939732523834,
+              9.200662618241891
+            ],
+            [
+              7.804939732523844,
+              9.200662618241891
+            ],
+            [
+              7.804939732523844,
+              11.260662618392702
+            ],
+            [
+              9.581939732523834,
+              11.260662618392702
+            ]
+          ],
+          [
+            [
+              24.57899556476713,
+              11.175662618241908
+            ],
+            [
+              24.57899556476713,
+              9.200662618241891
+            ],
+            [
+              22.80199556476714,
+              9.200662618241891
+            ],
+            [
+              22.80199556476714,
+              11.175662618241908
+            ],
+            [
+              24.57899556476713,
+              11.175662618241908
+            ]
+          ],
+          [
+            [
+              7.201995565779653,
+              5.040662618241891
+            ],
+            [
+              5.424995565779654,
+              5.040662618241891
+            ],
+            [
+              5.424995565779654,
+              7.100662618392712
+            ],
+            [
+              7.201995565779653,
+              7.100662618392712
+            ],
+            [
+              7.201995565779653,
+              5.040662618241891
+            ]
+          ],
+          [
+            [
+              9.57899556577966,
+              7.100662618392712
+            ],
+            [
+              9.57899556577966,
+              5.040662618241891
+            ],
+            [
+              7.801995565779671,
+              5.040662618241891
+            ],
+            [
+              7.801995565779671,
+              7.100662618392712
+            ],
+            [
+              9.57899556577966,
+              7.100662618392712
+            ]
+          ],
+          [
+            [
+              24.578995564767148,
+              7.100662618241899
+            ],
+            [
+              24.578995564767148,
+              5.040662618241917
+            ],
+            [
+              22.801995564767157,
+              5.040662618241917
+            ],
+            [
+              22.801995564767157,
+              7.100662618241899
+            ],
+            [
+              24.578995564767148,
+              7.100662618241899
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CARGAS CIELO PISO 4°",
+        "hatch_pattern": "GRAVEL"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-P2-POINT-SC-7000-SC_POINT",
+      "load_type": "SC_POINT",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "source_sheet": "2017_67-700",
+      "source_value": 7000,
+      "source_unit": "kgf",
+      "SI_value": 68.64655,
+      "SI_unit": "kN",
+      "geometry": null,
+      "location": {
+        "annotation_anchor_sheet_xy": [
+          13682.958,
+          6635.796
+        ],
+        "application_position": null
+      },
+      "confidence": "EXHAUSTIVE_DXF_SEARCH_NO_UNIQUE_GRAPHIC_CALL",
+      "receiver": null,
+      "application_status": "REVIEW_REQUIRED_UNRESOLVED_POSITION"
+    },
+    {
+      "load_id": "L700-P2-POINT-SC-7000-PM_ADIC_POINT",
+      "load_type": "PM_ADIC_POINT",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "source_sheet": "2017_67-700",
+      "source_value": 13000,
+      "source_unit": "kgf",
+      "SI_value": 127.48645,
+      "SI_unit": "kN",
+      "geometry": null,
+      "location": {
+        "annotation_anchor_sheet_xy": [
+          13682.958,
+          6635.796
+        ],
+        "application_position": null
+      },
+      "confidence": "EXHAUSTIVE_DXF_SEARCH_NO_UNIQUE_GRAPHIC_CALL",
+      "receiver": null,
+      "application_status": "REVIEW_REQUIRED_UNRESOLVED_POSITION"
+    },
+    {
+      "load_id": "L700-P3-POINT-SC-6000-SC_POINT",
+      "load_type": "SC_POINT",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "source_sheet": "2017_67-700",
+      "source_value": 6000,
+      "source_unit": "kgf",
+      "SI_value": 58.8399,
+      "SI_unit": "kN",
+      "geometry": null,
+      "location": {
+        "annotation_anchor_sheet_xy": [
+          13599.347,
+          455.876
+        ],
+        "application_position": null
+      },
+      "confidence": "EXHAUSTIVE_DXF_SEARCH_NO_UNIQUE_GRAPHIC_CALL",
+      "receiver": null,
+      "application_status": "REVIEW_REQUIRED_UNRESOLVED_POSITION"
+    },
+    {
+      "load_id": "L700-P3-POINT-SC-6000-PM_ADIC_POINT",
+      "load_type": "PM_ADIC_POINT",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "source_sheet": "2017_67-700",
+      "source_value": 10000,
+      "source_unit": "kgf",
+      "SI_value": 98.0665,
+      "SI_unit": "kN",
+      "geometry": null,
+      "location": {
+        "annotation_anchor_sheet_xy": [
+          13599.347,
+          455.876
+        ],
+        "application_position": null
+      },
+      "confidence": "EXHAUSTIVE_DXF_SEARCH_NO_UNIQUE_GRAPHIC_CALL",
+      "receiver": null,
+      "application_status": "REVIEW_REQUIRED_UNRESOLVED_POSITION"
+    },
+    {
+      "load_id": "L700-P3-POINT-SC-6700-SC_POINT",
+      "load_type": "SC_POINT",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "source_sheet": "2017_67-700",
+      "source_value": 6700,
+      "source_unit": "kgf",
+      "SI_value": 65.704555,
+      "SI_unit": "kN",
+      "geometry": null,
+      "location": {
+        "annotation_anchor_sheet_xy": [
+          8957.198,
+          507.317
+        ],
+        "application_position": null
+      },
+      "confidence": "EXHAUSTIVE_DXF_SEARCH_NO_UNIQUE_GRAPHIC_CALL",
+      "receiver": null,
+      "application_status": "REVIEW_REQUIRED_UNRESOLVED_POSITION"
+    },
+    {
+      "load_id": "L700-P3-POINT-SC-6700-PM_ADIC_POINT",
+      "load_type": "PM_ADIC_POINT",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "source_sheet": "2017_67-700",
+      "source_value": 13000,
+      "source_unit": "kgf",
+      "SI_value": 127.48645,
+      "SI_unit": "kN",
+      "geometry": null,
+      "location": {
+        "annotation_anchor_sheet_xy": [
+          8957.198,
+          507.317
+        ],
+        "application_position": null
+      },
+      "confidence": "EXHAUSTIVE_DXF_SEARCH_NO_UNIQUE_GRAPHIC_CALL",
+      "receiver": null,
+      "application_status": "REVIEW_REQUIRED_UNRESOLVED_POSITION"
+    },
+    {
+      "load_id": "L700-P4-LINE-SC-800-SC_LINE",
+      "load_type": "SC_LINE",
+      "building": "EDIFICIO_1",
+      "floor": "P4",
+      "source_sheet": "2017_67-700",
+      "source_value": 800,
+      "source_unit": "kgf/m",
+      "SI_value": 7.84532,
+      "SI_unit": "kN/m",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            37.14088063447958,
+            16.356404329769557
+          ],
+          [
+            72.14088063446994,
+            16.356404329769557
+          ]
+        ]
+      },
+      "location": {
+        "polygon_band": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                37.14088063447958,
+                16.03132100213761
+              ],
+              [
+                37.14088063447958,
+                16.681487657401505
+              ],
+              [
+                72.14088063446994,
+                16.681487657401505
+              ],
+              [
+                72.14088063446994,
+                16.03132100213761
+              ],
+              [
+                37.14088063447958,
+                16.03132100213761
+              ]
+            ]
+          ]
+        },
+        "centerline_length_m": 35.0
+      },
+      "confidence": "LIKELY",
+      "receiver": {
+        "status": "LIKELY",
+        "elements": [
+          {
+            "element_id": "E1-P4-V-024",
+            "category": "beam",
+            "distance_m": 0.274917,
+            "parallel_overlap_m": 9.3,
+            "start": [
+              37.840881,
+              16.631321
+            ],
+            "end": [
+              47.140881,
+              16.631321
+            ]
+          },
+          {
+            "element_id": "E1-P4-V-030",
+            "category": "beam",
+            "distance_m": 0.325083,
+            "parallel_overlap_m": 4.35,
+            "start": [
+              42.790881,
+              16.031321
+            ],
+            "end": [
+              47.140881,
+              16.031321
+            ]
+          },
+          {
+            "element_id": "E1-P4-V-020",
+            "category": "beam",
+            "distance_m": 0.325083,
+            "parallel_overlap_m": 4.35,
+            "start": [
+              37.840881,
+              16.031321
+            ],
+            "end": [
+              42.190881,
+              16.031321
+            ]
+          },
+          {
+            "element_id": "E1-P4-V-047",
+            "category": "beam",
+            "distance_m": 0.274917,
+            "parallel_overlap_m": 9.3,
+            "start": [
+              47.840881,
+              16.631321
+            ],
+            "end": [
+              57.140881,
+              16.631321
+            ]
+          },
+          {
+            "element_id": "E1-P4-V-055",
+            "category": "beam",
+            "distance_m": 0.325083,
+            "parallel_overlap_m": 4.35,
+            "start": [
+              52.790881,
+              16.031321
+            ],
+            "end": [
+              57.140881,
+              16.031321
+            ]
+          },
+          {
+            "element_id": "E1-P4-V-043",
+            "category": "beam",
+            "distance_m": 0.325083,
+            "parallel_overlap_m": 4.35,
+            "start": [
+              47.840881,
+              16.031321
+            ],
+            "end": [
+              52.190881,
+              16.031321
+            ]
+          },
+          {
+            "element_id": "E1-P4-V-072",
+            "category": "beam",
+            "distance_m": 0.274917,
+            "parallel_overlap_m": 9.3,
+            "start": [
+              57.840881,
+              16.631321
+            ],
+            "end": [
+              67.140881,
+              16.631321
+            ]
+          },
+          {
+            "element_id": "E1-P4-V-078",
+            "category": "beam",
+            "distance_m": 0.325083,
+            "parallel_overlap_m": 4.35,
+            "start": [
+              62.790881,
+              16.031321
+            ],
+            "end": [
+              67.140881,
+              16.031321
+            ]
+          },
+          {
+            "element_id": "E1-P4-V-068",
+            "category": "beam",
+            "distance_m": 0.325083,
+            "parallel_overlap_m": 4.35,
+            "start": [
+              57.840881,
+              16.031321
+            ],
+            "end": [
+              62.190881,
+              16.031321
+            ]
+          },
+          {
+            "element_id": "E1-P4-V-089",
+            "category": "beam",
+            "distance_m": 0.274917,
+            "parallel_overlap_m": 4.3,
+            "start": [
+              67.840881,
+              16.631321
+            ],
+            "end": [
+              72.140881,
+              16.631321
+            ]
+          },
+          {
+            "element_id": "E1-P4-V-088",
+            "category": "beam",
+            "distance_m": 0.325083,
+            "parallel_overlap_m": 4.3,
+            "start": [
+              67.840881,
+              16.031321
+            ],
+            "end": [
+              72.140881,
+              16.031321
+            ]
+          }
+        ],
+        "receiver_count": 11,
+        "max_single_distance_m": 0.325083,
+        "reason": "coincidencia de orientacion, banda, longitud y planta estructural; no existe leader que asigne un unico elemento"
+      },
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-P4-LINE-SC-800-PM_ADIC_LINE",
+      "load_type": "PM_ADIC_LINE",
+      "building": "EDIFICIO_1",
+      "floor": "P4",
+      "source_sheet": "2017_67-700",
+      "source_value": 7600,
+      "source_unit": "kgf/m",
+      "SI_value": 74.53054,
+      "SI_unit": "kN/m",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            37.14088063447958,
+            16.356404329769557
+          ],
+          [
+            72.14088063446994,
+            16.356404329769557
+          ]
+        ]
+      },
+      "location": {
+        "polygon_band": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                37.14088063447958,
+                16.03132100213761
+              ],
+              [
+                37.14088063447958,
+                16.681487657401505
+              ],
+              [
+                72.14088063446994,
+                16.681487657401505
+              ],
+              [
+                72.14088063446994,
+                16.03132100213761
+              ],
+              [
+                37.14088063447958,
+                16.03132100213761
+              ]
+            ]
+          ]
+        },
+        "centerline_length_m": 35.0
+      },
+      "confidence": "LIKELY",
+      "receiver": {
+        "status": "LIKELY",
+        "elements": [
+          {
+            "element_id": "E1-P4-V-024",
+            "category": "beam",
+            "distance_m": 0.274917,
+            "parallel_overlap_m": 9.3,
+            "start": [
+              37.840881,
+              16.631321
+            ],
+            "end": [
+              47.140881,
+              16.631321
+            ]
+          },
+          {
+            "element_id": "E1-P4-V-030",
+            "category": "beam",
+            "distance_m": 0.325083,
+            "parallel_overlap_m": 4.35,
+            "start": [
+              42.790881,
+              16.031321
+            ],
+            "end": [
+              47.140881,
+              16.031321
+            ]
+          },
+          {
+            "element_id": "E1-P4-V-020",
+            "category": "beam",
+            "distance_m": 0.325083,
+            "parallel_overlap_m": 4.35,
+            "start": [
+              37.840881,
+              16.031321
+            ],
+            "end": [
+              42.190881,
+              16.031321
+            ]
+          },
+          {
+            "element_id": "E1-P4-V-047",
+            "category": "beam",
+            "distance_m": 0.274917,
+            "parallel_overlap_m": 9.3,
+            "start": [
+              47.840881,
+              16.631321
+            ],
+            "end": [
+              57.140881,
+              16.631321
+            ]
+          },
+          {
+            "element_id": "E1-P4-V-055",
+            "category": "beam",
+            "distance_m": 0.325083,
+            "parallel_overlap_m": 4.35,
+            "start": [
+              52.790881,
+              16.031321
+            ],
+            "end": [
+              57.140881,
+              16.031321
+            ]
+          },
+          {
+            "element_id": "E1-P4-V-043",
+            "category": "beam",
+            "distance_m": 0.325083,
+            "parallel_overlap_m": 4.35,
+            "start": [
+              47.840881,
+              16.031321
+            ],
+            "end": [
+              52.190881,
+              16.031321
+            ]
+          },
+          {
+            "element_id": "E1-P4-V-072",
+            "category": "beam",
+            "distance_m": 0.274917,
+            "parallel_overlap_m": 9.3,
+            "start": [
+              57.840881,
+              16.631321
+            ],
+            "end": [
+              67.140881,
+              16.631321
+            ]
+          },
+          {
+            "element_id": "E1-P4-V-078",
+            "category": "beam",
+            "distance_m": 0.325083,
+            "parallel_overlap_m": 4.35,
+            "start": [
+              62.790881,
+              16.031321
+            ],
+            "end": [
+              67.140881,
+              16.031321
+            ]
+          },
+          {
+            "element_id": "E1-P4-V-068",
+            "category": "beam",
+            "distance_m": 0.325083,
+            "parallel_overlap_m": 4.35,
+            "start": [
+              57.840881,
+              16.031321
+            ],
+            "end": [
+              62.190881,
+              16.031321
+            ]
+          },
+          {
+            "element_id": "E1-P4-V-089",
+            "category": "beam",
+            "distance_m": 0.274917,
+            "parallel_overlap_m": 4.3,
+            "start": [
+              67.840881,
+              16.631321
+            ],
+            "end": [
+              72.140881,
+              16.631321
+            ]
+          },
+          {
+            "element_id": "E1-P4-V-088",
+            "category": "beam",
+            "distance_m": 0.325083,
+            "parallel_overlap_m": 4.3,
+            "start": [
+              67.840881,
+              16.031321
+            ],
+            "end": [
+              72.140881,
+              16.031321
+            ]
+          }
+        ],
+        "receiver_count": 11,
+        "max_single_distance_m": 0.325083,
+        "reason": "coincidencia de orientacion, banda, longitud y planta estructural; no existe leader que asigne un unico elemento"
+      },
+      "application_status": "READY_SPATIAL_NOT_APPLIED"
+    },
+    {
+      "load_id": "L700-E2-P4-LINE-SC-100-SC_LINE",
+      "load_type": "SC_LINE",
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "source_sheet": "2024_22-700",
+      "source_value": 100,
+      "source_unit": "kgf/m",
+      "SI_value": 0.980665,
+      "SI_unit": "kN/m",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            26.404492212100948,
+            6.150662618241891
+          ],
+          [
+            26.404492212100948,
+            3.030672806084863
+          ]
+        ]
+      },
+      "location": {
+        "polygon_band": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                27.85199354121306,
+                3.030672806084863
+              ],
+              [
+                24.95699088298884,
+                3.030672806084863
+              ],
+              [
+                24.95699088298884,
+                6.15066261824189
+              ],
+              [
+                27.85199354121306,
+                6.15066261824189
+              ],
+              [
+                27.85199354121306,
+                3.030672806084863
+              ]
+            ]
+          ]
+        },
+        "centerline_length_m": 3.119989812157028
+      },
+      "confidence": "UNRESOLVED",
+      "receiver": {
+        "status": "UNRESOLVED",
+        "elements": [],
+        "receiver_count": 0,
+        "max_single_distance_m": null,
+        "reason": "coincidencia de orientacion, banda, longitud y planta estructural; no existe leader que asigne un unico elemento"
+      },
+      "application_status": "REVIEW_REQUIRED"
+    },
+    {
+      "load_id": "L700-E2-P4-LINE-SC-100-PM_ADIC_LINE",
+      "load_type": "PM_ADIC_LINE",
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "source_sheet": "2024_22-700",
+      "source_value": 1500,
+      "source_unit": "kgf/m",
+      "SI_value": 14.709975,
+      "SI_unit": "kN/m",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            26.404492212100948,
+            6.150662618241891
+          ],
+          [
+            26.404492212100948,
+            3.030672806084863
+          ]
+        ]
+      },
+      "location": {
+        "polygon_band": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                27.85199354121306,
+                3.030672806084863
+              ],
+              [
+                24.95699088298884,
+                3.030672806084863
+              ],
+              [
+                24.95699088298884,
+                6.15066261824189
+              ],
+              [
+                27.85199354121306,
+                6.15066261824189
+              ],
+              [
+                27.85199354121306,
+                3.030672806084863
+              ]
+            ]
+          ]
+        },
+        "centerline_length_m": 3.119989812157028
+      },
+      "confidence": "UNRESOLVED",
+      "receiver": {
+        "status": "UNRESOLVED",
+        "elements": [],
+        "receiver_count": 0,
+        "max_single_distance_m": null,
+        "reason": "coincidencia de orientacion, banda, longitud y planta estructural; no existe leader que asigne un unico elemento"
+      },
+      "application_status": "REVIEW_REQUIRED"
+    },
+    {
+      "load_id": "EDIFICIO_1-S1-PP_LOSA",
+      "load_type": "PP_LOSA",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "source_sheet": "2017_67-700",
+      "source_value": 2500,
+      "source_unit": "kgf/m3",
+      "SI_value": 24.516625,
+      "SI_unit": "kN/m3",
+      "geometry": null,
+      "location": {
+        "rule": "PP.LOSA=e(m)*2500 kgf/m3",
+        "thickness_source": "structural floor plan"
+      },
+      "confidence": "CONFIRMED_FORMULA_THICKNESS_MAPPING_PENDING",
+      "receiver": null,
+      "application_status": "NOT_READY_LOCAL_THICKNESS_MAPPING"
+    },
+    {
+      "load_id": "EDIFICIO_1-P1-PP_LOSA",
+      "load_type": "PP_LOSA",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "source_sheet": "2017_67-700",
+      "source_value": 2500,
+      "source_unit": "kgf/m3",
+      "SI_value": 24.516625,
+      "SI_unit": "kN/m3",
+      "geometry": null,
+      "location": {
+        "rule": "PP.LOSA=e(m)*2500 kgf/m3",
+        "thickness_source": "structural floor plan"
+      },
+      "confidence": "CONFIRMED_FORMULA_THICKNESS_MAPPING_PENDING",
+      "receiver": null,
+      "application_status": "NOT_READY_LOCAL_THICKNESS_MAPPING"
+    },
+    {
+      "load_id": "EDIFICIO_1-P2-PP_LOSA",
+      "load_type": "PP_LOSA",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "source_sheet": "2017_67-700",
+      "source_value": 2500,
+      "source_unit": "kgf/m3",
+      "SI_value": 24.516625,
+      "SI_unit": "kN/m3",
+      "geometry": null,
+      "location": {
+        "rule": "PP.LOSA=e(m)*2500 kgf/m3",
+        "thickness_source": "structural floor plan"
+      },
+      "confidence": "CONFIRMED_FORMULA_THICKNESS_MAPPING_PENDING",
+      "receiver": null,
+      "application_status": "NOT_READY_LOCAL_THICKNESS_MAPPING"
+    },
+    {
+      "load_id": "EDIFICIO_1-P3-PP_LOSA",
+      "load_type": "PP_LOSA",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "source_sheet": "2017_67-700",
+      "source_value": 2500,
+      "source_unit": "kgf/m3",
+      "SI_value": 24.516625,
+      "SI_unit": "kN/m3",
+      "geometry": null,
+      "location": {
+        "rule": "PP.LOSA=e(m)*2500 kgf/m3",
+        "thickness_source": "structural floor plan"
+      },
+      "confidence": "CONFIRMED_FORMULA_THICKNESS_MAPPING_PENDING",
+      "receiver": null,
+      "application_status": "NOT_READY_LOCAL_THICKNESS_MAPPING"
+    },
+    {
+      "load_id": "EDIFICIO_1-P4-PP_LOSA",
+      "load_type": "PP_LOSA",
+      "building": "EDIFICIO_1",
+      "floor": "P4",
+      "source_sheet": "2017_67-700",
+      "source_value": 2500,
+      "source_unit": "kgf/m3",
+      "SI_value": 24.516625,
+      "SI_unit": "kN/m3",
+      "geometry": null,
+      "location": {
+        "rule": "PP.LOSA=e(m)*2500 kgf/m3",
+        "thickness_source": "structural floor plan"
+      },
+      "confidence": "CONFIRMED_FORMULA_THICKNESS_MAPPING_PENDING",
+      "receiver": null,
+      "application_status": "NOT_READY_LOCAL_THICKNESS_MAPPING"
+    },
+    {
+      "load_id": "EDIFICIO_2-S1-PP_LOSA",
+      "load_type": "PP_LOSA",
+      "building": "EDIFICIO_2",
+      "floor": "S1",
+      "source_sheet": "2024_22-700",
+      "source_value": 2500,
+      "source_unit": "kgf/m3",
+      "SI_value": 24.516625,
+      "SI_unit": "kN/m3",
+      "geometry": null,
+      "location": {
+        "rule": "PP.LOSA=e(m)*2500 kgf/m3",
+        "thickness_source": "structural floor plan"
+      },
+      "confidence": "CONFIRMED_FORMULA_THICKNESS_MAPPING_PENDING",
+      "receiver": null,
+      "application_status": "NOT_READY_LOCAL_THICKNESS_MAPPING"
+    },
+    {
+      "load_id": "EDIFICIO_2-P1-PP_LOSA",
+      "load_type": "PP_LOSA",
+      "building": "EDIFICIO_2",
+      "floor": "P1",
+      "source_sheet": "2024_22-700",
+      "source_value": 2500,
+      "source_unit": "kgf/m3",
+      "SI_value": 24.516625,
+      "SI_unit": "kN/m3",
+      "geometry": null,
+      "location": {
+        "rule": "PP.LOSA=e(m)*2500 kgf/m3",
+        "thickness_source": "structural floor plan"
+      },
+      "confidence": "CONFIRMED_FORMULA_THICKNESS_MAPPING_PENDING",
+      "receiver": null,
+      "application_status": "NOT_READY_LOCAL_THICKNESS_MAPPING"
+    },
+    {
+      "load_id": "EDIFICIO_2-P2-PP_LOSA",
+      "load_type": "PP_LOSA",
+      "building": "EDIFICIO_2",
+      "floor": "P2",
+      "source_sheet": "2024_22-700",
+      "source_value": 2500,
+      "source_unit": "kgf/m3",
+      "SI_value": 24.516625,
+      "SI_unit": "kN/m3",
+      "geometry": null,
+      "location": {
+        "rule": "PP.LOSA=e(m)*2500 kgf/m3",
+        "thickness_source": "structural floor plan"
+      },
+      "confidence": "CONFIRMED_FORMULA_THICKNESS_MAPPING_PENDING",
+      "receiver": null,
+      "application_status": "NOT_READY_LOCAL_THICKNESS_MAPPING"
+    },
+    {
+      "load_id": "EDIFICIO_2-P3-PP_LOSA",
+      "load_type": "PP_LOSA",
+      "building": "EDIFICIO_2",
+      "floor": "P3",
+      "source_sheet": "2024_22-700",
+      "source_value": 2500,
+      "source_unit": "kgf/m3",
+      "SI_value": 24.516625,
+      "SI_unit": "kN/m3",
+      "geometry": null,
+      "location": {
+        "rule": "PP.LOSA=e(m)*2500 kgf/m3",
+        "thickness_source": "structural floor plan"
+      },
+      "confidence": "CONFIRMED_FORMULA_THICKNESS_MAPPING_PENDING",
+      "receiver": null,
+      "application_status": "NOT_READY_LOCAL_THICKNESS_MAPPING"
+    },
+    {
+      "load_id": "EDIFICIO_2-P4-PP_LOSA",
+      "load_type": "PP_LOSA",
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "source_sheet": "2024_22-700",
+      "source_value": 2500,
+      "source_unit": "kgf/m3",
+      "SI_value": 24.516625,
+      "SI_unit": "kN/m3",
+      "geometry": null,
+      "location": {
+        "rule": "PP.LOSA=e(m)*2500 kgf/m3",
+        "thickness_source": "structural floor plan"
+      },
+      "confidence": "CONFIRMED_FORMULA_THICKNESS_MAPPING_PENDING",
+      "receiver": null,
+      "application_status": "NOT_READY_LOCAL_THICKNESS_MAPPING"
+    }
+  ],
+  "counts_by_type": {
+    "SC_SURFACE": 44,
+    "SC_LINE": 2,
+    "SC_POINT": 3,
+    "PM_ADIC_SURFACE": 44,
+    "PM_ADIC_LINE": 2,
+    "PM_ADIC_POINT": 3,
+    "PP_LOSA": 10
+  },
+  "results_recalculated": false
+}

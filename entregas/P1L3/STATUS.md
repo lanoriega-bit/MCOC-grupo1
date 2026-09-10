@@ -1,5 +1,21 @@
 # P1L3 - Estado de integracion
 
+## Cierre espacial de cargas 700 — ambos edificios (2026-09-10)
+
+- Se congelo sin cambios el calce aprobado de `2017_67-700` para EDIFICIO_1.
+- Se confirmaron las dos transformaciones de `2024_22-700` para EDIFICIO_2:
+  escala `0.01`, giro 0 grados, inversion Y y residuales menores que `1.3e-14 m`.
+- La cobertura de los seis panos actuales por piso de EDIFICIO_2 es 100% en
+  S1/P1/P2/P3/P4, sin `UNMAPPED` ni `OVERLAP`; S1-P3 tienen seis panos
+  multizona cada uno y P4 ninguno.
+- La lectura directa del respaldo DWG 2018 confirma `PM.ADIC=2800 kgf/m2`.
+  Las tres cargas puntuales E1 conservan estado `UNRESOLVED`; la franja lineal
+  E1-P4 de 800/7600 kgf/m queda `LIKELY` sobre una cadena de 11 segmentos.
+- Se genero `results/a1a2/load_zones_700_completion/load_catalog_700.json`
+  con 108 entradas y tipos separados SC, PM adicional y PP losa.
+- No se recalcularon Q, G, masas, EX/EY, superposicion, capacidad, OpenSees ni
+  Unity. Reporte: `results/a1a2/load_zones_700_completion/REPORT.md`.
+
 ## Auditoria espacial de cargas 700 — EDIFICIO_1 (2026-09-10)
 
 - Se confirmaron por piso las transformaciones de `2017_67-700` contra
@@ -95,8 +111,9 @@
   cerrada autorizada para recalcular el edificio.
 - Se transcribieron por piso las combinaciones superficiales, lineales y
   puntuales de ambas laminas 700, con conversion exacta a SI, en
-  `../P1L2/edificio/validacion/cargas/INTERPRETACION_LAMINAS_700.md`. Queda una
-  unidad ambigua en la banda `SC=500 / PM.ADIC.=2800` de EDIFICIO_1 P1.
+  `../P1L2/edificio/validacion/cargas/INTERPRETACION_LAMINAS_700.md`. La unidad
+  de la banda `SC=500 / PM.ADIC.=2800` de EDIFICIO_1 P1 fue confirmada como
+  superficial mediante el superindice separado presente en el DWG original.
 - Se extrajeron 34 zonas HATCH sin solapes y se superpusieron sobre el modelo.
   El calce es visualmente consistente en LT2 y E1 P1-P4, pendiente de cerrar
   transformaciones con ejes rotulados. En E1 S1 aparece una zona cargada entre
