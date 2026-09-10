@@ -243,6 +243,7 @@ namespace Mcoc.UnityViewer
         public string run_id;
         public string case_name;
         public List<AnalysisElementResult> elements;
+        public List<AnalysisNodeResult> nodes;
         public List<ExcludedAnalysisElement> excluded_elements;
     }
 
@@ -268,6 +269,17 @@ namespace Mcoc.UnityViewer
         public int node_j;
         public List<double> localForce_end1;
         public List<double> localForce_end2;
+    }
+
+    [Serializable]
+    public class AnalysisNodeResult
+    {
+        public int node_tag;
+        public string floor;
+        public List<double> coord;
+        public double ux_m;
+        public double uy_m;
+        public double uz_m;
     }
 
     [Serializable]

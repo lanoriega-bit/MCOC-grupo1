@@ -97,6 +97,7 @@ def validate_geometry(model: dict) -> None:
 def build_analysis_results(analysis: dict, run_dir: Path) -> dict:
     manifest = load_json(run_dir / "manifest.json")
     elements = load_json(run_dir / "elements.json")
+    nodes = load_json(run_dir / "nodes.json")
     excluded_block = analysis.get("floating_excluded", {})
     excluded_rows = excluded_block.get("elementos", []) if isinstance(excluded_block, dict) else excluded_block
     crosswalk_by_id = {
@@ -133,6 +134,17 @@ def build_analysis_results(analysis: dict, run_dir: Path) -> dict:
         "case_name": manifest["caso"],
         "units": manifest["unidades"],
         "elements": rows,
+        "nodes": [
+            {
+                "node_tag": int(tag),
+                "floor": result.get("floor"),
+                "coord": result.get("coord", []),
+                "ux_m": result.get("ux_m", 0.0),
+                "uy_m": result.get("uy_m", 0.0),
+                "uz_m": result.get("uz_m", 0.0),
+            }
+            for tag, result in nodes.items()
+        ],
         "excluded_elements": [
             {
                 "element_id": key,
@@ -321,7 +333,7 @@ def main() -> None:
         *[
             A7_DIR / "cases" / case_name / file_name
             for case_name in ("G", "Q", "EX", "EY", "R")
-            for file_name in ("manifest.json", "elements.json")
+            for file_name in ("manifest.json", "elements.json", "nodes.json")
         ],
     ]
     missing = [str(path) for path in required if not path.is_file()]

@@ -44,9 +44,15 @@ namespace Mcoc.UnityViewer
         private Texture2D fiberTexture;
         private Texture2D momentCurvatureTexture;
         private Texture2D pmInteractionTexture;
-        private bool deliveryPanelVisible = true;
+        private bool deliveryPanelVisible = false;
         private int deliveryTab = 0;
         private string activeAnalysisCase = "R";
+        private bool uiHidden = false;
+        private bool inspectorVisible = true;
+        private Texture2D expandedGraph = null;
+        private string expandedGraphTitle = "";
+        private float deformationScaleEX = 1f;
+        private float deformationScaleEY = 1f;
         private readonly Dictionary<string, Vector2> memberTrib = new Dictionary<string, Vector2>();
         private readonly Dictionary<string, AnalysisElementResult> analysisByElementId = new Dictionary<string, AnalysisElementResult>();
         private readonly Dictionary<string, ExcludedAnalysisElement> excludedByElementId = new Dictionary<string, ExcludedAnalysisElement>();
@@ -66,6 +72,17 @@ namespace Mcoc.UnityViewer
         private string searchResult = "";
         private Vector2 infoScroll = Vector2.zero;
         private Vector2 controlsScroll = Vector2.zero;
+        private string inspectorIdentity = "";
+        private string inspectorGeometry = "";
+        private string inspectorProperties = "";
+        private string inspectorTributary = "";
+        private string inspectorAnalysis = "";
+        private string inspectorCapacity = "";
+        private bool inspectorGeometryOpen = false;
+        private bool inspectorPropertiesOpen = false;
+        private bool inspectorTributaryOpen = false;
+        private bool inspectorAnalysisOpen = true;
+        private bool inspectorCapacityOpen = false;
         private static Texture2D whiteTex;
 
         private static readonly Dictionary<string, string> TypeLabels = new Dictionary<string, string>
@@ -82,6 +99,7 @@ namespace Mcoc.UnityViewer
             { "node", "Nodos" },
             { "cad_reference", "Lineas CAD ref." },
             { "tributary", "Areas tributarias" },
+            { "tributary_point", "Tributarias a soportes" },
             { "seismic_arrow", "Sismo EX/EY" },
             { "seismic_cm", "Centros de masa" },
             { "seismic_mass", "Masa por piso" },
@@ -141,6 +159,8 @@ namespace Mcoc.UnityViewer
             if (tributaries != null) BuildTributaries();
             seismic = JsonLoader.LoadSeismic();
             if (seismic != null) BuildSeismic();
+            RunVisibilitySelfCheck();
+            ResetPresentation();
             SetStatus($"{model.solids?.Count ?? 0} solidos, {model.segments?.Count ?? 0} lineas CAD, {model.labels?.Count ?? 0} etiquetas");
         }
 
@@ -372,7 +392,7 @@ namespace Mcoc.UnityViewer
                 CreateArrow("sismo_EX_" + f.building + "_" + f.floor, cm, Vector3.right, (float)f.F_EX_kN, maxF, new Color(1f, 0.3f, 0.2f), "seismic_arrow", f.floor, f.building, "EX");
                 CreateArrow("sismo_EY_" + f.building + "_" + f.floor, cm, Vector3.up, (float)f.F_EY_kN, maxF, new Color(0.3f, 0.5f, 1f), "seismic_arrow", f.floor, f.building, "EY");
                 CreateCmMarker("sismo_CM_" + f.building + "_" + f.floor, cm, f);
-                CreateMassBar("sismo_M_" + f.building + "_" + f.floor, cm, (float)f.mass_ton, maxMass);
+                CreateMassBar("sismo_M_" + f.building + "_" + f.floor, cm, (float)f.mass_ton, maxMass, f.floor, f.building);
                 CreatePatternBar("sismo_patron_EX_" + f.building + "_" + f.floor, cm, Vector3.right, (float)f.F_EX_kN, maxF, new Color(1f, 0.35f, 0.25f), f);
                 CreatePatternBar("sismo_patron_EY_" + f.building + "_" + f.floor, cm, Vector3.up, (float)f.F_EY_kN, maxF, new Color(0.35f, 0.55f, 1f), f);
                 CreateTorsionArc("sismo_T_EX_" + f.building + "_" + f.floor, cm, (float)f.M_torsion_EX_kNm, maxTor, 0f, f);
@@ -427,46 +447,43 @@ namespace Mcoc.UnityViewer
             allElements.Add(ei);
         }
 
-        // Deformada: dibuja CADA pilar, viga, muro, apoyo y losa desplazado lateralmente segun perfil u(z)
+        // Deformada: usa exclusivamente desplazamientos nodales de la corrida OpenSees EX/EY.
+        // El factor solo amplifica la forma para verla; no altera los resultados mostrados.
         void CreateDeformFrame(SeismicBuilding b, bool ex)
         {
-            if (model == null || model.solids == null) return;
-            float dx = ex ? 1f : 0f;
-            float dy = ex ? 0f : 1f;
-            Color color = ex ? new Color(1f, 0.15f, 0.1f) : new Color(0.2f, 0.55f, 1f);
-            foreach (var s in model.solids)
+            AnalysisResultsData analysisCase = FindAnalysisCaseData(ex ? "EX" : "EY");
+            if (analysisCase == null || analysisCase.nodes == null || analysisCase.elements == null) return;
+            var nodes = new Dictionary<int, AnalysisNodeResult>();
+            float maxU = 0f;
+            foreach (var node in analysisCase.nodes)
             {
-                if (s == null) continue;
-                if ((s.building ?? "") != b.building) continue;
-                string cat = s.category ?? "";
-                if (cat != "beam" && cat != "column" && cat != "column_plan" && cat != "wall" && cat != "support" && cat != "slab") continue;
-                Vector3 p0, p1;
-                float z0, z1;
-                if (s.kind == "linear_prism")
-                {
-                    p0 = V(s.start); p1 = V(s.end);
-                    z0 = Mathf.Min(p0.z, p1.z); z1 = Mathf.Max(p0.z, p1.z);
-                }
-                else
-                {
-                    Vector3 c = V(s.center);
-                    float h = cat == "slab" ? 0.2f : (float)(s.height_m <= 0 ? 0.6 : s.height_m);
-                    z0 = c.z - h * 0.5f; z1 = c.z + h * 0.5f;
-                    p0 = new Vector3(c.x, c.y, z0);
-                    p1 = new Vector3(c.x, c.y, z1);
-                }
-                float u0 = DeformU(z0);
-                float u1 = DeformU(z1);
-                CreateDeformLine(p0 + new Vector3(u0 * dx, u0 * dy, 0f), p1 + new Vector3(u1 * dx, u1 * dy, 0f), color, s.building, s.floor ?? "");
+                if (node == null) continue;
+                nodes[node.node_tag] = node;
+                float magnitude = Mathf.Sqrt((float)(node.ux_m * node.ux_m + node.uy_m * node.uy_m + node.uz_m * node.uz_m));
+                maxU = Mathf.Max(maxU, magnitude);
+            }
+            float scale = maxU > 1.0e-9f ? Mathf.Clamp(8f / maxU, 1f, 250f) : 1f;
+            if (ex) deformationScaleEX = scale; else deformationScaleEY = scale;
+            Color color = ex ? new Color(1f, 0.15f, 0.1f) : new Color(0.2f, 0.55f, 1f);
+            string elementPrefix = b.building == "EDIFICIO_1" ? "E1-" : "E2-";
+            foreach (var element in analysisCase.elements)
+            {
+                if (element == null || string.IsNullOrEmpty(element.element_id) || !element.element_id.StartsWith(elementPrefix)) continue;
+                if (!nodes.TryGetValue(element.node_i, out var ni) || !nodes.TryGetValue(element.node_j, out var nj)) continue;
+                Vector3 p0 = V(ni.coord);
+                Vector3 p1 = V(nj.coord);
+                Vector3 d0 = new Vector3((float)ni.ux_m, (float)ni.uy_m, (float)ni.uz_m) * scale;
+                Vector3 d1 = new Vector3((float)nj.ux_m, (float)nj.uy_m, (float)nj.uz_m) * scale;
+                CreateDeformLine(p0 + d0, p1 + d1, color, b.building, element.floor ?? "");
             }
         }
 
-        float DeformU(float z)
+        AnalysisResultsData FindAnalysisCaseData(string name)
         {
-            const float uTop = 8f;      // desplazamiento visual maximo en el tope
-            const float hTop = 19.76f;  // altura total (S1..P4)
-            float t = Mathf.Clamp01(z / hTop);
-            return uTop * t * t;        // perfil ~ cuadrado: mas desplazamiento arriba
+            if (analysisCases == null || analysisCases.cases == null) return null;
+            foreach (var item in analysisCases.cases)
+                if (item != null && (item.case_name ?? "").Replace("CASE_", "").ToUpperInvariant() == name.ToUpperInvariant()) return item;
+            return null;
         }
 
         void CreateDeformLine(Vector3 p0, Vector3 p1, Color color, string building, string floor)
@@ -531,7 +548,7 @@ namespace Mcoc.UnityViewer
             allElements.Add(ei);
         }
 
-        void CreateMassBar(string name, Vector3 cm, float massTon, float maxMass)
+        void CreateMassBar(string name, Vector3 cm, float massTon, float maxMass, string floor, string building)
         {
             float h = 0.4f + (massTon / maxMass) * 8f;
             var go = GameObject.CreatePrimitive(PrimitiveType.Cube);
@@ -545,12 +562,12 @@ namespace Mcoc.UnityViewer
             ei.id = name;
             ei.humanId = "Masa " + name.Replace("sismo_M_", "");
             ei.category = "seismic_mass";
-            ei.floor = "S1";
-            ei.building = "";
+            ei.floor = floor;
+            ei.building = building;
             ei.coordCenter = cm;
             ei.baseColor = rnd.sharedMaterial.color;
             ei.isSeismic = true;
-            Register(go, "seismic_mass", "S1");
+            Register(go, "seismic_mass", floor);
             allElements.Add(ei);
         }
 
@@ -648,7 +665,7 @@ namespace Mcoc.UnityViewer
             ei.building = building;
             ei.baseColor = mr.sharedMaterial.color;
             ei.baseMat = mr.sharedMaterial;
-            Register(go, "tributary", floor);
+            Register(go, cat, floor);
             allElements.Add(ei);
             return ei;
         }
@@ -747,7 +764,7 @@ namespace Mcoc.UnityViewer
             byType[type].Add(go);
             if (!byFloor.ContainsKey(floor)) byFloor.Add(floor, new List<GameObject>());
             byFloor[floor].Add(go);
-            if (!typeVisible.ContainsKey(type)) typeVisible[type] = type != "cad_reference";
+            if (!typeVisible.ContainsKey(type)) typeVisible[type] = DefaultTypeVisibility(type);
             if (!floorVisible.ContainsKey(floor)) floorVisible[floor] = true;
             ApplyVisibility(go, type, floor);
         }
@@ -769,6 +786,8 @@ namespace Mcoc.UnityViewer
         // ---------- Seleccion por clic ----------
         void Update()
         {
+            if (Input.GetKeyDown(KeyCode.H)) uiHidden = !uiHidden;
+            if (Input.GetKeyDown(KeyCode.R)) ResetPresentation();
             // Seleccion SOLO con click limpio (sin arrastre). Arrastrar = rotar camara.
             if (Input.GetMouseButtonDown(0) && !IsMouseOverUI())
             {
@@ -788,14 +807,16 @@ namespace Mcoc.UnityViewer
 
         bool IsMouseOverUI()
         {
+            if (uiHidden) return false;
+            if (expandedGraph != null) return true;
             Vector2 m = Input.mousePosition;
             m.y = Screen.height - m.y;
             // Zona panel derecho (navegacion + buscar, arriba)
-            if (m.x > Screen.width - 260 && m.y < 170) return true;
+            if (m.x > Screen.width - 370 && m.y < 215) return true;
             // Zona panel izquierdo (pisos y tipos)
             if (ControlsRect().Contains(m)) return true;
             // Zona panel de info (arriba izquierda)
-            if (m.x < 565 && m.y < 210) return true;
+            if (lastSelected != null && InspectorRect().Contains(m)) return true;
             if (deliveryPanelVisible && DeliveryRect().Contains(m)) return true;
             if (!deliveryPanelVisible && new Rect(Screen.width * 0.5f - 90f, 10f, 180f, 28f).Contains(m)) return true;
             return false;
@@ -941,6 +962,12 @@ namespace Mcoc.UnityViewer
             {
                 capacityLine = $"\nCapacidad HA (laboratorio): {capacity.b_m:F2} x {capacity.h_m:F2} m, {capacity.num_bars} barras, f'c={capacity.fc_pa / 1e6:F1} MPa, fy={capacity.fy_pa / 1e6:F1} MPa";
             }
+            inspectorIdentity = $"{id}\n{cat} | Piso {ei.floor} | {(string.IsNullOrEmpty(ei.building) ? "Sin edificio" : ei.building)}\nEjes: {ejes}";
+            inspectorGeometry = $"Coordenadas: {coord}\nNodo i: {P(ei.nodeI)}\nNodo j: {P(ei.nodeJ)}\nLongitud: {ei.lengthM:F3} m";
+            inspectorProperties = $"Seccion: {section}\nMaterial: {ei.materialName}\nelementTag: {ei.elementTag ?? "-"}";
+            inspectorTributary = string.IsNullOrEmpty(cargaLine) ? "Sin carga tributaria asociada." : cargaLine;
+            inspectorAnalysis = analysisLine.TrimStart('\n');
+            inspectorCapacity = string.IsNullOrEmpty(capacityLine) ? "Este elemento no tiene un analisis de capacidad asociado." : capacityLine.TrimStart('\n');
             lastInfo = $"ID: {id}\n" +
                 $"elementTag: {ei.elementTag ?? "-"}\n" +
                 $"Tipo: {cat}\n" +
@@ -956,6 +983,7 @@ namespace Mcoc.UnityViewer
                 analysisLine + capacityLine;
             if (infoText != null) infoText.text = lastInfo;
             lastSelected = ei;
+            inspectorVisible = true;
         }
 
         // ---------- Vistas ----------
@@ -979,11 +1007,19 @@ namespace Mcoc.UnityViewer
         void OnGUI()
         {
             if (whiteTex == null) whiteTex = MakeTex(2, 2, Color.white);
+            if (uiHidden)
+            {
+                var hint = new GUIStyle(GUI.skin.label);
+                hint.fontSize = 11; hint.normal.textColor = new Color(1f, 1f, 1f, 0.65f);
+                GUI.Label(new Rect(10, 8, 190, 20), "H: mostrar interfaz", hint);
+                return;
+            }
             DrawPanelInfo();
             DrawControls();
             DrawP1L3Panel();
             if (labelsVisible) DrawLabels();
             if (seismic != null) DrawSeismicValueLabels();
+            DrawExpandedGraph();
         }
 
         Rect DeliveryRect()
@@ -1112,39 +1148,84 @@ namespace Mcoc.UnityViewer
                 if (images[i] != null) GUI.DrawTexture(ir, images[i], ScaleMode.ScaleToFit, true);
                 else GUI.Label(ir, "Imagen no disponible", warning);
                 GUI.Label(new Rect(ir.x, ir.y + ir.height + 2, ir.width, 20), labels[i], pass);
+                if (images[i] != null && GUI.Button(new Rect(ir.x + ir.width - 72, ir.y + 4, 68, 22), "Ampliar"))
+                {
+                    expandedGraph = images[i];
+                    expandedGraphTitle = labels[i];
+                }
             }
             GUI.Label(new Rect(body.x, body.y + body.height - 28, body.width, 26), capacity.disclaimer, warning);
         }
 
+        void DrawExpandedGraph()
+        {
+            if (expandedGraph == null) return;
+            GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), MakeTex(2, 2, new Color(0f, 0f, 0f, 0.92f)));
+            float width = Mathf.Min(Screen.width - 60f, 1100f);
+            float height = Mathf.Min(Screen.height - 90f, 760f);
+            Rect frame = new Rect((Screen.width - width) * 0.5f, (Screen.height - height) * 0.5f, width, height);
+            GUI.Box(frame, "");
+            var title = new GUIStyle(GUI.skin.label);
+            title.fontSize = 17; title.fontStyle = FontStyle.Bold; title.normal.textColor = Color.white;
+            GUI.Label(new Rect(frame.x + 14, frame.y + 8, frame.width - 110, 26), expandedGraphTitle, title);
+            if (GUI.Button(new Rect(frame.x + frame.width - 90, frame.y + 8, 76, 26), "Cerrar"))
+            {
+                expandedGraph = null;
+                expandedGraphTitle = "";
+                return;
+            }
+            GUI.DrawTexture(new Rect(frame.x + 14, frame.y + 42, frame.width - 28, frame.height - 56), expandedGraph, ScaleMode.ScaleToFit, true);
+        }
+
         void DrawPanelInfo()
         {
-            if (string.IsNullOrEmpty(lastInfo)) return;
-            var style = new GUIStyle(GUI.skin.box);
-            style.fontSize = 13;
-            style.alignment = TextAnchor.UpperLeft;
-            style.normal.textColor = Color.white;
-            style.normal.background = whiteTex;
-            var tex = MakeTex(2, 2, new Color(0f, 0f, 0f, 0.78f));
-            GUI.Box(new Rect(10, 10, 360, 200), "");
-            GUI.DrawTexture(new Rect(10, 10, 360, 200), tex);
-            var lbl = new GUIStyle(GUI.skin.label);
-            lbl.fontSize = 12;
-            lbl.normal.textColor = Color.white;
-            int lineCount = lastInfo.Split('\n').Length;
-            float contentHeight = Mathf.Max(184f, lineCount * 18f + 8f);
-            infoScroll = GUI.BeginScrollView(new Rect(16, 16, 348, 188), infoScroll, new Rect(0, 0, 325, contentHeight));
-            GUI.Label(new Rect(2, 0, 318, contentHeight), lastInfo, lbl);
-            GUI.EndScrollView();
-            var btnc = new GUIStyle(GUI.skin.button);
-            btnc.fontSize = 12;
-            string toCopy = "";
-            if (lastSelected != null) toCopy = string.IsNullOrEmpty(lastSelected.humanId) ? lastSelected.id : lastSelected.humanId;
-            if (!string.IsNullOrEmpty(toCopy) && GUI.Button(new Rect(10 + 360 + 8, 10, 180, 26), "Copiar ID: " + toCopy, btnc))
+            if (lastSelected == null) return;
+            Rect r = InspectorRect();
+            if (!inspectorVisible)
             {
-                GUIUtility.systemCopyBuffer = toCopy;
-                lastInfo = lastInfo + "\n[ID copiado: " + toCopy + "]";
-                infoText.text = lastInfo;
+                if (GUI.Button(new Rect(r.x + r.width - 160, r.y, 160, 26), "Abrir inspector")) inspectorVisible = true;
+                return;
             }
+            GUI.Box(r, "");
+            GUI.DrawTexture(r, MakeTex(2, 2, new Color(0.015f, 0.025f, 0.05f, 0.94f)));
+            var title = new GUIStyle(GUI.skin.label);
+            title.fontSize = 14; title.fontStyle = FontStyle.Bold; title.normal.textColor = Color.white;
+            var lbl = new GUIStyle(GUI.skin.label);
+            lbl.fontSize = 12; lbl.normal.textColor = new Color(0.93f, 0.95f, 1f); lbl.wordWrap = true;
+            GUI.Label(new Rect(r.x + 10, r.y + 7, r.width - 90, 22), "Elemento seleccionado", title);
+            if (GUI.Button(new Rect(r.x + r.width - 38, r.y + 5, 28, 24), "X")) { inspectorVisible = false; return; }
+            GUI.Label(new Rect(r.x + 10, r.y + 34, r.width - 20, 58), inspectorIdentity, lbl);
+            string toCopy = string.IsNullOrEmpty(lastSelected.humanId) ? lastSelected.id : lastSelected.humanId;
+            if (GUI.Button(new Rect(r.x + 10, r.y + 94, r.width - 20, 24), "Copiar ID: " + toCopy))
+                GUIUtility.systemCopyBuffer = toCopy;
+
+            float contentHeight = 420f;
+            infoScroll = GUI.BeginScrollView(new Rect(r.x + 8, r.y + 124, r.width - 16, r.height - 132), infoScroll, new Rect(0, 0, r.width - 40, contentHeight));
+            float sy = 2f;
+            DrawInspectorSection(ref sy, "Geometria", ref inspectorGeometryOpen, inspectorGeometry, r.width - 42, lbl);
+            DrawInspectorSection(ref sy, "Propiedades", ref inspectorPropertiesOpen, inspectorProperties, r.width - 42, lbl);
+            DrawInspectorSection(ref sy, "Tributarias / cargas", ref inspectorTributaryOpen, inspectorTributary, r.width - 42, lbl);
+            DrawInspectorSection(ref sy, "Modelo FE / resultados " + activeAnalysisCase, ref inspectorAnalysisOpen, inspectorAnalysis, r.width - 42, lbl);
+            DrawInspectorSection(ref sy, "Capacidad HA", ref inspectorCapacityOpen, inspectorCapacity, r.width - 42, lbl);
+            GUI.EndScrollView();
+        }
+
+        Rect InspectorRect()
+        {
+            float height = Mathf.Clamp(Screen.height - 220f, 300f, 540f);
+            return new Rect(Screen.width - 370f, 210f, 360f, height);
+        }
+
+        void DrawInspectorSection(ref float y, string heading, ref bool open, string content, float width, GUIStyle label)
+        {
+            string marker = open ? "▼ " : "▶ ";
+            if (GUI.Button(new Rect(0, y, width, 24), marker + heading)) open = !open;
+            y += 27f;
+            if (!open) return;
+            int lines = Mathf.Max(1, (content ?? "").Split('\n').Length);
+            float h = Mathf.Max(38f, lines * 18f + 8f);
+            GUI.Label(new Rect(8, y, width - 12, h), content, label);
+            y += h + 5f;
         }
 
         void DrawControls()
@@ -1154,27 +1235,29 @@ namespace Mcoc.UnityViewer
 
             // --- Botones de vista ---
             var btn = new GUIStyle(GUI.skin.button);
-            btn.fontSize = 12;
-            GUI.Box(new Rect(x, y, 250, 82), "");
-            GUI.DrawTexture(new Rect(x, y, 250, 82), MakeTex(2, 2, new Color(0.02f, 0.04f, 0.08f, 0.85f)));
+            btn.fontSize = 11;
+            GUI.Box(new Rect(x, y, 250, 108), "");
+            GUI.DrawTexture(new Rect(x, y, 250, 108), MakeTex(2, 2, new Color(0.02f, 0.04f, 0.08f, 0.9f)));
             var ttl = new GUIStyle(GUI.skin.label);
             ttl.fontSize = 12; ttl.fontStyle = FontStyle.Bold; ttl.normal.textColor = Color.white;
             GUI.Label(new Rect(x + 8, y + 4, 240, 18), "Navegacion", ttl);
             var t1 = new GUIStyle(btn); var t2 = new GUIStyle(btn); var t3 = new GUIStyle(btn); var t4 = new GUIStyle(btn); var t5 = new GUIStyle(btn);
-            if (GUI.Button(new Rect(x + 8, y + 24, 44, 24), "Lado A", t1)) SideView("A");
-            if (GUI.Button(new Rect(x + 56, y + 24, 44, 24), "Lado B", t2)) SideView("B");
-            if (GUI.Button(new Rect(x + 104, y + 24, 44, 24), "Lado C", t3)) SideView("C");
-            if (GUI.Button(new Rect(x + 152, y + 24, 44, 24), "Lado D", t4)) SideView("D");
-            if (GUI.Button(new Rect(x + 8, y + 52, 120, 24), "Vista planta", t5)) TopView();
-            if (GUI.Button(new Rect(x + 132, y + 52, 108, 24), labelsVisible ? "IDs: on" : "IDs: off", t1)) labelsVisible = !labelsVisible;
+            if (GUI.Button(new Rect(x + 8, y + 24, 54, 24), "Lado A", t1)) SideView("A");
+            if (GUI.Button(new Rect(x + 66, y + 24, 54, 24), "Lado B", t2)) SideView("B");
+            if (GUI.Button(new Rect(x + 124, y + 24, 54, 24), "Lado C", t3)) SideView("C");
+            if (GUI.Button(new Rect(x + 182, y + 24, 58, 24), "Lado D", t4)) SideView("D");
+            if (GUI.Button(new Rect(x + 8, y + 52, 112, 24), "Vista planta", t5)) TopView();
+            if (GUI.Button(new Rect(x + 124, y + 52, 116, 24), labelsVisible ? "IDs: ON" : "IDs: OFF", t1)) labelsVisible = !labelsVisible;
+            if (GUI.Button(new Rect(x + 8, y + 80, 112, 22), "Reset vista (R)", t5)) ResetPresentation();
+            if (GUI.Button(new Rect(x + 124, y + 80, 116, 22), "Modo limpio (H)", t1)) uiHidden = true;
 
             // --- Busqueda por ID ---
-            GUI.Box(new Rect(x, y + 88, 250, 76), "");
-            GUI.DrawTexture(new Rect(x, y + 88, 250, 76), MakeTex(2, 2, new Color(0.02f, 0.04f, 0.08f, 0.85f)));
-            GUI.Label(new Rect(x + 8, y + 92, 240, 18), "Buscar por ID (ej. E1-P2-C-034)", ttl);
-            searchText = GUI.TextField(new Rect(x + 8, y + 114, 160, 24), searchText, 40);
-            if (GUI.Button(new Rect(x + 172, y + 114, 68, 24), "Buscar", t2)) DoSearch();
-            if (!string.IsNullOrEmpty(searchResult)) GUI.Label(new Rect(x + 8, y + 142, 240, 18), searchResult, ttl);
+            GUI.Box(new Rect(x, y + 114, 250, 82), "");
+            GUI.DrawTexture(new Rect(x, y + 114, 250, 82), MakeTex(2, 2, new Color(0.02f, 0.04f, 0.08f, 0.9f)));
+            GUI.Label(new Rect(x + 8, y + 118, 240, 18), "Buscar por ID (ej. E1-P2-C-034)", ttl);
+            searchText = GUI.TextField(new Rect(x + 8, y + 140, 160, 24), searchText, 40);
+            if (GUI.Button(new Rect(x + 172, y + 140, 68, 24), "Buscar", t2)) DoSearch();
+            if (!string.IsNullOrEmpty(searchResult)) GUI.Label(new Rect(x + 8, y + 168, 240, 18), searchResult, ttl);
 
             // --- Panel izquierdo: controles visibles + lista desplazable ---
             Rect controls = ControlsRect();
@@ -1196,7 +1279,7 @@ namespace Mcoc.UnityViewer
             QuickTypeToggle(new Rect(lx + 8, ly + 91, 116, 20), "Corte basal", "seismic_shear");
             QuickTypeToggle(new Rect(lx + 128, ly + 91, 116, 20), "Torsion", "seismic_torsion");
 
-            GUI.Label(new Rect(lx + 8, ly + 118, 240, 18), "Pisos (encender / apagar)", sect);
+            GUI.Label(new Rect(lx + 8, ly + 118, 240, 18), "Pisos (S = mostrar solo)", sect);
             var floors = SortedFloors();
             float floorX = lx + 8;
             float floorY = ly + 139;
@@ -1204,8 +1287,15 @@ namespace Mcoc.UnityViewer
             {
                 string f = floors[i];
                 bool vis = floorVisible.ContainsKey(f) && floorVisible[f];
-                bool novo = GUI.Toggle(new Rect(floorX + (i % 3) * 78, floorY + (i / 3) * 22, 76, 20), vis, f);
+                float cellX = floorX + (i % 3) * 78;
+                float cellY = floorY + (i / 3) * 22;
+                bool novo = GUI.Toggle(new Rect(cellX, cellY, 48, 20), vis, f);
                 if (novo != vis) { floorVisible[f] = novo; ReapplyAll(); }
+                if (GUI.Button(new Rect(cellX + 49, cellY, 25, 19), "S"))
+                {
+                    foreach (var key in new List<string>(floorVisible.Keys)) floorVisible[key] = key == f;
+                    ReapplyAll();
+                }
             }
             float floorRows = Mathf.Ceil(floors.Count / 3f);
             float buttonsY = floorY + floorRows * 22f + 2f;
@@ -1244,6 +1334,74 @@ namespace Mcoc.UnityViewer
         {
             float height = Mathf.Clamp(Screen.height - 235f, 360f, 650f);
             return new Rect(10f, 225f, 250f, height);
+        }
+
+        bool DefaultTypeVisibility(string type)
+        {
+            switch (type)
+            {
+                case "beam":
+                case "column":
+                case "column_plan":
+                case "wall":
+                case "support":
+                case "slab":
+                case "slab_edge":
+                    return true;
+                default:
+                    return false;
+            }
+        }
+
+        void ResetPresentation()
+        {
+            yaw = 30f;
+            pitch = 25f;
+            orbitDist = 160f;
+            orbitTarget = new Vector3(16.41f, 5.99f, -14.73f);
+            labelsVisible = false;
+            deliveryPanelVisible = false;
+            expandedGraph = null;
+            expandedGraphTitle = "";
+            foreach (var key in new List<string>(floorVisible.Keys)) floorVisible[key] = true;
+            foreach (var key in new List<string>(typeVisible.Keys)) typeVisible[key] = DefaultTypeVisibility(key);
+            ReapplyAll();
+            RestoreHighlight();
+            lastInfo = "";
+            lastSelected = null;
+            searchResult = "Vista y visibilidad restablecidas";
+        }
+
+        void RunVisibilitySelfCheck()
+        {
+            string[] requiredTypes = {
+                "beam", "column", "wall", "slab", "support", "tributary",
+                "seismic_arrow", "seismic_cm", "seismic_mass", "seismic_shear",
+                "seismic_torsion", "seismic_deform"
+            };
+            var failures = new List<string>();
+            foreach (var key in requiredTypes)
+            {
+                if (!byType.ContainsKey(key) || byType[key].Count == 0) { failures.Add(key + ":sin objetos"); continue; }
+                typeVisible[key] = false;
+                ReapplyAll();
+                foreach (var go in byType[key]) if (go.activeSelf) { failures.Add(key + ":OFF fallo"); break; }
+                typeVisible[key] = true;
+                ReapplyAll();
+                bool anyActive = false;
+                foreach (var go in byType[key]) if (go.activeSelf) { anyActive = true; break; }
+                if (!anyActive) failures.Add(key + ":ON fallo");
+            }
+            foreach (var floor in new[] { "S1", "P1", "P2", "P3", "P4" })
+            {
+                if (!byFloor.ContainsKey(floor) || byFloor[floor].Count == 0) { failures.Add(floor + ":sin objetos"); continue; }
+                floorVisible[floor] = false;
+                ReapplyAll();
+                foreach (var go in byFloor[floor]) if (go.activeSelf) { failures.Add(floor + ":OFF fallo"); break; }
+                floorVisible[floor] = true;
+            }
+            if (failures.Count == 0) Debug.Log("[UI QA] PASS: capas y pisos responden a ON/OFF.");
+            else Debug.LogError("[UI QA] FAIL: " + string.Join(", ", failures));
         }
 
         void QuickTypeToggle(Rect rect, string label, params string[] keys)
@@ -1300,10 +1458,12 @@ namespace Mcoc.UnityViewer
             ls.fontSize = 12;
             var sw = Screen.width; var sh = Screen.height;
             var drawn = new HashSet<string>();
+            var occupied = new List<Rect>();
             int step = 0;
             if (anyFloor)
             foreach (var f in seismic.floors)
             {
+                if (floorVisible.ContainsKey(f.floor) && !floorVisible[f.floor]) continue;
                 string key = f.building + "_" + f.floor;
                 if (drawn.Contains(key)) continue;
                 drawn.Add(key);
@@ -1331,6 +1491,12 @@ namespace Mcoc.UnityViewer
                 float boxBot = sp.y;
                 if (bx < 0) bx = 0; else if (bx + boxW > sw) bx = sw - boxW;
 
+                Rect placed = PlaceLabelRect(new Rect(bx, boxTop, boxW, boxH), occupied, sw, sh);
+                bx = placed.x;
+                boxTop = placed.y;
+                float labelBase = placed.yMax;
+                occupied.Add(placed);
+
                 GUI.DrawTexture(new Rect(bx, boxTop, boxW, boxH), MakeTex(2, 2, new Color(0f, 0f, 0f, 0.75f)));
 
                 int line = -boxH + pad;
@@ -1339,33 +1505,33 @@ namespace Mcoc.UnityViewer
                     double totalW = TotalWeight(f.building);
                     ls.fontSize = 13; ls.fontStyle = FontStyle.Bold;
                     ls.normal.textColor = new Color(1f, 0.75f, 0.15f);
-                    GUI.Label(new Rect(bx + 6, sp.y + line, boxW - 12, lineH), "MASA PISO " + f.floor + " = " + f.mass_ton.ToString("F1") + " t", ls);
+                    GUI.Label(new Rect(bx + 6, labelBase + line, boxW - 12, lineH), "MASA PISO " + f.floor + " = " + f.mass_ton.ToString("F1") + " t", ls);
                     line += lineH;
                     ls.fontSize = 12; ls.fontStyle = FontStyle.Normal;
                     ls.normal.textColor = new Color(1f, 0.9f, 0.5f);
-                    GUI.Label(new Rect(bx + 6, sp.y + line, boxW - 12, lineH), "PESO TOTAL = " + totalW.ToString("F1") + " kN", ls);
+                    GUI.Label(new Rect(bx + 6, labelBase + line, boxW - 12, lineH), "PESO TOTAL = " + totalW.ToString("F1") + " kN", ls);
                     line += lineH;
                 }
                 ls.fontSize = 12; ls.fontStyle = FontStyle.Normal;
                 if (cmVisible)
                 {
                     ls.normal.textColor = new Color(0.9f, 0.9f, 0.9f);
-                    GUI.Label(new Rect(bx + 6, sp.y + line, boxW - 12, lineH), "CM(" + f.cm_x.ToString("F2") + "," + f.cm_y.ToString("F2") + ")  A=" + f.area_m2.ToString("F1") + " m2", ls);
+                    GUI.Label(new Rect(bx + 6, labelBase + line, boxW - 12, lineH), "CM(" + f.cm_x.ToString("F2") + "," + f.cm_y.ToString("F2") + ")  A=" + f.area_m2.ToString("F1") + " m2", ls);
                     line += lineH;
                 }
                 if (arrowVisible)
                 {
                     ls.normal.textColor = new Color(1f, 0.5f, 0.5f);
-                    GUI.Label(new Rect(bx + 6, sp.y + line, boxW - 12, lineH), "EX F=" + f.F_EX_kN.ToString("F0") + " kN", ls);
+                    GUI.Label(new Rect(bx + 6, labelBase + line, boxW - 12, lineH), "EX F=" + f.F_EX_kN.ToString("F0") + " kN", ls);
                     line += lineH;
                     ls.normal.textColor = new Color(0.5f, 0.6f, 1f);
-                    GUI.Label(new Rect(bx + 6, sp.y + line, boxW - 12, lineH), "EY F=" + f.F_EY_kN.ToString("F0") + " kN", ls);
+                    GUI.Label(new Rect(bx + 6, labelBase + line, boxW - 12, lineH), "EY F=" + f.F_EY_kN.ToString("F0") + " kN", ls);
                     line += lineH;
                 }
                 if (torVisible)
                 {
                     ls.normal.textColor = new Color(1f, 0.55f, 0.85f);
-                    GUI.Label(new Rect(bx + 6, sp.y + line, boxW - 12, lineH), "Torsion EX=" + f.M_torsion_EX_kNm.ToString("F0") + "  EY=" + f.M_torsion_EY_kNm.ToString("F0") + " kNm", ls);
+                    GUI.Label(new Rect(bx + 6, labelBase + line, boxW - 12, lineH), "Torsion EX=" + f.M_torsion_EX_kNm.ToString("F0") + "  EY=" + f.M_torsion_EY_kNm.ToString("F0") + " kNm", ls);
                 }
                 step++;
             }
@@ -1382,6 +1548,33 @@ namespace Mcoc.UnityViewer
                 GUI.Label(new Rect(sp.x - 80, sp.y + 30, 240, 18), lb.text, ls);
                 ls.fontSize = 12; ls.fontStyle = FontStyle.Normal;
             }
+        }
+
+        Rect PlaceLabelRect(Rect candidate, List<Rect> occupied, float screenWidth, float screenHeight)
+        {
+            candidate.x = Mathf.Clamp(candidate.x, 2f, Mathf.Max(2f, screenWidth - candidate.width - 2f));
+            candidate.y = Mathf.Clamp(candidate.y, 2f, Mathf.Max(2f, screenHeight - candidate.height - 2f));
+            for (int attempt = 0; attempt < 18; attempt++)
+            {
+                bool collision = false;
+                foreach (var other in occupied)
+                {
+                    Rect padded = new Rect(other.x - 3f, other.y - 3f, other.width + 6f, other.height + 6f);
+                    if (!candidate.Overlaps(padded)) continue;
+                    collision = true;
+                    candidate.y = other.yMax + 5f;
+                    if (candidate.yMax > screenHeight - 2f)
+                    {
+                        candidate.y = 2f + (attempt % 3) * (candidate.height + 5f);
+                        candidate.x = candidate.x < screenWidth * 0.5f
+                            ? Mathf.Min(screenWidth - candidate.width - 2f, candidate.x + candidate.width + 8f)
+                            : Mathf.Max(2f, candidate.x - candidate.width - 8f);
+                    }
+                    break;
+                }
+                if (!collision) break;
+            }
+            return candidate;
         }
 
         // ---------- Busqueda por ID ----------
