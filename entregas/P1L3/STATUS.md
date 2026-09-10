@@ -24,6 +24,10 @@
   `areas` (losa a vigas) y `point_areas` (hacia muros/columnas). No deben
   sumarse. Sus campos `polygon` son visualizaciones incompletas y no una huella
   cerrada autorizada para recalcular el edificio.
+- Se transcribieron por piso las combinaciones superficiales, lineales y
+  puntuales de ambas laminas 700, con conversion exacta a SI, en
+  `../P1L2/edificio/validacion/cargas/INTERPRETACION_LAMINAS_700.md`. Queda una
+  unidad ambigua en la banda `SC=500 / PM.ADIC.=2800` de EDIFICIO_1 P1.
 
 Actualizado: 2026-09-09.
 
