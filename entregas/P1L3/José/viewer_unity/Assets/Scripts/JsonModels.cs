@@ -247,6 +247,14 @@ namespace Mcoc.UnityViewer
     }
 
     [Serializable]
+    public class AnalysisCasesData
+    {
+        public string format;
+        public string default_case;
+        public List<AnalysisResultsData> cases;
+    }
+
+    [Serializable]
     public class AnalysisElementResult
     {
         public string case_name;
@@ -279,6 +287,10 @@ namespace Mcoc.UnityViewer
         public string building_column_id;
         public string building_column_origin;
         public string mapped_element_id;
+        public string mapped_analysis_id;
+        public double mapping_distance_m;
+        public string mapping_status;
+        public string mapping_note;
         public double b_m;
         public double h_m;
         public double cover_m;
@@ -289,8 +301,18 @@ namespace Mcoc.UnityViewer
         public double Es_pa;
         public int num_fibers_y;
         public int num_fibers_z;
+        public List<MomentCurvaturePoint> moment_curvature;
         public List<PMPoint> pm_interaction;
         public string disclaimer;
+    }
+
+    [Serializable]
+    public class MomentCurvaturePoint
+    {
+        public double step;
+        public double curvature_1_per_m;
+        public double moment_kNm;
+        public bool converged;
     }
 
     [Serializable]
@@ -303,5 +325,72 @@ namespace Mcoc.UnityViewer
         public double curvature_at_max_1_per_m;
         public double converged_steps;
         public string status;
+    }
+
+    [Serializable]
+    public class P1L3DeliveryData
+    {
+        public string format;
+        public string status;
+        public List<string> limitations;
+        public DeliveryGravity gravity;
+        public DeliverySeismic seismic;
+        public DeliverySuperposition superposition;
+        public List<DeliveryCase> cases;
+    }
+
+    [Serializable]
+    public class DeliveryGravity
+    {
+        public int panel_count;
+        public double G_transferred_kN;
+        public double Q_transferred_kN;
+        public double Q_expected_kN;
+        public double Q_conservation_rel_error;
+        public string status;
+    }
+
+    [Serializable]
+    public class DeliverySeismic
+    {
+        public double base_shear_coefficient;
+        public double total_EX_kN;
+        public double total_EY_kN;
+        public double base_shear_EX_kN;
+        public double base_shear_EY_kN;
+        public double EX_rel_error;
+        public double EY_rel_error;
+        public string EX_deformed_status;
+        public string EY_deformed_status;
+        public double max_application_point_error_m;
+        public string status;
+    }
+
+    [Serializable]
+    public class DeliverySuperposition
+    {
+        public double lambda_G;
+        public double lambda_Q;
+        public double lambda_EX;
+        public double lambda_EY;
+        public double displacement_rel_error;
+        public double reaction_rel_error;
+        public double internal_force_rel_error;
+        public string status;
+    }
+
+    [Serializable]
+    public class DeliveryCase
+    {
+        public string case_name;
+        public double max_displacement_m;
+        public int max_node_tag;
+        public string max_floor;
+        public double ux_m;
+        public double uy_m;
+        public double uz_m;
+        public double sum_Rx_kN;
+        public double sum_Ry_kN;
+        public double sum_Rz_kN;
     }
 }

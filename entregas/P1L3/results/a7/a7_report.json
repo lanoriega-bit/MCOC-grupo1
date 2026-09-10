@@ -1,0 +1,1054 @@
+{
+  "schema": "MCOC-P1L3-INTEGRATED-v1",
+  "status": "PASS",
+  "sources": {
+    "geometry": "entregas/P1L2/unity_export/model_combined_viewer.json",
+    "analysis_model": "entregas/P1L3/results/a3a4/analysis_model.json",
+    "seismic": "entregas/P1L3/José/results/seismic_ex_ey.json"
+  },
+  "limitations": [
+    "La geometria tributaria actual cubre solo 3392.624 m2 y sigue en auditoria.",
+    "Las masas EX/EY provienen del archivo historico de Jose y son provisionales.",
+    "El modelo no incluye losas FE; las cargas laterales se distribuyen baricentricamente a tres nodos del piso."
+  ],
+  "gravity": {
+    "panel_count": 110,
+    "panel_stats": {
+      "cells": 332,
+      "accepted": 110,
+      "excluded_unsupported": 222,
+      "excluded_span": 0
+    },
+    "G_transferred_N": 21126625.425920054,
+    "Q_transferred_N": 8317569.065322855,
+    "Q_expected_N": 8317569.0653228555,
+    "Q_conservation_rel_error": 1.1197052495762212e-16
+  },
+  "seismic": {
+    "base_shear_coefficient": 0.1,
+    "source_total_EX_kN": 6384.122191660001,
+    "source_total_EY_kN": 6384.122191660001,
+    "applied_total_EX_kN": 6384.12219166,
+    "applied_total_EY_kN": 6384.122191660001,
+    "reaction_base_shear_EX_kN": 6384.122191662,
+    "reaction_base_shear_EY_kN": 6384.122191654999,
+    "EX_force_rel_error": 1.4246198215959293e-16,
+    "EY_force_rel_error": 0.0,
+    "EX_base_shear_rel_error": 3.132738987689449e-13,
+    "EY_base_shear_rel_error": 7.833984398956015e-13,
+    "EX_deformed_shape": {
+      "component": "ux_m",
+      "extreme_value_m": 0.252121682354,
+      "node_tag": 915,
+      "floor": "P2",
+      "expected_sign": "+",
+      "status": "PASS"
+    },
+    "EY_deformed_shape": {
+      "component": "uy_m",
+      "extreme_value_m": 0.402089881538,
+      "node_tag": 953,
+      "floor": "P4",
+      "expected_sign": "+",
+      "status": "PASS"
+    },
+    "max_application_point_error_m": 7.105427357601002e-15,
+    "application_audit": [
+      {
+        "building": "EDIFICIO_1",
+        "floor": "S1",
+        "direction": "EX",
+        "method": "BARYCENTRIC_TRIANGLE",
+        "cm_m": [
+          45.02522399208753,
+          3.851838196976043
+        ],
+        "target_m": [
+          45.02522399208753,
+          5.089583196976043
+        ],
+        "eccentricity_m": 1.237745,
+        "source_force_kN": 307.1221871325377,
+        "applied_force_kN": 307.1221871325377,
+        "resultant_point_m": [
+          45.02522399208753,
+          5.089583196976043
+        ],
+        "point_error_m": 0.0,
+        "torsion_about_cm_kNm": -380.13895151236255,
+        "source_torsion_magnitude_kNm": 380.1389515123629,
+        "nodes": [
+          {
+            "node_tag": 63,
+            "weight": 0.585572616319632,
+            "x_m": 47.491,
+            "y_m": 8.9
+          },
+          {
+            "node_tag": 384,
+            "weight": 0.002572363150475539,
+            "x_m": 47.491,
+            "y_m": 0.6
+          },
+          {
+            "node_tag": 362,
+            "weight": 0.4118550205298925,
+            "x_m": 41.504,
+            "y_m": -0.3
+          }
+        ]
+      },
+      {
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "direction": "EX",
+        "method": "BARYCENTRIC_TRIANGLE",
+        "cm_m": [
+          40.413214165801115,
+          6.745656492585511
+        ],
+        "target_m": [
+          40.413214165801115,
+          8.711381492585511
+        ],
+        "eccentricity_m": 1.9657250000000002,
+        "source_force_kN": 986.3081597428294,
+        "applied_force_kN": 986.3081597428294,
+        "resultant_point_m": [
+          40.413214165801115,
+          8.711381492585511
+        ],
+        "point_error_m": 0.0,
+        "torsion_about_cm_kNm": -1938.8106073104727,
+        "source_torsion_magnitude_kNm": 1938.8106073104734,
+        "nodes": [
+          {
+            "node_tag": 873,
+            "weight": 0.5485647587313666,
+            "x_m": 42.791,
+            "y_m": 8.6
+          },
+          {
+            "node_tag": 90,
+            "weight": 0.44863883664129867,
+            "x_m": 37.491,
+            "y_m": 8.9
+          },
+          {
+            "node_tag": 878,
+            "weight": 0.00279640462733477,
+            "x_m": 42.791,
+            "y_m": 0.3
+          }
+        ]
+      },
+      {
+        "building": "EDIFICIO_1",
+        "floor": "P2",
+        "direction": "EX",
+        "method": "BARYCENTRIC_TRIANGLE",
+        "cm_m": [
+          35.10155042285729,
+          7.177982749147026
+        ],
+        "target_m": [
+          35.10155042285729,
+          8.166767749147027
+        ],
+        "eccentricity_m": 0.988785,
+        "source_force_kN": 744.6850131903833,
+        "applied_force_kN": 744.6850131903833,
+        "resultant_point_m": [
+          35.10155042285729,
+          8.166767749147027
+        ],
+        "point_error_m": 0.0,
+        "torsion_about_cm_kNm": -736.3333707674539,
+        "source_torsion_magnitude_kNm": 736.3333707674532,
+        "nodes": [
+          {
+            "node_tag": 126,
+            "weight": 0.7344937226223044,
+            "x_m": 37.491,
+            "y_m": 9.081
+          },
+          {
+            "node_tag": 546,
+            "weight": 0.03956623689807106,
+            "x_m": 32.491,
+            "y_m": 13.95
+          },
+          {
+            "node_tag": 915,
+            "weight": 0.22594004047962454,
+            "x_m": 27.791,
+            "y_m": 4.182
+          }
+        ]
+      },
+      {
+        "building": "EDIFICIO_1",
+        "floor": "P3",
+        "direction": "EX",
+        "method": "BARYCENTRIC_TRIANGLE",
+        "cm_m": [
+          35.04937547677784,
+          5.729954940892442
+        ],
+        "target_m": [
+          35.04937547677784,
+          6.512229940892443
+        ],
+        "eccentricity_m": 0.782275,
+        "source_force_kN": 791.7677108124687,
+        "applied_force_kN": 791.7677108124687,
+        "resultant_point_m": [
+          35.04937547677784,
+          6.512229940892443
+        ],
+        "point_error_m": 0.0,
+        "torsion_about_cm_kNm": -619.3800859758239,
+        "source_torsion_magnitude_kNm": 619.380085975824,
+        "nodes": [
+          {
+            "node_tag": 163,
+            "weight": 0.5852310302107863,
+            "x_m": 37.491,
+            "y_m": 9.081
+          },
+          {
+            "node_tag": 160,
+            "weight": 0.1601944183115618,
+            "x_m": 37.491,
+            "y_m": 0.181
+          },
+          {
+            "node_tag": 326,
+            "weight": 0.25457455147765196,
+            "x_m": 27.9,
+            "y_m": 4.591
+          }
+        ]
+      },
+      {
+        "building": "EDIFICIO_1",
+        "floor": "P4",
+        "direction": "EX",
+        "method": "BARYCENTRIC_TRIANGLE",
+        "cm_m": [
+          36.61551898848222,
+          7.375274948555947
+        ],
+        "target_m": [
+          36.61551898848222,
+          8.364064948555948
+        ],
+        "eccentricity_m": 0.9887900000000001,
+        "source_force_kN": 1377.103640821781,
+        "applied_force_kN": 1377.103640821781,
+        "resultant_point_m": [
+          36.61551898848222,
+          8.364064948555948
+        ],
+        "point_error_m": 0.0,
+        "torsion_about_cm_kNm": -1361.6663090081713,
+        "source_torsion_magnitude_kNm": 1361.666309008169,
+        "nodes": [
+          {
+            "node_tag": 183,
+            "weight": 0.6485579032627296,
+            "x_m": 37.491,
+            "y_m": 9.081
+          },
+          {
+            "node_tag": 580,
+            "weight": 0.17509620230355552,
+            "x_m": 32.491,
+            "y_m": 13.95
+          },
+          {
+            "node_tag": 180,
+            "weight": 0.17634589443371493,
+            "x_m": 37.491,
+            "y_m": 0.181
+          }
+        ]
+      },
+      {
+        "building": "EDIFICIO_2",
+        "floor": "S1",
+        "direction": "EX",
+        "method": "BARYCENTRIC_TRIANGLE",
+        "cm_m": [
+          8.348782985173214,
+          5.211635922956577
+        ],
+        "target_m": [
+          8.348782985173214,
+          6.104060922956577
+        ],
+        "eccentricity_m": 0.8924249999999999,
+        "source_force_kN": 144.16161601912714,
+        "applied_force_kN": 144.16161601912714,
+        "resultant_point_m": [
+          8.348782985173214,
+          6.104060922956576
+        ],
+        "point_error_m": 1.7763568394002505e-15,
+        "torsion_about_cm_kNm": -128.65343017586935,
+        "source_torsion_magnitude_kNm": 128.65343017586952,
+        "nodes": [
+          {
+            "node_tag": 8,
+            "weight": 0.5116436209755263,
+            "x_m": 7.502,
+            "y_m": 8.901
+          },
+          {
+            "node_tag": 608,
+            "weight": 0.18016659259004555,
+            "x_m": 12.202,
+            "y_m": 8.601
+          },
+          {
+            "node_tag": 2,
+            "weight": 0.3081897864344282,
+            "x_m": 7.502,
+            "y_m": 0.001
+          }
+        ]
+      },
+      {
+        "building": "EDIFICIO_2",
+        "floor": "P1",
+        "direction": "EX",
+        "method": "BARYCENTRIC_TRIANGLE",
+        "cm_m": [
+          8.348782985173214,
+          5.211635922956577
+        ],
+        "target_m": [
+          8.348782985173214,
+          6.104060922956577
+        ],
+        "eccentricity_m": 0.8924249999999999,
+        "source_force_kN": 289.79426893640857,
+        "applied_force_kN": 289.79426893640857,
+        "resultant_point_m": [
+          8.348782985173214,
+          6.104060922956576
+        ],
+        "point_error_m": 1.7763568394002505e-15,
+        "torsion_about_cm_kNm": -258.6196504555741,
+        "source_torsion_magnitude_kNm": 258.6196504555744,
+        "nodes": [
+          {
+            "node_tag": 20,
+            "weight": 0.5116436209755263,
+            "x_m": 7.502,
+            "y_m": 8.901
+          },
+          {
+            "node_tag": 645,
+            "weight": 0.18016659259004555,
+            "x_m": 12.202,
+            "y_m": 8.601
+          },
+          {
+            "node_tag": 17,
+            "weight": 0.3081897864344282,
+            "x_m": 7.502,
+            "y_m": 0.001
+          }
+        ]
+      },
+      {
+        "building": "EDIFICIO_2",
+        "floor": "P2",
+        "direction": "EX",
+        "method": "BARYCENTRIC_TRIANGLE",
+        "cm_m": [
+          8.348782985173214,
+          5.211635922956577
+        ],
+        "target_m": [
+          8.348782985173214,
+          6.104060922956577
+        ],
+        "eccentricity_m": 0.8924249999999999,
+        "source_force_kN": 435.4269218536902,
+        "applied_force_kN": 435.4269218536902,
+        "resultant_point_m": [
+          8.348782985173214,
+          6.104060922956576
+        ],
+        "point_error_m": 1.7763568394002505e-15,
+        "torsion_about_cm_kNm": -388.5858707352788,
+        "source_torsion_magnitude_kNm": 388.5858707352794,
+        "nodes": [
+          {
+            "node_tag": 28,
+            "weight": 0.5116436209755263,
+            "x_m": 7.502,
+            "y_m": 8.901
+          },
+          {
+            "node_tag": 682,
+            "weight": 0.18016659259004555,
+            "x_m": 12.202,
+            "y_m": 8.601
+          },
+          {
+            "node_tag": 25,
+            "weight": 0.3081897864344282,
+            "x_m": 7.502,
+            "y_m": 0.001
+          }
+        ]
+      },
+      {
+        "building": "EDIFICIO_2",
+        "floor": "P3",
+        "direction": "EX",
+        "method": "BARYCENTRIC_TRIANGLE",
+        "cm_m": [
+          8.348782985173214,
+          5.211635922956577
+        ],
+        "target_m": [
+          8.348782985173214,
+          6.104060922956577
+        ],
+        "eccentricity_m": 0.8924249999999999,
+        "source_force_kN": 581.0595747709715,
+        "applied_force_kN": 581.0595747709715,
+        "resultant_point_m": [
+          8.348782985173214,
+          6.104060922956576
+        ],
+        "point_error_m": 1.7763568394002505e-15,
+        "torsion_about_cm_kNm": -518.5520910149833,
+        "source_torsion_magnitude_kNm": 518.5520910149843,
+        "nodes": [
+          {
+            "node_tag": 36,
+            "weight": 0.5116436209755263,
+            "x_m": 7.502,
+            "y_m": 8.901
+          },
+          {
+            "node_tag": 719,
+            "weight": 0.18016659259004555,
+            "x_m": 12.202,
+            "y_m": 8.601
+          },
+          {
+            "node_tag": 33,
+            "weight": 0.3081897864344282,
+            "x_m": 7.502,
+            "y_m": 0.001
+          }
+        ]
+      },
+      {
+        "building": "EDIFICIO_2",
+        "floor": "P4",
+        "direction": "EX",
+        "method": "BARYCENTRIC_TRIANGLE",
+        "cm_m": [
+          7.797594057230105,
+          4.777178405893961
+        ],
+        "target_m": [
+          7.797594057230105,
+          5.6696034058939615
+        ],
+        "eccentricity_m": 0.8924249999999999,
+        "source_force_kN": 726.6930983798027,
+        "applied_force_kN": 726.6930983798027,
+        "resultant_point_m": [
+          7.797594057230105,
+          5.669603405893963
+        ],
+        "point_error_m": 1.7763568394002505e-15,
+        "torsion_about_cm_kNm": -648.519088321597,
+        "source_torsion_magnitude_kNm": 648.5190883215953,
+        "nodes": [
+          {
+            "node_tag": 44,
+            "weight": 0.6031788151823777,
+            "x_m": 7.502,
+            "y_m": 8.901
+          },
+          {
+            "node_tag": 828,
+            "weight": 0.09498489382017863,
+            "x_m": 4.052,
+            "y_m": 4.116
+          },
+          {
+            "node_tag": 782,
+            "weight": 0.3018362909974437,
+            "x_m": 9.567,
+            "y_m": -0.299
+          }
+        ]
+      },
+      {
+        "building": "EDIFICIO_1",
+        "floor": "S1",
+        "direction": "EY",
+        "method": "BARYCENTRIC_TRIANGLE",
+        "cm_m": [
+          45.02522399208753,
+          3.851838196976043
+        ],
+        "target_m": [
+          47.26780899208753,
+          3.851838196976043
+        ],
+        "eccentricity_m": 2.242585,
+        "source_force_kN": 307.1221871325377,
+        "applied_force_kN": 307.1221871325377,
+        "resultant_point_m": [
+          47.26780899208753,
+          3.851838196976042
+        ],
+        "point_error_m": 8.881784197001252e-16,
+        "torsion_about_cm_kNm": 688.7476100306213,
+        "source_torsion_magnitude_kNm": 688.7476100306221,
+        "nodes": [
+          {
+            "node_tag": 384,
+            "weight": 0.5582856022088121,
+            "x_m": 47.491,
+            "y_m": 0.6
+          },
+          {
+            "node_tag": 63,
+            "weight": 0.39795145506325275,
+            "x_m": 47.491,
+            "y_m": 8.9
+          },
+          {
+            "node_tag": 866,
+            "weight": 0.043762942727935183,
+            "x_m": 42.391,
+            "y_m": -0.569
+          }
+        ]
+      },
+      {
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "direction": "EY",
+        "method": "BARYCENTRIC_TRIANGLE",
+        "cm_m": [
+          40.413214165801115,
+          6.745656492585511
+        ],
+        "target_m": [
+          42.68573916580112,
+          6.745656492585511
+        ],
+        "eccentricity_m": 2.2725250000000004,
+        "source_force_kN": 986.3081597428294,
+        "applied_force_kN": 986.3081597428294,
+        "resultant_point_m": [
+          42.685739165801124,
+          6.745656492585511
+        ],
+        "point_error_m": 7.105427357601002e-15,
+        "torsion_about_cm_kNm": 2241.409950719575,
+        "source_torsion_magnitude_kNm": 2241.4099507195738,
+        "nodes": [
+          {
+            "node_tag": 873,
+            "weight": 0.7560067341803328,
+            "x_m": 42.791,
+            "y_m": 8.6
+          },
+          {
+            "node_tag": 90,
+            "weight": 0.01986053475450569,
+            "x_m": 37.491,
+            "y_m": 8.9
+          },
+          {
+            "node_tag": 878,
+            "weight": 0.2241327310651615,
+            "x_m": 42.791,
+            "y_m": 0.3
+          }
+        ]
+      },
+      {
+        "building": "EDIFICIO_1",
+        "floor": "P2",
+        "direction": "EY",
+        "method": "BARYCENTRIC_TRIANGLE",
+        "cm_m": [
+          35.10155042285729,
+          7.177982749147026
+        ],
+        "target_m": [
+          37.344135422857285,
+          7.177982749147026
+        ],
+        "eccentricity_m": 2.2425849999999996,
+        "source_force_kN": 744.6850131903833,
+        "applied_force_kN": 744.6850131903833,
+        "resultant_point_m": [
+          37.344135422857285,
+          7.177982749147025
+        ],
+        "point_error_m": 8.881784197001252e-16,
+        "torsion_about_cm_kNm": 1670.019440305555,
+        "source_torsion_magnitude_kNm": 1670.0194403055555,
+        "nodes": [
+          {
+            "node_tag": 126,
+            "weight": 0.7407356265855528,
+            "x_m": 37.491,
+            "y_m": 9.081
+          },
+          {
+            "node_tag": 122,
+            "weight": 0.22989145798590438,
+            "x_m": 37.491,
+            "y_m": 0.181
+          },
+          {
+            "node_tag": 546,
+            "weight": 0.029372915428542812,
+            "x_m": 32.491,
+            "y_m": 13.95
+          }
+        ]
+      },
+      {
+        "building": "EDIFICIO_1",
+        "floor": "P3",
+        "direction": "EY",
+        "method": "BARYCENTRIC_TRIANGLE",
+        "cm_m": [
+          35.04937547677784,
+          5.729954940892442
+        ],
+        "target_m": [
+          37.26704047677784,
+          5.729954940892442
+        ],
+        "eccentricity_m": 2.2176649999999998,
+        "source_force_kN": 791.7677108124687,
+        "applied_force_kN": 791.7677108124687,
+        "resultant_point_m": [
+          37.26704047677784,
+          5.729954940892442
+        ],
+        "point_error_m": 0.0,
+        "torsion_about_cm_kNm": 1755.8755403989308,
+        "source_torsion_magnitude_kNm": 1755.8755403989333,
+        "nodes": [
+          {
+            "node_tag": 163,
+            "weight": 0.6119075273130554,
+            "x_m": 37.491,
+            "y_m": 9.081
+          },
+          {
+            "node_tag": 160,
+            "weight": 0.36474146411409886,
+            "x_m": 37.491,
+            "y_m": 0.181
+          },
+          {
+            "node_tag": 326,
+            "weight": 0.02335100857284572,
+            "x_m": 27.9,
+            "y_m": 4.591
+          }
+        ]
+      },
+      {
+        "building": "EDIFICIO_1",
+        "floor": "P4",
+        "direction": "EY",
+        "method": "BARYCENTRIC_TRIANGLE",
+        "cm_m": [
+          36.61551898848222,
+          7.375274948555947
+        ],
+        "target_m": [
+          39.10289398848222,
+          7.375274948555947
+        ],
+        "eccentricity_m": 2.487375,
+        "source_force_kN": 1377.103640821781,
+        "applied_force_kN": 1377.103640821781,
+        "resultant_point_m": [
+          39.10289398848222,
+          7.375274948555946
+        ],
+        "point_error_m": 8.881784197001252e-16,
+        "torsion_about_cm_kNm": 3425.373168589078,
+        "source_torsion_magnitude_kNm": 3425.3731685890775,
+        "nodes": [
+          {
+            "node_tag": 183,
+            "weight": 0.45382901181392565,
+            "x_m": 37.491,
+            "y_m": 9.081
+          },
+          {
+            "node_tag": 953,
+            "weight": 0.3429561677621748,
+            "x_m": 42.191,
+            "y_m": 9.381
+          },
+          {
+            "node_tag": 180,
+            "weight": 0.20321482042389954,
+            "x_m": 37.491,
+            "y_m": 0.181
+          }
+        ]
+      },
+      {
+        "building": "EDIFICIO_2",
+        "floor": "S1",
+        "direction": "EY",
+        "method": "BARYCENTRIC_TRIANGLE",
+        "cm_m": [
+          8.348782985173214,
+          5.211635922956577
+        ],
+        "target_m": [
+          9.916302985173214,
+          5.211635922956577
+        ],
+        "eccentricity_m": 1.56752,
+        "source_force_kN": 144.16161601912714,
+        "applied_force_kN": 144.16161601912714,
+        "resultant_point_m": [
+          9.916302985173214,
+          5.211635922956576
+        ],
+        "point_error_m": 8.881784197001252e-16,
+        "torsion_about_cm_kNm": 225.97621634230225,
+        "source_torsion_magnitude_kNm": 225.97621634230217,
+        "nodes": [
+          {
+            "node_tag": 608,
+            "weight": 0.031145404691205334,
+            "x_m": 12.202,
+            "y_m": 8.601
+          },
+          {
+            "node_tag": 8,
+            "weight": 0.5409452400022758,
+            "x_m": 7.502,
+            "y_m": 8.901
+          },
+          {
+            "node_tag": 607,
+            "weight": 0.42790935530651886,
+            "x_m": 12.802,
+            "y_m": 0.301
+          }
+        ]
+      },
+      {
+        "building": "EDIFICIO_2",
+        "floor": "P1",
+        "direction": "EY",
+        "method": "BARYCENTRIC_TRIANGLE",
+        "cm_m": [
+          8.348782985173214,
+          5.211635922956577
+        ],
+        "target_m": [
+          9.916302985173214,
+          5.211635922956577
+        ],
+        "eccentricity_m": 1.56752,
+        "source_force_kN": 289.79426893640857,
+        "applied_force_kN": 289.79426893640857,
+        "resultant_point_m": [
+          9.916302985173214,
+          5.211635922956576
+        ],
+        "point_error_m": 8.881784197001252e-16,
+        "torsion_about_cm_kNm": 454.2583124431993,
+        "source_torsion_magnitude_kNm": 454.25831244319915,
+        "nodes": [
+          {
+            "node_tag": 645,
+            "weight": 0.031145404691205334,
+            "x_m": 12.202,
+            "y_m": 8.601
+          },
+          {
+            "node_tag": 20,
+            "weight": 0.5409452400022758,
+            "x_m": 7.502,
+            "y_m": 8.901
+          },
+          {
+            "node_tag": 644,
+            "weight": 0.42790935530651886,
+            "x_m": 12.802,
+            "y_m": 0.301
+          }
+        ]
+      },
+      {
+        "building": "EDIFICIO_2",
+        "floor": "P2",
+        "direction": "EY",
+        "method": "BARYCENTRIC_TRIANGLE",
+        "cm_m": [
+          8.348782985173214,
+          5.211635922956577
+        ],
+        "target_m": [
+          9.916302985173214,
+          5.211635922956577
+        ],
+        "eccentricity_m": 1.56752,
+        "source_force_kN": 435.4269218536902,
+        "applied_force_kN": 435.4269218536902,
+        "resultant_point_m": [
+          9.916302985173214,
+          5.211635922956576
+        ],
+        "point_error_m": 8.881784197001252e-16,
+        "torsion_about_cm_kNm": 682.5404085440966,
+        "source_torsion_magnitude_kNm": 682.5404085440964,
+        "nodes": [
+          {
+            "node_tag": 682,
+            "weight": 0.031145404691205334,
+            "x_m": 12.202,
+            "y_m": 8.601
+          },
+          {
+            "node_tag": 28,
+            "weight": 0.5409452400022758,
+            "x_m": 7.502,
+            "y_m": 8.901
+          },
+          {
+            "node_tag": 681,
+            "weight": 0.42790935530651886,
+            "x_m": 12.802,
+            "y_m": 0.301
+          }
+        ]
+      },
+      {
+        "building": "EDIFICIO_2",
+        "floor": "P3",
+        "direction": "EY",
+        "method": "BARYCENTRIC_TRIANGLE",
+        "cm_m": [
+          8.348782985173214,
+          5.211635922956577
+        ],
+        "target_m": [
+          9.916302985173214,
+          5.211635922956577
+        ],
+        "eccentricity_m": 1.56752,
+        "source_force_kN": 581.0595747709715,
+        "applied_force_kN": 581.0595747709715,
+        "resultant_point_m": [
+          9.916302985173214,
+          5.211635922956576
+        ],
+        "point_error_m": 8.881784197001252e-16,
+        "torsion_about_cm_kNm": 910.8225046449938,
+        "source_torsion_magnitude_kNm": 910.8225046449934,
+        "nodes": [
+          {
+            "node_tag": 719,
+            "weight": 0.031145404691205334,
+            "x_m": 12.202,
+            "y_m": 8.601
+          },
+          {
+            "node_tag": 36,
+            "weight": 0.5409452400022758,
+            "x_m": 7.502,
+            "y_m": 8.901
+          },
+          {
+            "node_tag": 718,
+            "weight": 0.42790935530651886,
+            "x_m": 12.802,
+            "y_m": 0.301
+          }
+        ]
+      },
+      {
+        "building": "EDIFICIO_2",
+        "floor": "P4",
+        "direction": "EY",
+        "method": "BARYCENTRIC_TRIANGLE",
+        "cm_m": [
+          7.797594057230105,
+          4.777178405893961
+        ],
+        "target_m": [
+          9.365114057230105,
+          4.777178405893961
+        ],
+        "eccentricity_m": 1.56752,
+        "source_force_kN": 726.6930983798027,
+        "applied_force_kN": 726.6930983798027,
+        "resultant_point_m": [
+          9.365114057230105,
+          4.777178405893962
+        ],
+        "point_error_m": 8.881784197001252e-16,
+        "torsion_about_cm_kNm": 1139.1059655723084,
+        "source_torsion_magnitude_kNm": 1139.1059655723084,
+        "nodes": [
+          {
+            "node_tag": 44,
+            "weight": 0.3559910134837145,
+            "x_m": 7.502,
+            "y_m": 8.901
+          },
+          {
+            "node_tag": 764,
+            "weight": 0.20236641369031333,
+            "x_m": 12.202,
+            "y_m": 8.601
+          },
+          {
+            "node_tag": 782,
+            "weight": 0.44164257282597214,
+            "x_m": 9.567,
+            "y_m": -0.299
+          }
+        ]
+      }
+    ]
+  },
+  "superposition": {
+    "lambdas": {
+      "G": 1.2,
+      "Q": 0.5,
+      "EX": 1.0,
+      "EY": 0.3
+    },
+    "desplazamientos_rel_error": 2.4129667986862863e-12,
+    "reacciones_rel_error": 4.748703279809333e-13,
+    "fuerzas_internas_rel_error": 1.3003811974763439e-12,
+    "tol": 1e-09,
+    "status": "PASS"
+  },
+  "cases": {
+    "G": {
+      "max_displacement": {
+        "magnitude_m": 1.474256711483199,
+        "node_tag": 973,
+        "vector_m": [
+          0.062525927253,
+          -0.962783785544,
+          -1.114706572183
+        ],
+        "floor": "P4"
+      },
+      "sum_reactions": {
+        "Rx_N": 2.0000036329292925e-06,
+        "Ry_N": 4.999918729708952e-06,
+        "Rz_N": 20965310.036007,
+        "Mx_Nm": -39831577.888481,
+        "My_Nm": -944815.702909,
+        "Mz_Nm": 2072793.363905
+      }
+    },
+    "Q": {
+      "max_displacement": {
+        "magnitude_m": 0.5804160275686059,
+        "node_tag": 973,
+        "vector_m": [
+          0.024616506818,
+          -0.37904873343,
+          -0.438860855324
+        ],
+        "floor": "P4"
+      },
+      "sum_reactions": {
+        "Rx_N": -9.890754881780595e-12,
+        "Ry_N": 9.999697940799024e-07,
+        "Rz_N": 8254059.020003,
+        "Mx_Nm": -15681723.511500001,
+        "My_Nm": -371974.68568700005,
+        "Mz_Nm": 816060.377735
+      }
+    },
+    "EX": {
+      "max_displacement": {
+        "magnitude_m": 0.25254317424370637,
+        "node_tag": 915,
+        "vector_m": [
+          0.252121682354,
+          0.013180543558,
+          -0.006243830202
+        ],
+        "floor": "P2"
+      },
+      "sum_reactions": {
+        "Rx_N": -6384122.191662,
+        "Ry_N": -3.0000026640664146e-06,
+        "Rz_N": -9.998861933979697e-07,
+        "Mx_Nm": -1552658.695624,
+        "My_Nm": -32651678.188654,
+        "Mz_Nm": -256997.580005
+      }
+    },
+    "EY": {
+      "max_displacement": {
+        "magnitude_m": 0.4285292128308002,
+        "node_tag": 959,
+        "vector_m": [
+          -0.017474989147,
+          0.401871877795,
+          0.147752850535
+        ],
+        "floor": "P4"
+      },
+      "sum_reactions": {
+        "Rx_N": 2.000020515424694e-06,
+        "Ry_N": -6384122.191655,
+        "Rz_N": 2.9999426587323796e-06,
+        "Mx_Nm": 39608235.692838,
+        "My_Nm": 33599.97360299997,
+        "Mz_Nm": -198147.67722299992
+      }
+    },
+    "R": {
+      "max_displacement": {
+        "magnitude_m": 2.0422867173506516,
+        "node_tag": 973,
+        "vector_m": [
+          0.149114733128,
+          -1.315149981446,
+          -1.555339306561
+        ],
+        "floor": "P4"
+      },
+      "sum_reactions": {
+        "Rx_N": -6384122.191658,
+        "Ry_N": -1915236.6574920001,
+        "Rz_N": 29285401.553208,
+        "Mx_Nm": -45308943.209703,
+        "My_Nm": -33961364.382908,
+        "Mz_Nm": 2578940.3423739998
+      }
+    }
+  }
+}

@@ -101,9 +101,41 @@ namespace Mcoc.UnityViewer
             return LoadOptional<AnalysisResultsData>(fileName, "resultados de analisis");
         }
 
+        public static AnalysisCasesData LoadAnalysisCases(string fileName = "analysis_cases.json")
+        {
+            return LoadOptional<AnalysisCasesData>(fileName, "casos G/Q/EX/EY/R");
+        }
+
+        public static P1L3DeliveryData LoadDelivery(string fileName = "p1l3_delivery.json")
+        {
+            return LoadOptional<P1L3DeliveryData>(fileName, "resumen P1L3");
+        }
+
         public static CapacityData LoadCapacity(string fileName = "capacity_ha.json")
         {
             return LoadOptional<CapacityData>(fileName, "capacidad HA");
+        }
+
+        public static Texture2D LoadPng(string fileName)
+        {
+            string path = Path.Combine(Application.streamingAssetsPath, fileName);
+            if (!File.Exists(path))
+            {
+                Debug.LogWarning($"[JsonLoader] No existe imagen: {path}");
+                return null;
+            }
+            try
+            {
+                var texture = new Texture2D(2, 2, TextureFormat.RGBA32, false);
+                if (!texture.LoadImage(File.ReadAllBytes(path))) return null;
+                texture.name = fileName;
+                return texture;
+            }
+            catch (System.Exception ex)
+            {
+                Debug.LogError($"[JsonLoader] Error al cargar imagen {fileName}: {ex.Message}");
+                return null;
+            }
         }
 
         private static T LoadOptional<T>(string fileName, string label) where T : class

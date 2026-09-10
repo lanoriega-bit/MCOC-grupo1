@@ -38,7 +38,15 @@ namespace Mcoc.UnityViewer
         private TributaryData tributaries;
         private SeismicData seismic;
         private AnalysisResultsData analysisResults;
+        private AnalysisCasesData analysisCases;
+        private P1L3DeliveryData delivery;
         private CapacityData capacity;
+        private Texture2D fiberTexture;
+        private Texture2D momentCurvatureTexture;
+        private Texture2D pmInteractionTexture;
+        private bool deliveryPanelVisible = true;
+        private int deliveryTab = 0;
+        private string activeAnalysisCase = "R";
         private readonly Dictionary<string, Vector2> memberTrib = new Dictionary<string, Vector2>();
         private readonly Dictionary<string, AnalysisElementResult> analysisByElementId = new Dictionary<string, AnalysisElementResult>();
         private readonly Dictionary<string, ExcludedAnalysisElement> excludedByElementId = new Dictionary<string, ExcludedAnalysisElement>();
@@ -56,6 +64,7 @@ namespace Mcoc.UnityViewer
         private ElementInfo lastSelected = null;
         private string searchText = "";
         private string searchResult = "";
+        private Vector2 infoScroll = Vector2.zero;
         private static Texture2D whiteTex;
 
         private static readonly Dictionary<string, string> TypeLabels = new Dictionary<string, string>
@@ -106,13 +115,13 @@ namespace Mcoc.UnityViewer
             model = JsonLoader.LoadModel(jsonFileName);
             if (model == null) { SetStatus("Error: no se pudo cargar el modelo."); return; }
             analysisResults = JsonLoader.LoadAnalysisResults();
+            analysisCases = JsonLoader.LoadAnalysisCases();
+            delivery = JsonLoader.LoadDelivery();
             capacity = JsonLoader.LoadCapacity();
-            if (analysisResults != null && analysisResults.elements != null)
-                foreach (var result in analysisResults.elements)
-                    if (!string.IsNullOrEmpty(result.element_id)) analysisByElementId[result.element_id] = result;
-            if (analysisResults != null && analysisResults.excluded_elements != null)
-                foreach (var item in analysisResults.excluded_elements)
-                    if (!string.IsNullOrEmpty(item.element_id)) excludedByElementId[item.element_id] = item;
+            fiberTexture = JsonLoader.LoadPng("fiber_section.png");
+            momentCurvatureTexture = JsonLoader.LoadPng("moment_curvature.png");
+            pmInteractionTexture = JsonLoader.LoadPng("pm_interaction.png");
+            ActivateAnalysisCase(analysisCases != null && !string.IsNullOrEmpty(analysisCases.default_case) ? analysisCases.default_case : "R");
             tributaries = JsonLoader.LoadTributaries();
             if (tributaries != null)
             {
@@ -132,6 +141,35 @@ namespace Mcoc.UnityViewer
             seismic = JsonLoader.LoadSeismic();
             if (seismic != null) BuildSeismic();
             SetStatus($"{model.solids?.Count ?? 0} solidos, {model.segments?.Count ?? 0} lineas CAD, {model.labels?.Count ?? 0} etiquetas");
+        }
+
+        void ActivateAnalysisCase(string requested)
+        {
+            string normalized = (requested ?? "R").Replace("CASE_", "").ToUpperInvariant();
+            AnalysisResultsData chosen = null;
+            if (analysisCases != null && analysisCases.cases != null)
+            {
+                foreach (var item in analysisCases.cases)
+                {
+                    if (item == null) continue;
+                    string candidate = (item.case_name ?? "").Replace("CASE_", "").ToUpperInvariant();
+                    if (candidate == normalized) { chosen = item; break; }
+                }
+            }
+            if (chosen == null) chosen = analysisResults;
+            if (chosen == null) return;
+
+            activeAnalysisCase = normalized;
+            analysisResults = chosen;
+            analysisByElementId.Clear();
+            excludedByElementId.Clear();
+            if (chosen.elements != null)
+                foreach (var result in chosen.elements)
+                    if (!string.IsNullOrEmpty(result.element_id)) analysisByElementId[result.element_id] = result;
+            if (chosen.excluded_elements != null)
+                foreach (var item in chosen.excluded_elements)
+                    if (!string.IsNullOrEmpty(item.element_id)) excludedByElementId[item.element_id] = item;
+            if (lastSelected != null) ShowInfo(lastSelected);
         }
 
         void LoadMaterials()
@@ -756,7 +794,9 @@ namespace Mcoc.UnityViewer
             // Zona panel izquierdo (pisos y tipos)
             if (m.x < 260 && m.y > 225 && m.y < 705) return true;
             // Zona panel de info (arriba izquierda)
-            if (m.x < 380 && m.y < 210) return true;
+            if (m.x < 565 && m.y < 210) return true;
+            if (deliveryPanelVisible && DeliveryRect().Contains(m)) return true;
+            if (!deliveryPanelVisible && new Rect(Screen.width * 0.5f - 90f, 10f, 180f, 28f).Contains(m)) return true;
             return false;
         }
 
@@ -940,8 +980,139 @@ namespace Mcoc.UnityViewer
             if (whiteTex == null) whiteTex = MakeTex(2, 2, Color.white);
             DrawPanelInfo();
             DrawControls();
+            DrawP1L3Panel();
             if (labelsVisible) DrawLabels();
             if (seismic != null) DrawSeismicValueLabels();
+        }
+
+        Rect DeliveryRect()
+        {
+            float width = Mathf.Clamp(Screen.width - 540f, 520f, 920f);
+            float x = Mathf.Max(270f, (Screen.width - width) * 0.5f);
+            float height = Mathf.Min(390f, Screen.height - 180f);
+            return new Rect(x, Screen.height - height - 10f, width, height);
+        }
+
+        void DrawP1L3Panel()
+        {
+            var title = new GUIStyle(GUI.skin.label);
+            title.fontSize = 14; title.fontStyle = FontStyle.Bold; title.normal.textColor = Color.white;
+            var text = new GUIStyle(GUI.skin.label);
+            text.fontSize = 12; text.normal.textColor = new Color(0.92f, 0.95f, 1f); text.wordWrap = true;
+            var pass = new GUIStyle(title); pass.normal.textColor = new Color(0.35f, 1f, 0.55f);
+            var warning = new GUIStyle(text); warning.normal.textColor = new Color(1f, 0.78f, 0.25f);
+            var button = new GUIStyle(GUI.skin.button); button.fontSize = 12;
+
+            if (!deliveryPanelVisible)
+            {
+                if (GUI.Button(new Rect(Screen.width * 0.5f - 90f, 10f, 180f, 28f), "Abrir panel P1L3", button)) deliveryPanelVisible = true;
+                return;
+            }
+
+            Rect r = DeliveryRect();
+            GUI.Box(r, "");
+            GUI.DrawTexture(r, MakeTex(2, 2, new Color(0.015f, 0.025f, 0.055f, 0.94f)));
+            GUI.Label(new Rect(r.x + 12, r.y + 7, 360, 24), "P1L3 | Laboratorio estructural integrado", title);
+            if (delivery != null) GUI.Label(new Rect(r.x + r.width - 170, r.y + 7, 110, 22), "Estado: " + delivery.status, delivery.status == "PASS" ? pass : warning);
+            if (GUI.Button(new Rect(r.x + r.width - 42, r.y + 5, 30, 24), "X", button)) { deliveryPanelVisible = false; return; }
+
+            float tabY = r.y + 34;
+            string[] tabs = { "Resumen", "Casos FE", "Capacidad HA" };
+            for (int i = 0; i < tabs.Length; i++)
+                if (GUI.Button(new Rect(r.x + 12 + i * 118, tabY, 110, 25), tabs[i], button)) deliveryTab = i;
+
+            Rect body = new Rect(r.x + 12, tabY + 32, r.width - 24, r.height - 76);
+            if (delivery == null)
+            {
+                GUI.Label(body, "No se encontro p1l3_delivery.json. Regenera el bundle de Unity.", warning);
+                return;
+            }
+            if (deliveryTab == 0) DrawDeliverySummary(body, text, pass, warning);
+            else if (deliveryTab == 1) DrawAnalysisCases(body, text, pass, warning, button);
+            else DrawCapacity(body, text, pass, warning);
+        }
+
+        void DrawDeliverySummary(Rect body, GUIStyle text, GUIStyle pass, GUIStyle warning)
+        {
+            var g = delivery.gravity;
+            var s = delivery.seismic;
+            var p = delivery.superposition;
+            if (g == null || s == null || p == null) { GUI.Label(body, "Resumen P1L3 incompleto.", warning); return; }
+            string summary =
+                $"PARTE A - CARGA VIVA [{g.status}]\n" +
+                $"110 zonas/panos tributarios; Q transferida = {g.Q_transferred_kN:F3} kN; qQ*A = {g.Q_expected_kN:F3} kN; error = {g.Q_conservation_rel_error:E2}.\n\n" +
+                $"PARTE B - SISMO PSEUDOESTATICO [{s.status}]\n" +
+                $"Coeficiente basal configurable C = {100.0 * s.base_shear_coefficient:F1}% g. EX = {s.total_EX_kN:F3} kN, EY = {s.total_EY_kN:F3} kN. " +
+                $"Errores de corte basal: EX {s.EX_rel_error:E2}, EY {s.EY_rel_error:E2}. Sentido deformada: EX {s.EX_deformed_status}, EY {s.EY_deformed_status}. " +
+                $"Error maximo al aplicar en CM+excentricidad = {s.max_application_point_error_m:E2} m.\n\n" +
+                $"PARTE C - SUPERPOSICION [{p.status}]\n" +
+                $"R = {p.lambda_G:F2} G + {p.lambda_Q:F2} Q + {p.lambda_EX:F2} EX + {p.lambda_EY:F2} EY. " +
+                $"Comparacion con corrida explicita: desplazamiento {p.displacement_rel_error:E2}, reaccion {p.reaction_rel_error:E2}, fuerza interna {p.internal_force_rel_error:E2}.\n\n" +
+                "PARTE D - CAPACIDAD HA\nFiber Section, materiales, armadura, M-phi y P-M disponibles en la pestana Capacidad HA.";
+            GUI.Label(body, summary, text);
+            float wy = body.y + body.height - 48;
+            GUI.Label(new Rect(body.x, wy, body.width, 46),
+                "MODELO PROVISIONAL: la geometria/carga tributaria aun es parcial y las deformaciones globales no deben interpretarse como una validacion final del edificio.", warning);
+        }
+
+        DeliveryCase FindDeliveryCase(string name)
+        {
+            if (delivery == null || delivery.cases == null) return null;
+            foreach (var item in delivery.cases)
+                if (item != null && (item.case_name ?? "").Replace("CASE_", "").ToUpperInvariant() == name.ToUpperInvariant()) return item;
+            return null;
+        }
+
+        void DrawAnalysisCases(Rect body, GUIStyle text, GUIStyle pass, GUIStyle warning, GUIStyle button)
+        {
+            GUI.Label(new Rect(body.x, body.y, body.width, 22), "Selecciona el caso para consultar las fuerzas locales de cualquier elemento:", text);
+            string[] names = { "G", "Q", "EX", "EY", "R" };
+            for (int i = 0; i < names.Length; i++)
+            {
+                var bs = new GUIStyle(button);
+                if (activeAnalysisCase == names[i]) bs.normal.textColor = new Color(0.25f, 1f, 0.5f);
+                if (GUI.Button(new Rect(body.x + i * 64, body.y + 28, 58, 26), names[i], bs)) ActivateAnalysisCase(names[i]);
+            }
+            var c = FindDeliveryCase(activeAnalysisCase);
+            if (c == null) { GUI.Label(new Rect(body.x, body.y + 64, body.width, 50), "Caso no disponible.", warning); return; }
+            string description =
+                $"CASO ACTIVO: {activeAnalysisCase}\n" +
+                $"Desplazamiento maximo = {c.max_displacement_m:F6} m en nodo {c.max_node_tag} ({c.max_floor}); " +
+                $"u = ({c.ux_m:F6}, {c.uy_m:F6}, {c.uz_m:F6}) m.\n" +
+                $"Suma de reacciones = ({c.sum_Rx_kN:F3}, {c.sum_Ry_kN:F3}, {c.sum_Rz_kN:F3}) kN.\n\n" +
+                "Haz clic en una viga o columna para ver P, Vy, Vz, T, My y Mz del caso activo. " +
+                "El caso R se resolvio explicitamente y tambien se comparo contra la suma lineal de G, Q, EX y EY.";
+            GUI.Label(new Rect(body.x, body.y + 66, body.width, 130), description, text);
+            if (activeAnalysisCase == "R" && delivery.superposition != null)
+                GUI.Label(new Rect(body.x, body.y + 202, body.width, 44),
+                    $"Verificacion de superposicion: {delivery.superposition.status} | errores u={delivery.superposition.displacement_rel_error:E2}, R={delivery.superposition.reaction_rel_error:E2}, f={delivery.superposition.internal_force_rel_error:E2}", pass);
+            GUI.Label(new Rect(body.x, body.y + body.height - 44, body.width, 42),
+                "Advertencia: los valores son resultados del modelo FE integrado actual; la rigidez global sigue en auditoria por geometria, conectividad y ejes locales.", warning);
+        }
+
+        void DrawCapacity(Rect body, GUIStyle text, GUIStyle pass, GUIStyle warning)
+        {
+            if (capacity == null) { GUI.Label(body, "Datos de capacidad HA no disponibles.", warning); return; }
+            string header =
+                $"Seccion {capacity.section_id}: {capacity.b_m:F2} x {capacity.h_m:F2} m | recubrimiento {capacity.cover_m:F3} m | " +
+                $"{capacity.num_bars} barras O{capacity.bar_diameter_m * 1000.0:F0} mm | f'c={capacity.fc_pa / 1e6:F1} MPa | fy={capacity.fy_pa / 1e6:F1} MPa | " +
+                $"malla {capacity.num_fibers_y}x{capacity.num_fibers_z}.\nMapeo visible: {capacity.mapped_element_id} -> {capacity.mapped_analysis_id} ({capacity.mapping_distance_m:F3} m).";
+            GUI.Label(new Rect(body.x, body.y, body.width, 48), header, text);
+            float gap = 8f;
+            float imageW = (body.width - gap * 2f) / 3f;
+            float imageY = body.y + 54;
+            float imageH = Mathf.Min(178f, body.height - 108f);
+            Texture2D[] images = { fiberTexture, momentCurvatureTexture, pmInteractionTexture };
+            string[] labels = { "Discretizacion y refuerzo", "Momento-curvatura M-phi", "Interaccion P-M" };
+            for (int i = 0; i < 3; i++)
+            {
+                Rect ir = new Rect(body.x + i * (imageW + gap), imageY, imageW, imageH);
+                GUI.Box(ir, "");
+                if (images[i] != null) GUI.DrawTexture(ir, images[i], ScaleMode.ScaleToFit, true);
+                else GUI.Label(ir, "Imagen no disponible", warning);
+                GUI.Label(new Rect(ir.x, ir.y + ir.height + 2, ir.width, 20), labels[i], pass);
+            }
+            GUI.Label(new Rect(body.x, body.y + body.height - 28, body.width, 26), capacity.disclaimer, warning);
         }
 
         void DrawPanelInfo()
@@ -956,9 +1127,13 @@ namespace Mcoc.UnityViewer
             GUI.Box(new Rect(10, 10, 360, 200), "");
             GUI.DrawTexture(new Rect(10, 10, 360, 200), tex);
             var lbl = new GUIStyle(GUI.skin.label);
-            lbl.fontSize = 13;
+            lbl.fontSize = 12;
             lbl.normal.textColor = Color.white;
-            GUI.Label(new Rect(20, 16, 340, 190), lastInfo, lbl);
+            int lineCount = lastInfo.Split('\n').Length;
+            float contentHeight = Mathf.Max(184f, lineCount * 18f + 8f);
+            infoScroll = GUI.BeginScrollView(new Rect(16, 16, 348, 188), infoScroll, new Rect(0, 0, 325, contentHeight));
+            GUI.Label(new Rect(2, 0, 318, contentHeight), lastInfo, lbl);
+            GUI.EndScrollView();
             var btnc = new GUIStyle(GUI.skin.button);
             btnc.fontSize = 12;
             string toCopy = "";
@@ -1018,7 +1193,7 @@ namespace Mcoc.UnityViewer
                 if (novo != vis) { floorVisible[f] = novo; ReapplyAll(); }
                 if (GUI.Button(new Rect(lx + 160, iy, 70, 20), "solo"))
                 {
-                    foreach (var k in floorVisible.Keys) floorVisible[k] = (k == f);
+                    foreach (var k in new List<string>(floorVisible.Keys)) floorVisible[k] = (k == f);
                     ReapplyAll();
                 }
                 iy += 22;

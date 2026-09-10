@@ -217,6 +217,13 @@ def _sum_vec(v1, v2):
     return [x + y for x, y in zip(v1, v2)]
 
 
+def _weighted_sum(vectors, factors):
+    if not vectors:
+        return []
+    return [sum(factor * vector[i] for vector, factor in zip(vectors, factors))
+            for i in range(len(vectors[0]))]
+
+
 def _rel_error(v_super, v_ref):
     n_ref = math.sqrt(sum(x * x for x in v_ref))
     if n_ref <= 0.0:
@@ -246,6 +253,72 @@ def comparar_superposicion(am, cfg, entradas_g, entradas_q, tol=TOL_SUPERPOSICIO
         "status": "PASS" if max(e, e_r, e_f) <= tol else "FAIL",
         "tol": tol,
     }, {"G": res_g, "Q": res_q, "GQ": res_gq}
+
+
+def comparar_superposicion_cuatro(
+    am,
+    cfg,
+    entradas_g,
+    entradas_q,
+    cargas_ex,
+    cargas_ey,
+    lambdas=None,
+    tol=TOL_SUPERPOSICION_DEFAULT,
+    silencioso=True,
+):
+    """Compara G/Q/EX/EY superpuestos con una corrida explicita equivalente."""
+    lambdas = lambdas or {"G": 1.2, "Q": 0.5, "EX": 1.0, "EY": 0.3}
+    required = {"G", "Q", "EX", "EY"}
+    if set(lambdas) != required:
+        raise ValueError(f"lambdas debe contener exactamente {sorted(required)}")
+
+    results = {
+        "G": resolver(am, cfg, load_by_beam=entradas_g, silencioso=silencioso),
+        "Q": resolver(am, cfg, load_by_beam=entradas_q, silencioso=silencioso),
+        "EX": resolver(am, cfg, nodal_loads=cargas_ex, silencioso=silencioso),
+        "EY": resolver(am, cfg, nodal_loads=cargas_ey, silencioso=silencioso),
+    }
+    combined_beams = {
+        element_id: lambdas["G"] * entradas_g.get(element_id, 0.0)
+        + lambdas["Q"] * entradas_q.get(element_id, 0.0)
+        for element_id in set(entradas_g) | set(entradas_q)
+    }
+    combined_nodes = {}
+    for tag in set(cargas_ex) | set(cargas_ey):
+        ex = cargas_ex.get(tag, [0.0, 0.0, 0.0])
+        ey = cargas_ey.get(tag, [0.0, 0.0, 0.0])
+        combined_nodes[tag] = [
+            lambdas["EX"] * ex[i] + lambdas["EY"] * ey[i] for i in range(3)
+        ]
+    results["R"] = resolver(
+        am,
+        cfg,
+        load_by_beam=combined_beams,
+        nodal_loads=combined_nodes,
+        silencioso=silencioso,
+    )
+
+    order = ("G", "Q", "EX", "EY")
+    factors = [float(lambdas[key]) for key in order]
+    disp_super = _weighted_sum([_vec_disp(results[key]["nodes"]) for key in order], factors)
+    react_super = _weighted_sum([_vec_react(results[key]["reactions"]) for key in order], factors)
+    forces_super = _weighted_sum([_vec_forces(results[key]["elements"]) for key in order], factors)
+    errors = {
+        "desplazamientos_rel_error": _rel_error(disp_super, _vec_disp(results["R"]["nodes"])),
+        "reacciones_rel_error": _rel_error(react_super, _vec_react(results["R"]["reactions"])),
+        "fuerzas_internas_rel_error": _rel_error(forces_super, _vec_forces(results["R"]["elements"])),
+        "tol": tol,
+    }
+    errors["status"] = (
+        "PASS"
+        if max(
+            errors["desplazamientos_rel_error"],
+            errors["reacciones_rel_error"],
+            errors["fuerzas_internas_rel_error"],
+        ) <= tol
+        else "FAIL"
+    )
+    return {"lambdas": lambdas, **errors}, results
 
 
 def escribir_resultados(run_dir, run_id, caso, datos, am, conservacion=None):

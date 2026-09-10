@@ -50,15 +50,16 @@ versionada y los datos se regeneran desde las fuentes vigentes mediante
 
 ## Como abrir (Opcion A: compilar/ejecutar)
 
-1. Ejecuta `python entregas/P1L3/scripts/build_unity_bundle.py` desde la raiz.
-2. En Unity Hub: **Add** y elige esta carpeta `viewer_unity/`.
-3. Abre `Assets/Main.unity`.
-4. Pulsa **Play**. El visor carga `model_viewer.json`, dibuja el edificio y
-   muestra los toggles y el panel de seleccion.
+1. Ejecuta `python entregas/P1L3/scripts/run_p1l3_integrated.py` desde la raiz.
+2. Ejecuta `python entregas/P1L3/scripts/build_unity_bundle.py`.
+3. En Unity Hub: **Add** y elige esta carpeta `viewer_unity/`.
+4. Abre `Assets/Main.unity`.
+5. Pulsa **Play**. El visor carga el edificio y abre el panel P1L3.
 
-Los resultados EX/EY actuales describen masas y fuerzas pseudoestaticas, pero
-todavia no fueron aplicados al modelo OpenSees. Unity debe identificarlos como
-patrones de carga, no como respuesta estructural calculada.
+El panel permite demostrar el resumen verificable, alternar los resultados FE
+`G/Q/EX/EY/R` y mostrar Fiber Section, M-phi y P-M. EX/EY si corresponden a
+corridas OpenSees del modelo actual; sus masas siguen siendo una fuente
+historica provisional hasta completar la auditoria de losas.
 
 ## Contrato JSON
 

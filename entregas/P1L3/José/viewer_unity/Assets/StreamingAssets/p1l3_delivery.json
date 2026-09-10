@@ -1,0 +1,102 @@
+{
+  "format": "P1L3_UNITY_DELIVERY_v1",
+  "status": "PASS",
+  "limitations": [
+    "La geometria tributaria actual cubre solo 3392.624 m2 y sigue en auditoria.",
+    "Las masas EX/EY provienen del archivo historico de Jose y son provisionales.",
+    "El modelo no incluye losas FE; las cargas laterales se distribuyen baricentricamente a tres nodos del piso."
+  ],
+  "gravity": {
+    "panel_count": 110,
+    "G_transferred_kN": 21126.625425920054,
+    "Q_transferred_kN": 8317.569065322854,
+    "Q_expected_kN": 8317.569065322856,
+    "Q_conservation_rel_error": 1.1197052495762212e-16,
+    "status": "PASS"
+  },
+  "seismic": {
+    "base_shear_coefficient": 0.1,
+    "total_EX_kN": 6384.12219166,
+    "total_EY_kN": 6384.122191660001,
+    "base_shear_EX_kN": 6384.122191662,
+    "base_shear_EY_kN": 6384.122191654999,
+    "EX_rel_error": 3.132738987689449e-13,
+    "EY_rel_error": 7.833984398956015e-13,
+    "EX_deformed_status": "PASS",
+    "EY_deformed_status": "PASS",
+    "max_application_point_error_m": 7.105427357601002e-15,
+    "status": "PASS"
+  },
+  "superposition": {
+    "lambda_G": 1.2,
+    "lambda_Q": 0.5,
+    "lambda_EX": 1.0,
+    "lambda_EY": 0.3,
+    "displacement_rel_error": 2.4129667986862863e-12,
+    "reaction_rel_error": 4.748703279809333e-13,
+    "internal_force_rel_error": 1.3003811974763439e-12,
+    "status": "PASS"
+  },
+  "cases": [
+    {
+      "case_name": "G",
+      "max_displacement_m": 1.474256711483199,
+      "max_node_tag": 973,
+      "max_floor": "P4",
+      "ux_m": 0.062525927253,
+      "uy_m": -0.962783785544,
+      "uz_m": -1.114706572183,
+      "sum_Rx_kN": 2.0000036329292926e-09,
+      "sum_Ry_kN": 4.999918729708952e-09,
+      "sum_Rz_kN": 20965.310036007
+    },
+    {
+      "case_name": "Q",
+      "max_displacement_m": 0.5804160275686059,
+      "max_node_tag": 973,
+      "max_floor": "P4",
+      "ux_m": 0.024616506818,
+      "uy_m": -0.37904873343,
+      "uz_m": -0.438860855324,
+      "sum_Rx_kN": -9.890754881780594e-15,
+      "sum_Ry_kN": 9.999697940799024e-10,
+      "sum_Rz_kN": 8254.059020003
+    },
+    {
+      "case_name": "EX",
+      "max_displacement_m": 0.25254317424370637,
+      "max_node_tag": 915,
+      "max_floor": "P2",
+      "ux_m": 0.252121682354,
+      "uy_m": 0.013180543558,
+      "uz_m": -0.006243830202,
+      "sum_Rx_kN": -6384.122191662,
+      "sum_Ry_kN": -3.0000026640664148e-09,
+      "sum_Rz_kN": -9.998861933979698e-10
+    },
+    {
+      "case_name": "EY",
+      "max_displacement_m": 0.4285292128308002,
+      "max_node_tag": 959,
+      "max_floor": "P4",
+      "ux_m": -0.017474989147,
+      "uy_m": 0.401871877795,
+      "uz_m": 0.147752850535,
+      "sum_Rx_kN": 2.000020515424694e-09,
+      "sum_Ry_kN": -6384.122191654999,
+      "sum_Rz_kN": 2.9999426587323798e-09
+    },
+    {
+      "case_name": "R",
+      "max_displacement_m": 2.0422867173506516,
+      "max_node_tag": 973,
+      "max_floor": "P4",
+      "ux_m": 0.149114733128,
+      "uy_m": -1.315149981446,
+      "uz_m": -1.555339306561,
+      "sum_Rx_kN": -6384.122191658001,
+      "sum_Ry_kN": -1915.2366574920002,
+      "sum_Rz_kN": 29285.401553208
+    }
+  ]
+}

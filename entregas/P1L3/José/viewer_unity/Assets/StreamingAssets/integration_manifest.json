@@ -1,10 +1,11 @@
 {
   "format": "P1L3_UNITY_BUNDLE_v1",
-  "generated_utc": "2026-09-09T18:37:08.030148+00:00",
+  "generated_utc": "2026-09-10T02:58:21.075760+00:00",
   "source_of_truth": {
     "geometry": "entregas/P1L2/unity_export/model_combined_viewer.json",
     "analysis_model": "entregas/P1L3/results/a3a4/analysis_model.json",
     "analysis_run": "entregas/P1L3/results/a5/superposicion_gq_v1",
+    "integrated_run": "entregas/P1L3/results/a7",
     "seismic": "entregas/P1L3/José/results/seismic_ex_ey.json",
     "capacity": "entregas/P1L3/capacidad_ha"
   },
@@ -19,11 +20,31 @@
     },
     {
       "name": "analysis_results.json",
-      "sha256": "1dc03db584fc5adeb5449bc61b4c62f245e67653a9956c00575a822af9ab9a2a"
+      "sha256": "b63a4245fb9d03a3aecc7e8775e6f3e1ff8f56a8ded0a05ae84ff27814a7f4a7"
+    },
+    {
+      "name": "analysis_cases.json",
+      "sha256": "ecad4cdec5360b861b63acc009302f89e6c997927cdb86435425b8bf57528a8e"
+    },
+    {
+      "name": "p1l3_delivery.json",
+      "sha256": "9b892ae810c21130f47efd472a2a5258e87d341149fd20fbc3a88b81921d5a1f"
     },
     {
       "name": "capacity_ha.json",
-      "sha256": "ad67af43f9d4002f3a430a86e917eadb098f0bd866c84211dba661eabb6c0f91"
+      "sha256": "040dc6d1c41feb26afb84f7c20688f5882dfe93a909258199911ca03d9b821a1"
+    },
+    {
+      "name": "fiber_section.png",
+      "sha256": "13161a9f68de942c2f7836d0298a014654d6b11fd881263967198ace82f7399f"
+    },
+    {
+      "name": "moment_curvature.png",
+      "sha256": "5ec1dc86d6fd4627215edefe4ad5e615e71ddd0366a4bba16cc8eb596852cf1b"
+    },
+    {
+      "name": "pm_interaction.png",
+      "sha256": "6f404d3e35b61701dd59f193b5cf8de36f2bf37bd1cd84105515ee17c13cb382"
     }
   ],
   "validation": {
@@ -39,7 +60,7 @@
     "floating_excluded": 93,
     "superposition_status": "PASS",
     "gravity_reaction_deficit_percent": 0.763564,
-    "seismic_is_applied_to_opensees": false,
+    "seismic_is_applied_to_opensees": true,
     "capacity_uses_lab_assumptions": true
   }
 }

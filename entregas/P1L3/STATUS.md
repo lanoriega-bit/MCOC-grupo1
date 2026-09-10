@@ -1,5 +1,23 @@
 # P1L3 - Estado de integracion
 
+## Checkpoint funcional integrado 2026-09-09
+
+- `run_p1l3_integrated.py` ejecuta en el mismo modelo OpenSees los casos
+  independientes `G`, `Q`, `EX`, `EY` y la combinacion explicita `R`.
+- La carga viva conserva `8317.569 kN` con error relativo `1.12e-16`.
+- EX y EY estan aplicados al modelo FE: `6384.122 kN` por direccion, con
+  errores relativos de corte basal `3.13e-13` y `7.83e-13`; el sentido de las
+  deformadas es `PASS`.
+- `R = 1.20 G + 0.50 Q + 1.00 EX + 0.30 EY` coincide con la suma lineal en
+  desplazamientos, reacciones y fuerzas internas (errores <= `2.42e-12`).
+- Unity incorpora un panel P1L3 con resumen, selector `G/Q/EX/EY/R`, consulta
+  de fuerzas locales y los tres graficos de capacidad HA.
+- La columna HA historica se asocia visualmente a `E2-P1-C-002` y al elemento
+  FE `A-C-0009` por seccion 0.70x0.70 m y proximidad de 0.157 m. Es un mapeo
+  explicito de laboratorio, no una validacion de demanda/capacidad final.
+- Compilacion C# en Unity 6000.6.0f1: `SUCCESS`, sin errores.
+- Informe de entrega: `INFORME.md`; resultado reproducible: `results/a7/`.
+
 ## Auditoria de planos 2026-09-09
 
 - Se convirtieron e indexaron con AutoCAD 60/60 DWG estructurales: 38 de
@@ -51,7 +69,7 @@ antecedente tecnico; no es la interfaz final.
 | Geometria | `entregas/P1L2/unity_export/model_combined_viewer.json` | Vigente: 1561 solidos, cinco pisos. |
 | Topologia FE | `results/a3a4/analysis_model.json` | 813 nodos, 1312 elementos, 106 apoyos. |
 | G/Q | `results/a1a2/` y `results/a5/` | Conservacion y superposicion `PASS`. |
-| EX/EY | `Jose/results/seismic_ex_ey.json` | Fuerzas y masas parametrizadas; todavia no aplicadas a OpenSees. |
+| EX/EY | `Jose/results/seismic_ex_ey.json` + `results/a7/` | Aplicados a OpenSees y verificados; masas historicas provisionales. |
 | Capacidad HA | `capacidad_ha/` | Fiber/M-phi/P-M integrado; propiedades mecanicas y armadura son hipotesis de laboratorio. |
 | Interfaz | `Jose/viewer_unity/` | Unity 6000.6.0f1; interfaz visual principal. |
 
@@ -88,25 +106,22 @@ marcan como `Modelo FE: no incluido`.
 
 ## Errores y bloqueos abiertos
 
-1. `EX/EY` no son aun resultados estructurales: existen fuerzas, masas, corte
-   basal y torsion, pero no una corrida OpenSees vinculada a `analysis_model`.
-2. Jose y la Parte A usan fuentes tributarias distintas. Antes del sismo final
+1. Jose y la Parte A usan fuentes tributarias distintas. Antes del sismo final
    debe existir una sola fuente G/Q y una sola convencion de niveles.
-3. Los 93 elementos flotantes explican un deficit vertical de 0.763564 %; no se
+2. Los 93 elementos flotantes explican un deficit vertical de 0.763564 %; no se
    debe corregir creando conexiones sin evidencia de planos.
-4. La columna de capacidad usa el ID historico `C_P2_01_0001`, que no esta
-   mapeado a un `element_id` publico vigente. No mostrar demanda/capacidad sobre
-   una columna hasta resolverlo con geometria y planos.
-5. Armadura `12Ø25`, recubrimiento 40 mm y parametros constitutivos siguen
+3. El mapeo HA a `E2-P1-C-002` es trazable pero provisional; no combina aun
+   demanda y capacidad como una verificacion normativa.
+4. Armadura `12Ø25`, recubrimiento 40 mm y parametros constitutivos siguen
    siendo hipotesis de laboratorio. Para LT2, `f'c=35 MPa` y `fy=420 MPa`
    quedaron confirmados por la lamina 2024_22-100.
-6. El punto P50 de la interaccion P-M converge 236/240 pasos y queda marcado
+5. El punto P50 de la interaccion P-M converge 236/240 pasos y queda marcado
    `PARTIAL_FAIL_STEP_237`; no debe presentarse como validacion completa del
    tramo post-pico.
-7. Faltan auditorias geometricas completas de vigas, muros, voladizos y zonas
+6. Faltan auditorias geometricas completas de vigas, muros, voladizos y zonas
    outboard. Las seis columnas S1 no resueltas solo se reabren con evidencia
    nueva.
-8. Los planos fuente estan archivados fuera de Git. El pipeline geometrico no es
+7. Los planos fuente estan archivados fuera de Git. El pipeline geometrico no es
    completamente reproducible hasta documentar un indice local estable y las
    conversiones DWG/DXF usadas.
 
