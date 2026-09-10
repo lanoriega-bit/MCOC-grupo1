@@ -10,6 +10,18 @@ casos reales `G/Q/EX/EY/R`, resultados OpenSees y capacidad HA se adaptan a
 graficos ampliables y modo presentacion. Ver `entregas/P1L3/INFORME.md` y
 `entregas/P1L3/UI_QA.md`. No volver a tratar P1L3 como "solo planificado".
 
+## POST-P1L3 CONSOLIDATED BASELINE — EN CONSTRUCCION
+
+- Snapshot entregado preservado: tag `P1L3_DELIVERED` en
+  `c847c131512d00cc85bb95aa5719278d70da0c2b`.
+- Rama vigente de consolidacion: `codex/pre-p1l4-consolidation`.
+- Backlog maestro y auditoria de ramas/canonicos:
+  `PRE_P1L4_CLEANUP.md`.
+- No se inicia P1L4 y no se sobrescriben resultados A7. Las futuras salidas se
+  identificaran `POST_P1L3_VALIDATED`.
+- FASE 0 cerro la preservacion y el inventario sin merges de ramas historicas.
+  Proximo hito: investigacion final de las seis columnas S1.
+
 ---
 
 ## QUICK START FOR NEXT AGENT
