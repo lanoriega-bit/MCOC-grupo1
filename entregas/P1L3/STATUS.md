@@ -13,6 +13,17 @@
 - Bloqueo conocido: esos panos no cubren aun toda la envolvente de losas.
   Los EX/EY historicos usan otra area tributaria (`8565.8412 m2`) y no son
   demanda final del modelo OpenSees integrado.
+- La barrida formal de tolerancias confirma que la cobertura incompleta no es
+  un error numerico: con tolerancias de viga entre 0.35 y 0.70 m se conservan
+  los mismos 110 panos y se excluyen 222 celdas. El origen es la grilla global
+  que exige cuatro bordes continuos, aunque las vigas reales sean locales.
+- Incluir muros como bordes solo recupera area apreciable en EDIFICIO_1 S1;
+  no resuelve la topologia de EDIFICIO_2. Informe reproducible:
+  `results/a1a2/tributary_coverage_audit.md`.
+- El JSON historico contiene dos etapas de la misma transferencia:
+  `areas` (losa a vigas) y `point_areas` (hacia muros/columnas). No deben
+  sumarse. Sus campos `polygon` son visualizaciones incompletas y no una huella
+  cerrada autorizada para recalcular el edificio.
 
 Actualizado: 2026-09-09.
 
@@ -85,14 +96,17 @@ marcan como `Modelo FE: no incluido`.
 7. Faltan auditorias geometricas completas de vigas, muros, voladizos y zonas
    outboard. Las seis columnas S1 no resueltas solo se reabren con evidencia
    nueva.
-7. Los planos fuente estan archivados fuera de Git. El pipeline geometrico no es
+8. Los planos fuente estan archivados fuera de Git. El pipeline geometrico no es
    completamente reproducible hasta documentar un indice local estable y las
    conversiones DWG/DXF usadas.
 
 ## Proximos hitos
 
-1. Inventariar planos estructurales 2017_67 y 2024_22 desde los archivos locales.
-2. Crear una matriz `plano -> piso -> elementos -> extractor -> validacion`.
+1. Reconstruir por piso la huella de losa y su zonificacion desde las plantas
+   estructurales y las laminas 700, conservando cargas superficiales, lineales
+   y puntuales como tipos separados.
+2. Sustituir la grilla cartesiana global por caras locales soportadas por
+   vigas/muros y verificar conservacion contra la huella completa.
 3. Auditar geometria completa por piso sin modificar la referencia de Luis.
 4. Unificar la fuente de cargas G/Q y recalcular masas sismicas.
 5. Aplicar EX/EY a `analysis_model`, exportar el mismo contrato de resultados y
