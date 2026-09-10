@@ -49,6 +49,8 @@ namespace Mcoc.UnityViewer
         private string activeAnalysisCase = "R";
         private bool uiHidden = false;
         private bool inspectorVisible = true;
+        private bool visibilityPanelVisible = true;
+        private bool legendExpanded = false;
         private Texture2D expandedGraph = null;
         private string expandedGraphTitle = "";
         private float deformationScaleEX = 1f;
@@ -105,7 +107,8 @@ namespace Mcoc.UnityViewer
             { "seismic_mass", "Masa por piso" },
             { "seismic_shear", "Corte basal" },
             { "seismic_pattern", "Patron sismico" },
-            { "seismic_deform", "Deformada (sentido)" },
+            { "seismic_deform_ex", "Deformada OpenSees EX" },
+            { "seismic_deform_ey", "Deformada OpenSees EY" },
             { "seismic_torsion", "Torsion de piso" }
         };
 
@@ -118,6 +121,10 @@ namespace Mcoc.UnityViewer
         {
             cam = Camera.main;
             if (cam == null) cam = Camera.main;
+            // La escena historica conserva Text de Canvas; el inspector IMGUI actual
+            // reemplaza esos duplicados y evita que queden flotando sobre el modelo.
+            if (infoText != null) infoText.gameObject.SetActive(false);
+            if (statusText != null) statusText.gameObject.SetActive(false);
             // El modelo usa Z como altura (piso/m = x,y ; nivel = z).
             // Girar el contenedor de la escena -90° en X: su +Z (altura) pasa a ser +Y
             // de Unity (vertical real), y la planta queda en el plano XZ horizontal.
@@ -474,7 +481,7 @@ namespace Mcoc.UnityViewer
                 Vector3 p1 = V(nj.coord);
                 Vector3 d0 = new Vector3((float)ni.ux_m, (float)ni.uy_m, (float)ni.uz_m) * scale;
                 Vector3 d1 = new Vector3((float)nj.ux_m, (float)nj.uy_m, (float)nj.uz_m) * scale;
-                CreateDeformLine(p0 + d0, p1 + d1, color, b.building, element.floor ?? "");
+                CreateDeformLine(p0 + d0, p1 + d1, color, b.building, element.floor ?? "", ex ? "seismic_deform_ex" : "seismic_deform_ey");
             }
         }
 
@@ -486,7 +493,15 @@ namespace Mcoc.UnityViewer
             return null;
         }
 
-        void CreateDeformLine(Vector3 p0, Vector3 p1, Color color, string building, string floor)
+        AnalysisNodeResult FindAnalysisNode(int tag)
+        {
+            if (analysisResults == null || analysisResults.nodes == null) return null;
+            foreach (var node in analysisResults.nodes)
+                if (node != null && node.node_tag == tag) return node;
+            return null;
+        }
+
+        void CreateDeformLine(Vector3 p0, Vector3 p1, Color color, string building, string floor, string category)
         {
             var go = new GameObject("def_" + building + "_" + floor);
             var lr = go.AddComponent<LineRenderer>();
@@ -500,14 +515,14 @@ namespace Mcoc.UnityViewer
             ei.go = go;
             ei.id = go.name;
             ei.humanId = "Deformada " + building + " " + floor;
-            ei.category = "seismic_deform";
+            ei.category = category;
             ei.floor = floor;
             ei.building = building;
             ei.isSeismic = true;
             ei.baseColor = color;
             ei.nodeI = p0;
             ei.nodeJ = p1;
-            Register(go, "seismic_deform", floor);
+            Register(go, category, floor);
             allElements.Add(ei);
         }
 
@@ -814,9 +829,18 @@ namespace Mcoc.UnityViewer
             // Zona panel derecho (navegacion + buscar, arriba)
             if (m.x > Screen.width - 370 && m.y < 215) return true;
             // Zona panel izquierdo (pisos y tipos)
-            if (ControlsRect().Contains(m)) return true;
+            if (visibilityPanelVisible && ControlsRect().Contains(m)) return true;
+            if (!visibilityPanelVisible && new Rect(10f, 10f, 150f, 28f).Contains(m)) return true;
             // Zona panel de info (arriba izquierda)
-            if (lastSelected != null && InspectorRect().Contains(m)) return true;
+            if (lastSelected != null && inspectorVisible && InspectorRect().Contains(m)) return true;
+            if (lastSelected != null && !inspectorVisible && new Rect(InspectorRect().x + InspectorRect().width - 160f, InspectorRect().y, 160f, 26f).Contains(m)) return true;
+            bool legendShown =
+                (typeVisible.ContainsKey("seismic_arrow") && typeVisible["seismic_arrow"]) ||
+                (typeVisible.ContainsKey("seismic_torsion") && typeVisible["seismic_torsion"]) ||
+                (typeVisible.ContainsKey("seismic_deform_ex") && typeVisible["seismic_deform_ex"]) ||
+                (typeVisible.ContainsKey("seismic_deform_ey") && typeVisible["seismic_deform_ey"]) ||
+                (typeVisible.ContainsKey("tributary") && typeVisible["tributary"]);
+            if (legendShown && m.x > Screen.width - 250f && m.y > Screen.height - (legendExpanded ? 126f : 40f)) return true;
             if (deliveryPanelVisible && DeliveryRect().Contains(m)) return true;
             if (!deliveryPanelVisible && new Rect(Screen.width * 0.5f - 90f, 10f, 180f, 28f).Contains(m)) return true;
             return false;
@@ -951,7 +975,11 @@ namespace Mcoc.UnityViewer
                 string forces = f != null && f.Count >= 6
                     ? $"P={f[0] / 1000.0:F3} kN, Vy={f[1] / 1000.0:F3} kN, Vz={f[2] / 1000.0:F3} kN, T={f[3] / 1000.0:F3} kNm, My={f[4] / 1000.0:F3} kNm, Mz={f[5] / 1000.0:F3} kNm"
                     : "fuerzas no disponibles";
-                analysisLine = $"\nModelo FE: incluido\nCaso: {ar.case_name}\nanalysis_id: {ar.analysis_id}\nOpenSees tag: {ar.opensees_tag}\nExtremo i: {forces}";
+                var ni = FindAnalysisNode(ar.node_i);
+                var nj = FindAnalysisNode(ar.node_j);
+                string displacements = ni == null || nj == null ? "desplazamientos no disponibles" :
+                    $"ui=({ni.ux_m:F6}, {ni.uy_m:F6}, {ni.uz_m:F6}) m\nuj=({nj.ux_m:F6}, {nj.uy_m:F6}, {nj.uz_m:F6}) m";
+                analysisLine = $"\nModelo FE: incluido\nCaso: {ar.case_name}\nanalysis_id: {ar.analysis_id}\nOpenSees tag: {ar.opensees_tag}\n{displacements}\nExtremo i: {forces}";
             }
             else if (excludedByElementId.TryGetValue(id, out var excluded))
             {
@@ -1019,13 +1047,14 @@ namespace Mcoc.UnityViewer
             DrawP1L3Panel();
             if (labelsVisible) DrawLabels();
             if (seismic != null) DrawSeismicValueLabels();
+            DrawLegend();
             DrawExpandedGraph();
         }
 
         Rect DeliveryRect()
         {
-            float width = Mathf.Clamp(Screen.width - 540f, 520f, 920f);
-            float x = Mathf.Max(270f, (Screen.width - width) * 0.5f);
+            float width = Mathf.Clamp(Screen.width - 40f, 360f, 920f);
+            float x = (Screen.width - width) * 0.5f;
             float height = Mathf.Min(390f, Screen.height - 180f);
             return new Rect(x, Screen.height - height - 10f, width, height);
         }
@@ -1075,21 +1104,30 @@ namespace Mcoc.UnityViewer
             var s = delivery.seismic;
             var p = delivery.superposition;
             if (g == null || s == null || p == null) { GUI.Label(body, "Resumen P1L3 incompleto.", warning); return; }
-            string summary =
-                $"PARTE A - CARGA VIVA [{g.status}]\n" +
-                $"110 zonas/panos tributarios; Q transferida = {g.Q_transferred_kN:F3} kN; qQ*A = {g.Q_expected_kN:F3} kN; error = {g.Q_conservation_rel_error:E2}.\n\n" +
-                $"PARTE B - SISMO PSEUDOESTATICO [{s.status}]\n" +
-                $"Coeficiente basal configurable C = {100.0 * s.base_shear_coefficient:F1}% g. EX = {s.total_EX_kN:F3} kN, EY = {s.total_EY_kN:F3} kN. " +
-                $"Errores de corte basal: EX {s.EX_rel_error:E2}, EY {s.EY_rel_error:E2}. Sentido deformada: EX {s.EX_deformed_status}, EY {s.EY_deformed_status}. " +
-                $"Error maximo al aplicar en CM+excentricidad = {s.max_application_point_error_m:E2} m.\n\n" +
-                $"PARTE C - SUPERPOSICION [{p.status}]\n" +
-                $"R = {p.lambda_G:F2} G + {p.lambda_Q:F2} Q + {p.lambda_EX:F2} EX + {p.lambda_EY:F2} EY. " +
-                $"Comparacion con corrida explicita: desplazamiento {p.displacement_rel_error:E2}, reaccion {p.reaction_rel_error:E2}, fuerza interna {p.internal_force_rel_error:E2}.\n\n" +
-                "PARTE D - CAPACIDAD HA\nFiber Section, materiales, armadura, M-phi y P-M disponibles en la pestana Capacidad HA.";
-            GUI.Label(body, summary, text);
+            float gap = 8f;
+            float cardW = (body.width - gap) * 0.5f;
+            float cardH = Mathf.Min(112f, (body.height - 58f) * 0.5f);
+            DrawSummaryCard(new Rect(body.x, body.y, cardW, cardH), "A | Carga viva", g.status,
+                $"{g.panel_count} panos\nQ = {g.Q_transferred_kN:F2} kN\nConservacion: {g.Q_conservation_rel_error:E2}", text, pass);
+            DrawSummaryCard(new Rect(body.x + cardW + gap, body.y, cardW, cardH), "B | Sismo EX/EY", s.status,
+                $"C = {100.0 * s.base_shear_coefficient:F1}% g\nV_EX = {s.base_shear_EX_kN:F2} kN\nV_EY = {s.base_shear_EY_kN:F2} kN", text, pass);
+            DrawSummaryCard(new Rect(body.x, body.y + cardH + gap, cardW, cardH), "C | Superposicion", p.status,
+                $"R={p.lambda_G:F1}G+{p.lambda_Q:F1}Q+{p.lambda_EX:F1}EX+{p.lambda_EY:F1}EY\nError u: {p.displacement_rel_error:E2}\nError f: {p.internal_force_rel_error:E2}", text, pass);
+            DrawSummaryCard(new Rect(body.x + cardW + gap, body.y + cardH + gap, cardW, cardH), "D | Capacidad HA", "DISPONIBLE",
+                "Fiber Section 0.70 x 0.70 m\nM-phi e interaccion P-M\nGraficos ampliables", text, pass);
             float wy = body.y + body.height - 48;
             GUI.Label(new Rect(body.x, wy, body.width, 46),
                 "MODELO PROVISIONAL: la geometria/carga tributaria aun es parcial y las deformaciones globales no deben interpretarse como una validacion final del edificio.", warning);
+        }
+
+        void DrawSummaryCard(Rect rect, string heading, string status, string detail, GUIStyle text, GUIStyle pass)
+        {
+            GUI.Box(rect, "");
+            GUI.DrawTexture(rect, MakeTex(2, 2, new Color(0.035f, 0.065f, 0.12f, 0.96f)));
+            var headingStyle = new GUIStyle(pass); headingStyle.fontSize = 13;
+            GUI.Label(new Rect(rect.x + 9, rect.y + 6, rect.width - 100, 20), heading, headingStyle);
+            GUI.Label(new Rect(rect.x + rect.width - 98, rect.y + 6, 90, 20), status, pass);
+            GUI.Label(new Rect(rect.x + 9, rect.y + 29, rect.width - 18, rect.height - 34), detail, text);
         }
 
         DeliveryCase FindDeliveryCase(string name)
@@ -1130,15 +1168,25 @@ namespace Mcoc.UnityViewer
         void DrawCapacity(Rect body, GUIStyle text, GUIStyle pass, GUIStyle warning)
         {
             if (capacity == null) { GUI.Label(body, "Datos de capacidad HA no disponibles.", warning); return; }
-            string header =
-                $"Seccion {capacity.section_id}: {capacity.b_m:F2} x {capacity.h_m:F2} m | recubrimiento {capacity.cover_m:F3} m | " +
-                $"{capacity.num_bars} barras O{capacity.bar_diameter_m * 1000.0:F0} mm | f'c={capacity.fc_pa / 1e6:F1} MPa | fy={capacity.fy_pa / 1e6:F1} MPa | " +
-                $"malla {capacity.num_fibers_y}x{capacity.num_fibers_z}.\nMapeo visible: {capacity.mapped_element_id} -> {capacity.mapped_analysis_id} ({capacity.mapping_distance_m:F3} m).";
-            GUI.Label(new Rect(body.x, body.y, body.width, 48), header, text);
+            GUI.Label(new Rect(body.x, body.y, body.width, 20),
+                $"Columna analizada: {capacity.mapped_element_id} -> {capacity.mapped_analysis_id} | mapeo {capacity.mapping_status}", pass);
+            string[] fields = {
+                $"SECCION\n{capacity.b_m:F2} x {capacity.h_m:F2} m",
+                $"MATERIALES\nf'c {capacity.fc_pa / 1e6:F0} MPa | fy {capacity.fy_pa / 1e6:F0} MPa",
+                $"REFUERZO\n{capacity.num_bars} O{capacity.bar_diameter_m * 1000.0:F0} mm | r={capacity.cover_m * 1000.0:F0} mm",
+                $"FIBRAS\n{capacity.num_fibers_y} x {capacity.num_fibers_z}"
+            };
+            float fieldW = (body.width - 12f) / 4f;
+            for (int i = 0; i < fields.Length; i++)
+            {
+                Rect fr = new Rect(body.x + i * (fieldW + 4f), body.y + 23f, fieldW, 43f);
+                GUI.Box(fr, "");
+                GUI.Label(new Rect(fr.x + 5, fr.y + 2, fr.width - 10, fr.height - 4), fields[i], text);
+            }
             float gap = 8f;
             float imageW = (body.width - gap * 2f) / 3f;
-            float imageY = body.y + 54;
-            float imageH = Mathf.Min(178f, body.height - 108f);
+            float imageY = body.y + 72;
+            float imageH = Mathf.Min(166f, body.height - 126f);
             Texture2D[] images = { fiberTexture, momentCurvatureTexture, pmInteractionTexture };
             string[] labels = { "Discretizacion y refuerzo", "Momento-curvatura M-phi", "Interaccion P-M" };
             for (int i = 0; i < 3; i++)
@@ -1177,6 +1225,37 @@ namespace Mcoc.UnityViewer
             GUI.DrawTexture(new Rect(frame.x + 14, frame.y + 42, frame.width - 28, frame.height - 56), expandedGraph, ScaleMode.ScaleToFit, true);
         }
 
+        void DrawLegend()
+        {
+            bool arrows = typeVisible.ContainsKey("seismic_arrow") && typeVisible["seismic_arrow"];
+            bool torsion = typeVisible.ContainsKey("seismic_torsion") && typeVisible["seismic_torsion"];
+            bool deformEX = typeVisible.ContainsKey("seismic_deform_ex") && typeVisible["seismic_deform_ex"];
+            bool deformEY = typeVisible.ContainsKey("seismic_deform_ey") && typeVisible["seismic_deform_ey"];
+            bool deform = deformEX || deformEY;
+            bool tributary = typeVisible.ContainsKey("tributary") && typeVisible["tributary"];
+            if (!arrows && !torsion && !deform && !tributary) return;
+            float h = legendExpanded ? 116f : 28f;
+            Rect r = new Rect(Screen.width - 250f, Screen.height - h - 10f, 240f, h);
+            GUI.Box(r, "");
+            GUI.DrawTexture(r, MakeTex(2, 2, new Color(0.015f, 0.025f, 0.05f, 0.9f)));
+            if (GUI.Button(new Rect(r.x + 6, r.y + 4, r.width - 12, 22), legendExpanded ? "Leyenda ▼" : "Leyenda ▲")) legendExpanded = !legendExpanded;
+            if (!legendExpanded) return;
+            var label = new GUIStyle(GUI.skin.label); label.fontSize = 11;
+            float y = r.y + 31f;
+            if (arrows || deform)
+            {
+                label.normal.textColor = new Color(1f, 0.35f, 0.25f); GUI.Label(new Rect(r.x + 10, y, 100, 18), "Rojo = EX", label);
+                label.normal.textColor = new Color(0.35f, 0.6f, 1f); GUI.Label(new Rect(r.x + 118, y, 100, 18), "Azul = EY", label); y += 19f;
+            }
+            if (torsion) { label.normal.textColor = new Color(1f, 0.35f, 0.7f); GUI.Label(new Rect(r.x + 10, y, 210, 18), "Magenta = torsion", label); y += 19f; }
+            if (tributary) { label.normal.textColor = new Color(1f, 0.85f, 0.25f); GUI.Label(new Rect(r.x + 10, y, 210, 18), "Tributarias: escala de carga", label); y += 19f; }
+            if (deform)
+            {
+                label.normal.textColor = Color.white;
+                GUI.Label(new Rect(r.x + 10, y, 220, 18), $"Deformada OpenSees: EX x{deformationScaleEX:F1}, EY x{deformationScaleEY:F1}", label);
+            }
+        }
+
         void DrawPanelInfo()
         {
             if (lastSelected == null) return;
@@ -1199,7 +1278,7 @@ namespace Mcoc.UnityViewer
             if (GUI.Button(new Rect(r.x + 10, r.y + 94, r.width - 20, 24), "Copiar ID: " + toCopy))
                 GUIUtility.systemCopyBuffer = toCopy;
 
-            float contentHeight = 420f;
+            float contentHeight = 700f;
             infoScroll = GUI.BeginScrollView(new Rect(r.x + 8, r.y + 124, r.width - 16, r.height - 132), infoScroll, new Rect(0, 0, r.width - 40, contentHeight));
             float sy = 2f;
             DrawInspectorSection(ref sy, "Geometria", ref inspectorGeometryOpen, inspectorGeometry, r.width - 42, lbl);
@@ -1260,6 +1339,11 @@ namespace Mcoc.UnityViewer
             if (!string.IsNullOrEmpty(searchResult)) GUI.Label(new Rect(x + 8, y + 168, 240, 18), searchResult, ttl);
 
             // --- Panel izquierdo: controles visibles + lista desplazable ---
+            if (!visibilityPanelVisible)
+            {
+                if (GUI.Button(new Rect(10, 10, 150, 28), "Abrir visibilidad")) visibilityPanelVisible = true;
+                return;
+            }
             Rect controls = ControlsRect();
             float lx = controls.x;
             float ly = controls.y;
@@ -1269,20 +1353,23 @@ namespace Mcoc.UnityViewer
             sect.fontSize = 12; sect.fontStyle = FontStyle.Bold; sect.normal.textColor = Color.white;
 
             GUI.Label(new Rect(lx + 8, ly + 4, 240, 18), "Visibilidad rapida", sect);
+            if (GUI.Button(new Rect(lx + 218, ly + 3, 24, 20), "X")) { visibilityPanelVisible = false; return; }
             bool newLabels = GUI.Toggle(new Rect(lx + 8, ly + 25, 116, 20), labelsVisible, "Textos / IDs");
             if (newLabels != labelsVisible) labelsVisible = newLabels;
             QuickTypeToggle(new Rect(lx + 128, ly + 25, 116, 20), "Tributarias", "tributary", "tributary_point");
             QuickTypeToggle(new Rect(lx + 8, ly + 47, 116, 20), "Flechas EX/EY", "seismic_arrow");
-            QuickTypeToggle(new Rect(lx + 128, ly + 47, 116, 20), "Deformada", "seismic_deform");
+            QuickTypeToggle(new Rect(lx + 128, ly + 47, 116, 20), "Deformada EX", "seismic_deform_ex");
             QuickTypeToggle(new Rect(lx + 8, ly + 69, 116, 20), "Centros masa", "seismic_cm");
-            QuickTypeToggle(new Rect(lx + 128, ly + 69, 116, 20), "Masa / peso", "seismic_mass");
-            QuickTypeToggle(new Rect(lx + 8, ly + 91, 116, 20), "Corte basal", "seismic_shear");
-            QuickTypeToggle(new Rect(lx + 128, ly + 91, 116, 20), "Torsion", "seismic_torsion");
+            QuickTypeToggle(new Rect(lx + 128, ly + 69, 116, 20), "Deformada EY", "seismic_deform_ey");
+            QuickTypeToggle(new Rect(lx + 8, ly + 91, 116, 20), "Masa / peso", "seismic_mass");
+            QuickTypeToggle(new Rect(lx + 128, ly + 91, 116, 20), "Corte basal", "seismic_shear");
+            QuickTypeToggle(new Rect(lx + 8, ly + 113, 116, 20), "Torsion", "seismic_torsion");
+            QuickTypeToggle(new Rect(lx + 128, ly + 113, 116, 20), "Patron sismico", "seismic_pattern");
 
-            GUI.Label(new Rect(lx + 8, ly + 118, 240, 18), "Pisos (S = mostrar solo)", sect);
+            GUI.Label(new Rect(lx + 8, ly + 140, 240, 18), "Pisos (S = mostrar solo)", sect);
             var floors = SortedFloors();
             float floorX = lx + 8;
-            float floorY = ly + 139;
+            float floorY = ly + 161;
             for (int i = 0; i < floors.Count; i++)
             {
                 string f = floors[i];
@@ -1363,6 +1450,7 @@ namespace Mcoc.UnityViewer
             deliveryPanelVisible = false;
             expandedGraph = null;
             expandedGraphTitle = "";
+            uiHidden = false;
             foreach (var key in new List<string>(floorVisible.Keys)) floorVisible[key] = true;
             foreach (var key in new List<string>(typeVisible.Keys)) typeVisible[key] = DefaultTypeVisibility(key);
             ReapplyAll();
@@ -1377,7 +1465,7 @@ namespace Mcoc.UnityViewer
             string[] requiredTypes = {
                 "beam", "column", "wall", "slab", "support", "tributary",
                 "seismic_arrow", "seismic_cm", "seismic_mass", "seismic_shear",
-                "seismic_torsion", "seismic_deform"
+                "seismic_torsion", "seismic_deform_ex", "seismic_deform_ey"
             };
             var failures = new List<string>();
             foreach (var key in requiredTypes)
@@ -1430,15 +1518,25 @@ namespace Mcoc.UnityViewer
             ls.fontSize = 10;
             ls.normal.textColor = new Color(1f, 0.82f, 0.3f);
             var sw = Screen.width; var sh = Screen.height;
+            var occupiedCells = new HashSet<string>();
+            int drawnCount = 0;
+            float cellW = orbitDist > 110f ? 105f : 72f;
+            float cellH = orbitDist > 110f ? 28f : 20f;
             foreach (var ei in allElements)
             {
                 if (ei.go == null || !ei.go.activeInHierarchy) continue;
+                if (ei.isSeismic || ei.category == "node" || ei.category == "axis" || ei.category == "cad_reference" || (ei.category ?? "").StartsWith("tributary")) continue;
                 Vector3 cp = transform.TransformPoint(ei.nodeI + (ei.nodeJ - ei.nodeI) * 0.5f);
                 Vector3 sp = cam.WorldToScreenPoint(cp);
                 if (sp.z <= 0) continue;
                 sp.y = sh - sp.y;
                 if (sp.x < 0 || sp.x > sw || sp.y < 0 || sp.y > sh) continue;
+                bool selectedElement = lastSelected == ei;
+                string cell = Mathf.FloorToInt(sp.x / cellW) + ":" + Mathf.FloorToInt(sp.y / cellH);
+                if (!selectedElement && (occupiedCells.Contains(cell) || drawnCount >= 220)) continue;
+                occupiedCells.Add(cell);
                 GUI.Label(new Rect(sp.x - 30, sp.y - 8, 80, 16), ShortTag(ei.id), ls);
+                drawnCount++;
             }
         }
 
@@ -1459,6 +1557,10 @@ namespace Mcoc.UnityViewer
             var sw = Screen.width; var sh = Screen.height;
             var drawn = new HashSet<string>();
             var occupied = new List<Rect>();
+            if (visibilityPanelVisible) occupied.Add(ControlsRect());
+            occupied.Add(new Rect(Screen.width - 260f, 10f, 250f, 196f));
+            if (lastSelected != null && inspectorVisible) occupied.Add(InspectorRect());
+            if (deliveryPanelVisible) occupied.Add(DeliveryRect());
             int step = 0;
             if (anyFloor)
             foreach (var f in seismic.floors)

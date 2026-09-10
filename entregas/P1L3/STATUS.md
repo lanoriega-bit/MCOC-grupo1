@@ -15,6 +15,13 @@
 - El panel lateral de visibilidad mantiene siempre accesibles controles rapidos
   para pisos, textos/IDs, tributarias, EX/EY, deformada, centros de masa, masa,
   corte basal y torsion; la lista completa de capas tiene desplazamiento.
+- UI2-UI4: paneles de visibilidad/inspector/P1L3 colapsables, inspector con
+  acordeones, resumen por tarjetas, graficos HA ampliables, leyenda contextual,
+  modo limpio `H`, Reset `R` y filtros de etiquetas para evitar solapes.
+- Se corrigieron dos asociaciones que rompian filtros: masas registradas siempre
+  en S1 y tributarias puntuales agrupadas bajo otra capa.
+- La deformada ilustrativa historica fue sustituida por nodos desplazados de las
+  corridas OpenSees EX/EY; Unity muestra su amplificacion visual en la leyenda.
 - La columna HA historica se asocia visualmente a `E2-P1-C-002` y al elemento
   FE `A-C-0009` por seccion 0.70x0.70 m y proximidad de 0.157 m. Es un mapeo
   explicito de laboratorio, no una validacion de demanda/capacidad final.

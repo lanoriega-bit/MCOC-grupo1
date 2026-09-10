@@ -61,6 +61,30 @@ El panel permite demostrar el resumen verificable, alternar los resultados FE
 corridas OpenSees del modelo actual; sus masas siguen siendo una fuente
 historica provisional hasta completar la auditoria de losas.
 
+## Interfaz de presentacion
+
+El arranque es limpio: vigas, columnas, muros, losas y apoyos visibles; todos
+los overlays, textos y resultados graficos apagados. Los numeros se leen desde
+los JSON del bundle y no estan hardcodeados en la UI.
+
+- **Visibilidad**: panel izquierdo colapsable. Incluye capas estructurales,
+  tributarias y sismicas, toggles por piso, `S` para aislar un piso y scroll.
+- **Navegacion**: lados A/B/C/D, planta, busqueda por ID y Reset.
+- **Inspector**: aparece al seleccionar un elemento y organiza identidad,
+  geometria, propiedades, tributarias, resultados FE y capacidad en acordeones.
+- **P1L3**: panel inferior desplegable con Resumen, Casos FE y Capacidad HA.
+- **Graficos**: cada imagen HA tiene boton `Ampliar` y vista modal legible.
+- **Leyenda**: aparece solo al activar overlays analiticos.
+- **Modo limpio**: tecla `H`; **Reset**: tecla `R`.
+
+Las deformadas EX/EY usan los desplazamientos nodales de OpenSees exportados en
+`analysis_cases.json`. La leyenda declara el factor de amplificacion visual.
+Las etiquetas de IDs y sismo usan decluttering para reducir solapes.
+
+Prueba reproducible desde el menu: **MCOC > Probar interfaz en Play**. El log
+debe contener `[UI QA] PASS: capas y pisos responden a ON/OFF` y
+`PLAY_SMOKE_COMPLETE`.
+
 ## Contrato JSON
 
 El visor consume `model_viewer.json` (formato P1L2). Los campos de **area y carga
