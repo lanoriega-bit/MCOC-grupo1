@@ -12,6 +12,9 @@
   desplazamientos, reacciones y fuerzas internas (errores <= `2.42e-12`).
 - Unity incorpora un panel P1L3 con resumen, selector `G/Q/EX/EY/R`, consulta
   de fuerzas locales y los tres graficos de capacidad HA.
+- El panel lateral de visibilidad mantiene siempre accesibles controles rapidos
+  para pisos, textos/IDs, tributarias, EX/EY, deformada, centros de masa, masa,
+  corte basal y torsion; la lista completa de capas tiene desplazamiento.
 - La columna HA historica se asocia visualmente a `E2-P1-C-002` y al elemento
   FE `A-C-0009` por seccion 0.70x0.70 m y proximidad de 0.157 m. Es un mapeo
   explicito de laboratorio, no una validacion de demanda/capacidad final.

@@ -65,6 +65,7 @@ namespace Mcoc.UnityViewer
         private string searchText = "";
         private string searchResult = "";
         private Vector2 infoScroll = Vector2.zero;
+        private Vector2 controlsScroll = Vector2.zero;
         private static Texture2D whiteTex;
 
         private static readonly Dictionary<string, string> TypeLabels = new Dictionary<string, string>
@@ -792,7 +793,7 @@ namespace Mcoc.UnityViewer
             // Zona panel derecho (navegacion + buscar, arriba)
             if (m.x > Screen.width - 260 && m.y < 170) return true;
             // Zona panel izquierdo (pisos y tipos)
-            if (m.x < 260 && m.y > 225 && m.y < 705) return true;
+            if (ControlsRect().Contains(m)) return true;
             // Zona panel de info (arriba izquierda)
             if (m.x < 565 && m.y < 210) return true;
             if (deliveryPanelVisible && DeliveryRect().Contains(m)) return true;
@@ -1175,42 +1176,86 @@ namespace Mcoc.UnityViewer
             if (GUI.Button(new Rect(x + 172, y + 114, 68, 24), "Buscar", t2)) DoSearch();
             if (!string.IsNullOrEmpty(searchResult)) GUI.Label(new Rect(x + 8, y + 142, 240, 18), searchResult, ttl);
 
-            // --- Panel izquierdo: Pisos y Tipos ---
-            float lx = 10;
-            float ly = 225;
-            GUI.Box(new Rect(lx, ly, 250, 480), "");
-            GUI.DrawTexture(new Rect(lx, ly, 250, 480), MakeTex(2, 2, new Color(0.02f, 0.04f, 0.08f, 0.85f)));
+            // --- Panel izquierdo: controles visibles + lista desplazable ---
+            Rect controls = ControlsRect();
+            float lx = controls.x;
+            float ly = controls.y;
+            GUI.Box(controls, "");
+            GUI.DrawTexture(controls, MakeTex(2, 2, new Color(0.02f, 0.04f, 0.08f, 0.92f)));
             var sect = new GUIStyle(GUI.skin.label);
             sect.fontSize = 12; sect.fontStyle = FontStyle.Bold; sect.normal.textColor = Color.white;
 
-            GUI.Label(new Rect(lx + 8, ly + 4, 240, 18), "Pisos", sect);
+            GUI.Label(new Rect(lx + 8, ly + 4, 240, 18), "Visibilidad rapida", sect);
+            bool newLabels = GUI.Toggle(new Rect(lx + 8, ly + 25, 116, 20), labelsVisible, "Textos / IDs");
+            if (newLabels != labelsVisible) labelsVisible = newLabels;
+            QuickTypeToggle(new Rect(lx + 128, ly + 25, 116, 20), "Tributarias", "tributary", "tributary_point");
+            QuickTypeToggle(new Rect(lx + 8, ly + 47, 116, 20), "Flechas EX/EY", "seismic_arrow");
+            QuickTypeToggle(new Rect(lx + 128, ly + 47, 116, 20), "Deformada", "seismic_deform");
+            QuickTypeToggle(new Rect(lx + 8, ly + 69, 116, 20), "Centros masa", "seismic_cm");
+            QuickTypeToggle(new Rect(lx + 128, ly + 69, 116, 20), "Masa / peso", "seismic_mass");
+            QuickTypeToggle(new Rect(lx + 8, ly + 91, 116, 20), "Corte basal", "seismic_shear");
+            QuickTypeToggle(new Rect(lx + 128, ly + 91, 116, 20), "Torsion", "seismic_torsion");
+
+            GUI.Label(new Rect(lx + 8, ly + 118, 240, 18), "Pisos (encender / apagar)", sect);
             var floors = SortedFloors();
-            float iy = ly + 24;
-            foreach (var f in floors)
+            float floorX = lx + 8;
+            float floorY = ly + 139;
+            for (int i = 0; i < floors.Count; i++)
             {
+                string f = floors[i];
                 bool vis = floorVisible.ContainsKey(f) && floorVisible[f];
-                bool novo = GUI.Toggle(new Rect(lx + 8, iy, 150, 20), vis, "Piso " + f);
+                bool novo = GUI.Toggle(new Rect(floorX + (i % 3) * 78, floorY + (i / 3) * 22, 76, 20), vis, f);
                 if (novo != vis) { floorVisible[f] = novo; ReapplyAll(); }
-                if (GUI.Button(new Rect(lx + 160, iy, 70, 20), "solo"))
-                {
-                    foreach (var k in new List<string>(floorVisible.Keys)) floorVisible[k] = (k == f);
-                    ReapplyAll();
-                }
-                iy += 22;
+            }
+            float floorRows = Mathf.Ceil(floors.Count / 3f);
+            float buttonsY = floorY + floorRows * 22f + 2f;
+            if (GUI.Button(new Rect(lx + 8, buttonsY, 112, 22), "Todos los pisos", btn))
+            {
+                foreach (var k in new List<string>(floorVisible.Keys)) floorVisible[k] = true;
+                ReapplyAll();
+            }
+            if (GUI.Button(new Rect(lx + 128, buttonsY, 112, 22), "Apagar pisos", btn))
+            {
+                foreach (var k in new List<string>(floorVisible.Keys)) floorVisible[k] = false;
+                ReapplyAll();
             }
 
-            iy += 10;
-            GUI.Label(new Rect(lx + 8, iy, 240, 18), "Tipos", sect);
-            iy += 22;
-            float ty = iy;
-            foreach (var kv in byType)
+            float listY = buttonsY + 30f;
+            GUI.Label(new Rect(lx + 8, listY, 220, 18), "Todas las capas (desplazar)", sect);
+            float viewportY = listY + 20f;
+            float viewportH = Mathf.Max(80f, controls.yMax - viewportY - 8f);
+            var keys = new List<string>();
+            foreach (var key in byType.Keys) if (TypeLabels.ContainsKey(key)) keys.Add(key);
+            keys.Sort((a, b) => string.Compare(TypeLabels[a], TypeLabels[b], System.StringComparison.Ordinal));
+            float contentH = Mathf.Max(viewportH - 2f, keys.Count * 22f + 4f);
+            controlsScroll = GUI.BeginScrollView(new Rect(lx + 6, viewportY, 238, viewportH), controlsScroll, new Rect(0, 0, 214, contentH));
+            float ty = 2f;
+            foreach (var key in keys)
             {
-                if (!TypeLabels.ContainsKey(kv.Key)) continue;
-                bool vis = typeVisible.ContainsKey(kv.Key) && typeVisible[kv.Key];
-                bool novo = GUI.Toggle(new Rect(lx + 8, ty, 220, 20), vis, TypeLabels[kv.Key]);
-                if (novo != vis) { typeVisible[kv.Key] = novo; ReapplyAll(); }
+                bool vis = typeVisible.ContainsKey(key) && typeVisible[key];
+                bool novo = GUI.Toggle(new Rect(2, ty, 208, 20), vis, TypeLabels[key]);
+                if (novo != vis) { typeVisible[key] = novo; ReapplyAll(); }
                 ty += 22;
             }
+            GUI.EndScrollView();
+        }
+
+        Rect ControlsRect()
+        {
+            float height = Mathf.Clamp(Screen.height - 235f, 360f, 650f);
+            return new Rect(10f, 225f, 250f, height);
+        }
+
+        void QuickTypeToggle(Rect rect, string label, params string[] keys)
+        {
+            bool visible = true;
+            foreach (var key in keys)
+                visible = visible && typeVisible.ContainsKey(key) && typeVisible[key];
+            bool changed = GUI.Toggle(rect, visible, label);
+            if (changed == visible) return;
+            foreach (var key in keys)
+                if (typeVisible.ContainsKey(key)) typeVisible[key] = changed;
+            ReapplyAll();
         }
 
         List<string> SortedFloors()
