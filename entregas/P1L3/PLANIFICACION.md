@@ -1,5 +1,18 @@
 # P1L3 - Revision GitHub y plan de evolucion
 
+## Estado ejecutado 2026-09-10
+
+Este documento conserva la planificacion historica. La ejecucion vigente esta
+en `INFORME.md`, `STATUS.md`, `UI_QA.md` y `results/a7/`.
+
+- U0-U7: completados; fuentes de los tres integrantes integradas mediante
+  adaptadores, sin merge ciego de geometria antigua.
+- UI1: controles de capas/pisos reparados y deformadas OpenSees trazables.
+- UI2-UI4: paneles colapsables, decluttering, inspector y capacidad ampliable.
+- UI5: compilacion y contratos PASS; pasada visual final pendiente solo de
+  reactivar la licencia local de Unity Hub.
+- Commits de interfaz: `b882f03`, `beb0006`.
+
 Fecha de revision: 2026-09-08
 
 Base preservada: `da25d46`

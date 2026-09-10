@@ -1,5 +1,18 @@
 # P1L3 - Parte A: notas de defensa
 
+## Estado integrado para la defensa
+
+Unity es el navegador principal, pero no calcula ni inventa respuestas: lee el
+contrato generado desde `results/a7`. La seleccion mantiene la cadena
+`element_id -> analysis_id -> opensees_tag -> caso -> resultado`. Los botones
+`G/Q/EX/EY/R` cambian el caso consultado; la deformada usa desplazamientos
+nodales OpenSees y declara su amplificacion grafica.
+
+Demostracion recomendada: iniciar limpio, aislar un piso con `S`, activar una
+capa por vez, seleccionar un elemento, alternar casos FE, abrir Capacidad HA y
+ampliar cada grafico. `H` oculta toda la UI y `R` restablece camara, pisos,
+estructura visible y overlays apagados.
+
 Fecha: 2026-09-09.
 
 Alcance de este documento: explicar los conceptos que sostienen el trabajo de la Parte A

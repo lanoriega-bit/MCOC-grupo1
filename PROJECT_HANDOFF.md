@@ -1,8 +1,14 @@
 # PROJECT_HANDOFF.md
 
 Transferencia tecnica completa del proyecto "Laboratorio estructural digital 3D de un edificio real".
-Fecha de revision: 2026-09-08. Base: `aed47c3`. `origin/main` = `aed47c3` (sin divergencia local).
+Fecha de revision: 2026-09-10. Base P1L3 integrada: `beb0006`.
 Este documento NO repite planificacion P1L3: eso vive en `entregas/P1L3/PLANIFICACION.md`.
+
+Estado vigente: P1L3 ya esta implementado e integrado en el Unity de Jose. Los
+casos reales `G/Q/EX/EY/R`, resultados OpenSees y capacidad HA se adaptan a
+`Assets/StreamingAssets`; la interfaz principal tiene filtros, inspector,
+graficos ampliables y modo presentacion. Ver `entregas/P1L3/INFORME.md` y
+`entregas/P1L3/UI_QA.md`. No volver a tratar P1L3 como "solo planificado".
 
 ---
 
@@ -39,7 +45,7 @@ Reglas Git obligatorias (ver seccion 20): cada hito = VALIDAR -> STATUS.md -> CO
   - P1L0: benchmark 2D minimo (OpenSees + calculo manual independiente).
   - P1L1: benchmark 3D de un portico simple.
   - P1L2: edificio real completo 3D auditado (geometria, ejes, calce, ids, viewer) - trabajo actual.
-  - P1L3: carga viva Q, sismo pseudoestatico EX/EY, superposicion y capacidad HA (planificado, NO implementado).
+  - P1L3: carga viva Q, sismo pseudoestatico EX/EY, superposicion y capacidad HA integrados en OpenSees/JSON/Unity.
 - El edificio tiene DOS ala/partes del mismo edificio:
   - EDIFICIO_1 (ED1): serie de planos 2017_67, ejes E..J.
   - EDIFICIO_2 (ED2): serie de planos 2024_22, ejes A..D.

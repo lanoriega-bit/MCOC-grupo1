@@ -1,5 +1,13 @@
 # P1L2 Status
 
+## Interfaz P1L3 vigente (2026-09-10)
+
+- El modelo combinado P1L2 de 1561 solidos sigue siendo la geometria consumida
+  por el Unity de Jose; no se reemplazo por snapshots historicos.
+- P1L3 integra `G/Q/EX/EY/R`, capacidad HA y resultados OpenSees en Unity.
+- La renovacion UI se documenta en `../P1L3/UI_QA.md`; no modifica esta
+  geometria ni la referencia original de Luis.
+
 ## Auditoria completa de fuentes (2026-09-09)
 
 - Inventariados y convertidos con AutoCAD 60/60 DWG de las series
