@@ -27,7 +27,11 @@ graficos ampliables y modo presentacion. Ver `entregas/P1L3/INFORME.md` y
 - FASE 2 consolidó las caras DXF de muro: 134 prismas ED1 pasaron a 67
   segmentos analíticos, con espesor medido, y los apoyos lineales S1 pasaron de
   60 a 21. Evidencia y overlays: `entregas/P1L2/edificio/validacion/ed1_walls/`.
-- Proximo hito: auditoria completa de vigas EDIFICIO_1 por piso.
+- FASE 3 en curso: el diagnóstico directo de `RLE-VIGA` confirmó contornos de
+  viga como patrón dominante (553 líneas/545 prismas históricos, 437 con par
+  único, 78 ambiguas, 46 cierres cortos). Todavía no se aplicaron correcciones.
+  Evidencia: `entregas/P1L2/edificio/validacion/ed1_beams/`.
+- Proximo hito: resolver centrolineas de viga con etiquetas y conectividad.
 
 ---
 

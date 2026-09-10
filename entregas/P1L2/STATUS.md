@@ -1,5 +1,16 @@
 # P1L2 Status
 
+## Consolidacion PRE-P1L4 — FASE 3 EN CURSO (2026-09-10)
+
+- Auditoría directa de `RLE-VIGA`: 553 segmentos DXF frente a 545 prismas ED1.
+- El patrón dominante son contornos rectangulares: 437 líneas tienen un único
+  candidato de cara opuesta; 78 quedan ambiguas, hay 46 tramos cortos y 2
+  diagonales. No aparecen duplicados exactos ni cruces interiores sin nodo.
+- Se generaron diagnóstico JSON, informe y overlays S1/P1/P2/P3/P4 en
+  `edificio/validacion/ed1_beams/`.
+- Estado deliberado: `DIAGNOSTIC_COMPLETE_NO_GEOMETRY_CHANGE`; no se han
+  consolidado vigas todavía.
+
 ## Consolidacion PRE-P1L4 — FASE 2 (2026-09-10)
 
 - Corregido el defecto del extractor histórico que interpretaba cada cara de
