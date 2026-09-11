@@ -50,6 +50,10 @@ graficos ampliables y modo presentacion. Ver `entregas/P1L3/INFORME.md` y
   trazos interiores no distinguen inequívocamente hueco de borde de paño. El
   bloque `losa-ne` aparece repetido por toda la planta y no prueba ausencia de
   losa.
+- En ED1, P2 tiene un candidato de 806.605 m² y P3 de 914.175 m², sin lados
+  exteriores pendientes. S1 carece de borde exterior RLE-LOSA y P1 contiene
+  una transición norte/outboard que todavía no forma un perímetro único; no se
+  aplican por envolvente ni se copian desde otros pisos.
 - Proximo paso: reconstruir perímetros y huecos piso a piso con respaldo de
   `RLE-LOSA`, vigas y notas, conservando `participates_in_FE=false` para la
   arquitectura visual.

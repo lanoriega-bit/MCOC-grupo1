@@ -16,6 +16,10 @@
   RLE-VIGA/RLE-MURO. Los rasgos interiores siguen en revision.
 - El bloque `losa-ne` se repite una vez por numerosos panos (22 en la planta
   comun y 23 en P4); no se interpreta como "no existe losa" ni confirma huecos.
+- Propuesta parcial ED1 sin aplicar: P2 `806.605 m2` y P3 `914.175 m2`, con
+  todos los lados directos o respaldados por estructura. S1 no dibuja el borde
+  exterior RLE-LOSA y P1 mezcla el bloque principal con la transicion outboard;
+  ambos permanecen `UNRESOLVED` hasta revisar fuentes complementarias.
 - Siguiente paso: cierres respaldados por vigas/notas y clasificacion individual
   de huecos; sin modificar aun FE, cargas ni resultados P1L3.
 
