@@ -1,7 +1,7 @@
 # PROJECT_HANDOFF.md
 
 Transferencia tecnica completa del proyecto "Laboratorio estructural digital 3D de un edificio real".
-Fecha de revision: 2026-09-10. Base P1L3 integrada: `beb0006`.
+Fecha de revision: 2026-09-11. Base P1L3 integrada: `beb0006`.
 Este documento NO repite planificacion P1L3: eso vive en `entregas/P1L3/PLANIFICACION.md`.
 
 Estado vigente: P1L3 ya esta implementado e integrado en el Unity de Jose. Los
@@ -37,8 +37,17 @@ graficos ampliables y modo presentacion. Ver `entregas/P1L3/INFORME.md` y
   S1. La interfaz D/E fue auditada y no existe conexión entre edificios
   demostrada. ED1 queda con 524 sólidos, combinado 1212 y 0 elementos
   `UNRESOLVED_REQUIRES_REVIEW`. Evidencia: `validacion/special_interface/`.
-- Proximo hito: losas y arquitectura visual ED1/ED2, conservando
-  `participates_in_FE=false` para aleros y canopias.
+- FASE 5 está en diagnóstico de losas. La lectura directa `RLE-LOSA(S)` muestra
+  contornos fragmentados: ED1 tiene 4/26/22/19/37 extremos abiertos en
+  S1/P1/P2/P3/P4 y ED2 22/22/22/22/26. La lámina 2024_22-101 confirma por
+  título una planta común desde cielo S1 hasta cielo P3; tres trazos del JSON
+  derivado quedaron fuera de la región de planta aprobada. Los cierres
+  colineales automáticos no resuelven el perímetro principal y no se han
+  modificado superficies, FE ni resultados. Evidencia:
+  `entregas/P1L2/edificio/validacion/slabs/`.
+- Proximo paso: reconstruir perímetros y huecos piso a piso con respaldo de
+  `RLE-LOSA`, vigas y notas, conservando `participates_in_FE=false` para la
+  arquitectura visual.
 
 ---
 

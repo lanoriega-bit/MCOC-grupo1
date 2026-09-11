@@ -1,5 +1,19 @@
 # P1L2 Status
 
+## Consolidacion PRE-P1L4 — FASE 5 EN CURSO (2026-09-11)
+
+- Diagnostico directo de `RLE-LOSA/RLE-LOSAS` generado para los 10 pares
+  edificio/piso en `edificio/validacion/slabs/`.
+- Los bordes crudos tienen numerosos extremos abiertos; no se rellenan ni se
+  convierten automaticamente en superficies.
+- `2024_22-101` confirma por titulo una planta comun S1-P3 de EDIFICIO_2. Se
+  usan 22 segmentos dentro de la region; tres trazos del JSON derivado quedaron
+  excluidos por pertenecer a un detalle fuera de planta.
+- Los bounding boxes provisionales de losas no son areas reales y deben ser
+  reemplazados por perimetros auditados.
+- Siguiente paso: cierres respaldados por vigas/notas y clasificacion individual
+  de huecos; sin modificar aun FE, cargas ni resultados P1L3.
+
 ## Consolidacion PRE-P1L4 — FASE 4 COMPLETA (2026-09-10)
 
 - `GEO-SPECIAL-001`: la elevacion `2017_67-308` confirma las columnas S1 H-1,

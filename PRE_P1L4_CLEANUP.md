@@ -1,6 +1,6 @@
 # Consolidación POST-P1L3 / PRE-P1L4
 
-Estado: `FASE_4_DONE_SPECIAL_GEOMETRY_AND_INTERFACE_AUDITED`
+Estado: `FASE_5_IN_PROGRESS_SLAB_TOPOLOGY_DIAGNOSTIC`
 Fecha de apertura: 2026-09-10  
 Rama vigente: `codex/pre-p1l4-consolidation`
 
@@ -86,8 +86,8 @@ Prioridad: P0 bloquea la base; P1 alta; P2 media; P3 documental. Estados:
 | Issue | Origen | Evidencia disponible | Estado actual | Impacto | Prioridad | Dependencia | Solución propuesta | Estado |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SLAB-E1-P4-001 — verificar piloto | Commit `807558b` | RLE-LOSA, vigas P4, overlay y auditoría | Revalidado tras consolidar vigas: 958.392750 m², no FE; referencias cambiadas a `sourceTag` estable | Patrón para niveles restantes | P1 | Ninguna | Metodología congelada; extender por piso sin usar IDs volátiles | DONE |
-| SLAB-E1-001 — S1/P1/P2/P3 | Bounding boxes provisionales | RLE-LOSA, vigas, ejes, notas y huecos | Sin perímetros visuales definitivos | Apariencia, áreas y PP | P0 | Muros/vigas por piso | Reconstruir perímetro/huecos/gaps y documentar cierres | OPEN |
-| SLAB-E2-001 — S1-P4 | Bounding boxes provisionales | Serie 2024_22 exclusivamente | Sin reconstrucción auditada | Apariencia, áreas y PP | P0 | Geometría ED2 estable | Aplicar metodología sin copiar ED1 | OPEN |
+| SLAB-E1-001 — S1/P1/P2/P3 | Bounding boxes provisionales | DXF directo RLE-LOSA, vigas, ejes, notas y huecos | Diagnóstico: 8/25/19/22 segmentos, 4/26/22/19 extremos abiertos; cierres colineales insuficientes | Apariencia, áreas y PP | P0 | Muros/vigas por piso | Clasificar perímetro/huecos y cierres respaldados por vigas/notas | IN_PROGRESS |
+| SLAB-E2-001 — S1-P4 | Bounding boxes provisionales | Serie 2024_22 exclusivamente | 101 confirma geometría común S1–P3: 22 segmentos y 22 extremos abiertos; P4: 28/26; 3 trazos de detalle excluidos de JSON previo | Apariencia, áreas y PP | P0 | Geometría ED2 estable | Reconstruir perímetro propio ED2 con cambios escalonados; no copiar ED1 | IN_PROGRESS |
 | ARCH-SEPARATION-001 | Riesgo de mezclar visual/FE | Contrato P4 | P4 declara `participates_in_FE=false` | Evita alterar rigidez/cargas por estética | P0 | Toda extensión arquitectónica | Exigir el campo explícito y validar consumidores | OPEN |
 
 ### CONECTIVIDAD FE

@@ -1,0 +1,5334 @@
+{
+  "status": "DIAGNOSTIC_COMPLETE_NO_SURFACE_CHANGE",
+  "source_priority": "DIRECT_FULL_DXF_RLE_LOSA",
+  "buildings": {
+    "EDIFICIO_1": {
+      "S1": {
+        "segment_count": 8,
+        "total_length_m": 19.219,
+        "open_endpoint_count_0_01m": 4,
+        "junction_count_0_01m": 0,
+        "polygon_count": 1,
+        "polygons": [
+          {
+            "area_m2": 1.322344,
+            "perimeter_m": 7.419,
+            "bounds_m": [
+              30.836027,
+              14.126432,
+              34.146027,
+              14.525932
+            ],
+            "hole_count": 0
+          }
+        ],
+        "cut_count": 0,
+        "dangle_count": 4,
+        "invalid_ring_count": 0,
+        "components": [
+          {
+            "segment_count": 3,
+            "total_length_m": 9.2,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              30.891027,
+              9.447637,
+              34.091027,
+              12.447637
+            ],
+            "handles": [
+              "1C0FC",
+              "1C0FD",
+              "1C0FE"
+            ]
+          },
+          {
+            "segment_count": 4,
+            "total_length_m": 7.419,
+            "closed_by_endpoint_graph": true,
+            "open_node_count": 0,
+            "junction_node_count": 0,
+            "bounds_m": [
+              30.836027,
+              14.126432,
+              34.146027,
+              14.525932
+            ],
+            "handles": [
+              "2419F"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 2.6,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              31.191027,
+              6.181696,
+              33.791027,
+              6.181696
+            ],
+            "handles": [
+              "1C0FF"
+            ]
+          }
+        ],
+        "collinear_bridge_trials": [
+          {
+            "max_gap_m": 0.25,
+            "closure_count": 0,
+            "closures": [],
+            "polygon_count": 1,
+            "polygons": [
+              {
+                "area_m2": 1.322344,
+                "bounds_m": [
+                  30.836027,
+                  14.126432,
+                  34.146027,
+                  14.525932
+                ]
+              }
+            ],
+            "invalid_ring_count": 0
+          },
+          {
+            "max_gap_m": 0.75,
+            "closure_count": 0,
+            "closures": [],
+            "polygon_count": 1,
+            "polygons": [
+              {
+                "area_m2": 1.322344,
+                "bounds_m": [
+                  30.836027,
+                  14.126432,
+                  34.146027,
+                  14.525932
+                ]
+              }
+            ],
+            "invalid_ring_count": 0
+          },
+          {
+            "max_gap_m": 1.5,
+            "closure_count": 0,
+            "closures": [],
+            "polygon_count": 1,
+            "polygons": [
+              {
+                "area_m2": 1.322344,
+                "bounds_m": [
+                  30.836027,
+                  14.126432,
+                  34.146027,
+                  14.525932
+                ]
+              }
+            ],
+            "invalid_ring_count": 0
+          }
+        ],
+        "source_sheet": "2017_67-101.dxf",
+        "source_sha256": "8adccabb890585ae49078d3a76437509d7580aa7645e01e9d95c4dda64c0998b",
+        "provisional_slab_count": 1,
+        "provisional_bbox_area_m2": 1073.172388,
+        "structural_context_polygonization": {
+          "segment_counts_by_layer": {
+            "RLE-LOSA": 8,
+            "RLE-MURO": 86,
+            "RLE-VIGA": 84
+          },
+          "polygon_count": 17,
+          "largest_polygons": [
+            {
+              "area_m2": 79.825038,
+              "bounds_m": [
+                27.741023,
+                0.431265,
+                37.541027,
+                8.781265
+              ]
+            },
+            {
+              "area_m2": 67.054315,
+              "bounds_m": [
+                27.741023,
+                9.381265,
+                37.541027,
+                16.381432
+              ]
+            },
+            {
+              "area_m2": 5.58,
+              "bounds_m": [
+                27.841027,
+                8.781265,
+                37.141027,
+                9.381265
+              ]
+            },
+            {
+              "area_m2": 4.301,
+              "bounds_m": [
+                37.591027,
+                -10.438568,
+                39.891027,
+                -8.568568
+              ]
+            },
+            {
+              "area_m2": 2.620067,
+              "bounds_m": [
+                27.341023,
+                9.431265,
+                27.741023,
+                15.981432
+              ]
+            },
+            {
+              "area_m2": 1.929995,
+              "bounds_m": [
+                30.891027,
+                3.98144,
+                34.091027,
+                6.331432
+              ]
+            },
+            {
+              "area_m2": 1.579967,
+              "bounds_m": [
+                32.391025,
+                -8.368568,
+                32.591025,
+                -0.468735
+              ]
+            },
+            {
+              "area_m2": 1.322344,
+              "bounds_m": [
+                30.836027,
+                14.126432,
+                34.146027,
+                14.525932
+              ]
+            },
+            {
+              "area_m2": 0.865971,
+              "bounds_m": [
+                27.841027,
+                -0.168735,
+                32.167277,
+                0.031432
+              ]
+            },
+            {
+              "area_m2": 0.49,
+              "bounds_m": [
+                47.141027,
+                -0.168568,
+                47.841027,
+                0.531432
+              ]
+            },
+            {
+              "area_m2": 0.374,
+              "bounds_m": [
+                39.891027,
+                -10.438568,
+                40.091027,
+                -8.568568
+              ]
+            },
+            {
+              "area_m2": 0.374,
+              "bounds_m": [
+                42.391027,
+                -10.438568,
+                42.591027,
+                -8.568568
+              ]
+            },
+            {
+              "area_m2": 0.374,
+              "bounds_m": [
+                44.891027,
+                -10.438568,
+                45.091027,
+                -8.568568
+              ]
+            },
+            {
+              "area_m2": 0.36,
+              "bounds_m": [
+                32.167277,
+                -0.468735,
+                33.967277,
+                -0.268735
+              ]
+            },
+            {
+              "area_m2": 0.12,
+              "bounds_m": [
+                33.967277,
+                -8.568568,
+                34.567277,
+                -8.368568
+              ]
+            },
+            {
+              "area_m2": 0.0,
+              "bounds_m": [
+                30.836027,
+                14.126432,
+                34.146027,
+                14.126432
+              ]
+            },
+            {
+              "area_m2": 0.0,
+              "bounds_m": [
+                33.967277,
+                -8.368568,
+                34.567277,
+                -8.368568
+              ]
+            }
+          ],
+          "total_polygonized_area_m2": 167.170697,
+          "invalid_ring_count": 0,
+          "interpretation": "CONTEXT_ONLY_NOT_AUTOMATIC_SLAB_SURFACE"
+        },
+        "overlay": "entregas/P1L2/edificio/validacion/slabs/edificio_1_s1_slab_topology.png",
+        "interpretation": "RAW_EDGES_REQUIRE_PERIMETER_AND_HOLE_CLASSIFICATION"
+      },
+      "P1": {
+        "segment_count": 25,
+        "total_length_m": 136.733945,
+        "open_endpoint_count_0_01m": 26,
+        "junction_count_0_01m": 0,
+        "polygon_count": 1,
+        "polygons": [
+          {
+            "area_m2": 1.322344,
+            "perimeter_m": 7.419,
+            "bounds_m": [
+              30.836027,
+              13.945137,
+              34.146027,
+              14.344637
+            ],
+            "hole_count": 0
+          }
+        ],
+        "cut_count": 0,
+        "dangle_count": 21,
+        "invalid_ring_count": 0,
+        "components": [
+          {
+            "segment_count": 2,
+            "total_length_m": 34.899837,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              27.141023,
+              -1.149863,
+              61.241027,
+              -0.35003
+            ],
+            "handles": [
+              "1CE22",
+              "1CE29"
+            ]
+          },
+          {
+            "segment_count": 3,
+            "total_length_m": 16.69027,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              67.791027,
+              16.520137,
+              72.041185,
+              26.291305
+            ],
+            "handles": [
+              "1CEC7",
+              "1CEC8",
+              "1CEC9"
+            ]
+          },
+          {
+            "segment_count": 4,
+            "total_length_m": 11.292428,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              61.218105,
+              19.062417,
+              62.068112,
+              28.841244
+            ],
+            "handles": [
+              "1CE2E",
+              "1CE2F",
+              "1CE30",
+              "1CE31"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 9.3,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              27.841027,
+              16.500137,
+              37.141027,
+              16.500137
+            ],
+            "handles": [
+              "1CE26"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 9.3,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              47.841027,
+              16.500137,
+              57.141027,
+              16.500137
+            ],
+            "handles": [
+              "1CE25"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 9.3,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              57.841027,
+              16.500137,
+              67.141027,
+              16.500137
+            ],
+            "handles": [
+              "1CE24"
+            ]
+          },
+          {
+            "segment_count": 3,
+            "total_length_m": 8.88241,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              30.891027,
+              9.425137,
+              34.091027,
+              12.266342
+            ],
+            "handles": [
+              "1CE2A",
+              "1CE2B",
+              "1CE2C"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 8.2,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              72.841027,
+              0.350137,
+              72.841027,
+              8.550137
+            ],
+            "handles": [
+              "1CEC4"
+            ]
+          },
+          {
+            "segment_count": 4,
+            "total_length_m": 7.419,
+            "closed_by_endpoint_graph": true,
+            "open_node_count": 0,
+            "junction_node_count": 0,
+            "bounds_m": [
+              30.836027,
+              13.945137,
+              34.146027,
+              14.344637
+            ],
+            "handles": [
+              "2080F"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 6.55,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              72.841027,
+              9.250137,
+              72.841027,
+              15.800137
+            ],
+            "handles": [
+              "1CEC5"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 4.549825,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              27.141023,
+              4.000145,
+              27.141023,
+              8.54997
+            ],
+            "handles": [
+              "1CE27"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 4.3,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              67.841027,
+              16.500137,
+              72.141027,
+              16.500137
+            ],
+            "handles": [
+              "1CEC6"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 3.450175,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              27.141023,
+              0.34997,
+              27.141023,
+              3.800145
+            ],
+            "handles": [
+              "1CE28"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 2.6,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              31.191027,
+              6.000401,
+              33.791027,
+              6.000401
+            ],
+            "handles": [
+              "1CE2D"
+            ]
+          }
+        ],
+        "collinear_bridge_trials": [
+          {
+            "max_gap_m": 0.25,
+            "closure_count": 2,
+            "closures": [
+              {
+                "start": [
+                  67.84102726889435,
+                  16.50013655801769
+                ],
+                "end": [
+                  67.99102726889384,
+                  16.52013655801769
+                ],
+                "length_m": 0.151327,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  27.14102323513276,
+                  4.000144550707378
+                ],
+                "end": [
+                  27.14102323513276,
+                  3.8001445507073686
+                ],
+                "length_m": 0.2,
+                "alignment": "V",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              }
+            ],
+            "polygon_count": 1,
+            "polygons": [
+              {
+                "area_m2": 1.322344,
+                "bounds_m": [
+                  30.836027,
+                  13.945137,
+                  34.146027,
+                  14.344637
+                ]
+              }
+            ],
+            "invalid_ring_count": 0
+          },
+          {
+            "max_gap_m": 0.75,
+            "closure_count": 5,
+            "closures": [
+              {
+                "start": [
+                  67.84102726889435,
+                  16.50013655801769
+                ],
+                "end": [
+                  67.99102726889384,
+                  16.52013655801769
+                ],
+                "length_m": 0.151327,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  27.14102323513276,
+                  4.000144550707378
+                ],
+                "end": [
+                  27.14102323513276,
+                  3.8001445507073686
+                ],
+                "length_m": 0.2,
+                "alignment": "V",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  27.14102323513276,
+                  0.34996990267049116
+                ],
+                "end": [
+                  27.14102323513276,
+                  -0.35003009732950885
+                ],
+                "length_m": 0.7,
+                "alignment": "V",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  72.84102726890117,
+                  8.55013655799471
+                ],
+                "end": [
+                  72.84102726890117,
+                  9.250136557994711
+                ],
+                "length_m": 0.7,
+                "alignment": "V",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  57.841027268962684,
+                  16.500136558017658
+                ],
+                "end": [
+                  57.141027268962674,
+                  16.500136558017658
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              }
+            ],
+            "polygon_count": 1,
+            "polygons": [
+              {
+                "area_m2": 1.322344,
+                "bounds_m": [
+                  30.836027,
+                  13.945137,
+                  34.146027,
+                  14.344637
+                ]
+              }
+            ],
+            "invalid_ring_count": 0
+          },
+          {
+            "max_gap_m": 1.5,
+            "closure_count": 5,
+            "closures": [
+              {
+                "start": [
+                  67.84102726889435,
+                  16.50013655801769
+                ],
+                "end": [
+                  67.99102726889384,
+                  16.52013655801769
+                ],
+                "length_m": 0.151327,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  27.14102323513276,
+                  4.000144550707378
+                ],
+                "end": [
+                  27.14102323513276,
+                  3.8001445507073686
+                ],
+                "length_m": 0.2,
+                "alignment": "V",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  27.14102323513276,
+                  0.34996990267049116
+                ],
+                "end": [
+                  27.14102323513276,
+                  -0.35003009732950885
+                ],
+                "length_m": 0.7,
+                "alignment": "V",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  72.84102726890117,
+                  8.55013655799471
+                ],
+                "end": [
+                  72.84102726890117,
+                  9.250136557994711
+                ],
+                "length_m": 0.7,
+                "alignment": "V",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  57.841027268962684,
+                  16.500136558017658
+                ],
+                "end": [
+                  57.141027268962674,
+                  16.500136558017658
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              }
+            ],
+            "polygon_count": 1,
+            "polygons": [
+              {
+                "area_m2": 1.322344,
+                "bounds_m": [
+                  30.836027,
+                  13.945137,
+                  34.146027,
+                  14.344637
+                ]
+              }
+            ],
+            "invalid_ring_count": 0
+          }
+        ],
+        "source_sheet": "2017_67-101.dxf",
+        "source_sha256": "8adccabb890585ae49078d3a76437509d7580aa7645e01e9d95c4dda64c0998b",
+        "provisional_slab_count": 1,
+        "provisional_bbox_area_m2": 2384.193102,
+        "structural_context_polygonization": {
+          "segment_counts_by_layer": {
+            "RLE-LOSA": 25,
+            "RLE-MURO": 53,
+            "RLE-VIGA": 111
+          },
+          "polygon_count": 8,
+          "largest_polygons": [
+            {
+              "area_m2": 13.824001,
+              "bounds_m": [
+                30.891027,
+                9.425137,
+                34.091027,
+                13.745137
+              ]
+            },
+            {
+              "area_m2": 12.5685,
+              "bounds_m": [
+                42.791027,
+                9.19997,
+                44.681027,
+                15.84997
+              ]
+            },
+            {
+              "area_m2": 4.595228,
+              "bounds_m": [
+                65.240972,
+                16.720137,
+                67.491027,
+                18.762413
+              ]
+            },
+            {
+              "area_m2": 1.479398,
+              "bounds_m": [
+                30.641027,
+                12.266342,
+                34.341027,
+                13.945137
+              ]
+            },
+            {
+              "area_m2": 1.322344,
+              "bounds_m": [
+                30.836027,
+                13.945137,
+                34.146027,
+                14.344637
+              ]
+            },
+            {
+              "area_m2": 1.118092,
+              "bounds_m": [
+                62.757314,
+                -6.299892,
+                70.211261,
+                -6.149892
+              ]
+            },
+            {
+              "area_m2": 0.662447,
+              "bounds_m": [
+                61.241027,
+                -3.649891,
+                62.757314,
+                -0.599863
+              ]
+            },
+            {
+              "area_m2": 0.0,
+              "bounds_m": [
+                30.836027,
+                13.945137,
+                34.146027,
+                13.945137
+              ]
+            }
+          ],
+          "total_polygonized_area_m2": 35.57001,
+          "invalid_ring_count": 0,
+          "interpretation": "CONTEXT_ONLY_NOT_AUTOMATIC_SLAB_SURFACE"
+        },
+        "overlay": "entregas/P1L2/edificio/validacion/slabs/edificio_1_p1_slab_topology.png",
+        "interpretation": "RAW_EDGES_REQUIRE_PERIMETER_AND_HOLE_CLASSIFICATION"
+      },
+      "P2": {
+        "segment_count": 19,
+        "total_length_m": 118.719004,
+        "open_endpoint_count_0_01m": 22,
+        "junction_count_0_01m": 0,
+        "polygon_count": 1,
+        "polygons": [
+          {
+            "area_m2": 1.322344,
+            "perimeter_m": 7.419,
+            "bounds_m": [
+              30.835861,
+              14.126525,
+              34.145861,
+              14.526024
+            ],
+            "hole_count": 0
+          }
+        ],
+        "cut_count": 0,
+        "dangle_count": 15,
+        "invalid_ring_count": 0,
+        "components": [
+          {
+            "segment_count": 3,
+            "total_length_m": 47.299837,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              27.140857,
+              -0.968476,
+              72.840861,
+              -0.168476
+            ],
+            "handles": [
+              "1EB0A",
+              "1EB0B",
+              "1EB1A"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 9.3,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              27.840861,
+              16.681524,
+              37.140861,
+              16.681524
+            ],
+            "handles": [
+              "1EB16"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 9.3,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              57.840861,
+              16.681524,
+              67.140861,
+              16.681524
+            ],
+            "handles": [
+              "1EB15"
+            ]
+          },
+          {
+            "segment_count": 3,
+            "total_length_m": 9.2,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              30.890861,
+              9.447729,
+              34.090861,
+              12.447729
+            ],
+            "handles": [
+              "1EB1B",
+              "1EB1C",
+              "1EB1D"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 8.2,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              72.840861,
+              0.531524,
+              72.840861,
+              8.731524
+            ],
+            "handles": [
+              "1EB0C"
+            ]
+          },
+          {
+            "segment_count": 4,
+            "total_length_m": 7.419,
+            "closed_by_endpoint_graph": true,
+            "open_node_count": 0,
+            "junction_node_count": 0,
+            "bounds_m": [
+              30.835861,
+              14.126525,
+              34.145861,
+              14.526024
+            ],
+            "handles": [
+              "1FC49"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 6.550167,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              27.140857,
+              9.431358,
+              27.140857,
+              15.981524
+            ],
+            "handles": [
+              "1EB17"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 6.55,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              72.840861,
+              9.431524,
+              72.840861,
+              15.981524
+            ],
+            "handles": [
+              "1EB0D"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 4.549825,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              27.140857,
+              4.181532,
+              27.140857,
+              8.731358
+            ],
+            "handles": [
+              "1EB18"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 4.3,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              67.840861,
+              16.681524,
+              72.140861,
+              16.681524
+            ],
+            "handles": [
+              "1EB0E"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 3.450175,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              27.140857,
+              0.531358,
+              27.140857,
+              3.981532
+            ],
+            "handles": [
+              "1EB19"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 2.6,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              31.190861,
+              6.181788,
+              33.790861,
+              6.181788
+            ],
+            "handles": [
+              "1EB1E"
+            ]
+          }
+        ],
+        "collinear_bridge_trials": [
+          {
+            "max_gap_m": 0.25,
+            "closure_count": 1,
+            "closures": [
+              {
+                "start": [
+                  27.140857382117087,
+                  4.18153239962663
+                ],
+                "end": [
+                  27.140857382117087,
+                  3.98153239962664
+                ],
+                "length_m": 0.2,
+                "alignment": "V",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              }
+            ],
+            "polygon_count": 1,
+            "polygons": [
+              {
+                "area_m2": 1.322344,
+                "bounds_m": [
+                  30.835861,
+                  14.126525,
+                  34.145861,
+                  14.526024
+                ]
+              }
+            ],
+            "invalid_ring_count": 0
+          },
+          {
+            "max_gap_m": 0.75,
+            "closure_count": 6,
+            "closures": [
+              {
+                "start": [
+                  27.140857382117087,
+                  4.18153239962663
+                ],
+                "end": [
+                  27.140857382117087,
+                  3.98153239962664
+                ],
+                "length_m": 0.2,
+                "alignment": "V",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  27.140857382117087,
+                  9.431357751609566
+                ],
+                "end": [
+                  27.140857382117087,
+                  8.731357751609593
+                ],
+                "length_m": 0.7,
+                "alignment": "V",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  72.84086141588475,
+                  -0.16847559311971963
+                ],
+                "end": [
+                  72.84086141588475,
+                  0.5315244068802621
+                ],
+                "length_m": 0.7,
+                "alignment": "V",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  72.84086141588475,
+                  8.731524406913996
+                ],
+                "end": [
+                  72.84086141588475,
+                  9.431524406913995
+                ],
+                "length_m": 0.7,
+                "alignment": "V",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  27.140857382117087,
+                  0.5313577515897577
+                ],
+                "end": [
+                  27.140857382117087,
+                  -0.16864224841024225
+                ],
+                "length_m": 0.7,
+                "alignment": "V",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  67.84086141587869,
+                  16.68152440693696
+                ],
+                "end": [
+                  67.14086141587867,
+                  16.68152440693695
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              }
+            ],
+            "polygon_count": 1,
+            "polygons": [
+              {
+                "area_m2": 1.322344,
+                "bounds_m": [
+                  30.835861,
+                  14.126525,
+                  34.145861,
+                  14.526024
+                ]
+              }
+            ],
+            "invalid_ring_count": 0
+          },
+          {
+            "max_gap_m": 1.5,
+            "closure_count": 6,
+            "closures": [
+              {
+                "start": [
+                  27.140857382117087,
+                  4.18153239962663
+                ],
+                "end": [
+                  27.140857382117087,
+                  3.98153239962664
+                ],
+                "length_m": 0.2,
+                "alignment": "V",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  27.140857382117087,
+                  9.431357751609566
+                ],
+                "end": [
+                  27.140857382117087,
+                  8.731357751609593
+                ],
+                "length_m": 0.7,
+                "alignment": "V",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  72.84086141588475,
+                  -0.16847559311971963
+                ],
+                "end": [
+                  72.84086141588475,
+                  0.5315244068802621
+                ],
+                "length_m": 0.7,
+                "alignment": "V",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  72.84086141588475,
+                  8.731524406913996
+                ],
+                "end": [
+                  72.84086141588475,
+                  9.431524406913995
+                ],
+                "length_m": 0.7,
+                "alignment": "V",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  27.140857382117087,
+                  0.5313577515897577
+                ],
+                "end": [
+                  27.140857382117087,
+                  -0.16864224841024225
+                ],
+                "length_m": 0.7,
+                "alignment": "V",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  67.84086141587869,
+                  16.68152440693696
+                ],
+                "end": [
+                  67.14086141587867,
+                  16.68152440693695
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              }
+            ],
+            "polygon_count": 1,
+            "polygons": [
+              {
+                "area_m2": 1.322344,
+                "bounds_m": [
+                  30.835861,
+                  14.126525,
+                  34.145861,
+                  14.526024
+                ]
+              }
+            ],
+            "invalid_ring_count": 0
+          }
+        ],
+        "source_sheet": "2017_67-102.dxf",
+        "source_sha256": "604331684dff83317a5585a9d6479d167fb2989a4b0a6fc7005ccbddf56a25a8",
+        "provisional_slab_count": 1,
+        "provisional_bbox_area_m2": 1664.285,
+        "structural_context_polygonization": {
+          "segment_counts_by_layer": {
+            "RLE-LOSA": 19,
+            "RLE-MURO": 18,
+            "RLE-VIGA": 113
+          },
+          "polygon_count": 2,
+          "largest_polygons": [
+            {
+              "area_m2": 1.322344,
+              "bounds_m": [
+                30.835861,
+                14.126525,
+                34.145861,
+                14.526024
+              ]
+            },
+            {
+              "area_m2": 1.206,
+              "bounds_m": [
+                52.190861,
+                16.631358,
+                52.790861,
+                18.641358
+              ]
+            }
+          ],
+          "total_polygonized_area_m2": 2.528344,
+          "invalid_ring_count": 0,
+          "interpretation": "CONTEXT_ONLY_NOT_AUTOMATIC_SLAB_SURFACE"
+        },
+        "overlay": "entregas/P1L2/edificio/validacion/slabs/edificio_1_p2_slab_topology.png",
+        "interpretation": "RAW_EDGES_REQUIRE_PERIMETER_AND_HOLE_CLASSIFICATION"
+      },
+      "P3": {
+        "segment_count": 22,
+        "total_length_m": 142.668835,
+        "open_endpoint_count_0_01m": 19,
+        "junction_count_0_01m": 1,
+        "polygon_count": 1,
+        "polygons": [
+          {
+            "area_m2": 1.322344,
+            "perimeter_m": 7.419,
+            "bounds_m": [
+              30.835867,
+              14.126508,
+              34.145867,
+              14.526008
+            ],
+            "hole_count": 0
+          }
+        ],
+        "cut_count": 0,
+        "dangle_count": 18,
+        "invalid_ring_count": 0,
+        "components": [
+          {
+            "segment_count": 8,
+            "total_length_m": 83.14972,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 3,
+            "junction_node_count": 1,
+            "bounds_m": [
+              27.140863,
+              -0.968514,
+              78.640835,
+              17.481471
+            ],
+            "handles": [
+              "1F10F",
+              "1F110",
+              "1F112",
+              "1F11D",
+              "1F12A",
+              "1F12C",
+              "1FC2B",
+              "1FC2C"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 9.3,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              27.840867,
+              16.681508,
+              37.140867,
+              16.681508
+            ],
+            "handles": [
+              "1F119"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 9.3,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              57.840867,
+              16.681508,
+              67.140867,
+              16.681508
+            ],
+            "handles": [
+              "1F117"
+            ]
+          },
+          {
+            "segment_count": 3,
+            "total_length_m": 9.2,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              30.890867,
+              9.447713,
+              34.090867,
+              12.447713
+            ],
+            "handles": [
+              "1F11E",
+              "1F11F",
+              "1F120"
+            ]
+          },
+          {
+            "segment_count": 4,
+            "total_length_m": 7.419,
+            "closed_by_endpoint_graph": true,
+            "open_node_count": 0,
+            "junction_node_count": 0,
+            "bounds_m": [
+              30.835867,
+              14.126508,
+              34.145867,
+              14.526008
+            ],
+            "handles": [
+              "1FC4C"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 7.149948,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              39.990919,
+              16.681508,
+              47.140867,
+              16.681508
+            ],
+            "handles": [
+              "1F118"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 6.550167,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              27.140863,
+              9.431341,
+              27.140863,
+              15.981508
+            ],
+            "handles": [
+              "1F11A"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 4.549825,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              27.140863,
+              4.181516,
+              27.140863,
+              8.731341
+            ],
+            "handles": [
+              "1F11B"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 3.450175,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              27.140863,
+              0.531341,
+              27.140863,
+              3.981516
+            ],
+            "handles": [
+              "1F11C"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 2.6,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              31.190867,
+              6.181772,
+              33.790867,
+              6.181772
+            ],
+            "handles": [
+              "1F121"
+            ]
+          }
+        ],
+        "collinear_bridge_trials": [
+          {
+            "max_gap_m": 0.25,
+            "closure_count": 1,
+            "closures": [
+              {
+                "start": [
+                  27.140863404891356,
+                  4.181515991098336
+                ],
+                "end": [
+                  27.140863404891356,
+                  3.9815159910983446
+                ],
+                "length_m": 0.2,
+                "alignment": "V",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              }
+            ],
+            "polygon_count": 1,
+            "polygons": [
+              {
+                "area_m2": 1.322344,
+                "bounds_m": [
+                  30.835867,
+                  14.126508,
+                  34.145867,
+                  14.526008
+                ]
+              }
+            ],
+            "invalid_ring_count": 0
+          },
+          {
+            "max_gap_m": 0.75,
+            "closure_count": 4,
+            "closures": [
+              {
+                "start": [
+                  27.140863404891356,
+                  4.181515991098336
+                ],
+                "end": [
+                  27.140863404891356,
+                  3.9815159910983446
+                ],
+                "length_m": 0.2,
+                "alignment": "V",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  27.140863404891356,
+                  0.5313413430614764
+                ],
+                "end": [
+                  27.140863404891356,
+                  -0.16865865693853266
+                ],
+                "length_m": 0.7,
+                "alignment": "V",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  27.14086340489136,
+                  9.431341343081304
+                ],
+                "end": [
+                  27.14086340489136,
+                  8.731341343081253
+                ],
+                "length_m": 0.7,
+                "alignment": "V",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  67.84086743865295,
+                  16.681341343144727
+                ],
+                "end": [
+                  67.14086743865295,
+                  16.681507998408637
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              }
+            ],
+            "polygon_count": 1,
+            "polygons": [
+              {
+                "area_m2": 1.322344,
+                "bounds_m": [
+                  30.835867,
+                  14.126508,
+                  34.145867,
+                  14.526008
+                ]
+              }
+            ],
+            "invalid_ring_count": 0
+          },
+          {
+            "max_gap_m": 1.5,
+            "closure_count": 4,
+            "closures": [
+              {
+                "start": [
+                  27.140863404891356,
+                  4.181515991098336
+                ],
+                "end": [
+                  27.140863404891356,
+                  3.9815159910983446
+                ],
+                "length_m": 0.2,
+                "alignment": "V",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  27.140863404891356,
+                  0.5313413430614764
+                ],
+                "end": [
+                  27.140863404891356,
+                  -0.16865865693853266
+                ],
+                "length_m": 0.7,
+                "alignment": "V",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  27.14086340489136,
+                  9.431341343081304
+                ],
+                "end": [
+                  27.14086340489136,
+                  8.731341343081253
+                ],
+                "length_m": 0.7,
+                "alignment": "V",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  67.84086743865295,
+                  16.681341343144727
+                ],
+                "end": [
+                  67.14086743865295,
+                  16.681507998408637
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              }
+            ],
+            "polygon_count": 1,
+            "polygons": [
+              {
+                "area_m2": 1.322344,
+                "bounds_m": [
+                  30.835867,
+                  14.126508,
+                  34.145867,
+                  14.526008
+                ]
+              }
+            ],
+            "invalid_ring_count": 0
+          }
+        ],
+        "source_sheet": "2017_67-102.dxf",
+        "source_sha256": "604331684dff83317a5585a9d6479d167fb2989a4b0a6fc7005ccbddf56a25a8",
+        "provisional_slab_count": 1,
+        "provisional_bbox_area_m2": 1799.578351,
+        "structural_context_polygonization": {
+          "segment_counts_by_layer": {
+            "RLE-LOSA": 22,
+            "RLE-MURO": 18,
+            "RLE-VIGA": 124
+          },
+          "polygon_count": 8,
+          "largest_polygons": [
+            {
+              "area_m2": 14.629655,
+              "bounds_m": [
+                39.990919,
+                9.381341,
+                42.190867,
+                16.031341
+              ]
+            },
+            {
+              "area_m2": 12.302432,
+              "bounds_m": [
+                75.240867,
+                9.381352,
+                77.090835,
+                16.031498
+              ]
+            },
+            {
+              "area_m2": 1.680031,
+              "bounds_m": [
+                37.190867,
+                18.641341,
+                39.990919,
+                19.241341
+              ]
+            },
+            {
+              "area_m2": 1.479398,
+              "bounds_m": [
+                30.640867,
+                12.447713,
+                34.340867,
+                14.126508
+              ]
+            },
+            {
+              "area_m2": 1.322344,
+              "bounds_m": [
+                30.835867,
+                14.126508,
+                34.145867,
+                14.526008
+              ]
+            },
+            {
+              "area_m2": 0.0,
+              "bounds_m": [
+                32.716477,
+                14.126508,
+                34.145867,
+                14.126508
+              ]
+            },
+            {
+              "area_m2": 0.0,
+              "bounds_m": [
+                39.390919,
+                18.641341,
+                39.990919,
+                18.641341
+              ]
+            },
+            {
+              "area_m2": 0.0,
+              "bounds_m": [
+                37.190871,
+                18.641341,
+                37.790871,
+                18.641341
+              ]
+            }
+          ],
+          "total_polygonized_area_m2": 31.41386,
+          "invalid_ring_count": 0,
+          "interpretation": "CONTEXT_ONLY_NOT_AUTOMATIC_SLAB_SURFACE"
+        },
+        "overlay": "entregas/P1L2/edificio/validacion/slabs/edificio_1_p3_slab_topology.png",
+        "interpretation": "RAW_EDGES_REQUIRE_PERIMETER_AND_HOLE_CLASSIFICATION"
+      },
+      "P4": {
+        "segment_count": 50,
+        "total_length_m": 188.2073,
+        "open_endpoint_count_0_01m": 37,
+        "junction_count_0_01m": 1,
+        "polygon_count": 2,
+        "polygons": [
+          {
+            "area_m2": 3.49559,
+            "perimeter_m": 7.519999,
+            "bounds_m": [
+              39.884881,
+              5.196488,
+              41.567881,
+              7.273487
+            ],
+            "hole_count": 0
+          },
+          {
+            "area_m2": 0.4419,
+            "perimeter_m": 2.659022,
+            "bounds_m": [
+              28.121695,
+              10.660581,
+              28.786887,
+              11.3249
+            ],
+            "hole_count": 0
+          }
+        ],
+        "cut_count": 0,
+        "dangle_count": 42,
+        "invalid_ring_count": 0,
+        "components": [
+          {
+            "segment_count": 8,
+            "total_length_m": 83.149795,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 3,
+            "junction_node_count": 1,
+            "bounds_m": [
+              27.140877,
+              -0.968535,
+              78.640848,
+              17.481488
+            ],
+            "handles": [
+              "1E268",
+              "1E269",
+              "1E26F",
+              "1E276",
+              "1E29D",
+              "1E2A4",
+              "1E91D",
+              "1E924"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 9.3,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              27.840881,
+              16.681488,
+              37.140881,
+              16.681488
+            ],
+            "handles": [
+              "1E272"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 9.3,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              37.840881,
+              16.681488,
+              47.140881,
+              16.681488
+            ],
+            "handles": [
+              "1E271"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 9.3,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              57.840881,
+              16.681488,
+              67.140881,
+              16.681488
+            ],
+            "handles": [
+              "1E270"
+            ]
+          },
+          {
+            "segment_count": 4,
+            "total_length_m": 7.519999,
+            "closed_by_endpoint_graph": true,
+            "open_node_count": 0,
+            "junction_node_count": 0,
+            "bounds_m": [
+              39.884881,
+              5.196488,
+              41.567881,
+              7.273487
+            ],
+            "handles": [
+              "1E27B",
+              "1E27C",
+              "1E27D",
+              "1FB70"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 6.550167,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              27.140877,
+              9.431321,
+              27.140877,
+              15.981488
+            ],
+            "handles": [
+              "1E273"
+            ]
+          },
+          {
+            "segment_count": 3,
+            "total_length_m": 5.637333,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              39.884881,
+              9.381321,
+              41.567881,
+              11.358487
+            ],
+            "handles": [
+              "1E288",
+              "1E289",
+              "1E28A"
+            ]
+          },
+          {
+            "segment_count": 3,
+            "total_length_m": 5.6309,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              62.790881,
+              5.197082,
+              64.568128,
+              7.273487
+            ],
+            "handles": [
+              "1E280",
+              "1E281",
+              "1E282"
+            ]
+          },
+          {
+            "segment_count": 3,
+            "total_length_m": 5.630406,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              60.413881,
+              5.197082,
+              62.190881,
+              7.273487
+            ],
+            "handles": [
+              "1E27E",
+              "1E27F",
+              "1E283"
+            ]
+          },
+          {
+            "segment_count": 3,
+            "total_length_m": 5.616202,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              70.413881,
+              5.211285,
+              72.190881,
+              7.273487
+            ],
+            "handles": [
+              "1E26A",
+              "1E26B",
+              "1E26C"
+            ]
+          },
+          {
+            "segment_count": 3,
+            "total_length_m": 5.613823,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              50.413881,
+              5.213664,
+              52.190881,
+              7.273487
+            ],
+            "handles": [
+              "1E28C",
+              "1E28D",
+              "1E28E"
+            ]
+          },
+          {
+            "segment_count": 3,
+            "total_length_m": 5.613823,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              52.790881,
+              5.213664,
+              54.567881,
+              7.273487
+            ],
+            "handles": [
+              "1E28B",
+              "1E28F",
+              "1E290"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 4.549825,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              27.140877,
+              4.181496,
+              27.140877,
+              8.731321
+            ],
+            "handles": [
+              "1E274"
+            ]
+          },
+          {
+            "segment_count": 2,
+            "total_length_m": 3.754166,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              52.790881,
+              9.381321,
+              54.567881,
+              11.358487
+            ],
+            "handles": [
+              "1E292",
+              "1E293"
+            ]
+          },
+          {
+            "segment_count": 2,
+            "total_length_m": 3.754166,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              60.413881,
+              9.381321,
+              62.190881,
+              11.358487
+            ],
+            "handles": [
+              "1E285",
+              "1E286"
+            ]
+          },
+          {
+            "segment_count": 2,
+            "total_length_m": 3.754166,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              62.790881,
+              9.381321,
+              64.567881,
+              11.358487
+            ],
+            "handles": [
+              "1E284",
+              "1E287"
+            ]
+          },
+          {
+            "segment_count": 2,
+            "total_length_m": 3.754166,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              70.413881,
+              9.381321,
+              72.190881,
+              11.358487
+            ],
+            "handles": [
+              "1E26D",
+              "1E26E"
+            ]
+          },
+          {
+            "segment_count": 2,
+            "total_length_m": 3.669166,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              50.498881,
+              9.381321,
+              52.190881,
+              11.358487
+            ],
+            "handles": [
+              "1E291",
+              "1E294"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 3.450175,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              27.140877,
+              0.531321,
+              27.140877,
+              3.981496
+            ],
+            "handles": [
+              "1E275"
+            ]
+          },
+          {
+            "segment_count": 4,
+            "total_length_m": 2.659022,
+            "closed_by_endpoint_graph": true,
+            "open_node_count": 0,
+            "junction_node_count": 0,
+            "bounds_m": [
+              28.121695,
+              10.660581,
+              28.786887,
+              11.3249
+            ],
+            "handles": [
+              "1E277",
+              "1E278",
+              "1E279",
+              "1E27A"
+            ]
+          }
+        ],
+        "collinear_bridge_trials": [
+          {
+            "max_gap_m": 0.25,
+            "closure_count": 1,
+            "closures": [
+              {
+                "start": [
+                  27.140876600701525,
+                  4.181495650091338
+                ],
+                "end": [
+                  27.140876600701525,
+                  3.981495650091338
+                ],
+                "length_m": 0.2,
+                "alignment": "V",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              }
+            ],
+            "polygon_count": 2,
+            "polygons": [
+              {
+                "area_m2": 3.49559,
+                "bounds_m": [
+                  39.884881,
+                  5.196488,
+                  41.567881,
+                  7.273487
+                ]
+              },
+              {
+                "area_m2": 0.4419,
+                "bounds_m": [
+                  28.121695,
+                  10.660581,
+                  28.786887,
+                  11.3249
+                ]
+              }
+            ],
+            "invalid_ring_count": 0
+          },
+          {
+            "max_gap_m": 0.75,
+            "closure_count": 11,
+            "closures": [
+              {
+                "start": [
+                  27.140876600701525,
+                  4.181495650091338
+                ],
+                "end": [
+                  27.140876600701525,
+                  3.981495650091338
+                ],
+                "length_m": 0.2,
+                "alignment": "V",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  52.19088063446971,
+                  11.358487257502976
+                ],
+                "end": [
+                  52.79088063446971,
+                  11.358487257502976
+                ],
+                "length_m": 0.6,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  52.79088063446973,
+                  5.213664203988674
+                ],
+                "end": [
+                  52.19088063446973,
+                  5.213664203988674
+                ],
+                "length_m": 0.6,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  62.19088063440139,
+                  7.2734872575023655
+                ],
+                "end": [
+                  62.79088063440139,
+                  7.2734872575023655
+                ],
+                "length_m": 0.6,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  52.19088063446972,
+                  7.273487257502338
+                ],
+                "end": [
+                  52.79088063446973,
+                  7.273487257502338
+                ],
+                "length_m": 0.6,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  62.19088063440137,
+                  11.358487257503002
+                ],
+                "end": [
+                  62.790880634401375,
+                  11.358487257503002
+                ],
+                "length_m": 0.6,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  62.7908806344014,
+                  5.1970817316449756
+                ],
+                "end": [
+                  62.19088063440139,
+                  5.1970817316449756
+                ],
+                "length_m": 0.6,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  67.8408806344631,
+                  16.681487657401657
+                ],
+                "end": [
+                  67.14088063446312,
+                  16.681487657401657
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  37.84088063447957,
+                  16.68148765740154
+                ],
+                "end": [
+                  37.14088063447957,
+                  16.68148765740154
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  27.140876600701525,
+                  9.431321002074265
+                ],
+                "end": [
+                  27.140876600701525,
+                  8.731321002074264
+                ],
+                "length_m": 0.7,
+                "alignment": "V",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  27.140876600701525,
+                  0.5313210020544648
+                ],
+                "end": [
+                  27.140876600701525,
+                  -0.16867899794554433
+                ],
+                "length_m": 0.7,
+                "alignment": "V",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              }
+            ],
+            "polygon_count": 4,
+            "polygons": [
+              {
+                "area_m2": 8.625901,
+                "bounds_m": [
+                  60.413881,
+                  5.197082,
+                  64.568128,
+                  7.273487
+                ]
+              },
+              {
+                "area_m2": 8.556505,
+                "bounds_m": [
+                  50.413881,
+                  5.213664,
+                  54.567881,
+                  7.273487
+                ]
+              },
+              {
+                "area_m2": 3.49559,
+                "bounds_m": [
+                  39.884881,
+                  5.196488,
+                  41.567881,
+                  7.273487
+                ]
+              },
+              {
+                "area_m2": 0.4419,
+                "bounds_m": [
+                  28.121695,
+                  10.660581,
+                  28.786887,
+                  11.3249
+                ]
+              }
+            ],
+            "invalid_ring_count": 0
+          },
+          {
+            "max_gap_m": 1.5,
+            "closure_count": 11,
+            "closures": [
+              {
+                "start": [
+                  27.140876600701525,
+                  4.181495650091338
+                ],
+                "end": [
+                  27.140876600701525,
+                  3.981495650091338
+                ],
+                "length_m": 0.2,
+                "alignment": "V",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  52.19088063446971,
+                  11.358487257502976
+                ],
+                "end": [
+                  52.79088063446971,
+                  11.358487257502976
+                ],
+                "length_m": 0.6,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  52.79088063446973,
+                  5.213664203988674
+                ],
+                "end": [
+                  52.19088063446973,
+                  5.213664203988674
+                ],
+                "length_m": 0.6,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  62.19088063440139,
+                  7.2734872575023655
+                ],
+                "end": [
+                  62.79088063440139,
+                  7.2734872575023655
+                ],
+                "length_m": 0.6,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  52.19088063446972,
+                  7.273487257502338
+                ],
+                "end": [
+                  52.79088063446973,
+                  7.273487257502338
+                ],
+                "length_m": 0.6,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  62.19088063440137,
+                  11.358487257503002
+                ],
+                "end": [
+                  62.790880634401375,
+                  11.358487257503002
+                ],
+                "length_m": 0.6,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  62.7908806344014,
+                  5.1970817316449756
+                ],
+                "end": [
+                  62.19088063440139,
+                  5.1970817316449756
+                ],
+                "length_m": 0.6,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  67.8408806344631,
+                  16.681487657401657
+                ],
+                "end": [
+                  67.14088063446312,
+                  16.681487657401657
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  37.84088063447957,
+                  16.68148765740154
+                ],
+                "end": [
+                  37.14088063447957,
+                  16.68148765740154
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  27.140876600701525,
+                  9.431321002074265
+                ],
+                "end": [
+                  27.140876600701525,
+                  8.731321002074264
+                ],
+                "length_m": 0.7,
+                "alignment": "V",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  27.140876600701525,
+                  0.5313210020544648
+                ],
+                "end": [
+                  27.140876600701525,
+                  -0.16867899794554433
+                ],
+                "length_m": 0.7,
+                "alignment": "V",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              }
+            ],
+            "polygon_count": 4,
+            "polygons": [
+              {
+                "area_m2": 8.625901,
+                "bounds_m": [
+                  60.413881,
+                  5.197082,
+                  64.568128,
+                  7.273487
+                ]
+              },
+              {
+                "area_m2": 8.556505,
+                "bounds_m": [
+                  50.413881,
+                  5.213664,
+                  54.567881,
+                  7.273487
+                ]
+              },
+              {
+                "area_m2": 3.49559,
+                "bounds_m": [
+                  39.884881,
+                  5.196488,
+                  41.567881,
+                  7.273487
+                ]
+              },
+              {
+                "area_m2": 0.4419,
+                "bounds_m": [
+                  28.121695,
+                  10.660581,
+                  28.786887,
+                  11.3249
+                ]
+              }
+            ],
+            "invalid_ring_count": 0
+          }
+        ],
+        "source_sheet": "2017_67-103.dxf",
+        "source_sha256": "38a3c6ad384f57180b6bbe7e1fd8180400ad15525697e0e4b1ae28fd0c245990",
+        "provisional_slab_count": 1,
+        "provisional_bbox_area_m2": 1802.478751,
+        "structural_context_polygonization": {
+          "segment_counts_by_layer": {
+            "RLE-LOSA": 50,
+            "RLE-MURO": 18,
+            "RLE-VIGA": 134
+          },
+          "polygon_count": 10,
+          "largest_polygons": [
+            {
+              "area_m2": 15.354731,
+              "bounds_m": [
+                75.240881,
+                0.481321,
+                77.090848,
+                8.781321
+              ]
+            },
+            {
+              "area_m2": 3.660306,
+              "bounds_m": [
+                52.790881,
+                5.213664,
+                54.567881,
+                7.273487
+              ]
+            },
+            {
+              "area_m2": 3.513424,
+              "bounds_m": [
+                52.790881,
+                9.381321,
+                54.567881,
+                11.358487
+              ]
+            },
+            {
+              "area_m2": 3.49559,
+              "bounds_m": [
+                39.884881,
+                5.196488,
+                41.567881,
+                7.273487
+              ]
+            },
+            {
+              "area_m2": 3.345365,
+              "bounds_m": [
+                50.498881,
+                9.381321,
+                52.190881,
+                11.358487
+              ]
+            },
+            {
+              "area_m2": 3.32,
+              "bounds_m": [
+                74.840881,
+                0.481321,
+                75.240881,
+                8.781321
+              ]
+            },
+            {
+              "area_m2": 2.679996,
+              "bounds_m": [
+                27.140877,
+                3.981496,
+                34.090881,
+                6.331488
+              ]
+            },
+            {
+              "area_m2": 2.66,
+              "bounds_m": [
+                74.840881,
+                9.381321,
+                75.240881,
+                16.031321
+              ]
+            },
+            {
+              "area_m2": 1.479398,
+              "bounds_m": [
+                30.640881,
+                12.447693,
+                34.340881,
+                14.126488
+              ]
+            },
+            {
+              "area_m2": 0.4419,
+              "bounds_m": [
+                28.121695,
+                10.660581,
+                28.786887,
+                11.3249
+              ]
+            }
+          ],
+          "total_polygonized_area_m2": 39.95071,
+          "invalid_ring_count": 0,
+          "interpretation": "CONTEXT_ONLY_NOT_AUTOMATIC_SLAB_SURFACE"
+        },
+        "overlay": "entregas/P1L2/edificio/validacion/slabs/edificio_1_p4_slab_topology.png",
+        "interpretation": "RAW_EDGES_REQUIRE_PERIMETER_AND_HOLE_CLASSIFICATION"
+      }
+    },
+    "EDIFICIO_2": {
+      "S1": {
+        "segment_count": 22,
+        "total_length_m": 102.370016,
+        "open_endpoint_count_0_01m": 22,
+        "junction_count_0_01m": 0,
+        "polygon_count": 0,
+        "polygons": [],
+        "cut_count": 0,
+        "dangle_count": 22,
+        "invalid_ring_count": 0,
+        "components": [
+          {
+            "segment_count": 4,
+            "total_length_m": 51.39,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              -4.148008,
+              -1.149332,
+              27.851992,
+              17.240668
+            ],
+            "handles": [
+              "4AAC9",
+              "4AACA",
+              "4AACB",
+              "4AAD3"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 10.500002,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              -3.348008,
+              16.500668,
+              7.151994,
+              16.500668
+            ],
+            "handles": [
+              "4AAD2"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 9.75,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              17.851994,
+              16.500668,
+              27.601994,
+              16.500668
+            ],
+            "handles": [
+              "4AAD0"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 9.3,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              7.851994,
+              16.500668,
+              17.151994,
+              16.500668
+            ],
+            "handles": [
+              "4AAD1"
+            ]
+          },
+          {
+            "segment_count": 2,
+            "total_length_m": 8.78,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              -3.348008,
+              4.415668,
+              -1.848008,
+              11.695668
+            ],
+            "handles": [
+              "4AADE",
+              "4AADF"
+            ]
+          },
+          {
+            "segment_count": 2,
+            "total_length_m": 2.805014,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              27.026988,
+              0.350668,
+              27.151992,
+              3.030678
+            ],
+            "handles": [
+              "4AACC",
+              "4AACD"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 2.4,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              27.851992,
+              6.150668,
+              27.851992,
+              8.550668
+            ],
+            "handles": [
+              "4AACF"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 2.395,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              25.206994,
+              6.000668,
+              27.601994,
+              6.000668
+            ],
+            "handles": [
+              "4AACE"
+            ]
+          },
+          {
+            "segment_count": 3,
+            "total_length_m": 1.8,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              7.151994,
+              -0.899332,
+              7.851994,
+              -0.349332
+            ],
+            "handles": [
+              "4AADA",
+              "4AADB",
+              "4AADC"
+            ]
+          },
+          {
+            "segment_count": 3,
+            "total_length_m": 1.8,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              17.151994,
+              -0.899332,
+              17.851994,
+              -0.349332
+            ],
+            "handles": [
+              "4AAD7",
+              "4AAD8",
+              "4AAD9"
+            ]
+          },
+          {
+            "segment_count": 3,
+            "total_length_m": 1.45,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              27.151992,
+              -0.899332,
+              27.501992,
+              -0.349332
+            ],
+            "handles": [
+              "4AAD4",
+              "4AAD5",
+              "4AAD6"
+            ]
+          }
+        ],
+        "collinear_bridge_trials": [
+          {
+            "max_gap_m": 0.25,
+            "closure_count": 0,
+            "closures": [],
+            "polygon_count": 0,
+            "polygons": [],
+            "invalid_ring_count": 0
+          },
+          {
+            "max_gap_m": 0.75,
+            "closure_count": 6,
+            "closures": [
+              {
+                "start": [
+                  27.851991969363297,
+                  -0.3493318045054593
+                ],
+                "end": [
+                  27.501991969363417,
+                  -0.34933180450545026
+                ],
+                "length_m": 0.35,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  17.151993993047473,
+                  -0.3493318045054002
+                ],
+                "end": [
+                  17.851993993047472,
+                  -0.3493318045054002
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  17.851993993047472,
+                  16.50066819557768
+                ],
+                "end": [
+                  17.151993993047473,
+                  16.50066819557768
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  27.151991969363415,
+                  0.35066819549454975
+                ],
+                "end": [
+                  27.151991969363415,
+                  -0.34933180450545026
+                ],
+                "length_m": 0.7,
+                "alignment": "V",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  7.151993993929891,
+                  -0.34933180450543205
+                ],
+                "end": [
+                  7.8519939939298915,
+                  -0.34933180450543205
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  7.8519939939299,
+                  16.50066819557768
+                ],
+                "end": [
+                  7.1519939939299,
+                  16.50066819557768
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              }
+            ],
+            "polygon_count": 2,
+            "polygons": [
+              {
+                "area_m2": 0.385,
+                "bounds_m": [
+                  17.151994,
+                  -0.899332,
+                  17.851994,
+                  -0.349332
+                ]
+              },
+              {
+                "area_m2": 0.385,
+                "bounds_m": [
+                  7.151994,
+                  -0.899332,
+                  7.851994,
+                  -0.349332
+                ]
+              }
+            ],
+            "invalid_ring_count": 0
+          },
+          {
+            "max_gap_m": 1.5,
+            "closure_count": 6,
+            "closures": [
+              {
+                "start": [
+                  27.851991969363297,
+                  -0.3493318045054593
+                ],
+                "end": [
+                  27.501991969363417,
+                  -0.34933180450545026
+                ],
+                "length_m": 0.35,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  17.151993993047473,
+                  -0.3493318045054002
+                ],
+                "end": [
+                  17.851993993047472,
+                  -0.3493318045054002
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  17.851993993047472,
+                  16.50066819557768
+                ],
+                "end": [
+                  17.151993993047473,
+                  16.50066819557768
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  27.151991969363415,
+                  0.35066819549454975
+                ],
+                "end": [
+                  27.151991969363415,
+                  -0.34933180450545026
+                ],
+                "length_m": 0.7,
+                "alignment": "V",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  7.151993993929891,
+                  -0.34933180450543205
+                ],
+                "end": [
+                  7.8519939939298915,
+                  -0.34933180450543205
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  7.8519939939299,
+                  16.50066819557768
+                ],
+                "end": [
+                  7.1519939939299,
+                  16.50066819557768
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              }
+            ],
+            "polygon_count": 2,
+            "polygons": [
+              {
+                "area_m2": 0.385,
+                "bounds_m": [
+                  17.151994,
+                  -0.899332,
+                  17.851994,
+                  -0.349332
+                ]
+              },
+              {
+                "area_m2": 0.385,
+                "bounds_m": [
+                  7.151994,
+                  -0.899332,
+                  7.851994,
+                  -0.349332
+                ]
+              }
+            ],
+            "invalid_ring_count": 0
+          }
+        ],
+        "source_sheet": "2024_22-101.dxf",
+        "source_sha256": "3e9d5e60c897e543a206c1f3c6e4498435f0419cba74c127e0cc4c957e92797c",
+        "provisional_slab_count": 1,
+        "provisional_bbox_area_m2": 964.425,
+        "structural_context_polygonization": {
+          "segment_counts_by_layer": {
+            "RLE-LOSA": 22,
+            "RLE-MURO": 29,
+            "RLE-VIGA": 90
+          },
+          "polygon_count": 7,
+          "largest_polygons": [
+            {
+              "area_m2": 12.01725,
+              "bounds_m": [
+                0.301994,
+                0.300668,
+                3.451994,
+                4.115668
+              ]
+            },
+            {
+              "area_m2": 11.635758,
+              "bounds_m": [
+                -3.348008,
+                0.300668,
+                -0.298006,
+                4.115668
+              ]
+            },
+            {
+              "area_m2": 11.635758,
+              "bounds_m": [
+                -3.348008,
+                12.035668,
+                -0.298006,
+                15.850668
+              ]
+            },
+            {
+              "area_m2": 10.92,
+              "bounds_m": [
+                -3.348008,
+                4.415668,
+                -1.848008,
+                11.695668
+              ]
+            },
+            {
+              "area_m2": 2.186998,
+              "bounds_m": [
+                -3.948008,
+                -1.094332,
+                -1.898008,
+                1.825666
+              ]
+            },
+            {
+              "area_m2": 2.184,
+              "bounds_m": [
+                -3.948008,
+                14.325668,
+                -1.898008,
+                17.240668
+              ]
+            },
+            {
+              "area_m2": 1.9875,
+              "bounds_m": [
+                27.601994,
+                8.550668,
+                27.851994,
+                16.500668
+              ]
+            }
+          ],
+          "total_polygonized_area_m2": 52.567264,
+          "invalid_ring_count": 0,
+          "interpretation": "CONTEXT_ONLY_NOT_AUTOMATIC_SLAB_SURFACE"
+        },
+        "overlay": "entregas/P1L2/edificio/validacion/slabs/edificio_2_s1_slab_topology.png",
+        "interpretation": "RAW_EDGES_REQUIRE_PERIMETER_AND_HOLE_CLASSIFICATION"
+      },
+      "P1": {
+        "segment_count": 22,
+        "total_length_m": 102.370016,
+        "open_endpoint_count_0_01m": 22,
+        "junction_count_0_01m": 0,
+        "polygon_count": 0,
+        "polygons": [],
+        "cut_count": 0,
+        "dangle_count": 22,
+        "invalid_ring_count": 0,
+        "components": [
+          {
+            "segment_count": 4,
+            "total_length_m": 51.39,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              -4.148008,
+              -1.149332,
+              27.851992,
+              17.240668
+            ],
+            "handles": [
+              "4AAC9",
+              "4AACA",
+              "4AACB",
+              "4AAD3"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 10.500002,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              -3.348008,
+              16.500668,
+              7.151994,
+              16.500668
+            ],
+            "handles": [
+              "4AAD2"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 9.75,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              17.851994,
+              16.500668,
+              27.601994,
+              16.500668
+            ],
+            "handles": [
+              "4AAD0"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 9.3,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              7.851994,
+              16.500668,
+              17.151994,
+              16.500668
+            ],
+            "handles": [
+              "4AAD1"
+            ]
+          },
+          {
+            "segment_count": 2,
+            "total_length_m": 8.78,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              -3.348008,
+              4.415668,
+              -1.848008,
+              11.695668
+            ],
+            "handles": [
+              "4AADE",
+              "4AADF"
+            ]
+          },
+          {
+            "segment_count": 2,
+            "total_length_m": 2.805014,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              27.026988,
+              0.350668,
+              27.151992,
+              3.030678
+            ],
+            "handles": [
+              "4AACC",
+              "4AACD"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 2.4,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              27.851992,
+              6.150668,
+              27.851992,
+              8.550668
+            ],
+            "handles": [
+              "4AACF"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 2.395,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              25.206994,
+              6.000668,
+              27.601994,
+              6.000668
+            ],
+            "handles": [
+              "4AACE"
+            ]
+          },
+          {
+            "segment_count": 3,
+            "total_length_m": 1.8,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              7.151994,
+              -0.899332,
+              7.851994,
+              -0.349332
+            ],
+            "handles": [
+              "4AADA",
+              "4AADB",
+              "4AADC"
+            ]
+          },
+          {
+            "segment_count": 3,
+            "total_length_m": 1.8,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              17.151994,
+              -0.899332,
+              17.851994,
+              -0.349332
+            ],
+            "handles": [
+              "4AAD7",
+              "4AAD8",
+              "4AAD9"
+            ]
+          },
+          {
+            "segment_count": 3,
+            "total_length_m": 1.45,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              27.151992,
+              -0.899332,
+              27.501992,
+              -0.349332
+            ],
+            "handles": [
+              "4AAD4",
+              "4AAD5",
+              "4AAD6"
+            ]
+          }
+        ],
+        "collinear_bridge_trials": [
+          {
+            "max_gap_m": 0.25,
+            "closure_count": 0,
+            "closures": [],
+            "polygon_count": 0,
+            "polygons": [],
+            "invalid_ring_count": 0
+          },
+          {
+            "max_gap_m": 0.75,
+            "closure_count": 6,
+            "closures": [
+              {
+                "start": [
+                  27.851991969363297,
+                  -0.3493318045054593
+                ],
+                "end": [
+                  27.501991969363417,
+                  -0.34933180450545026
+                ],
+                "length_m": 0.35,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  17.151993993047473,
+                  -0.3493318045054002
+                ],
+                "end": [
+                  17.851993993047472,
+                  -0.3493318045054002
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  17.851993993047472,
+                  16.50066819557768
+                ],
+                "end": [
+                  17.151993993047473,
+                  16.50066819557768
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  27.151991969363415,
+                  0.35066819549454975
+                ],
+                "end": [
+                  27.151991969363415,
+                  -0.34933180450545026
+                ],
+                "length_m": 0.7,
+                "alignment": "V",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  7.151993993929891,
+                  -0.34933180450543205
+                ],
+                "end": [
+                  7.8519939939298915,
+                  -0.34933180450543205
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  7.8519939939299,
+                  16.50066819557768
+                ],
+                "end": [
+                  7.1519939939299,
+                  16.50066819557768
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              }
+            ],
+            "polygon_count": 2,
+            "polygons": [
+              {
+                "area_m2": 0.385,
+                "bounds_m": [
+                  17.151994,
+                  -0.899332,
+                  17.851994,
+                  -0.349332
+                ]
+              },
+              {
+                "area_m2": 0.385,
+                "bounds_m": [
+                  7.151994,
+                  -0.899332,
+                  7.851994,
+                  -0.349332
+                ]
+              }
+            ],
+            "invalid_ring_count": 0
+          },
+          {
+            "max_gap_m": 1.5,
+            "closure_count": 6,
+            "closures": [
+              {
+                "start": [
+                  27.851991969363297,
+                  -0.3493318045054593
+                ],
+                "end": [
+                  27.501991969363417,
+                  -0.34933180450545026
+                ],
+                "length_m": 0.35,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  17.151993993047473,
+                  -0.3493318045054002
+                ],
+                "end": [
+                  17.851993993047472,
+                  -0.3493318045054002
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  17.851993993047472,
+                  16.50066819557768
+                ],
+                "end": [
+                  17.151993993047473,
+                  16.50066819557768
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  27.151991969363415,
+                  0.35066819549454975
+                ],
+                "end": [
+                  27.151991969363415,
+                  -0.34933180450545026
+                ],
+                "length_m": 0.7,
+                "alignment": "V",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  7.151993993929891,
+                  -0.34933180450543205
+                ],
+                "end": [
+                  7.8519939939298915,
+                  -0.34933180450543205
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  7.8519939939299,
+                  16.50066819557768
+                ],
+                "end": [
+                  7.1519939939299,
+                  16.50066819557768
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              }
+            ],
+            "polygon_count": 2,
+            "polygons": [
+              {
+                "area_m2": 0.385,
+                "bounds_m": [
+                  17.151994,
+                  -0.899332,
+                  17.851994,
+                  -0.349332
+                ]
+              },
+              {
+                "area_m2": 0.385,
+                "bounds_m": [
+                  7.151994,
+                  -0.899332,
+                  7.851994,
+                  -0.349332
+                ]
+              }
+            ],
+            "invalid_ring_count": 0
+          }
+        ],
+        "source_sheet": "2024_22-101.dxf",
+        "source_sha256": "3e9d5e60c897e543a206c1f3c6e4498435f0419cba74c127e0cc4c957e92797c",
+        "provisional_slab_count": 1,
+        "provisional_bbox_area_m2": 964.425,
+        "structural_context_polygonization": {
+          "segment_counts_by_layer": {
+            "RLE-LOSA": 22,
+            "RLE-MURO": 29,
+            "RLE-VIGA": 90
+          },
+          "polygon_count": 7,
+          "largest_polygons": [
+            {
+              "area_m2": 12.01725,
+              "bounds_m": [
+                0.301994,
+                0.300668,
+                3.451994,
+                4.115668
+              ]
+            },
+            {
+              "area_m2": 11.635758,
+              "bounds_m": [
+                -3.348008,
+                0.300668,
+                -0.298006,
+                4.115668
+              ]
+            },
+            {
+              "area_m2": 11.635758,
+              "bounds_m": [
+                -3.348008,
+                12.035668,
+                -0.298006,
+                15.850668
+              ]
+            },
+            {
+              "area_m2": 10.92,
+              "bounds_m": [
+                -3.348008,
+                4.415668,
+                -1.848008,
+                11.695668
+              ]
+            },
+            {
+              "area_m2": 2.186998,
+              "bounds_m": [
+                -3.948008,
+                -1.094332,
+                -1.898008,
+                1.825666
+              ]
+            },
+            {
+              "area_m2": 2.184,
+              "bounds_m": [
+                -3.948008,
+                14.325668,
+                -1.898008,
+                17.240668
+              ]
+            },
+            {
+              "area_m2": 1.9875,
+              "bounds_m": [
+                27.601994,
+                8.550668,
+                27.851994,
+                16.500668
+              ]
+            }
+          ],
+          "total_polygonized_area_m2": 52.567264,
+          "invalid_ring_count": 0,
+          "interpretation": "CONTEXT_ONLY_NOT_AUTOMATIC_SLAB_SURFACE"
+        },
+        "overlay": "entregas/P1L2/edificio/validacion/slabs/edificio_2_p1_slab_topology.png",
+        "interpretation": "RAW_EDGES_REQUIRE_PERIMETER_AND_HOLE_CLASSIFICATION"
+      },
+      "P2": {
+        "segment_count": 22,
+        "total_length_m": 102.370016,
+        "open_endpoint_count_0_01m": 22,
+        "junction_count_0_01m": 0,
+        "polygon_count": 0,
+        "polygons": [],
+        "cut_count": 0,
+        "dangle_count": 22,
+        "invalid_ring_count": 0,
+        "components": [
+          {
+            "segment_count": 4,
+            "total_length_m": 51.39,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              -4.148008,
+              -1.149332,
+              27.851992,
+              17.240668
+            ],
+            "handles": [
+              "4AAC9",
+              "4AACA",
+              "4AACB",
+              "4AAD3"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 10.500002,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              -3.348008,
+              16.500668,
+              7.151994,
+              16.500668
+            ],
+            "handles": [
+              "4AAD2"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 9.75,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              17.851994,
+              16.500668,
+              27.601994,
+              16.500668
+            ],
+            "handles": [
+              "4AAD0"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 9.3,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              7.851994,
+              16.500668,
+              17.151994,
+              16.500668
+            ],
+            "handles": [
+              "4AAD1"
+            ]
+          },
+          {
+            "segment_count": 2,
+            "total_length_m": 8.78,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              -3.348008,
+              4.415668,
+              -1.848008,
+              11.695668
+            ],
+            "handles": [
+              "4AADE",
+              "4AADF"
+            ]
+          },
+          {
+            "segment_count": 2,
+            "total_length_m": 2.805014,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              27.026988,
+              0.350668,
+              27.151992,
+              3.030678
+            ],
+            "handles": [
+              "4AACC",
+              "4AACD"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 2.4,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              27.851992,
+              6.150668,
+              27.851992,
+              8.550668
+            ],
+            "handles": [
+              "4AACF"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 2.395,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              25.206994,
+              6.000668,
+              27.601994,
+              6.000668
+            ],
+            "handles": [
+              "4AACE"
+            ]
+          },
+          {
+            "segment_count": 3,
+            "total_length_m": 1.8,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              7.151994,
+              -0.899332,
+              7.851994,
+              -0.349332
+            ],
+            "handles": [
+              "4AADA",
+              "4AADB",
+              "4AADC"
+            ]
+          },
+          {
+            "segment_count": 3,
+            "total_length_m": 1.8,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              17.151994,
+              -0.899332,
+              17.851994,
+              -0.349332
+            ],
+            "handles": [
+              "4AAD7",
+              "4AAD8",
+              "4AAD9"
+            ]
+          },
+          {
+            "segment_count": 3,
+            "total_length_m": 1.45,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              27.151992,
+              -0.899332,
+              27.501992,
+              -0.349332
+            ],
+            "handles": [
+              "4AAD4",
+              "4AAD5",
+              "4AAD6"
+            ]
+          }
+        ],
+        "collinear_bridge_trials": [
+          {
+            "max_gap_m": 0.25,
+            "closure_count": 0,
+            "closures": [],
+            "polygon_count": 0,
+            "polygons": [],
+            "invalid_ring_count": 0
+          },
+          {
+            "max_gap_m": 0.75,
+            "closure_count": 6,
+            "closures": [
+              {
+                "start": [
+                  27.851991969363297,
+                  -0.3493318045054593
+                ],
+                "end": [
+                  27.501991969363417,
+                  -0.34933180450545026
+                ],
+                "length_m": 0.35,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  17.151993993047473,
+                  -0.3493318045054002
+                ],
+                "end": [
+                  17.851993993047472,
+                  -0.3493318045054002
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  17.851993993047472,
+                  16.50066819557768
+                ],
+                "end": [
+                  17.151993993047473,
+                  16.50066819557768
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  27.151991969363415,
+                  0.35066819549454975
+                ],
+                "end": [
+                  27.151991969363415,
+                  -0.34933180450545026
+                ],
+                "length_m": 0.7,
+                "alignment": "V",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  7.151993993929891,
+                  -0.34933180450543205
+                ],
+                "end": [
+                  7.8519939939298915,
+                  -0.34933180450543205
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  7.8519939939299,
+                  16.50066819557768
+                ],
+                "end": [
+                  7.1519939939299,
+                  16.50066819557768
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              }
+            ],
+            "polygon_count": 2,
+            "polygons": [
+              {
+                "area_m2": 0.385,
+                "bounds_m": [
+                  17.151994,
+                  -0.899332,
+                  17.851994,
+                  -0.349332
+                ]
+              },
+              {
+                "area_m2": 0.385,
+                "bounds_m": [
+                  7.151994,
+                  -0.899332,
+                  7.851994,
+                  -0.349332
+                ]
+              }
+            ],
+            "invalid_ring_count": 0
+          },
+          {
+            "max_gap_m": 1.5,
+            "closure_count": 6,
+            "closures": [
+              {
+                "start": [
+                  27.851991969363297,
+                  -0.3493318045054593
+                ],
+                "end": [
+                  27.501991969363417,
+                  -0.34933180450545026
+                ],
+                "length_m": 0.35,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  17.151993993047473,
+                  -0.3493318045054002
+                ],
+                "end": [
+                  17.851993993047472,
+                  -0.3493318045054002
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  17.851993993047472,
+                  16.50066819557768
+                ],
+                "end": [
+                  17.151993993047473,
+                  16.50066819557768
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  27.151991969363415,
+                  0.35066819549454975
+                ],
+                "end": [
+                  27.151991969363415,
+                  -0.34933180450545026
+                ],
+                "length_m": 0.7,
+                "alignment": "V",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  7.151993993929891,
+                  -0.34933180450543205
+                ],
+                "end": [
+                  7.8519939939298915,
+                  -0.34933180450543205
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  7.8519939939299,
+                  16.50066819557768
+                ],
+                "end": [
+                  7.1519939939299,
+                  16.50066819557768
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              }
+            ],
+            "polygon_count": 2,
+            "polygons": [
+              {
+                "area_m2": 0.385,
+                "bounds_m": [
+                  17.151994,
+                  -0.899332,
+                  17.851994,
+                  -0.349332
+                ]
+              },
+              {
+                "area_m2": 0.385,
+                "bounds_m": [
+                  7.151994,
+                  -0.899332,
+                  7.851994,
+                  -0.349332
+                ]
+              }
+            ],
+            "invalid_ring_count": 0
+          }
+        ],
+        "source_sheet": "2024_22-101.dxf",
+        "source_sha256": "3e9d5e60c897e543a206c1f3c6e4498435f0419cba74c127e0cc4c957e92797c",
+        "provisional_slab_count": 1,
+        "provisional_bbox_area_m2": 964.425,
+        "structural_context_polygonization": {
+          "segment_counts_by_layer": {
+            "RLE-LOSA": 22,
+            "RLE-MURO": 29,
+            "RLE-VIGA": 90
+          },
+          "polygon_count": 7,
+          "largest_polygons": [
+            {
+              "area_m2": 12.01725,
+              "bounds_m": [
+                0.301994,
+                0.300668,
+                3.451994,
+                4.115668
+              ]
+            },
+            {
+              "area_m2": 11.635758,
+              "bounds_m": [
+                -3.348008,
+                0.300668,
+                -0.298006,
+                4.115668
+              ]
+            },
+            {
+              "area_m2": 11.635758,
+              "bounds_m": [
+                -3.348008,
+                12.035668,
+                -0.298006,
+                15.850668
+              ]
+            },
+            {
+              "area_m2": 10.92,
+              "bounds_m": [
+                -3.348008,
+                4.415668,
+                -1.848008,
+                11.695668
+              ]
+            },
+            {
+              "area_m2": 2.186998,
+              "bounds_m": [
+                -3.948008,
+                -1.094332,
+                -1.898008,
+                1.825666
+              ]
+            },
+            {
+              "area_m2": 2.184,
+              "bounds_m": [
+                -3.948008,
+                14.325668,
+                -1.898008,
+                17.240668
+              ]
+            },
+            {
+              "area_m2": 1.9875,
+              "bounds_m": [
+                27.601994,
+                8.550668,
+                27.851994,
+                16.500668
+              ]
+            }
+          ],
+          "total_polygonized_area_m2": 52.567264,
+          "invalid_ring_count": 0,
+          "interpretation": "CONTEXT_ONLY_NOT_AUTOMATIC_SLAB_SURFACE"
+        },
+        "overlay": "entregas/P1L2/edificio/validacion/slabs/edificio_2_p2_slab_topology.png",
+        "interpretation": "RAW_EDGES_REQUIRE_PERIMETER_AND_HOLE_CLASSIFICATION"
+      },
+      "P3": {
+        "segment_count": 22,
+        "total_length_m": 102.370016,
+        "open_endpoint_count_0_01m": 22,
+        "junction_count_0_01m": 0,
+        "polygon_count": 0,
+        "polygons": [],
+        "cut_count": 0,
+        "dangle_count": 22,
+        "invalid_ring_count": 0,
+        "components": [
+          {
+            "segment_count": 4,
+            "total_length_m": 51.39,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              -4.148008,
+              -1.149332,
+              27.851992,
+              17.240668
+            ],
+            "handles": [
+              "4AAC9",
+              "4AACA",
+              "4AACB",
+              "4AAD3"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 10.500002,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              -3.348008,
+              16.500668,
+              7.151994,
+              16.500668
+            ],
+            "handles": [
+              "4AAD2"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 9.75,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              17.851994,
+              16.500668,
+              27.601994,
+              16.500668
+            ],
+            "handles": [
+              "4AAD0"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 9.3,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              7.851994,
+              16.500668,
+              17.151994,
+              16.500668
+            ],
+            "handles": [
+              "4AAD1"
+            ]
+          },
+          {
+            "segment_count": 2,
+            "total_length_m": 8.78,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              -3.348008,
+              4.415668,
+              -1.848008,
+              11.695668
+            ],
+            "handles": [
+              "4AADE",
+              "4AADF"
+            ]
+          },
+          {
+            "segment_count": 2,
+            "total_length_m": 2.805014,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              27.026988,
+              0.350668,
+              27.151992,
+              3.030678
+            ],
+            "handles": [
+              "4AACC",
+              "4AACD"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 2.4,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              27.851992,
+              6.150668,
+              27.851992,
+              8.550668
+            ],
+            "handles": [
+              "4AACF"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 2.395,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              25.206994,
+              6.000668,
+              27.601994,
+              6.000668
+            ],
+            "handles": [
+              "4AACE"
+            ]
+          },
+          {
+            "segment_count": 3,
+            "total_length_m": 1.8,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              7.151994,
+              -0.899332,
+              7.851994,
+              -0.349332
+            ],
+            "handles": [
+              "4AADA",
+              "4AADB",
+              "4AADC"
+            ]
+          },
+          {
+            "segment_count": 3,
+            "total_length_m": 1.8,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              17.151994,
+              -0.899332,
+              17.851994,
+              -0.349332
+            ],
+            "handles": [
+              "4AAD7",
+              "4AAD8",
+              "4AAD9"
+            ]
+          },
+          {
+            "segment_count": 3,
+            "total_length_m": 1.45,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              27.151992,
+              -0.899332,
+              27.501992,
+              -0.349332
+            ],
+            "handles": [
+              "4AAD4",
+              "4AAD5",
+              "4AAD6"
+            ]
+          }
+        ],
+        "collinear_bridge_trials": [
+          {
+            "max_gap_m": 0.25,
+            "closure_count": 0,
+            "closures": [],
+            "polygon_count": 0,
+            "polygons": [],
+            "invalid_ring_count": 0
+          },
+          {
+            "max_gap_m": 0.75,
+            "closure_count": 6,
+            "closures": [
+              {
+                "start": [
+                  27.851991969363297,
+                  -0.3493318045054593
+                ],
+                "end": [
+                  27.501991969363417,
+                  -0.34933180450545026
+                ],
+                "length_m": 0.35,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  17.151993993047473,
+                  -0.3493318045054002
+                ],
+                "end": [
+                  17.851993993047472,
+                  -0.3493318045054002
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  17.851993993047472,
+                  16.50066819557768
+                ],
+                "end": [
+                  17.151993993047473,
+                  16.50066819557768
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  27.151991969363415,
+                  0.35066819549454975
+                ],
+                "end": [
+                  27.151991969363415,
+                  -0.34933180450545026
+                ],
+                "length_m": 0.7,
+                "alignment": "V",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  7.151993993929891,
+                  -0.34933180450543205
+                ],
+                "end": [
+                  7.8519939939298915,
+                  -0.34933180450543205
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  7.8519939939299,
+                  16.50066819557768
+                ],
+                "end": [
+                  7.1519939939299,
+                  16.50066819557768
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              }
+            ],
+            "polygon_count": 2,
+            "polygons": [
+              {
+                "area_m2": 0.385,
+                "bounds_m": [
+                  17.151994,
+                  -0.899332,
+                  17.851994,
+                  -0.349332
+                ]
+              },
+              {
+                "area_m2": 0.385,
+                "bounds_m": [
+                  7.151994,
+                  -0.899332,
+                  7.851994,
+                  -0.349332
+                ]
+              }
+            ],
+            "invalid_ring_count": 0
+          },
+          {
+            "max_gap_m": 1.5,
+            "closure_count": 6,
+            "closures": [
+              {
+                "start": [
+                  27.851991969363297,
+                  -0.3493318045054593
+                ],
+                "end": [
+                  27.501991969363417,
+                  -0.34933180450545026
+                ],
+                "length_m": 0.35,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  17.151993993047473,
+                  -0.3493318045054002
+                ],
+                "end": [
+                  17.851993993047472,
+                  -0.3493318045054002
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  17.851993993047472,
+                  16.50066819557768
+                ],
+                "end": [
+                  17.151993993047473,
+                  16.50066819557768
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  27.151991969363415,
+                  0.35066819549454975
+                ],
+                "end": [
+                  27.151991969363415,
+                  -0.34933180450545026
+                ],
+                "length_m": 0.7,
+                "alignment": "V",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  7.151993993929891,
+                  -0.34933180450543205
+                ],
+                "end": [
+                  7.8519939939298915,
+                  -0.34933180450543205
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  7.8519939939299,
+                  16.50066819557768
+                ],
+                "end": [
+                  7.1519939939299,
+                  16.50066819557768
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              }
+            ],
+            "polygon_count": 2,
+            "polygons": [
+              {
+                "area_m2": 0.385,
+                "bounds_m": [
+                  17.151994,
+                  -0.899332,
+                  17.851994,
+                  -0.349332
+                ]
+              },
+              {
+                "area_m2": 0.385,
+                "bounds_m": [
+                  7.151994,
+                  -0.899332,
+                  7.851994,
+                  -0.349332
+                ]
+              }
+            ],
+            "invalid_ring_count": 0
+          }
+        ],
+        "source_sheet": "2024_22-101.dxf",
+        "source_sha256": "3e9d5e60c897e543a206c1f3c6e4498435f0419cba74c127e0cc4c957e92797c",
+        "provisional_slab_count": 1,
+        "provisional_bbox_area_m2": 964.425,
+        "structural_context_polygonization": {
+          "segment_counts_by_layer": {
+            "RLE-LOSA": 22,
+            "RLE-MURO": 29,
+            "RLE-VIGA": 90
+          },
+          "polygon_count": 7,
+          "largest_polygons": [
+            {
+              "area_m2": 12.01725,
+              "bounds_m": [
+                0.301994,
+                0.300668,
+                3.451994,
+                4.115668
+              ]
+            },
+            {
+              "area_m2": 11.635758,
+              "bounds_m": [
+                -3.348008,
+                0.300668,
+                -0.298006,
+                4.115668
+              ]
+            },
+            {
+              "area_m2": 11.635758,
+              "bounds_m": [
+                -3.348008,
+                12.035668,
+                -0.298006,
+                15.850668
+              ]
+            },
+            {
+              "area_m2": 10.92,
+              "bounds_m": [
+                -3.348008,
+                4.415668,
+                -1.848008,
+                11.695668
+              ]
+            },
+            {
+              "area_m2": 2.186998,
+              "bounds_m": [
+                -3.948008,
+                -1.094332,
+                -1.898008,
+                1.825666
+              ]
+            },
+            {
+              "area_m2": 2.184,
+              "bounds_m": [
+                -3.948008,
+                14.325668,
+                -1.898008,
+                17.240668
+              ]
+            },
+            {
+              "area_m2": 1.9875,
+              "bounds_m": [
+                27.601994,
+                8.550668,
+                27.851994,
+                16.500668
+              ]
+            }
+          ],
+          "total_polygonized_area_m2": 52.567264,
+          "invalid_ring_count": 0,
+          "interpretation": "CONTEXT_ONLY_NOT_AUTOMATIC_SLAB_SURFACE"
+        },
+        "overlay": "entregas/P1L2/edificio/validacion/slabs/edificio_2_p3_slab_topology.png",
+        "interpretation": "RAW_EDGES_REQUIRE_PERIMETER_AND_HOLE_CLASSIFICATION"
+      },
+      "P4": {
+        "segment_count": 28,
+        "total_length_m": 126.633017,
+        "open_endpoint_count_0_01m": 26,
+        "junction_count_0_01m": 0,
+        "polygon_count": 0,
+        "polygons": [],
+        "cut_count": 0,
+        "dangle_count": 28,
+        "invalid_ring_count": 0,
+        "components": [
+          {
+            "segment_count": 6,
+            "total_length_m": 63.230002,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              -4.148006,
+              -1.149332,
+              27.851994,
+              17.240668
+            ],
+            "handles": [
+              "4D406",
+              "4D407",
+              "4D408",
+              "4D40D",
+              "4D40E",
+              "4E0B7"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 9.75,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              17.851996,
+              16.500668,
+              27.601996,
+              16.500668
+            ],
+            "handles": [
+              "4D40B"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 9.3,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              7.851996,
+              16.500668,
+              17.151996,
+              16.500668
+            ],
+            "handles": [
+              "4D40C"
+            ]
+          },
+          {
+            "segment_count": 2,
+            "total_length_m": 8.78,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              -3.348006,
+              4.415668,
+              -1.848006,
+              11.695668
+            ],
+            "handles": [
+              "4D41E",
+              "4D41F"
+            ]
+          },
+          {
+            "segment_count": 3,
+            "total_length_m": 5.614,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              5.424996,
+              5.040668,
+              7.201996,
+              7.100668
+            ],
+            "handles": [
+              "4E7CB",
+              "4E7D0",
+              "4E7D1"
+            ]
+          },
+          {
+            "segment_count": 3,
+            "total_length_m": 5.614,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              7.801996,
+              5.040668,
+              9.578996,
+              7.100668
+            ],
+            "handles": [
+              "4E7C8",
+              "4E7C9",
+              "4E7CC"
+            ]
+          },
+          {
+            "segment_count": 3,
+            "total_length_m": 5.614,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              22.801996,
+              5.040668,
+              24.578996,
+              7.100668
+            ],
+            "handles": [
+              "4D418",
+              "4D419",
+              "4D41A"
+            ]
+          },
+          {
+            "segment_count": 2,
+            "total_length_m": 3.752,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              5.424996,
+              9.200668,
+              7.201996,
+              11.175668
+            ],
+            "handles": [
+              "4E7CD",
+              "4E7CF"
+            ]
+          },
+          {
+            "segment_count": 2,
+            "total_length_m": 3.752,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              7.801996,
+              9.200668,
+              9.578996,
+              11.175668
+            ],
+            "handles": [
+              "4E7CA",
+              "4E7CE"
+            ]
+          },
+          {
+            "segment_count": 2,
+            "total_length_m": 3.752,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              22.801996,
+              9.200668,
+              24.578996,
+              11.175668
+            ],
+            "handles": [
+              "4D41B",
+              "4D41C"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 2.68001,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              27.851994,
+              0.350668,
+              27.851994,
+              3.030678
+            ],
+            "handles": [
+              "4D409"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 2.4,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              27.851994,
+              6.150668,
+              27.851994,
+              8.550668
+            ],
+            "handles": [
+              "4D40A"
+            ]
+          },
+          {
+            "segment_count": 1,
+            "total_length_m": 2.395005,
+            "closed_by_endpoint_graph": false,
+            "open_node_count": 2,
+            "junction_node_count": 0,
+            "bounds_m": [
+              25.206992,
+              6.150835,
+              27.601996,
+              6.150835
+            ],
+            "handles": [
+              "4E713"
+            ]
+          }
+        ],
+        "collinear_bridge_trials": [
+          {
+            "max_gap_m": 0.25,
+            "closure_count": 1,
+            "closures": [
+              {
+                "start": [
+                  27.851994310317494,
+                  6.150668195514568
+                ],
+                "end": [
+                  27.601996334819624,
+                  6.15083485081881
+                ],
+                "length_m": 0.249998,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              }
+            ],
+            "polygon_count": 0,
+            "polygons": [],
+            "invalid_ring_count": 0
+          },
+          {
+            "max_gap_m": 0.75,
+            "closure_count": 7,
+            "closures": [
+              {
+                "start": [
+                  27.851994310317494,
+                  6.150668195514568
+                ],
+                "end": [
+                  27.601996334819624,
+                  6.15083485081881
+                ],
+                "length_m": 0.249998,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  7.8019963348841115,
+                  5.0406681955145585
+                ],
+                "end": [
+                  7.201996334884102,
+                  5.0406681955145585
+                ],
+                "length_m": 0.6,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  7.8019963348841115,
+                  7.1006681956653805
+                ],
+                "end": [
+                  7.201996334884102,
+                  7.1006681956653805
+                ],
+                "length_m": 0.6,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  7.80199633488412,
+                  11.175668195514561
+                ],
+                "end": [
+                  7.201996334884111,
+                  11.175668195514561
+                ],
+                "length_m": 0.6,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  17.85199633400168,
+                  16.50066819557769
+                ],
+                "end": [
+                  17.15199633400168,
+                  16.50066819557769
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  27.851994310317515,
+                  -0.34933180450544116
+                ],
+                "end": [
+                  27.851994310317515,
+                  0.35066819549455885
+                ],
+                "length_m": 0.7,
+                "alignment": "V",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  7.851996334884111,
+                  16.50066819557769
+                ],
+                "end": [
+                  7.151996334884111,
+                  16.50066819557769
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              }
+            ],
+            "polygon_count": 1,
+            "polygons": [
+              {
+                "area_m2": 8.55724,
+                "bounds_m": [
+                  5.424996,
+                  5.040668,
+                  9.578996,
+                  7.100668
+                ]
+              }
+            ],
+            "invalid_ring_count": 0
+          },
+          {
+            "max_gap_m": 1.5,
+            "closure_count": 7,
+            "closures": [
+              {
+                "start": [
+                  27.851994310317494,
+                  6.150668195514568
+                ],
+                "end": [
+                  27.601996334819624,
+                  6.15083485081881
+                ],
+                "length_m": 0.249998,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  7.8019963348841115,
+                  5.0406681955145585
+                ],
+                "end": [
+                  7.201996334884102,
+                  5.0406681955145585
+                ],
+                "length_m": 0.6,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  7.8019963348841115,
+                  7.1006681956653805
+                ],
+                "end": [
+                  7.201996334884102,
+                  7.1006681956653805
+                ],
+                "length_m": 0.6,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  7.80199633488412,
+                  11.175668195514561
+                ],
+                "end": [
+                  7.201996334884111,
+                  11.175668195514561
+                ],
+                "length_m": 0.6,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  17.85199633400168,
+                  16.50066819557769
+                ],
+                "end": [
+                  17.15199633400168,
+                  16.50066819557769
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  27.851994310317515,
+                  -0.34933180450544116
+                ],
+                "end": [
+                  27.851994310317515,
+                  0.35066819549455885
+                ],
+                "length_m": 0.7,
+                "alignment": "V",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              },
+              {
+                "start": [
+                  7.851996334884111,
+                  16.50066819557769
+                ],
+                "end": [
+                  7.151996334884111,
+                  16.50066819557769
+                ],
+                "length_m": 0.7,
+                "alignment": "H",
+                "classification": "INFERRED_COLLINEAR_GAP_CANDIDATE"
+              }
+            ],
+            "polygon_count": 1,
+            "polygons": [
+              {
+                "area_m2": 8.55724,
+                "bounds_m": [
+                  5.424996,
+                  5.040668,
+                  9.578996,
+                  7.100668
+                ]
+              }
+            ],
+            "invalid_ring_count": 0
+          }
+        ],
+        "source_sheet": "2024_22-102.dxf",
+        "source_sha256": "6c0e993a02e3ff123a4171ea74c601a1763dc0de0587c38ac7b788012115b17a",
+        "provisional_slab_count": 1,
+        "provisional_bbox_area_m2": 951.9,
+        "structural_context_polygonization": {
+          "segment_counts_by_layer": {
+            "RLE-LOSA": 28,
+            "RLE-MURO": 28,
+            "RLE-VIGA": 160
+          },
+          "polygon_count": 7,
+          "largest_polygons": [
+            {
+              "area_m2": 28.410425,
+              "bounds_m": [
+                22.801996,
+                9.200668,
+                27.601996,
+                15.850668
+              ]
+            },
+            {
+              "area_m2": 12.01725,
+              "bounds_m": [
+                0.301996,
+                0.300668,
+                3.451996,
+                4.115668
+              ]
+            },
+            {
+              "area_m2": 10.92,
+              "bounds_m": [
+                -3.348006,
+                4.415668,
+                -1.848006,
+                11.695668
+              ]
+            },
+            {
+              "area_m2": 3.509575,
+              "bounds_m": [
+                22.801996,
+                9.200668,
+                24.578996,
+                11.175668
+              ]
+            },
+            {
+              "area_m2": 2.278538,
+              "bounds_m": [
+                24.956992,
+                3.030678,
+                27.851996,
+                6.150835
+              ]
+            },
+            {
+              "area_m2": 2.184,
+              "bounds_m": [
+                -3.948006,
+                14.325668,
+                -1.898006,
+                17.240668
+              ]
+            },
+            {
+              "area_m2": 1.9875,
+              "bounds_m": [
+                27.601996,
+                8.550668,
+                27.851996,
+                16.500668
+              ]
+            }
+          ],
+          "total_polygonized_area_m2": 61.307288,
+          "invalid_ring_count": 0,
+          "interpretation": "CONTEXT_ONLY_NOT_AUTOMATIC_SLAB_SURFACE"
+        },
+        "overlay": "entregas/P1L2/edificio/validacion/slabs/edificio_2_p4_slab_topology.png",
+        "interpretation": "RAW_EDGES_REQUIRE_PERIMETER_AND_HOLE_CLASSIFICATION"
+      }
+    }
+  },
+  "ed2_common_s1_p3": {
+    "status": "CONFIRMED_COMMON_PLAN",
+    "source_sheet": "2024_22-101.dxf",
+    "title": "PLANTA CIELO 1º SUBTERRANEO A CIELO PISO 3º",
+    "interpretation": "La misma geometria de borde aplica a S1/P1/P2/P3 por titulo explicito de lamina, no por extrapolacion.",
+    "direct_region_segment_count": 22,
+    "derived_json_segment_count": 25,
+    "excluded_outside_region_detail_segments": 3
+  },
+  "inputs": {
+    "entregas/P1L2/unity_export/model_combined_viewer.json": "e89de2b9946671fd31bf0a633539a2d372578c39876081d4d3860b38c8c6cd90",
+    "recursos/planos/dxf_full/2017_67/2017_67-101.dxf": "8adccabb890585ae49078d3a76437509d7580aa7645e01e9d95c4dda64c0998b",
+    "recursos/planos/dxf_full/2017_67/2017_67-102.dxf": "604331684dff83317a5585a9d6479d167fb2989a4b0a6fc7005ccbddf56a25a8",
+    "recursos/planos/dxf_full/2017_67/2017_67-103.dxf": "38a3c6ad384f57180b6bbe7e1fd8180400ad15525697e0e4b1ae28fd0c245990",
+    "recursos/planos/dxf_full/2024_22/2024_22-101.dxf": "3e9d5e60c897e543a206c1f3c6e4498435f0419cba74c127e0cc4c957e92797c",
+    "recursos/planos/dxf_full/2024_22/2024_22-102.dxf": "6c0e993a02e3ff123a4171ea74c601a1763dc0de0587c38ac7b788012115b17a"
+  }
+}
