@@ -11,6 +11,11 @@
   excluidos por pertenecer a un detalle fuera de planta.
 - Los bounding boxes provisionales de losas no son areas reales y deben ser
   reemplazados por perimetros auditados.
+- Propuesta exterior ED2 sin aplicar: `565.392 m2` en S1-P3 y `566.465 m2` en
+  P4; todos sus lados son directos RLE-LOSA o cierres respaldados por
+  RLE-VIGA/RLE-MURO. Los rasgos interiores siguen en revision.
+- El bloque `losa-ne` se repite una vez por numerosos panos (22 en la planta
+  comun y 23 en P4); no se interpreta como "no existe losa" ni confirma huecos.
 - Siguiente paso: cierres respaldados por vigas/notas y clasificacion individual
   de huecos; sin modificar aun FE, cargas ni resultados P1L3.
 

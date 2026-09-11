@@ -45,6 +45,11 @@ graficos ampliables y modo presentacion. Ver `entregas/P1L3/INFORME.md` y
   colineales automáticos no resuelven el perímetro principal y no se han
   modificado superficies, FE ni resultados. Evidencia:
   `entregas/P1L2/edificio/validacion/slabs/`.
+- La propuesta exterior ED2 queda en 565.392 m² para S1-P3 y 566.465 m² para
+  P4, sin lados exteriores `REVIEW_REQUIRED`; aún no se aplica porque los
+  trazos interiores no distinguen inequívocamente hueco de borde de paño. El
+  bloque `losa-ne` aparece repetido por toda la planta y no prueba ausencia de
+  losa.
 - Proximo paso: reconstruir perímetros y huecos piso a piso con respaldo de
   `RLE-LOSA`, vigas y notas, conservando `participates_in_FE=false` para la
   arquitectura visual.

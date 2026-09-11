@@ -1,0 +1,6314 @@
+{
+  "status": "PROPOSAL_ONLY_NOT_APPLIED",
+  "building": "EDIFICIO_2",
+  "participates_in_FE": false,
+  "source_priority": "2024_22 RLE-LOSA > RLE-VIGA/RLE-MURO > inference",
+  "common_plan_s1_p3": "CONFIRMED_BY_2024_22-101_TITLE",
+  "floors": {
+    "S1": {
+      "source_sheet": "2024_22-101.dxf",
+      "source_sha256": "3e9d5e60c897e543a206c1f3c6e4498435f0419cba74c127e0cc4c957e92797c",
+      "outline_xy": [
+        [
+          -4.148008,
+          -1.149332
+        ],
+        [
+          27.851994,
+          -1.149332
+        ],
+        [
+          27.851994,
+          16.500668
+        ],
+        [
+          -3.348008,
+          16.500668
+        ],
+        [
+          -3.348008,
+          17.240668
+        ],
+        [
+          -4.148008,
+          17.240668
+        ]
+      ],
+      "area_m2": 565.392035,
+      "perimeter_m": 100.780004,
+      "edge_evidence": [
+        {
+          "edge_index": 0,
+          "start": [
+            -4.148008,
+            -1.149332
+          ],
+          "end": [
+            27.851994,
+            -1.149332
+          ],
+          "length_m": 32.000002,
+          "confidence": "CONFIRMED_RLE_LOSA",
+          "rle_losa": {
+            "coverage_ratio": 1.0,
+            "matches": [
+              {
+                "handle": "4AACA",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 32.0
+              }
+            ]
+          },
+          "structural_context": {
+            "coverage_ratio": 0.01875,
+            "matches": [
+              {
+                "handle": "4AB84",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 0.055,
+                "overlap_m": 0.6
+              }
+            ]
+          }
+        },
+        {
+          "edge_index": 1,
+          "start": [
+            27.851994,
+            -1.149332
+          ],
+          "end": [
+            27.851994,
+            16.500668
+          ],
+          "length_m": 17.65,
+          "confidence": "LIKELY_RLE_PLUS_STRUCTURE",
+          "rle_losa": {
+            "coverage_ratio": 0.181303,
+            "matches": [
+              {
+                "handle": "4AACF",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 2e-06,
+                "overlap_m": 2.4
+              },
+              {
+                "handle": "4AACB",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 2e-06,
+                "overlap_m": 0.8
+              }
+            ]
+          },
+          "structural_context": {
+            "coverage_ratio": 0.779037,
+            "matches": [
+              {
+                "handle": "4AB5B",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 0.0,
+                "overlap_m": 7.95
+              },
+              {
+                "handle": "4AB66",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 0.0,
+                "overlap_m": 5.8
+              }
+            ]
+          }
+        },
+        {
+          "edge_index": 2,
+          "start": [
+            27.851994,
+            16.500668
+          ],
+          "end": [
+            -3.348008,
+            16.500668
+          ],
+          "length_m": 31.200002,
+          "confidence": "LIKELY_RLE_PLUS_STRUCTURE",
+          "rle_losa": {
+            "coverage_ratio": 0.947115,
+            "matches": [
+              {
+                "handle": "4AAD2",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 10.500002
+              },
+              {
+                "handle": "4AAD0",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 9.75
+              },
+              {
+                "handle": "4AAD1",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 9.3
+              }
+            ]
+          },
+          "structural_context": {
+            "coverage_ratio": 0.955128,
+            "matches": [
+              {
+                "handle": "4AB5C",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 0.0,
+                "overlap_m": 0.25
+              },
+              {
+                "handle": "4AAE8",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 4.95
+              },
+              {
+                "handle": "4AB0E",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 4.8
+              },
+              {
+                "handle": "4AAE0",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 4.35
+              },
+              {
+                "handle": "4AAE4",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 4.35
+              },
+              {
+                "handle": "4AB74",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 4.35
+              },
+              {
+                "handle": "4AB57",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 3.1
+              },
+              {
+                "handle": "4ABA6",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 1.600002
+              },
+              {
+                "handle": "4AB7A",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 0.05,
+                "overlap_m": 1.45
+              },
+              {
+                "handle": "4AB30",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 0.6
+              }
+            ]
+          }
+        },
+        {
+          "edge_index": 3,
+          "start": [
+            -3.348008,
+            16.500668
+          ],
+          "end": [
+            -3.348008,
+            17.240668
+          ],
+          "length_m": 0.74,
+          "confidence": "LIKELY_RLE_PLUS_STRUCTURE",
+          "rle_losa": {
+            "coverage_ratio": 0.0,
+            "matches": []
+          },
+          "structural_context": {
+            "coverage_ratio": 1.0,
+            "matches": [
+              {
+                "handle": "4AB7C",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 0.0,
+                "overlap_m": 0.74
+              }
+            ]
+          }
+        },
+        {
+          "edge_index": 4,
+          "start": [
+            -3.348008,
+            17.240668
+          ],
+          "end": [
+            -4.148008,
+            17.240668
+          ],
+          "length_m": 0.8,
+          "confidence": "LIKELY_RLE_PLUS_STRUCTURE",
+          "rle_losa": {
+            "coverage_ratio": 0.25,
+            "matches": [
+              {
+                "handle": "4AAD3",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 0.2
+              }
+            ]
+          },
+          "structural_context": {
+            "coverage_ratio": 0.75,
+            "matches": [
+              {
+                "handle": "4AB7D",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 0.0,
+                "overlap_m": 0.6
+              }
+            ]
+          }
+        },
+        {
+          "edge_index": 5,
+          "start": [
+            -4.148008,
+            17.240668
+          ],
+          "end": [
+            -4.148008,
+            -1.149332
+          ],
+          "length_m": 18.39,
+          "confidence": "CONFIRMED_RLE_LOSA",
+          "rle_losa": {
+            "coverage_ratio": 1.0,
+            "matches": [
+              {
+                "handle": "4AAC9",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 18.39
+              }
+            ]
+          },
+          "structural_context": {
+            "coverage_ratio": 0.317292,
+            "matches": [
+              {
+                "handle": "4AB83",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 0.2,
+                "overlap_m": 2.919997
+              },
+              {
+                "handle": "4AB7E",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 0.2,
+                "overlap_m": 2.915
+              }
+            ]
+          }
+        }
+      ],
+      "confidence_counts": {
+        "CONFIRMED_RLE_LOSA": 2,
+        "LIKELY_RLE_PLUS_STRUCTURE": 4
+      },
+      "internal_rle_features": [
+        {
+          "bounds_m": [
+            -3.348008,
+            4.415668,
+            -1.848008,
+            11.695668
+          ],
+          "segment_count": 2,
+          "open_node_count": 2,
+          "closed_by_endpoint_graph": false,
+          "handles": [
+            "4AADE",
+            "4AADF"
+          ],
+          "nearby_texts": [
+            {
+              "handle": "4BF6A",
+              "layer": "RLA-TEXTOS1",
+              "text": "(serie planos 500)",
+              "point": [
+                -1.9474908271538198,
+                8.968228160316409
+              ],
+              "distance_to_feature_m": 0.0
+            },
+            {
+              "handle": "4BF67",
+              "layer": "RLA-TEXTOS1",
+              "text": "DE ESCALERA",
+              "point": [
+                -2.1131165006048307,
+                8.732513874602121
+              ],
+              "distance_to_feature_m": 0.0
+            },
+            {
+              "handle": "4BF69",
+              "layer": "RLA-TEXTOS1",
+              "text": "VER DETALLE",
+              "point": [
+                -2.3147461888379803,
+                8.701925488593979
+              ],
+              "distance_to_feature_m": 0.0
+            },
+            {
+              "handle": "4ACAF",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 30/80",
+              "point": [
+                -2.1114403030756193,
+                3.9878347906145017
+              ],
+              "distance_to_feature_m": 0.427833
+            },
+            {
+              "handle": "4ACA2",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 30/80",
+              "point": [
+                -2.0231364318826603,
+                12.18261846200795
+              ],
+              "distance_to_feature_m": 0.48695
+            },
+            {
+              "handle": "4AC92",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 40/80",
+              "point": [
+                -3.9011368356061302,
+                7.840387646526981
+              ],
+              "distance_to_feature_m": 0.553129
+            },
+            {
+              "handle": "4ACB0",
+              "layer": "RLE-TEXTO-1",
+              "text": "0102",
+              "point": [
+                -2.150634053844119,
+                3.696252359095688
+              ],
+              "distance_to_feature_m": 0.719416
+            },
+            {
+              "handle": "4ACA3",
+              "layer": "RLE-TEXTO-1",
+              "text": "0102",
+              "point": [
+                -2.017479583608981,
+                12.49300811949417
+              ],
+              "distance_to_feature_m": 0.79734
+            },
+            {
+              "handle": "4AC91",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 40/80",
+              "point": [
+                -3.8824649417808996,
+                12.94538764656855
+              ],
+              "distance_to_feature_m": 1.359207
+            },
+            {
+              "handle": "4ACAA",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 60/80",
+              "point": [
+                -0.40301243774830026,
+                6.39788764653641
+              ],
+              "distance_to_feature_m": 1.444996
+            },
+            {
+              "handle": "4ACA0",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 60/80",
+              "point": [
+                -0.3947158423734095,
+                10.55788764653684
+              ],
+              "distance_to_feature_m": 1.453292
+            },
+            {
+              "handle": "4AC93",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 40/80",
+              "point": [
+                -3.8788216078128404,
+                2.885386386827981
+              ],
+              "distance_to_feature_m": 1.61973
+            }
+          ],
+          "nearby_losa_ne_markers": [
+            {
+              "handle": "4BEE5",
+              "block": "losa-ne",
+              "point": [
+                -1.3258614151886696,
+                8.36198216079745
+              ],
+              "bounds_m": [
+                -1.6233614151886695,
+                8.06448216079745,
+                -1.0283614151886695,
+                8.659482160797449
+              ],
+              "distance_to_feature_m": 0.522147
+            }
+          ],
+          "classification": "REVIEW_REQUIRED_HOLE_OR_PANEL_EDGE",
+          "marker_interpretation": "losa-ne aparece una vez por numerosos panos; no significa por si solo ausencia de losa"
+        },
+        {
+          "bounds_m": [
+            27.026988,
+            0.350668,
+            27.151992,
+            3.030678
+          ],
+          "segment_count": 2,
+          "open_node_count": 2,
+          "closed_by_endpoint_graph": false,
+          "handles": [
+            "4AACC",
+            "4AACD"
+          ],
+          "nearby_texts": [
+            {
+              "handle": "4AC52",
+              "layer": "RLE-TEXTO-1",
+              "text": "M.H.A. e=25",
+              "point": [
+                27.496451771521368,
+                1.67402666791319
+              ],
+              "distance_to_feature_m": 0.34446
+            },
+            {
+              "handle": "4AC53",
+              "layer": "RLE-TEXTO-1",
+              "text": "M.H.A. e=30",
+              "point": [
+                26.44540991865222,
+                2.9311738673775016
+              ],
+              "distance_to_feature_m": 0.581578
+            },
+            {
+              "handle": "4AC71",
+              "layer": "RLE-TEXTO-1",
+              "text": "70x70",
+              "point": [
+                26.901470713190275,
+                -0.3989040047042408
+              ],
+              "distance_to_feature_m": 0.760008
+            },
+            {
+              "handle": "4AC55",
+              "layer": "RLE-TEXTO-1",
+              "text": "M.H.A. e=25",
+              "point": [
+                27.484628898621214,
+                4.764599942229902
+              ],
+              "distance_to_feature_m": 1.76554
+            }
+          ],
+          "nearby_losa_ne_markers": [],
+          "classification": "REVIEW_REQUIRED_HOLE_OR_PANEL_EDGE",
+          "marker_interpretation": "losa-ne aparece una vez por numerosos panos; no significa por si solo ausencia de losa"
+        },
+        {
+          "bounds_m": [
+            25.206994,
+            6.000668,
+            27.601994,
+            6.000668
+          ],
+          "segment_count": 1,
+          "open_node_count": 2,
+          "closed_by_endpoint_graph": false,
+          "handles": [
+            "4AACE"
+          ],
+          "nearby_texts": [
+            {
+              "handle": "4AC55",
+              "layer": "RLE-TEXTO-1",
+              "text": "M.H.A. e=25",
+              "point": [
+                27.484628898621214,
+                4.764599942229902
+              ],
+              "distance_to_feature_m": 1.236068
+            },
+            {
+              "handle": "4AC54",
+              "layer": "RLE-TEXTO-1",
+              "text": "M.H.A. e=25",
+              "point": [
+                24.861980573745868,
+                4.454204548897792
+              ],
+              "distance_to_feature_m": 1.584482
+            },
+            {
+              "handle": "4ACF2",
+              "layer": "RLE-TEXTO-1",
+              "text": "PASADA",
+              "point": [
+                23.33383348691389,
+                5.800412776671742
+              ],
+              "distance_to_feature_m": 1.883835
+            },
+            {
+              "handle": "4ACF3",
+              "layer": "RLE-TEXTO-1",
+              "text": "45/30",
+              "point": [
+                23.28905275774722,
+                5.998850276671751
+              ],
+              "distance_to_feature_m": 1.917942
+            }
+          ],
+          "nearby_losa_ne_markers": [],
+          "classification": "REVIEW_REQUIRED_HOLE_OR_PANEL_EDGE",
+          "marker_interpretation": "losa-ne aparece una vez por numerosos panos; no significa por si solo ausencia de losa"
+        },
+        {
+          "bounds_m": [
+            7.151994,
+            -0.899332,
+            7.851994,
+            -0.349332
+          ],
+          "segment_count": 3,
+          "open_node_count": 2,
+          "closed_by_endpoint_graph": false,
+          "handles": [
+            "4AADA",
+            "4AADB",
+            "4AADC"
+          ],
+          "nearby_texts": [
+            {
+              "handle": "4AC6D",
+              "layer": "RLE-TEXTO-1",
+              "text": "70x70",
+              "point": [
+                8.16968857244999,
+                0.6578753648900602
+              ],
+              "distance_to_feature_m": 1.056123
+            },
+            {
+              "handle": "4AC43",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 60/80",
+              "point": [
+                5.510368927172549,
+                -0.41094164816895046
+              ],
+              "distance_to_feature_m": 1.641625
+            },
+            {
+              "handle": "4AD1C",
+              "layer": "RLE-TEXTO-1",
+              "text": "PASADA",
+              "point": [
+                5.438862430998779,
+                0.49013781420575925
+              ],
+              "distance_to_feature_m": 1.907755
+            }
+          ],
+          "nearby_losa_ne_markers": [],
+          "classification": "REVIEW_REQUIRED_HOLE_OR_PANEL_EDGE",
+          "marker_interpretation": "losa-ne aparece una vez por numerosos panos; no significa por si solo ausencia de losa"
+        },
+        {
+          "bounds_m": [
+            17.151994,
+            -0.899332,
+            17.851994,
+            -0.349332
+          ],
+          "segment_count": 3,
+          "open_node_count": 2,
+          "closed_by_endpoint_graph": false,
+          "handles": [
+            "4AAD7",
+            "4AAD8",
+            "4AAD9"
+          ],
+          "nearby_texts": [
+            {
+              "handle": "4AC6F",
+              "layer": "RLE-TEXTO-1",
+              "text": "70x70",
+              "point": [
+                18.18171388930786,
+                0.6809421297422114
+              ],
+              "distance_to_feature_m": 1.081749
+            }
+          ],
+          "nearby_losa_ne_markers": [],
+          "classification": "REVIEW_REQUIRED_HOLE_OR_PANEL_EDGE",
+          "marker_interpretation": "losa-ne aparece una vez por numerosos panos; no significa por si solo ausencia de losa"
+        },
+        {
+          "bounds_m": [
+            27.151992,
+            -0.899332,
+            27.501992,
+            -0.349332
+          ],
+          "segment_count": 3,
+          "open_node_count": 2,
+          "closed_by_endpoint_graph": false,
+          "handles": [
+            "4AAD4",
+            "4AAD5",
+            "4AAD6"
+          ],
+          "nearby_texts": [
+            {
+              "handle": "4AC71",
+              "layer": "RLE-TEXTO-1",
+              "text": "70x70",
+              "point": [
+                26.901470713190275,
+                -0.3989040047042408
+              ],
+              "distance_to_feature_m": 0.250521
+            }
+          ],
+          "nearby_losa_ne_markers": [],
+          "classification": "REVIEW_REQUIRED_HOLE_OR_PANEL_EDGE",
+          "marker_interpretation": "losa-ne aparece una vez por numerosos panos; no significa por si solo ausencia de losa"
+        }
+      ],
+      "internal_feature_policy": "NOT_CLASSIFIED_AS_HOLES",
+      "losa_ne_markers": [
+        {
+          "handle": "4BEB5",
+          "block": "losa-ne",
+          "point": [
+            4.14532423359879,
+            -0.8669581768407807
+          ],
+          "bounds_m": [
+            3.84782423359879,
+            -1.1644581768407807,
+            4.44282423359879,
+            -0.5694581768407807
+          ]
+        },
+        {
+          "handle": "4BEB9",
+          "block": "losa-ne",
+          "point": [
+            -2.140418505254149,
+            2.1203956695963186
+          ],
+          "bounds_m": [
+            -2.4379185052541494,
+            1.8228956695963188,
+            -1.8429185052541492,
+            2.417895669596319
+          ]
+        },
+        {
+          "handle": "4BEBD",
+          "block": "losa-ne",
+          "point": [
+            1.73217890086627,
+            2.7256651444562383
+          ],
+          "bounds_m": [
+            1.43467890086627,
+            2.4281651444562384,
+            2.02967890086627,
+            3.0231651444562386
+          ]
+        },
+        {
+          "handle": "4BEC1",
+          "block": "losa-ne",
+          "point": [
+            5.604229305057941,
+            4.745066094901399
+          ],
+          "bounds_m": [
+            5.3067293050579405,
+            4.447566094901399,
+            5.901729305057943,
+            5.0425660949013995
+          ]
+        },
+        {
+          "handle": "4BEC5",
+          "block": "losa-ne",
+          "point": [
+            14.651174467347609,
+            -0.8804404103938214
+          ],
+          "bounds_m": [
+            14.35367446734761,
+            -1.1779404103938214,
+            14.94867446734761,
+            -0.5829404103938214
+          ]
+        },
+        {
+          "handle": "4BEC9",
+          "block": "losa-ne",
+          "point": [
+            9.909511696033968,
+            4.745066094901399
+          ],
+          "bounds_m": [
+            9.612011696033969,
+            4.447566094901399,
+            10.20701169603397,
+            5.0425660949013995
+          ]
+        },
+        {
+          "handle": "4BECD",
+          "block": "losa-ne",
+          "point": [
+            14.915992600765549,
+            4.745066094901399
+          ],
+          "bounds_m": [
+            14.61849260076555,
+            4.447566094901399,
+            15.213492600765548,
+            5.0425660949013995
+          ]
+        },
+        {
+          "handle": "4BED1",
+          "block": "losa-ne",
+          "point": [
+            24.162919030317138,
+            -0.8791842559292309
+          ],
+          "bounds_m": [
+            23.86541903031714,
+            -1.1766842559292308,
+            24.46041903031714,
+            -0.5816842559292309
+          ]
+        },
+        {
+          "handle": "4BED5",
+          "block": "losa-ne",
+          "point": [
+            19.89995546647087,
+            4.745066094901399
+          ],
+          "bounds_m": [
+            19.602455466470868,
+            4.447566094901399,
+            20.19745546647087,
+            5.0425660949013995
+          ]
+        },
+        {
+          "handle": "4BED9",
+          "block": "losa-ne",
+          "point": [
+            25.182402451724762,
+            1.0611503516579115
+          ],
+          "bounds_m": [
+            24.88490245172476,
+            0.7636503516579114,
+            25.47990245172476,
+            1.3586503516579114
+          ]
+        },
+        {
+          "handle": "4BEDD",
+          "block": "losa-ne",
+          "point": [
+            24.081798423160958,
+            4.904224167752541
+          ],
+          "bounds_m": [
+            23.78429842316096,
+            4.606724167752541,
+            24.379298423160957,
+            5.201724167752541
+          ]
+        },
+        {
+          "handle": "4BEE1",
+          "block": "losa-ne",
+          "point": [
+            26.449620202794257,
+            7.202247839293359
+          ],
+          "bounds_m": [
+            26.152120202794258,
+            6.904747839293359,
+            26.747120202794257,
+            7.499747839293359
+          ]
+        },
+        {
+          "handle": "4BEE5",
+          "block": "losa-ne",
+          "point": [
+            -1.3258614151886696,
+            8.36198216079745
+          ],
+          "bounds_m": [
+            -1.6233614151886695,
+            8.06448216079745,
+            -1.0283614151886695,
+            8.659482160797449
+          ]
+        },
+        {
+          "handle": "4BEE9",
+          "block": "losa-ne",
+          "point": [
+            1.479641752256141,
+            6.202925939694101
+          ],
+          "bounds_m": [
+            1.182141752256141,
+            5.9054259396941005,
+            1.777141752256141,
+            6.5004259396941
+          ]
+        },
+        {
+          "handle": "4BEED",
+          "block": "losa-ne",
+          "point": [
+            -1.5955274636039893,
+            14.33722961058353
+          ],
+          "bounds_m": [
+            -1.8930274636039894,
+            14.039729610583528,
+            -1.2980274636039895,
+            14.634729610583529
+          ]
+        },
+        {
+          "handle": "4BEF1",
+          "block": "losa-ne",
+          "point": [
+            1.8513378991308604,
+            13.5627415649199
+          ],
+          "bounds_m": [
+            1.5538378991308606,
+            13.265241564919899,
+            2.1488378991308603,
+            13.8602415649199
+          ]
+        },
+        {
+          "handle": "4BEF5",
+          "block": "losa-ne",
+          "point": [
+            1.68588544932388,
+            10.78355700087019
+          ],
+          "bounds_m": [
+            1.38838544932388,
+            10.48605700087019,
+            1.98338544932388,
+            11.081057000870189
+          ]
+        },
+        {
+          "handle": "4BEF9",
+          "block": "losa-ne",
+          "point": [
+            5.53626459366509,
+            12.18019821283852
+          ],
+          "bounds_m": [
+            5.238764593665089,
+            11.88269821283852,
+            5.833764593665092,
+            12.47769821283852
+          ]
+        },
+        {
+          "handle": "4BEFD",
+          "block": "losa-ne",
+          "point": [
+            9.83639360979074,
+            12.18019821283852
+          ],
+          "bounds_m": [
+            9.538893609790739,
+            11.88269821283852,
+            10.13389360979074,
+            12.47769821283852
+          ]
+        },
+        {
+          "handle": "4BF01",
+          "block": "losa-ne",
+          "point": [
+            14.74457080086422,
+            12.18019821283852
+          ],
+          "bounds_m": [
+            14.447070800864221,
+            11.88269821283852,
+            15.042070800864222,
+            12.47769821283852
+          ]
+        },
+        {
+          "handle": "4BF05",
+          "block": "losa-ne",
+          "point": [
+            19.68701629249064,
+            12.033616001358059
+          ],
+          "bounds_m": [
+            19.38951629249064,
+            11.73611600135806,
+            19.98451629249064,
+            12.33111600135806
+          ]
+        },
+        {
+          "handle": "4BF09",
+          "block": "losa-ne",
+          "point": [
+            25.159981155864003,
+            12.07746243865727
+          ],
+          "bounds_m": [
+            24.862481155864003,
+            11.77996243865727,
+            25.457481155864002,
+            12.374962438657269
+          ]
+        }
+      ],
+      "overlay": "entregas/P1L2/edificio/validacion/slabs/ed2_outline_proposal/edificio_2_s1_outline_proposal.png"
+    },
+    "P1": {
+      "source_sheet": "2024_22-101.dxf",
+      "source_sha256": "3e9d5e60c897e543a206c1f3c6e4498435f0419cba74c127e0cc4c957e92797c",
+      "outline_xy": [
+        [
+          -4.148008,
+          -1.149332
+        ],
+        [
+          27.851994,
+          -1.149332
+        ],
+        [
+          27.851994,
+          16.500668
+        ],
+        [
+          -3.348008,
+          16.500668
+        ],
+        [
+          -3.348008,
+          17.240668
+        ],
+        [
+          -4.148008,
+          17.240668
+        ]
+      ],
+      "area_m2": 565.392035,
+      "perimeter_m": 100.780004,
+      "edge_evidence": [
+        {
+          "edge_index": 0,
+          "start": [
+            -4.148008,
+            -1.149332
+          ],
+          "end": [
+            27.851994,
+            -1.149332
+          ],
+          "length_m": 32.000002,
+          "confidence": "CONFIRMED_RLE_LOSA",
+          "rle_losa": {
+            "coverage_ratio": 1.0,
+            "matches": [
+              {
+                "handle": "4AACA",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 32.0
+              }
+            ]
+          },
+          "structural_context": {
+            "coverage_ratio": 0.01875,
+            "matches": [
+              {
+                "handle": "4AB84",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 0.055,
+                "overlap_m": 0.6
+              }
+            ]
+          }
+        },
+        {
+          "edge_index": 1,
+          "start": [
+            27.851994,
+            -1.149332
+          ],
+          "end": [
+            27.851994,
+            16.500668
+          ],
+          "length_m": 17.65,
+          "confidence": "LIKELY_RLE_PLUS_STRUCTURE",
+          "rle_losa": {
+            "coverage_ratio": 0.181303,
+            "matches": [
+              {
+                "handle": "4AACF",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 2e-06,
+                "overlap_m": 2.4
+              },
+              {
+                "handle": "4AACB",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 2e-06,
+                "overlap_m": 0.8
+              }
+            ]
+          },
+          "structural_context": {
+            "coverage_ratio": 0.779037,
+            "matches": [
+              {
+                "handle": "4AB5B",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 0.0,
+                "overlap_m": 7.95
+              },
+              {
+                "handle": "4AB66",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 0.0,
+                "overlap_m": 5.8
+              }
+            ]
+          }
+        },
+        {
+          "edge_index": 2,
+          "start": [
+            27.851994,
+            16.500668
+          ],
+          "end": [
+            -3.348008,
+            16.500668
+          ],
+          "length_m": 31.200002,
+          "confidence": "LIKELY_RLE_PLUS_STRUCTURE",
+          "rle_losa": {
+            "coverage_ratio": 0.947115,
+            "matches": [
+              {
+                "handle": "4AAD2",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 10.500002
+              },
+              {
+                "handle": "4AAD0",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 9.75
+              },
+              {
+                "handle": "4AAD1",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 9.3
+              }
+            ]
+          },
+          "structural_context": {
+            "coverage_ratio": 0.955128,
+            "matches": [
+              {
+                "handle": "4AB5C",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 0.0,
+                "overlap_m": 0.25
+              },
+              {
+                "handle": "4AAE8",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 4.95
+              },
+              {
+                "handle": "4AB0E",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 4.8
+              },
+              {
+                "handle": "4AAE0",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 4.35
+              },
+              {
+                "handle": "4AAE4",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 4.35
+              },
+              {
+                "handle": "4AB74",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 4.35
+              },
+              {
+                "handle": "4AB57",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 3.1
+              },
+              {
+                "handle": "4ABA6",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 1.600002
+              },
+              {
+                "handle": "4AB7A",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 0.05,
+                "overlap_m": 1.45
+              },
+              {
+                "handle": "4AB30",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 0.6
+              }
+            ]
+          }
+        },
+        {
+          "edge_index": 3,
+          "start": [
+            -3.348008,
+            16.500668
+          ],
+          "end": [
+            -3.348008,
+            17.240668
+          ],
+          "length_m": 0.74,
+          "confidence": "LIKELY_RLE_PLUS_STRUCTURE",
+          "rle_losa": {
+            "coverage_ratio": 0.0,
+            "matches": []
+          },
+          "structural_context": {
+            "coverage_ratio": 1.0,
+            "matches": [
+              {
+                "handle": "4AB7C",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 0.0,
+                "overlap_m": 0.74
+              }
+            ]
+          }
+        },
+        {
+          "edge_index": 4,
+          "start": [
+            -3.348008,
+            17.240668
+          ],
+          "end": [
+            -4.148008,
+            17.240668
+          ],
+          "length_m": 0.8,
+          "confidence": "LIKELY_RLE_PLUS_STRUCTURE",
+          "rle_losa": {
+            "coverage_ratio": 0.25,
+            "matches": [
+              {
+                "handle": "4AAD3",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 0.2
+              }
+            ]
+          },
+          "structural_context": {
+            "coverage_ratio": 0.75,
+            "matches": [
+              {
+                "handle": "4AB7D",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 0.0,
+                "overlap_m": 0.6
+              }
+            ]
+          }
+        },
+        {
+          "edge_index": 5,
+          "start": [
+            -4.148008,
+            17.240668
+          ],
+          "end": [
+            -4.148008,
+            -1.149332
+          ],
+          "length_m": 18.39,
+          "confidence": "CONFIRMED_RLE_LOSA",
+          "rle_losa": {
+            "coverage_ratio": 1.0,
+            "matches": [
+              {
+                "handle": "4AAC9",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 18.39
+              }
+            ]
+          },
+          "structural_context": {
+            "coverage_ratio": 0.317292,
+            "matches": [
+              {
+                "handle": "4AB83",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 0.2,
+                "overlap_m": 2.919997
+              },
+              {
+                "handle": "4AB7E",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 0.2,
+                "overlap_m": 2.915
+              }
+            ]
+          }
+        }
+      ],
+      "confidence_counts": {
+        "CONFIRMED_RLE_LOSA": 2,
+        "LIKELY_RLE_PLUS_STRUCTURE": 4
+      },
+      "internal_rle_features": [
+        {
+          "bounds_m": [
+            -3.348008,
+            4.415668,
+            -1.848008,
+            11.695668
+          ],
+          "segment_count": 2,
+          "open_node_count": 2,
+          "closed_by_endpoint_graph": false,
+          "handles": [
+            "4AADE",
+            "4AADF"
+          ],
+          "nearby_texts": [
+            {
+              "handle": "4BF6A",
+              "layer": "RLA-TEXTOS1",
+              "text": "(serie planos 500)",
+              "point": [
+                -1.9474908271538198,
+                8.968228160316409
+              ],
+              "distance_to_feature_m": 0.0
+            },
+            {
+              "handle": "4BF67",
+              "layer": "RLA-TEXTOS1",
+              "text": "DE ESCALERA",
+              "point": [
+                -2.1131165006048307,
+                8.732513874602121
+              ],
+              "distance_to_feature_m": 0.0
+            },
+            {
+              "handle": "4BF69",
+              "layer": "RLA-TEXTOS1",
+              "text": "VER DETALLE",
+              "point": [
+                -2.3147461888379803,
+                8.701925488593979
+              ],
+              "distance_to_feature_m": 0.0
+            },
+            {
+              "handle": "4ACAF",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 30/80",
+              "point": [
+                -2.1114403030756193,
+                3.9878347906145017
+              ],
+              "distance_to_feature_m": 0.427833
+            },
+            {
+              "handle": "4ACA2",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 30/80",
+              "point": [
+                -2.0231364318826603,
+                12.18261846200795
+              ],
+              "distance_to_feature_m": 0.48695
+            },
+            {
+              "handle": "4AC92",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 40/80",
+              "point": [
+                -3.9011368356061302,
+                7.840387646526981
+              ],
+              "distance_to_feature_m": 0.553129
+            },
+            {
+              "handle": "4ACB0",
+              "layer": "RLE-TEXTO-1",
+              "text": "0102",
+              "point": [
+                -2.150634053844119,
+                3.696252359095688
+              ],
+              "distance_to_feature_m": 0.719416
+            },
+            {
+              "handle": "4ACA3",
+              "layer": "RLE-TEXTO-1",
+              "text": "0102",
+              "point": [
+                -2.017479583608981,
+                12.49300811949417
+              ],
+              "distance_to_feature_m": 0.79734
+            },
+            {
+              "handle": "4AC91",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 40/80",
+              "point": [
+                -3.8824649417808996,
+                12.94538764656855
+              ],
+              "distance_to_feature_m": 1.359207
+            },
+            {
+              "handle": "4ACAA",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 60/80",
+              "point": [
+                -0.40301243774830026,
+                6.39788764653641
+              ],
+              "distance_to_feature_m": 1.444996
+            },
+            {
+              "handle": "4ACA0",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 60/80",
+              "point": [
+                -0.3947158423734095,
+                10.55788764653684
+              ],
+              "distance_to_feature_m": 1.453292
+            },
+            {
+              "handle": "4AC93",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 40/80",
+              "point": [
+                -3.8788216078128404,
+                2.885386386827981
+              ],
+              "distance_to_feature_m": 1.61973
+            }
+          ],
+          "nearby_losa_ne_markers": [
+            {
+              "handle": "4BEE5",
+              "block": "losa-ne",
+              "point": [
+                -1.3258614151886696,
+                8.36198216079745
+              ],
+              "bounds_m": [
+                -1.6233614151886695,
+                8.06448216079745,
+                -1.0283614151886695,
+                8.659482160797449
+              ],
+              "distance_to_feature_m": 0.522147
+            }
+          ],
+          "classification": "REVIEW_REQUIRED_HOLE_OR_PANEL_EDGE",
+          "marker_interpretation": "losa-ne aparece una vez por numerosos panos; no significa por si solo ausencia de losa"
+        },
+        {
+          "bounds_m": [
+            27.026988,
+            0.350668,
+            27.151992,
+            3.030678
+          ],
+          "segment_count": 2,
+          "open_node_count": 2,
+          "closed_by_endpoint_graph": false,
+          "handles": [
+            "4AACC",
+            "4AACD"
+          ],
+          "nearby_texts": [
+            {
+              "handle": "4AC52",
+              "layer": "RLE-TEXTO-1",
+              "text": "M.H.A. e=25",
+              "point": [
+                27.496451771521368,
+                1.67402666791319
+              ],
+              "distance_to_feature_m": 0.34446
+            },
+            {
+              "handle": "4AC53",
+              "layer": "RLE-TEXTO-1",
+              "text": "M.H.A. e=30",
+              "point": [
+                26.44540991865222,
+                2.9311738673775016
+              ],
+              "distance_to_feature_m": 0.581578
+            },
+            {
+              "handle": "4AC71",
+              "layer": "RLE-TEXTO-1",
+              "text": "70x70",
+              "point": [
+                26.901470713190275,
+                -0.3989040047042408
+              ],
+              "distance_to_feature_m": 0.760008
+            },
+            {
+              "handle": "4AC55",
+              "layer": "RLE-TEXTO-1",
+              "text": "M.H.A. e=25",
+              "point": [
+                27.484628898621214,
+                4.764599942229902
+              ],
+              "distance_to_feature_m": 1.76554
+            }
+          ],
+          "nearby_losa_ne_markers": [],
+          "classification": "REVIEW_REQUIRED_HOLE_OR_PANEL_EDGE",
+          "marker_interpretation": "losa-ne aparece una vez por numerosos panos; no significa por si solo ausencia de losa"
+        },
+        {
+          "bounds_m": [
+            25.206994,
+            6.000668,
+            27.601994,
+            6.000668
+          ],
+          "segment_count": 1,
+          "open_node_count": 2,
+          "closed_by_endpoint_graph": false,
+          "handles": [
+            "4AACE"
+          ],
+          "nearby_texts": [
+            {
+              "handle": "4AC55",
+              "layer": "RLE-TEXTO-1",
+              "text": "M.H.A. e=25",
+              "point": [
+                27.484628898621214,
+                4.764599942229902
+              ],
+              "distance_to_feature_m": 1.236068
+            },
+            {
+              "handle": "4AC54",
+              "layer": "RLE-TEXTO-1",
+              "text": "M.H.A. e=25",
+              "point": [
+                24.861980573745868,
+                4.454204548897792
+              ],
+              "distance_to_feature_m": 1.584482
+            },
+            {
+              "handle": "4ACF2",
+              "layer": "RLE-TEXTO-1",
+              "text": "PASADA",
+              "point": [
+                23.33383348691389,
+                5.800412776671742
+              ],
+              "distance_to_feature_m": 1.883835
+            },
+            {
+              "handle": "4ACF3",
+              "layer": "RLE-TEXTO-1",
+              "text": "45/30",
+              "point": [
+                23.28905275774722,
+                5.998850276671751
+              ],
+              "distance_to_feature_m": 1.917942
+            }
+          ],
+          "nearby_losa_ne_markers": [],
+          "classification": "REVIEW_REQUIRED_HOLE_OR_PANEL_EDGE",
+          "marker_interpretation": "losa-ne aparece una vez por numerosos panos; no significa por si solo ausencia de losa"
+        },
+        {
+          "bounds_m": [
+            7.151994,
+            -0.899332,
+            7.851994,
+            -0.349332
+          ],
+          "segment_count": 3,
+          "open_node_count": 2,
+          "closed_by_endpoint_graph": false,
+          "handles": [
+            "4AADA",
+            "4AADB",
+            "4AADC"
+          ],
+          "nearby_texts": [
+            {
+              "handle": "4AC6D",
+              "layer": "RLE-TEXTO-1",
+              "text": "70x70",
+              "point": [
+                8.16968857244999,
+                0.6578753648900602
+              ],
+              "distance_to_feature_m": 1.056123
+            },
+            {
+              "handle": "4AC43",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 60/80",
+              "point": [
+                5.510368927172549,
+                -0.41094164816895046
+              ],
+              "distance_to_feature_m": 1.641625
+            },
+            {
+              "handle": "4AD1C",
+              "layer": "RLE-TEXTO-1",
+              "text": "PASADA",
+              "point": [
+                5.438862430998779,
+                0.49013781420575925
+              ],
+              "distance_to_feature_m": 1.907755
+            }
+          ],
+          "nearby_losa_ne_markers": [],
+          "classification": "REVIEW_REQUIRED_HOLE_OR_PANEL_EDGE",
+          "marker_interpretation": "losa-ne aparece una vez por numerosos panos; no significa por si solo ausencia de losa"
+        },
+        {
+          "bounds_m": [
+            17.151994,
+            -0.899332,
+            17.851994,
+            -0.349332
+          ],
+          "segment_count": 3,
+          "open_node_count": 2,
+          "closed_by_endpoint_graph": false,
+          "handles": [
+            "4AAD7",
+            "4AAD8",
+            "4AAD9"
+          ],
+          "nearby_texts": [
+            {
+              "handle": "4AC6F",
+              "layer": "RLE-TEXTO-1",
+              "text": "70x70",
+              "point": [
+                18.18171388930786,
+                0.6809421297422114
+              ],
+              "distance_to_feature_m": 1.081749
+            }
+          ],
+          "nearby_losa_ne_markers": [],
+          "classification": "REVIEW_REQUIRED_HOLE_OR_PANEL_EDGE",
+          "marker_interpretation": "losa-ne aparece una vez por numerosos panos; no significa por si solo ausencia de losa"
+        },
+        {
+          "bounds_m": [
+            27.151992,
+            -0.899332,
+            27.501992,
+            -0.349332
+          ],
+          "segment_count": 3,
+          "open_node_count": 2,
+          "closed_by_endpoint_graph": false,
+          "handles": [
+            "4AAD4",
+            "4AAD5",
+            "4AAD6"
+          ],
+          "nearby_texts": [
+            {
+              "handle": "4AC71",
+              "layer": "RLE-TEXTO-1",
+              "text": "70x70",
+              "point": [
+                26.901470713190275,
+                -0.3989040047042408
+              ],
+              "distance_to_feature_m": 0.250521
+            }
+          ],
+          "nearby_losa_ne_markers": [],
+          "classification": "REVIEW_REQUIRED_HOLE_OR_PANEL_EDGE",
+          "marker_interpretation": "losa-ne aparece una vez por numerosos panos; no significa por si solo ausencia de losa"
+        }
+      ],
+      "internal_feature_policy": "NOT_CLASSIFIED_AS_HOLES",
+      "losa_ne_markers": [
+        {
+          "handle": "4BEB5",
+          "block": "losa-ne",
+          "point": [
+            4.14532423359879,
+            -0.8669581768407807
+          ],
+          "bounds_m": [
+            3.84782423359879,
+            -1.1644581768407807,
+            4.44282423359879,
+            -0.5694581768407807
+          ]
+        },
+        {
+          "handle": "4BEB9",
+          "block": "losa-ne",
+          "point": [
+            -2.140418505254149,
+            2.1203956695963186
+          ],
+          "bounds_m": [
+            -2.4379185052541494,
+            1.8228956695963188,
+            -1.8429185052541492,
+            2.417895669596319
+          ]
+        },
+        {
+          "handle": "4BEBD",
+          "block": "losa-ne",
+          "point": [
+            1.73217890086627,
+            2.7256651444562383
+          ],
+          "bounds_m": [
+            1.43467890086627,
+            2.4281651444562384,
+            2.02967890086627,
+            3.0231651444562386
+          ]
+        },
+        {
+          "handle": "4BEC1",
+          "block": "losa-ne",
+          "point": [
+            5.604229305057941,
+            4.745066094901399
+          ],
+          "bounds_m": [
+            5.3067293050579405,
+            4.447566094901399,
+            5.901729305057943,
+            5.0425660949013995
+          ]
+        },
+        {
+          "handle": "4BEC5",
+          "block": "losa-ne",
+          "point": [
+            14.651174467347609,
+            -0.8804404103938214
+          ],
+          "bounds_m": [
+            14.35367446734761,
+            -1.1779404103938214,
+            14.94867446734761,
+            -0.5829404103938214
+          ]
+        },
+        {
+          "handle": "4BEC9",
+          "block": "losa-ne",
+          "point": [
+            9.909511696033968,
+            4.745066094901399
+          ],
+          "bounds_m": [
+            9.612011696033969,
+            4.447566094901399,
+            10.20701169603397,
+            5.0425660949013995
+          ]
+        },
+        {
+          "handle": "4BECD",
+          "block": "losa-ne",
+          "point": [
+            14.915992600765549,
+            4.745066094901399
+          ],
+          "bounds_m": [
+            14.61849260076555,
+            4.447566094901399,
+            15.213492600765548,
+            5.0425660949013995
+          ]
+        },
+        {
+          "handle": "4BED1",
+          "block": "losa-ne",
+          "point": [
+            24.162919030317138,
+            -0.8791842559292309
+          ],
+          "bounds_m": [
+            23.86541903031714,
+            -1.1766842559292308,
+            24.46041903031714,
+            -0.5816842559292309
+          ]
+        },
+        {
+          "handle": "4BED5",
+          "block": "losa-ne",
+          "point": [
+            19.89995546647087,
+            4.745066094901399
+          ],
+          "bounds_m": [
+            19.602455466470868,
+            4.447566094901399,
+            20.19745546647087,
+            5.0425660949013995
+          ]
+        },
+        {
+          "handle": "4BED9",
+          "block": "losa-ne",
+          "point": [
+            25.182402451724762,
+            1.0611503516579115
+          ],
+          "bounds_m": [
+            24.88490245172476,
+            0.7636503516579114,
+            25.47990245172476,
+            1.3586503516579114
+          ]
+        },
+        {
+          "handle": "4BEDD",
+          "block": "losa-ne",
+          "point": [
+            24.081798423160958,
+            4.904224167752541
+          ],
+          "bounds_m": [
+            23.78429842316096,
+            4.606724167752541,
+            24.379298423160957,
+            5.201724167752541
+          ]
+        },
+        {
+          "handle": "4BEE1",
+          "block": "losa-ne",
+          "point": [
+            26.449620202794257,
+            7.202247839293359
+          ],
+          "bounds_m": [
+            26.152120202794258,
+            6.904747839293359,
+            26.747120202794257,
+            7.499747839293359
+          ]
+        },
+        {
+          "handle": "4BEE5",
+          "block": "losa-ne",
+          "point": [
+            -1.3258614151886696,
+            8.36198216079745
+          ],
+          "bounds_m": [
+            -1.6233614151886695,
+            8.06448216079745,
+            -1.0283614151886695,
+            8.659482160797449
+          ]
+        },
+        {
+          "handle": "4BEE9",
+          "block": "losa-ne",
+          "point": [
+            1.479641752256141,
+            6.202925939694101
+          ],
+          "bounds_m": [
+            1.182141752256141,
+            5.9054259396941005,
+            1.777141752256141,
+            6.5004259396941
+          ]
+        },
+        {
+          "handle": "4BEED",
+          "block": "losa-ne",
+          "point": [
+            -1.5955274636039893,
+            14.33722961058353
+          ],
+          "bounds_m": [
+            -1.8930274636039894,
+            14.039729610583528,
+            -1.2980274636039895,
+            14.634729610583529
+          ]
+        },
+        {
+          "handle": "4BEF1",
+          "block": "losa-ne",
+          "point": [
+            1.8513378991308604,
+            13.5627415649199
+          ],
+          "bounds_m": [
+            1.5538378991308606,
+            13.265241564919899,
+            2.1488378991308603,
+            13.8602415649199
+          ]
+        },
+        {
+          "handle": "4BEF5",
+          "block": "losa-ne",
+          "point": [
+            1.68588544932388,
+            10.78355700087019
+          ],
+          "bounds_m": [
+            1.38838544932388,
+            10.48605700087019,
+            1.98338544932388,
+            11.081057000870189
+          ]
+        },
+        {
+          "handle": "4BEF9",
+          "block": "losa-ne",
+          "point": [
+            5.53626459366509,
+            12.18019821283852
+          ],
+          "bounds_m": [
+            5.238764593665089,
+            11.88269821283852,
+            5.833764593665092,
+            12.47769821283852
+          ]
+        },
+        {
+          "handle": "4BEFD",
+          "block": "losa-ne",
+          "point": [
+            9.83639360979074,
+            12.18019821283852
+          ],
+          "bounds_m": [
+            9.538893609790739,
+            11.88269821283852,
+            10.13389360979074,
+            12.47769821283852
+          ]
+        },
+        {
+          "handle": "4BF01",
+          "block": "losa-ne",
+          "point": [
+            14.74457080086422,
+            12.18019821283852
+          ],
+          "bounds_m": [
+            14.447070800864221,
+            11.88269821283852,
+            15.042070800864222,
+            12.47769821283852
+          ]
+        },
+        {
+          "handle": "4BF05",
+          "block": "losa-ne",
+          "point": [
+            19.68701629249064,
+            12.033616001358059
+          ],
+          "bounds_m": [
+            19.38951629249064,
+            11.73611600135806,
+            19.98451629249064,
+            12.33111600135806
+          ]
+        },
+        {
+          "handle": "4BF09",
+          "block": "losa-ne",
+          "point": [
+            25.159981155864003,
+            12.07746243865727
+          ],
+          "bounds_m": [
+            24.862481155864003,
+            11.77996243865727,
+            25.457481155864002,
+            12.374962438657269
+          ]
+        }
+      ],
+      "overlay": "entregas/P1L2/edificio/validacion/slabs/ed2_outline_proposal/edificio_2_p1_outline_proposal.png"
+    },
+    "P2": {
+      "source_sheet": "2024_22-101.dxf",
+      "source_sha256": "3e9d5e60c897e543a206c1f3c6e4498435f0419cba74c127e0cc4c957e92797c",
+      "outline_xy": [
+        [
+          -4.148008,
+          -1.149332
+        ],
+        [
+          27.851994,
+          -1.149332
+        ],
+        [
+          27.851994,
+          16.500668
+        ],
+        [
+          -3.348008,
+          16.500668
+        ],
+        [
+          -3.348008,
+          17.240668
+        ],
+        [
+          -4.148008,
+          17.240668
+        ]
+      ],
+      "area_m2": 565.392035,
+      "perimeter_m": 100.780004,
+      "edge_evidence": [
+        {
+          "edge_index": 0,
+          "start": [
+            -4.148008,
+            -1.149332
+          ],
+          "end": [
+            27.851994,
+            -1.149332
+          ],
+          "length_m": 32.000002,
+          "confidence": "CONFIRMED_RLE_LOSA",
+          "rle_losa": {
+            "coverage_ratio": 1.0,
+            "matches": [
+              {
+                "handle": "4AACA",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 32.0
+              }
+            ]
+          },
+          "structural_context": {
+            "coverage_ratio": 0.01875,
+            "matches": [
+              {
+                "handle": "4AB84",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 0.055,
+                "overlap_m": 0.6
+              }
+            ]
+          }
+        },
+        {
+          "edge_index": 1,
+          "start": [
+            27.851994,
+            -1.149332
+          ],
+          "end": [
+            27.851994,
+            16.500668
+          ],
+          "length_m": 17.65,
+          "confidence": "LIKELY_RLE_PLUS_STRUCTURE",
+          "rle_losa": {
+            "coverage_ratio": 0.181303,
+            "matches": [
+              {
+                "handle": "4AACF",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 2e-06,
+                "overlap_m": 2.4
+              },
+              {
+                "handle": "4AACB",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 2e-06,
+                "overlap_m": 0.8
+              }
+            ]
+          },
+          "structural_context": {
+            "coverage_ratio": 0.779037,
+            "matches": [
+              {
+                "handle": "4AB5B",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 0.0,
+                "overlap_m": 7.95
+              },
+              {
+                "handle": "4AB66",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 0.0,
+                "overlap_m": 5.8
+              }
+            ]
+          }
+        },
+        {
+          "edge_index": 2,
+          "start": [
+            27.851994,
+            16.500668
+          ],
+          "end": [
+            -3.348008,
+            16.500668
+          ],
+          "length_m": 31.200002,
+          "confidence": "LIKELY_RLE_PLUS_STRUCTURE",
+          "rle_losa": {
+            "coverage_ratio": 0.947115,
+            "matches": [
+              {
+                "handle": "4AAD2",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 10.500002
+              },
+              {
+                "handle": "4AAD0",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 9.75
+              },
+              {
+                "handle": "4AAD1",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 9.3
+              }
+            ]
+          },
+          "structural_context": {
+            "coverage_ratio": 0.955128,
+            "matches": [
+              {
+                "handle": "4AB5C",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 0.0,
+                "overlap_m": 0.25
+              },
+              {
+                "handle": "4AAE8",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 4.95
+              },
+              {
+                "handle": "4AB0E",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 4.8
+              },
+              {
+                "handle": "4AAE0",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 4.35
+              },
+              {
+                "handle": "4AAE4",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 4.35
+              },
+              {
+                "handle": "4AB74",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 4.35
+              },
+              {
+                "handle": "4AB57",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 3.1
+              },
+              {
+                "handle": "4ABA6",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 1.600002
+              },
+              {
+                "handle": "4AB7A",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 0.05,
+                "overlap_m": 1.45
+              },
+              {
+                "handle": "4AB30",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 0.6
+              }
+            ]
+          }
+        },
+        {
+          "edge_index": 3,
+          "start": [
+            -3.348008,
+            16.500668
+          ],
+          "end": [
+            -3.348008,
+            17.240668
+          ],
+          "length_m": 0.74,
+          "confidence": "LIKELY_RLE_PLUS_STRUCTURE",
+          "rle_losa": {
+            "coverage_ratio": 0.0,
+            "matches": []
+          },
+          "structural_context": {
+            "coverage_ratio": 1.0,
+            "matches": [
+              {
+                "handle": "4AB7C",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 0.0,
+                "overlap_m": 0.74
+              }
+            ]
+          }
+        },
+        {
+          "edge_index": 4,
+          "start": [
+            -3.348008,
+            17.240668
+          ],
+          "end": [
+            -4.148008,
+            17.240668
+          ],
+          "length_m": 0.8,
+          "confidence": "LIKELY_RLE_PLUS_STRUCTURE",
+          "rle_losa": {
+            "coverage_ratio": 0.25,
+            "matches": [
+              {
+                "handle": "4AAD3",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 0.2
+              }
+            ]
+          },
+          "structural_context": {
+            "coverage_ratio": 0.75,
+            "matches": [
+              {
+                "handle": "4AB7D",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 0.0,
+                "overlap_m": 0.6
+              }
+            ]
+          }
+        },
+        {
+          "edge_index": 5,
+          "start": [
+            -4.148008,
+            17.240668
+          ],
+          "end": [
+            -4.148008,
+            -1.149332
+          ],
+          "length_m": 18.39,
+          "confidence": "CONFIRMED_RLE_LOSA",
+          "rle_losa": {
+            "coverage_ratio": 1.0,
+            "matches": [
+              {
+                "handle": "4AAC9",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 18.39
+              }
+            ]
+          },
+          "structural_context": {
+            "coverage_ratio": 0.317292,
+            "matches": [
+              {
+                "handle": "4AB83",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 0.2,
+                "overlap_m": 2.919997
+              },
+              {
+                "handle": "4AB7E",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 0.2,
+                "overlap_m": 2.915
+              }
+            ]
+          }
+        }
+      ],
+      "confidence_counts": {
+        "CONFIRMED_RLE_LOSA": 2,
+        "LIKELY_RLE_PLUS_STRUCTURE": 4
+      },
+      "internal_rle_features": [
+        {
+          "bounds_m": [
+            -3.348008,
+            4.415668,
+            -1.848008,
+            11.695668
+          ],
+          "segment_count": 2,
+          "open_node_count": 2,
+          "closed_by_endpoint_graph": false,
+          "handles": [
+            "4AADE",
+            "4AADF"
+          ],
+          "nearby_texts": [
+            {
+              "handle": "4BF6A",
+              "layer": "RLA-TEXTOS1",
+              "text": "(serie planos 500)",
+              "point": [
+                -1.9474908271538198,
+                8.968228160316409
+              ],
+              "distance_to_feature_m": 0.0
+            },
+            {
+              "handle": "4BF67",
+              "layer": "RLA-TEXTOS1",
+              "text": "DE ESCALERA",
+              "point": [
+                -2.1131165006048307,
+                8.732513874602121
+              ],
+              "distance_to_feature_m": 0.0
+            },
+            {
+              "handle": "4BF69",
+              "layer": "RLA-TEXTOS1",
+              "text": "VER DETALLE",
+              "point": [
+                -2.3147461888379803,
+                8.701925488593979
+              ],
+              "distance_to_feature_m": 0.0
+            },
+            {
+              "handle": "4ACAF",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 30/80",
+              "point": [
+                -2.1114403030756193,
+                3.9878347906145017
+              ],
+              "distance_to_feature_m": 0.427833
+            },
+            {
+              "handle": "4ACA2",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 30/80",
+              "point": [
+                -2.0231364318826603,
+                12.18261846200795
+              ],
+              "distance_to_feature_m": 0.48695
+            },
+            {
+              "handle": "4AC92",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 40/80",
+              "point": [
+                -3.9011368356061302,
+                7.840387646526981
+              ],
+              "distance_to_feature_m": 0.553129
+            },
+            {
+              "handle": "4ACB0",
+              "layer": "RLE-TEXTO-1",
+              "text": "0102",
+              "point": [
+                -2.150634053844119,
+                3.696252359095688
+              ],
+              "distance_to_feature_m": 0.719416
+            },
+            {
+              "handle": "4ACA3",
+              "layer": "RLE-TEXTO-1",
+              "text": "0102",
+              "point": [
+                -2.017479583608981,
+                12.49300811949417
+              ],
+              "distance_to_feature_m": 0.79734
+            },
+            {
+              "handle": "4AC91",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 40/80",
+              "point": [
+                -3.8824649417808996,
+                12.94538764656855
+              ],
+              "distance_to_feature_m": 1.359207
+            },
+            {
+              "handle": "4ACAA",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 60/80",
+              "point": [
+                -0.40301243774830026,
+                6.39788764653641
+              ],
+              "distance_to_feature_m": 1.444996
+            },
+            {
+              "handle": "4ACA0",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 60/80",
+              "point": [
+                -0.3947158423734095,
+                10.55788764653684
+              ],
+              "distance_to_feature_m": 1.453292
+            },
+            {
+              "handle": "4AC93",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 40/80",
+              "point": [
+                -3.8788216078128404,
+                2.885386386827981
+              ],
+              "distance_to_feature_m": 1.61973
+            }
+          ],
+          "nearby_losa_ne_markers": [
+            {
+              "handle": "4BEE5",
+              "block": "losa-ne",
+              "point": [
+                -1.3258614151886696,
+                8.36198216079745
+              ],
+              "bounds_m": [
+                -1.6233614151886695,
+                8.06448216079745,
+                -1.0283614151886695,
+                8.659482160797449
+              ],
+              "distance_to_feature_m": 0.522147
+            }
+          ],
+          "classification": "REVIEW_REQUIRED_HOLE_OR_PANEL_EDGE",
+          "marker_interpretation": "losa-ne aparece una vez por numerosos panos; no significa por si solo ausencia de losa"
+        },
+        {
+          "bounds_m": [
+            27.026988,
+            0.350668,
+            27.151992,
+            3.030678
+          ],
+          "segment_count": 2,
+          "open_node_count": 2,
+          "closed_by_endpoint_graph": false,
+          "handles": [
+            "4AACC",
+            "4AACD"
+          ],
+          "nearby_texts": [
+            {
+              "handle": "4AC52",
+              "layer": "RLE-TEXTO-1",
+              "text": "M.H.A. e=25",
+              "point": [
+                27.496451771521368,
+                1.67402666791319
+              ],
+              "distance_to_feature_m": 0.34446
+            },
+            {
+              "handle": "4AC53",
+              "layer": "RLE-TEXTO-1",
+              "text": "M.H.A. e=30",
+              "point": [
+                26.44540991865222,
+                2.9311738673775016
+              ],
+              "distance_to_feature_m": 0.581578
+            },
+            {
+              "handle": "4AC71",
+              "layer": "RLE-TEXTO-1",
+              "text": "70x70",
+              "point": [
+                26.901470713190275,
+                -0.3989040047042408
+              ],
+              "distance_to_feature_m": 0.760008
+            },
+            {
+              "handle": "4AC55",
+              "layer": "RLE-TEXTO-1",
+              "text": "M.H.A. e=25",
+              "point": [
+                27.484628898621214,
+                4.764599942229902
+              ],
+              "distance_to_feature_m": 1.76554
+            }
+          ],
+          "nearby_losa_ne_markers": [],
+          "classification": "REVIEW_REQUIRED_HOLE_OR_PANEL_EDGE",
+          "marker_interpretation": "losa-ne aparece una vez por numerosos panos; no significa por si solo ausencia de losa"
+        },
+        {
+          "bounds_m": [
+            25.206994,
+            6.000668,
+            27.601994,
+            6.000668
+          ],
+          "segment_count": 1,
+          "open_node_count": 2,
+          "closed_by_endpoint_graph": false,
+          "handles": [
+            "4AACE"
+          ],
+          "nearby_texts": [
+            {
+              "handle": "4AC55",
+              "layer": "RLE-TEXTO-1",
+              "text": "M.H.A. e=25",
+              "point": [
+                27.484628898621214,
+                4.764599942229902
+              ],
+              "distance_to_feature_m": 1.236068
+            },
+            {
+              "handle": "4AC54",
+              "layer": "RLE-TEXTO-1",
+              "text": "M.H.A. e=25",
+              "point": [
+                24.861980573745868,
+                4.454204548897792
+              ],
+              "distance_to_feature_m": 1.584482
+            },
+            {
+              "handle": "4ACF2",
+              "layer": "RLE-TEXTO-1",
+              "text": "PASADA",
+              "point": [
+                23.33383348691389,
+                5.800412776671742
+              ],
+              "distance_to_feature_m": 1.883835
+            },
+            {
+              "handle": "4ACF3",
+              "layer": "RLE-TEXTO-1",
+              "text": "45/30",
+              "point": [
+                23.28905275774722,
+                5.998850276671751
+              ],
+              "distance_to_feature_m": 1.917942
+            }
+          ],
+          "nearby_losa_ne_markers": [],
+          "classification": "REVIEW_REQUIRED_HOLE_OR_PANEL_EDGE",
+          "marker_interpretation": "losa-ne aparece una vez por numerosos panos; no significa por si solo ausencia de losa"
+        },
+        {
+          "bounds_m": [
+            7.151994,
+            -0.899332,
+            7.851994,
+            -0.349332
+          ],
+          "segment_count": 3,
+          "open_node_count": 2,
+          "closed_by_endpoint_graph": false,
+          "handles": [
+            "4AADA",
+            "4AADB",
+            "4AADC"
+          ],
+          "nearby_texts": [
+            {
+              "handle": "4AC6D",
+              "layer": "RLE-TEXTO-1",
+              "text": "70x70",
+              "point": [
+                8.16968857244999,
+                0.6578753648900602
+              ],
+              "distance_to_feature_m": 1.056123
+            },
+            {
+              "handle": "4AC43",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 60/80",
+              "point": [
+                5.510368927172549,
+                -0.41094164816895046
+              ],
+              "distance_to_feature_m": 1.641625
+            },
+            {
+              "handle": "4AD1C",
+              "layer": "RLE-TEXTO-1",
+              "text": "PASADA",
+              "point": [
+                5.438862430998779,
+                0.49013781420575925
+              ],
+              "distance_to_feature_m": 1.907755
+            }
+          ],
+          "nearby_losa_ne_markers": [],
+          "classification": "REVIEW_REQUIRED_HOLE_OR_PANEL_EDGE",
+          "marker_interpretation": "losa-ne aparece una vez por numerosos panos; no significa por si solo ausencia de losa"
+        },
+        {
+          "bounds_m": [
+            17.151994,
+            -0.899332,
+            17.851994,
+            -0.349332
+          ],
+          "segment_count": 3,
+          "open_node_count": 2,
+          "closed_by_endpoint_graph": false,
+          "handles": [
+            "4AAD7",
+            "4AAD8",
+            "4AAD9"
+          ],
+          "nearby_texts": [
+            {
+              "handle": "4AC6F",
+              "layer": "RLE-TEXTO-1",
+              "text": "70x70",
+              "point": [
+                18.18171388930786,
+                0.6809421297422114
+              ],
+              "distance_to_feature_m": 1.081749
+            }
+          ],
+          "nearby_losa_ne_markers": [],
+          "classification": "REVIEW_REQUIRED_HOLE_OR_PANEL_EDGE",
+          "marker_interpretation": "losa-ne aparece una vez por numerosos panos; no significa por si solo ausencia de losa"
+        },
+        {
+          "bounds_m": [
+            27.151992,
+            -0.899332,
+            27.501992,
+            -0.349332
+          ],
+          "segment_count": 3,
+          "open_node_count": 2,
+          "closed_by_endpoint_graph": false,
+          "handles": [
+            "4AAD4",
+            "4AAD5",
+            "4AAD6"
+          ],
+          "nearby_texts": [
+            {
+              "handle": "4AC71",
+              "layer": "RLE-TEXTO-1",
+              "text": "70x70",
+              "point": [
+                26.901470713190275,
+                -0.3989040047042408
+              ],
+              "distance_to_feature_m": 0.250521
+            }
+          ],
+          "nearby_losa_ne_markers": [],
+          "classification": "REVIEW_REQUIRED_HOLE_OR_PANEL_EDGE",
+          "marker_interpretation": "losa-ne aparece una vez por numerosos panos; no significa por si solo ausencia de losa"
+        }
+      ],
+      "internal_feature_policy": "NOT_CLASSIFIED_AS_HOLES",
+      "losa_ne_markers": [
+        {
+          "handle": "4BEB5",
+          "block": "losa-ne",
+          "point": [
+            4.14532423359879,
+            -0.8669581768407807
+          ],
+          "bounds_m": [
+            3.84782423359879,
+            -1.1644581768407807,
+            4.44282423359879,
+            -0.5694581768407807
+          ]
+        },
+        {
+          "handle": "4BEB9",
+          "block": "losa-ne",
+          "point": [
+            -2.140418505254149,
+            2.1203956695963186
+          ],
+          "bounds_m": [
+            -2.4379185052541494,
+            1.8228956695963188,
+            -1.8429185052541492,
+            2.417895669596319
+          ]
+        },
+        {
+          "handle": "4BEBD",
+          "block": "losa-ne",
+          "point": [
+            1.73217890086627,
+            2.7256651444562383
+          ],
+          "bounds_m": [
+            1.43467890086627,
+            2.4281651444562384,
+            2.02967890086627,
+            3.0231651444562386
+          ]
+        },
+        {
+          "handle": "4BEC1",
+          "block": "losa-ne",
+          "point": [
+            5.604229305057941,
+            4.745066094901399
+          ],
+          "bounds_m": [
+            5.3067293050579405,
+            4.447566094901399,
+            5.901729305057943,
+            5.0425660949013995
+          ]
+        },
+        {
+          "handle": "4BEC5",
+          "block": "losa-ne",
+          "point": [
+            14.651174467347609,
+            -0.8804404103938214
+          ],
+          "bounds_m": [
+            14.35367446734761,
+            -1.1779404103938214,
+            14.94867446734761,
+            -0.5829404103938214
+          ]
+        },
+        {
+          "handle": "4BEC9",
+          "block": "losa-ne",
+          "point": [
+            9.909511696033968,
+            4.745066094901399
+          ],
+          "bounds_m": [
+            9.612011696033969,
+            4.447566094901399,
+            10.20701169603397,
+            5.0425660949013995
+          ]
+        },
+        {
+          "handle": "4BECD",
+          "block": "losa-ne",
+          "point": [
+            14.915992600765549,
+            4.745066094901399
+          ],
+          "bounds_m": [
+            14.61849260076555,
+            4.447566094901399,
+            15.213492600765548,
+            5.0425660949013995
+          ]
+        },
+        {
+          "handle": "4BED1",
+          "block": "losa-ne",
+          "point": [
+            24.162919030317138,
+            -0.8791842559292309
+          ],
+          "bounds_m": [
+            23.86541903031714,
+            -1.1766842559292308,
+            24.46041903031714,
+            -0.5816842559292309
+          ]
+        },
+        {
+          "handle": "4BED5",
+          "block": "losa-ne",
+          "point": [
+            19.89995546647087,
+            4.745066094901399
+          ],
+          "bounds_m": [
+            19.602455466470868,
+            4.447566094901399,
+            20.19745546647087,
+            5.0425660949013995
+          ]
+        },
+        {
+          "handle": "4BED9",
+          "block": "losa-ne",
+          "point": [
+            25.182402451724762,
+            1.0611503516579115
+          ],
+          "bounds_m": [
+            24.88490245172476,
+            0.7636503516579114,
+            25.47990245172476,
+            1.3586503516579114
+          ]
+        },
+        {
+          "handle": "4BEDD",
+          "block": "losa-ne",
+          "point": [
+            24.081798423160958,
+            4.904224167752541
+          ],
+          "bounds_m": [
+            23.78429842316096,
+            4.606724167752541,
+            24.379298423160957,
+            5.201724167752541
+          ]
+        },
+        {
+          "handle": "4BEE1",
+          "block": "losa-ne",
+          "point": [
+            26.449620202794257,
+            7.202247839293359
+          ],
+          "bounds_m": [
+            26.152120202794258,
+            6.904747839293359,
+            26.747120202794257,
+            7.499747839293359
+          ]
+        },
+        {
+          "handle": "4BEE5",
+          "block": "losa-ne",
+          "point": [
+            -1.3258614151886696,
+            8.36198216079745
+          ],
+          "bounds_m": [
+            -1.6233614151886695,
+            8.06448216079745,
+            -1.0283614151886695,
+            8.659482160797449
+          ]
+        },
+        {
+          "handle": "4BEE9",
+          "block": "losa-ne",
+          "point": [
+            1.479641752256141,
+            6.202925939694101
+          ],
+          "bounds_m": [
+            1.182141752256141,
+            5.9054259396941005,
+            1.777141752256141,
+            6.5004259396941
+          ]
+        },
+        {
+          "handle": "4BEED",
+          "block": "losa-ne",
+          "point": [
+            -1.5955274636039893,
+            14.33722961058353
+          ],
+          "bounds_m": [
+            -1.8930274636039894,
+            14.039729610583528,
+            -1.2980274636039895,
+            14.634729610583529
+          ]
+        },
+        {
+          "handle": "4BEF1",
+          "block": "losa-ne",
+          "point": [
+            1.8513378991308604,
+            13.5627415649199
+          ],
+          "bounds_m": [
+            1.5538378991308606,
+            13.265241564919899,
+            2.1488378991308603,
+            13.8602415649199
+          ]
+        },
+        {
+          "handle": "4BEF5",
+          "block": "losa-ne",
+          "point": [
+            1.68588544932388,
+            10.78355700087019
+          ],
+          "bounds_m": [
+            1.38838544932388,
+            10.48605700087019,
+            1.98338544932388,
+            11.081057000870189
+          ]
+        },
+        {
+          "handle": "4BEF9",
+          "block": "losa-ne",
+          "point": [
+            5.53626459366509,
+            12.18019821283852
+          ],
+          "bounds_m": [
+            5.238764593665089,
+            11.88269821283852,
+            5.833764593665092,
+            12.47769821283852
+          ]
+        },
+        {
+          "handle": "4BEFD",
+          "block": "losa-ne",
+          "point": [
+            9.83639360979074,
+            12.18019821283852
+          ],
+          "bounds_m": [
+            9.538893609790739,
+            11.88269821283852,
+            10.13389360979074,
+            12.47769821283852
+          ]
+        },
+        {
+          "handle": "4BF01",
+          "block": "losa-ne",
+          "point": [
+            14.74457080086422,
+            12.18019821283852
+          ],
+          "bounds_m": [
+            14.447070800864221,
+            11.88269821283852,
+            15.042070800864222,
+            12.47769821283852
+          ]
+        },
+        {
+          "handle": "4BF05",
+          "block": "losa-ne",
+          "point": [
+            19.68701629249064,
+            12.033616001358059
+          ],
+          "bounds_m": [
+            19.38951629249064,
+            11.73611600135806,
+            19.98451629249064,
+            12.33111600135806
+          ]
+        },
+        {
+          "handle": "4BF09",
+          "block": "losa-ne",
+          "point": [
+            25.159981155864003,
+            12.07746243865727
+          ],
+          "bounds_m": [
+            24.862481155864003,
+            11.77996243865727,
+            25.457481155864002,
+            12.374962438657269
+          ]
+        }
+      ],
+      "overlay": "entregas/P1L2/edificio/validacion/slabs/ed2_outline_proposal/edificio_2_p2_outline_proposal.png"
+    },
+    "P3": {
+      "source_sheet": "2024_22-101.dxf",
+      "source_sha256": "3e9d5e60c897e543a206c1f3c6e4498435f0419cba74c127e0cc4c957e92797c",
+      "outline_xy": [
+        [
+          -4.148008,
+          -1.149332
+        ],
+        [
+          27.851994,
+          -1.149332
+        ],
+        [
+          27.851994,
+          16.500668
+        ],
+        [
+          -3.348008,
+          16.500668
+        ],
+        [
+          -3.348008,
+          17.240668
+        ],
+        [
+          -4.148008,
+          17.240668
+        ]
+      ],
+      "area_m2": 565.392035,
+      "perimeter_m": 100.780004,
+      "edge_evidence": [
+        {
+          "edge_index": 0,
+          "start": [
+            -4.148008,
+            -1.149332
+          ],
+          "end": [
+            27.851994,
+            -1.149332
+          ],
+          "length_m": 32.000002,
+          "confidence": "CONFIRMED_RLE_LOSA",
+          "rle_losa": {
+            "coverage_ratio": 1.0,
+            "matches": [
+              {
+                "handle": "4AACA",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 32.0
+              }
+            ]
+          },
+          "structural_context": {
+            "coverage_ratio": 0.01875,
+            "matches": [
+              {
+                "handle": "4AB84",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 0.055,
+                "overlap_m": 0.6
+              }
+            ]
+          }
+        },
+        {
+          "edge_index": 1,
+          "start": [
+            27.851994,
+            -1.149332
+          ],
+          "end": [
+            27.851994,
+            16.500668
+          ],
+          "length_m": 17.65,
+          "confidence": "LIKELY_RLE_PLUS_STRUCTURE",
+          "rle_losa": {
+            "coverage_ratio": 0.181303,
+            "matches": [
+              {
+                "handle": "4AACF",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 2e-06,
+                "overlap_m": 2.4
+              },
+              {
+                "handle": "4AACB",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 2e-06,
+                "overlap_m": 0.8
+              }
+            ]
+          },
+          "structural_context": {
+            "coverage_ratio": 0.779037,
+            "matches": [
+              {
+                "handle": "4AB5B",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 0.0,
+                "overlap_m": 7.95
+              },
+              {
+                "handle": "4AB66",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 0.0,
+                "overlap_m": 5.8
+              }
+            ]
+          }
+        },
+        {
+          "edge_index": 2,
+          "start": [
+            27.851994,
+            16.500668
+          ],
+          "end": [
+            -3.348008,
+            16.500668
+          ],
+          "length_m": 31.200002,
+          "confidence": "LIKELY_RLE_PLUS_STRUCTURE",
+          "rle_losa": {
+            "coverage_ratio": 0.947115,
+            "matches": [
+              {
+                "handle": "4AAD2",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 10.500002
+              },
+              {
+                "handle": "4AAD0",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 9.75
+              },
+              {
+                "handle": "4AAD1",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 9.3
+              }
+            ]
+          },
+          "structural_context": {
+            "coverage_ratio": 0.955128,
+            "matches": [
+              {
+                "handle": "4AB5C",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 0.0,
+                "overlap_m": 0.25
+              },
+              {
+                "handle": "4AAE8",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 4.95
+              },
+              {
+                "handle": "4AB0E",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 4.8
+              },
+              {
+                "handle": "4AAE0",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 4.35
+              },
+              {
+                "handle": "4AAE4",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 4.35
+              },
+              {
+                "handle": "4AB74",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 4.35
+              },
+              {
+                "handle": "4AB57",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 3.1
+              },
+              {
+                "handle": "4ABA6",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 1.600002
+              },
+              {
+                "handle": "4AB7A",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 0.05,
+                "overlap_m": 1.45
+              },
+              {
+                "handle": "4AB30",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 0.6
+              }
+            ]
+          }
+        },
+        {
+          "edge_index": 3,
+          "start": [
+            -3.348008,
+            16.500668
+          ],
+          "end": [
+            -3.348008,
+            17.240668
+          ],
+          "length_m": 0.74,
+          "confidence": "LIKELY_RLE_PLUS_STRUCTURE",
+          "rle_losa": {
+            "coverage_ratio": 0.0,
+            "matches": []
+          },
+          "structural_context": {
+            "coverage_ratio": 1.0,
+            "matches": [
+              {
+                "handle": "4AB7C",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 0.0,
+                "overlap_m": 0.74
+              }
+            ]
+          }
+        },
+        {
+          "edge_index": 4,
+          "start": [
+            -3.348008,
+            17.240668
+          ],
+          "end": [
+            -4.148008,
+            17.240668
+          ],
+          "length_m": 0.8,
+          "confidence": "LIKELY_RLE_PLUS_STRUCTURE",
+          "rle_losa": {
+            "coverage_ratio": 0.25,
+            "matches": [
+              {
+                "handle": "4AAD3",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 0.2
+              }
+            ]
+          },
+          "structural_context": {
+            "coverage_ratio": 0.75,
+            "matches": [
+              {
+                "handle": "4AB7D",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 0.0,
+                "overlap_m": 0.6
+              }
+            ]
+          }
+        },
+        {
+          "edge_index": 5,
+          "start": [
+            -4.148008,
+            17.240668
+          ],
+          "end": [
+            -4.148008,
+            -1.149332
+          ],
+          "length_m": 18.39,
+          "confidence": "CONFIRMED_RLE_LOSA",
+          "rle_losa": {
+            "coverage_ratio": 1.0,
+            "matches": [
+              {
+                "handle": "4AAC9",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 18.39
+              }
+            ]
+          },
+          "structural_context": {
+            "coverage_ratio": 0.317292,
+            "matches": [
+              {
+                "handle": "4AB83",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 0.2,
+                "overlap_m": 2.919997
+              },
+              {
+                "handle": "4AB7E",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 0.2,
+                "overlap_m": 2.915
+              }
+            ]
+          }
+        }
+      ],
+      "confidence_counts": {
+        "CONFIRMED_RLE_LOSA": 2,
+        "LIKELY_RLE_PLUS_STRUCTURE": 4
+      },
+      "internal_rle_features": [
+        {
+          "bounds_m": [
+            -3.348008,
+            4.415668,
+            -1.848008,
+            11.695668
+          ],
+          "segment_count": 2,
+          "open_node_count": 2,
+          "closed_by_endpoint_graph": false,
+          "handles": [
+            "4AADE",
+            "4AADF"
+          ],
+          "nearby_texts": [
+            {
+              "handle": "4BF6A",
+              "layer": "RLA-TEXTOS1",
+              "text": "(serie planos 500)",
+              "point": [
+                -1.9474908271538198,
+                8.968228160316409
+              ],
+              "distance_to_feature_m": 0.0
+            },
+            {
+              "handle": "4BF67",
+              "layer": "RLA-TEXTOS1",
+              "text": "DE ESCALERA",
+              "point": [
+                -2.1131165006048307,
+                8.732513874602121
+              ],
+              "distance_to_feature_m": 0.0
+            },
+            {
+              "handle": "4BF69",
+              "layer": "RLA-TEXTOS1",
+              "text": "VER DETALLE",
+              "point": [
+                -2.3147461888379803,
+                8.701925488593979
+              ],
+              "distance_to_feature_m": 0.0
+            },
+            {
+              "handle": "4ACAF",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 30/80",
+              "point": [
+                -2.1114403030756193,
+                3.9878347906145017
+              ],
+              "distance_to_feature_m": 0.427833
+            },
+            {
+              "handle": "4ACA2",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 30/80",
+              "point": [
+                -2.0231364318826603,
+                12.18261846200795
+              ],
+              "distance_to_feature_m": 0.48695
+            },
+            {
+              "handle": "4AC92",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 40/80",
+              "point": [
+                -3.9011368356061302,
+                7.840387646526981
+              ],
+              "distance_to_feature_m": 0.553129
+            },
+            {
+              "handle": "4ACB0",
+              "layer": "RLE-TEXTO-1",
+              "text": "0102",
+              "point": [
+                -2.150634053844119,
+                3.696252359095688
+              ],
+              "distance_to_feature_m": 0.719416
+            },
+            {
+              "handle": "4ACA3",
+              "layer": "RLE-TEXTO-1",
+              "text": "0102",
+              "point": [
+                -2.017479583608981,
+                12.49300811949417
+              ],
+              "distance_to_feature_m": 0.79734
+            },
+            {
+              "handle": "4AC91",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 40/80",
+              "point": [
+                -3.8824649417808996,
+                12.94538764656855
+              ],
+              "distance_to_feature_m": 1.359207
+            },
+            {
+              "handle": "4ACAA",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 60/80",
+              "point": [
+                -0.40301243774830026,
+                6.39788764653641
+              ],
+              "distance_to_feature_m": 1.444996
+            },
+            {
+              "handle": "4ACA0",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 60/80",
+              "point": [
+                -0.3947158423734095,
+                10.55788764653684
+              ],
+              "distance_to_feature_m": 1.453292
+            },
+            {
+              "handle": "4AC93",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 40/80",
+              "point": [
+                -3.8788216078128404,
+                2.885386386827981
+              ],
+              "distance_to_feature_m": 1.61973
+            }
+          ],
+          "nearby_losa_ne_markers": [
+            {
+              "handle": "4BEE5",
+              "block": "losa-ne",
+              "point": [
+                -1.3258614151886696,
+                8.36198216079745
+              ],
+              "bounds_m": [
+                -1.6233614151886695,
+                8.06448216079745,
+                -1.0283614151886695,
+                8.659482160797449
+              ],
+              "distance_to_feature_m": 0.522147
+            }
+          ],
+          "classification": "REVIEW_REQUIRED_HOLE_OR_PANEL_EDGE",
+          "marker_interpretation": "losa-ne aparece una vez por numerosos panos; no significa por si solo ausencia de losa"
+        },
+        {
+          "bounds_m": [
+            27.026988,
+            0.350668,
+            27.151992,
+            3.030678
+          ],
+          "segment_count": 2,
+          "open_node_count": 2,
+          "closed_by_endpoint_graph": false,
+          "handles": [
+            "4AACC",
+            "4AACD"
+          ],
+          "nearby_texts": [
+            {
+              "handle": "4AC52",
+              "layer": "RLE-TEXTO-1",
+              "text": "M.H.A. e=25",
+              "point": [
+                27.496451771521368,
+                1.67402666791319
+              ],
+              "distance_to_feature_m": 0.34446
+            },
+            {
+              "handle": "4AC53",
+              "layer": "RLE-TEXTO-1",
+              "text": "M.H.A. e=30",
+              "point": [
+                26.44540991865222,
+                2.9311738673775016
+              ],
+              "distance_to_feature_m": 0.581578
+            },
+            {
+              "handle": "4AC71",
+              "layer": "RLE-TEXTO-1",
+              "text": "70x70",
+              "point": [
+                26.901470713190275,
+                -0.3989040047042408
+              ],
+              "distance_to_feature_m": 0.760008
+            },
+            {
+              "handle": "4AC55",
+              "layer": "RLE-TEXTO-1",
+              "text": "M.H.A. e=25",
+              "point": [
+                27.484628898621214,
+                4.764599942229902
+              ],
+              "distance_to_feature_m": 1.76554
+            }
+          ],
+          "nearby_losa_ne_markers": [],
+          "classification": "REVIEW_REQUIRED_HOLE_OR_PANEL_EDGE",
+          "marker_interpretation": "losa-ne aparece una vez por numerosos panos; no significa por si solo ausencia de losa"
+        },
+        {
+          "bounds_m": [
+            25.206994,
+            6.000668,
+            27.601994,
+            6.000668
+          ],
+          "segment_count": 1,
+          "open_node_count": 2,
+          "closed_by_endpoint_graph": false,
+          "handles": [
+            "4AACE"
+          ],
+          "nearby_texts": [
+            {
+              "handle": "4AC55",
+              "layer": "RLE-TEXTO-1",
+              "text": "M.H.A. e=25",
+              "point": [
+                27.484628898621214,
+                4.764599942229902
+              ],
+              "distance_to_feature_m": 1.236068
+            },
+            {
+              "handle": "4AC54",
+              "layer": "RLE-TEXTO-1",
+              "text": "M.H.A. e=25",
+              "point": [
+                24.861980573745868,
+                4.454204548897792
+              ],
+              "distance_to_feature_m": 1.584482
+            },
+            {
+              "handle": "4ACF2",
+              "layer": "RLE-TEXTO-1",
+              "text": "PASADA",
+              "point": [
+                23.33383348691389,
+                5.800412776671742
+              ],
+              "distance_to_feature_m": 1.883835
+            },
+            {
+              "handle": "4ACF3",
+              "layer": "RLE-TEXTO-1",
+              "text": "45/30",
+              "point": [
+                23.28905275774722,
+                5.998850276671751
+              ],
+              "distance_to_feature_m": 1.917942
+            }
+          ],
+          "nearby_losa_ne_markers": [],
+          "classification": "REVIEW_REQUIRED_HOLE_OR_PANEL_EDGE",
+          "marker_interpretation": "losa-ne aparece una vez por numerosos panos; no significa por si solo ausencia de losa"
+        },
+        {
+          "bounds_m": [
+            7.151994,
+            -0.899332,
+            7.851994,
+            -0.349332
+          ],
+          "segment_count": 3,
+          "open_node_count": 2,
+          "closed_by_endpoint_graph": false,
+          "handles": [
+            "4AADA",
+            "4AADB",
+            "4AADC"
+          ],
+          "nearby_texts": [
+            {
+              "handle": "4AC6D",
+              "layer": "RLE-TEXTO-1",
+              "text": "70x70",
+              "point": [
+                8.16968857244999,
+                0.6578753648900602
+              ],
+              "distance_to_feature_m": 1.056123
+            },
+            {
+              "handle": "4AC43",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 60/80",
+              "point": [
+                5.510368927172549,
+                -0.41094164816895046
+              ],
+              "distance_to_feature_m": 1.641625
+            },
+            {
+              "handle": "4AD1C",
+              "layer": "RLE-TEXTO-1",
+              "text": "PASADA",
+              "point": [
+                5.438862430998779,
+                0.49013781420575925
+              ],
+              "distance_to_feature_m": 1.907755
+            }
+          ],
+          "nearby_losa_ne_markers": [],
+          "classification": "REVIEW_REQUIRED_HOLE_OR_PANEL_EDGE",
+          "marker_interpretation": "losa-ne aparece una vez por numerosos panos; no significa por si solo ausencia de losa"
+        },
+        {
+          "bounds_m": [
+            17.151994,
+            -0.899332,
+            17.851994,
+            -0.349332
+          ],
+          "segment_count": 3,
+          "open_node_count": 2,
+          "closed_by_endpoint_graph": false,
+          "handles": [
+            "4AAD7",
+            "4AAD8",
+            "4AAD9"
+          ],
+          "nearby_texts": [
+            {
+              "handle": "4AC6F",
+              "layer": "RLE-TEXTO-1",
+              "text": "70x70",
+              "point": [
+                18.18171388930786,
+                0.6809421297422114
+              ],
+              "distance_to_feature_m": 1.081749
+            }
+          ],
+          "nearby_losa_ne_markers": [],
+          "classification": "REVIEW_REQUIRED_HOLE_OR_PANEL_EDGE",
+          "marker_interpretation": "losa-ne aparece una vez por numerosos panos; no significa por si solo ausencia de losa"
+        },
+        {
+          "bounds_m": [
+            27.151992,
+            -0.899332,
+            27.501992,
+            -0.349332
+          ],
+          "segment_count": 3,
+          "open_node_count": 2,
+          "closed_by_endpoint_graph": false,
+          "handles": [
+            "4AAD4",
+            "4AAD5",
+            "4AAD6"
+          ],
+          "nearby_texts": [
+            {
+              "handle": "4AC71",
+              "layer": "RLE-TEXTO-1",
+              "text": "70x70",
+              "point": [
+                26.901470713190275,
+                -0.3989040047042408
+              ],
+              "distance_to_feature_m": 0.250521
+            }
+          ],
+          "nearby_losa_ne_markers": [],
+          "classification": "REVIEW_REQUIRED_HOLE_OR_PANEL_EDGE",
+          "marker_interpretation": "losa-ne aparece una vez por numerosos panos; no significa por si solo ausencia de losa"
+        }
+      ],
+      "internal_feature_policy": "NOT_CLASSIFIED_AS_HOLES",
+      "losa_ne_markers": [
+        {
+          "handle": "4BEB5",
+          "block": "losa-ne",
+          "point": [
+            4.14532423359879,
+            -0.8669581768407807
+          ],
+          "bounds_m": [
+            3.84782423359879,
+            -1.1644581768407807,
+            4.44282423359879,
+            -0.5694581768407807
+          ]
+        },
+        {
+          "handle": "4BEB9",
+          "block": "losa-ne",
+          "point": [
+            -2.140418505254149,
+            2.1203956695963186
+          ],
+          "bounds_m": [
+            -2.4379185052541494,
+            1.8228956695963188,
+            -1.8429185052541492,
+            2.417895669596319
+          ]
+        },
+        {
+          "handle": "4BEBD",
+          "block": "losa-ne",
+          "point": [
+            1.73217890086627,
+            2.7256651444562383
+          ],
+          "bounds_m": [
+            1.43467890086627,
+            2.4281651444562384,
+            2.02967890086627,
+            3.0231651444562386
+          ]
+        },
+        {
+          "handle": "4BEC1",
+          "block": "losa-ne",
+          "point": [
+            5.604229305057941,
+            4.745066094901399
+          ],
+          "bounds_m": [
+            5.3067293050579405,
+            4.447566094901399,
+            5.901729305057943,
+            5.0425660949013995
+          ]
+        },
+        {
+          "handle": "4BEC5",
+          "block": "losa-ne",
+          "point": [
+            14.651174467347609,
+            -0.8804404103938214
+          ],
+          "bounds_m": [
+            14.35367446734761,
+            -1.1779404103938214,
+            14.94867446734761,
+            -0.5829404103938214
+          ]
+        },
+        {
+          "handle": "4BEC9",
+          "block": "losa-ne",
+          "point": [
+            9.909511696033968,
+            4.745066094901399
+          ],
+          "bounds_m": [
+            9.612011696033969,
+            4.447566094901399,
+            10.20701169603397,
+            5.0425660949013995
+          ]
+        },
+        {
+          "handle": "4BECD",
+          "block": "losa-ne",
+          "point": [
+            14.915992600765549,
+            4.745066094901399
+          ],
+          "bounds_m": [
+            14.61849260076555,
+            4.447566094901399,
+            15.213492600765548,
+            5.0425660949013995
+          ]
+        },
+        {
+          "handle": "4BED1",
+          "block": "losa-ne",
+          "point": [
+            24.162919030317138,
+            -0.8791842559292309
+          ],
+          "bounds_m": [
+            23.86541903031714,
+            -1.1766842559292308,
+            24.46041903031714,
+            -0.5816842559292309
+          ]
+        },
+        {
+          "handle": "4BED5",
+          "block": "losa-ne",
+          "point": [
+            19.89995546647087,
+            4.745066094901399
+          ],
+          "bounds_m": [
+            19.602455466470868,
+            4.447566094901399,
+            20.19745546647087,
+            5.0425660949013995
+          ]
+        },
+        {
+          "handle": "4BED9",
+          "block": "losa-ne",
+          "point": [
+            25.182402451724762,
+            1.0611503516579115
+          ],
+          "bounds_m": [
+            24.88490245172476,
+            0.7636503516579114,
+            25.47990245172476,
+            1.3586503516579114
+          ]
+        },
+        {
+          "handle": "4BEDD",
+          "block": "losa-ne",
+          "point": [
+            24.081798423160958,
+            4.904224167752541
+          ],
+          "bounds_m": [
+            23.78429842316096,
+            4.606724167752541,
+            24.379298423160957,
+            5.201724167752541
+          ]
+        },
+        {
+          "handle": "4BEE1",
+          "block": "losa-ne",
+          "point": [
+            26.449620202794257,
+            7.202247839293359
+          ],
+          "bounds_m": [
+            26.152120202794258,
+            6.904747839293359,
+            26.747120202794257,
+            7.499747839293359
+          ]
+        },
+        {
+          "handle": "4BEE5",
+          "block": "losa-ne",
+          "point": [
+            -1.3258614151886696,
+            8.36198216079745
+          ],
+          "bounds_m": [
+            -1.6233614151886695,
+            8.06448216079745,
+            -1.0283614151886695,
+            8.659482160797449
+          ]
+        },
+        {
+          "handle": "4BEE9",
+          "block": "losa-ne",
+          "point": [
+            1.479641752256141,
+            6.202925939694101
+          ],
+          "bounds_m": [
+            1.182141752256141,
+            5.9054259396941005,
+            1.777141752256141,
+            6.5004259396941
+          ]
+        },
+        {
+          "handle": "4BEED",
+          "block": "losa-ne",
+          "point": [
+            -1.5955274636039893,
+            14.33722961058353
+          ],
+          "bounds_m": [
+            -1.8930274636039894,
+            14.039729610583528,
+            -1.2980274636039895,
+            14.634729610583529
+          ]
+        },
+        {
+          "handle": "4BEF1",
+          "block": "losa-ne",
+          "point": [
+            1.8513378991308604,
+            13.5627415649199
+          ],
+          "bounds_m": [
+            1.5538378991308606,
+            13.265241564919899,
+            2.1488378991308603,
+            13.8602415649199
+          ]
+        },
+        {
+          "handle": "4BEF5",
+          "block": "losa-ne",
+          "point": [
+            1.68588544932388,
+            10.78355700087019
+          ],
+          "bounds_m": [
+            1.38838544932388,
+            10.48605700087019,
+            1.98338544932388,
+            11.081057000870189
+          ]
+        },
+        {
+          "handle": "4BEF9",
+          "block": "losa-ne",
+          "point": [
+            5.53626459366509,
+            12.18019821283852
+          ],
+          "bounds_m": [
+            5.238764593665089,
+            11.88269821283852,
+            5.833764593665092,
+            12.47769821283852
+          ]
+        },
+        {
+          "handle": "4BEFD",
+          "block": "losa-ne",
+          "point": [
+            9.83639360979074,
+            12.18019821283852
+          ],
+          "bounds_m": [
+            9.538893609790739,
+            11.88269821283852,
+            10.13389360979074,
+            12.47769821283852
+          ]
+        },
+        {
+          "handle": "4BF01",
+          "block": "losa-ne",
+          "point": [
+            14.74457080086422,
+            12.18019821283852
+          ],
+          "bounds_m": [
+            14.447070800864221,
+            11.88269821283852,
+            15.042070800864222,
+            12.47769821283852
+          ]
+        },
+        {
+          "handle": "4BF05",
+          "block": "losa-ne",
+          "point": [
+            19.68701629249064,
+            12.033616001358059
+          ],
+          "bounds_m": [
+            19.38951629249064,
+            11.73611600135806,
+            19.98451629249064,
+            12.33111600135806
+          ]
+        },
+        {
+          "handle": "4BF09",
+          "block": "losa-ne",
+          "point": [
+            25.159981155864003,
+            12.07746243865727
+          ],
+          "bounds_m": [
+            24.862481155864003,
+            11.77996243865727,
+            25.457481155864002,
+            12.374962438657269
+          ]
+        }
+      ],
+      "overlay": "entregas/P1L2/edificio/validacion/slabs/ed2_outline_proposal/edificio_2_p3_outline_proposal.png"
+    },
+    "P4": {
+      "source_sheet": "2024_22-102.dxf",
+      "source_sha256": "6c0e993a02e3ff123a4171ea74c601a1763dc0de0587c38ac7b788012115b17a",
+      "outline_xy": [
+        [
+          -4.148008,
+          -1.149332
+        ],
+        [
+          27.851994,
+          -1.149332
+        ],
+        [
+          27.851994,
+          16.500668
+        ],
+        [
+          -1.898008,
+          16.500668
+        ],
+        [
+          -1.898008,
+          17.240668
+        ],
+        [
+          -4.148008,
+          17.240668
+        ]
+      ],
+      "area_m2": 566.465035,
+      "perimeter_m": 100.780004,
+      "edge_evidence": [
+        {
+          "edge_index": 0,
+          "start": [
+            -4.148008,
+            -1.149332
+          ],
+          "end": [
+            27.851994,
+            -1.149332
+          ],
+          "length_m": 32.000002,
+          "confidence": "CONFIRMED_RLE_LOSA",
+          "rle_losa": {
+            "coverage_ratio": 1.0,
+            "matches": [
+              {
+                "handle": "4D407",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 32.0
+              }
+            ]
+          },
+          "structural_context": {
+            "coverage_ratio": 0.01875,
+            "matches": [
+              {
+                "handle": "4D4E6",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 0.055,
+                "overlap_m": 0.6
+              }
+            ]
+          }
+        },
+        {
+          "edge_index": 1,
+          "start": [
+            27.851994,
+            -1.149332
+          ],
+          "end": [
+            27.851994,
+            16.500668
+          ],
+          "length_m": 17.65,
+          "confidence": "LIKELY_RLE_PLUS_STRUCTURE",
+          "rle_losa": {
+            "coverage_ratio": 0.333145,
+            "matches": [
+              {
+                "handle": "4D409",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 2.68001
+              },
+              {
+                "handle": "4D40A",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 2.4
+              },
+              {
+                "handle": "4D408",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 0.8
+              }
+            ]
+          },
+          "structural_context": {
+            "coverage_ratio": 0.627195,
+            "matches": [
+              {
+                "handle": "4D4C6",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 2e-06,
+                "overlap_m": 7.95
+              },
+              {
+                "handle": "4D4D0",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 2e-06,
+                "overlap_m": 3.11999
+              }
+            ]
+          }
+        },
+        {
+          "edge_index": 2,
+          "start": [
+            27.851994,
+            16.500668
+          ],
+          "end": [
+            -1.898008,
+            16.500668
+          ],
+          "length_m": 29.750002,
+          "confidence": "LIKELY_RLE_PLUS_STRUCTURE",
+          "rle_losa": {
+            "coverage_ratio": 0.944538,
+            "matches": [
+              {
+                "handle": "4D40B",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 9.75
+              },
+              {
+                "handle": "4D40C",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 9.3
+              },
+              {
+                "handle": "4D40D",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 9.050002
+              }
+            ]
+          },
+          "structural_context": {
+            "coverage_ratio": 0.92605,
+            "matches": [
+              {
+                "handle": "4D4C7",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 0.0,
+                "overlap_m": 0.249998
+              },
+              {
+                "handle": "4D420",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 4.35
+              },
+              {
+                "handle": "4D457",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 2.590337
+              },
+              {
+                "handle": "4D4D3",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 2.490337
+              },
+              {
+                "handle": "4D426",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 2.309663
+              },
+              {
+                "handle": "4D42E",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 2.309663
+              },
+              {
+                "handle": "4D425",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 1.840337
+              },
+              {
+                "handle": "4D42D",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 1.840337
+              },
+              {
+                "handle": "4D4BF",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 1.540337
+              },
+              {
+                "handle": "4D587",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 1.431183
+              },
+              {
+                "handle": "4D458",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 1.409663
+              },
+              {
+                "handle": "4D4D4",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 1.059663
+              },
+              {
+                "handle": "4D42C",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 0.8
+              },
+              {
+                "handle": "4D456",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 0.8
+              },
+              {
+                "handle": "4D4BE",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 0.8
+              },
+              {
+                "handle": "4D4D2",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 0.8
+              },
+              {
+                "handle": "4E6D4",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 0.8
+              },
+              {
+                "handle": "4D4C0",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 0.759663
+              },
+              {
+                "handle": "4D586",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 0.168819
+              }
+            ]
+          }
+        },
+        {
+          "edge_index": 3,
+          "start": [
+            -1.898008,
+            16.500668
+          ],
+          "end": [
+            -1.898008,
+            17.240668
+          ],
+          "length_m": 0.74,
+          "confidence": "CONFIRMED_RLE_LOSA",
+          "rle_losa": {
+            "coverage_ratio": 1.0,
+            "matches": [
+              {
+                "handle": "4E0B7",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 2e-06,
+                "overlap_m": 0.74
+              }
+            ]
+          },
+          "structural_context": {
+            "coverage_ratio": 0.0,
+            "matches": []
+          }
+        },
+        {
+          "edge_index": 4,
+          "start": [
+            -1.898008,
+            17.240668
+          ],
+          "end": [
+            -4.148008,
+            17.240668
+          ],
+          "length_m": 2.25,
+          "confidence": "CONFIRMED_RLE_LOSA",
+          "rle_losa": {
+            "coverage_ratio": 0.999999,
+            "matches": [
+              {
+                "handle": "4D40E",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 2.249998
+              }
+            ]
+          },
+          "structural_context": {
+            "coverage_ratio": 0.266667,
+            "matches": [
+              {
+                "handle": "4D4DF",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 0.0,
+                "overlap_m": 0.6
+              }
+            ]
+          }
+        },
+        {
+          "edge_index": 5,
+          "start": [
+            -4.148008,
+            17.240668
+          ],
+          "end": [
+            -4.148008,
+            -1.149332
+          ],
+          "length_m": 18.39,
+          "confidence": "CONFIRMED_RLE_LOSA",
+          "rle_losa": {
+            "coverage_ratio": 1.0,
+            "matches": [
+              {
+                "handle": "4D406",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 2e-06,
+                "overlap_m": 18.39
+              }
+            ]
+          },
+          "structural_context": {
+            "coverage_ratio": 0.0,
+            "matches": []
+          }
+        }
+      ],
+      "confidence_counts": {
+        "CONFIRMED_RLE_LOSA": 4,
+        "LIKELY_RLE_PLUS_STRUCTURE": 2
+      },
+      "internal_rle_features": [
+        {
+          "bounds_m": [
+            -3.348006,
+            4.415668,
+            -1.848006,
+            11.695668
+          ],
+          "segment_count": 2,
+          "open_node_count": 2,
+          "closed_by_endpoint_graph": false,
+          "handles": [
+            "4D41E",
+            "4D41F"
+          ],
+          "nearby_texts": [
+            {
+              "handle": "4E353",
+              "layer": "RLA-TEXTOS1",
+              "text": "(serie planos 500)",
+              "point": [
+                -1.9474884861995998,
+                8.968228160316421
+              ],
+              "distance_to_feature_m": 0.0
+            },
+            {
+              "handle": "4F2C0",
+              "layer": "RLE-TEXTO-1",
+              "text": "+V.I. 15/76 (2° ETAPA)",
+              "point": [
+                -2.5637552208015406,
+                11.47476668060866
+              ],
+              "distance_to_feature_m": 0.0
+            },
+            {
+              "handle": "4D816",
+              "layer": "RLE-TEXTO-1",
+              "text": "+V.I. 20/90",
+              "point": [
+                -3.2148835994233607,
+                7.88001108404686
+              ],
+              "distance_to_feature_m": 0.0
+            },
+            {
+              "handle": "4E350",
+              "layer": "RLA-TEXTOS1",
+              "text": "DE ESCALERA",
+              "point": [
+                -2.113114159650611,
+                8.732513874602132
+              ],
+              "distance_to_feature_m": 0.0
+            },
+            {
+              "handle": "4E352",
+              "layer": "RLA-TEXTOS1",
+              "text": "VER DETALLE",
+              "point": [
+                -2.3147438478837694,
+                8.701925488593988
+              ],
+              "distance_to_feature_m": 0.0
+            },
+            {
+              "handle": "4F2BD",
+              "layer": "RLE-TEXTO-1",
+              "text": "+V.I. 15/76 (2° ETAPA)",
+              "point": [
+                -1.513928907887589,
+                8.29415699524236
+              ],
+              "distance_to_feature_m": 0.334077
+            },
+            {
+              "handle": "4D849",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 30/80",
+              "point": [
+                -2.3115333958389512,
+                4.003285506317529
+              ],
+              "distance_to_feature_m": 0.412382
+            },
+            {
+              "handle": "4D84C",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 30/80",
+              "point": [
+                -1.7877241251974691,
+                12.19633954281695
+              ],
+              "distance_to_feature_m": 0.504288
+            },
+            {
+              "handle": "4D84A",
+              "layer": "RLE-TEXTO-1",
+              "text": "407",
+              "point": [
+                -2.3608494903574297,
+                3.7129964551780814
+              ],
+              "distance_to_feature_m": 0.702672
+            },
+            {
+              "handle": "4D84D",
+              "layer": "RLE-TEXTO-1",
+              "text": "402",
+              "point": [
+                -1.8259339689474496,
+                12.48373896762989
+              ],
+              "distance_to_feature_m": 0.78838
+            },
+            {
+              "handle": "4D80B",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 40/80",
+              "point": [
+                -4.24005769571311,
+                7.840387646526988
+              ],
+              "distance_to_feature_m": 0.892052
+            },
+            {
+              "handle": "4D7F1",
+              "layer": "RLE-TEXTO-1",
+              "text": "70x70",
+              "point": [
+                -0.639093406416971,
+                8.52704594914812
+              ],
+              "distance_to_feature_m": 1.208913
+            },
+            {
+              "handle": "4F2BE",
+              "layer": "RLE-TEXTO-1",
+              "text": "+V.I. 15/76 (2° ETAPA)",
+              "point": [
+                -1.513928907887589,
+                3.0480884868817384
+              ],
+              "distance_to_feature_m": 1.407793
+            },
+            {
+              "handle": "4D854",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 60/80",
+              "point": [
+                -0.4295676679071198,
+                6.4561077346925595
+              ],
+              "distance_to_feature_m": 1.418438
+            },
+            {
+              "handle": "4D856",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 60/80",
+              "point": [
+                -0.391299156115449,
+                10.510505451714439
+              ],
+              "distance_to_feature_m": 1.456707
+            },
+            {
+              "handle": "4D864",
+              "layer": "RLE-TEXTO-1",
+              "text": "+V.I. 20/90",
+              "point": [
+                -3.2148835994233607,
+                13.19650535019598
+              ],
+              "distance_to_feature_m": 1.500837
+            },
+            {
+              "handle": "4D80C",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 40/80",
+              "point": [
+                -4.24005769571311,
+                12.94538764656856
+              ],
+              "distance_to_feature_m": 1.535433
+            },
+            {
+              "handle": "4D865",
+              "layer": "RLE-TEXTO-1",
+              "text": "+V.I. 20/90",
+              "point": [
+                -3.18372733362949,
+                2.7745984650607216
+              ],
+              "distance_to_feature_m": 1.64107
+            },
+            {
+              "handle": "4D809",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 40/80",
+              "point": [
+                -4.24005769571311,
+                2.8853863868279994
+              ],
+              "distance_to_feature_m": 1.771304
+            }
+          ],
+          "nearby_losa_ne_markers": [
+            {
+              "handle": "4E2CA",
+              "block": "losa-ne",
+              "point": [
+                -1.23416838733659,
+                7.03915558658895
+              ],
+              "bounds_m": [
+                -1.5316683873365902,
+                6.74165558658895,
+                -0.9366683873365901,
+                7.336655586588949
+              ],
+              "distance_to_feature_m": 0.613838
+            }
+          ],
+          "classification": "REVIEW_REQUIRED_HOLE_OR_PANEL_EDGE",
+          "marker_interpretation": "losa-ne aparece una vez por numerosos panos; no significa por si solo ausencia de losa"
+        },
+        {
+          "bounds_m": [
+            5.424996,
+            5.040668,
+            7.201996,
+            7.100668
+          ],
+          "segment_count": 3,
+          "open_node_count": 2,
+          "closed_by_endpoint_graph": false,
+          "handles": [
+            "4E7CB",
+            "4E7D0",
+            "4E7D1"
+          ],
+          "nearby_texts": [
+            {
+              "handle": "4E7F2",
+              "layer": "RLE-TEXTO-1",
+              "text": "+V.I. 15/70 (2° ETAPA)",
+              "point": [
+                7.314911376535552,
+                6.927704551089541
+              ],
+              "distance_to_feature_m": 0.112915
+            },
+            {
+              "handle": "4E7F5",
+              "layer": "RLE-TEXTO-1",
+              "text": "+V.I. 15/VAR (2° ETAPA)",
+              "point": [
+                5.16993601152732,
+                6.11754596357402
+              ],
+              "distance_to_feature_m": 0.25506
+            },
+            {
+              "handle": "4E7EC",
+              "layer": "RLE-TEXTO-1",
+              "text": "+V.I. 15/68 (2° ETAPA)",
+              "point": [
+                7.57500696921531,
+                5.2432415814821205
+              ],
+              "distance_to_feature_m": 0.373011
+            },
+            {
+              "handle": "4D7D7",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 60/80",
+              "point": [
+                6.85994432172678,
+                4.365387646536278
+              ],
+              "distance_to_feature_m": 0.67528
+            },
+            {
+              "handle": "4D883",
+              "layer": "RLE-TEXTO-1",
+              "text": "45/30",
+              "point": [
+                8.206997808047323,
+                5.958850276671701
+              ],
+              "distance_to_feature_m": 1.005002
+            },
+            {
+              "handle": "4D882",
+              "layer": "RLE-TEXTO-1",
+              "text": "PASADA",
+              "point": [
+                8.22140702679731,
+                5.760412776671711
+              ],
+              "distance_to_feature_m": 1.019411
+            },
+            {
+              "handle": "4D885",
+              "layer": "RLE-TEXTO-1",
+              "text": "Ø7.5",
+              "point": [
+                8.17292608929732,
+                4.598104607499758
+              ],
+              "distance_to_feature_m": 1.067037
+            },
+            {
+              "handle": "4D8C4",
+              "layer": "RLE-TEXTO-1",
+              "text": "PASADA",
+              "point": [
+                5.322611316868611,
+                8.3127420119695
+              ],
+              "distance_to_feature_m": 1.216391
+            },
+            {
+              "handle": "4D884",
+              "layer": "RLE-TEXTO-1",
+              "text": "PASADAS",
+              "point": [
+                8.29155468304733,
+                4.3996671074997495
+              ],
+              "distance_to_feature_m": 1.264128
+            },
+            {
+              "handle": "4D7E1",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 60/80",
+              "point": [
+                6.382811814529519,
+                8.488381078759222
+              ],
+              "distance_to_feature_m": 1.387713
+            },
+            {
+              "handle": "4D8C5",
+              "layer": "RLE-TEXTO-1",
+              "text": "45/30",
+              "point": [
+                5.314103078357889,
+                8.511179511969498
+              ],
+              "distance_to_feature_m": 1.414864
+            },
+            {
+              "handle": "4D7EF",
+              "layer": "RLE-TEXTO-1",
+              "text": "70x70",
+              "point": [
+                8.220849928220318,
+                8.406584454156919
+              ],
+              "distance_to_feature_m": 1.656346
+            }
+          ],
+          "nearby_losa_ne_markers": [],
+          "classification": "REVIEW_REQUIRED_HOLE_OR_PANEL_EDGE",
+          "marker_interpretation": "losa-ne aparece una vez por numerosos panos; no significa por si solo ausencia de losa"
+        },
+        {
+          "bounds_m": [
+            7.801996,
+            5.040668,
+            9.578996,
+            7.100668
+          ],
+          "segment_count": 3,
+          "open_node_count": 2,
+          "closed_by_endpoint_graph": false,
+          "handles": [
+            "4E7C8",
+            "4E7C9",
+            "4E7CC"
+          ],
+          "nearby_texts": [
+            {
+              "handle": "4D883",
+              "layer": "RLE-TEXTO-1",
+              "text": "45/30",
+              "point": [
+                8.206997808047323,
+                5.958850276671701
+              ],
+              "distance_to_feature_m": 0.0
+            },
+            {
+              "handle": "4D882",
+              "layer": "RLE-TEXTO-1",
+              "text": "PASADA",
+              "point": [
+                8.22140702679731,
+                5.760412776671711
+              ],
+              "distance_to_feature_m": 0.0
+            },
+            {
+              "handle": "4E7EC",
+              "layer": "RLE-TEXTO-1",
+              "text": "+V.I. 15/68 (2° ETAPA)",
+              "point": [
+                7.57500696921531,
+                5.2432415814821205
+              ],
+              "distance_to_feature_m": 0.226989
+            },
+            {
+              "handle": "4E7F6",
+              "layer": "RLE-TEXTO-1",
+              "text": "+V.I. 15/76 (2° ETAPA)",
+              "point": [
+                9.913098004940839,
+                6.935999989882362
+              ],
+              "distance_to_feature_m": 0.334102
+            },
+            {
+              "handle": "4D885",
+              "layer": "RLE-TEXTO-1",
+              "text": "Ø7.5",
+              "point": [
+                8.17292608929732,
+                4.598104607499758
+              ],
+              "distance_to_feature_m": 0.442563
+            },
+            {
+              "handle": "4E7F2",
+              "layer": "RLE-TEXTO-1",
+              "text": "+V.I. 15/70 (2° ETAPA)",
+              "point": [
+                7.314911376535552,
+                6.927704551089541
+              ],
+              "distance_to_feature_m": 0.487085
+            },
+            {
+              "handle": "4D884",
+              "layer": "RLE-TEXTO-1",
+              "text": "PASADAS",
+              "point": [
+                8.29155468304733,
+                4.3996671074997495
+              ],
+              "distance_to_feature_m": 0.641001
+            },
+            {
+              "handle": "4D7D7",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 60/80",
+              "point": [
+                6.85994432172678,
+                4.365387646536278
+              ],
+              "distance_to_feature_m": 1.159079
+            },
+            {
+              "handle": "4D7EF",
+              "layer": "RLE-TEXTO-1",
+              "text": "70x70",
+              "point": [
+                8.220849928220318,
+                8.406584454156919
+              ],
+              "distance_to_feature_m": 1.305916
+            },
+            {
+              "handle": "4D7E2",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 60/80",
+              "point": [
+                10.11227688341122,
+                8.46591328470529
+              ],
+              "distance_to_feature_m": 1.465702
+            },
+            {
+              "handle": "4E7F8",
+              "layer": "RLE-TEXTO-1",
+              "text": "+V.I. 15/76 (2° ETAPA)",
+              "point": [
+                11.0457220038268,
+                5.2432415814821205
+              ],
+              "distance_to_feature_m": 1.466726
+            },
+            {
+              "handle": "4D881",
+              "layer": "RLE-TEXTO-1",
+              "text": "45/30",
+              "point": [
+                8.206997808047332,
+                3.2050186373716087
+              ],
+              "distance_to_feature_m": 1.835649
+            },
+            {
+              "handle": "4D7E1",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 60/80",
+              "point": [
+                6.382811814529519,
+                8.488381078759222
+              ],
+              "distance_to_feature_m": 1.984901
+            }
+          ],
+          "nearby_losa_ne_markers": [],
+          "classification": "REVIEW_REQUIRED_HOLE_OR_PANEL_EDGE",
+          "marker_interpretation": "losa-ne aparece una vez por numerosos panos; no significa por si solo ausencia de losa"
+        },
+        {
+          "bounds_m": [
+            22.801996,
+            5.040668,
+            24.578996,
+            7.100668
+          ],
+          "segment_count": 3,
+          "open_node_count": 2,
+          "closed_by_endpoint_graph": false,
+          "handles": [
+            "4D418",
+            "4D419",
+            "4D41A"
+          ],
+          "nearby_texts": [
+            {
+              "handle": "4E7B5",
+              "layer": "RLE-TEXTO-1",
+              "text": "+V.I. 15/VAR (2° ETAPA)",
+              "point": [
+                24.467257992861132,
+                6.07774688212915
+              ],
+              "distance_to_feature_m": 0.0
+            },
+            {
+              "handle": "4D8A7",
+              "layer": "RLE-TEXTO-1",
+              "text": "45/30",
+              "point": [
+                23.206997807034767,
+                5.95885027667176
+              ],
+              "distance_to_feature_m": 0.0
+            },
+            {
+              "handle": "4D8A6",
+              "layer": "RLE-TEXTO-1",
+              "text": "PASADA",
+              "point": [
+                23.22140702578477,
+                5.76041277667176
+              ],
+              "distance_to_feature_m": 0.0
+            },
+            {
+              "handle": "4E7BA",
+              "layer": "RLE-TEXTO-1",
+              "text": "+V.I. 15/68 (2° ETAPA)",
+              "point": [
+                23.594183915401448,
+                4.775843332899599
+              ],
+              "distance_to_feature_m": 0.264825
+            },
+            {
+              "handle": "4E7B8",
+              "layer": "RLE-TEXTO-1",
+              "text": "+V.I. 15/VAR (2° ETAPA)",
+              "point": [
+                22.50715888481202,
+                6.022046449431651
+              ],
+              "distance_to_feature_m": 0.294837
+            },
+            {
+              "handle": "4E7B9",
+              "layer": "RLE-TEXTO-1",
+              "text": "+V.I. 15/70 (2° ETAPA)",
+              "point": [
+                23.67423613474206,
+                7.438008802901299
+              ],
+              "distance_to_feature_m": 0.337341
+            },
+            {
+              "handle": "4D8A9",
+              "layer": "RLE-TEXTO-1",
+              "text": "Ø7.5",
+              "point": [
+                23.17292608828478,
+                4.598104607499809
+              ],
+              "distance_to_feature_m": 0.442563
+            },
+            {
+              "handle": "4D7C5",
+              "layer": "RLE-TEXTO-1",
+              "text": "M.H.A. e=25",
+              "point": [
+                24.862094244212972,
+                4.51426146911082
+              ],
+              "distance_to_feature_m": 0.597703
+            },
+            {
+              "handle": "4D8A8",
+              "layer": "RLE-TEXTO-1",
+              "text": "PASADAS",
+              "point": [
+                23.29155468203477,
+                4.399667107499808
+              ],
+              "distance_to_feature_m": 0.641001
+            },
+            {
+              "handle": "4D7CB",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 60/80",
+              "point": [
+                22.07102800116746,
+                4.150478544610592
+              ],
+              "distance_to_feature_m": 1.151847
+            },
+            {
+              "handle": "4D7CC",
+              "layer": "RLE-TEXTO-1",
+              "text": "405a",
+              "point": [
+                21.780738950028,
+                4.189672295379101
+              ],
+              "distance_to_feature_m": 1.329346
+            },
+            {
+              "handle": "4D7E5",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 60/80",
+              "point": [
+                25.287276883313922,
+                8.460147256743689
+              ],
+              "distance_to_feature_m": 1.532921
+            },
+            {
+              "handle": "4E74C",
+              "layer": "RLE-TEXTO-1",
+              "text": "N.O.G.=11.92",
+              "point": [
+                26.00504879145512,
+                4.268442606494919
+              ],
+              "distance_to_feature_m": 1.621715
+            },
+            {
+              "handle": "4E717",
+              "layer": "RLE-TEXTO-1",
+              "text": "406",
+              "point": [
+                26.328240237947185,
+                5.5557561395715584
+              ],
+              "distance_to_feature_m": 1.749244
+            },
+            {
+              "handle": "4E716",
+              "layer": "RLE-TEXTO-1",
+              "text": "V.I. 15/24",
+              "point": [
+                26.3778105512157,
+                5.846045190711029
+              ],
+              "distance_to_feature_m": 1.798815
+            },
+            {
+              "handle": "4E7C6",
+              "layer": "RLE-TEXTO-1",
+              "text": "+V.I. 15/70 (2° ETAPA)",
+              "point": [
+                23.594183915401448,
+                8.922473178583932
+              ],
+              "distance_to_feature_m": 1.821805
+            },
+            {
+              "handle": "4D8A5",
+              "layer": "RLE-TEXTO-1",
+              "text": "45/30",
+              "point": [
+                23.206997807034767,
+                3.205018637371659
+              ],
+              "distance_to_feature_m": 1.835649
+            }
+          ],
+          "nearby_losa_ne_markers": [
+            {
+              "handle": "4E2C2",
+              "block": "losa-ne",
+              "point": [
+                24.079626036592398,
+                4.183647735688068
+              ],
+              "bounds_m": [
+                23.7821260365924,
+                3.8861477356880685,
+                24.3771260365924,
+                4.481147735688069
+              ],
+              "distance_to_feature_m": 0.85702
+            }
+          ],
+          "classification": "REVIEW_REQUIRED_HOLE_OR_PANEL_EDGE",
+          "marker_interpretation": "losa-ne aparece una vez por numerosos panos; no significa por si solo ausencia de losa"
+        },
+        {
+          "bounds_m": [
+            5.424996,
+            9.200668,
+            7.201996,
+            11.175668
+          ],
+          "segment_count": 2,
+          "open_node_count": 2,
+          "closed_by_endpoint_graph": false,
+          "handles": [
+            "4E7CD",
+            "4E7CF"
+          ],
+          "nearby_texts": [
+            {
+              "handle": "4E7F3",
+              "layer": "RLE-TEXTO-1",
+              "text": "+V.I. 15/70 (2° ETAPA)",
+              "point": [
+                7.314911376535552,
+                9.38659729205899
+              ],
+              "distance_to_feature_m": 0.112915
+            },
+            {
+              "handle": "4E7F4",
+              "layer": "RLE-TEXTO-1",
+              "text": "+V.I. 15/VAR (2° ETAPA)",
+              "point": [
+                5.169936011527329,
+                10.206599162267251
+              ],
+              "distance_to_feature_m": 0.25506
+            },
+            {
+              "handle": "4E7F1",
+              "layer": "RLE-TEXTO-1",
+              "text": "+V.I. 15/68 (2° ETAPA)",
+              "point": [
+                7.57500696921531,
+                11.038840888225371
+              ],
+              "distance_to_feature_m": 0.373011
+            },
+            {
+              "handle": "4D8C5",
+              "layer": "RLE-TEXTO-1",
+              "text": "45/30",
+              "point": [
+                5.314103078357889,
+                8.511179511969498
+              ],
+              "distance_to_feature_m": 0.698349
+            },
+            {
+              "handle": "4D7E1",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 60/80",
+              "point": [
+                6.382811814529519,
+                8.488381078759222
+              ],
+              "distance_to_feature_m": 0.712287
+            },
+            {
+              "handle": "4D8C4",
+              "layer": "RLE-TEXTO-1",
+              "text": "PASADA",
+              "point": [
+                5.322611316868611,
+                8.3127420119695
+              ],
+              "distance_to_feature_m": 0.893809
+            },
+            {
+              "handle": "4D87E",
+              "layer": "RLE-TEXTO-1",
+              "text": "PASADA",
+              "point": [
+                4.471407026467291,
+                11.360412776671701
+              ],
+              "distance_to_feature_m": 0.97132
+            },
+            {
+              "handle": "4D88A",
+              "layer": "RLE-TEXTO-1",
+              "text": "PASADA",
+              "point": [
+                8.22140702679731,
+                11.36041277667171
+              ],
+              "distance_to_feature_m": 1.036016
+            },
+            {
+              "handle": "4D87F",
+              "layer": "RLE-TEXTO-1",
+              "text": "45/30",
+              "point": [
+                4.4569978077173005,
+                11.5588502766717
+              ],
+              "distance_to_feature_m": 1.041081
+            },
+            {
+              "handle": "4D88B",
+              "layer": "RLE-TEXTO-1",
+              "text": "45/30",
+              "point": [
+                8.206997808047308,
+                11.558850276671711
+              ],
+              "distance_to_feature_m": 1.075573
+            },
+            {
+              "handle": "4D7D6",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 60/80",
+              "point": [
+                7.07938926939205,
+                12.440387646577848
+              ],
+              "distance_to_feature_m": 1.26472
+            },
+            {
+              "handle": "4D7EF",
+              "layer": "RLE-TEXTO-1",
+              "text": "70x70",
+              "point": [
+                8.220849928220318,
+                8.406584454156919
+              ],
+              "distance_to_feature_m": 1.291755
+            },
+            {
+              "handle": "4D87C",
+              "layer": "RLE-TEXTO-1",
+              "text": "PASADAS",
+              "point": [
+                4.5415546827172895,
+                12.42331417294341
+              ],
+              "distance_to_feature_m": 1.528754
+            },
+            {
+              "handle": "4D888",
+              "layer": "RLE-TEXTO-1",
+              "text": "PASADAS",
+              "point": [
+                8.29155468304731,
+                12.42331417294343
+              ],
+              "distance_to_feature_m": 1.65643
+            },
+            {
+              "handle": "4D889",
+              "layer": "RLE-TEXTO-1",
+              "text": "Ø7.5",
+              "point": [
+                8.172926089297311,
+                12.62175167294343
+              ],
+              "distance_to_feature_m": 1.741799
+            },
+            {
+              "handle": "4D87D",
+              "layer": "RLE-TEXTO-1",
+              "text": "Ø7.5",
+              "point": [
+                4.42292608896729,
+                12.62175167294342
+              ],
+              "distance_to_feature_m": 1.759347
+            }
+          ],
+          "nearby_losa_ne_markers": [],
+          "classification": "REVIEW_REQUIRED_HOLE_OR_PANEL_EDGE",
+          "marker_interpretation": "losa-ne aparece una vez por numerosos panos; no significa por si solo ausencia de losa"
+        },
+        {
+          "bounds_m": [
+            7.801996,
+            9.200668,
+            9.578996,
+            11.175668
+          ],
+          "segment_count": 2,
+          "open_node_count": 2,
+          "closed_by_endpoint_graph": false,
+          "handles": [
+            "4E7CA",
+            "4E7CE"
+          ],
+          "nearby_texts": [
+            {
+              "handle": "4D88A",
+              "layer": "RLE-TEXTO-1",
+              "text": "PASADA",
+              "point": [
+                8.22140702679731,
+                11.36041277667171
+              ],
+              "distance_to_feature_m": 0.184745
+            },
+            {
+              "handle": "4E7F1",
+              "layer": "RLE-TEXTO-1",
+              "text": "+V.I. 15/68 (2° ETAPA)",
+              "point": [
+                7.57500696921531,
+                11.038840888225371
+              ],
+              "distance_to_feature_m": 0.226989
+            },
+            {
+              "handle": "4E7F7",
+              "layer": "RLE-TEXTO-1",
+              "text": "+V.I. 15/76 (2° ETAPA)",
+              "point": [
+                9.913098004940839,
+                9.98380812287617
+              ],
+              "distance_to_feature_m": 0.334102
+            },
+            {
+              "handle": "4D88B",
+              "layer": "RLE-TEXTO-1",
+              "text": "45/30",
+              "point": [
+                8.206997808047308,
+                11.558850276671711
+              ],
+              "distance_to_feature_m": 0.383182
+            },
+            {
+              "handle": "4E7F3",
+              "layer": "RLE-TEXTO-1",
+              "text": "+V.I. 15/70 (2° ETAPA)",
+              "point": [
+                7.314911376535552,
+                9.38659729205899
+              ],
+              "distance_to_feature_m": 0.487085
+            },
+            {
+              "handle": "4D7EF",
+              "layer": "RLE-TEXTO-1",
+              "text": "70x70",
+              "point": [
+                8.220849928220318,
+                8.406584454156919
+              ],
+              "distance_to_feature_m": 0.794084
+            },
+            {
+              "handle": "4D7E2",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 60/80",
+              "point": [
+                10.11227688341122,
+                8.46591328470529
+              ],
+              "distance_to_feature_m": 0.907884
+            },
+            {
+              "handle": "4D888",
+              "layer": "RLE-TEXTO-1",
+              "text": "PASADAS",
+              "point": [
+                8.29155468304731,
+                12.42331417294343
+              ],
+              "distance_to_feature_m": 1.247646
+            },
+            {
+              "handle": "4D8C3",
+              "layer": "RLE-TEXTO-1",
+              "text": "45/30",
+              "point": [
+                10.853035212699051,
+                9.69841932534954
+              ],
+              "distance_to_feature_m": 1.274039
+            },
+            {
+              "handle": "4D889",
+              "layer": "RLE-TEXTO-1",
+              "text": "Ø7.5",
+              "point": [
+                8.172926089297311,
+                12.62175167294343
+              ],
+              "distance_to_feature_m": 1.446084
+            },
+            {
+              "handle": "4D7D6",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 60/80",
+              "point": [
+                7.07938926939205,
+                12.440387646577848
+              ],
+              "distance_to_feature_m": 1.456597
+            },
+            {
+              "handle": "4E7FA",
+              "layer": "RLE-TEXTO-1",
+              "text": "+V.I. 15/76 (2° ETAPA)",
+              "point": [
+                11.0457220038268,
+                11.02869792949288
+              ],
+              "distance_to_feature_m": 1.466726
+            },
+            {
+              "handle": "4D8C2",
+              "layer": "RLE-TEXTO-1",
+              "text": "PASADA",
+              "point": [
+                11.047444431449048,
+                9.499981825349542
+              ],
+              "distance_to_feature_m": 1.468448
+            },
+            {
+              "handle": "4D7E1",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 60/80",
+              "point": [
+                6.382811814529519,
+                8.488381078759222
+              ],
+              "distance_to_feature_m": 1.587903
+            }
+          ],
+          "nearby_losa_ne_markers": [],
+          "classification": "REVIEW_REQUIRED_HOLE_OR_PANEL_EDGE",
+          "marker_interpretation": "losa-ne aparece una vez por numerosos panos; no significa por si solo ausencia de losa"
+        },
+        {
+          "bounds_m": [
+            22.801996,
+            9.200668,
+            24.578996,
+            11.175668
+          ],
+          "segment_count": 2,
+          "open_node_count": 2,
+          "closed_by_endpoint_graph": false,
+          "handles": [
+            "4D41B",
+            "4D41C"
+          ],
+          "nearby_texts": [
+            {
+              "handle": "4D8BD",
+              "layer": "RLE-TEXTO-1",
+              "text": "45/30",
+              "point": [
+                24.05303521269905,
+                9.698419325349578
+              ],
+              "distance_to_feature_m": 0.0
+            },
+            {
+              "handle": "4D8BC",
+              "layer": "RLE-TEXTO-1",
+              "text": "PASADA",
+              "point": [
+                24.067444431449047,
+                9.499981825349591
+              ],
+              "distance_to_feature_m": 0.0
+            },
+            {
+              "handle": "4E7C7",
+              "layer": "RLE-TEXTO-1",
+              "text": "+V.I. 15/VAR (2° ETAPA)",
+              "point": [
+                22.54735717257373,
+                10.206599162267251
+              ],
+              "distance_to_feature_m": 0.254639
+            },
+            {
+              "handle": "4E7C6",
+              "layer": "RLE-TEXTO-1",
+              "text": "+V.I. 15/70 (2° ETAPA)",
+              "point": [
+                23.594183915401448,
+                8.922473178583932
+              ],
+              "distance_to_feature_m": 0.278195
+            },
+            {
+              "handle": "4E7C5",
+              "layer": "RLE-TEXTO-1",
+              "text": "+V.I. 15/VAR (2° ETAPA)",
+              "point": [
+                24.885432883969603,
+                10.206599162267251
+              ],
+              "distance_to_feature_m": 0.306437
+            },
+            {
+              "handle": "4E7C4",
+              "layer": "RLE-TEXTO-1",
+              "text": "+V.I. 15/68 (2° ETAPA)",
+              "point": [
+                23.67423613474206,
+                11.5033164238654
+              ],
+              "distance_to_feature_m": 0.327648
+            },
+            {
+              "handle": "4D7E5",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 60/80",
+              "point": [
+                25.287276883313922,
+                8.460147256743689
+              ],
+              "distance_to_feature_m": 1.024711
+            },
+            {
+              "handle": "4D8AE",
+              "layer": "RLE-TEXTO-1",
+              "text": "PASADA",
+              "point": [
+                21.77286025273934,
+                11.36041277667176
+              ],
+              "distance_to_feature_m": 1.045586
+            },
+            {
+              "handle": "4D8AF",
+              "layer": "RLE-TEXTO-1",
+              "text": "45/30",
+              "point": [
+                21.758451033989342,
+                11.55885027667176
+              ],
+              "distance_to_feature_m": 1.111672
+            },
+            {
+              "handle": "4D8AC",
+              "layer": "RLE-TEXTO-1",
+              "text": "PASADAS",
+              "point": [
+                23.29155468203476,
+                12.423314172943481
+              ],
+              "distance_to_feature_m": 1.247646
+            },
+            {
+              "handle": "4D8AD",
+              "layer": "RLE-TEXTO-1",
+              "text": "Ø7.5",
+              "point": [
+                23.17292608828476,
+                12.62175167294348
+              ],
+              "distance_to_feature_m": 1.446084
+            },
+            {
+              "handle": "4D7CE",
+              "layer": "RLE-TEXTO-1",
+              "text": "V. 60/80",
+              "point": [
+                22.0652627139733,
+                12.52504678305613
+              ],
+              "distance_to_feature_m": 1.5374
+            },
+            {
+              "handle": "4D8BE",
+              "layer": "RLE-TEXTO-1",
+              "text": "PASADA",
+              "point": [
+                21.14744443144905,
+                9.499981825349577
+              ],
+              "distance_to_feature_m": 1.654552
+            },
+            {
+              "handle": "4D7CF",
+              "layer": "RLE-TEXTO-1",
+              "text": "405",
+              "point": [
+                21.77497366283384,
+                12.57436287757465
+              ],
+              "distance_to_feature_m": 1.735259
+            },
+            {
+              "handle": "4E7B9",
+              "layer": "RLE-TEXTO-1",
+              "text": "+V.I. 15/70 (2° ETAPA)",
+              "point": [
+                23.67423613474206,
+                7.438008802901299
+              ],
+              "distance_to_feature_m": 1.762659
+            },
+            {
+              "handle": "4D8BF",
+              "layer": "RLE-TEXTO-1",
+              "text": "45/30",
+              "point": [
+                20.95303521269905,
+                9.698419325349569
+              ],
+              "distance_to_feature_m": 1.848961
+            }
+          ],
+          "nearby_losa_ne_markers": [],
+          "classification": "REVIEW_REQUIRED_HOLE_OR_PANEL_EDGE",
+          "marker_interpretation": "losa-ne aparece una vez por numerosos panos; no significa por si solo ausencia de losa"
+        },
+        {
+          "bounds_m": [
+            25.206992,
+            6.150835,
+            27.601996,
+            6.150835
+          ],
+          "segment_count": 1,
+          "open_node_count": 2,
+          "closed_by_endpoint_graph": false,
+          "handles": [
+            "4E713"
+          ],
+          "nearby_texts": [
+            {
+              "handle": "4E716",
+              "layer": "RLE-TEXTO-1",
+              "text": "V.I. 15/24",
+              "point": [
+                26.3778105512157,
+                5.846045190711029
+              ],
+              "distance_to_feature_m": 0.30479
+            },
+            {
+              "handle": "4E717",
+              "layer": "RLE-TEXTO-1",
+              "text": "406",
+              "point": [
+                26.328240237947185,
+                5.5557561395715584
+              ],
+              "distance_to_feature_m": 0.595079
+            },
+            {
+              "handle": "4E7B5",
+              "layer": "RLE-TEXTO-1",
+              "text": "+V.I. 15/VAR (2° ETAPA)",
+              "point": [
+                24.467257992861132,
+                6.07774688212915
+              ],
+              "distance_to_feature_m": 0.743336
+            },
+            {
+              "handle": "4D828",
+              "layer": "RLE-TEXTO-1",
+              "text": "V.I. 25/90",
+              "point": [
+                27.416632649576904,
+                7.301691136163799
+              ],
+              "distance_to_feature_m": 1.150856
+            },
+            {
+              "handle": "4D7C6",
+              "layer": "RLE-TEXTO-1",
+              "text": "M.H.A. e=25",
+              "point": [
+                27.42261646065497,
+                4.6175756487902895
+              ],
+              "distance_to_feature_m": 1.533259
+            },
+            {
+              "handle": "4D7C5",
+              "layer": "RLE-TEXTO-1",
+              "text": "M.H.A. e=25",
+              "point": [
+                24.862094244212972,
+                4.51426146911082
+              ],
+              "distance_to_feature_m": 1.672521
+            },
+            {
+              "handle": "4E720",
+              "layer": "RLE-TEXTO-1",
+              "text": "LOSA e=20",
+              "point": [
+                26.56719559388496,
+                4.4273480699519405
+              ],
+              "distance_to_feature_m": 1.723487
+            },
+            {
+              "handle": "4E74C",
+              "layer": "RLE-TEXTO-1",
+              "text": "N.O.G.=11.92",
+              "point": [
+                26.00504879145512,
+                4.268442606494919
+              ],
+              "distance_to_feature_m": 1.882392
+            }
+          ],
+          "nearby_losa_ne_markers": [
+            {
+              "handle": "4E828",
+              "block": "losa-ne",
+              "point": [
+                27.052242808496676,
+                5.165883121875531
+              ],
+              "bounds_m": [
+                26.754742808496676,
+                4.868383121875532,
+                27.349742808496675,
+                5.463383121875531
+              ],
+              "distance_to_feature_m": 0.984952
+            }
+          ],
+          "classification": "REVIEW_REQUIRED_HOLE_OR_PANEL_EDGE",
+          "marker_interpretation": "losa-ne aparece una vez por numerosos panos; no significa por si solo ausencia de losa"
+        }
+      ],
+      "internal_feature_policy": "NOT_CLASSIFIED_AS_HOLES",
+      "losa_ne_markers": [
+        {
+          "handle": "4E29A",
+          "block": "losa-ne",
+          "point": [
+            4.19952464007122,
+            -0.7371983619923503
+          ],
+          "bounds_m": [
+            3.90202464007122,
+            -1.0346983619923504,
+            4.49702464007122,
+            -0.43969836199235035
+          ]
+        },
+        {
+          "handle": "4E29E",
+          "block": "losa-ne",
+          "point": [
+            -2.140418505254149,
+            1.3181798940727913
+          ],
+          "bounds_m": [
+            -2.4379185052541494,
+            1.0206798940727912,
+            -1.8429185052541492,
+            1.6156798940727912
+          ]
+        },
+        {
+          "handle": "4E2A2",
+          "block": "losa-ne",
+          "point": [
+            1.7860264013978304,
+            2.7793507702310216
+          ],
+          "bounds_m": [
+            1.4885264013978303,
+            2.4818507702310217,
+            2.0835264013978305,
+            3.0768507702310215
+          ]
+        },
+        {
+          "handle": "4E2A6",
+          "block": "losa-ne",
+          "point": [
+            5.449251662605591,
+            3.5272790225529977
+          ],
+          "bounds_m": [
+            5.151751662605591,
+            3.229779022552998,
+            5.746751662605593,
+            3.824779022552998
+          ]
+        },
+        {
+          "handle": "4E2AA",
+          "block": "losa-ne",
+          "point": [
+            15.23828427042546,
+            -0.8764778993791015
+          ],
+          "bounds_m": [
+            14.94078427042546,
+            -1.1739778993791015,
+            15.535784270425461,
+            -0.5789778993791015
+          ]
+        },
+        {
+          "handle": "4E2AE",
+          "block": "losa-ne",
+          "point": [
+            9.909511696033968,
+            3.5272790225529977
+          ],
+          "bounds_m": [
+            9.612011696033969,
+            3.229779022552998,
+            10.20701169603397,
+            3.824779022552998
+          ]
+        },
+        {
+          "handle": "4E2B2",
+          "block": "losa-ne",
+          "point": [
+            14.915992600765549,
+            3.5266010690448
+          ],
+          "bounds_m": [
+            14.61849260076555,
+            3.2291010690448,
+            15.213492600765548,
+            3.8241010690448003
+          ]
+        },
+        {
+          "handle": "4E2B6",
+          "block": "losa-ne",
+          "point": [
+            21.97649961698961,
+            -0.7881169035222593
+          ],
+          "bounds_m": [
+            21.678999616989607,
+            -1.0856169035222591,
+            22.27399961698961,
+            -0.49061690352225923
+          ]
+        },
+        {
+          "handle": "4E2BA",
+          "block": "losa-ne",
+          "point": [
+            19.89995546647087,
+            3.5266010690448
+          ],
+          "bounds_m": [
+            19.602455466470868,
+            3.2291010690448,
+            20.19745546647087,
+            3.8241010690448003
+          ]
+        },
+        {
+          "handle": "4E2BE",
+          "block": "losa-ne",
+          "point": [
+            25.182402451724762,
+            1.5068135060597205
+          ],
+          "bounds_m": [
+            24.88490245172476,
+            1.2093135060597207,
+            25.47990245172476,
+            1.8043135060597206
+          ]
+        },
+        {
+          "handle": "4E2C2",
+          "block": "losa-ne",
+          "point": [
+            24.079626036592398,
+            4.183647735688068
+          ],
+          "bounds_m": [
+            23.7821260365924,
+            3.8861477356880685,
+            24.3771260365924,
+            4.481147735688069
+          ]
+        },
+        {
+          "handle": "4E2C6",
+          "block": "losa-ne",
+          "point": [
+            25.824802920336378,
+            7.293867107171418
+          ],
+          "bounds_m": [
+            25.52730292033638,
+            6.996367107171418,
+            26.122302920336377,
+            7.591367107171418
+          ]
+        },
+        {
+          "handle": "4E2CA",
+          "block": "losa-ne",
+          "point": [
+            -1.23416838733659,
+            7.03915558658895
+          ],
+          "bounds_m": [
+            -1.5316683873365902,
+            6.74165558658895,
+            -0.9366683873365901,
+            7.336655586588949
+          ]
+        },
+        {
+          "handle": "4E2CE",
+          "block": "losa-ne",
+          "point": [
+            1.7575767003142801,
+            6.265428490119989
+          ],
+          "bounds_m": [
+            1.46007670031428,
+            5.967928490119989,
+            2.05507670031428,
+            6.562928490119989
+          ]
+        },
+        {
+          "handle": "4E2D2",
+          "block": "losa-ne",
+          "point": [
+            -1.5897772201597196,
+            13.6277070508155
+          ],
+          "bounds_m": [
+            -1.8872772201597194,
+            13.330207050815499,
+            -1.2922772201597195,
+            13.9252070508155
+          ]
+        },
+        {
+          "handle": "4E2D6",
+          "block": "losa-ne",
+          "point": [
+            1.8912713555894698,
+            13.46938291316315
+          ],
+          "bounds_m": [
+            1.5937713555894697,
+            13.171882913163149,
+            2.18877135558947,
+            13.76688291316315
+          ]
+        },
+        {
+          "handle": "4E2DA",
+          "block": "losa-ne",
+          "point": [
+            1.8467291030246793,
+            10.81865995791856
+          ],
+          "bounds_m": [
+            1.5492291030246792,
+            10.52115995791856,
+            2.144229103024679,
+            11.11615995791856
+          ]
+        },
+        {
+          "handle": "4E2DE",
+          "block": "losa-ne",
+          "point": [
+            5.672993513376801,
+            12.485053558008898
+          ],
+          "bounds_m": [
+            5.3754935133768,
+            12.187553558008899,
+            5.9704935133768,
+            12.7825535580089
+          ]
+        },
+        {
+          "handle": "4E2E2",
+          "block": "losa-ne",
+          "point": [
+            9.931381204290028,
+            12.485053558008898
+          ],
+          "bounds_m": [
+            9.633881204290027,
+            12.187553558008899,
+            10.228881204290028,
+            12.7825535580089
+          ]
+        },
+        {
+          "handle": "4E2E6",
+          "block": "losa-ne",
+          "point": [
+            14.839558395363511,
+            12.485053558008898
+          ],
+          "bounds_m": [
+            14.54205839536351,
+            12.187553558008899,
+            15.13705839536351,
+            12.7825535580089
+          ]
+        },
+        {
+          "handle": "4E2EA",
+          "block": "losa-ne",
+          "point": [
+            19.71085672300908,
+            12.46908530959832
+          ],
+          "bounds_m": [
+            19.413356723009077,
+            12.17158530959832,
+            20.00835672300908,
+            12.76658530959832
+          ]
+        },
+        {
+          "handle": "4E2EE",
+          "block": "losa-ne",
+          "point": [
+            25.30485928349864,
+            12.43211367529604
+          ],
+          "bounds_m": [
+            25.00735928349864,
+            12.134613675296041,
+            25.60235928349864,
+            12.729613675296042
+          ]
+        },
+        {
+          "handle": "4E828",
+          "block": "losa-ne",
+          "point": [
+            27.052242808496676,
+            5.165883121875531
+          ],
+          "bounds_m": [
+            26.754742808496676,
+            4.868383121875532,
+            27.349742808496675,
+            5.463383121875531
+          ]
+        }
+      ],
+      "overlay": "entregas/P1L2/edificio/validacion/slabs/ed2_outline_proposal/edificio_2_p4_outline_proposal.png"
+    }
+  },
+  "inputs": {
+    "recursos/planos/dxf_full/2024_22/2024_22-101.dxf": "3e9d5e60c897e543a206c1f3c6e4498435f0419cba74c127e0cc4c957e92797c",
+    "recursos/planos/dxf_full/2024_22/2024_22-102.dxf": "6c0e993a02e3ff123a4171ea74c601a1763dc0de0587c38ac7b788012115b17a"
+  }
+}
