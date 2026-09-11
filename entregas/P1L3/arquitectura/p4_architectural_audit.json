@@ -4,7 +4,7 @@
     "floor": "entregas/P1L2/edificio/datos/piso_04.json",
     "floor_sha256": "162322d1473b64ec6615d3bc77b8588cae1af27776c3bda51af8754b97382d6e",
     "structural_model": "entregas/P1L2/unity_export/model_combined_viewer.json",
-    "structural_model_sha256": "f05b3b6dbd4482c153d28f35c41af080eaac2c5e70938e695f9007ddb64ae9b7"
+    "structural_model_sha256": "e89de2b9946671fd31bf0a633539a2d372578c39876081d4d3860b38c8c6cd90"
   },
   "scope": "EDIFICIO_1 / P4",
   "raw_rle_topology": {
@@ -41,14 +41,14 @@
     "direct_outer_length_m": 124.799962,
     "collinear_inferred_gap_count": 6,
     "beam_supported_likely_edge_count": 3,
-    "supporting_beam_count": 6,
+    "supporting_beam_count": 3,
     "interior_closed_loops_excluded": 2
   },
   "areas": {
     "old_bbox_m2": 1802.478751,
-    "new_architectural_outline_m2": 958.392618,
-    "reduction_m2": 844.086133,
-    "reduction_percent": 46.829186
+    "new_architectural_outline_m2": 958.39275,
+    "reduction_m2": 844.086001,
+    "reduction_percent": 46.829179
   },
   "thickness": {
     "value_m": 0.15,
@@ -152,40 +152,40 @@
       ],
       "end": [
         57.832,
-        20.751488
+        20.7515
       ],
-      "length_m": 4.132488,
+      "length_m": 4.1325,
       "confidence": "LIKELY",
       "reason": "lado este del resalto norte",
-      "evidence": "limite del gap RLE-LOSA y vigas E1-P4-V-058/E1-P4-V-063"
+      "evidence": "limite del gap RLE-LOSA y centrolinea P4-VP-050"
     },
     {
       "start": [
         57.832,
-        20.751488
+        20.7515
       ],
       "end": [
         47.132,
-        20.751488
+        20.7515
       ],
       "length_m": 10.7,
       "confidence": "LIKELY",
       "reason": "borde norte del resalto",
-      "evidence": "vigas E1-P4-V-048/E1-P4-V-049"
+      "evidence": "centrolinea consolidada P4-VP-031"
     },
     {
       "start": [
         47.132,
-        20.751488
+        20.7515
       ],
       "end": [
         47.132,
         16.619
       ],
-      "length_m": 4.132488,
+      "length_m": 4.1325,
       "confidence": "LIKELY",
       "reason": "lado oeste del resalto norte",
-      "evidence": "limite del gap RLE-LOSA y vigas E1-P4-V-033/E1-P4-V-039"
+      "evidence": "limite del gap RLE-LOSA y centrolinea P4-VP-034"
     }
   ],
   "result": "PASS"

@@ -1,0 +1,310 @@
+{
+  "status": "PASS_WITH_SCOPE_LIMIT",
+  "scope": "CAD_DILATATION_EVIDENCE_ONLY_NO_MODEL_CHANGE",
+  "all_series_dilatation_layer_entities": 393,
+  "all_series_dilatation_texts": 22,
+  "sheets": [
+    {
+      "sheet": "2017_67-000.dxf",
+      "sha256": "47e2eb98c33b198a59560052c858beade080653a3c51657354b4dfcc015be673",
+      "layer_entity_counts": {},
+      "dilatation_text_count": 3
+    },
+    {
+      "sheet": "2017_67-002.dxf",
+      "sha256": "a170a20235fab3f030223d34177842c18fda562e77b16099e723b1f172c3675f",
+      "layer_entity_counts": {},
+      "dilatation_text_count": 2
+    },
+    {
+      "sheet": "2017_67-101.dxf",
+      "sha256": "8adccabb890585ae49078d3a76437509d7580aa7645e01e9d95c4dda64c0998b",
+      "layer_entity_counts": {
+        "RLA-MURO DILATADO": 4,
+        "RLA-MURO INV DILATADO": 104
+      },
+      "dilatation_text_count": 8
+    },
+    {
+      "sheet": "2017_67-103.dxf",
+      "sha256": "38a3c6ad384f57180b6bbe7e1fd8180400ad15525697e0e4b1ae28fd0c245990",
+      "layer_entity_counts": {
+        "RLA-MURO INV DILATADO": 285
+      },
+      "dilatation_text_count": 0
+    },
+    {
+      "sheet": "2017_67-500.dxf",
+      "sha256": "279b1bfa0acccf794b492891546b02825bea25831ab7249a67e8b4954c2efeab",
+      "layer_entity_counts": {},
+      "dilatation_text_count": 4
+    },
+    {
+      "sheet": "2017_67-501.dxf",
+      "sha256": "aa295879e0cce815b597a8a6cc38c1aff0368b39e4d6ba6c86320ba21fa72830",
+      "layer_entity_counts": {},
+      "dilatation_text_count": 5
+    }
+  ],
+  "counts_by_sheet_floor_layer": [
+    {
+      "sheet": "2017_67-101.dxf",
+      "floor_region": "S1",
+      "layer": "RLA-MURO DILATADO",
+      "count": 4
+    },
+    {
+      "sheet": "2017_67-101.dxf",
+      "floor_region": "S1",
+      "layer": "RLA-MURO INV DILATADO",
+      "count": 104
+    },
+    {
+      "sheet": "2017_67-103.dxf",
+      "floor_region": "P4",
+      "layer": "RLA-MURO INV DILATADO",
+      "count": 285
+    }
+  ],
+  "s1_target": {
+    "source_sheet": "2017_67-101.dxf",
+    "source_layer": "RLA-MURO DILATADO",
+    "entity_count": 4,
+    "components": [
+      {
+        "node_count": 4,
+        "edge_count": 4,
+        "closed": true,
+        "handles": [
+          "1C106",
+          "1C107",
+          "1C108",
+          "1C109"
+        ],
+        "bbox_raw": [
+          1026.322323512687,
+          6312.153453651963,
+          1046.322323512686,
+          6548.136768392442
+        ],
+        "size_raw": [
+          19.999999999998863,
+          235.98331474047882
+        ],
+        "floor": "S1",
+        "bbox_global_m": [
+          27.141023,
+          6.351432,
+          27.341023,
+          8.711265
+        ],
+        "size_m": [
+          0.2,
+          2.359833
+        ],
+        "center_global_m": [
+          27.241023,
+          7.531349
+        ]
+      }
+    ],
+    "unique_closed_component": {
+      "node_count": 4,
+      "edge_count": 4,
+      "closed": true,
+      "handles": [
+        "1C106",
+        "1C107",
+        "1C108",
+        "1C109"
+      ],
+      "bbox_raw": [
+        1026.322323512687,
+        6312.153453651963,
+        1046.322323512686,
+        6548.136768392442
+      ],
+      "size_raw": [
+        19.999999999998863,
+        235.98331474047882
+      ],
+      "floor": "S1",
+      "bbox_global_m": [
+        27.141023,
+        6.351432,
+        27.341023,
+        8.711265
+      ],
+      "size_m": [
+        0.2,
+        2.359833
+      ],
+      "center_global_m": [
+        27.241023,
+        7.531349
+      ]
+    },
+    "overlay": "entregas/P1L2/edificio/validacion/special_interface/s1_dilatation_wall_contour.png",
+    "classification": "CONFIRMED_CLOSED_WALL_CONTOUR_LABELLED_DILATADO",
+    "structural_interpretation": "LOCAL_ED1_WALL_SEGMENT; DOES_NOT_PROVE_CROSS_BUILDING_CONNECTION"
+  },
+  "inverse_layer_interpretation": "SEPARATE_REINFORCEMENT_GRAPHICS; NOT_MERGED_WITH_TARGET_CONTOUR",
+  "physical_interface_verdict": "NO_CROSS_BUILDING_FE_CONNECTION_PROVEN",
+  "modeling_rule": "DO_NOT_CREATE_CROSS_BUILDING_FE_LINKS_FROM_GEOMETRIC_PROXIMITY",
+  "texts": [
+    {
+      "sheet": "2017_67-000.dxf",
+      "layout": "Model",
+      "handle": "20453",
+      "layer": "RLA-TEXTOS1",
+      "text": "JUNTA DE DILATACION"
+    },
+    {
+      "sheet": "2017_67-000.dxf",
+      "layout": "Model",
+      "handle": "20514",
+      "layer": "RLA-TEXTOS1",
+      "text": "MURO DILATADO"
+    },
+    {
+      "sheet": "2017_67-000.dxf",
+      "layout": "Model",
+      "handle": "217E4",
+      "layer": "RLA-TEXTOS1",
+      "text": "-JUNTAS TEMPORALES DE DILATACIÓN."
+    },
+    {
+      "sheet": "2017_67-002.dxf",
+      "layout": "Model",
+      "handle": "32BA4",
+      "layer": "CORTES",
+      "text": "DILATADO"
+    },
+    {
+      "sheet": "2017_67-002.dxf",
+      "layout": "Model",
+      "handle": "32BD1",
+      "layer": "CORTES",
+      "text": "JUNTA DE DILATACION"
+    },
+    {
+      "sheet": "2017_67-101.dxf",
+      "layout": "Model",
+      "handle": "1C252",
+      "layer": "RLE-TEXTO-1",
+      "text": "(DILATADO)"
+    },
+    {
+      "sheet": "2017_67-101.dxf",
+      "layout": "Model",
+      "handle": "1C2C2",
+      "layer": "RLE-TEXTO-1",
+      "text": "DILATACION 10 CM"
+    },
+    {
+      "sheet": "2017_67-101.dxf",
+      "layout": "Model",
+      "handle": "1C2C6",
+      "layer": "RLE-TEXTO-1",
+      "text": "DILATACION 10 CM"
+    },
+    {
+      "sheet": "2017_67-101.dxf",
+      "layout": "Model",
+      "handle": "1C2CB",
+      "layer": "RLE-TEXTO-1",
+      "text": "DILATACION"
+    },
+    {
+      "sheet": "2017_67-101.dxf",
+      "layout": "Model",
+      "handle": "1C2D0",
+      "layer": "RLE-TEXTO-1",
+      "text": "DILATACION CON"
+    },
+    {
+      "sheet": "2017_67-101.dxf",
+      "layout": "Model",
+      "handle": "1CFD2",
+      "layer": "RLE-TEXTO-1",
+      "text": "DILATACION 1CM"
+    },
+    {
+      "sheet": "2017_67-101.dxf",
+      "layout": "Model",
+      "handle": "1D00E",
+      "layer": "RLE-TEXTO-1",
+      "text": "DILATACION 1CM"
+    },
+    {
+      "sheet": "2017_67-101.dxf",
+      "layout": "Model",
+      "handle": "2433F",
+      "layer": "RLE-TEXTO-1",
+      "text": "DILATACION"
+    },
+    {
+      "sheet": "2017_67-500.dxf",
+      "layout": "Model",
+      "handle": "59048",
+      "layer": "RLA-TEXTOS1",
+      "text": "DILATACION"
+    },
+    {
+      "sheet": "2017_67-500.dxf",
+      "layout": "Model",
+      "handle": "5B958",
+      "layer": "RLA-TEXTOS1",
+      "text": "DILATACION"
+    },
+    {
+      "sheet": "2017_67-500.dxf",
+      "layout": "Model",
+      "handle": "5FDCB",
+      "layer": "RLA-TEXTOS1",
+      "text": "DILATACION"
+    },
+    {
+      "sheet": "2017_67-500.dxf",
+      "layout": "Model",
+      "handle": "601B4",
+      "layer": "RLA-TEXTOS1",
+      "text": "DILATACION"
+    },
+    {
+      "sheet": "2017_67-501.dxf",
+      "layout": "Model",
+      "handle": "59048",
+      "layer": "RLA-TEXTOS1",
+      "text": "DILATACION"
+    },
+    {
+      "sheet": "2017_67-501.dxf",
+      "layout": "Model",
+      "handle": "62985",
+      "layer": "RLA-TEXTOS1",
+      "text": "DILATACION"
+    },
+    {
+      "sheet": "2017_67-501.dxf",
+      "layout": "Model",
+      "handle": "6298A",
+      "layer": "RLA-TEXTOS1",
+      "text": "DILATACION"
+    },
+    {
+      "sheet": "2017_67-501.dxf",
+      "layout": "Model",
+      "handle": "6298F",
+      "layer": "RLA-TEXTOS1",
+      "text": "DILATACION"
+    },
+    {
+      "sheet": "2017_67-501.dxf",
+      "layout": "Model",
+      "handle": "62994",
+      "layer": "RLA-TEXTOS1",
+      "text": "DILATACION"
+    }
+  ]
+}

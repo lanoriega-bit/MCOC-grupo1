@@ -1,5 +1,25 @@
 # P1L2 Status
 
+## Consolidacion PRE-P1L4 — FASE 4 COMPLETA (2026-09-10)
+
+- `GEO-SPECIAL-001`: la elevacion `2017_67-308` confirma las columnas S1 H-1,
+  H-2 y H-3 y sus apoyos; el contorno cerrado `RLA-MURO DILATADO` confirma y
+  añade un muro local S1 de 0.20 x 2.360 m.
+- `GEO-INTERFACE-001`: D/E mantiene residual 0.009 m. No se encontro evidencia
+  de transferencia estructural entre edificios; no se crean conexiones FE por
+  proximidad.
+- Los cinco remates que sobrepasan geometricamente D/E pertenecen a un solo
+  edificio y no forman enlaces ED1-ED2.
+- EDIFICIO_1: 524 solidos; combinado: 1212; elementos
+  `UNRESOLVED_REQUIRES_REVIEW`: 0.
+- Piloto P4 revalidado tras consolidacion de vigas: 958.392750 m2,
+  `participates_in_FE=false`, dependencias migradas a `sourceTag` estable.
+- Validaciones de calce, combinado, nucleo, referencia Luis, muros, vigas y
+  visual: PASS. `LUIS_REFERENCE_FILES_MODIFIED = 0`.
+- Evidencia: `edificio/validacion/special_interface/`.
+- Siguiente hito: losas y arquitectura visual ED1/ED2, sin tocar aun FE ni
+  resultados P1L3.
+
 ## Consolidacion PRE-P1L4 — FASE 3 COMPLETA (2026-09-10)
 
 - Auditoría directa de `RLE-VIGA`: 553 segmentos fuente; propuesta validada de
@@ -7,7 +27,7 @@
 - Los 545 prismas históricos se consolidaron; 46 cierres cortos y 4 detalles
   interiores fueron excluidos. No quedan caras largas/diagonales sin resolver.
 - Ancho 300/300 trazable; altura 281 con evidencia directa o de familia inequívoca y 19
-  `UNKNOWN`. En esas 17, 0.60 m es solo profundidad visual, no sección asumida.
+  `UNKNOWN`. En esas 19, 0.60 m es solo profundidad visual, no sección asumida.
 - Propuesta, aplicación, geometría combinada, continuidad, muros, diff de Luis
   y auditoría visual: `PASS`. La referencia original permanece intacta.
 
@@ -41,7 +61,7 @@
 
 ## Interfaz P1L3 vigente (2026-09-10)
 
-- El modelo combinado P1L2 vigente tiene 1210 solidos; el Unity entregado P1L3
+- El modelo combinado P1L2 vigente tiene 1212 solidos; el Unity entregado P1L3
   conserva su snapshot hasta la fase prevista de actualización de interfaz.
   por el Unity de Jose; no se reemplazo por snapshots historicos.
 - P1L3 integra `G/Q/EX/EY/R`, capacidad HA y resultados OpenSees en Unity.

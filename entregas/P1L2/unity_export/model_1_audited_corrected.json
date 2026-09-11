@@ -360,12 +360,12 @@
       "kind": "box",
       "floor": "1S",
       "center": [
-        30.000027268962683,
-        16.150136558017508,
+        30.0,
+        16.15,
         1.98
       ],
-      "width_m": 0.7000000000000064,
-      "depth_m": 0.6999999999999993,
+      "width_m": 0.7,
+      "depth_m": 0.7,
       "height_m": 3.96,
       "length_m": 3.96,
       "source_layer": "RLE-PILAR",
@@ -376,7 +376,7 @@
         "CAD_1_column_plan_0053",
         "CAD_1_column_plan_0054"
       ],
-      "confidence": "inferred_from_floor_1",
+      "confidence": "confirmed_by_axis_elevation",
       "audit": {
         "status": "REVIEW_HIGH",
         "reference_status": "PROVISIONAL_GEOMETRY_REVIEW",
@@ -390,9 +390,20 @@
       },
       "preserved_viewer_id": "E1-S1-C-013",
       "audit_resolution": {
-        "classification": "LIKELY_CORRECT",
-        "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-        "reason": "S1 panel never drafts columns; the P1 plan on the same sheet draws the column at the exact station, but the station sits at/outside the S1 drawn slab-and-beam footprint"
+        "classification": "CONFIRMED_BY_AXIS_ELEVATION",
+        "resolution_group": "CONFIRMED_CORRECT",
+        "reason": "La elevacion estructural 2017_67-308 confirma pilar 70x70 continuo bajo P1 en la estacion H-1/H-2/H-3."
+      },
+      "geometry_confirmation": {
+        "status": "CONFIRMED_BY_AXIS_ELEVATION",
+        "source_sheet": "2017_67-308",
+        "axis_x": "H",
+        "axis_y": "3",
+        "section_m": [
+          0.7,
+          0.7
+        ],
+        "audit_file": "entregas/P1L2/edificio/validacion/special_interface/s1_axis_h_audit.json"
       }
     },
     {
@@ -560,11 +571,11 @@
       "kind": "box",
       "floor": "1S",
       "center": [
-        30.000027268962285,
-        0.037636557960950105,
+        30.0,
+        0.0,
         1.98
       ],
-      "width_m": 0.700000000000017,
+      "width_m": 0.7,
       "depth_m": 0.7,
       "height_m": 3.96,
       "length_m": 3.96,
@@ -576,7 +587,7 @@
         "CAD_1_column_plan_0070",
         "CAD_1_column_plan_0071"
       ],
-      "confidence": "inferred_from_floor_1",
+      "confidence": "confirmed_by_axis_elevation",
       "audit": {
         "status": "REVIEW_HIGH",
         "reference_status": "PROVISIONAL_GEOMETRY_REVIEW",
@@ -590,9 +601,20 @@
       },
       "preserved_viewer_id": "E1-S1-C-011",
       "audit_resolution": {
-        "classification": "LIKELY_CORRECT",
-        "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-        "reason": "S1 panel never drafts columns; the P1 plan on the same sheet draws the column at the exact station, but the station sits at/outside the S1 drawn slab-and-beam footprint"
+        "classification": "CONFIRMED_BY_AXIS_ELEVATION",
+        "resolution_group": "CONFIRMED_CORRECT",
+        "reason": "La elevacion estructural 2017_67-308 confirma pilar 70x70 continuo bajo P1 en la estacion H-1/H-2/H-3."
+      },
+      "geometry_confirmation": {
+        "status": "CONFIRMED_BY_AXIS_ELEVATION",
+        "source_sheet": "2017_67-308",
+        "axis_x": "H",
+        "axis_y": "1",
+        "section_m": [
+          0.7,
+          0.7
+        ],
+        "audit_file": "entregas/P1L2/edificio/validacion/special_interface/s1_axis_h_audit.json"
       }
     },
     {
@@ -601,12 +623,12 @@
       "kind": "box",
       "floor": "1S",
       "center": [
-        30.000027268962278,
-        8.899969902690374,
+        30.0,
+        8.9,
         1.98
       ],
-      "width_m": 0.6999999999999993,
-      "depth_m": 0.7000000000000135,
+      "width_m": 0.7,
+      "depth_m": 0.7,
       "height_m": 3.96,
       "length_m": 3.96,
       "source_layer": "RLE-PILAR",
@@ -617,7 +639,7 @@
         "CAD_1_column_plan_0074",
         "CAD_1_column_plan_0075"
       ],
-      "confidence": "inferred_from_floor_1",
+      "confidence": "confirmed_by_axis_elevation",
       "audit": {
         "status": "REVIEW_HIGH",
         "reference_status": "PROVISIONAL_GEOMETRY_REVIEW",
@@ -631,9 +653,20 @@
       },
       "preserved_viewer_id": "E1-S1-C-012",
       "audit_resolution": {
-        "classification": "LIKELY_CORRECT",
-        "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-        "reason": "S1 panel never drafts columns; the P1 plan on the same sheet draws the column at the exact station, but the station sits at/outside the S1 drawn slab-and-beam footprint"
+        "classification": "CONFIRMED_BY_AXIS_ELEVATION",
+        "resolution_group": "CONFIRMED_CORRECT",
+        "reason": "La elevacion estructural 2017_67-308 confirma pilar 70x70 continuo bajo P1 en la estacion H-1/H-2/H-3."
+      },
+      "geometry_confirmation": {
+        "status": "CONFIRMED_BY_AXIS_ELEVATION",
+        "source_sheet": "2017_67-308",
+        "axis_x": "H",
+        "axis_y": "2",
+        "section_m": [
+          0.7,
+          0.7
+        ],
+        "audit_file": "entregas/P1L2/edificio/validacion/special_interface/s1_axis_h_audit.json"
       }
     },
     {
@@ -3568,8 +3601,8 @@
       "kind": "box",
       "floor": "base",
       "center": [
-        30.000027268962683,
-        16.150136558017508,
+        30.0,
+        16.15,
         -0.15
       ],
       "width_m": 1.2600000000000116,
@@ -3581,7 +3614,7 @@
       "sourceTags": [
         "SOL_1S_column_0009"
       ],
-      "confidence": "qa_connected",
+      "confidence": "derived_from_axis_elevation_confirmed_column",
       "audit": {
         "status": "REVIEW_HIGH",
         "reference_status": "PROVISIONAL_GEOMETRY_REVIEW",
@@ -3595,9 +3628,14 @@
       },
       "preserved_viewer_id": "E1-S1-A-073",
       "audit_resolution": {
-        "classification": "UNRESOLVED_DERIVED_ELEMENT",
-        "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-        "reason": "derived from inferred column resolution"
+        "classification": "CONFIRMED_DERIVED_SUPPORT",
+        "resolution_group": "CONFIRMED_CORRECT",
+        "reason": "Apoyo derivado de E1-S1-C-013, confirmado en elevacion 2017_67-308."
+      },
+      "geometry_confirmation": {
+        "status": "DERIVED_FROM_CONFIRMED_COLUMN",
+        "column_id": "E1-S1-C-013",
+        "audit_file": "entregas/P1L2/edificio/validacion/special_interface/s1_axis_h_audit.json"
       }
     },
     {
@@ -3720,8 +3758,8 @@
       "kind": "box",
       "floor": "base",
       "center": [
-        30.000027268962285,
-        0.037636557960950105,
+        30.0,
+        0.0,
         -0.15
       ],
       "width_m": 1.2600000000000307,
@@ -3733,7 +3771,7 @@
       "sourceTags": [
         "SOL_1S_column_0013"
       ],
-      "confidence": "qa_connected",
+      "confidence": "derived_from_axis_elevation_confirmed_column",
       "audit": {
         "status": "REVIEW_HIGH",
         "reference_status": "PROVISIONAL_GEOMETRY_REVIEW",
@@ -3747,9 +3785,14 @@
       },
       "preserved_viewer_id": "E1-S1-A-071",
       "audit_resolution": {
-        "classification": "UNRESOLVED_DERIVED_ELEMENT",
-        "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-        "reason": "derived from inferred column resolution"
+        "classification": "CONFIRMED_DERIVED_SUPPORT",
+        "resolution_group": "CONFIRMED_CORRECT",
+        "reason": "Apoyo derivado de E1-S1-C-011, confirmado en elevacion 2017_67-308."
+      },
+      "geometry_confirmation": {
+        "status": "DERIVED_FROM_CONFIRMED_COLUMN",
+        "column_id": "E1-S1-C-011",
+        "audit_file": "entregas/P1L2/edificio/validacion/special_interface/s1_axis_h_audit.json"
       }
     },
     {
@@ -3758,8 +3801,8 @@
       "kind": "box",
       "floor": "base",
       "center": [
-        30.000027268962278,
-        8.899969902690374,
+        30.0,
+        8.9,
         -0.15
       ],
       "width_m": 1.2599999999999987,
@@ -3771,7 +3814,7 @@
       "sourceTags": [
         "SOL_1S_column_0014"
       ],
-      "confidence": "qa_connected",
+      "confidence": "derived_from_axis_elevation_confirmed_column",
       "audit": {
         "status": "REVIEW_HIGH",
         "reference_status": "PROVISIONAL_GEOMETRY_REVIEW",
@@ -3785,9 +3828,14 @@
       },
       "preserved_viewer_id": "E1-S1-A-072",
       "audit_resolution": {
-        "classification": "UNRESOLVED_DERIVED_ELEMENT",
-        "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-        "reason": "derived from inferred column resolution"
+        "classification": "CONFIRMED_DERIVED_SUPPORT",
+        "resolution_group": "CONFIRMED_CORRECT",
+        "reason": "Apoyo derivado de E1-S1-C-012, confirmado en elevacion 2017_67-308."
+      },
+      "geometry_confirmation": {
+        "status": "DERIVED_FROM_CONFIRMED_COLUMN",
+        "column_id": "E1-S1-C-012",
+        "audit_file": "entregas/P1L2/edificio/validacion/special_interface/s1_axis_h_audit.json"
       }
     },
     {
@@ -22675,6 +22723,84 @@
         "LBL_4_beam_label_0070"
       ],
       "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+    },
+    {
+      "solidTag": "SOL_1S_wall_dilatation_001",
+      "category": "wall",
+      "kind": "linear_prism",
+      "floor": "1S",
+      "sourceTag": "S1-W-DIL-001",
+      "source_layer": "RLA-MURO DILATADO",
+      "source_dxf": "2017_67-101.dxf",
+      "sourceTags": [
+        "1C106",
+        "1C107",
+        "1C108",
+        "1C109"
+      ],
+      "start": [
+        -0.24997700000000123,
+        6.351432,
+        1.98
+      ],
+      "end": [
+        -0.24997700000000123,
+        8.711265,
+        1.98
+      ],
+      "width_m": 0.1999999999999993,
+      "wall_thickness_m": 0.1999999999999993,
+      "height_m": 3.96,
+      "length_m": 2.359832999999999,
+      "confidence": "confirmed_from_closed_CAD_contour_and_explicit_label",
+      "preserved_viewer_id": "E1-S1-M-061",
+      "audit_resolution": {
+        "classification": "CONFIRMED_SPECIAL_DILATATION_WALL",
+        "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+        "reason": "Cuatro entidades CAD forman un contorno cerrado 0.20 x 2.36 m en la capa RLA-MURO DILATADO, junto a la llamada explicita (DILATADO)."
+      },
+      "geometry_confirmation": {
+        "status": "CONFIRMED_SPECIAL_CLOSED_CONTOUR",
+        "audit_file": "entregas/P1L2/edificio/validacion/special_interface/ed1_dilatation_audit.json",
+        "entity_handles": [
+          "1C106",
+          "1C107",
+          "1C108",
+          "1C109"
+        ],
+        "thickness_m": 0.1999999999999993,
+        "physical_interface_connection": false
+      },
+      "interface_policy": "LOCAL_ED1_ELEMENT_NO_CROSS_BUILDING_FE_LINK"
+    },
+    {
+      "solidTag": "SOL_base_support_dilatation_001",
+      "category": "support",
+      "kind": "linear_prism",
+      "floor": "base",
+      "sourceTag": "SOL_1S_wall_dilatation_001",
+      "source_layer": "generated_from_confirmed_special_wall",
+      "source_dxf": "2017_67-101.dxf",
+      "start": [
+        -0.24997700000000123,
+        6.351432,
+        -0.15
+      ],
+      "end": [
+        -0.24997700000000123,
+        8.711265,
+        -0.15
+      ],
+      "width_m": 0.45,
+      "height_m": 0.3,
+      "length_m": 2.359832999999999,
+      "confidence": "derived_from_confirmed_special_wall",
+      "preserved_viewer_id": "E1-S1-A-080",
+      "audit_resolution": {
+        "classification": "DERIVED_FROM_CONFIRMED_SPECIAL_WALL",
+        "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+        "reason": "Apoyo visual derivado del muro S1 confirmado; no representa enlace con EDIFICIO_2."
+      }
     }
   ],
   "segments": [
@@ -86687,5 +86813,23 @@
     "confirmed_section_heights": 281,
     "unknown_section_heights": 19,
     "policy": "one analytical centerline per physical beam span; geometry-only widths do not invent section heights"
+  },
+  "special_geometry": {
+    "status": "APPLIED",
+    "scope": "GEO-SPECIAL-001_LOCAL_S1_DILATATION_WALL",
+    "audit_file": "entregas/P1L2/edificio/validacion/special_interface/ed1_dilatation_audit.json",
+    "wall_tag": "SOL_1S_wall_dilatation_001",
+    "support_tag": "SOL_base_support_dilatation_001",
+    "cross_building_connection_created": false
+  },
+  "axis_h_resolution": {
+    "status": "APPLIED",
+    "audit_file": "entregas/P1L2/edificio/validacion/special_interface/s1_axis_h_audit.json",
+    "confirmed_columns": [
+      "E1-S1-C-011",
+      "E1-S1-C-012",
+      "E1-S1-C-013"
+    ],
+    "source_sheet": "2017_67-308"
   }
 }

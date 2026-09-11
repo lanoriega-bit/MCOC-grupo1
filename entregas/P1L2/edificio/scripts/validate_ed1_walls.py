@@ -11,7 +11,8 @@ MODEL = REPO / "entregas/P1L2/unity_export/model_combined_viewer.json"
 DIFF_VALIDATION = REPO / "entregas/P1L2/edificio/datos/luis_reference_diff_validation.json"
 OUT_JSON = REPO / "entregas/P1L2/edificio/datos/ed1_wall_validation.json"
 OUT_MD = REPO / "entregas/P1L2/edificio/validacion/ed1_walls/VALIDATION.md"
-EXPECTED_BY_FLOOR = {"S1": 21, "P1": 25, "P2": 7, "P3": 7, "P4": 7}
+EXPECTED_REGULAR_BY_FLOOR = {"S1": 21, "P1": 25, "P2": 7, "P3": 7, "P4": 7}
+EXPECTED_BY_FLOOR = {"S1": 22, "P1": 25, "P2": 7, "P3": 7, "P4": 7}
 
 
 def load(path: Path) -> dict[str, object]:
@@ -42,21 +43,29 @@ def main() -> None:
     counts = dict(Counter(str(item["floor"]) for item in walls))
     audit_counts = {
         floor: len(audit["floors"][floor]["pairs"])
-        for floor in EXPECTED_BY_FLOOR
+        for floor in EXPECTED_REGULAR_BY_FLOOR
     }
+    special_walls = [item for item in walls if item.get("source_layer") == "RLA-MURO DILATADO"]
     thickness_failures = [
         item["id"] for item in walls
-        if item.get("geometry_confirmation", {}).get("status") != "CONFIRMED_CONTOUR_PAIR"
+        if item.get("geometry_confirmation", {}).get("status") not in {"CONFIRMED_CONTOUR_PAIR", "CONFIRMED_SPECIAL_CLOSED_CONTOUR"}
         or abs(float(item["width_m"]) - float(item["wall_thickness_m"])) > 1e-9
         or abs(float(item["width_m"]) - float(item["geometry_confirmation"]["thickness_m"])) > 1e-9
-        or not str(item.get("thickness_source", "")).startswith("CAD_CONTOUR_PAIR")
+        or not (
+            str(item.get("thickness_source", "")).startswith("CAD_CONTOUR_PAIR")
+            or item.get("source_layer") == "RLA-MURO DILATADO"
+        )
     ]
     wall_ids = [str(item["id"]) for item in walls]
     wall_keys = [xy_key(item) for item in walls]
     checks = {
         "audit_pass": audit.get("status") == "PASS",
         "counts_match_expected": counts == EXPECTED_BY_FLOOR,
-        "counts_match_audit": counts == audit_counts,
+        "regular_counts_match_audit": {
+            floor: counts.get(floor, 0) - (1 if floor == "S1" else 0)
+            for floor in EXPECTED_BY_FLOOR
+        } == audit_counts,
+        "one_confirmed_special_dilatation_wall": len(special_walls) == 1 and special_walls[0].get("geometry_confirmation", {}).get("physical_interface_connection") is False,
         "all_thicknesses_traceable": not thickness_failures,
         "unique_wall_ids": len(wall_ids) == len(set(wall_ids)),
         "unique_centerlines": len(wall_keys) == len(set(wall_keys)),
@@ -73,6 +82,7 @@ def main() -> None:
         "thicknesses_m": dict(sorted(Counter(str(item["wall_thickness_m"]) for item in walls).items())),
         "geometry_and_label_confirmed": sum(item.get("thickness_source") == "CAD_CONTOUR_PAIR+TEXT_LABEL" for item in walls),
         "geometry_only_confirmed": sum(item.get("thickness_source") == "CAD_CONTOUR_PAIR" for item in walls),
+        "special_dilatation_confirmed": len(special_walls),
         "thickness_failures": thickness_failures,
         "source_audit": str(AUDIT.relative_to(REPO)).replace("\\", "/"),
         "validated_model": str(MODEL.relative_to(REPO)).replace("\\", "/"),

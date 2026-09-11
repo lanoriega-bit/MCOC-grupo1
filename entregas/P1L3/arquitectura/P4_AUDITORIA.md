@@ -4,7 +4,7 @@ La capa es exclusivamente visual y `participates_in_FE = false`.
 
 - Segmentos RLE-LOSA inspeccionados: 50.
 - Segmentos exteriores usados directamente: 13.
-- Vigas de respaldo del resalto: 6.
+- Centrolineas de viga de respaldo del resalto: 3.
 - Cierres colineales inferidos: 6.
 - Bordes probables del resalto respaldado por vigas: 3.
 - Area bbox anterior: 1802.479 m2.

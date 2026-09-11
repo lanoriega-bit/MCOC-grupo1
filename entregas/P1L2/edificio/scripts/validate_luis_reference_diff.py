@@ -200,6 +200,13 @@ def main() -> int:
     diff_application_errors = []
     for change in changes:
         old_geometry = change.get("old_geometry")
+        if old_geometry == "ABSENT":
+            new_geometry = change.get("new_geometry")
+            if isinstance(new_geometry, dict):
+                expected_corrected_solids[solid_signature(new_geometry)] += 1
+            else:
+                diff_application_errors.append(f"ADDITION_MISSING_NEW_GEOMETRY:{change.get('solidTag')}")
+            continue
         if not isinstance(old_geometry, dict):
             diff_application_errors.append(f"MISSING_OLD_GEOMETRY:{change.get('solidTag')}")
             continue

@@ -1,6 +1,6 @@
 # Consolidación POST-P1L3 / PRE-P1L4
 
-Estado: `FASE_3_DONE_BEAMS_CONSOLIDATED`
+Estado: `FASE_4_DONE_SPECIAL_GEOMETRY_AND_INTERFACE_AUDITED`
 Fecha de apertura: 2026-09-10  
 Rama vigente: `codex/pre-p1l4-consolidation`
 
@@ -77,15 +77,15 @@ Prioridad: P0 bloquea la base; P1 alta; P2 media; P3 documental. Estados:
 | GEO-COL-S1-001 — E1-S1-C-014..019 | Inferencias verticales de Luis | Elevaciones estructurales completas 309 eje I y 310 eje I', más ejes canónicos | Seis `CONFIRMED_BY_AXIS_ELEVATION`; sección 0.70×0.70 m y centro de eje normalizados | Cierra apoyos y continuidad del ala este sin extrapolar plantas | P0 | Fuentes CAD completas | Auditoría reproducible en `validacion/s1_columns_final/`; corregido y regenerado | DONE |
 | GEO-WALL-E1-001 — muros S1-P4 | Extractor histórico modelaba cada cara `RLE-MURO` como muro | DXF directo, 193 segmentos fuente, 5 overlays y crosswalk | 134 prismas ED1 consolidados en 67 segmentos analíticos; 72 cierres cortos excluidos; 0 sin resolver | Elimina doble rigidez y apoyos duplicados | P0 | GEO-COL-S1-001 | Auditoría y validación reproducibles en `validacion/ed1_walls/` | DONE |
 | GEO-BEAM-E1-001 — vigas S1-P4 | Extractor histórico extruía cada línea RLE-VIGA | 553 segmentos DXF, propuesta/validación independiente y overlays | 545 prismas consolidados en 300 centrolineas; 46 cierres y 4 detalles interiores excluidos; 0 sin resolver | Elimina doble representación y estabiliza paños/conectividad | P0 | GEO-WALL-E1-001 | Aplicación reproducible con crosswalk y validación final | DONE |
-| GEO-SPECIAL-001 — outboard/voladizos/canopias | Extracción automática deficiente fuera de grilla | `outboard_room_reconstruction.json`, planos, fotos secundarias | Grupos `UNRESOLVED_REQUIRES_REVIEW` | Forma real y elementos flotantes | P1 | Muros y vigas estabilizados | Revisar por sector con overlays y evidencia primaria | OPEN |
-| GEO-INTERFACE-001 — interfaz ED1/ED2 | Modelos extraídos por separado | Calce D/E confirmado; rama E2 antigua declara interfaz no resuelta | Alineación confirmada, conexión física no auditada | Transferencia entre bloques | P1 | Muros/vigas de ambos lados | Inventariar miembros que cruzan o terminan en junta | OPEN |
+| GEO-SPECIAL-001 — outboard/voladizos/canopias | Extracción automática deficiente fuera de grilla | Elevación H 308, contorno `RLA-MURO DILATADO`, planos y fotos secundarias | 3 columnas H y apoyos confirmados; muro dilatado local añadido; 0 `UNRESOLVED_REQUIRES_REVIEW` estructurales | Cierra geometría resistente especial; aleros/canopias siguen como arquitectura no FE | P1 | Muros y vigas estabilizados | Auditorías reproducibles en `validacion/special_interface/`; arquitectura continúa con losas | DONE |
+| GEO-INTERFACE-001 — interfaz ED1/ED2 | Modelos extraídos por separado | Calce D/E, búsqueda en 13 láminas principales y auditoría completa de capas/textos `DILAT` | D/E residual 0.009 m; 5 remates locales sobrepasan el eje, ninguno enlaza ambos edificios; no hay conexión FE probada | Define separación segura de bloques | P1 | Muros/vigas de ambos lados | Mantener modelos separados; reabrir solo ante detalle primario contradictorio | DONE |
 | GEO-ID-ED2-001 — estabilidad de IDs ED2 | Regeneración actual puede renumerar | Handoff y extractor ED2 | Sin registro/tombstones formal equivalente a ED1 | Rompe crosswalk/resultados | P1 | Auditoría ED2 | Crear registro persistente antes de regenerar | OPEN |
 
 ### LOSAS / ARQUITECTURA
 
 | Issue | Origen | Evidencia disponible | Estado actual | Impacto | Prioridad | Dependencia | Solución propuesta | Estado |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| SLAB-E1-P4-001 — verificar piloto | Commit `807558b` | RLE-LOSA, vigas P4, overlay y auditoría | Piloto vigente, 958.392618 m², no FE | Patrón para niveles restantes | P1 | Ninguna | Revalidar contra base y congelar metodología | OPEN |
+| SLAB-E1-P4-001 — verificar piloto | Commit `807558b` | RLE-LOSA, vigas P4, overlay y auditoría | Revalidado tras consolidar vigas: 958.392750 m², no FE; referencias cambiadas a `sourceTag` estable | Patrón para niveles restantes | P1 | Ninguna | Metodología congelada; extender por piso sin usar IDs volátiles | DONE |
 | SLAB-E1-001 — S1/P1/P2/P3 | Bounding boxes provisionales | RLE-LOSA, vigas, ejes, notas y huecos | Sin perímetros visuales definitivos | Apariencia, áreas y PP | P0 | Muros/vigas por piso | Reconstruir perímetro/huecos/gaps y documentar cierres | OPEN |
 | SLAB-E2-001 — S1-P4 | Bounding boxes provisionales | Serie 2024_22 exclusivamente | Sin reconstrucción auditada | Apariencia, áreas y PP | P0 | Geometría ED2 estable | Aplicar metodología sin copiar ED1 | OPEN |
 | ARCH-SEPARATION-001 | Riesgo de mezclar visual/FE | Contrato P4 | P4 declara `participates_in_FE=false` | Evita alterar rigidez/cargas por estética | P0 | Toda extensión arquitectónica | Exigir el campo explícito y validar consumidores | OPEN |
@@ -242,9 +242,31 @@ de cada componente flotante.
 - Evidencia: `entregas/P1L2/edificio/validacion/ed1_beams/` y
   `entregas/P1L2/edificio/datos/ed1_beam_resolution.json`.
 
+### FASE 4 — sectores especiales e interfaz EDIFICIO_1–EDIFICIO_2
+
+- La elevación estructural `2017_67-308` confirma H-1/H-2/H-3 en S1: luces
+  8.900 m y 7.250 m, cuatro rótulos `P. 70x70` por estación y dos caras
+  continuas bajo P1. Las tres columnas y sus apoyos derivados quedan
+  `CONFIRMED_BY_AXIS_ELEVATION`.
+- En `2017_67-101`, cuatro entidades (handles `1C106`–`1C109`) forman un único
+  contorno cerrado `RLA-MURO DILATADO` de 0.200 × 2.360 m. Se incorporó como
+  muro local S1 de EDIFICIO_1 y apoyo derivado, sin crear vínculo con EDIFICIO_2.
+- El calce D/E conserva residual 0.009 m. La búsqueda en toda la serie 2017_67
+  encontró 393 entidades en capas `DILAT` y 22 textos; no apareció un detalle
+  que pruebe transferencia entre los bloques.
+- Cinco remates locales sobrepasan geométricamente el eje D/E, pero ninguno
+  conecta un miembro ED1 con uno ED2. La regla queda: no crear links FE por
+  proximidad.
+- EDIFICIO_1 queda con 524 sólidos y el combinado con 1212; 0 elementos
+  `UNRESOLVED_REQUIRES_REVIEW`. Calce, geometría, núcleo, diff de Luis, muros,
+  vigas y auditoría visual: `PASS`; `LUIS_REFERENCE_FILES_MODIFIED = 0`.
+- El piloto arquitectónico P4 se desacopló de IDs volátiles de vigas mediante
+  `sourceTag`; área revalidada 958.392750 m² y `participates_in_FE=false`.
+- Evidencia: `entregas/P1L2/edificio/validacion/special_interface/`.
+
 ## Próximo hito
 
-`FASE 4 — GEO-SPECIAL-001 / GEO-INTERFACE-001`: auditar los sectores
-outboard, voladizos, canopias y la interfaz física EDIFICIO_1–EDIFICIO_2 con
-planos como fuente primaria. No reconstruir todavía el modelo FE ni recalcular
-cargas/resultados P1L3.
+`FASE 5 — SLAB-E1-001 / SLAB-E2-001 / ARCH-SEPARATION-001`: reconstruir los
+perímetros y huecos de losas por piso y extender aleros/canopias como geometría
+arquitectónica explícitamente `participates_in_FE=false`. No reconstruir todavía
+el modelo FE ni recalcular cargas/resultados P1L3.

@@ -96135,12 +96135,12 @@
       "kind": "box",
       "floor": "S1",
       "center": [
-        57.49102726896268,
-        16.150136558017508,
+        57.491,
+        16.15,
         1.98
       ],
-      "width_m": 0.7000000000000064,
-      "depth_m": 0.6999999999999993,
+      "width_m": 0.7,
+      "depth_m": 0.7,
       "height_m": 3.96,
       "length_m": 3.96,
       "source_layer": "RLE-PILAR",
@@ -96151,7 +96151,7 @@
         "CAD_1_column_plan_0053",
         "CAD_1_column_plan_0054"
       ],
-      "confidence": "inferred_from_floor_1",
+      "confidence": "confirmed_by_axis_elevation",
       "audit": {
         "status": "REVIEW_HIGH",
         "reference_status": "PROVISIONAL_GEOMETRY_REVIEW",
@@ -96165,9 +96165,20 @@
       },
       "preserved_viewer_id": "E1-S1-C-013",
       "audit_resolution": {
-        "classification": "LIKELY_CORRECT",
-        "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-        "reason": "S1 panel never drafts columns; the P1 plan on the same sheet draws the column at the exact station, but the station sits at/outside the S1 drawn slab-and-beam footprint"
+        "classification": "CONFIRMED_BY_AXIS_ELEVATION",
+        "resolution_group": "CONFIRMED_CORRECT",
+        "reason": "La elevacion estructural 2017_67-308 confirma pilar 70x70 continuo bajo P1 en la estacion H-1/H-2/H-3."
+      },
+      "geometry_confirmation": {
+        "status": "CONFIRMED_BY_AXIS_ELEVATION",
+        "source_sheet": "2017_67-308",
+        "axis_x": "H",
+        "axis_y": "3",
+        "section_m": [
+          0.7,
+          0.7
+        ],
+        "audit_file": "entregas/P1L2/edificio/validacion/special_interface/s1_axis_h_audit.json"
       },
       "source_floor": "1S",
       "level_kind": "FLOOR",
@@ -96567,11 +96578,11 @@
       "kind": "box",
       "floor": "S1",
       "center": [
-        57.491027268962284,
-        0.037636557960950105,
+        57.491,
+        0.0,
         1.98
       ],
-      "width_m": 0.700000000000017,
+      "width_m": 0.7,
       "depth_m": 0.7,
       "height_m": 3.96,
       "length_m": 3.96,
@@ -96583,7 +96594,7 @@
         "CAD_1_column_plan_0070",
         "CAD_1_column_plan_0071"
       ],
-      "confidence": "inferred_from_floor_1",
+      "confidence": "confirmed_by_axis_elevation",
       "audit": {
         "status": "REVIEW_HIGH",
         "reference_status": "PROVISIONAL_GEOMETRY_REVIEW",
@@ -96597,9 +96608,20 @@
       },
       "preserved_viewer_id": "E1-S1-C-011",
       "audit_resolution": {
-        "classification": "LIKELY_CORRECT",
-        "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-        "reason": "S1 panel never drafts columns; the P1 plan on the same sheet draws the column at the exact station, but the station sits at/outside the S1 drawn slab-and-beam footprint"
+        "classification": "CONFIRMED_BY_AXIS_ELEVATION",
+        "resolution_group": "CONFIRMED_CORRECT",
+        "reason": "La elevacion estructural 2017_67-308 confirma pilar 70x70 continuo bajo P1 en la estacion H-1/H-2/H-3."
+      },
+      "geometry_confirmation": {
+        "status": "CONFIRMED_BY_AXIS_ELEVATION",
+        "source_sheet": "2017_67-308",
+        "axis_x": "H",
+        "axis_y": "1",
+        "section_m": [
+          0.7,
+          0.7
+        ],
+        "audit_file": "entregas/P1L2/edificio/validacion/special_interface/s1_axis_h_audit.json"
       },
       "source_floor": "1S",
       "level_kind": "FLOOR",
@@ -96614,7 +96636,7 @@
       "coordinates": {
         "center": [
           57.491,
-          0.038,
+          0.0,
           1.98
         ],
         "z_bottom_m": 0.0,
@@ -96636,8 +96658,8 @@
           "Y": {
             "axis": "1",
             "axis_coord_m": 0.0,
-            "offset_m": 0.038,
-            "abs_offset_m": 0.038,
+            "offset_m": 0.0,
+            "abs_offset_m": 0.0,
             "status": "ON_AXIS",
             "relation": "1",
             "span": null
@@ -96666,12 +96688,12 @@
       "kind": "box",
       "floor": "S1",
       "center": [
-        57.491027268962284,
-        8.899969902690374,
+        57.491,
+        8.9,
         1.98
       ],
-      "width_m": 0.6999999999999993,
-      "depth_m": 0.7000000000000135,
+      "width_m": 0.7,
+      "depth_m": 0.7,
       "height_m": 3.96,
       "length_m": 3.96,
       "source_layer": "RLE-PILAR",
@@ -96682,7 +96704,7 @@
         "CAD_1_column_plan_0074",
         "CAD_1_column_plan_0075"
       ],
-      "confidence": "inferred_from_floor_1",
+      "confidence": "confirmed_by_axis_elevation",
       "audit": {
         "status": "REVIEW_HIGH",
         "reference_status": "PROVISIONAL_GEOMETRY_REVIEW",
@@ -96696,9 +96718,20 @@
       },
       "preserved_viewer_id": "E1-S1-C-012",
       "audit_resolution": {
-        "classification": "LIKELY_CORRECT",
-        "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-        "reason": "S1 panel never drafts columns; the P1 plan on the same sheet draws the column at the exact station, but the station sits at/outside the S1 drawn slab-and-beam footprint"
+        "classification": "CONFIRMED_BY_AXIS_ELEVATION",
+        "resolution_group": "CONFIRMED_CORRECT",
+        "reason": "La elevacion estructural 2017_67-308 confirma pilar 70x70 continuo bajo P1 en la estacion H-1/H-2/H-3."
+      },
+      "geometry_confirmation": {
+        "status": "CONFIRMED_BY_AXIS_ELEVATION",
+        "source_sheet": "2017_67-308",
+        "axis_x": "H",
+        "axis_y": "2",
+        "section_m": [
+          0.7,
+          0.7
+        ],
+        "audit_file": "entregas/P1L2/edificio/validacion/special_interface/s1_axis_h_audit.json"
       },
       "source_floor": "1S",
       "level_kind": "FLOOR",
@@ -106218,8 +106251,8 @@
       "kind": "box",
       "floor": "S1",
       "center": [
-        57.49102726896268,
-        16.150136558017508,
+        57.491,
+        16.15,
         -0.15
       ],
       "width_m": 1.2600000000000116,
@@ -106231,7 +106264,7 @@
       "sourceTags": [
         "SOL_1S_column_0009"
       ],
-      "confidence": "qa_connected",
+      "confidence": "derived_from_axis_elevation_confirmed_column",
       "audit": {
         "status": "REVIEW_HIGH",
         "reference_status": "PROVISIONAL_GEOMETRY_REVIEW",
@@ -106245,9 +106278,14 @@
       },
       "preserved_viewer_id": "E1-S1-A-073",
       "audit_resolution": {
-        "classification": "UNRESOLVED_DERIVED_ELEMENT",
-        "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-        "reason": "derived from inferred column resolution"
+        "classification": "CONFIRMED_DERIVED_SUPPORT",
+        "resolution_group": "CONFIRMED_CORRECT",
+        "reason": "Apoyo derivado de E1-S1-C-013, confirmado en elevacion 2017_67-308."
+      },
+      "geometry_confirmation": {
+        "status": "DERIVED_FROM_CONFIRMED_COLUMN",
+        "column_id": "E1-S1-C-013",
+        "audit_file": "entregas/P1L2/edificio/validacion/special_interface/s1_axis_h_audit.json"
       },
       "source_floor": "base",
       "level_kind": "FOUNDATION_LEVEL",
@@ -106574,8 +106612,8 @@
       "kind": "box",
       "floor": "S1",
       "center": [
-        57.491027268962284,
-        0.037636557960950105,
+        57.491,
+        0.0,
         -0.15
       ],
       "width_m": 1.2600000000000307,
@@ -106587,7 +106625,7 @@
       "sourceTags": [
         "SOL_1S_column_0013"
       ],
-      "confidence": "qa_connected",
+      "confidence": "derived_from_axis_elevation_confirmed_column",
       "audit": {
         "status": "REVIEW_HIGH",
         "reference_status": "PROVISIONAL_GEOMETRY_REVIEW",
@@ -106601,9 +106639,14 @@
       },
       "preserved_viewer_id": "E1-S1-A-071",
       "audit_resolution": {
-        "classification": "UNRESOLVED_DERIVED_ELEMENT",
-        "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-        "reason": "derived from inferred column resolution"
+        "classification": "CONFIRMED_DERIVED_SUPPORT",
+        "resolution_group": "CONFIRMED_CORRECT",
+        "reason": "Apoyo derivado de E1-S1-C-011, confirmado en elevacion 2017_67-308."
+      },
+      "geometry_confirmation": {
+        "status": "DERIVED_FROM_CONFIRMED_COLUMN",
+        "column_id": "E1-S1-C-011",
+        "audit_file": "entregas/P1L2/edificio/validacion/special_interface/s1_axis_h_audit.json"
       },
       "source_floor": "base",
       "level_kind": "FOUNDATION_LEVEL",
@@ -106618,7 +106661,7 @@
       "coordinates": {
         "center": [
           57.491,
-          0.038,
+          0.0,
           -0.15
         ],
         "z_bottom_m": -0.3,
@@ -106640,8 +106683,8 @@
           "Y": {
             "axis": "1",
             "axis_coord_m": 0.0,
-            "offset_m": 0.038,
-            "abs_offset_m": 0.038,
+            "offset_m": 0.0,
+            "abs_offset_m": 0.0,
             "status": "ON_AXIS",
             "relation": "1",
             "span": null
@@ -106663,8 +106706,8 @@
       "kind": "box",
       "floor": "S1",
       "center": [
-        57.491027268962284,
-        8.899969902690374,
+        57.491,
+        8.9,
         -0.15
       ],
       "width_m": 1.2599999999999987,
@@ -106676,7 +106719,7 @@
       "sourceTags": [
         "SOL_1S_column_0014"
       ],
-      "confidence": "qa_connected",
+      "confidence": "derived_from_axis_elevation_confirmed_column",
       "audit": {
         "status": "REVIEW_HIGH",
         "reference_status": "PROVISIONAL_GEOMETRY_REVIEW",
@@ -106690,9 +106733,14 @@
       },
       "preserved_viewer_id": "E1-S1-A-072",
       "audit_resolution": {
-        "classification": "UNRESOLVED_DERIVED_ELEMENT",
-        "resolution_group": "UNRESOLVED_REQUIRES_REVIEW",
-        "reason": "derived from inferred column resolution"
+        "classification": "CONFIRMED_DERIVED_SUPPORT",
+        "resolution_group": "CONFIRMED_CORRECT",
+        "reason": "Apoyo derivado de E1-S1-C-012, confirmado en elevacion 2017_67-308."
+      },
+      "geometry_confirmation": {
+        "status": "DERIVED_FROM_CONFIRMED_COLUMN",
+        "column_id": "E1-S1-C-012",
+        "audit_file": "entregas/P1L2/edificio/validacion/special_interface/s1_axis_h_audit.json"
       },
       "source_floor": "base",
       "level_kind": "FOUNDATION_LEVEL",
@@ -118474,8 +118522,8 @@
       "section_source": "TEXT_LABEL",
       "section_confidence": "CONFIRMED_FROM_LABEL",
       "source_label": "V.F. 20/160",
-      "source_label_tag": "LBL_base_beam_label_0011",
-      "source_label_distance_m": 0.509,
+      "source_label_tag": "LBL_base_beam_label_0017",
+      "source_label_distance_m": 1.097,
       "section_source_dxf": "2017_67-100.dxf",
       "section_source_sheet": "2017_67-100",
       "section_source_layer": "RLE-TEXTO-1"
@@ -170078,6 +170126,310 @@
       "material": "UNKNOWN",
       "material_source": "UNKNOWN",
       "material_confidence": "UNKNOWN"
+    },
+    {
+      "solidTag": "SOL_1S_wall_dilatation_001",
+      "category": "wall",
+      "kind": "linear_prism",
+      "floor": "S1",
+      "sourceTag": "S1-W-DIL-001",
+      "source_layer": "RLA-MURO DILATADO",
+      "source_dxf": "2017_67-101.dxf",
+      "sourceTags": [
+        "1C106",
+        "1C107",
+        "1C108",
+        "1C109"
+      ],
+      "start": [
+        27.241023000000002,
+        6.351432,
+        1.98
+      ],
+      "end": [
+        27.241023000000002,
+        8.711265,
+        1.98
+      ],
+      "width_m": 0.1999999999999993,
+      "wall_thickness_m": 0.2,
+      "height_m": 3.96,
+      "length_m": 2.359832999999999,
+      "confidence": "confirmed_from_closed_CAD_contour_and_explicit_label",
+      "preserved_viewer_id": "E1-S1-M-061",
+      "audit_resolution": {
+        "classification": "CONFIRMED_SPECIAL_DILATATION_WALL",
+        "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+        "reason": "Cuatro entidades CAD forman un contorno cerrado 0.20 x 2.36 m en la capa RLA-MURO DILATADO, junto a la llamada explicita (DILATADO)."
+      },
+      "geometry_confirmation": {
+        "status": "CONFIRMED_SPECIAL_CLOSED_CONTOUR",
+        "audit_file": "entregas/P1L2/edificio/validacion/special_interface/ed1_dilatation_audit.json",
+        "entity_handles": [
+          "1C106",
+          "1C107",
+          "1C108",
+          "1C109"
+        ],
+        "thickness_m": 0.1999999999999993,
+        "physical_interface_connection": false
+      },
+      "interface_policy": "LOCAL_ED1_ELEMENT_NO_CROSS_BUILDING_FE_LINK",
+      "source_floor": "1S",
+      "level_kind": "FLOOR",
+      "building": "EDIFICIO_1",
+      "id": "E1-S1-M-061",
+      "human_id": "E1-S1-M-061",
+      "elementTag": "SOL_1S_wall_dilatation_001",
+      "legacy_solidTag": "SOL_1S_wall_dilatation_001",
+      "model_z_m": 1.98,
+      "source_elevation_m": 1.98,
+      "source_sheet": "2017_67-101",
+      "coordinates": {
+        "start": [
+          27.241,
+          6.351,
+          1.98
+        ],
+        "end": [
+          27.241,
+          8.711,
+          1.98
+        ],
+        "center": [
+          27.241,
+          7.531,
+          1.98
+        ],
+        "z_bottom_m": 0.0,
+        "z_top_m": 3.96
+      },
+      "axis_x": "D/E",
+      "axis_y": null,
+      "axis_location": {
+        "center": {
+          "X": {
+            "axis": "D/E",
+            "axis_coord_m": 27.491,
+            "offset_m": -0.25,
+            "abs_offset_m": 0.25,
+            "status": "ON_AXIS",
+            "relation": "D/E",
+            "span": null
+          },
+          "Y": {
+            "axis": "2",
+            "axis_coord_m": 8.9,
+            "offset_m": -1.369,
+            "abs_offset_m": 1.369,
+            "status": "BETWEEN_OR_OFFSET",
+            "relation": "entre 1''-2",
+            "span": [
+              "1''",
+              "2"
+            ],
+            "lower_axis_coord_m": 3.9,
+            "upper_axis_coord_m": 8.9
+          }
+        },
+        "start": {
+          "X": {
+            "axis": "D/E",
+            "axis_coord_m": 27.491,
+            "offset_m": -0.25,
+            "abs_offset_m": 0.25,
+            "status": "ON_AXIS",
+            "relation": "D/E",
+            "span": null
+          },
+          "Y": {
+            "axis": "1''",
+            "axis_coord_m": 3.9,
+            "offset_m": 2.451,
+            "abs_offset_m": 2.451,
+            "status": "BETWEEN_OR_OFFSET",
+            "relation": "entre 1''-2",
+            "span": [
+              "1''",
+              "2"
+            ],
+            "lower_axis_coord_m": 3.9,
+            "upper_axis_coord_m": 8.9
+          }
+        },
+        "end": {
+          "X": {
+            "axis": "D/E",
+            "axis_coord_m": 27.491,
+            "offset_m": -0.25,
+            "abs_offset_m": 0.25,
+            "status": "ON_AXIS",
+            "relation": "D/E",
+            "span": null
+          },
+          "Y": {
+            "axis": "2",
+            "axis_coord_m": 8.9,
+            "offset_m": -0.189,
+            "abs_offset_m": 0.189,
+            "status": "ON_AXIS",
+            "relation": "2",
+            "span": null
+          }
+        }
+      },
+      "location_description": "EDIFICIO_1 / S1 / Muro X D/E / Y entre 1''-2",
+      "material": "M.H.A.",
+      "material_source": "TEXT_LABEL",
+      "material_confidence": "CONFIRMED_FROM_LABEL",
+      "thickness_source": "TEXT_LABEL",
+      "thickness_confidence": "CONFIRMED_FROM_LABEL",
+      "source_label": "M.H.A. e=20",
+      "source_label_tag": "LBL_1S_wall_label_0028",
+      "source_label_distance_m": 0.363,
+      "thickness_source_dxf": "2017_67-101.dxf",
+      "thickness_source_sheet": "2017_67-101",
+      "thickness_source_layer": "RLE-TEXTO-1"
+    },
+    {
+      "solidTag": "SOL_base_support_dilatation_001",
+      "category": "support",
+      "kind": "linear_prism",
+      "floor": "S1",
+      "sourceTag": "SOL_1S_wall_dilatation_001",
+      "source_layer": "generated_from_confirmed_special_wall",
+      "source_dxf": "2017_67-101.dxf",
+      "start": [
+        27.241023000000002,
+        6.351432,
+        -0.15
+      ],
+      "end": [
+        27.241023000000002,
+        8.711265,
+        -0.15
+      ],
+      "width_m": 0.45,
+      "height_m": 0.3,
+      "length_m": 2.359832999999999,
+      "confidence": "derived_from_confirmed_special_wall",
+      "preserved_viewer_id": "E1-S1-A-080",
+      "audit_resolution": {
+        "classification": "DERIVED_FROM_CONFIRMED_SPECIAL_WALL",
+        "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+        "reason": "Apoyo visual derivado del muro S1 confirmado; no representa enlace con EDIFICIO_2."
+      },
+      "source_floor": "base",
+      "level_kind": "FOUNDATION_LEVEL",
+      "building": "EDIFICIO_1",
+      "id": "E1-S1-A-080",
+      "human_id": "E1-S1-A-080",
+      "elementTag": "SOL_base_support_dilatation_001",
+      "legacy_solidTag": "SOL_base_support_dilatation_001",
+      "model_z_m": -0.15,
+      "source_elevation_m": -0.15,
+      "source_sheet": "2017_67-101",
+      "coordinates": {
+        "start": [
+          27.241,
+          6.351,
+          -0.15
+        ],
+        "end": [
+          27.241,
+          8.711,
+          -0.15
+        ],
+        "center": [
+          27.241,
+          7.531,
+          -0.15
+        ],
+        "z_bottom_m": -0.3,
+        "z_top_m": 0.0
+      },
+      "axis_x": "D/E",
+      "axis_y": null,
+      "axis_location": {
+        "center": {
+          "X": {
+            "axis": "D/E",
+            "axis_coord_m": 27.491,
+            "offset_m": -0.25,
+            "abs_offset_m": 0.25,
+            "status": "ON_AXIS",
+            "relation": "D/E",
+            "span": null
+          },
+          "Y": {
+            "axis": "2",
+            "axis_coord_m": 8.9,
+            "offset_m": -1.369,
+            "abs_offset_m": 1.369,
+            "status": "BETWEEN_OR_OFFSET",
+            "relation": "entre 1''-2",
+            "span": [
+              "1''",
+              "2"
+            ],
+            "lower_axis_coord_m": 3.9,
+            "upper_axis_coord_m": 8.9
+          }
+        },
+        "start": {
+          "X": {
+            "axis": "D/E",
+            "axis_coord_m": 27.491,
+            "offset_m": -0.25,
+            "abs_offset_m": 0.25,
+            "status": "ON_AXIS",
+            "relation": "D/E",
+            "span": null
+          },
+          "Y": {
+            "axis": "1''",
+            "axis_coord_m": 3.9,
+            "offset_m": 2.451,
+            "abs_offset_m": 2.451,
+            "status": "BETWEEN_OR_OFFSET",
+            "relation": "entre 1''-2",
+            "span": [
+              "1''",
+              "2"
+            ],
+            "lower_axis_coord_m": 3.9,
+            "upper_axis_coord_m": 8.9
+          }
+        },
+        "end": {
+          "X": {
+            "axis": "D/E",
+            "axis_coord_m": 27.491,
+            "offset_m": -0.25,
+            "abs_offset_m": 0.25,
+            "status": "ON_AXIS",
+            "relation": "D/E",
+            "span": null
+          },
+          "Y": {
+            "axis": "2",
+            "axis_coord_m": 8.9,
+            "offset_m": -0.189,
+            "abs_offset_m": 0.189,
+            "status": "ON_AXIS",
+            "relation": "2",
+            "span": null
+          }
+        }
+      },
+      "location_description": "EDIFICIO_1 / S1 / Apoyo X D/E / Y entre 1''-2",
+      "material": "UNKNOWN",
+      "material_source": "UNKNOWN",
+      "material_confidence": "UNKNOWN",
+      "section_width_m": null,
+      "section_height_m": null,
+      "section_source": "UNKNOWN",
+      "section_confidence": "UNKNOWN"
     }
   ],
   "segments": [

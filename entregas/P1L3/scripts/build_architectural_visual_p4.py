@@ -53,13 +53,10 @@ DIRECT_OUTER_IDS = [
     "PERIMETRO_LOSA_P1_04_0015",
 ]
 
-PROJECTION_BEAM_IDS = [
-    "E1-P4-V-033",
-    "E1-P4-V-039",
-    "E1-P4-V-048",
-    "E1-P4-V-049",
-    "E1-P4-V-058",
-    "E1-P4-V-063",
+PROJECTION_BEAM_PROPOSAL_IDS = [
+    "P4-VP-031",
+    "P4-VP-034",
+    "P4-VP-050",
 ]
 
 COLLINEAR_GAPS = [
@@ -181,20 +178,20 @@ def main() -> None:
     old_slab = slabs[0]
     old_area = float(old_slab["width_m"]) * float(old_slab["depth_m"])
 
-    beam_by_id = {
-        item.get("id"): item
+    beam_by_proposal_id = {
+        item.get("sourceTag"): item
         for item in model["solids"]
         if item.get("building") == "EDIFICIO_1"
         and item.get("floor") == "P4"
         and item.get("category") == "beam"
     }
-    missing_beams = sorted(set(PROJECTION_BEAM_IDS) - set(beam_by_id))
+    missing_beams = sorted(set(PROJECTION_BEAM_PROPOSAL_IDS) - set(beam_by_proposal_id))
     if missing_beams:
         raise RuntimeError(f"Faltan vigas de respaldo para el resalto: {missing_beams}")
     projection_top = max(
-        point[1]
-        for beam_id in PROJECTION_BEAM_IDS
-        for point in (beam_by_id[beam_id]["start"], beam_by_id[beam_id]["end"])
+        max(point[1] for point in (beam_by_proposal_id[proposal_id]["start"], beam_by_proposal_id[proposal_id]["end"]))
+        + float(beam_by_proposal_id[proposal_id]["width_m"]) / 2.0
+        for proposal_id in PROJECTION_BEAM_PROPOSAL_IDS
     )
 
     outline = [
@@ -233,7 +230,7 @@ def main() -> None:
                 "length_m": round(projection_top - 16.619, 6),
                 "confidence": "LIKELY",
                 "reason": "lado este del resalto norte",
-                "evidence": "limite del gap RLE-LOSA y vigas E1-P4-V-058/E1-P4-V-063",
+                "evidence": "limite del gap RLE-LOSA y centrolinea P4-VP-050",
             },
             {
                 "start": [57.832, round(projection_top, 6)],
@@ -241,7 +238,7 @@ def main() -> None:
                 "length_m": 10.7,
                 "confidence": "LIKELY",
                 "reason": "borde norte del resalto",
-                "evidence": "vigas E1-P4-V-048/E1-P4-V-049",
+                "evidence": "centrolinea consolidada P4-VP-031",
             },
             {
                 "start": [47.132, round(projection_top, 6)],
@@ -249,7 +246,7 @@ def main() -> None:
                 "length_m": round(projection_top - 16.619, 6),
                 "confidence": "LIKELY",
                 "reason": "lado oeste del resalto norte",
-                "evidence": "limite del gap RLE-LOSA y vigas E1-P4-V-033/E1-P4-V-039",
+                "evidence": "limite del gap RLE-LOSA y centrolinea P4-VP-034",
             },
         ]
     )
@@ -277,7 +274,7 @@ def main() -> None:
         "surface_vertices_xy_flat": [coordinate for point in surface_vertices for coordinate in point],
         "surface_triangles": surface_triangles,
         "confirmed_source_segment_ids": DIRECT_OUTER_IDS,
-        "supporting_beam_ids": PROJECTION_BEAM_IDS,
+        "supporting_beam_proposal_ids": PROJECTION_BEAM_PROPOSAL_IDS,
         "inferred_closures": inferred_closures,
         "notes": [
             "El espesor 0,15 m corresponde a LOSA e=15 de la lamina 2017_67-103.",
@@ -308,7 +305,7 @@ def main() -> None:
             "direct_outer_length_m": round(direct_length, 6),
             "collinear_inferred_gap_count": len(COLLINEAR_GAPS),
             "beam_supported_likely_edge_count": 3,
-            "supporting_beam_count": len(PROJECTION_BEAM_IDS),
+            "supporting_beam_count": len(PROJECTION_BEAM_PROPOSAL_IDS),
             "interior_closed_loops_excluded": topology["closed_polygon_count"],
         },
         "areas": {
@@ -339,7 +336,7 @@ def main() -> None:
         "La capa es exclusivamente visual y `participates_in_FE = false`.\n\n"
         f"- Segmentos RLE-LOSA inspeccionados: {topology['segment_count']}.\n"
         f"- Segmentos exteriores usados directamente: {len(DIRECT_OUTER_IDS)}.\n"
-        f"- Vigas de respaldo del resalto: {len(PROJECTION_BEAM_IDS)}.\n"
+        f"- Centrolineas de viga de respaldo del resalto: {len(PROJECTION_BEAM_PROPOSAL_IDS)}.\n"
         f"- Cierres colineales inferidos: {len(COLLINEAR_GAPS)}.\n"
         "- Bordes probables del resalto respaldado por vigas: 3.\n"
         f"- Area bbox anterior: {old_area:.3f} m2.\n"
