@@ -62,6 +62,13 @@ graficos ampliables y modo presentacion. Ver `entregas/P1L3/INFORME.md` y
   compatible con centrolineas largas, solapes verticales ni encuentros en
   mitad de vano. No se escribieron resultados ni se añadieron enlaces.
   Evidencia: `validacion/fe_connectivity_post_geometry/`.
+- FASE 7 tiene un candidato analítico separado en
+  `entregas/P1L3/results/post_p1l3_candidate/`: usa incidencias físicas,
+  encuentros muro-muro, solapes verticales y crosswalk 1:N. Reduce 72/50 a
+  45 geometrías/23 componentes sin nuevos flotantes externos al conjunto foco.
+  Quedan 31 muros `DISCONNECTED_ERROR` y 9 elementos `UNRESOLVED`; requiere
+  revisión de planos antes de añadir más conexiones. A3-A4, OpenSees, cargas,
+  resultados, geometría y Unity permanecen intactos.
 - Proximo paso: reconstruir perímetros y huecos piso a piso con respaldo de
   `RLE-LOSA`, vigas y notas, conservando `participates_in_FE=false` para la
   arquitectura visual.

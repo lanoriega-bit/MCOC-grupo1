@@ -1,5 +1,18 @@
 # P1L2 Status
 
+## Consolidacion PRE-P1L4 — FASE 7 CANDIDATO FE (2026-09-12)
+
+- Creado `analysis_model_post_p1l3_candidate.json` sin reemplazar A3-A4 ni
+  ejecutar OpenSees.
+- Estrategia: miembro equivalente único por muro, nodos de incidencia y brazos
+  rígidos internos; vigas segmentadas solo en intersecciones de huellas/ejes.
+- La topología pasa de 72 geometrías flotantes/50 componentes a 45/23.
+- Crosswalk 1:N PASS: 33 geometrías se dividen, con máximo 3 segmentos FE.
+- Clasificación foco: 26 `FE_ADAPTER_ERROR` resueltos, 5 columnas
+  `TRANSFERRED`, 1 `REAL_CANTILEVER`, 40 `UNRESOLVED` (31 son muros marcados
+  `DISCONNECTED_ERROR` y 9 requieren interpretación adicional).
+- Candidato detenido para revisión: no se inventan los 40 enlaces restantes.
+
 ## Consolidacion PRE-P1L4 — CONECTIVIDAD POST-GEOMETRIA (2026-09-12)
 
 - Se reevaluo en memoria la topologia con las mismas reglas P1L3, sin escribir
