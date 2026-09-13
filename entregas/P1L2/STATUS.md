@@ -1,5 +1,19 @@
 # P1L2 Status
 
+## Consolidacion PRE-P1L4 — CONECTIVIDAD POST-GEOMETRIA (2026-09-12)
+
+- Se reevaluo en memoria la topologia con las mismas reglas P1L3, sin escribir
+  `analysis_model.json`, ejecutar OpenSees ni modificar cargas/resultados.
+- Los flotantes bajan de 93 elementos/61 componentes a 72/50.
+- De los 93 IDs historicos: 1 queda conectado, 55 siguen flotantes y 37 fueron
+  eliminados o sustituidos al consolidar caras/fragmentos; aparecen 17 IDs
+  nuevos o renombrados flotantes.
+- Los 72 actuales se separan en 45 muros ED1 afectados por idealizacion de nodo
+  central, 15 vigas ED1 que requieren distinguir incidencia de voladizo, 7
+  columnas con camino vertical/transferencia por revisar y 5 elementos ED2 P4.
+- No se agregaron conexiones. El siguiente paso FE es validar incidencias y
+  solapes con conservacion de rigidez antes de reconstruir el modelo analitico.
+
 ## Consolidacion PRE-P1L4 — FASE 5 EN CURSO (2026-09-11)
 
 - Diagnostico directo de `RLE-LOSA/RLE-LOSAS` generado para los 10 pares

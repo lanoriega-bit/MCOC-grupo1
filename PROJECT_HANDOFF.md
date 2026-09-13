@@ -54,6 +54,14 @@ graficos ampliables y modo presentacion. Ver `entregas/P1L3/INFORME.md` y
   exteriores pendientes. S1 carece de borde exterior RLE-LOSA y P1 contiene
   una transición norte/outboard que todavía no forma un perímetro único; no se
   aplican por envolvente ni se copian desde otros pisos.
+- Antes de terminar losas se reevaluó la conectividad con el adaptador P1L3 en
+  memoria: 93 elementos/61 componentes flotantes pasan a 72/50. Solo
+  `E1-P1-M-015` conserva ID y recupera conexión; 37 IDs históricos fueron
+  eliminados/sustituidos por la consolidación. Los restantes revelan que el
+  esquema FE de muro con nodo central y viga con snap solo en extremos no es
+  compatible con centrolineas largas, solapes verticales ni encuentros en
+  mitad de vano. No se escribieron resultados ni se añadieron enlaces.
+  Evidencia: `validacion/fe_connectivity_post_geometry/`.
 - Proximo paso: reconstruir perímetros y huecos piso a piso con respaldo de
   `RLE-LOSA`, vigas y notas, conservando `participates_in_FE=false` para la
   arquitectura visual.

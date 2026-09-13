@@ -1,6 +1,6 @@
 # Consolidación POST-P1L3 / PRE-P1L4
 
-Estado: `FASE_5_IN_PROGRESS_SLAB_TOPOLOGY_DIAGNOSTIC`
+Estado: `FE_CONNECTIVITY_POST_GEOMETRY_AUDITED_BEFORE_SLAB_COMPLETION`
 Fecha de apertura: 2026-09-10  
 Rama vigente: `codex/pre-p1l4-consolidation`
 
@@ -94,7 +94,7 @@ Prioridad: P0 bloquea la base; P1 alta; P2 media; P3 documental. Estados:
 
 | Issue | Origen | Evidencia disponible | Estado actual | Impacto | Prioridad | Dependencia | Solución propuesta | Estado |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| FE-FLOAT-001 — 93 elementos/61 componentes | Topología A3-A4 | `floating_excluded`, déficit 0.763564%, auditorías de rama E2 | Excluidos sin camino a apoyo | Equilibrio y respuesta incompletos | P0 | Geometría estable | Reporte por componente: causa, evidencia, conexión esperada y decisión | OPEN |
+| FE-FLOAT-001 — 93 elementos/61 componentes | Topología A3-A4 | Reevaluación en memoria tras consolidar geometría | 72 elementos/50 componentes; 1 ID recuperado, 37 eliminados/sustituidos, 55 siguen flotantes y 17 son nuevos/renombrados | Equilibrio y respuesta incompletos; el adaptador por centro/extremos no representa solapes e incidencias | P0 | Geometría estable | Diseñar y validar conexión por incidencia/solape; separar voladizos reales sin enlaces artificiales | IN_PROGRESS |
 | FE-STUB-001 — segmentos cortos | Segmentación de vigas | Rama Luis: taxonomía y verificación EI/L | No clasificados explícitamente en contrato vigente | Fuerzas máximas engañosas | P1 | FE reconstruido | Portar criterio basado en parent/visual/longitud y QA `localForce` | OPEN |
 | FE-INTERFACE-001 — conexión de bloques | Junta ED1/ED2 | Ejes coincidentes, sin conexión FE demostrada | No evaluada como sistema integrado | Camino lateral/gravitacional | P1 | GEO-INTERFACE-001 | Resolver solo con detalle/plano; no crear vínculos artificiales | OPEN |
 

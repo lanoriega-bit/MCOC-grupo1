@@ -1,0 +1,1656 @@
+{
+  "status": "PASS_WITH_REMAINING_FLOATING",
+  "scope": "TOPOLOGY_ONLY_NO_OPENSEES_NO_LOADS_NO_RESULT_WRITE",
+  "method": "p1l3.modelado.build_analysis ejecutado en memoria con la geometria vigente y la misma configuracion historica",
+  "config": {
+    "E_N_m2": 25000000000.0,
+    "nu": 0.2,
+    "G_N_m2": 10416666666.666668,
+    "snap_radius_m": 0.6,
+    "torsional_formula": "timoshenko_rect"
+  },
+  "inputs": {
+    "entregas/P1L3/results/a3a4/analysis_model.json": "0934ebd683f6deb649b01defd55d3dcec2e281037fc61673623b348f45a20c9f",
+    "entregas/P1L2/unity_export/model_combined_viewer.json": "e89de2b9946671fd31bf0a633539a2d372578c39876081d4d3860b38c8c6cd90"
+  },
+  "historic": {
+    "included_nodes": 813,
+    "included_elements": 1312,
+    "supports": 106,
+    "floating_components": 61,
+    "floating_elements": 93,
+    "floating_by_building_floor_type": {
+      "EDIFICIO_1/P1/beam": 6,
+      "EDIFICIO_1/P1/column": 2,
+      "EDIFICIO_1/P1/wall": 36,
+      "EDIFICIO_1/P2/wall": 11,
+      "EDIFICIO_1/P3/wall": 11,
+      "EDIFICIO_1/P4/wall": 11,
+      "EDIFICIO_1/S1/beam": 12,
+      "EDIFICIO_2/P4/beam": 2,
+      "EDIFICIO_2/P4/wall": 2
+    }
+  },
+  "current_in_memory": {
+    "included_nodes": 731,
+    "included_elements": 1041,
+    "supports": 68,
+    "floating_components": 50,
+    "floating_elements": 72,
+    "floating_by_building_floor_type": {
+      "EDIFICIO_1/P1/beam": 6,
+      "EDIFICIO_1/P1/column": 6,
+      "EDIFICIO_1/P1/wall": 24,
+      "EDIFICIO_1/P2/beam": 3,
+      "EDIFICIO_1/P2/column": 1,
+      "EDIFICIO_1/P2/wall": 7,
+      "EDIFICIO_1/P3/wall": 7,
+      "EDIFICIO_1/P4/wall": 7,
+      "EDIFICIO_1/S1/beam": 6,
+      "EDIFICIO_2/P4/beam": 2,
+      "EDIFICIO_2/P4/wall": 3
+    }
+  },
+  "delta": {
+    "floating_components": -11,
+    "floating_elements": -21,
+    "included_nodes": -82,
+    "included_elements": -271,
+    "supports": -38
+  },
+  "old_floating_resolution": {
+    "recovered_connected": [
+      {
+        "element_id": "E1-P1-M-015",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "RECOVERED_CONNECTED"
+      }
+    ],
+    "still_floating": [
+      {
+        "element_id": "E1-P1-V-068",
+        "type": "beam",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P1-V-072",
+        "type": "beam",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P1-V-098",
+        "type": "beam",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P1-C-016",
+        "type": "column",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P1-C-017",
+        "type": "column",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P1-M-001",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P1-M-002",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P1-M-003",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P1-M-004",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P1-M-012",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P1-M-020",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P1-M-021",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P1-M-022",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P1-M-023",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P1-M-024",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P1-M-025",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P1-M-026",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P1-M-027",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P1-M-028",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P1-M-029",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P1-M-031",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P1-M-032",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P1-M-033",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P1-M-034",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P1-M-035",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P1-M-036",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P1-M-037",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P2-M-002",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P2",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P2-M-003",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P2",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P2-M-005",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P2",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P2-M-008",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P2",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P2-M-009",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P2",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P2-M-010",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P2",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P3-M-002",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P3",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P3-M-003",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P3",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P3-M-005",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P3",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P3-M-008",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P3",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P3-M-009",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P3",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P3-M-010",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P3",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P4-M-002",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P4",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P4-M-003",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P4",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P4-M-008",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P4",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P4-M-009",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P4",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P4-M-010",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P4",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-P4-M-012",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P4",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-S1-V-031",
+        "type": "beam",
+        "building": "EDIFICIO_1",
+        "floor": "S1",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-S1-V-032",
+        "type": "beam",
+        "building": "EDIFICIO_1",
+        "floor": "S1",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-S1-V-033",
+        "type": "beam",
+        "building": "EDIFICIO_1",
+        "floor": "S1",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-S1-V-064",
+        "type": "beam",
+        "building": "EDIFICIO_1",
+        "floor": "S1",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-S1-V-065",
+        "type": "beam",
+        "building": "EDIFICIO_1",
+        "floor": "S1",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E1-S1-V-066",
+        "type": "beam",
+        "building": "EDIFICIO_1",
+        "floor": "S1",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E2-P4-V-050",
+        "type": "beam",
+        "building": "EDIFICIO_2",
+        "floor": "P4",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E2-P4-V-051",
+        "type": "beam",
+        "building": "EDIFICIO_2",
+        "floor": "P4",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E2-P4-M-015",
+        "type": "wall",
+        "building": "EDIFICIO_2",
+        "floor": "P4",
+        "status": "STILL_FLOATING"
+      },
+      {
+        "element_id": "E2-P4-M-017",
+        "type": "wall",
+        "building": "EDIFICIO_2",
+        "floor": "P4",
+        "status": "STILL_FLOATING"
+      }
+    ],
+    "removed_or_superseded": [
+      {
+        "element_id": "E1-P1-V-069",
+        "type": "beam",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "REMOVED_OR_SUPERSEDED_BY_CONSOLIDATION"
+      },
+      {
+        "element_id": "E1-P1-V-075",
+        "type": "beam",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "REMOVED_OR_SUPERSEDED_BY_CONSOLIDATION"
+      },
+      {
+        "element_id": "E1-P1-V-099",
+        "type": "beam",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "REMOVED_OR_SUPERSEDED_BY_CONSOLIDATION"
+      },
+      {
+        "element_id": "E1-P1-M-005",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "REMOVED_OR_SUPERSEDED_BY_CONSOLIDATION"
+      },
+      {
+        "element_id": "E1-P1-M-006",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "REMOVED_OR_SUPERSEDED_BY_CONSOLIDATION"
+      },
+      {
+        "element_id": "E1-P1-M-007",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "REMOVED_OR_SUPERSEDED_BY_CONSOLIDATION"
+      },
+      {
+        "element_id": "E1-P1-M-008",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "REMOVED_OR_SUPERSEDED_BY_CONSOLIDATION"
+      },
+      {
+        "element_id": "E1-P1-M-009",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "REMOVED_OR_SUPERSEDED_BY_CONSOLIDATION"
+      },
+      {
+        "element_id": "E1-P1-M-011",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "REMOVED_OR_SUPERSEDED_BY_CONSOLIDATION"
+      },
+      {
+        "element_id": "E1-P1-M-013",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "REMOVED_OR_SUPERSEDED_BY_CONSOLIDATION"
+      },
+      {
+        "element_id": "E1-P1-M-014",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "REMOVED_OR_SUPERSEDED_BY_CONSOLIDATION"
+      },
+      {
+        "element_id": "E1-P1-M-017",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "REMOVED_OR_SUPERSEDED_BY_CONSOLIDATION"
+      },
+      {
+        "element_id": "E1-P1-M-018",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "REMOVED_OR_SUPERSEDED_BY_CONSOLIDATION"
+      },
+      {
+        "element_id": "E1-P1-M-019",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "REMOVED_OR_SUPERSEDED_BY_CONSOLIDATION"
+      },
+      {
+        "element_id": "E1-P1-M-030",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "REMOVED_OR_SUPERSEDED_BY_CONSOLIDATION"
+      },
+      {
+        "element_id": "E1-P1-M-038",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "REMOVED_OR_SUPERSEDED_BY_CONSOLIDATION"
+      },
+      {
+        "element_id": "E1-P2-M-001",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P2",
+        "status": "REMOVED_OR_SUPERSEDED_BY_CONSOLIDATION"
+      },
+      {
+        "element_id": "E1-P2-M-004",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P2",
+        "status": "REMOVED_OR_SUPERSEDED_BY_CONSOLIDATION"
+      },
+      {
+        "element_id": "E1-P2-M-006",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P2",
+        "status": "REMOVED_OR_SUPERSEDED_BY_CONSOLIDATION"
+      },
+      {
+        "element_id": "E1-P2-M-011",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P2",
+        "status": "REMOVED_OR_SUPERSEDED_BY_CONSOLIDATION"
+      },
+      {
+        "element_id": "E1-P2-M-012",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P2",
+        "status": "REMOVED_OR_SUPERSEDED_BY_CONSOLIDATION"
+      },
+      {
+        "element_id": "E1-P3-M-001",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P3",
+        "status": "REMOVED_OR_SUPERSEDED_BY_CONSOLIDATION"
+      },
+      {
+        "element_id": "E1-P3-M-004",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P3",
+        "status": "REMOVED_OR_SUPERSEDED_BY_CONSOLIDATION"
+      },
+      {
+        "element_id": "E1-P3-M-006",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P3",
+        "status": "REMOVED_OR_SUPERSEDED_BY_CONSOLIDATION"
+      },
+      {
+        "element_id": "E1-P3-M-011",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P3",
+        "status": "REMOVED_OR_SUPERSEDED_BY_CONSOLIDATION"
+      },
+      {
+        "element_id": "E1-P3-M-012",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P3",
+        "status": "REMOVED_OR_SUPERSEDED_BY_CONSOLIDATION"
+      },
+      {
+        "element_id": "E1-P4-M-001",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P4",
+        "status": "REMOVED_OR_SUPERSEDED_BY_CONSOLIDATION"
+      },
+      {
+        "element_id": "E1-P4-M-004",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P4",
+        "status": "REMOVED_OR_SUPERSEDED_BY_CONSOLIDATION"
+      },
+      {
+        "element_id": "E1-P4-M-005",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P4",
+        "status": "REMOVED_OR_SUPERSEDED_BY_CONSOLIDATION"
+      },
+      {
+        "element_id": "E1-P4-M-006",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P4",
+        "status": "REMOVED_OR_SUPERSEDED_BY_CONSOLIDATION"
+      },
+      {
+        "element_id": "E1-P4-M-011",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P4",
+        "status": "REMOVED_OR_SUPERSEDED_BY_CONSOLIDATION"
+      },
+      {
+        "element_id": "E1-S1-V-034",
+        "type": "beam",
+        "building": "EDIFICIO_1",
+        "floor": "S1",
+        "status": "REMOVED_OR_SUPERSEDED_BY_CONSOLIDATION"
+      },
+      {
+        "element_id": "E1-S1-V-035",
+        "type": "beam",
+        "building": "EDIFICIO_1",
+        "floor": "S1",
+        "status": "REMOVED_OR_SUPERSEDED_BY_CONSOLIDATION"
+      },
+      {
+        "element_id": "E1-S1-V-036",
+        "type": "beam",
+        "building": "EDIFICIO_1",
+        "floor": "S1",
+        "status": "REMOVED_OR_SUPERSEDED_BY_CONSOLIDATION"
+      },
+      {
+        "element_id": "E1-S1-V-067",
+        "type": "beam",
+        "building": "EDIFICIO_1",
+        "floor": "S1",
+        "status": "REMOVED_OR_SUPERSEDED_BY_CONSOLIDATION"
+      },
+      {
+        "element_id": "E1-S1-V-068",
+        "type": "beam",
+        "building": "EDIFICIO_1",
+        "floor": "S1",
+        "status": "REMOVED_OR_SUPERSEDED_BY_CONSOLIDATION"
+      },
+      {
+        "element_id": "E1-S1-V-069",
+        "type": "beam",
+        "building": "EDIFICIO_1",
+        "floor": "S1",
+        "status": "REMOVED_OR_SUPERSEDED_BY_CONSOLIDATION"
+      }
+    ],
+    "new_or_renamed_floating": [
+      {
+        "element_id": "E1-P1-V-071",
+        "type": "beam",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "NEW_OR_RENAMED_FLOATING"
+      },
+      {
+        "element_id": "E1-P1-V-073",
+        "type": "beam",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "NEW_OR_RENAMED_FLOATING"
+      },
+      {
+        "element_id": "E1-P1-V-084",
+        "type": "beam",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "NEW_OR_RENAMED_FLOATING"
+      },
+      {
+        "element_id": "E1-P1-C-018",
+        "type": "column",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "NEW_OR_RENAMED_FLOATING"
+      },
+      {
+        "element_id": "E1-P1-C-019",
+        "type": "column",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "NEW_OR_RENAMED_FLOATING"
+      },
+      {
+        "element_id": "E1-P1-C-020",
+        "type": "column",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "NEW_OR_RENAMED_FLOATING"
+      },
+      {
+        "element_id": "E1-P1-C-022",
+        "type": "column",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "NEW_OR_RENAMED_FLOATING"
+      },
+      {
+        "element_id": "E1-P1-M-010",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "NEW_OR_RENAMED_FLOATING"
+      },
+      {
+        "element_id": "E1-P1-M-016",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "NEW_OR_RENAMED_FLOATING"
+      },
+      {
+        "element_id": "E1-P2-V-053",
+        "type": "beam",
+        "building": "EDIFICIO_1",
+        "floor": "P2",
+        "status": "NEW_OR_RENAMED_FLOATING"
+      },
+      {
+        "element_id": "E1-P2-V-055",
+        "type": "beam",
+        "building": "EDIFICIO_1",
+        "floor": "P2",
+        "status": "NEW_OR_RENAMED_FLOATING"
+      },
+      {
+        "element_id": "E1-P2-V-075",
+        "type": "beam",
+        "building": "EDIFICIO_1",
+        "floor": "P2",
+        "status": "NEW_OR_RENAMED_FLOATING"
+      },
+      {
+        "element_id": "E1-P2-C-010",
+        "type": "column",
+        "building": "EDIFICIO_1",
+        "floor": "P2",
+        "status": "NEW_OR_RENAMED_FLOATING"
+      },
+      {
+        "element_id": "E1-P2-M-007",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P2",
+        "status": "NEW_OR_RENAMED_FLOATING"
+      },
+      {
+        "element_id": "E1-P3-M-007",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P3",
+        "status": "NEW_OR_RENAMED_FLOATING"
+      },
+      {
+        "element_id": "E1-P4-M-007",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P4",
+        "status": "NEW_OR_RENAMED_FLOATING"
+      },
+      {
+        "element_id": "E2-P4-M-019",
+        "type": "wall",
+        "building": "EDIFICIO_2",
+        "floor": "P4",
+        "status": "NEW_OR_RENAMED_FLOATING"
+      }
+    ]
+  },
+  "current_floating_classification": {
+    "by_preliminary_diagnosis": {
+      "CONFIRMED_GEOMETRY_ENDPOINT_SNAP_OR_TRUE_CANTILEVER_REVIEW": 15,
+      "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW": 45,
+      "CONFIRMED_PLAN_GEOMETRY_VERTICAL_OR_TRANSFER_PATH_REVIEW": 7,
+      "ED2_PREEXISTING_CONNECTIVITY_REVIEW": 5
+    },
+    "elements": [
+      {
+        "element_id": "E1-P1-V-068",
+        "type": "beam",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_VIGA_geometry",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_ENDPOINT_SNAP_OR_TRUE_CANTILEVER_REVIEW"
+      },
+      {
+        "element_id": "E1-P1-V-071",
+        "type": "beam",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_VIGA_geometry",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_ENDPOINT_SNAP_OR_TRUE_CANTILEVER_REVIEW"
+      },
+      {
+        "element_id": "E1-P1-V-072",
+        "type": "beam",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_VIGA_geometry",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_ENDPOINT_SNAP_OR_TRUE_CANTILEVER_REVIEW"
+      },
+      {
+        "element_id": "E1-P1-V-073",
+        "type": "beam",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_VIGA_geometry",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_ENDPOINT_SNAP_OR_TRUE_CANTILEVER_REVIEW"
+      },
+      {
+        "element_id": "E1-P1-V-084",
+        "type": "beam",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_VIGA_geometry",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_ENDPOINT_SNAP_OR_TRUE_CANTILEVER_REVIEW"
+      },
+      {
+        "element_id": "E1-P1-V-098",
+        "type": "beam",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_VIGA_geometry",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_ENDPOINT_SNAP_OR_TRUE_CANTILEVER_REVIEW"
+      },
+      {
+        "element_id": "E1-P2-V-053",
+        "type": "beam",
+        "building": "EDIFICIO_1",
+        "floor": "P2",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_VIGA_geometry",
+        "source_dxf": "2017_67-102.dxf",
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_ENDPOINT_SNAP_OR_TRUE_CANTILEVER_REVIEW"
+      },
+      {
+        "element_id": "E1-P2-V-055",
+        "type": "beam",
+        "building": "EDIFICIO_1",
+        "floor": "P2",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_VIGA_geometry",
+        "source_dxf": "2017_67-102.dxf",
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_ENDPOINT_SNAP_OR_TRUE_CANTILEVER_REVIEW"
+      },
+      {
+        "element_id": "E1-P2-V-075",
+        "type": "beam",
+        "building": "EDIFICIO_1",
+        "floor": "P2",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_VIGA_geometry",
+        "source_dxf": "2017_67-102.dxf",
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_ENDPOINT_SNAP_OR_TRUE_CANTILEVER_REVIEW"
+      },
+      {
+        "element_id": "E1-S1-V-031",
+        "type": "beam",
+        "building": "EDIFICIO_1",
+        "floor": "S1",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_VIGA_geometry",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_ENDPOINT_SNAP_OR_TRUE_CANTILEVER_REVIEW"
+      },
+      {
+        "element_id": "E1-S1-V-032",
+        "type": "beam",
+        "building": "EDIFICIO_1",
+        "floor": "S1",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_VIGA_geometry",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_ENDPOINT_SNAP_OR_TRUE_CANTILEVER_REVIEW"
+      },
+      {
+        "element_id": "E1-S1-V-033",
+        "type": "beam",
+        "building": "EDIFICIO_1",
+        "floor": "S1",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_VIGA_geometry",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_ENDPOINT_SNAP_OR_TRUE_CANTILEVER_REVIEW"
+      },
+      {
+        "element_id": "E1-S1-V-064",
+        "type": "beam",
+        "building": "EDIFICIO_1",
+        "floor": "S1",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_VIGA_geometry",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_ENDPOINT_SNAP_OR_TRUE_CANTILEVER_REVIEW"
+      },
+      {
+        "element_id": "E1-S1-V-065",
+        "type": "beam",
+        "building": "EDIFICIO_1",
+        "floor": "S1",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_VIGA_geometry",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_ENDPOINT_SNAP_OR_TRUE_CANTILEVER_REVIEW"
+      },
+      {
+        "element_id": "E1-S1-V-066",
+        "type": "beam",
+        "building": "EDIFICIO_1",
+        "floor": "S1",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_VIGA_geometry",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_ENDPOINT_SNAP_OR_TRUE_CANTILEVER_REVIEW"
+      },
+      {
+        "element_id": "E1-P1-M-001",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P1-M-002",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P1-M-003",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P1-M-004",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P1-M-010",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P1-M-012",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P1-M-016",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P1-M-020",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P1-M-021",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P1-M-022",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P1-M-023",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P1-M-024",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P1-M-025",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P1-M-026",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P1-M-027",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P1-M-028",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P1-M-029",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P1-M-031",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P1-M-032",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P1-M-033",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P1-M-034",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P1-M-035",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P1-M-036",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P1-M-037",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P2-M-002",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P2",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-102.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P2-M-003",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P2",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-102.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P2-M-005",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P2",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-102.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P2-M-007",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P2",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-102.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P2-M-008",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P2",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-102.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P2-M-009",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P2",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-102.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P2-M-010",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P2",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-102.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P3-M-002",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P3",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-102.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P3-M-003",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P3",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-102.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P3-M-005",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P3",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-102.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P3-M-007",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P3",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-102.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P3-M-008",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P3",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-102.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P3-M-009",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P3",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-102.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P3-M-010",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P3",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-102.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P4-M-002",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P4",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-103.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P4-M-003",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P4",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-103.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P4-M-007",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P4",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-103.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P4-M-008",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P4",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-103.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P4-M-009",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P4",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-103.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P4-M-010",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P4",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-103.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P4-M-012",
+        "type": "wall",
+        "building": "EDIFICIO_1",
+        "floor": "P4",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "source_dxf": "2017_67-103.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "preliminary_diagnosis": "CONFIRMED_GEOMETRY_FE_CENTER_NODE_OVERLAP_REVIEW"
+      },
+      {
+        "element_id": "E1-P1-C-016",
+        "type": "column",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "medium",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-PILAR",
+        "preliminary_diagnosis": "CONFIRMED_PLAN_GEOMETRY_VERTICAL_OR_TRANSFER_PATH_REVIEW"
+      },
+      {
+        "element_id": "E1-P1-C-017",
+        "type": "column",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "medium",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-PILAR",
+        "preliminary_diagnosis": "CONFIRMED_PLAN_GEOMETRY_VERTICAL_OR_TRANSFER_PATH_REVIEW"
+      },
+      {
+        "element_id": "E1-P1-C-018",
+        "type": "column",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "medium",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-PILAR",
+        "preliminary_diagnosis": "CONFIRMED_PLAN_GEOMETRY_VERTICAL_OR_TRANSFER_PATH_REVIEW"
+      },
+      {
+        "element_id": "E1-P1-C-019",
+        "type": "column",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "medium",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-PILAR",
+        "preliminary_diagnosis": "CONFIRMED_PLAN_GEOMETRY_VERTICAL_OR_TRANSFER_PATH_REVIEW"
+      },
+      {
+        "element_id": "E1-P1-C-020",
+        "type": "column",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "medium",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-PILAR",
+        "preliminary_diagnosis": "CONFIRMED_PLAN_GEOMETRY_VERTICAL_OR_TRANSFER_PATH_REVIEW"
+      },
+      {
+        "element_id": "E1-P1-C-022",
+        "type": "column",
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "medium",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-PILAR",
+        "preliminary_diagnosis": "CONFIRMED_PLAN_GEOMETRY_VERTICAL_OR_TRANSFER_PATH_REVIEW"
+      },
+      {
+        "element_id": "E1-P2-C-010",
+        "type": "column",
+        "building": "EDIFICIO_1",
+        "floor": "P2",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "medium",
+        "source_dxf": "2017_67-102.dxf",
+        "source_layer": "RLE-PILAR",
+        "preliminary_diagnosis": "CONFIRMED_PLAN_GEOMETRY_VERTICAL_OR_TRANSFER_PATH_REVIEW"
+      },
+      {
+        "element_id": "E2-P4-V-050",
+        "type": "beam",
+        "building": "EDIFICIO_2",
+        "floor": "P4",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "medium",
+        "source_dxf": "2024_22-102.dxf",
+        "source_layer": "RLE-VIGA",
+        "preliminary_diagnosis": "ED2_PREEXISTING_CONNECTIVITY_REVIEW"
+      },
+      {
+        "element_id": "E2-P4-V-051",
+        "type": "beam",
+        "building": "EDIFICIO_2",
+        "floor": "P4",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "medium",
+        "source_dxf": "2024_22-102.dxf",
+        "source_layer": "RLE-VIGA",
+        "preliminary_diagnosis": "ED2_PREEXISTING_CONNECTIVITY_REVIEW"
+      },
+      {
+        "element_id": "E2-P4-M-015",
+        "type": "wall",
+        "building": "EDIFICIO_2",
+        "floor": "P4",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "merged_from_RLE-MURO",
+        "source_dxf": "2024_22-102.dxf",
+        "source_layer": "RLE-MURO",
+        "preliminary_diagnosis": "ED2_PREEXISTING_CONNECTIVITY_REVIEW"
+      },
+      {
+        "element_id": "E2-P4-M-017",
+        "type": "wall",
+        "building": "EDIFICIO_2",
+        "floor": "P4",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "merged_from_RLE-MURO",
+        "source_dxf": "2024_22-102.dxf",
+        "source_layer": "RLE-MURO",
+        "preliminary_diagnosis": "ED2_PREEXISTING_CONNECTIVITY_REVIEW"
+      },
+      {
+        "element_id": "E2-P4-M-019",
+        "type": "wall",
+        "building": "EDIFICIO_2",
+        "floor": "P4",
+        "status": "CURRENT_FLOATING",
+        "geometry_confidence": "merged_from_RLE-MURO",
+        "source_dxf": "2024_22-102.dxf",
+        "source_layer": "RLE-MURO",
+        "preliminary_diagnosis": "ED2_PREEXISTING_CONNECTIVITY_REVIEW"
+      }
+    ],
+    "interpretation": "La condicion flotante del adaptador historico no invalida por si sola una geometria confirmada en CAD."
+  },
+  "id_set_checks": {
+    "historic_floating_unique_ids": 93,
+    "current_floating_unique_ids": 72,
+    "current_total_unique_element_ids": 1113
+  },
+  "decision": {
+    "analysis_model_written": false,
+    "opensees_run": false,
+    "loads_or_results_changed": false,
+    "artificial_connections_added": false,
+    "next": "Auditar los 50 componentes restantes por evidencia y reconstruir FE solo cuando geometria/conectividad queden aprobadas."
+  }
+}
