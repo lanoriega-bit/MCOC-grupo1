@@ -1,5 +1,9 @@
 # Viewer 3D del edificio
 
+> **LEGACY / SOLO DEPURACIÓN.** La interfaz principal vigente es
+> `entregas/P1L3/José/viewer_unity`. Este viewer web no debe recibir funciones
+> nuevas ni utilizarse como demostración principal.
+
 ## Objetivo
 
 Visualizar el edificio completo como estructura 3D con volumenes reales (vigas, muros, columnas, losas), con navegacion tipo Google Earth y controles de QA para revisar pisos, categorias y elementos individuales.
