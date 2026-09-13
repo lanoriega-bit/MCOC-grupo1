@@ -40,6 +40,7 @@ namespace Mcoc.UnityViewer
         private SeismicData seismic;
         private AnalysisResultsData analysisResults;
         private AnalysisCasesData analysisCases;
+        private FeDiagnosticData feDiagnostic;
         private P1L3DeliveryData delivery;
         private CapacityData capacity;
         private Texture2D fiberTexture;
@@ -59,6 +60,7 @@ namespace Mcoc.UnityViewer
         private readonly Dictionary<string, Vector2> memberTrib = new Dictionary<string, Vector2>();
         private readonly Dictionary<string, AnalysisElementResult> analysisByElementId = new Dictionary<string, AnalysisElementResult>();
         private readonly Dictionary<string, ExcludedAnalysisElement> excludedByElementId = new Dictionary<string, ExcludedAnalysisElement>();
+        private readonly Dictionary<string, FeDiagnosticElement> diagnosticByElementId = new Dictionary<string, FeDiagnosticElement>();
         private readonly Dictionary<string, List<GameObject>> byType = new Dictionary<string, List<GameObject>>();
         private readonly Dictionary<string, List<GameObject>> byFloor = new Dictionary<string, List<GameObject>>();
         private readonly Dictionary<string, bool> typeVisible = new Dictionary<string, bool>();
@@ -72,6 +74,13 @@ namespace Mcoc.UnityViewer
         private Transform selected = null;
         private string lastInfo = "";
         private bool labelsVisible = false;
+        private int diagnosticViewMode = 0; // 0 geometria, 1 FE, 2 ambos
+        private bool diagnosticColorsVisible = false;
+        private bool diagnosticProblemsOnly = false;
+        private bool diagnosticWalls = true;
+        private bool diagnosticBeams = true;
+        private bool diagnosticColumns = true;
+        private bool diagnosticEd2Only = false;
         private ElementInfo lastSelected = null;
         private string searchText = "";
         private string searchResult = "";
@@ -114,7 +123,8 @@ namespace Mcoc.UnityViewer
             { "seismic_pattern", "Patron sismico" },
             { "seismic_deform_ex", "Deformada OpenSees EX" },
             { "seismic_deform_ey", "Deformada OpenSees EY" },
-            { "seismic_torsion", "Torsion de piso" }
+            { "seismic_torsion", "Torsion de piso" },
+            { "fe_candidate", "Malla FE candidata POST-P1L3" }
         };
 
         private static readonly Dictionary<string, int> FloorOrder = new Dictionary<string, int>
@@ -154,6 +164,12 @@ namespace Mcoc.UnityViewer
             architecture = JsonLoader.LoadArchitecture();
             analysisResults = JsonLoader.LoadAnalysisResults();
             analysisCases = JsonLoader.LoadAnalysisCases();
+            feDiagnostic = JsonLoader.LoadFeDiagnostic();
+            diagnosticByElementId.Clear();
+            if (feDiagnostic != null && feDiagnostic.elements != null)
+                foreach (var item in feDiagnostic.elements)
+                    if (item != null && !string.IsNullOrEmpty(item.element_id))
+                        diagnosticByElementId[item.element_id] = item;
             delivery = JsonLoader.LoadDelivery();
             capacity = JsonLoader.LoadCapacity();
             fiberTexture = JsonLoader.LoadPng("fiber_section.png");
@@ -175,13 +191,15 @@ namespace Mcoc.UnityViewer
                             memberTrib[a.elementTag] = new Vector2((float)a.area_m2, (float)a.load_kN);
             }
             BuildScene();
+            if (feDiagnostic != null) BuildFeCandidate();
             if (architecture != null) BuildArchitecture();
             if (tributaries != null) BuildTributaries();
             seismic = JsonLoader.LoadSeismic();
             if (seismic != null) BuildSeismic();
             RunVisibilitySelfCheck();
+            RunDiagnosticSelfCheck();
             ResetPresentation();
-            SetStatus($"{model.solids?.Count ?? 0} solidos, {model.segments?.Count ?? 0} lineas CAD, {architecture?.objects?.Count ?? 0} objeto(s) arquitectonico(s)");
+            SetStatus($"POST-P1L3: {model.solids?.Count ?? 0} solidos | FE candidato: {feDiagnostic?.members?.Count ?? 0} miembros (no ejecutado)");
         }
 
         void ActivateAnalysisCase(string requested)
@@ -250,6 +268,50 @@ namespace Mcoc.UnityViewer
             if (model.diaphragms != null)
                 foreach (var dia in model.diaphragms) CreateDiaphragm(dia);
             CreateNodes();
+        }
+
+        void BuildFeCandidate()
+        {
+            if (feDiagnostic.members == null) return;
+            foreach (var member in feDiagnostic.members)
+            {
+                Vector3 start = V(member.start);
+                Vector3 end = V(member.end);
+                Vector3 direction = end - start;
+                float length = direction.magnitude;
+                if (length < 0.01f) continue;
+                var go = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                go.name = "FE_" + member.analysis_id;
+                go.transform.position = (start + end) * 0.5f;
+                go.transform.localScale = new Vector3(length, 0.055f, 0.055f);
+                go.transform.rotation = Quaternion.FromToRotation(Vector3.right, direction.normalized);
+                var renderer = go.GetComponent<Renderer>();
+                var color = DiagnosticColor(member.validation);
+                renderer.sharedMaterial = LineMaterial(color);
+
+                var info = go.AddComponent<ElementInfo>();
+                info.go = go;
+                info.id = member.element_id;
+                info.humanId = member.element_id;
+                info.elementTag = member.geometryElementTag;
+                info.category = member.type;
+                info.floor = member.floor;
+                info.building = member.building;
+                info.materialName = "miembro FE candidato (no ejecutado)";
+                info.nodeI = start;
+                info.nodeJ = end;
+                info.coordCenter = (start + end) * 0.5f;
+                info.lengthM = length;
+                info.baseColor = color;
+                info.isFeCandidateVisual = true;
+                info.analysisId = member.analysis_id;
+                info.openseesTag = member.opensees_element_tag;
+                info.diagnosticStatus = member.validation;
+                if (diagnosticByElementId.TryGetValue(member.element_id, out var diagnostic))
+                    ApplyDiagnosticInfo(info, diagnostic);
+                Register(go, "fe_candidate", member.floor);
+                allElements.Add(info);
+            }
         }
 
         void BuildArchitecture()
@@ -381,6 +443,8 @@ namespace Mcoc.UnityViewer
             data.materialName = solid.material ?? "hormigon";
             data.coordZBottom = solid.model_z_m;
             data.coordZTop = solid.model_z_m;
+            if (diagnosticByElementId.TryGetValue(data.id, out var diagnostic))
+                ApplyDiagnosticInfo(data, diagnostic);
 
             // carga tributaria soportada (si calculada)
             if (solid.elementTag != null && memberTrib.TryGetValue(solid.elementTag, out var trib))
@@ -417,6 +481,32 @@ namespace Mcoc.UnityViewer
             Register(go, solid.category, solid.floor);
             allElements.Add(data);
             return go;
+        }
+
+        void ApplyDiagnosticInfo(ElementInfo info, FeDiagnosticElement diagnostic)
+        {
+            info.diagnosticStatus = diagnostic.validation;
+            info.structuralClassification = diagnostic.structural_classification;
+            info.diagnosticMotive = diagnostic.motive;
+            info.diagnosticComponent = diagnostic.component_id;
+            info.expectedConnection = diagnostic.expected_connection;
+            info.diagnosticEvidence = diagnostic.evidence;
+            info.diagnosticSource = string.IsNullOrEmpty(diagnostic.source_dxf)
+                ? diagnostic.source_layer
+                : diagnostic.source_dxf + " / " + diagnostic.source_layer;
+            info.crosswalk = diagnostic.crosswalk;
+        }
+
+        static Color DiagnosticColor(string status)
+        {
+            switch (status)
+            {
+                case "CONNECTED_EXPECTED": return new Color(0.2f, 0.9f, 0.35f);
+                case "FREE_END_EXPECTED": return new Color(0.2f, 0.55f, 1f);
+                case "DISCONNECTED_ERROR": return new Color(1f, 0.2f, 0.16f);
+                case "UNRESOLVED": return new Color(1f, 0.78f, 0.12f);
+                default: return new Color(0.58f, 0.62f, 0.7f, 0.7f);
+            }
         }
 
         void CreateSegment(SegmentData seg)
@@ -947,7 +1037,44 @@ namespace Mcoc.UnityViewer
         {
             bool vis = typeVisible.ContainsKey(type) ? typeVisible[type] : true;
             if (floorVisible.ContainsKey(floor)) vis = vis && floorVisible[floor];
+            var info = go.GetComponent<ElementInfo>();
+            bool isFe = info != null && info.isFeCandidateVisual;
+            bool isStructuralGeometry = !isFe && info != null &&
+                (info.category == "beam" || info.category == "wall" || info.category == "column");
+            if (isFe) vis = vis && diagnosticViewMode != 0;
+            else if (diagnosticViewMode == 1) vis = false;
+            if ((isFe || isStructuralGeometry) && info != null)
+            {
+                if (info.category == "wall" && !diagnosticWalls) vis = false;
+                if (info.category == "beam" && !diagnosticBeams) vis = false;
+                if (info.category == "column" && !diagnosticColumns) vis = false;
+                if (diagnosticEd2Only && info.building != "EDIFICIO_2") vis = false;
+                if (diagnosticProblemsOnly)
+                    vis = vis && (info.diagnosticStatus == "DISCONNECTED_ERROR" || info.diagnosticStatus == "UNRESOLVED");
+                UpdateDiagnosticMaterial(info);
+            }
+            else if (diagnosticProblemsOnly)
+            {
+                vis = false;
+            }
             go.SetActive(vis);
+        }
+
+        void UpdateDiagnosticMaterial(ElementInfo info)
+        {
+            if (info == null || info.go == null || info.isFeCandidateVisual) return;
+            var renderer = info.go.GetComponent<Renderer>();
+            if (renderer == null) return;
+            if (diagnosticColorsVisible && !string.IsNullOrEmpty(info.diagnosticStatus))
+            {
+                var material = renderer.material;
+                material.color = DiagnosticColor(info.diagnosticStatus);
+            }
+            else
+            {
+                var material = MatFor(info.category);
+                if (material != null) renderer.sharedMaterial = material;
+            }
         }
 
         void ReapplyAll()
@@ -990,8 +1117,9 @@ namespace Mcoc.UnityViewer
             // Zona panel derecho (navegacion + buscar, arriba)
             if (m.x > Screen.width - 370 && m.y < 215) return true;
             // Zona panel izquierdo (pisos y tipos)
+            if (new Rect(10f, 10f, 250f, 207f).Contains(m)) return true;
             if (visibilityPanelVisible && ControlsRect().Contains(m)) return true;
-            if (!visibilityPanelVisible && new Rect(10f, 10f, 150f, 28f).Contains(m)) return true;
+            if (!visibilityPanelVisible && new Rect(10f, 225f, 150f, 28f).Contains(m)) return true;
             // Zona panel de info (arriba izquierda)
             if (lastSelected != null && inspectorVisible && InspectorRect().Contains(m)) return true;
             if (lastSelected != null && !inspectorVisible && new Rect(InspectorRect().x + InspectorRect().width - 160f, InspectorRect().y, 160f, 26f).Contains(m)) return true;
@@ -1129,7 +1257,7 @@ namespace Mcoc.UnityViewer
                 cargaLine = $"Carga tributaria que soporta: {ei.tribLoadKN.ToString("F3")} kN\n" +
                     $"Area tributaria asociada: {ei.tribAreaM2.ToString("F3")} m2";
             }
-            string analysisLine = "\nModelo FE: sin correspondencia";
+            string analysisLine = "\nResultado FE P1L3 entregado: sin correspondencia";
             if (ei.hasFEParticipationFlag && !ei.participatesInFE)
             {
                 analysisLine = "\nModelo FE: no participa (capa exclusivamente visual)";
@@ -1144,11 +1272,29 @@ namespace Mcoc.UnityViewer
                 var nj = FindAnalysisNode(ar.node_j);
                 string displacements = ni == null || nj == null ? "desplazamientos no disponibles" :
                     $"ui=({ni.ux_m:F6}, {ni.uy_m:F6}, {ni.uz_m:F6}) m\nuj=({nj.ux_m:F6}, {nj.uy_m:F6}, {nj.uz_m:F6}) m";
-                analysisLine = $"\nModelo FE: incluido\nCaso: {ar.case_name}\nanalysis_id: {ar.analysis_id}\nOpenSees tag: {ar.opensees_tag}\n{displacements}\nExtremo i: {forces}";
+                analysisLine = $"\nResultado FE P1L3 entregado: incluido (historico)\nCaso: {ar.case_name}\nanalysis_id: {ar.analysis_id}\nOpenSees tag: {ar.opensees_tag}\n{displacements}\nExtremo i: {forces}";
             }
             else if (excludedByElementId.TryGetValue(id, out var excluded))
             {
-                analysisLine = $"\nModelo FE: no incluido\nMotivo: {excluded.reason}";
+                analysisLine = $"\nResultado FE P1L3 entregado: no incluido (historico)\nMotivo: {excluded.reason}";
+            }
+            string diagnosticLine = "";
+            if (!string.IsNullOrEmpty(ei.diagnosticStatus))
+            {
+                var mappings = new List<string>();
+                if (ei.crosswalk != null)
+                    foreach (var mapping in ei.crosswalk)
+                        mappings.Add($"{mapping.analysis_id} | OpenSees {mapping.opensees_element_tag} | nodos {mapping.opensees_node_i}-{mapping.opensees_node_j}");
+                string crosswalkLine = mappings.Count == 0
+                    ? "Sin segmento FE candidato"
+                    : string.Join("\n", mappings.ToArray());
+                diagnosticLine =
+                    $"\n\nDIAGNOSTICO FE POST-P1L3 (candidato no ejecutado)\n" +
+                    $"Estado: {ei.diagnosticStatus}\nClase: {ei.structuralClassification}\n" +
+                    $"Motivo: {ei.diagnosticMotive}\nComponente: {ei.diagnosticComponent}\n" +
+                    $"Conexion esperada: {ei.expectedConnection}\nEvidencia: {ei.diagnosticEvidence}\n" +
+                    $"Fuente: {(string.IsNullOrEmpty(ei.diagnosticSource) ? "-" : ei.diagnosticSource)}\n" +
+                    $"Geometria: {id}\nCrosswalk 1:N:\n{crosswalkLine}";
             }
             string capacityLine = "";
             if (capacity != null && !string.IsNullOrEmpty(capacity.mapped_element_id) && capacity.mapped_element_id == id)
@@ -1163,7 +1309,7 @@ namespace Mcoc.UnityViewer
             inspectorGeometry = $"Coordenadas: {coord}\nNodo i: {P(ei.nodeI)}\nNodo j: {P(ei.nodeJ)}\nLongitud: {ei.lengthM:F3} m{visualArea}";
             inspectorProperties = $"Seccion: {section}\nMaterial: {ei.materialName}\nelementTag: {ei.elementTag ?? "-"}{source}{confidence}";
             inspectorTributary = string.IsNullOrEmpty(cargaLine) ? "Sin carga tributaria asociada." : cargaLine;
-            inspectorAnalysis = analysisLine.TrimStart('\n');
+            inspectorAnalysis = (analysisLine + diagnosticLine).TrimStart('\n');
             inspectorCapacity = string.IsNullOrEmpty(capacityLine) ? "Este elemento no tiene un analisis de capacidad asociado." : capacityLine.TrimStart('\n');
             lastInfo = $"ID: {id}\n" +
                 $"elementTag: {ei.elementTag ?? "-"}\n" +
@@ -1177,7 +1323,7 @@ namespace Mcoc.UnityViewer
                 $"Longitud: {ei.lengthM.ToString("F3")} m\n" +
                 $"Tributaria: {trib}" +
                 (string.IsNullOrEmpty(cargaLine) ? "" : "\n" + cargaLine) +
-                analysisLine + capacityLine;
+                analysisLine + diagnosticLine + capacityLine;
             if (infoText != null) infoText.text = lastInfo;
             lastSelected = ei;
             inspectorVisible = true;
@@ -1212,12 +1358,67 @@ namespace Mcoc.UnityViewer
                 return;
             }
             DrawPanelInfo();
+            DrawDiagnosticControls();
             DrawControls();
             DrawP1L3Panel();
             if (labelsVisible) DrawLabels();
             if (seismic != null) DrawSeismicValueLabels();
             DrawLegend();
             DrawExpandedGraph();
+        }
+
+        void DrawDiagnosticControls()
+        {
+            Rect r = new Rect(10f, 10f, 250f, 207f);
+            GUI.Box(r, "");
+            GUI.DrawTexture(r, MakeTex(2, 2, new Color(0.02f, 0.04f, 0.08f, 0.94f)));
+            var title = new GUIStyle(GUI.skin.label);
+            title.fontSize = 12; title.fontStyle = FontStyle.Bold; title.normal.textColor = Color.white;
+            var small = new GUIStyle(GUI.skin.label);
+            small.fontSize = 10; small.normal.textColor = new Color(0.86f, 0.9f, 1f);
+            GUI.Label(new Rect(r.x + 8, r.y + 4, 234, 18), "Datos integrados", title);
+            GUI.Label(new Rect(r.x + 8, r.y + 22, 234, 32),
+                "Geometria: POST-P1L3 ACTUAL\nResultados: P1L3 ENTREGADO (historico)", small);
+
+            GUI.Label(new Rect(r.x + 8, r.y + 55, 234, 18), "Vista estructural", title);
+            string[] modes = { "Geometria", "FE", "Ambos" };
+            for (int i = 0; i < modes.Length; i++)
+            {
+                string label = diagnosticViewMode == i ? "● " + modes[i] : modes[i];
+                if (GUI.Button(new Rect(r.x + 8 + i * 78, r.y + 74, 74, 22), label))
+                {
+                    diagnosticViewMode = i;
+                    diagnosticColorsVisible = i != 0;
+                    typeVisible["fe_candidate"] = i != 0;
+                    ReapplyAll();
+                }
+            }
+            bool colors = GUI.Toggle(new Rect(r.x + 8, r.y + 99, 116, 19), diagnosticColorsVisible, "Diagnostico por color");
+            if (colors != diagnosticColorsVisible) { diagnosticColorsVisible = colors; ReapplyAll(); }
+            bool problems = GUI.Toggle(new Rect(r.x + 128, r.y + 99, 114, 19), diagnosticProblemsOnly, "Solo problemas FE");
+            if (problems != diagnosticProblemsOnly) { diagnosticProblemsOnly = problems; ReapplyAll(); }
+
+            bool walls = GUI.Toggle(new Rect(r.x + 8, r.y + 120, 70, 19), diagnosticWalls, "Muros");
+            bool beams = GUI.Toggle(new Rect(r.x + 82, r.y + 120, 70, 19), diagnosticBeams, "Vigas");
+            bool columns = GUI.Toggle(new Rect(r.x + 156, r.y + 120, 82, 19), diagnosticColumns, "Columnas");
+            bool ed2 = GUI.Toggle(new Rect(r.x + 8, r.y + 140, 100, 19), diagnosticEd2Only, "Solo EDIFICIO_2");
+            if (walls != diagnosticWalls || beams != diagnosticBeams || columns != diagnosticColumns || ed2 != diagnosticEd2Only)
+            {
+                diagnosticWalls = walls; diagnosticBeams = beams; diagnosticColumns = columns; diagnosticEd2Only = ed2;
+                ReapplyAll();
+            }
+
+            var green = new GUIStyle(small); green.normal.textColor = DiagnosticColor("CONNECTED_EXPECTED");
+            var blue = new GUIStyle(small); blue.normal.textColor = DiagnosticColor("FREE_END_EXPECTED");
+            var red = new GUIStyle(small); red.normal.textColor = DiagnosticColor("DISCONNECTED_ERROR");
+            var yellow = new GUIStyle(small); yellow.normal.textColor = DiagnosticColor("UNRESOLVED");
+            GUI.Label(new Rect(r.x + 8, r.y + 161, 113, 18), "● Conectado esperado", green);
+            GUI.Label(new Rect(r.x + 126, r.y + 161, 116, 18), "● Extremo libre", blue);
+            GUI.Label(new Rect(r.x + 8, r.y + 179, 113, 18), "● Error desconectado", red);
+            GUI.Label(new Rect(r.x + 126, r.y + 179, 116, 18), "● No resuelto", yellow);
+            if (feDiagnostic != null && feDiagnostic.summary != null)
+                GUI.Label(new Rect(r.x + 8, r.y + 195, 234, 14),
+                    $"Candidato no ejecutado | {feDiagnostic.summary.focus_elements} revisados", small);
         }
 
         Rect DeliveryRect()
@@ -1510,7 +1711,7 @@ namespace Mcoc.UnityViewer
             // --- Panel izquierdo: controles visibles + lista desplazable ---
             if (!visibilityPanelVisible)
             {
-                if (GUI.Button(new Rect(10, 10, 150, 28), "Abrir visibilidad")) visibilityPanelVisible = true;
+                if (GUI.Button(new Rect(10, 225, 150, 28), "Abrir visibilidad")) visibilityPanelVisible = true;
                 return;
             }
             Rect controls = ControlsRect();
@@ -1620,6 +1821,13 @@ namespace Mcoc.UnityViewer
             orbitDist = 160f;
             orbitTarget = new Vector3(16.41f, 5.99f, -14.73f);
             labelsVisible = false;
+            diagnosticViewMode = 0;
+            diagnosticColorsVisible = false;
+            diagnosticProblemsOnly = false;
+            diagnosticWalls = true;
+            diagnosticBeams = true;
+            diagnosticColumns = true;
+            diagnosticEd2Only = false;
             deliveryPanelVisible = false;
             expandedGraph = null;
             expandedGraphTitle = "";
@@ -1664,6 +1872,48 @@ namespace Mcoc.UnityViewer
             }
             if (failures.Count == 0) Debug.Log("[UI QA] PASS: capas y pisos responden a ON/OFF.");
             else Debug.LogError("[UI QA] FAIL: " + string.Join(", ", failures));
+        }
+
+        void RunDiagnosticSelfCheck()
+        {
+            var failures = new List<string>();
+            if (feDiagnostic == null || feDiagnostic.summary == null) failures.Add("contrato FE ausente");
+            else
+            {
+                if (feDiagnostic.summary.focus_elements != 72) failures.Add("foco distinto de 72");
+                if (feDiagnostic.members == null || feDiagnostic.members.Count != feDiagnostic.summary.fe_element_count)
+                    failures.Add("miembros FE no coinciden con resumen");
+                if (feDiagnostic.summary.geometry_elements_split_into_multiple_fe <= 0)
+                    failures.Add("crosswalk 1:N ausente");
+            }
+            if (!byType.ContainsKey("fe_candidate") || byType["fe_candidate"].Count == 0)
+                failures.Add("malla FE no construida");
+
+            bool oldFeType = typeVisible.ContainsKey("fe_candidate") && typeVisible["fe_candidate"];
+            diagnosticViewMode = 1;
+            typeVisible["fe_candidate"] = true;
+            ReapplyAll();
+            if (!byType.ContainsKey("fe_candidate") || !byType["fe_candidate"].Exists(go => go.activeSelf))
+                failures.Add("modo FE no visible");
+            diagnosticProblemsOnly = true;
+            ReapplyAll();
+            foreach (var info in allElements)
+            {
+                if (info == null || info.go == null || !info.go.activeSelf) continue;
+                if (info.diagnosticStatus != "DISCONNECTED_ERROR" && info.diagnosticStatus != "UNRESOLVED")
+                {
+                    failures.Add("filtro solo problemas deja elementos ajenos");
+                    break;
+                }
+            }
+            diagnosticViewMode = 0;
+            diagnosticProblemsOnly = false;
+            typeVisible["fe_candidate"] = oldFeType;
+            ReapplyAll();
+            if (failures.Count == 0)
+                Debug.Log("[UI QA] PASS: diagnostico FE, filtros y crosswalk 1:N disponibles.");
+            else
+                Debug.LogError("[UI QA] FAIL diagnostico FE: " + string.Join(", ", failures));
         }
 
         void QuickTypeToggle(Rect rect, string label, params string[] keys)
@@ -2093,5 +2343,16 @@ namespace Mcoc.UnityViewer
         public bool isSeismic = false;
         public double seismicForceKN;
         public string seismicCase;
+        public bool isFeCandidateVisual;
+        public string analysisId;
+        public int openseesTag;
+        public string diagnosticStatus;
+        public string structuralClassification;
+        public string diagnosticMotive;
+        public string diagnosticComponent;
+        public string expectedConnection;
+        public string diagnosticEvidence;
+        public string diagnosticSource;
+        public List<FeCrosswalkEntry> crosswalk;
     }
 }

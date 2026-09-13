@@ -1,13 +1,21 @@
-# Unity P1L3 — laboratorio estructural integrado
+# Unity — laboratorio estructural integrado POST-P1L3
 
 Proyecto Unity de la parte de visualizacion/interaccion del laboratorio (el lado
 "Unity" de la arquitectura OpenSees <-> Unity). Lee el mismo JSON de contrato del
 modelo (`model_viewer.json`) y permite mostrar/ocultar por tipo y piso, y hacer
 clic sobre elementos para inspeccionar sus datos.
 
-Este proyecto es la interfaz visual principal de P1L3. La escena se encuentra
+Este proyecto es la unica interfaz visual principal del repositorio. La escena se encuentra
 versionada y los datos se regeneran desde las fuentes vigentes mediante
 `entregas/P1L3/scripts/build_unity_bundle.py`.
+
+La cabecera de la interfaz separa dos estados que no deben confundirse:
+
+- `POST-P1L3 ACTUAL`: geometria consolidada y diagnostico topologico candidato.
+- `P1L3 ENTREGADO (historico)`: G/Q/EX/EY/R, masas, superposicion y capacidad.
+
+El candidato FE es solo diagnostico visual: no fue ejecutado en OpenSees y no
+reemplaza los resultados entregados.
 
 ## Que implementa (requisitos del rol "Unity Viewer")
 
@@ -39,6 +47,7 @@ versionada y los datos se regeneran desde las fuentes vigentes mediante
 | `Assets/Scripts/JsonLoader.cs` | Carga el JSON desde `StreamingAssets` |
 | `Assets/Scripts/ViewerController.cs` | Construye la escena, toggles y panel de click |
 | `Assets/StreamingAssets/model_viewer.json` | Contrato del modelo (producido por tus companeros) |
+| `Assets/StreamingAssets/post_p1l3_fe_diagnostic.json` | Malla candidata, validacion de 72 casos y crosswalk geometria -> FE/OpenSees |
 | `Packages/manifest.json` | Dependencias base (UGUI, TextMeshPro, JSon) |
 | `ProjectSettings/` | Config minima de proyecto (Unity regenerea el resto) |
 
@@ -76,6 +85,22 @@ los JSON del bundle y no estan hardcodeados en la UI.
 - **Graficos**: cada imagen HA tiene boton `Ampliar` y vista modal legible.
 - **Leyenda**: aparece solo al activar overlays analiticos.
 - **Modo limpio**: tecla `H`; **Reset**: tecla `R`.
+
+## Diagnostico FE POST-P1L3
+
+El panel superior izquierdo permite alternar `Geometria`, `FE` o `Ambos`,
+colorear el diagnostico, aislar solo problemas y filtrar muros, vigas, columnas
+o solamente EDIFICIO_2. Los estados son:
+
+- verde: `CONNECTED_EXPECTED`;
+- azul: `FREE_END_EXPECTED`;
+- rojo: `DISCONNECTED_ERROR`;
+- amarillo: `UNRESOLVED`.
+
+Al seleccionar un elemento, el inspector muestra clase, motivo, componente,
+conexion esperada, evidencia y el crosswalk 1:N completo con `analysis_id`, tag
+OpenSees y nodos. Los elementos fuera del foco heredado de 72 aparecen neutros
+y conservan igualmente su crosswalk candidato.
 
 Las deformadas EX/EY usan los desplazamientos nodales de OpenSees exportados en
 `analysis_cases.json`. La leyenda declara el factor de amplificacion visual.

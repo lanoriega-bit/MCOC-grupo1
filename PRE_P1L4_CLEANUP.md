@@ -276,8 +276,22 @@ de cada componente flotante.
 - No se recalculó OpenSees ni se modificó ninguna carga o resultado histórico.
 - La referencia original de Luis permanece intacta.
 
+### FASE U3–U4 — diagnóstico FE y filtros en Unity
+
+- Se genera `post_p1l3_fe_diagnostic.json` desde el candidato FASE 7 y la
+  auditoría de conectividad, sin copiar decisiones al código de interfaz.
+- Contrato: 1167 miembros FE, 1133 IDs geométricos mapeados, 33 crosswalks 1:N
+  (máximo 3 segmentos) y foco heredado de 72 elementos.
+- Estados del foco: 31 `CONNECTED_EXPECTED`, 1 `FREE_END_EXPECTED`, 31
+  `DISCONNECTED_ERROR` y 9 `UNRESOLVED`.
+- Unity permite `Geometría / FE / Ambos`, color de diagnóstico, `Solo problemas
+  FE`, filtros de muros/vigas/columnas y aislamiento de EDIFICIO_2.
+- El inspector expone ID, piso, tipo, clase, motivo, componente, conexión
+  esperada, evidencia y el crosswalk a `analysis_id`/tags/nodos OpenSees.
+- El candidato continúa `CANDIDATE_NOT_APPROVED_NOT_RUN`; los 40 elementos
+  pendientes no fueron resueltos ni conectados artificialmente.
+
 ## Próximo hito
 
-`FASE U3–U4`: integrar el diagnóstico FE candidato y sus filtros/selección en el
-Unity de José, sin aprobar ni ejecutar el candidato y sin resolver los 40 casos
-pendientes desde código.
+`FASE U5 + R1–R5`: validar en Play, añadir lanzadores simples e inventariar los
+artefactos para definir canónicos/legado antes de cualquier limpieza segura.
