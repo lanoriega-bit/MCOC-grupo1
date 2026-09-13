@@ -1,7 +1,7 @@
 # PROJECT_HANDOFF.md
 
 Transferencia tecnica completa del proyecto "Laboratorio estructural digital 3D de un edificio real".
-Fecha de revision: 2026-09-11. Base P1L3 integrada: `beb0006`.
+Fecha de revision: 2026-09-12. Base P1L3 entregada: `P1L3_DELIVERED` (`c847c13`).
 Este documento NO repite planificacion P1L3: eso vive en `entregas/P1L3/PLANIFICACION.md`.
 
 Estado vigente: P1L3 ya esta implementado e integrado en el Unity de Jose. Los
@@ -9,6 +9,11 @@ casos reales `G/Q/EX/EY/R`, resultados OpenSees y capacidad HA se adaptan a
 `Assets/StreamingAssets`; la interfaz principal tiene filtros, inspector,
 graficos ampliables y modo presentacion. Ver `entregas/P1L3/INFORME.md` y
 `entregas/P1L3/UI_QA.md`. No volver a tratar P1L3 como "solo planificado".
+
+Entrada actual: `PROJECT_INDEX.md`, `Abrir_Unity.bat` y
+`Validar_Modelo.bat`. Unity muestra geometría `POST_P1L3_CURRENT`, diagnóstico
+FE `CANDIDATE_NOT_RUN` y resultados `P1L3_DELIVERED_HISTORICAL` como estados
+separados. El viewer web es legado de depuración.
 
 ## POST-P1L3 CONSOLIDATED BASELINE — EN CONSTRUCCION
 
@@ -68,10 +73,16 @@ graficos ampliables y modo presentacion. Ver `entregas/P1L3/INFORME.md` y
   45 geometrías/23 componentes sin nuevos flotantes externos al conjunto foco.
   Quedan 31 muros `DISCONNECTED_ERROR` y 9 elementos `UNRESOLVED`; requiere
   revisión de planos antes de añadir más conexiones. A3-A4, OpenSees, cargas,
-  resultados, geometría y Unity permanecen intactos.
-- Proximo paso: reconstruir perímetros y huecos piso a piso con respaldo de
-  `RLE-LOSA`, vigas y notas, conservando `participates_in_FE=false` para la
-  arquitectura visual.
+  resultados y geometría permanecen intactos.
+- FASE U2–U5 integra en el Unity de José la geometría vigente y el diagnóstico
+  candidato: vista Geometría/FE/Ambos, filtros por estado/tipo/ED2, selección y
+  crosswalk 1:N. No ejecuta el candidato ni cambia resultados.
+- R1–R5 define canónicos en `PROJECT_INDEX.md`, inventaría cada archivo en
+  `REPOSITORY_INVENTORY.json`, marca viewers web como legacy y elimina 0
+  archivos por preservación histórica.
+- Próximo paso: revisar visualmente los 31 `DISCONNECTED_ERROR` y 9
+  `UNRESOLVED`, volver a planos y luego terminar losas/cobertura. No recalcular
+  cargas/OpenSees hasta validar Q completo.
 
 ---
 

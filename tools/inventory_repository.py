@@ -71,8 +71,9 @@ def classify(path: str) -> str:
 
 def main() -> None:
     tracked = [line for line in git("-c", "core.quotepath=false", "ls-files").splitlines() if line]
-    if "tools/inventory_repository.py" not in tracked:
-        tracked.append("tools/inventory_repository.py")
+    for special in ("tools/inventory_repository.py", "PROJECT_INDEX.md"):
+        if special not in tracked and (ROOT / special).is_file():
+            tracked.append(special)
     rows = []
     hashes = defaultdict(list)
     for relative in tracked:

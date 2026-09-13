@@ -40,7 +40,7 @@ crear esta documentación.
 | Clase | Alcance actual | Regla PRE-P1L4 |
 | --- | --- | --- |
 | SOURCE | Planos locales `recursos/planos/`, enunciado y DWG/DXF; los planos están ignorados por Git. | Solo lectura; registrar hashes/índice y conversiones. |
-| CANONICAL | Ejes `global_axes.json`; ED1 `model_1_audited_corrected.json`; ED2 `model_2_viewer.json`; combinado `model_combined_viewer.json`; FE `results/a3a4/analysis_model.json`; Unity `entregas/P1L3/José/viewer_unity`. | Pueden cambiar únicamente mediante pipeline y validación. |
+| CANONICAL | Ejes `global_axes.json`; ED1 `model_1_audited_corrected.json`; ED2 `model_2_viewer.json`; combinado `model_combined_viewer.json`; FE candidato `results/post_p1l3_candidate/analysis_model_post_p1l3_candidate.json`; Unity `entregas/P1L3/José/viewer_unity`. | Pueden cambiar únicamente mediante pipeline y validación. A3-A4 queda como historia entregada. |
 | GENERATED | JSON y gráficos bajo `results/`; `Assets/StreamingAssets`; modelos exportados. | No editar cifras manualmente. Regenerar desde fuentes. |
 | VALIDATION | `edificio/validacion`, archivos `*_validation.*`, reportes A1-A7 y overlays. | Conservar junto a la revisión/hash de sus entradas. |
 | DELIVERED_HISTORY | Tag `P1L3_DELIVERED`, entregas P1L0-P1L3 y referencia Luis `model_viewer.json`. | No modificar el snapshot ni la referencia Luis. |
@@ -58,7 +58,8 @@ hará después de definir adaptadores y consumidores para no romper rutas.
 | Geometría estructural | `entregas/P1L2/unity_export/model_combined_viewer.json` | Auditorías de columnas, muros, vigas y conectividad completas. |
 | Geometría ED1 | `model_1_audited_corrected.json` | Regeneración trazable desde decisiones auditadas. |
 | Geometría ED2 | `model_2_viewer.json` | Auditoría equivalente y registro estable de IDs. |
-| Modelo FE | `entregas/P1L3/results/a3a4/analysis_model.json` | Reconstrucción posterior a estabilizar geometría. |
+| Modelo FE diagnóstico | `entregas/P1L3/results/post_p1l3_candidate/analysis_model_post_p1l3_candidate.json` | Candidato actual, no aprobado ni ejecutado. |
+| Modelo FE entregado | `entregas/P1L3/results/a3a4/analysis_model.json` | Historia P1L3 reproducible; no es la topología actual. |
 | Catálogo de cargas | `load_zones_700_completion/load_catalog_700.json` | Está auditado espacialmente pero aún `NOT_APPLIED`. |
 | Resultados entregados | `entregas/P1L3/results/a7/` | Histórico bajo `P1L3_DELIVERED`; no sobrescribir. |
 | Arquitectura visual | `entregas/P1L3/arquitectura/architectural_visual_model.json` | Extender por piso manteniendo `participates_in_FE=false`. |
@@ -291,7 +292,21 @@ de cada componente flotante.
 - El candidato continúa `CANDIDATE_NOT_APPROVED_NOT_RUN`; los 40 elementos
   pendientes no fueron resueltos ni conectados artificialmente.
 
+### FASE U5 + R1–R5 — acceso e índice canónico
+
+- La raíz contiene `Abrir_Unity.bat` y `Validar_Modelo.bat`.
+- `PROJECT_INDEX.md` define una única fuente por geometría, FE, cargas, Unity,
+  OpenSees y resultados históricos.
+- `REPOSITORY_INVENTORY.json` clasifica 585 archivos, 9 referencias remotas y
+  7 grupos de duplicados exactos; se regenera con
+  `tools/inventory_repository.py`.
+- Los viewers web P1L2/Semana 2 quedaron marcados `LEGACY` y no recibirán
+  funciones nuevas.
+- Limpieza segura: 0 eliminados y 0 movidos. Los duplicados restantes son
+  bundles de ejecución o snapshots de entrega/checkpoint; se preservan.
+
 ## Próximo hito
 
-`FASE U5 + R1–R5`: validar en Play, añadir lanzadores simples e inventariar los
-artefactos para definir canónicos/legado antes de cualquier limpieza segura.
+Revisión visual del diagnóstico en Unity y retorno a planos para los 31
+`DISCONNECTED_ERROR` y 9 `UNRESOLVED`; no recalcular cargas/OpenSees hasta
+validar Q completo.

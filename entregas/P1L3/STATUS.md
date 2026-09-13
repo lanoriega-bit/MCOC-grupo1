@@ -1,4 +1,16 @@
-# P1L3 - Estado de integracion
+# P1L3 - Estado de integración y consolidación POST-P1L3
+
+## Interfaz vigente PRE-P1L4 (2026-09-12)
+
+- Unity de José es la única interfaz principal; los viewers web son legacy.
+- Geometría visible actual: 1212 sólidos (ED1 524, ED2 688).
+- Diagnóstico FE candidato: 1167 miembros, no ejecutado; foco de 72 elementos
+  con 31 `CONNECTED_EXPECTED`, 1 `FREE_END_EXPECTED`, 31
+  `DISCONNECTED_ERROR` y 9 `UNRESOLVED`.
+- La interfaz distingue resultados/cargas/capacidad P1L3 históricos de la
+  geometría y topología candidatas actuales.
+- Inicio: `Abrir_Unity.bat`; validación sin OpenSees: `Validar_Modelo.bat`;
+  fuentes canónicas: `PROJECT_INDEX.md`.
 
 ## Cierre espacial de cargas 700 — ambos edificios (2026-09-10)
 
@@ -134,8 +146,9 @@ antecedente tecnico; no es la interfaz final.
 | Componente | Fuente vigente | Estado |
 | --- | --- | --- |
 | Planos | `C:/Users/matis/OneDrive/Documentos/Planos_edificio_ingeniera/` | Fuente primaria local; contiene archivos ZIP/RAR que deben inventariarse y extraerse de forma controlada. |
-| Geometria | `entregas/P1L2/unity_export/model_combined_viewer.json` | Vigente: 1561 solidos, cinco pisos. |
-| Topologia FE | `results/a3a4/analysis_model.json` | 813 nodos, 1312 elementos, 106 apoyos. |
+| Geometria | `entregas/P1L2/unity_export/model_combined_viewer.json` | Vigente POST-P1L3: 1212 solidos, cinco pisos. |
+| Topologia FE actual | `results/post_p1l3_candidate/analysis_model_post_p1l3_candidate.json` | Candidato no aprobado/no ejecutado: 1832 nodos, 1167 miembros y 1508 restricciones. |
+| Topologia FE entregada | `results/a3a4/analysis_model.json` | Histórica P1L3: 813 nodos, 1312 elementos, 106 apoyos. |
 | G/Q | `results/a1a2/` y `results/a5/` | Conservacion y superposicion `PASS`. |
 | EX/EY | `Jose/results/seismic_ex_ey.json` + `results/a7/` | Aplicados a OpenSees y verificados; masas historicas provisionales. |
 | Capacidad HA | `capacidad_ha/` | Fiber/M-phi/P-M integrado; propiedades mecanicas y armadura son hipotesis de laboratorio. |
