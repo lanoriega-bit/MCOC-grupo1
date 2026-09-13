@@ -358,6 +358,92 @@ namespace Mcoc.UnityViewer
     }
 
     [Serializable]
+    public class FeDiagnosticData
+    {
+        public string format;
+        public string status;
+        public string source_candidate;
+        public FeDiagnosticSummary summary;
+        public List<FeDiagnosticElement> elements;
+        public List<FeCandidateMember> members;
+    }
+
+    [Serializable]
+    public class FeDiagnosticSummary
+    {
+        public int baseline_floating_elements;
+        public int baseline_components;
+        public int candidate_floating_fe_segments;
+        public int candidate_floating_geometry_elements;
+        public int candidate_floating_components;
+        public int node_count;
+        public int fe_element_count;
+        public int constraint_count;
+        public int geometry_elements_split_into_multiple_fe;
+        public int max_fe_segments_per_geometry;
+        public int focus_elements;
+        public int mapped_geometry_elements;
+    }
+
+    [Serializable]
+    public class FeDiagnosticElement
+    {
+        public string element_id;
+        public string type;
+        public string building;
+        public string floor;
+        public string structural_classification;
+        public string validation;
+        public bool connected_in_candidate;
+        public bool diagnostic_focus;
+        public string component_id;
+        public string motive;
+        public string expected_connection;
+        public string evidence;
+        public List<string> connection_types;
+        public string source_dxf;
+        public string source_layer;
+        public string prior_diagnosis;
+        public List<FeCrosswalkEntry> crosswalk;
+    }
+
+    [Serializable]
+    public class FeCrosswalkEntry
+    {
+        public string analysis_id;
+        public int opensees_element_tag;
+        public string element_id;
+        public string geometryElementTag;
+        public int geometry_segment_index;
+        public string type;
+        public string building;
+        public string floor;
+        public int node_i;
+        public int node_j;
+        public int opensees_node_i;
+        public int opensees_node_j;
+    }
+
+    [Serializable]
+    public class FeCandidateMember
+    {
+        public string analysis_id;
+        public int opensees_element_tag;
+        public string element_id;
+        public string geometryElementTag;
+        public int geometry_segment_index;
+        public string type;
+        public string building;
+        public string floor;
+        public int node_i;
+        public int node_j;
+        public bool diagnostic_focus;
+        public string validation;
+        public List<double> start;
+        public List<double> end;
+    }
+
+    [Serializable]
     public class CapacityData
     {
         public string format;

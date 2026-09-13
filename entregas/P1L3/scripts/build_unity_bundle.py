@@ -121,6 +121,113 @@ def visual_lines_for_unity(model: dict) -> dict:
     return data
 
 
+def build_fe_diagnostic(candidate: dict, audit: dict) -> dict:
+    """Adapta el candidato topologico a listas planas legibles por JsonUtility.
+
+    No decide conectividad nueva: transporta la validacion del candidato, el
+    diagnostico previo y el crosswalk 1:N a la interfaz.
+    """
+    validation_by_id = {
+        row["element_id"]: row for row in candidate["connectivity_validation"]
+    }
+    audit_by_id = {
+        row["element_id"]: row
+        for row in audit["current_floating_classification"]["elements"]
+    }
+    crosswalk_by_id: dict[str, list[dict]] = {}
+    for row in candidate["crosswalk"]:
+        crosswalk_by_id.setdefault(row["element_id"], []).append(row)
+    component_by_id = {}
+    for component in candidate["floating_excluded"]["components"]:
+        for element_id in component["geometry_element_ids"]:
+            component_by_id[element_id] = component["component_id"]
+    connection_by_id: dict[str, list[dict]] = {}
+    for connection in candidate["junction_connections"]:
+        for element_id in (connection.get("geometry_a"), connection.get("geometry_b")):
+            if element_id:
+                connection_by_id.setdefault(element_id, []).append(connection)
+
+    expectation_by_type = {
+        "wall": "interseccion/solape fisico con muro o viga del mismo edificio y nivel",
+        "beam": "incidencia fisica con viga, columna o muro; un extremo libre solo si es voladizo real",
+        "column": "continuidad vertical o transferencia demostrada hacia viga/muro",
+    }
+    elements = []
+    for element_id in sorted(crosswalk_by_id):
+        mapped = crosswalk_by_id[element_id][0]
+        row = validation_by_id.get(element_id, {
+            "element_id": element_id,
+            "type": mapped["type"],
+            "building": mapped["building"],
+            "floor": mapped["floor"],
+            "structural_classification": "NOT_IN_FOCUS",
+            "validation": "NOT_IN_FOCUS",
+            "connected_in_candidate": element_id not in component_by_id,
+        })
+        audit_row = audit_by_id.get(element_id, {})
+        links = connection_by_id.get(element_id, [])
+        link_types = sorted({item.get("type", "") for item in links if item.get("type")})
+        evidence = sorted({item.get("evidence", "") for item in links if item.get("evidence")})
+        validation = row["validation"]
+        if validation == "CONNECTED_EXPECTED":
+            motive = "El adaptador candidato recupera la trayectoria esperada mediante encuentros fisicos."
+        elif validation == "FREE_END_EXPECTED":
+            motive = "La geometria confirma un voladizo real: un extremo libre es intencional."
+        elif validation == "DISCONNECTED_ERROR":
+            motive = "La geometria esta confirmada, pero el candidato aun no obtiene trayectoria a apoyo."
+        elif validation == "UNRESOLVED":
+            motive = "La interpretacion estructural sigue pendiente; no se crea una conexion artificial."
+        else:
+            motive = "Elemento fuera del foco de 72 casos heredados; se muestra para inspeccionar la malla candidata."
+        elements.append(
+            {
+                **row,
+                "diagnostic_focus": element_id in validation_by_id,
+                "component_id": component_by_id.get(element_id, "SUPPORTED_COMPONENT"),
+                "motive": motive,
+                "expected_connection": expectation_by_type.get(row["type"], "conexion estructural demostrada"),
+                "evidence": "; ".join(evidence) if evidence else audit_row.get("geometry_confidence", "sin evidencia adicional"),
+                "connection_types": link_types,
+                "source_dxf": audit_row.get("source_dxf", ""),
+                "source_layer": audit_row.get("source_layer", ""),
+                "prior_diagnosis": audit_row.get("preliminary_diagnosis", ""),
+                "crosswalk": sorted(
+                    crosswalk_by_id.get(element_id, []),
+                    key=lambda item: item["geometry_segment_index"],
+                ),
+            }
+        )
+
+    nodes = candidate["nodes"]
+    members = []
+    for member in candidate["elements"]:
+        diagnostic = validation_by_id.get(member["element_id"])
+        ni = nodes[str(member["node_i"])]
+        nj = nodes[str(member["node_j"])]
+        members.append(
+            {
+                **member,
+                "diagnostic_focus": diagnostic is not None,
+                "validation": diagnostic["validation"] if diagnostic else "NOT_IN_FOCUS",
+                "start": [ni["x"], ni["y"], ni["z"]],
+                "end": [nj["x"], nj["y"], nj["z"]],
+            }
+        )
+
+    return {
+        "format": "POST_P1L3_UNITY_FE_DIAGNOSTIC_v1",
+        "status": candidate["status"],
+        "source_candidate": str(FE_CANDIDATE.relative_to(ROOT)).replace("\\", "/"),
+        "summary": {
+            **candidate["qa"],
+            "focus_elements": len(validation_by_id),
+            "mapped_geometry_elements": len(elements),
+        },
+        "elements": elements,
+        "members": members,
+    }
+
+
 def build_analysis_results(analysis: dict, run_dir: Path) -> dict:
     manifest = load_json(run_dir / "manifest.json")
     elements = load_json(run_dir / "elements.json")
@@ -347,6 +454,8 @@ def main() -> None:
     required = [
         GEOMETRY,
         ANALYSIS_MODEL,
+        FE_CANDIDATE,
+        CONNECTIVITY_AUDIT,
         A5_REPORT,
         A7_REPORT,
         SEISMIC,
@@ -371,6 +480,8 @@ def main() -> None:
     geometry = load_json(GEOMETRY)
     validate_geometry(geometry)
     analysis = load_json(ANALYSIS_MODEL)
+    fe_candidate = load_json(FE_CANDIDATE)
+    connectivity_audit = load_json(CONNECTIVITY_AUDIT)
     seismic = load_json(SEISMIC)
     a7 = load_json(A7_REPORT)
     architecture = load_json(ARCHITECTURE)
@@ -393,6 +504,10 @@ def main() -> None:
     default_analysis = next(case for case in analysis_cases["cases"] if case["case_name"] == "CASE_R")
     write_json(STREAMING / "analysis_results.json", default_analysis)
     write_json(STREAMING / "analysis_cases.json", analysis_cases)
+    write_compact_json(
+        STREAMING / "post_p1l3_fe_diagnostic.json",
+        build_fe_diagnostic(fe_candidate, connectivity_audit),
+    )
     write_json(STREAMING / "p1l3_delivery.json", build_delivery_summary(a7))
     write_json(STREAMING / "capacity_ha.json", build_capacity(geometry, analysis))
     for image_name in ("fiber_section.png", "moment_curvature.png", "pm_interaction.png"):
@@ -428,6 +543,7 @@ def main() -> None:
                 "fiber_section.png", "moment_curvature.png", "pm_interaction.png",
                 "architectural_visual_model.json",
                 "visual_lines.json",
+                "post_p1l3_fe_diagnostic.json",
             )
         ],
         "validation": {
@@ -445,6 +561,10 @@ def main() -> None:
             "capacity_uses_lab_assumptions": True,
             "architecture_visual_objects": len(architecture["objects"]),
             "architecture_participates_in_FE": False,
+            "fe_candidate_status": fe_candidate["status"],
+            "fe_candidate_members": len(fe_candidate["elements"]),
+            "fe_diagnostic_focus_elements": len(fe_candidate["connectivity_validation"]),
+            "fe_candidate_was_run": fe_candidate["run_policy"]["opensees_run"],
         },
     }
     write_json(STREAMING / "integration_manifest.json", manifest)

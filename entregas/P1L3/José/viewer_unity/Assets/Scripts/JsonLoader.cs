@@ -116,6 +116,11 @@ namespace Mcoc.UnityViewer
             return LoadOptional<AnalysisCasesData>(fileName, "casos G/Q/EX/EY/R");
         }
 
+        public static FeDiagnosticData LoadFeDiagnostic(string fileName = "post_p1l3_fe_diagnostic.json")
+        {
+            return LoadOptional<FeDiagnosticData>(fileName, "diagnostico FE POST-P1L3");
+        }
+
         public static P1L3DeliveryData LoadDelivery(string fileName = "p1l3_delivery.json")
         {
             return LoadOptional<P1L3DeliveryData>(fileName, "resumen P1L3");

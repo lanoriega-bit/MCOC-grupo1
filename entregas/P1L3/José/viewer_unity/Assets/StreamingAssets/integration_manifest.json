@@ -1,6 +1,6 @@
 {
   "format": "POST_P1L3_UNITY_BUNDLE_v2",
-  "generated_utc": "2026-09-13T02:29:39.732935+00:00",
+  "generated_utc": "2026-09-13T02:36:31.478912+00:00",
   "data_state": {
     "geometry": "POST_P1L3_CURRENT",
     "fe_diagnosis": "POST_P1L3_CANDIDATE_NOT_RUN",
@@ -62,6 +62,10 @@
     {
       "name": "visual_lines.json",
       "sha256": "ea2d3c072fa65e772b8f6c91e7087f1a65b706cb9032469ff60dd5d316f58926"
+    },
+    {
+      "name": "post_p1l3_fe_diagnostic.json",
+      "sha256": "105fdd92adb765759231da524135fbeef26b34b98c616590375055a6b15c0516"
     }
   ],
   "validation": {
@@ -80,6 +84,10 @@
     "seismic_is_applied_to_opensees": true,
     "capacity_uses_lab_assumptions": true,
     "architecture_visual_objects": 1,
-    "architecture_participates_in_FE": false
+    "architecture_participates_in_FE": false,
+    "fe_candidate_status": "CANDIDATE_NOT_APPROVED_NOT_RUN",
+    "fe_candidate_members": 1167,
+    "fe_diagnostic_focus_elements": 72,
+    "fe_candidate_was_run": false
   }
 }
