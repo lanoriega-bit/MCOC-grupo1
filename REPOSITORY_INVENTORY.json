@@ -1,12 +1,12 @@
 {
   "format": "MCOC_REPOSITORY_INVENTORY_v1",
-  "generated_utc": "2026-09-13T02:45:55.880821+00:00",
+  "generated_utc": "2026-09-13T02:49:20.135650+00:00",
   "branch": "codex/pre-p1l4-consolidation",
-  "commit": "d5d645270c62e7b69e38279b0b4c7132d24ce25d",
+  "commit": "e19a478f1cf1b71910dda27e43ce24851c0b167a",
   "policy": "INVENTORY_ONLY_NO_FILES_MOVED_OR_DELETED",
   "self_exclusion": "REPOSITORY_INVENTORY.json is excluded because a file cannot contain its own stable hash",
   "summary": {
-    "tracked_files": 585,
+    "tracked_files": 587,
     "classification_counts": {
       "AUDIT_EVIDENCE_OR_REFERENCE": 159,
       "DELIVERED_HISTORY": 45,
@@ -25,8 +25,9 @@
       "OPENSEES_P1L3_DELIVERED_RUNNER": 1,
       "P1L3_DELIVERED_HISTORY": 56,
       "PIPELINE_OR_ANALYSIS_CODE": 82,
+      "PROJECT_INDEX_CURRENT": 1,
       "SUPERSEDED_RETAINED": 4,
-      "SUPPORTING_PROJECT_FILE": 105,
+      "SUPPORTING_PROJECT_FILE": 106,
       "UNITY_BUNDLE_PIPELINE_CURRENT": 1,
       "UNITY_CURRENT": 81,
       "UNITY_SCENE_CURRENT": 1
@@ -50,9 +51,9 @@
     },
     {
       "name": "origin/codex/pre-p1l4-consolidation",
-      "commit": "d5d6452",
+      "commit": "e19a478",
       "date": "2026-09-12",
-      "subject": "feat(project): add Unity launch and validation buttons",
+      "subject": "docs(viewers): mark web interfaces as legacy",
       "classification": "CURRENT"
     },
     {
@@ -151,20 +152,32 @@
     {
       "path": "PRE_P1L4_CLEANUP.md",
       "classification": "DOCUMENTATION",
-      "size_bytes": 26503,
-      "sha256": "579936f1c2d89b937c101be5a67f2fe371688e0006c117ea6c098d61e004a5b5"
+      "size_bytes": 27406,
+      "sha256": "a5bb9e45deb05baae07c18794c4a5ce7166f2536e3f36bc84345e92e3128d8e8"
     },
     {
       "path": "PROJECT_HANDOFF.md",
       "classification": "DOCUMENTATION",
-      "size_bytes": 37134,
-      "sha256": "e74a8b24bd39e510f724ec9e830d028baf2eedbbb5466bdb8604aff90f7943cc"
+      "size_bytes": 37851,
+      "sha256": "af4685103cbc87e039294eb1246f834ce0466820db772bb7ba640b0d7699dd47"
+    },
+    {
+      "path": "PROJECT_INDEX.md",
+      "classification": "PROJECT_INDEX_CURRENT",
+      "size_bytes": 7083,
+      "sha256": "dc0678a1c50caca0e631e8419afbe829f376a1eecfab1498605acdba79ca813e"
     },
     {
       "path": "README.md",
       "classification": "DOCUMENTATION",
-      "size_bytes": 6589,
-      "sha256": "cc67749607a2e9fee2be897be9f2d328556518d06e1e2a85d01d5e2e1e8a928e"
+      "size_bytes": 7195,
+      "sha256": "efd82fca64f888e07ed9b717be7f3b101d9a439d8ffb806e8cf2c6ef1c7e9d31"
+    },
+    {
+      "path": "REPOSITORY_INVENTORY.json",
+      "classification": "SUPPORTING_PROJECT_FILE",
+      "size_bytes": 153269,
+      "sha256": "84553f39934fbf4d131501f9317d7ba4b552aecdf032acfc7a59bf0e2cd0c6e1"
     },
     {
       "path": "Validar_Modelo.bat",
@@ -2059,8 +2072,8 @@
     {
       "path": "entregas/P1L2/viewer/README.md",
       "classification": "LEGACY_DEBUG_VIEWER",
-      "size_bytes": 2985,
-      "sha256": "ea1cbd54f4b547ac4e130faaf1448cbe98189845e0adb5f9d930956d17103a4f"
+      "size_bytes": 3184,
+      "sha256": "8a186430cde93014731e606c859c333f87533fbc93770bf21084cda2020870c3"
     },
     {
       "path": "entregas/P1L2/viewer/app.js",
@@ -2611,8 +2624,8 @@
     {
       "path": "entregas/P1L3/STATUS.md",
       "classification": "DOCUMENTATION",
-      "size_bytes": 12162,
-      "sha256": "fa0bd4a7f8232c1ee98faaf75cc831369a24eabad386894bfe1b2c0fdee564f3"
+      "size_bytes": 13012,
+      "sha256": "6a5527a3e0f7597e05c4c804424e5096a63a8feb531cdb5564d745d3278cd3ba"
     },
     {
       "path": "entregas/P1L3/UI_QA.md",
@@ -3547,8 +3560,8 @@
     {
       "path": "entregas/semana2/viewer/README.md",
       "classification": "DELIVERED_LEGACY_VIEWER",
-      "size_bytes": 2184,
-      "sha256": "88bdeb151cb805eb83e062ab91aff41450f8c74b63f9687883f23e11c1819be8"
+      "size_bytes": 2330,
+      "sha256": "8155d1290804e5a522c61a2f5ee970a6da857028d56699f2022dd2f2767b1914"
     },
     {
       "path": "entregas/semana2/viewer/index.html",
@@ -3637,8 +3650,8 @@
     {
       "path": "tools/inventory_repository.py",
       "classification": "SUPPORTING_PROJECT_FILE",
-      "size_bytes": 5884,
-      "sha256": "c818476c472fab989fc1bf6b99299983f93a47379926dcb3ddcec63434dd5d13"
+      "size_bytes": 5949,
+      "sha256": "f96e89fd981e2181ee67c1c329353d27527d2bb42f647f606ff9e89ddd6f7466"
     }
   ]
 }
