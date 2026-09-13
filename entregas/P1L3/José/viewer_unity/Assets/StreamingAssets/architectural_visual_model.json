@@ -18,7 +18,7 @@
       "participates_in_FE": false,
       "top_z_m": 19.8,
       "thickness_m": 0.15,
-      "area_m2": 958.392618,
+      "area_m2": 958.39275,
       "outline_xy": [
         [
           27.132,
@@ -46,11 +46,11 @@
         ],
         [
           57.832,
-          20.751488
+          20.7515
         ],
         [
           47.132,
-          20.751488
+          20.7515
         ],
         [
           47.132,
@@ -75,9 +75,9 @@
         57.832,
         16.619,
         57.832,
-        20.751488,
+        20.7515,
         47.132,
-        20.751488,
+        20.7515,
         47.132,
         16.619,
         27.132,
@@ -110,11 +110,11 @@
         ],
         [
           57.832,
-          20.751488
+          20.7515
         ],
         [
           47.132,
-          20.751488
+          20.7515
         ],
         [
           47.132,
@@ -139,9 +139,9 @@
         57.832,
         16.619,
         57.832,
-        20.751488,
+        20.7515,
         47.132,
-        20.751488,
+        20.7515,
         47.132,
         16.619,
         27.132,
@@ -153,10 +153,10 @@
         8,
         7,
         8,
-        5,
-        7,
-        5,
         6,
+        6,
+        8,
+        5,
         2,
         3,
         4,
@@ -188,13 +188,10 @@
         "PERIMETRO_LOSA_P1_04_0014",
         "PERIMETRO_LOSA_P1_04_0015"
       ],
-      "supporting_beam_ids": [
-        "E1-P4-V-033",
-        "E1-P4-V-039",
-        "E1-P4-V-048",
-        "E1-P4-V-049",
-        "E1-P4-V-058",
-        "E1-P4-V-063"
+      "supporting_beam_proposal_ids": [
+        "P4-VP-031",
+        "P4-VP-034",
+        "P4-VP-050"
       ],
       "inferred_closures": [
         {
@@ -288,40 +285,40 @@
           ],
           "end": [
             57.832,
-            20.751488
+            20.7515
           ],
-          "length_m": 4.132488,
+          "length_m": 4.1325,
           "confidence": "LIKELY",
           "reason": "lado este del resalto norte",
-          "evidence": "limite del gap RLE-LOSA y vigas E1-P4-V-058/E1-P4-V-063"
+          "evidence": "limite del gap RLE-LOSA y centrolinea P4-VP-050"
         },
         {
           "start": [
             57.832,
-            20.751488
+            20.7515
           ],
           "end": [
             47.132,
-            20.751488
+            20.7515
           ],
           "length_m": 10.7,
           "confidence": "LIKELY",
           "reason": "borde norte del resalto",
-          "evidence": "vigas E1-P4-V-048/E1-P4-V-049"
+          "evidence": "centrolinea consolidada P4-VP-031"
         },
         {
           "start": [
             47.132,
-            20.751488
+            20.7515
           ],
           "end": [
             47.132,
             16.619
           ],
-          "length_m": 4.132488,
+          "length_m": 4.1325,
           "confidence": "LIKELY",
           "reason": "lado oeste del resalto norte",
-          "evidence": "limite del gap RLE-LOSA y vigas E1-P4-V-033/E1-P4-V-039"
+          "evidence": "limite del gap RLE-LOSA y centrolinea P4-VP-034"
         }
       ],
       "notes": [

@@ -21,6 +21,16 @@ STREAMING = UNITY / "Assets" / "StreamingAssets"
 
 GEOMETRY = ROOT / "entregas" / "P1L2" / "unity_export" / "model_combined_viewer.json"
 ANALYSIS_MODEL = P1L3 / "results" / "a3a4" / "analysis_model.json"
+FE_CANDIDATE = P1L3 / "results" / "post_p1l3_candidate" / "analysis_model_post_p1l3_candidate.json"
+CONNECTIVITY_AUDIT = (
+    ROOT
+    / "entregas"
+    / "P1L2"
+    / "edificio"
+    / "validacion"
+    / "fe_connectivity_post_geometry"
+    / "connectivity_comparison.json"
+)
 RUN_DIR = P1L3 / "results" / "a5" / "superposicion_gq_v1"
 A5_REPORT = P1L3 / "results" / "a5" / "a5_report.json"
 A7_DIR = P1L3 / "results" / "a7"
@@ -89,10 +99,14 @@ def validate_geometry(model: dict) -> None:
     floors = set(model.get("expectedFloors", []))
     assert floors == {"S1", "P1", "P2", "P3", "P4"}, floors
     solids = model.get("solids", [])
-    assert len(solids) == 1561, len(solids)
+    assert solids, "La geometria vigente no contiene solidos"
     ids = [item.get("id") for item in solids]
     assert all(ids), "Hay solidos sin id publico"
     assert len(ids) == len(set(ids)), "IDs publicos duplicados"
+    assert {item.get("building") for item in solids} == {"EDIFICIO_1", "EDIFICIO_2"}
+    assert {item.get("category") for item in solids} >= {
+        "beam", "column", "wall", "support", "slab"
+    }
 
 
 def visual_lines_for_unity(model: dict) -> dict:
@@ -387,11 +401,19 @@ def main() -> None:
     a5 = load_json(A5_REPORT)
     deficit_g = abs(a5["equilibrio"]["eq_G_err_N"]) / a5["equilibrio"]["P_aplicado_G_N"]
     manifest = {
-        "format": "P1L3_UNITY_BUNDLE_v1",
+        "format": "POST_P1L3_UNITY_BUNDLE_v2",
         "generated_utc": datetime.now(timezone.utc).isoformat(),
+        "data_state": {
+            "geometry": "POST_P1L3_CURRENT",
+            "fe_diagnosis": "POST_P1L3_CANDIDATE_NOT_RUN",
+            "analysis_results": "P1L3_DELIVERED_HISTORICAL",
+            "loads": "P1L3_DELIVERED_HISTORICAL",
+            "capacity": "P1L3_DELIVERED_HISTORICAL",
+        },
         "source_of_truth": {
             "geometry": str(GEOMETRY.relative_to(ROOT)).replace("\\", "/"),
-            "analysis_model": str(ANALYSIS_MODEL.relative_to(ROOT)).replace("\\", "/"),
+            "delivered_analysis_model": str(ANALYSIS_MODEL.relative_to(ROOT)).replace("\\", "/"),
+            "post_p1l3_fe_candidate": str(FE_CANDIDATE.relative_to(ROOT)).replace("\\", "/"),
             "analysis_run": str(RUN_DIR.relative_to(ROOT)).replace("\\", "/"),
             "integrated_run": str(A7_DIR.relative_to(ROOT)).replace("\\", "/"),
             "seismic": str(SEISMIC.relative_to(ROOT)).replace("\\", "/"),

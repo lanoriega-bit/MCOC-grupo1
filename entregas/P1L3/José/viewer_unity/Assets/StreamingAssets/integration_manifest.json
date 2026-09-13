@@ -1,9 +1,17 @@
 {
-  "format": "P1L3_UNITY_BUNDLE_v1",
-  "generated_utc": "2026-09-10T13:11:45.110439+00:00",
+  "format": "POST_P1L3_UNITY_BUNDLE_v2",
+  "generated_utc": "2026-09-13T02:29:39.732935+00:00",
+  "data_state": {
+    "geometry": "POST_P1L3_CURRENT",
+    "fe_diagnosis": "POST_P1L3_CANDIDATE_NOT_RUN",
+    "analysis_results": "P1L3_DELIVERED_HISTORICAL",
+    "loads": "P1L3_DELIVERED_HISTORICAL",
+    "capacity": "P1L3_DELIVERED_HISTORICAL"
+  },
   "source_of_truth": {
     "geometry": "entregas/P1L2/unity_export/model_combined_viewer.json",
-    "analysis_model": "entregas/P1L3/results/a3a4/analysis_model.json",
+    "delivered_analysis_model": "entregas/P1L3/results/a3a4/analysis_model.json",
+    "post_p1l3_fe_candidate": "entregas/P1L3/results/post_p1l3_candidate/analysis_model_post_p1l3_candidate.json",
     "analysis_run": "entregas/P1L3/results/a5/superposicion_gq_v1",
     "integrated_run": "entregas/P1L3/results/a7",
     "seismic": "entregas/P1L3/José/results/seismic_ex_ey.json",
@@ -13,7 +21,7 @@
   "files": [
     {
       "name": "model_viewer.json",
-      "sha256": "c091f99f516bfedcc0ddd5004fa0c74fc7016a0c5df44b18a7e5ac88b6f9704a"
+      "sha256": "9c7225cbfa0b5201a580d183fa3b36498ef0c32469bbd5ac0b53a55662330e3f"
     },
     {
       "name": "seismic_ex_ey.json",
@@ -49,7 +57,7 @@
     },
     {
       "name": "architectural_visual_model.json",
-      "sha256": "80281f8f13af8fa40076923ae07109e44414c700871d5644c9d00abd78ae9af6"
+      "sha256": "7f9de0c56eba23bbe0b195a83570fdc0d71e07971b2a278a03ea28e2b7acc68a"
     },
     {
       "name": "visual_lines.json",
@@ -57,7 +65,7 @@
     }
   ],
   "validation": {
-    "geometry_solids": 1561,
+    "geometry_solids": 1212,
     "geometry_floors": [
       "S1",
       "P1",

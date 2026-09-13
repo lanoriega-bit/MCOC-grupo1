@@ -264,9 +264,20 @@ de cada componente flotante.
   `sourceTag`; área revalidada 958.392750 m² y `participates_in_FE=false`.
 - Evidencia: `entregas/P1L2/edificio/validacion/special_interface/`.
 
+### FASE U2 — geometría vigente en Unity
+
+- La fuente canónica sigue siendo
+  `entregas/P1L2/unity_export/model_combined_viewer.json`.
+- El bundle de Unity pasa de la copia entregada de 1561 sólidos a la geometría
+  POST-P1L3 vigente de 1212 sólidos: EDIFICIO_1 524 y EDIFICIO_2 688.
+- El manifiesto distingue explícitamente geometría `POST_P1L3_CURRENT`,
+  candidato FE `POST_P1L3_CANDIDATE_NOT_RUN` y resultados/cargas/capacidad
+  `P1L3_DELIVERED_HISTORICAL`.
+- No se recalculó OpenSees ni se modificó ninguna carga o resultado histórico.
+- La referencia original de Luis permanece intacta.
+
 ## Próximo hito
 
-`FASE 5 — SLAB-E1-001 / SLAB-E2-001 / ARCH-SEPARATION-001`: reconstruir los
-perímetros y huecos de losas por piso y extender aleros/canopias como geometría
-arquitectónica explícitamente `participates_in_FE=false`. No reconstruir todavía
-el modelo FE ni recalcular cargas/resultados P1L3.
+`FASE U3–U4`: integrar el diagnóstico FE candidato y sus filtros/selección en el
+Unity de José, sin aprobar ni ejecutar el candidato y sin resolver los 40 casos
+pendientes desde código.
