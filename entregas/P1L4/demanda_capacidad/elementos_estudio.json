@@ -1,0 +1,269 @@
+{
+  "format": "P1L4_DEMANDA_CAPACIDAD_ELEMENTOS_ESTUDIO_v1",
+  "units": {
+    "length": "m",
+    "force": "N",
+    "moment": "N.m",
+    "stress": "Pa"
+  },
+  "active_case": {
+    "value": "CASE_R",
+    "origin": "CONFIRMADO",
+    "source": "entregas/P1L3/results/a7/cases/R/manifest.json"
+  },
+  "elements": [
+    {
+      "element_id": {
+        "value": "E2-P1-C-002",
+        "origin": "CONFIRMADO",
+        "source": "entregas/P1L2/unity_export/model_combined_viewer.json"
+      },
+      "structural_id": {
+        "value": "E2-P1-C-002",
+        "origin": "CONFIRMADO",
+        "source": "entregas/P1L2/unity_export/model_combined_viewer.json"
+      },
+      "type": {
+        "value": "column",
+        "origin": "CONFIRMADO",
+        "source": "entregas/P1L3/results/a3a4/analysis_model.json"
+      },
+      "opensees_tag": {
+        "value": 10009,
+        "origin": "DERIVADO",
+        "source": "entregas/P1L3/results/a3a4/analysis_model.json"
+      },
+      "geometry_elementTag": {
+        "value": "SOL2_1_column_0001",
+        "origin": "CONFIRMADO",
+        "source": "entregas/P1L2/unity_export/model_combined_viewer.json"
+      },
+      "analysis_id": {
+        "value": "A-C-0009",
+        "origin": "DERIVADO",
+        "source": "entregas/P1L3/results/a3a4/analysis_model.json"
+      },
+      "nodes": {
+        "value": [2, 17],
+        "origin": "DERIVADO",
+        "source": "entregas/P1L3/results/a3a4/analysis_model.json"
+      },
+      "node_coordinates": {
+        "value": {
+          "2": [7.502, 0.001, 3.96],
+          "17": [7.502, 0.001, 7.92]
+        },
+        "origin": "DERIVADO",
+        "source": "entregas/P1L3/results/a3a4/analysis_model.json"
+      },
+      "geometry": {
+        "section_label": {
+          "value": "P.70x70",
+          "origin": "CONFIRMADO",
+          "source": "entregas/P1L3/capacidad_ha/datos/seccion_estudio.json"
+        },
+        "b_m": {
+          "value": 0.7,
+          "origin": "CONFIRMADO",
+          "source": "entregas/P1L3/capacidad_ha/datos/seccion_estudio.json"
+        },
+        "h_m": {
+          "value": 0.7,
+          "origin": "CONFIRMADO",
+          "source": "entregas/P1L3/capacidad_ha/datos/seccion_estudio.json"
+        },
+        "height_m": {
+          "value": 3.96,
+          "origin": "DERIVADO",
+          "source": "entregas/P1L2/unity_export/model_combined_viewer.json"
+        },
+        "location": {
+          "value": "EDIFICIO_2 / P1 / Eje B-1",
+          "origin": "CONFIRMADO",
+          "source": "entregas/P1L2/unity_export/model_combined_viewer.json"
+        },
+        "analysis_section": {
+          "value": {
+            "A_m2": 0.48999999999999994,
+            "Iy_m4": 0.020008333333333326,
+            "Iz_m4": 0.020008333333333326,
+            "J_m4": 0.03377406666666665,
+            "dim_local_y_m": 0.7,
+            "dim_local_z_m": 0.7
+          },
+          "origin": "DERIVADO",
+          "source": "entregas/P1L3/results/a3a4/analysis_model.json"
+        }
+      },
+      "material": {
+        "global_fe_model": {
+          "value": "linear_elastic_frame",
+          "origin": "DERIVADO",
+          "source": "entregas/P1L3/results/a3a4/analysis_model.json"
+        },
+        "global_fe_E_pa": {
+          "value": 25000000000.0,
+          "origin": "DERIVADO",
+          "source": "entregas/P1L3/results/a3a4/analysis_model.json"
+        },
+        "concrete_capacity_model": {
+          "value": "Concrete01",
+          "origin": "ASUMIDO_LAB",
+          "source": "entregas/P1L3/capacidad_ha/datos/seccion_estudio.json"
+        },
+        "fc_pa": {
+          "value": 35000000.0,
+          "origin": "CONFIRMADO",
+          "source": "entregas/P1L3/capacidad_ha/datos/seccion_estudio.json"
+        },
+        "steel_capacity_model": {
+          "value": "Steel01",
+          "origin": "ASUMIDO_LAB",
+          "source": "entregas/P1L3/capacidad_ha/datos/seccion_estudio.json"
+        },
+        "fy_pa": {
+          "value": 420000000.0,
+          "origin": "CONFIRMADO",
+          "source": "entregas/P1L3/capacidad_ha/datos/seccion_estudio.json"
+        },
+        "Es_pa": {
+          "value": 200000000000.0,
+          "origin": "ASUMIDO_LAB",
+          "source": "entregas/P1L3/capacidad_ha/datos/seccion_estudio.json"
+        }
+      },
+      "reinforcement": {
+        "value": {
+          "num_bars": 12,
+          "bar_diameter_m": 0.025,
+          "cover_m": 0.04
+        },
+        "origin": "ASUMIDO_LAB",
+        "source": "entregas/P1L3/capacidad_ha/datos/seccion_estudio.json"
+      },
+      "capacity": {
+        "status": "EXISTING",
+        "origin": "DERIVADO",
+        "section_id": "C_P2_01_0001_lab_fiber_section",
+        "source": "entregas/P1L3/capacidad_ha/results/pm_interaction.csv",
+        "note": "Capacidad P-M existente de Semana 3. Geometria, fc y fy confirmados; armadura, recubrimiento y parametros constitutivos son hipotesis de laboratorio. No es chequeo normativo."
+      }
+    },
+    {
+      "element_id": {
+        "value": "E2-P1-M-019",
+        "origin": "CONFIRMADO",
+        "source": "entregas/P1L2/unity_export/model_combined_viewer.json"
+      },
+      "structural_id": {
+        "value": "E2-P1-M-019",
+        "origin": "CONFIRMADO",
+        "source": "entregas/P1L2/unity_export/model_combined_viewer.json"
+      },
+      "type": {
+        "value": "wall",
+        "origin": "CONFIRMADO",
+        "source": "entregas/P1L3/results/a3a4/analysis_model.json"
+      },
+      "opensees_tag": {
+        "value": 10171,
+        "origin": "DERIVADO",
+        "source": "entregas/P1L3/results/a3a4/analysis_model.json"
+      },
+      "geometry_elementTag": {
+        "value": "SOL2_1_wall_0021",
+        "origin": "CONFIRMADO",
+        "source": "entregas/P1L2/unity_export/model_combined_viewer.json"
+      },
+      "analysis_id": {
+        "value": "A-M-0171",
+        "origin": "DERIVADO",
+        "source": "entregas/P1L3/results/a3a4/analysis_model.json"
+      },
+      "nodes": {
+        "value": [227, 266],
+        "origin": "DERIVADO",
+        "source": "entregas/P1L3/results/a3a4/analysis_model.json"
+      },
+      "node_coordinates": {
+        "value": {
+          "227": [27.9, 3.251, 3.96],
+          "266": [27.9, 3.251, 7.92]
+        },
+        "origin": "DERIVADO",
+        "source": "entregas/P1L3/results/a3a4/analysis_model.json"
+      },
+      "geometry": {
+        "length_m": {
+          "value": 5.800000000020009,
+          "origin": "DERIVADO",
+          "source": "entregas/P1L2/unity_export/model_combined_viewer.json"
+        },
+        "thickness_m": {
+          "value": 0.22,
+          "origin": "DERIVADO",
+          "source": "entregas/P1L2/unity_export/model_combined_viewer.json; entregas/P1L3/results/a3a4/analysis_model.json"
+        },
+        "height_m": {
+          "value": 3.96,
+          "origin": "DERIVADO",
+          "source": "entregas/P1L2/unity_export/model_combined_viewer.json"
+        },
+        "location": {
+          "value": "EDIFICIO_2 / P1 / Muro X > D/E / Y entre 1-2",
+          "origin": "CONFIRMADO",
+          "source": "entregas/P1L2/unity_export/model_combined_viewer.json"
+        },
+        "analysis_section": {
+          "value": {
+            "A_m2": 1.2760000000044018,
+            "Iy_m4": 0.005146533333351087,
+            "Iz_m4": 3.5770533333703534,
+            "J_m4": 0.020094195817457028,
+            "dim_local_y_m": 5.800000000020009,
+            "dim_local_z_m": 0.22
+          },
+          "origin": "DERIVADO",
+          "source": "entregas/P1L3/results/a3a4/analysis_model.json"
+        },
+        "thickness_label": {
+          "value": null,
+          "origin": "CONFIRMADO",
+          "source": "entregas/P1L2/unity_export/model_combined_viewer.json",
+          "note": "wall_thickness_m esta null; no hay etiqueta textual de espesor asociada a este muro en el modelo combinado."
+        }
+      },
+      "material": {
+        "global_fe_model": {
+          "value": "linear_elastic_frame",
+          "origin": "DERIVADO",
+          "source": "entregas/P1L3/results/a3a4/analysis_model.json"
+        },
+        "global_fe_E_pa": {
+          "value": 25000000000.0,
+          "origin": "DERIVADO",
+          "source": "entregas/P1L3/results/a3a4/analysis_model.json"
+        },
+        "capacity_material": {
+          "value": null,
+          "origin": "CONFIRMADO",
+          "source": "entregas/P1L3/PLANIFICACION.md",
+          "note": "No existe material constitutivo ni armadura confirmada para capacidad del muro."
+        }
+      },
+      "reinforcement": {
+        "value": null,
+        "origin": "CONFIRMADO",
+        "source": "entregas/P1L3/PLANIFICACION.md",
+        "note": "No existe armadura verificable de muro en los datos auditados; no se inventa."
+      },
+      "capacity": {
+        "status": "MISSING",
+        "origin": "CONFIRMADO",
+        "section_id": null,
+        "source": null,
+        "note": "No existe curva P-M para este muro en Semana 3."
+      }
+    }
+  ]
+}

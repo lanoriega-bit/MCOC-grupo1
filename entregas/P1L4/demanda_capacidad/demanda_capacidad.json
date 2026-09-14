@@ -1,0 +1,959 @@
+{
+  "format": "P1L4_UNITY_DEMAND_CAPACITY_v1",
+  "active_case": "CASE_R",
+  "units": {
+    "length": "m",
+    "force": "kN",
+    "moment": "kN.m",
+    "source_force": "N",
+    "source_moment": "N.m"
+  },
+  "source_of_truth": {
+    "elements_study": "entregas/P1L4/demanda_capacidad/elementos_estudio.json",
+    "analysis_model": "entregas/P1L3/results/a3a4/analysis_model.json",
+    "case_manifest": "entregas/P1L3/results/a7/cases/R/manifest.json",
+    "case_results": "entregas/P1L3/results/a7/cases/R/elements.json",
+    "column_capacity_pm": "entregas/P1L3/capacidad_ha/results/pm_interaction.csv",
+    "wall_section_config": "entregas/P1L4/demanda_capacidad/datos/wall_section_estudio.json",
+    "wall_capacity_pm": "entregas/P1L4/demanda_capacidad/results/wall_pm_interaction.csv"
+  },
+  "validation": {
+    "status": "PASS",
+    "required_tags": [
+      10009,
+      10171
+    ],
+    "column_partial_points_marked_invalid": "PASS",
+    "wall_valid_pm_points": 8,
+    "wall_invalid_pm_points": 6,
+    "checks": [
+      {
+        "element_id": "E2-P1-C-002",
+        "opensees_tag": 10009,
+        "analysis_model_unique_tag": "PASS",
+        "case_result_unique_tag": "PASS",
+        "case_result_available": "PASS",
+        "force_components_available": "PASS",
+        "nodes_match_study": "PASS"
+      },
+      {
+        "element_id": "E2-P1-M-019",
+        "opensees_tag": 10171,
+        "analysis_model_unique_tag": "PASS",
+        "case_result_unique_tag": "PASS",
+        "case_result_available": "PASS",
+        "force_components_available": "PASS",
+        "nodes_match_study": "PASS"
+      }
+    ]
+  },
+  "elements": [
+    {
+      "element_id": "E2-P1-C-002",
+      "structural_id": "E2-P1-C-002",
+      "type": "column",
+      "opensees_tag": 10009,
+      "geometry_elementTag": "SOL2_1_column_0001",
+      "analysis_id": "A-C-0009",
+      "nodes": [
+        2,
+        17
+      ],
+      "node_coordinates": {
+        "2": [
+          7.502,
+          0.001,
+          3.96
+        ],
+        "17": [
+          7.502,
+          0.001,
+          7.92
+        ]
+      },
+      "section_id": "C_P2_01_0001_lab_fiber_section",
+      "geometry": {
+        "section_label": {
+          "value": "P.70x70",
+          "origin": "CONFIRMADO",
+          "source": "entregas/P1L3/capacidad_ha/datos/seccion_estudio.json"
+        },
+        "b_m": {
+          "value": 0.7,
+          "origin": "CONFIRMADO",
+          "source": "entregas/P1L3/capacidad_ha/datos/seccion_estudio.json"
+        },
+        "h_m": {
+          "value": 0.7,
+          "origin": "CONFIRMADO",
+          "source": "entregas/P1L3/capacidad_ha/datos/seccion_estudio.json"
+        },
+        "height_m": {
+          "value": 3.96,
+          "origin": "DERIVADO",
+          "source": "entregas/P1L2/unity_export/model_combined_viewer.json"
+        },
+        "location": {
+          "value": "EDIFICIO_2 / P1 / Eje B-1",
+          "origin": "CONFIRMADO",
+          "source": "entregas/P1L2/unity_export/model_combined_viewer.json"
+        },
+        "analysis_section": {
+          "value": {
+            "A_m2": 0.48999999999999994,
+            "Iy_m4": 0.020008333333333326,
+            "Iz_m4": 0.020008333333333326,
+            "J_m4": 0.03377406666666665,
+            "dim_local_y_m": 0.7,
+            "dim_local_z_m": 0.7
+          },
+          "origin": "DERIVADO",
+          "source": "entregas/P1L3/results/a3a4/analysis_model.json"
+        }
+      },
+      "material": {
+        "global_fe_model": {
+          "value": "linear_elastic_frame",
+          "origin": "DERIVADO",
+          "source": "entregas/P1L3/results/a3a4/analysis_model.json"
+        },
+        "global_fe_E_pa": {
+          "value": 25000000000.0,
+          "origin": "DERIVADO",
+          "source": "entregas/P1L3/results/a3a4/analysis_model.json"
+        },
+        "concrete_capacity_model": {
+          "value": "Concrete01",
+          "origin": "ASUMIDO_LAB",
+          "source": "entregas/P1L3/capacidad_ha/datos/seccion_estudio.json"
+        },
+        "fc_pa": {
+          "value": 35000000.0,
+          "origin": "CONFIRMADO",
+          "source": "entregas/P1L3/capacidad_ha/datos/seccion_estudio.json"
+        },
+        "steel_capacity_model": {
+          "value": "Steel01",
+          "origin": "ASUMIDO_LAB",
+          "source": "entregas/P1L3/capacidad_ha/datos/seccion_estudio.json"
+        },
+        "fy_pa": {
+          "value": 420000000.0,
+          "origin": "CONFIRMADO",
+          "source": "entregas/P1L3/capacidad_ha/datos/seccion_estudio.json"
+        },
+        "Es_pa": {
+          "value": 200000000000.0,
+          "origin": "ASUMIDO_LAB",
+          "source": "entregas/P1L3/capacidad_ha/datos/seccion_estudio.json"
+        }
+      },
+      "reinforcement": {
+        "value": {
+          "num_bars": 12,
+          "bar_diameter_m": 0.025,
+          "cover_m": 0.04
+        },
+        "origin": "ASUMIDO_LAB",
+        "source": "entregas/P1L3/capacidad_ha/datos/seccion_estudio.json"
+      },
+      "demand": {
+        "case_name": "CASE_R",
+        "source_file": "entregas/P1L3/results/a7/cases/R/elements.json",
+        "components_order": [
+          "P",
+          "Vy",
+          "Vz",
+          "T",
+          "My",
+          "Mz"
+        ],
+        "selection_rule": "selected end has maximum absolute My for P-M demand display; both end forces are retained",
+        "selected_end": "end1",
+        "P_kN": -57.57961084098628,
+        "Vy_kN": 67.42412543985226,
+        "Vz_kN": -20.081183736706215,
+        "T_kNm": 122.24344784818868,
+        "My_kNm": 423.28153608023047,
+        "Mz_kNm": 159.73758901688075,
+        "selected_end_forces_N_Nm": {
+          "P": -57579.61084098628,
+          "Vy": 67424.12543985226,
+          "Vz": -20081.183736706214,
+          "T": 122243.44784818868,
+          "My": 423281.5360802305,
+          "Mz": 159737.58901688075
+        },
+        "end_forces_N_Nm": {
+          "end1": {
+            "P": -57579.61084098628,
+            "Vy": 67424.12543985226,
+            "Vz": -20081.183736706214,
+            "T": 122243.44784818868,
+            "My": 423281.5360802305,
+            "Mz": 159737.58901688075
+          },
+          "end2": {
+            "P": 57579.61084098628,
+            "Vy": -67424.12543985226,
+            "Vz": 20081.183736706214,
+            "T": -122243.44784818868,
+            "My": -343760.0484828739,
+            "Mz": 107261.94772493414
+          }
+        },
+        "end_forces_kN_kNm": {
+          "end1": {
+            "P_kN": -57.57961084098628,
+            "Vy_kN": 67.42412543985226,
+            "Vz_kN": -20.081183736706215,
+            "T_kNm": 122.24344784818868,
+            "My_kNm": 423.28153608023047,
+            "Mz_kNm": 159.73758901688075
+          },
+          "end2": {
+            "P_kN": 57.57961084098628,
+            "Vy_kN": -67.42412543985226,
+            "Vz_kN": 20.081183736706215,
+            "T_kNm": -122.24344784818868,
+            "My_kNm": -343.7600484828739,
+            "Mz_kNm": 107.26194772493415
+          }
+        },
+        "envelope_abs_N_Nm": {
+          "P": 57579.61084098628,
+          "Vy": 67424.12543985226,
+          "Vz": 20081.183736706214,
+          "T": 122243.44784818868,
+          "My": 423281.5360802305,
+          "Mz": 159737.58901688075
+        },
+        "envelope_abs_kN_kNm": {
+          "P_kN": 57.57961084098628,
+          "Vy_kN": 67.42412543985226,
+          "Vz_kN": 20.081183736706215,
+          "T_kNm": 122.24344784818868,
+          "My_kNm": 423.28153608023047,
+          "Mz_kNm": 159.73758901688075
+        },
+        "pm_component": "My"
+      },
+      "capacity": {
+        "status": "EXISTING",
+        "pm_axis": "My",
+        "source": "entregas/P1L3/capacidad_ha/results/pm_interaction.csv",
+        "note": "Capacidad P-M existente de Semana 3. Geometria, fc y fy confirmados; armadura, recubrimiento y parametros constitutivos son hipotesis de laboratorio. No es chequeo normativo.",
+        "points": [
+          {
+            "point_id": "P0_Mflexion",
+            "P_kN": 0.0,
+            "compression_magnitude_kN": 0.0,
+            "M_kNm": 766.0763085174932,
+            "curvature_at_M_1_per_m": 0.03105882352941185,
+            "converged_steps": 240,
+            "valid": true,
+            "status": "PASS"
+          },
+          {
+            "point_id": "P25",
+            "P_kN": -4873.0633417640165,
+            "compression_magnitude_kN": 4873.0633417640165,
+            "M_kNm": 1696.4508452882744,
+            "curvature_at_M_1_per_m": 0.008647058823529416,
+            "converged_steps": 240,
+            "valid": true,
+            "status": "PASS"
+          },
+          {
+            "point_id": "P50",
+            "P_kN": -9746.126683528033,
+            "compression_magnitude_kN": 9746.126683528033,
+            "M_kNm": 1650.0713852594663,
+            "curvature_at_M_1_per_m": 0.004411764705882354,
+            "converged_steps": 236,
+            "valid": false,
+            "status": "PARTIAL_FAIL_STEP_237_PHI_TARGET_REDUCED_TO_1.25PHIY"
+          },
+          {
+            "point_id": "PureCompression",
+            "P_kN": -19492.253367056066,
+            "compression_magnitude_kN": 19492.253367056066,
+            "M_kNm": 0.0,
+            "curvature_at_M_1_per_m": 0.0,
+            "converged_steps": 0,
+            "valid": true,
+            "status": "AXIAL_ONLY_PASS"
+          }
+        ],
+        "invalid_points_note": "Los puntos con valid=false se conservan por trazabilidad y no se usan para interpolar la envolvente."
+      },
+      "demand_capacity": {
+        "case": "CASE_R",
+        "P_kN": -57.57961084098628,
+        "compression_magnitude_kN": 57.57961084098628,
+        "M_kNm": 423.28153608023047,
+        "M_abs_kNm": 423.28153608023047,
+        "pm_axis": "My",
+        "inside_envelope": true,
+        "interpolated_capacity_M_abs_kNm": 777.0695175128502,
+        "method": "Piecewise linear interpolation in |P|-M using only capacity points with valid=true; null if demand |P| is outside valid curve range."
+      },
+      "capacity_section_input": null,
+      "traceability": {
+        "geometry_source": "entregas/P1L2/unity_export/model_combined_viewer.json",
+        "analysis_source": "entregas/P1L3/results/a3a4/analysis_model.json",
+        "demand_source": "entregas/P1L3/results/a7/cases/R/elements.json",
+        "capacity_source": "entregas/P1L3/capacidad_ha/results/pm_interaction.csv",
+        "capacity_section_config": "entregas/P1L3/capacidad_ha/datos/seccion_estudio.json",
+        "case_manifest": "entregas/P1L3/results/a7/cases/R/manifest.json"
+      },
+      "data_origins": {
+        "element_id": "CONFIRMADO",
+        "opensees_tag": "DERIVADO",
+        "geometry": "CONFIRMADO/DERIVADO segun campo en geometry",
+        "material": "CONFIRMADO/DERIVADO/ASUMIDO_LAB segun campo en material",
+        "capacity": "DERIVADO",
+        "demand": "DERIVADO"
+      }
+    },
+    {
+      "element_id": "E2-P1-M-019",
+      "structural_id": "E2-P1-M-019",
+      "type": "wall",
+      "opensees_tag": 10171,
+      "geometry_elementTag": "SOL2_1_wall_0021",
+      "analysis_id": "A-M-0171",
+      "nodes": [
+        227,
+        266
+      ],
+      "node_coordinates": {
+        "227": [
+          27.9,
+          3.251,
+          3.96
+        ],
+        "266": [
+          27.9,
+          3.251,
+          7.92
+        ]
+      },
+      "section_id": "E2-P1-M-019_lab_wall_fiber_section",
+      "geometry": {
+        "length_m": {
+          "value": 5.800000000020009,
+          "origin": "DERIVADO",
+          "source": "entregas/P1L2/unity_export/model_combined_viewer.json"
+        },
+        "thickness_m": {
+          "value": 0.22,
+          "origin": "DERIVADO",
+          "source": "entregas/P1L2/unity_export/model_combined_viewer.json; entregas/P1L3/results/a3a4/analysis_model.json"
+        },
+        "height_m": {
+          "value": 3.96,
+          "origin": "DERIVADO",
+          "source": "entregas/P1L2/unity_export/model_combined_viewer.json"
+        },
+        "location": {
+          "value": "EDIFICIO_2 / P1 / Muro X > D/E / Y entre 1-2",
+          "origin": "CONFIRMADO",
+          "source": "entregas/P1L2/unity_export/model_combined_viewer.json"
+        },
+        "analysis_section": {
+          "value": {
+            "A_m2": 1.2760000000044018,
+            "Iy_m4": 0.005146533333351087,
+            "Iz_m4": 3.5770533333703534,
+            "J_m4": 0.020094195817457028,
+            "dim_local_y_m": 5.800000000020009,
+            "dim_local_z_m": 0.22
+          },
+          "origin": "DERIVADO",
+          "source": "entregas/P1L3/results/a3a4/analysis_model.json"
+        },
+        "thickness_label": {
+          "value": null,
+          "origin": "CONFIRMADO",
+          "source": "entregas/P1L2/unity_export/model_combined_viewer.json",
+          "note": "wall_thickness_m esta null; no hay etiqueta textual de espesor asociada a este muro en el modelo combinado."
+        }
+      },
+      "material": {
+        "concrete": {
+          "model": {
+            "value": "Concrete01",
+            "origin": "ASUMIDO_LAB",
+            "source": "Hipotesis de laboratorio coherente con capacidad_ha Semana 3."
+          },
+          "fc_pa": {
+            "value": 35000000.0,
+            "origin": "CONFIRMADO",
+            "source": "entregas/P1L2/edificio/validacion/AUDITORIA_PLANOS_COMPLETA.md; entregas/P1L3/capacidad_ha/datos/seccion_estudio.json"
+          },
+          "epsc0": {
+            "value": -0.002,
+            "origin": "ASUMIDO_LAB",
+            "source": "Parametro requerido por Concrete01 para ensayo de laboratorio."
+          },
+          "fpcu_ratio": {
+            "value": 0.2,
+            "origin": "ASUMIDO_LAB",
+            "source": "Parametro requerido por Concrete01; resistencia residual simplificada."
+          },
+          "epsu": {
+            "value": -0.0035,
+            "origin": "ASUMIDO_LAB",
+            "source": "Parametro requerido por Concrete01 para hormigon no confinado de laboratorio."
+          }
+        },
+        "steel_vertical": {
+          "model": {
+            "value": "Steel01",
+            "origin": "ASUMIDO_LAB",
+            "source": "Hipotesis de laboratorio coherente con capacidad_ha Semana 3."
+          },
+          "fy_pa": {
+            "value": 420000000.0,
+            "origin": "CONFIRMADO",
+            "source": "entregas/P1L2/edificio/validacion/AUDITORIA_PLANOS_COMPLETA.md; entregas/P1L3/capacidad_ha/datos/seccion_estudio.json"
+          },
+          "Es_pa": {
+            "value": 200000000000.0,
+            "origin": "ASUMIDO_LAB",
+            "source": "Hipotesis de laboratorio: Es = 200000 MPa."
+          },
+          "hardening_ratio": {
+            "value": 0.0,
+            "origin": "ASUMIDO_LAB",
+            "source": "Simplificacion elastoplastica perfecta."
+          }
+        }
+      },
+      "reinforcement": {
+        "vertical_bars": {
+          "diameter_m": {
+            "value": 0.016,
+            "origin": "ASUMIDO_LAB",
+            "source": "Hipotesis de laboratorio por falta de detalle verificable para E2-P1-M-019."
+          },
+          "spacing_m": {
+            "value": 0.2,
+            "origin": "ASUMIDO_LAB",
+            "source": "Hipotesis de laboratorio por falta de detalle verificable para E2-P1-M-019."
+          },
+          "curtains": {
+            "value": 2,
+            "origin": "ASUMIDO_LAB",
+            "source": "Hipotesis de laboratorio: dos capas/caras de barras verticales."
+          }
+        },
+        "horizontal_bars": {
+          "diameter_m": {
+            "value": 0.012,
+            "origin": "ASUMIDO_LAB",
+            "source": "Hipotesis documental para trazabilidad; no se incluye como acero longitudinal en la P-M vertical."
+          },
+          "spacing_m": {
+            "value": 0.2,
+            "origin": "ASUMIDO_LAB",
+            "source": "Hipotesis documental para trazabilidad; no se incluye como acero longitudinal en la P-M vertical."
+          }
+        },
+        "boundary_elements": {
+          "value": null,
+          "origin": "MISSING",
+          "source": "Busqueda P1L2/P1L3 por E2-P1-M-019, SOL2_1_wall_0021, A-M-0171, 10171 y tipologias equivalentes."
+        }
+      },
+      "demand": {
+        "case_name": "CASE_R",
+        "source_file": "entregas/P1L3/results/a7/cases/R/elements.json",
+        "components_order": [
+          "P",
+          "Vy",
+          "Vz",
+          "T",
+          "My",
+          "Mz"
+        ],
+        "selection_rule": "selected end has maximum absolute Mz for P-M demand display; both end forces are retained",
+        "selected_end": "end1",
+        "P_kN": 2632.200566732805,
+        "Vy_kN": -654.7171490379892,
+        "Vz_kN": 25.089269145631352,
+        "T_kNm": -27.599076308026227,
+        "My_kNm": -198.95206729130788,
+        "Mz_kNm": -7636.192288738655,
+        "selected_end_forces_N_Nm": {
+          "P": 2632200.5667328048,
+          "Vy": -654717.1490379892,
+          "Vz": 25089.26914563135,
+          "T": -27599.076308026226,
+          "My": -198952.06729130787,
+          "Mz": -7636192.288738656
+        },
+        "end_forces_N_Nm": {
+          "end1": {
+            "P": 2632200.5667328048,
+            "Vy": -654717.1490379892,
+            "Vz": 25089.26914563135,
+            "T": -27599.076308026226,
+            "My": -198952.06729130787,
+            "Mz": -7636192.288738656
+          },
+          "end2": {
+            "P": -2632200.5667328048,
+            "Vy": 654717.1490379892,
+            "Vz": -25089.26914563135,
+            "T": 27599.076308026226,
+            "My": 99598.56147460773,
+            "Mz": 5043512.378548219
+          }
+        },
+        "end_forces_kN_kNm": {
+          "end1": {
+            "P_kN": 2632.200566732805,
+            "Vy_kN": -654.7171490379892,
+            "Vz_kN": 25.089269145631352,
+            "T_kNm": -27.599076308026227,
+            "My_kNm": -198.95206729130788,
+            "Mz_kNm": -7636.192288738655
+          },
+          "end2": {
+            "P_kN": -2632.200566732805,
+            "Vy_kN": 654.7171490379892,
+            "Vz_kN": -25.089269145631352,
+            "T_kNm": 27.599076308026227,
+            "My_kNm": 99.59856147460773,
+            "Mz_kNm": 5043.512378548219
+          }
+        },
+        "envelope_abs_N_Nm": {
+          "P": 2632200.5667328048,
+          "Vy": 654717.1490379892,
+          "Vz": 25089.26914563135,
+          "T": 27599.076308026226,
+          "My": 198952.06729130787,
+          "Mz": 7636192.288738656
+        },
+        "envelope_abs_kN_kNm": {
+          "P_kN": 2632.200566732805,
+          "Vy_kN": 654.7171490379892,
+          "Vz_kN": 25.089269145631352,
+          "T_kNm": 27.599076308026227,
+          "My_kNm": 198.95206729130788,
+          "Mz_kNm": 7636.192288738655
+        },
+        "pm_component": "Mz"
+      },
+      "capacity": {
+        "status": "GENERATED_P1L4",
+        "pm_axis": "Mz",
+        "source": "entregas/P1L4/demanda_capacidad/results/wall_pm_interaction.csv",
+        "note": "Curva P-M generada en P1L4 con geometria derivada y armadura ASUMIDO_LAB centralizada en wall_section_estudio.json.",
+        "points": [
+          {
+            "point_id": "P0.00",
+            "P_kN": -0.0,
+            "compression_magnitude_kN": 0.0,
+            "M_kNm": 13148.973613100112,
+            "curvature_at_M_1_per_m": 0.003405694236114132,
+            "converged_steps": 260,
+            "requested_steps": 260,
+            "valid": true,
+            "status": "PASS"
+          },
+          {
+            "point_id": "P0.03",
+            "P_kN": -1483.9879830728062,
+            "compression_magnitude_kN": 1483.9879830728062,
+            "M_kNm": 16378.954941988912,
+            "curvature_at_M_1_per_m": 0.0025395061066978207,
+            "converged_steps": 260,
+            "requested_steps": 260,
+            "valid": true,
+            "status": "PASS"
+          },
+          {
+            "point_id": "P0.06",
+            "P_kN": -2967.9759661456123,
+            "compression_magnitude_kN": 2967.9759661456123,
+            "M_kNm": 19337.93523892652,
+            "curvature_at_M_1_per_m": 0.0021457842296904064,
+            "converged_steps": 260,
+            "requested_steps": 260,
+            "valid": true,
+            "status": "PASS"
+          },
+          {
+            "point_id": "P0.10",
+            "P_kN": -4946.626610242688,
+            "compression_magnitude_kN": 4946.626610242688,
+            "M_kNm": 22845.13649445657,
+            "curvature_at_M_1_per_m": 0.0017323762588326217,
+            "converged_steps": 260,
+            "requested_steps": 260,
+            "valid": true,
+            "status": "PASS"
+          },
+          {
+            "point_id": "P0.15",
+            "P_kN": -7419.939915364031,
+            "compression_magnitude_kN": 7419.939915364031,
+            "M_kNm": 26531.697527749082,
+            "curvature_at_M_1_per_m": 0.0013583404756755781,
+            "converged_steps": 260,
+            "requested_steps": 260,
+            "valid": true,
+            "status": "PASS"
+          },
+          {
+            "point_id": "P0.20",
+            "P_kN": -9893.253220485376,
+            "compression_magnitude_kN": 9893.253220485376,
+            "M_kNm": 29449.691761809787,
+            "curvature_at_M_1_per_m": 0.0011221073494711296,
+            "converged_steps": 260,
+            "requested_steps": 260,
+            "valid": true,
+            "status": "PASS"
+          },
+          {
+            "point_id": "P0.30",
+            "P_kN": -14839.879830728061,
+            "compression_magnitude_kN": 14839.879830728061,
+            "M_kNm": 32943.2321475423,
+            "curvature_at_M_1_per_m": 0.0008465020355659398,
+            "converged_steps": 260,
+            "requested_steps": 260,
+            "valid": true,
+            "status": "PASS"
+          },
+          {
+            "point_id": "P0.40",
+            "P_kN": -19786.506440970752,
+            "compression_magnitude_kN": 19786.506440970752,
+            "M_kNm": 33617.06762007692,
+            "curvature_at_M_1_per_m": 0.0006496410970622329,
+            "converged_steps": 98,
+            "requested_steps": 260,
+            "valid": false,
+            "status": "INVALID_PARTIAL_FAIL_STEP_99"
+          },
+          {
+            "point_id": "P0.50",
+            "P_kN": -24733.133051213437,
+            "compression_magnitude_kN": 24733.133051213437,
+            "M_kNm": 32461.567392152352,
+            "curvature_at_M_1_per_m": 0.0005118384401096378,
+            "converged_steps": 52,
+            "requested_steps": 260,
+            "valid": false,
+            "status": "INVALID_PARTIAL_FAIL_STEP_53"
+          },
+          {
+            "point_id": "P0.60",
+            "P_kN": -29679.759661456123,
+            "compression_magnitude_kN": 29679.759661456123,
+            "M_kNm": 29052.97334917599,
+            "curvature_at_M_1_per_m": 0.0004134079708577836,
+            "converged_steps": 35,
+            "requested_steps": 260,
+            "valid": false,
+            "status": "INVALID_PARTIAL_FAIL_STEP_36"
+          },
+          {
+            "point_id": "P0.70",
+            "P_kN": -34626.38627169881,
+            "compression_magnitude_kN": 34626.38627169881,
+            "M_kNm": 22917.9277725207,
+            "curvature_at_M_1_per_m": 0.0003346635954563025,
+            "converged_steps": 26,
+            "requested_steps": 260,
+            "valid": false,
+            "status": "INVALID_PARTIAL_FAIL_STEP_27"
+          },
+          {
+            "point_id": "P0.80",
+            "P_kN": -39573.012881941504,
+            "compression_magnitude_kN": 39573.012881941504,
+            "M_kNm": 15477.71753366558,
+            "curvature_at_M_1_per_m": 0.00025591922005481846,
+            "converged_steps": 19,
+            "requested_steps": 260,
+            "valid": false,
+            "status": "INVALID_PARTIAL_FAIL_STEP_20"
+          },
+          {
+            "point_id": "P0.90",
+            "P_kN": -44519.639492184186,
+            "compression_magnitude_kN": 44519.639492184186,
+            "M_kNm": 7846.329803378386,
+            "curvature_at_M_1_per_m": 0.0001574887508029666,
+            "converged_steps": 11,
+            "requested_steps": 260,
+            "valid": false,
+            "status": "INVALID_PARTIAL_FAIL_STEP_12"
+          },
+          {
+            "point_id": "PureCompression",
+            "P_kN": -49466.266102426875,
+            "compression_magnitude_kN": 49466.266102426875,
+            "M_kNm": 0.0,
+            "curvature_at_M_1_per_m": 0.0,
+            "converged_steps": 0,
+            "requested_steps": 0,
+            "valid": true,
+            "status": "AXIAL_ONLY_PASS"
+          }
+        ],
+        "invalid_points_note": "Los puntos con valid=false se conservan por trazabilidad y no se usan para interpolar la envolvente."
+      },
+      "demand_capacity": {
+        "case": "CASE_R",
+        "P_kN": 2632.200566732805,
+        "compression_magnitude_kN": 2632.200566732805,
+        "M_kNm": -7636.192288738655,
+        "M_abs_kNm": 7636.192288738655,
+        "pm_axis": "Mz",
+        "inside_envelope": true,
+        "interpolated_capacity_M_abs_kNm": 18668.41985039786,
+        "method": "Piecewise linear interpolation in |P|-M using only capacity points with valid=true; null if demand |P| is outside valid curve range."
+      },
+      "capacity_section_input": {
+        "section_id": "E2-P1-M-019_lab_wall_fiber_section",
+        "building_wall": {
+          "element_id": {
+            "value": "E2-P1-M-019",
+            "origin": "CONFIRMADO",
+            "source": "entregas/P1L2/unity_export/model_combined_viewer.json"
+          },
+          "geometry_elementTag": {
+            "value": "SOL2_1_wall_0021",
+            "origin": "CONFIRMADO",
+            "source": "entregas/P1L2/unity_export/model_combined_viewer.json"
+          },
+          "analysis_id": {
+            "value": "A-M-0171",
+            "origin": "DERIVADO",
+            "source": "entregas/P1L3/results/a3a4/analysis_model.json"
+          },
+          "opensees_tag": {
+            "value": 10171,
+            "origin": "DERIVADO",
+            "source": "entregas/P1L3/results/a3a4/analysis_model.json"
+          },
+          "location": {
+            "value": "EDIFICIO_2 / P1 / Muro X > D/E / Y entre 1-2",
+            "origin": "CONFIRMADO",
+            "source": "entregas/P1L2/unity_export/model_combined_viewer.json"
+          }
+        },
+        "geometry": {
+          "length_m": {
+            "value": 5.800000000020009,
+            "origin": "DERIVADO",
+            "source": "entregas/P1L2/unity_export/model_combined_viewer.json"
+          },
+          "thickness_m": {
+            "value": 0.22,
+            "origin": "DERIVADO",
+            "source": "entregas/P1L2/unity_export/model_combined_viewer.json; entregas/P1L3/results/a3a4/analysis_model.json",
+            "note": "El campo wall_thickness_m del solido esta null; se usa width_m y dim_local_z_m del modelo FE entregado."
+          },
+          "height_m": {
+            "value": 3.96,
+            "origin": "DERIVADO",
+            "source": "entregas/P1L2/unity_export/model_combined_viewer.json"
+          },
+          "pm_axis": {
+            "value": "Mz",
+            "origin": "DERIVADO",
+            "source": "entregas/P1L3/p1l3/modelado.py; entregas/P1L3/p1l3/opensees_mdl.py",
+            "note": "Para muros, dim_local_y_m = largo y dim_local_z_m = espesor; Mz es la flexion alrededor del eje local z asociada a la inercia fuerte Iz = espesor*largo^3/12."
+          },
+          "cover_m": {
+            "value": 0.02,
+            "origin": "CONFIRMADO",
+            "source": "entregas/P1L2/edificio/validacion/AUDITORIA_PLANOS_COMPLETA.md",
+            "note": "Recubrimiento general E.T.O.G. para muros normal/severa 2/2 cm; no es un detalle especifico del muro."
+          }
+        },
+        "materials": {
+          "concrete": {
+            "model": {
+              "value": "Concrete01",
+              "origin": "ASUMIDO_LAB",
+              "source": "Hipotesis de laboratorio coherente con capacidad_ha Semana 3."
+            },
+            "fc_pa": {
+              "value": 35000000.0,
+              "origin": "CONFIRMADO",
+              "source": "entregas/P1L2/edificio/validacion/AUDITORIA_PLANOS_COMPLETA.md; entregas/P1L3/capacidad_ha/datos/seccion_estudio.json"
+            },
+            "epsc0": {
+              "value": -0.002,
+              "origin": "ASUMIDO_LAB",
+              "source": "Parametro requerido por Concrete01 para ensayo de laboratorio."
+            },
+            "fpcu_ratio": {
+              "value": 0.2,
+              "origin": "ASUMIDO_LAB",
+              "source": "Parametro requerido por Concrete01; resistencia residual simplificada."
+            },
+            "epsu": {
+              "value": -0.0035,
+              "origin": "ASUMIDO_LAB",
+              "source": "Parametro requerido por Concrete01 para hormigon no confinado de laboratorio."
+            }
+          },
+          "steel_vertical": {
+            "model": {
+              "value": "Steel01",
+              "origin": "ASUMIDO_LAB",
+              "source": "Hipotesis de laboratorio coherente con capacidad_ha Semana 3."
+            },
+            "fy_pa": {
+              "value": 420000000.0,
+              "origin": "CONFIRMADO",
+              "source": "entregas/P1L2/edificio/validacion/AUDITORIA_PLANOS_COMPLETA.md; entregas/P1L3/capacidad_ha/datos/seccion_estudio.json"
+            },
+            "Es_pa": {
+              "value": 200000000000.0,
+              "origin": "ASUMIDO_LAB",
+              "source": "Hipotesis de laboratorio: Es = 200000 MPa."
+            },
+            "hardening_ratio": {
+              "value": 0.0,
+              "origin": "ASUMIDO_LAB",
+              "source": "Simplificacion elastoplastica perfecta."
+            }
+          }
+        },
+        "reinforcement": {
+          "vertical_bars": {
+            "diameter_m": {
+              "value": 0.016,
+              "origin": "ASUMIDO_LAB",
+              "source": "Hipotesis de laboratorio por falta de detalle verificable para E2-P1-M-019."
+            },
+            "spacing_m": {
+              "value": 0.2,
+              "origin": "ASUMIDO_LAB",
+              "source": "Hipotesis de laboratorio por falta de detalle verificable para E2-P1-M-019."
+            },
+            "curtains": {
+              "value": 2,
+              "origin": "ASUMIDO_LAB",
+              "source": "Hipotesis de laboratorio: dos capas/caras de barras verticales."
+            }
+          },
+          "horizontal_bars": {
+            "diameter_m": {
+              "value": 0.012,
+              "origin": "ASUMIDO_LAB",
+              "source": "Hipotesis documental para trazabilidad; no se incluye como acero longitudinal en la P-M vertical."
+            },
+            "spacing_m": {
+              "value": 0.2,
+              "origin": "ASUMIDO_LAB",
+              "source": "Hipotesis documental para trazabilidad; no se incluye como acero longitudinal en la P-M vertical."
+            }
+          },
+          "boundary_elements": {
+            "value": null,
+            "origin": "MISSING",
+            "source": "Busqueda P1L2/P1L3 por E2-P1-M-019, SOL2_1_wall_0021, A-M-0171, 10171 y tipologias equivalentes."
+          }
+        },
+        "fiber_discretization": {
+          "num_fibers_y": {
+            "value": 80,
+            "origin": "ASUMIDO_LAB",
+            "source": "Discretizacion de laboratorio para el largo del muro."
+          },
+          "num_fibers_z": {
+            "value": 8,
+            "origin": "ASUMIDO_LAB",
+            "source": "Discretizacion de laboratorio para el espesor del muro."
+          }
+        },
+        "analysis": {
+          "moment_curvature": {
+            "num_steps": {
+              "value": 260,
+              "origin": "ASUMIDO_LAB",
+              "source": "Ensayo incremental de seccion de laboratorio."
+            },
+            "target_factor_phi_y": {
+              "value": 7.0,
+              "origin": "ASUMIDO_LAB",
+              "source": "Curvatura objetivo como multiplo de phi_y estimada."
+            }
+          },
+          "axial_capacity": {
+            "num_steps": {
+              "value": 260,
+              "origin": "ASUMIDO_LAB",
+              "source": "Ensayo axial incremental de seccion de laboratorio."
+            },
+            "target_strain_factor_epsu": {
+              "value": 1.0,
+              "origin": "ASUMIDO_LAB",
+              "source": "Comprimir hasta epsu de Concrete01."
+            }
+          },
+          "pm_interaction": {
+            "compression_fractions": {
+              "value": [
+                0.0,
+                0.03,
+                0.06,
+                0.1,
+                0.15,
+                0.2,
+                0.3,
+                0.4,
+                0.5,
+                0.6,
+                0.7,
+                0.8,
+                0.9
+              ],
+              "origin": "ASUMIDO_LAB",
+              "source": "Puntos para cubrir P cercano a 0, flexion dominante, compresion intermedia y compresion alta."
+            }
+          }
+        },
+        "evidence_summary": {
+          "length": "DERIVADO",
+          "thickness": "DERIVADO",
+          "fc": "CONFIRMADO",
+          "fy": "CONFIRMADO",
+          "vertical_reinforcement": "ASUMIDO_LAB",
+          "horizontal_reinforcement": "ASUMIDO_LAB",
+          "boundary_elements": "MISSING",
+          "cover": "CONFIRMADO"
+        }
+      },
+      "traceability": {
+        "geometry_source": "entregas/P1L2/unity_export/model_combined_viewer.json",
+        "analysis_source": "entregas/P1L3/results/a3a4/analysis_model.json",
+        "demand_source": "entregas/P1L3/results/a7/cases/R/elements.json",
+        "capacity_source": "entregas/P1L4/demanda_capacidad/results/wall_pm_interaction.csv",
+        "capacity_section_config": "entregas/P1L4/demanda_capacidad/datos/wall_section_estudio.json",
+        "case_manifest": "entregas/P1L3/results/a7/cases/R/manifest.json"
+      },
+      "data_origins": {
+        "element_id": "CONFIRMADO",
+        "opensees_tag": "DERIVADO",
+        "geometry": "CONFIRMADO/DERIVADO segun campo en geometry",
+        "material": "CONFIRMADO/DERIVADO/ASUMIDO_LAB segun campo en material",
+        "capacity": "DERIVADO",
+        "demand": "DERIVADO"
+      }
+    }
+  ]
+}
