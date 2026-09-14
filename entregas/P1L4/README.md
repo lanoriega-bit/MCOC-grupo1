@@ -32,7 +32,10 @@ reproducibles desde los contratos del repositorio.
 
 - P1L4-0, auditoría: documentada en `P1L4_INTEGRATION_AUDIT.md`.
 - P1L4-1, Luis: integrado desde `8c933f4`; generador reproducido con `PASS`.
-- José: todavía no hay rama/output P1L4 remoto posterior a la consolidación.
+- P1L4-2, José: salida entregada en `entregas/P1L4/Jose/` (`export_p1l4_jose.py`
+  reproducible) e integrada en el viewer canónico; status
+  `P1L3_ENTREGADO_HISTORICO` hasta que se ejecute un recálculo sobre la
+  topología post-P1L3 aprobada.
 - Los casos disponibles son G, Q, EX, EY y R/CASE_R, todos históricos P1L3.
 - La geometría mostrada es post-P1L3 y el FE de diagnóstico es candidato no ejecutado.
 
@@ -59,6 +62,7 @@ reproducibles desde los contratos del repositorio.
 | Diagnóstico/crosswalk | `results/post_p1l3_candidate/analysis_model_post_p1l3_candidate.json` | CANDIDATE_NOT_RUN |
 | Tributarias | `Assets/StreamingAssets/tributary_areas.json` | P1L3_ENTREGADO_HISTORICO |
 | Demanda-capacidad | `entregas/P1L4/demanda_capacidad/demanda_capacidad.json` | P1L4_VERIFICADO |
+| Fuerzas/desplazamientos/apoyos José | `entregas/P1L4/Jose/resultados/` (G/Q/EX/EY/R) | P1L3_ENTREGADO_HISTORICO |
 | Cargas 700 | `results/a1a2/load_zones_700_completion/load_catalog_700.json` | AUDITADO_NOT_APPLIED |
 
 ## Próximos hitos
