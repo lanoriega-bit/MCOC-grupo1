@@ -1,0 +1,202 @@
+{
+  "section_id": "E2-P1-M-019_lab_wall_fiber_section",
+  "building_wall": {
+    "element_id": {
+      "value": "E2-P1-M-019",
+      "origin": "CONFIRMADO",
+      "source": "entregas/P1L2/unity_export/model_combined_viewer.json"
+    },
+    "geometry_elementTag": {
+      "value": "SOL2_1_wall_0021",
+      "origin": "CONFIRMADO",
+      "source": "entregas/P1L2/unity_export/model_combined_viewer.json"
+    },
+    "analysis_id": {
+      "value": "A-M-0171",
+      "origin": "DERIVADO",
+      "source": "entregas/P1L3/results/a3a4/analysis_model.json"
+    },
+    "opensees_tag": {
+      "value": 10171,
+      "origin": "DERIVADO",
+      "source": "entregas/P1L3/results/a3a4/analysis_model.json"
+    },
+    "location": {
+      "value": "EDIFICIO_2 / P1 / Muro X > D/E / Y entre 1-2",
+      "origin": "CONFIRMADO",
+      "source": "entregas/P1L2/unity_export/model_combined_viewer.json"
+    }
+  },
+  "geometry": {
+    "length_m": {
+      "value": 5.800000000020009,
+      "origin": "DERIVADO",
+      "source": "entregas/P1L2/unity_export/model_combined_viewer.json"
+    },
+    "thickness_m": {
+      "value": 0.22,
+      "origin": "DERIVADO",
+      "source": "entregas/P1L2/unity_export/model_combined_viewer.json; entregas/P1L3/results/a3a4/analysis_model.json",
+      "note": "El campo wall_thickness_m del solido esta null; se usa width_m y dim_local_z_m del modelo FE entregado."
+    },
+    "height_m": {
+      "value": 3.96,
+      "origin": "DERIVADO",
+      "source": "entregas/P1L2/unity_export/model_combined_viewer.json"
+    },
+    "pm_axis": {
+      "value": "Mz",
+      "origin": "DERIVADO",
+      "source": "entregas/P1L3/p1l3/modelado.py; entregas/P1L3/p1l3/opensees_mdl.py",
+      "note": "Para muros, dim_local_y_m = largo y dim_local_z_m = espesor; Mz es la flexion alrededor del eje local z asociada a la inercia fuerte Iz = espesor*largo^3/12."
+    },
+    "cover_m": {
+      "value": 0.02,
+      "origin": "CONFIRMADO",
+      "source": "entregas/P1L2/edificio/validacion/AUDITORIA_PLANOS_COMPLETA.md",
+      "note": "Recubrimiento general E.T.O.G. para muros normal/severa 2/2 cm; no es un detalle especifico del muro."
+    }
+  },
+  "materials": {
+    "concrete": {
+      "model": {
+        "value": "Concrete01",
+        "origin": "ASUMIDO_LAB",
+        "source": "Hipotesis de laboratorio coherente con capacidad_ha Semana 3."
+      },
+      "fc_pa": {
+        "value": 35000000.0,
+        "origin": "CONFIRMADO",
+        "source": "entregas/P1L2/edificio/validacion/AUDITORIA_PLANOS_COMPLETA.md; entregas/P1L3/capacidad_ha/datos/seccion_estudio.json"
+      },
+      "epsc0": {
+        "value": -0.002,
+        "origin": "ASUMIDO_LAB",
+        "source": "Parametro requerido por Concrete01 para ensayo de laboratorio."
+      },
+      "fpcu_ratio": {
+        "value": 0.20,
+        "origin": "ASUMIDO_LAB",
+        "source": "Parametro requerido por Concrete01; resistencia residual simplificada."
+      },
+      "epsu": {
+        "value": -0.0035,
+        "origin": "ASUMIDO_LAB",
+        "source": "Parametro requerido por Concrete01 para hormigon no confinado de laboratorio."
+      }
+    },
+    "steel_vertical": {
+      "model": {
+        "value": "Steel01",
+        "origin": "ASUMIDO_LAB",
+        "source": "Hipotesis de laboratorio coherente con capacidad_ha Semana 3."
+      },
+      "fy_pa": {
+        "value": 420000000.0,
+        "origin": "CONFIRMADO",
+        "source": "entregas/P1L2/edificio/validacion/AUDITORIA_PLANOS_COMPLETA.md; entregas/P1L3/capacidad_ha/datos/seccion_estudio.json"
+      },
+      "Es_pa": {
+        "value": 200000000000.0,
+        "origin": "ASUMIDO_LAB",
+        "source": "Hipotesis de laboratorio: Es = 200000 MPa."
+      },
+      "hardening_ratio": {
+        "value": 0.0,
+        "origin": "ASUMIDO_LAB",
+        "source": "Simplificacion elastoplastica perfecta."
+      }
+    }
+  },
+  "reinforcement": {
+    "vertical_bars": {
+      "diameter_m": {
+        "value": 0.016,
+        "origin": "ASUMIDO_LAB",
+        "source": "Hipotesis de laboratorio por falta de detalle verificable para E2-P1-M-019."
+      },
+      "spacing_m": {
+        "value": 0.20,
+        "origin": "ASUMIDO_LAB",
+        "source": "Hipotesis de laboratorio por falta de detalle verificable para E2-P1-M-019."
+      },
+      "curtains": {
+        "value": 2,
+        "origin": "ASUMIDO_LAB",
+        "source": "Hipotesis de laboratorio: dos capas/caras de barras verticales."
+      }
+    },
+    "horizontal_bars": {
+      "diameter_m": {
+        "value": 0.012,
+        "origin": "ASUMIDO_LAB",
+        "source": "Hipotesis documental para trazabilidad; no se incluye como acero longitudinal en la P-M vertical."
+      },
+      "spacing_m": {
+        "value": 0.20,
+        "origin": "ASUMIDO_LAB",
+        "source": "Hipotesis documental para trazabilidad; no se incluye como acero longitudinal en la P-M vertical."
+      }
+    },
+    "boundary_elements": {
+      "value": null,
+      "origin": "MISSING",
+      "source": "Busqueda P1L2/P1L3 por E2-P1-M-019, SOL2_1_wall_0021, A-M-0171, 10171 y tipologias equivalentes."
+    }
+  },
+  "fiber_discretization": {
+    "num_fibers_y": {
+      "value": 80,
+      "origin": "ASUMIDO_LAB",
+      "source": "Discretizacion de laboratorio para el largo del muro."
+    },
+    "num_fibers_z": {
+      "value": 8,
+      "origin": "ASUMIDO_LAB",
+      "source": "Discretizacion de laboratorio para el espesor del muro."
+    }
+  },
+  "analysis": {
+    "moment_curvature": {
+      "num_steps": {
+        "value": 260,
+        "origin": "ASUMIDO_LAB",
+        "source": "Ensayo incremental de seccion de laboratorio."
+      },
+      "target_factor_phi_y": {
+        "value": 7.0,
+        "origin": "ASUMIDO_LAB",
+        "source": "Curvatura objetivo como multiplo de phi_y estimada."
+      }
+    },
+    "axial_capacity": {
+      "num_steps": {
+        "value": 260,
+        "origin": "ASUMIDO_LAB",
+        "source": "Ensayo axial incremental de seccion de laboratorio."
+      },
+      "target_strain_factor_epsu": {
+        "value": 1.0,
+        "origin": "ASUMIDO_LAB",
+        "source": "Comprimir hasta epsu de Concrete01."
+      }
+    },
+    "pm_interaction": {
+      "compression_fractions": {
+        "value": [0.0, 0.03, 0.06, 0.1, 0.15, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+        "origin": "ASUMIDO_LAB",
+        "source": "Puntos para cubrir P cercano a 0, flexion dominante, compresion intermedia y compresion alta."
+      }
+    }
+  },
+  "evidence_summary": {
+    "length": "DERIVADO",
+    "thickness": "DERIVADO",
+    "fc": "CONFIRMADO",
+    "fy": "CONFIRMADO",
+    "vertical_reinforcement": "ASUMIDO_LAB",
+    "horizontal_reinforcement": "ASUMIDO_LAB",
+    "boundary_elements": "MISSING",
+    "cover": "CONFIRMADO"
+  }
+}
