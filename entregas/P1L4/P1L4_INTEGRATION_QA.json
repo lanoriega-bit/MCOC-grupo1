@@ -1,0 +1,64 @@
+{
+  "status": "PASS_WITH_NOTES",
+  "baseline": "aa6bc4b7a207dde4ddac2f3deef1eee54e042f5f",
+  "checks": {
+    "unity_geometry_ids_unique": true,
+    "opensees_tags_unique": true,
+    "analysis_ids_unique": true,
+    "nodes_exist_and_have_coordinates": true,
+    "sections_readable": true,
+    "material_readable": true,
+    "local_axes_readable": true,
+    "result_components_exist": true,
+    "case_ids_valid": true,
+    "supports_readable": true,
+    "tributary_areas_readable": true,
+    "loads_readable": true,
+    "demand_capacity_readable": true
+  },
+  "counts": {
+    "unity_geometry_ids": 1212,
+    "historical_analysis_geometry_ids": 1312,
+    "geometry_ids_with_historical_results": 1056,
+    "current_geometry_ids_without_historical_results": 156,
+    "historical_result_ids_without_current_geometry": 256,
+    "opensees_elements": 1312,
+    "supports": 106,
+    "tributary_areas": 1060,
+    "tributary_point_areas": 491,
+    "tributary_areas_without_display_polygon": 192,
+    "tributary_zero_area_records": 117,
+    "load_catalog_entries": 108,
+    "crosswalk_1_to_many_geometry_ids": 33
+  },
+  "demand_capacity": [
+    {
+      "element_id": "E2-P1-C-002",
+      "opensees_tag": 10009,
+      "geometry_id_exists": true,
+      "metadata_id_exists": true,
+      "result_tag_exists_in_CASE_R": true,
+      "valid_pm_points": 3,
+      "invalid_pm_points_retained": 1,
+      "demand_readable": true
+    },
+    {
+      "element_id": "E2-P1-M-019",
+      "opensees_tag": 10171,
+      "geometry_id_exists": true,
+      "metadata_id_exists": true,
+      "result_tag_exists_in_CASE_R": true,
+      "valid_pm_points": 8,
+      "invalid_pm_points_retained": 6,
+      "demand_readable": true
+    }
+  ],
+  "notes": [
+    "La geometria Unity es POST-P1L3; los resultados OpenSees disponibles son el snapshot P1L3 entregado.",
+    "Las diferencias de IDs se muestran como N/A y no se rellenan ni remapean por proximidad.",
+    "El catalogo 700 es legible pero sigue READY_FOR_Q_REVIEW_NOT_APPLIED; no reemplaza las cargas historicas.",
+    "Hay 192 tributarias historicas con area/carga legible pero sin poligono de visualizacion; se reportan, no se inventa su huella.",
+    "Hay 117 registros historicos con area y carga explicitamente iguales a cero; no se reinterpretan como datos ausentes.",
+    "El FE post-P1L3 sigue CANDIDATE_NOT_APPROVED_NOT_RUN."
+  ]
+}

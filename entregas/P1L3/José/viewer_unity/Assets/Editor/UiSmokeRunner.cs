@@ -1,4 +1,5 @@
 using System.IO;
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
@@ -13,8 +14,10 @@ namespace Mcoc.UnityViewer.EditorTools
     public static class UiSmokeRunner
     {
         static readonly string RequestPath = Path.Combine(Directory.GetCurrentDirectory(), "Temp", "p1l3-ui-smoke.request");
+        static readonly string ResultPath = Path.Combine(Directory.GetCurrentDirectory(), "Temp", "p1l4-ui-smoke.result.txt");
         static double playStarted;
         static bool running;
+        static readonly List<string> captured = new List<string>();
 
         static UiSmokeRunner()
         {
@@ -28,6 +31,9 @@ namespace Mcoc.UnityViewer.EditorTools
         {
             if (running || EditorApplication.isPlayingOrWillChangePlaymode) return;
             running = true;
+            captured.Clear();
+            if (File.Exists(ResultPath)) File.Delete(ResultPath);
+            Application.logMessageReceived += CaptureLog;
             EditorSceneManager.OpenScene("Assets/Main.unity", OpenSceneMode.Single);
             EditorApplication.playModeStateChanged += OnPlayModeChanged;
             Debug.Log("[UI QA] Iniciando prueba automatica en Play.");
@@ -44,9 +50,18 @@ namespace Mcoc.UnityViewer.EditorTools
             else if (state == PlayModeStateChange.EnteredEditMode && running)
             {
                 EditorApplication.playModeStateChanged -= OnPlayModeChanged;
+                Application.logMessageReceived -= CaptureLog;
                 running = false;
                 Debug.Log("[UI QA] PLAY_SMOKE_COMPLETE: arranque y ciclo Play/Edit finalizados.");
+                captured.Add("[UI QA] PLAY_SMOKE_COMPLETE: arranque y ciclo Play/Edit finalizados.");
+                File.WriteAllLines(ResultPath, captured.ToArray());
             }
+        }
+
+        static void CaptureLog(string condition, string stackTrace, LogType type)
+        {
+            if (condition.Contains("[UI QA]") || condition.Contains("[P1L4 QA]") || type == LogType.Error || type == LogType.Exception)
+                captured.Add(condition);
         }
 
         static void WaitForRuntimeChecks()

@@ -557,4 +557,218 @@ namespace Mcoc.UnityViewer
         public double sum_Ry_kN;
         public double sum_Rz_kN;
     }
+
+    [Serializable]
+    public class P1L4StructuralMetadataData
+    {
+        public string format;
+        public string data_state;
+        public string source;
+        public P1L4Units units;
+        public P1L4Material material;
+        public List<P1L4CaseDescriptor> cases;
+        public List<P1L4ElementMetadata> elements;
+        public List<P1L4SupportData> supports;
+        public P1L4MetadataQa qa;
+    }
+
+    [Serializable]
+    public class P1L4Units
+    {
+        public string length;
+        public string force;
+        public string moment;
+        public string stress;
+    }
+
+    [Serializable]
+    public class P1L4Material
+    {
+        public string material_id;
+        public string model;
+        public double E_pa;
+        public double nu;
+        public double G_pa;
+        public string source;
+    }
+
+    [Serializable]
+    public class P1L4CaseDescriptor
+    {
+        public string case_id;
+        public string folder;
+        public int element_count;
+        public int node_count;
+        public string manifest_source;
+        public string elements_source;
+        public string nodes_source;
+    }
+
+    [Serializable]
+    public class P1L4ElementMetadata
+    {
+        public string element_id;
+        public string geometry_elementTag;
+        public string analysis_id;
+        public int opensees_tag;
+        public string type;
+        public string building;
+        public string floor;
+        public int node_i;
+        public int node_j;
+        public List<double> node_i_coord_m;
+        public List<double> node_j_coord_m;
+        public string section_id;
+        public P1L4Section section;
+        public string material_id;
+        public P1L4LocalAxes local_axes;
+        public string source_layer;
+        public string source_dxf;
+    }
+
+    [Serializable]
+    public class P1L4Section
+    {
+        public double A_m2;
+        public double Iy_m4;
+        public double Iz_m4;
+        public double J_m4;
+        public double dim_local_y_m;
+        public double dim_local_z_m;
+        public string source;
+    }
+
+    [Serializable]
+    public class P1L4LocalAxes
+    {
+        public List<double> x;
+        public List<double> y;
+        public List<double> z;
+        public List<double> vecxz;
+        public string source;
+    }
+
+    [Serializable]
+    public class P1L4SupportData
+    {
+        public string support_id;
+        public int node_tag;
+        public string floor;
+        public List<double> coord_m;
+        public bool UX;
+        public bool UY;
+        public bool UZ;
+        public bool RX;
+        public bool RY;
+        public bool RZ;
+    }
+
+    [Serializable]
+    public class P1L4MetadataQa
+    {
+        public int element_count;
+        public int unique_opensees_tags;
+        public int unique_analysis_ids;
+        public int support_count;
+        public bool all_nodes_exist;
+        public bool all_local_axes_unit_and_orthogonal;
+    }
+
+    [Serializable]
+    public class DemandCapacityData
+    {
+        public string format;
+        public string active_case;
+        public DemandCapacityValidation validation;
+        public List<DemandCapacityElement> elements;
+    }
+
+    [Serializable]
+    public class DemandCapacityValidation
+    {
+        public string status;
+        public List<int> required_tags;
+        public int wall_valid_pm_points;
+        public int wall_invalid_pm_points;
+    }
+
+    [Serializable]
+    public class DemandCapacityElement
+    {
+        public string element_id;
+        public string structural_id;
+        public string type;
+        public int opensees_tag;
+        public string geometry_elementTag;
+        public string analysis_id;
+        public List<int> nodes;
+        public string section_id;
+        public DemandCapacityDemand demand;
+        public DemandCapacityCurve capacity;
+        public DemandCapacityCheck demand_capacity;
+        public DemandCapacityTraceability traceability;
+    }
+
+    [Serializable]
+    public class DemandCapacityDemand
+    {
+        public string case_name;
+        public string source_file;
+        public string selection_rule;
+        public string selected_end;
+        public double P_kN;
+        public double Vy_kN;
+        public double Vz_kN;
+        public double T_kNm;
+        public double My_kNm;
+        public double Mz_kNm;
+        public string pm_component;
+    }
+
+    [Serializable]
+    public class DemandCapacityCurve
+    {
+        public string status;
+        public string pm_axis;
+        public string source;
+        public string note;
+        public List<DemandCapacityPoint> points;
+        public string invalid_points_note;
+    }
+
+    [Serializable]
+    public class DemandCapacityPoint
+    {
+        public string point_id;
+        public double P_kN;
+        public double compression_magnitude_kN;
+        public double M_kNm;
+        public bool valid;
+        public string status;
+    }
+
+    [Serializable]
+    public class DemandCapacityCheck
+    {
+        public string @case;
+        public double P_kN;
+        public double compression_magnitude_kN;
+        public double M_kNm;
+        public double M_abs_kNm;
+        public string pm_axis;
+        public bool inside_envelope;
+        public double interpolated_capacity_M_abs_kNm;
+        public string method;
+    }
+
+    [Serializable]
+    public class DemandCapacityTraceability
+    {
+        public string geometry_source;
+        public string analysis_source;
+        public string demand_source;
+        public string capacity_source;
+        public string capacity_section_config;
+        public string case_manifest;
+    }
 }

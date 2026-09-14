@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -43,6 +44,8 @@ namespace Mcoc.UnityViewer
         private FeDiagnosticData feDiagnostic;
         private P1L3DeliveryData delivery;
         private CapacityData capacity;
+        private P1L4StructuralMetadataData p1l4Metadata;
+        private DemandCapacityData demandCapacity;
         private Texture2D fiberTexture;
         private Texture2D momentCurvatureTexture;
         private Texture2D pmInteractionTexture;
@@ -58,9 +61,12 @@ namespace Mcoc.UnityViewer
         private float deformationScaleEX = 1f;
         private float deformationScaleEY = 1f;
         private readonly Dictionary<string, Vector2> memberTrib = new Dictionary<string, Vector2>();
-        private readonly Dictionary<string, AnalysisElementResult> analysisByElementId = new Dictionary<string, AnalysisElementResult>();
+        private readonly Dictionary<string, List<AnalysisElementResult>> analysisByElementId = new Dictionary<string, List<AnalysisElementResult>>();
         private readonly Dictionary<string, ExcludedAnalysisElement> excludedByElementId = new Dictionary<string, ExcludedAnalysisElement>();
         private readonly Dictionary<string, FeDiagnosticElement> diagnosticByElementId = new Dictionary<string, FeDiagnosticElement>();
+        private readonly Dictionary<string, List<P1L4ElementMetadata>> p1l4MetadataByElementId = new Dictionary<string, List<P1L4ElementMetadata>>();
+        private readonly Dictionary<string, DemandCapacityElement> demandCapacityByElementId = new Dictionary<string, DemandCapacityElement>();
+        private readonly Dictionary<int, P1L4SupportData> p1l4SupportsByNode = new Dictionary<int, P1L4SupportData>();
         private readonly Dictionary<string, List<GameObject>> byType = new Dictionary<string, List<GameObject>>();
         private readonly Dictionary<string, List<GameObject>> byFloor = new Dictionary<string, List<GameObject>>();
         private readonly Dictionary<string, bool> typeVisible = new Dictionary<string, bool>();
@@ -92,11 +98,13 @@ namespace Mcoc.UnityViewer
         private string inspectorTributary = "";
         private string inspectorAnalysis = "";
         private string inspectorCapacity = "";
+        private string inspectorTraceability = "";
         private bool inspectorGeometryOpen = false;
         private bool inspectorPropertiesOpen = false;
         private bool inspectorTributaryOpen = false;
         private bool inspectorAnalysisOpen = true;
         private bool inspectorCapacityOpen = false;
+        private bool inspectorTraceabilityOpen = false;
         private static Texture2D whiteTex;
 
         private static readonly Dictionary<string, string> TypeLabels = new Dictionary<string, string>
@@ -172,6 +180,9 @@ namespace Mcoc.UnityViewer
                         diagnosticByElementId[item.element_id] = item;
             delivery = JsonLoader.LoadDelivery();
             capacity = JsonLoader.LoadCapacity();
+            p1l4Metadata = JsonLoader.LoadP1L4StructuralMetadata();
+            demandCapacity = JsonLoader.LoadDemandCapacity();
+            BuildP1L4Indexes();
             fiberTexture = JsonLoader.LoadPng("fiber_section.png");
             momentCurvatureTexture = JsonLoader.LoadPng("moment_curvature.png");
             pmInteractionTexture = JsonLoader.LoadPng("pm_interaction.png");
@@ -198,8 +209,36 @@ namespace Mcoc.UnityViewer
             if (seismic != null) BuildSeismic();
             RunVisibilitySelfCheck();
             RunDiagnosticSelfCheck();
+            RunP1L4SelfCheck();
             ResetPresentation();
             SetStatus($"POST-P1L3: {model.solids?.Count ?? 0} solidos | FE candidato: {feDiagnostic?.members?.Count ?? 0} miembros (no ejecutado)");
+        }
+
+        void BuildP1L4Indexes()
+        {
+            p1l4MetadataByElementId.Clear();
+            demandCapacityByElementId.Clear();
+            p1l4SupportsByNode.Clear();
+            if (p1l4Metadata != null && p1l4Metadata.elements != null)
+            {
+                foreach (var item in p1l4Metadata.elements)
+                {
+                    if (item == null || string.IsNullOrEmpty(item.element_id)) continue;
+                    if (!p1l4MetadataByElementId.TryGetValue(item.element_id, out var rows))
+                    {
+                        rows = new List<P1L4ElementMetadata>();
+                        p1l4MetadataByElementId[item.element_id] = rows;
+                    }
+                    rows.Add(item);
+                }
+            }
+            if (demandCapacity != null && demandCapacity.elements != null)
+                foreach (var item in demandCapacity.elements)
+                    if (item != null && !string.IsNullOrEmpty(item.element_id))
+                        demandCapacityByElementId[item.element_id] = item;
+            if (p1l4Metadata != null && p1l4Metadata.supports != null)
+                foreach (var item in p1l4Metadata.supports)
+                    if (item != null) p1l4SupportsByNode[item.node_tag] = item;
         }
 
         void ActivateAnalysisCase(string requested)
@@ -224,7 +263,15 @@ namespace Mcoc.UnityViewer
             excludedByElementId.Clear();
             if (chosen.elements != null)
                 foreach (var result in chosen.elements)
-                    if (!string.IsNullOrEmpty(result.element_id)) analysisByElementId[result.element_id] = result;
+                    if (!string.IsNullOrEmpty(result.element_id))
+                    {
+                        if (!analysisByElementId.TryGetValue(result.element_id, out var rows))
+                        {
+                            rows = new List<AnalysisElementResult>();
+                            analysisByElementId[result.element_id] = rows;
+                        }
+                        rows.Add(result);
+                    }
             if (chosen.excluded_elements != null)
                 foreach (var item in chosen.excluded_elements)
                     if (!string.IsNullOrEmpty(item.element_id)) excludedByElementId[item.element_id] = item;
@@ -1131,7 +1178,8 @@ namespace Mcoc.UnityViewer
                 (typeVisible.ContainsKey("tributary") && typeVisible["tributary"]);
             if (legendShown && m.x > Screen.width - 250f && m.y > Screen.height - (legendExpanded ? 126f : 40f)) return true;
             if (deliveryPanelVisible && DeliveryRect().Contains(m)) return true;
-            if (!deliveryPanelVisible && new Rect(Screen.width * 0.5f - 90f, 10f, 180f, 28f).Contains(m)) return true;
+            if (new Rect(Screen.width * 0.5f - 195f, 10f, 390f, 64f).Contains(m)) return true;
+            if (!deliveryPanelVisible && new Rect(Screen.width * 0.5f - 90f, 80f, 180f, 26f).Contains(m)) return true;
             return false;
         }
 
@@ -1257,27 +1305,8 @@ namespace Mcoc.UnityViewer
                 cargaLine = $"Carga tributaria que soporta: {ei.tribLoadKN.ToString("F3")} kN\n" +
                     $"Area tributaria asociada: {ei.tribAreaM2.ToString("F3")} m2";
             }
-            string analysisLine = "\nResultado FE P1L3 entregado: sin correspondencia";
-            if (ei.hasFEParticipationFlag && !ei.participatesInFE)
-            {
-                analysisLine = "\nModelo FE: no participa (capa exclusivamente visual)";
-            }
-            else if (analysisByElementId.TryGetValue(id, out var ar))
-            {
-                var f = ar.localForce_end1;
-                string forces = f != null && f.Count >= 6
-                    ? $"P={f[0] / 1000.0:F3} kN, Vy={f[1] / 1000.0:F3} kN, Vz={f[2] / 1000.0:F3} kN, T={f[3] / 1000.0:F3} kNm, My={f[4] / 1000.0:F3} kNm, Mz={f[5] / 1000.0:F3} kNm"
-                    : "fuerzas no disponibles";
-                var ni = FindAnalysisNode(ar.node_i);
-                var nj = FindAnalysisNode(ar.node_j);
-                string displacements = ni == null || nj == null ? "desplazamientos no disponibles" :
-                    $"ui=({ni.ux_m:F6}, {ni.uy_m:F6}, {ni.uz_m:F6}) m\nuj=({nj.ux_m:F6}, {nj.uy_m:F6}, {nj.uz_m:F6}) m";
-                analysisLine = $"\nResultado FE P1L3 entregado: incluido (historico)\nCaso: {ar.case_name}\nanalysis_id: {ar.analysis_id}\nOpenSees tag: {ar.opensees_tag}\n{displacements}\nExtremo i: {forces}";
-            }
-            else if (excludedByElementId.TryGetValue(id, out var excluded))
-            {
-                analysisLine = $"\nResultado FE P1L3 entregado: no incluido (historico)\nMotivo: {excluded.reason}";
-            }
+            string analysisLine = BuildP1L4AnalysisText(ei, id, section, coord);
+            string resultsLine = BuildP1L4ResultsText(ei, id);
             string diagnosticLine = "";
             if (!string.IsNullOrEmpty(ei.diagnosticStatus))
             {
@@ -1296,21 +1325,19 @@ namespace Mcoc.UnityViewer
                     $"Fuente: {(string.IsNullOrEmpty(ei.diagnosticSource) ? "-" : ei.diagnosticSource)}\n" +
                     $"Geometria: {id}\nCrosswalk 1:N:\n{crosswalkLine}";
             }
-            string capacityLine = "";
-            if (capacity != null && !string.IsNullOrEmpty(capacity.mapped_element_id) && capacity.mapped_element_id == id)
-            {
-                capacityLine = $"\nCapacidad HA (laboratorio): {capacity.b_m:F2} x {capacity.h_m:F2} m, {capacity.num_bars} barras, f'c={capacity.fc_pa / 1e6:F1} MPa, fy={capacity.fy_pa / 1e6:F1} MPa";
-            }
+            string capacityLine = BuildDemandCapacityText(id);
+            string traceabilityLine = BuildTraceabilityText(ei, id, diagnosticLine);
             inspectorIdentity = $"{id}\n{cat} | Piso {ei.floor} | {(string.IsNullOrEmpty(ei.building) ? "Sin edificio" : ei.building)}\nEjes: {ejes}";
             string visualArea = ei.visualAreaM2 > 0 ? $"\nArea visual: {ei.visualAreaM2:F3} m2" : "";
             string source = !string.IsNullOrEmpty(ei.sourceDxf) || !string.IsNullOrEmpty(ei.sourceLayer)
                 ? $"\nFuente: {ei.sourceDxf ?? "-"} / {ei.sourceLayer ?? "-"}" : "";
             string confidence = string.IsNullOrEmpty(ei.confidence) ? "" : $"\nConfianza: {ei.confidence}";
-            inspectorGeometry = $"Coordenadas: {coord}\nNodo i: {P(ei.nodeI)}\nNodo j: {P(ei.nodeJ)}\nLongitud: {ei.lengthM:F3} m{visualArea}";
-            inspectorProperties = $"Seccion: {section}\nMaterial: {ei.materialName}\nelementTag: {ei.elementTag ?? "-"}{source}{confidence}";
+            inspectorGeometry = BuildP1L4IdentityText(ei, id, cat, source, confidence);
+            inspectorProperties = analysisLine + $"\nLongitud geometrica: {ei.lengthM:F3} m{visualArea}";
             inspectorTributary = string.IsNullOrEmpty(cargaLine) ? "Sin carga tributaria asociada." : cargaLine;
-            inspectorAnalysis = (analysisLine + diagnosticLine).TrimStart('\n');
-            inspectorCapacity = string.IsNullOrEmpty(capacityLine) ? "Este elemento no tiene un analisis de capacidad asociado." : capacityLine.TrimStart('\n');
+            inspectorAnalysis = resultsLine;
+            inspectorCapacity = capacityLine;
+            inspectorTraceability = traceabilityLine;
             lastInfo = $"ID: {id}\n" +
                 $"elementTag: {ei.elementTag ?? "-"}\n" +
                 $"Tipo: {cat}\n" +
@@ -1323,10 +1350,187 @@ namespace Mcoc.UnityViewer
                 $"Longitud: {ei.lengthM.ToString("F3")} m\n" +
                 $"Tributaria: {trib}" +
                 (string.IsNullOrEmpty(cargaLine) ? "" : "\n" + cargaLine) +
-                analysisLine + diagnosticLine + capacityLine;
+                "\n" + resultsLine + "\n" + capacityLine + "\n" + traceabilityLine;
             if (infoText != null) infoText.text = lastInfo;
             lastSelected = ei;
             inspectorVisible = true;
+        }
+
+        List<P1L4ElementMetadata> MetadataForSelection(ElementInfo ei, string id)
+        {
+            if (!p1l4MetadataByElementId.TryGetValue(id, out var all)) return new List<P1L4ElementMetadata>();
+            if (ei == null || string.IsNullOrEmpty(ei.analysisId)) return all;
+            var selectedRows = new List<P1L4ElementMetadata>();
+            foreach (var item in all)
+                if (item.analysis_id == ei.analysisId) selectedRows.Add(item);
+            return selectedRows.Count > 0 ? selectedRows : all;
+        }
+
+        List<AnalysisElementResult> ResultsForSelection(ElementInfo ei, string id)
+        {
+            if (!analysisByElementId.TryGetValue(id, out var all)) return new List<AnalysisElementResult>();
+            if (ei == null || string.IsNullOrEmpty(ei.analysisId)) return all;
+            var selectedRows = new List<AnalysisElementResult>();
+            foreach (var item in all)
+                if (item.analysis_id == ei.analysisId) selectedRows.Add(item);
+            return selectedRows.Count > 0 ? selectedRows : all;
+        }
+
+        string BuildP1L4IdentityText(ElementInfo ei, string id, string category, string source, string confidence)
+        {
+            var rows = MetadataForSelection(ei, id);
+            var sb = new StringBuilder();
+            sb.AppendLine($"element_id: {id}");
+            sb.AppendLine($"Edificio: {(string.IsNullOrEmpty(ei.building) ? "N/A" : ei.building)}");
+            sb.AppendLine($"Piso: {(string.IsNullOrEmpty(ei.floor) ? "N/A" : ei.floor)}");
+            sb.AppendLine($"Tipo: {category}");
+            if (rows.Count == 0)
+            {
+                sb.AppendLine("OpenSees elementTag: N/A");
+                sb.AppendLine("analysis_id: N/A");
+                sb.Append($"geometry tag: {(string.IsNullOrEmpty(ei.elementTag) ? "N/A" : ei.elementTag)}");
+            }
+            else
+            {
+                sb.AppendLine($"Miembros FE asociados: {rows.Count}");
+                foreach (var item in rows)
+                    sb.AppendLine($"- {item.analysis_id} | OpenSees {item.opensees_tag} | geom {item.geometry_elementTag}");
+            }
+            if (!string.IsNullOrEmpty(source)) sb.Append(source);
+            if (!string.IsNullOrEmpty(confidence)) sb.Append(confidence);
+            return sb.ToString().TrimEnd();
+        }
+
+        string BuildP1L4AnalysisText(ElementInfo ei, string id, string fallbackSection, string fallbackCoord)
+        {
+            var rows = MetadataForSelection(ei, id);
+            if (ei.hasFEParticipationFlag && !ei.participatesInFE)
+                return "No participa en el modelo FE (capa exclusivamente visual).";
+            if (rows.Count == 0)
+                return $"Sin metadatos FE.\nCoordenadas: {fallbackCoord}\nSeccion visual: {fallbackSection}\nMaterial visual: {ei.materialName}";
+            var sb = new StringBuilder();
+            sb.AppendLine($"Fuente: {p1l4Metadata.data_state}");
+            foreach (var item in rows)
+            {
+                sb.AppendLine($"{item.analysis_id} / OpenSees {item.opensees_tag}");
+                sb.AppendLine($"Nodos: {item.node_i} {FormatVector(item.node_i_coord_m)} m -> {item.node_j} {FormatVector(item.node_j_coord_m)} m");
+                if (item.section != null)
+                    sb.AppendLine($"Seccion {item.section_id}: y={item.section.dim_local_y_m:F3} m, z={item.section.dim_local_z_m:F3} m, A={item.section.A_m2:F4} m2");
+                else sb.AppendLine("Seccion: N/A");
+                if (p1l4Metadata.material != null)
+                    sb.AppendLine($"Material {item.material_id}: {p1l4Metadata.material.model}, E={p1l4Metadata.material.E_pa / 1e9:F2} GPa");
+                else sb.AppendLine("Material: N/A");
+                if (item.local_axes != null)
+                    sb.AppendLine($"Ejes locales: x={FormatVector(item.local_axes.x)}, y={FormatVector(item.local_axes.y)}, z={FormatVector(item.local_axes.z)}");
+                else sb.AppendLine("Ejes locales: N/A");
+                sb.AppendLine($"Restricciones nodo i: {SupportText(item.node_i)}");
+                sb.AppendLine($"Restricciones nodo j: {SupportText(item.node_j)}");
+            }
+            return sb.ToString().TrimEnd();
+        }
+
+        string BuildP1L4ResultsText(ElementInfo ei, string id)
+        {
+            if (ei.hasFEParticipationFlag && !ei.participatesInFE)
+                return $"CASO ACTIVO: {activeAnalysisCase}\nN/V/T/M: N/A (no participa en FE).";
+            var rows = ResultsForSelection(ei, id);
+            if (rows.Count == 0)
+            {
+                if (excludedByElementId.TryGetValue(id, out var excluded))
+                    return $"CASO ACTIVO: {activeAnalysisCase}\nNo incluido en el resultado historico.\nMotivo: {excluded.reason}";
+                return $"CASO ACTIVO: {activeAnalysisCase}\nN/V/T/M: N/A (sin correspondencia de resultados).";
+            }
+            var sb = new StringBuilder();
+            sb.AppendLine($"CASO ACTIVO: {activeAnalysisCase}");
+            sb.AppendLine($"Estado: {(p1l4Metadata == null ? "P1L3_ENTREGADO_HISTORICO" : p1l4Metadata.data_state)}");
+            if (rows.Count > 1) sb.AppendLine($"Crosswalk 1:{rows.Count}; se listan miembros por separado, sin combinar esfuerzos.");
+            foreach (var row in rows)
+            {
+                sb.AppendLine($"{row.analysis_id} | OpenSees {row.opensees_tag}");
+                sb.AppendLine("Extremo i: " + FormatForces(row.localForce_end1));
+                sb.AppendLine("Extremo j: " + FormatForces(row.localForce_end2));
+                var ni = FindAnalysisNode(row.node_i);
+                var nj = FindAnalysisNode(row.node_j);
+                if (ni == null || nj == null) sb.AppendLine("Desplazamientos: N/A");
+                else
+                {
+                    sb.AppendLine($"ui=({ni.ux_m:F6}, {ni.uy_m:F6}, {ni.uz_m:F6}) m");
+                    sb.AppendLine($"uj=({nj.ux_m:F6}, {nj.uy_m:F6}, {nj.uz_m:F6}) m");
+                }
+            }
+            return sb.ToString().TrimEnd();
+        }
+
+        string BuildDemandCapacityText(string id)
+        {
+            if (!demandCapacityByElementId.TryGetValue(id, out var item))
+                return "Este elemento no tiene contrato de demanda-capacidad P1L4.";
+            string contractCase = (item.demand_capacity.@case ?? "").Replace("CASE_", "").ToUpperInvariant();
+            var sb = new StringBuilder();
+            sb.AppendLine($"Elemento: {item.element_id} | OpenSees {item.opensees_tag}");
+            sb.AppendLine($"Curva: P-{item.demand_capacity.pm_axis} | Seccion: {item.section_id}");
+            sb.AppendLine($"Caso de demanda: {item.demand_capacity.@case}");
+            if (contractCase != activeAnalysisCase)
+            {
+                sb.AppendLine($"CASO ACTIVO {activeAnalysisCase}: punto de demanda N/A.");
+                sb.AppendLine("Cambie a R para mostrar el punto verificado por Luis.");
+            }
+            else
+            {
+                sb.AppendLine($"P = {item.demand_capacity.P_kN:F2} kN");
+                sb.AppendLine($"{item.demand_capacity.pm_axis} = {item.demand_capacity.M_kNm:F2} kN.m");
+                sb.AppendLine($"Capacidad interpolada |M| = {item.demand_capacity.interpolated_capacity_M_abs_kNm:F2} kN.m");
+                sb.AppendLine("Estado: " + (item.demand_capacity.inside_envelope ? "DENTRO" : "FUERA"));
+            }
+            int valid = 0;
+            int total = item.capacity != null && item.capacity.points != null ? item.capacity.points.Count : 0;
+            if (item.capacity != null && item.capacity.points != null)
+                foreach (var point in item.capacity.points) if (point.valid) valid++;
+            sb.AppendLine($"Puntos P-M validos: {valid}/{total}");
+            if (item.type == "wall") sb.AppendLine("Armadura: ASUMIDO_LAB");
+            if (item.capacity != null && !string.IsNullOrEmpty(item.capacity.note)) sb.Append(item.capacity.note);
+            return sb.ToString().TrimEnd();
+        }
+
+        string BuildTraceabilityText(ElementInfo ei, string id, string diagnosticLine)
+        {
+            var rows = MetadataForSelection(ei, id);
+            var sb = new StringBuilder();
+            sb.AppendLine($"Objeto Unity: {ei.go.name}");
+            sb.AppendLine($"geometry element_id: {id}");
+            if (rows.Count == 0) sb.AppendLine("OpenSees elementTag / analysis_id: N/A");
+            else foreach (var item in rows) sb.AppendLine($"OpenSees {item.opensees_tag} -> {item.analysis_id} -> {item.geometry_elementTag}");
+            sb.AppendLine($"Resultados: {(p1l4Metadata == null ? "Assets/StreamingAssets/analysis_cases.json" : p1l4Metadata.source)}");
+            if (demandCapacityByElementId.TryGetValue(id, out var dc) && dc.traceability != null)
+            {
+                sb.AppendLine($"Demanda: {dc.traceability.demand_source}");
+                sb.AppendLine($"Seccion capacidad: {dc.traceability.capacity_section_config}");
+                sb.AppendLine($"Capacidad: {dc.traceability.capacity_source}");
+            }
+            else sb.AppendLine("Capacidad: N/A");
+            if (!string.IsNullOrEmpty(diagnosticLine)) sb.Append(diagnosticLine);
+            return sb.ToString().TrimEnd();
+        }
+
+        string SupportText(int nodeTag)
+        {
+            if (!p1l4SupportsByNode.TryGetValue(nodeTag, out var support)) return "libre / sin apoyo registrado";
+            return $"UX={FixedText(support.UX)} UY={FixedText(support.UY)} UZ={FixedText(support.UZ)} RX={FixedText(support.RX)} RY={FixedText(support.RY)} RZ={FixedText(support.RZ)}";
+        }
+
+        static string FixedText(bool value) => value ? "FIJO" : "LIBRE";
+
+        static string FormatVector(List<double> values)
+        {
+            if (values == null || values.Count < 3) return "N/A";
+            return $"({values[0]:F3}, {values[1]:F3}, {values[2]:F3})";
+        }
+
+        static string FormatForces(List<double> values)
+        {
+            if (values == null || values.Count < 6) return "N=N/A, Vy=N/A, Vz=N/A, T=N/A, My=N/A, Mz=N/A";
+            return $"N={values[0] / 1000.0:F3} kN, Vy={values[1] / 1000.0:F3} kN, Vz={values[2] / 1000.0:F3} kN, " +
+                $"T={values[3] / 1000.0:F3} kN.m, My={values[4] / 1000.0:F3} kN.m, Mz={values[5] / 1000.0:F3} kN.m";
         }
 
         // ---------- Vistas ----------
@@ -1358,6 +1562,7 @@ namespace Mcoc.UnityViewer
                 return;
             }
             DrawPanelInfo();
+            DrawP1L4Header();
             DrawDiagnosticControls();
             DrawControls();
             DrawP1L3Panel();
@@ -1365,6 +1570,27 @@ namespace Mcoc.UnityViewer
             if (seismic != null) DrawSeismicValueLabels();
             DrawLegend();
             DrawExpandedGraph();
+        }
+
+        void DrawP1L4Header()
+        {
+            float width = 390f;
+            float x = (Screen.width - width) * 0.5f;
+            Rect r = new Rect(x, 10f, width, 64f);
+            GUI.Box(r, "");
+            GUI.DrawTexture(r, MakeTex(2, 2, new Color(0.015f, 0.035f, 0.07f, 0.95f)));
+            var title = new GUIStyle(GUI.skin.label);
+            title.fontSize = 13; title.fontStyle = FontStyle.Bold; title.normal.textColor = Color.white;
+            GUI.Label(new Rect(r.x + 8, r.y + 4, 150, 20), "P1L4 | RESULTADOS", title);
+            GUI.Label(new Rect(r.x + 160, r.y + 4, 220, 20), "CASO ACTIVO: " + activeAnalysisCase, title);
+            string[] names = { "G", "Q", "EX", "EY", "R" };
+            for (int i = 0; i < names.Length; i++)
+            {
+                var button = new GUIStyle(GUI.skin.button);
+                if (activeAnalysisCase == names[i]) button.normal.textColor = new Color(0.25f, 1f, 0.5f);
+                if (GUI.Button(new Rect(r.x + 8 + i * 75f, r.y + 29, 68f, 26f), names[i], button))
+                    ActivateAnalysisCase(names[i]);
+            }
         }
 
         void DrawDiagnosticControls()
@@ -1441,7 +1667,7 @@ namespace Mcoc.UnityViewer
 
             if (!deliveryPanelVisible)
             {
-                if (GUI.Button(new Rect(Screen.width * 0.5f - 90f, 10f, 180f, 28f), "Abrir panel P1L3", button)) deliveryPanelVisible = true;
+                if (GUI.Button(new Rect(Screen.width * 0.5f - 90f, 80f, 180f, 26f), "Referencia P1L3", button)) deliveryPanelVisible = true;
                 return;
             }
 
@@ -1648,14 +1874,15 @@ namespace Mcoc.UnityViewer
             if (GUI.Button(new Rect(r.x + 10, r.y + 94, r.width - 20, 24), "Copiar ID: " + toCopy))
                 GUIUtility.systemCopyBuffer = toCopy;
 
-            float contentHeight = 700f;
+            float contentHeight = 1400f;
             infoScroll = GUI.BeginScrollView(new Rect(r.x + 8, r.y + 124, r.width - 16, r.height - 132), infoScroll, new Rect(0, 0, r.width - 40, contentHeight));
             float sy = 2f;
-            DrawInspectorSection(ref sy, "Geometria", ref inspectorGeometryOpen, inspectorGeometry, r.width - 42, lbl);
-            DrawInspectorSection(ref sy, "Propiedades", ref inspectorPropertiesOpen, inspectorProperties, r.width - 42, lbl);
-            DrawInspectorSection(ref sy, "Tributarias / cargas", ref inspectorTributaryOpen, inspectorTributary, r.width - 42, lbl);
-            DrawInspectorSection(ref sy, "Modelo FE / resultados " + activeAnalysisCase, ref inspectorAnalysisOpen, inspectorAnalysis, r.width - 42, lbl);
-            DrawInspectorSection(ref sy, "Capacidad HA", ref inspectorCapacityOpen, inspectorCapacity, r.width - 42, lbl);
+            DrawInspectorSection(ref sy, "IDENTIDAD", ref inspectorGeometryOpen, inspectorGeometry, r.width - 42, lbl);
+            DrawInspectorSection(ref sy, "ANALISIS", ref inspectorPropertiesOpen, inspectorProperties, r.width - 42, lbl);
+            DrawInspectorSection(ref sy, "RESULTADOS | " + activeAnalysisCase, ref inspectorAnalysisOpen, inspectorAnalysis, r.width - 42, lbl);
+            DrawInspectorSection(ref sy, "CARGAS / TRIBUTARIAS", ref inspectorTributaryOpen, inspectorTributary, r.width - 42, lbl);
+            DrawInspectorSection(ref sy, "DEMANDA-CAPACIDAD", ref inspectorCapacityOpen, inspectorCapacity, r.width - 42, lbl);
+            DrawInspectorSection(ref sy, "TRAZABILIDAD", ref inspectorTraceabilityOpen, inspectorTraceability, r.width - 42, lbl);
             GUI.EndScrollView();
         }
 
@@ -1914,6 +2141,30 @@ namespace Mcoc.UnityViewer
                 Debug.Log("[UI QA] PASS: diagnostico FE, filtros y crosswalk 1:N disponibles.");
             else
                 Debug.LogError("[UI QA] FAIL diagnostico FE: " + string.Join(", ", failures));
+        }
+
+        void RunP1L4SelfCheck()
+        {
+            var failures = new List<string>();
+            if (p1l4Metadata == null) failures.Add("metadata ausente");
+            else
+            {
+                if (p1l4Metadata.elements == null || p1l4Metadata.elements.Count == 0) failures.Add("elementos metadata ausentes");
+                if (p1l4Metadata.supports == null || p1l4Metadata.supports.Count == 0) failures.Add("apoyos ausentes");
+                if (p1l4Metadata.cases == null || p1l4Metadata.cases.Count != 5) failures.Add("casos distintos de G/Q/EX/EY/R");
+                if (p1l4Metadata.qa == null || !p1l4Metadata.qa.all_nodes_exist || !p1l4Metadata.qa.all_local_axes_unit_and_orthogonal)
+                    failures.Add("QA de nodos/ejes locales no valido");
+            }
+            if (demandCapacity == null || demandCapacity.validation == null || demandCapacity.validation.status != "PASS")
+                failures.Add("demanda-capacidad ausente o invalida");
+            else if (demandCapacity.elements == null || demandCapacity.elements.Count < 2)
+                failures.Add("faltan columna/muro de demanda-capacidad");
+            if (!demandCapacityByElementId.ContainsKey("E2-P1-C-002") || !demandCapacityByElementId.ContainsKey("E2-P1-M-019"))
+                failures.Add("IDs de estudio no mapeados");
+            if (failures.Count == 0)
+                Debug.Log($"[P1L4 QA] PASS: metadata={p1l4Metadata.elements.Count}, apoyos={p1l4Metadata.supports.Count}, casos={p1l4Metadata.cases.Count}, demanda-capacidad={demandCapacity.elements.Count}.");
+            else
+                Debug.LogError("[P1L4 QA] FAIL: " + string.Join(", ", failures));
         }
 
         void QuickTypeToggle(Rect rect, string label, params string[] keys)

@@ -32,6 +32,15 @@ reproducibles desde los contratos del repositorio.
 
 - P1L4-0, auditoría: documentada en `P1L4_INTEGRATION_AUDIT.md`.
 - P1L4-1, Luis: integrado desde `8c933f4`; generador reproducido con `PASS`.
+- P1L4-2, contrato/loader inicial: implementado. Exporta 1312 miembros, cinco
+  casos, secciones, material elástico, ejes locales y 106 apoyos.
+- P1L4-3, inspector inicial: implementado con secciones IDENTIDAD, ANÁLISIS,
+  RESULTADOS, CARGAS/TRIBUTARIAS, DEMANDA-CAPACIDAD y TRAZABILIDAD.
+- El inspector preserva crosswalk 1:N y lista los esfuerzos de ambos extremos
+  de cada miembro sin combinarlos.
+- El caso activo G/Q/EX/EY/R queda siempre visible en el encabezado.
+- La columna y el muro de Luis están conectados por JSON; fuera de CASE_R el
+  punto de demanda aparece como `N/A`.
 - José: todavía no hay rama/output P1L4 remoto posterior a la consolidación.
 - Los casos disponibles son G, Q, EX, EY y R/CASE_R, todos históricos P1L3.
 - La geometría mostrada es post-P1L3 y el FE de diagnóstico es candidato no ejecutado.
@@ -63,11 +72,8 @@ reproducibles desde los contratos del repositorio.
 
 ## Próximos hitos
 
-1. Contrato/adaptador estructural P1L4 y loader.
-2. Inspector estructural con crosswalk 1:N.
-3. Caso activo y deformada general.
-4. Diagramas M y N/V.
-5. Cargas, apoyos y tributarias.
-6. Demanda-capacidad y trazabilidad.
-7. UX de demostración, QA y guía de defensa.
-
+1. Caso activo y deformada general.
+2. Diagramas M y N/V.
+3. Cargas, apoyos y tributarias.
+4. Gráfico P-M interactivo y ejes locales gráficos.
+5. UX de demostración y guía de defensa.

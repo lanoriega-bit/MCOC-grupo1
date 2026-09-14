@@ -121,6 +121,16 @@ namespace Mcoc.UnityViewer
             return LoadOptional<FeDiagnosticData>(fileName, "diagnostico FE POST-P1L3");
         }
 
+        public static P1L4StructuralMetadataData LoadP1L4StructuralMetadata(string fileName = "p1l4_structural_metadata.json")
+        {
+            return LoadOptional<P1L4StructuralMetadataData>(fileName, "metadatos estructurales P1L4");
+        }
+
+        public static DemandCapacityData LoadDemandCapacity(string fileName = "demanda_capacidad.json")
+        {
+            return LoadOptional<DemandCapacityData>(fileName, "demanda-capacidad P1L4");
+        }
+
         public static P1L3DeliveryData LoadDelivery(string fileName = "p1l3_delivery.json")
         {
             return LoadOptional<P1L3DeliveryData>(fileName, "resumen P1L3");

@@ -1,0 +1,48 @@
+{
+  "format": "P1L4_UNITY_INTEGRATION_MANIFEST_v1",
+  "generated_utc": "2026-09-14T16:38:48.027995+00:00",
+  "pre_p1l4_consolidated_baseline": "aa6bc4b7a207dde4ddac2f3deef1eee54e042f5f",
+  "canonical_unity": "entregas/P1L3/José/viewer_unity",
+  "data_state": {
+    "geometry": "POST_P1L3_CURRENT",
+    "analysis_and_results": "P1L3_ENTREGADO_HISTORICO",
+    "fe_diagnosis": "POST_P1L3_CANDIDATE_NOT_RUN",
+    "demand_capacity": "P1L4_VERIFIED_LUIS_8c933f4",
+    "loads": "P1L3_HISTORICAL_AND_700_NOT_APPLIED"
+  },
+  "sources": {
+    "analysis_model": "entregas/P1L3/results/a3a4/analysis_model.json",
+    "cases_dir": "entregas/P1L3/results/a7/cases",
+    "demand_capacity": "entregas/P1L4/demanda_capacidad/demanda_capacidad.json"
+  },
+  "files": [
+    {
+      "name": "p1l4_structural_metadata.json",
+      "sha256": "00324660ea2f34afb8846f78695e9dca80f9e3975c455af091ed79b2e730fa84"
+    },
+    {
+      "name": "demanda_capacidad.json",
+      "sha256": "ee84df843e43c4c9661edf59240e65f2269d6e307fde0f8015dd19c6c84b394d"
+    }
+  ],
+  "qa": {
+    "element_count": 1312,
+    "unique_opensees_tags": 1312,
+    "unique_analysis_ids": 1312,
+    "support_count": 106,
+    "all_nodes_exist": true,
+    "all_local_axes_unit_and_orthogonal": true,
+    "case_ids": [
+      "CASE_G",
+      "CASE_Q",
+      "CASE_EX",
+      "CASE_EY",
+      "CASE_R"
+    ],
+    "demand_capacity_tags": [
+      10009,
+      10171
+    ],
+    "demand_capacity_status": "PASS"
+  }
+}
