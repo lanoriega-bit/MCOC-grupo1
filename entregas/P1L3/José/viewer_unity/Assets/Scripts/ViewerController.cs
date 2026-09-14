@@ -46,6 +46,7 @@ namespace Mcoc.UnityViewer
         private Texture2D fiberTexture;
         private Texture2D momentCurvatureTexture;
         private Texture2D pmInteractionTexture;
+        private Texture2D wallPmTexture;
         private bool deliveryPanelVisible = false;
         private int deliveryTab = 0;
         private string activeAnalysisCase = "R";
@@ -60,6 +61,16 @@ namespace Mcoc.UnityViewer
         private readonly Dictionary<string, Vector2> memberTrib = new Dictionary<string, Vector2>();
         private readonly Dictionary<string, AnalysisElementResult> analysisByElementId = new Dictionary<string, AnalysisElementResult>();
         private readonly Dictionary<string, ExcludedAnalysisElement> excludedByElementId = new Dictionary<string, ExcludedAnalysisElement>();
+        private readonly Dictionary<int, JoseElementForce> joseByElementTag = new Dictionary<int, JoseElementForce>();
+        private readonly Dictionary<string, JoseElementForce> joseByElementId = new Dictionary<string, JoseElementForce>();
+        private readonly Dictionary<int, JoseNodeDisplacement> joseDisplacementByNode = new Dictionary<int, JoseNodeDisplacement>();
+        private readonly Dictionary<int, JoseSupport> joseSupportByNode = new Dictionary<int, JoseSupport>();
+        private JoseDisplacementsData joseDisplacements;
+        private JoseSupportsData joseSupports;
+        private string joseForcesStatus = "-";
+        private DemandaCapacidadData demandaCapacidad;
+        private readonly Dictionary<string, DemandaCapacidadElement> dcByElementId = new Dictionary<string, DemandaCapacidadElement>();
+        private readonly Dictionary<string, DemandaCapacidadElement> dcByGeometryTag = new Dictionary<string, DemandaCapacidadElement>();
         private readonly Dictionary<string, FeDiagnosticElement> diagnosticByElementId = new Dictionary<string, FeDiagnosticElement>();
         private readonly Dictionary<string, List<GameObject>> byType = new Dictionary<string, List<GameObject>>();
         private readonly Dictionary<string, List<GameObject>> byFloor = new Dictionary<string, List<GameObject>>();
@@ -175,6 +186,22 @@ namespace Mcoc.UnityViewer
             fiberTexture = JsonLoader.LoadPng("fiber_section.png");
             momentCurvatureTexture = JsonLoader.LoadPng("moment_curvature.png");
             pmInteractionTexture = JsonLoader.LoadPng("pm_interaction.png");
+            wallPmTexture = JsonLoader.LoadPng("wall_pm_interaction.png");
+            joseSupports = JsonLoader.LoadJoseSupports();
+            joseSupportByNode.Clear();
+            if (joseSupports != null && joseSupports.supports != null)
+                foreach (var sup in joseSupports.supports)
+                    if (sup != null) joseSupportByNode[sup.node_tag] = sup;
+            demandaCapacidad = JsonLoader.LoadDemandaCapacidad();
+            dcByElementId.Clear();
+            dcByGeometryTag.Clear();
+            if (demandaCapacidad != null && demandaCapacidad.elements != null)
+                foreach (var dc in demandaCapacidad.elements)
+                {
+                    if (dc == null) continue;
+                    if (!string.IsNullOrEmpty(dc.element_id)) dcByElementId[dc.element_id] = dc;
+                    if (!string.IsNullOrEmpty(dc.geometry_elementTag)) dcByGeometryTag[dc.geometry_elementTag] = dc;
+                }
             ActivateAnalysisCase(analysisCases != null && !string.IsNullOrEmpty(analysisCases.default_case) ? analysisCases.default_case : "R");
             tributaries = JsonLoader.LoadTributaries();
             if (tributaries != null)
@@ -228,6 +255,23 @@ namespace Mcoc.UnityViewer
             if (chosen.excluded_elements != null)
                 foreach (var item in chosen.excluded_elements)
                     if (!string.IsNullOrEmpty(item.element_id)) excludedByElementId[item.element_id] = item;
+
+            var joseForces = JsonLoader.LoadJoseForces(normalized);
+            joseByElementTag.Clear();
+            joseByElementId.Clear();
+            if (joseForces != null && joseForces.elements != null)
+                foreach (var joseElement in joseForces.elements)
+                {
+                    if (joseElement == null) continue;
+                    joseByElementTag[joseElement.opensees_element_tag] = joseElement;
+                    if (!string.IsNullOrEmpty(joseElement.element_id)) joseByElementId[joseElement.element_id] = joseElement;
+                }
+            joseForcesStatus = joseForces != null && !string.IsNullOrEmpty(joseForces.status) ? joseForces.status : "-";
+            joseDisplacements = JsonLoader.LoadJoseDisplacements(normalized);
+            joseDisplacementByNode.Clear();
+            if (joseDisplacements != null && joseDisplacements.nodes != null)
+                foreach (var joseNode in joseDisplacements.nodes)
+                    if (joseNode != null) joseDisplacementByNode[joseNode.node_tag] = joseNode;
             if (lastSelected != null) ShowInfo(lastSelected);
         }
 
@@ -1278,6 +1322,58 @@ namespace Mcoc.UnityViewer
             {
                 analysisLine = $"\nResultado FE P1L3 entregado: no incluido (historico)\nMotivo: {excluded.reason}";
             }
+            string joseLine = "\n\nP1L4 Jose (export OpenSees): sin correspondencia";
+            if (joseByElementId.TryGetValue(id, out var jose))
+            {
+                string f1 = $"P={jose.N_end1 / 1000.0:F3} kN, Vy={jose.Vy_end1 / 1000.0:F3} kN, Vz={jose.Vz_end1 / 1000.0:F3} kN, T={jose.T_end1 / 1000.0:F3} kNm, My={jose.My_end1 / 1000.0:F3} kNm, Mz={jose.Mz_end1 / 1000.0:F3} kNm";
+                string f2 = $"P={jose.N_end2 / 1000.0:F3} kN, Vy={jose.Vy_end2 / 1000.0:F3} kN, Vz={jose.Vz_end2 / 1000.0:F3} kN, T={jose.T_end2 / 1000.0:F3} kNm, My={jose.My_end2 / 1000.0:F3} kNm, Mz={jose.Mz_end2 / 1000.0:F3} kNm";
+                string disp = "";
+                if (joseDisplacementByNode.TryGetValue(jose.node_i, out var d1) && joseDisplacementByNode.TryGetValue(jose.node_j, out var d2))
+                    disp = $"ui=({d1.ux_m:F6}, {d1.uy_m:F6}, {d1.uz_m:F6}) m\nuj=({d2.ux_m:F6}, {d2.uy_m:F6}, {d2.uz_m:F6}) m";
+                else
+                    disp = "desplazamientos no disponibles";
+                string supportLine = "";
+                if (joseSupportByNode.TryGetValue(jose.node_i, out var sup))
+                {
+                    supportLine = $"Apoyo nodo {sup.node_tag}: UX={sup.UX} UY={sup.UY} UZ={sup.UZ} RX={sup.RX} RY={sup.RY} RZ={sup.RZ}";
+                }
+                joseLine = $"\n\nP1L4 Jose (export OpenSees)\n" +
+                    $"Caso: {jose.case_name}\nstatus: {joseForcesStatus}\n" +
+                    $"OpenSees tag: {jose.opensees_element_tag}\n" +
+                    $"Extremo i ({jose.node_i}): {f1}\n" +
+                    $"Extremo j ({jose.node_j}): {f2}\n" +
+                    disp +
+                    (string.IsNullOrEmpty(supportLine) ? "" : "\n" + supportLine);
+            }
+            string dcLine = "";
+            DemandaCapacidadElement dc = null;
+            if (dcByElementId.TryGetValue(id, out dc)) { }
+            else if (dcByGeometryTag.TryGetValue(id, out dc)) { }
+            if (dc == null && !string.IsNullOrEmpty(ei.id))
+            {
+                if (dcByGeometryTag.TryGetValue(ei.id, out dc)) { }
+            }
+            if (dc != null && dc.demand != null && dc.demand_capacity != null)
+            {
+                var d = dc.demand;
+                var dcRes = dc.demand_capacity;
+                string demF = dcRes.pm_axis == "Mz"
+                    ? $"P={d.P_kN:F3} kN | Mz={d.Mz_kNm:F3} kNm"
+                    : $"P={d.P_kN:F3} kN | My={d.My_kNm:F3} kNm";
+                string veredicto = dcRes.inside_envelope
+                    ? "DENTRO de la envolvente (OK)"
+                    : "FUERA de la envolvente (riesgo)";
+                string cap = capacity != null && !string.IsNullOrEmpty(capacity.mapped_element_id) && capacity.mapped_element_id == id
+                    ? $"\nCapacidad HA (laboratorio): {capacity.b_m:F2} x {capacity.h_m:F2} m, {capacity.num_bars} barras, f'c={capacity.fc_pa / 1e6:F1} MPa, fy={capacity.fy_pa / 1e6:F1} MPa"
+                    : "";
+                dcLine = $"\n\nP1L4 Luis: demanda-capacidad\n" +
+                    $"Elemento estudio: {dc.element_id} ({dc.type}) tag {dc.opensees_tag}\n" +
+                    $"Caso: {d.case_name}\n" +
+                    $"Demanda: {demF}\n" +
+                    $"Capacidad interpolada Mabs: {dcRes.interpolated_capacity_M_abs_kNm:F3} kNm\n" +
+                    $"Eje P-M: {dcRes.pm_axis}\n" +
+                    $"Chequeo: {veredicto}" + cap;
+            }
             string diagnosticLine = "";
             if (!string.IsNullOrEmpty(ei.diagnosticStatus))
             {
@@ -1301,6 +1397,9 @@ namespace Mcoc.UnityViewer
             {
                 capacityLine = $"\nCapacidad HA (laboratorio): {capacity.b_m:F2} x {capacity.h_m:F2} m, {capacity.num_bars} barras, f'c={capacity.fc_pa / 1e6:F1} MPa, fy={capacity.fy_pa / 1e6:F1} MPa";
             }
+            inspectorCapacity = string.IsNullOrEmpty(dcLine)
+                ? (string.IsNullOrEmpty(capacityLine) ? "Este elemento no tiene un analisis de capacidad asociado." : capacityLine.TrimStart('\n'))
+                : dcLine.TrimStart('\n');
             inspectorIdentity = $"{id}\n{cat} | Piso {ei.floor} | {(string.IsNullOrEmpty(ei.building) ? "Sin edificio" : ei.building)}\nEjes: {ejes}";
             string visualArea = ei.visualAreaM2 > 0 ? $"\nArea visual: {ei.visualAreaM2:F3} m2" : "";
             string source = !string.IsNullOrEmpty(ei.sourceDxf) || !string.IsNullOrEmpty(ei.sourceLayer)
@@ -1309,8 +1408,7 @@ namespace Mcoc.UnityViewer
             inspectorGeometry = $"Coordenadas: {coord}\nNodo i: {P(ei.nodeI)}\nNodo j: {P(ei.nodeJ)}\nLongitud: {ei.lengthM:F3} m{visualArea}";
             inspectorProperties = $"Seccion: {section}\nMaterial: {ei.materialName}\nelementTag: {ei.elementTag ?? "-"}{source}{confidence}";
             inspectorTributary = string.IsNullOrEmpty(cargaLine) ? "Sin carga tributaria asociada." : cargaLine;
-            inspectorAnalysis = (analysisLine + diagnosticLine).TrimStart('\n');
-            inspectorCapacity = string.IsNullOrEmpty(capacityLine) ? "Este elemento no tiene un analisis de capacidad asociado." : capacityLine.TrimStart('\n');
+            inspectorAnalysis = (analysisLine + joseLine + dcLine + diagnosticLine).TrimStart('\n');
             lastInfo = $"ID: {id}\n" +
                 $"elementTag: {ei.elementTag ?? "-"}\n" +
                 $"Tipo: {cat}\n" +
@@ -1323,7 +1421,7 @@ namespace Mcoc.UnityViewer
                 $"Longitud: {ei.lengthM.ToString("F3")} m\n" +
                 $"Tributaria: {trib}" +
                 (string.IsNullOrEmpty(cargaLine) ? "" : "\n" + cargaLine) +
-                analysisLine + diagnosticLine + capacityLine;
+                analysisLine + joseLine + dcLine + diagnosticLine + capacityLine;
             if (infoText != null) infoText.text = lastInfo;
             lastSelected = ei;
             inspectorVisible = true;
@@ -1425,7 +1523,7 @@ namespace Mcoc.UnityViewer
         {
             float width = Mathf.Clamp(Screen.width - 40f, 360f, 920f);
             float x = (Screen.width - width) * 0.5f;
-            float height = Mathf.Min(390f, Screen.height - 180f);
+            float height = Mathf.Min(430f, Screen.height - 150f);
             return new Rect(x, Screen.height - height - 10f, width, height);
         }
 
@@ -1554,12 +1652,12 @@ namespace Mcoc.UnityViewer
                 GUI.Label(new Rect(fr.x + 5, fr.y + 2, fr.width - 10, fr.height - 4), fields[i], text);
             }
             float gap = 8f;
-            float imageW = (body.width - gap * 2f) / 3f;
+            float imageW = (body.width - gap * 3f) / 4f;
             float imageY = body.y + 72;
-            float imageH = Mathf.Min(166f, body.height - 126f);
-            Texture2D[] images = { fiberTexture, momentCurvatureTexture, pmInteractionTexture };
-            string[] labels = { "Discretizacion y refuerzo", "Momento-curvatura M-phi", "Interaccion P-M" };
-            for (int i = 0; i < 3; i++)
+            float imageH = Mathf.Min(150f, body.height - 126f);
+            Texture2D[] images = { fiberTexture, momentCurvatureTexture, pmInteractionTexture, wallPmTexture };
+            string[] labels = { "Discretizacion y refuerzo", "Momento-curvatura M-phi", "Columna P-M (P1L3)", "Muro P-M (P1L4)" };
+            for (int i = 0; i < 4; i++)
             {
                 Rect ir = new Rect(body.x + i * (imageW + gap), imageY, imageW, imageH);
                 GUI.Box(ir, "");

@@ -131,6 +131,28 @@ namespace Mcoc.UnityViewer
             return LoadOptional<CapacityData>(fileName, "capacidad HA");
         }
 
+        public static JoseInternalForcesData LoadJoseForces(string caseName, string folder = "p1l4_jose/fuerzas_internas")
+        {
+            return LoadOptional<JoseInternalForcesData>(
+                $"{folder}/{caseName}.json", $"fuerzas P1L4 Jose caso {caseName}");
+        }
+
+        public static JoseDisplacementsData LoadJoseDisplacements(string caseName, string folder = "p1l4_jose/desplazamientos")
+        {
+            return LoadOptional<JoseDisplacementsData>(
+                $"{folder}/{caseName}.json", $"desplazamientos P1L4 Jose caso {caseName}");
+        }
+
+        public static JoseSupportsData LoadJoseSupports(string fileName = "p1l4_jose/apoyos.json")
+        {
+            return LoadOptional<JoseSupportsData>(fileName, "apoyos P1L4 Jose");
+        }
+
+        public static DemandaCapacidadData LoadDemandaCapacidad(string fileName = "demanda_capacidad.json")
+        {
+            return LoadOptional<DemandaCapacidadData>(fileName, "demanda-capacidad P1L4");
+        }
+
         public static Texture2D LoadPng(string fileName)
         {
             string path = Path.Combine(Application.streamingAssetsPath, fileName);

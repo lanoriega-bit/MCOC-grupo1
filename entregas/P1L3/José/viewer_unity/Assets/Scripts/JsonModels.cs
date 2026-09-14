@@ -357,6 +357,153 @@ namespace Mcoc.UnityViewer
         public string reason;
     }
 
+    // ---------- P1L4 Jose: exportador OpenSees -> JSON/CSV ----------
+    // Contrato P1L4_JOSE_INTERNAL_FORCES_v1 (fuerzas_internas/{CASE}.json)
+
+    [Serializable]
+    public class JoseInternalForcesData
+    {
+        public string format;
+        public string run_id;
+        public string case_name;
+        public string status;
+        public int element_count;
+        public List<JoseElementForce> elements;
+    }
+
+    [Serializable]
+    public class JoseElementForce
+    {
+        public string case_name;
+        public int opensees_element_tag;
+        public string element_id;
+        public string analysis_id;
+        public string geometry_elementTag;
+        public string type;
+        public string floor;
+        public int node_i;
+        public int node_j;
+        public double N_end1;
+        public double Vy_end1;
+        public double Vz_end1;
+        public double T_end1;
+        public double My_end1;
+        public double Mz_end1;
+        public double N_end2;
+        public double Vy_end2;
+        public double Vz_end2;
+        public double T_end2;
+        public double My_end2;
+        public double Mz_end2;
+    }
+
+    [Serializable]
+    public class JoseDisplacementsData
+    {
+        public string format;
+        public string run_id;
+        public string case_name;
+        public string status;
+        public int node_count;
+        public List<JoseNodeDisplacement> nodes;
+    }
+
+    [Serializable]
+    public class JoseNodeDisplacement
+    {
+        public int node_tag;
+        public string floor;
+        public double ux_m;
+        public double uy_m;
+        public double uz_m;
+        public double rx_rad;
+        public double ry_rad;
+        public double rz_rad;
+    }
+
+    [Serializable]
+    public class JoseSupportsData
+    {
+        public string format;
+        public string status;
+        public int support_count;
+        public List<JoseSupport> supports;
+    }
+
+    [Serializable]
+    public class JoseSupport
+    {
+        public int node_tag;
+        public string level;
+        public int UX;
+        public int UY;
+        public int UZ;
+        public int RX;
+        public int RY;
+        public int RZ;
+    }
+
+    // ---------- P1L4 Luis: demanda-capacidad P-M ----------
+    // Contrato P1L4_UNITY_DEMAND_CAPACITY_v1 (demanda_capacidad.json)
+
+    [Serializable]
+    public class DemandaCapacidadData
+    {
+        public string format;
+        public string active_case;
+        public List<DemandaCapacidadElement> elements;
+    }
+
+    [Serializable]
+    public class DemandaCapacidadElement
+    {
+        public string element_id;
+        public string structural_id;
+        public string type;
+        public int opensees_tag;
+        public string geometry_elementTag;
+        public string analysis_id;
+        public List<int> nodes;
+        public DemandaCapacidadDemand demand;
+        public DemandaCapacidadCapacity capacity;
+        public DemandaCapacidadResult demand_capacity;
+    }
+
+    [Serializable]
+    public class DemandaCapacidadDemand
+    {
+        public string case_name;
+        public string selected_end;
+        public string pm_component;
+        public double P_kN;
+        public double Vy_kN;
+        public double Vz_kN;
+        public double T_kNm;
+        public double My_kNm;
+        public double Mz_kNm;
+    }
+
+    [Serializable]
+    public class DemandaCapacidadCapacity
+    {
+        public string status;
+        public string pm_axis;
+        public string source;
+    }
+
+    [Serializable]
+    public class DemandaCapacidadResult
+    {
+        public double P_kN;
+        public double compression_magnitude_kN;
+        public double M_kNm;
+        public double M_abs_kNm;
+        public string pm_axis;
+        public bool inside_envelope;
+        public double interpolated_capacity_M_abs_kNm;
+        public string method;
+    }
+
     [Serializable]
     public class FeDiagnosticData
     {
