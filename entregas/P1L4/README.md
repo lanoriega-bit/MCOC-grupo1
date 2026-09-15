@@ -36,6 +36,8 @@ participa en FE y no representa una superficie de terreno inventada.
 
 - P1L4-0, auditoría: documentada en `P1L4_INTEGRATION_AUDIT.md`.
 - P1L4-1, Luis: integrado desde `8c933f4`; generador reproducido con `PASS`.
+- P1L4-2, José: integrado desde `64ad560`; exportador reproducible y salida
+  plana JSON/CSV para 813 nodos, 1312 miembros, 106 apoyos, cargas y tributarias.
 - P1L4-2, contrato/loader inicial: implementado. Exporta 1312 miembros, cinco
   casos, secciones, material elástico, ejes locales y 106 apoyos.
 - P1L4-3, inspector inicial: implementado con secciones IDENTIDAD, ANÁLISIS,
@@ -45,11 +47,12 @@ participa en FE y no representa una superficie de terreno inventada.
 - El caso activo G/Q/EX/EY/R queda siempre visible en el encabezado.
 - La columna y el muro de Luis están conectados por JSON; fuera de CASE_R el
   punto de demanda aparece como `N/A`.
-- José: todavía no hay rama/output P1L4 remoto posterior a la consolidación.
 - Los casos disponibles son G, Q, EX, EY y R/CASE_R, todos históricos P1L3.
 - La geometría mostrada es post-P1L3 y el FE de diagnóstico es candidato no ejecutado.
 - P1L4-4/5: selector G/Q/EX/EY/R, deformada nodal con amplificación y diagramas
   My/Mz/N/Vy/Vz del elemento seleccionado ya están implementados.
+- Cada componente dispone además de gráfico 2D legible, selector de miembro
+  cuando el crosswalk es 1:N, valores i/j, unidades y caso activo.
 - Los diagramas muestran los dos valores de extremo de OpenSees unidos por una
   interpolación lineal únicamente gráfica; no se presenta como distribución exacta.
 - P1L4-6: los 106 apoyos FE se dibujan en su coordenada nodal exacta y exponen
@@ -68,8 +71,8 @@ participa en FE y no representa una superficie de terreno inventada.
   interpolación visual.
 - Los puntos P-M con `valid=false` no se conectan como envolvente.
 - Para el muro `E2-P1-M-019` siempre debe verse `Armadura: ASUMIDO_LAB`.
-- Los resultados A7 se rotulan `P1L3_ENTREGADO_HISTORICO` hasta que llegue una
-  salida P1L4 verificada de José.
+- La salida de José se rotula `P1L3_ENTREGADO_HISTORICO`: es un export P1L4
+  reproducible de resultados A7 verificados, no un recálculo post-consolidación.
 
 ## Contratos de entrada
 
@@ -81,6 +84,7 @@ participa en FE y no representa una superficie de terreno inventada.
 | Diagnóstico/crosswalk | `results/post_p1l3_candidate/analysis_model_post_p1l3_candidate.json` | CANDIDATE_NOT_RUN |
 | Tributarias | `Assets/StreamingAssets/tributary_areas.json` | P1L3_ENTREGADO_HISTORICO |
 | Demanda-capacidad | `entregas/P1L4/demanda_capacidad/demanda_capacidad.json` | P1L4_VERIFICADO |
+| Export José: fuerzas/desplazamientos/apoyos | `entregas/P1L4/Jose/resultados/` | P1L3_ENTREGADO_HISTORICO |
 | Cargas 700 | `results/a1a2/load_zones_700_completion/load_catalog_700.json` | AUDITADO_NOT_APPLIED |
 
 ## Controles principales
@@ -89,7 +93,7 @@ participa en FE y no representa una superficie de terreno inventada.
   G, Q, EX, EY y R.
 - `Deformada` activa los desplazamientos nodales reales y el control contiguo
   modifica únicamente su amplificación gráfica.
-- `My`, `Mz`, `N`, `Vy` y `Vz` eligen el diagrama del elemento seleccionado.
+- `My`, `Mz`, `N`, `Vy` y `Vz` eligen el diagrama 3D y abren su gráfico 2D.
 - `Ejes x/y/z` dibuja el sistema local: x rojo, y verde y z azul.
 - `Cargas 700`, `Tributarias` y `Apoyos FE` están en Visibilidad rápida.
 - `Diagnóstico FE` continúa disponible como modo separado y conserva el crosswalk 1:N.
@@ -138,8 +142,8 @@ participa en FE y no representa una superficie de terreno inventada.
 
 ## Bloqueadores reales
 
-- No existe todavía una corrida P1L4 de José sobre la topología consolidada.
-- Por ello, G/Q/EX/EY/R y tributarias se muestran como históricos P1L3.
+- No existe una corrida OpenSees posterior sobre la topología consolidada;
+  por ello G/Q/EX/EY/R y tributarias se muestran correctamente como históricos P1L3.
 - El catálogo 700 está visible para auditoría, pero no se aplica a resultados.
 - Seis registros puntuales carecen de posición inequívoca y diez PP_LOSA esperan
   mapeo de espesor; Unity no inventa su geometría ni receptor.

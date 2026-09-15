@@ -68,12 +68,18 @@ namespace Mcoc.UnityViewer
         private int diagramMode = 0; // 0 off, 1 My, 2 Mz, 3 N, 4 Vy, 5 Vz
         private string diagramCaption = "Diagramas: seleccione un elemento";
         private readonly List<GameObject> selectedDiagramObjects = new List<GameObject>();
+        private bool diagram2DVisible = false;
+        private int selectedDiagramMemberIndex = 0;
         private bool demandCapacityPlotVisible = false;
         private bool localAxesVisible = false;
         private readonly List<GameObject> selectedLocalAxisObjects = new List<GameObject>();
         private readonly Dictionary<string, Vector2> memberTrib = new Dictionary<string, Vector2>();
         private readonly Dictionary<string, List<AnalysisElementResult>> analysisByElementId = new Dictionary<string, List<AnalysisElementResult>>();
         private readonly Dictionary<string, ExcludedAnalysisElement> excludedByElementId = new Dictionary<string, ExcludedAnalysisElement>();
+        private readonly Dictionary<string, JoseElementForce> joseByAnalysisId = new Dictionary<string, JoseElementForce>();
+        private readonly Dictionary<int, JoseNodeDisplacement> joseDisplacementByNode = new Dictionary<int, JoseNodeDisplacement>();
+        private JoseSupportsData joseSupports;
+        private string joseForcesStatus = "N/A";
         private readonly Dictionary<string, FeDiagnosticElement> diagnosticByElementId = new Dictionary<string, FeDiagnosticElement>();
         private readonly Dictionary<string, List<P1L4ElementMetadata>> p1l4MetadataByElementId = new Dictionary<string, List<P1L4ElementMetadata>>();
         private readonly Dictionary<string, PhysicalContextClassification> physicalContextByElementId = new Dictionary<string, PhysicalContextClassification>();
@@ -212,6 +218,7 @@ namespace Mcoc.UnityViewer
             fiberTexture = JsonLoader.LoadPng("fiber_section.png");
             momentCurvatureTexture = JsonLoader.LoadPng("moment_curvature.png");
             pmInteractionTexture = JsonLoader.LoadPng("pm_interaction.png");
+            joseSupports = JsonLoader.LoadJoseSupports();
             ActivateAnalysisCase(analysisCases != null && !string.IsNullOrEmpty(analysisCases.default_case) ? analysisCases.default_case : "R");
             tributaries = JsonLoader.LoadTributaries();
             if (tributaries != null)
@@ -304,6 +311,22 @@ namespace Mcoc.UnityViewer
             if (chosen.excluded_elements != null)
                 foreach (var item in chosen.excluded_elements)
                     if (!string.IsNullOrEmpty(item.element_id)) excludedByElementId[item.element_id] = item;
+
+            // La salida plana entregada por José es la fuente integrada de Semana 4.
+            // Se indexa por analysis_id para preservar relaciones geometría 1:N.
+            joseByAnalysisId.Clear();
+            var joseForces = JsonLoader.LoadJoseForces(normalized);
+            joseForcesStatus = joseForces != null && !string.IsNullOrEmpty(joseForces.status)
+                ? joseForces.status : "N/A";
+            if (joseForces != null && joseForces.elements != null)
+                foreach (var item in joseForces.elements)
+                    if (item != null && !string.IsNullOrEmpty(item.analysis_id))
+                        joseByAnalysisId[item.analysis_id] = item;
+            joseDisplacementByNode.Clear();
+            var joseDisplacements = JsonLoader.LoadJoseDisplacements(normalized);
+            if (joseDisplacements != null && joseDisplacements.nodes != null)
+                foreach (var item in joseDisplacements.nodes)
+                    if (item != null) joseDisplacementByNode[item.node_tag] = item;
             if (model != null && model.solids != null) RebuildActiveDeformedShape();
             if (lastSelected != null) ShowInfo(lastSelected);
         }
@@ -330,8 +353,14 @@ namespace Mcoc.UnityViewer
             foreach (var element in analysisResults.elements)
             {
                 if (element == null || !nodes.TryGetValue(element.node_i, out var ni) || !nodes.TryGetValue(element.node_j, out var nj)) continue;
-                Vector3 p0 = V(ni.coord) + new Vector3((float)ni.ux_m, (float)ni.uy_m, (float)ni.uz_m) * activeDeformationScale;
-                Vector3 p1 = V(nj.coord) + new Vector3((float)nj.ux_m, (float)nj.uy_m, (float)nj.uz_m) * activeDeformationScale;
+                Vector3 di = joseDisplacementByNode.TryGetValue(element.node_i, out var jdi)
+                    ? new Vector3((float)jdi.ux_m, (float)jdi.uy_m, (float)jdi.uz_m)
+                    : new Vector3((float)ni.ux_m, (float)ni.uy_m, (float)ni.uz_m);
+                Vector3 dj = joseDisplacementByNode.TryGetValue(element.node_j, out var jdj)
+                    ? new Vector3((float)jdj.ux_m, (float)jdj.uy_m, (float)jdj.uz_m)
+                    : new Vector3((float)nj.ux_m, (float)nj.uy_m, (float)nj.uz_m);
+                Vector3 p0 = V(ni.coord) + di * activeDeformationScale;
+                Vector3 p1 = V(nj.coord) + dj * activeDeformationScale;
                 var go = new GameObject($"P1L4_DEF_{activeAnalysisCase}_{element.analysis_id}");
                 var line = go.AddComponent<LineRenderer>();
                 line.useWorldSpace = false;
@@ -1773,6 +1802,8 @@ namespace Mcoc.UnityViewer
         void SetDiagramMode(int mode)
         {
             diagramMode = mode;
+            diagram2DVisible = mode != 0;
+            selectedDiagramMemberIndex = 0;
             RebuildSelectedDiagram();
         }
 
@@ -1805,30 +1836,35 @@ namespace Mcoc.UnityViewer
             int component = diagramMode == 1 ? 4 : diagramMode == 2 ? 5 : diagramMode == 3 ? 0 : diagramMode == 4 ? 1 : 2;
             string componentName = diagramMode == 1 ? "My" : diagramMode == 2 ? "Mz" : diagramMode == 3 ? "N" : diagramMode == 4 ? "Vy" : "Vz";
             string units = diagramMode <= 2 ? "kN.m" : "kN";
-            double maxAbs = 0.0;
-            foreach (var result in results)
-            {
-                if (result.localForce_end1 != null && result.localForce_end1.Count > component) maxAbs = System.Math.Max(maxAbs, System.Math.Abs(result.localForce_end1[component] / 1000.0));
-                if (result.localForce_end2 != null && result.localForce_end2.Count > component) maxAbs = System.Math.Max(maxAbs, System.Math.Abs(result.localForce_end2[component] / 1000.0));
-            }
-            if (results.Count == 0 || metadata.Count == 0 || maxAbs <= 1.0e-12)
+            if (results.Count == 0 || metadata.Count == 0)
             {
                 diagramCaption = $"{componentName}: N/A para {id} en {activeAnalysisCase}";
                 return;
             }
-            float displayScale = 3.0f / (float)maxAbs;
-            foreach (var result in results)
+            selectedDiagramMemberIndex = Mathf.Clamp(selectedDiagramMemberIndex, 0, results.Count - 1);
+            var result = results[selectedDiagramMemberIndex];
+            var end1 = ForceVector(result, true);
+            var end2 = ForceVector(result, false);
+            double maxAbs = 0.0;
+            if (end1 != null && end1.Count > component) maxAbs = System.Math.Max(maxAbs, System.Math.Abs(end1[component] / 1000.0));
+            if (end2 != null && end2.Count > component) maxAbs = System.Math.Max(maxAbs, System.Math.Abs(end2[component] / 1000.0));
+            if (maxAbs <= 1.0e-12)
             {
-                P1L4ElementMetadata meta = null;
-                foreach (var candidate in metadata)
-                    if (candidate.analysis_id == result.analysis_id) { meta = candidate; break; }
-                if (meta == null || result.localForce_end1 == null || result.localForce_end2 == null || result.localForce_end1.Count <= component || result.localForce_end2.Count <= component) continue;
+                diagramCaption = $"{componentName}: N/A para {result.analysis_id} en {activeAnalysisCase}";
+                return;
+            }
+            float displayScale = 3.0f / (float)maxAbs;
+            P1L4ElementMetadata meta = null;
+            foreach (var candidate in metadata)
+                if (candidate.analysis_id == result.analysis_id) { meta = candidate; break; }
+            if (meta != null && end1 != null && end2 != null && end1.Count > component && end2.Count > component)
+            {
                 Vector3 p0 = V(meta.node_i_coord_m);
                 Vector3 p1 = V(meta.node_j_coord_m);
                 List<double> offsetAxis = diagramMode == 1 || diagramMode == 5 ? meta.local_axes.z : meta.local_axes.y;
                 Vector3 axis = V(offsetAxis).normalized;
-                float value0 = (float)(result.localForce_end1[component] / 1000.0);
-                float value1 = (float)(result.localForce_end2[component] / 1000.0);
+                float value0 = (float)(end1[component] / 1000.0);
+                float value1 = (float)(end2[component] / 1000.0);
                 var go = new GameObject($"P1L4_DIAG_{componentName}_{result.analysis_id}");
                 var line = go.AddComponent<LineRenderer>();
                 line.useWorldSpace = false;
@@ -1845,7 +1881,18 @@ namespace Mcoc.UnityViewer
             }
             typeVisible["analysis_diagram"] = true;
             ReapplyAll();
-            diagramCaption = $"{componentName} | {activeAnalysisCase} | max |valor|={maxAbs:F2} {units} | escala grafica 3 m/max | interpolacion lineal entre extremos OpenSees";
+            diagramCaption = $"{componentName} | {activeAnalysisCase} | {result.analysis_id} ({selectedDiagramMemberIndex + 1}/{results.Count}) | max |valor|={maxAbs:F2} {units} | END_FORCES_INTERPOLATION";
+        }
+
+        List<double> ForceVector(AnalysisElementResult result, bool firstEnd)
+        {
+            if (result != null && !string.IsNullOrEmpty(result.analysis_id) && joseByAnalysisId.TryGetValue(result.analysis_id, out var jose))
+            {
+                return firstEnd
+                    ? new List<double> { jose.N_end1, jose.Vy_end1, jose.Vz_end1, jose.T_end1, jose.My_end1, jose.Mz_end1 }
+                    : new List<double> { jose.N_end2, jose.Vy_end2, jose.Vz_end2, jose.T_end2, jose.My_end2, jose.Mz_end2 };
+            }
+            return firstEnd ? result?.localForce_end1 : result?.localForce_end2;
         }
 
         List<P1L4ElementMetadata> MetadataForSelection(ElementInfo ei, string id)
@@ -1939,8 +1986,8 @@ namespace Mcoc.UnityViewer
             foreach (var row in rows)
             {
                 sb.AppendLine($"{row.analysis_id} | OpenSees {row.opensees_tag}");
-                sb.AppendLine("Extremo i: " + FormatForces(row.localForce_end1));
-                sb.AppendLine("Extremo j: " + FormatForces(row.localForce_end2));
+                sb.AppendLine("Extremo i: " + FormatForces(ForceVector(row, true)));
+                sb.AppendLine("Extremo j: " + FormatForces(ForceVector(row, false)));
                 var ni = FindAnalysisNode(row.node_i);
                 var nj = FindAnalysisNode(row.node_j);
                 if (ni == null || nj == null) sb.AppendLine("Desplazamientos: N/A");
@@ -1950,6 +1997,8 @@ namespace Mcoc.UnityViewer
                     sb.AppendLine($"uj=({nj.ux_m:F6}, {nj.uy_m:F6}, {nj.uz_m:F6}) m");
                 }
             }
+            int expectedCount = analysisResults != null && analysisResults.elements != null ? analysisResults.elements.Count : 0;
+            sb.AppendLine($"Fuente integrada José: {joseForcesStatus} ({joseByAnalysisId.Count}/{expectedCount} miembros del caso cargados)");
             return sb.ToString().TrimEnd();
         }
 
@@ -2075,13 +2124,14 @@ namespace Mcoc.UnityViewer
             if (seismic != null) DrawSeismicValueLabels();
             DrawPhysicalContextLabels();
             DrawLegend();
+            DrawElementDiagram2D();
             DrawExpandedGraph();
             DrawDemandCapacityPlot();
         }
 
         void DrawDiagramControls()
         {
-            float width = 490f;
+            float width = 570f;
             float x = (Screen.width - width) * 0.5f;
             Rect r = new Rect(x, 142f, width, 58f);
             GUI.Box(r, "");
@@ -2093,15 +2143,89 @@ namespace Mcoc.UnityViewer
                 if (diagramMode == i) button.normal.textColor = new Color(0.25f, 1f, 0.5f);
                 if (GUI.Button(new Rect(r.x + 7 + i * 55f, r.y + 5, 50f, 22f), labels[i], button)) SetDiagramMode(i);
             }
-            bool axes = GUI.Toggle(new Rect(r.x + 344, r.y + 6, 138, 20), localAxesVisible, "Ejes x/y/z");
+            bool axes = GUI.Toggle(new Rect(r.x + 344, r.y + 6, 105, 20), localAxesVisible, "Ejes x/y/z");
             if (axes != localAxesVisible)
             {
                 localAxesVisible = axes;
                 RebuildSelectedLocalAxes();
             }
+            bool plot2D = GUI.Toggle(new Rect(r.x + 452, r.y + 6, 105, 20), diagram2DVisible, "Gráfico 2D");
+            if (plot2D != diagram2DVisible) diagram2DVisible = plot2D;
             var text = new GUIStyle(GUI.skin.label);
             text.fontSize = 10; text.normal.textColor = new Color(0.9f, 0.94f, 1f); text.wordWrap = false;
             GUI.Label(new Rect(r.x + 7, r.y + 31, r.width - 14, 20), diagramCaption, text);
+        }
+
+        void DrawElementDiagram2D()
+        {
+            if (!diagram2DVisible || diagramMode == 0 || lastSelected == null) return;
+            string id = string.IsNullOrEmpty(lastSelected.humanId) ? lastSelected.id : lastSelected.humanId;
+            var rows = ResultsForSelection(lastSelected, id);
+            if (rows.Count == 0) return;
+            selectedDiagramMemberIndex = Mathf.Clamp(selectedDiagramMemberIndex, 0, rows.Count - 1);
+            var row = rows[selectedDiagramMemberIndex];
+            int component = diagramMode == 1 ? 4 : diagramMode == 2 ? 5 : diagramMode == 3 ? 0 : diagramMode == 4 ? 1 : 2;
+            string componentName = diagramMode == 1 ? "My" : diagramMode == 2 ? "Mz" : diagramMode == 3 ? "N" : diagramMode == 4 ? "Vy" : "Vz";
+            string units = diagramMode <= 2 ? "kN.m" : "kN";
+            var end1 = ForceVector(row, true);
+            var end2 = ForceVector(row, false);
+            if (end1 == null || end2 == null || end1.Count <= component || end2.Count <= component) return;
+            double v0 = end1[component] / 1000.0;
+            double v1 = end2[component] / 1000.0;
+            double maxAbs = System.Math.Max(1.0e-9, System.Math.Max(System.Math.Abs(v0), System.Math.Abs(v1)));
+
+            float width = Mathf.Min(700f, Screen.width - 420f);
+            float height = Mathf.Min(390f, Screen.height - 250f);
+            Rect panel = new Rect((Screen.width - width) * 0.5f, 210f, width, height);
+            GUI.Box(panel, "");
+            GUI.DrawTexture(panel, MakeTex(2, 2, new Color(0.01f, 0.02f, 0.045f, 0.98f)));
+            var title = new GUIStyle(GUI.skin.label);
+            title.fontSize = 15; title.fontStyle = FontStyle.Bold; title.normal.textColor = Color.white;
+            GUI.Label(new Rect(panel.x + 14, panel.y + 9, panel.width - 60, 24), $"{componentName} 2D | caso {activeAnalysisCase} | {id}", title);
+            if (GUI.Button(new Rect(panel.xMax - 44, panel.y + 7, 32, 25), "X")) { diagram2DVisible = false; return; }
+
+            if (rows.Count > 1)
+            {
+                if (GUI.Button(new Rect(panel.x + 14, panel.y + 38, 34, 22), "<"))
+                {
+                    selectedDiagramMemberIndex = (selectedDiagramMemberIndex - 1 + rows.Count) % rows.Count;
+                    RebuildSelectedDiagram();
+                    return;
+                }
+                GUI.Label(new Rect(panel.x + 54, panel.y + 39, 260, 20), $"Miembro FE {selectedDiagramMemberIndex + 1}/{rows.Count}: {row.analysis_id}");
+                if (GUI.Button(new Rect(panel.x + 315, panel.y + 38, 34, 22), ">"))
+                {
+                    selectedDiagramMemberIndex = (selectedDiagramMemberIndex + 1) % rows.Count;
+                    RebuildSelectedDiagram();
+                    return;
+                }
+            }
+            else GUI.Label(new Rect(panel.x + 14, panel.y + 39, 330, 20), $"Miembro FE: {row.analysis_id} | OpenSees {row.opensees_tag}");
+
+            Rect plot = new Rect(panel.x + 72, panel.y + 78, panel.width - 102, panel.height - 150);
+            float zeroY = plot.center.y;
+            DrawGuiLine(new Vector2(plot.x, zeroY), new Vector2(plot.xMax, zeroY), new Color(0.78f, 0.82f, 0.9f), 2f);
+            DrawGuiLine(new Vector2(plot.x, plot.y), new Vector2(plot.x, plot.yMax), Color.white, 2f);
+            float scale = (plot.height * 0.42f) / (float)maxAbs;
+            Vector2 p0 = new Vector2(plot.x, zeroY - (float)v0 * scale);
+            Vector2 p1 = new Vector2(plot.xMax, zeroY - (float)v1 * scale);
+            Color curve = new Color(0.2f, 0.95f, 0.65f);
+            DrawGuiLine(new Vector2(plot.x, zeroY), p0, new Color(curve.r, curve.g, curve.b, 0.55f), 1f);
+            DrawGuiLine(p0, p1, curve, 4f);
+            DrawGuiLine(p1, new Vector2(plot.xMax, zeroY), new Color(curve.r, curve.g, curve.b, 0.55f), 1f);
+            GUI.color = curve;
+            GUI.DrawTexture(new Rect(p0.x - 5, p0.y - 5, 10, 10), whiteTex);
+            GUI.DrawTexture(new Rect(p1.x - 5, p1.y - 5, 10, 10), whiteTex);
+            GUI.color = Color.white;
+
+            var label = new GUIStyle(GUI.skin.label);
+            label.fontSize = 11; label.normal.textColor = new Color(0.93f, 0.96f, 1f); label.wordWrap = true;
+            GUI.Label(new Rect(plot.x - 18, plot.yMax + 5, 100, 20), "x=0", label);
+            GUI.Label(new Rect(plot.xMax - 72, plot.yMax + 5, 90, 20), "x=L", label);
+            GUI.Label(new Rect(plot.x + 5, p0.y - 24, 180, 20), $"i: {v0:F3} {units}", label);
+            GUI.Label(new Rect(plot.xMax - 190, p1.y - 24, 185, 20), $"j: {v1:F3} {units}", label);
+            GUI.Label(new Rect(panel.x + 14, panel.yMax - 52, panel.width - 28, 40),
+                $"Representación: END_FORCES_INTERPOLATION. Valores de extremos desde el export de José ({joseForcesStatus}); la recta es interpolación visual, no una distribución interna calculada.", label);
         }
 
         void DrawP1L4Header()
@@ -2709,6 +2833,8 @@ namespace Mcoc.UnityViewer
             activeDeformationVisible = false;
             if (typeVisible.ContainsKey("analysis_deformed")) typeVisible["analysis_deformed"] = false;
             diagramMode = 0;
+            diagram2DVisible = false;
+            selectedDiagramMemberIndex = 0;
             diagramCaption = "Diagramas: seleccione un elemento";
             ClearSelectedDiagram();
             localAxesVisible = false;
@@ -2824,6 +2950,13 @@ namespace Mcoc.UnityViewer
                 failures.Add("IDs de estudio no mapeados");
             if (p1l4LoadCatalog == null || p1l4LoadCatalog.entry_count != 108 || p1l4LoadCatalog.is_structurally_applied)
                 failures.Add("catalogo de cargas auditadas ausente o mal rotulado");
+            int expectedJoseElements = analysisResults != null && analysisResults.elements != null ? analysisResults.elements.Count : 0;
+            if (joseByAnalysisId.Count != expectedJoseElements || joseForcesStatus != "P1L3_ENTREGADO_HISTORICO")
+                failures.Add($"export Jose caso {activeAnalysisCase} incompleto o mal rotulado ({joseByAnalysisId.Count}/{expectedJoseElements}, {joseForcesStatus})");
+            if (joseDisplacementByNode.Count != 813)
+                failures.Add($"desplazamientos Jose incompletos ({joseDisplacementByNode.Count}/813)");
+            if (joseSupports == null || joseSupports.supports == null || joseSupports.supports.Count != 106)
+                failures.Add("apoyos Jose incompletos");
             if (physicalContext == null || physicalContext.classifications == null || physicalContext.classifications.Count != 40)
                 failures.Add("contexto fisico ausente o incompleto");
             else
@@ -2838,7 +2971,7 @@ namespace Mcoc.UnityViewer
                     failures.Add("contexto fisico debe iniciar apagado");
             }
             if (failures.Count == 0)
-                Debug.Log($"[P1L4 QA] PASS: metadata={p1l4Metadata.elements.Count}, apoyos={p1l4Metadata.supports.Count}, casos={p1l4Metadata.cases.Count}, demanda-capacidad={demandCapacity.elements.Count}, contexto-fisico={physicalContext.classifications.Count}.");
+                Debug.Log($"[P1L4 QA] PASS: metadata={p1l4Metadata.elements.Count}, Jose={joseByAnalysisId.Count}, apoyos={p1l4Metadata.supports.Count}, casos={p1l4Metadata.cases.Count}, demanda-capacidad={demandCapacity.elements.Count}, contexto-fisico={physicalContext.classifications.Count}, diagramas-2D=My/Mz/N/Vy/Vz.");
             else
                 Debug.LogError("[P1L4 QA] FAIL: " + string.Join(", ", failures));
         }
