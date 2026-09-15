@@ -28,6 +28,10 @@ Unity no contiene fuerzas ni capacidades escritas manualmente en C#. Los datos
 se leen desde los archivos de `Assets/StreamingAssets`, producidos por scripts
 reproducibles desde los contratos del repositorio.
 
+La capa opcional `CONTEXTO FÍSICO (VISUAL ONLY)` identifica acceso/escalera B,
+acceso/escalera D y núcleo de ascensores S1–P4. Está apagada por defecto, no
+participa en FE y no representa una superficie de terreno inventada.
+
 ## Estado actual de la integración
 
 - P1L4-0, auditoría: documentada en `P1L4_INTEGRATION_AUDIT.md`.

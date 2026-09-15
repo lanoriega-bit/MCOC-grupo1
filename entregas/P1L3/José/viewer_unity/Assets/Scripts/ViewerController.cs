@@ -47,6 +47,7 @@ namespace Mcoc.UnityViewer
         private P1L4StructuralMetadataData p1l4Metadata;
         private DemandCapacityData demandCapacity;
         private P1L4LoadCatalogData p1l4LoadCatalog;
+        private PhysicalContextData physicalContext;
         private Texture2D fiberTexture;
         private Texture2D momentCurvatureTexture;
         private Texture2D pmInteractionTexture;
@@ -75,6 +76,7 @@ namespace Mcoc.UnityViewer
         private readonly Dictionary<string, ExcludedAnalysisElement> excludedByElementId = new Dictionary<string, ExcludedAnalysisElement>();
         private readonly Dictionary<string, FeDiagnosticElement> diagnosticByElementId = new Dictionary<string, FeDiagnosticElement>();
         private readonly Dictionary<string, List<P1L4ElementMetadata>> p1l4MetadataByElementId = new Dictionary<string, List<P1L4ElementMetadata>>();
+        private readonly Dictionary<string, PhysicalContextClassification> physicalContextByElementId = new Dictionary<string, PhysicalContextClassification>();
         private readonly Dictionary<string, DemandCapacityElement> demandCapacityByElementId = new Dictionary<string, DemandCapacityElement>();
         private readonly Dictionary<int, P1L4SupportData> p1l4SupportsByNode = new Dictionary<int, P1L4SupportData>();
         private readonly Dictionary<string, List<GameObject>> byType = new Dictionary<string, List<GameObject>>();
@@ -148,7 +150,8 @@ namespace Mcoc.UnityViewer
             { "analysis_diagram", "Diagrama del elemento seleccionado" },
             { "selected_local_axes", "Ejes locales del elemento" },
             { "seismic_torsion", "Torsion de piso" },
-            { "fe_candidate", "Malla FE candidata POST-P1L3" }
+            { "fe_candidate", "Malla FE candidata POST-P1L3" },
+            { "physical_context", "CONTEXTO FÍSICO (VISUAL ONLY)" }
         };
 
         private static readonly Dictionary<string, int> FloorOrder = new Dictionary<string, int>
@@ -199,6 +202,12 @@ namespace Mcoc.UnityViewer
             p1l4Metadata = JsonLoader.LoadP1L4StructuralMetadata();
             demandCapacity = JsonLoader.LoadDemandCapacity();
             p1l4LoadCatalog = JsonLoader.LoadP1L4LoadCatalog();
+            physicalContext = JsonLoader.LoadPhysicalContext();
+            physicalContextByElementId.Clear();
+            if (physicalContext != null && physicalContext.classifications != null)
+                foreach (var item in physicalContext.classifications)
+                    if (item != null && !string.IsNullOrEmpty(item.element_id))
+                        physicalContextByElementId[item.element_id] = item;
             BuildP1L4Indexes();
             fiberTexture = JsonLoader.LoadPng("fiber_section.png");
             momentCurvatureTexture = JsonLoader.LoadPng("moment_curvature.png");
@@ -224,6 +233,7 @@ namespace Mcoc.UnityViewer
             if (architecture != null) BuildArchitecture();
             if (tributaries != null) BuildTributaries();
             BuildP1L4Loads();
+            BuildPhysicalContext();
             seismic = JsonLoader.LoadSeismic();
             if (seismic != null) BuildSeismic();
             RunVisibilitySelfCheck();
@@ -551,6 +561,7 @@ namespace Mcoc.UnityViewer
                 info.diagnosticStatus = member.validation;
                 if (diagnosticByElementId.TryGetValue(member.element_id, out var diagnostic))
                     ApplyDiagnosticInfo(info, diagnostic);
+                ApplyPhysicalContextInfo(info);
                 Register(go, "fe_candidate", member.floor);
                 allElements.Add(info);
             }
@@ -687,6 +698,7 @@ namespace Mcoc.UnityViewer
             data.coordZTop = solid.model_z_m;
             if (diagnosticByElementId.TryGetValue(data.id, out var diagnostic))
                 ApplyDiagnosticInfo(data, diagnostic);
+            ApplyPhysicalContextInfo(data);
 
             // carga tributaria soportada (si calculada)
             if (solid.elementTag != null && memberTrib.TryGetValue(solid.elementTag, out var trib))
@@ -737,6 +749,109 @@ namespace Mcoc.UnityViewer
                 ? diagnostic.source_layer
                 : diagnostic.source_dxf + " / " + diagnostic.source_layer;
             info.crosswalk = diagnostic.crosswalk;
+        }
+
+        void ApplyPhysicalContextInfo(ElementInfo info)
+        {
+            if (info == null || string.IsNullOrEmpty(info.id)) return;
+            if (!physicalContextByElementId.TryGetValue(info.id, out var item)) return;
+            info.physicalCluster = item.cluster;
+            info.physicalClassification = item.physical_classification;
+            info.physicalSupport = item.physical_support;
+            info.mainFeParticipation = item.main_fe_participation;
+            info.revisedDiagnostic = item.revised_diagnostic;
+            info.duplicateClassification = item.duplicate_classification;
+            info.physicalEvidence = item.evidence;
+        }
+
+        void BuildPhysicalContext()
+        {
+            if (physicalContext == null) return;
+            if (physicalContext.clusters != null)
+            {
+                foreach (var cluster in physicalContext.clusters)
+                {
+                    if (cluster == null || cluster.center == null || cluster.size == null) continue;
+                    Vector3 center = V(cluster.center);
+                    Vector3 size = V(cluster.size);
+                    Color color = ContextColor(cluster.color);
+                    CreateContextBox(cluster, center, size, color);
+                    _physicalContextLabels.Add(new Label2D(center.x, center.y, center.z + size.z * 0.5f + 0.4f, cluster.label, color));
+                }
+            }
+            if (physicalContext.level_markers != null)
+            {
+                foreach (var marker in physicalContext.level_markers)
+                {
+                    if (marker == null || marker.start == null || marker.end == null) continue;
+                    Color color = ContextColor(marker.color);
+                    CreateContextLine(V(marker.start), V(marker.end), 0.10f, color, marker.id, marker.floor);
+                    Vector3 middle = (V(marker.start) + V(marker.end)) * 0.5f;
+                    _physicalContextLabels.Add(new Label2D(middle.x, middle.y, middle.z + 0.25f, marker.label, color));
+                }
+            }
+        }
+
+        void CreateContextBox(PhysicalContextCluster cluster, Vector3 center, Vector3 size, Color color)
+        {
+            Vector3 h = size * 0.5f;
+            var corners = new Vector3[8];
+            int index = 0;
+            for (int z = -1; z <= 1; z += 2)
+                for (int y = -1; y <= 1; y += 2)
+                    for (int x = -1; x <= 1; x += 2)
+                        corners[index++] = center + new Vector3(x * h.x, y * h.y, z * h.z);
+            int[,] edges = { {0,1},{2,3},{4,5},{6,7},{0,2},{1,3},{4,6},{5,7},{0,4},{1,5},{2,6},{3,7} };
+            for (int i = 0; i < 12; i++)
+                CreateContextLine(corners[edges[i,0]], corners[edges[i,1]], 0.08f, color, cluster.id + "_edge_" + i, cluster.floor);
+
+            var marker = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+            marker.name = cluster.id;
+            marker.transform.position = center;
+            marker.transform.localScale = Vector3.one * 0.7f;
+            marker.GetComponent<Renderer>().sharedMaterial = LineMaterial(color);
+            var info = marker.AddComponent<ElementInfo>();
+            info.go = marker;
+            info.id = cluster.id;
+            info.humanId = cluster.label;
+            info.category = "physical_context";
+            info.floor = cluster.floor;
+            info.building = "EDIFICIO_1";
+            info.materialName = cluster.note;
+            info.coordCenter = center;
+            info.nodeI = center;
+            info.nodeJ = center;
+            info.hasFEParticipationFlag = true;
+            info.participatesInFE = false;
+            info.physicalCluster = cluster.id;
+            info.physicalClassification = "VISUAL_CONTEXT_REGION";
+            info.physicalSupport = "NO_FE_SUPPORT_ASSIGNED";
+            info.mainFeParticipation = "VISUAL_ONLY";
+            info.revisedDiagnostic = physicalContext.status;
+            info.physicalEvidence = cluster.note;
+            Register(marker, "physical_context", cluster.floor);
+            allElements.Add(info);
+        }
+
+        void CreateContextLine(Vector3 start, Vector3 end, float thickness, Color color, string name, string floor)
+        {
+            Vector3 direction = end - start;
+            if (direction.magnitude < 0.001f) return;
+            var go = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            go.name = name;
+            go.transform.position = (start + end) * 0.5f;
+            go.transform.localScale = new Vector3(direction.magnitude, thickness, thickness);
+            go.transform.rotation = Quaternion.FromToRotation(Vector3.right, direction.normalized);
+            go.GetComponent<Renderer>().sharedMaterial = LineMaterial(color);
+            var collider = go.GetComponent<Collider>();
+            if (collider != null) Destroy(collider);
+            Register(go, "physical_context", floor);
+        }
+
+        static Color ContextColor(string html)
+        {
+            if (!string.IsNullOrEmpty(html) && ColorUtility.TryParseHtmlString(html, out var color)) return color;
+            return new Color(1f, 0.6f, 0.1f);
         }
 
         static Color DiagnosticColor(string status)
@@ -1886,6 +2001,18 @@ namespace Mcoc.UnityViewer
             }
             else sb.AppendLine("Capacidad: N/A");
             if (!string.IsNullOrEmpty(diagnosticLine)) sb.Append(diagnosticLine);
+            if (!string.IsNullOrEmpty(ei.physicalClassification))
+            {
+                sb.AppendLine();
+                sb.AppendLine("CONTEXTO FÍSICO POST-P1L3 (no ejecutado)");
+                sb.AppendLine($"Cluster: {ei.physicalCluster}");
+                sb.AppendLine($"Geometría: {ei.physicalClassification}");
+                sb.AppendLine($"Soporte físico: {ei.physicalSupport}");
+                sb.AppendLine($"FE principal: {ei.mainFeParticipation}");
+                sb.AppendLine($"Diagnóstico revisado: {ei.revisedDiagnostic}");
+                sb.AppendLine($"Duplicado: {ei.duplicateClassification}");
+                sb.AppendLine($"Evidencia: {ei.physicalEvidence}");
+            }
             return sb.ToString().TrimEnd();
         }
 
@@ -1946,6 +2073,7 @@ namespace Mcoc.UnityViewer
             DrawP1L3Panel();
             if (labelsVisible) DrawLabels();
             if (seismic != null) DrawSeismicValueLabels();
+            DrawPhysicalContextLabels();
             DrawLegend();
             DrawExpandedGraph();
             DrawDemandCapacityPlot();
@@ -2696,8 +2824,21 @@ namespace Mcoc.UnityViewer
                 failures.Add("IDs de estudio no mapeados");
             if (p1l4LoadCatalog == null || p1l4LoadCatalog.entry_count != 108 || p1l4LoadCatalog.is_structurally_applied)
                 failures.Add("catalogo de cargas auditadas ausente o mal rotulado");
+            if (physicalContext == null || physicalContext.classifications == null || physicalContext.classifications.Count != 40)
+                failures.Add("contexto fisico ausente o incompleto");
+            else
+            {
+                if (physicalContext.participates_in_FE || physicalContext.opensees_changed || physicalContext.historical_results_changed)
+                    failures.Add("contexto fisico altera FE o resultados");
+                if (physicalContext.clusters == null || physicalContext.clusters.Count != 3)
+                    failures.Add("clusters de contexto fisico incompletos");
+                if (!byType.ContainsKey("physical_context") || byType["physical_context"].Count == 0)
+                    failures.Add("capa visual de contexto fisico no construida");
+                if (typeVisible.ContainsKey("physical_context") && typeVisible["physical_context"])
+                    failures.Add("contexto fisico debe iniciar apagado");
+            }
             if (failures.Count == 0)
-                Debug.Log($"[P1L4 QA] PASS: metadata={p1l4Metadata.elements.Count}, apoyos={p1l4Metadata.supports.Count}, casos={p1l4Metadata.cases.Count}, demanda-capacidad={demandCapacity.elements.Count}.");
+                Debug.Log($"[P1L4 QA] PASS: metadata={p1l4Metadata.elements.Count}, apoyos={p1l4Metadata.supports.Count}, casos={p1l4Metadata.cases.Count}, demanda-capacidad={demandCapacity.elements.Count}, contexto-fisico={physicalContext.classifications.Count}.");
             else
                 Debug.LogError("[P1L4 QA] FAIL: " + string.Join(", ", failures));
         }
@@ -2747,6 +2888,26 @@ namespace Mcoc.UnityViewer
                 occupiedCells.Add(cell);
                 GUI.Label(new Rect(sp.x - 30, sp.y - 8, 80, 16), ShortTag(ei.id), ls);
                 drawnCount++;
+            }
+        }
+
+        private readonly List<Label2D> _physicalContextLabels = new List<Label2D>();
+
+        void DrawPhysicalContextLabels()
+        {
+            if (cam == null || !typeVisible.ContainsKey("physical_context") || !typeVisible["physical_context"]) return;
+            GUIStyle style = new GUIStyle(GUI.skin.box);
+            style.fontSize = 11;
+            style.fontStyle = FontStyle.Bold;
+            style.alignment = TextAnchor.MiddleCenter;
+            foreach (var label in _physicalContextLabels)
+            {
+                Vector3 world = transform.TransformPoint(new Vector3(label.x, label.y, label.z));
+                Vector3 screen = cam.WorldToScreenPoint(world);
+                if (screen.z <= 0) continue;
+                screen.y = Screen.height - screen.y;
+                style.normal.textColor = label.color;
+                GUI.Label(new Rect(screen.x - 115, screen.y - 12, 230, 24), label.text, style);
             }
         }
 
@@ -3155,5 +3316,12 @@ namespace Mcoc.UnityViewer
         public string diagnosticEvidence;
         public string diagnosticSource;
         public List<FeCrosswalkEntry> crosswalk;
+        public string physicalCluster;
+        public string physicalClassification;
+        public string physicalSupport;
+        public string mainFeParticipation;
+        public string revisedDiagnostic;
+        public string duplicateClassification;
+        public string physicalEvidence;
     }
 }

@@ -28,6 +28,8 @@ def main() -> None:
     tributaries = load(STREAM / "tributary_areas.json")
     loads = load(LOAD_CATALOG)
     unity_loads = load(STREAM / "p1l4_load_catalog.json")
+    physical_context = load(STREAM / "p1l4_physical_context.json")
+    integration_manifest = load(STREAM / "p1l4_integration_manifest.json")
 
     geometry_ids = {item["id"] for item in geometry["solids"] if item.get("id")}
     metadata_ids = {item["element_id"] for item in metadata["elements"]}
@@ -113,6 +115,28 @@ def main() -> None:
         and unity_loads.get("entry_count") == len(loads["entries"])
         and unity_loads.get("drawable_entry_count") == len(drawable_loads)
     )
+    context_ids = [item["element_id"] for item in physical_context.get("classifications", [])]
+    physical_context_valid = (
+        physical_context.get("status") == "AUDITED_DIAGNOSTIC_ONLY"
+        and physical_context.get("participates_in_FE") is False
+        and physical_context.get("opensees_changed") is False
+        and physical_context.get("historical_results_changed") is False
+        and physical_context.get("terrain_surface_generated") is False
+        and len(context_ids) == 40
+        and len(set(context_ids)) == 40
+        and len(physical_context.get("clusters", [])) == 3
+        and all(item.get("participates_in_FE") is False for item in physical_context.get("clusters", []))
+    )
+    context_manifest_entry = next(
+        (item for item in integration_manifest.get("files", []) if item.get("name") == "p1l4_physical_context.json"),
+        None,
+    )
+    physical_context_manifest_valid = (
+        context_manifest_entry is not None
+        and integration_manifest.get("data_state", {}).get("physical_context") == "POST_P1L3_AUDITED_DIAGNOSTIC_ONLY"
+        and integration_manifest.get("qa", {}).get("physical_context_classifications") == 40
+        and integration_manifest.get("qa", {}).get("physical_context_participates_in_FE") is False
+    )
 
     overlap = len(geometry_ids & metadata_ids)
     report = {
@@ -132,6 +156,8 @@ def main() -> None:
             "tributary_areas_readable": tributaries_valid,
             "loads_readable": loads_valid,
             "unity_load_catalog_readable_and_not_applied": unity_loads_valid,
+            "physical_context_readable_visual_only": physical_context_valid,
+            "physical_context_manifest_traced": physical_context_manifest_valid,
             "demand_capacity_readable": all(
                 row["geometry_id_exists"] and row["metadata_id_exists"]
                 and row["result_tag_exists_in_CASE_R"] and row["valid_pm_points"] >= 2
@@ -153,6 +179,8 @@ def main() -> None:
             "load_catalog_entries": len(loads["entries"]),
             "load_catalog_drawable_entries": len(drawable_loads),
             "crosswalk_1_to_many_geometry_ids": one_to_many,
+            "physical_context_classifications": len(context_ids),
+            "physical_context_clusters": len(physical_context.get("clusters", [])),
         },
         "demand_capacity": dc_checks,
         "notes": [
@@ -162,6 +190,7 @@ def main() -> None:
             f"Hay {tributary_polygons_missing} tributarias historicas con area/carga legible pero sin poligono de visualizacion; se reportan, no se inventa su huella.",
             f"Hay {tributary_zero_areas} registros historicos con area y carga explicitamente iguales a cero; no se reinterpretan como datos ausentes.",
             "El FE post-P1L3 sigue CANDIDATE_NOT_APPROVED_NOT_RUN.",
+            "La capa CONTEXTO FÍSICO solo reclasifica y dibuja regiones/marcadores; no cambia apoyos, elementos ni resultados.",
         ],
     }
     if not all(report["checks"].values()):

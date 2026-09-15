@@ -19,6 +19,8 @@ Estado: `PASS_WITH_NOTES`
 | `tributary_areas_readable` | PASS |
 | `loads_readable` | PASS |
 | `unity_load_catalog_readable_and_not_applied` | PASS |
+| `physical_context_readable_visual_only` | PASS |
+| `physical_context_manifest_traced` | PASS |
 | `demand_capacity_readable` | PASS |
 
 ## Cobertura y contratos
@@ -37,6 +39,8 @@ Estado: `PASS_WITH_NOTES`
 - `load_catalog_entries`: 108
 - `load_catalog_drawable_entries`: 82
 - `crosswalk_1_to_many_geometry_ids`: 33
+- `physical_context_classifications`: 40
+- `physical_context_clusters`: 3
 
 ## Demanda-capacidad
 
@@ -51,3 +55,4 @@ Estado: `PASS_WITH_NOTES`
 - Hay 192 tributarias historicas con area/carga legible pero sin poligono de visualizacion; se reportan, no se inventa su huella.
 - Hay 117 registros historicos con area y carga explicitamente iguales a cero; no se reinterpretan como datos ausentes.
 - El FE post-P1L3 sigue CANDIDATE_NOT_APPROVED_NOT_RUN.
+- La capa CONTEXTO FÍSICO solo reclasifica y dibuja regiones/marcadores; no cambia apoyos, elementos ni resultados.

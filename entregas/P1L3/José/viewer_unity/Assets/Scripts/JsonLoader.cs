@@ -136,6 +136,11 @@ namespace Mcoc.UnityViewer
             return LoadOptional<P1L4LoadCatalogData>(fileName, "catalogo de cargas P1L4");
         }
 
+        public static PhysicalContextData LoadPhysicalContext(string fileName = "p1l4_physical_context.json")
+        {
+            return LoadOptional<PhysicalContextData>(fileName, "contexto fisico P1L4");
+        }
+
         public static P1L3DeliveryData LoadDelivery(string fileName = "p1l3_delivery.json")
         {
             return LoadOptional<P1L3DeliveryData>(fileName, "resumen P1L3");

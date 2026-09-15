@@ -1,5 +1,23 @@
 # P1L3 - Estado de integración y consolidación POST-P1L3
 
+## Auditoría de contexto físico P1L4 (2026-09-15)
+
+- Se reevaluaron los 31 `DISCONNECTED_ERROR` y 9 `UNRESOLVED` sin modificar
+  OpenSees: 20 corresponden al núcleo con revisión del adaptador FE, 14 al
+  acceso/escalera D, 4 al acceso/escalera B y 2 continúan `UNRESOLVED_REAL`.
+- El núcleo S1–P4 conserva seis paredes/retornos físicos repetidos verticalmente;
+  no se encontró ningún `DUPLICATE_EXTRACTION` inequívoco ni se eliminó geometría.
+- La evidencia `RADIER SOBRE TERRENO` y las cotas variables de 2017_67-101,
+  junto con la información física del edificio, confirman que S1 queda enterrado
+  en gran parte de B/D. A/C permanecen sin una cota exterior continua cerrada.
+- Unity incorpora la capa apagada por defecto `CONTEXTO FÍSICO (VISUAL ONLY)`
+  con tres clusters, labels y marcadores de nivel. `participates_in_FE=false`.
+- QA de contrato, compilación Unity 6000.6.0f1 y arranque Play: `PASS`; el
+  runtime registró `contexto-fisico=40`.
+- Se mantuvieron intactos geometría canónica, 1312 resultados históricos P1L3,
+  cargas, masas, EX/EY, superposición y capacidad.
+- Reporte: `entregas/P1L4/physical_context_audit/PHYSICAL_CONTEXT_AUDIT.md`.
+
 ## Interfaz vigente PRE-P1L4 (2026-09-12)
 
 - Unity de José es la única interfaz principal; los viewers web son legacy.

@@ -803,4 +803,60 @@ namespace Mcoc.UnityViewer
         public List<string> receiver_ids;
         public string receiver_status;
     }
+
+    [Serializable]
+    public class PhysicalContextData
+    {
+        public string format;
+        public string status;
+        public string data_state;
+        public bool participates_in_FE;
+        public bool opensees_changed;
+        public bool historical_results_changed;
+        public bool terrain_surface_generated;
+        public string terrain_note;
+        public List<PhysicalContextCluster> clusters;
+        public List<PhysicalContextLevelMarker> level_markers;
+        public List<PhysicalContextClassification> classifications;
+    }
+
+    [Serializable]
+    public class PhysicalContextCluster
+    {
+        public string id;
+        public string label;
+        public string floor;
+        public List<double> center;
+        public List<double> size;
+        public string color;
+        public List<string> element_ids;
+        public string note;
+        public bool participates_in_FE;
+    }
+
+    [Serializable]
+    public class PhysicalContextLevelMarker
+    {
+        public string id;
+        public string label;
+        public string floor;
+        public List<double> start;
+        public List<double> end;
+        public string color;
+        public bool participates_in_FE;
+    }
+
+    [Serializable]
+    public class PhysicalContextClassification
+    {
+        public string element_id;
+        public string cluster;
+        public string physical_geometry;
+        public string physical_classification;
+        public string physical_support;
+        public string main_fe_participation;
+        public string revised_diagnostic;
+        public string duplicate_classification;
+        public string evidence;
+    }
 }

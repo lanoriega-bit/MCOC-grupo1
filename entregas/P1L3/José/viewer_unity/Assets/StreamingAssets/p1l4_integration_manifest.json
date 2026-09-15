@@ -8,13 +8,15 @@
     "analysis_and_results": "P1L3_ENTREGADO_HISTORICO",
     "fe_diagnosis": "POST_P1L3_CANDIDATE_NOT_RUN",
     "demand_capacity": "P1L4_VERIFIED_LUIS_8c933f4",
-    "loads": "P1L3_HISTORICAL_AND_700_NOT_APPLIED"
+    "loads": "P1L3_HISTORICAL_AND_700_NOT_APPLIED",
+    "physical_context": "POST_P1L3_AUDITED_DIAGNOSTIC_ONLY"
   },
   "sources": {
     "analysis_model": "entregas/P1L3/results/a3a4/analysis_model.json",
     "cases_dir": "entregas/P1L3/results/a7/cases",
     "demand_capacity": "entregas/P1L4/demanda_capacidad/demanda_capacidad.json",
-    "load_catalog": "entregas/P1L3/results/a1a2/load_zones_700_completion/load_catalog_700.json"
+    "load_catalog": "entregas/P1L3/results/a1a2/load_zones_700_completion/load_catalog_700.json",
+    "physical_context": "entregas/P1L4/physical_context_audit/physical_context_diagnostic.json"
   },
   "files": [
     {
@@ -28,6 +30,10 @@
     {
       "name": "p1l4_load_catalog.json",
       "sha256": "86a662b048d0f5fb459506295ea5219b76972a2d20683458741649543936949c"
+    },
+    {
+      "name": "p1l4_physical_context.json",
+      "sha256": "e298859f55cc644b422186b8486a9e4a087ddf2453c8e9d953dc4027154a7926"
     }
   ],
   "qa": {
@@ -50,6 +56,9 @@
     ],
     "demand_capacity_status": "PASS",
     "load_catalog_entries": 108,
-    "load_catalog_drawable_entries": 82
+    "load_catalog_drawable_entries": 82,
+    "physical_context_classifications": 40,
+    "physical_context_clusters": 3,
+    "physical_context_participates_in_FE": false
   }
 }

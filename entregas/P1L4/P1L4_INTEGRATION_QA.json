@@ -15,6 +15,8 @@
     "tributary_areas_readable": true,
     "loads_readable": true,
     "unity_load_catalog_readable_and_not_applied": true,
+    "physical_context_readable_visual_only": true,
+    "physical_context_manifest_traced": true,
     "demand_capacity_readable": true
   },
   "counts": {
@@ -31,7 +33,9 @@
     "tributary_zero_area_records": 117,
     "load_catalog_entries": 108,
     "load_catalog_drawable_entries": 82,
-    "crosswalk_1_to_many_geometry_ids": 33
+    "crosswalk_1_to_many_geometry_ids": 33,
+    "physical_context_classifications": 40,
+    "physical_context_clusters": 3
   },
   "demand_capacity": [
     {
@@ -61,6 +65,7 @@
     "El catalogo 700 es legible pero sigue READY_FOR_Q_REVIEW_NOT_APPLIED; no reemplaza las cargas historicas.",
     "Hay 192 tributarias historicas con area/carga legible pero sin poligono de visualizacion; se reportan, no se inventa su huella.",
     "Hay 117 registros historicos con area y carga explicitamente iguales a cero; no se reinterpretan como datos ausentes.",
-    "El FE post-P1L3 sigue CANDIDATE_NOT_APPROVED_NOT_RUN."
+    "El FE post-P1L3 sigue CANDIDATE_NOT_APPROVED_NOT_RUN.",
+    "La capa CONTEXTO FÍSICO solo reclasifica y dibuja regiones/marcadores; no cambia apoyos, elementos ni resultados."
   ]
 }

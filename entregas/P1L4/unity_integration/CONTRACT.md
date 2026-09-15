@@ -9,6 +9,7 @@ El Unity canónico consume tres contratos P1L4 adicionales desde
 | `demanda_capacidad.json` | Contrato íntegro producido por Luis para columna y muro |
 | `p1l4_integration_manifest.json` | Fuentes, hashes, estados y QA del paquete |
 | `p1l4_load_catalog.json` | Catálogo 700 aplanado para Unity, siempre `AUDITADO_NOT_APPLIED` |
+| `p1l4_physical_context.json` | Reclasificación de 40 casos, clusters y cotas visuales; siempre `participates_in_FE=false` |
 
 Los cinco casos de fuerzas/desplazamientos continúan en `analysis_cases.json`.
 El adaptador no recalcula OpenSees: empaqueta y valida las fuentes disponibles.
@@ -29,6 +30,10 @@ ejes explícitos, debe preferirse esa salida y validarse contra esta regla.
 Cada contrato declara `data_state`. Mientras la fuente sea A7, Unity debe mostrar
 `P1L3_ENTREGADO_HISTORICO`. Cuando llegue una ejecución P1L4, el exportador se
 invoca con las rutas y estado nuevos; no se cambian números dentro de C#.
+
+La capa `CONTEXTO FÍSICO` no crea terreno estructural, apoyos ni conexiones. Sus
+cajas, labels y marcadores explican topografía, escaleras y núcleo; el inspector
+mantiene separados geometría física, soporte físico y participación FE.
 
 ## Crosswalk 1:N
 
