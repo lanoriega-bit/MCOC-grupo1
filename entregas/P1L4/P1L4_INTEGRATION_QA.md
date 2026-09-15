@@ -25,7 +25,11 @@ Estado: `PASS_WITH_NOTES`
 | `jose_export_5_cases_1312_elements` | PASS |
 | `jose_displacements_5_cases_813_nodes` | PASS |
 | `jose_supports_106_nodes` | PASS |
+| `supports_unique_nodes_and_positions` | PASS |
+| `jose_forces_exactly_match_historical_cases` | PASS |
 | `unity_2d_diagrams_declared` | PASS |
+| `diagram_physics_and_equilibrium` | PASS |
+| `single_demand_capacity_loader_and_model` | PASS |
 
 ## Cobertura y contratos
 
@@ -40,6 +44,7 @@ Estado: `PASS_WITH_NOTES`
 - `tributary_point_areas`: 491
 - `tributary_areas_without_display_polygon`: 192
 - `tributary_zero_area_records`: 117
+- `tributary_records_with_zone_contributions`: 0
 - `load_catalog_entries`: 108
 - `load_catalog_drawable_entries`: 82
 - `crosswalk_1_to_many_geometry_ids`: 33
@@ -62,6 +67,9 @@ Estado: `PASS_WITH_NOTES`
 - Hay 117 registros historicos con area y carga explicitamente iguales a cero; no se reinterpretan como datos ausentes.
 - El FE post-P1L3 sigue CANDIDATE_NOT_APPROVED_NOT_RUN.
 - La capa CONTEXTO FÍSICO solo reclasifica y dibuja regiones/marcadores; no cambia apoyos, elementos ni resultados.
+- Las 1312 fuerzas de José coinciden exactamente con analysis_cases.json en G/Q/EX/EY/R: es una exportación P1L3 histórica, no una corrida P1L4 nueva.
+- El pipeline ejecutado aplica G/Q/EX/EY/R como cargas nodales. Los diagramas usan fuerzas de extremo con el extremo j convertido a una convención común de cara interna.
+- Las tributarias del snapshot histórico no contienen zone_contributions; la UI no atribuye detalle multizona inexistente.
 
 ## Auditoría final contra la pauta
 
@@ -72,16 +80,16 @@ Estado: `PASS_WITH_NOTES`
 | ejes locales/restricciones | PASS | QA ortogonal + 106 apoyos | `RebuildSelectedLocalAxes / SupportText` |
 | N/Vy/Vz/T/My/Mz | PASS | Cinco casos, ambos extremos | `BuildP1L4ResultsText` |
 | deformada | PASS | 813 nodos por caso | `RebuildActiveDeformedShape` |
-| diagramas 3D y gráficos 2D | PASS | My/Mz/N/Vy/Vz | `RebuildSelectedDiagram / DrawElementDiagram2D` |
+| diagramas 3D y gráficos 2D | PASS | My/Mz/N/Vy/Vz; convención de cara interna y equilibrio auditados | `DIAGRAM_PHYSICS_AUDIT.md / DrawElementDiagram2D` |
 | áreas tributarias | PASS_WITH_NOTE | 1060 + 491; no se inventan polígonos ausentes | `tributary_areas.json` |
 | cargas | PASS_WITH_NOTE | 82 geometrías visibles; 700 NOT_APPLIED | `p1l4_load_catalog.json` |
 | apoyos | PASS | 106 símbolos y seis GDL | `BuildP1L4Supports` |
 | P-M columna/muro + demanda | PASS | Curva, punto y DENTRO/FUERA | `DrawDemandCapacityPlot` |
 | caso activo | PASS | G/Q/EX/EY/R | `DrawP1L4Header` |
-| trazabilidad | PASS | Unity→geometría→FE→OpenSees→capacidad | `BuildTraceabilityText` |
+| trazabilidad | PASS | Unity→geometría→FE→OpenSees→capacidad; 1:N candidato separado | `BuildTraceabilityText` |
 
 ## Evidencia de ejecución final
 
 - Compilación Unity 6000.6.0f1: PASS.
 - Play UI/diagnóstico/P1L4: PASS.
-- Secuencia de demostración viga/columna/muro/global: PASS.
+- Secuencia: E2-P1-V-056, cara interna, My y N/V 2D, crosswalk 1:N candidato, columna, muro y global: PASS.

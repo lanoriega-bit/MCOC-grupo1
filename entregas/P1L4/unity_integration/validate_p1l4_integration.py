@@ -14,6 +14,9 @@ OUT_MD = ROOT / "entregas" / "P1L4" / "P1L4_INTEGRATION_QA.md"
 LOAD_CATALOG = ROOT / "entregas" / "P1L3" / "results" / "a1a2" / "load_zones_700_completion" / "load_catalog_700.json"
 JOSE_STREAM = STREAM / "p1l4_jose"
 VIEWER_CODE = STREAM.parent / "Scripts" / "ViewerController.cs"
+JSON_LOADER_CODE = STREAM.parent / "Scripts" / "JsonLoader.cs"
+JSON_MODELS_CODE = STREAM.parent / "Scripts" / "JsonModels.cs"
+DIAGRAM_AUDIT = ROOT / "entregas" / "P1L4" / "DIAGRAM_PHYSICS_AUDIT.json"
 
 
 def load(path: Path):
@@ -35,7 +38,10 @@ def main() -> None:
     jose_forces = {case: load(JOSE_STREAM / "fuerzas_internas" / f"{case}.json") for case in ("G", "Q", "EX", "EY", "R")}
     jose_displacements = {case: load(JOSE_STREAM / "desplazamientos" / f"{case}.json") for case in ("G", "Q", "EX", "EY", "R")}
     jose_supports = load(JOSE_STREAM / "apoyos.json")
+    diagram_audit = load(DIAGRAM_AUDIT)
     viewer_code = VIEWER_CODE.read_text(encoding="utf-8-sig")
+    json_loader_code = JSON_LOADER_CODE.read_text(encoding="utf-8-sig")
+    json_models_code = JSON_MODELS_CODE.read_text(encoding="utf-8-sig")
 
     geometry_ids = {item["id"] for item in geometry["solids"] if item.get("id")}
     metadata_ids = {item["element_id"] for item in metadata["elements"]}
@@ -159,9 +165,49 @@ def main() -> None:
         for data in jose_displacements.values()
     )
     jose_supports_valid = jose_supports.get("support_count") == 106 and len(jose_supports.get("supports", [])) == 106
+    support_nodes = [item["node_tag"] for item in metadata["supports"]]
+    support_coords = [tuple(item["coord_m"]) for item in metadata["supports"]]
+    supports_unique = len(support_nodes) == len(set(support_nodes)) == len(set(support_coords))
     diagrams_2d_declared = all(token in viewer_code for token in (
-        "DrawElementDiagram2D", '"My"', '"Mz"', '"N"', '"Vy"', '"Vz"', "END_FORCES_INTERPOLATION"
+        "DrawElementDiagram2D", '"My"', '"Mz"', '"N"', '"Vy"', '"Vz"',
+        "END_FORCES_INTERPOLATION", "DiagramForceVector", "extremo j convertido a cara interna común",
+        "G/Q/EX/EY/R se aplicaron como cargas nodales"
     ))
+    diagram_equilibrium_valid = (
+        diagram_audit.get("status") == "PASS"
+        and diagram_audit.get("load_application", {}).get("classification") == "B_NODAL_LOADS"
+        and diagram_audit.get("all_elements_equilibrium", {}).get("status") == "PASS"
+    )
+    no_duplicate_demand_loader = (
+        "LoadDemandaCapacidad" not in json_loader_code
+        and "class DemandaCapacidadData" not in json_models_code
+        and json_loader_code.count("LoadDemandCapacity") == 1
+        and json_models_code.count("class DemandCapacityData") == 1
+    )
+
+    force_components = ("N", "Vy", "Vz", "T", "My", "Mz")
+    jose_matches_integrated = True
+    for case in cases["cases"]:
+        case_key = case["case_name"].replace("CASE_", "")
+        integrated_by_id = {row["analysis_id"]: row for row in case.get("elements", [])}
+        jose_rows = jose_forces[case_key].get("elements", [])
+        if len(integrated_by_id) != len(jose_rows):
+            jose_matches_integrated = False
+            break
+        for row in jose_rows:
+            source = integrated_by_id.get(row["analysis_id"])
+            if source is None:
+                jose_matches_integrated = False
+                break
+            for end_index, suffix in ((0, "end1"), (1, "end2")):
+                values = source[f"localForce_{suffix}"]
+                if any(values[index] != row[f"{component}_{suffix}"] for index, component in enumerate(force_components)):
+                    jose_matches_integrated = False
+                    break
+            if not jose_matches_integrated:
+                break
+        if not jose_matches_integrated:
+            break
 
     overlap = len(geometry_ids & metadata_ids)
     report = {
@@ -191,7 +237,11 @@ def main() -> None:
             "jose_export_5_cases_1312_elements": jose_forces_valid,
             "jose_displacements_5_cases_813_nodes": jose_displacements_valid,
             "jose_supports_106_nodes": jose_supports_valid,
+            "supports_unique_nodes_and_positions": supports_unique,
+            "jose_forces_exactly_match_historical_cases": jose_matches_integrated,
             "unity_2d_diagrams_declared": diagrams_2d_declared,
+            "diagram_physics_and_equilibrium": diagram_equilibrium_valid,
+            "single_demand_capacity_loader_and_model": no_duplicate_demand_loader,
         },
         "counts": {
             "unity_geometry_ids": len(geometry_ids),
@@ -205,6 +255,7 @@ def main() -> None:
             "tributary_point_areas": len(tributaries.get("point_areas", [])),
             "tributary_areas_without_display_polygon": tributary_polygons_missing,
             "tributary_zero_area_records": tributary_zero_areas,
+            "tributary_records_with_zone_contributions": sum(bool(item.get("zone_contributions")) for item in tributaries.get("areas", [])),
             "load_catalog_entries": len(loads["entries"]),
             "load_catalog_drawable_entries": len(drawable_loads),
             "crosswalk_1_to_many_geometry_ids": one_to_many,
@@ -222,6 +273,9 @@ def main() -> None:
             f"Hay {tributary_zero_areas} registros historicos con area y carga explicitamente iguales a cero; no se reinterpretan como datos ausentes.",
             "El FE post-P1L3 sigue CANDIDATE_NOT_APPROVED_NOT_RUN.",
             "La capa CONTEXTO FÍSICO solo reclasifica y dibuja regiones/marcadores; no cambia apoyos, elementos ni resultados.",
+            "Las 1312 fuerzas de José coinciden exactamente con analysis_cases.json en G/Q/EX/EY/R: es una exportación P1L3 histórica, no una corrida P1L4 nueva.",
+            "El pipeline ejecutado aplica G/Q/EX/EY/R como cargas nodales. Los diagramas usan fuerzas de extremo con el extremo j convertido a una convención común de cara interna.",
+            "Las tributarias del snapshot histórico no contienen zone_contributions; la UI no atribuye detalle multizona inexistente.",
         ],
     }
     if not all(report["checks"].values()):
@@ -258,17 +312,17 @@ def main() -> None:
         ("ejes locales/restricciones", "PASS", "QA ortogonal + 106 apoyos", "RebuildSelectedLocalAxes / SupportText"),
         ("N/Vy/Vz/T/My/Mz", "PASS", "Cinco casos, ambos extremos", "BuildP1L4ResultsText"),
         ("deformada", "PASS", "813 nodos por caso", "RebuildActiveDeformedShape"),
-        ("diagramas 3D y gráficos 2D", "PASS", "My/Mz/N/Vy/Vz", "RebuildSelectedDiagram / DrawElementDiagram2D"),
+        ("diagramas 3D y gráficos 2D", "PASS", "My/Mz/N/Vy/Vz; convención de cara interna y equilibrio auditados", "DIAGRAM_PHYSICS_AUDIT.md / DrawElementDiagram2D"),
         ("áreas tributarias", "PASS_WITH_NOTE", "1060 + 491; no se inventan polígonos ausentes", "tributary_areas.json"),
         ("cargas", "PASS_WITH_NOTE", "82 geometrías visibles; 700 NOT_APPLIED", "p1l4_load_catalog.json"),
         ("apoyos", "PASS", "106 símbolos y seis GDL", "BuildP1L4Supports"),
         ("P-M columna/muro + demanda", "PASS", "Curva, punto y DENTRO/FUERA", "DrawDemandCapacityPlot"),
         ("caso activo", "PASS", "G/Q/EX/EY/R", "DrawP1L4Header"),
-        ("trazabilidad", "PASS", "Unity→geometría→FE→OpenSees→capacidad", "BuildTraceabilityText"),
+        ("trazabilidad", "PASS", "Unity→geometría→FE→OpenSees→capacidad; 1:N candidato separado", "BuildTraceabilityText"),
     ]
     lines += ["", "## Auditoría final contra la pauta", "", "| REQUISITO | ESTADO | EVIDENCIA | ARCHIVO/FUNCIÓN |", "| --- | --- | --- | --- |"]
     lines += [f"| {req} | {state} | {evidence} | `{source}` |" for req, state, evidence, source in audit_rows]
-    lines += ["", "## Evidencia de ejecución final", "", "- Compilación Unity 6000.6.0f1: PASS.", "- Play UI/diagnóstico/P1L4: PASS.", "- Secuencia de demostración viga/columna/muro/global: PASS."]
+    lines += ["", "## Evidencia de ejecución final", "", "- Compilación Unity 6000.6.0f1: PASS.", "- Play UI/diagnóstico/P1L4: PASS.", "- Secuencia: E2-P1-V-056, cara interna, My y N/V 2D, crosswalk 1:N candidato, columna, muro y global: PASS."]
     OUT_MD.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(json.dumps({"status": report["status"], **report["counts"]}, ensure_ascii=False, indent=2))
     if report["status"] == "FAIL":

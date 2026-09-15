@@ -168,11 +168,6 @@ namespace Mcoc.UnityViewer
             return LoadOptional<JoseSupportsData>(fileName, "apoyos P1L4 Jose");
         }
 
-        public static DemandaCapacidadData LoadDemandaCapacidad(string fileName = "demanda_capacidad.json")
-        {
-            return LoadOptional<DemandaCapacidadData>(fileName, "demanda-capacidad P1L4");
-        }
-
         public static Texture2D LoadPng(string fileName)
         {
             string path = Path.Combine(Application.streamingAssetsPath, fileName);

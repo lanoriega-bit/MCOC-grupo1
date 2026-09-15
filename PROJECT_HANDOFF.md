@@ -1,8 +1,21 @@
 # PROJECT_HANDOFF.md
 
 Transferencia tecnica completa del proyecto "Laboratorio estructural digital 3D de un edificio real".
-Fecha de revision: 2026-09-12. Base P1L3 entregada: `P1L3_DELIVERED` (`c847c13`).
+Fecha de revision: 2026-09-15. Base P1L3 entregada: `P1L3_DELIVERED` (`c847c13`).
 Este documento NO repite planificacion P1L3: eso vive en `entregas/P1L3/PLANIFICACION.md`.
+
+## ESTADO VIGENTE — P1L4 CERRADO Y AUDITADO
+
+- Rama: `codex/p1l4-unity-integration`.
+- Tag evaluable vigente: `P1L4_FINAL_AUDITED`.
+- Unity canónico: `entregas/P1L3/José/viewer_unity`, escena `Assets/Main.unity`.
+- Resultado de auditoría: `entregas/P1L4/FINAL_PROJECT_AUDIT.md`.
+- Física de diagramas: `entregas/P1L4/DIAGRAM_PHYSICS_AUDIT.md`.
+- G/Q/EX/EY/R siguen siendo el snapshot P1L3 histórico, explícitamente
+  identificado; P1L4 no contiene una corrida estructural post-consolidación.
+
+La sección PRE-P1L4 siguiente se conserva como historia de decisiones y no
+debe interpretarse como estado actual.
 
 Estado vigente: P1L3 ya esta implementado e integrado en el Unity de Jose. Los
 casos reales `G/Q/EX/EY/R`, resultados OpenSees y capacidad HA se adaptan a
@@ -15,7 +28,7 @@ Entrada actual: `PROJECT_INDEX.md`, `Abrir_Unity.bat` y
 FE `CANDIDATE_NOT_RUN` y resultados `P1L3_DELIVERED_HISTORICAL` como estados
 separados. El viewer web es legado de depuración.
 
-## POST-P1L3 CONSOLIDATED BASELINE — EN CONSTRUCCION
+## HISTÓRICO — POST-P1L3 CONSOLIDATED BASELINE
 
 - Snapshot entregado preservado: tag `P1L3_DELIVERED` en
   `c847c131512d00cc85bb95aa5719278d70da0c2b`.

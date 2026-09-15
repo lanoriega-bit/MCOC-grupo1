@@ -3,7 +3,7 @@
 `P1L4 STATUS: COMPLETE`
 
 - Rama evaluable: `codex/p1l4-unity-integration`.
-- Tag evaluable: `P1L4_FINAL` (debe resolver al commit final de esta entrega).
+- Tag evaluable: `P1L4_FINAL_AUDITED`.
 - Proyecto Unity canónico: `entregas/P1L3/José/viewer_unity`.
 - Escena: `Assets/Main.unity`.
 - Unity verificado: `6000.6.0f1`.
@@ -25,13 +25,20 @@ deformada; diagramas 3D y gráficos 2D My/Mz/N/Vy/Vz; ver cargas, apoyos y
 tributarias; y revisar P-M/demanda de columna y muro.
 
 Los gráficos derivados solo de fuerzas de extremo se identifican como
-`END_FORCES_INTERPOLATION`. En crosswalk 1:N se navega miembro por miembro. Un
-cero explícito se dibuja como cero; una ausencia se muestra como `N/A`.
+`END_FORCES_INTERPOLATION`. El extremo `j` se cambia de signo para expresar
+ambos extremos en una convención común de cara interna. El pipeline auditado
+usa cargas nodales y no contiene cargas interiores de elemento; por equilibrio,
+N/V/T son constantes y My/Mz lineales. Los 33 crosswalk 1:N pertenecen al FE
+candidato no ejecutado y se muestran solo como trazabilidad; no reciben ni
+combinan resultados históricos. Un cero explícito se dibuja como cero; una
+ausencia se muestra como `N/A`.
 
 ## QA final
 
 - Export José reproducido: PASS.
 - Validador de contratos: PASS_WITH_NOTES.
+- Auditoría física de 1312 miembros × 5 casos: PASS; residual máximo
+  `1.862645149e-09` en unidades SI.
 - Compilación Unity: PASS.
 - Play: PASS.
 - Secuencia de demostración viga/columna/muro/global: PASS.

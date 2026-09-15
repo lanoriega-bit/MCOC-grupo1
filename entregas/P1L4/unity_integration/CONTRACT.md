@@ -43,7 +43,11 @@ mantiene separados geometría física, soporte físico y participación FE.
 
 `element_id` identifica la geometría pública. `analysis_id` y `opensees_tag`
 identifican cada miembro FE. Varios registros pueden compartir `element_id`.
-Unity debe listarlos por separado y no sumar ni escoger máximos sin indicarlo.
+En el paquete vigente, los 33 crosswalk 1:N describen el FE candidato
+`CANDIDATE_NOT_RUN`; se muestran como diagnóstico y no heredan resultados del
+snapshot histórico. Si una corrida futura entrega varios resultados para un
+`element_id`, Unity debe listarlos por separado y no sumar ni escoger máximos
+sin indicarlo.
 
 ## Resultados ausentes
 
@@ -58,6 +62,23 @@ caso activo. Si una geometría tiene crosswalk 1:N, el usuario navega cada
 `analysis_id`; no se combinan resultados. Con solo fuerzas de extremo disponibles,
 la representación se rotula `END_FORCES_INTERPOLATION`. Un cero explícito se
 dibuja sobre el eje y no se convierte en `N/A`.
+
+OpenSees entrega acciones locales de extremo sobre caras opuestas. Para dibujar
+una única convención de esfuerzo interno, Unity conserva el vector `i` y cambia
+el signo completo del vector `j`; el inspector sigue mostrando las acciones
+crudas i/j sin alterarlas. En el pipeline A7 ejecutado no existen `eleLoad` ni
+cargas distribuidas interiores: G/Q se transfieren como `P/2` a nodos y EX/EY
+son nodales. Por ello corresponden:
+
+| Componente | Forma entre extremos |
+| --- | --- |
+| N, Vy, Vz, T | constante |
+| My | lineal, con pendiente asociada a Vz |
+| Mz | lineal, con pendiente asociada a Vy |
+
+Si un contrato futuro incluye cargas de elemento o estaciones internas, no se
+debe reutilizar esta regla ciegamente: deberá clasificarse como `DIRECT_RESULT`
+o `RECONSTRUCTED_FROM_ELEMENT_LOADS` y conservar la trazabilidad de esas cargas.
 
 ## Cargas auditadas
 

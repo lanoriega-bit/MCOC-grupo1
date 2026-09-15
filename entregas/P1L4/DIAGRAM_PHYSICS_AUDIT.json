@@ -1,0 +1,118 @@
+{
+  "status": "PASS",
+  "load_application": {
+    "classification": "B_NODAL_LOADS",
+    "gravity": "P/2 at beam end nodes with ops.load",
+    "seismic": "floor forces distributed to nodes with ops.load",
+    "element_load_calls": 0,
+    "interior_stations_available": false
+  },
+  "diagram_classification": "END_FORCES_INTERPOLATION",
+  "common_face_convention": "diagram i = OpenSees end1; diagram j = -OpenSees end2",
+  "component_shapes": {
+    "N": "constant",
+    "Vy": "constant",
+    "Vz": "constant",
+    "T": "constant",
+    "My": "linear; derivative paired with Vz according to local convention",
+    "Mz": "linear; derivative paired with Vy according to local convention"
+  },
+  "all_elements_equilibrium": {
+    "cases": [
+      "G",
+      "Q",
+      "EX",
+      "EY",
+      "R"
+    ],
+    "elements_per_case": 1312,
+    "maximum_absolute_residual": 1.862645149230957e-09,
+    "tolerance": 1e-06,
+    "status": "PASS",
+    "by_case": {
+      "G": {
+        "N_N": 0.0,
+        "Vy_N": 0.0,
+        "Vz_N": 0.0,
+        "T_Nm": 0.0,
+        "My_Nm": 1.862645149230957e-09,
+        "Mz_Nm": 4.656612873077393e-10
+      },
+      "Q": {
+        "N_N": 0.0,
+        "Vy_N": 0.0,
+        "Vz_N": 0.0,
+        "T_Nm": 0.0,
+        "My_Nm": 4.656612873077393e-10,
+        "Mz_Nm": 2.3283064365386963e-10
+      },
+      "EX": {
+        "N_N": 0.0,
+        "Vy_N": 0.0,
+        "Vz_N": 0.0,
+        "T_Nm": 0.0,
+        "My_Nm": 2.3283064365386963e-10,
+        "Mz_Nm": 2.3283064365386963e-10
+      },
+      "EY": {
+        "N_N": 0.0,
+        "Vy_N": 0.0,
+        "Vz_N": 0.0,
+        "T_Nm": 0.0,
+        "My_Nm": 2.3283064365386963e-10,
+        "Mz_Nm": 9.313225746154785e-10
+      },
+      "R": {
+        "N_N": 0.0,
+        "Vy_N": 0.0,
+        "Vz_N": 0.0,
+        "T_Nm": 0.0,
+        "My_Nm": 1.862645149230957e-09,
+        "Mz_Nm": 4.656612873077393e-10
+      }
+    }
+  },
+  "target": {
+    "element_id": "E2-P1-V-056",
+    "analysis_id": "A-V-0473",
+    "opensees_tag": 10473,
+    "local_axes": {
+      "x": [
+        0.9979690828636266,
+        0.06370015422533802,
+        0.0
+      ],
+      "y": [
+        -0.06370015422533803,
+        0.9979690828636267,
+        0.0
+      ],
+      "z": [
+        0.0,
+        -0.0,
+        1.0
+      ],
+      "vecxz": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "DERIVED_FROM_OPENSEES_GEOMTRANSF_RULE"
+    },
+    "gravity_dominant_pair": "Vz-My because local z is global vertical",
+    "direct_gravity_routes_in_A7": {
+      "G": [],
+      "Q": []
+    },
+    "manual_R_equilibrium": {
+      "length_m": 4.709564735726647,
+      "raw_OpenSees_My_i_kNm": 846.0892418816544,
+      "raw_OpenSees_My_j_kNm": -48.22720867167029,
+      "internal_common_face_My_i_kNm": 846.0892418816544,
+      "internal_common_face_My_j_kNm": 48.22720867167029,
+      "internal_common_face_Vz_kN": -169.41311522005876,
+      "My_equilibrium_residual_Nm": 0.0,
+      "Mz_equilibrium_residual_Nm": 0.0
+    }
+  }
+}

@@ -1844,8 +1844,8 @@ namespace Mcoc.UnityViewer
             }
             selectedDiagramMemberIndex = Mathf.Clamp(selectedDiagramMemberIndex, 0, results.Count - 1);
             var result = results[selectedDiagramMemberIndex];
-            var end1 = ForceVector(result, true);
-            var end2 = ForceVector(result, false);
+            var end1 = DiagramForceVector(result, true);
+            var end2 = DiagramForceVector(result, false);
             double maxAbs = 0.0;
             if (end1 != null && end1.Count > component) maxAbs = System.Math.Max(maxAbs, System.Math.Abs(end1[component] / 1000.0));
             if (end2 != null && end2.Count > component) maxAbs = System.Math.Max(maxAbs, System.Math.Abs(end2[component] / 1000.0));
@@ -1879,7 +1879,7 @@ namespace Mcoc.UnityViewer
             }
             typeVisible["analysis_diagram"] = true;
             ReapplyAll();
-            diagramCaption = $"{componentName} | {activeAnalysisCase} | {result.analysis_id} ({selectedDiagramMemberIndex + 1}/{results.Count}) | max |valor|={maxAbs:F2} {units} | END_FORCES_INTERPOLATION";
+            diagramCaption = $"{componentName} | {activeAnalysisCase} | {result.analysis_id} ({selectedDiagramMemberIndex + 1}/{results.Count}) | max |valor|={maxAbs:F2} {units} | END_FORCES_INTERPOLATION | sin cargas interiores";
         }
 
         List<double> ForceVector(AnalysisElementResult result, bool firstEnd)
@@ -1891,6 +1891,19 @@ namespace Mcoc.UnityViewer
                     : new List<double> { jose.N_end2, jose.Vy_end2, jose.Vz_end2, jose.T_end2, jose.My_end2, jose.Mz_end2 };
             }
             return firstEnd ? result?.localForce_end1 : result?.localForce_end2;
+        }
+
+        List<double> DiagramForceVector(AnalysisElementResult result, bool firstEnd)
+        {
+            var raw = ForceVector(result, firstEnd);
+            if (raw == null) return null;
+            // OpenSees entrega acciones del elemento sobre cada nodo con caras opuestas.
+            // Para un diagrama interno con una unica convencion de cara se conserva i
+            // y se invierte j. Los valores crudos siguen visibles en el inspector.
+            if (firstEnd) return raw;
+            var commonFace = new List<double>(raw.Count);
+            foreach (double value in raw) commonFace.Add(-value);
+            return commonFace;
         }
 
         List<P1L4ElementMetadata> MetadataForSelection(ElementInfo ei, string id)
@@ -2165,8 +2178,8 @@ namespace Mcoc.UnityViewer
             int component = diagramMode == 1 ? 4 : diagramMode == 2 ? 5 : diagramMode == 3 ? 0 : diagramMode == 4 ? 1 : 2;
             string componentName = diagramMode == 1 ? "My" : diagramMode == 2 ? "Mz" : diagramMode == 3 ? "N" : diagramMode == 4 ? "Vy" : "Vz";
             string units = diagramMode <= 2 ? "kN.m" : "kN";
-            var end1 = ForceVector(row, true);
-            var end2 = ForceVector(row, false);
+            var end1 = DiagramForceVector(row, true);
+            var end2 = DiagramForceVector(row, false);
             if (end1 == null || end2 == null || end1.Count <= component || end2.Count <= component) return;
             double v0 = end1[component] / 1000.0;
             double v1 = end2[component] / 1000.0;
@@ -2222,8 +2235,13 @@ namespace Mcoc.UnityViewer
             GUI.Label(new Rect(plot.xMax - 72, plot.yMax + 5, 90, 20), "x=L", label);
             GUI.Label(new Rect(plot.x + 5, p0.y - 24, 180, 20), $"i: {v0:F3} {units}", label);
             GUI.Label(new Rect(plot.xMax - 190, p1.y - 24, 185, 20), $"j: {v1:F3} {units}", label);
-            GUI.Label(new Rect(panel.x + 14, panel.yMax - 52, panel.width - 28, 40),
-                $"Representación: END_FORCES_INTERPOLATION. Valores de extremos desde el export de José ({joseForcesStatus}); la recta es interpolación visual, no una distribución interna calculada.", label);
+            double minValue = System.Math.Min(v0, v1);
+            double maxValue = System.Math.Max(v0, v1);
+            string minAt = v0 <= v1 ? "i (x=0)" : "j (x=L)";
+            string maxAt = v0 >= v1 ? "i (x=0)" : "j (x=L)";
+            GUI.Label(new Rect(panel.x + 360, panel.y + 39, panel.width - 374, 34), $"mín={minValue:F3} {units} @ {minAt}\nmáx={maxValue:F3} {units} @ {maxAt}", label);
+            GUI.Label(new Rect(panel.x + 14, panel.yMax - 70, panel.width - 28, 60),
+                $"DATOS: fuerzas de extremos OpenSees ({joseForcesStatus}); acciones locales i/j.\nREPRESENTACIÓN: END_FORCES_INTERPOLATION; extremo j convertido a cara interna común. CARGA INTERIOR: ninguna; G/Q/EX/EY/R se aplicaron como cargas nodales. Recta coherente por equilibrio del miembro FE, sin inventar estaciones.", label);
         }
 
         void DrawP1L4Header()
@@ -2986,13 +3004,13 @@ namespace Mcoc.UnityViewer
             {
                 if (candidate == null || candidate.category != "beam") continue;
                 string candidateId = string.IsNullOrEmpty(candidate.humanId) ? candidate.id : candidate.humanId;
-                if (analysisByElementId.ContainsKey(candidateId) && p1l4MetadataByElementId.ContainsKey(candidateId))
+                if (candidateId == "E2-P1-V-056" && analysisByElementId.ContainsKey(candidateId) && p1l4MetadataByElementId.ContainsKey(candidateId))
                 {
                     beam = candidate;
                     break;
                 }
             }
-            if (beam == null) failures.Add("viga demostrable no encontrada");
+            if (beam == null) failures.Add("viga E2-P1-V-056 no encontrada");
             else
             {
                 ShowInfo(beam);
@@ -3012,6 +3030,43 @@ namespace Mcoc.UnityViewer
                     if (selectedDiagramObjects.Count == 0 || !diagram2DVisible)
                         failures.Add($"diagrama modo {mode} no disponible");
                 }
+                SetDiagramMode(1);
+                if (!diagramCaption.Contains("END_FORCES_INTERPOLATION") || !diagramCaption.Contains("sin cargas interiores"))
+                    failures.Add("clasificacion fisica del diagrama no visible");
+                string auditedBeamId = string.IsNullOrEmpty(beam.humanId) ? beam.id : beam.humanId;
+                var auditedRows = ResultsForSelection(beam, auditedBeamId);
+                if (auditedRows.Count != 1) failures.Add("E2-P1-V-056 no tiene un unico miembro FE historico");
+                else
+                {
+                    var rawJ = ForceVector(auditedRows[0], false);
+                    var diagramJ = DiagramForceVector(auditedRows[0], false);
+                    if (rawJ == null || diagramJ == null || rawJ.Count != diagramJ.Count)
+                        failures.Add("vectores i/j de E2-P1-V-056 no disponibles");
+                    else
+                        for (int index = 0; index < rawJ.Count; index++)
+                            if (System.Math.Abs(rawJ[index] + diagramJ[index]) > 1e-9)
+                                failures.Add("conversion de j a cara interna comun invalida");
+                }
+            }
+
+            ElementInfo oneToMany = null;
+            foreach (var candidate in allElements)
+            {
+                if (candidate == null) continue;
+                string candidateId = string.IsNullOrEmpty(candidate.humanId) ? candidate.id : candidate.humanId;
+                if (diagnosticByElementId.TryGetValue(candidateId, out var diagnostic) &&
+                    diagnostic.crosswalk != null && diagnostic.crosswalk.Count > 1)
+                {
+                    oneToMany = candidate;
+                    break;
+                }
+            }
+            if (oneToMany == null) failures.Add("elemento crosswalk 1:N candidato no seleccionable");
+            else
+            {
+                ShowInfo(oneToMany);
+                if (oneToMany.crosswalk == null || oneToMany.crosswalk.Count < 2)
+                    failures.Add("trazabilidad crosswalk 1:N candidata sin miembros multiples");
             }
 
             ActivateAnalysisCase("R");
@@ -3048,7 +3103,7 @@ namespace Mcoc.UnityViewer
                 ReapplyAll();
             }
             if (failures.Count == 0)
-                Debug.Log("[P1L4 DEMO QA] PASS: VIGA identidad/ejes/R/fuerzas/deformada/My-2D/N-V-2D; COLUMNA P-M/demanda; MURO P-M/ASUMIDO_LAB; GLOBAL cargas/apoyos/tributarias.");
+                Debug.Log("[P1L4 DEMO QA] PASS: E2-P1-V-056 identidad/ejes/R/fuerzas/cara-interna/deformada/My-2D/N-V-2D; crosswalk 1:N candidato trazable; COLUMNA P-M/demanda; MURO P-M/ASUMIDO_LAB; GLOBAL cargas/apoyos/tributarias.");
             else Debug.LogError("[P1L4 DEMO QA] FAIL: " + string.Join(", ", failures));
         }
 

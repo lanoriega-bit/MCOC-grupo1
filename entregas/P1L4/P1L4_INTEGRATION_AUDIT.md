@@ -1,5 +1,10 @@
 # Auditoría de integración P1L4
 
+> Estado vigente: integración cerrada y auditada. Esta matriz conserva el
+> diagnóstico inicial para trazabilidad; el resultado final requisito por
+> requisito está en `P1L4_INTEGRATION_QA.md` y los hallazgos/correcciones en
+> `FINAL_PROJECT_AUDIT.md`.
+
 Fecha: 2026-09-14 (actualización estado José 2026-09-14)  
 Rama de trabajo: `codex/p1l4-unity-integration`  
 `PRE_P1L4_CONSOLIDATED_BASELINE`: `aa6bc4b7a207dde4ddac2f3deef1eee54e042f5f`

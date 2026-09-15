@@ -1,14 +1,20 @@
 # Índice maestro del proyecto
 
-Estado: `POST-P1L3 / PRE-P1L4`  
-Rama de trabajo: `codex/pre-p1l4-consolidation`  
-Snapshot entregado: tag `P1L3_DELIVERED` (`c847c13`)  
-Interfaz visual principal única: Unity de José
+- Estado: `P1L4 COMPLETE — FINAL AUDITADO`
+- Rama de trabajo: `codex/p1l4-unity-integration`
+- Snapshot P1L3 preservado: tag `P1L3_DELIVERED` (`c847c13`)
+- Entrega P1L4: tag `P1L4_FINAL_AUDITED`
+- Interfaz visual principal única: Unity de José
 
 Este índice responde qué archivo debe usarse hoy. El inventario máquina a
 máquina de todos los archivos, hashes, ramas y duplicados está en
 `REPOSITORY_INVENTORY.json` y se regenera con
 `tools/inventory_repository.py`.
+
+La auditoría final, incluidas las limitaciones de los resultados históricos y
+la convención física de diagramas, está en
+`entregas/P1L4/FINAL_PROJECT_AUDIT.md`. Las secciones PRE-P1L4 conservadas más
+abajo son historia técnica, no el estado vigente de la entrega.
 
 ## Inicio rápido
 
@@ -109,10 +115,8 @@ Por ahora esta estructura es solo una guía. Mover cientos de archivos rompería
 rutas, historia y scripts; cualquier migración futura debe hacerse por
 adaptadores y en commits pequeños.
 
-## Próximo trabajo técnico autorizado
+## Trabajo posterior a la entrega
 
-1. Revisar visualmente en Unity los 31 `DISCONNECTED_ERROR` y 9 `UNRESOLVED`.
-2. Volver a planos para resolver únicamente conexiones respaldadas.
-3. Terminar perímetros/huecos de losas y cobertura.
-4. Validar Q completo.
-5. Solo entonces recalcular G/Q, masas, EX/EY, superposición y OpenSees.
+P1L4 visualiza correctamente el snapshot estructural entregado y declara sus
+límites. Un futuro recálculo post-consolidación debe aprobar primero topología,
+losas y Q; no debe sustituir silenciosamente los resultados P1L3 históricos.

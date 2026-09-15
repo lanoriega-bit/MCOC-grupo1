@@ -21,7 +21,11 @@
     "jose_export_5_cases_1312_elements": true,
     "jose_displacements_5_cases_813_nodes": true,
     "jose_supports_106_nodes": true,
-    "unity_2d_diagrams_declared": true
+    "supports_unique_nodes_and_positions": true,
+    "jose_forces_exactly_match_historical_cases": true,
+    "unity_2d_diagrams_declared": true,
+    "diagram_physics_and_equilibrium": true,
+    "single_demand_capacity_loader_and_model": true
   },
   "counts": {
     "unity_geometry_ids": 1212,
@@ -35,6 +39,7 @@
     "tributary_point_areas": 491,
     "tributary_areas_without_display_polygon": 192,
     "tributary_zero_area_records": 117,
+    "tributary_records_with_zone_contributions": 0,
     "load_catalog_entries": 108,
     "load_catalog_drawable_entries": 82,
     "crosswalk_1_to_many_geometry_ids": 33,
@@ -72,6 +77,9 @@
     "Hay 192 tributarias historicas con area/carga legible pero sin poligono de visualizacion; se reportan, no se inventa su huella.",
     "Hay 117 registros historicos con area y carga explicitamente iguales a cero; no se reinterpretan como datos ausentes.",
     "El FE post-P1L3 sigue CANDIDATE_NOT_APPROVED_NOT_RUN.",
-    "La capa CONTEXTO FÍSICO solo reclasifica y dibuja regiones/marcadores; no cambia apoyos, elementos ni resultados."
+    "La capa CONTEXTO FÍSICO solo reclasifica y dibuja regiones/marcadores; no cambia apoyos, elementos ni resultados.",
+    "Las 1312 fuerzas de José coinciden exactamente con analysis_cases.json en G/Q/EX/EY/R: es una exportación P1L3 histórica, no una corrida P1L4 nueva.",
+    "El pipeline ejecutado aplica G/Q/EX/EY/R como cargas nodales. Los diagramas usan fuerzas de extremo con el extremo j convertido a una convención común de cara interna.",
+    "Las tributarias del snapshot histórico no contienen zone_contributions; la UI no atribuye detalle multizona inexistente."
   ]
 }

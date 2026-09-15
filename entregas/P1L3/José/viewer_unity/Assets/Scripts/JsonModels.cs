@@ -443,67 +443,6 @@ namespace Mcoc.UnityViewer
         public int RZ;
     }
 
-    // ---------- P1L4 Luis: demanda-capacidad P-M ----------
-    // Contrato P1L4_UNITY_DEMAND_CAPACITY_v1 (demanda_capacidad.json)
-
-    [Serializable]
-    public class DemandaCapacidadData
-    {
-        public string format;
-        public string active_case;
-        public List<DemandaCapacidadElement> elements;
-    }
-
-    [Serializable]
-    public class DemandaCapacidadElement
-    {
-        public string element_id;
-        public string structural_id;
-        public string type;
-        public int opensees_tag;
-        public string geometry_elementTag;
-        public string analysis_id;
-        public List<int> nodes;
-        public DemandaCapacidadDemand demand;
-        public DemandaCapacidadCapacity capacity;
-        public DemandaCapacidadResult demand_capacity;
-    }
-
-    [Serializable]
-    public class DemandaCapacidadDemand
-    {
-        public string case_name;
-        public string selected_end;
-        public string pm_component;
-        public double P_kN;
-        public double Vy_kN;
-        public double Vz_kN;
-        public double T_kNm;
-        public double My_kNm;
-        public double Mz_kNm;
-    }
-
-    [Serializable]
-    public class DemandaCapacidadCapacity
-    {
-        public string status;
-        public string pm_axis;
-        public string source;
-    }
-
-    [Serializable]
-    public class DemandaCapacidadResult
-    {
-        public double P_kN;
-        public double compression_magnitude_kN;
-        public double M_kNm;
-        public double M_abs_kNm;
-        public string pm_axis;
-        public bool inside_envelope;
-        public double interpolated_capacity_M_abs_kNm;
-        public string method;
-    }
-
     [Serializable]
     public class FeDiagnosticData
     {

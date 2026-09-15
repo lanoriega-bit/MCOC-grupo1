@@ -4,6 +4,8 @@
 
 Estado evaluable y limitaciones: [`FINAL_STATUS.md`](FINAL_STATUS.md).
 Matriz requisito por requisito: [`P1L4_INTEGRATION_QA.md`](P1L4_INTEGRATION_QA.md).
+Auditoría integral: [`FINAL_PROJECT_AUDIT.md`](FINAL_PROJECT_AUDIT.md).
+Auditoría física de diagramas: [`DIAGRAM_PHYSICS_AUDIT.md`](DIAGRAM_PHYSICS_AUDIT.md).
 
 ## Objetivo
 
@@ -47,8 +49,9 @@ participa en FE y no representa una superficie de terreno inventada.
   casos, secciones, material elástico, ejes locales y 106 apoyos.
 - P1L4-3, inspector inicial: implementado con secciones IDENTIDAD, ANÁLISIS,
   RESULTADOS, CARGAS/TRIBUTARIAS, DEMANDA-CAPACIDAD y TRAZABILIDAD.
-- El inspector preserva crosswalk 1:N y lista los esfuerzos de ambos extremos
-  de cada miembro sin combinarlos.
+- El inspector preserva el crosswalk 1:N del FE candidato como trazabilidad no
+  ejecutada. Los esfuerzos históricos se mantienen en su mapeo entregado y no
+  se asignan a segmentos candidatos.
 - El caso activo G/Q/EX/EY/R queda siempre visible en el encabezado.
 - La columna y el muro de Luis están conectados por JSON; fuera de CASE_R el
   punto de demanda aparece como `N/A`.
@@ -58,8 +61,11 @@ participa en FE y no representa una superficie de terreno inventada.
   My/Mz/N/Vy/Vz del elemento seleccionado ya están implementados.
 - Cada componente dispone además de gráfico 2D legible, selector de miembro
   cuando el crosswalk es 1:N, valores i/j, unidades y caso activo.
-- Los diagramas muestran los dos valores de extremo de OpenSees unidos por una
-  interpolación lineal únicamente gráfica; no se presenta como distribución exacta.
+- Los diagramas convierten la acción del extremo `j` a la misma convención de
+  cara interna usada en `i`. El pipeline ejecutado aplica G/Q/EX/EY/R mediante
+  cargas nodales, sin `eleLoad` interior: N/V/T son constantes y My/Mz lineales
+  por equilibrio. Se rotulan `END_FORCES_INTERPOLATION`, nunca como estaciones
+  internas exportadas.
 - P1L4-6: los 106 apoyos FE se dibujan en su coordenada nodal exacta y exponen
   UX/UY/UZ/RX/RY/RZ. El catálogo 700 muestra 82 geometrías disponibles y deja
   explícitamente fuera de la vista las cargas puntuales sin posición confirmada.
@@ -70,10 +76,11 @@ participa en FE y no representa una superficie de terreno inventada.
 
 - Todo valor muestra unidad.
 - Un componente ausente se presenta como `N/A`, nunca como cero inventado.
-- Un geometry element con varios miembros FE conserva la relación 1:N; no se
-  suman ni combinan esfuerzos arbitrariamente.
-- Una curva de diagrama construida desde fuerzas de extremos se etiqueta como
-  interpolación visual.
+- El crosswalk 1:N candidato se muestra como diagnóstico, nunca como resultado
+  ejecutado. Si una fuente futura trae resultados 1:N, Unity los navegará por
+  miembro sin sumarlos.
+- Una curva construida desde fuerzas de extremos se etiqueta
+  `END_FORCES_INTERPOLATION` y declara `DATOS` y `REPRESENTACIÓN`.
 - Los puntos P-M con `valid=false` no se conectan como envolvente.
 - Para el muro `E2-P1-M-019` siempre debe verse `Armadura: ASUMIDO_LAB`.
 - La salida de José se rotula `P1L3_ENTREGADO_HISTORICO`: es un export P1L4
@@ -111,7 +118,8 @@ participa en FE y no representa una superficie de terreno inventada.
 4. Mostrar sus nodos, sección, material, `elementTag`, `analysis_id` y ejes locales.
 5. Cambiar R → G → Q → EX/EY y comprobar que los esfuerzos y la deformada cambian.
 6. Activar `Deformada`, variar el factor y volver a `OFF`.
-7. Activar My o Mz; explicar que los valores de extremo son OpenSees y la unión es visual.
+7. Activar My o Mz; leer `DATOS: fuerzas de extremos OpenSees` y explicar la
+   conversión de signo de `j` a cara interna común.
 8. Activar N, Vy o Vz y repetir la lectura de signo, escala y unidades.
 9. Activar `Tributarias`, seleccionar un paño y leer área y carga histórica asociada.
 10. Activar `Cargas 700`; seleccionar una superficie o línea y mostrar
@@ -134,8 +142,11 @@ participa en FE y no representa una superficie de terreno inventada.
   OpenSees multiplicado por un factor exclusivamente visual.
 - **¿Qué representan los ejes locales?** x sigue el miembro i→j; y/z se obtienen
   con la misma regla `vecxz` usada por la transformación geométrica de OpenSees.
-- **¿Cómo se genera un diagrama?** Con los valores disponibles en ambos extremos.
-  La línea entre ellos es interpolación gráfica documentada, no una solución interna exacta.
+- **¿Cómo se genera un diagrama?** Se convierten las acciones i/j de OpenSees a
+  una convención común de corte interno. Como el modelo ejecutado solo tiene
+  cargas nodales, el equilibrio exige N/V/T constantes y My/Mz lineales. La UI
+  mantiene la clasificación conservadora `END_FORCES_INTERPOLATION` porque no
+  existen estaciones internas exportadas.
 - **¿Qué significa P-M?** Es la envolvente de capacidad combinada axial-momento
   de la sección. Cambiar P modifica el momento resistente disponible.
 - **¿Cómo se obtiene el punto de demanda?** Luis lo extrae automáticamente de
