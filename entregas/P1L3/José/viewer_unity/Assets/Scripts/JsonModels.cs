@@ -771,4 +771,36 @@ namespace Mcoc.UnityViewer
         public string capacity_section_config;
         public string case_manifest;
     }
+
+    [Serializable]
+    public class P1L4LoadCatalogData
+    {
+        public string format;
+        public string data_state;
+        public string source;
+        public bool is_structurally_applied;
+        public int entry_count;
+        public int drawable_entry_count;
+        public List<P1L4LoadEntryData> entries;
+    }
+
+    [Serializable]
+    public class P1L4LoadEntryData
+    {
+        public string load_id;
+        public string load_type;
+        public string building;
+        public string floor;
+        public string source_sheet;
+        public double source_value;
+        public string source_unit;
+        public double SI_value;
+        public string SI_unit;
+        public string confidence;
+        public string application_status;
+        public string geometry_type;
+        public List<double> coordinates_xy_flat;
+        public List<string> receiver_ids;
+        public string receiver_status;
+    }
 }

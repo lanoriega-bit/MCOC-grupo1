@@ -8,6 +8,7 @@ El Unity canónico consume tres contratos P1L4 adicionales desde
 | `p1l4_structural_metadata.json` | Identidad FE, nodos, sección, material elástico, ejes locales y apoyos |
 | `demanda_capacidad.json` | Contrato íntegro producido por Luis para columna y muro |
 | `p1l4_integration_manifest.json` | Fuentes, hashes, estados y QA del paquete |
+| `p1l4_load_catalog.json` | Catálogo 700 aplanado para Unity, siempre `AUDITADO_NOT_APPLIED` |
 
 Los cinco casos de fuerzas/desplazamientos continúan en `analysis_cases.json`.
 El adaptador no recalcula OpenSees: empaqueta y valida las fuentes disponibles.
@@ -41,3 +42,10 @@ La ausencia de una componente o fuente se representa como no disponible. El
 consumidor muestra `N/A`; un cero solo se muestra si está presente explícitamente
 en el resultado OpenSees.
 
+## Cargas auditadas
+
+El adaptador conserva las 108 entradas del catálogo 700 y aplana únicamente sus
+coordenadas para que `JsonUtility` pueda leerlas. `is_structurally_applied=false`
+es parte obligatoria del contrato. Unity dibuja solo las geometrías existentes:
+superficies y líneas. Una carga puntual sin `application_position` no recibe un
+símbolo aproximado. Magnitud, unidad, confianza, estado y receptores se preservan.

@@ -21,6 +21,7 @@ STREAMING = ROOT / "entregas" / "P1L3" / "José" / "viewer_unity" / "Assets" / "
 DEFAULT_ANALYSIS = ROOT / "entregas" / "P1L3" / "results" / "a3a4" / "analysis_model.json"
 DEFAULT_CASES = ROOT / "entregas" / "P1L3" / "results" / "a7" / "cases"
 DEFAULT_DEMAND_CAPACITY = P1L4 / "demanda_capacidad" / "demanda_capacidad.json"
+DEFAULT_LOAD_CATALOG = ROOT / "entregas" / "P1L3" / "results" / "a1a2" / "load_zones_700_completion" / "load_catalog_700.json"
 PREFERRED_CASE_ORDER = ("G", "Q", "EX", "EY", "R")
 
 
@@ -213,11 +214,56 @@ def build_metadata(analysis: dict, case_records: list[dict], data_state: str, an
     }
 
 
+def build_load_catalog(source: dict, source_path: Path) -> dict:
+    entries = []
+    drawable = 0
+    for item in source.get("entries", []):
+        geometry = item.get("geometry") or {}
+        geometry_type = geometry.get("type", "")
+        coordinates = geometry.get("coordinates") or []
+        points = coordinates[0] if geometry_type == "Polygon" and coordinates else coordinates
+        coordinates_xy_flat = []
+        if geometry_type in ("Polygon", "LineString"):
+            for point in points:
+                if isinstance(point, list) and len(point) >= 2:
+                    coordinates_xy_flat.extend([float(point[0]), float(point[1])])
+        if len(coordinates_xy_flat) >= (6 if geometry_type == "Polygon" else 4):
+            drawable += 1
+        receiver = item.get("receiver") or {}
+        entries.append({
+            "load_id": item.get("load_id", ""),
+            "load_type": item.get("load_type", ""),
+            "building": item.get("building", ""),
+            "floor": item.get("floor", ""),
+            "source_sheet": item.get("source_sheet", ""),
+            "source_value": item.get("source_value"),
+            "source_unit": item.get("source_unit", ""),
+            "SI_value": item.get("SI_value"),
+            "SI_unit": item.get("SI_unit", ""),
+            "confidence": item.get("confidence", ""),
+            "application_status": item.get("application_status", ""),
+            "geometry_type": geometry_type,
+            "coordinates_xy_flat": coordinates_xy_flat,
+            "receiver_ids": [row.get("element_id", "") for row in receiver.get("elements", [])],
+            "receiver_status": receiver.get("status", ""),
+        })
+    return {
+        "format": "P1L4_UNITY_LOAD_CATALOG_v1",
+        "data_state": "AUDITADO_NOT_APPLIED",
+        "source": rel(source_path),
+        "is_structurally_applied": False,
+        "entry_count": len(entries),
+        "drawable_entry_count": drawable,
+        "entries": entries,
+    }
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument("--analysis-model", type=Path, default=DEFAULT_ANALYSIS)
     parser.add_argument("--cases-dir", type=Path, default=DEFAULT_CASES)
     parser.add_argument("--demand-capacity", type=Path, default=DEFAULT_DEMAND_CAPACITY)
+    parser.add_argument("--load-catalog", type=Path, default=DEFAULT_LOAD_CATALOG)
     parser.add_argument("--data-state", default="P1L3_ENTREGADO_HISTORICO")
     return parser.parse_args()
 
@@ -227,8 +273,10 @@ def main() -> None:
     analysis_path = args.analysis_model.resolve()
     cases_dir = args.cases_dir.resolve()
     demand_capacity_path = args.demand_capacity.resolve()
+    load_catalog_path = args.load_catalog.resolve()
     analysis = load_json(analysis_path)
     demand_capacity = load_json(demand_capacity_path)
+    load_catalog = build_load_catalog(load_json(load_catalog_path), load_catalog_path)
     case_records = discover_cases(cases_dir)
     metadata = build_metadata(analysis, case_records, args.data_state, analysis_path)
 
@@ -241,9 +289,11 @@ def main() -> None:
     STREAMING.mkdir(parents=True, exist_ok=True)
     metadata_output = STREAMING / "p1l4_structural_metadata.json"
     demand_output = STREAMING / "demanda_capacidad.json"
+    load_output = STREAMING / "p1l4_load_catalog.json"
     manifest_output = STREAMING / "p1l4_integration_manifest.json"
     write_json(metadata_output, metadata)
     shutil.copyfile(demand_capacity_path, demand_output)
+    write_json(load_output, load_catalog)
     manifest = {
         "format": "P1L4_UNITY_INTEGRATION_MANIFEST_v1",
         "generated_utc": datetime.now(timezone.utc).isoformat(),
@@ -260,16 +310,20 @@ def main() -> None:
             "analysis_model": rel(analysis_path),
             "cases_dir": rel(cases_dir),
             "demand_capacity": rel(demand_capacity_path),
+            "load_catalog": rel(load_catalog_path),
         },
         "files": [
             {"name": metadata_output.name, "sha256": sha256(metadata_output)},
             {"name": demand_output.name, "sha256": sha256(demand_output)},
+            {"name": load_output.name, "sha256": sha256(load_output)},
         ],
         "qa": {
             **metadata["qa"],
             "case_ids": [item["case_id"] for item in case_records],
             "demand_capacity_tags": sorted(demand_tags),
             "demand_capacity_status": demand_capacity.get("validation", {}).get("status"),
+            "load_catalog_entries": load_catalog["entry_count"],
+            "load_catalog_drawable_entries": load_catalog["drawable_entry_count"],
         },
     }
     write_json(manifest_output, manifest)

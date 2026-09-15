@@ -1,6 +1,6 @@
 {
   "format": "P1L4_UNITY_INTEGRATION_MANIFEST_v1",
-  "generated_utc": "2026-09-14T16:38:48.027995+00:00",
+  "generated_utc": "2026-09-14T17:00:37.899735+00:00",
   "pre_p1l4_consolidated_baseline": "aa6bc4b7a207dde4ddac2f3deef1eee54e042f5f",
   "canonical_unity": "entregas/P1L3/José/viewer_unity",
   "data_state": {
@@ -13,7 +13,8 @@
   "sources": {
     "analysis_model": "entregas/P1L3/results/a3a4/analysis_model.json",
     "cases_dir": "entregas/P1L3/results/a7/cases",
-    "demand_capacity": "entregas/P1L4/demanda_capacidad/demanda_capacidad.json"
+    "demand_capacity": "entregas/P1L4/demanda_capacidad/demanda_capacidad.json",
+    "load_catalog": "entregas/P1L3/results/a1a2/load_zones_700_completion/load_catalog_700.json"
   },
   "files": [
     {
@@ -23,6 +24,10 @@
     {
       "name": "demanda_capacidad.json",
       "sha256": "ee84df843e43c4c9661edf59240e65f2269d6e307fde0f8015dd19c6c84b394d"
+    },
+    {
+      "name": "p1l4_load_catalog.json",
+      "sha256": "86a662b048d0f5fb459506295ea5219b76972a2d20683458741649543936949c"
     }
   ],
   "qa": {
@@ -43,6 +48,8 @@
       10009,
       10171
     ],
-    "demand_capacity_status": "PASS"
+    "demand_capacity_status": "PASS",
+    "load_catalog_entries": 108,
+    "load_catalog_drawable_entries": 82
   }
 }

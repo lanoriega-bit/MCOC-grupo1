@@ -27,6 +27,7 @@ def main() -> None:
     demand_capacity = load(STREAM / "demanda_capacidad.json")
     tributaries = load(STREAM / "tributary_areas.json")
     loads = load(LOAD_CATALOG)
+    unity_loads = load(STREAM / "p1l4_load_catalog.json")
 
     geometry_ids = {item["id"] for item in geometry["solids"] if item.get("id")}
     metadata_ids = {item["element_id"] for item in metadata["elements"]}
@@ -101,6 +102,17 @@ def main() -> None:
         and item.get("application_status")
         for item in loads["entries"]
     )
+    drawable_loads = [
+        item for item in unity_loads.get("entries", [])
+        if item.get("geometry_type") in ("Polygon", "LineString")
+        and len(item.get("coordinates_xy_flat", [])) >= (6 if item.get("geometry_type") == "Polygon" else 4)
+    ]
+    unity_loads_valid = (
+        unity_loads.get("data_state") == "AUDITADO_NOT_APPLIED"
+        and unity_loads.get("is_structurally_applied") is False
+        and unity_loads.get("entry_count") == len(loads["entries"])
+        and unity_loads.get("drawable_entry_count") == len(drawable_loads)
+    )
 
     overlap = len(geometry_ids & metadata_ids)
     report = {
@@ -119,6 +131,7 @@ def main() -> None:
             "supports_readable": supports_valid,
             "tributary_areas_readable": tributaries_valid,
             "loads_readable": loads_valid,
+            "unity_load_catalog_readable_and_not_applied": unity_loads_valid,
             "demand_capacity_readable": all(
                 row["geometry_id_exists"] and row["metadata_id_exists"]
                 and row["result_tag_exists_in_CASE_R"] and row["valid_pm_points"] >= 2
@@ -138,6 +151,7 @@ def main() -> None:
             "tributary_areas_without_display_polygon": tributary_polygons_missing,
             "tributary_zero_area_records": tributary_zero_areas,
             "load_catalog_entries": len(loads["entries"]),
+            "load_catalog_drawable_entries": len(drawable_loads),
             "crosswalk_1_to_many_geometry_ids": one_to_many,
         },
         "demand_capacity": dc_checks,

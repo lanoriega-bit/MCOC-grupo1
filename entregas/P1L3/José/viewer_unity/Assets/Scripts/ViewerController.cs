@@ -46,6 +46,7 @@ namespace Mcoc.UnityViewer
         private CapacityData capacity;
         private P1L4StructuralMetadataData p1l4Metadata;
         private DemandCapacityData demandCapacity;
+        private P1L4LoadCatalogData p1l4LoadCatalog;
         private Texture2D fiberTexture;
         private Texture2D momentCurvatureTexture;
         private Texture2D pmInteractionTexture;
@@ -60,6 +61,15 @@ namespace Mcoc.UnityViewer
         private string expandedGraphTitle = "";
         private float deformationScaleEX = 1f;
         private float deformationScaleEY = 1f;
+        private float activeDeformationScale = 50f;
+        private bool activeDeformationVisible = false;
+        private readonly List<GameObject> activeDeformationObjects = new List<GameObject>();
+        private int diagramMode = 0; // 0 off, 1 My, 2 Mz, 3 N, 4 Vy, 5 Vz
+        private string diagramCaption = "Diagramas: seleccione un elemento";
+        private readonly List<GameObject> selectedDiagramObjects = new List<GameObject>();
+        private bool demandCapacityPlotVisible = false;
+        private bool localAxesVisible = false;
+        private readonly List<GameObject> selectedLocalAxisObjects = new List<GameObject>();
         private readonly Dictionary<string, Vector2> memberTrib = new Dictionary<string, Vector2>();
         private readonly Dictionary<string, List<AnalysisElementResult>> analysisByElementId = new Dictionary<string, List<AnalysisElementResult>>();
         private readonly Dictionary<string, ExcludedAnalysisElement> excludedByElementId = new Dictionary<string, ExcludedAnalysisElement>();
@@ -114,6 +124,9 @@ namespace Mcoc.UnityViewer
             { "column_plan", "Pilares CAD" },
             { "wall", "Muros" },
             { "support", "Apoyos" },
+            { "p1l4_support", "Apoyos nodales FE P1L4" },
+            { "p1l4_load_surface", "Cargas 700 superficiales (NO APLICADAS)" },
+            { "p1l4_load_line", "Cargas 700 lineales (NO APLICADAS)" },
             { "diaphragm", "Analisis - Diafragma" },
             { "slab", "Referencia - Losa provisional" },
             { "axis", "Ejes CAD" },
@@ -131,6 +144,9 @@ namespace Mcoc.UnityViewer
             { "seismic_pattern", "Patron sismico" },
             { "seismic_deform_ex", "Deformada OpenSees EX" },
             { "seismic_deform_ey", "Deformada OpenSees EY" },
+            { "analysis_deformed", "Deformada caso activo P1L4" },
+            { "analysis_diagram", "Diagrama del elemento seleccionado" },
+            { "selected_local_axes", "Ejes locales del elemento" },
             { "seismic_torsion", "Torsion de piso" },
             { "fe_candidate", "Malla FE candidata POST-P1L3" }
         };
@@ -182,6 +198,7 @@ namespace Mcoc.UnityViewer
             capacity = JsonLoader.LoadCapacity();
             p1l4Metadata = JsonLoader.LoadP1L4StructuralMetadata();
             demandCapacity = JsonLoader.LoadDemandCapacity();
+            p1l4LoadCatalog = JsonLoader.LoadP1L4LoadCatalog();
             BuildP1L4Indexes();
             fiberTexture = JsonLoader.LoadPng("fiber_section.png");
             momentCurvatureTexture = JsonLoader.LoadPng("moment_curvature.png");
@@ -202,9 +219,11 @@ namespace Mcoc.UnityViewer
                             memberTrib[a.elementTag] = new Vector2((float)a.area_m2, (float)a.load_kN);
             }
             BuildScene();
+            BuildP1L4Supports();
             if (feDiagnostic != null) BuildFeCandidate();
             if (architecture != null) BuildArchitecture();
             if (tributaries != null) BuildTributaries();
+            BuildP1L4Loads();
             seismic = JsonLoader.LoadSeismic();
             if (seismic != null) BuildSeismic();
             RunVisibilitySelfCheck();
@@ -275,7 +294,60 @@ namespace Mcoc.UnityViewer
             if (chosen.excluded_elements != null)
                 foreach (var item in chosen.excluded_elements)
                     if (!string.IsNullOrEmpty(item.element_id)) excludedByElementId[item.element_id] = item;
+            if (model != null && model.solids != null) RebuildActiveDeformedShape();
             if (lastSelected != null) ShowInfo(lastSelected);
+        }
+
+        void RebuildActiveDeformedShape()
+        {
+            foreach (var go in activeDeformationObjects)
+            {
+                if (go == null) continue;
+                if (registeredFloor.TryGetValue(go, out var priorFloor) && byFloor.TryGetValue(priorFloor, out var floorObjects))
+                    floorObjects.Remove(go);
+                registeredType.Remove(go);
+                registeredFloor.Remove(go);
+                if (Application.isPlaying) Destroy(go); else DestroyImmediate(go);
+            }
+            activeDeformationObjects.Clear();
+            if (byType.ContainsKey("analysis_deformed")) byType["analysis_deformed"].Clear();
+            if (analysisResults == null || analysisResults.nodes == null || analysisResults.elements == null) return;
+
+            var nodes = new Dictionary<int, AnalysisNodeResult>();
+            foreach (var node in analysisResults.nodes)
+                if (node != null) nodes[node.node_tag] = node;
+            Color color = ActiveCaseColor(activeAnalysisCase);
+            foreach (var element in analysisResults.elements)
+            {
+                if (element == null || !nodes.TryGetValue(element.node_i, out var ni) || !nodes.TryGetValue(element.node_j, out var nj)) continue;
+                Vector3 p0 = V(ni.coord) + new Vector3((float)ni.ux_m, (float)ni.uy_m, (float)ni.uz_m) * activeDeformationScale;
+                Vector3 p1 = V(nj.coord) + new Vector3((float)nj.ux_m, (float)nj.uy_m, (float)nj.uz_m) * activeDeformationScale;
+                var go = new GameObject($"P1L4_DEF_{activeAnalysisCase}_{element.analysis_id}");
+                var line = go.AddComponent<LineRenderer>();
+                line.useWorldSpace = false;
+                line.positionCount = 2;
+                line.SetPosition(0, p0);
+                line.SetPosition(1, p1);
+                line.startWidth = 0.18f;
+                line.endWidth = 0.18f;
+                line.material = SeismicLineMat(color);
+                Register(go, "analysis_deformed", element.floor ?? "");
+                activeDeformationObjects.Add(go);
+            }
+            typeVisible["analysis_deformed"] = activeDeformationVisible;
+            ReapplyAll();
+        }
+
+        static Color ActiveCaseColor(string caseName)
+        {
+            switch (caseName)
+            {
+                case "G": return new Color(0.75f, 0.78f, 0.85f);
+                case "Q": return new Color(0.25f, 0.95f, 0.45f);
+                case "EX": return new Color(1f, 0.2f, 0.12f);
+                case "EY": return new Color(0.2f, 0.55f, 1f);
+                default: return new Color(1f, 0.25f, 0.85f);
+            }
         }
 
         void LoadMaterials()
@@ -315,6 +387,129 @@ namespace Mcoc.UnityViewer
             if (model.diaphragms != null)
                 foreach (var dia in model.diaphragms) CreateDiaphragm(dia);
             CreateNodes();
+        }
+
+        void BuildP1L4Supports()
+        {
+            if (p1l4Metadata == null || p1l4Metadata.supports == null) return;
+            foreach (var support in p1l4Metadata.supports)
+            {
+                if (support == null || support.coord_m == null || support.coord_m.Count < 3) continue;
+                Vector3 coord = V(support.coord_m);
+                var go = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                go.name = "P1L4_SUPPORT_" + support.node_tag;
+                go.transform.position = coord;
+                go.transform.localScale = new Vector3(0.42f, 0.42f, 0.28f);
+                var renderer = go.GetComponent<Renderer>();
+                renderer.sharedMaterial = LineMaterial(new Color(0.95f, 0.25f, 0.85f));
+
+                var info = go.AddComponent<ElementInfo>();
+                info.go = go;
+                info.id = support.support_id;
+                info.humanId = support.support_id;
+                info.category = "p1l4_support";
+                info.floor = string.IsNullOrEmpty(support.floor) ? "base" : support.floor;
+                info.building = SupportBuilding(support.node_tag);
+                info.materialName = "restriccion nodal OpenSees";
+                info.nodeI = coord;
+                info.coordCenter = coord;
+                info.baseColor = renderer.sharedMaterial.color;
+                info.isP1L4Support = true;
+                info.supportNodeTag = support.node_tag;
+                info.fixUX = support.UX;
+                info.fixUY = support.UY;
+                info.fixUZ = support.UZ;
+                info.fixRX = support.RX;
+                info.fixRY = support.RY;
+                info.fixRZ = support.RZ;
+                Register(go, "p1l4_support", info.floor);
+                allElements.Add(info);
+            }
+        }
+
+        string SupportBuilding(int nodeTag)
+        {
+            if (p1l4Metadata != null && p1l4Metadata.elements != null)
+                foreach (var item in p1l4Metadata.elements)
+                    if (item != null && (item.node_i == nodeTag || item.node_j == nodeTag))
+                        return string.IsNullOrEmpty(item.building) ? "Modelo global" : item.building;
+            return "Modelo global";
+        }
+
+        void BuildP1L4Loads()
+        {
+            if (p1l4LoadCatalog == null || p1l4LoadCatalog.entries == null) return;
+            var slabZ = new Dictionary<string, float>();
+            if (model != null && model.solids != null)
+                foreach (var solid in model.solids)
+                {
+                    if (solid == null || solid.category != "slab" || solid.center == null || solid.center.Count < 3) continue;
+                    string key = (solid.building ?? "") + "|" + (solid.floor ?? "");
+                    float top = (float)solid.center[2] + (float)solid.height_m * 0.5f;
+                    if (!slabZ.ContainsKey(key) || slabZ[key] < top) slabZ[key] = top;
+                }
+
+            foreach (var load in p1l4LoadCatalog.entries)
+            {
+                if (load == null || load.coordinates_xy_flat == null) continue;
+                string key = (load.building ?? "") + "|" + (load.floor ?? "");
+                float z = (slabZ.TryGetValue(key, out var top) ? top : 0f) + 0.12f;
+                ElementInfo info = null;
+                if (load.geometry_type == "Polygon" && load.coordinates_xy_flat.Count >= 6)
+                {
+                    var polygon = new List<Point2D>();
+                    for (int i = 0; i + 1 < load.coordinates_xy_flat.Count; i += 2)
+                        polygon.Add(new Point2D { x = load.coordinates_xy_flat[i], y = load.coordinates_xy_flat[i + 1] });
+                    info = CreateTribPoly("load_" + load.load_id, polygon, z, 1f, 0f, "p1l4_load_surface", load.building, load.floor, load.load_id, "");
+                    var renderer = info.go.GetComponent<Renderer>();
+                    renderer.sharedMaterial = SeismicLineMat(load.load_type.StartsWith("SC_")
+                        ? new Color(0.1f, 0.8f, 1f, 0.38f)
+                        : new Color(1f, 0.55f, 0.12f, 0.38f));
+                    info.baseMat = renderer.sharedMaterial;
+                    info.baseColor = renderer.sharedMaterial.color;
+                }
+                else if (load.geometry_type == "LineString" && load.coordinates_xy_flat.Count >= 4)
+                {
+                    Vector3 start = new Vector3((float)load.coordinates_xy_flat[0], (float)load.coordinates_xy_flat[1], z);
+                    Vector3 end = new Vector3((float)load.coordinates_xy_flat[2], (float)load.coordinates_xy_flat[3], z);
+                    Vector3 direction = end - start;
+                    if (direction.magnitude < 0.01f) continue;
+                    var go = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                    go.name = "load_" + load.load_id;
+                    go.transform.position = (start + end) * 0.5f;
+                    go.transform.localScale = new Vector3(direction.magnitude, 0.12f, 0.12f);
+                    go.transform.rotation = Quaternion.FromToRotation(Vector3.right, direction.normalized);
+                    var renderer = go.GetComponent<Renderer>();
+                    renderer.sharedMaterial = LineMaterial(load.application_status.StartsWith("READY")
+                        ? new Color(0.15f, 0.9f, 0.95f)
+                        : new Color(1f, 0.25f, 0.2f));
+                    info = go.AddComponent<ElementInfo>();
+                    info.go = go;
+                    info.id = load.load_id;
+                    info.humanId = load.load_id;
+                    info.category = "p1l4_load_line";
+                    info.floor = load.floor;
+                    info.building = load.building;
+                    info.nodeI = start;
+                    info.nodeJ = end;
+                    info.coordCenter = (start + end) * 0.5f;
+                    info.lengthM = direction.magnitude;
+                    info.baseColor = renderer.sharedMaterial.color;
+                    Register(go, "p1l4_load_line", load.floor);
+                    allElements.Add(info);
+                }
+                if (info == null) continue;
+                info.isP1L4Load = true;
+                info.loadType = load.load_type;
+                info.loadValue = load.SI_value;
+                info.loadUnit = load.SI_unit;
+                info.loadApplicationStatus = load.application_status;
+                info.loadReceiverStatus = load.receiver_status;
+                info.loadReceiverIds = load.receiver_ids == null ? "" : string.Join(", ", load.receiver_ids.ToArray());
+                info.sourceDxf = load.source_sheet;
+                info.confidence = load.confidence;
+                info.materialName = "carga auditada; no aplicada al modelo P1L4";
+            }
         }
 
         void BuildFeCandidate()
@@ -1178,8 +1373,15 @@ namespace Mcoc.UnityViewer
                 (typeVisible.ContainsKey("tributary") && typeVisible["tributary"]);
             if (legendShown && m.x > Screen.width - 250f && m.y > Screen.height - (legendExpanded ? 126f : 40f)) return true;
             if (deliveryPanelVisible && DeliveryRect().Contains(m)) return true;
-            if (new Rect(Screen.width * 0.5f - 195f, 10f, 390f, 64f).Contains(m)) return true;
-            if (!deliveryPanelVisible && new Rect(Screen.width * 0.5f - 90f, 80f, 180f, 26f).Contains(m)) return true;
+            if (new Rect(Screen.width * 0.5f - 195f, 10f, 390f, 94f).Contains(m)) return true;
+            if (!deliveryPanelVisible && new Rect(Screen.width * 0.5f - 90f, 110f, 180f, 26f).Contains(m)) return true;
+            if (new Rect(Screen.width * 0.5f - 245f, 142f, 490f, 58f).Contains(m)) return true;
+            if (demandCapacityPlotVisible)
+            {
+                float plotWidth = Mathf.Min(660f, Screen.width - 80f);
+                float plotHeight = Mathf.Min(500f, Screen.height - 80f);
+                if (new Rect((Screen.width - plotWidth) * 0.5f, (Screen.height - plotHeight) * 0.5f, plotWidth, plotHeight).Contains(m)) return true;
+            }
             return false;
         }
 
@@ -1266,10 +1468,22 @@ namespace Mcoc.UnityViewer
                 }
             }
             selected = null;
+            ClearSelectedDiagram();
+            ClearSelectedLocalAxes();
         }
 
         void ShowInfo(ElementInfo ei)
         {
+            if (ei.isP1L4Load)
+            {
+                ShowP1L4LoadInfo(ei);
+                return;
+            }
+            if (ei.isP1L4Support)
+            {
+                ShowP1L4SupportInfo(ei);
+                return;
+            }
             string cat = TypeLabels.ContainsKey(ei.category) ? TypeLabels[ei.category] : ei.category;
             string section = "-";
             if (ei.widthM > 0 && ei.heightM > 0) section = ei.widthM.ToString("F3") + " x " + ei.heightM.ToString("F3") + " m";
@@ -1354,6 +1568,169 @@ namespace Mcoc.UnityViewer
             if (infoText != null) infoText.text = lastInfo;
             lastSelected = ei;
             inspectorVisible = true;
+            RebuildSelectedDiagram();
+            RebuildSelectedLocalAxes();
+        }
+
+        void ShowP1L4LoadInfo(ElementInfo ei)
+        {
+            string receiver = string.IsNullOrEmpty(ei.loadReceiverIds) ? "N/A" : ei.loadReceiverIds;
+            inspectorIdentity = $"{ei.humanId}\n{ei.loadType} | Piso {ei.floor} | {ei.building}";
+            inspectorGeometry = $"Geometria: {(ei.category == "p1l4_load_surface" ? "superficie" : "linea")}\nCentro: {P(ei.coordCenter)}";
+            inspectorProperties = $"Magnitud: {ei.loadValue:F3} {ei.loadUnit}\nEstado: {ei.loadApplicationStatus}\nConfianza: {ei.confidence}";
+            inspectorTributary = $"Receptores: {receiver}\nEstado receptor: {(string.IsNullOrEmpty(ei.loadReceiverStatus) ? "N/A" : ei.loadReceiverStatus)}";
+            inspectorAnalysis = "NO APLICADA: esta carga proviene del catalogo 700 auditado y no modifica los resultados historicos mostrados.";
+            inspectorCapacity = "N/A";
+            inspectorTraceability = $"Lamina fuente: {ei.sourceDxf}\nCatalogo: {p1l4LoadCatalog.source}\nEstado de datos: {p1l4LoadCatalog.data_state}";
+            lastInfo = inspectorIdentity + "\n\n" + inspectorProperties + "\n\n" + inspectorTributary + "\n\n" + inspectorAnalysis;
+            if (infoText != null) infoText.text = lastInfo;
+            lastSelected = ei;
+            inspectorVisible = true;
+            ClearSelectedDiagram();
+            ClearSelectedLocalAxes();
+        }
+
+        void ShowP1L4SupportInfo(ElementInfo ei)
+        {
+            string restrictions = $"UX={(ei.fixUX ? "FIJO" : "LIBRE")}  UY={(ei.fixUY ? "FIJO" : "LIBRE")}  UZ={(ei.fixUZ ? "FIJO" : "LIBRE")}\n" +
+                $"RX={(ei.fixRX ? "FIJO" : "LIBRE")}  RY={(ei.fixRY ? "FIJO" : "LIBRE")}  RZ={(ei.fixRZ ? "FIJO" : "LIBRE")}";
+            inspectorIdentity = $"{ei.humanId}\nApoyo nodal FE P1L4 | Nodo OpenSees {ei.supportNodeTag}\nPiso {ei.floor} | {ei.building}";
+            inspectorGeometry = $"Coordenada global [m]: {P(ei.coordCenter)}\nEl simbolo se ubica en la coordenada exacta del nodo; no se asocia por proximidad a un solido historico.";
+            inspectorProperties = restrictions + "\nConvencion: X/Y horizontales, Z vertical en el contrato estructural.";
+            inspectorTributary = "N/A: el apoyo no define por si mismo una carga tributaria.";
+            inspectorAnalysis = "Condicion de borde del modelo OpenSees historico P1L3.\nReacciones disponibles por caso en el resumen global; no se inventa una reaccion nodal individual.";
+            inspectorCapacity = "N/A: una restriccion nodal no tiene curva de capacidad P-M.";
+            inspectorTraceability = $"Fuente: {p1l4Metadata.source}\nEstado: {p1l4Metadata.data_state}\nContrato: Assets/StreamingAssets/p1l4_structural_metadata.json";
+            lastInfo = inspectorIdentity + "\n\n" + inspectorGeometry + "\n\nRESTRICCIONES\n" + inspectorProperties + "\n\n" + inspectorTraceability;
+            if (infoText != null) infoText.text = lastInfo;
+            lastSelected = ei;
+            inspectorVisible = true;
+            ClearSelectedDiagram();
+            ClearSelectedLocalAxes();
+        }
+
+        void ClearSelectedLocalAxes()
+        {
+            foreach (var go in selectedLocalAxisObjects)
+            {
+                if (go == null) continue;
+                if (registeredFloor.TryGetValue(go, out var priorFloor) && byFloor.TryGetValue(priorFloor, out var floorObjects))
+                    floorObjects.Remove(go);
+                registeredType.Remove(go);
+                registeredFloor.Remove(go);
+                if (Application.isPlaying) Destroy(go); else DestroyImmediate(go);
+            }
+            selectedLocalAxisObjects.Clear();
+            if (byType.ContainsKey("selected_local_axes")) byType["selected_local_axes"].Clear();
+        }
+
+        void RebuildSelectedLocalAxes()
+        {
+            ClearSelectedLocalAxes();
+            if (!localAxesVisible || lastSelected == null) return;
+            string id = string.IsNullOrEmpty(lastSelected.humanId) ? lastSelected.id : lastSelected.humanId;
+            var rows = MetadataForSelection(lastSelected, id);
+            if (rows.Count == 0 || rows[0].local_axes == null) return;
+            var item = rows[0];
+            Vector3 start = (V(item.node_i_coord_m) + V(item.node_j_coord_m)) * 0.5f;
+            CreateSelectedAxis(start, V(item.local_axes.x), Color.red, "x", item.floor);
+            CreateSelectedAxis(start, V(item.local_axes.y), Color.green, "y", item.floor);
+            CreateSelectedAxis(start, V(item.local_axes.z), Color.blue, "z", item.floor);
+            typeVisible["selected_local_axes"] = true;
+            ReapplyAll();
+        }
+
+        void CreateSelectedAxis(Vector3 start, Vector3 direction, Color color, string axisName, string floor)
+        {
+            var go = new GameObject("P1L4_LOCAL_AXIS_" + axisName);
+            var line = go.AddComponent<LineRenderer>();
+            line.useWorldSpace = false;
+            line.positionCount = 2;
+            line.SetPosition(0, start);
+            line.SetPosition(1, start + direction.normalized * 2f);
+            line.startWidth = 0.16f;
+            line.endWidth = 0.05f;
+            line.material = SeismicLineMat(color);
+            Register(go, "selected_local_axes", floor ?? "");
+            selectedLocalAxisObjects.Add(go);
+        }
+
+        void SetDiagramMode(int mode)
+        {
+            diagramMode = mode;
+            RebuildSelectedDiagram();
+        }
+
+        void ClearSelectedDiagram()
+        {
+            foreach (var go in selectedDiagramObjects)
+            {
+                if (go == null) continue;
+                if (registeredFloor.TryGetValue(go, out var priorFloor) && byFloor.TryGetValue(priorFloor, out var floorObjects))
+                    floorObjects.Remove(go);
+                registeredType.Remove(go);
+                registeredFloor.Remove(go);
+                if (Application.isPlaying) Destroy(go); else DestroyImmediate(go);
+            }
+            selectedDiagramObjects.Clear();
+            if (byType.ContainsKey("analysis_diagram")) byType["analysis_diagram"].Clear();
+        }
+
+        void RebuildSelectedDiagram()
+        {
+            ClearSelectedDiagram();
+            if (diagramMode == 0 || lastSelected == null)
+            {
+                diagramCaption = diagramMode == 0 ? "Diagramas: OFF" : "Diagramas: seleccione un elemento";
+                return;
+            }
+            string id = string.IsNullOrEmpty(lastSelected.humanId) ? lastSelected.id : lastSelected.humanId;
+            var results = ResultsForSelection(lastSelected, id);
+            var metadata = MetadataForSelection(lastSelected, id);
+            int component = diagramMode == 1 ? 4 : diagramMode == 2 ? 5 : diagramMode == 3 ? 0 : diagramMode == 4 ? 1 : 2;
+            string componentName = diagramMode == 1 ? "My" : diagramMode == 2 ? "Mz" : diagramMode == 3 ? "N" : diagramMode == 4 ? "Vy" : "Vz";
+            string units = diagramMode <= 2 ? "kN.m" : "kN";
+            double maxAbs = 0.0;
+            foreach (var result in results)
+            {
+                if (result.localForce_end1 != null && result.localForce_end1.Count > component) maxAbs = System.Math.Max(maxAbs, System.Math.Abs(result.localForce_end1[component] / 1000.0));
+                if (result.localForce_end2 != null && result.localForce_end2.Count > component) maxAbs = System.Math.Max(maxAbs, System.Math.Abs(result.localForce_end2[component] / 1000.0));
+            }
+            if (results.Count == 0 || metadata.Count == 0 || maxAbs <= 1.0e-12)
+            {
+                diagramCaption = $"{componentName}: N/A para {id} en {activeAnalysisCase}";
+                return;
+            }
+            float displayScale = 3.0f / (float)maxAbs;
+            foreach (var result in results)
+            {
+                P1L4ElementMetadata meta = null;
+                foreach (var candidate in metadata)
+                    if (candidate.analysis_id == result.analysis_id) { meta = candidate; break; }
+                if (meta == null || result.localForce_end1 == null || result.localForce_end2 == null || result.localForce_end1.Count <= component || result.localForce_end2.Count <= component) continue;
+                Vector3 p0 = V(meta.node_i_coord_m);
+                Vector3 p1 = V(meta.node_j_coord_m);
+                List<double> offsetAxis = diagramMode == 1 || diagramMode == 5 ? meta.local_axes.z : meta.local_axes.y;
+                Vector3 axis = V(offsetAxis).normalized;
+                float value0 = (float)(result.localForce_end1[component] / 1000.0);
+                float value1 = (float)(result.localForce_end2[component] / 1000.0);
+                var go = new GameObject($"P1L4_DIAG_{componentName}_{result.analysis_id}");
+                var line = go.AddComponent<LineRenderer>();
+                line.useWorldSpace = false;
+                line.positionCount = 4;
+                line.SetPosition(0, p0);
+                line.SetPosition(1, p0 + axis * value0 * displayScale);
+                line.SetPosition(2, p1 + axis * value1 * displayScale);
+                line.SetPosition(3, p1);
+                line.startWidth = 0.12f;
+                line.endWidth = 0.12f;
+                line.material = SeismicLineMat(value0 + value1 >= 0f ? new Color(1f, 0.75f, 0.1f) : new Color(0.25f, 0.95f, 1f));
+                Register(go, "analysis_diagram", result.floor ?? "");
+                selectedDiagramObjects.Add(go);
+            }
+            typeVisible["analysis_diagram"] = true;
+            ReapplyAll();
+            diagramCaption = $"{componentName} | {activeAnalysisCase} | max |valor|={maxAbs:F2} {units} | escala grafica 3 m/max | interpolacion lineal entre extremos OpenSees";
         }
 
         List<P1L4ElementMetadata> MetadataForSelection(ElementInfo ei, string id)
@@ -1563,6 +1940,7 @@ namespace Mcoc.UnityViewer
             }
             DrawPanelInfo();
             DrawP1L4Header();
+            DrawDiagramControls();
             DrawDiagnosticControls();
             DrawControls();
             DrawP1L3Panel();
@@ -1570,13 +1948,39 @@ namespace Mcoc.UnityViewer
             if (seismic != null) DrawSeismicValueLabels();
             DrawLegend();
             DrawExpandedGraph();
+            DrawDemandCapacityPlot();
+        }
+
+        void DrawDiagramControls()
+        {
+            float width = 490f;
+            float x = (Screen.width - width) * 0.5f;
+            Rect r = new Rect(x, 142f, width, 58f);
+            GUI.Box(r, "");
+            GUI.DrawTexture(r, MakeTex(2, 2, new Color(0.015f, 0.035f, 0.07f, 0.93f)));
+            string[] labels = { "OFF", "My", "Mz", "N", "Vy", "Vz" };
+            for (int i = 0; i < labels.Length; i++)
+            {
+                var button = new GUIStyle(GUI.skin.button);
+                if (diagramMode == i) button.normal.textColor = new Color(0.25f, 1f, 0.5f);
+                if (GUI.Button(new Rect(r.x + 7 + i * 55f, r.y + 5, 50f, 22f), labels[i], button)) SetDiagramMode(i);
+            }
+            bool axes = GUI.Toggle(new Rect(r.x + 344, r.y + 6, 138, 20), localAxesVisible, "Ejes x/y/z");
+            if (axes != localAxesVisible)
+            {
+                localAxesVisible = axes;
+                RebuildSelectedLocalAxes();
+            }
+            var text = new GUIStyle(GUI.skin.label);
+            text.fontSize = 10; text.normal.textColor = new Color(0.9f, 0.94f, 1f); text.wordWrap = false;
+            GUI.Label(new Rect(r.x + 7, r.y + 31, r.width - 14, 20), diagramCaption, text);
         }
 
         void DrawP1L4Header()
         {
             float width = 390f;
             float x = (Screen.width - width) * 0.5f;
-            Rect r = new Rect(x, 10f, width, 64f);
+            Rect r = new Rect(x, 10f, width, 94f);
             GUI.Box(r, "");
             GUI.DrawTexture(r, MakeTex(2, 2, new Color(0.015f, 0.035f, 0.07f, 0.95f)));
             var title = new GUIStyle(GUI.skin.label);
@@ -1590,6 +1994,27 @@ namespace Mcoc.UnityViewer
                 if (activeAnalysisCase == names[i]) button.normal.textColor = new Color(0.25f, 1f, 0.5f);
                 if (GUI.Button(new Rect(r.x + 8 + i * 75f, r.y + 29, 68f, 26f), names[i], button))
                     ActivateAnalysisCase(names[i]);
+            }
+            bool show = GUI.Toggle(new Rect(r.x + 8, r.y + 61, 112, 22), activeDeformationVisible, "Deformada");
+            if (show != activeDeformationVisible)
+            {
+                activeDeformationVisible = show;
+                typeVisible["analysis_deformed"] = show;
+                ReapplyAll();
+            }
+            GUI.Label(new Rect(r.x + 122, r.y + 62, 44, 20), "Factor");
+            float newScale = GUI.HorizontalSlider(new Rect(r.x + 165, r.y + 68, 130, 18), activeDeformationScale, 1f, 250f);
+            if (Mathf.Abs(newScale - activeDeformationScale) > 0.25f)
+            {
+                activeDeformationScale = newScale;
+                RebuildActiveDeformedShape();
+            }
+            GUI.Label(new Rect(r.x + 300, r.y + 62, 48, 20), $"x{activeDeformationScale:F0}");
+            if (GUI.Button(new Rect(r.x + 350, r.y + 60, 32, 24), "OFF"))
+            {
+                activeDeformationVisible = false;
+                typeVisible["analysis_deformed"] = false;
+                ReapplyAll();
             }
         }
 
@@ -1667,7 +2092,7 @@ namespace Mcoc.UnityViewer
 
             if (!deliveryPanelVisible)
             {
-                if (GUI.Button(new Rect(Screen.width * 0.5f - 90f, 80f, 180f, 26f), "Referencia P1L3", button)) deliveryPanelVisible = true;
+                if (GUI.Button(new Rect(Screen.width * 0.5f - 90f, 110f, 180f, 26f), "Referencia P1L3", button)) deliveryPanelVisible = true;
                 return;
             }
 
@@ -1871,8 +2296,12 @@ namespace Mcoc.UnityViewer
             if (GUI.Button(new Rect(r.x + r.width - 38, r.y + 5, 28, 24), "X")) { inspectorVisible = false; return; }
             GUI.Label(new Rect(r.x + 10, r.y + 34, r.width - 20, 58), inspectorIdentity, lbl);
             string toCopy = string.IsNullOrEmpty(lastSelected.humanId) ? lastSelected.id : lastSelected.humanId;
-            if (GUI.Button(new Rect(r.x + 10, r.y + 94, r.width - 20, 24), "Copiar ID: " + toCopy))
+            bool hasDemandCapacity = demandCapacityByElementId.ContainsKey(toCopy);
+            float copyWidth = hasDemandCapacity ? (r.width - 30) * 0.5f : r.width - 20;
+            if (GUI.Button(new Rect(r.x + 10, r.y + 94, copyWidth, 24), "Copiar ID: " + toCopy))
                 GUIUtility.systemCopyBuffer = toCopy;
+            if (hasDemandCapacity && GUI.Button(new Rect(r.x + 15 + copyWidth, r.y + 94, copyWidth, 24), "Grafico P-M"))
+                demandCapacityPlotVisible = true;
 
             float contentHeight = 1400f;
             infoScroll = GUI.BeginScrollView(new Rect(r.x + 8, r.y + 124, r.width - 16, r.height - 132), infoScroll, new Rect(0, 0, r.width - 40, contentHeight));
@@ -1884,6 +2313,97 @@ namespace Mcoc.UnityViewer
             DrawInspectorSection(ref sy, "DEMANDA-CAPACIDAD", ref inspectorCapacityOpen, inspectorCapacity, r.width - 42, lbl);
             DrawInspectorSection(ref sy, "TRAZABILIDAD", ref inspectorTraceabilityOpen, inspectorTraceability, r.width - 42, lbl);
             GUI.EndScrollView();
+        }
+
+        void DrawDemandCapacityPlot()
+        {
+            if (!demandCapacityPlotVisible || lastSelected == null) return;
+            string id = string.IsNullOrEmpty(lastSelected.humanId) ? lastSelected.id : lastSelected.humanId;
+            if (!demandCapacityByElementId.TryGetValue(id, out var item) || item.capacity == null || item.capacity.points == null)
+            {
+                demandCapacityPlotVisible = false;
+                return;
+            }
+            float width = Mathf.Min(660f, Screen.width - 80f);
+            float height = Mathf.Min(500f, Screen.height - 80f);
+            Rect panel = new Rect((Screen.width - width) * 0.5f, (Screen.height - height) * 0.5f, width, height);
+            GUI.Box(panel, "");
+            GUI.DrawTexture(panel, MakeTex(2, 2, new Color(0.01f, 0.02f, 0.045f, 0.98f)));
+            var title = new GUIStyle(GUI.skin.label);
+            title.fontSize = 15; title.fontStyle = FontStyle.Bold; title.normal.textColor = Color.white;
+            GUI.Label(new Rect(panel.x + 14, panel.y + 9, panel.width - 70, 24), $"P-M | {item.element_id} | eje {item.capacity.pm_axis}", title);
+            if (GUI.Button(new Rect(panel.xMax - 44, panel.y + 7, 32, 25), "X")) { demandCapacityPlotVisible = false; return; }
+
+            Rect plot = new Rect(panel.x + 70, panel.y + 48, panel.width - 100, panel.height - 122);
+            DrawGuiLine(new Vector2(plot.x, plot.yMax), new Vector2(plot.xMax, plot.yMax), Color.white, 2f);
+            DrawGuiLine(new Vector2(plot.x, plot.yMax), new Vector2(plot.x, plot.y), Color.white, 2f);
+            var valid = new List<DemandCapacityPoint>();
+            double maxM = System.Math.Abs(item.demand_capacity.M_kNm);
+            double maxP = item.demand_capacity.compression_magnitude_kN;
+            foreach (var point in item.capacity.points)
+            {
+                maxM = System.Math.Max(maxM, System.Math.Abs(point.M_kNm));
+                maxP = System.Math.Max(maxP, point.compression_magnitude_kN);
+                if (point.valid) valid.Add(point);
+            }
+            maxM = System.Math.Max(maxM, 1.0);
+            maxP = System.Math.Max(maxP, 1.0);
+            valid.Sort((a, b) => a.compression_magnitude_kN.CompareTo(b.compression_magnitude_kN));
+            Vector2 previous = Vector2.zero;
+            bool hasPrevious = false;
+            foreach (var point in valid)
+            {
+                Vector2 pos = PlotPoint(plot, System.Math.Abs(point.M_kNm), point.compression_magnitude_kN, maxM, maxP);
+                if (hasPrevious) DrawGuiLine(previous, pos, new Color(0.2f, 0.95f, 0.55f), 3f);
+                GUI.color = new Color(0.2f, 0.95f, 0.55f);
+                GUI.DrawTexture(new Rect(pos.x - 4, pos.y - 4, 8, 8), whiteTex);
+                GUI.color = Color.white;
+                previous = pos;
+                hasPrevious = true;
+            }
+            foreach (var point in item.capacity.points)
+            {
+                if (point.valid) continue;
+                Vector2 pos = PlotPoint(plot, System.Math.Abs(point.M_kNm), point.compression_magnitude_kN, maxM, maxP);
+                DrawGuiLine(pos + new Vector2(-4, -4), pos + new Vector2(4, 4), Color.gray, 1f);
+                DrawGuiLine(pos + new Vector2(-4, 4), pos + new Vector2(4, -4), Color.gray, 1f);
+            }
+            string contractCase = (item.demand_capacity.@case ?? "").Replace("CASE_", "").ToUpperInvariant();
+            if (contractCase == activeAnalysisCase)
+            {
+                Vector2 demand = PlotPoint(plot, item.demand_capacity.M_abs_kNm, item.demand_capacity.compression_magnitude_kN, maxM, maxP);
+                GUI.color = Color.red;
+                GUI.DrawTexture(new Rect(demand.x - 6, demand.y - 6, 12, 12), whiteTex);
+                GUI.color = Color.white;
+            }
+            var label = new GUIStyle(GUI.skin.label);
+            label.fontSize = 11; label.normal.textColor = new Color(0.92f, 0.95f, 1f); label.wordWrap = true;
+            GUI.Label(new Rect(plot.x, plot.yMax + 5, plot.width, 20), $"|M| [kN.m]   max={maxM:F1}", label);
+            GUI.Label(new Rect(panel.x + 8, plot.y, 60, 50), $"|P|\n[kN]\n{maxP:F1}", label);
+            string demandText = contractCase == activeAnalysisCase
+                ? $"Demanda {item.demand_capacity.@case}: P={item.demand_capacity.P_kN:F2} kN, {item.demand_capacity.pm_axis}={item.demand_capacity.M_kNm:F2} kN.m — {(item.demand_capacity.inside_envelope ? "DENTRO" : "FUERA")}"
+                : $"CASO ACTIVO {activeAnalysisCase}: punto de demanda N/A; la demanda disponible corresponde a {item.demand_capacity.@case}.";
+            GUI.Label(new Rect(panel.x + 14, panel.yMax - 58, panel.width - 28, 44), demandText + (item.type == "wall" ? "\nArmadura: ASUMIDO_LAB" : ""), label);
+        }
+
+        static Vector2 PlotPoint(Rect plot, double moment, double compression, double maxMoment, double maxCompression)
+        {
+            float x = plot.x + (float)(moment / maxMoment) * plot.width;
+            float y = plot.yMax - (float)(compression / maxCompression) * plot.height;
+            return new Vector2(x, y);
+        }
+
+        static void DrawGuiLine(Vector2 start, Vector2 end, Color color, float width)
+        {
+            Matrix4x4 previousMatrix = GUI.matrix;
+            Color previousColor = GUI.color;
+            float angle = Mathf.Atan2(end.y - start.y, end.x - start.x) * Mathf.Rad2Deg;
+            float length = Vector2.Distance(start, end);
+            GUIUtility.RotateAroundPivot(angle, start);
+            GUI.color = color;
+            GUI.DrawTexture(new Rect(start.x, start.y - width * 0.5f, length, width), whiteTex);
+            GUI.matrix = previousMatrix;
+            GUI.color = previousColor;
         }
 
         Rect InspectorRect()
@@ -1954,23 +2474,25 @@ namespace Mcoc.UnityViewer
             bool newLabels = GUI.Toggle(new Rect(lx + 8, ly + 25, 116, 20), labelsVisible, "Textos / IDs");
             if (newLabels != labelsVisible) labelsVisible = newLabels;
             QuickTypeToggle(new Rect(lx + 128, ly + 25, 116, 20), "Tributarias", "tributary", "tributary_point");
-            QuickTypeToggle(new Rect(lx + 8, ly + 47, 116, 20), "Flechas EX/EY", "seismic_arrow");
-            QuickTypeToggle(new Rect(lx + 128, ly + 47, 116, 20), "Deformada EX", "seismic_deform_ex");
-            QuickTypeToggle(new Rect(lx + 8, ly + 69, 116, 20), "Centros masa", "seismic_cm");
-            QuickTypeToggle(new Rect(lx + 128, ly + 69, 116, 20), "Deformada EY", "seismic_deform_ey");
-            QuickTypeToggle(new Rect(lx + 8, ly + 91, 116, 20), "Masa / peso", "seismic_mass");
-            QuickTypeToggle(new Rect(lx + 128, ly + 91, 116, 20), "Corte basal", "seismic_shear");
-            QuickTypeToggle(new Rect(lx + 8, ly + 113, 116, 20), "Torsion", "seismic_torsion");
-            QuickTypeToggle(new Rect(lx + 128, ly + 113, 116, 20), "Patron sismico", "seismic_pattern");
+            QuickTypeToggle(new Rect(lx + 8, ly + 47, 116, 20), "Apoyos FE", "p1l4_support");
+            QuickTypeToggle(new Rect(lx + 128, ly + 47, 116, 20), "Flechas EX/EY", "seismic_arrow");
+            QuickTypeToggle(new Rect(lx + 8, ly + 69, 116, 20), "Deformada EX", "seismic_deform_ex");
+            QuickTypeToggle(new Rect(lx + 128, ly + 69, 116, 20), "Centros masa", "seismic_cm");
+            QuickTypeToggle(new Rect(lx + 8, ly + 91, 116, 20), "Deformada EY", "seismic_deform_ey");
+            QuickTypeToggle(new Rect(lx + 128, ly + 91, 116, 20), "Masa / peso", "seismic_mass");
+            QuickTypeToggle(new Rect(lx + 8, ly + 113, 116, 20), "Corte basal", "seismic_shear");
+            QuickTypeToggle(new Rect(lx + 128, ly + 113, 116, 20), "Torsion", "seismic_torsion");
+            QuickTypeToggle(new Rect(lx + 8, ly + 135, 116, 20), "Patron sismico", "seismic_pattern");
+            QuickTypeToggle(new Rect(lx + 128, ly + 135, 116, 20), "Cargas 700", "p1l4_load_surface", "p1l4_load_line");
 
-            GUI.Label(new Rect(lx + 8, ly + 139, 240, 18), "Arquitectura (solo visual)", sect);
-            QuickTypeToggle(new Rect(lx + 8, ly + 159, 116, 20), "Losa arq. P4", "architectural_slab");
-            QuickTypeToggle(new Rect(lx + 128, ly + 159, 116, 20), "Borde arq. P4", "architectural_slab_edge");
+            GUI.Label(new Rect(lx + 8, ly + 161, 240, 18), "Arquitectura (solo visual)", sect);
+            QuickTypeToggle(new Rect(lx + 8, ly + 181, 116, 20), "Losa arq. P4", "architectural_slab");
+            QuickTypeToggle(new Rect(lx + 128, ly + 181, 116, 20), "Borde arq. P4", "architectural_slab_edge");
 
-            GUI.Label(new Rect(lx + 8, ly + 184, 240, 18), "Pisos (S = mostrar solo)", sect);
+            GUI.Label(new Rect(lx + 8, ly + 206, 240, 18), "Pisos (S = mostrar solo)", sect);
             var floors = SortedFloors();
             float floorX = lx + 8;
-            float floorY = ly + 205;
+            float floorY = ly + 227;
             for (int i = 0; i < floors.Count; i++)
             {
                 string f = floors[i];
@@ -2033,6 +2555,7 @@ namespace Mcoc.UnityViewer
                 case "column_plan":
                 case "wall":
                 case "support":
+                case "p1l4_support":
                 case "architectural_slab":
                 case "architectural_slab_edge":
                     return true;
@@ -2055,6 +2578,13 @@ namespace Mcoc.UnityViewer
             diagnosticBeams = true;
             diagnosticColumns = true;
             diagnosticEd2Only = false;
+            activeDeformationVisible = false;
+            if (typeVisible.ContainsKey("analysis_deformed")) typeVisible["analysis_deformed"] = false;
+            diagramMode = 0;
+            diagramCaption = "Diagramas: seleccione un elemento";
+            ClearSelectedDiagram();
+            localAxesVisible = false;
+            ClearSelectedLocalAxes();
             deliveryPanelVisible = false;
             expandedGraph = null;
             expandedGraphTitle = "";
@@ -2072,6 +2602,7 @@ namespace Mcoc.UnityViewer
         {
             string[] requiredTypes = {
                 "beam", "column", "wall", "slab", "support", "slab_edge", "diaphragm",
+                "p1l4_support",
                 "architectural_slab", "architectural_slab_edge", "tributary",
                 "seismic_arrow", "seismic_cm", "seismic_mass", "seismic_shear",
                 "seismic_torsion", "seismic_deform_ex", "seismic_deform_ey"
@@ -2151,6 +2682,8 @@ namespace Mcoc.UnityViewer
             {
                 if (p1l4Metadata.elements == null || p1l4Metadata.elements.Count == 0) failures.Add("elementos metadata ausentes");
                 if (p1l4Metadata.supports == null || p1l4Metadata.supports.Count == 0) failures.Add("apoyos ausentes");
+                if (!byType.ContainsKey("p1l4_support") || byType["p1l4_support"].Count != p1l4Metadata.supports.Count)
+                    failures.Add("simbolos de apoyo no coinciden con metadata");
                 if (p1l4Metadata.cases == null || p1l4Metadata.cases.Count != 5) failures.Add("casos distintos de G/Q/EX/EY/R");
                 if (p1l4Metadata.qa == null || !p1l4Metadata.qa.all_nodes_exist || !p1l4Metadata.qa.all_local_axes_unit_and_orthogonal)
                     failures.Add("QA de nodos/ejes locales no valido");
@@ -2161,6 +2694,8 @@ namespace Mcoc.UnityViewer
                 failures.Add("faltan columna/muro de demanda-capacidad");
             if (!demandCapacityByElementId.ContainsKey("E2-P1-C-002") || !demandCapacityByElementId.ContainsKey("E2-P1-M-019"))
                 failures.Add("IDs de estudio no mapeados");
+            if (p1l4LoadCatalog == null || p1l4LoadCatalog.entry_count != 108 || p1l4LoadCatalog.is_structurally_applied)
+                failures.Add("catalogo de cargas auditadas ausente o mal rotulado");
             if (failures.Count == 0)
                 Debug.Log($"[P1L4 QA] PASS: metadata={p1l4Metadata.elements.Count}, apoyos={p1l4Metadata.supports.Count}, casos={p1l4Metadata.cases.Count}, demanda-capacidad={demandCapacity.elements.Count}.");
             else
@@ -2595,6 +3130,21 @@ namespace Mcoc.UnityViewer
         public double seismicForceKN;
         public string seismicCase;
         public bool isFeCandidateVisual;
+        public bool isP1L4Support;
+        public int supportNodeTag;
+        public bool fixUX;
+        public bool fixUY;
+        public bool fixUZ;
+        public bool fixRX;
+        public bool fixRY;
+        public bool fixRZ;
+        public bool isP1L4Load;
+        public string loadType;
+        public double loadValue;
+        public string loadUnit;
+        public string loadApplicationStatus;
+        public string loadReceiverStatus;
+        public string loadReceiverIds;
         public string analysisId;
         public int openseesTag;
         public string diagnosticStatus;

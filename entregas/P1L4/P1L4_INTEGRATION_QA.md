@@ -18,6 +18,7 @@ Estado: `PASS_WITH_NOTES`
 | `supports_readable` | PASS |
 | `tributary_areas_readable` | PASS |
 | `loads_readable` | PASS |
+| `unity_load_catalog_readable_and_not_applied` | PASS |
 | `demand_capacity_readable` | PASS |
 
 ## Cobertura y contratos
@@ -34,6 +35,7 @@ Estado: `PASS_WITH_NOTES`
 - `tributary_areas_without_display_polygon`: 192
 - `tributary_zero_area_records`: 117
 - `load_catalog_entries`: 108
+- `load_catalog_drawable_entries`: 82
 - `crosswalk_1_to_many_geometry_ids`: 33
 
 ## Demanda-capacidad
