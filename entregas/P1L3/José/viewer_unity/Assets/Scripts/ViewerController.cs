@@ -246,6 +246,7 @@ namespace Mcoc.UnityViewer
             RunVisibilitySelfCheck();
             RunDiagnosticSelfCheck();
             RunP1L4SelfCheck();
+            RunP1L4DemoSequenceCheck();
             ResetPresentation();
             SetStatus($"POST-P1L3: {model.solids?.Count ?? 0} solidos | FE candidato: {feDiagnostic?.members?.Count ?? 0} miembros (no ejecutado)");
         }
@@ -1848,12 +1849,9 @@ namespace Mcoc.UnityViewer
             double maxAbs = 0.0;
             if (end1 != null && end1.Count > component) maxAbs = System.Math.Max(maxAbs, System.Math.Abs(end1[component] / 1000.0));
             if (end2 != null && end2.Count > component) maxAbs = System.Math.Max(maxAbs, System.Math.Abs(end2[component] / 1000.0));
-            if (maxAbs <= 1.0e-12)
-            {
-                diagramCaption = $"{componentName}: N/A para {result.analysis_id} en {activeAnalysisCase}";
-                return;
-            }
-            float displayScale = 3.0f / (float)maxAbs;
+            // Un cero presente en OpenSees es un resultado válido, no N/A.
+            // En ese caso el diagrama coincide con el eje del miembro.
+            float displayScale = maxAbs > 1.0e-12 ? 3.0f / (float)maxAbs : 0f;
             P1L4ElementMetadata meta = null;
             foreach (var candidate in metadata)
                 if (candidate.analysis_id == result.analysis_id) { meta = candidate; break; }
@@ -2974,6 +2972,84 @@ namespace Mcoc.UnityViewer
                 Debug.Log($"[P1L4 QA] PASS: metadata={p1l4Metadata.elements.Count}, Jose={joseByAnalysisId.Count}, apoyos={p1l4Metadata.supports.Count}, casos={p1l4Metadata.cases.Count}, demanda-capacidad={demandCapacity.elements.Count}, contexto-fisico={physicalContext.classifications.Count}, diagramas-2D=My/Mz/N/Vy/Vz.");
             else
                 Debug.LogError("[P1L4 QA] FAIL: " + string.Join(", ", failures));
+        }
+
+        /// <summary>
+        /// Recorre programáticamente la misma cadena usada en la defensa en vivo.
+        /// No altera resultados ni guarda la escena; deja el caso R y una viga con My visible.
+        /// </summary>
+        public void RunP1L4DemoSequenceCheck()
+        {
+            var failures = new List<string>();
+            ElementInfo beam = null;
+            foreach (var candidate in allElements)
+            {
+                if (candidate == null || candidate.category != "beam") continue;
+                string candidateId = string.IsNullOrEmpty(candidate.humanId) ? candidate.id : candidate.humanId;
+                if (analysisByElementId.ContainsKey(candidateId) && p1l4MetadataByElementId.ContainsKey(candidateId))
+                {
+                    beam = candidate;
+                    break;
+                }
+            }
+            if (beam == null) failures.Add("viga demostrable no encontrada");
+            else
+            {
+                ShowInfo(beam);
+                localAxesVisible = true;
+                RebuildSelectedLocalAxes();
+                if (selectedLocalAxisObjects.Count != 3) failures.Add("ejes locales de viga no disponibles");
+                foreach (var caseName in new[] { "G", "Q", "EX", "EY", "R" })
+                {
+                    ActivateAnalysisCase(caseName);
+                    string beamId = string.IsNullOrEmpty(beam.humanId) ? beam.id : beam.humanId;
+                    var rows = ResultsForSelection(beam, beamId);
+                    if (rows.Count == 0 || joseByAnalysisId.Count != 1312) failures.Add($"caso {caseName} sin resultados integrados");
+                }
+                foreach (var mode in new[] { 1, 2, 3, 4, 5 })
+                {
+                    SetDiagramMode(mode);
+                    if (selectedDiagramObjects.Count == 0 || !diagram2DVisible)
+                        failures.Add($"diagrama modo {mode} no disponible");
+                }
+            }
+
+            ActivateAnalysisCase("R");
+            foreach (var target in new[] { "E2-P1-C-002", "E2-P1-M-019" })
+            {
+                ElementInfo selectedInfo = null;
+                foreach (var candidate in allElements)
+                {
+                    string candidateId = candidate == null ? "" : (string.IsNullOrEmpty(candidate.humanId) ? candidate.id : candidate.humanId);
+                    if (candidateId == target) { selectedInfo = candidate; break; }
+                }
+                if (selectedInfo == null) failures.Add(target + " no seleccionable");
+                else
+                {
+                    ShowInfo(selectedInfo);
+                    string capacityText = BuildDemandCapacityText(target);
+                    if (!capacityText.Contains("Estado:")) failures.Add(target + " sin inside/outside");
+                    if (target.EndsWith("M-019") && !capacityText.Contains("ASUMIDO_LAB")) failures.Add("muro sin nota ASUMIDO_LAB");
+                }
+            }
+            if (!byType.ContainsKey("p1l4_support") || byType["p1l4_support"].Count != 106) failures.Add("apoyos globales no disponibles");
+            if (!byType.ContainsKey("tributary") || byType["tributary"].Count == 0) failures.Add("tributarias globales no disponibles");
+            int loadCount = (byType.ContainsKey("p1l4_load_surface") ? byType["p1l4_load_surface"].Count : 0) +
+                (byType.ContainsKey("p1l4_load_line") ? byType["p1l4_load_line"].Count : 0);
+            if (loadCount != 82) failures.Add($"cargas globales visibles {loadCount}/82");
+
+            if (beam != null)
+            {
+                ShowInfo(beam);
+                SetDiagramMode(1);
+                diagram2DVisible = true;
+                activeDeformationVisible = true;
+                if (typeVisible.ContainsKey("analysis_deformed")) typeVisible["analysis_deformed"] = true;
+                ReapplyAll();
+            }
+            if (failures.Count == 0)
+                Debug.Log("[P1L4 DEMO QA] PASS: VIGA identidad/ejes/R/fuerzas/deformada/My-2D/N-V-2D; COLUMNA P-M/demanda; MURO P-M/ASUMIDO_LAB; GLOBAL cargas/apoyos/tributarias.");
+            else Debug.LogError("[P1L4 DEMO QA] FAIL: " + string.Join(", ", failures));
         }
 
         void QuickTypeToggle(Rect rect, string label, params string[] keys)

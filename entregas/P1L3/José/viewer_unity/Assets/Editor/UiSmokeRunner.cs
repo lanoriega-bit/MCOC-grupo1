@@ -17,6 +17,7 @@ namespace Mcoc.UnityViewer.EditorTools
         static readonly string ResultPath = Path.Combine(Directory.GetCurrentDirectory(), "Temp", "p1l4-ui-smoke.result.txt");
         static double playStarted;
         static bool running;
+        static bool demoExecuted;
         static readonly List<string> captured = new List<string>();
 
         static UiSmokeRunner()
@@ -31,6 +32,7 @@ namespace Mcoc.UnityViewer.EditorTools
         {
             if (running || EditorApplication.isPlayingOrWillChangePlaymode) return;
             running = true;
+            demoExecuted = false;
             captured.Clear();
             if (File.Exists(ResultPath)) File.Delete(ResultPath);
             Application.logMessageReceived += CaptureLog;
@@ -60,13 +62,22 @@ namespace Mcoc.UnityViewer.EditorTools
 
         static void CaptureLog(string condition, string stackTrace, LogType type)
         {
-            if (condition.Contains("[UI QA]") || condition.Contains("[P1L4 QA]") || type == LogType.Error || type == LogType.Exception)
+            if (condition.Contains("[UI QA]") || condition.Contains("[P1L4 QA]") || condition.Contains("[P1L4 DEMO QA]") || type == LogType.Error || type == LogType.Exception)
                 captured.Add(condition);
         }
 
         static void WaitForRuntimeChecks()
         {
-            if (!EditorApplication.isPlaying || EditorApplication.timeSinceStartup - playStarted < 12.0) return;
+            if (!EditorApplication.isPlaying) return;
+            double elapsed = EditorApplication.timeSinceStartup - playStarted;
+            if (!demoExecuted && elapsed >= 6.0)
+            {
+                demoExecuted = true;
+                var viewer = Object.FindFirstObjectByType<ViewerController>();
+                if (viewer == null) Debug.LogError("[P1L4 DEMO QA] FAIL: ViewerController no encontrado en Play.");
+                else viewer.RunP1L4DemoSequenceCheck();
+            }
+            if (elapsed < 14.0) return;
             EditorApplication.update -= WaitForRuntimeChecks;
             EditorApplication.isPlaying = false;
         }

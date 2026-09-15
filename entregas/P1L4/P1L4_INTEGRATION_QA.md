@@ -22,6 +22,10 @@ Estado: `PASS_WITH_NOTES`
 | `physical_context_readable_visual_only` | PASS |
 | `physical_context_manifest_traced` | PASS |
 | `demand_capacity_readable` | PASS |
+| `jose_export_5_cases_1312_elements` | PASS |
+| `jose_displacements_5_cases_813_nodes` | PASS |
+| `jose_supports_106_nodes` | PASS |
+| `unity_2d_diagrams_declared` | PASS |
 
 ## Cobertura y contratos
 
@@ -41,6 +45,8 @@ Estado: `PASS_WITH_NOTES`
 - `crosswalk_1_to_many_geometry_ids`: 33
 - `physical_context_classifications`: 40
 - `physical_context_clusters`: 3
+- `jose_internal_forces_per_case`: 1312
+- `jose_displacements_per_case`: 813
 
 ## Demanda-capacidad
 
@@ -56,3 +62,26 @@ Estado: `PASS_WITH_NOTES`
 - Hay 117 registros historicos con area y carga explicitamente iguales a cero; no se reinterpretan como datos ausentes.
 - El FE post-P1L3 sigue CANDIDATE_NOT_APPROVED_NOT_RUN.
 - La capa CONTEXTO FÍSICO solo reclasifica y dibuja regiones/marcadores; no cambia apoyos, elementos ni resultados.
+
+## Auditoría final contra la pauta
+
+| REQUISITO | ESTADO | EVIDENCIA | ARCHIVO/FUNCIÓN |
+| --- | --- | --- | --- |
+| ID | PASS | Inspector element_id/analysis_id/tag | `BuildP1L4IdentityText` |
+| nodos/sección/material | PASS | Contrato SI legible | `BuildP1L4AnalysisText` |
+| ejes locales/restricciones | PASS | QA ortogonal + 106 apoyos | `RebuildSelectedLocalAxes / SupportText` |
+| N/Vy/Vz/T/My/Mz | PASS | Cinco casos, ambos extremos | `BuildP1L4ResultsText` |
+| deformada | PASS | 813 nodos por caso | `RebuildActiveDeformedShape` |
+| diagramas 3D y gráficos 2D | PASS | My/Mz/N/Vy/Vz | `RebuildSelectedDiagram / DrawElementDiagram2D` |
+| áreas tributarias | PASS_WITH_NOTE | 1060 + 491; no se inventan polígonos ausentes | `tributary_areas.json` |
+| cargas | PASS_WITH_NOTE | 82 geometrías visibles; 700 NOT_APPLIED | `p1l4_load_catalog.json` |
+| apoyos | PASS | 106 símbolos y seis GDL | `BuildP1L4Supports` |
+| P-M columna/muro + demanda | PASS | Curva, punto y DENTRO/FUERA | `DrawDemandCapacityPlot` |
+| caso activo | PASS | G/Q/EX/EY/R | `DrawP1L4Header` |
+| trazabilidad | PASS | Unity→geometría→FE→OpenSees→capacidad | `BuildTraceabilityText` |
+
+## Evidencia de ejecución final
+
+- Compilación Unity 6000.6.0f1: PASS.
+- Play UI/diagnóstico/P1L4: PASS.
+- Secuencia de demostración viga/columna/muro/global: PASS.

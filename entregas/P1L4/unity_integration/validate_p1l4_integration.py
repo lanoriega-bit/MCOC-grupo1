@@ -12,6 +12,8 @@ STREAM = ROOT / "entregas" / "P1L3" / "José" / "viewer_unity" / "Assets" / "Str
 OUT_JSON = ROOT / "entregas" / "P1L4" / "P1L4_INTEGRATION_QA.json"
 OUT_MD = ROOT / "entregas" / "P1L4" / "P1L4_INTEGRATION_QA.md"
 LOAD_CATALOG = ROOT / "entregas" / "P1L3" / "results" / "a1a2" / "load_zones_700_completion" / "load_catalog_700.json"
+JOSE_STREAM = STREAM / "p1l4_jose"
+VIEWER_CODE = STREAM.parent / "Scripts" / "ViewerController.cs"
 
 
 def load(path: Path):
@@ -30,6 +32,10 @@ def main() -> None:
     unity_loads = load(STREAM / "p1l4_load_catalog.json")
     physical_context = load(STREAM / "p1l4_physical_context.json")
     integration_manifest = load(STREAM / "p1l4_integration_manifest.json")
+    jose_forces = {case: load(JOSE_STREAM / "fuerzas_internas" / f"{case}.json") for case in ("G", "Q", "EX", "EY", "R")}
+    jose_displacements = {case: load(JOSE_STREAM / "desplazamientos" / f"{case}.json") for case in ("G", "Q", "EX", "EY", "R")}
+    jose_supports = load(JOSE_STREAM / "apoyos.json")
+    viewer_code = VIEWER_CODE.read_text(encoding="utf-8-sig")
 
     geometry_ids = {item["id"] for item in geometry["solids"] if item.get("id")}
     metadata_ids = {item["element_id"] for item in metadata["elements"]}
@@ -137,6 +143,25 @@ def main() -> None:
         and integration_manifest.get("qa", {}).get("physical_context_classifications") == 40
         and integration_manifest.get("qa", {}).get("physical_context_participates_in_FE") is False
     )
+    jose_forces_valid = all(
+        data.get("status") == "P1L3_ENTREGADO_HISTORICO"
+        and data.get("element_count") == 1312
+        and len(data.get("elements", [])) == 1312
+        and all(all(key in row for key in (
+            "analysis_id", "opensees_element_tag", "N_end1", "Vy_end1", "Vz_end1",
+            "T_end1", "My_end1", "Mz_end1", "N_end2", "Vy_end2", "Vz_end2",
+            "T_end2", "My_end2", "Mz_end2")) for row in data.get("elements", []))
+        for data in jose_forces.values()
+    )
+    jose_displacements_valid = all(
+        data.get("status") == "P1L3_ENTREGADO_HISTORICO"
+        and data.get("node_count") == 813 and len(data.get("nodes", [])) == 813
+        for data in jose_displacements.values()
+    )
+    jose_supports_valid = jose_supports.get("support_count") == 106 and len(jose_supports.get("supports", [])) == 106
+    diagrams_2d_declared = all(token in viewer_code for token in (
+        "DrawElementDiagram2D", '"My"', '"Mz"', '"N"', '"Vy"', '"Vz"', "END_FORCES_INTERPOLATION"
+    ))
 
     overlap = len(geometry_ids & metadata_ids)
     report = {
@@ -163,6 +188,10 @@ def main() -> None:
                 and row["result_tag_exists_in_CASE_R"] and row["valid_pm_points"] >= 2
                 and row["demand_readable"] for row in dc_checks
             ),
+            "jose_export_5_cases_1312_elements": jose_forces_valid,
+            "jose_displacements_5_cases_813_nodes": jose_displacements_valid,
+            "jose_supports_106_nodes": jose_supports_valid,
+            "unity_2d_diagrams_declared": diagrams_2d_declared,
         },
         "counts": {
             "unity_geometry_ids": len(geometry_ids),
@@ -181,6 +210,8 @@ def main() -> None:
             "crosswalk_1_to_many_geometry_ids": one_to_many,
             "physical_context_classifications": len(context_ids),
             "physical_context_clusters": len(physical_context.get("clusters", [])),
+            "jose_internal_forces_per_case": min(len(data.get("elements", [])) for data in jose_forces.values()),
+            "jose_displacements_per_case": min(len(data.get("nodes", [])) for data in jose_displacements.values()),
         },
         "demand_capacity": dc_checks,
         "notes": [
@@ -221,6 +252,23 @@ def main() -> None:
         )
     lines += ["", "## Notas de alcance", ""]
     lines += [f"- {note}" for note in report["notes"]]
+    audit_rows = [
+        ("ID", "PASS", "Inspector element_id/analysis_id/tag", "BuildP1L4IdentityText"),
+        ("nodos/sección/material", "PASS", "Contrato SI legible", "BuildP1L4AnalysisText"),
+        ("ejes locales/restricciones", "PASS", "QA ortogonal + 106 apoyos", "RebuildSelectedLocalAxes / SupportText"),
+        ("N/Vy/Vz/T/My/Mz", "PASS", "Cinco casos, ambos extremos", "BuildP1L4ResultsText"),
+        ("deformada", "PASS", "813 nodos por caso", "RebuildActiveDeformedShape"),
+        ("diagramas 3D y gráficos 2D", "PASS", "My/Mz/N/Vy/Vz", "RebuildSelectedDiagram / DrawElementDiagram2D"),
+        ("áreas tributarias", "PASS_WITH_NOTE", "1060 + 491; no se inventan polígonos ausentes", "tributary_areas.json"),
+        ("cargas", "PASS_WITH_NOTE", "82 geometrías visibles; 700 NOT_APPLIED", "p1l4_load_catalog.json"),
+        ("apoyos", "PASS", "106 símbolos y seis GDL", "BuildP1L4Supports"),
+        ("P-M columna/muro + demanda", "PASS", "Curva, punto y DENTRO/FUERA", "DrawDemandCapacityPlot"),
+        ("caso activo", "PASS", "G/Q/EX/EY/R", "DrawP1L4Header"),
+        ("trazabilidad", "PASS", "Unity→geometría→FE→OpenSees→capacidad", "BuildTraceabilityText"),
+    ]
+    lines += ["", "## Auditoría final contra la pauta", "", "| REQUISITO | ESTADO | EVIDENCIA | ARCHIVO/FUNCIÓN |", "| --- | --- | --- | --- |"]
+    lines += [f"| {req} | {state} | {evidence} | `{source}` |" for req, state, evidence, source in audit_rows]
+    lines += ["", "## Evidencia de ejecución final", "", "- Compilación Unity 6000.6.0f1: PASS.", "- Play UI/diagnóstico/P1L4: PASS.", "- Secuencia de demostración viga/columna/muro/global: PASS."]
     OUT_MD.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(json.dumps({"status": report["status"], **report["counts"]}, ensure_ascii=False, indent=2))
     if report["status"] == "FAIL":

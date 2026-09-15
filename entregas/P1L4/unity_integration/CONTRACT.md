@@ -1,6 +1,6 @@
 # Contrato Unity P1L4
 
-El Unity canónico consume tres contratos P1L4 adicionales desde
+El Unity canónico consume los contratos P1L4 desde
 `Assets/StreamingAssets`:
 
 | Archivo | Propósito |
@@ -10,9 +10,13 @@ El Unity canónico consume tres contratos P1L4 adicionales desde
 | `p1l4_integration_manifest.json` | Fuentes, hashes, estados y QA del paquete |
 | `p1l4_load_catalog.json` | Catálogo 700 aplanado para Unity, siempre `AUDITADO_NOT_APPLIED` |
 | `p1l4_physical_context.json` | Reclasificación de 40 casos, clusters y cotas visuales; siempre `participates_in_FE=false` |
+| `p1l4_jose/fuerzas_internas/{G,Q,EX,EY,R}.json` | N, Vy, Vz, T, My y Mz en ambos extremos, indexados por `analysis_id` |
+| `p1l4_jose/desplazamientos/{G,Q,EX,EY,R}.json` | Desplazamientos y giros nodales del caso activo |
+| `p1l4_jose/apoyos.json` | Restricciones nodales UX/UY/UZ/RX/RY/RZ |
 
-Los cinco casos de fuerzas/desplazamientos continúan en `analysis_cases.json`.
-El adaptador no recalcula OpenSees: empaqueta y valida las fuentes disponibles.
+`analysis_cases.json` conserva el contrato integrado anterior y el export de José
+es la fuente directa que usa el visor para fuerzas y deformada. Ambos se cruzan
+por `analysis_id` y cantidad de registros. El adaptador no recalcula OpenSees.
 
 ## Convención de ejes locales
 
@@ -46,6 +50,14 @@ Unity debe listarlos por separado y no sumar ni escoger máximos sin indicarlo.
 La ausencia de una componente o fuente se representa como no disponible. El
 consumidor muestra `N/A`; un cero solo se muestra si está presente explícitamente
 en el resultado OpenSees.
+
+## Diagramas 3D y gráficos 2D
+
+Los modos `My`, `Mz`, `N`, `Vy` y `Vz` consumen el mismo miembro FE y el mismo
+caso activo. Si una geometría tiene crosswalk 1:N, el usuario navega cada
+`analysis_id`; no se combinan resultados. Con solo fuerzas de extremo disponibles,
+la representación se rotula `END_FORCES_INTERPOLATION`. Un cero explícito se
+dibuja sobre el eje y no se convierte en `N/A`.
 
 ## Cargas auditadas
 
