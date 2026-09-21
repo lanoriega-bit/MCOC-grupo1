@@ -47,6 +47,7 @@ RESULTS_DIR = EDIF_DIR / "results"
 UNITY_DIR = EDIF_DIR.parent / "unity_export"
 
 BUILDING_ID = "EDIFICIO_2"
+POST_P1L4_WALL_AUDIT = REPO / "entregas" / "POST_P1L4" / "ed2_walls" / "ed2_wall_face_audit.json"
 
 LEVEL_REVIEW = {
     "status": "SOURCE_ELEVATIONS_REVIEWED",
@@ -358,6 +359,36 @@ def mkg(floor_id, ori, fx, lo, hi, src, i):
 
 
 def generate_wall_solids(segments):
+    # Desde EXT-2, la fuente canonica de muros es la recuperacion de
+    # centrolineas a partir de pares de caras RLE-MURO del DXF completo.
+    # El fallback historico se conserva solo para poder diagnosticar una
+    # instalacion que aun no haya generado la auditoria primaria.
+    if POST_P1L4_WALL_AUDIT.exists():
+        audit = json.loads(POST_P1L4_WALL_AUDIT.read_text(encoding="utf-8"))
+        if audit.get("status") != "PASS":
+            raise RuntimeError("EXT-2 EDIFICIO_2 wall audit must be PASS before regeneration")
+        solids = []
+        counter = 0
+        for floor_id in ("1S", "1", "2", "3", "4"):
+            canonical_floor = {"1S": "S1", "1": "P1", "2": "P2", "3": "P3", "4": "P4"}[floor_id]
+            ztop = next(f.z_m for f in FLOORS if f.floor_id == floor_id)
+            zbot = prev_z(floor_id)
+            for pair in audit["floors"][canonical_floor]["pairs"]:
+                counter += 1
+                start_xy = pair["centerline_start_xy_m"]
+                end_xy = pair["centerline_end_xy_m"]
+                solids.append({
+                    "solidTag": f"SOL2_{floor_id}_wall_{counter:04d}", "category": "wall", "kind": "linear_prism",
+                    "floor": floor_id, "start": [start_xy[0], start_xy[1], (zbot + ztop) / 2],
+                    "end": [end_xy[0], end_xy[1], (zbot + ztop) / 2], "width_m": pair["thickness_m"],
+                    "wall_thickness_m": pair["thickness_m"], "height_m": ztop-zbot, "length_m": pair["length_m"],
+                    "sourceTag": pair["pair_id"], "sourceTags": pair["face_ids"], "source_layer": "RLE-MURO_CONTOUR_PAIR",
+                    "source_dxf": pair["source_sheet"], "confidence": "confirmed_from_RLE_MURO_contour_pair", "building": BUILDING_ID,
+                    "thickness_source": pair["thickness_source"], "thickness_confidence": "CONFIRMED_FROM_PLAN",
+                    "geometry_confirmation": {"status": "CONFIRMED_CONTOUR_PAIR", "audit_file": str(POST_P1L4_WALL_AUDIT.relative_to(REPO)).replace("\\", "/"), "face_ids": pair["face_ids"], "thickness_m": pair["thickness_m"]},
+                    "post_p1l4_correction": {"correction_type": "MERGED", "reason": "Dos caras RLE-MURO representan un muro fisico.", "primary_source": pair["source_sheet"], "external_repo_clue": "SECONDARY_ONLY", "confidence": "HIGH_PRIMARY_SOURCE", "results_compatibility": "P1L4_HISTORICAL_RESULTS_NOT_RECALCULATED"},
+                })
+        return solids
     solids = []; counter = 0
     for f in FLOORS:
         if f.floor_id == "base":

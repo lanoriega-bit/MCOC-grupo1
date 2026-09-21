@@ -726,6 +726,15 @@ namespace Mcoc.UnityViewer
             data.materialName = solid.material ?? "hormigon";
             data.coordZBottom = solid.model_z_m;
             data.coordZTop = solid.model_z_m;
+            if (solid.post_p1l4_correction != null)
+            {
+                data.correctionType = solid.post_p1l4_correction.correction_type;
+                data.correctionReason = solid.post_p1l4_correction.reason;
+                data.correctionPrimarySource = solid.post_p1l4_correction.primary_source;
+                data.correctionExternalClue = solid.post_p1l4_correction.external_repo_clue;
+                data.correctionConfidence = solid.post_p1l4_correction.confidence;
+                data.correctionResultsCompatibility = solid.post_p1l4_correction.results_compatibility;
+            }
             if (diagnosticByElementId.TryGetValue(data.id, out var diagnostic))
                 ApplyDiagnosticInfo(data, diagnostic);
             ApplyPhysicalContextInfo(data);
@@ -2047,6 +2056,16 @@ namespace Mcoc.UnityViewer
                 sb.AppendLine($"Capacidad: {dc.traceability.capacity_source}");
             }
             else sb.AppendLine("Capacidad: N/A");
+            if (!string.IsNullOrEmpty(ei.correctionType))
+            {
+                sb.AppendLine("CORRECCIONES POST-P1L4");
+                sb.AppendLine($"Cambio: {ei.correctionType}");
+                sb.AppendLine($"Razón: {ei.correctionReason}");
+                sb.AppendLine($"Evidencia primaria: {ei.correctionPrimarySource}");
+                sb.AppendLine($"Pista externa: {ei.correctionExternalClue}");
+                sb.AppendLine($"Confianza: {ei.correctionConfidence}");
+                sb.AppendLine($"Compatibilidad: {ei.correctionResultsCompatibility}");
+            }
             if (!string.IsNullOrEmpty(diagnosticLine)) sb.Append(diagnosticLine);
             if (!string.IsNullOrEmpty(ei.physicalClassification))
             {
@@ -3532,5 +3551,11 @@ namespace Mcoc.UnityViewer
         public string revisedDiagnostic;
         public string duplicateClassification;
         public string physicalEvidence;
+        public string correctionType;
+        public string correctionReason;
+        public string correctionPrimarySource;
+        public string correctionExternalClue;
+        public string correctionConfidence;
+        public string correctionResultsCompatibility;
     }
 }

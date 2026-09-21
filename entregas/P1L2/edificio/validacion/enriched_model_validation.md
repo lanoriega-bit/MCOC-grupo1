@@ -2,9 +2,9 @@
 
 - Estado: **PASS**
 - Formato ID: `E{1|2}-{S1|P1|P2|P3|P4}-{C|V|M|A|L|D}-###`
-- Elementos seleccionables con ID: 1222 / 1222
-- Elementos con elementTag: 1222 / 1222
-- Elementos con ejes asociados: 1222 / 1222
+- Elementos seleccionables con ID: 1167 / 1167
+- Elementos con elementTag: 1167 / 1167
+- Elementos con ejes asociados: 1167 / 1167
 - Geometria preservada: True
 - Floor contract: PASS ['P1', 'P2', 'P3', 'P4', 'S1']
 
@@ -14,8 +14,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | beam | 815 | 483 | 202 | 0 | 332 | 59.3 | 24.8 |
 | column | 150 | 150 | 84 | 66 | 0 | 100.0 | 56.0 |
-| wall | 168 | 108 | 108 | 0 | 60 | 64.3 | 64.3 |
-| support | 69 | 4 | 4 | 0 | 65 | 5.8 | 5.8 |
+| wall | 122 | 122 | 122 | 0 | 0 | 100.0 | 100.0 |
+| support | 60 | 4 | 4 | 0 | 56 | 6.7 | 6.7 |
 
 ## Columnas off-axis
 

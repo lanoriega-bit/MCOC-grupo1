@@ -41124,34 +41124,34 @@
   "solid_counts_by_floor": {
     "S1": {
       "beam": 143,
-      "wall": 42,
       "column": 27,
-      "support": 69,
-      "slab": 2
+      "support": 60,
+      "slab": 2,
+      "wall": 33
     },
     "P1": {
       "beam": 159,
-      "wall": 45,
       "column": 34,
-      "slab": 2
+      "slab": 2,
+      "wall": 36
     },
     "P2": {
       "beam": 154,
-      "wall": 27,
       "column": 29,
-      "slab": 2
+      "slab": 2,
+      "wall": 18
     },
     "P3": {
       "beam": 150,
-      "wall": 27,
       "column": 26,
-      "slab": 2
+      "slab": 2,
+      "wall": 18
     },
     "P4": {
       "beam": 209,
-      "wall": 27,
       "column": 34,
-      "slab": 2
+      "slab": 2,
+      "wall": 17
     }
   },
   "combined_geometry_validation": {
@@ -41178,7 +41178,7 @@
     "source_floor_audit": {
       "status": "PASS",
       "auxiliary_source_floor_counts": {
-        "base": 952
+        "base": 943
       },
       "issues": []
     },
@@ -41244,10 +41244,10 @@
             21.551
           ],
           "actual_checked_structural_bbox_m": [
-            -3.948,
+            -3.748,
             -1.094,
-            27.9,
-            17.25
+            27.727,
+            17.241
           ]
         }
       },
@@ -41389,81 +41389,81 @@
         "margin_m": 0.45,
         "floors": {
           "S1": {
-            "wall_count": 8,
+            "wall_count": 5,
             "wall_center_bbox_m": [
-              24.9,
-              3.0,
-              27.9,
+              25.082,
+              1.691,
+              27.727,
               12.526
             ],
             "raw_wall_extent_m": [
-              24.9,
+              25.082,
               0.351,
-              27.9,
+              27.727,
               16.501
             ],
             "status": "PASS"
           },
           "P1": {
-            "wall_count": 8,
+            "wall_count": 5,
             "wall_center_bbox_m": [
-              24.9,
-              3.0,
-              27.9,
+              25.082,
+              1.691,
+              27.727,
               12.526
             ],
             "raw_wall_extent_m": [
-              24.9,
+              25.082,
               0.351,
-              27.9,
+              27.727,
               16.501
             ],
             "status": "PASS"
           },
           "P2": {
-            "wall_count": 8,
+            "wall_count": 5,
             "wall_center_bbox_m": [
-              24.9,
-              3.0,
-              27.9,
+              25.082,
+              1.691,
+              27.727,
               12.526
             ],
             "raw_wall_extent_m": [
-              24.9,
+              25.082,
               0.351,
-              27.9,
+              27.727,
               16.501
             ],
             "status": "PASS"
           },
           "P3": {
-            "wall_count": 8,
+            "wall_count": 5,
             "wall_center_bbox_m": [
-              24.9,
-              3.0,
-              27.9,
+              25.082,
+              1.691,
+              27.727,
               12.526
             ],
             "raw_wall_extent_m": [
-              24.9,
+              25.082,
               0.351,
-              27.9,
+              27.727,
               16.501
             ],
             "status": "PASS"
           },
           "P4": {
-            "wall_count": 8,
+            "wall_count": 4,
             "wall_center_bbox_m": [
-              24.9,
-              3.0,
-              27.9,
+              25.082,
+              3.181,
+              27.727,
               12.526
             ],
             "raw_wall_extent_m": [
-              24.9,
-              3.0,
-              27.9,
+              25.082,
+              3.181,
+              27.727,
               16.501
             ],
             "status": "PASS"

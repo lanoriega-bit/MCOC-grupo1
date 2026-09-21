@@ -192,3 +192,11 @@
 - The remaining 3 slab-edge/transitional S1 columns keep their documented
   review status; the six I/I' stations are already confirmed and must not be
   reopened without contradictory primary evidence.
+# POST-P1L4 EXT-2 — muros
+
+- Auditoría primaria EDIFICIO_2 (`2024_22-101/102`): `PASS`.
+- Corrección canónica: 100 prismas históricos de caras/cierres → 54 muros físicos (S1/P1/P2/P3/P4 = 11/11/11/11/10).
+- Espesores confirmados: 0.25/0.30/0.60 m; conflictos etiqueta-geometría: 0.
+- EDIFICIO_1 permanece en 68 muros auditados; `E1-P4-M-007` conserva continuidad S1–P4.
+- Modelo combinado y bundle Unity regenerados. Resultados OpenSees P1L4 permanecen históricos y no fueron recalculados.
+- QA de datos/pipeline: `PASS`. Unity Play pendiente por licencia local no disponible (`com.unity.editor.ui/headless`).

@@ -69,6 +69,18 @@ namespace Mcoc.UnityViewer
         public string axis_y;
         public string source_elevation_m;
         public double model_z_m;
+        public PostP1L4CorrectionData post_p1l4_correction;
+    }
+
+    [Serializable]
+    public class PostP1L4CorrectionData
+    {
+        public string correction_type;
+        public string reason;
+        public string primary_source;
+        public string external_repo_clue;
+        public string confidence;
+        public string results_compatibility;
     }
 
     [Serializable]

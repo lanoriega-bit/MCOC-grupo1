@@ -33,7 +33,7 @@ def main() -> None:
     manifest = load(MANIFEST)
 
     assert geometry == unity_geometry, "Unity no contiene la geometria canonica vigente"
-    assert len(geometry["solids"]) == 1212
+    assert len(geometry["solids"]) == 1157
     assert set(geometry["expectedFloors"]) == {"S1", "P1", "P2", "P3", "P4"}
     assert candidate["status"] == "CANDIDATE_NOT_APPROVED_NOT_RUN"
     assert candidate["run_policy"]["opensees_run"] is False
@@ -52,7 +52,8 @@ def main() -> None:
     assert max(len(row["crosswalk"]) for row in diagnostic["elements"]) == 3
 
     state = manifest["data_state"]
-    assert state["geometry"] == "POST_P1L3_CURRENT"
+    assert state["geometry"] == "POST_P1L4_STRUCTURAL_AUDIT_EXT2"
+    assert "RESULTADOS_P1L4_HISTORICOS_NO_RECALCULADOS" in state["compatibility_warning"]
     assert state["fe_diagnosis"] == "POST_P1L3_CANDIDATE_NOT_RUN"
     assert state["analysis_results"] == "P1L3_DELIVERED_HISTORICAL"
     assert state["loads"] == "P1L3_DELIVERED_HISTORICAL"
@@ -63,7 +64,7 @@ def main() -> None:
         assert sha256(path) == item["sha256"], f"Hash incorrecto: {item['name']}"
 
     print("UNITY_INTEGRATION_VALIDATION = PASS")
-    print("Geometria actual: 1212 solidos")
+    print("Geometria actual: 1157 solidos (EXT-2 walls)")
     print("Malla FE candidata: 1167 miembros; NO EJECUTADA")
     print("Diagnostico: 72 elementos; 33 crosswalks 1:N")
     print("Resultados/cargas/capacidad: snapshot historico P1L3")
