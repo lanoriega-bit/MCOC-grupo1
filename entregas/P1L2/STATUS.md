@@ -200,3 +200,13 @@
 - EDIFICIO_1 permanece en 68 muros auditados; `E1-P4-M-007` conserva continuidad S1–P4.
 - Modelo combinado y bundle Unity regenerados. Resultados OpenSees P1L4 permanecen históricos y no fueron recalculados.
 - QA de datos/pipeline: `PASS`. Unity Play pendiente por licencia local no disponible (`com.unity.editor.ui/headless`).
+
+# POST-P1L4 EXT-3 — vigas
+
+- EDIFICIO_1 revalidado: 300 vigas físicas desde 553 segmentos CAD; 46 cierres cortos y 4 detalles interiores excluidos.
+- EDIFICIO_2 corregido: 515 prismas históricos → 267 vigas físicas (`44/44/44/44/91`), todas con sección trazable al plano.
+- Total canónico: 567 vigas; `E1-P2-V-075` confirmado como viga de descanso y `E2-P4-V-050/051` consolidado como una V60/80.
+- Comparación externa: 457 coincidencias 3/3, 3 coincidencias 2/3; diferencias externas sin fuente primaria no se incorporaron.
+- Conectividad: 247 apoyadas geométricamente en ambos extremos, 259 con un extremo/borde/voladizo y 60 para revisión FE posterior. No se crearon conexiones artificiales.
+- Resultados OpenSees P1L4 siguen históricos; no fueron recalculados.
+- Unity 6000.6.0f1 compila y la prueba automática en Play registra `PASS` para carga del modelo (909 sólidos), capas/pisos, diagnóstico y secuencia P1L4.

@@ -2,9 +2,9 @@
 
 - Estado: **PASS**
 - Formato ID: `E{1|2}-{S1|P1|P2|P3|P4}-{C|V|M|A|L|D}-###`
-- Elementos seleccionables con ID: 1167 / 1167
-- Elementos con elementTag: 1167 / 1167
-- Elementos con ejes asociados: 1167 / 1167
+- Elementos seleccionables con ID: 919 / 919
+- Elementos con elementTag: 919 / 919
+- Elementos con ejes asociados: 919 / 919
 - Geometria preservada: True
 - Floor contract: PASS ['P1', 'P2', 'P3', 'P4', 'S1']
 
@@ -12,7 +12,7 @@
 
 | Tipo | Total | Known | Confirmado label | CAD geometry | Unknown | Known % | Label % |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| beam | 815 | 483 | 202 | 0 | 332 | 59.3 | 24.8 |
+| beam | 567 | 548 | 0 | 0 | 19 | 96.6 | 0.0 |
 | column | 150 | 150 | 84 | 66 | 0 | 100.0 | 56.0 |
 | wall | 122 | 122 | 122 | 0 | 0 | 100.0 | 100.0 |
 | support | 60 | 4 | 4 | 0 | 56 | 6.7 | 6.7 |

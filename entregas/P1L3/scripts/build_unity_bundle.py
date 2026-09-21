@@ -519,7 +519,7 @@ def main() -> None:
         "format": "POST_P1L3_UNITY_BUNDLE_v2",
         "generated_utc": datetime.now(timezone.utc).isoformat(),
         "data_state": {
-            "geometry": "POST_P1L4_STRUCTURAL_AUDIT_EXT2",
+            "geometry": "POST_P1L4_STRUCTURAL_AUDIT_EXT3",
             "fe_diagnosis": "POST_P1L3_CANDIDATE_NOT_RUN",
             "analysis_results": "P1L3_DELIVERED_HISTORICAL",
             "loads": "P1L3_DELIVERED_HISTORICAL",

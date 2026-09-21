@@ -1,8 +1,8 @@
 {
   "status": "PASS",
   "check": "ENRICHED_MODEL_METADATA_VALIDATION",
-  "geometry_hash_before": "ec61d03277a21353fee22e1411118578bf4ad6b668804eb9ce674b8e1710c2bd",
-  "geometry_hash_after": "ec61d03277a21353fee22e1411118578bf4ad6b668804eb9ce674b8e1710c2bd",
+  "geometry_hash_before": "8e6ad2e52e14c4ac1a8df363e50a4d8e1edc512b90a49411923caf218ffdbb6e",
+  "geometry_hash_after": "8e6ad2e52e14c4ac1a8df363e50a4d8e1edc512b90a49411923caf218ffdbb6e",
   "geometry_preserved": true,
   "floor_contract": {
     "status": "PASS",
@@ -23,16 +23,16 @@
     "errors": []
   },
   "element_id_format": "E{1|2}-{S1|P1|P2|P3|P4}-{C|V|M|A|L|D}-###",
-  "selectable_element_count": 1167,
-  "elements_with_id": 1167,
-  "elements_with_elementTag": 1167,
-  "elements_with_axis_location": 1167,
+  "selectable_element_count": 919,
+  "elements_with_id": 919,
+  "elements_with_elementTag": 919,
+  "elements_with_axis_location": 919,
   "duplicate_element_ids": [],
   "duplicate_element_tags": [],
   "missing_element_ids": [],
   "missing_element_tags": [],
   "solid_counts_by_category": {
-    "beam": 815,
+    "beam": 567,
     "column": 150,
     "slab": 10,
     "support": 60,
@@ -40,13 +40,13 @@
   },
   "property_coverage": {
     "beam": {
-      "total": 815,
-      "known": 483,
-      "confirmed_from_label": 202,
+      "total": 567,
+      "known": 548,
+      "confirmed_from_label": 0,
       "cad_geometry": 0,
-      "unknown": 332,
-      "known_percent": 59.3,
-      "confirmed_from_label_percent": 24.8
+      "unknown": 19,
+      "known_percent": 96.6,
+      "confirmed_from_label_percent": 0.0
     },
     "column": {
       "total": 150,
@@ -81,7 +81,7 @@
     "SPECIAL_POSITION_CONFIRMED": 6
   },
   "parsed_property_labels": 777,
-  "associated_property_labels": 683,
-  "ambiguous_property_labels": 42,
+  "associated_property_labels": 681,
+  "ambiguous_property_labels": 43,
   "errors": []
 }
