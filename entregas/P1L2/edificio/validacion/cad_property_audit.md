@@ -62,36 +62,36 @@
 
 | Layer | Roles detectados |
 |---|---|
-| RLE-MURO | wall |
+| RLA-MURO DILATADO | wall |
 | RLE-MURO_CONTOUR_PAIR | wall |
 | RLE-PILAR | column |
 | RLE-TEXTO-1 | beam_label, column_label, steel_beam_label, wall_label |
-| RLE-VIGA | beam |
 | RLE-VIGA_CONTOUR_CENTERLINE | beam |
 | generated_connected_support | support |
 | generated_diaphragm_bbox | slab |
+| generated_from_confirmed_special_wall | support |
 | generated_from_confirmed_wall_centerline | support |
 
 ## Labels a revisar
 
 | Label | Tipo | Texto | Edificio | Piso | Asociacion | Distancia [m] |
 |---|---|---|---|---|---|---:|
-| LBL2_base_beam_label_0001 | foundation_beam_section | V.F. 20/120 | EDIFICIO_2 | S1 | SOL2_base_support_0021 | 4.199 |
-| LBL2_base_beam_label_0002 | foundation_beam_section | V.F. 20/120 | EDIFICIO_2 | S1 | SOL2_base_support_0022 | 4.908 |
-| LBL2_base_beam_label_0003 | foundation_beam_section | V.F. 20/120 | EDIFICIO_2 | S1 | SOL2_base_support_0022 | 4.1 |
-| LBL2_base_beam_label_0004 | foundation_beam_section | V.F. 20/120 | EDIFICIO_2 | S1 | SOL2_base_support_0022 | 4.211 |
-| LBL2_base_beam_label_0005 | foundation_beam_section | V.F. 20/120 | EDIFICIO_2 | S1 | SOL2_base_support_0021 | 4.361 |
-| LBL2_base_beam_label_0006 | foundation_beam_section | V.F. 20/120 | EDIFICIO_2 | S1 | SOL2_base_support_0026 | 3.416 |
-| LBL2_base_beam_label_0007 | foundation_beam_section | V.F. 20/120 | EDIFICIO_2 | S1 | SOL2_base_support_0027 | 3.267 |
-| LBL2_base_beam_label_0008 | foundation_beam_section | V.F. 20/120 | EDIFICIO_2 | S1 | SOL2_base_support_0005 | 4.924 |
-| LBL2_base_beam_label_0009 | foundation_beam_section | V.F. 20/120 | EDIFICIO_2 | S1 | SOL2_base_support_0027 | 4.89 |
-| LBL2_base_beam_label_0010 | foundation_beam_section | V.F. 20/120 | EDIFICIO_2 | S1 | SOL2_base_support_0026 | 4.515 |
-| LBL2_base_beam_label_0018 | foundation_beam_section | V.F. 20/120 | EDIFICIO_2 | S1 | SOL2_base_support_0014 | 4.174 |
-| LBL2_base_beam_label_0020 | foundation_beam_section | V.F. 20/120 | EDIFICIO_2 | S1 | SOL2_base_support_0025 | 2.71 |
-| LBL2_base_beam_label_0023 | foundation_beam_section | V.F. 20/120 | EDIFICIO_2 | S1 | SOL2_base_support_0024 | 3.629 |
-| LBL2_base_beam_label_0026 | foundation_beam_section | V.F. 20/120 | EDIFICIO_2 | S1 | SOL2_base_support_0024 | 4.974 |
-| LBL2_base_beam_label_0031 | foundation_beam_section | V.F. 20/120 | EDIFICIO_2 | S1 | SOL2_base_support_0021 | 4.361 |
-| LBL2_base_beam_label_0036 | foundation_beam_section | V.F. 20/120 | EDIFICIO_2 | S1 | SOL2_base_support_0015 | 3.853 |
+| LBL2_base_beam_label_0001 | foundation_beam_section | V.F. 20/120 | EDIFICIO_2 | S1 | SOL2_base_support_0012 | 4.199 |
+| LBL2_base_beam_label_0002 | foundation_beam_section | V.F. 20/120 | EDIFICIO_2 | S1 | SOL2_base_support_0013 | 4.908 |
+| LBL2_base_beam_label_0003 | foundation_beam_section | V.F. 20/120 | EDIFICIO_2 | S1 | SOL2_base_support_0013 | 4.1 |
+| LBL2_base_beam_label_0004 | foundation_beam_section | V.F. 20/120 | EDIFICIO_2 | S1 | SOL2_base_support_0013 | 4.211 |
+| LBL2_base_beam_label_0005 | foundation_beam_section | V.F. 20/120 | EDIFICIO_2 | S1 | SOL2_base_support_0012 | 4.361 |
+| LBL2_base_beam_label_0006 | foundation_beam_section | V.F. 20/120 | EDIFICIO_2 | S1 | SOL2_base_support_0017 | 3.416 |
+| LBL2_base_beam_label_0007 | foundation_beam_section | V.F. 20/120 | EDIFICIO_2 | S1 | SOL2_base_support_0018 | 3.267 |
+| LBL2_base_beam_label_0008 | foundation_beam_section | V.F. 20/120 | EDIFICIO_2 | S1 | SOL2_base_support_0001 | 5.051 |
+| LBL2_base_beam_label_0009 | foundation_beam_section | V.F. 20/120 | EDIFICIO_2 | S1 | SOL2_base_support_0018 | 4.89 |
+| LBL2_base_beam_label_0010 | foundation_beam_section | V.F. 20/120 | EDIFICIO_2 | S1 | SOL2_base_support_0017 | 4.515 |
+| LBL2_base_beam_label_0018 | foundation_beam_section | V.F. 20/120 | EDIFICIO_2 | S1 | SOL2_base_support_0010 | 4.205 |
+| LBL2_base_beam_label_0020 | foundation_beam_section | V.F. 20/120 | EDIFICIO_2 | S1 | SOL2_base_support_0016 | 2.71 |
+| LBL2_base_beam_label_0023 | foundation_beam_section | V.F. 20/120 | EDIFICIO_2 | S1 | SOL2_base_support_0015 | 3.629 |
+| LBL2_base_beam_label_0026 | foundation_beam_section | V.F. 20/120 | EDIFICIO_2 | S1 | SOL2_base_support_0015 | 4.974 |
+| LBL2_base_beam_label_0031 | foundation_beam_section | V.F. 20/120 | EDIFICIO_2 | S1 | SOL2_base_support_0012 | 4.361 |
+| LBL2_base_beam_label_0036 | foundation_beam_section | V.F. 20/120 | EDIFICIO_2 | S1 | SOL2_base_support_0007 | 3.887 |
 | LBL2_4_column_label_0095 | column_section | P.H.I 20x20 | EDIFICIO_2 | P4 | SOL2_4_column_0001 | 6.821 |
 | LBL2_4_column_label_0096 | column_section | P.H.I 20x20 | EDIFICIO_2 | P4 | SOL2_4_column_0001 | 4.472 |
 | LBL2_4_column_label_0097 | column_section | P.H.I 20x20 | EDIFICIO_2 | P4 | SOL2_4_column_0001 | 2.443 |

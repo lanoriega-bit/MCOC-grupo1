@@ -272,7 +272,24 @@ namespace Mcoc.UnityViewer
             if (demandCapacity != null && demandCapacity.elements != null)
                 foreach (var item in demandCapacity.elements)
                     if (item != null && !string.IsNullOrEmpty(item.element_id))
+                    {
                         demandCapacityByElementId[item.element_id] = item;
+                        // Los resultados P1L4 conservan el ID historico, mientras que la
+                        // geometria POST-P1L4 puede haber consolidado el elemento. El
+                        // solidTag es el puente estable entre ambos contratos.
+                        if (model != null && model.solids != null && !string.IsNullOrEmpty(item.geometry_elementTag))
+                        {
+                            foreach (var solid in model.solids)
+                            {
+                                if (solid == null) continue;
+                                string solidTag = !string.IsNullOrEmpty(solid.elementTag) ? solid.elementTag : solid.solidTag;
+                                if (solidTag != item.geometry_elementTag) continue;
+                                string currentId = !string.IsNullOrEmpty(solid.human_id) ? solid.human_id : solid.id;
+                                if (!string.IsNullOrEmpty(currentId)) demandCapacityByElementId[currentId] = item;
+                                break;
+                            }
+                        }
+                    }
             if (p1l4Metadata != null && p1l4Metadata.supports != null)
                 foreach (var item in p1l4Metadata.supports)
                     if (item != null) p1l4SupportsByNode[item.node_tag] = item;
@@ -2015,7 +2032,9 @@ namespace Mcoc.UnityViewer
                 return "Este elemento no tiene contrato de demanda-capacidad P1L4.";
             string contractCase = (item.demand_capacity.@case ?? "").Replace("CASE_", "").ToUpperInvariant();
             var sb = new StringBuilder();
-            sb.AppendLine($"Elemento: {item.element_id} | OpenSees {item.opensees_tag}");
+            sb.AppendLine($"Elemento historico: {item.element_id} | OpenSees {item.opensees_tag}");
+            if (id != item.element_id)
+                sb.AppendLine($"Geometria POST-P1L4: {id} | vinculo por {item.geometry_elementTag}");
             sb.AppendLine($"Curva: P-{item.demand_capacity.pm_axis} | Seccion: {item.section_id}");
             sb.AppendLine($"Caso de demanda: {item.demand_capacity.@case}");
             if (contractCase != activeAnalysisCase)
@@ -2909,7 +2928,12 @@ namespace Mcoc.UnityViewer
             if (feDiagnostic == null || feDiagnostic.summary == null) failures.Add("contrato FE ausente");
             else
             {
-                if (feDiagnostic.summary.focus_elements != 72) failures.Add("foco distinto de 72");
+                int actualFocus = 0;
+                if (feDiagnostic.elements != null)
+                    foreach (var item in feDiagnostic.elements)
+                        if (item != null && item.diagnostic_focus) actualFocus++;
+                if (actualFocus <= 0 || feDiagnostic.summary.focus_elements != actualFocus)
+                    failures.Add($"foco inconsistente resumen={feDiagnostic.summary.focus_elements}, elementos={actualFocus}");
                 if (feDiagnostic.members == null || feDiagnostic.members.Count != feDiagnostic.summary.fe_element_count)
                     failures.Add("miembros FE no coinciden con resumen");
                 if (feDiagnostic.summary.geometry_elements_split_into_multiple_fe <= 0)
@@ -2963,8 +2987,8 @@ namespace Mcoc.UnityViewer
                 failures.Add("demanda-capacidad ausente o invalida");
             else if (demandCapacity.elements == null || demandCapacity.elements.Count < 2)
                 failures.Add("faltan columna/muro de demanda-capacidad");
-            if (!demandCapacityByElementId.ContainsKey("E2-P1-C-002") || !demandCapacityByElementId.ContainsKey("E2-P1-M-019"))
-                failures.Add("IDs de estudio no mapeados");
+            if (FindSelectableCapacityElement("column") == null || FindSelectableCapacityElement("wall") == null)
+                failures.Add("columna/muro de demanda-capacidad no mapeados a geometria seleccionable");
             if (p1l4LoadCatalog == null || p1l4LoadCatalog.entry_count != 108 || p1l4LoadCatalog.is_structurally_applied)
                 failures.Add("catalogo de cargas auditadas ausente o mal rotulado");
             int expectedJoseElements = analysisResults != null && analysisResults.elements != null ? analysisResults.elements.Count : 0;
@@ -3034,21 +3058,17 @@ namespace Mcoc.UnityViewer
             }
 
             ActivateAnalysisCase("R");
-            foreach (var target in new[] { "E2-P1-C-002", "E2-P1-M-019" })
+            foreach (var capacityType in new[] { "column", "wall" })
             {
-                ElementInfo selectedInfo = null;
-                foreach (var candidate in allElements)
-                {
-                    string candidateId = candidate == null ? "" : (string.IsNullOrEmpty(candidate.humanId) ? candidate.id : candidate.humanId);
-                    if (candidateId == target) { selectedInfo = candidate; break; }
-                }
-                if (selectedInfo == null) failures.Add(target + " no seleccionable");
+                ElementInfo selectedInfo = FindSelectableCapacityElement(capacityType);
+                if (selectedInfo == null) failures.Add(capacityType + " de capacidad no seleccionable");
                 else
                 {
                     ShowInfo(selectedInfo);
-                    string capacityText = BuildDemandCapacityText(target);
-                    if (!capacityText.Contains("Estado:")) failures.Add(target + " sin inside/outside");
-                    if (target.EndsWith("M-019") && !capacityText.Contains("ASUMIDO_LAB")) failures.Add("muro sin nota ASUMIDO_LAB");
+                    string currentId = string.IsNullOrEmpty(selectedInfo.humanId) ? selectedInfo.id : selectedInfo.humanId;
+                    string capacityText = BuildDemandCapacityText(currentId);
+                    if (!capacityText.Contains("Estado:")) failures.Add(currentId + " sin inside/outside");
+                    if (capacityType == "wall" && !capacityText.Contains("ASUMIDO_LAB")) failures.Add("muro sin nota ASUMIDO_LAB");
                 }
             }
             if (!byType.ContainsKey("p1l4_support") || byType["p1l4_support"].Count != 106) failures.Add("apoyos globales no disponibles");
@@ -3069,6 +3089,18 @@ namespace Mcoc.UnityViewer
             if (failures.Count == 0)
                 Debug.Log("[P1L4 DEMO QA] PASS: VIGA identidad/ejes/R/fuerzas/deformada/My-2D/N-V-2D; COLUMNA P-M/demanda; MURO P-M/ASUMIDO_LAB; GLOBAL cargas/apoyos/tributarias.");
             else Debug.LogError("[P1L4 DEMO QA] FAIL: " + string.Join(", ", failures));
+        }
+
+        ElementInfo FindSelectableCapacityElement(string capacityType)
+        {
+            foreach (var candidate in allElements)
+            {
+                if (candidate == null) continue;
+                string currentId = string.IsNullOrEmpty(candidate.humanId) ? candidate.id : candidate.humanId;
+                if (string.IsNullOrEmpty(currentId) || !demandCapacityByElementId.TryGetValue(currentId, out var item)) continue;
+                if (item != null && item.type == capacityType) return candidate;
+            }
+            return null;
         }
 
         void QuickTypeToggle(Rect rect, string label, params string[] keys)

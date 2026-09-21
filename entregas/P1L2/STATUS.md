@@ -210,3 +210,15 @@
 - Conectividad: 247 apoyadas geométricamente en ambos extremos, 259 con un extremo/borde/voladizo y 60 para revisión FE posterior. No se crearon conexiones artificiales.
 - Resultados OpenSees P1L4 siguen históricos; no fueron recalculados.
 - Unity 6000.6.0f1 compila y la prueba automática en Play registra `PASS` para carga del modelo (909 sólidos), capas/pisos, diagnóstico y secuencia P1L4.
+
+# POST-P1L4 EXT-4 — losas, propiedades y conectividad
+
+- Los 10 pisos fueron auditados contra `RLE-LOSA`, estructura y ambos modelos externos. No se aplicaron superficies: ED1 S1/P1 y los rasgos interiores siguen sin evidencia suficiente.
+- ED1 P2/P3 y ED2 S1–P4 quedan como propuestas reproducibles; ED1 P4 sigue siendo piloto visual congelado, no FE.
+- Propiedades: 545/567 vigas con sección confirmada, 19 alturas ED1 pendientes; materiales de vigas/columnas permanecen UNKNOWN hasta evidencia primaria.
+- El adaptador histórico deja 115 geometrías flotantes/59 componentes. El candidato de incidencia física, aún no ejecutado, reduce a 43/22 y conserva 42 unresolved sin forzar conexión.
+- OpenSees, cargas, masas y resultados P1L4 no fueron recalculados.
+- QA final: geometría/ejes/continuidad/referencia Luis/contrato Unity `PASS`;
+  Unity 6000.6.0f1 compila y Play completa capas, diagnóstico y demo P1L4 sin
+  errores. IDs consolidados de capacidad se vinculan por `geometry_elementTag`
+  manteniendo visible el ID histórico.
