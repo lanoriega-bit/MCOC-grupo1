@@ -23,7 +23,7 @@ Este backlog comienza vacío de correcciones automáticas. Una diferencia entre 
 | ID | Prioridad | Alcance | Indicio | Estado | Acción siguiente |
 |---|---|---|---|---|---|
 | EXT-COL-001 | P2 | Todas las columnas | Conteos y discretización difieren ampliamente entre los tres contratos | CANDIDATE | normalizar coordenadas y hacer matching 1:1/1:N |
-| EXT-COL-002 | P2 | `E1-P1-C-016`, `E1-P1-C-017` | revisión especial solicitada; no se presume error | CANDIDATE | comparar continuidad y volver a planos |
+| EXT-COL-002 | P3 | `E1-P1-C-016`, `E1-P1-C-017` | ambos externos los omiten, pero `2017_67-101` muestra pilares 0.35×0.35 m de apoyo exterior de escalera B | REJECTED_EXTERNAL_CLUE | mantener geometría; revisar solo su participación FE en el hito de conectividad |
 | EXT-WALL-001 | P2 | núcleo `E1-P4-M-007`, S1→P4 | otros modelos segmentan muros por piso de forma distinta | CANDIDATE | reconstruir muros fuente y comparar ejes centrales |
 | EXT-BEAM-001 | P2 | `E1-P2-V-075`, escalera B | revisar fragmentación, descansos y conexión | CANDIDATE | comparar 1:N y planos de escalera |
 | EXT-BEAM-002 | P3 | `E2-P4-V-050`, `E2-P4-V-051` | continúan unresolved hasta nueva evidencia real | CANDIDATE | buscar pista externa y confirmarla en planos; no corregir por consenso |
@@ -31,4 +31,3 @@ Este backlog comienza vacío de correcciones automáticas. Una diferencia entre 
 ## Correcciones aprobadas
 
 Ninguna en `EXT-0`.
-
