@@ -12,7 +12,7 @@ namespace Mcoc.UnityViewer
     /// elemento muestra sus datos (ID, nodos, seccion, material, longitud,
     /// area y carga tributaria cuando esten presentes en el contrato).
     /// </summary>
-    public class ViewerController : MonoBehaviour
+    public partial class ViewerController : MonoBehaviour
     {
         [Header("Carga")]
         [SerializeField] private string jsonFileName = "model_viewer.json";
@@ -243,11 +243,14 @@ namespace Mcoc.UnityViewer
             BuildPhysicalContext();
             seismic = JsonLoader.LoadSeismic();
             if (seismic != null) BuildSeismic();
+            historicalResultsEnabled = true; // explicit QA scope; reset below before first rendered frame
             RunVisibilitySelfCheck();
             RunDiagnosticSelfCheck();
             RunP1L4SelfCheck();
             RunP1L4DemoSequenceCheck();
             ResetPresentation();
+            RunCurrentUiSelfCheck();
+            if (System.Array.IndexOf(System.Environment.GetCommandLineArgs(), "--ux-review") >= 0) StartCoroutine(RunUxReview());
             SetStatus($"POST-P1L3: {model.solids?.Count ?? 0} solidos | FE candidato: {feDiagnostic?.members?.Count ?? 0} miembros (no ejecutado)");
         }
 
@@ -1449,8 +1452,12 @@ namespace Mcoc.UnityViewer
         void ApplyVisibility(GameObject go, string type, string floor)
         {
             bool vis = typeVisible.ContainsKey(type) ? typeVisible[type] : true;
+            if (IsHistoricalLayer(type) && !ResultsAllowed) vis = false;
             if (floorVisible.ContainsKey(floor)) vis = vis && floorVisible[floor];
             var info = go.GetComponent<ElementInfo>();
+            if (info != null && buildingVisible.TryGetValue(info.building ?? "", out var buildingOn)) vis &= buildingOn;
+            if (info != null && type == "physical_context" && contextVisible.TryGetValue(info.physicalCluster ?? "", out var contextOn)) vis &= contextOn;
+            if (correctionsOnly && info != null && string.IsNullOrEmpty(info.correctionType)) vis = false;
             bool isFe = info != null && info.isFeCandidateVisual;
             bool isStructuralGeometry = !isFe && info != null &&
                 (info.category == "beam" || info.category == "wall" || info.category == "column");
@@ -1502,6 +1509,7 @@ namespace Mcoc.UnityViewer
         // ---------- Seleccion por clic ----------
         void Update()
         {
+            if (Input.GetKeyDown(KeyCode.F11)) SetPresentationMode(!presentationMode);
             if (Input.GetKeyDown(KeyCode.H)) uiHidden = !uiHidden;
             if (Input.GetKeyDown(KeyCode.R)) ResetPresentation();
             // Seleccion SOLO con click limpio (sin arrastre). Arrastrar = rotar camara.
@@ -1522,6 +1530,11 @@ namespace Mcoc.UnityViewer
         }
 
         bool IsMouseOverUI()
+        {
+            return IsPointerOverCurrentUi();
+        }
+
+        bool IsMouseOverLegacyUI()
         {
             if (uiHidden) return false;
             if (expandedGraph != null) return true;
@@ -1740,6 +1753,7 @@ namespace Mcoc.UnityViewer
             lastSelected = ei;
             inspectorVisible = true;
             RebuildSelectedDiagram();
+            if (!ResultsAllowed && (ei.category == "beam" || ei.category == "column" || ei.category == "wall")) localAxesVisible = true;
             RebuildSelectedLocalAxes();
         }
 
@@ -1797,6 +1811,11 @@ namespace Mcoc.UnityViewer
 
         void RebuildSelectedLocalAxes()
         {
+            RebuildCurrentLocalAxes();
+        }
+
+        void RebuildHistoricalLocalAxes()
+        {
             ClearSelectedLocalAxes();
             if (!localAxesVisible || lastSelected == null) return;
             string id = string.IsNullOrEmpty(lastSelected.humanId) ? lastSelected.id : lastSelected.humanId;
@@ -1852,6 +1871,7 @@ namespace Mcoc.UnityViewer
         void RebuildSelectedDiagram()
         {
             ClearSelectedDiagram();
+            if (!ResultsAllowed) return;
             if (diagramMode == 0 || lastSelected == null)
             {
                 diagramCaption = diagramMode == 0 ? "Diagramas: OFF" : "Diagramas: seleccione un elemento";
@@ -2142,6 +2162,11 @@ namespace Mcoc.UnityViewer
         // ---------- UI (IMGUI garantiza visibilidad en build) ----------
         void OnGUI()
         {
+            DrawCurrentUi();
+        }
+
+        void DrawLegacyUi()
+        {
             if (whiteTex == null) whiteTex = MakeTex(2, 2, Color.white);
             if (uiHidden)
             {
@@ -2210,14 +2235,12 @@ namespace Mcoc.UnityViewer
             double v1 = end2[component] / 1000.0;
             double maxAbs = System.Math.Max(1.0e-9, System.Math.Max(System.Math.Abs(v0), System.Math.Abs(v1)));
 
-            float width = Mathf.Min(700f, Screen.width - 420f);
-            float height = Mathf.Min(390f, Screen.height - 250f);
-            Rect panel = new Rect((Screen.width - width) * 0.5f, 210f, width, height);
+            Rect panel = CurrentPlotRect();
             GUI.Box(panel, "");
             GUI.DrawTexture(panel, MakeTex(2, 2, new Color(0.01f, 0.02f, 0.045f, 0.98f)));
             var title = new GUIStyle(GUI.skin.label);
             title.fontSize = 15; title.fontStyle = FontStyle.Bold; title.normal.textColor = Color.white;
-            GUI.Label(new Rect(panel.x + 14, panel.y + 9, panel.width - 60, 24), $"{componentName} 2D | caso {activeAnalysisCase} | {id}", title);
+            GUI.Label(new Rect(panel.x + 14, panel.y + 9, panel.width - 60, 24), $"HISTÓRICO | {componentName} | caso {activeAnalysisCase} | {id}", title);
             if (GUI.Button(new Rect(panel.xMax - 44, panel.y + 7, 32, 25), "X")) { diagram2DVisible = false; return; }
 
             if (rows.Count > 1)
@@ -2612,14 +2635,12 @@ namespace Mcoc.UnityViewer
                 demandCapacityPlotVisible = false;
                 return;
             }
-            float width = Mathf.Min(660f, Screen.width - 80f);
-            float height = Mathf.Min(500f, Screen.height - 80f);
-            Rect panel = new Rect((Screen.width - width) * 0.5f, (Screen.height - height) * 0.5f, width, height);
+            Rect panel = CurrentPlotRect();
             GUI.Box(panel, "");
             GUI.DrawTexture(panel, MakeTex(2, 2, new Color(0.01f, 0.02f, 0.045f, 0.98f)));
             var title = new GUIStyle(GUI.skin.label);
             title.fontSize = 15; title.fontStyle = FontStyle.Bold; title.normal.textColor = Color.white;
-            GUI.Label(new Rect(panel.x + 14, panel.y + 9, panel.width - 70, 24), $"P-M | {item.element_id} | eje {item.capacity.pm_axis}", title);
+            GUI.Label(new Rect(panel.x + 14, panel.y + 9, panel.width - 70, 24), $"HISTÓRICO P-M | {item.element_id} | {item.capacity.pm_axis}", title);
             if (GUI.Button(new Rect(panel.xMax - 44, panel.y + 7, 32, 25), "X")) { demandCapacityPlotVisible = false; return; }
 
             Rect plot = new Rect(panel.x + 70, panel.y + 48, panel.width - 100, panel.height - 122);
@@ -2843,7 +2864,6 @@ namespace Mcoc.UnityViewer
                 case "column_plan":
                 case "wall":
                 case "support":
-                case "p1l4_support":
                 case "architectural_slab":
                 case "architectural_slab_edge":
                     return true;
@@ -2854,6 +2874,10 @@ namespace Mcoc.UnityViewer
 
         void ResetPresentation()
         {
+            historicalResultsEnabled = false;
+            demandCapacityPlotVisible = false;
+            correctionsOnly = false;
+            foreach (var key in new List<string>(buildingVisible.Keys)) buildingVisible[key] = true;
             yaw = 30f;
             pitch = 25f;
             orbitDist = 160f;
@@ -2886,6 +2910,7 @@ namespace Mcoc.UnityViewer
             lastInfo = "";
             lastSelected = null;
             searchResult = "Vista y visibilidad restablecidas";
+            FitCurrentModel();
         }
 
         void RunVisibilitySelfCheck()
@@ -3023,6 +3048,7 @@ namespace Mcoc.UnityViewer
         /// </summary>
         public void RunP1L4DemoSequenceCheck()
         {
+            if (!ResultsAllowed) { RunCurrentUiSelfCheck(); return; }
             var failures = new List<string>();
             ElementInfo beam = null;
             foreach (var candidate in allElements)
@@ -3360,14 +3386,14 @@ namespace Mcoc.UnityViewer
             if (cam == null) return;
 
             float scroll = Input.GetAxis("Mouse ScrollWheel");
-            if (Mathf.Abs(scroll) > 0.001f)
+            if (Mathf.Abs(scroll) > 0.001f && !IsMouseOverUI())
             {
                 orbitDist = Mathf.Clamp(orbitDist - scroll * zoomSpeed * 25f, 3f, maxZoom);
             }
 
             bool orb = false;
             if (Input.GetMouseButton(0) && !IsMouseOverUI()) orb = true;
-            if (Input.GetMouseButton(1)) orb = true;
+            if (Input.GetMouseButton(1) && !IsMouseOverUI()) orb = true;
 
             Vector2 cur = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
             Vector2 delta = (lastMouse.x >= 0f) ? cur - lastMouse : Vector2.zero;
@@ -3405,7 +3431,7 @@ namespace Mcoc.UnityViewer
             }
 
             // Pan con boton central + arrastrar
-            if (Input.GetMouseButton(2))
+            if (Input.GetMouseButton(2) && !IsMouseOverUI())
             {
                 Vector3 rightc = cam.transform.right;
                 Vector3 upc = cam.transform.up;

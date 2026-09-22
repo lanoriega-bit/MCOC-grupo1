@@ -57,6 +57,10 @@ namespace Mcoc.UnityViewer
         public List<double> center;
         public double width_m;
         public double height_m;
+        public double section_width_m;
+        public double section_height_m;
+        public double section_depth_m;
+        public string section_confidence;
         public double depth_m;
         public double length_m;
         public string confidence;
