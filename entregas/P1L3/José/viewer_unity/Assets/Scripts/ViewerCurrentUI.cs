@@ -131,9 +131,8 @@ namespace Mcoc.UnityViewer
                 DrawExpandedGraph();
             }
             PanelBackground(new Rect(0,Screen.height-36,Screen.width,36));
-            string resultState = ResultsAllowed ? "HISTORICAL · NO COMPATIBLES" : "NONE · Sin resultados actuales";
             GUI.Label(new Rect(12,Screen.height-32,Screen.width-24,28),
-                "GEOMETRÍA: POST-P1L4 CURRENT     |     FE: CANDIDATE / NOT RUN     |     RESULTADOS: " + resultState, currentBody);
+                CurrentStatusLine(), currentBody);
             if (!string.IsNullOrEmpty(GUI.tooltip))
             {
                 Rect tip = new Rect(300,Screen.height-103,Mathf.Min(520,Screen.width-620),60);
@@ -195,6 +194,7 @@ namespace Mcoc.UnityViewer
                 DrawQuickViews();
                 if (GUILayout.Button("Restablecer modelo · R",currentButton)) ResetPresentation();
             }
+            DrawDeliveryPanels();
             if (Accordion("RESULTADOS"))
             {
                 GUILayout.Label("SIN RESULTADOS ACTUALES PARA ESTA GEOMETRÍA",currentHeading);

@@ -17,6 +17,9 @@ namespace Mcoc.UnityViewer
         {
             string output=Path.Combine(Application.dataPath,"..","QA");Directory.CreateDirectory(output);
             var failures=new List<string>();
+            LoadProjectState();
+            if(projectState==null||projectState.deliveries==null||projectState.deliveries.Count!=4)failures.Add("Delivery metadata missing");
+            if(projectState!=null&&projectState.geometry_count!=model.solids.Count)failures.Add("Metadata geometry mismatch");
             ResetPresentation();
             // Try to activate every archived layer without opting in: none may render.
             foreach(string key in new List<string>(typeVisible.Keys))if(IsHistoricalLayer(key))typeVisible[key]=true;
@@ -42,6 +45,13 @@ namespace Mcoc.UnityViewer
                 if(CurrentInspectorRect().yMax>Screen.height-36||SemanticPanelRect().yMax>Screen.height-36)failures.Add("Panel clipped");
                 if(selectedLocalAxisObjects.Count!=3)failures.Add("Local axes missing");
                 CaptureReviewFrame(Path.Combine(output,$"current_{size.x}x{size.y}.png"));
+                openGroups.Clear();openGroups.Add("ENTREGAS");openGroups.Add("P1L4");semanticScroll=Vector2.zero;
+                yield return new WaitForEndOfFrame();
+                if(ResultsAllowed||historicalResultsEnabled)failures.Add("Delivery summary enabled archive");
+                CaptureReviewFrame(Path.Combine(output,$"deliveries_{size.x}x{size.y}.png"));
+                openGroups.Clear();openGroups.Add("ESTADO DEL PROYECTO");
+                yield return new WaitForEndOfFrame();CaptureReviewFrame(Path.Combine(output,$"state_{size.x}x{size.y}.png"));
+                openGroups.Clear();openGroups.Add("MODELO");
                 SetHistoricalResults(true);ActivateAnalysisCase("R");
                 var archivedBeam=allElements.Find(e=>e!=null&&e.category=="beam"&&analysisByElementId.ContainsKey(e.humanId??e.id));
                 if(archivedBeam==null)failures.Add("Archived beam missing");

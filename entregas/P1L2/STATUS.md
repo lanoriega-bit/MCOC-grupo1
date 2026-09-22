@@ -233,3 +233,9 @@
   Unity 6000.6.0f1 compila y Play completa capas, diagnóstico y demo P1L4 sin
   errores. IDs consolidados de capacidad se vinculan por `geometry_elementTag`
   manteniendo visible el ID histórico.
+# PRE-P1L5 — HIST-1 (2026-09-22)
+
+Unity conserva el modelo actual e incorpora Entregas y Estado del proyecto,
+con estadísticas de tags inmutables y resultados históricos solo por opt-in.
+Compilación y prueba de ejecución en dos resoluciones: PASS. No cambia geometría,
+cargas ni resultados. Ver `entregas/PRE_P1L5/UNITY_QA.md`.
