@@ -1,0 +1,23 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {Workbook} from '@oai/artifact-tool';
+const dir=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const dossier=JSON.parse(await fs.readFile(path.join(dir,'FE_PENDING_43_DETAILED_REVIEW.json'),'utf8'));
+const headers=['Nº','ID','Prioridad','Edificio','Piso','Tipo','Ejes','Problema','Sabemos','No sabemos','Planos','Pregunta','X centro (m)','Y centro (m)','Z centro (m)','Z piso modelo (m)','Elevación piso fuente (m)','Geometry tag','Miembros candidatos JSON','Vecinos JSON','Distancias JSON','Hipótesis JSON','Evidencia JSON','Externos JSON','Ejes locales JSON','Coordenadas JSON','Localización ejes JSON','Qué buscar','Impacto','Estado','Fuente','Respuesta de Matías','Lámina y detalle revisados'];
+const rows=dossier.rows.map(r=>[r.number,r.element_id,r.priority,r.building,r.floor,r.type,r.axes,r.problem,r.known.join('\n'),r.unknown.join('\n'),r.recommended_plans.map(p=>p.sheet+' — '+p.purpose).join('\n'),r.question_for_matias,...r.coordinates_global_m.center,r.level.model_floor_z_m,r.level.source_floor_elevation_m,r.geometry_tag,...['candidate_members','neighbors','endpoint_distances','hypotheses','primary_evidence','external_comparison','local_axes','coordinates_global_m','axis_location'].map(k=>JSON.stringify(r[k])),r.manual_checks.join('\n'),r.impact_potential,r.status,'FE_PENDING_43_DETAILED_REVIEW.json; '+r.primary_evidence.source_dxf,'','']);
+const wb=Workbook.create(),sheet=wb.worksheets.add('Pendientes');
+sheet.getRange('A1').write([headers,...rows]);
+sheet.getRange('A1:F44').format.columnWidthPx=140;
+sheet.getRange('A1:F44').format.rowHeightPx=26;
+wb.recalculate();
+if(sheet.getRange('A2:F44').values.length!==43)throw new Error('Record count');
+const actual=sheet.getRange('A1:AG44').values;
+if(actual[43][1]!==rows[42][1])throw new Error('Last ID mismatch');
+console.log((await wb.inspect({kind:'table',range:'Pendientes!A1:F4',include:'values',tableMaxRows:4,tableMaxCols:6})).ndjson);
+// CSV has no layout or formula container; export the verified typed table as RFC4180 UTF-8 BOM.
+const csv='\uFEFF'+actual.map(row=>row.map(v=>'"'+String(v??'').replaceAll('"','""')+'"').join(',')).join('\r\n')+'\r\n';
+await fs.writeFile(path.join(dir,'FE_PENDING_43_DETAILED_REVIEW.csv'),csv,'utf8');
+const preview=await wb.render({sheetName:'Pendientes',range:'A1:F8',scale:1});
+await fs.writeFile(path.join(dir,'fe_pending_review/csv_preview.png'),new Uint8Array(await preview.arrayBuffer()));
+console.log('PASS: 43 records, 33 fields, source IDs preserved; CSV includes blank review-response fields.');

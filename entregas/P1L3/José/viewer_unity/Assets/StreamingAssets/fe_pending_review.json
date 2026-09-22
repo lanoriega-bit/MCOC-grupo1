@@ -1,0 +1,1044 @@
+{
+  "geometry_version": "829f33867523be305f5e5cf573f3ef8710597096ca100b72f692b0095d116314",
+  "rows": [
+    {
+      "id": "E1-P1-M-004",
+      "label": "01/43",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "priority": "A",
+      "axes": "X Eb–Ec (Eb +1.4000 m) / Y 1''–2 (1'' +0.0001 m)",
+      "problem": "El candidato sitúa este muro en POST-FLOAT-004 sin camino de conectividad a los apoyos de fundación. Respecto de E1-S1-M-026: distancia entre ejes XY 0.1813 m, separación entre huellas 0.0000 m y separación vertical 0.0000 m.",
+      "plan": "2017_67-101, 2017_67-304",
+      "question": "¿La planta y el corte muestran una unión resistente entre E1-P1-M-004 y E1-S1-M-026, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
+      "neighbors": [
+        "E1-P1-C-001",
+        "E1-P1-M-004",
+        "E1-P1-M-012",
+        "E1-P2-M-007",
+        "E1-S1-M-026"
+      ],
+      "level_z": 7.92
+    },
+    {
+      "id": "E1-P1-M-010",
+      "label": "02/43",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "priority": "A",
+      "axes": "X Eb–Ec (Ec -1.4000 m) / Y 2a–3 (2a +0.0001 m)",
+      "problem": "El candidato sitúa este muro en POST-FLOAT-003 sin camino de conectividad a los apoyos de fundación. Respecto de E1-S1-M-005: distancia entre ejes XY 0.1250 m, separación entre huellas 0.0000 m y separación vertical 0.0000 m.",
+      "plan": "2017_67-101, 2017_67-304",
+      "question": "¿La planta y el corte muestran una unión resistente entre E1-P1-M-010 y E1-S1-M-005, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
+      "neighbors": [
+        "E1-P1-C-003",
+        "E1-P1-M-002",
+        "E1-P1-M-010",
+        "E1-P2-M-005",
+        "E1-S1-M-005"
+      ],
+      "level_z": 7.92
+    },
+    {
+      "id": "E1-P2-M-003",
+      "label": "03/43",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "priority": "A",
+      "axes": "X E–Ea (Ea -0.0251 m) / Y 2–2a (2a -0.6579 m)",
+      "problem": "El candidato sitúa este muro en POST-FLOAT-013 sin camino de conectividad a los apoyos de fundación. Respecto de E1-P1-M-002: distancia entre ejes XY 0.0001 m, separación entre huellas 0.0000 m y separación vertical 0.0000 m. La auditoría previa detectó sensibilidad a redondeo de 0.1 mm; eso no autoriza unirlo sin revisar el encuentro.",
+      "plan": "2017_67-102, 2017_67-304",
+      "question": "¿La planta y el corte muestran una unión resistente entre E1-P2-M-003 y E1-P1-M-002, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
+      "neighbors": [
+        "E1-P1-M-002",
+        "E1-P2-C-003",
+        "E1-P2-M-003",
+        "E1-P2-M-008",
+        "E1-P3-M-003",
+        "E1-P4-M-003"
+      ],
+      "level_z": 11.88
+    },
+    {
+      "id": "E1-P2-M-010",
+      "label": "04/43",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "priority": "A",
+      "axes": "X Ea–Eb (Eb -0.0501 m) / Y 1''–2 (1'' +1.3565 m)",
+      "problem": "El candidato sitúa este muro en POST-FLOAT-015 sin camino de conectividad a los apoyos de fundación. Respecto de E1-P1-M-012: distancia entre ejes XY 0.0001 m, separación entre huellas 0.0000 m y separación vertical 0.0000 m. La auditoría previa detectó sensibilidad a redondeo de 0.1 mm; eso no autoriza unirlo sin revisar el encuentro.",
+      "plan": "2017_67-102, 2017_67-304",
+      "question": "¿La planta y el corte muestran una unión resistente entre E1-P2-M-010 y E1-P1-M-012, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
+      "neighbors": [
+        "E1-P1-M-012",
+        "E1-P2-C-002",
+        "E1-P2-M-007",
+        "E1-P2-M-010",
+        "E1-P3-M-010",
+        "E1-P4-M-009"
+      ],
+      "level_z": 11.88
+    },
+    {
+      "id": "E1-P2-M-007",
+      "label": "05/43",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "priority": "A",
+      "axes": "X Eb–Ec (Eb +1.3999 m) / Y 1''–2 (1'' +0.1815 m)",
+      "problem": "El candidato sitúa este muro en POST-FLOAT-016 sin camino de conectividad a los apoyos de fundación. Respecto de E1-P1-M-012: distancia entre ejes XY 0.1499 m, separación entre huellas 0.0000 m y separación vertical 0.0000 m.",
+      "plan": "2017_67-102, 2017_67-304",
+      "question": "¿La planta y el corte muestran una unión resistente entre E1-P2-M-007 y E1-P1-M-012, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
+      "neighbors": [
+        "E1-P1-M-012",
+        "E1-P2-C-005",
+        "E1-P2-M-007",
+        "E1-P2-M-009",
+        "E1-P3-M-007",
+        "E1-P4-M-007"
+      ],
+      "level_z": 11.88
+    },
+    {
+      "id": "E1-P2-M-008",
+      "label": "06/43",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "priority": "A",
+      "axes": "X Eb–Ec (Eb +1.3999 m) / Y 2a–3 (2a +0.1815 m)",
+      "problem": "El candidato sitúa este muro en POST-FLOAT-014 sin camino de conectividad a los apoyos de fundación. Respecto de E1-P1-M-010: distancia entre ejes XY 0.1814 m, separación entre huellas 0.0000 m y separación vertical 0.0000 m.",
+      "plan": "2017_67-102, 2017_67-304",
+      "question": "¿La planta y el corte muestran una unión resistente entre E1-P2-M-008 y E1-P1-M-010, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
+      "neighbors": [
+        "E1-P1-M-010",
+        "E1-P2-C-003",
+        "E1-P2-M-003",
+        "E1-P2-M-008",
+        "E1-P3-M-008",
+        "E1-P4-M-008"
+      ],
+      "level_z": 11.88
+    },
+    {
+      "id": "E1-P2-M-009",
+      "label": "07/43",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "priority": "A",
+      "axes": "X Ec–Ed (Ec +0.0499 m) / Y 1''–2 (1'' +1.3565 m)",
+      "problem": "El candidato sitúa este muro en POST-FLOAT-017 sin camino de conectividad a los apoyos de fundación. Respecto de E1-P1-M-025: distancia entre ejes XY 0.0001 m, separación entre huellas 0.0000 m y separación vertical 0.0000 m. La auditoría previa detectó sensibilidad a redondeo de 0.1 mm; eso no autoriza unirlo sin revisar el encuentro.",
+      "plan": "2017_67-102, 2017_67-304",
+      "question": "¿La planta y el corte muestran una unión resistente entre E1-P2-M-009 y E1-P1-M-025, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
+      "neighbors": [
+        "E1-P1-M-025",
+        "E1-P2-C-006",
+        "E1-P2-M-007",
+        "E1-P2-M-009",
+        "E1-P3-M-009",
+        "E1-P4-M-010"
+      ],
+      "level_z": 11.88
+    },
+    {
+      "id": "E1-P2-M-005",
+      "label": "08/43",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "priority": "A",
+      "axes": "X Ed–F (Ed +0.0249 m) / Y 2–2a (2a -0.6579 m)",
+      "problem": "El candidato sitúa este muro en POST-FLOAT-018 sin camino de conectividad a los apoyos de fundación. Respecto de E1-P1-M-026: distancia entre ejes XY 0.0001 m, separación entre huellas 0.0000 m y separación vertical 0.0000 m. La auditoría previa detectó sensibilidad a redondeo de 0.1 mm; eso no autoriza unirlo sin revisar el encuentro.",
+      "plan": "2017_67-102, 2017_67-304",
+      "question": "¿La planta y el corte muestran una unión resistente entre E1-P2-M-005 y E1-P1-M-026, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
+      "neighbors": [
+        "E1-P1-M-026",
+        "E1-P2-C-004",
+        "E1-P2-M-005",
+        "E1-P2-M-008",
+        "E1-P3-M-005",
+        "E1-P4-M-012"
+      ],
+      "level_z": 11.88
+    },
+    {
+      "id": "E1-P3-M-003",
+      "label": "09/43",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "priority": "A",
+      "axes": "X E–Ea (Ea -0.0251 m) / Y 2–2a (2a -0.6579 m)",
+      "problem": "El candidato sitúa este muro en POST-FLOAT-013 sin camino de conectividad a los apoyos de fundación. Respecto de E1-P2-M-003: distancia entre ejes XY 0.0000 m, separación entre huellas 0.0000 m y separación vertical 0.0000 m.",
+      "plan": "2017_67-102, 2017_67-304",
+      "question": "¿La planta y el corte muestran una unión resistente entre E1-P3-M-003 y E1-P2-M-003, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
+      "neighbors": [
+        "E1-P2-M-003",
+        "E1-P3-C-003",
+        "E1-P3-M-003",
+        "E1-P3-M-008",
+        "E1-P4-M-003"
+      ],
+      "level_z": 15.84
+    },
+    {
+      "id": "E1-P3-M-010",
+      "label": "10/43",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "priority": "A",
+      "axes": "X Ea–Eb (Eb -0.0501 m) / Y 1''–2 (1'' +1.3565 m)",
+      "problem": "El candidato sitúa este muro en POST-FLOAT-015 sin camino de conectividad a los apoyos de fundación. Respecto de E1-P2-M-010: distancia entre ejes XY 0.0000 m, separación entre huellas 0.0000 m y separación vertical 0.0000 m.",
+      "plan": "2017_67-102, 2017_67-304",
+      "question": "¿La planta y el corte muestran una unión resistente entre E1-P3-M-010 y E1-P2-M-010, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
+      "neighbors": [
+        "E1-P2-M-010",
+        "E1-P3-C-002",
+        "E1-P3-M-007",
+        "E1-P3-M-010",
+        "E1-P4-M-009"
+      ],
+      "level_z": 15.84
+    },
+    {
+      "id": "E1-P3-M-007",
+      "label": "11/43",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "priority": "A",
+      "axes": "X Eb–Ec (Eb +1.3999 m) / Y 1''–2 (1'' +0.1815 m)",
+      "problem": "El candidato sitúa este muro en POST-FLOAT-016 sin camino de conectividad a los apoyos de fundación. Respecto de E1-P2-M-007: distancia entre ejes XY 0.0000 m, separación entre huellas 0.0000 m y separación vertical 0.0000 m.",
+      "plan": "2017_67-102, 2017_67-304",
+      "question": "¿La planta y el corte muestran una unión resistente entre E1-P3-M-007 y E1-P2-M-007, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
+      "neighbors": [
+        "E1-P2-M-007",
+        "E1-P3-C-004",
+        "E1-P3-M-007",
+        "E1-P3-M-009",
+        "E1-P4-M-007"
+      ],
+      "level_z": 15.84
+    },
+    {
+      "id": "E1-P3-M-008",
+      "label": "12/43",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "priority": "A",
+      "axes": "X Eb–Ec (Eb +1.3999 m) / Y 2a–3 (2a +0.1815 m)",
+      "problem": "El candidato sitúa este muro en POST-FLOAT-014 sin camino de conectividad a los apoyos de fundación. Respecto de E1-P2-M-008: distancia entre ejes XY 0.0000 m, separación entre huellas 0.0000 m y separación vertical 0.0000 m.",
+      "plan": "2017_67-102, 2017_67-304",
+      "question": "¿La planta y el corte muestran una unión resistente entre E1-P3-M-008 y E1-P2-M-008, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
+      "neighbors": [
+        "E1-P2-M-008",
+        "E1-P3-C-006",
+        "E1-P3-M-003",
+        "E1-P3-M-008",
+        "E1-P4-M-008"
+      ],
+      "level_z": 15.84
+    },
+    {
+      "id": "E1-P3-M-009",
+      "label": "13/43",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "priority": "A",
+      "axes": "X Ec–Ed (Ec +0.0499 m) / Y 1''–2 (1'' +1.3565 m)",
+      "problem": "El candidato sitúa este muro en POST-FLOAT-017 sin camino de conectividad a los apoyos de fundación. Respecto de E1-P2-M-009: distancia entre ejes XY 0.0000 m, separación entre huellas 0.0000 m y separación vertical 0.0000 m.",
+      "plan": "2017_67-102, 2017_67-304",
+      "question": "¿La planta y el corte muestran una unión resistente entre E1-P3-M-009 y E1-P2-M-009, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
+      "neighbors": [
+        "E1-P2-M-009",
+        "E1-P3-C-005",
+        "E1-P3-M-007",
+        "E1-P3-M-009",
+        "E1-P4-M-010"
+      ],
+      "level_z": 15.84
+    },
+    {
+      "id": "E1-P3-M-005",
+      "label": "14/43",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "priority": "A",
+      "axes": "X Ed–F (Ed +0.0249 m) / Y 2–2a (2a -0.6579 m)",
+      "problem": "El candidato sitúa este muro en POST-FLOAT-018 sin camino de conectividad a los apoyos de fundación. Respecto de E1-P2-M-005: distancia entre ejes XY 0.0000 m, separación entre huellas 0.0000 m y separación vertical 0.0000 m.",
+      "plan": "2017_67-102, 2017_67-304",
+      "question": "¿La planta y el corte muestran una unión resistente entre E1-P3-M-005 y E1-P2-M-005, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
+      "neighbors": [
+        "E1-P2-M-005",
+        "E1-P3-C-006",
+        "E1-P3-M-005",
+        "E1-P3-M-008",
+        "E1-P4-M-012"
+      ],
+      "level_z": 15.84
+    },
+    {
+      "id": "E1-P4-M-003",
+      "label": "15/43",
+      "building": "EDIFICIO_1",
+      "floor": "P4",
+      "priority": "A",
+      "axes": "X E–Ea (Ea -0.0251 m) / Y 2–2a (2a -0.6579 m)",
+      "problem": "El candidato sitúa este muro en POST-FLOAT-013 sin camino de conectividad a los apoyos de fundación. Respecto de E1-P3-M-003: distancia entre ejes XY 0.0000 m, separación entre huellas 0.0000 m y separación vertical 0.0000 m.",
+      "plan": "2017_67-103, 2017_67-304",
+      "question": "¿La planta y el corte muestran una unión resistente entre E1-P4-M-003 y E1-P3-M-003, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
+      "neighbors": [
+        "E1-P2-M-003",
+        "E1-P3-M-003",
+        "E1-P4-C-003",
+        "E1-P4-M-003",
+        "E1-P4-M-008"
+      ],
+      "level_z": 19.8
+    },
+    {
+      "id": "E1-P4-M-009",
+      "label": "16/43",
+      "building": "EDIFICIO_1",
+      "floor": "P4",
+      "priority": "A",
+      "axes": "X Ea–Eb (Eb -0.0501 m) / Y 1''–2 (1'' +1.3565 m)",
+      "problem": "El candidato sitúa este muro en POST-FLOAT-015 sin camino de conectividad a los apoyos de fundación. Respecto de E1-P3-M-010: distancia entre ejes XY 0.0000 m, separación entre huellas 0.0000 m y separación vertical 0.0000 m.",
+      "plan": "2017_67-103, 2017_67-304",
+      "question": "¿La planta y el corte muestran una unión resistente entre E1-P4-M-009 y E1-P3-M-010, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
+      "neighbors": [
+        "E1-P2-M-010",
+        "E1-P3-M-010",
+        "E1-P4-C-002",
+        "E1-P4-M-007",
+        "E1-P4-M-009"
+      ],
+      "level_z": 19.8
+    },
+    {
+      "id": "E1-P4-M-007",
+      "label": "17/43",
+      "building": "EDIFICIO_1",
+      "floor": "P4",
+      "priority": "A",
+      "axes": "X Eb–Ec (Eb +1.3999 m) / Y 1''–2 (1'' +0.1815 m)",
+      "problem": "El candidato sitúa este muro en POST-FLOAT-016 sin camino de conectividad a los apoyos de fundación. Respecto de E1-P3-M-007: distancia entre ejes XY 0.0000 m, separación entre huellas 0.0000 m y separación vertical 0.0000 m.",
+      "plan": "2017_67-103, 2017_67-304",
+      "question": "¿La planta y el corte muestran una unión resistente entre E1-P4-M-007 y E1-P3-M-007, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
+      "neighbors": [
+        "E1-P2-M-007",
+        "E1-P3-M-007",
+        "E1-P4-C-004",
+        "E1-P4-M-007",
+        "E1-P4-M-010"
+      ],
+      "level_z": 19.8
+    },
+    {
+      "id": "E1-P4-M-008",
+      "label": "18/43",
+      "building": "EDIFICIO_1",
+      "floor": "P4",
+      "priority": "A",
+      "axes": "X Eb–Ec (Eb +1.3999 m) / Y 2a–3 (2a +0.1815 m)",
+      "problem": "El candidato sitúa este muro en POST-FLOAT-014 sin camino de conectividad a los apoyos de fundación. Respecto de E1-P3-M-008: distancia entre ejes XY 0.0000 m, separación entre huellas 0.0000 m y separación vertical 0.0000 m.",
+      "plan": "2017_67-103, 2017_67-304",
+      "question": "¿La planta y el corte muestran una unión resistente entre E1-P4-M-008 y E1-P3-M-008, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
+      "neighbors": [
+        "E1-P2-M-008",
+        "E1-P3-M-008",
+        "E1-P4-C-006",
+        "E1-P4-M-003",
+        "E1-P4-M-008"
+      ],
+      "level_z": 19.8
+    },
+    {
+      "id": "E1-P4-M-010",
+      "label": "19/43",
+      "building": "EDIFICIO_1",
+      "floor": "P4",
+      "priority": "A",
+      "axes": "X Ec–Ed (Ec +0.0499 m) / Y 1''–2 (1'' +1.3565 m)",
+      "problem": "El candidato sitúa este muro en POST-FLOAT-017 sin camino de conectividad a los apoyos de fundación. Respecto de E1-P3-M-009: distancia entre ejes XY 0.0000 m, separación entre huellas 0.0000 m y separación vertical 0.0000 m.",
+      "plan": "2017_67-103, 2017_67-304",
+      "question": "¿La planta y el corte muestran una unión resistente entre E1-P4-M-010 y E1-P3-M-009, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
+      "neighbors": [
+        "E1-P2-M-009",
+        "E1-P3-M-009",
+        "E1-P4-C-005",
+        "E1-P4-M-007",
+        "E1-P4-M-010"
+      ],
+      "level_z": 19.8
+    },
+    {
+      "id": "E1-P4-M-012",
+      "label": "20/43",
+      "building": "EDIFICIO_1",
+      "floor": "P4",
+      "priority": "A",
+      "axes": "X Ed–F (Ed +0.0249 m) / Y 2–2a (2a -0.6579 m)",
+      "problem": "El candidato sitúa este muro en POST-FLOAT-018 sin camino de conectividad a los apoyos de fundación. Respecto de E1-P3-M-005: distancia entre ejes XY 0.0000 m, separación entre huellas 0.0000 m y separación vertical 0.0000 m.",
+      "plan": "2017_67-103, 2017_67-304",
+      "question": "¿La planta y el corte muestran una unión resistente entre E1-P4-M-012 y E1-P3-M-005, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
+      "neighbors": [
+        "E1-P2-M-005",
+        "E1-P3-M-005",
+        "E1-P4-C-006",
+        "E1-P4-M-008",
+        "E1-P4-M-012"
+      ],
+      "level_z": 19.8
+    },
+    {
+      "id": "E1-P1-C-016",
+      "label": "21/43",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "priority": "B",
+      "axes": "X H–H1 (H +0.0271 m) / Y OUTBOARD >3 (3 +2.6926 m)",
+      "problem": "El candidato sitúa este columna en POST-FLOAT-001 sin camino de conectividad a los apoyos de fundación. Respecto de E1-S1-C-013: distancia entre ejes XY 2.6927 m, separación entre huellas 2.1676 m y separación vertical 0.0000 m. Pertenece al contexto de escalera B; su apoyo y alcance FE siguen sin aprobar.",
+      "plan": "2017_67-101, 2017_67-308",
+      "question": "¿Qué detalle muestra el apoyo real de E1-P1-C-016 en escalera B y su conexión o independencia respecto del edificio?",
+      "neighbors": [
+        "E1-P1-C-015",
+        "E1-P1-C-016",
+        "E1-P1-M-027",
+        "E1-P2-C-015",
+        "E1-S1-C-013"
+      ],
+      "level_z": 7.92
+    },
+    {
+      "id": "E1-P1-C-017",
+      "label": "22/43",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "priority": "B",
+      "axes": "X H–H1 (H +0.0271 m) / Y OUTBOARD >3 (3 +10.0256 m)",
+      "problem": "El candidato sitúa este columna en POST-FLOAT-002 sin camino de conectividad a los apoyos de fundación. Respecto de E1-S1-C-013: distancia entre ejes XY 10.0256 m, separación entre huellas 9.5006 m y separación vertical 0.0000 m. Pertenece al contexto de escalera B; su apoyo y alcance FE siguen sin aprobar.",
+      "plan": "2017_67-101, 2017_67-308",
+      "question": "¿Qué detalle muestra el apoyo real de E1-P1-C-017 en escalera B y su conexión o independencia respecto del edificio?",
+      "neighbors": [
+        "E1-P1-C-017",
+        "E1-P1-C-020",
+        "E1-P1-M-027",
+        "E1-P2-C-015",
+        "E1-S1-C-013"
+      ],
+      "level_z": 7.92
+    },
+    {
+      "id": "E1-P1-M-016",
+      "label": "23/43",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "priority": "B",
+      "axes": "X H'–H2 (H2 -1.8169 m) / Y OUTBOARD <1 (1 -3.5749 m)",
+      "problem": "El candidato sitúa este muro en POST-FLOAT-012 sin camino de conectividad a los apoyos de fundación. Respecto de E1-S1-M-060: distancia entre ejes XY 13.8663 m, separación entre huellas 13.7163 m y separación vertical 0.0000 m.",
+      "plan": "2017_67-101, 2017_67-306",
+      "question": "¿La planta y el corte muestran una unión resistente entre E1-P1-M-016 y E1-S1-M-060, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
+      "neighbors": [
+        "E1-P1-C-022",
+        "E1-P1-M-016",
+        "E1-P1-M-020",
+        "E1-P1-M-024",
+        "E1-P1-M-037",
+        "E1-P1-V-068",
+        "E1-P1-V-072",
+        "E1-P1-V-098",
+        "E1-P2-M-009",
+        "E1-S1-M-060"
+      ],
+      "level_z": 7.92
+    },
+    {
+      "id": "E1-P1-M-024",
+      "label": "24/43",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "priority": "B",
+      "axes": "X H'–H2 (H2 -1.8000 m) / Y OUTBOARD <1 (1 -0.5249 m)",
+      "problem": "El candidato sitúa este muro en POST-FLOAT-012 sin camino de conectividad a los apoyos de fundación. Respecto de E1-S1-M-060: distancia entre ejes XY 12.3501 m, separación entre huellas 12.2000 m y separación vertical 0.0000 m.",
+      "plan": "2017_67-101, 2017_67-306",
+      "question": "¿La planta y el corte muestran una unión resistente entre E1-P1-M-024 y E1-S1-M-060, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
+      "neighbors": [
+        "E1-P1-C-022",
+        "E1-P1-M-016",
+        "E1-P1-M-020",
+        "E1-P1-M-021",
+        "E1-P1-M-024",
+        "E1-P1-M-037",
+        "E1-P1-V-068",
+        "E1-P1-V-072",
+        "E1-P1-V-098",
+        "E1-P2-M-009",
+        "E1-S1-M-060"
+      ],
+      "level_z": 7.92
+    },
+    {
+      "id": "E1-P1-M-023",
+      "label": "25/43",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "priority": "B",
+      "axes": "X H'–H2 (H2 -1.0419 m) / Y OUTBOARD <1 (1 -6.2249 m)",
+      "problem": "El candidato sitúa este muro en POST-FLOAT-005 sin camino de conectividad a los apoyos de fundación. Respecto de E1-S1-M-060: distancia entre ejes XY 13.8663 m, separación entre huellas 13.7163 m y separación vertical 0.0000 m.",
+      "plan": "2017_67-101, 2017_67-306",
+      "question": "¿La planta y el corte muestran una unión resistente entre E1-P1-M-023 y E1-S1-M-060, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
+      "neighbors": [
+        "E1-P1-C-022",
+        "E1-P1-M-022",
+        "E1-P1-M-023",
+        "E1-P2-M-009",
+        "E1-S1-M-060"
+      ],
+      "level_z": 7.92
+    },
+    {
+      "id": "E1-P1-M-020",
+      "label": "26/43",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "priority": "B",
+      "axes": "X SOBRE EJE H2 (H2 +0.0000 m) / Y OUTBOARD <1 (1 -2.0499 m)",
+      "problem": "El candidato sitúa este muro en POST-FLOAT-012 sin camino de conectividad a los apoyos de fundación. Respecto de E1-S1-M-060: distancia entre ejes XY 17.4250 m, separación entre huellas 17.2000 m y separación vertical 0.0000 m.",
+      "plan": "2017_67-101, 2017_67-306",
+      "question": "¿La planta y el corte muestran una unión resistente entre E1-P1-M-020 y E1-S1-M-060, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
+      "neighbors": [
+        "E1-P1-C-022",
+        "E1-P1-M-016",
+        "E1-P1-M-020",
+        "E1-P1-M-024",
+        "E1-P1-M-037",
+        "E1-P1-V-068",
+        "E1-P1-V-072",
+        "E1-P1-V-098",
+        "E1-P2-M-009",
+        "E1-S1-M-060"
+      ],
+      "level_z": 7.92
+    },
+    {
+      "id": "E1-P1-M-022",
+      "label": "27/43",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "priority": "B",
+      "axes": "X I–IA (IA -1.0750 m) / Y OUTBOARD <1 (1 -6.2249 m)",
+      "problem": "El candidato sitúa este muro en POST-FLOAT-006 sin camino de conectividad a los apoyos de fundación. Respecto de E1-S1-M-060: distancia entre ejes XY 18.9500 m, separación entre huellas 18.8000 m y separación vertical 0.0000 m.",
+      "plan": "2017_67-101, 2017_67-310",
+      "question": "¿La planta y el corte muestran una unión resistente entre E1-P1-M-022 y E1-S1-M-060, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
+      "neighbors": [
+        "E1-P1-C-022",
+        "E1-P1-M-022",
+        "E1-P1-M-023",
+        "E1-P2-M-009",
+        "E1-S1-M-060"
+      ],
+      "level_z": 7.92
+    },
+    {
+      "id": "E1-P1-M-021",
+      "label": "28/43",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "priority": "B",
+      "axes": "X I–IA (IA -1.0750 m) / Y OUTBOARD <1 (1 -0.5249 m)",
+      "problem": "El candidato sitúa este muro en POST-FLOAT-007 sin camino de conectividad a los apoyos de fundación. Respecto de E1-S1-M-060: distancia entre ejes XY 18.9501 m, separación entre huellas 18.8000 m y separación vertical 0.0000 m.",
+      "plan": "2017_67-101, 2017_67-310",
+      "question": "¿La planta y el corte muestran una unión resistente entre E1-P1-M-021 y E1-S1-M-060, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
+      "neighbors": [
+        "E1-P1-C-022",
+        "E1-P1-M-021",
+        "E1-P1-M-035",
+        "E1-P2-M-009",
+        "E1-S1-M-060"
+      ],
+      "level_z": 7.92
+    },
+    {
+      "id": "E1-P1-M-031",
+      "label": "29/43",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "priority": "B",
+      "axes": "X SOBRE EJE IA (IA -0.0000 m) / Y OUTBOARD <1 (1 -11.1362 m)",
+      "problem": "El candidato sitúa este muro en POST-FLOAT-008 sin camino de conectividad a los apoyos de fundación. Respecto de E1-S1-M-060: distancia entre ejes XY 21.3386 m, separación entre huellas 21.0903 m y separación vertical 0.0000 m.",
+      "plan": "2017_67-101, 2017_67-310",
+      "question": "¿La planta y el corte muestran una unión resistente entre E1-P1-M-031 y E1-S1-M-060, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
+      "neighbors": [
+        "E1-P1-C-024",
+        "E1-P1-M-031",
+        "E1-P1-M-036",
+        "E1-P2-M-009",
+        "E1-S1-M-060"
+      ],
+      "level_z": 7.92
+    },
+    {
+      "id": "E1-P1-M-034",
+      "label": "30/43",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "priority": "B",
+      "axes": "X SOBRE EJE IA (IA -0.0000 m) / Y OUTBOARD <1 (1 -10.3310 m)",
+      "problem": "El candidato sitúa este muro en POST-FLOAT-009 sin camino de conectividad a los apoyos de fundación. Respecto de E1-S1-M-060: distancia entre ejes XY 21.2678 m, separación entre huellas 21.0186 m y separación vertical 0.0000 m.",
+      "plan": "2017_67-101, 2017_67-310",
+      "question": "¿La planta y el corte muestran una unión resistente entre E1-P1-M-034 y E1-S1-M-060, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
+      "neighbors": [
+        "E1-P1-C-024",
+        "E1-P1-M-034",
+        "E1-P1-M-036",
+        "E1-P2-M-009",
+        "E1-S1-M-060"
+      ],
+      "level_z": 7.92
+    },
+    {
+      "id": "E1-P1-M-036",
+      "label": "31/43",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "priority": "B",
+      "axes": "X IA–I' (I' -1.0172 m) / Y OUTBOARD <1 (1 -10.6970 m)",
+      "problem": "El candidato sitúa este muro en POST-FLOAT-010 sin camino de conectividad a los apoyos de fundación. Respecto de E1-S1-M-060: distancia entre ejes XY 21.4471 m, separación entre huellas 21.2873 m y separación vertical 0.0000 m.",
+      "plan": "2017_67-101, 2017_67-310",
+      "question": "¿La planta y el corte muestran una unión resistente entre E1-P1-M-036 y E1-S1-M-060, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
+      "neighbors": [
+        "E1-P1-C-024",
+        "E1-P1-M-036",
+        "E1-P1-M-037",
+        "E1-P2-M-009",
+        "E1-S1-M-060"
+      ],
+      "level_z": 7.92
+    },
+    {
+      "id": "E1-P1-M-035",
+      "label": "32/43",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "priority": "B",
+      "axes": "X IA–I' (I' -1.0172 m) / Y OUTBOARD <1 (1 -0.5249 m)",
+      "problem": "El candidato sitúa este muro en POST-FLOAT-011 sin camino de conectividad a los apoyos de fundación. Respecto de E1-S1-M-060: distancia entre ejes XY 21.3203 m, separación entre huellas 21.1703 m y separación vertical 0.0000 m.",
+      "plan": "2017_67-101, 2017_67-310",
+      "question": "¿La planta y el corte muestran una unión resistente entre E1-P1-M-035 y E1-S1-M-060, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
+      "neighbors": [
+        "E1-P1-C-024",
+        "E1-P1-M-021",
+        "E1-P1-M-035",
+        "E1-P2-M-009",
+        "E1-S1-M-060"
+      ],
+      "level_z": 7.92
+    },
+    {
+      "id": "E1-P1-M-037",
+      "label": "33/43",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "priority": "B",
+      "axes": "X I'–IB (I' +0.3953 m) / Y OUTBOARD <1 (1 -5.9627 m)",
+      "problem": "El candidato sitúa este muro en POST-FLOAT-012 sin camino de conectividad a los apoyos de fundación. Respecto de E1-S1-M-060: distancia entre ejes XY 23.9953 m, separación entre huellas 23.6953 m y separación vertical 0.0000 m.",
+      "plan": "2017_67-101, 2017_67-310",
+      "question": "¿La planta y el corte muestran una unión resistente entre E1-P1-M-037 y E1-S1-M-060, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
+      "neighbors": [
+        "E1-P1-C-024",
+        "E1-P1-M-016",
+        "E1-P1-M-020",
+        "E1-P1-M-024",
+        "E1-P1-M-036",
+        "E1-P1-M-037",
+        "E1-P1-V-068",
+        "E1-P1-V-072",
+        "E1-P1-V-098",
+        "E1-P2-M-009",
+        "E1-S1-M-060"
+      ],
+      "level_z": 7.92
+    },
+    {
+      "id": "E1-P1-V-068",
+      "label": "34/43",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "priority": "B",
+      "axes": "X SOBRE EJE H1 (H1 +0.0000 m) / Y OUTBOARD <1 (1 -2.0499 m)",
+      "problem": "El candidato sitúa este viga en POST-FLOAT-012 sin camino de conectividad a los apoyos de fundación. Respecto de E1-P1-M-024: distancia entre ejes XY 0.0750 m, separación entre huellas 0.0000 m y separación vertical 0.0000 m.",
+      "plan": "2017_67-101, 2017_67-306",
+      "question": "¿La planta y el corte muestran una unión resistente entre E1-P1-V-068 y E1-P1-M-024, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
+      "neighbors": [
+        "E1-P1-C-013",
+        "E1-P1-M-016",
+        "E1-P1-M-020",
+        "E1-P1-M-024",
+        "E1-P1-M-037",
+        "E1-P1-V-068",
+        "E1-P1-V-072",
+        "E1-P1-V-098",
+        "E1-P2-V-089",
+        "E1-S1-V-079"
+      ],
+      "level_z": 7.92
+    },
+    {
+      "id": "E1-P1-V-072",
+      "label": "35/43",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "priority": "B",
+      "axes": "X H'–H2 (H' +0.1061 m) / Y OUTBOARD <1 (1 -3.5749 m)",
+      "problem": "El candidato sitúa este viga en POST-FLOAT-012 sin camino de conectividad a los apoyos de fundación. Respecto de E1-P1-M-016: distancia entre ejes XY 0.0000 m, separación entre huellas 0.0000 m y separación vertical 0.0000 m.",
+      "plan": "2017_67-101, 2017_67-305",
+      "question": "¿La planta y el corte muestran una unión resistente entre E1-P1-V-072 y E1-P1-M-016, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
+      "neighbors": [
+        "E1-P1-C-013",
+        "E1-P1-M-016",
+        "E1-P1-M-020",
+        "E1-P1-M-024",
+        "E1-P1-M-037",
+        "E1-P1-V-068",
+        "E1-P1-V-072",
+        "E1-P1-V-098",
+        "E1-P2-V-089",
+        "E1-S1-V-079"
+      ],
+      "level_z": 7.92
+    },
+    {
+      "id": "E1-P1-V-098",
+      "label": "36/43",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "priority": "B",
+      "axes": "X I–IA (IA -0.5274 m) / Y OUTBOARD <1 (1 -3.5749 m)",
+      "problem": "El candidato sitúa este viga en POST-FLOAT-012 sin camino de conectividad a los apoyos de fundación. Respecto de E1-P1-M-020: distancia entre ejes XY 0.1061 m, separación entre huellas 0.0000 m y separación vertical 0.0000 m.",
+      "plan": "2017_67-101, 2017_67-310",
+      "question": "¿La planta y el corte muestran una unión resistente entre E1-P1-V-098 y E1-P1-M-020, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
+      "neighbors": [
+        "E1-P1-C-024",
+        "E1-P1-M-016",
+        "E1-P1-M-020",
+        "E1-P1-M-024",
+        "E1-P1-M-037",
+        "E1-P1-V-068",
+        "E1-P1-V-072",
+        "E1-P1-V-098",
+        "E1-P2-V-093",
+        "E1-S1-V-079"
+      ],
+      "level_z": 7.92
+    },
+    {
+      "id": "E1-P2-V-055",
+      "label": "37/43",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "priority": "B",
+      "axes": "X Ga–H (Ga +0.7499 m) / Y OUTBOARD >3 (3 +2.6414 m)",
+      "problem": "El candidato sitúa este viga en POST-FLOAT-022 sin camino de conectividad a los apoyos de fundación. Respecto de E1-P2-M-005: distancia entre ejes XY 13.8571 m, separación entre huellas 13.6877 m y separación vertical 0.0000 m. Pertenece al contexto de escalera B; su apoyo y alcance FE siguen sin aprobar.",
+      "plan": "2017_67-102, 2017_67-305",
+      "question": "¿Qué detalle muestra el apoyo real de E1-P2-V-055 en escalera B y su conexión o independencia respecto del edificio?",
+      "neighbors": [
+        "E1-P1-V-034",
+        "E1-P2-C-010",
+        "E1-P2-M-005",
+        "E1-P2-V-055",
+        "E1-P2-V-075",
+        "E1-P3-V-052"
+      ],
+      "level_z": 11.88
+    },
+    {
+      "id": "E1-P2-V-075",
+      "label": "38/43",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "priority": "B",
+      "axes": "X Ga–H (H -2.8251 m) / Y OUTBOARD >3 (3 +2.6414 m)",
+      "problem": "El candidato sitúa este viga en POST-FLOAT-022 sin camino de conectividad a los apoyos de fundación. Respecto de E1-P2-M-005: distancia entre ejes XY 18.6217 m, separación entre huellas 18.4622 m y separación vertical 0.0000 m. Pertenece al contexto de escalera B; su apoyo y alcance FE siguen sin aprobar.",
+      "plan": "2017_67-102, 2017_67-308",
+      "question": "¿Qué detalle muestra el apoyo real de E1-P2-V-075 en escalera B y su conexión o independencia respecto del edificio?",
+      "neighbors": [
+        "E1-P1-V-053",
+        "E1-P2-C-015",
+        "E1-P2-M-005",
+        "E1-P2-V-055",
+        "E1-P2-V-075",
+        "E1-P3-V-074"
+      ],
+      "level_z": 11.88
+    },
+    {
+      "id": "E2-P4-V-004",
+      "label": "39/43",
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "priority": "B",
+      "axes": "X OUTBOARD <A (A -3.5480 m) / Y 1–2 (2 -3.2916 m)",
+      "problem": "El candidato sitúa este viga en POST-FLOAT-020 sin camino de conectividad a los apoyos de fundación. Respecto de E2-P4-M-002: distancia entre ejes XY 2.5919 m, separación entre huellas 2.5900 m y separación vertical 0.0000 m.",
+      "plan": "2024_22-102, 2024_22-303",
+      "question": "¿La planta y el corte muestran una unión resistente entre E2-P4-V-004 y E2-P4-M-002, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
+      "neighbors": [
+        "E2-P3-V-002",
+        "E2-P4-C-001",
+        "E2-P4-M-002",
+        "E2-P4-V-004",
+        "E2-P4-V-005",
+        "E2-P4-V-006"
+      ],
+      "level_z": 19.8
+    },
+    {
+      "id": "E2-P4-V-005",
+      "label": "40/43",
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "priority": "B",
+      "axes": "X OUTBOARD <A (A -3.5480 m) / Y 1–2 (2 -1.7239 m)",
+      "problem": "El candidato sitúa este viga en POST-FLOAT-020 sin camino de conectividad a los apoyos de fundación. Respecto de E2-P4-M-002: distancia entre ejes XY 4.9764 m, separación entre huellas 4.9754 m y separación vertical 0.0000 m.",
+      "plan": "2024_22-102, 2024_22-303",
+      "question": "¿La planta y el corte muestran una unión resistente entre E2-P4-V-005 y E2-P4-M-002, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
+      "neighbors": [
+        "E2-P3-V-002",
+        "E2-P4-C-001",
+        "E2-P4-M-002",
+        "E2-P4-V-004",
+        "E2-P4-V-005",
+        "E2-P4-V-006"
+      ],
+      "level_z": 19.8
+    },
+    {
+      "id": "E2-P4-V-006",
+      "label": "41/43",
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "priority": "B",
+      "axes": "X OUTBOARD <A (A -3.5480 m) / Y 1–2 (2 -0.9489 m)",
+      "problem": "El candidato sitúa este viga en POST-FLOAT-020 sin camino de conectividad a los apoyos de fundación. Respecto de E2-P4-M-002: distancia entre ejes XY 5.7263 m, separación entre huellas 5.7254 m y separación vertical 0.0000 m.",
+      "plan": "2024_22-102, 2024_22-303",
+      "question": "¿La planta y el corte muestran una unión resistente entre E2-P4-V-006 y E2-P4-M-002, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
+      "neighbors": [
+        "E2-P3-V-002",
+        "E2-P4-C-001",
+        "E2-P4-M-002",
+        "E2-P4-V-004",
+        "E2-P4-V-005",
+        "E2-P4-V-006"
+      ],
+      "level_z": 19.8
+    },
+    {
+      "id": "E2-P4-V-007",
+      "label": "42/43",
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "priority": "B",
+      "axes": "X OUTBOARD <A (A -3.5480 m) / Y 2–3 (2 +1.5932 m)",
+      "problem": "El candidato sitúa este viga en POST-FLOAT-019 sin camino de conectividad a los apoyos de fundación. Respecto de E2-P4-M-003: distancia entre ejes XY 2.5919 m, separación entre huellas 2.5900 m y separación vertical 0.0000 m.",
+      "plan": "2024_22-102, 2024_22-303",
+      "question": "¿La planta y el corte muestran una unión resistente entre E2-P4-V-007 y E2-P4-M-003, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
+      "neighbors": [
+        "E2-P3-V-003",
+        "E2-P4-C-001",
+        "E2-P4-M-003",
+        "E2-P4-V-007"
+      ],
+      "level_z": 19.8
+    },
+    {
+      "id": "E2-P4-V-009",
+      "label": "43/43",
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "priority": "B",
+      "axes": "X OUTBOARD <A (A -2.7322 m) / Y 2–3 (3 -0.2993 m)",
+      "problem": "El candidato sitúa este viga en POST-FLOAT-021 sin camino de conectividad a los apoyos de fundación. Respecto de E2-P4-M-006: distancia entre ejes XY 0.4500 m, separación entre huellas 0.2000 m y separación vertical 0.0000 m.",
+      "plan": "2024_22-102, 2024_22-303",
+      "question": "¿La planta y el corte muestran una unión resistente entre E2-P4-V-009 y E2-P4-M-006, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
+      "neighbors": [
+        "E2-P3-V-008",
+        "E2-P4-C-001",
+        "E2-P4-M-006",
+        "E2-P4-V-009"
+      ],
+      "level_z": 19.8
+    }
+  ],
+  "axes": [
+    {
+      "building": "EDIFICIO_1",
+      "direction": "X",
+      "name": "E",
+      "coordinate": 27.491000000000003
+    },
+    {
+      "building": "EDIFICIO_1",
+      "direction": "X",
+      "name": "Ea",
+      "coordinate": 30.791000000000004
+    },
+    {
+      "building": "EDIFICIO_1",
+      "direction": "X",
+      "name": "Eb",
+      "coordinate": 31.091000000000005
+    },
+    {
+      "building": "EDIFICIO_1",
+      "direction": "X",
+      "name": "Ec",
+      "coordinate": 33.891000000000005
+    },
+    {
+      "building": "EDIFICIO_1",
+      "direction": "X",
+      "name": "Ed",
+      "coordinate": 34.191
+    },
+    {
+      "building": "EDIFICIO_1",
+      "direction": "X",
+      "name": "F",
+      "coordinate": 37.491
+    },
+    {
+      "building": "EDIFICIO_1",
+      "direction": "X",
+      "name": "G",
+      "coordinate": 47.491
+    },
+    {
+      "building": "EDIFICIO_1",
+      "direction": "X",
+      "name": "Ga",
+      "coordinate": 48.941
+    },
+    {
+      "building": "EDIFICIO_1",
+      "direction": "X",
+      "name": "H",
+      "coordinate": 57.491
+    },
+    {
+      "building": "EDIFICIO_1",
+      "direction": "X",
+      "name": "H1",
+      "coordinate": 61.316
+    },
+    {
+      "building": "EDIFICIO_1",
+      "direction": "X",
+      "name": "H'",
+      "coordinate": 61.968
+    },
+    {
+      "building": "EDIFICIO_1",
+      "direction": "X",
+      "name": "H2",
+      "coordinate": 66.316
+    },
+    {
+      "building": "EDIFICIO_1",
+      "direction": "X",
+      "name": "I",
+      "coordinate": 67.491
+    },
+    {
+      "building": "EDIFICIO_1",
+      "direction": "X",
+      "name": "IA",
+      "coordinate": 70.09100000000001
+    },
+    {
+      "building": "EDIFICIO_1",
+      "direction": "X",
+      "name": "I'",
+      "coordinate": 72.491
+    },
+    {
+      "building": "EDIFICIO_1",
+      "direction": "X",
+      "name": "IB",
+      "coordinate": 73.366
+    },
+    {
+      "building": "EDIFICIO_1",
+      "direction": "X",
+      "name": "J",
+      "coordinate": 77.491
+    },
+    {
+      "building": "EDIFICIO_1",
+      "direction": "Y",
+      "name": "1",
+      "coordinate": 0.0
+    },
+    {
+      "building": "EDIFICIO_1",
+      "direction": "Y",
+      "name": "1''",
+      "coordinate": 3.9
+    },
+    {
+      "building": "EDIFICIO_1",
+      "direction": "Y",
+      "name": "2",
+      "coordinate": 8.9
+    },
+    {
+      "building": "EDIFICIO_1",
+      "direction": "Y",
+      "name": "2a",
+      "coordinate": 13.845
+    },
+    {
+      "building": "EDIFICIO_1",
+      "direction": "Y",
+      "name": "3",
+      "coordinate": 16.15
+    },
+    {
+      "building": "EDIFICIO_2",
+      "direction": "X",
+      "name": "A",
+      "coordinate": 0.0
+    },
+    {
+      "building": "EDIFICIO_2",
+      "direction": "X",
+      "name": "B",
+      "coordinate": 7.5
+    },
+    {
+      "building": "EDIFICIO_2",
+      "direction": "X",
+      "name": "C",
+      "coordinate": 17.5
+    },
+    {
+      "building": "EDIFICIO_2",
+      "direction": "X",
+      "name": "D",
+      "coordinate": 27.5
+    },
+    {
+      "building": "EDIFICIO_2",
+      "direction": "Y",
+      "name": "1",
+      "coordinate": 0.0
+    },
+    {
+      "building": "EDIFICIO_2",
+      "direction": "Y",
+      "name": "2",
+      "coordinate": 8.9
+    },
+    {
+      "building": "EDIFICIO_2",
+      "direction": "Y",
+      "name": "3",
+      "coordinate": 16.15
+    }
+  ]
+}
