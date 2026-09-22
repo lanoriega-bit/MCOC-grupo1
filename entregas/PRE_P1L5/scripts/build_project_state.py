@@ -65,7 +65,7 @@ def main():
         for delivery in deliveries[1:]:
             delivery['qa']+=f" Equilibrio local histórico: {force_qa['status']}, {force_qa['member_cases']} barra/casos y {force_qa['axis_count']} ejes. No valida CURRENT."
     state = dict(format='MCOC_PRE5_PROJECT_STATE_V1', geometry='POST_P1L4_CURRENT',
-        properties=f'{material_count} materiales confirmados por plano; REVIEW_REQUIRED: {heights} alturas, alcance ED1 y losas',
+        properties=f'{material_count} materiales confirmados por plano; REVIEW_REQUIRED: {heights} alturas, ED1 P4 y losas',
         fe='CANDIDATE NOT RUN', results='NONE CURRENT', unity='PASS: checkpoint UX / ver QA vigente',
         pending=len(residual), floating_components=len(candidate['floating_excluded']['components']),
         geometry_count=len(current['solids']), fe_members=len(candidate['elements']),

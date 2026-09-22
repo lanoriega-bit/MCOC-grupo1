@@ -16,7 +16,7 @@
       "source_sha256": "982512c16f1facb6188d93954c24063b5910e2741e4499e1e1d9d77affeb595a",
       "concrete_fc_pa": 35000000,
       "reinforcement_fy_pa": 420000000,
-      "scope": "Fundaciones a cielo piso 3; ED1 P4 and stairs require separate scope",
+      "scope": "Fundaciones a cielo piso 3; main ED1 S1/P1/P2/P3 only; P4 and slabs not assigned",
       "confidence": "CONFIRMED_NOTE_FROM_PLAN"
     },
     {
@@ -52,13 +52,25 @@
       "source_sha256": "40ebaee4f4bd25b7b51104211b242a3cfbaf28f483ab91904d4b96fa331e8d76",
       "concrete_fc_pa": 25000000,
       "reinforcement_fy_pa": 420000000,
-      "scope": "Sheet 600 details only; not a whole-building material",
+      "scope": "DETALLE SALA ELECTRICA; separate auxiliary structure; not whole-building or stair grade",
       "confidence": "CONFIRMED_NOTE_FROM_PLAN"
     }
   ],
+  "sheet600_scope_evidence": {
+    "text": "DETALLE SALA ELECTRICA",
+    "tag": "TITULO1",
+    "handle": "D665",
+    "layer": "FORMATO",
+    "block": "*MODEL_SPACE",
+    "insert_handle": "D65D",
+    "xy": [
+      5118.93770968832,
+      176.2782596022369
+    ]
+  },
   "excluded": [
     "G20 applies to radier, not every floor slab",
-    "ED1 grade boundaries and stair sheet600 require element association",
+    "ED1 P4 excluded; sheet600 electrical-room entities not present in canonical main model",
     "No E/nu/density/armature-layout inferred from grade",
     "No historical FE/capacity replacement"
   ]
