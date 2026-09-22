@@ -17,6 +17,20 @@ namespace Mcoc.UnityViewer
         {
             string output=Path.Combine(Application.dataPath,"..","QA");Directory.CreateDirectory(output);
             var failures=new List<string>();
+            LoadCurrentContract();
+            if(currentContract==null||currentContract.analysis_available||currentContract.status!="BLOCKED_NOT_RUN")failures.Add("Current dataset must remain unavailable until approved run");
+            var expected=new CurrentDatasetContract{format="MCOC_CURRENT_DATASET_V1",geometry_version="geo",fe_version="fe",loads_version="loads",geometry_stream_sha256="file",fe_approved=true,loads_approved=true};
+            var fixture=new CurrentDatasetContract{format=expected.format,geometry_version="geo",fe_version="fe",loads_version="loads",geometry_stream_sha256="file",analysis_version="run",git_commit="test",timestamp="test",status="CURRENT_VERIFIED",analysis_available=true,fe_approved=true,loads_approved=true,linear_verified=true,payload_file="test.json",payload_sha256="test",units=new CurrentDatasetUnits{length="m",force="N",moment="N.m",stress="Pa",mass="kg",rotation="rad"},cases=new List<string>{"G","Q","EX","EY","R"},basis_cases=new List<string>{"G","Q","EX","EY"}};
+            if(CurrentVersionGate.Check(expected,fixture,"file")!="IDENTITY_MATCH_REQUIRES_PAYLOAD_QA")failures.Add("Valid identity gate");
+            fixture.geometry_version="other";if(CurrentVersionGate.Check(expected,fixture,"file")!="GEOMETRY_MISMATCH")failures.Add("Geometry mismatch accepted");fixture.geometry_version="geo";
+            fixture.fe_version="other";if(CurrentVersionGate.Check(expected,fixture,"file")!="FE_MISMATCH")failures.Add("FE mismatch accepted");fixture.fe_version="fe";
+            fixture.loads_version="other";if(CurrentVersionGate.Check(expected,fixture,"file")!="LOADS_MISMATCH")failures.Add("Loads mismatch accepted");fixture.loads_version="loads";
+            fixture.units.force="kN";if(CurrentVersionGate.Check(expected,fixture,"file")!="UNITS_MISMATCH")failures.Add("Unit mismatch accepted");fixture.units.force="N";
+            fixture.status="HISTORICAL";if(CurrentVersionGate.Check(expected,fixture,"file")!="RESULTS_NOT_VERIFIED")failures.Add("History accepted as current");fixture.status="CURRENT_VERIFIED";
+            if(CurrentVersionGate.Check(expected,fixture,"changed-file")!="GEOMETRY_FILE_MISMATCH")failures.Add("Actual geometry file mismatch accepted");
+            var combined=LinearBasisResponse.Combine(new[]{new double[]{1,2},new double[]{3,4},new double[]{5,6},new double[]{7,8}},new double[]{1,2,-1,.5});
+            if(System.Math.Abs(combined[0]-5.5)>1e-12||System.Math.Abs(combined[1]-8)>1e-12)failures.Add("Signed linear basis combination");
+            bool nanRejected=false;try{LinearBasisResponse.Combine(new[]{new double[]{1},new double[]{2},new double[]{3},new double[]{4}},new[]{double.NaN,0,0,0});}catch(System.ArgumentException){nanRejected=true;}if(!nanRejected)failures.Add("NaN accepted");
             LoadProjectState();
             if(projectState==null||projectState.deliveries==null||projectState.deliveries.Count!=4)failures.Add("Delivery metadata missing");
             if(projectState!=null&&projectState.geometry_count!=model.solids.Count)failures.Add("Metadata geometry mismatch");
@@ -30,6 +44,10 @@ namespace Mcoc.UnityViewer
             foreach(var e in allElements)if(e!=null&&e.building=="EDIFICIO_2"&&e.go.activeSelf)failures.Add("Building filter "+e.id);
             ResetPresentation();floorVisible["P2"]=false;ReapplyAll();
             foreach(var go in byFloor["P2"])if(go.activeSelf)failures.Add("Floor filter");
+            ResetPresentation();
+            var slab=allElements.Find(e=>e!=null&&e.category=="slab");
+            if(slab==null)failures.Add("Floor slab unavailable");
+            else {Select(slab);ResetInspectorSections(slab);if(!CurrentSectionText(CurrentSolid(slab)).Contains("provisional"))failures.Add("Slab must disclose provisional geometry");}
             ResetPresentation();
             ElementInfo beam=allElements.Find(e=>e!=null&&e.category=="beam"&&e.humanId=="E1-P2-V-075");
             if(beam==null)failures.Add("Review beam missing");
@@ -45,6 +63,17 @@ namespace Mcoc.UnityViewer
                 if(CurrentInspectorRect().yMax>Screen.height-36||SemanticPanelRect().yMax>Screen.height-36)failures.Add("Panel clipped");
                 if(selectedLocalAxisObjects.Count!=3)failures.Add("Local axes missing");
                 CaptureReviewFrame(Path.Combine(output,$"current_{size.x}x{size.y}.png"));
+                foreach(string targetId in new[]{"E2-P4-V-009","E2-P1-C-001","E1-P4-M-007"})
+                {
+                    var target=allElements.Find(e=>e!=null&&e.humanId==targetId);
+                    if(target==null){failures.Add("Inspector target missing "+targetId);continue;}
+                    Select(target);ResetInspectorSections(target);
+                    yield return new WaitForEndOfFrame();
+                    if(inspectorGroups.Count!=2||!inspectorGroups.Contains("RESUMEN")||!inspectorGroups.Contains("RESULTADOS"))failures.Add("Inspector defaults "+targetId);
+                    if(selectedLocalAxisObjects.Count!=3)failures.Add("Selected axes "+targetId);
+                    if(targetId=="E1-P4-M-007"&&!CurrentMaterialStatus(CurrentSolid(target)).Contains("POR CONFIRMAR"))failures.Add("Generic RC must not certify concrete grade");
+                    CaptureReviewFrame(Path.Combine(output,$"inspector_{targetId}_{size.x}x{size.y}.png"));
+                }
                 openGroups.Clear();openGroups.Add("ENTREGAS");openGroups.Add("P1L4");semanticScroll=Vector2.zero;
                 yield return new WaitForEndOfFrame();
                 if(ResultsAllowed||historicalResultsEnabled)failures.Add("Delivery summary enabled archive");
@@ -56,7 +85,7 @@ namespace Mcoc.UnityViewer
                 if(materialElement==null)failures.Add("Material review element missing");
                 else
                 {
-                    Select(materialElement);technicalDetail=true;
+                    Select(materialElement);ResetInspectorSections(materialElement);inspectorGroups.Add("PROPIEDADES");
                     var materialSolid=CurrentSolid(materialElement);
                     if(materialSolid==null||materialSolid.concrete_fc_pa!=35000000||materialSolid.material_confidence!="CONFIRMED_FROM_PLAN")failures.Add("Primary material missing");
                     if(string.IsNullOrEmpty(materialElement.correctionType)||!materialElement.correctionType.Contains("PROPERTY_UPDATED"))failures.Add("Property correction filter trace missing");
@@ -95,7 +124,7 @@ namespace Mcoc.UnityViewer
             yield return new WaitForEndOfFrame();CaptureReviewFrame(Path.Combine(output,"presentation.png"));
             yield return new WaitForSecondsRealtime(1);
             SetPresentationMode(false);ResetPresentation();SetGlobalAxesVisible(false);
-            string report=failures.Count==0?"PASS: current model; archived layers blocked; building/floor filters; 1366x768 and 1920x1080; non-overlapping panels; local axes; historical opt-in; presentation isolation; fullscreen.":"FAIL: "+string.Join("; ",failures);
+            string report=failures.Count==0?"PASS: current model; archived layers blocked; beam/column/wall/slab inspector; summary/results defaults; current identity negative gates; signed basis/NaN tests; building/floor filters; 1366x768 and 1920x1080; non-overlapping panels; local axes; historical opt-in; presentation isolation; fullscreen.":"FAIL: "+string.Join("; ",failures);
             File.WriteAllText(Path.Combine(output,"UX_QA.txt"),report);
             Debug.Log("[UX REVIEW QA] "+report);
         }

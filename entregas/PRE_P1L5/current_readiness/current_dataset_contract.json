@@ -1,0 +1,43 @@
+{
+  "format": "MCOC_CURRENT_DATASET_V1",
+  "geometry_version": "829f33867523be305f5e5cf573f3ef8710597096ca100b72f692b0095d116314",
+  "fe_version": "1995548cb230c6d87edc93860fcd485397473dffc2123e88f8b5f3a91a153a02",
+  "loads_version": "060ec4dc97f9a61dbe87a06cb8af8d1112b78994aa684777ecf494618f07402f",
+  "analysis_version": "NONE_NOT_RUN",
+  "git_commit": "d7acb29df1d80d2686e5aca14e92abc32970e7b1",
+  "timestamp": "2026-09-22T16:46:18.454970+00:00",
+  "status": "BLOCKED_NOT_RUN",
+  "geometry_stream_sha256": "a3162fdd0c9c7df01d23ea17b0fdf623eb25a23cb04bff698eb2bc5ea42349cc",
+  "units": {
+    "length": "m",
+    "force": "N",
+    "moment": "N.m",
+    "stress": "Pa",
+    "mass": "kg",
+    "rotation": "rad"
+  },
+  "cases": [
+    "G",
+    "Q",
+    "EX",
+    "EY",
+    "R"
+  ],
+  "basis_cases": [
+    "G",
+    "Q",
+    "EX",
+    "EY"
+  ],
+  "analysis_available": false,
+  "fe_approved": false,
+  "loads_approved": false,
+  "linear_verified": false,
+  "payload_file": "",
+  "payload_sha256": "",
+  "source_geometry": "entregas/P1L2/unity_export/model_combined_viewer.json",
+  "source_fe": "entregas/P1L3/results/post_p1l3_candidate/analysis_model_post_p1l3_candidate.json",
+  "source_loads": "entregas/P1L3/results/a1a2/load_zones_700_completion/load_catalog_700.json",
+  "basis_policy": "Identical K, supports, local axes, node/member ordering and applied patterns; signed SI components before envelopes",
+  "capacity_policy": "Immutable section/material/rebar signature per curve; change demand only for compatible linear combinations"
+}

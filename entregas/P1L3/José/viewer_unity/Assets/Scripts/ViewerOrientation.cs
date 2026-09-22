@@ -89,7 +89,9 @@ namespace Mcoc.UnityViewer
             var s=CurrentSolid(lastSelected);Vector3 a=lastSelected.nodeI,b=lastSelected.nodeJ;
             if(s!=null)
             {
-                if(s.start!=null&&s.end!=null){a=V(s.start);b=V(s.end);}
+                // JsonUtility can deserialize absent endpoints as empty arrays.
+                // Columns are defined by their center and vertical height.
+                if(s.start!=null&&s.end!=null&&s.start.Count>=3&&s.end.Count>=3&&(V(s.end)-V(s.start)).sqrMagnitude>.000001f){a=V(s.start);b=V(s.end);}
                 else{Vector3 center=V(s.center);float half=Mathf.Max(.1f,(float)s.height_m)*.5f;a=center-Vector3.forward*half;b=center+Vector3.forward*half;}
             }
             if((b-a).sqrMagnitude<.000001f)return;

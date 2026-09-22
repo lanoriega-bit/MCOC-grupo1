@@ -276,6 +276,11 @@ namespace Mcoc.UnityViewer
             bool pm=GUILayout.Toggle(demandCapacityPlotVisible,"P–M histórico / demanda",GUILayout.Height(25));
             if(pm!=demandCapacityPlotVisible){demandCapacityPlotVisible=pm;if(pm)diagram2DVisible=false;}
             LayerToggle("Apoyos FE históricos","p1l4_support"); LayerToggle("Áreas tributarias históricas","tributary","tributary_point");
+            if(lastSelected!=null)
+            {
+                GUILayout.Label("SELECCIÓN EN EL ARCHIVO · NO ACTUAL",currentHeading);
+                GUILayout.Label(inspectorAnalysis+"\n"+inspectorCapacity,currentBody);
+            }
         }
 
         static string FloorFriendly(string floor) => floor=="S1" ? "Subterráneo 1" : floor!=null && floor.StartsWith("P") ? "Piso "+floor.Substring(1) : floor ?? "Sin piso";
@@ -299,57 +304,7 @@ namespace Mcoc.UnityViewer
             return "INFERIDO / " + raw;
         }
 
-        void DrawCurrentInspector()
-        {
-            Rect r=CurrentInspectorRect(); PanelBackground(r);
-            GUILayout.BeginArea(new Rect(r.x+10,r.y+8,r.width-20,r.height-16));
-            GUILayout.BeginHorizontal(); GUILayout.Label("ELEMENTO SELECCIONADO",currentHeading);
-            if(GUILayout.Button("×",currentButton,GUILayout.Width(30)))inspectorVisible=false;
-            GUILayout.EndHorizontal();
-            currentInspectorScroll=GUILayout.BeginScrollView(currentInspectorScroll);
-            var e=lastSelected;var s=CurrentSolid(e);
-            GUILayout.Label(TypeFriendly(e.category),currentTitle);
-            GUILayout.Label((e.building??"Edificio sin asignar").Replace("EDIFICIO_","Edificio ")+" — "+FloorFriendly(e.floor),currentHeading);
-            string role=e.category=="beam"?"Elemento horizontal que transmite cargas hacia sus apoyos. Los receptores efectivos se revisan en el FE candidato.":e.category=="column"?"Elemento vertical que transmite cargas entre niveles. Su apoyo y continuidad se verifican en el modelo estructural.":e.category=="wall"?"Elemento vertical resistente. Su representación FE y conexiones se revisan por separado.":"Geometría de referencia; revise su fuente y su participación antes de usarla en análisis.";
-            GUILayout.Label(role,currentBody);
-            if(s!=null)
-            {
-                if(s.category=="wall")GUILayout.Label($"Espesor geométrico: {s.width_m*100:F1} cm\nLongitud: {s.length_m:F2} m",currentBody);
-                else if(s.category=="column")GUILayout.Label($"Sección geométrica: {s.width_m*100:F1} × {s.depth_m*100:F1} cm\nAltura: {s.height_m:F2} m",currentBody);
-                else GUILayout.Label($"Dimensiones visuales: {s.width_m*100:F1} × {s.height_m*100:F1} cm\nLongitud: {s.length_m:F2} m",currentBody);
-                GUILayout.Label("Geometría: "+ConfidenceFriendly(s.confidence),currentBody);
-                double sectionSecond=s.category=="column"?s.section_depth_m:s.section_height_m;
-                if(s.category!="wall")GUILayout.Label("Sección: "+ConfidenceFriendly(s.section_confidence)+(sectionSecond>0?$"\nSección asociada: {s.section_width_m*100:F1} × {sectionSecond*100:F1} cm":"\nDimensión resistente: no disponible en el contrato"),currentBody);
-            }
-            else GUILayout.Label("Geometría: "+ConfidenceFriendly(e.confidence),currentBody);
-            GUILayout.Label("Material: "+(string.IsNullOrEmpty(e.materialName)||e.materialName=="UNKNOWN"?"Por confirmar":e.materialName),currentBody);
-            if(s!=null&&s.concrete_fc_pa>0)
-                GUILayout.Label($"f'c de plano: {s.concrete_fc_pa/1e6:F0} MPa · {ConfidenceFriendly(s.material_confidence)}\nNo actualiza el FE ni la capacidad histórica.",currentBody);
-            GUILayout.Label("Análisis actual: resultados no disponibles",currentHeading);
-            if(!string.IsNullOrEmpty(e.diagnosticStatus))GUILayout.Label("Conectividad candidata: "+e.diagnosticStatus,currentBody);
-            bool la=GUILayout.Toggle(localAxesVisible,"Mostrar LOCAL x/y/z",GUILayout.Height(28));
-            if(la!=localAxesVisible){localAxesVisible=la;RebuildCurrentLocalAxes();}
-            GUILayout.Label("x local: longitudinal. y/z: transversales. Convención geométrica; no sustituye los ejes del futuro FE.",currentBody);
-            if(e.category=="wall")GUILayout.Label("En este muro, x geométrico sigue su longitud en planta; el miembro equivalente FE puede tener otra orientación.",currentBody);
-            technicalDetail=GUILayout.Toggle(technicalDetail,"DETALLE TÉCNICO",GUILayout.Height(30));
-            if(technicalDetail)
-            {
-                if(s!=null&&s.property_correction!=null)
-                    GUILayout.Label($"PROPIEDAD ACTUALIZADA\n{s.material_source}\nAcero: {s.reinforcement_grade} / fy {s.reinforcement_fy_pa/1e6:F0} MPa\nArmadura y E: no inferidos\nPista externa: {s.property_correction.external_repo_clue}\n{s.material_scope_note}",currentBody);
-                GUILayout.Label($"ID: {e.humanId??e.id}\nGeometry tag: {e.elementTag}\nEjes CAD: {e.axisX??"—"} / {e.axisY??"—"}\nExtremo i [m]: {P(e.nodeI)}\nExtremo j [m]: {P(e.nodeJ)}\nFuente: {e.sourceDxf}\nLayer: {e.sourceLayer}\nConfianza: {e.confidence}",currentBody);
-                if(e.crosswalk!=null)foreach(var x in e.crosswalk)GUILayout.Label($"CANDIDATO / NOT RUN\n{x.analysis_id}\nTag propuesto {x.opensees_element_tag} · nodos {x.opensees_node_i}–{x.opensees_node_j}",currentBody);
-                if(!string.IsNullOrEmpty(e.diagnosticMotive))GUILayout.Label(e.diagnosticMotive+"\n"+e.diagnosticEvidence,currentBody);
-                if(!string.IsNullOrEmpty(e.correctionType))GUILayout.Label($"CORRECCIÓN: {e.correctionType}\n{e.correctionReason}\nFuente primaria: {e.correctionPrimarySource}\nPista externa: {e.correctionExternalClue}\nConfianza: {e.correctionConfidence}",currentBody);
-                if(e.isP1L4Load)GUILayout.Label(inspectorProperties+"\n"+inspectorTributary+"\nNO APLICADA",currentBody);
-                if(ResultsAllowed)
-                {
-                    GUILayout.Label("ARCHIVO HISTÓRICO · NO ACTUAL",currentHeading);
-                    GUILayout.Label(inspectorAnalysis+"\n"+inspectorCapacity,currentBody);
-                }
-                GUILayout.Label(new GUIContent("N · Vy/Vz · T · My/Mz  [?]","N: axial [kN]. Vy/Vz: corte local [kN]. T: torsión sobre x [kN·m]. My/Mz: flexión local [kN·m]."),currentBody);
-            }
-            GUILayout.EndScrollView();GUILayout.EndArea();
-        }
+        void DrawCurrentInspector() => DrawStructuralInspector();
 
         void DrawUsageHelp()
         {
