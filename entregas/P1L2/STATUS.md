@@ -1,5 +1,16 @@
 # P1L2 Status
 
+## POST-P1L4 — EXT-5 + Unity actual (2026-09-21)
+
+- Geometría sin cambios respecto a EXT-4: 909 sólidos. No se regeneró ni ejecutó FE.
+- Diagnóstico Unity actualizado: 116 elementos de foco, incluyendo E2-P4-V-009.
+- 43 flotantes/22 componentes; 19 alturas de viga pendientes.
+- Auditoría de restricciones: 424 nodos multi-maestro y 376 retenidos/restringidos;
+  no aprobar el candidato de 856 miembros para análisis todavía.
+- Unity normal usa POST_P1L4_CURRENT; resultados históricos apagados y aislados.
+- `LUIS_REFERENCE_FILES_MODIFIED = 0`; tags y resultados históricos preservados.
+- Evidencia: `entregas/POST_P1L4/EXT_5_REMAINING_AUDIT.md` y `UNITY_CURRENT_UX_QA.md`.
+
 ## Consolidacion PRE-P1L4 — FASE 7 CANDIDATO FE (2026-09-12)
 
 - Creado `analysis_model_post_p1l3_candidate.json` sin reemplazar A3-A4 ni

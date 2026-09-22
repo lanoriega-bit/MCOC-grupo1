@@ -1,5 +1,31 @@
 # PROJECT_HANDOFF.md
 
+## Estado vigente — POST-P1L4, EXT-5 + Unity Current UX
+
+Esta sección sustituye los estados antiguos del resto del documento, que se
+conservan como memoria histórica, no como instrucciones para recalcular.
+
+- Rama: `codex/post-p1l4-structural-audit`; geometría `POST_P1L4_CURRENT`, 909 sólidos.
+- Unity canónico: `entregas/P1L3/José/viewer_unity`, escena `Assets/Main.unity`.
+- Interfaz semántica, inspector resumen/detalle, orientación GLOBAL/LOCAL,
+  F11 presentación, H limpio, R restablecer. Histórico solo en Avanzado.
+- Estado por defecto: `FE CANDIDATE / NOT RUN`, `RESULTADOS NONE`.
+- Candidato: 856 miembros, 16 relaciones 1:N, 43 flotantes/22 componentes.
+- EXT-5 no cambia geometría: corrige la omisión diagnóstica de E2-P4-V-009,
+  agrupa 43 pendientes y detecta ocho solapes entre huellas de muros que
+  requieren revisión del adaptador; no añade enlaces automáticos.
+- Barrera FE: 424 esclavos multi-maestro, 376 nodos retenidos/restringidos;
+  19 alturas ED1, materiales y losas S1/P1 continúan pendientes.
+- No ejecutar OpenSees, cargas, masas ni capacidad hasta cerrar esa barrera.
+- `P1L4_FINAL` es un tag anotado: objeto `ca16f8e3d05dffd7f25f983b21f401f4ef7aa408`,
+  commit evaluable `56e24ac0568b24eba3cf119f2e3cc66fc0af3a35`. No confundirlos.
+- Referencia original de Luis y resultados entregados intactos.
+- Continuar desde [EXT-5](entregas/POST_P1L4/EXT_5_REMAINING_AUDIT.md),
+  [backlog](entregas/POST_P1L4/STRUCTURAL_CORRECTION_BACKLOG.md) y
+  [guía/QA Unity](entregas/POST_P1L4/UNITY_CURRENT_UX_QA.md).
+
+## Archivo histórico PRE-P1L4 (estado superado)
+
 Transferencia tecnica completa del proyecto "Laboratorio estructural digital 3D de un edificio real".
 Fecha de revision: 2026-09-12. Base P1L3 entregada: `P1L3_DELIVERED` (`c847c13`).
 Este documento NO repite planificacion P1L3: eso vive en `entregas/P1L3/PLANIFICACION.md`.

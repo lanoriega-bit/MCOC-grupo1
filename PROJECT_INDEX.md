@@ -1,8 +1,11 @@
 # Índice maestro del proyecto
 
-Estado: `POST-P1L3 / PRE-P1L4`  
-Rama de trabajo: `codex/pre-p1l4-consolidation`  
-Snapshot entregado: tag `P1L3_DELIVERED` (`c847c13`)  
+Estado: `POST-P1L4 / EXT-5 + UNITY CURRENT UX`
+
+Rama de trabajo: `codex/post-p1l4-structural-audit`
+
+Snapshot P1L4 preservado: tag `P1L4_FINAL`, commit `56e24ac0568b24eba3cf119f2e3cc66fc0af3a35`
+
 Interfaz visual principal única: Unity de José
 
 Este índice responde qué archivo debe usarse hoy. El inventario máquina a
@@ -22,19 +25,23 @@ instala ni activa licencias.
 
 ## Estado que muestra Unity
 
-La interfaz mantiene dos líneas temporales visibles y separadas:
+La interfaz normal muestra únicamente el modelo actual. El histórico requiere
+activación explícita en Avanzado y nunca se presenta como resultado vigente:
 
 | Capa | Estado | Interpretación |
 | --- | --- | --- |
-| Geometría | `POST_P1L3_CURRENT` | 1212 sólidos consolidados: ED1 524, ED2 688. |
-| Diagnóstico FE | `POST_P1L3_CANDIDATE_NOT_RUN` | 1167 miembros candidatos; sirve para revisar topología, no son resultados. |
-| G/Q/EX/EY/R | `P1L3_DELIVERED_HISTORICAL` | Resultados entregados preservados; no corresponden todavía a un recálculo de la geometría actual. |
-| Cargas y masas mostradas | `P1L3_DELIVERED_HISTORICAL` | Demostración histórica; el catálogo 700 nuevo aún no se aplicó. |
-| Capacidad HA | `P1L3_DELIVERED_HISTORICAL` | Demostración de laboratorio preservada. |
+| Geometría | `POST_P1L4_CURRENT` | 909 sólidos; auditorías EXT-1 a EXT-4, sin cambios geométricos en EXT-5. |
+| Diagnóstico FE | `CANDIDATE / NOT RUN` | 856 miembros, 16 relaciones 1:N; 43 geometrías flotantes / 22 componentes. |
+| Resultados actuales | `NONE` | Sin corrida compatible; fuerzas, deformada y demanda actuales no disponibles. |
+| G/Q/EX/EY/R y capacidad anteriores | `HISTORICAL` | Avanzado → Histórico, apagado por defecto. |
+| Catálogo de cargas | Auditadas, no aplicadas | No confundir su geometría con G/Q recalculados. |
 
-El diagnóstico FE conserva el foco heredado de 72 elementos: 31
-`CONNECTED_EXPECTED`, 1 `FREE_END_EXPECTED`, 31 `DISCONNECTED_ERROR` y 9
-`UNRESOLVED`. Los 40 pendientes no fueron resueltos desde código.
+El diagnóstico visible cubre 116 elementos: 63 `CONNECTED_EXPECTED`, 10
+`FREE_END_EXPECTED`, 31 `DISCONNECTED_ERROR` y 12 `UNRESOLVED`.
+Estos dos últimos grupos son las 43 geometrías flotantes; se incluye ahora
+`E2-P4-V-009`, antes omitida del foco. Un extremo libre en el grafo no prueba
+por sí solo un voladizo real. Ver [EXT-5](entregas/POST_P1L4/EXT_5_REMAINING_AUDIT.md)
+y [guía/QA Unity](entregas/POST_P1L4/UNITY_CURRENT_UX_QA.md).
 
 ## Fuentes canónicas
 
@@ -70,7 +77,8 @@ El diagnóstico FE conserva el foco heredado de 72 elementos: 31
 
 | Rama remota | Clasificación | Acción |
 | --- | --- | --- |
-| `origin/codex/pre-p1l4-consolidation` | `CURRENT` | Desarrollo vigente. |
+| `origin/codex/post-p1l4-structural-audit` | `CURRENT` | Auditoría y Unity vigentes. |
+| `origin/codex/pre-p1l4-consolidation` | `HISTORICAL` | Consolidación anterior. |
 | `origin/main` | `SHARED_MAIN_REVIEW_BEFORE_INTEGRATION` | Tiene un PDF agregado después de la base; revisar al integrar, sin merge ciego. |
 | `origin/codex/arquitectura-p4` | `DELIVERED_HISTORY_FULLY_CONTAINED` | Ya está contenida en esta rama. |
 | `origin/jose-viewer` | `SUPERSEDED` | Funciones útiles ya portadas a Unity actual. |
@@ -111,8 +119,8 @@ adaptadores y en commits pequeños.
 
 ## Próximo trabajo técnico autorizado
 
-1. Revisar visualmente en Unity los 31 `DISCONNECTED_ERROR` y 9 `UNRESOLVED`.
-2. Volver a planos para resolver únicamente conexiones respaldadas.
+1. Revisar las 43 geometrías flotantes agrupadas por causa en EXT-5.
+2. Validar las restricciones del adaptador (424 nodos multi-maestro y 376 nodos retenidos/restringidos), sin conectar artificialmente.
 3. Terminar perímetros/huecos de losas y cobertura.
 4. Validar Q completo.
 5. Solo entonces recalcular G/Q, masas, EX/EY, superposición y OpenSees.
