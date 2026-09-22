@@ -58,8 +58,14 @@ def main():
             unknown_metrics='Pendientes/correcciones históricas: no homologables; no inferir cero.'))
     residual = {gid for comp in candidate['floating_excluded']['components'] for gid in comp['geometry_element_ids']}
     heights = sum(s['category']=='beam' and s.get('section_height_m') is None for s in current['solids'])
+    material_count=sum(s.get('material_confidence')=='CONFIRMED_FROM_PLAN' for s in current['solids'])
+    force_qa_path=OUT/'historical_equilibrium_qa.json'
+    force_qa=json.loads(force_qa_path.read_text(encoding='utf-8')) if force_qa_path.exists() else None
+    if force_qa:
+        for delivery in deliveries[1:]:
+            delivery['qa']+=f" Equilibrio local histórico: {force_qa['status']}, {force_qa['member_cases']} barra/casos y {force_qa['axis_count']} ejes. No valida CURRENT."
     state = dict(format='MCOC_PRE5_PROJECT_STATE_V1', geometry='POST_P1L4_CURRENT',
-        properties=f'REVIEW_REQUIRED: {heights} alturas de viga; materiales y losas pendientes',
+        properties=f'{material_count} materiales confirmados por plano; REVIEW_REQUIRED: {heights} alturas, alcance ED1 y losas',
         fe='CANDIDATE NOT RUN', results='NONE CURRENT', unity='PASS: checkpoint UX / ver QA vigente',
         pending=len(residual), floating_components=len(candidate['floating_excluded']['components']),
         geometry_count=len(current['solids']), fe_members=len(candidate['elements']),
@@ -74,7 +80,7 @@ def main():
         objective='Auditoría comparativa Santiago/Cáceres; fuentes primarias antes de cambios.',
         original_status='EXT-0…EXT-5: geometría auditada, candidato sin ejecutar.',
         current_status=f"MODELO ACTUAL: {len(residual)} pendientes FE / {state['floating_components']} componentes.",
-        changes='Correcciones de caras duplicadas; propiedades confirmadas; nuevos estados de trazabilidad. No se implementa P1L5.',
+        changes=f'Correcciones de caras duplicadas; {material_count} materiales confirmados por nota primaria; trazabilidad. No se implementa P1L5.',
         qa='Geometría/contratos/Unity validados; análisis resistente aún no aprobado.',
         statistics=counts(current), model_path=GEOMETRY, source_path='entregas/PRE_P1L5/PRE_P1L5_STATUS.md',
         url='https://github.com/lanoriega-bit/MCOC-grupo1/tree/codex/post-p1l4-structural-audit/entregas/PRE_P1L5',

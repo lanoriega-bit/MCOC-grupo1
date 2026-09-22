@@ -19,3 +19,10 @@ Las capturas seleccionadas están en `qa/`; las pruebas completas se regeneran
 en `Builds/CurrentReview/QA` (no versionado).
 
 Esta prueba acredita interfaz/aislamiento, no validez resistente del candidato.
+
+## EXT-7 / UX-5
+
+Se recompila y repite QA después de agregar material de plano, fuente/alcance
+en inspector y filtro PROPERTY_UPDATED. Se verifica E2-P1-C-001: fc=35 MPa,
+CONFIRMED_FROM_PLAN. La metadata incorpora el nuevo QA histórico (6560 casos).
+La nota de material no cambia la capacidad histórica ni habilita resultados.

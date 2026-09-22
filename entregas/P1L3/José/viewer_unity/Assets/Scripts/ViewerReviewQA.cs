@@ -52,6 +52,17 @@ namespace Mcoc.UnityViewer
                 openGroups.Clear();openGroups.Add("ESTADO DEL PROYECTO");
                 yield return new WaitForEndOfFrame();CaptureReviewFrame(Path.Combine(output,$"state_{size.x}x{size.y}.png"));
                 openGroups.Clear();openGroups.Add("MODELO");
+                var materialElement=allElements.Find(e=>e!=null&&e.humanId=="E2-P1-C-001");
+                if(materialElement==null)failures.Add("Material review element missing");
+                else
+                {
+                    Select(materialElement);technicalDetail=true;
+                    var materialSolid=CurrentSolid(materialElement);
+                    if(materialSolid==null||materialSolid.concrete_fc_pa!=35000000||materialSolid.material_confidence!="CONFIRMED_FROM_PLAN")failures.Add("Primary material missing");
+                    if(string.IsNullOrEmpty(materialElement.correctionType)||!materialElement.correctionType.Contains("PROPERTY_UPDATED"))failures.Add("Property correction filter trace missing");
+                    yield return new WaitForEndOfFrame();CaptureReviewFrame(Path.Combine(output,$"material_{size.x}x{size.y}.png"));
+                    technicalDetail=false;
+                }
                 SetHistoricalResults(true);ActivateAnalysisCase("R");
                 var archivedBeam=allElements.Find(e=>e!=null&&e.category=="beam"&&analysisByElementId.ContainsKey(e.humanId??e.id));
                 if(archivedBeam==null)failures.Add("Archived beam missing");

@@ -65,6 +65,9 @@ namespace Mcoc.UnityViewer
         public double length_m;
         public string confidence;
         public string material;
+        public string material_source,material_confidence,material_scope_note,reinforcement_grade;
+        public double concrete_fc_pa,reinforcement_fy_pa;
+        public PostP1L4CorrectionData property_correction;
         public string id;
         public string human_id;
         public string elementTag;

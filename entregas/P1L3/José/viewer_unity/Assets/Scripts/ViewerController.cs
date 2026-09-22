@@ -755,6 +755,16 @@ namespace Mcoc.UnityViewer
                 data.correctionConfidence = solid.post_p1l4_correction.confidence;
                 data.correctionResultsCompatibility = solid.post_p1l4_correction.results_compatibility;
             }
+            if (solid.property_correction != null)
+            {
+                var property = solid.property_correction;
+                data.correctionType = string.IsNullOrEmpty(data.correctionType) ? property.correction_type : data.correctionType + " + " + property.correction_type;
+                data.correctionReason += "\n" + property.reason;
+                data.correctionPrimarySource += "\n" + property.primary_source;
+                data.correctionExternalClue += "\n" + property.external_repo_clue;
+                data.correctionConfidence = property.confidence;
+                data.correctionResultsCompatibility = property.results_compatibility;
+            }
             if (diagnosticByElementId.TryGetValue(data.id, out var diagnostic))
                 ApplyDiagnosticInfo(data, diagnostic);
             ApplyPhysicalContextInfo(data);

@@ -323,6 +323,8 @@ namespace Mcoc.UnityViewer
             }
             else GUILayout.Label("Geometría: "+ConfidenceFriendly(e.confidence),currentBody);
             GUILayout.Label("Material: "+(string.IsNullOrEmpty(e.materialName)||e.materialName=="UNKNOWN"?"Por confirmar":e.materialName),currentBody);
+            if(s!=null&&s.concrete_fc_pa>0)
+                GUILayout.Label($"f'c de plano: {s.concrete_fc_pa/1e6:F0} MPa · {ConfidenceFriendly(s.material_confidence)}\nNo actualiza el FE ni la capacidad histórica.",currentBody);
             GUILayout.Label("Análisis actual: resultados no disponibles",currentHeading);
             if(!string.IsNullOrEmpty(e.diagnosticStatus))GUILayout.Label("Conectividad candidata: "+e.diagnosticStatus,currentBody);
             bool la=GUILayout.Toggle(localAxesVisible,"Mostrar LOCAL x/y/z",GUILayout.Height(28));
@@ -332,6 +334,8 @@ namespace Mcoc.UnityViewer
             technicalDetail=GUILayout.Toggle(technicalDetail,"DETALLE TÉCNICO",GUILayout.Height(30));
             if(technicalDetail)
             {
+                if(s!=null&&s.property_correction!=null)
+                    GUILayout.Label($"PROPIEDAD ACTUALIZADA\n{s.material_source}\nAcero: {s.reinforcement_grade} / fy {s.reinforcement_fy_pa/1e6:F0} MPa\nArmadura y E: no inferidos\nPista externa: {s.property_correction.external_repo_clue}\n{s.material_scope_note}",currentBody);
                 GUILayout.Label($"ID: {e.humanId??e.id}\nGeometry tag: {e.elementTag}\nEjes CAD: {e.axisX??"—"} / {e.axisY??"—"}\nExtremo i [m]: {P(e.nodeI)}\nExtremo j [m]: {P(e.nodeJ)}\nFuente: {e.sourceDxf}\nLayer: {e.sourceLayer}\nConfianza: {e.confidence}",currentBody);
                 if(e.crosswalk!=null)foreach(var x in e.crosswalk)GUILayout.Label($"CANDIDATO / NOT RUN\n{x.analysis_id}\nTag propuesto {x.opensees_element_tag} · nodos {x.opensees_node_i}–{x.opensees_node_j}",currentBody);
                 if(!string.IsNullOrEmpty(e.diagnosticMotive))GUILayout.Label(e.diagnosticMotive+"\n"+e.diagnosticEvidence,currentBody);

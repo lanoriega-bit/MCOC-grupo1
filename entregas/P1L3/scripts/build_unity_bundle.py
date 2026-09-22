@@ -10,6 +10,7 @@ import csv
 import hashlib
 import json
 import shutil
+import runpy
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -583,6 +584,8 @@ def main() -> None:
         },
     }
     write_json(STREAMING / "integration_manifest.json", manifest)
+    # State/history is rebuilt whenever the canonical Unity bundle is refreshed.
+    runpy.run_path(str(ROOT / "entregas/PRE_P1L5/scripts/build_project_state.py"), run_name="__main__")
     print(json.dumps(manifest["validation"], ensure_ascii=False, indent=2))
 
 

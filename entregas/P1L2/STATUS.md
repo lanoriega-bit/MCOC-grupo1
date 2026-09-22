@@ -239,3 +239,12 @@ Unity conserva el modelo actual e incorpora Entregas y Estado del proyecto,
 con estadísticas de tags inmutables y resultados históricos solo por opt-in.
 Compilación y prueba de ejecución en dos resoluciones: PASS. No cambia geometría,
 cargas ni resultados. Ver `entregas/PRE_P1L5/UNITY_QA.md`.
+
+## EXT-6/7, FE-2 y UX-5
+
+361 miembros ED2 con material confirmado desde 2024_22-100/53994. Coordenadas,
+secciones, cargas y resultados anteriores sin cambios. 43 pendientes FE,
+19 alturas y losas ED1 S1/P1 aún abiertos. Ocho muros revisados individualmente.
+Normalización cinemática 1482→946 solo propuesta; clusters extensos impiden
+declararla físicamente aprobada. PRE_P1L5_BASELINE: BLOCKED.
+Guía y QA vigentes: `entregas/PRE_P1L5/PRE_P1L5_STATUS.md`.

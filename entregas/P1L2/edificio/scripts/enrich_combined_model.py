@@ -721,6 +721,10 @@ def main() -> int:
         apply_property(solid, selected, conflict)
 
     enrich_diaphragms(model, maps)
+    # PRE-P1L5 primary note overrides only explicitly covered RC members.
+    sys.path.insert(0, str(REPO / "entregas/PRE_P1L5/scripts"))
+    from primary_materials import enrich as enrich_primary_materials
+    enrich_primary_materials(model)
     model["metadata_enrichment"] = {
         "status": "APPLIED",
         "script": str(Path(__file__).relative_to(REPO)),
