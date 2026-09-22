@@ -12,8 +12,10 @@ y [CHECKPOINTS.md](CHECKPOINTS.md). P1L4_FINAL permanece en
 
 - Geometría CURRENT: 909 sólidos; 150 columnas, 567 vigas, 122 muros,
   10 losas visuales y 60 apoyos geométricos. Coordenadas/secciones intactas en PRE5.
-- Propiedades: 361 miembros ED2 con G35_10/fc35 MPa y A630-420H/fy420 MPa
-  confirmados en nota 2024_22-100/53994. No se dedujeron E ni armaduras.
+- Propiedades: 752 miembros con G35_10/fc35 MPa y A630-420H/fy420 MPa:
+  361 ED2 (2024_22-100/53994) y 391 ED1 S1–P3 (2017_67-100/1E116).
+  Lámina 600 = sala eléctrica, no excepción genérica de escaleras. ED1 P4 y
+  losas no asignados. No se dedujeron E ni armaduras.
 - FE candidato: 856 miembros, 16 relaciones 1:N, 43 residuales/22 componentes.
   No hay FE canónico ejecutable aprobado nuevo: no llamar “canónico” al candidato.
 - Resultados actuales: NONE. G/Q/EX/EY/R y P-M son históricos y opt-in.
@@ -29,7 +31,7 @@ y [CHECKPOINTS.md](CHECKPOINTS.md). P1L4_FINAL permanece en
 | 43 caminos FE / 22 componentes | Planos y decisión estructural del grupo | Confirmar transferencias, escaleras exteriores, bordes y muros; no apoyos ficticios |
 | Brazos rígidos encadenados | FE-2, clusters hasta 26.448 m en planta | Revisar físicamente alcance del cuerpo rígido y formulación del adaptador |
 | 19 alturas de viga | Labels VAR y cortes/detalles primarios | Asociar cada perfil real; definir equivalente justificado cuando sea variable |
-| Material ED1 | Nota 100 G35 hasta cielo P3 vs 600 G25 | Asignación inequívoca por elemento/sector; no copiar grado global |
+| Material ED1 P4/losas | Nota 100 termina en cielo P3; 600 G25 es sala eléctrica | Confirmar alcance superior y losas; no extrapolar G35 |
 | ED1 S1/P1 y huecos | RLE-LOSA, arquitectura, cortes | Cerrar perímetro exterior/transición outboard y distinguir vacíos de bordes de paño |
 | 8 muros con huellas solapadas | Tabla individual en REMAINING_STRUCTURAL_AUDIT | Cuatro redondeos y otros offsets/esquinas: validar incidencia FE, no eliminar |
 | G/Q definitivos | Catálogo 700, PP.LOSA, cargas especiales | Completar cobertura, unidades, receptores y áreas netas antes de masas/sismo |
@@ -74,6 +76,8 @@ python entregas/PRE_P1L5/scripts/validate_pre5.py
 La aplicación de materiales es idempotente. Si se reconstruye geometría desde
 los modelos por edificio, ejecutar build_combined_model y enrich_combined_model
 en su orden vigente; el enriquecedor integra la asignación primaria ED2.
+También integra ED1 principal S1–P3. Para renovar evidencia del título 600,
+ejecutar `directed_source_review.py` antes de `primary_materials.py`.
 No rehacer modelos originales de entregas ni aplicar globalmente materiales.
 
 Revisión de fuentes (solo lectura) reproducible:
@@ -87,6 +91,10 @@ ENTREGAS abre resúmenes y enlaces sin habilitar históricos. En P1L3/P1L4 el
 botón histórico es explícito y advierte incompatibilidad. R restablece CURRENT,
 H limpia pantalla, F11 presentación. En ED2 seleccionar una columna y abrir
 Detalle técnico para ver nota primaria/material; no confundir fc con E.
+El inspector nuevo abre Resumen y Resultados; propiedades, conexiones, cargas,
+ejes, capacidad, fuente y detalle son retraíbles. No muestra esfuerzos archivados
+en el uso normal. Ver `current_readiness/CURRENT_READINESS_REPORT.md` para el
+último diagnóstico y `current_readiness/CURRENT_RESULTS_CONTRACT.md` para versiones.
 
 Prueba automatizada: `CurrentReviewBuild.Build` y ejecutable `--ux-review`.
 Valida filtros, aislamiento histórico, Entregas, propiedades, ejes y gráficos

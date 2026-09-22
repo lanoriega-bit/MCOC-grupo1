@@ -7,8 +7,10 @@ Estado: REVIEW_REQUIRED. No se ejecuta OpenSees.
 361 miembros RC de ED2 reciben G35_10 (fc=35 MPa) y A630-420H (fy=420 MPa),
 por 2024_22-100, MTEXT 53994, desde fundaciones a cielo P4. Se conserva E/nu
 histórico sin alteración: resistencia nominal no determina toda la rigidez ni la armadura.
-Ed1 tiene G35 hasta cielo P3 en 2017_67-100 y G25 en detalles de 2017_67-600:
-se registra la evidencia, pero no se propaga globalmente. Radier G20 no se copia a losas.
+Actualización final: ED1 recibe G35/A630-420H en 391 miembros principales S1–P3
+desde 2017_67-100/1E116. El atributo TITULO1 D665 de 2017_67-600 dice
+DETALLE SALA ELECTRICA: su G25 no se propaga al edificio ni a sus escaleras.
+P4 y losas quedan pendientes. Radier G20 no se copia a losas.
 Se corrigió la búsqueda anterior: las notas sí existen. Render original en qa/material_*.png.
 
 ## Ocho muros: revisión uno por uno

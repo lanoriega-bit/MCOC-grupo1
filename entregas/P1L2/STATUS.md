@@ -248,3 +248,14 @@ secciones, cargas y resultados anteriores sin cambios. 43 pendientes FE,
 Normalización cinemática 1482→946 solo propuesta; clusters extensos impiden
 declararla físicamente aprobada. PRE_P1L5_BASELINE: BLOCKED.
 Guía y QA vigentes: `entregas/PRE_P1L5/PRE_P1L5_STATUS.md`.
+
+## Última etapa PRE5 — inspector y alcance ED1
+
+391 miembros ED1 S1–P3 adicionales reciben G35/A630-420H desde nota 100/1E116.
+El título de 600 confirma SALA ELECTRICA: no asignar G25 a escaleras globalmente.
+752 materiales confirmados en el combinado/Unity; ED1 P4 y losas pendientes.
+Geometría, secciones, candidato y resultados históricos no cambiados.
+Inspector semántico con Resumen/Resultados; actuales no disponibles, archivo
+histórico sólo opt-in. Contrato de versiones y preparación de superposición.
+Persisten 43/22, alturas19 y restricciones físicamente no aprobadas. Ver informe
+`entregas/PRE_P1L5/current_readiness/CURRENT_READINESS_REPORT.md`.

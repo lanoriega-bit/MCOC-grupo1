@@ -9,8 +9,8 @@ Este backlog comienza vacío de correcciones automáticas. Una diferencia entre 
 | ID | Prioridad | Hallazgo | Estado | Acción |
 |---|---|---|---|---|
 | PRE5-PROP-001 | P1 | Nota G35/A630-420H ED2 desde fundaciones a cielo P4 | CLOSED | 361 asignaciones primarias; QA y Unity; no E/armadura inventados |
-| PRE5-PROP-002 | P1 | ED1 G35 hasta cielo P3 y nota 600 G25 | REVIEW_REQUIRED | Resolver alcance antes de propagar a miembros |
-| PRE5-FE-001 | P0 | Cuerpos rígidos propuestos encadenan hasta 26.448 m en planta | REVIEW_REQUIRED | No aplicar normalización solo por equivalencia algebraica; revisar formulación física |
+| PRE5-PROP-002 | P1 | ED1 G35 hasta cielo P3; 600 es SALA ELECTRICA G25 | PARTIAL_CLOSED | 391 miembros principales S1–P3 confirmados; P4/losas pendientes |
+| PRE5-FE-001 | P0 | Cuerpos rígidos hasta 26.448 m; 15 miembros con extremos en mismo cluster, 5 clusters fuera de juntas | REVIEW_REQUIRED | Tres clusters con tramos largos y dos cortos; revisar formulación física, no sólo equivalencia algebraica |
 | PRE5-FE-002 | P1 | 4 continuidades de muro separadas 0.1 mm por redondeo | REVIEW_REQUIRED_ADAPTER | Resolver incidencia con formulación de muro validada; no mover geometría |
 | PRE5-FE-003 | P2 | Otros 4 muros: offset paralelo y contactos mínimos de esquina | REVIEW_REQUIRED | No inferir L/T ni eliminar por huella |
 | PRE5-BEAM-001 | P1 | 19 alturas; VAR cerca de cada caso | REVIEW_REQUIRED | Asociar cortes/labels; no significa 19 perfiles variables confirmados |
@@ -18,6 +18,7 @@ Este backlog comienza vacío de correcciones automáticas. Una diferencia entre 
 | PRE5-QA-001 | P1 | Ampliar equilibrio local/ejes históricos | CLOSED | 6560 barra/casos y 1312 ejes PASS, solo históricos |
 
 Datos por elemento y fuentes: `entregas/PRE_P1L5/remaining_sources_audit.json`.
+Diagnóstico adicional: `entregas/PRE_P1L5/current_readiness/structural_readiness.json`.
 43 residuales/22 componentes siguen abiertos; no se ejecutó OpenSees.
 
 ### Checkpoint EXT-5 (histórico; complementado por PRE5)

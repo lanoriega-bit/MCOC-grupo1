@@ -22,7 +22,8 @@ def main():
         'entregas/POST_P1L4/scripts/validate_ed2_beams.py',
         'entregas/POST_P1L4/scripts/validate_ext5_remaining.py',
         'entregas/P1L3/scripts/validate_unity_integration.py',
-        'entregas/PRE_P1L5/scripts/audit_historical_equilibrium.py']
+        'entregas/PRE_P1L5/scripts/audit_historical_equilibrium.py',
+        'entregas/PRE_P1L5/scripts/validate_current_readiness.py']
     for path in scripts:
         p=subprocess.run([sys.executable,str(ROOT/path)],cwd=ROOT,capture_output=True,text=True,encoding='utf-8',errors='replace')
         checks.append({'script':path,'status':'PASS' if p.returncode==0 else 'FAIL','returncode':p.returncode,'output':p.stdout+p.stderr})
@@ -44,7 +45,9 @@ def main():
     def stable(s):return {k:v for k,v in s.items() if k not in ignore}
     same=[stable(s) for s in m['solids']]==[stable(s) for s in old['solids']]
     props=[s for s in m['solids'] if s.get('property_correction')]
-    correct=len(props)==361 and all(s['building']=='EDIFICIO_2' and s['concrete_fc_pa']==35e6 and s['material_confidence']=='CONFIRMED_FROM_PLAN' for s in props)
+    ed1=[s for s in props if s['building']=='EDIFICIO_1'];ed2=[s for s in props if s['building']=='EDIFICIO_2']
+    correct=len(ed1)==391 and len(ed2)==361 and all(s['concrete_fc_pa']==35e6 and s['material_confidence']=='CONFIRMED_FROM_PLAN' for s in props)
+    correct=correct and all(s['floor'] in ('S1','P1','P2','P3') and s['source_dxf'] in ('2017_67-101.dxf','2017_67-102.dxf') for s in ed1)
     checks.append({'check':'geometry_sections_unchanged_scoped_materials','status':'PASS' if same and correct else 'FAIL','property_updated':len(props)})
     state=read('entregas/PRE_P1L5/project_state.json')
     bundle=read(STREAM/'model_viewer.json');same_state=(OUT/'project_state.json').read_bytes()==(STREAM/'project_state.json').read_bytes()

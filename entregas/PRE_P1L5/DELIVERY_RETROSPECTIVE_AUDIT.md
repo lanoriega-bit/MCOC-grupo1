@@ -30,7 +30,7 @@ posteriores, no necesariamente a los 927 sólidos del snapshot inicial de Luis.
 | Losas bounding boxes | SUPERSEDED como geometría definitiva | Diez proxies visuales; S1/P1 sin cierre aprobado; P4 piloto visual separado |
 | Sectores outboard/cubierta | IMPROVED_POST_DELIVERY parcial | No confundir envolvente arquitectónica y miembro FE |
 | Topografía/accesos/escaleras | IMPROVED_POST_DELIVERY visual | Contexto no métrico; no genera apoyos |
-| Material UNKNOWN | IMPROVED_POST_DELIVERY parcial | 361 ED2 G35/A630-420H de nota primaria; ED1 alcance pendiente |
+| Material UNKNOWN | IMPROVED_POST_DELIVERY parcial | 361 ED2 + 391 ED1 S1–P3 G35/A630-420H de notas primarias; ED1 P4/losas pendientes |
 | Secciones | SUPERSEDED/PARTIAL | 19 alturas sin asignación resistente; no usar dimensión de proxy |
 | Tributarias/gravedad | SUPERSEDED_INPUT | Método de conservación útil; áreas/cargas deben reconstruirse sobre geometría validada |
 

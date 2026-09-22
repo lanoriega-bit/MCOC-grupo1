@@ -32,6 +32,7 @@ Los estados técnicos incluyen pendientes físicos; no confundir PASS del test c
 | entregas/POST_P1L4/scripts/validate_ext5_remaining.py | PASS |
 | entregas/P1L3/scripts/validate_unity_integration.py | PASS |
 | entregas/PRE_P1L5/scripts/audit_historical_equilibrium.py | PASS |
+| entregas/PRE_P1L5/scripts/validate_current_readiness.py | PASS |
 | immutable entregap1l2 | PASS |
 | immutable P1L3_DELIVERED | PASS |
 | immutable P1L4_FINAL | PASS |

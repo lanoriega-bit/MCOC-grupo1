@@ -70,6 +70,12 @@
       "output": "{\n  \"status\": \"PASS\",\n  \"scope\": \"HISTORICAL_ONLY_NOT_CURRENT_FE_VALIDATION\",\n  \"external_repo_clue\": \"jpCaceres123/Proyecto-1-MCOC b4a7bd8 Edificio/verification/tests/test_postproceso.py\",\n  \"member_cases\": 6560,\n  \"axis_count\": 1312,\n  \"force_failures\": 0,\n  \"axis_failures\": 0,\n  \"max_relative_residual\": 3.651763429241626e-16,\n  \"tolerance_relative\": 1e-06,\n  \"units\": \"N, N.m, m; nodal end actions\"\n}\n"
     },
     {
+      "script": "entregas/PRE_P1L5/scripts/validate_current_readiness.py",
+      "status": "PASS",
+      "returncode": 0,
+      "output": "{\"status\": \"PASS\", \"current_results\": \"NONE\", \"scope\": \"Versioned files, source-scoped materials, explicit blockers; no solver run\", \"materials\": 752, \"context_elements\": 909, \"pending_fe\": 43, \"height_blockers\": 19}\n"
+    },
+    {
       "check": "immutable entregap1l2",
       "status": "PASS",
       "commit": "d2e40be4292b2a55b2e0db8be6be51cd31535bd6"
@@ -92,7 +98,7 @@
     {
       "check": "geometry_sections_unchanged_scoped_materials",
       "status": "PASS",
-      "property_updated": 361
+      "property_updated": 752
     },
     {
       "check": "canonical_unity_metadata_identity",

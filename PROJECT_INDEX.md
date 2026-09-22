@@ -128,6 +128,13 @@ adaptadores y en commits pequeños.
 
 ## Próximo trabajo técnico autorizado
 
+Último checkpoint: `entregas/PRE_P1L5/current_readiness/CURRENT_READINESS_REPORT.md`.
+Inspector estructural actual y contrato de versiones separados del archivo
+histórico. Materiales: 752 confirmados (391 ED1 hasta P3 + 361 ED2).
+Arquitectura futura, sin P1L5 implementado:
+`current_readiness/P1L5_ARCHITECTURE_PREPARATION.md` y `SQ4_FEASIBILITY.md`
+dentro de PRE_P1L5. No usar el candidato ni el catálogo como análisis aprobado.
+
 1. Revisar las 43 geometrías flotantes agrupadas por causa en EXT-5.
 2. Validar las restricciones del adaptador (424 nodos multi-maestro y 376 nodos retenidos/restringidos), sin conectar artificialmente.
 3. Terminar perímetros/huecos de losas y cobertura.
