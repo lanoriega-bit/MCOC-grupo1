@@ -1,6 +1,15 @@
 # Índice maestro del proyecto
 
-Estado: `POST-P1L4 / EXT-5 + UNITY CURRENT UX`
+Estado: `PRE-P1L5 / CONSOLIDACIÓN — BASELINE BLOCKED`
+
+Guía vigente: [PRE_P1L5_STATUS](entregas/PRE_P1L5/PRE_P1L5_STATUS.md).
+Incluye [QA global](entregas/PRE_P1L5/GLOBAL_VALIDATION.md),
+[auditoría retrospectiva](entregas/PRE_P1L5/DELIVERY_RETROSPECTIVE_AUDIT.md),
+[matriz externa](entregas/PRE_P1L5/CROSS_GROUP_FEATURE_MATRIX.md) y
+[pendientes individuales](entregas/PRE_P1L5/REMAINING_STRUCTURAL_AUDIT.md).
+No ejecutar P1L5 ni el candidato FE hasta resolver los bloqueos documentados.
+361 materiales ED2 confirmados; geometría y resultados históricos intactos.
+Unity agrega ENTREGAS, Evolución y Estado del proyecto desde metadata.
 
 Rama de trabajo: `codex/post-p1l4-structural-audit`
 
@@ -26,7 +35,7 @@ instala ni activa licencias.
 ## Estado que muestra Unity
 
 La interfaz normal muestra únicamente el modelo actual. El histórico requiere
-activación explícita en Avanzado y nunca se presenta como resultado vigente:
+activación explícita en Entregas o Avanzado y nunca se presenta como resultado vigente:
 
 | Capa | Estado | Interpretación |
 | --- | --- | --- |
