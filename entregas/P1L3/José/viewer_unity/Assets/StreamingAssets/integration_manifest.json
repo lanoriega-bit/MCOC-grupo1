@@ -1,8 +1,12 @@
 {
   "format": "POST_P1L3_UNITY_BUNDLE_v2",
-  "generated_utc": "2026-09-21T21:41:48.827937+00:00",
+  "generated_utc": "2026-09-21T23:12:11.457608+00:00",
   "data_state": {
-    "geometry": "POST_P1L4_STRUCTURAL_AUDIT_EXT4",
+    "geometry": "POST_P1L4_CURRENT",
+    "geometry_checkpoint": "EXT-4; EXT-5 audit without geometry mutation",
+    "current_results": "NONE",
+    "default_mode": "CURRENT_MODEL",
+    "historical_results_default_visible": false,
     "fe_diagnosis": "POST_P1L3_CANDIDATE_NOT_RUN",
     "analysis_results": "P1L3_DELIVERED_HISTORICAL",
     "loads": "P1L3_DELIVERED_HISTORICAL",
@@ -66,7 +70,7 @@
     },
     {
       "name": "post_p1l3_fe_diagnostic.json",
-      "sha256": "ef673c8e5a20f525556831a223e3dfacf06a50da7ba835e3c1a9915ecc79819f"
+      "sha256": "00702f53a2aeb38d38edee733b6c95b3b168e0a1683f6fdbd3eb64bdd0125949"
     }
   ],
   "validation": {
@@ -88,7 +92,7 @@
     "architecture_participates_in_FE": false,
     "fe_candidate_status": "CANDIDATE_NOT_APPROVED_NOT_RUN",
     "fe_candidate_members": 856,
-    "fe_diagnostic_focus_elements": 115,
+    "fe_diagnostic_focus_elements": 116,
     "fe_candidate_was_run": false
   }
 }

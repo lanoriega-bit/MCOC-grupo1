@@ -40,19 +40,23 @@ def main() -> None:
     assert len(diagnostic["members"]) == len(candidate["elements"]) == 856
 
     focus = [row for row in diagnostic["elements"] if row["diagnostic_focus"]]
-    assert len(focus) == 115
+    assert len(focus) == 116
+    floating_ids = {gid for c in candidate['floating_excluded']['components'] for gid in c['geometry_element_ids']}
+    assert floating_ids <= {r['element_id'] for r in focus}, 'Current floating geometry omitted from diagnostic focus'
     assert Counter(row["validation"] for row in focus) == {
         "CONNECTED_EXPECTED": 63,
         "FREE_END_EXPECTED": 10,
         "DISCONNECTED_ERROR": 31,
-        "UNRESOLVED": 11,
+        "UNRESOLVED": 12,
     }
     one_to_many = [row for row in diagnostic["elements"] if len(row["crosswalk"]) > 1]
     assert len(one_to_many) == 16
     assert max(len(row["crosswalk"]) for row in diagnostic["elements"]) == 3
 
     state = manifest["data_state"]
-    assert state["geometry"] == "POST_P1L4_STRUCTURAL_AUDIT_EXT4"
+    assert state["geometry"] == "POST_P1L4_CURRENT"
+    assert state['current_results'] == 'NONE'
+    assert state['historical_results_default_visible'] is False
     assert "RESULTADOS_P1L4_HISTORICOS_NO_RECALCULADOS" in state["compatibility_warning"]
     assert state["fe_diagnosis"] == "POST_P1L3_CANDIDATE_NOT_RUN"
     assert state["analysis_results"] == "P1L3_DELIVERED_HISTORICAL"
@@ -64,9 +68,9 @@ def main() -> None:
         assert sha256(path) == item["sha256"], f"Hash incorrecto: {item['name']}"
 
     print("UNITY_INTEGRATION_VALIDATION = PASS")
-    print("Geometria actual: 909 solidos (EXT-4 audit)")
+    print("Geometria actual: 909 solidos (POST_P1L4_CURRENT)")
     print("Malla FE candidata: 856 miembros; NO EJECUTADA")
-    print("Diagnostico: 115 elementos; 16 crosswalks 1:N")
+    print("Diagnostico: 116 elementos; 16 crosswalks 1:N; todos los flotantes cubiertos")
     print("Resultados/cargas/capacidad: snapshot historico P1L3")
 
 

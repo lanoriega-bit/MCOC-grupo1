@@ -4,6 +4,22 @@ Este backlog comienza vacío de correcciones automáticas. Una diferencia entre 
 
 ## Estados
 
+### Checkpoint EXT-5 (vigente)
+
+| ID | Prioridad | Hallazgo | Estado | Siguiente verificación |
+|---|---|---|---|---|
+| EXT-CONN-002 | P1 | E2-P4-V-009 faltaba del foco diagnóstico | CLOSED | Incluido; los 43 flotantes están cubiertos en Unity |
+| EXT-CONN-003 | P1 | 424 esclavos multi-maestro; 376 nodos retenidos/restringidos | REVIEW_REQUIRED | Formular y probar restricciones mecánicamente antes de OpenSees |
+| EXT-CONN-004 | P2 | Ocho muros con solape de huellas no reconocido por intersección exacta | REVIEW_REQUIRED | Detalle primario, continuidad vertical y formulación de encuentro; no auto-unir |
+| EXT-CONN-005 | P2 | 10 extremos libres etiquetados históricamente REAL_CANTILEVER | REVIEW_REQUIRED_PRIMARY_SCOPE | El grafo no demuestra la condición física; Unity lo explica |
+
+Los 42 unresolved heredados no eran todos los residuales: quedan **43**,
+agrupados elemento por elemento en `EXT_5_REMAINING_AUDIT.json`.
+No hay correcciones geométricas nuevas en EXT-5. Las 19 alturas y las losas ED1
+S1/P1 no se rellenan con proximidad a textos ni consenso externo.
+
+### Diccionario de estados
+
 - `CANDIDATE`: diferencia detectada; falta evidencia primaria.
 - `PRIMARY_SOURCE_CONFIRMED`: comprobada en planos/DXF/cortes/detalles.
 - `REJECTED_EXTERNAL_CLUE`: el indicio externo contradice o no está respaldado por planos.

@@ -141,6 +141,16 @@ def build_fe_diagnostic(candidate: dict, audit: dict) -> dict:
     for component in candidate["floating_excluded"]["components"]:
         for element_id in component["geometry_element_ids"]:
             component_by_id[element_id] = component["component_id"]
+    # Recompute diagnostic coverage from the current candidate, not only the
+    # inherited focus: newly floating members must not disappear from filters.
+    for element_id in sorted(set(component_by_id) - set(validation_by_id)):
+        mapped = crosswalk_by_id[element_id][0]
+        validation_by_id[element_id] = {
+            "element_id": element_id, "type": mapped["type"],
+            "building": mapped["building"], "floor": mapped["floor"],
+            "structural_classification": "UNRESOLVED",
+            "validation": "UNRESOLVED", "connected_in_candidate": False,
+        }
     connection_by_id: dict[str, list[dict]] = {}
     for connection in candidate["junction_connections"]:
         for element_id in (connection.get("geometry_a"), connection.get("geometry_b")):
@@ -172,13 +182,13 @@ def build_fe_diagnostic(candidate: dict, audit: dict) -> dict:
         if validation == "CONNECTED_EXPECTED":
             motive = "El adaptador candidato recupera la trayectoria esperada mediante encuentros fisicos."
         elif validation == "FREE_END_EXPECTED":
-            motive = "La geometria confirma un voladizo real: un extremo libre es intencional."
+            motive = "El grafo tiene un extremo libre conectado; la condicion fisica de voladizo requiere evidencia primaria independiente."
         elif validation == "DISCONNECTED_ERROR":
             motive = "La geometria esta confirmada, pero el candidato aun no obtiene trayectoria a apoyo."
         elif validation == "UNRESOLVED":
             motive = "La interpretacion estructural sigue pendiente; no se crea una conexion artificial."
         else:
-            motive = "Elemento fuera del foco de 72 casos heredados; se muestra para inspeccionar la malla candidata."
+            motive = "Elemento fuera del foco de diagnostico vigente; disponible para inspeccionar la malla candidata."
         elements.append(
             {
                 **row,
@@ -519,7 +529,11 @@ def main() -> None:
         "format": "POST_P1L3_UNITY_BUNDLE_v2",
         "generated_utc": datetime.now(timezone.utc).isoformat(),
         "data_state": {
-            "geometry": "POST_P1L4_STRUCTURAL_AUDIT_EXT4",
+            "geometry": "POST_P1L4_CURRENT",
+            "geometry_checkpoint": "EXT-4; EXT-5 audit without geometry mutation",
+            "current_results": "NONE",
+            "default_mode": "CURRENT_MODEL",
+            "historical_results_default_visible": False,
             "fe_diagnosis": "POST_P1L3_CANDIDATE_NOT_RUN",
             "analysis_results": "P1L3_DELIVERED_HISTORICAL",
             "loads": "P1L3_DELIVERED_HISTORICAL",
@@ -564,7 +578,7 @@ def main() -> None:
             "architecture_participates_in_FE": False,
             "fe_candidate_status": fe_candidate["status"],
             "fe_candidate_members": len(fe_candidate["elements"]),
-            "fe_diagnostic_focus_elements": len(fe_candidate["connectivity_validation"]),
+            "fe_diagnostic_focus_elements": build_fe_diagnostic(fe_candidate, connectivity_audit)["summary"]["focus_elements"],
             "fe_candidate_was_run": fe_candidate["run_policy"]["opensees_run"],
         },
     }
