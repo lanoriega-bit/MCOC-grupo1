@@ -1,5 +1,17 @@
 # P1L2 Status
 
+## PRE-P1L5 — expediente de revisión manual (2026-09-22)
+
+- Correcciones automáticas de los pendientes FE pausadas por solicitud de Matías.
+- Regeneración temporal desde fuente canónica: mismos 43 elementos / 22 componentes;
+  nodos, miembros, restricciones, apoyos, crosswalk y encuentros idénticos al candidato.
+- Expediente individual: `entregas/PRE_P1L5/FE_PENDING_43_DETAILED_REVIEW.md`
+  y versiones JSON/CSV. Prioridad A: 20; B: 23; C: 0. No se resolvió ningún elemento.
+- Reporte de ejes usa offsets explícitos; elevaciones aplican Z fuente = Z modelo − 7.97 m.
+  Estas aclaraciones no modifican propiedades ni geometría canónica.
+- Unity: Diagnóstico → Pendientes FE selecciona/aisla con vecinos y ejes estructurales.
+- Sin corrida OpenSees; cargas/resultados/tag histórico y referencia Luis intactos.
+
 ## POST-P1L4 — EXT-5 + Unity actual (2026-09-21)
 
 - Geometría sin cambios respecto a EXT-4: 909 sólidos. No se regeneró ni ejecutó FE.

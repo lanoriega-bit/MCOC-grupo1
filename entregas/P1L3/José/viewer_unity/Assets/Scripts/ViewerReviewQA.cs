@@ -17,6 +17,27 @@ namespace Mcoc.UnityViewer
         {
             string output=Path.Combine(Application.dataPath,"..","QA");Directory.CreateDirectory(output);
             var failures=new List<string>();
+            LoadPendingReview();
+            if(pendingReviewData?.rows?.Count!=43)failures.Add("Pending dossier count/version");
+            else foreach(var row in pendingReviewData.rows)
+            {
+                SelectPendingReview(row);
+                if(lastSelected?.humanId!=row.id||!lastSelected.go.activeSelf)failures.Add("Pending selection "+row.id);
+                if(pendingGridObjects.Count<4)failures.Add("Structural grid missing "+row.id);
+                foreach(var e in allElements)if(e!=null&&e.go.activeSelf&&(e.isFeCandidateVisual||!pendingReviewIds.Contains(e.humanId??"")))failures.Add("Isolation leak "+row.id+" / "+e.id);
+            }
+            foreach(var resolution in new[]{new Vector2Int(1366,768),new Vector2Int(1920,1080)})
+            {
+                Screen.SetResolution(resolution.x,resolution.y,FullScreenMode.Windowed);yield return new WaitForSecondsRealtime(2);
+                foreach(string id in new[]{"E1-P1-M-004","E1-P1-C-016","E2-P4-V-004"})
+                {
+                    var row=pendingReviewData?.rows?.Find(r=>r.id==id);if(row==null)continue;
+                    SelectPendingReview(row);yield return new WaitForSecondsRealtime(.3f);yield return new WaitForEndOfFrame();
+                    CaptureReviewFrame(Path.Combine(output,$"pending_{id}_{resolution.x}.png"));
+                }
+            }
+            ResetPresentation();
+            if(pendingReviewRow!=null||pendingGridObjects.Count!=0)failures.Add("Pending review reset");
             LoadCurrentContract();
             if(currentContract==null||currentContract.analysis_available||currentContract.status!="BLOCKED_NOT_RUN")failures.Add("Current dataset must remain unavailable until approved run");
             var expected=new CurrentDatasetContract{format="MCOC_CURRENT_DATASET_V1",geometry_version="geo",fe_version="fe",loads_version="loads",geometry_stream_sha256="file",fe_approved=true,loads_approved=true};

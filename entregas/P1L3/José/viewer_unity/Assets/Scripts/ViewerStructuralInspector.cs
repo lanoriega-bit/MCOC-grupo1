@@ -92,6 +92,7 @@ namespace Mcoc.UnityViewer
             if(GUILayout.Button("×",currentButton,GUILayout.Width(30)))inspectorVisible=false;
             GUILayout.EndHorizontal();
             currentInspectorScroll=GUILayout.BeginScrollView(currentInspectorScroll);
+            DrawPendingPlanCard(id);
             if(InspectorSection("RESUMEN"))
             {
                 GUILayout.Label(TypeFriendly(e.category).ToUpperInvariant()+" · "+id,currentHeading);

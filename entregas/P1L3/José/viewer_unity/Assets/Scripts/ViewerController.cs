@@ -251,6 +251,7 @@ namespace Mcoc.UnityViewer
             ResetPresentation();
             RunCurrentUiSelfCheck();
             if (System.Array.IndexOf(System.Environment.GetCommandLineArgs(), "--ux-review") >= 0) StartCoroutine(RunUxReview());
+            if (System.Array.IndexOf(System.Environment.GetCommandLineArgs(), "--pending-review") >= 0) Invoke(nameof(OpenPendingReviewFirst),1f);
             SetStatus($"POST-P1L3: {model.solids?.Count ?? 0} solidos | FE candidato: {feDiagnostic?.members?.Count ?? 0} miembros (no ejecutado)");
         }
 
@@ -1487,6 +1488,7 @@ namespace Mcoc.UnityViewer
             {
                 vis = false;
             }
+            if(pendingReviewRow!=null)vis=isStructuralGeometry&&pendingReviewIds.Contains(info.humanId??"");
             go.SetActive(vis);
         }
 
@@ -2884,6 +2886,7 @@ namespace Mcoc.UnityViewer
 
         void ResetPresentation()
         {
+            ExitPendingReview();
             historicalResultsEnabled = false;
             demandCapacityPlotVisible = false;
             correctionsOnly = false;

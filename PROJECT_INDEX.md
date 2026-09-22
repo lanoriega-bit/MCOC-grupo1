@@ -3,6 +3,10 @@
 Estado: `PRE-P1L5 / CONSOLIDACIÓN — BASELINE BLOCKED`
 
 Guía vigente: [PRE_P1L5_STATUS](entregas/PRE_P1L5/PRE_P1L5_STATUS.md).
+Revisión manual vigente: [43 fichas FE](entregas/PRE_P1L5/FE_PENDING_43_DETAILED_REVIEW.md)
+y [guía de revisión en Unity](entregas/PRE_P1L5/fe_pending_review/README.md).
+Las correcciones automáticas de estos elementos están pausadas. Usar
+Diagnóstico → Pendientes FE; 43 pendientes / 22 componentes, sin nueva corrida FE.
 Incluye [QA global](entregas/PRE_P1L5/GLOBAL_VALIDATION.md),
 [auditoría retrospectiva](entregas/PRE_P1L5/DELIVERY_RETROSPECTIVE_AUDIT.md),
 [matriz externa](entregas/PRE_P1L5/CROSS_GROUP_FEATURE_MATRIX.md) y

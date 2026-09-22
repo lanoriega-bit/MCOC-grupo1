@@ -45,6 +45,7 @@ namespace Mcoc.UnityViewer
 
         void SetPresentationMode(bool enabled)
         {
+            if(enabled&&pendingReviewRow!=null)ResetPresentation();
             presentationMode = enabled;
             uiHidden = false;
             navigationExpanded = !enabled;
@@ -123,6 +124,7 @@ namespace Mcoc.UnityViewer
             if (lastSelected != null && inspectorVisible) DrawCurrentInspector();
             DrawOrientationGizmo();
             DrawCurrentAxisLabels();
+            DrawPendingGridLabels();
             if (labelsVisible && !presentationMode) DrawLabels();
             if (ResultsAllowed)
             {
@@ -218,6 +220,7 @@ namespace Mcoc.UnityViewer
                 GUILayout.Label("P–M representa resistencia de una sección. La demanda actual estará disponible después de la nueva corrida. Los estudios anteriores están en Avanzado → Histórico.",currentBody);
             if (!presentationMode && Accordion("DIAGNÓSTICO"))
             {
+                DrawPendingReviewControls();
                 bool colors=GUILayout.Toggle(diagnosticColorsVisible,"Colores de conectividad",GUILayout.Height(25));
                 bool problems=GUILayout.Toggle(diagnosticProblemsOnly,"Solo problemas / no resueltos",GUILayout.Height(25));
                 bool changes=GUILayout.Toggle(correctionsOnly,"Solo correcciones POST-P1L4",GUILayout.Height(25));
