@@ -14,15 +14,15 @@ Luis original modified: `0`
 ## Luis Original Vs Corrected
 | Collection | Status | Missing From Corrected | Extra In Corrected |
 | --- | --- | ---: | ---: |
-| solids | FAIL | 799 | 396 |
+| solids | FAIL | 806 | 311 |
 | segments | PASS | 0 | 0 |
 | labels | PASS | 0 | 0 |
 | diaphragms | PASS | 0 | 0 |
 
 ## Documented Removals
-- Diff changes: 807
-- Removed columns: 39
-- Removed supports: 54
+- Diff changes: 899
+- Removed columns: 46
+- Removed supports: 61
 - Geometry corrections: 402
 - Match Luis-vs-corrected solid diff: True
 

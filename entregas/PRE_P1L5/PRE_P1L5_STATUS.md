@@ -10,13 +10,14 @@ y [CHECKPOINTS.md](CHECKPOINTS.md). P1L4_FINAL permanece en
 
 ## Qué está disponible
 
-- Geometría CURRENT: 909 sólidos; 150 columnas, 567 vigas, 122 muros,
-  10 losas visuales y 60 apoyos geométricos. Coordenadas/secciones intactas en PRE5.
-- Propiedades: 752 miembros con G35_10/fc35 MPa y A630-420H/fy420 MPa:
-  361 ED2 (2024_22-100/53994) y 391 ED1 S1–P3 (2017_67-100/1E116).
+- Revisión 2026-09-23: [REVIEW_STATUS](user_structural_review/REVIEW_STATUS.md).
+- Geometría CURRENT: 791 sólidos; 143 columnas, 511 vigas, 74 muros,
+  10 losas visuales y 53 apoyos geométricos. 116 exclusiones aprobadas y dos fusiones.
+- Propiedades: 644 miembros actuales con G35_10/fc35 MPa y A630-420H/fy420 MPa.
+  Notas primarias 2024_22-100/53994 y 2017_67-100/1E116; propiedades de sobrevivientes intactas.
   Lámina 600 = sala eléctrica, no excepción genérica de escaleras. ED1 P4 y
   losas no asignados. No se dedujeron E ni armaduras.
-- FE candidato: 856 miembros, 16 relaciones 1:N, 43 residuales/22 componentes.
+- FE candidato: 736 miembros, 7 relaciones 1:N, 22 residuales/16 componentes.
   No hay FE canónico ejecutable aprobado nuevo: no llamar “canónico” al candidato.
 - Resultados actuales: NONE. G/Q/EX/EY/R y P-M son históricos y opt-in.
 - Entregas P1L2/P1L3/P1L4/POST-P1L4 + Evolución y Estado del proyecto en Unity.
@@ -28,9 +29,9 @@ y [CHECKPOINTS.md](CHECKPOINTS.md). P1L4_FINAL permanece en
 
 | Bloqueo | Evidencia / responsable de decisión | Qué falta |
 |---|---|---|
-| 43 caminos FE / 22 componentes | Planos y decisión estructural del grupo | Confirmar transferencias, escaleras exteriores, bordes y muros; no apoyos ficticios |
+| 22 caminos FE / 16 componentes | Planos y decisión estructural del grupo | Confirmar transferencias, exteriores restantes, bordes y muros; no apoyos ficticios |
 | Brazos rígidos encadenados | FE-2, clusters hasta 26.448 m en planta | Revisar físicamente alcance del cuerpo rígido y formulación del adaptador |
-| 19 alturas de viga | Labels VAR y cortes/detalles primarios | Asociar cada perfil real; definir equivalente justificado cuando sea variable |
+| Alineación columnas >5 cm | Contraste S1/P1 vs P2–P4 | Desfase habitual ~18 cm: resolver transformación por planta antes de mover |
 | Material ED1 P4/losas | Nota 100 termina en cielo P3; 600 G25 es sala eléctrica | Confirmar alcance superior y losas; no extrapolar G35 |
 | ED1 S1/P1 y huecos | RLE-LOSA, arquitectura, cortes | Cerrar perímetro exterior/transición outboard y distinguir vacíos de bordes de paño |
 | 8 muros con huellas solapadas | Tabla individual en REMAINING_STRUCTURAL_AUDIT | Cuatro redondeos y otros offsets/esquinas: validar incidencia FE, no eliminar |
@@ -39,6 +40,9 @@ y [CHECKPOINTS.md](CHECKPOINTS.md). P1L4_FINAL permanece en
 La normalización 1482→946 enlaces es **propuesta algebraica**, no corrección
 aplicada: conserva relaciones de un grafo que aún puede imponer rigidez física
 excesiva. No cerrar este bloqueo solo por residual cinemático pequeño.
+Sus números de nodo son históricos. Usar `user_structural_review/current_constraint_clusters.json`
+para el candidato actual (1346 restricciones). Las 19 alturas desconocidas pertenecían a
+elementos excluidos, no fueron resueltas por asignación de valores.
 
 ## Fuentes canónicas y no canónicas
 

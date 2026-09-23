@@ -531,7 +531,7 @@ def main() -> None:
         "generated_utc": datetime.now(timezone.utc).isoformat(),
         "data_state": {
             "geometry": "POST_P1L4_CURRENT",
-            "geometry_checkpoint": "EXT-4; EXT-5 audit without geometry mutation",
+            "geometry_checkpoint": "PRE5 user scope / beam consolidation; see CURRENT_MODEL_EXCLUSIONS.json and current_review_changes.json",
             "current_results": "NONE",
             "default_mode": "CURRENT_MODEL",
             "historical_results_default_visible": False,
@@ -587,6 +587,10 @@ def main() -> None:
     # State/history is rebuilt whenever the canonical Unity bundle is refreshed.
     runpy.run_path(str(ROOT / "entregas/PRE_P1L5/scripts/build_project_state.py"), run_name="__main__")
     runpy.run_path(str(ROOT / "entregas/PRE_P1L5/scripts/build_current_contract.py"), run_name="__main__")
+    if (ROOT / "entregas/PRE_P1L5/CURRENT_MODEL_EXCLUSIONS.json").exists():
+        import sys
+        sys.path.insert(0, str(ROOT / "entregas/PRE_P1L5/scripts"))
+        runpy.run_path(str(ROOT / "entregas/PRE_P1L5/scripts/finalize_user_review.py"), run_name="__main__")
     print(json.dumps(manifest["validation"], ensure_ascii=False, indent=2))
 
 

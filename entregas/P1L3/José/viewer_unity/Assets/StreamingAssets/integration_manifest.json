@@ -1,9 +1,9 @@
 {
   "format": "POST_P1L3_UNITY_BUNDLE_v2",
-  "generated_utc": "2026-09-22T16:46:17.651351+00:00",
+  "generated_utc": "2026-09-23T04:46:13.186979+00:00",
   "data_state": {
     "geometry": "POST_P1L4_CURRENT",
-    "geometry_checkpoint": "EXT-4; EXT-5 audit without geometry mutation",
+    "geometry_checkpoint": "PRE5 user scope / beam consolidation; see CURRENT_MODEL_EXCLUSIONS.json and current_review_changes.json",
     "current_results": "NONE",
     "default_mode": "CURRENT_MODEL",
     "historical_results_default_visible": false,
@@ -26,7 +26,7 @@
   "files": [
     {
       "name": "model_viewer.json",
-      "sha256": "a3162fdd0c9c7df01d23ea17b0fdf623eb25a23cb04bff698eb2bc5ea42349cc"
+      "sha256": "a1b3b57311fca8112e70d49a571bf1a473e49926f1ba4995befd927dd3606a26"
     },
     {
       "name": "seismic_ex_ey.json",
@@ -70,11 +70,11 @@
     },
     {
       "name": "post_p1l3_fe_diagnostic.json",
-      "sha256": "00702f53a2aeb38d38edee733b6c95b3b168e0a1683f6fdbd3eb64bdd0125949"
+      "sha256": "962e24349a5266a4be231f21c069b76b24f0f021443ca211b6bb43a7b3335c1c"
     }
   ],
   "validation": {
-    "geometry_solids": 909,
+    "geometry_solids": 791,
     "geometry_floors": [
       "S1",
       "P1",
@@ -91,8 +91,8 @@
     "architecture_visual_objects": 1,
     "architecture_participates_in_FE": false,
     "fe_candidate_status": "CANDIDATE_NOT_APPROVED_NOT_RUN",
-    "fe_candidate_members": 856,
-    "fe_diagnostic_focus_elements": 116,
+    "fe_candidate_members": 736,
+    "fe_diagnostic_focus_elements": 80,
     "fe_candidate_was_run": false
   }
 }

@@ -13,6 +13,8 @@ namespace Mcoc.UnityViewer
     }
     [Serializable] public class PendingGridAxis { public string building,direction,name; public float coordinate; }
     [Serializable] public class PendingReviewData { public string geometry_version; public List<PendingReviewRow> rows; public List<PendingGridAxis> axes; }
+    [Serializable] public class RevisionChange { public string id,type,reason,source; public List<string> historical_ids; public float gap_m; }
+    [Serializable] public class RevisionChanges { public string geometry_version,baseline_commit; public List<RevisionChange> rows; }
     public partial class ViewerController
     {
         PendingReviewData pendingReviewData;
@@ -23,6 +25,43 @@ namespace Mcoc.UnityViewer
         bool pendingReviewExpanded,pendingGridVisible=true;
         Vector2 pendingListScroll;
         string pendingReviewError;
+        RevisionChanges revisionChanges;
+        bool revisionChangesExpanded;
+        string revisionFilter="MERGED";
+        Vector2 revisionScroll;
+
+        void LoadRevisionChanges()
+        {
+            if(revisionChanges!=null)return;
+            string path=Path.Combine(Application.streamingAssetsPath,"current_review_changes.json");
+            if(!File.Exists(path))return;
+            var data=JsonUtility.FromJson<RevisionChanges>(File.ReadAllText(path));
+            LoadProjectState();
+            if(data!=null&&data.geometry_version==projectState?.geometry_sha256)revisionChanges=data;
+        }
+        void DrawRevisionChanges()
+        {
+            LoadRevisionChanges();
+            if(GUILayout.Button((revisionChangesExpanded?"− ":"+ ")+"Cambios de esta revisión",currentButton))revisionChangesExpanded=!revisionChangesExpanded;
+            if(!revisionChangesExpanded)return;
+            if(revisionChanges==null){GUILayout.Label("Registro no disponible para esta geometría.",currentBody);return;}
+            GUILayout.Label("Exclusiones archivadas, no visibles como estructura actual. Sin resultados nuevos.",currentBody);
+            foreach(string kind in new[]{"MERGED","REMOVED","CONNECTIVITY_FIXED","REVIEW_REQUIRED"})
+                if(GUILayout.Button((revisionFilter==kind?"▶ ":"")+kind+" · "+revisionChanges.rows.FindAll(r=>r.type==kind).Count,currentButton))revisionFilter=kind;
+            revisionScroll=GUILayout.BeginScrollView(revisionScroll,GUILayout.Height(210));
+            foreach(var row in revisionChanges.rows)
+            {
+                if(row.type!=revisionFilter)continue;
+                if(GUILayout.Button(row.id,currentButton))
+                {
+                    var target=allElements.Find(e=>e!=null&&!e.isFeCandidateVisual&&e.humanId==row.id);
+                    if(target!=null){ExitPendingReview();ReapplyAll();Select(target);inspectorVisible=true;ResetInspectorSections(target);}
+                }
+                if(row.historical_ids!=null&&row.historical_ids.Count>1)GUILayout.Label("IDs históricos: "+string.Join(" + ",row.historical_ids),currentBody);
+                GUILayout.Label(row.reason,currentBody);GUILayout.Label("Fuente: "+row.source,currentBody);
+            }
+            GUILayout.EndScrollView();
+        }
 
         void LoadPendingReview()
         {
@@ -66,7 +105,7 @@ namespace Mcoc.UnityViewer
             if(GUILayout.Button((pendingReviewExpanded?"− ":"+ ")+"Pendientes FE",currentButton))pendingReviewExpanded=!pendingReviewExpanded;
             if(!pendingReviewExpanded)return;
             if(pendingReviewData==null){GUILayout.Label(pendingReviewError??"Expediente no disponible",currentBody);return;}
-            GUILayout.Label(pendingReviewData.rows.Count+" casos · diagnóstico sin correcciones",currentBody);
+            GUILayout.Label(pendingReviewData.rows.Count+" casos · sin camino FE a apoyo",currentBody);
             bool grid=GUILayout.Toggle(pendingGridVisible,"Ejes estructurales del plano",GUILayout.Height(25));
             if(grid!=pendingGridVisible){pendingGridVisible=grid;foreach(var go in pendingGridObjects)go.SetActive(grid);}
             if(pendingReviewRow!=null&&GUILayout.Button("Salir del aislamiento · R",currentButton))ResetPresentation();

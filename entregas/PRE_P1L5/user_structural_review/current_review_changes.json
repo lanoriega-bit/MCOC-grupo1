@@ -1,0 +1,1940 @@
+{
+  "geometry_version": "b4263e2c89bca94edc4812fce931c6b92778b9fb356f68fc22d934747b236328",
+  "baseline_commit": "b11d12d",
+  "rows": [
+    {
+      "id": "E2-P4-V-042",
+      "type": "MERGED",
+      "reason": "Continuous paired CAD faces across artificial extraction gap; Main labeled span retained versus residual short extraction.",
+      "source": "2024_22-102.dxf / beam_primary_evidence.json",
+      "historical_ids": [
+        "E2-P4-V-042",
+        "E2-P4-V-046"
+      ],
+      "gap_m": 0.1745,
+      "before": [
+        {
+          "solidTag": "SOL2_4_beam_0430",
+          "category": "beam",
+          "kind": "linear_prism",
+          "floor": "P4",
+          "start": [
+            4.052,
+            0.0007,
+            19.400000000000002
+          ],
+          "end": [
+            5.5923,
+            0.0007,
+            19.400000000000002
+          ],
+          "width_m": 0.6,
+          "height_m": 0.8,
+          "section_width_m": 0.6,
+          "section_height_m": 0.8,
+          "length_m": 1.5403,
+          "sourceTag": "P4-VP-042",
+          "sourceTags": [
+            "P4-E2-VB-0070",
+            "P4-E2-VB-0073"
+          ],
+          "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+          "source_dxf": "2024_22-102.dxf",
+          "confidence": "confirmed_from_RLE_VIGA_geometry",
+          "building": "EDIFICIO_2",
+          "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
+          "section_confidence": "CONFIRMED_FROM_PLAN",
+          "geometry_confirmation": {
+            "status": "CONFIRMED_LABEL_WIDTH",
+            "audit_file": "entregas/POST_P1L4/ed2_beams/ed2_beam_centerline_proposal.json",
+            "face_ids": [
+              "P4-E2-VB-0070",
+              "P4-E2-VB-0073"
+            ],
+            "width_m": 0.6
+          },
+          "post_p1l4_correction": {
+            "correction_type": "MERGED",
+            "reason": "Caras y cierres RLE-VIGA consolidados en una centrolinea fisica.",
+            "primary_source": "2024_22-102.dxf",
+            "external_repo_clue": "SECONDARY_COMPARISON_ONLY",
+            "confidence": "HIGH_PRIMARY_SOURCE",
+            "results_compatibility": "P1L4_HISTORICAL_RESULTS_NOT_RECALCULATED"
+          },
+          "source_floor": "4",
+          "level_kind": "FLOOR",
+          "id": "E2-P4-V-042",
+          "human_id": "E2-P4-V-042",
+          "elementTag": "SOL2_4_beam_0430",
+          "legacy_solidTag": "SOL2_4_beam_0430",
+          "model_z_m": 19.4,
+          "source_elevation_m": 19.4,
+          "source_sheet": "2024_22-102",
+          "coordinates": {
+            "start": [
+              4.052,
+              0.001,
+              19.4
+            ],
+            "end": [
+              5.592,
+              0.001,
+              19.4
+            ],
+            "center": [
+              4.822,
+              0.001,
+              19.4
+            ],
+            "z_bottom_m": 19.0,
+            "z_top_m": 19.8
+          },
+          "axis_x": null,
+          "axis_y": "1",
+          "axis_location": {
+            "center": {
+              "X": {
+                "axis": "B",
+                "axis_coord_m": 7.5,
+                "offset_m": -2.678,
+                "abs_offset_m": 2.678,
+                "status": "BETWEEN_OR_OFFSET",
+                "relation": "entre A-B",
+                "span": [
+                  "A",
+                  "B"
+                ],
+                "lower_axis_coord_m": 0.0,
+                "upper_axis_coord_m": 7.5
+              },
+              "Y": {
+                "axis": "1",
+                "axis_coord_m": 0.0,
+                "offset_m": 0.001,
+                "abs_offset_m": 0.001,
+                "status": "ON_AXIS",
+                "relation": "1",
+                "span": null
+              }
+            },
+            "start": {
+              "X": {
+                "axis": "B",
+                "axis_coord_m": 7.5,
+                "offset_m": -3.448,
+                "abs_offset_m": 3.448,
+                "status": "BETWEEN_OR_OFFSET",
+                "relation": "entre A-B",
+                "span": [
+                  "A",
+                  "B"
+                ],
+                "lower_axis_coord_m": 0.0,
+                "upper_axis_coord_m": 7.5
+              },
+              "Y": {
+                "axis": "1",
+                "axis_coord_m": 0.0,
+                "offset_m": 0.001,
+                "abs_offset_m": 0.001,
+                "status": "ON_AXIS",
+                "relation": "1",
+                "span": null
+              }
+            },
+            "end": {
+              "X": {
+                "axis": "B",
+                "axis_coord_m": 7.5,
+                "offset_m": -1.908,
+                "abs_offset_m": 1.908,
+                "status": "BETWEEN_OR_OFFSET",
+                "relation": "entre A-B",
+                "span": [
+                  "A",
+                  "B"
+                ],
+                "lower_axis_coord_m": 0.0,
+                "upper_axis_coord_m": 7.5
+              },
+              "Y": {
+                "axis": "1",
+                "axis_coord_m": 0.0,
+                "offset_m": 0.001,
+                "abs_offset_m": 0.001,
+                "status": "ON_AXIS",
+                "relation": "1",
+                "span": null
+              }
+            }
+          },
+          "location_description": "EDIFICIO_2 / P4 / Viga X entre A-B / Y 1",
+          "material": "G35_10",
+          "material_source": "2024_22-100.dxf / MTEXT 53994 / Main ED2 through cielo P4; excludes slabs and radier",
+          "material_confidence": "CONFIRMED_FROM_PLAN",
+          "concrete_fc_pa": 35000000,
+          "reinforcement_grade": "A630-420H",
+          "reinforcement_fy_pa": 420000000,
+          "material_scope_note": "Main ED2 through cielo P4; excludes slabs and radier; E, nu, reinforcement layout and design factors not inferred.",
+          "property_correction": {
+            "correction_type": "PROPERTY_UPDATED",
+            "reason": "Primary general material note: Main ED2 through cielo P4; excludes slabs and radier",
+            "primary_source": "2024_22-100.dxf",
+            "handle": "53994",
+            "source_sha256": "1c69385668a85b2714816f198f89fb74bec476d1286103853a853fc8d9e5639c",
+            "external_repo_clue": "CACERES material documentation prompted primary-note search; values are from our DXF",
+            "confidence": "CONFIRMED_FROM_PLAN",
+            "checkpoint": "EXT-7 primary_materials.py; resolve commit through Git history",
+            "results_compatibility": "HISTORICAL_RESULTS_NOT_RECALCULATED"
+          }
+        },
+        {
+          "solidTag": "SOL2_4_beam_0429",
+          "category": "beam",
+          "kind": "linear_prism",
+          "floor": "P4",
+          "start": [
+            5.7668,
+            0.0007,
+            19.400000000000002
+          ],
+          "end": [
+            6.5668,
+            0.0007,
+            19.400000000000002
+          ],
+          "width_m": 0.6,
+          "height_m": 0.8,
+          "section_width_m": 0.6,
+          "section_height_m": 0.8,
+          "length_m": 0.8,
+          "sourceTag": "P4-VP-082",
+          "sourceTags": [
+            "P4-E2-VB-0069",
+            "P4-E2-VB-0072"
+          ],
+          "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+          "source_dxf": "2024_22-102.dxf",
+          "confidence": "confirmed_from_RLE_VIGA_geometry",
+          "building": "EDIFICIO_2",
+          "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
+          "section_confidence": "CONFIRMED_FROM_PLAN",
+          "geometry_confirmation": {
+            "status": "CONFIRMED_RESIDUAL_LABEL_WIDTH",
+            "audit_file": "entregas/POST_P1L4/ed2_beams/ed2_beam_centerline_proposal.json",
+            "face_ids": [
+              "P4-E2-VB-0069",
+              "P4-E2-VB-0072"
+            ],
+            "width_m": 0.6
+          },
+          "post_p1l4_correction": {
+            "correction_type": "MERGED",
+            "reason": "Caras y cierres RLE-VIGA consolidados en una centrolinea fisica.",
+            "primary_source": "2024_22-102.dxf",
+            "external_repo_clue": "SECONDARY_COMPARISON_ONLY",
+            "confidence": "HIGH_PRIMARY_SOURCE",
+            "results_compatibility": "P1L4_HISTORICAL_RESULTS_NOT_RECALCULATED"
+          },
+          "source_floor": "4",
+          "level_kind": "FLOOR",
+          "id": "E2-P4-V-046",
+          "human_id": "E2-P4-V-046",
+          "elementTag": "SOL2_4_beam_0429",
+          "legacy_solidTag": "SOL2_4_beam_0429",
+          "model_z_m": 19.4,
+          "source_elevation_m": 19.4,
+          "source_sheet": "2024_22-102",
+          "coordinates": {
+            "start": [
+              5.767,
+              0.001,
+              19.4
+            ],
+            "end": [
+              6.567,
+              0.001,
+              19.4
+            ],
+            "center": [
+              6.167,
+              0.001,
+              19.4
+            ],
+            "z_bottom_m": 19.0,
+            "z_top_m": 19.8
+          },
+          "axis_x": null,
+          "axis_y": "1",
+          "axis_location": {
+            "center": {
+              "X": {
+                "axis": "B",
+                "axis_coord_m": 7.5,
+                "offset_m": -1.333,
+                "abs_offset_m": 1.333,
+                "status": "BETWEEN_OR_OFFSET",
+                "relation": "entre A-B",
+                "span": [
+                  "A",
+                  "B"
+                ],
+                "lower_axis_coord_m": 0.0,
+                "upper_axis_coord_m": 7.5
+              },
+              "Y": {
+                "axis": "1",
+                "axis_coord_m": 0.0,
+                "offset_m": 0.001,
+                "abs_offset_m": 0.001,
+                "status": "ON_AXIS",
+                "relation": "1",
+                "span": null
+              }
+            },
+            "start": {
+              "X": {
+                "axis": "B",
+                "axis_coord_m": 7.5,
+                "offset_m": -1.733,
+                "abs_offset_m": 1.733,
+                "status": "BETWEEN_OR_OFFSET",
+                "relation": "entre A-B",
+                "span": [
+                  "A",
+                  "B"
+                ],
+                "lower_axis_coord_m": 0.0,
+                "upper_axis_coord_m": 7.5
+              },
+              "Y": {
+                "axis": "1",
+                "axis_coord_m": 0.0,
+                "offset_m": 0.001,
+                "abs_offset_m": 0.001,
+                "status": "ON_AXIS",
+                "relation": "1",
+                "span": null
+              }
+            },
+            "end": {
+              "X": {
+                "axis": "B",
+                "axis_coord_m": 7.5,
+                "offset_m": -0.933,
+                "abs_offset_m": 0.933,
+                "status": "BETWEEN_OR_OFFSET",
+                "relation": "entre A-B",
+                "span": [
+                  "A",
+                  "B"
+                ],
+                "lower_axis_coord_m": 0.0,
+                "upper_axis_coord_m": 7.5
+              },
+              "Y": {
+                "axis": "1",
+                "axis_coord_m": 0.0,
+                "offset_m": 0.001,
+                "abs_offset_m": 0.001,
+                "status": "ON_AXIS",
+                "relation": "1",
+                "span": null
+              }
+            }
+          },
+          "location_description": "EDIFICIO_2 / P4 / Viga X entre A-B / Y 1",
+          "material": "G35_10",
+          "material_source": "2024_22-100.dxf / MTEXT 53994 / Main ED2 through cielo P4; excludes slabs and radier",
+          "material_confidence": "CONFIRMED_FROM_PLAN",
+          "concrete_fc_pa": 35000000,
+          "reinforcement_grade": "A630-420H",
+          "reinforcement_fy_pa": 420000000,
+          "material_scope_note": "Main ED2 through cielo P4; excludes slabs and radier; E, nu, reinforcement layout and design factors not inferred.",
+          "property_correction": {
+            "correction_type": "PROPERTY_UPDATED",
+            "reason": "Primary general material note: Main ED2 through cielo P4; excludes slabs and radier",
+            "primary_source": "2024_22-100.dxf",
+            "handle": "53994",
+            "source_sha256": "1c69385668a85b2714816f198f89fb74bec476d1286103853a853fc8d9e5639c",
+            "external_repo_clue": "CACERES material documentation prompted primary-note search; values are from our DXF",
+            "confidence": "CONFIRMED_FROM_PLAN",
+            "checkpoint": "EXT-7 primary_materials.py; resolve commit through Git history",
+            "results_compatibility": "HISTORICAL_RESULTS_NOT_RECALCULATED"
+          }
+        }
+      ]
+    },
+    {
+      "id": "E2-P4-V-049",
+      "type": "MERGED",
+      "reason": "Continuous paired CAD faces across artificial extraction gap; Same primary faces; preserves dominant 6.4344 m span and historical solidTag0417 versus 1.475 m short fragment0418.",
+      "source": "2024_22-102.dxf / beam_primary_evidence.json",
+      "historical_ids": [
+        "E2-P4-V-049",
+        "E2-P4-V-048"
+      ],
+      "gap_m": 0.091,
+      "before": [
+        {
+          "solidTag": "SOL2_4_beam_0417",
+          "category": "beam",
+          "kind": "linear_prism",
+          "floor": "P4",
+          "start": [
+            7.502,
+            1.9167,
+            19.400000000000002
+          ],
+          "end": [
+            7.502,
+            8.3511,
+            19.400000000000002
+          ],
+          "width_m": 0.6,
+          "height_m": 0.8,
+          "section_width_m": 0.6,
+          "section_height_m": 0.8,
+          "length_m": 6.4343,
+          "sourceTag": "P4-VP-033",
+          "sourceTags": [
+            "P4-E2-VB-0057",
+            "P4-E2-VB-0058"
+          ],
+          "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+          "source_dxf": "2024_22-102.dxf",
+          "confidence": "confirmed_from_RLE_VIGA_geometry",
+          "building": "EDIFICIO_2",
+          "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
+          "section_confidence": "CONFIRMED_FROM_PLAN",
+          "geometry_confirmation": {
+            "status": "CONFIRMED_LABEL_WIDTH",
+            "audit_file": "entregas/POST_P1L4/ed2_beams/ed2_beam_centerline_proposal.json",
+            "face_ids": [
+              "P4-E2-VB-0057",
+              "P4-E2-VB-0058"
+            ],
+            "width_m": 0.6
+          },
+          "post_p1l4_correction": {
+            "correction_type": "MERGED",
+            "reason": "Caras y cierres RLE-VIGA consolidados en una centrolinea fisica.",
+            "primary_source": "2024_22-102.dxf",
+            "external_repo_clue": "SECONDARY_COMPARISON_ONLY",
+            "confidence": "HIGH_PRIMARY_SOURCE",
+            "results_compatibility": "P1L4_HISTORICAL_RESULTS_NOT_RECALCULATED"
+          },
+          "source_floor": "4",
+          "level_kind": "FLOOR",
+          "id": "E2-P4-V-049",
+          "human_id": "E2-P4-V-049",
+          "elementTag": "SOL2_4_beam_0417",
+          "legacy_solidTag": "SOL2_4_beam_0417",
+          "model_z_m": 19.4,
+          "source_elevation_m": 19.4,
+          "source_sheet": "2024_22-102",
+          "coordinates": {
+            "start": [
+              7.502,
+              1.917,
+              19.4
+            ],
+            "end": [
+              7.502,
+              8.351,
+              19.4
+            ],
+            "center": [
+              7.502,
+              5.134,
+              19.4
+            ],
+            "z_bottom_m": 19.0,
+            "z_top_m": 19.8
+          },
+          "axis_x": "B",
+          "axis_y": null,
+          "axis_location": {
+            "center": {
+              "X": {
+                "axis": "B",
+                "axis_coord_m": 7.5,
+                "offset_m": 0.002,
+                "abs_offset_m": 0.002,
+                "status": "ON_AXIS",
+                "relation": "B",
+                "span": null
+              },
+              "Y": {
+                "axis": "2",
+                "axis_coord_m": 8.9,
+                "offset_m": -3.766,
+                "abs_offset_m": 3.766,
+                "status": "BETWEEN_OR_OFFSET",
+                "relation": "entre 1-2",
+                "span": [
+                  "1",
+                  "2"
+                ],
+                "lower_axis_coord_m": 0.0,
+                "upper_axis_coord_m": 8.9
+              }
+            },
+            "start": {
+              "X": {
+                "axis": "B",
+                "axis_coord_m": 7.5,
+                "offset_m": 0.002,
+                "abs_offset_m": 0.002,
+                "status": "ON_AXIS",
+                "relation": "B",
+                "span": null
+              },
+              "Y": {
+                "axis": "1",
+                "axis_coord_m": 0.0,
+                "offset_m": 1.917,
+                "abs_offset_m": 1.917,
+                "status": "BETWEEN_OR_OFFSET",
+                "relation": "entre 1-2",
+                "span": [
+                  "1",
+                  "2"
+                ],
+                "lower_axis_coord_m": 0.0,
+                "upper_axis_coord_m": 8.9
+              }
+            },
+            "end": {
+              "X": {
+                "axis": "B",
+                "axis_coord_m": 7.5,
+                "offset_m": 0.002,
+                "abs_offset_m": 0.002,
+                "status": "ON_AXIS",
+                "relation": "B",
+                "span": null
+              },
+              "Y": {
+                "axis": "2",
+                "axis_coord_m": 8.9,
+                "offset_m": -0.549,
+                "abs_offset_m": 0.549,
+                "status": "BETWEEN_OR_OFFSET",
+                "relation": "entre 1-2",
+                "span": [
+                  "1",
+                  "2"
+                ],
+                "lower_axis_coord_m": 0.0,
+                "upper_axis_coord_m": 8.9
+              }
+            }
+          },
+          "location_description": "EDIFICIO_2 / P4 / Viga X B / Y entre 1-2",
+          "material": "G35_10",
+          "material_source": "2024_22-100.dxf / MTEXT 53994 / Main ED2 through cielo P4; excludes slabs and radier",
+          "material_confidence": "CONFIRMED_FROM_PLAN",
+          "property_review": {
+            "status": "PROPERTY_LABEL_CONFLICT",
+            "labels": [
+              "LBL2_4_beam_label_0077",
+              "LBL2_4_beam_label_0079",
+              "LBL2_4_beam_label_0009"
+            ],
+            "property_keys": [
+              "15/68",
+              "15/70",
+              "60/80"
+            ]
+          },
+          "concrete_fc_pa": 35000000,
+          "reinforcement_grade": "A630-420H",
+          "reinforcement_fy_pa": 420000000,
+          "material_scope_note": "Main ED2 through cielo P4; excludes slabs and radier; E, nu, reinforcement layout and design factors not inferred.",
+          "property_correction": {
+            "correction_type": "PROPERTY_UPDATED",
+            "reason": "Primary general material note: Main ED2 through cielo P4; excludes slabs and radier",
+            "primary_source": "2024_22-100.dxf",
+            "handle": "53994",
+            "source_sha256": "1c69385668a85b2714816f198f89fb74bec476d1286103853a853fc8d9e5639c",
+            "external_repo_clue": "CACERES material documentation prompted primary-note search; values are from our DXF",
+            "confidence": "CONFIRMED_FROM_PLAN",
+            "checkpoint": "EXT-7 primary_materials.py; resolve commit through Git history",
+            "results_compatibility": "HISTORICAL_RESULTS_NOT_RECALCULATED"
+          }
+        },
+        {
+          "solidTag": "SOL2_4_beam_0418",
+          "category": "beam",
+          "kind": "linear_prism",
+          "floor": "P4",
+          "start": [
+            7.502,
+            0.3507,
+            19.400000000000002
+          ],
+          "end": [
+            7.502,
+            1.8257,
+            19.400000000000002
+          ],
+          "width_m": 0.6,
+          "height_m": 0.8,
+          "section_width_m": 0.6,
+          "section_height_m": 0.8,
+          "length_m": 1.475,
+          "sourceTag": "P4-VP-032",
+          "sourceTags": [
+            "P4-E2-VB-0057",
+            "P4-E2-VB-0058"
+          ],
+          "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+          "source_dxf": "2024_22-102.dxf",
+          "confidence": "confirmed_from_RLE_VIGA_geometry",
+          "building": "EDIFICIO_2",
+          "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
+          "section_confidence": "CONFIRMED_FROM_PLAN",
+          "geometry_confirmation": {
+            "status": "CONFIRMED_LABEL_WIDTH",
+            "audit_file": "entregas/POST_P1L4/ed2_beams/ed2_beam_centerline_proposal.json",
+            "face_ids": [
+              "P4-E2-VB-0057",
+              "P4-E2-VB-0058"
+            ],
+            "width_m": 0.6
+          },
+          "post_p1l4_correction": {
+            "correction_type": "MERGED",
+            "reason": "Caras y cierres RLE-VIGA consolidados en una centrolinea fisica.",
+            "primary_source": "2024_22-102.dxf",
+            "external_repo_clue": "SECONDARY_COMPARISON_ONLY",
+            "confidence": "HIGH_PRIMARY_SOURCE",
+            "results_compatibility": "P1L4_HISTORICAL_RESULTS_NOT_RECALCULATED"
+          },
+          "source_floor": "4",
+          "level_kind": "FLOOR",
+          "id": "E2-P4-V-048",
+          "human_id": "E2-P4-V-048",
+          "elementTag": "SOL2_4_beam_0418",
+          "legacy_solidTag": "SOL2_4_beam_0418",
+          "model_z_m": 19.4,
+          "source_elevation_m": 19.4,
+          "source_sheet": "2024_22-102",
+          "coordinates": {
+            "start": [
+              7.502,
+              0.351,
+              19.4
+            ],
+            "end": [
+              7.502,
+              1.826,
+              19.4
+            ],
+            "center": [
+              7.502,
+              1.088,
+              19.4
+            ],
+            "z_bottom_m": 19.0,
+            "z_top_m": 19.8
+          },
+          "axis_x": "B",
+          "axis_y": null,
+          "axis_location": {
+            "center": {
+              "X": {
+                "axis": "B",
+                "axis_coord_m": 7.5,
+                "offset_m": 0.002,
+                "abs_offset_m": 0.002,
+                "status": "ON_AXIS",
+                "relation": "B",
+                "span": null
+              },
+              "Y": {
+                "axis": "1",
+                "axis_coord_m": 0.0,
+                "offset_m": 1.088,
+                "abs_offset_m": 1.088,
+                "status": "BETWEEN_OR_OFFSET",
+                "relation": "entre 1-2",
+                "span": [
+                  "1",
+                  "2"
+                ],
+                "lower_axis_coord_m": 0.0,
+                "upper_axis_coord_m": 8.9
+              }
+            },
+            "start": {
+              "X": {
+                "axis": "B",
+                "axis_coord_m": 7.5,
+                "offset_m": 0.002,
+                "abs_offset_m": 0.002,
+                "status": "ON_AXIS",
+                "relation": "B",
+                "span": null
+              },
+              "Y": {
+                "axis": "1",
+                "axis_coord_m": 0.0,
+                "offset_m": 0.351,
+                "abs_offset_m": 0.351,
+                "status": "BETWEEN_OR_OFFSET",
+                "relation": "entre 1-2",
+                "span": [
+                  "1",
+                  "2"
+                ],
+                "lower_axis_coord_m": 0.0,
+                "upper_axis_coord_m": 8.9
+              }
+            },
+            "end": {
+              "X": {
+                "axis": "B",
+                "axis_coord_m": 7.5,
+                "offset_m": 0.002,
+                "abs_offset_m": 0.002,
+                "status": "ON_AXIS",
+                "relation": "B",
+                "span": null
+              },
+              "Y": {
+                "axis": "1",
+                "axis_coord_m": 0.0,
+                "offset_m": 1.826,
+                "abs_offset_m": 1.826,
+                "status": "BETWEEN_OR_OFFSET",
+                "relation": "entre 1-2",
+                "span": [
+                  "1",
+                  "2"
+                ],
+                "lower_axis_coord_m": 0.0,
+                "upper_axis_coord_m": 8.9
+              }
+            }
+          },
+          "location_description": "EDIFICIO_2 / P4 / Viga X B / Y entre 1-2",
+          "material": "G35_10",
+          "material_source": "2024_22-100.dxf / MTEXT 53994 / Main ED2 through cielo P4; excludes slabs and radier",
+          "material_confidence": "CONFIRMED_FROM_PLAN",
+          "concrete_fc_pa": 35000000,
+          "reinforcement_grade": "A630-420H",
+          "reinforcement_fy_pa": 420000000,
+          "material_scope_note": "Main ED2 through cielo P4; excludes slabs and radier; E, nu, reinforcement layout and design factors not inferred.",
+          "property_correction": {
+            "correction_type": "PROPERTY_UPDATED",
+            "reason": "Primary general material note: Main ED2 through cielo P4; excludes slabs and radier",
+            "primary_source": "2024_22-100.dxf",
+            "handle": "53994",
+            "source_sha256": "1c69385668a85b2714816f198f89fb74bec476d1286103853a853fc8d9e5639c",
+            "external_repo_clue": "CACERES material documentation prompted primary-note search; values are from our DXF",
+            "confidence": "CONFIRMED_FROM_PLAN",
+            "checkpoint": "EXT-7 primary_materials.py; resolve commit through Git history",
+            "results_compatibility": "HISTORICAL_RESULTS_NOT_RECALCULATED"
+          }
+        }
+      ]
+    },
+    {
+      "id": "E1-P1-C-007",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "source": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "historical_ids": [
+        "E1-P1-C-007"
+      ]
+    },
+    {
+      "id": "E1-P1-C-009",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "source": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "historical_ids": [
+        "E1-P1-C-009"
+      ]
+    },
+    {
+      "id": "E1-P1-C-016",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "source": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "historical_ids": [
+        "E1-P1-C-016"
+      ]
+    },
+    {
+      "id": "E1-P1-C-017",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "source": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "historical_ids": [
+        "E1-P1-C-017"
+      ]
+    },
+    {
+      "id": "E1-P1-C-018",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "source": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "historical_ids": [
+        "E1-P1-C-018"
+      ]
+    },
+    {
+      "id": "E1-P1-C-019",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "source": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "historical_ids": [
+        "E1-P1-C-019"
+      ]
+    },
+    {
+      "id": "E1-P1-C-020",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "source": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "historical_ids": [
+        "E1-P1-C-020"
+      ]
+    },
+    {
+      "id": "E1-P1-V-073",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "source": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "historical_ids": [
+        "E1-P1-V-073"
+      ]
+    },
+    {
+      "id": "E1-P1-V-071",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "source": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "historical_ids": [
+        "E1-P1-V-071"
+      ]
+    },
+    {
+      "id": "E1-P1-V-084",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "source": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "historical_ids": [
+        "E1-P1-V-084"
+      ]
+    },
+    {
+      "id": "E1-P1-V-082",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "source": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "historical_ids": [
+        "E1-P1-V-082"
+      ]
+    },
+    {
+      "id": "E1-P1-V-093",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "source": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "historical_ids": [
+        "E1-P1-V-093"
+      ]
+    },
+    {
+      "id": "E1-P1-V-089",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "source": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "historical_ids": [
+        "E1-P1-V-089"
+      ]
+    },
+    {
+      "id": "E1-P1-V-091",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "source": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "historical_ids": [
+        "E1-P1-V-091"
+      ]
+    },
+    {
+      "id": "E1-P1-V-068",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "source": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "historical_ids": [
+        "E1-P1-V-068"
+      ]
+    },
+    {
+      "id": "E1-P1-V-072",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "source": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "historical_ids": [
+        "E1-P1-V-072"
+      ]
+    },
+    {
+      "id": "E1-P1-V-098",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "source": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "historical_ids": [
+        "E1-P1-V-098"
+      ]
+    },
+    {
+      "id": "E1-P2-V-053",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "source": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "historical_ids": [
+        "E1-P2-V-053"
+      ]
+    },
+    {
+      "id": "E1-P2-V-069",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "source": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "historical_ids": [
+        "E1-P2-V-069"
+      ]
+    },
+    {
+      "id": "E1-P2-V-082",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "source": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "historical_ids": [
+        "E1-P2-V-082"
+      ]
+    },
+    {
+      "id": "E1-P2-V-075",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "source": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "historical_ids": [
+        "E1-P2-V-075"
+      ]
+    },
+    {
+      "id": "E1-P2-V-055",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "source": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "historical_ids": [
+        "E1-P2-V-055"
+      ]
+    },
+    {
+      "id": "E1-P1-M-027",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "source": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "historical_ids": [
+        "E1-P1-M-027"
+      ]
+    },
+    {
+      "id": "E1-P1-M-028",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_INTERIOR_WALL_ACKNOWLEDGED",
+      "source": "2026-09-23 clarification: remove also the two interior axis-I panels, after location discrepancy was reported. Not classified as exterior.",
+      "historical_ids": [
+        "E1-P1-M-028"
+      ]
+    },
+    {
+      "id": "E1-P1-M-029",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_INTERIOR_WALL_ACKNOWLEDGED",
+      "source": "2026-09-23 clarification: remove also the two interior axis-I panels, after location discrepancy was reported. Not classified as exterior.",
+      "historical_ids": [
+        "E1-P1-M-029"
+      ]
+    },
+    {
+      "id": "E1-S1-M-026",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "source": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "historical_ids": [
+        "E1-S1-M-026"
+      ]
+    },
+    {
+      "id": "E1-P1-M-004",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "source": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "historical_ids": [
+        "E1-P1-M-004"
+      ]
+    },
+    {
+      "id": "E1-P2-M-007",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "source": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "historical_ids": [
+        "E1-P2-M-007"
+      ]
+    },
+    {
+      "id": "E1-P3-M-007",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "source": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "historical_ids": [
+        "E1-P3-M-007"
+      ]
+    },
+    {
+      "id": "E1-P4-M-007",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "source": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "historical_ids": [
+        "E1-P4-M-007"
+      ]
+    },
+    {
+      "id": "E1-S1-M-029",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "source": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "historical_ids": [
+        "E1-S1-M-029"
+      ]
+    },
+    {
+      "id": "E1-P1-M-010",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "source": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "historical_ids": [
+        "E1-P1-M-010"
+      ]
+    },
+    {
+      "id": "E1-P2-M-008",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "source": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "historical_ids": [
+        "E1-P2-M-008"
+      ]
+    },
+    {
+      "id": "E1-P3-M-008",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "source": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "historical_ids": [
+        "E1-P3-M-008"
+      ]
+    },
+    {
+      "id": "E1-P4-M-008",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "source": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "historical_ids": [
+        "E1-P4-M-008"
+      ]
+    },
+    {
+      "id": "E1-P1-M-003",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "source": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "historical_ids": [
+        "E1-P1-M-003"
+      ]
+    },
+    {
+      "id": "E1-P2-M-002",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "source": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "historical_ids": [
+        "E1-P2-M-002"
+      ]
+    },
+    {
+      "id": "E1-P3-M-002",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "source": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "historical_ids": [
+        "E1-P3-M-002"
+      ]
+    },
+    {
+      "id": "E1-P4-M-002",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "source": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "historical_ids": [
+        "E1-P4-M-002"
+      ]
+    },
+    {
+      "id": "E2-S1-M-007",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "source": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "historical_ids": [
+        "E2-S1-M-007"
+      ]
+    },
+    {
+      "id": "E2-P1-M-007",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "source": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "historical_ids": [
+        "E2-P1-M-007"
+      ]
+    },
+    {
+      "id": "E2-P2-M-007",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "source": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "historical_ids": [
+        "E2-P2-M-007"
+      ]
+    },
+    {
+      "id": "E2-P3-M-007",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "source": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "historical_ids": [
+        "E2-P3-M-007"
+      ]
+    },
+    {
+      "id": "E2-P4-M-007",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "source": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "historical_ids": [
+        "E2-P4-M-007"
+      ]
+    },
+    {
+      "id": "E2-S1-M-008",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "source": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "historical_ids": [
+        "E2-S1-M-008"
+      ]
+    },
+    {
+      "id": "E2-P1-M-008",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "source": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "historical_ids": [
+        "E2-P1-M-008"
+      ]
+    },
+    {
+      "id": "E2-P2-M-008",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "source": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "historical_ids": [
+        "E2-P2-M-008"
+      ]
+    },
+    {
+      "id": "E2-P3-M-008",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "source": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "historical_ids": [
+        "E2-P3-M-008"
+      ]
+    },
+    {
+      "id": "E2-P4-M-008",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "source": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "historical_ids": [
+        "E2-P4-M-008"
+      ]
+    },
+    {
+      "id": "E2-S1-M-010",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "source": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "historical_ids": [
+        "E2-S1-M-010"
+      ]
+    },
+    {
+      "id": "E2-P1-M-010",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "source": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "historical_ids": [
+        "E2-P1-M-010"
+      ]
+    },
+    {
+      "id": "E2-P2-M-010",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "source": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "historical_ids": [
+        "E2-P2-M-010"
+      ]
+    },
+    {
+      "id": "E2-P3-M-010",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "source": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "historical_ids": [
+        "E2-P3-M-010"
+      ]
+    },
+    {
+      "id": "E2-P4-M-009",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "source": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "historical_ids": [
+        "E2-P4-M-009"
+      ]
+    },
+    {
+      "id": "E2-S1-M-011",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "source": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "historical_ids": [
+        "E2-S1-M-011"
+      ]
+    },
+    {
+      "id": "E2-P1-M-011",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "source": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "historical_ids": [
+        "E2-P1-M-011"
+      ]
+    },
+    {
+      "id": "E2-P2-M-011",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "source": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "historical_ids": [
+        "E2-P2-M-011"
+      ]
+    },
+    {
+      "id": "E2-P3-M-011",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "source": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "historical_ids": [
+        "E2-P3-M-011"
+      ]
+    },
+    {
+      "id": "E2-P4-M-010",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "source": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "historical_ids": [
+        "E2-P4-M-010"
+      ]
+    },
+    {
+      "id": "E2-S1-M-009",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "source": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "historical_ids": [
+        "E2-S1-M-009"
+      ]
+    },
+    {
+      "id": "E2-P1-M-009",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "source": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "historical_ids": [
+        "E2-P1-M-009"
+      ]
+    },
+    {
+      "id": "E2-P2-M-009",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "source": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "historical_ids": [
+        "E2-P2-M-009"
+      ]
+    },
+    {
+      "id": "E2-P3-M-009",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "source": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "historical_ids": [
+        "E2-P3-M-009"
+      ]
+    },
+    {
+      "id": "E1-S1-M-001",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-M-001"
+      ]
+    },
+    {
+      "id": "E1-S1-M-007",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-M-007"
+      ]
+    },
+    {
+      "id": "E1-S1-M-027",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-M-027"
+      ]
+    },
+    {
+      "id": "E1-S1-M-051",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-M-051"
+      ]
+    },
+    {
+      "id": "E1-S1-M-052",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-M-052"
+      ]
+    },
+    {
+      "id": "E1-S1-M-053",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-M-053"
+      ]
+    },
+    {
+      "id": "E1-S1-M-060",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-M-060"
+      ]
+    },
+    {
+      "id": "E1-S1-A-001",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-A-001"
+      ]
+    },
+    {
+      "id": "E1-S1-A-010",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-A-010"
+      ]
+    },
+    {
+      "id": "E1-S1-A-030",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-A-030"
+      ]
+    },
+    {
+      "id": "E1-S1-A-057",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-A-057"
+      ]
+    },
+    {
+      "id": "E1-S1-A-058",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-A-058"
+      ]
+    },
+    {
+      "id": "E1-S1-A-059",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-A-059"
+      ]
+    },
+    {
+      "id": "E1-S1-A-070",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-A-070"
+      ]
+    },
+    {
+      "id": "E1-S1-V-001",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-V-001"
+      ]
+    },
+    {
+      "id": "E1-S1-V-048",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-V-048"
+      ]
+    },
+    {
+      "id": "E1-S1-V-027",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-V-027"
+      ]
+    },
+    {
+      "id": "E1-S1-V-014",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-V-014"
+      ]
+    },
+    {
+      "id": "E1-S1-V-028",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-V-028"
+      ]
+    },
+    {
+      "id": "E1-S1-V-037",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-V-037"
+      ]
+    },
+    {
+      "id": "E1-S1-V-046",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-V-046"
+      ]
+    },
+    {
+      "id": "E1-S1-V-063",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-V-063"
+      ]
+    },
+    {
+      "id": "E1-S1-V-070",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-V-070"
+      ]
+    },
+    {
+      "id": "E1-S1-V-077",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-V-077"
+      ]
+    },
+    {
+      "id": "E1-S1-V-032",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-V-032"
+      ]
+    },
+    {
+      "id": "E1-S1-V-041",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-V-041"
+      ]
+    },
+    {
+      "id": "E1-S1-V-050",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-V-050"
+      ]
+    },
+    {
+      "id": "E1-S1-V-072",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-V-072"
+      ]
+    },
+    {
+      "id": "E1-S1-V-071",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-V-071"
+      ]
+    },
+    {
+      "id": "E1-S1-V-079",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-V-079"
+      ]
+    },
+    {
+      "id": "E1-S1-V-031",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-V-031"
+      ]
+    },
+    {
+      "id": "E1-S1-V-049",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-V-049"
+      ]
+    },
+    {
+      "id": "E1-S1-V-040",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-V-040"
+      ]
+    },
+    {
+      "id": "E1-S1-V-013",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-V-013"
+      ]
+    },
+    {
+      "id": "E1-S1-V-010",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-V-010"
+      ]
+    },
+    {
+      "id": "E1-S1-V-008",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-V-008"
+      ]
+    },
+    {
+      "id": "E1-S1-V-033",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-V-033"
+      ]
+    },
+    {
+      "id": "E1-S1-V-042",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-V-042"
+      ]
+    },
+    {
+      "id": "E1-S1-V-051",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-V-051"
+      ]
+    },
+    {
+      "id": "E1-S1-V-073",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-V-073"
+      ]
+    },
+    {
+      "id": "E1-S1-V-029",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-V-029"
+      ]
+    },
+    {
+      "id": "E1-S1-V-047",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-V-047"
+      ]
+    },
+    {
+      "id": "E1-S1-V-016",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-V-016"
+      ]
+    },
+    {
+      "id": "E1-S1-V-015",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-V-015"
+      ]
+    },
+    {
+      "id": "E1-S1-V-017",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-V-017"
+      ]
+    },
+    {
+      "id": "E1-S1-V-057",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-V-057"
+      ]
+    },
+    {
+      "id": "E1-S1-V-056",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-V-056"
+      ]
+    },
+    {
+      "id": "E1-S1-V-058",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-V-058"
+      ]
+    },
+    {
+      "id": "E1-S1-V-065",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-V-065"
+      ]
+    },
+    {
+      "id": "E1-S1-V-064",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-V-064"
+      ]
+    },
+    {
+      "id": "E1-S1-V-066",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-V-066"
+      ]
+    },
+    {
+      "id": "E1-S1-V-006",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-V-006"
+      ]
+    },
+    {
+      "id": "E1-S1-V-007",
+      "type": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "source": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "historical_ids": [
+        "E1-S1-V-007"
+      ]
+    },
+    {
+      "id": "E1-P2-M-003",
+      "type": "CONNECTIVITY_FIXED",
+      "reason": "Continuidad de cadena recuperada por 2 pares primarios revisados; separación transversal 0.1 mm, sin mover geometría.",
+      "source": "2017_67-101/102; numerical wall overlap whitelist",
+      "historical_ids": [
+        "E1-P2-M-003"
+      ]
+    },
+    {
+      "id": "E1-P2-M-010",
+      "type": "CONNECTIVITY_FIXED",
+      "reason": "Continuidad de cadena recuperada por 2 pares primarios revisados; separación transversal 0.1 mm, sin mover geometría.",
+      "source": "2017_67-101/102; numerical wall overlap whitelist",
+      "historical_ids": [
+        "E1-P2-M-010"
+      ]
+    },
+    {
+      "id": "E1-P3-M-003",
+      "type": "CONNECTIVITY_FIXED",
+      "reason": "Continuidad de cadena recuperada por 2 pares primarios revisados; separación transversal 0.1 mm, sin mover geometría.",
+      "source": "2017_67-101/102; numerical wall overlap whitelist",
+      "historical_ids": [
+        "E1-P3-M-003"
+      ]
+    },
+    {
+      "id": "E1-P3-M-010",
+      "type": "CONNECTIVITY_FIXED",
+      "reason": "Continuidad de cadena recuperada por 2 pares primarios revisados; separación transversal 0.1 mm, sin mover geometría.",
+      "source": "2017_67-101/102; numerical wall overlap whitelist",
+      "historical_ids": [
+        "E1-P3-M-010"
+      ]
+    },
+    {
+      "id": "E1-P4-M-003",
+      "type": "CONNECTIVITY_FIXED",
+      "reason": "Continuidad de cadena recuperada por 2 pares primarios revisados; separación transversal 0.1 mm, sin mover geometría.",
+      "source": "2017_67-101/102; numerical wall overlap whitelist",
+      "historical_ids": [
+        "E1-P4-M-003"
+      ]
+    },
+    {
+      "id": "E1-P4-M-009",
+      "type": "CONNECTIVITY_FIXED",
+      "reason": "Continuidad de cadena recuperada por 2 pares primarios revisados; separación transversal 0.1 mm, sin mover geometría.",
+      "source": "2017_67-101/102; numerical wall overlap whitelist",
+      "historical_ids": [
+        "E1-P4-M-009"
+      ]
+    },
+    {
+      "id": "COLUMN_ALIGNMENT",
+      "type": "REVIEW_REQUIRED",
+      "reason": "Offsets habituales ~18 cm, superiores a 5 cm. Revisar transformación por planta antes de mover columnas. Cero columnas alineadas.",
+      "source": "COLUMN_ALIGNMENT_AUDIT.md",
+      "historical_ids": []
+    }
+  ],
+  "columns_moved": 0,
+  "alignment_status": "HELD_OFFSETS_OVER_5CM_REQUIRE_TRANSFORM_REVIEW",
+  "current_results": "NONE",
+  "summary": {
+    "geometry_before": 909,
+    "geometry_after": 791,
+    "excluded": 116,
+    "merged_pairs": 2,
+    "old_pending": 43,
+    "current_pending": 22,
+    "old_components": 22,
+    "current_components": 16,
+    "old_fe_members": 856,
+    "current_fe_members": 736,
+    "removed_from_scope": [
+      "E1-P1-C-016",
+      "E1-P1-C-017",
+      "E1-P1-M-004",
+      "E1-P1-M-010",
+      "E1-P1-V-068",
+      "E1-P1-V-072",
+      "E1-P1-V-098",
+      "E1-P2-M-007",
+      "E1-P2-M-008",
+      "E1-P2-V-055",
+      "E1-P2-V-075",
+      "E1-P3-M-007",
+      "E1-P3-M-008",
+      "E1-P4-M-007",
+      "E1-P4-M-008"
+    ],
+    "resolved_by_vertical_continuity": [
+      "E1-P2-M-003",
+      "E1-P2-M-010",
+      "E1-P3-M-003",
+      "E1-P3-M-010",
+      "E1-P4-M-003",
+      "E1-P4-M-009"
+    ],
+    "resolved_by_column_alignment": [],
+    "still_unresolved": [
+      "E1-P1-M-016",
+      "E1-P1-M-020",
+      "E1-P1-M-021",
+      "E1-P1-M-022",
+      "E1-P1-M-023",
+      "E1-P1-M-024",
+      "E1-P1-M-031",
+      "E1-P1-M-034",
+      "E1-P1-M-035",
+      "E1-P1-M-036",
+      "E1-P1-M-037",
+      "E1-P2-M-005",
+      "E1-P2-M-009",
+      "E1-P3-M-005",
+      "E1-P3-M-009",
+      "E1-P4-M-010",
+      "E1-P4-M-012",
+      "E2-P4-V-004",
+      "E2-P4-V-005",
+      "E2-P4-V-006",
+      "E2-P4-V-007",
+      "E2-P4-V-009"
+    ],
+    "new_issue": [],
+    "columns_moved": 0,
+    "current_results": "NONE",
+    "analysis_run": false,
+    "unknown_heights_removed": [
+      "E1-S1-V-014",
+      "E1-S1-V-063",
+      "E1-S1-V-070",
+      "E1-S1-V-077",
+      "E1-S1-V-050",
+      "E1-S1-V-072",
+      "E1-S1-V-071",
+      "E1-S1-V-079",
+      "E1-S1-V-010",
+      "E1-S1-V-042",
+      "E1-S1-V-051",
+      "E1-S1-V-073",
+      "E1-S1-V-057",
+      "E1-S1-V-056",
+      "E1-S1-V-058",
+      "E1-S1-V-065",
+      "E1-S1-V-064",
+      "E1-S1-V-066",
+      "E1-P2-V-069"
+    ]
+  }
+}

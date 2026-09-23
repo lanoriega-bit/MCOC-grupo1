@@ -95,12 +95,29 @@ def main():
                 continue
             lb = wall_lines[b["solidTag"]]
             inter = la.intersection(lb)
+            # Whitelisted primary-plan continuity, not a global snap tolerance.
+            confirmed_pair = (a['id'],b['id']) in {
+                ('E1-P1-M-002','E1-P2-M-003'),
+                ('E1-P1-M-012','E1-P2-M-010'),
+            }
+            numeric=False
+            if inter.is_empty and confirmed_pair and la.distance(lb)<=.001:
+                av=(la.coords[-1][0]-la.coords[0][0],la.coords[-1][1]-la.coords[0][1])
+                bv=(lb.coords[-1][0]-lb.coords[0][0],lb.coords[-1][1]-lb.coords[0][1])
+                parallel=abs(av[0]*bv[1]-av[1]*bv[0])/(la.length*lb.length)<1e-6
+                projected=sorted(la.project(Point(p)) for p in lb.coords)
+                lo,hi=max(0,projected[0]),min(la.length,projected[-1])
+                if parallel and hi-lo>.5:
+                    inter=la.interpolate((lo+hi)/2);numeric=True
             if inter.is_empty:
                 continue
             p = inter if inter.geom_type == "Point" else inter.interpolate(0.5, normalized=True) if inter.geom_type == "LineString" else None
             if p is not None:
                 add_wall_junction(a, (p.x, p.y), ztop, "WALL_VERTICAL_OVERLAP", b["id"])
                 add_wall_junction(b, (p.x, p.y), ztop, "WALL_VERTICAL_OVERLAP", a["id"])
+                if numeric:
+                    for row in connections[-2:]:
+                        row['evidence']='CONFIRMED_PRIMARY_WALL_CHAIN / FE_ADAPTER_NUMERICAL_ALIGNMENT: transverse separation <=0.001 m; longitudinal overlap >0.5 m; explicit reviewed pair, not slab contact'
 
     # Incidencias de columnas sobre muros por interseccion de huellas fisicas.
     for c in columns:
@@ -249,7 +266,8 @@ def main():
     floating=[e for e in elements if find(e["node_i"]) not in supported_roots]
     roots={find(e["node_i"]) for e in floating}
 
-    old_focus={r["element_id"] for r in prior["current_floating_classification"]["elements"]}
+    historical_focus={r["element_id"] for r in prior["current_floating_classification"]["elements"]}
+    old_focus=historical_focus & {s['id'] for s in solids}
     floating_geometry={e["element_id"] for e in floating}
     resolved=sorted(old_focus-floating_geometry); remaining=sorted(old_focus&floating_geometry)
     degree=Counter()

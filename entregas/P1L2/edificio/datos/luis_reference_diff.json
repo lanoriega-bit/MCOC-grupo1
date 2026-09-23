@@ -40855,6 +40855,5240 @@
       },
       "confidence": "HIGH",
       "scope": "ED1_S1_AXIS_H_ELEVATION_CONFIRMATION"
+    },
+    {
+      "id": "E1-P1-C-007",
+      "solidTag": "SOL_1_column_0025",
+      "category": "column",
+      "old_geometry": {
+        "solidTag": "SOL_1_column_0025",
+        "category": "column",
+        "kind": "box",
+        "floor": "1",
+        "center": [
+          9.999861415970583,
+          20.45152440699242,
+          5.9399999999999995
+        ],
+        "width_m": 0.35,
+        "depth_m": 0.35,
+        "height_m": 3.96,
+        "length_m": 3.96,
+        "source_layer": "RLE-PILAR",
+        "source_dxf": "2017_67-102.dxf",
+        "sourceTags": [
+          "CAD_2_column_plan_0200",
+          "CAD_2_column_plan_0201",
+          "CAD_2_column_plan_0202",
+          "CAD_2_column_plan_0203",
+          "CAD_2_column_plan_0204",
+          "CAD_2_column_plan_0205",
+          "CAD_2_column_plan_0206",
+          "CAD_2_column_plan_0207"
+        ],
+        "confidence": "inferred_from_above_2",
+        "audit": {
+          "status": "REVIEW_HIGH",
+          "reference_status": "PROVISIONAL_GEOMETRY_REVIEW",
+          "findings": [
+            {
+              "finding_id": "AUD-LUIS-0036",
+              "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+              "severity": "HIGH"
+            }
+          ]
+        },
+        "preserved_viewer_id": "E1-P1-C-007",
+        "audit_resolution": {
+          "classification": "CONFIRMED_BY_PLAN_NOTE",
+          "resolution_group": "CONFIRMED_CORRECT",
+          "reason": "near same-floor column label/note"
+        }
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-102.dxf",
+      "evidence": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-P1-C-009",
+      "solidTag": "SOL_1_column_0024",
+      "category": "column",
+      "old_geometry": {
+        "solidTag": "SOL_1_column_0024",
+        "category": "column",
+        "kind": "box",
+        "floor": "1",
+        "center": [
+          17.489861415920867,
+          20.45152440699247,
+          5.9399999999999995
+        ],
+        "width_m": 0.35,
+        "depth_m": 0.35,
+        "height_m": 3.96,
+        "length_m": 3.96,
+        "source_layer": "RLE-PILAR",
+        "source_dxf": "2017_67-102.dxf",
+        "sourceTags": [
+          "CAD_2_column_plan_0192",
+          "CAD_2_column_plan_0193",
+          "CAD_2_column_plan_0194",
+          "CAD_2_column_plan_0195",
+          "CAD_2_column_plan_0196",
+          "CAD_2_column_plan_0197",
+          "CAD_2_column_plan_0198",
+          "CAD_2_column_plan_0199"
+        ],
+        "confidence": "inferred_from_above_2",
+        "audit": {
+          "status": "REVIEW_HIGH",
+          "reference_status": "PROVISIONAL_GEOMETRY_REVIEW",
+          "findings": [
+            {
+              "finding_id": "AUD-LUIS-0035",
+              "code": "UNSUPPORTED_VERTICAL_COLUMN_INFERENCE",
+              "severity": "HIGH"
+            }
+          ]
+        },
+        "preserved_viewer_id": "E1-P1-C-009",
+        "audit_resolution": {
+          "classification": "CONFIRMED_BY_PLAN_NOTE",
+          "resolution_group": "CONFIRMED_CORRECT",
+          "reason": "near same-floor column label/note"
+        }
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-102.dxf",
+      "evidence": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-P1-C-016",
+      "solidTag": "SOL_1_column_0022",
+      "category": "column",
+      "old_geometry": {
+        "solidTag": "SOL_1_column_0022",
+        "category": "column",
+        "kind": "box",
+        "floor": "1",
+        "center": [
+          30.027062003397322,
+          18.842590245405034,
+          5.9399999999999995
+        ],
+        "width_m": 0.35,
+        "depth_m": 0.35,
+        "height_m": 3.96,
+        "length_m": 3.96,
+        "source_layer": "RLE-PILAR",
+        "source_dxf": "2017_67-101.dxf",
+        "sourceTags": [
+          "CAD_1_column_plan_0293"
+        ],
+        "confidence": "medium",
+        "preserved_viewer_id": "E1-P1-C-016"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-P1-C-017",
+      "solidTag": "SOL_1_column_0023",
+      "category": "column",
+      "old_geometry": {
+        "solidTag": "SOL_1_column_0023",
+        "category": "column",
+        "kind": "box",
+        "floor": "1",
+        "center": [
+          30.027062003397322,
+          26.1755827703045,
+          5.9399999999999995
+        ],
+        "width_m": 0.35,
+        "depth_m": 0.35,
+        "height_m": 3.96,
+        "length_m": 3.96,
+        "source_layer": "RLE-PILAR",
+        "source_dxf": "2017_67-101.dxf",
+        "sourceTags": [
+          "CAD_1_column_plan_0295"
+        ],
+        "confidence": "medium",
+        "preserved_viewer_id": "E1-P1-C-017"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-P1-C-018",
+      "solidTag": "SOL_1_column_0019",
+      "category": "column",
+      "old_geometry": {
+        "solidTag": "SOL_1_column_0019",
+        "category": "column",
+        "kind": "box",
+        "floor": "1",
+        "center": [
+          34.477104918172905,
+          18.912417237810057,
+          5.9399999999999995
+        ],
+        "width_m": 0.35,
+        "depth_m": 0.35,
+        "height_m": 3.96,
+        "length_m": 3.96,
+        "source_layer": "RLE-PILAR",
+        "source_dxf": "2017_67-101.dxf",
+        "sourceTags": [
+          "CAD_1_column_plan_0204",
+          "CAD_1_column_plan_0205",
+          "CAD_1_column_plan_0206",
+          "CAD_1_column_plan_0207"
+        ],
+        "confidence": "medium",
+        "preserved_viewer_id": "E1-P1-C-018"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-P1-C-019",
+      "solidTag": "SOL_1_column_0020",
+      "category": "column",
+      "old_geometry": {
+        "solidTag": "SOL_1_column_0020",
+        "category": "column",
+        "kind": "box",
+        "floor": "1",
+        "center": [
+          34.47711152935153,
+          23.624555331991267,
+          5.9399999999999995
+        ],
+        "width_m": 0.35,
+        "depth_m": 0.35,
+        "height_m": 3.96,
+        "length_m": 3.96,
+        "source_layer": "RLE-PILAR",
+        "source_dxf": "2017_67-101.dxf",
+        "sourceTags": [
+          "CAD_1_column_plan_0208",
+          "CAD_1_column_plan_0209",
+          "CAD_1_column_plan_0210",
+          "CAD_1_column_plan_0211"
+        ],
+        "confidence": "medium",
+        "preserved_viewer_id": "E1-P1-C-019"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-P1-C-020",
+      "solidTag": "SOL_1_column_0021",
+      "category": "column",
+      "old_geometry": {
+        "solidTag": "SOL_1_column_0021",
+        "category": "column",
+        "kind": "box",
+        "floor": "1",
+        "center": [
+          34.4771178551556,
+          28.336693854232795,
+          5.9399999999999995
+        ],
+        "width_m": 0.35,
+        "depth_m": 0.35,
+        "height_m": 3.96,
+        "length_m": 3.96,
+        "source_layer": "RLE-PILAR",
+        "source_dxf": "2017_67-101.dxf",
+        "sourceTags": [
+          "CAD_1_column_plan_0212",
+          "CAD_1_column_plan_0213",
+          "CAD_1_column_plan_0214",
+          "CAD_1_column_plan_0215"
+        ],
+        "confidence": "medium",
+        "preserved_viewer_id": "E1-P1-C-020"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-P1-V-073",
+      "solidTag": "SOL_1_beam_0163",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1_beam_0163",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1",
+        "sourceTag": "P1-VP-053",
+        "sourceTags": [
+          "P1-VB-0084",
+          "P1-VB-0085"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          34.4771,
+          19.0624,
+          7.52
+        ],
+        "end": [
+          34.4771,
+          23.4746,
+          7.52
+        ],
+        "width_m": 0.2,
+        "height_m": 0.8,
+        "length_m": 4.412199999999999,
+        "section_width_m": 0.2,
+        "section_height_m": 0.8,
+        "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
+        "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+        "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-P1-V-073",
+        "audit_resolution": {
+          "classification": "CONFIRMED_LABEL_WIDTH",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_LABEL_WIDTH",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "P1-VB-0084",
+            "P1-VB-0085"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [
+          "LBL_1_beam_label_0083",
+          "LBL_1_beam_label_0088"
+        ],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-P1-V-071",
+      "solidTag": "SOL_1_beam_0164",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1_beam_0164",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1",
+        "sourceTag": "P1-VP-054",
+        "sourceTags": [
+          "P1-VB-0087",
+          "P1-VB-0088"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          34.4771,
+          23.7746,
+          7.52
+        ],
+        "end": [
+          34.4771,
+          28.1867,
+          7.52
+        ],
+        "width_m": 0.2,
+        "height_m": 0.8,
+        "length_m": 4.412099999999999,
+        "section_width_m": 0.2,
+        "section_height_m": 0.8,
+        "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
+        "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+        "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-P1-V-071",
+        "audit_resolution": {
+          "classification": "CONFIRMED_LABEL_WIDTH",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_LABEL_WIDTH",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "P1-VB-0087",
+            "P1-VB-0088"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [
+          "LBL_1_beam_label_0082"
+        ],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-P1-V-084",
+      "solidTag": "SOL_1_beam_0166",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1_beam_0166",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1",
+        "sourceTag": "P1-VP-065",
+        "sourceTags": [
+          "P1-VB-0090",
+          "P1-VB-0091"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          34.6638,
+          28.3648,
+          7.52
+        ],
+        "end": [
+          40.036699999999996,
+          26.2482,
+          7.52
+        ],
+        "width_m": 0.2,
+        "height_m": 0.8,
+        "length_m": 5.774777049376013,
+        "section_width_m": 0.2,
+        "section_height_m": 0.8,
+        "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
+        "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+        "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-P1-V-084",
+        "audit_resolution": {
+          "classification": "CONFIRMED_RESIDUAL_LABEL_WIDTH",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_RESIDUAL_LABEL_WIDTH",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "P1-VB-0090",
+            "P1-VB-0091"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [
+          "LBL_1_beam_label_0081"
+        ],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-P1-V-082",
+      "solidTag": "SOL_1_beam_0172",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1_beam_0172",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1",
+        "sourceTag": "P1-VP-056",
+        "sourceTags": [
+          "P1-VB-0094",
+          "P1-VB-0096"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          35.3,
+          18.8624,
+          7.52
+        ],
+        "end": [
+          37.55,
+          18.8624,
+          7.52
+        ],
+        "width_m": 0.2,
+        "height_m": 0.8,
+        "length_m": 2.25,
+        "section_width_m": 0.2,
+        "section_height_m": 0.8,
+        "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
+        "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+        "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-P1-V-082",
+        "audit_resolution": {
+          "classification": "CONFIRMED_LABEL_WIDTH",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_LABEL_WIDTH",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "P1-VB-0094",
+            "P1-VB-0096"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [
+          "LBL_1_beam_label_0088"
+        ],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-P1-V-093",
+      "solidTag": "SOL_1_beam_0171",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1_beam_0171",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1",
+        "sourceTag": "P1-VP-057",
+        "sourceTags": [
+          "P1-VB-0095",
+          "P1-VB-0096"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          37.75,
+          18.8624,
+          7.52
+        ],
+        "end": [
+          40.0,
+          18.8624,
+          7.52
+        ],
+        "width_m": 0.2,
+        "height_m": 0.8,
+        "length_m": 2.25,
+        "section_width_m": 0.2,
+        "section_height_m": 0.8,
+        "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
+        "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+        "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-P1-V-093",
+        "audit_resolution": {
+          "classification": "CONFIRMED_LABEL_WIDTH",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_LABEL_WIDTH",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "P1-VB-0095",
+            "P1-VB-0096"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [
+          "LBL_1_beam_label_0089"
+        ],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-P1-V-089",
+      "solidTag": "SOL_1_beam_0174",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1_beam_0174",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1",
+        "sourceTag": "P1-VP-058",
+        "sourceTags": [
+          "P1-VB-0097",
+          "P1-VB-0098"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          37.650000000000006,
+          16.7201,
+          7.52
+        ],
+        "end": [
+          37.650000000000006,
+          18.7624,
+          7.52
+        ],
+        "width_m": 0.2,
+        "height_m": 0.8,
+        "length_m": 2.042300000000001,
+        "section_width_m": 0.2,
+        "section_height_m": 0.8,
+        "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
+        "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+        "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-P1-V-089",
+        "audit_resolution": {
+          "classification": "CONFIRMED_LABEL_WIDTH",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_LABEL_WIDTH",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "P1-VB-0097",
+            "P1-VB-0098"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [
+          "LBL_1_beam_label_0087"
+        ],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-P1-V-091",
+      "solidTag": "SOL_1_beam_0168",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1_beam_0168",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1",
+        "sourceTag": "P1-VP-055",
+        "sourceTags": [
+          "P1-VB-0092",
+          "P1-VB-0093"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          37.75,
+          16.6201,
+          7.52
+        ],
+        "end": [
+          40.0,
+          16.6201,
+          7.52
+        ],
+        "width_m": 0.2,
+        "height_m": 0.8,
+        "length_m": 2.25,
+        "section_width_m": 0.2,
+        "section_height_m": 0.8,
+        "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
+        "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+        "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-P1-V-091",
+        "audit_resolution": {
+          "classification": "CONFIRMED_LABEL_WIDTH",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_LABEL_WIDTH",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "P1-VB-0092",
+            "P1-VB-0093"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [
+          "LBL_1_beam_label_0090"
+        ],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-P1-V-068",
+      "solidTag": "SOL_1_beam_0185",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1_beam_0185",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1",
+        "sourceTag": "P1-VP-063",
+        "sourceTags": [
+          "P1-VB-0106",
+          "P1-VB-0109"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          33.825,
+          -3.4999,
+          7.42
+        ],
+        "end": [
+          33.825,
+          -0.5999,
+          7.42
+        ],
+        "width_m": 0.15,
+        "height_m": 1.0,
+        "length_m": 2.9,
+        "section_width_m": 0.15,
+        "section_height_m": 1.0,
+        "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
+        "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+        "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-P1-V-068",
+        "audit_resolution": {
+          "classification": "CONFIRMED_LABEL_WIDTH",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_LABEL_WIDTH",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "P1-VB-0106",
+            "P1-VB-0109"
+          ],
+          "width_m": 0.15
+        },
+        "section_evidence_labels": [
+          "LBL_1_beam_label_0100"
+        ],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-P1-V-072",
+      "solidTag": "SOL_1_beam_0186",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1_beam_0186",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1",
+        "sourceTag": "P1-VP-064",
+        "sourceTags": [
+          "P1-VB-0110",
+          "P1-VB-0111"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          33.9,
+          -3.5749,
+          7.42
+        ],
+        "end": [
+          35.2663,
+          -3.5749,
+          7.42
+        ],
+        "width_m": 0.15,
+        "height_m": 1.0,
+        "length_m": 1.3663000000000025,
+        "section_width_m": 0.15,
+        "section_height_m": 1.0,
+        "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
+        "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+        "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-P1-V-072",
+        "audit_resolution": {
+          "classification": "CONFIRMED_RESIDUAL_LABEL_WIDTH",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_RESIDUAL_LABEL_WIDTH",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "P1-VB-0110",
+            "P1-VB-0111"
+          ],
+          "width_m": 0.15
+        },
+        "section_evidence_labels": [
+          "LBL_1_beam_label_0108"
+        ],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-P1-V-098",
+      "solidTag": "SOL_1_beam_0181",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1_beam_0181",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1",
+        "sourceTag": "P1-VP-062",
+        "sourceTags": [
+          "P1-VB-0105",
+          "P1-VB-0107"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          38.900000000000006,
+          -3.5749,
+          7.295
+        ],
+        "end": [
+          45.2453,
+          -3.5749,
+          7.295
+        ],
+        "width_m": 0.15,
+        "height_m": 1.25,
+        "length_m": 6.345299999999995,
+        "section_width_m": 0.15,
+        "section_height_m": 1.25,
+        "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
+        "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+        "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-P1-V-098",
+        "audit_resolution": {
+          "classification": "CONFIRMED_LABEL_WIDTH",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_LABEL_WIDTH",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "P1-VB-0105",
+            "P1-VB-0107"
+          ],
+          "width_m": 0.15
+        },
+        "section_evidence_labels": [
+          "LBL_1_beam_label_0101"
+        ],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-P2-V-053",
+      "solidTag": "SOL_2_beam_0299",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_2_beam_0299",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "2",
+        "sourceTag": "P2-VP-066",
+        "sourceTags": [
+          "P2-VB-0112",
+          "P2-VB-0113"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-102.dxf",
+        "start": [
+          19.999900000000004,
+          16.6815,
+          11.48
+        ],
+        "end": [
+          19.999900000000004,
+          18.1572,
+          11.48
+        ],
+        "width_m": 0.6,
+        "height_m": 0.8,
+        "length_m": 1.4756999999999998,
+        "section_width_m": 0.6,
+        "section_height_m": 0.8,
+        "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
+        "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+        "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-P2-V-053",
+        "audit_resolution": {
+          "classification": "CONFIRMED_LABEL_WIDTH",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_LABEL_WIDTH",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "P2-VB-0112",
+            "P2-VB-0113"
+          ],
+          "width_m": 0.6
+        },
+        "section_evidence_labels": [
+          "LBL_2_beam_label_0042"
+        ],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-102.dxf",
+      "evidence": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-P2-V-069",
+      "solidTag": "SOL_2_beam_0279",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_2_beam_0279",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "2",
+        "sourceTag": "P2-VP-057",
+        "sourceTags": [
+          "P2-VB-0091",
+          "P2-VB-0092"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-102.dxf",
+        "start": [
+          24.999900000000004,
+          16.6815,
+          11.58
+        ],
+        "end": [
+          24.999900000000004,
+          18.1572,
+          11.58
+        ],
+        "width_m": 0.6,
+        "height_m": 0.6,
+        "length_m": 1.4756999999999998,
+        "section_width_m": 0.6,
+        "section_height_m": null,
+        "section_source": "CAD_CONTOUR_WIDTH_ONLY",
+        "section_confidence": "WIDTH_CONFIRMED_HEIGHT_UNKNOWN",
+        "visual_height_source": "LEGACY_VISUAL_DEFAULT_0.60_NOT_SECTION",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-P2-V-069",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONTOUR_PAIR_GEOMETRY",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONTOUR_PAIR_GEOMETRY",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "P2-VB-0091",
+            "P2-VB-0092"
+          ],
+          "width_m": 0.6
+        },
+        "section_evidence_labels": [],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-102.dxf",
+      "evidence": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-P2-V-082",
+      "solidTag": "SOL_2_beam_0291",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_2_beam_0291",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "2",
+        "sourceTag": "P2-VP-062",
+        "sourceTags": [
+          "P2-VB-0104",
+          "P2-VB-0105"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-102.dxf",
+        "start": [
+          29.999900000000004,
+          16.6815,
+          11.48
+        ],
+        "end": [
+          29.999900000000004,
+          18.1572,
+          11.48
+        ],
+        "width_m": 0.6,
+        "height_m": 0.8,
+        "length_m": 1.4756999999999998,
+        "section_width_m": 0.6,
+        "section_height_m": 0.8,
+        "section_source": "CAD_CONTOUR_WIDTH+INFERRED_REPEATED_PLAN_LABEL",
+        "section_confidence": "INFERRED_SECTION_HEIGHT_FROM_CONFIRMED_FAMILY",
+        "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-P2-V-082",
+        "audit_resolution": {
+          "classification": "CONFIRMED_REPEATED_PLAN_GEOMETRY",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_REPEATED_PLAN_GEOMETRY",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "P2-VB-0104",
+            "P2-VB-0105"
+          ],
+          "width_m": 0.6
+        },
+        "section_evidence_labels": [
+          "LBL_3_beam_label_0078",
+          "LBL_4_beam_label_0075"
+        ],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-102.dxf",
+      "evidence": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-P2-V-075",
+      "solidTag": "SOL_2_beam_0287",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_2_beam_0287",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "2",
+        "sourceTag": "P2-VP-060",
+        "sourceTags": [
+          "P2-VB-0098",
+          "P2-VB-0101"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-102.dxf",
+        "start": [
+          24.6999,
+          18.7914,
+          11.655000000000001
+        ],
+        "end": [
+          29.649900000000002,
+          18.7914,
+          11.655000000000001
+        ],
+        "width_m": 0.3,
+        "height_m": 0.45,
+        "length_m": 4.950000000000003,
+        "section_width_m": 0.3,
+        "section_height_m": 0.45,
+        "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
+        "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+        "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-P2-V-075",
+        "audit_resolution": {
+          "classification": "CONFIRMED_LABEL_WIDTH",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_LABEL_WIDTH",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "P2-VB-0098",
+            "P2-VB-0101"
+          ],
+          "width_m": 0.3
+        },
+        "section_evidence_labels": [
+          "LBL_2_beam_label_0074"
+        ],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-102.dxf",
+      "evidence": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-P2-V-055",
+      "solidTag": "SOL_2_beam_0289",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_2_beam_0289",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "2",
+        "sourceTag": "P2-VP-061",
+        "sourceTags": [
+          "P2-VB-0102",
+          "P2-VB-0103"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-102.dxf",
+        "start": [
+          19.6999,
+          18.7914,
+          11.655000000000001
+        ],
+        "end": [
+          24.6999,
+          18.7914,
+          11.655000000000001
+        ],
+        "width_m": 0.3,
+        "height_m": 0.45,
+        "length_m": 5.0,
+        "section_width_m": 0.3,
+        "section_height_m": 0.45,
+        "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
+        "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+        "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-P2-V-055",
+        "audit_resolution": {
+          "classification": "CONFIRMED_LABEL_WIDTH",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_LABEL_WIDTH",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "P2-VB-0102",
+            "P2-VB-0103"
+          ],
+          "width_m": 0.3
+        },
+        "section_evidence_labels": [
+          "LBL_2_beam_label_0075"
+        ],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-102.dxf",
+      "evidence": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-P1-M-027",
+      "solidTag": "SOL_1_wall_0077",
+      "category": "wall",
+      "old_geometry": {
+        "solidTag": "SOL_1_wall_0077",
+        "category": "wall",
+        "kind": "linear_prism",
+        "floor": "1",
+        "sourceTag": "P1-WP-014",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "source_dxf": "2017_67-101.dxf",
+        "sourceTags": [
+          "P1-RLE-MURO-0029",
+          "P1-RLE-MURO-0031"
+        ],
+        "start": [
+          40.150000000000006,
+          16.7201,
+          5.9399999999999995
+        ],
+        "end": [
+          40.150000000000006,
+          26.3258,
+          5.9399999999999995
+        ],
+        "width_m": 0.3,
+        "height_m": 3.9599999999999995,
+        "length_m": 9.605700000000002,
+        "confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "preserved_viewer_id": "E1-P1-M-027",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "Dos caras paralelas directas del DXF definen una centrolinea y su espesor real."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONTOUR_PAIR",
+          "audit_file": "entregas/P1L2/edificio/validacion/ed1_walls/ed1_wall_face_audit.json",
+          "face_ids": [
+            "P1-RLE-MURO-0029",
+            "P1-RLE-MURO-0031"
+          ],
+          "thickness_m": 0.3
+        }
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "Manual review + canonical primary CAD provenance. C007/C009: explicit clarification retains P2; transfer remains unverified.",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-P1-M-028",
+      "solidTag": "SOL_1_wall_0078",
+      "category": "wall",
+      "old_geometry": {
+        "solidTag": "SOL_1_wall_0078",
+        "category": "wall",
+        "kind": "linear_prism",
+        "floor": "1",
+        "sourceTag": "P1-WP-010",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "source_dxf": "2017_67-101.dxf",
+        "sourceTags": [
+          "P1-RLE-MURO-0024",
+          "P1-RLE-MURO-0025"
+        ],
+        "start": [
+          40.150000000000006,
+          0.3501,
+          5.9399999999999995
+        ],
+        "end": [
+          40.150000000000006,
+          8.5501,
+          5.9399999999999995
+        ],
+        "width_m": 0.3,
+        "height_m": 3.9599999999999995,
+        "length_m": 8.200000000000001,
+        "confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "preserved_viewer_id": "E1-P1-M-028",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "Dos caras paralelas directas del DXF definen una centrolinea y su espesor real."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONTOUR_PAIR",
+          "audit_file": "entregas/P1L2/edificio/validacion/ed1_walls/ed1_wall_face_audit.json",
+          "face_ids": [
+            "P1-RLE-MURO-0024",
+            "P1-RLE-MURO-0025"
+          ],
+          "thickness_m": 0.3
+        }
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_INTERIOR_WALL_ACKNOWLEDGED",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2026-09-23 clarification: remove also the two interior axis-I panels, after location discrepancy was reported. Not classified as exterior.",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-P1-M-029",
+      "solidTag": "SOL_1_wall_0079",
+      "category": "wall",
+      "old_geometry": {
+        "solidTag": "SOL_1_wall_0079",
+        "category": "wall",
+        "kind": "linear_prism",
+        "floor": "1",
+        "sourceTag": "P1-WP-009",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "source_dxf": "2017_67-101.dxf",
+        "sourceTags": [
+          "P1-RLE-MURO-0021",
+          "P1-RLE-MURO-0022"
+        ],
+        "start": [
+          40.150000000000006,
+          9.2501,
+          5.9399999999999995
+        ],
+        "end": [
+          40.150000000000006,
+          15.8,
+          5.9399999999999995
+        ],
+        "width_m": 0.3,
+        "height_m": 3.9599999999999995,
+        "length_m": 6.549900000000001,
+        "confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "preserved_viewer_id": "E1-P1-M-029",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "Dos caras paralelas directas del DXF definen una centrolinea y su espesor real."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONTOUR_PAIR",
+          "audit_file": "entregas/P1L2/edificio/validacion/ed1_walls/ed1_wall_face_audit.json",
+          "face_ids": [
+            "P1-RLE-MURO-0021",
+            "P1-RLE-MURO-0022"
+          ],
+          "thickness_m": 0.3
+        }
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_INTERIOR_WALL_ACKNOWLEDGED",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2026-09-23 clarification: remove also the two interior axis-I panels, after location discrepancy was reported. Not classified as exterior.",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-M-026",
+      "solidTag": "SOL_1S_wall_0045",
+      "category": "wall",
+      "old_geometry": {
+        "solidTag": "SOL_1S_wall_0045",
+        "category": "wall",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-WP-014",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "source_dxf": "2017_67-101.dxf",
+        "sourceTags": [
+          "S1-RLE-MURO-0058",
+          "S1-RLE-MURO-0059"
+        ],
+        "start": [
+          3.6999999999999993,
+          4.0814,
+          1.98
+        ],
+        "end": [
+          6.299999999999997,
+          4.0814,
+          1.98
+        ],
+        "width_m": 0.2,
+        "height_m": 3.96,
+        "length_m": 2.599999999999998,
+        "confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "preserved_viewer_id": "E1-S1-M-026",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "Dos caras paralelas directas del DXF definen una centrolinea y su espesor real."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONTOUR_PAIR",
+          "audit_file": "entregas/P1L2/edificio/validacion/ed1_walls/ed1_wall_face_audit.json",
+          "face_ids": [
+            "S1-RLE-MURO-0058",
+            "S1-RLE-MURO-0059"
+          ],
+          "thickness_m": 0.2
+        }
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-P1-M-004",
+      "solidTag": "SOL_1_wall_0071",
+      "category": "wall",
+      "old_geometry": {
+        "solidTag": "SOL_1_wall_0071",
+        "category": "wall",
+        "kind": "linear_prism",
+        "floor": "1",
+        "sourceTag": "P1-WP-006",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "source_dxf": "2017_67-101.dxf",
+        "sourceTags": [
+          "P1-RLE-MURO-0015",
+          "P1-RLE-MURO-0016"
+        ],
+        "start": [
+          3.6999999999999993,
+          3.9001,
+          5.9399999999999995
+        ],
+        "end": [
+          6.299999999999997,
+          3.9001,
+          5.9399999999999995
+        ],
+        "width_m": 0.2,
+        "height_m": 3.9599999999999995,
+        "length_m": 2.599999999999998,
+        "confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "preserved_viewer_id": "E1-P1-M-004",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "Dos caras paralelas directas del DXF definen una centrolinea y su espesor real."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONTOUR_PAIR",
+          "audit_file": "entregas/P1L2/edificio/validacion/ed1_walls/ed1_wall_face_audit.json",
+          "face_ids": [
+            "P1-RLE-MURO-0015",
+            "P1-RLE-MURO-0016"
+          ],
+          "thickness_m": 0.2
+        }
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-P2-M-007",
+      "solidTag": "SOL_2_wall_0100",
+      "category": "wall",
+      "old_geometry": {
+        "solidTag": "SOL_2_wall_0100",
+        "category": "wall",
+        "kind": "linear_prism",
+        "floor": "2",
+        "sourceTag": "P2-WP-006",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "source_dxf": "2017_67-102.dxf",
+        "sourceTags": [
+          "P2-RLE-MURO-0015",
+          "P2-RLE-MURO-0016"
+        ],
+        "start": [
+          3.6998999999999995,
+          4.0815,
+          9.9
+        ],
+        "end": [
+          6.299900000000001,
+          4.0815,
+          9.9
+        ],
+        "width_m": 0.2,
+        "height_m": 3.960000000000001,
+        "length_m": 2.6000000000000014,
+        "confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "preserved_viewer_id": "E1-P2-M-007",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "Dos caras paralelas directas del DXF definen una centrolinea y su espesor real."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONTOUR_PAIR",
+          "audit_file": "entregas/P1L2/edificio/validacion/ed1_walls/ed1_wall_face_audit.json",
+          "face_ids": [
+            "P2-RLE-MURO-0015",
+            "P2-RLE-MURO-0016"
+          ],
+          "thickness_m": 0.2
+        }
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-102.dxf",
+      "evidence": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-P3-M-007",
+      "solidTag": "SOL_3_wall_0112",
+      "category": "wall",
+      "old_geometry": {
+        "solidTag": "SOL_3_wall_0112",
+        "category": "wall",
+        "kind": "linear_prism",
+        "floor": "3",
+        "sourceTag": "P3-WP-006",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "source_dxf": "2017_67-102.dxf",
+        "sourceTags": [
+          "P3-RLE-MURO-0015",
+          "P3-RLE-MURO-0016"
+        ],
+        "start": [
+          3.6998999999999995,
+          4.0815,
+          13.86
+        ],
+        "end": [
+          6.299900000000001,
+          4.0815,
+          13.86
+        ],
+        "width_m": 0.2,
+        "height_m": 3.959999999999999,
+        "length_m": 2.6000000000000014,
+        "confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "preserved_viewer_id": "E1-P3-M-007",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "Dos caras paralelas directas del DXF definen una centrolinea y su espesor real."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONTOUR_PAIR",
+          "audit_file": "entregas/P1L2/edificio/validacion/ed1_walls/ed1_wall_face_audit.json",
+          "face_ids": [
+            "P3-RLE-MURO-0015",
+            "P3-RLE-MURO-0016"
+          ],
+          "thickness_m": 0.2
+        }
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-102.dxf",
+      "evidence": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-P4-M-007",
+      "solidTag": "SOL_4_wall_0124",
+      "category": "wall",
+      "old_geometry": {
+        "solidTag": "SOL_4_wall_0124",
+        "category": "wall",
+        "kind": "linear_prism",
+        "floor": "4",
+        "sourceTag": "P4-WP-006",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "source_dxf": "2017_67-103.dxf",
+        "sourceTags": [
+          "P4-RLE-MURO-0015",
+          "P4-RLE-MURO-0016"
+        ],
+        "start": [
+          3.6998999999999995,
+          4.0815,
+          17.82
+        ],
+        "end": [
+          6.299900000000001,
+          4.0815,
+          17.82
+        ],
+        "width_m": 0.2,
+        "height_m": 3.960000000000001,
+        "length_m": 2.6000000000000014,
+        "confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "preserved_viewer_id": "E1-P4-M-007",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "Dos caras paralelas directas del DXF definen una centrolinea y su espesor real."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONTOUR_PAIR",
+          "audit_file": "entregas/P1L2/edificio/validacion/ed1_walls/ed1_wall_face_audit.json",
+          "face_ids": [
+            "P4-RLE-MURO-0015",
+            "P4-RLE-MURO-0016"
+          ],
+          "thickness_m": 0.2
+        }
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-103.dxf",
+      "evidence": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-M-029",
+      "solidTag": "SOL_1S_wall_0035",
+      "category": "wall",
+      "old_geometry": {
+        "solidTag": "SOL_1S_wall_0035",
+        "category": "wall",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-WP-009",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "source_dxf": "2017_67-101.dxf",
+        "sourceTags": [
+          "S1-RLE-MURO-0044",
+          "S1-RLE-MURO-0045"
+        ],
+        "start": [
+          3.3999999999999986,
+          14.0264,
+          1.98
+        ],
+        "end": [
+          6.600000000000001,
+          14.0264,
+          1.98
+        ],
+        "width_m": 0.2,
+        "height_m": 3.96,
+        "length_m": 3.200000000000003,
+        "confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "preserved_viewer_id": "E1-S1-M-029",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "Dos caras paralelas directas del DXF definen una centrolinea y su espesor real."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONTOUR_PAIR",
+          "audit_file": "entregas/P1L2/edificio/validacion/ed1_walls/ed1_wall_face_audit.json",
+          "face_ids": [
+            "S1-RLE-MURO-0044",
+            "S1-RLE-MURO-0045"
+          ],
+          "thickness_m": 0.2
+        }
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-P1-M-010",
+      "solidTag": "SOL_1_wall_0061",
+      "category": "wall",
+      "old_geometry": {
+        "solidTag": "SOL_1_wall_0061",
+        "category": "wall",
+        "kind": "linear_prism",
+        "floor": "1",
+        "sourceTag": "P1-WP-001",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "source_dxf": "2017_67-101.dxf",
+        "sourceTags": [
+          "P1-RLE-MURO-0001",
+          "P1-RLE-MURO-0002"
+        ],
+        "start": [
+          3.3999999999999986,
+          13.8451,
+          5.9399999999999995
+        ],
+        "end": [
+          6.600000000000001,
+          13.8451,
+          5.9399999999999995
+        ],
+        "width_m": 0.2,
+        "height_m": 3.9599999999999995,
+        "length_m": 3.200000000000003,
+        "confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "preserved_viewer_id": "E1-P1-M-010",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "Dos caras paralelas directas del DXF definen una centrolinea y su espesor real."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONTOUR_PAIR",
+          "audit_file": "entregas/P1L2/edificio/validacion/ed1_walls/ed1_wall_face_audit.json",
+          "face_ids": [
+            "P1-RLE-MURO-0001",
+            "P1-RLE-MURO-0002"
+          ],
+          "thickness_m": 0.2
+        }
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-P2-M-008",
+      "solidTag": "SOL_2_wall_0099",
+      "category": "wall",
+      "old_geometry": {
+        "solidTag": "SOL_2_wall_0099",
+        "category": "wall",
+        "kind": "linear_prism",
+        "floor": "2",
+        "sourceTag": "P2-WP-001",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "source_dxf": "2017_67-102.dxf",
+        "sourceTags": [
+          "P2-RLE-MURO-0001",
+          "P2-RLE-MURO-0002"
+        ],
+        "start": [
+          3.399899999999999,
+          14.0265,
+          9.9
+        ],
+        "end": [
+          6.599899999999998,
+          14.0265,
+          9.9
+        ],
+        "width_m": 0.2,
+        "height_m": 3.960000000000001,
+        "length_m": 3.1999999999999993,
+        "confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "preserved_viewer_id": "E1-P2-M-008",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "Dos caras paralelas directas del DXF definen una centrolinea y su espesor real."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONTOUR_PAIR",
+          "audit_file": "entregas/P1L2/edificio/validacion/ed1_walls/ed1_wall_face_audit.json",
+          "face_ids": [
+            "P2-RLE-MURO-0001",
+            "P2-RLE-MURO-0002"
+          ],
+          "thickness_m": 0.2
+        }
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-102.dxf",
+      "evidence": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-P3-M-008",
+      "solidTag": "SOL_3_wall_0111",
+      "category": "wall",
+      "old_geometry": {
+        "solidTag": "SOL_3_wall_0111",
+        "category": "wall",
+        "kind": "linear_prism",
+        "floor": "3",
+        "sourceTag": "P3-WP-001",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "source_dxf": "2017_67-102.dxf",
+        "sourceTags": [
+          "P3-RLE-MURO-0001",
+          "P3-RLE-MURO-0002"
+        ],
+        "start": [
+          3.399899999999999,
+          14.0265,
+          13.86
+        ],
+        "end": [
+          6.599899999999998,
+          14.0265,
+          13.86
+        ],
+        "width_m": 0.2,
+        "height_m": 3.959999999999999,
+        "length_m": 3.1999999999999993,
+        "confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "preserved_viewer_id": "E1-P3-M-008",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "Dos caras paralelas directas del DXF definen una centrolinea y su espesor real."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONTOUR_PAIR",
+          "audit_file": "entregas/P1L2/edificio/validacion/ed1_walls/ed1_wall_face_audit.json",
+          "face_ids": [
+            "P3-RLE-MURO-0001",
+            "P3-RLE-MURO-0002"
+          ],
+          "thickness_m": 0.2
+        }
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-102.dxf",
+      "evidence": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-P4-M-008",
+      "solidTag": "SOL_4_wall_0123",
+      "category": "wall",
+      "old_geometry": {
+        "solidTag": "SOL_4_wall_0123",
+        "category": "wall",
+        "kind": "linear_prism",
+        "floor": "4",
+        "sourceTag": "P4-WP-001",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "source_dxf": "2017_67-103.dxf",
+        "sourceTags": [
+          "P4-RLE-MURO-0001",
+          "P4-RLE-MURO-0002"
+        ],
+        "start": [
+          3.399899999999999,
+          14.0265,
+          17.82
+        ],
+        "end": [
+          6.599899999999998,
+          14.0265,
+          17.82
+        ],
+        "width_m": 0.2,
+        "height_m": 3.960000000000001,
+        "length_m": 3.1999999999999993,
+        "confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "preserved_viewer_id": "E1-P4-M-008",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "Dos caras paralelas directas del DXF definen una centrolinea y su espesor real."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONTOUR_PAIR",
+          "audit_file": "entregas/P1L2/edificio/validacion/ed1_walls/ed1_wall_face_audit.json",
+          "face_ids": [
+            "P4-RLE-MURO-0001",
+            "P4-RLE-MURO-0002"
+          ],
+          "thickness_m": 0.2
+        }
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-103.dxf",
+      "evidence": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-P1-M-003",
+      "solidTag": "SOL_1_wall_0072",
+      "category": "wall",
+      "old_geometry": {
+        "solidTag": "SOL_1_wall_0072",
+        "category": "wall",
+        "kind": "linear_prism",
+        "floor": "1",
+        "sourceTag": "P1-WP-007",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "source_dxf": "2017_67-101.dxf",
+        "sourceTags": [
+          "P1-RLE-MURO-0015",
+          "P1-RLE-MURO-0017"
+        ],
+        "start": [
+          -0.3500000000000014,
+          3.9001,
+          5.9399999999999995
+        ],
+        "end": [
+          3.3999999999999986,
+          3.9001,
+          5.9399999999999995
+        ],
+        "width_m": 0.2,
+        "height_m": 3.9599999999999995,
+        "length_m": 3.75,
+        "confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "preserved_viewer_id": "E1-P1-M-003",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "Dos caras paralelas directas del DXF definen una centrolinea y su espesor real."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONTOUR_PAIR",
+          "audit_file": "entregas/P1L2/edificio/validacion/ed1_walls/ed1_wall_face_audit.json",
+          "face_ids": [
+            "P1-RLE-MURO-0015",
+            "P1-RLE-MURO-0017"
+          ],
+          "thickness_m": 0.2
+        }
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-P2-M-002",
+      "solidTag": "SOL_2_wall_0109",
+      "category": "wall",
+      "old_geometry": {
+        "solidTag": "SOL_2_wall_0109",
+        "category": "wall",
+        "kind": "linear_prism",
+        "floor": "2",
+        "sourceTag": "P2-WP-007",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "source_dxf": "2017_67-102.dxf",
+        "sourceTags": [
+          "P2-RLE-MURO-0015",
+          "P2-RLE-MURO-0017"
+        ],
+        "start": [
+          -0.3501000000000012,
+          4.0815,
+          9.9
+        ],
+        "end": [
+          3.399899999999999,
+          4.0815,
+          9.9
+        ],
+        "width_m": 0.2,
+        "height_m": 3.960000000000001,
+        "length_m": 3.75,
+        "confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "preserved_viewer_id": "E1-P2-M-002",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "Dos caras paralelas directas del DXF definen una centrolinea y su espesor real."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONTOUR_PAIR",
+          "audit_file": "entregas/P1L2/edificio/validacion/ed1_walls/ed1_wall_face_audit.json",
+          "face_ids": [
+            "P2-RLE-MURO-0015",
+            "P2-RLE-MURO-0017"
+          ],
+          "thickness_m": 0.2
+        }
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-102.dxf",
+      "evidence": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-P3-M-002",
+      "solidTag": "SOL_3_wall_0121",
+      "category": "wall",
+      "old_geometry": {
+        "solidTag": "SOL_3_wall_0121",
+        "category": "wall",
+        "kind": "linear_prism",
+        "floor": "3",
+        "sourceTag": "P3-WP-007",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "source_dxf": "2017_67-102.dxf",
+        "sourceTags": [
+          "P3-RLE-MURO-0015",
+          "P3-RLE-MURO-0017"
+        ],
+        "start": [
+          -0.3501000000000012,
+          4.0815,
+          13.86
+        ],
+        "end": [
+          3.399899999999999,
+          4.0815,
+          13.86
+        ],
+        "width_m": 0.2,
+        "height_m": 3.959999999999999,
+        "length_m": 3.75,
+        "confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "preserved_viewer_id": "E1-P3-M-002",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "Dos caras paralelas directas del DXF definen una centrolinea y su espesor real."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONTOUR_PAIR",
+          "audit_file": "entregas/P1L2/edificio/validacion/ed1_walls/ed1_wall_face_audit.json",
+          "face_ids": [
+            "P3-RLE-MURO-0015",
+            "P3-RLE-MURO-0017"
+          ],
+          "thickness_m": 0.2
+        }
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-102.dxf",
+      "evidence": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-P4-M-002",
+      "solidTag": "SOL_4_wall_0133",
+      "category": "wall",
+      "old_geometry": {
+        "solidTag": "SOL_4_wall_0133",
+        "category": "wall",
+        "kind": "linear_prism",
+        "floor": "4",
+        "sourceTag": "P4-WP-007",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "source_dxf": "2017_67-103.dxf",
+        "sourceTags": [
+          "P4-RLE-MURO-0015",
+          "P4-RLE-MURO-0017"
+        ],
+        "start": [
+          -0.3501000000000012,
+          4.0815,
+          17.82
+        ],
+        "end": [
+          3.399899999999999,
+          4.0815,
+          17.82
+        ],
+        "width_m": 0.2,
+        "height_m": 3.960000000000001,
+        "length_m": 3.75,
+        "confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "preserved_viewer_id": "E1-P4-M-002",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "Dos caras paralelas directas del DXF definen una centrolinea y su espesor real."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONTOUR_PAIR",
+          "audit_file": "entregas/P1L2/edificio/validacion/ed1_walls/ed1_wall_face_audit.json",
+          "face_ids": [
+            "P4-RLE-MURO-0015",
+            "P4-RLE-MURO-0017"
+          ],
+          "thickness_m": 0.2
+        }
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-103.dxf",
+      "evidence": "User seeds + 2026-09-23 clarification (ED2 east removed; west M002/M003 and neighbors retained)",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-M-001",
+      "solidTag": "SOL_1S_wall_0001",
+      "category": "wall",
+      "old_geometry": {
+        "solidTag": "SOL_1S_wall_0001",
+        "category": "wall",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-WP-001",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "source_dxf": "2017_67-101.dxf",
+        "sourceTags": [
+          "S1-RLE-MURO-0001",
+          "S1-RLE-MURO-0002"
+        ],
+        "start": [
+          -0.25,
+          -8.3686,
+          1.98
+        ],
+        "end": [
+          -0.25,
+          -0.4687,
+          1.98
+        ],
+        "width_m": 0.2,
+        "height_m": 3.96,
+        "length_m": 7.899900000000001,
+        "confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "preserved_viewer_id": "E1-S1-M-001",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "Dos caras paralelas directas del DXF definen una centrolinea y su espesor real."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONTOUR_PAIR",
+          "audit_file": "entregas/P1L2/edificio/validacion/ed1_walls/ed1_wall_face_audit.json",
+          "face_ids": [
+            "S1-RLE-MURO-0001",
+            "S1-RLE-MURO-0002"
+          ],
+          "thickness_m": 0.2
+        }
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-M-007",
+      "solidTag": "SOL_1S_wall_0051",
+      "category": "wall",
+      "old_geometry": {
+        "solidTag": "SOL_1S_wall_0051",
+        "category": "wall",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-WP-016",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "source_dxf": "2017_67-101.dxf",
+        "sourceTags": [
+          "S1-RLE-MURO-0061",
+          "S1-RLE-MURO-0077"
+        ],
+        "start": [
+          -0.14999999999999858,
+          -8.4686,
+          1.98
+        ],
+        "end": [
+          0.5,
+          -8.4686,
+          1.98
+        ],
+        "width_m": 0.2,
+        "height_m": 3.96,
+        "length_m": 0.6499999999999986,
+        "confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "preserved_viewer_id": "E1-S1-M-007",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "Dos caras paralelas directas del DXF definen una centrolinea y su espesor real."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONTOUR_PAIR",
+          "audit_file": "entregas/P1L2/edificio/validacion/ed1_walls/ed1_wall_face_audit.json",
+          "face_ids": [
+            "S1-RLE-MURO-0061",
+            "S1-RLE-MURO-0077"
+          ],
+          "thickness_m": 0.2
+        }
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-M-027",
+      "solidTag": "SOL_1S_wall_0046",
+      "category": "wall",
+      "old_geometry": {
+        "solidTag": "SOL_1S_wall_0046",
+        "category": "wall",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-WP-015",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "source_dxf": "2017_67-101.dxf",
+        "sourceTags": [
+          "S1-RLE-MURO-0060",
+          "S1-RLE-MURO-0078"
+        ],
+        "start": [
+          4.0763,
+          -8.4686,
+          1.98
+        ],
+        "end": [
+          4.676299999999998,
+          -8.4686,
+          1.98
+        ],
+        "width_m": 0.2,
+        "height_m": 3.96,
+        "length_m": 0.5999999999999979,
+        "confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "preserved_viewer_id": "E1-S1-M-027",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "Dos caras paralelas directas del DXF definen una centrolinea y su espesor real."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONTOUR_PAIR",
+          "audit_file": "entregas/P1L2/edificio/validacion/ed1_walls/ed1_wall_face_audit.json",
+          "face_ids": [
+            "S1-RLE-MURO-0060",
+            "S1-RLE-MURO-0078"
+          ],
+          "thickness_m": 0.2
+        }
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-M-051",
+      "solidTag": "SOL_1S_wall_0008",
+      "category": "wall",
+      "old_geometry": {
+        "solidTag": "SOL_1S_wall_0008",
+        "category": "wall",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-WP-021",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "source_dxf": "2017_67-101.dxf",
+        "sourceTags": [
+          "S1-RLE-MURO-0082",
+          "S1-RLE-MURO-0084"
+        ],
+        "start": [
+          6.476300000000002,
+          -8.4686,
+          1.98
+        ],
+        "end": [
+          7.076300000000003,
+          -8.4686,
+          1.98
+        ],
+        "width_m": 0.2,
+        "height_m": 3.96,
+        "length_m": 0.6000000000000014,
+        "confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "preserved_viewer_id": "E1-S1-M-051",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "Dos caras paralelas directas del DXF definen una centrolinea y su espesor real."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONTOUR_PAIR",
+          "audit_file": "entregas/P1L2/edificio/validacion/ed1_walls/ed1_wall_face_audit.json",
+          "face_ids": [
+            "S1-RLE-MURO-0082",
+            "S1-RLE-MURO-0084"
+          ],
+          "thickness_m": 0.2
+        }
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-M-052",
+      "solidTag": "SOL_1S_wall_0007",
+      "category": "wall",
+      "old_geometry": {
+        "solidTag": "SOL_1S_wall_0007",
+        "category": "wall",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-WP-002",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "source_dxf": "2017_67-101.dxf",
+        "sourceTags": [
+          "S1-RLE-MURO-0004",
+          "S1-RLE-MURO-0005"
+        ],
+        "start": [
+          6.476300000000002,
+          -0.4187,
+          1.98
+        ],
+        "end": [
+          21.25,
+          -0.4187,
+          1.98
+        ],
+        "width_m": 0.3,
+        "height_m": 3.96,
+        "length_m": 14.773699999999998,
+        "confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "preserved_viewer_id": "E1-S1-M-052",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "Dos caras paralelas directas del DXF definen una centrolinea y su espesor real."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONTOUR_PAIR",
+          "audit_file": "entregas/P1L2/edificio/validacion/ed1_walls/ed1_wall_face_audit.json",
+          "face_ids": [
+            "S1-RLE-MURO-0004",
+            "S1-RLE-MURO-0005"
+          ],
+          "thickness_m": 0.3
+        }
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-M-053",
+      "solidTag": "SOL_1S_wall_0050",
+      "category": "wall",
+      "old_geometry": {
+        "solidTag": "SOL_1S_wall_0050",
+        "category": "wall",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-WP-018",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "source_dxf": "2017_67-101.dxf",
+        "sourceTags": [
+          "S1-RLE-MURO-0070",
+          "S1-RLE-MURO-0072"
+        ],
+        "start": [
+          9.475299999999997,
+          -8.4686,
+          1.98
+        ],
+        "end": [
+          21.25,
+          -8.4686,
+          1.98
+        ],
+        "width_m": 0.2,
+        "height_m": 3.96,
+        "length_m": 11.774700000000003,
+        "confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "preserved_viewer_id": "E1-S1-M-053",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "Dos caras paralelas directas del DXF definen una centrolinea y su espesor real."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONTOUR_PAIR",
+          "audit_file": "entregas/P1L2/edificio/validacion/ed1_walls/ed1_wall_face_audit.json",
+          "face_ids": [
+            "S1-RLE-MURO-0070",
+            "S1-RLE-MURO-0072"
+          ],
+          "thickness_m": 0.2
+        }
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-M-060",
+      "solidTag": "SOL_1S_wall_0010",
+      "category": "wall",
+      "old_geometry": {
+        "solidTag": "SOL_1S_wall_0010",
+        "category": "wall",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-WP-003",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "source_dxf": "2017_67-101.dxf",
+        "sourceTags": [
+          "S1-RLE-MURO-0007",
+          "S1-RLE-MURO-0008"
+        ],
+        "start": [
+          21.4,
+          -8.3686,
+          1.98
+        ],
+        "end": [
+          21.4,
+          -0.5687,
+          1.98
+        ],
+        "width_m": 0.3,
+        "height_m": 3.96,
+        "length_m": 7.799900000000001,
+        "confidence": "confirmed_from_RLE_MURO_contour_pair",
+        "preserved_viewer_id": "E1-S1-M-060",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "Dos caras paralelas directas del DXF definen una centrolinea y su espesor real."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONTOUR_PAIR",
+          "audit_file": "entregas/P1L2/edificio/validacion/ed1_walls/ed1_wall_face_audit.json",
+          "face_ids": [
+            "S1-RLE-MURO-0007",
+            "S1-RLE-MURO-0008"
+          ],
+          "thickness_m": 0.3
+        }
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-A-001",
+      "solidTag": "SOL_base_support_0001",
+      "category": "support",
+      "old_geometry": {
+        "solidTag": "SOL_base_support_0001",
+        "category": "support",
+        "kind": "linear_prism",
+        "floor": "base",
+        "sourceTag": "SOL_1S_wall_0001",
+        "source_layer": "generated_from_confirmed_wall_centerline",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          -0.25,
+          -8.3686,
+          -0.15
+        ],
+        "end": [
+          -0.25,
+          -0.4687,
+          -0.15
+        ],
+        "width_m": 0.45,
+        "height_m": 0.3,
+        "length_m": 7.899900000000001,
+        "confidence": "derived_from_confirmed_wall_centerline",
+        "preserved_viewer_id": "E1-S1-A-001"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-A-010",
+      "solidTag": "SOL_base_support_0051",
+      "category": "support",
+      "old_geometry": {
+        "solidTag": "SOL_base_support_0051",
+        "category": "support",
+        "kind": "linear_prism",
+        "floor": "base",
+        "sourceTag": "SOL_1S_wall_0051",
+        "source_layer": "generated_from_confirmed_wall_centerline",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          -0.14999999999999858,
+          -8.4686,
+          -0.15
+        ],
+        "end": [
+          0.5,
+          -8.4686,
+          -0.15
+        ],
+        "width_m": 0.45,
+        "height_m": 0.3,
+        "length_m": 0.6499999999999986,
+        "confidence": "derived_from_confirmed_wall_centerline",
+        "preserved_viewer_id": "E1-S1-A-010"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-A-030",
+      "solidTag": "SOL_base_support_0046",
+      "category": "support",
+      "old_geometry": {
+        "solidTag": "SOL_base_support_0046",
+        "category": "support",
+        "kind": "linear_prism",
+        "floor": "base",
+        "sourceTag": "SOL_1S_wall_0046",
+        "source_layer": "generated_from_confirmed_wall_centerline",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          4.0763,
+          -8.4686,
+          -0.15
+        ],
+        "end": [
+          4.676299999999998,
+          -8.4686,
+          -0.15
+        ],
+        "width_m": 0.45,
+        "height_m": 0.3,
+        "length_m": 0.5999999999999979,
+        "confidence": "derived_from_confirmed_wall_centerline",
+        "preserved_viewer_id": "E1-S1-A-030"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-A-057",
+      "solidTag": "SOL_base_support_0008",
+      "category": "support",
+      "old_geometry": {
+        "solidTag": "SOL_base_support_0008",
+        "category": "support",
+        "kind": "linear_prism",
+        "floor": "base",
+        "sourceTag": "SOL_1S_wall_0008",
+        "source_layer": "generated_from_confirmed_wall_centerline",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          6.476300000000002,
+          -8.4686,
+          -0.15
+        ],
+        "end": [
+          7.076300000000003,
+          -8.4686,
+          -0.15
+        ],
+        "width_m": 0.45,
+        "height_m": 0.3,
+        "length_m": 0.6000000000000014,
+        "confidence": "derived_from_confirmed_wall_centerline",
+        "preserved_viewer_id": "E1-S1-A-057"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-A-058",
+      "solidTag": "SOL_base_support_0007",
+      "category": "support",
+      "old_geometry": {
+        "solidTag": "SOL_base_support_0007",
+        "category": "support",
+        "kind": "linear_prism",
+        "floor": "base",
+        "sourceTag": "SOL_1S_wall_0007",
+        "source_layer": "generated_from_confirmed_wall_centerline",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          6.476300000000002,
+          -0.4187,
+          -0.15
+        ],
+        "end": [
+          21.25,
+          -0.4187,
+          -0.15
+        ],
+        "width_m": 0.45,
+        "height_m": 0.3,
+        "length_m": 14.773699999999998,
+        "confidence": "derived_from_confirmed_wall_centerline",
+        "preserved_viewer_id": "E1-S1-A-058"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-A-059",
+      "solidTag": "SOL_base_support_0050",
+      "category": "support",
+      "old_geometry": {
+        "solidTag": "SOL_base_support_0050",
+        "category": "support",
+        "kind": "linear_prism",
+        "floor": "base",
+        "sourceTag": "SOL_1S_wall_0050",
+        "source_layer": "generated_from_confirmed_wall_centerline",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          9.475299999999997,
+          -8.4686,
+          -0.15
+        ],
+        "end": [
+          21.25,
+          -8.4686,
+          -0.15
+        ],
+        "width_m": 0.45,
+        "height_m": 0.3,
+        "length_m": 11.774700000000003,
+        "confidence": "derived_from_confirmed_wall_centerline",
+        "preserved_viewer_id": "E1-S1-A-059"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-A-070",
+      "solidTag": "SOL_base_support_0010",
+      "category": "support",
+      "old_geometry": {
+        "solidTag": "SOL_base_support_0010",
+        "category": "support",
+        "kind": "linear_prism",
+        "floor": "base",
+        "sourceTag": "SOL_1S_wall_0010",
+        "source_layer": "generated_from_confirmed_wall_centerline",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          21.4,
+          -8.3686,
+          -0.15
+        ],
+        "end": [
+          21.4,
+          -0.5687,
+          -0.15
+        ],
+        "width_m": 0.45,
+        "height_m": 0.3,
+        "length_m": 7.799900000000001,
+        "confidence": "derived_from_confirmed_wall_centerline",
+        "preserved_viewer_id": "E1-S1-A-070"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-V-001",
+      "solidTag": "SOL_1S_beam_0010",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1S_beam_0010",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-VP-009",
+        "sourceTags": [
+          "S1-VB-0010",
+          "S1-VB-0011"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          -0.25,
+          -10.4386,
+          3.3099999999999996
+        ],
+        "end": [
+          -0.25,
+          -8.5686,
+          3.3099999999999996
+        ],
+        "width_m": 0.2,
+        "height_m": 1.3,
+        "length_m": 1.8699999999999992,
+        "section_width_m": 0.2,
+        "section_height_m": 1.3,
+        "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
+        "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+        "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-S1-V-001",
+        "audit_resolution": {
+          "classification": "CONFIRMED_LABEL_WIDTH",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_LABEL_WIDTH",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "S1-VB-0010",
+            "S1-VB-0011"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [
+          "LBL_1S_beam_label_0060"
+        ],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-V-048",
+      "solidTag": "SOL_1S_beam_0012",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1S_beam_0012",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-VP-010",
+        "sourceTags": [
+          "S1-VB-0013",
+          "S1-VB-0021"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          11.639600000000002,
+          -10.5386,
+          3.2099999999999995
+        ],
+        "end": [
+          12.390700000000002,
+          -10.5386,
+          3.2099999999999995
+        ],
+        "width_m": 0.2,
+        "height_m": 1.5,
+        "length_m": 0.751100000000001,
+        "section_width_m": 0.2,
+        "section_height_m": 1.5,
+        "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
+        "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+        "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-S1-V-048",
+        "audit_resolution": {
+          "classification": "CONFIRMED_LABEL_WIDTH",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_LABEL_WIDTH",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "S1-VB-0013",
+            "S1-VB-0021"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [
+          "LBL_1S_beam_label_0035"
+        ],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-V-027",
+      "solidTag": "SOL_1S_beam_0013",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1S_beam_0013",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-VP-011",
+        "sourceTags": [
+          "S1-VB-0014",
+          "S1-VB-0016"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          0.5,
+          -10.5386,
+          3.3099999999999996
+        ],
+        "end": [
+          3.0630999999999986,
+          -10.5386,
+          3.3099999999999996
+        ],
+        "width_m": 0.2,
+        "height_m": 1.3,
+        "length_m": 2.5630999999999986,
+        "section_width_m": 0.2,
+        "section_height_m": 1.3,
+        "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
+        "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+        "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-S1-V-027",
+        "audit_resolution": {
+          "classification": "CONFIRMED_LABEL_WIDTH",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_LABEL_WIDTH",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "S1-VB-0014",
+            "S1-VB-0016"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [
+          "LBL_1S_beam_label_0060"
+        ],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-V-014",
+      "solidTag": "SOL_1S_beam_0016",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1S_beam_0016",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-VP-012",
+        "sourceTags": [
+          "S1-VB-0014",
+          "S1-VB-0017"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          3.2631000000000014,
+          -10.5386,
+          3.6599999999999997
+        ],
+        "end": [
+          4.586399999999998,
+          -10.5386,
+          3.6599999999999997
+        ],
+        "width_m": 0.2,
+        "height_m": 0.6,
+        "length_m": 1.3232999999999961,
+        "section_width_m": 0.2,
+        "section_height_m": null,
+        "section_source": "CAD_CONTOUR_WIDTH_ONLY",
+        "section_confidence": "WIDTH_CONFIRMED_HEIGHT_UNKNOWN",
+        "visual_height_source": "LEGACY_VISUAL_DEFAULT_0.60_NOT_SECTION",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-S1-V-014",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONNECTED_SECTION_FAMILY",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONNECTED_SECTION_FAMILY",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "S1-VB-0014",
+            "S1-VB-0017"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [],
+        "section_height_candidates_m": [
+          0.8,
+          1.3,
+          1.5
+        ],
+        "section_review": "AMBIGUOUS_CONNECTED_LABEL_HEIGHTS",
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-V-028",
+      "solidTag": "SOL_1S_beam_0056",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1S_beam_0056",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-VP-013",
+        "sourceTags": [
+          "S1-VB-0014",
+          "S1-VB-0017"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          4.676299999999998,
+          -10.5386,
+          3.3099999999999996
+        ],
+        "end": [
+          6.476300000000002,
+          -10.5386,
+          3.3099999999999996
+        ],
+        "width_m": 0.2,
+        "height_m": 1.3,
+        "length_m": 1.8000000000000043,
+        "section_width_m": 0.2,
+        "section_height_m": 1.3,
+        "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
+        "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+        "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-S1-V-028",
+        "audit_resolution": {
+          "classification": "CONFIRMED_LABEL_WIDTH",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_LABEL_WIDTH",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "S1-VB-0014",
+            "S1-VB-0017"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [
+          "LBL_1S_beam_label_0048"
+        ],
+        "historical_id_match_quality": "NEAREST_RETIRED_ID_SAME_ORIENTATION"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-V-037",
+      "solidTag": "SOL_1S_beam_0017",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1S_beam_0017",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-VP-014",
+        "sourceTags": [
+          "S1-VB-0014",
+          "S1-VB-0018"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          6.676299999999998,
+          -10.5386,
+          3.2099999999999995
+        ],
+        "end": [
+          9.475299999999997,
+          -10.5386,
+          3.2099999999999995
+        ],
+        "width_m": 0.2,
+        "height_m": 1.5,
+        "length_m": 2.7989999999999995,
+        "section_width_m": 0.2,
+        "section_height_m": 1.5,
+        "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
+        "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+        "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-S1-V-037",
+        "audit_resolution": {
+          "classification": "CONFIRMED_LABEL_WIDTH",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_LABEL_WIDTH",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "S1-VB-0014",
+            "S1-VB-0018"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [
+          "LBL_1S_beam_label_0035"
+        ],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-V-046",
+      "solidTag": "SOL_1S_beam_0020",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1S_beam_0020",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-VP-015",
+        "sourceTags": [
+          "S1-VB-0014",
+          "S1-VB-0023"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          10.100000000000001,
+          -10.5386,
+          3.2099999999999995
+        ],
+        "end": [
+          11.639600000000002,
+          -10.5386,
+          3.2099999999999995
+        ],
+        "width_m": 0.2,
+        "height_m": 1.5,
+        "length_m": 1.5396,
+        "section_width_m": 0.2,
+        "section_height_m": 1.5,
+        "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
+        "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+        "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-S1-V-046",
+        "audit_resolution": {
+          "classification": "CONFIRMED_LABEL_WIDTH",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_LABEL_WIDTH",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "S1-VB-0014",
+            "S1-VB-0023"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [
+          "LBL_1S_beam_label_0035"
+        ],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-V-063",
+      "solidTag": "SOL_1S_beam_0014",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1S_beam_0014",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-VP-016",
+        "sourceTags": [
+          "S1-VB-0015",
+          "S1-VB-0024"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          13.43,
+          -10.5386,
+          3.6599999999999997
+        ],
+        "end": [
+          16.560000000000002,
+          -10.5386,
+          3.6599999999999997
+        ],
+        "width_m": 0.2,
+        "height_m": 0.6,
+        "length_m": 3.1300000000000026,
+        "section_width_m": 0.2,
+        "section_height_m": null,
+        "section_source": "CAD_CONTOUR_WIDTH_ONLY",
+        "section_confidence": "WIDTH_CONFIRMED_HEIGHT_UNKNOWN",
+        "visual_height_source": "LEGACY_VISUAL_DEFAULT_0.60_NOT_SECTION",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-S1-V-063",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONTOUR_PAIR_GEOMETRY",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONTOUR_PAIR_GEOMETRY",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "S1-VB-0015",
+            "S1-VB-0024"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-V-070",
+      "solidTag": "SOL_1S_beam_0022",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1S_beam_0022",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-VP-017",
+        "sourceTags": [
+          "S1-VB-0015",
+          "S1-VB-0025"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          16.759999999999998,
+          -10.5386,
+          3.6599999999999997
+        ],
+        "end": [
+          19.9,
+          -10.5386,
+          3.6599999999999997
+        ],
+        "width_m": 0.2,
+        "height_m": 0.6,
+        "length_m": 3.1400000000000006,
+        "section_width_m": 0.2,
+        "section_height_m": null,
+        "section_source": "CAD_CONTOUR_WIDTH_ONLY",
+        "section_confidence": "WIDTH_CONFIRMED_HEIGHT_UNKNOWN",
+        "visual_height_source": "LEGACY_VISUAL_DEFAULT_0.60_NOT_SECTION",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-S1-V-070",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONTOUR_PAIR_GEOMETRY",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONTOUR_PAIR_GEOMETRY",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "S1-VB-0015",
+            "S1-VB-0025"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-V-077",
+      "solidTag": "SOL_1S_beam_0023",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1S_beam_0023",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-VP-018",
+        "sourceTags": [
+          "S1-VB-0015",
+          "S1-VB-0026"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          20.1,
+          -10.5386,
+          3.6599999999999997
+        ],
+        "end": [
+          21.25,
+          -10.5386,
+          3.6599999999999997
+        ],
+        "width_m": 0.2,
+        "height_m": 0.6,
+        "length_m": 1.1499999999999986,
+        "section_width_m": 0.2,
+        "section_height_m": null,
+        "section_source": "CAD_CONTOUR_WIDTH_ONLY",
+        "section_confidence": "WIDTH_CONFIRMED_HEIGHT_UNKNOWN",
+        "visual_height_source": "LEGACY_VISUAL_DEFAULT_0.60_NOT_SECTION",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-S1-V-077",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONTOUR_PAIR_GEOMETRY",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONTOUR_PAIR_GEOMETRY",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "S1-VB-0015",
+            "S1-VB-0026"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-V-032",
+      "solidTag": "SOL_1S_beam_0024",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1S_beam_0024",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-VP-019",
+        "sourceTags": [
+          "S1-VB-0027",
+          "S1-VB-0028"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          7.5,
+          -8.3686,
+          3.3099999999999996
+        ],
+        "end": [
+          7.5,
+          -3.1687,
+          3.3099999999999996
+        ],
+        "width_m": 0.2,
+        "height_m": 1.3,
+        "length_m": 5.199900000000001,
+        "section_width_m": 0.2,
+        "section_height_m": 1.3,
+        "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
+        "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+        "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-S1-V-032",
+        "audit_resolution": {
+          "classification": "CONFIRMED_LABEL_WIDTH",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_LABEL_WIDTH",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "S1-VB-0027",
+            "S1-VB-0028"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [
+          "LBL_1S_beam_label_0059"
+        ],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-V-041",
+      "solidTag": "SOL_1S_beam_0026",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1S_beam_0026",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-VP-020",
+        "sourceTags": [
+          "S1-VB-0029",
+          "S1-VB-0030"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          10.0,
+          -8.3686,
+          3.3099999999999996
+        ],
+        "end": [
+          10.0,
+          -4.2687,
+          3.3099999999999996
+        ],
+        "width_m": 0.2,
+        "height_m": 1.3,
+        "length_m": 4.099900000000001,
+        "section_width_m": 0.2,
+        "section_height_m": 1.3,
+        "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
+        "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+        "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-S1-V-041",
+        "audit_resolution": {
+          "classification": "CONFIRMED_LABEL_WIDTH",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_LABEL_WIDTH",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "S1-VB-0029",
+            "S1-VB-0030"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [
+          "LBL_1S_beam_label_0059"
+        ],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-V-050",
+      "solidTag": "SOL_1S_beam_0028",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1S_beam_0028",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-VP-021",
+        "sourceTags": [
+          "S1-VB-0031",
+          "S1-VB-0032"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          12.5,
+          -8.3686,
+          3.6599999999999997
+        ],
+        "end": [
+          12.5,
+          -5.3386,
+          3.6599999999999997
+        ],
+        "width_m": 0.2,
+        "height_m": 0.6,
+        "length_m": 3.030000000000001,
+        "section_width_m": 0.2,
+        "section_height_m": null,
+        "section_source": "CAD_CONTOUR_WIDTH_ONLY",
+        "section_confidence": "WIDTH_CONFIRMED_HEIGHT_UNKNOWN",
+        "visual_height_source": "LEGACY_VISUAL_DEFAULT_0.60_NOT_SECTION",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-S1-V-050",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONNECTED_SECTION_FAMILY",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONNECTED_SECTION_FAMILY",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "S1-VB-0031",
+            "S1-VB-0032"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [],
+        "section_height_candidates_m": [
+          1.3,
+          1.5
+        ],
+        "section_review": "AMBIGUOUS_CONNECTED_LABEL_HEIGHTS",
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-V-072",
+      "solidTag": "SOL_1S_beam_0030",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1S_beam_0030",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-VP-022",
+        "sourceTags": [
+          "S1-VB-0033",
+          "S1-VB-0034"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          20.0,
+          -8.3686,
+          3.6599999999999997
+        ],
+        "end": [
+          20.0,
+          -7.4736,
+          3.6599999999999997
+        ],
+        "width_m": 0.2,
+        "height_m": 0.6,
+        "length_m": 0.8950000000000005,
+        "section_width_m": 0.2,
+        "section_height_m": null,
+        "section_source": "CAD_CONTOUR_WIDTH_ONLY",
+        "section_confidence": "WIDTH_CONFIRMED_HEIGHT_UNKNOWN",
+        "visual_height_source": "LEGACY_VISUAL_DEFAULT_0.60_NOT_SECTION",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-S1-V-072",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONTOUR_PAIR_GEOMETRY",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONTOUR_PAIR_GEOMETRY",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "S1-VB-0033",
+            "S1-VB-0034"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-V-071",
+      "solidTag": "SOL_1S_beam_0032",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1S_beam_0032",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-VP-023",
+        "sourceTags": [
+          "S1-VB-0035",
+          "S1-VB-0036"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          20.0,
+          -10.4386,
+          3.6599999999999997
+        ],
+        "end": [
+          20.0,
+          -8.5686,
+          3.6599999999999997
+        ],
+        "width_m": 0.2,
+        "height_m": 0.6,
+        "length_m": 1.8699999999999992,
+        "section_width_m": 0.2,
+        "section_height_m": null,
+        "section_source": "CAD_CONTOUR_WIDTH_ONLY",
+        "section_confidence": "WIDTH_CONFIRMED_HEIGHT_UNKNOWN",
+        "visual_height_source": "LEGACY_VISUAL_DEFAULT_0.60_NOT_SECTION",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-S1-V-071",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONTOUR_PAIR_GEOMETRY",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONTOUR_PAIR_GEOMETRY",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "S1-VB-0035",
+            "S1-VB-0036"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-V-079",
+      "solidTag": "SOL_1S_beam_0035",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1S_beam_0035",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-VP-024",
+        "sourceTags": [
+          "S1-VB-0038",
+          "S1-VB-0039"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          21.4,
+          -10.4386,
+          3.6599999999999997
+        ],
+        "end": [
+          21.4,
+          -8.5686,
+          3.6599999999999997
+        ],
+        "width_m": 0.3,
+        "height_m": 0.6,
+        "length_m": 1.8699999999999992,
+        "section_width_m": 0.3,
+        "section_height_m": null,
+        "section_source": "CAD_CONTOUR_WIDTH_ONLY",
+        "section_confidence": "WIDTH_CONFIRMED_HEIGHT_UNKNOWN",
+        "visual_height_source": "LEGACY_VISUAL_DEFAULT_0.60_NOT_SECTION",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-S1-V-079",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONTOUR_PAIR_GEOMETRY",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONTOUR_PAIR_GEOMETRY",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "S1-VB-0038",
+            "S1-VB-0039"
+          ],
+          "width_m": 0.3
+        },
+        "section_evidence_labels": [],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-V-031",
+      "solidTag": "SOL_1S_beam_0036",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1S_beam_0036",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-VP-025",
+        "sourceTags": [
+          "S1-VB-0040",
+          "S1-VB-0041"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          7.5,
+          -10.4386,
+          3.3099999999999996
+        ],
+        "end": [
+          7.5,
+          -8.5686,
+          3.3099999999999996
+        ],
+        "width_m": 0.2,
+        "height_m": 1.3,
+        "length_m": 1.8699999999999992,
+        "section_width_m": 0.2,
+        "section_height_m": 1.3,
+        "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
+        "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+        "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-S1-V-031",
+        "audit_resolution": {
+          "classification": "CONFIRMED_LABEL_WIDTH",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_LABEL_WIDTH",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "S1-VB-0040",
+            "S1-VB-0041"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [
+          "LBL_1S_beam_label_0059"
+        ],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-V-049",
+      "solidTag": "SOL_1S_beam_0038",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1S_beam_0038",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-VP-026",
+        "sourceTags": [
+          "S1-VB-0042",
+          "S1-VB-0043"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          12.5,
+          -10.4386,
+          3.2099999999999995
+        ],
+        "end": [
+          12.5,
+          -8.5686,
+          3.2099999999999995
+        ],
+        "width_m": 0.2,
+        "height_m": 1.5,
+        "length_m": 1.8699999999999992,
+        "section_width_m": 0.2,
+        "section_height_m": 1.5,
+        "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
+        "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+        "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-S1-V-049",
+        "audit_resolution": {
+          "classification": "CONFIRMED_LABEL_WIDTH",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_LABEL_WIDTH",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "S1-VB-0042",
+            "S1-VB-0043"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [
+          "LBL_1S_beam_label_0035"
+        ],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-V-040",
+      "solidTag": "SOL_1S_beam_0040",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1S_beam_0040",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-VP-027",
+        "sourceTags": [
+          "S1-VB-0044",
+          "S1-VB-0045"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          10.0,
+          -10.4386,
+          3.2099999999999995
+        ],
+        "end": [
+          10.0,
+          -8.5686,
+          3.2099999999999995
+        ],
+        "width_m": 0.2,
+        "height_m": 1.5,
+        "length_m": 1.8699999999999992,
+        "section_width_m": 0.2,
+        "section_height_m": 1.5,
+        "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
+        "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+        "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-S1-V-040",
+        "audit_resolution": {
+          "classification": "CONFIRMED_LABEL_WIDTH",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_LABEL_WIDTH",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "S1-VB-0044",
+            "S1-VB-0045"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [
+          "LBL_1S_beam_label_0035"
+        ],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-V-013",
+      "solidTag": "SOL_1S_beam_0043",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1S_beam_0043",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-VP-028",
+        "sourceTags": [
+          "S1-VB-0046",
+          "S1-VB-0047"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          2.5,
+          -8.3686,
+          3.3099999999999996
+        ],
+        "end": [
+          2.5,
+          -2.0637,
+          3.3099999999999996
+        ],
+        "width_m": 0.2,
+        "height_m": 1.3,
+        "length_m": 6.304900000000001,
+        "section_width_m": 0.2,
+        "section_height_m": 1.3,
+        "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
+        "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+        "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-S1-V-013",
+        "audit_resolution": {
+          "classification": "CONFIRMED_LABEL_WIDTH",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_LABEL_WIDTH",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "S1-VB-0046",
+            "S1-VB-0047"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [
+          "LBL_1S_beam_label_0060"
+        ],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-V-010",
+      "solidTag": "SOL_1S_beam_0046",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1S_beam_0046",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-VP-029",
+        "sourceTags": [
+          "S1-VB-0047",
+          "S1-VB-0050"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          2.5,
+          -2.0637,
+          3.6599999999999997
+        ],
+        "end": [
+          2.5,
+          -0.5687,
+          3.6599999999999997
+        ],
+        "width_m": 0.2,
+        "height_m": 0.6,
+        "length_m": 1.4949999999999999,
+        "section_width_m": 0.2,
+        "section_height_m": null,
+        "section_source": "CAD_CONTOUR_WIDTH_ONLY",
+        "section_confidence": "WIDTH_CONFIRMED_HEIGHT_UNKNOWN",
+        "visual_height_source": "LEGACY_VISUAL_DEFAULT_0.60_NOT_SECTION",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-S1-V-010",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONNECTED_SECTION_FAMILY",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONNECTED_SECTION_FAMILY",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "S1-VB-0047",
+            "S1-VB-0050"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [],
+        "section_height_candidates_m": [
+          0.8,
+          1.3,
+          1.5
+        ],
+        "section_review": "AMBIGUOUS_CONNECTED_LABEL_HEIGHTS",
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-V-008",
+      "solidTag": "SOL_1S_beam_0044",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1S_beam_0044",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-VP-030",
+        "sourceTags": [
+          "S1-VB-0048",
+          "S1-VB-0049"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          2.5,
+          -10.4386,
+          3.3099999999999996
+        ],
+        "end": [
+          2.5,
+          -8.5686,
+          3.3099999999999996
+        ],
+        "width_m": 0.2,
+        "height_m": 1.3,
+        "length_m": 1.8699999999999992,
+        "section_width_m": 0.2,
+        "section_height_m": 1.3,
+        "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
+        "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+        "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-S1-V-008",
+        "audit_resolution": {
+          "classification": "CONFIRMED_LABEL_WIDTH",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_LABEL_WIDTH",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "S1-VB-0048",
+            "S1-VB-0049"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [
+          "LBL_1S_beam_label_0060"
+        ],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-V-033",
+      "solidTag": "SOL_1S_beam_0047",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1S_beam_0047",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-VP-031",
+        "sourceTags": [
+          "S1-VB-0051",
+          "S1-VB-0052"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          7.5,
+          -3.1687,
+          3.5599999999999996
+        ],
+        "end": [
+          7.5,
+          -0.5687,
+          3.5599999999999996
+        ],
+        "width_m": 0.2,
+        "height_m": 0.8,
+        "length_m": 2.5999999999999996,
+        "section_width_m": 0.2,
+        "section_height_m": 0.8,
+        "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
+        "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+        "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-S1-V-033",
+        "audit_resolution": {
+          "classification": "CONFIRMED_LABEL_WIDTH",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_LABEL_WIDTH",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "S1-VB-0051",
+            "S1-VB-0052"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [
+          "LBL_1S_beam_label_0043"
+        ],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-V-042",
+      "solidTag": "SOL_1S_beam_0049",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1S_beam_0049",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-VP-032",
+        "sourceTags": [
+          "S1-VB-0053",
+          "S1-VB-0054"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          10.0,
+          -4.2687,
+          3.6599999999999997
+        ],
+        "end": [
+          10.0,
+          -0.5687,
+          3.6599999999999997
+        ],
+        "width_m": 0.2,
+        "height_m": 0.6,
+        "length_m": 3.7,
+        "section_width_m": 0.2,
+        "section_height_m": null,
+        "section_source": "CAD_CONTOUR_WIDTH_ONLY",
+        "section_confidence": "WIDTH_CONFIRMED_HEIGHT_UNKNOWN",
+        "visual_height_source": "LEGACY_VISUAL_DEFAULT_0.60_NOT_SECTION",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-S1-V-042",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONNECTED_SECTION_FAMILY",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONNECTED_SECTION_FAMILY",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "S1-VB-0053",
+            "S1-VB-0054"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [],
+        "section_height_candidates_m": [
+          1.3,
+          1.5
+        ],
+        "section_review": "AMBIGUOUS_CONNECTED_LABEL_HEIGHTS",
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-V-051",
+      "solidTag": "SOL_1S_beam_0051",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1S_beam_0051",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-VP-033",
+        "sourceTags": [
+          "S1-VB-0055",
+          "S1-VB-0056"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          12.5,
+          -5.3386,
+          3.6599999999999997
+        ],
+        "end": [
+          12.5,
+          -0.5687,
+          3.6599999999999997
+        ],
+        "width_m": 0.2,
+        "height_m": 0.6,
+        "length_m": 4.7699,
+        "section_width_m": 0.2,
+        "section_height_m": null,
+        "section_source": "CAD_CONTOUR_WIDTH_ONLY",
+        "section_confidence": "WIDTH_CONFIRMED_HEIGHT_UNKNOWN",
+        "visual_height_source": "LEGACY_VISUAL_DEFAULT_0.60_NOT_SECTION",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-S1-V-051",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONNECTED_SECTION_FAMILY",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONNECTED_SECTION_FAMILY",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "S1-VB-0055",
+            "S1-VB-0056"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [],
+        "section_height_candidates_m": [
+          1.3,
+          1.5
+        ],
+        "section_review": "AMBIGUOUS_CONNECTED_LABEL_HEIGHTS",
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-V-073",
+      "solidTag": "SOL_1S_beam_0053",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1S_beam_0053",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-VP-034",
+        "sourceTags": [
+          "S1-VB-0057",
+          "S1-VB-0058"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          20.0,
+          -7.4736,
+          3.6599999999999997
+        ],
+        "end": [
+          20.0,
+          -0.5687,
+          3.6599999999999997
+        ],
+        "width_m": 0.2,
+        "height_m": 0.6,
+        "length_m": 6.9049000000000005,
+        "section_width_m": 0.2,
+        "section_height_m": null,
+        "section_source": "CAD_CONTOUR_WIDTH_ONLY",
+        "section_confidence": "WIDTH_CONFIRMED_HEIGHT_UNKNOWN",
+        "visual_height_source": "LEGACY_VISUAL_DEFAULT_0.60_NOT_SECTION",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-S1-V-073",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONTOUR_PAIR_GEOMETRY",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONTOUR_PAIR_GEOMETRY",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "S1-VB-0057",
+            "S1-VB-0058"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-V-029",
+      "solidTag": "SOL_1S_beam_0055",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1S_beam_0055",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-VP-035",
+        "sourceTags": [
+          "S1-VB-0059",
+          "S1-VB-0060"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          4.676299999999998,
+          -8.4686,
+          3.3099999999999996
+        ],
+        "end": [
+          6.476300000000002,
+          -8.4686,
+          3.3099999999999996
+        ],
+        "width_m": 0.2,
+        "height_m": 1.3,
+        "length_m": 1.8000000000000043,
+        "section_width_m": 0.2,
+        "section_height_m": 1.3,
+        "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
+        "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+        "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-S1-V-029",
+        "audit_resolution": {
+          "classification": "CONFIRMED_LABEL_WIDTH",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_LABEL_WIDTH",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "S1-VB-0059",
+            "S1-VB-0060"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [
+          "LBL_1S_beam_label_0048"
+        ],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-V-047",
+      "solidTag": "SOL_1S_beam_0019",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1S_beam_0019",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-VP-036",
+        "sourceTags": [
+          "S1-VB-0059",
+          "S1-VB-0060"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          6.676299999999998,
+          -8.4686,
+          3.3099999999999996
+        ],
+        "end": [
+          9.475299999999997,
+          -8.4686,
+          3.3099999999999996
+        ],
+        "width_m": 0.2,
+        "height_m": 1.3,
+        "length_m": 2.7989999999999995,
+        "section_width_m": 0.2,
+        "section_height_m": 1.3,
+        "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
+        "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+        "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-S1-V-047",
+        "audit_resolution": {
+          "classification": "CONFIRMED_LABEL_WIDTH",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_LABEL_WIDTH",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "S1-VB-0059",
+            "S1-VB-0060"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [
+          "LBL_1S_beam_label_0059"
+        ],
+        "historical_id_match_quality": "NEAREST_RETIRED_ID_SAME_ORIENTATION"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-V-016",
+      "solidTag": "SOL_1S_beam_0057",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1S_beam_0057",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-VP-037",
+        "sourceTags": [
+          "S1-VB-0061",
+          "S1-VB-0062"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          5.0,
+          -8.3686,
+          3.3099999999999996
+        ],
+        "end": [
+          5.0,
+          -3.1687,
+          3.3099999999999996
+        ],
+        "width_m": 0.2,
+        "height_m": 1.3,
+        "length_m": 5.199900000000001,
+        "section_width_m": 0.2,
+        "section_height_m": 1.3,
+        "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
+        "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+        "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-S1-V-016",
+        "audit_resolution": {
+          "classification": "CONFIRMED_LABEL_WIDTH",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_LABEL_WIDTH",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "S1-VB-0061",
+            "S1-VB-0062"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [
+          "LBL_1S_beam_label_0048"
+        ],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-V-015",
+      "solidTag": "SOL_1S_beam_0059",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1S_beam_0059",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-VP-038",
+        "sourceTags": [
+          "S1-VB-0063",
+          "S1-VB-0064"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          5.0,
+          -10.4386,
+          3.3099999999999996
+        ],
+        "end": [
+          5.0,
+          -8.5686,
+          3.3099999999999996
+        ],
+        "width_m": 0.2,
+        "height_m": 1.3,
+        "length_m": 1.8699999999999992,
+        "section_width_m": 0.2,
+        "section_height_m": 1.3,
+        "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
+        "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+        "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-S1-V-015",
+        "audit_resolution": {
+          "classification": "CONFIRMED_LABEL_WIDTH",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_LABEL_WIDTH",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "S1-VB-0063",
+            "S1-VB-0064"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [
+          "LBL_1S_beam_label_0048"
+        ],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-V-017",
+      "solidTag": "SOL_1S_beam_0061",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1S_beam_0061",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-VP-039",
+        "sourceTags": [
+          "S1-VB-0065",
+          "S1-VB-0066"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          5.0,
+          -3.1687,
+          3.5599999999999996
+        ],
+        "end": [
+          5.0,
+          -0.5687,
+          3.5599999999999996
+        ],
+        "width_m": 0.2,
+        "height_m": 0.8,
+        "length_m": 2.5999999999999996,
+        "section_width_m": 0.2,
+        "section_height_m": 0.8,
+        "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
+        "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+        "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-S1-V-017",
+        "audit_resolution": {
+          "classification": "CONFIRMED_LABEL_WIDTH",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_LABEL_WIDTH",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "S1-VB-0065",
+            "S1-VB-0066"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [
+          "LBL_1S_beam_label_0043"
+        ],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-V-057",
+      "solidTag": "SOL_1S_beam_0063",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1S_beam_0063",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-VP-040",
+        "sourceTags": [
+          "S1-VB-0067",
+          "S1-VB-0068"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          15.0,
+          -8.3686,
+          3.6599999999999997
+        ],
+        "end": [
+          15.0,
+          -5.3386,
+          3.6599999999999997
+        ],
+        "width_m": 0.2,
+        "height_m": 0.6,
+        "length_m": 3.030000000000001,
+        "section_width_m": 0.2,
+        "section_height_m": null,
+        "section_source": "CAD_CONTOUR_WIDTH_ONLY",
+        "section_confidence": "WIDTH_CONFIRMED_HEIGHT_UNKNOWN",
+        "visual_height_source": "LEGACY_VISUAL_DEFAULT_0.60_NOT_SECTION",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-S1-V-057",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONTOUR_PAIR_GEOMETRY",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONTOUR_PAIR_GEOMETRY",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "S1-VB-0067",
+            "S1-VB-0068"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-V-056",
+      "solidTag": "SOL_1S_beam_0065",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1S_beam_0065",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-VP-041",
+        "sourceTags": [
+          "S1-VB-0069",
+          "S1-VB-0070"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          15.0,
+          -10.4386,
+          3.6599999999999997
+        ],
+        "end": [
+          15.0,
+          -8.5686,
+          3.6599999999999997
+        ],
+        "width_m": 0.2,
+        "height_m": 0.6,
+        "length_m": 1.8699999999999992,
+        "section_width_m": 0.2,
+        "section_height_m": null,
+        "section_source": "CAD_CONTOUR_WIDTH_ONLY",
+        "section_confidence": "WIDTH_CONFIRMED_HEIGHT_UNKNOWN",
+        "visual_height_source": "LEGACY_VISUAL_DEFAULT_0.60_NOT_SECTION",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-S1-V-056",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONTOUR_PAIR_GEOMETRY",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONTOUR_PAIR_GEOMETRY",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "S1-VB-0069",
+            "S1-VB-0070"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-V-058",
+      "solidTag": "SOL_1S_beam_0067",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1S_beam_0067",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-VP-042",
+        "sourceTags": [
+          "S1-VB-0071",
+          "S1-VB-0072"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          15.0,
+          -5.3386,
+          3.6599999999999997
+        ],
+        "end": [
+          15.0,
+          -0.5687,
+          3.6599999999999997
+        ],
+        "width_m": 0.2,
+        "height_m": 0.6,
+        "length_m": 4.7699,
+        "section_width_m": 0.2,
+        "section_height_m": null,
+        "section_source": "CAD_CONTOUR_WIDTH_ONLY",
+        "section_confidence": "WIDTH_CONFIRMED_HEIGHT_UNKNOWN",
+        "visual_height_source": "LEGACY_VISUAL_DEFAULT_0.60_NOT_SECTION",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-S1-V-058",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONTOUR_PAIR_GEOMETRY",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONTOUR_PAIR_GEOMETRY",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "S1-VB-0071",
+            "S1-VB-0072"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-V-065",
+      "solidTag": "SOL_1S_beam_0069",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1S_beam_0069",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-VP-043",
+        "sourceTags": [
+          "S1-VB-0073",
+          "S1-VB-0074"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          17.5,
+          -8.3686,
+          3.6599999999999997
+        ],
+        "end": [
+          17.5,
+          -5.3386,
+          3.6599999999999997
+        ],
+        "width_m": 0.2,
+        "height_m": 0.6,
+        "length_m": 3.030000000000001,
+        "section_width_m": 0.2,
+        "section_height_m": null,
+        "section_source": "CAD_CONTOUR_WIDTH_ONLY",
+        "section_confidence": "WIDTH_CONFIRMED_HEIGHT_UNKNOWN",
+        "visual_height_source": "LEGACY_VISUAL_DEFAULT_0.60_NOT_SECTION",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-S1-V-065",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONTOUR_PAIR_GEOMETRY",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONTOUR_PAIR_GEOMETRY",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "S1-VB-0073",
+            "S1-VB-0074"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-V-064",
+      "solidTag": "SOL_1S_beam_0071",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1S_beam_0071",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-VP-044",
+        "sourceTags": [
+          "S1-VB-0075",
+          "S1-VB-0076"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          17.5,
+          -10.4386,
+          3.6599999999999997
+        ],
+        "end": [
+          17.5,
+          -8.5686,
+          3.6599999999999997
+        ],
+        "width_m": 0.2,
+        "height_m": 0.6,
+        "length_m": 1.8699999999999992,
+        "section_width_m": 0.2,
+        "section_height_m": null,
+        "section_source": "CAD_CONTOUR_WIDTH_ONLY",
+        "section_confidence": "WIDTH_CONFIRMED_HEIGHT_UNKNOWN",
+        "visual_height_source": "LEGACY_VISUAL_DEFAULT_0.60_NOT_SECTION",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-S1-V-064",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONTOUR_PAIR_GEOMETRY",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONTOUR_PAIR_GEOMETRY",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "S1-VB-0075",
+            "S1-VB-0076"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-V-066",
+      "solidTag": "SOL_1S_beam_0073",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1S_beam_0073",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-VP-045",
+        "sourceTags": [
+          "S1-VB-0077",
+          "S1-VB-0078"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          17.5,
+          -5.3386,
+          3.6599999999999997
+        ],
+        "end": [
+          17.5,
+          -0.5687,
+          3.6599999999999997
+        ],
+        "width_m": 0.2,
+        "height_m": 0.6,
+        "length_m": 4.7699,
+        "section_width_m": 0.2,
+        "section_height_m": null,
+        "section_source": "CAD_CONTOUR_WIDTH_ONLY",
+        "section_confidence": "WIDTH_CONFIRMED_HEIGHT_UNKNOWN",
+        "visual_height_source": "LEGACY_VISUAL_DEFAULT_0.60_NOT_SECTION",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-S1-V-066",
+        "audit_resolution": {
+          "classification": "CONFIRMED_CONTOUR_PAIR_GEOMETRY",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_CONTOUR_PAIR_GEOMETRY",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "S1-VB-0077",
+            "S1-VB-0078"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-V-006",
+      "solidTag": "SOL_1S_beam_0075",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1S_beam_0075",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-VP-046",
+        "sourceTags": [
+          "S1-VB-0079",
+          "S1-VB-0080"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          0.5,
+          -8.4686,
+          3.3099999999999996
+        ],
+        "end": [
+          3.0630999999999986,
+          -8.4686,
+          3.3099999999999996
+        ],
+        "width_m": 0.2,
+        "height_m": 1.3,
+        "length_m": 2.5630999999999986,
+        "section_width_m": 0.2,
+        "section_height_m": 1.3,
+        "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
+        "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+        "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-S1-V-006",
+        "audit_resolution": {
+          "classification": "CONFIRMED_LABEL_WIDTH",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_LABEL_WIDTH",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "S1-VB-0079",
+            "S1-VB-0080"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [
+          "LBL_1S_beam_label_0060"
+        ],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
+    },
+    {
+      "id": "E1-S1-V-007",
+      "solidTag": "SOL_1S_beam_0076",
+      "category": "beam",
+      "old_geometry": {
+        "solidTag": "SOL_1S_beam_0076",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "1S",
+        "sourceTag": "S1-VP-047",
+        "sourceTags": [
+          "S1-VB-0079",
+          "S1-VB-0080"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          3.2631000000000014,
+          -8.4686,
+          3.3099999999999996
+        ],
+        "end": [
+          4.0763,
+          -8.4686,
+          3.3099999999999996
+        ],
+        "width_m": 0.2,
+        "height_m": 1.3,
+        "length_m": 0.8131999999999984,
+        "section_width_m": 0.2,
+        "section_height_m": 1.3,
+        "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
+        "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+        "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-S1-V-007",
+        "audit_resolution": {
+          "classification": "CONFIRMED_LABEL_WIDTH",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_LABEL_WIDTH",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "S1-VB-0079",
+            "S1-VB-0080"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [
+          "LBL_1S_beam_label_0048"
+        ],
+        "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      },
+      "new_geometry": "REMOVED",
+      "reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "classification": "USER_APPROVED_SCOPE_EXCLUSION",
+      "source_dxf": "2017_67-101.dxf",
+      "evidence": "2017_67-101: sector bounded by M001/M060, south of axis 1; exact proposal overlay",
+      "confidence": "EXPLICIT_USER_SCOPE_NOT_CAD_ABSENCE",
+      "review_checkpoint": "PRE5_USER_SCOPE_116"
     }
   ],
   "post_p1l3_wall_consolidation": {
@@ -40894,5 +46128,10 @@
       "E1-S1-C-013"
     ],
     "source_sheet": "2017_67-308"
+  },
+  "post_p1l4_user_scope": {
+    "manifest": "entregas/PRE_P1L5/CURRENT_MODEL_EXCLUSIONS.json",
+    "approved_count_all_buildings": 116,
+    "baseline_commit": "b11d12d"
   }
 }

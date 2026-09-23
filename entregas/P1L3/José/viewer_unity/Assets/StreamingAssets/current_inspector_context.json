@@ -1,5 +1,5 @@
 {
-  "geometry_version": "829f33867523be305f5e5cf573f3ef8710597096ca100b72f692b0095d116314",
+  "geometry_version": "b4263e2c89bca94edc4812fce931c6b92778b9fb356f68fc22d934747b236328",
   "elements": [
     {
       "element_id": "E2-S1-V-017",
@@ -110,7 +110,6 @@
       "element_id": "E2-S1-V-043",
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
-        "E2-S1-M-011",
         "E2-S1-V-038",
         "E2-S1-V-040",
         "E2-S1-V-041"
@@ -122,7 +121,6 @@
       "element_id": "E2-S1-V-044",
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
-        "E2-S1-M-011",
         "E2-S1-V-039",
         "E2-S1-V-041"
       ],
@@ -674,7 +672,6 @@
       "element_id": "E2-P1-V-043",
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
-        "E2-P1-M-011",
         "E2-P1-V-038",
         "E2-P1-V-040",
         "E2-P1-V-041"
@@ -686,7 +683,6 @@
       "element_id": "E2-P1-V-044",
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
-        "E2-P1-M-011",
         "E2-P1-V-039",
         "E2-P1-V-041"
       ],
@@ -1238,7 +1234,6 @@
       "element_id": "E2-P2-V-043",
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
-        "E2-P2-M-011",
         "E2-P2-V-038",
         "E2-P2-V-040",
         "E2-P2-V-041"
@@ -1250,7 +1245,6 @@
       "element_id": "E2-P2-V-044",
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
-        "E2-P2-M-011",
         "E2-P2-V-039",
         "E2-P2-V-041"
       ],
@@ -1802,7 +1796,6 @@
       "element_id": "E2-P3-V-043",
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
-        "E2-P3-M-011",
         "E2-P3-V-038",
         "E2-P3-V-040",
         "E2-P3-V-041"
@@ -1814,7 +1807,6 @@
       "element_id": "E2-P3-V-044",
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
-        "E2-P3-M-011",
         "E2-P3-V-039",
         "E2-P3-V-041"
       ],
@@ -2453,7 +2445,6 @@
       "element_id": "E2-P4-V-090",
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
-        "E2-P4-M-010",
         "E2-P4-V-085"
       ],
       "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
@@ -2474,7 +2465,6 @@
       "element_id": "E2-P4-V-091",
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
-        "E2-P4-M-010",
         "E2-P4-V-088"
       ],
       "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
@@ -2593,19 +2583,8 @@
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
         "E2-P4-C-002",
-        "E2-P4-V-048",
-        "E2-P4-V-055"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E2-P4-V-048",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E2-P4-C-002",
         "E2-P4-V-049",
-        "E2-P4-V-052"
+        "E2-P4-V-055"
       ],
       "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
       "special_role": ""
@@ -2614,8 +2593,9 @@
       "element_id": "E2-P4-V-049",
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
+        "E2-P4-C-002",
         "E2-P4-C-003",
-        "E2-P4-V-048",
+        "E2-P4-V-052",
         "E2-P4-V-053"
       ],
       "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
@@ -2718,8 +2698,7 @@
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
         "E2-P4-V-035",
-        "E2-P4-V-036",
-        "E2-P4-V-046"
+        "E2-P4-V-036"
       ],
       "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
       "special_role": ""
@@ -3134,15 +3113,6 @@
       "special_role": ""
     },
     {
-      "element_id": "E2-P4-V-046",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E2-P4-V-042"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
       "element_id": "E2-P4-V-045",
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
@@ -3231,54 +3201,6 @@
       "special_role": ""
     },
     {
-      "element_id": "E2-S1-M-011",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E2-P1-M-011",
-        "E2-S1-V-043",
-        "E2-S1-V-044"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E2-S1-M-007",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E2-P1-M-007"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E2-S1-M-008",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E2-P1-M-008"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E2-S1-M-010",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E2-P1-M-010"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E2-S1-M-009",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E2-P1-M-009",
-        "E2-S1-C-008"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
       "element_id": "E2-S1-M-006",
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
@@ -3332,59 +3254,6 @@
       "candidate_neighbors": [
         "E2-P1-M-005",
         "E2-S1-V-007"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E2-P1-M-011",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E2-P1-V-043",
-        "E2-P1-V-044",
-        "E2-P2-M-011",
-        "E2-S1-M-011"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E2-P1-M-007",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E2-P2-M-007",
-        "E2-S1-M-007"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E2-P1-M-008",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E2-P2-M-008",
-        "E2-S1-M-008"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E2-P1-M-010",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E2-P2-M-010",
-        "E2-S1-M-010"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E2-P1-M-009",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E2-P1-C-008",
-        "E2-P2-M-009",
-        "E2-S1-M-009"
       ],
       "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
       "special_role": ""
@@ -3454,59 +3323,6 @@
       "special_role": ""
     },
     {
-      "element_id": "E2-P2-M-011",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E2-P1-M-011",
-        "E2-P2-V-043",
-        "E2-P2-V-044",
-        "E2-P3-M-011"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E2-P2-M-007",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E2-P1-M-007",
-        "E2-P3-M-007"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E2-P2-M-008",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E2-P1-M-008",
-        "E2-P3-M-008"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E2-P2-M-010",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E2-P1-M-010",
-        "E2-P3-M-010"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E2-P2-M-009",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E2-P1-M-009",
-        "E2-P2-C-008",
-        "E2-P3-M-009"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
       "element_id": "E2-P2-M-006",
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
@@ -3571,58 +3387,6 @@
       "special_role": ""
     },
     {
-      "element_id": "E2-P3-M-011",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E2-P2-M-011",
-        "E2-P3-V-043",
-        "E2-P3-V-044",
-        "E2-P4-M-010"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E2-P3-M-007",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E2-P2-M-007",
-        "E2-P4-M-007"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E2-P3-M-008",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E2-P2-M-008",
-        "E2-P4-M-008"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E2-P3-M-010",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E2-P2-M-010",
-        "E2-P4-M-009"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E2-P3-M-009",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E2-P2-M-009",
-        "E2-P3-C-008"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
       "element_id": "E2-P3-M-006",
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
@@ -3682,44 +3446,6 @@
         "E2-P2-M-005",
         "E2-P3-V-007",
         "E2-P4-M-005"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E2-P4-M-010",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E2-P3-M-011",
-        "E2-P4-V-090",
-        "E2-P4-V-091"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E2-P4-M-007",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E2-P3-M-007"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E2-P4-M-008",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E2-P3-M-008"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E2-P4-M-009",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E2-P3-M-010"
       ],
       "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
       "special_role": ""
@@ -3865,7 +3591,6 @@
       "element_id": "E2-S1-C-008",
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
-        "E2-S1-M-009",
         "E2-S1-V-042"
       ],
       "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
@@ -3977,7 +3702,6 @@
       "element_id": "E2-P1-C-008",
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
-        "E2-P1-M-009",
         "E2-P1-V-042",
         "E2-S1-V-042"
       ],
@@ -4091,7 +3815,6 @@
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
         "E2-P1-V-042",
-        "E2-P2-M-009",
         "E2-P2-V-042"
       ],
       "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
@@ -4204,7 +3927,6 @@
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
         "E2-P2-V-042",
-        "E2-P3-M-009",
         "E2-P3-V-042"
       ],
       "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
@@ -4217,7 +3939,7 @@
         "E2-P3-V-022",
         "E2-P3-V-025",
         "E2-P3-V-027",
-        "E2-P4-V-048",
+        "E2-P4-V-049",
         "E2-P4-V-052"
       ],
       "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
@@ -4492,7 +4214,6 @@
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
         "E1-S1-M-039",
-        "E1-S1-M-052",
         "E1-S1-V-025",
         "E1-S1-V-038"
       ],
@@ -4618,9 +4339,7 @@
     {
       "element_id": "E1-S1-C-008",
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-M-052"
-      ],
+      "candidate_neighbors": [],
       "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
       "special_role": ""
     },
@@ -4772,9 +4491,7 @@
       "element_id": "E1-P1-C-023",
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
-        "E1-P1-M-027",
         "E1-P1-V-088",
-        "E1-P1-V-091",
         "E1-P1-V-095",
         "E1-P1-V-104"
       ],
@@ -4785,8 +4502,6 @@
       "element_id": "E1-P1-C-021",
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
-        "E1-P1-M-028",
-        "E1-P1-M-029",
         "E1-P1-V-086",
         "E1-P1-V-095",
         "E1-P1-V-096",
@@ -4800,7 +4515,6 @@
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
         "E1-P1-M-015",
-        "E1-P1-M-028",
         "E1-P1-M-032",
         "E1-P1-V-085",
         "E1-P1-V-094",
@@ -4872,69 +4586,6 @@
         "E1-P1-V-102",
         "E1-P1-V-106",
         "E1-P1-V-107"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-P1-C-018",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-P1-V-073"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-P1-C-019",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-P1-V-071",
-        "E1-P1-V-073"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-P1-C-020",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-P1-V-071",
-        "E1-P1-V-084"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-P1-C-016",
-      "connection_status": "Camino de apoyo sin resolver.",
-      "candidate_neighbors": [],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-P1-C-017",
-      "connection_status": "Camino de apoyo sin resolver.",
-      "candidate_neighbors": [],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-P1-C-009",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-P1-V-023",
-        "E1-P1-V-034"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-P1-C-007",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-P1-V-014",
-        "E1-P1-V-023"
       ],
       "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
       "special_role": ""
@@ -5060,7 +4711,6 @@
         "E1-P1-V-049",
         "E1-P2-V-047",
         "E1-P2-V-052",
-        "E1-P2-V-053",
         "E1-P2-V-059"
       ],
       "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
@@ -5075,7 +4725,6 @@
         "E1-P1-V-067",
         "E1-P2-V-064",
         "E1-P2-V-081",
-        "E1-P2-V-082",
         "E1-P2-V-090"
       ],
       "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
@@ -5086,7 +4735,6 @@
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
         "E1-P1-V-088",
-        "E1-P1-V-091",
         "E1-P1-V-095",
         "E1-P1-V-104",
         "E1-P2-V-096",
@@ -5354,7 +5002,6 @@
       "candidate_neighbors": [
         "E1-P2-V-047",
         "E1-P2-V-052",
-        "E1-P2-V-053",
         "E1-P2-V-059",
         "E1-P3-V-045",
         "E1-P3-V-051",
@@ -5370,7 +5017,6 @@
       "candidate_neighbors": [
         "E1-P2-V-064",
         "E1-P2-V-081",
-        "E1-P2-V-082",
         "E1-P2-V-090",
         "E1-P3-V-068",
         "E1-P3-V-073",
@@ -6041,20 +5687,9 @@
       "special_role": ""
     },
     {
-      "element_id": "E1-S1-M-001",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-V-001"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
       "element_id": "E1-S1-M-004",
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-P1-M-003"
-      ],
+      "candidate_neighbors": [],
       "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
       "special_role": ""
     },
@@ -6069,22 +5704,11 @@
       "special_role": ""
     },
     {
-      "element_id": "E1-S1-M-007",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-V-001",
-        "E1-S1-V-006"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
       "element_id": "E1-S1-M-031",
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
         "E1-S1-C-001",
-        "E1-S1-V-005",
-        "E1-S1-V-010"
+        "E1-S1-V-005"
       ],
       "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
       "special_role": ""
@@ -6122,13 +5746,6 @@
       "special_role": ""
     },
     {
-      "element_id": "E1-S1-M-029",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
       "element_id": "E1-S1-M-020",
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
@@ -6138,54 +5755,10 @@
       "special_role": ""
     },
     {
-      "element_id": "E1-S1-M-026",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-M-027",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-V-007",
-        "E1-S1-V-029"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
       "element_id": "E1-S1-M-034",
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
         "E1-P1-M-025"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-M-051",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-V-029",
-        "E1-S1-V-047"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-M-052",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-C-004",
-        "E1-S1-C-008",
-        "E1-S1-V-005",
-        "E1-S1-V-033",
-        "E1-S1-V-042",
-        "E1-S1-V-051",
-        "E1-S1-V-058",
-        "E1-S1-V-066",
-        "E1-S1-V-073"
       ],
       "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
       "special_role": ""
@@ -6211,26 +5784,6 @@
       "special_role": ""
     },
     {
-      "element_id": "E1-S1-M-053",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-V-040",
-        "E1-S1-V-041",
-        "E1-S1-V-047",
-        "E1-S1-V-049",
-        "E1-S1-V-050",
-        "E1-S1-V-056",
-        "E1-S1-V-057",
-        "E1-S1-V-064",
-        "E1-S1-V-065",
-        "E1-S1-V-071",
-        "E1-S1-V-072",
-        "E1-S1-V-079"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
       "element_id": "E1-S1-M-050",
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
@@ -6251,26 +5804,6 @@
       "special_role": ""
     },
     {
-      "element_id": "E1-S1-M-060",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-V-079"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-P1-M-003",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-P1-V-001",
-        "E1-P1-V-002",
-        "E1-S1-M-004"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
       "element_id": "E1-P1-M-001",
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
@@ -6285,15 +5818,9 @@
       "element_id": "E1-P1-M-002",
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
+        "E1-P2-M-003",
         "E1-S1-M-005"
       ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-P1-M-010",
-      "connection_status": "Camino de apoyo sin resolver.",
-      "candidate_neighbors": [],
       "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
       "special_role": ""
     },
@@ -6301,15 +5828,9 @@
       "element_id": "E1-P1-M-012",
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
+        "E1-P2-M-010",
         "E1-S1-M-020"
       ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-P1-M-004",
-      "connection_status": "Camino de apoyo sin resolver.",
-      "candidate_neighbors": [],
       "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
       "special_role": ""
     },
@@ -6346,9 +5867,7 @@
     {
       "element_id": "E1-P1-M-024",
       "connection_status": "Camino de apoyo sin resolver.",
-      "candidate_neighbors": [
-        "E1-P1-V-068"
-      ],
+      "candidate_neighbors": [],
       "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
       "special_role": ""
     },
@@ -6362,58 +5881,14 @@
     {
       "element_id": "E1-P1-M-016",
       "connection_status": "Camino de apoyo sin resolver.",
-      "candidate_neighbors": [
-        "E1-P1-V-072",
-        "E1-P1-V-098"
-      ],
+      "candidate_neighbors": [],
       "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
       "special_role": ""
     },
     {
       "element_id": "E1-P1-M-020",
       "connection_status": "Camino de apoyo sin resolver.",
-      "candidate_neighbors": [
-        "E1-P1-V-098"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-P1-M-028",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-P1-C-021",
-        "E1-P1-C-022",
-        "E1-P1-V-085",
-        "E1-P1-V-094",
-        "E1-P1-V-096",
-        "E1-P1-V-100",
-        "E1-P1-V-102"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-P1-M-029",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-P1-C-021",
-        "E1-P1-V-095",
-        "E1-P1-V-102",
-        "E1-P1-V-104"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-P1-M-027",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-P1-C-023",
-        "E1-P1-V-084",
-        "E1-P1-V-091",
-        "E1-P1-V-093"
-      ],
+      "candidate_neighbors": [],
       "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
       "special_role": ""
     },
@@ -6482,55 +5957,26 @@
     {
       "element_id": "E1-P1-M-037",
       "connection_status": "Camino de apoyo sin resolver.",
-      "candidate_neighbors": [
-        "E1-P1-V-098"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-P2-M-002",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-P2-V-004",
-        "E1-P2-V-005",
-        "E1-P3-M-002"
-      ],
+      "candidate_neighbors": [],
       "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
       "special_role": ""
     },
     {
       "element_id": "E1-P2-M-003",
-      "connection_status": "Camino de apoyo sin resolver.",
+      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
+        "E1-P1-M-002",
         "E1-P3-M-003"
       ],
       "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
       "special_role": ""
     },
     {
-      "element_id": "E1-P2-M-008",
-      "connection_status": "Camino de apoyo sin resolver.",
-      "candidate_neighbors": [
-        "E1-P3-M-008"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
       "element_id": "E1-P2-M-010",
-      "connection_status": "Camino de apoyo sin resolver.",
+      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
+        "E1-P1-M-012",
         "E1-P3-M-010"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-P2-M-007",
-      "connection_status": "Camino de apoyo sin resolver.",
-      "candidate_neighbors": [
-        "E1-P3-M-007"
       ],
       "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
       "special_role": ""
@@ -6554,20 +6000,8 @@
       "special_role": ""
     },
     {
-      "element_id": "E1-P3-M-002",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-P2-M-002",
-        "E1-P3-V-004",
-        "E1-P3-V-005",
-        "E1-P4-M-002"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
       "element_id": "E1-P3-M-003",
-      "connection_status": "Camino de apoyo sin resolver.",
+      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
         "E1-P2-M-003",
         "E1-P4-M-003"
@@ -6576,31 +6010,11 @@
       "special_role": ""
     },
     {
-      "element_id": "E1-P3-M-008",
-      "connection_status": "Camino de apoyo sin resolver.",
-      "candidate_neighbors": [
-        "E1-P2-M-008",
-        "E1-P4-M-008"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
       "element_id": "E1-P3-M-010",
-      "connection_status": "Camino de apoyo sin resolver.",
+      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
         "E1-P2-M-010",
         "E1-P4-M-009"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-P3-M-007",
-      "connection_status": "Camino de apoyo sin resolver.",
-      "candidate_neighbors": [
-        "E1-P2-M-007",
-        "E1-P4-M-007"
       ],
       "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
       "special_role": ""
@@ -6626,19 +6040,8 @@
       "special_role": ""
     },
     {
-      "element_id": "E1-P4-M-002",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-P3-M-002",
-        "E1-P4-V-004",
-        "E1-P4-V-005"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
       "element_id": "E1-P4-M-003",
-      "connection_status": "Camino de apoyo sin resolver.",
+      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
         "E1-P3-M-003"
       ],
@@ -6646,31 +6049,13 @@
       "special_role": ""
     },
     {
-      "element_id": "E1-P4-M-008",
-      "connection_status": "Camino de apoyo sin resolver.",
-      "candidate_neighbors": [
-        "E1-P3-M-008"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
       "element_id": "E1-P4-M-009",
-      "connection_status": "Camino de apoyo sin resolver.",
+      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
         "E1-P3-M-010"
       ],
       "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
       "special_role": ""
-    },
-    {
-      "element_id": "E1-P4-M-007",
-      "connection_status": "Camino de apoyo sin resolver.",
-      "candidate_neighbors": [
-        "E1-P3-M-007"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": "Muro del núcleo de ascensores con continuidad geométrica auditada. Idealización FE por validar."
     },
     {
       "element_id": "E1-P4-M-010",
@@ -6691,13 +6076,6 @@
       "special_role": ""
     },
     {
-      "element_id": "E1-S1-A-001",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
       "element_id": "E1-S1-A-004",
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [],
@@ -6706,13 +6084,6 @@
     },
     {
       "element_id": "E1-S1-A-002",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-A-010",
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [],
       "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
@@ -6768,28 +6139,7 @@
       "special_role": ""
     },
     {
-      "element_id": "E1-S1-A-030",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
       "element_id": "E1-S1-A-037",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-A-057",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-A-058",
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [],
       "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
@@ -6810,13 +6160,6 @@
       "special_role": ""
     },
     {
-      "element_id": "E1-S1-A-059",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
       "element_id": "E1-S1-A-056",
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [],
@@ -6825,13 +6168,6 @@
     },
     {
       "element_id": "E1-S1-A-022",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-A-070",
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [],
       "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
@@ -6933,432 +6269,10 @@
       "special_role": ""
     },
     {
-      "element_id": "E1-S1-V-001",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-M-001",
-        "E1-S1-M-007"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-V-048",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-V-046",
-        "E1-S1-V-049"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-V-027",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-V-008",
-        "E1-S1-V-014"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-V-014",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-V-027",
-        "E1-S1-V-028"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-V-028",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-V-014",
-        "E1-S1-V-015",
-        "E1-S1-V-037"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-V-037",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-V-028",
-        "E1-S1-V-031"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-V-046",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-V-040",
-        "E1-S1-V-048"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-V-063",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-V-056",
-        "E1-S1-V-070"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-V-070",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-V-063",
-        "E1-S1-V-064",
-        "E1-S1-V-071",
-        "E1-S1-V-077"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-V-077",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-V-070",
-        "E1-S1-V-071",
-        "E1-S1-V-079"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-V-032",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-V-031",
-        "E1-S1-V-033",
-        "E1-S1-V-047"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-V-041",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-M-053",
-        "E1-S1-V-040",
-        "E1-S1-V-042"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-V-050",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-M-053",
-        "E1-S1-V-049",
-        "E1-S1-V-051"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-V-072",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-M-053",
-        "E1-S1-V-071",
-        "E1-S1-V-073"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-V-071",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-M-053",
-        "E1-S1-V-070",
-        "E1-S1-V-072",
-        "E1-S1-V-077"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-V-079",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-M-053",
-        "E1-S1-M-060",
-        "E1-S1-V-077"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-V-031",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-V-032",
-        "E1-S1-V-037",
-        "E1-S1-V-047"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-V-049",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-M-053",
-        "E1-S1-V-048",
-        "E1-S1-V-050"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-V-040",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-M-053",
-        "E1-S1-V-041",
-        "E1-S1-V-046"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-V-013",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-V-006",
-        "E1-S1-V-008",
-        "E1-S1-V-010"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-V-010",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-M-031",
-        "E1-S1-V-013"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-V-008",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-V-006",
-        "E1-S1-V-013",
-        "E1-S1-V-027"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-V-033",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-M-052",
-        "E1-S1-V-032"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-V-042",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-M-052",
-        "E1-S1-V-041"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-V-051",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-M-052",
-        "E1-S1-V-050"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-V-073",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-M-052",
-        "E1-S1-V-072"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-V-029",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-M-027",
-        "E1-S1-M-051",
-        "E1-S1-V-015",
-        "E1-S1-V-016",
-        "E1-S1-V-047"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-V-047",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-M-051",
-        "E1-S1-M-053",
-        "E1-S1-V-029",
-        "E1-S1-V-031",
-        "E1-S1-V-032"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-V-016",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-V-015",
-        "E1-S1-V-017",
-        "E1-S1-V-029"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-V-015",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-V-016",
-        "E1-S1-V-028",
-        "E1-S1-V-029"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-V-017",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-V-005",
-        "E1-S1-V-016"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-V-057",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-M-053",
-        "E1-S1-V-056",
-        "E1-S1-V-058"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-V-056",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-M-053",
-        "E1-S1-V-057",
-        "E1-S1-V-063"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-V-058",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-M-052",
-        "E1-S1-V-057"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-V-065",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-M-053",
-        "E1-S1-V-064",
-        "E1-S1-V-066"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-V-064",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-M-053",
-        "E1-S1-V-065",
-        "E1-S1-V-070"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-V-066",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-M-052",
-        "E1-S1-V-065"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-V-006",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-M-007",
-        "E1-S1-V-007",
-        "E1-S1-V-008",
-        "E1-S1-V-013"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-S1-V-007",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-S1-M-027",
-        "E1-S1-V-006"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
       "element_id": "E1-S1-V-005",
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
-        "E1-S1-M-031",
-        "E1-S1-M-052",
-        "E1-S1-V-017"
+        "E1-S1-M-031"
       ],
       "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
       "special_role": ""
@@ -7566,8 +6480,6 @@
       "candidate_neighbors": [
         "E1-P1-C-021",
         "E1-P1-C-025",
-        "E1-P1-M-028",
-        "E1-P1-M-029",
         "E1-P1-V-095",
         "E1-P1-V-096",
         "E1-P1-V-106",
@@ -7753,7 +6665,6 @@
       "candidate_neighbors": [
         "E1-P1-C-023",
         "E1-P1-C-026",
-        "E1-P1-M-029",
         "E1-P1-V-095",
         "E1-P1-V-106",
         "E1-P2-C-018",
@@ -7809,7 +6720,6 @@
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
         "E1-P1-C-006",
-        "E1-P1-C-007",
         "E1-P1-V-011",
         "E1-P1-V-022",
         "E1-P1-V-023",
@@ -7823,8 +6733,6 @@
       "element_id": "E1-P1-V-023",
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
-        "E1-P1-C-007",
-        "E1-P1-C-009",
         "E1-P1-V-014",
         "E1-P1-V-034",
         "E1-P2-C-007",
@@ -7922,7 +6830,6 @@
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
         "E1-P1-C-022",
-        "E1-P1-M-028",
         "E1-P1-V-085",
         "E1-P1-V-096",
         "E1-P1-V-100",
@@ -7936,7 +6843,6 @@
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
         "E1-P1-C-021",
-        "E1-P1-M-028",
         "E1-P1-V-086",
         "E1-P1-V-094",
         "E1-P1-V-102",
@@ -7951,7 +6857,6 @@
       "candidate_neighbors": [
         "E1-P1-C-021",
         "E1-P1-C-023",
-        "E1-P1-M-029",
         "E1-P1-V-086",
         "E1-P1-V-088",
         "E1-P1-V-102",
@@ -7967,7 +6872,6 @@
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
         "E1-P1-C-001",
-        "E1-P1-M-003",
         "E1-P1-V-002",
         "E1-P1-V-007",
         "E1-P2-C-001"
@@ -7980,7 +6884,6 @@
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
         "E1-P1-C-002",
-        "E1-P1-M-003",
         "E1-P1-V-001",
         "E1-P1-V-009",
         "E1-P2-C-002"
@@ -8126,76 +7029,10 @@
       "special_role": ""
     },
     {
-      "element_id": "E1-P1-V-073",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-P1-C-018",
-        "E1-P1-C-019"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-P1-V-071",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-P1-C-019",
-        "E1-P1-C-020",
-        "E1-P1-V-084"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-P1-V-091",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-P1-C-023",
-        "E1-P1-M-027",
-        "E1-P1-V-089",
-        "E1-P2-C-018"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-P1-V-082",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-P1-V-089",
-        "E1-P1-V-093"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-P1-V-093",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-P1-M-027",
-        "E1-P1-V-082",
-        "E1-P1-V-089"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-P1-V-089",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-P1-V-082",
-        "E1-P1-V-091",
-        "E1-P1-V-093"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
       "element_id": "E1-P1-V-034",
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
         "E1-P1-C-008",
-        "E1-P1-C-009",
         "E1-P1-V-023",
         "E1-P1-V-024",
         "E1-P1-V-041",
@@ -8236,54 +7073,11 @@
       "special_role": ""
     },
     {
-      "element_id": "E1-P1-V-098",
-      "connection_status": "Camino de apoyo sin resolver.",
-      "candidate_neighbors": [
-        "E1-P1-M-016",
-        "E1-P1-M-020",
-        "E1-P1-M-037"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-P1-V-068",
-      "connection_status": "Camino de apoyo sin resolver.",
-      "candidate_neighbors": [
-        "E1-P1-M-024",
-        "E1-P1-V-072"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-P1-V-072",
-      "connection_status": "Camino de apoyo sin resolver.",
-      "candidate_neighbors": [
-        "E1-P1-M-016",
-        "E1-P1-V-068"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-P1-V-084",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-P1-C-020",
-        "E1-P1-M-027",
-        "E1-P1-V-071"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
       "element_id": "E1-P1-V-085",
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
         "E1-P1-C-022",
         "E1-P1-M-015",
-        "E1-P1-M-028",
         "E1-P1-V-064",
         "E1-P1-V-076",
         "E1-P1-V-094",
@@ -8312,7 +7106,6 @@
       "candidate_neighbors": [
         "E1-P1-C-022",
         "E1-P1-C-024",
-        "E1-P1-M-028",
         "E1-P1-M-032",
         "E1-P1-M-033",
         "E1-P1-V-094",
@@ -8627,9 +7420,7 @@
         "E1-P2-C-015",
         "E1-P2-V-059",
         "E1-P2-V-068",
-        "E1-P2-V-069",
         "E1-P2-V-081",
-        "E1-P2-V-082",
         "E1-P3-C-012"
       ],
       "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
@@ -8641,10 +7432,8 @@
       "candidate_neighbors": [
         "E1-P2-C-010",
         "E1-P2-V-052",
-        "E1-P2-V-053",
         "E1-P2-V-064",
         "E1-P2-V-068",
-        "E1-P2-V-069",
         "E1-P3-C-009"
       ],
       "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
@@ -8656,7 +7445,6 @@
       "candidate_neighbors": [
         "E1-P2-C-015",
         "E1-P2-V-081",
-        "E1-P2-V-082",
         "E1-P2-V-092",
         "E1-P2-V-096",
         "E1-P3-C-012"
@@ -8886,7 +7674,6 @@
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
         "E1-P2-C-001",
-        "E1-P2-M-002",
         "E1-P2-V-005",
         "E1-P2-V-008",
         "E1-P3-C-001"
@@ -8899,7 +7686,6 @@
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
         "E1-P2-C-002",
-        "E1-P2-M-002",
         "E1-P2-V-004",
         "E1-P2-V-010",
         "E1-P3-C-002"
@@ -9062,16 +7848,6 @@
       "special_role": ""
     },
     {
-      "element_id": "E1-P2-V-069",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-P2-V-059",
-        "E1-P2-V-064"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
       "element_id": "E1-P2-V-096",
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
@@ -9099,36 +7875,6 @@
       "special_role": ""
     },
     {
-      "element_id": "E1-P2-V-075",
-      "connection_status": "Camino de apoyo sin resolver.",
-      "candidate_neighbors": [
-        "E1-P2-V-055"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": "Viga de descanso de la escalera B, confirmada por plano. Su participación y camino de apoyo FE siguen pendientes."
-    },
-    {
-      "element_id": "E1-P2-V-055",
-      "connection_status": "Camino de apoyo sin resolver.",
-      "candidate_neighbors": [
-        "E1-P2-V-075"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-P2-V-082",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-P2-C-015",
-        "E1-P2-V-064",
-        "E1-P2-V-090",
-        "E1-P3-C-012"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
       "element_id": "E1-P2-V-047",
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
@@ -9138,7 +7884,6 @@
         "E1-P2-V-042",
         "E1-P2-V-043",
         "E1-P2-V-052",
-        "E1-P2-V-053",
         "E1-P3-C-009"
       ],
       "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
@@ -9163,18 +7908,6 @@
         "E1-P2-C-009",
         "E1-P2-V-028",
         "E1-P2-V-043"
-      ],
-      "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
-      "special_role": ""
-    },
-    {
-      "element_id": "E1-P2-V-053",
-      "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
-      "candidate_neighbors": [
-        "E1-P2-C-010",
-        "E1-P2-V-047",
-        "E1-P2-V-059",
-        "E1-P3-C-009"
       ],
       "load_status": "Catálogo 700 disponible, no aplicado al FE actual. Las cargas y áreas receptoras deben aprobarse; ausencia de dato no significa carga cero.",
       "special_role": ""
@@ -9689,7 +8422,6 @@
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
         "E1-P3-C-001",
-        "E1-P3-M-002",
         "E1-P3-V-005",
         "E1-P3-V-007",
         "E1-P4-C-001"
@@ -9702,7 +8434,6 @@
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
         "E1-P3-C-002",
-        "E1-P3-M-002",
         "E1-P3-V-004",
         "E1-P3-V-009",
         "E1-P4-C-002"
@@ -10512,7 +9243,6 @@
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
         "E1-P4-C-001",
-        "E1-P4-M-002",
         "E1-P4-V-005",
         "E1-P4-V-007"
       ],
@@ -10524,7 +9254,6 @@
       "connection_status": "Incidencias geométricas identificadas; conectividad FE todavía no aprobada.",
       "candidate_neighbors": [
         "E1-P4-C-002",
-        "E1-P4-M-002",
         "E1-P4-V-004",
         "E1-P4-V-009"
       ],

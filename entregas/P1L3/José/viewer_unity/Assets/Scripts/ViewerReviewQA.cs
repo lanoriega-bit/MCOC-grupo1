@@ -18,7 +18,8 @@ namespace Mcoc.UnityViewer
             string output=Path.Combine(Application.dataPath,"..","QA");Directory.CreateDirectory(output);
             var failures=new List<string>();
             LoadPendingReview();
-            if(pendingReviewData?.rows?.Count!=43)failures.Add("Pending dossier count/version");
+            LoadProjectState();
+            if(pendingReviewData?.rows?.Count!=projectState?.pending)failures.Add("Pending dossier count/version");
             else foreach(var row in pendingReviewData.rows)
             {
                 SelectPendingReview(row);
@@ -29,7 +30,7 @@ namespace Mcoc.UnityViewer
             foreach(var resolution in new[]{new Vector2Int(1366,768),new Vector2Int(1920,1080)})
             {
                 Screen.SetResolution(resolution.x,resolution.y,FullScreenMode.Windowed);yield return new WaitForSecondsRealtime(2);
-                foreach(string id in new[]{"E1-P1-M-004","E1-P1-C-016","E2-P4-V-004"})
+                foreach(string id in new[]{"E1-P1-M-016","E1-P2-M-005","E2-P4-V-004"})
                 {
                     var row=pendingReviewData?.rows?.Find(r=>r.id==id);if(row==null)continue;
                     SelectPendingReview(row);yield return new WaitForSecondsRealtime(.3f);yield return new WaitForEndOfFrame();
@@ -70,7 +71,18 @@ namespace Mcoc.UnityViewer
             if(slab==null)failures.Add("Floor slab unavailable");
             else {Select(slab);ResetInspectorSections(slab);if(!CurrentSectionText(CurrentSolid(slab)).Contains("provisional"))failures.Add("Slab must disclose provisional geometry");}
             ResetPresentation();
-            ElementInfo beam=allElements.Find(e=>e!=null&&e.category=="beam"&&e.humanId=="E1-P2-V-075");
+            LoadRevisionChanges();
+            if(revisionChanges==null)failures.Add("Current revision ledger/version missing");
+            else foreach(var change in revisionChanges.rows)
+            {
+                if(change.type=="REMOVED"&&model.solids.Exists(s=>s.id==change.id))failures.Add("Excluded geometry present "+change.id);
+                if(change.type=="MERGED")
+                {
+                    if(model.solids.FindAll(s=>s.id==change.id).Count!=1)failures.Add("Merged canonical count "+change.id);
+                    foreach(var oldId in change.historical_ids)if(oldId!=change.id&&model.solids.Exists(s=>s.id==oldId))failures.Add("Merged retired ID present "+oldId);
+                }
+            }
+            ElementInfo beam=allElements.Find(e=>e!=null&&e.category=="beam"&&e.humanId=="E2-P4-V-049");
             if(beam==null)failures.Add("Review beam missing");
             foreach(var size in new[]{new Vector2Int(1366,768),new Vector2Int(1920,1080)})
             {
@@ -84,7 +96,7 @@ namespace Mcoc.UnityViewer
                 if(CurrentInspectorRect().yMax>Screen.height-36||SemanticPanelRect().yMax>Screen.height-36)failures.Add("Panel clipped");
                 if(selectedLocalAxisObjects.Count!=3)failures.Add("Local axes missing");
                 CaptureReviewFrame(Path.Combine(output,$"current_{size.x}x{size.y}.png"));
-                foreach(string targetId in new[]{"E2-P4-V-009","E2-P1-C-001","E1-P4-M-007"})
+                foreach(string targetId in new[]{"E2-P4-V-009","E2-P1-C-001","E1-P4-M-003"})
                 {
                     var target=allElements.Find(e=>e!=null&&e.humanId==targetId);
                     if(target==null){failures.Add("Inspector target missing "+targetId);continue;}
@@ -92,7 +104,7 @@ namespace Mcoc.UnityViewer
                     yield return new WaitForEndOfFrame();
                     if(inspectorGroups.Count!=2||!inspectorGroups.Contains("RESUMEN")||!inspectorGroups.Contains("RESULTADOS"))failures.Add("Inspector defaults "+targetId);
                     if(selectedLocalAxisObjects.Count!=3)failures.Add("Selected axes "+targetId);
-                    if(targetId=="E1-P4-M-007"&&!CurrentMaterialStatus(CurrentSolid(target)).Contains("POR CONFIRMAR"))failures.Add("Generic RC must not certify concrete grade");
+                    if(targetId=="E1-P4-M-003"&&!CurrentMaterialStatus(CurrentSolid(target)).Contains("POR CONFIRMAR"))failures.Add("Generic RC must not certify concrete grade");
                     CaptureReviewFrame(Path.Combine(output,$"inspector_{targetId}_{size.x}x{size.y}.png"));
                 }
                 openGroups.Clear();openGroups.Add("ENTREGAS");openGroups.Add("P1L4");semanticScroll=Vector2.zero;

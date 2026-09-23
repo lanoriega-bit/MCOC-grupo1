@@ -220,6 +220,7 @@ namespace Mcoc.UnityViewer
                 GUILayout.Label("P–M representa resistencia de una sección. La demanda actual estará disponible después de la nueva corrida. Los estudios anteriores están en Avanzado → Histórico.",currentBody);
             if (!presentationMode && Accordion("DIAGNÓSTICO"))
             {
+                DrawRevisionChanges();
                 DrawPendingReviewControls();
                 bool colors=GUILayout.Toggle(diagnosticColorsVisible,"Colores de conectividad",GUILayout.Height(25));
                 bool problems=GUILayout.Toggle(diagnosticProblemsOnly,"Solo problemas / no resueltos",GUILayout.Height(25));

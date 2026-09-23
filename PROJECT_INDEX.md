@@ -3,16 +3,16 @@
 Estado: `PRE-P1L5 / CONSOLIDACIÓN — BASELINE BLOCKED`
 
 Guía vigente: [PRE_P1L5_STATUS](entregas/PRE_P1L5/PRE_P1L5_STATUS.md).
-Revisión manual vigente: [43 fichas FE](entregas/PRE_P1L5/FE_PENDING_43_DETAILED_REVIEW.md)
-y [guía de revisión en Unity](entregas/PRE_P1L5/fe_pending_review/README.md).
-Las correcciones automáticas de estos elementos están pausadas. Usar
-Diagnóstico → Pendientes FE; 43 pendientes / 22 componentes, sin nueva corrida FE.
+Revisión vigente: [alcance aprobado y fusiones](entregas/PRE_P1L5/user_structural_review/REVIEW_STATUS.md).
+Diagnóstico → Cambios de esta revisión / Pendientes FE: 22 pendientes / 16 componentes.
+Las [43 fichas originales](entregas/PRE_P1L5/FE_PENDING_43_DETAILED_REVIEW.md) se conservan
+como expediente previo, no diagnóstico actual. No hay nueva corrida FE.
 Incluye [QA global](entregas/PRE_P1L5/GLOBAL_VALIDATION.md),
 [auditoría retrospectiva](entregas/PRE_P1L5/DELIVERY_RETROSPECTIVE_AUDIT.md),
 [matriz externa](entregas/PRE_P1L5/CROSS_GROUP_FEATURE_MATRIX.md) y
 [pendientes individuales](entregas/PRE_P1L5/REMAINING_STRUCTURAL_AUDIT.md).
 No ejecutar P1L5 ni el candidato FE hasta resolver los bloqueos documentados.
-361 materiales ED2 confirmados; geometría y resultados históricos intactos.
+644 materiales confirmados en miembros actualmente incluidos; resultados históricos intactos.
 Unity agrega ENTREGAS, Evolución y Estado del proyecto desde metadata.
 
 Rama de trabajo: `codex/post-p1l4-structural-audit`
@@ -43,15 +43,15 @@ activación explícita en Entregas o Avanzado y nunca se presenta como resultado
 
 | Capa | Estado | Interpretación |
 | --- | --- | --- |
-| Geometría | `POST_P1L4_CURRENT` | 909 sólidos; auditorías EXT-1 a EXT-4, sin cambios geométricos en EXT-5. |
-| Diagnóstico FE | `CANDIDATE / NOT RUN` | 856 miembros, 16 relaciones 1:N; 43 geometrías flotantes / 22 componentes. |
+| Geometría | `POST_P1L4_CURRENT` | 791 sólidos; 116 exclusiones aprobadas y dos pares fusionados. |
+| Diagnóstico FE | `CANDIDATE / NOT RUN` | 736 miembros, 7 relaciones 1:N; 22 geometrías sin camino FE a apoyo / 16 componentes. |
 | Resultados actuales | `NONE` | Sin corrida compatible; fuerzas, deformada y demanda actuales no disponibles. |
 | G/Q/EX/EY/R y capacidad anteriores | `HISTORICAL` | Avanzado → Histórico, apagado por defecto. |
 | Catálogo de cargas | Auditadas, no aplicadas | No confundir su geometría con G/Q recalculados. |
 
-El diagnóstico visible cubre 116 elementos: 63 `CONNECTED_EXPECTED`, 10
-`FREE_END_EXPECTED`, 31 `DISCONNECTED_ERROR` y 12 `UNRESOLVED`.
-Estos dos últimos grupos son las 43 geometrías flotantes; se incluye ahora
+El diagnóstico visible cubre 80 elementos: 49 `CONNECTED_EXPECTED`, 9
+`FREE_END_EXPECTED`, 17 `DISCONNECTED_ERROR` y 5 `UNRESOLVED`.
+Estos dos últimos grupos son las 22 geometrías sin camino FE a apoyo; se incluye
 `E2-P4-V-009`, antes omitida del foco. Un extremo libre en el grafo no prueba
 por sí solo un voladizo real. Ver [EXT-5](entregas/POST_P1L4/EXT_5_REMAINING_AUDIT.md)
 y [guía/QA Unity](entregas/POST_P1L4/UNITY_CURRENT_UX_QA.md).
@@ -139,8 +139,8 @@ Arquitectura futura, sin P1L5 implementado:
 `current_readiness/P1L5_ARCHITECTURE_PREPARATION.md` y `SQ4_FEASIBILITY.md`
 dentro de PRE_P1L5. No usar el candidato ni el catálogo como análisis aprobado.
 
-1. Revisar las 43 geometrías flotantes agrupadas por causa en EXT-5.
-2. Validar las restricciones del adaptador (424 nodos multi-maestro y 376 nodos retenidos/restringidos), sin conectar artificialmente.
+1. Revisar las 22 geometrías de `user_structural_review/FE_PENDING_AFTER_USER_REVIEW.md` y el desfase de columnas >5 cm.
+2. Validar las restricciones del adaptador usando `user_structural_review/current_constraint_clusters.json`; los IDs de nodos históricos no son vigentes.
 3. Terminar perímetros/huecos de losas y cobertura.
 4. Validar Q completo.
 5. Solo entonces recalcular G/Q, masas, EX/EY, superposición y OpenSees.

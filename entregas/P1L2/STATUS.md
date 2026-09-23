@@ -1,5 +1,18 @@
 # P1L2 Status
 
+## PRE-P1L5 — revisión manual aplicada (2026-09-23)
+
+- 116 exclusiones aprobadas individualmente en `EXCLUSION_APPROVAL.md`, archivadas en
+  `entregas/PRE_P1L5/CURRENT_MODEL_EXCLUSIONS.json`; referencia Luis intacta.
+- Dos fusiones físicas ED2 P4: 042+046 → 042; 048+049 → 049. IDs restantes estables.
+- Modelo actual: 791 sólidos; FE candidato 736 miembros, 22 pendientes / 16 componentes.
+- De los 43 anteriores: 15 excluidos, 6 recuperados por continuidad numérica de muros;
+  ninguno nuevo. No se añadieron apoyos ni se ejecutó OpenSees.
+- Columnas no alineadas: offsets predominantes ~18 cm exigen revisar origen por planta.
+- Las 19 alturas pendientes pertenecían a elementos excluidos; no fueron inventadas.
+- Informe vigente: `entregas/PRE_P1L5/user_structural_review/REVIEW_STATUS.md`.
+- Las secciones siguientes son checkpoints históricos, no métricas CURRENT.
+
 ## PRE-P1L5 — expediente de revisión manual (2026-09-22)
 
 - Correcciones automáticas de los pendientes FE pausadas por solicitud de Matías.
