@@ -3,8 +3,8 @@
 Estado: `PRE-P1L5 / CONSOLIDACIÓN — BASELINE BLOCKED`
 
 Guía vigente: [PRE_P1L5_STATUS](entregas/PRE_P1L5/PRE_P1L5_STATUS.md).
-Revisión vigente: [alcance aprobado y fusiones](entregas/PRE_P1L5/user_structural_review/REVIEW_STATUS.md).
-Diagnóstico → Cambios de esta revisión / Pendientes FE: 22 pendientes / 16 componentes.
+Revisión vigente: [segundo saneamiento estructural](entregas/PRE_P1L5/second_structural_cleanup/REVIEW_STATUS.md).
+Diagnóstico → Cambios de esta revisión / COLUMN STACKS / Pendientes FE: seis pendientes / cuatro componentes.
 Las [43 fichas originales](entregas/PRE_P1L5/FE_PENDING_43_DETAILED_REVIEW.md) se conservan
 como expediente previo, no diagnóstico actual. No hay nueva corrida FE.
 Incluye [QA global](entregas/PRE_P1L5/GLOBAL_VALIDATION.md),
@@ -12,7 +12,7 @@ Incluye [QA global](entregas/PRE_P1L5/GLOBAL_VALIDATION.md),
 [matriz externa](entregas/PRE_P1L5/CROSS_GROUP_FEATURE_MATRIX.md) y
 [pendientes individuales](entregas/PRE_P1L5/REMAINING_STRUCTURAL_AUDIT.md).
 No ejecutar P1L5 ni el candidato FE hasta resolver los bloqueos documentados.
-644 materiales confirmados en miembros actualmente incluidos; resultados históricos intactos.
+588 materiales confirmados en miembros actualmente incluidos; resultados históricos intactos.
 Unity agrega ENTREGAS, Evolución y Estado del proyecto desde metadata.
 
 Rama de trabajo: `codex/post-p1l4-structural-audit`
@@ -43,18 +43,17 @@ activación explícita en Entregas o Avanzado y nunca se presenta como resultado
 
 | Capa | Estado | Interpretación |
 | --- | --- | --- |
-| Geometría | `POST_P1L4_CURRENT` | 791 sólidos; 116 exclusiones aprobadas y dos pares fusionados. |
-| Diagnóstico FE | `CANDIDATE / NOT RUN` | 736 miembros, 7 relaciones 1:N; 22 geometrías sin camino FE a apoyo / 16 componentes. |
+| Geometría | `POST_P1L4_CURRENT` | 724 sólidos; 167 exclusiones archivadas, 18 fusiones acumuladas y 74 ajustes XY de columnas. |
+| Diagnóstico FE | `CANDIDATE / NOT RUN` | 676 miembros, 7 relaciones 1:N; seis geometrías sin camino FE a apoyo / cuatro componentes. |
 | Resultados actuales | `NONE` | Sin corrida compatible; fuerzas, deformada y demanda actuales no disponibles. |
 | G/Q/EX/EY/R y capacidad anteriores | `HISTORICAL` | Avanzado → Histórico, apagado por defecto. |
 | Catálogo de cargas | Auditadas, no aplicadas | No confundir su geometría con G/Q recalculados. |
 
-El diagnóstico visible cubre 80 elementos: 49 `CONNECTED_EXPECTED`, 9
-`FREE_END_EXPECTED`, 17 `DISCONNECTED_ERROR` y 5 `UNRESOLVED`.
-Estos dos últimos grupos son las 22 geometrías sin camino FE a apoyo; se incluye
-`E2-P4-V-009`, antes omitida del foco. Un extremo libre en el grafo no prueba
-por sí solo un voladizo real. Ver [EXT-5](entregas/POST_P1L4/EXT_5_REMAINING_AUDIT.md)
-y [guía/QA Unity](entregas/POST_P1L4/UNITY_CURRENT_UX_QA.md).
+El diagnóstico se reconstruyó: seis geometrías sin camino FE a apoyo,
+incluidas `E1-S1-V-005` y `E2-P4-V-009`. El foco de clasificación histórico
+no sustituye ese inventario completo. Un extremo libre no prueba un voladizo real.
+QA vigente: [segundo saneamiento](entregas/PRE_P1L5/second_structural_cleanup/REVIEW_STATUS.md).
+EXT-5 y sus conteos permanecen como antecedentes históricos.
 
 ## Fuentes canónicas
 

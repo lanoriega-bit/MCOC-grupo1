@@ -8,29 +8,28 @@ Los muros conservan un miembro vertical equivalente en su centro para no multipl
 
 ## Métricas
 
-- Flotantes: 115 geometrías/59 componentes → 22/16.
-- Nodos candidatos: 1353.
-- Elementos FE candidatos: 736.
-- Restricciones internas: 1346.
+- Flotantes: 115 geometrías/59 componentes → 6/4.
+- Nodos candidatos: 1183.
+- Elementos FE candidatos: 676.
+- Restricciones internas: 1205.
 - Geometrías con relación 1:N: 7; máximo 3 segmentos.
-- Viga–muro: 41; muro–muro: 0; solapes verticales: 78; columna–viga: 696.
+- Viga–muro: 20; muro–muro: 0; solapes verticales: 48; columna–viga: 696.
 
 ## Clasificación de los 115 elementos foco
 
-- `FE_ADAPTER_ERROR`: 47.
+- `CONTINUOUS`: 2.
+- `FE_ADAPTER_ERROR`: 32.
 - `REAL_CANTILEVER`: 9.
-- `TRANSFERRED`: 2.
-- `UNRESOLVED`: 21.
+- `UNRESOLVED`: 4.
 
 - `REAL_CANTILEVER`: E2-P4-V-003, E2-P4-V-008, E2-P4-V-011, E2-P4-V-012, E2-P4-V-018, E2-P4-V-029, E2-P4-V-042, E2-P4-V-043, E2-P4-V-057.
-- `TRANSFERRED`: E1-P1-C-022, E1-P2-C-010.
-- `FE_ADAPTER_ERROR`: E1-P1-M-001, E1-P1-M-002, E1-P1-M-012, E1-P1-M-025, E1-P1-M-026, E1-P1-M-032, E1-P1-M-033, E1-P2-M-003, E1-P2-M-010, E1-P3-M-003, E1-P3-M-010, E1-P4-M-003, E1-P4-M-009, E2-P1-V-007, E2-P1-V-008, E2-P2-V-007, E2-P2-V-008, E2-P3-V-007, E2-P3-V-008, E2-P4-V-001, E2-P4-V-002, E2-P4-V-010, E2-P4-V-013, E2-P4-V-014, E2-P4-V-015, E2-P4-V-016, E2-P4-V-017, E2-P4-V-021, E2-P4-V-022, E2-P4-V-023, E2-P4-V-024, E2-P4-V-025, E2-P4-V-027, E2-P4-V-028, E2-P4-V-030, E2-P4-V-031, E2-P4-V-033, E2-P4-V-034, E2-P4-V-035, E2-P4-V-036, E2-P4-V-037, E2-P4-V-038, E2-P4-V-039, E2-P4-V-040, E2-P4-V-041, E2-S1-V-007, E2-S1-V-008.
-- `UNRESOLVED`: E1-P1-M-016, E1-P1-M-020, E1-P1-M-021, E1-P1-M-022, E1-P1-M-023, E1-P1-M-024, E1-P1-M-031, E1-P1-M-034, E1-P1-M-035, E1-P1-M-036, E1-P1-M-037, E1-P2-M-005, E1-P2-M-009, E1-P3-M-005, E1-P3-M-009, E1-P4-M-010, E1-P4-M-012, E2-P4-V-004, E2-P4-V-005, E2-P4-V-006, E2-P4-V-007.
+- `TRANSFERRED`: —.
+- `FE_ADAPTER_ERROR`: E2-P1-V-007, E2-P1-V-008, E2-P2-V-007, E2-P2-V-008, E2-P3-V-007, E2-P3-V-008, E2-P4-V-001, E2-P4-V-002, E2-P4-V-010, E2-P4-V-013, E2-P4-V-014, E2-P4-V-016, E2-P4-V-017, E2-P4-V-021, E2-P4-V-022, E2-P4-V-023, E2-P4-V-024, E2-P4-V-025, E2-P4-V-027, E2-P4-V-028, E2-P4-V-030, E2-P4-V-031, E2-P4-V-033, E2-P4-V-034, E2-P4-V-035, E2-P4-V-037, E2-P4-V-038, E2-P4-V-039, E2-P4-V-040, E2-P4-V-041, E2-S1-V-007, E2-S1-V-008.
+- `UNRESOLVED`: E2-P4-V-004, E2-P4-V-005, E2-P4-V-006, E2-P4-V-007.
 
 ## Validación
 
-- `CONNECTED_EXPECTED`: 49.
-- `DISCONNECTED_ERROR`: 17.
+- `CONNECTED_EXPECTED`: 34.
 - `FREE_END_EXPECTED`: 9.
 - `UNRESOLVED`: 4.
 

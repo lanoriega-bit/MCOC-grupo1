@@ -590,7 +590,12 @@ def main() -> None:
     if (ROOT / "entregas/PRE_P1L5/CURRENT_MODEL_EXCLUSIONS.json").exists():
         import sys
         sys.path.insert(0, str(ROOT / "entregas/PRE_P1L5/scripts"))
-        runpy.run_path(str(ROOT / "entregas/PRE_P1L5/scripts/finalize_user_review.py"), run_name="__main__")
+        scope = json.loads((ROOT / "entregas/PRE_P1L5/CURRENT_MODEL_EXCLUSIONS.json").read_text(encoding="utf-8-sig"))
+        if scope.get("current_revision") == "SECOND_STRUCTURAL_CLEANUP":
+            from second_structural_cleanup import finalize
+            finalize()
+        else:
+            runpy.run_path(str(ROOT / "entregas/PRE_P1L5/scripts/finalize_user_review.py"), run_name="__main__")
     print(json.dumps(manifest["validation"], ensure_ascii=False, indent=2))
 
 

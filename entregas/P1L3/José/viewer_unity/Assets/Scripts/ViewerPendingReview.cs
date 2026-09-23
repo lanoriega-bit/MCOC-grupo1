@@ -15,6 +15,8 @@ namespace Mcoc.UnityViewer
     [Serializable] public class PendingReviewData { public string geometry_version; public List<PendingReviewRow> rows; public List<PendingGridAxis> axes; }
     [Serializable] public class RevisionChange { public string id,type,reason,source; public List<string> historical_ids; public float gap_m; }
     [Serializable] public class RevisionChanges { public string geometry_version,baseline_commit; public List<RevisionChange> rows; }
+    [Serializable] public class ColumnStackRow { public string id,building; public List<string> member_ids,floors; public bool confirmed; }
+    [Serializable] public class ColumnStackData { public string geometry_version,registration_policy; public List<ColumnStackRow> stacks; }
     public partial class ViewerController
     {
         PendingReviewData pendingReviewData;
@@ -27,8 +29,61 @@ namespace Mcoc.UnityViewer
         string pendingReviewError;
         RevisionChanges revisionChanges;
         bool revisionChangesExpanded;
-        string revisionFilter="MERGED";
+        string revisionFilter="BEAM_MERGED";
         Vector2 revisionScroll;
+        ColumnStackData columnStackData;
+        bool columnStacksExpanded,stackReviewActive;
+        Vector2 stackScroll;
+
+        void LoadColumnStacks()
+        {
+            if(columnStackData!=null)return;
+            string path=Path.Combine(Application.streamingAssetsPath,"column_vertical_stacks.json");
+            if(!File.Exists(path))return;
+            LoadProjectState();var data=JsonUtility.FromJson<ColumnStackData>(File.ReadAllText(path));
+            if(data?.geometry_version==projectState?.geometry_sha256)columnStackData=data;
+        }
+        void SelectColumnStack(ColumnStackRow stack)
+        {
+            LoadPendingReview();
+            var first=allElements.Find(e=>e!=null&&!e.isFeCandidateVisual&&stack.member_ids.Contains(e.humanId));
+            if(first==null||pendingReviewData==null)return;
+            SelectPendingReview(new PendingReviewRow{id=first.humanId,label=stack.id,building=stack.building,floor=first.floor,
+                priority=stack.confirmed?"CONFIRMED":"REVIEW_REQUIRED",axes="Ver ejes de planta; referencia XY de stacks: contorno P2",
+                problem="COLUMN STACKS · comparación vertical, no resultado resistente",plan="COLUMN_VERTICAL_STACKS.json",
+                question="Comparar continuidad S1–P4. Secciones sin modificar. R restaura el edificio.",neighbors=stack.member_ids,level_z=0});
+            stackReviewActive=true;columnStacksExpanded=true;pendingReviewExpanded=false;
+            SetGlobalAxesVisible(false);
+            yaw=0;pitch=12;ReapplyAll();FitCurrentModel();
+            // A slender five-floor stack needs vertical margin, not a building
+            // width-based fit that can hide its roof behind the top bar.
+            orbitDist=Mathf.Max(42f,orbitDist*1.5f);
+        }
+        void DrawColumnStacks()
+        {
+            LoadColumnStacks();
+            if(GUILayout.Button((columnStacksExpanded?"− ":"+ ")+"COLUMN STACKS · verticalidad",currentButton))columnStacksExpanded=!columnStacksExpanded;
+            if(!columnStacksExpanded)return;
+            if(columnStackData==null){GUILayout.Label("Stacks no disponibles para esta geometría.",currentBody);return;}
+            GUILayout.Label("Aislar una cadena. Pisos en su altura real, misma vista XY. No se superponen datasets históricos.",currentBody);
+            if(stackReviewActive)
+            {
+                GUILayout.BeginHorizontal();
+                foreach(string floor in new[]{"S1","P1","P2","P3","P4"})
+                {
+                    bool visible=floorVisible.ContainsKey(floor)&&floorVisible[floor];
+                    bool next=GUILayout.Toggle(visible,floor);if(next!=visible){floorVisible[floor]=next;ReapplyAll();}
+                }
+                GUILayout.EndHorizontal();
+                if(GUILayout.Button("Vista XZ",currentButton)){yaw=0;pitch=0;velYaw=velPitch=0;}
+                if(GUILayout.Button("Vista YZ",currentButton)){yaw=90;pitch=0;velYaw=velPitch=0;}
+                if(GUILayout.Button("Volver al edificio · R",currentButton))ResetPresentation();
+            }
+            stackScroll=GUILayout.BeginScrollView(stackScroll,GUILayout.Height(190));
+            foreach(var stack in columnStackData.stacks)
+                if(GUILayout.Button(stack.id+" · "+stack.member_ids[0]+" · "+stack.member_ids.Count+" pisos · "+(stack.confirmed?"CONFIRMED":"REVIEW"),currentButton))SelectColumnStack(stack);
+            GUILayout.EndScrollView();
+        }
 
         void LoadRevisionChanges()
         {
@@ -46,8 +101,11 @@ namespace Mcoc.UnityViewer
             if(!revisionChangesExpanded)return;
             if(revisionChanges==null){GUILayout.Label("Registro no disponible para esta geometría.",currentBody);return;}
             GUILayout.Label("Exclusiones archivadas, no visibles como estructura actual. Sin resultados nuevos.",currentBody);
-            foreach(string kind in new[]{"MERGED","REMOVED","CONNECTIVITY_FIXED","REVIEW_REQUIRED"})
+            foreach(string kind in new[]{"WALL_REMOVED","WALL_SUPPORT_REMOVED","BEAM_MERGED","COLUMN_ALIGNED","REVIEW_REQUIRED","MERGED","REMOVED","CONNECTIVITY_FIXED"})
+            {
+                if((kind=="MERGED"||kind=="REMOVED"||kind=="CONNECTIVITY_FIXED")&&!revisionChanges.rows.Exists(r=>r.type==kind))continue;
                 if(GUILayout.Button((revisionFilter==kind?"▶ ":"")+kind+" · "+revisionChanges.rows.FindAll(r=>r.type==kind).Count,currentButton))revisionFilter=kind;
+            }
             revisionScroll=GUILayout.BeginScrollView(revisionScroll,GUILayout.Height(210));
             foreach(var row in revisionChanges.rows)
             {
@@ -82,7 +140,7 @@ namespace Mcoc.UnityViewer
         }
         void ExitPendingReview()
         {
-            pendingReviewRow=null;pendingReviewIds.Clear();
+            pendingReviewRow=null;pendingReviewIds.Clear();stackReviewActive=false;
             foreach(var go in pendingGridObjects)if(go!=null)Destroy(go);
             pendingGridObjects.Clear();pendingGridLabels.Clear();
         }

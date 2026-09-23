@@ -10,15 +10,18 @@ y [CHECKPOINTS.md](CHECKPOINTS.md). P1L4_FINAL permanece en
 
 ## Qué está disponible
 
-- Revisión 2026-09-23: [REVIEW_STATUS](user_structural_review/REVIEW_STATUS.md).
-- Geometría CURRENT: 791 sólidos; 143 columnas, 511 vigas, 74 muros,
-  10 losas visuales y 53 apoyos geométricos. 116 exclusiones aprobadas y dos fusiones.
-- Propiedades: 644 miembros actuales con G35_10/fc35 MPa y A630-420H/fy420 MPa.
+- Revisión 2026-09-23: [REVIEW_STATUS](second_structural_cleanup/REVIEW_STATUS.md).
+- Geometría CURRENT: 724 sólidos; 143 columnas, 495 vigas, 30 muros ED2,
+  10 losas visuales y 46 apoyos geométricos. 167 exclusiones archivadas y 18 fusiones acumuladas.
+  ED1: cero muros activos por decisión de alcance, no ausencia de muros en el edificio real.
+- Propiedades: 588 miembros actuales con G35_10/fc35 MPa y A630-420H/fy420 MPa.
   Notas primarias 2024_22-100/53994 y 2017_67-100/1E116; propiedades de sobrevivientes intactas.
   Lámina 600 = sala eléctrica, no excepción genérica de escaleras. ED1 P4 y
   losas no asignados. No se dedujeron E ni armaduras.
-- FE candidato: 736 miembros, 7 relaciones 1:N, 22 residuales/16 componentes.
+- FE candidato: 676 miembros, 7 relaciones 1:N, seis residuales/cuatro componentes.
   No hay FE canónico ejecutable aprobado nuevo: no llamar “canónico” al candidato.
+- Columnas: 38 stacks revisados; 74 ajustes XY basados en contornos/ejes. Secciones intactas.
+  14 columnas siguen en revisión; registro P2 de columnas no equivale a reconciliación global de plantas/700.
 - Resultados actuales: NONE. G/Q/EX/EY/R y P-M son históricos y opt-in.
 - Entregas P1L2/P1L3/P1L4/POST-P1L4 + Evolución y Estado del proyecto en Unity.
 - QA local histórico ampliado: 6560 barra/casos y 1312 ejes PASS.
@@ -29,19 +32,20 @@ y [CHECKPOINTS.md](CHECKPOINTS.md). P1L4_FINAL permanece en
 
 | Bloqueo | Evidencia / responsable de decisión | Qué falta |
 |---|---|---|
-| 22 caminos FE / 16 componentes | Planos y decisión estructural del grupo | Confirmar transferencias, exteriores restantes, bordes y muros; no apoyos ficticios |
+| Seis caminos FE / cuatro componentes | Planos y decisión estructural del grupo | Confirmar E1-S1-V-005 y cinco vigas ED2 P4; no apoyos ficticios |
+| Registro global / stacks | Controles LINE RLE-EJES | Columnas referidas a P2; reconciliar con ejes nominales y registro de cargas antes de aprobar FE/cargas |
 | Brazos rígidos encadenados | FE-2, clusters hasta 26.448 m en planta | Revisar físicamente alcance del cuerpo rígido y formulación del adaptador |
-| Alineación columnas >5 cm | Contraste S1/P1 vs P2–P4 | Desfase habitual ~18 cm: resolver transformación por planta antes de mover |
+| 14 columnas en revisión | COLUMN_VERTICAL_STACKS.json | Falta de controles únicos o suficientes pisos superiores; no se movieron |
 | Material ED1 P4/losas | Nota 100 termina en cielo P3; 600 G25 es sala eléctrica | Confirmar alcance superior y losas; no extrapolar G35 |
 | ED1 S1/P1 y huecos | RLE-LOSA, arquitectura, cortes | Cerrar perímetro exterior/transición outboard y distinguir vacíos de bordes de paño |
-| 8 muros con huellas solapadas | Tabla individual en REMAINING_STRUCTURAL_AUDIT | Cuatro redondeos y otros offsets/esquinas: validar incidencia FE, no eliminar |
+| Muros ED1 fuera de alcance | USER_SCOPE_DECISION_ED1_WALLS | Los ocho casos históricos de solape ya no pertenecen a CURRENT; no equivalen a una solución física del edificio real |
 | G/Q definitivos | Catálogo 700, PP.LOSA, cargas especiales | Completar cobertura, unidades, receptores y áreas netas antes de masas/sismo |
 
 La normalización 1482→946 enlaces es **propuesta algebraica**, no corrección
 aplicada: conserva relaciones de un grafo que aún puede imponer rigidez física
 excesiva. No cerrar este bloqueo solo por residual cinemático pequeño.
-Sus números de nodo son históricos. Usar `user_structural_review/current_constraint_clusters.json`
-para el candidato actual (1346 restricciones). Las 19 alturas desconocidas pertenecían a
+Sus números de nodo son históricos. Usar `second_structural_cleanup/current_constraint_clusters.json`
+para el candidato actual (1205 restricciones). Las 19 alturas desconocidas pertenecían a
 elementos excluidos, no fueron resueltas por asignación de valores.
 
 ## Fuentes canónicas y no canónicas
@@ -57,7 +61,7 @@ elementos excluidos, no fueron resueltas por asignación de valores.
 | Resultados históricos | entregas/P1L3/results/a7/cases/{G,Q,EX,EY,R} |
 | Unity único | entregas/P1L3/José/viewer_unity/Assets/Main.unity |
 | Metadata proyecto | entregas/PRE_P1L5/project_state.json → StreamingAssets/project_state.json |
-| QA PRE5 | entregas/PRE_P1L5/global_validation.json + GLOBAL_VALIDATION.md |
+| QA CURRENT | entregas/PRE_P1L5/second_structural_cleanup/review_qa.json + REVIEW_STATUS.md |
 | No aplicar | constraint_normalization_proposal.json, propuestas de losas EXT-4 |
 
 `Luis model_viewer.json` es referencia histórica inmutable, NO CURRENT.

@@ -1,332 +1,29 @@
 {
-  "geometry_version": "b4263e2c89bca94edc4812fce931c6b92778b9fb356f68fc22d934747b236328",
+  "geometry_version": "e2a1924f7bb5ef4ec88622ce47727456094e0e1403eb376c9166237ca4bb7e77",
   "rows": [
     {
-      "id": "E1-P1-M-016",
-      "label": "01/22",
+      "id": "E1-S1-V-005",
       "building": "EDIFICIO_1",
-      "floor": "P1",
-      "priority": "B",
-      "axes": "X H'–H2 (H2 -1.8169 m) / Y OUTBOARD <1 (1 -3.5749 m)",
-      "problem": "SIN CAMINO FE A APOYO; geometría física no equivale a unión FE validada.",
-      "plan": "2017_67-101, 2017_67-306",
-      "question": "¿La planta y el corte muestran una unión resistente entre E1-P1-M-016 y E1-S1-M-060, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
-      "neighbors": [
-        "E1-P1-C-022",
-        "E1-P1-M-016",
-        "E1-P1-M-020",
-        "E1-P1-M-024",
-        "E1-P1-M-037",
-        "E1-P2-M-009"
-      ],
-      "level_z": 7.92
-    },
-    {
-      "id": "E1-P1-M-020",
-      "label": "02/22",
-      "building": "EDIFICIO_1",
-      "floor": "P1",
-      "priority": "B",
-      "axes": "X SOBRE EJE H2 (H2 +0.0000 m) / Y OUTBOARD <1 (1 -2.0499 m)",
-      "problem": "SIN CAMINO FE A APOYO; geometría física no equivale a unión FE validada.",
-      "plan": "2017_67-101, 2017_67-306",
-      "question": "¿La planta y el corte muestran una unión resistente entre E1-P1-M-020 y E1-S1-M-060, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
-      "neighbors": [
-        "E1-P1-C-022",
-        "E1-P1-M-016",
-        "E1-P1-M-020",
-        "E1-P1-M-024",
-        "E1-P1-M-037",
-        "E1-P2-M-009"
-      ],
-      "level_z": 7.92
-    },
-    {
-      "id": "E1-P1-M-021",
-      "label": "03/22",
-      "building": "EDIFICIO_1",
-      "floor": "P1",
-      "priority": "B",
-      "axes": "X I–IA (IA -1.0750 m) / Y OUTBOARD <1 (1 -0.5249 m)",
-      "problem": "SIN CAMINO FE A APOYO; geometría física no equivale a unión FE validada.",
-      "plan": "2017_67-101, 2017_67-310",
-      "question": "¿La planta y el corte muestran una unión resistente entre E1-P1-M-021 y E1-S1-M-060, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
-      "neighbors": [
-        "E1-P1-C-022",
-        "E1-P1-M-021",
-        "E1-P1-M-035",
-        "E1-P2-M-009"
-      ],
-      "level_z": 7.92
-    },
-    {
-      "id": "E1-P1-M-022",
-      "label": "04/22",
-      "building": "EDIFICIO_1",
-      "floor": "P1",
-      "priority": "B",
-      "axes": "X I–IA (IA -1.0750 m) / Y OUTBOARD <1 (1 -6.2249 m)",
-      "problem": "SIN CAMINO FE A APOYO; geometría física no equivale a unión FE validada.",
-      "plan": "2017_67-101, 2017_67-310",
-      "question": "¿La planta y el corte muestran una unión resistente entre E1-P1-M-022 y E1-S1-M-060, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
-      "neighbors": [
-        "E1-P1-C-022",
-        "E1-P1-M-022",
-        "E1-P1-M-023",
-        "E1-P2-M-009"
-      ],
-      "level_z": 7.92
-    },
-    {
-      "id": "E1-P1-M-023",
-      "label": "05/22",
-      "building": "EDIFICIO_1",
-      "floor": "P1",
-      "priority": "B",
-      "axes": "X H'–H2 (H2 -1.0419 m) / Y OUTBOARD <1 (1 -6.2249 m)",
-      "problem": "SIN CAMINO FE A APOYO; geometría física no equivale a unión FE validada.",
-      "plan": "2017_67-101, 2017_67-306",
-      "question": "¿La planta y el corte muestran una unión resistente entre E1-P1-M-023 y E1-S1-M-060, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
-      "neighbors": [
-        "E1-P1-C-022",
-        "E1-P1-M-022",
-        "E1-P1-M-023",
-        "E1-P2-M-009"
-      ],
-      "level_z": 7.92
-    },
-    {
-      "id": "E1-P1-M-024",
-      "label": "06/22",
-      "building": "EDIFICIO_1",
-      "floor": "P1",
-      "priority": "B",
-      "axes": "X H'–H2 (H2 -1.8000 m) / Y OUTBOARD <1 (1 -0.5249 m)",
-      "problem": "SIN CAMINO FE A APOYO; geometría física no equivale a unión FE validada.",
-      "plan": "2017_67-101, 2017_67-306",
-      "question": "¿La planta y el corte muestran una unión resistente entre E1-P1-M-024 y E1-S1-M-060, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
-      "neighbors": [
-        "E1-P1-C-022",
-        "E1-P1-M-016",
-        "E1-P1-M-020",
-        "E1-P1-M-021",
-        "E1-P1-M-024",
-        "E1-P1-M-037",
-        "E1-P2-M-009"
-      ],
-      "level_z": 7.92
-    },
-    {
-      "id": "E1-P1-M-031",
-      "label": "07/22",
-      "building": "EDIFICIO_1",
-      "floor": "P1",
-      "priority": "B",
-      "axes": "X SOBRE EJE IA (IA -0.0000 m) / Y OUTBOARD <1 (1 -11.1362 m)",
-      "problem": "SIN CAMINO FE A APOYO; geometría física no equivale a unión FE validada.",
-      "plan": "2017_67-101, 2017_67-310",
-      "question": "¿La planta y el corte muestran una unión resistente entre E1-P1-M-031 y E1-S1-M-060, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
-      "neighbors": [
-        "E1-P1-C-024",
-        "E1-P1-M-031",
-        "E1-P1-M-036",
-        "E1-P2-M-009"
-      ],
-      "level_z": 7.92
-    },
-    {
-      "id": "E1-P1-M-034",
-      "label": "08/22",
-      "building": "EDIFICIO_1",
-      "floor": "P1",
-      "priority": "B",
-      "axes": "X SOBRE EJE IA (IA -0.0000 m) / Y OUTBOARD <1 (1 -10.3310 m)",
-      "problem": "SIN CAMINO FE A APOYO; geometría física no equivale a unión FE validada.",
-      "plan": "2017_67-101, 2017_67-310",
-      "question": "¿La planta y el corte muestran una unión resistente entre E1-P1-M-034 y E1-S1-M-060, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
-      "neighbors": [
-        "E1-P1-C-024",
-        "E1-P1-M-034",
-        "E1-P1-M-036",
-        "E1-P2-M-009"
-      ],
-      "level_z": 7.92
-    },
-    {
-      "id": "E1-P1-M-035",
-      "label": "09/22",
-      "building": "EDIFICIO_1",
-      "floor": "P1",
-      "priority": "B",
-      "axes": "X IA–I' (I' -1.0172 m) / Y OUTBOARD <1 (1 -0.5249 m)",
-      "problem": "SIN CAMINO FE A APOYO; geometría física no equivale a unión FE validada.",
-      "plan": "2017_67-101, 2017_67-310",
-      "question": "¿La planta y el corte muestran una unión resistente entre E1-P1-M-035 y E1-S1-M-060, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
-      "neighbors": [
-        "E1-P1-C-024",
-        "E1-P1-M-021",
-        "E1-P1-M-035",
-        "E1-P2-M-009"
-      ],
-      "level_z": 7.92
-    },
-    {
-      "id": "E1-P1-M-036",
-      "label": "10/22",
-      "building": "EDIFICIO_1",
-      "floor": "P1",
-      "priority": "B",
-      "axes": "X IA–I' (I' -1.0172 m) / Y OUTBOARD <1 (1 -10.6970 m)",
-      "problem": "SIN CAMINO FE A APOYO; geometría física no equivale a unión FE validada.",
-      "plan": "2017_67-101, 2017_67-310",
-      "question": "¿La planta y el corte muestran una unión resistente entre E1-P1-M-036 y E1-S1-M-060, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
-      "neighbors": [
-        "E1-P1-C-024",
-        "E1-P1-M-036",
-        "E1-P1-M-037",
-        "E1-P2-M-009"
-      ],
-      "level_z": 7.92
-    },
-    {
-      "id": "E1-P1-M-037",
-      "label": "11/22",
-      "building": "EDIFICIO_1",
-      "floor": "P1",
-      "priority": "B",
-      "axes": "X I'–IB (I' +0.3953 m) / Y OUTBOARD <1 (1 -5.9627 m)",
-      "problem": "SIN CAMINO FE A APOYO; geometría física no equivale a unión FE validada.",
-      "plan": "2017_67-101, 2017_67-310",
-      "question": "¿La planta y el corte muestran una unión resistente entre E1-P1-M-037 y E1-S1-M-060, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
-      "neighbors": [
-        "E1-P1-C-024",
-        "E1-P1-M-016",
-        "E1-P1-M-020",
-        "E1-P1-M-024",
-        "E1-P1-M-036",
-        "E1-P1-M-037",
-        "E1-P2-M-009"
-      ],
-      "level_z": 7.92
-    },
-    {
-      "id": "E1-P2-M-005",
-      "label": "12/22",
-      "building": "EDIFICIO_1",
-      "floor": "P2",
+      "floor": "S1",
       "priority": "A",
-      "axes": "X Ed–F (Ed +0.0249 m) / Y 2–2a (2a -0.6579 m)",
-      "problem": "SIN CAMINO FE A APOYO; geometría física no equivale a unión FE validada.",
-      "plan": "2017_67-102, 2017_67-304",
-      "question": "¿La planta y el corte muestran una unión resistente entre E1-P2-M-005 y E1-P1-M-026, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
+      "axes": "EDIFICIO_1 / S1 / Viga X entre Eb-Ec / Y < 1",
+      "plan": "2017_67-101.dxf",
+      "question": "Comprobar trayectoria física de cargas; no introducir apoyos ficticios.",
       "neighbors": [
-        "E1-P1-M-026",
-        "E1-P2-C-004",
-        "E1-P2-M-005",
-        "E1-P3-M-005",
-        "E1-P4-M-012"
+        "E1-S1-V-005"
       ],
-      "level_z": 11.88
-    },
-    {
-      "id": "E1-P2-M-009",
-      "label": "13/22",
-      "building": "EDIFICIO_1",
-      "floor": "P2",
-      "priority": "A",
-      "axes": "X Ec–Ed (Ec +0.0499 m) / Y 1''–2 (1'' +1.3565 m)",
-      "problem": "SIN CAMINO FE A APOYO; geometría física no equivale a unión FE validada.",
-      "plan": "2017_67-102, 2017_67-304",
-      "question": "¿La planta y el corte muestran una unión resistente entre E1-P2-M-009 y E1-P1-M-025, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
-      "neighbors": [
-        "E1-P1-M-025",
-        "E1-P2-C-006",
-        "E1-P2-M-009",
-        "E1-P3-M-009",
-        "E1-P4-M-010"
-      ],
-      "level_z": 11.88
-    },
-    {
-      "id": "E1-P3-M-005",
-      "label": "14/22",
-      "building": "EDIFICIO_1",
-      "floor": "P3",
-      "priority": "A",
-      "axes": "X Ed–F (Ed +0.0249 m) / Y 2–2a (2a -0.6579 m)",
-      "problem": "SIN CAMINO FE A APOYO; geometría física no equivale a unión FE validada.",
-      "plan": "2017_67-102, 2017_67-304",
-      "question": "¿La planta y el corte muestran una unión resistente entre E1-P3-M-005 y E1-P2-M-005, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
-      "neighbors": [
-        "E1-P2-M-005",
-        "E1-P3-C-006",
-        "E1-P3-M-005",
-        "E1-P4-M-012"
-      ],
-      "level_z": 15.84
-    },
-    {
-      "id": "E1-P3-M-009",
-      "label": "15/22",
-      "building": "EDIFICIO_1",
-      "floor": "P3",
-      "priority": "A",
-      "axes": "X Ec–Ed (Ec +0.0499 m) / Y 1''–2 (1'' +1.3565 m)",
-      "problem": "SIN CAMINO FE A APOYO; geometría física no equivale a unión FE validada.",
-      "plan": "2017_67-102, 2017_67-304",
-      "question": "¿La planta y el corte muestran una unión resistente entre E1-P3-M-009 y E1-P2-M-009, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
-      "neighbors": [
-        "E1-P2-M-009",
-        "E1-P3-C-005",
-        "E1-P3-M-009",
-        "E1-P4-M-010"
-      ],
-      "level_z": 15.84
-    },
-    {
-      "id": "E1-P4-M-010",
-      "label": "16/22",
-      "building": "EDIFICIO_1",
-      "floor": "P4",
-      "priority": "A",
-      "axes": "X Ec–Ed (Ec +0.0499 m) / Y 1''–2 (1'' +1.3565 m)",
-      "problem": "SIN CAMINO FE A APOYO; geometría física no equivale a unión FE validada.",
-      "plan": "2017_67-103, 2017_67-304",
-      "question": "¿La planta y el corte muestran una unión resistente entre E1-P4-M-010 y E1-P3-M-009, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
-      "neighbors": [
-        "E1-P2-M-009",
-        "E1-P3-M-009",
-        "E1-P4-C-005",
-        "E1-P4-M-010"
-      ],
-      "level_z": 19.8
-    },
-    {
-      "id": "E1-P4-M-012",
-      "label": "17/22",
-      "building": "EDIFICIO_1",
-      "floor": "P4",
-      "priority": "A",
-      "axes": "X Ed–F (Ed +0.0249 m) / Y 2–2a (2a -0.6579 m)",
-      "problem": "SIN CAMINO FE A APOYO; geometría física no equivale a unión FE validada.",
-      "plan": "2017_67-103, 2017_67-304",
-      "question": "¿La planta y el corte muestran una unión resistente entre E1-P4-M-012 y E1-P3-M-005, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
-      "neighbors": [
-        "E1-P2-M-005",
-        "E1-P3-M-005",
-        "E1-P4-C-006",
-        "E1-P4-M-012"
-      ],
-      "level_z": 19.8
+      "level_z": 3.56,
+      "label": "01/6",
+      "problem": "SIN CAMINO FE A APOYO; nuevo diagnóstico tras saneamiento."
     },
     {
       "id": "E2-P4-V-004",
-      "label": "18/22",
+      "label": "02/6",
       "building": "EDIFICIO_2",
       "floor": "P4",
       "priority": "B",
       "axes": "X OUTBOARD <A (A -3.5480 m) / Y 1–2 (2 -3.2916 m)",
-      "problem": "SIN CAMINO FE A APOYO; geometría física no equivale a unión FE validada.",
+      "problem": "SIN CAMINO FE A APOYO; nuevo diagnóstico tras saneamiento.",
       "plan": "2024_22-102, 2024_22-303",
       "question": "¿La planta y el corte muestran una unión resistente entre E2-P4-V-004 y E2-P4-M-002, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
       "neighbors": [
@@ -341,12 +38,12 @@
     },
     {
       "id": "E2-P4-V-005",
-      "label": "19/22",
+      "label": "03/6",
       "building": "EDIFICIO_2",
       "floor": "P4",
       "priority": "B",
       "axes": "X OUTBOARD <A (A -3.5480 m) / Y 1–2 (2 -1.7239 m)",
-      "problem": "SIN CAMINO FE A APOYO; geometría física no equivale a unión FE validada.",
+      "problem": "SIN CAMINO FE A APOYO; nuevo diagnóstico tras saneamiento.",
       "plan": "2024_22-102, 2024_22-303",
       "question": "¿La planta y el corte muestran una unión resistente entre E2-P4-V-005 y E2-P4-M-002, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
       "neighbors": [
@@ -361,12 +58,12 @@
     },
     {
       "id": "E2-P4-V-006",
-      "label": "20/22",
+      "label": "04/6",
       "building": "EDIFICIO_2",
       "floor": "P4",
       "priority": "B",
       "axes": "X OUTBOARD <A (A -3.5480 m) / Y 1–2 (2 -0.9489 m)",
-      "problem": "SIN CAMINO FE A APOYO; geometría física no equivale a unión FE validada.",
+      "problem": "SIN CAMINO FE A APOYO; nuevo diagnóstico tras saneamiento.",
       "plan": "2024_22-102, 2024_22-303",
       "question": "¿La planta y el corte muestran una unión resistente entre E2-P4-V-006 y E2-P4-M-002, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
       "neighbors": [
@@ -381,12 +78,12 @@
     },
     {
       "id": "E2-P4-V-007",
-      "label": "21/22",
+      "label": "05/6",
       "building": "EDIFICIO_2",
       "floor": "P4",
       "priority": "B",
       "axes": "X OUTBOARD <A (A -3.5480 m) / Y 2–3 (2 +1.5932 m)",
-      "problem": "SIN CAMINO FE A APOYO; geometría física no equivale a unión FE validada.",
+      "problem": "SIN CAMINO FE A APOYO; nuevo diagnóstico tras saneamiento.",
       "plan": "2024_22-102, 2024_22-303",
       "question": "¿La planta y el corte muestran una unión resistente entre E2-P4-V-007 y E2-P4-M-003, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
       "neighbors": [
@@ -399,12 +96,12 @@
     },
     {
       "id": "E2-P4-V-009",
-      "label": "22/22",
+      "label": "06/6",
       "building": "EDIFICIO_2",
       "floor": "P4",
       "priority": "B",
       "axes": "X OUTBOARD <A (A -2.7322 m) / Y 2–3 (3 -0.2993 m)",
-      "problem": "SIN CAMINO FE A APOYO; geometría física no equivale a unión FE validada.",
+      "problem": "SIN CAMINO FE A APOYO; nuevo diagnóstico tras saneamiento.",
       "plan": "2024_22-102, 2024_22-303",
       "question": "¿La planta y el corte muestran una unión resistente entre E2-P4-V-009 y E2-P4-M-006, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
       "neighbors": [

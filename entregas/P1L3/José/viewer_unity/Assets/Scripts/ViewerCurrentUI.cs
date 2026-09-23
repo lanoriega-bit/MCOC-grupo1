@@ -221,6 +221,7 @@ namespace Mcoc.UnityViewer
             if (!presentationMode && Accordion("DIAGNÓSTICO"))
             {
                 DrawRevisionChanges();
+                DrawColumnStacks();
                 DrawPendingReviewControls();
                 bool colors=GUILayout.Toggle(diagnosticColorsVisible,"Colores de conectividad",GUILayout.Height(25));
                 bool problems=GUILayout.Toggle(diagnosticProblemsOnly,"Solo problemas / no resueltos",GUILayout.Height(25));

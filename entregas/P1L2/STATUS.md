@@ -1,5 +1,16 @@
 # P1L2 Status
 
+## PRE-P1L5 — segundo saneamiento (2026-09-23)
+
+- CURRENT: 724 sólidos; 143 columnas, 495 vigas, 30 muros ED2, 10 losas visuales y 46 apoyos geométricos.
+- Los 44 muros ED1 activos se excluyeron por decisión de alcance, junto a siete apoyos exclusivos.
+  Se preservan 19 apoyos de columnas y ocho compartidos ED1; no se afirma que el edificio real no tenga muros.
+- 16 nuevas fusiones físicas y 74 ajustes XY de columnas con contornos/ejes primarios; sin cambios de sección/material.
+- Candidato: 676 miembros, seis pendientes / cuatro componentes; no ejecutado.
+- El registro de stacks se refiere a P2; la discrepancia con ejes nominales/registro global sigue explícita antes de aprobar cargas.
+- Informe vigente: [segundo saneamiento](../PRE_P1L5/second_structural_cleanup/REVIEW_STATUS.md).
+- Las secciones siguientes son checkpoints anteriores, no métricas CURRENT.
+
 ## PRE-P1L5 — revisión manual aplicada (2026-09-23)
 
 - 116 exclusiones aprobadas individualmente en `EXCLUSION_APPROVAL.md`, archivadas en

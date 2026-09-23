@@ -1489,6 +1489,7 @@ namespace Mcoc.UnityViewer
                 vis = false;
             }
             if(pendingReviewRow!=null)vis=isStructuralGeometry&&pendingReviewIds.Contains(info.humanId??"");
+            if(stackReviewActive&&info!=null)vis=vis&&floorVisible.ContainsKey(info.floor)&&floorVisible[info.floor];
             go.SetActive(vis);
         }
 

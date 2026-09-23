@@ -75,13 +75,27 @@ namespace Mcoc.UnityViewer
             if(revisionChanges==null)failures.Add("Current revision ledger/version missing");
             else foreach(var change in revisionChanges.rows)
             {
-                if(change.type=="REMOVED"&&model.solids.Exists(s=>s.id==change.id))failures.Add("Excluded geometry present "+change.id);
-                if(change.type=="MERGED")
+                if((change.type=="REMOVED"||change.type=="WALL_REMOVED"||change.type=="WALL_SUPPORT_REMOVED")&&model.solids.Exists(s=>s.id==change.id))failures.Add("Excluded geometry present "+change.id);
+                if(change.type=="MERGED"||change.type=="BEAM_MERGED")
                 {
                     if(model.solids.FindAll(s=>s.id==change.id).Count!=1)failures.Add("Merged canonical count "+change.id);
                     foreach(var oldId in change.historical_ids)if(oldId!=change.id&&model.solids.Exists(s=>s.id==oldId))failures.Add("Merged retired ID present "+oldId);
                 }
             }
+            LoadColumnStacks();
+            if(columnStackData==null)failures.Add("Column stacks missing/version mismatch");
+            else foreach(var stack in columnStackData.stacks)
+            {
+                SelectColumnStack(stack);
+                foreach(string id in stack.member_ids)
+                    if(!allElements.Exists(e=>e!=null&&!e.isFeCandidateVisual&&e.humanId==id&&e.go.activeSelf))failures.Add("Stack column missing "+id);
+                foreach(var e in allElements)if(e!=null&&e.go.activeSelf&&!stack.member_ids.Contains(e.humanId??""))failures.Add("Stack isolation leak "+e.id);
+                floorVisible["S1"]=false;ReapplyAll();
+                foreach(var e in allElements)if(e!=null&&e.go.activeSelf&&e.floor=="S1")failures.Add("Stack S1 toggle");
+            }
+            ResetPresentation();
+            if(stackReviewActive)failures.Add("Stack reset");
+            if(model.solids.Exists(s=>s.building=="EDIFICIO_1"&&s.category=="wall"))failures.Add("ED1 wall remained active");
             ElementInfo beam=allElements.Find(e=>e!=null&&e.category=="beam"&&e.humanId=="E2-P4-V-049");
             if(beam==null)failures.Add("Review beam missing");
             foreach(var size in new[]{new Vector2Int(1366,768),new Vector2Int(1920,1080)})
@@ -96,7 +110,7 @@ namespace Mcoc.UnityViewer
                 if(CurrentInspectorRect().yMax>Screen.height-36||SemanticPanelRect().yMax>Screen.height-36)failures.Add("Panel clipped");
                 if(selectedLocalAxisObjects.Count!=3)failures.Add("Local axes missing");
                 CaptureReviewFrame(Path.Combine(output,$"current_{size.x}x{size.y}.png"));
-                foreach(string targetId in new[]{"E2-P4-V-009","E2-P1-C-001","E1-P4-M-003"})
+                foreach(string targetId in new[]{"E2-P4-V-009","E2-P1-C-001","E2-P4-M-003","E1-P4-C-001"})
                 {
                     var target=allElements.Find(e=>e!=null&&e.humanId==targetId);
                     if(target==null){failures.Add("Inspector target missing "+targetId);continue;}
@@ -104,9 +118,28 @@ namespace Mcoc.UnityViewer
                     yield return new WaitForEndOfFrame();
                     if(inspectorGroups.Count!=2||!inspectorGroups.Contains("RESUMEN")||!inspectorGroups.Contains("RESULTADOS"))failures.Add("Inspector defaults "+targetId);
                     if(selectedLocalAxisObjects.Count!=3)failures.Add("Selected axes "+targetId);
-                    if(targetId=="E1-P4-M-003"&&!CurrentMaterialStatus(CurrentSolid(target)).Contains("POR CONFIRMAR"))failures.Add("Generic RC must not certify concrete grade");
+                    if(targetId=="E1-P4-C-001"&&!CurrentMaterialStatus(CurrentSolid(target)).Contains("POR CONFIRMAR"))failures.Add("Generic RC must not certify concrete grade");
                     CaptureReviewFrame(Path.Combine(output,$"inspector_{targetId}_{size.x}x{size.y}.png"));
                 }
+                var exampleStack=columnStackData?.stacks?.Find(s=>s.confirmed&&s.building=="EDIFICIO_1"&&s.member_ids.Count==5);
+                if(exampleStack!=null)
+                {
+                    SelectColumnStack(exampleStack);semanticScroll=Vector2.zero;
+                    yield return new WaitForEndOfFrame();
+                    foreach(var e in allElements)
+                    {
+                        if(e==null||e.isFeCandidateVisual||!exampleStack.member_ids.Contains(e.humanId??""))continue;
+                        var renderer=e.go.GetComponent<Renderer>();if(renderer==null)continue;
+                        var bounds=renderer.bounds;
+                        foreach(float y in new[]{bounds.min.y,bounds.max.y})
+                        {
+                            var screen=cam.WorldToScreenPoint(new Vector3(bounds.center.x,y,bounds.center.z));
+                            if(screen.z<=0||screen.y<45||screen.y>Screen.height-82)failures.Add("Stack vertically clipped "+e.humanId);
+                        }
+                    }
+                    CaptureReviewFrame(Path.Combine(output,$"column_stack_{size.x}x{size.y}.png"));
+                }
+                ResetPresentation();
                 openGroups.Clear();openGroups.Add("ENTREGAS");openGroups.Add("P1L4");semanticScroll=Vector2.zero;
                 yield return new WaitForEndOfFrame();
                 if(ResultsAllowed||historicalResultsEnabled)failures.Add("Delivery summary enabled archive");

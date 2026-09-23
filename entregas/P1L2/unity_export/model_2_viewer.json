@@ -9699,65 +9699,13 @@
       "preserved_viewer_id": "E2-P4-V-076"
     },
     {
-      "solidTag": "SOL2_4_beam_0378",
-      "category": "beam",
-      "kind": "linear_prism",
-      "floor": "P4",
-      "start": [
-        12.502,
-        0.3507,
-        19.400000000000002
-      ],
-      "end": [
-        12.502,
-        1.8257,
-        19.400000000000002
-      ],
-      "width_m": 0.6,
-      "height_m": 0.8,
-      "section_width_m": 0.6,
-      "section_height_m": 0.8,
-      "length_m": 1.475,
-      "sourceTag": "P4-VP-011",
-      "sourceTags": [
-        "P4-E2-VB-0018",
-        "P4-E2-VB-0019"
-      ],
-      "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
-      "source_dxf": "2024_22-102.dxf",
-      "confidence": "confirmed_from_RLE_VIGA_geometry",
-      "building": "EDIFICIO_2",
-      "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
-      "section_confidence": "CONFIRMED_FROM_PLAN",
-      "geometry_confirmation": {
-        "status": "CONFIRMED_REPEATED_PLAN_GEOMETRY",
-        "audit_file": "entregas/POST_P1L4/ed2_beams/ed2_beam_centerline_proposal.json",
-        "face_ids": [
-          "P4-E2-VB-0018",
-          "P4-E2-VB-0019"
-        ],
-        "width_m": 0.6
-      },
-      "post_p1l4_correction": {
-        "correction_type": "MERGED",
-        "reason": "Caras y cierres RLE-VIGA consolidados en una centrolinea fisica.",
-        "primary_source": "2024_22-102.dxf",
-        "external_repo_clue": "SECONDARY_COMPARISON_ONLY",
-        "confidence": "HIGH_PRIMARY_SOURCE",
-        "results_compatibility": "P1L4_HISTORICAL_RESULTS_NOT_RECALCULATED"
-      },
-      "source_floor": "4",
-      "level_kind": "FLOOR",
-      "preserved_viewer_id": "E2-P4-V-059"
-    },
-    {
       "solidTag": "SOL2_4_beam_0379",
       "category": "beam",
       "kind": "linear_prism",
       "floor": "P4",
       "start": [
         12.502,
-        1.9167,
+        0.3507,
         19.400000000000002
       ],
       "end": [
@@ -9769,7 +9717,7 @@
       "height_m": 0.8,
       "section_width_m": 0.6,
       "section_height_m": 0.8,
-      "length_m": 6.4343,
+      "length_m": 8.0004,
       "sourceTag": "P4-VP-012",
       "sourceTags": [
         "P4-E2-VB-0018",
@@ -9791,68 +9739,21 @@
         "width_m": 0.6
       },
       "post_p1l4_correction": {
-        "correction_type": "MERGED",
-        "reason": "Caras y cierres RLE-VIGA consolidados en una centrolinea fisica.",
+        "correction_type": "BEAM_MERGED",
+        "reason": "ARTIFICIAL_BEAM_FRAGMENTATION: same confirmed section/Z; paired continuous primary faces; no identified intermediate support/joint.",
         "primary_source": "2024_22-102.dxf",
-        "external_repo_clue": "SECONDARY_COMPARISON_ONLY",
-        "confidence": "HIGH_PRIMARY_SOURCE",
-        "results_compatibility": "P1L4_HISTORICAL_RESULTS_NOT_RECALCULATED"
+        "confidence": "CONFIRMED_FROM_PLAN",
+        "audit": "second_structural_cleanup/GLOBAL_BEAM_FRAGMENTATION_AUDIT.json",
+        "id_reason": "Prefer direct label-confirmed contour; then longer surviving historical span; deterministic stable-ID tie break.",
+        "results_compatibility": "HISTORICAL_NOT_RECALCULATED"
       },
       "source_floor": "4",
       "level_kind": "FLOOR",
-      "preserved_viewer_id": "E2-P4-V-060"
-    },
-    {
-      "solidTag": "SOL2_4_beam_0381",
-      "category": "beam",
-      "kind": "linear_prism",
-      "floor": "P4",
-      "start": [
-        22.502,
-        0.3507,
-        19.400000000000002
-      ],
-      "end": [
-        22.502,
-        1.8257,
-        19.400000000000002
-      ],
-      "width_m": 0.6,
-      "height_m": 0.8,
-      "section_width_m": 0.6,
-      "section_height_m": 0.8,
-      "length_m": 1.475,
-      "sourceTag": "P4-VP-013",
-      "sourceTags": [
-        "P4-E2-VB-0021",
-        "P4-E2-VB-0022"
-      ],
-      "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
-      "source_dxf": "2024_22-102.dxf",
-      "confidence": "confirmed_from_RLE_VIGA_geometry",
-      "building": "EDIFICIO_2",
-      "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
-      "section_confidence": "CONFIRMED_FROM_PLAN",
-      "geometry_confirmation": {
-        "status": "CONFIRMED_REPEATED_PLAN_GEOMETRY",
-        "audit_file": "entregas/POST_P1L4/ed2_beams/ed2_beam_centerline_proposal.json",
-        "face_ids": [
-          "P4-E2-VB-0021",
-          "P4-E2-VB-0022"
-        ],
-        "width_m": 0.6
-      },
-      "post_p1l4_correction": {
-        "correction_type": "MERGED",
-        "reason": "Caras y cierres RLE-VIGA consolidados en una centrolinea fisica.",
-        "primary_source": "2024_22-102.dxf",
-        "external_repo_clue": "SECONDARY_COMPARISON_ONLY",
-        "confidence": "HIGH_PRIMARY_SOURCE",
-        "results_compatibility": "P1L4_HISTORICAL_RESULTS_NOT_RECALCULATED"
-      },
-      "source_floor": "4",
-      "level_kind": "FLOOR",
-      "preserved_viewer_id": "E2-P4-V-080"
+      "preserved_viewer_id": "E2-P4-V-060",
+      "canonical_element_id": "E2-P4-V-060",
+      "merged_from": [
+        "E2-P4-V-059"
+      ]
     },
     {
       "solidTag": "SOL2_4_beam_0382",
@@ -9861,7 +9762,7 @@
       "floor": "P4",
       "start": [
         22.502,
-        1.9167,
+        0.3507,
         19.400000000000002
       ],
       "end": [
@@ -9873,7 +9774,7 @@
       "height_m": 0.8,
       "section_width_m": 0.6,
       "section_height_m": 0.8,
-      "length_m": 6.4343,
+      "length_m": 8.0004,
       "sourceTag": "P4-VP-014",
       "sourceTags": [
         "P4-E2-VB-0021",
@@ -9895,16 +9796,21 @@
         "width_m": 0.6
       },
       "post_p1l4_correction": {
-        "correction_type": "MERGED",
-        "reason": "Caras y cierres RLE-VIGA consolidados en una centrolinea fisica.",
+        "correction_type": "BEAM_MERGED",
+        "reason": "ARTIFICIAL_BEAM_FRAGMENTATION: same confirmed section/Z; paired continuous primary faces; no identified intermediate support/joint.",
         "primary_source": "2024_22-102.dxf",
-        "external_repo_clue": "SECONDARY_COMPARISON_ONLY",
-        "confidence": "HIGH_PRIMARY_SOURCE",
-        "results_compatibility": "P1L4_HISTORICAL_RESULTS_NOT_RECALCULATED"
+        "confidence": "CONFIRMED_FROM_PLAN",
+        "audit": "second_structural_cleanup/GLOBAL_BEAM_FRAGMENTATION_AUDIT.json",
+        "id_reason": "Prefer direct label-confirmed contour; then longer surviving historical span; deterministic stable-ID tie break.",
+        "results_compatibility": "HISTORICAL_NOT_RECALCULATED"
       },
       "source_floor": "4",
       "level_kind": "FLOOR",
-      "preserved_viewer_id": "E2-P4-V-081"
+      "preserved_viewer_id": "E2-P4-V-081",
+      "canonical_element_id": "E2-P4-V-081",
+      "merged_from": [
+        "E2-P4-V-080"
+      ]
     },
     {
       "solidTag": "SOL2_4_beam_0384",
@@ -10021,7 +9927,7 @@
         19.400000000000002
       ],
       "end": [
-        25.3923,
+        27.602,
         8.9007,
         19.400000000000002
       ],
@@ -10029,7 +9935,7 @@
       "height_m": 0.8,
       "section_width_m": 0.6,
       "section_height_m": 0.8,
-      "length_m": 2.5903,
+      "length_m": 4.800000000000001,
       "sourceTag": "P4-VP-017",
       "sourceTags": [
         "P4-E2-VB-0025",
@@ -10051,68 +9957,21 @@
         "width_m": 0.6
       },
       "post_p1l4_correction": {
-        "correction_type": "MERGED",
-        "reason": "Caras y cierres RLE-VIGA consolidados en una centrolinea fisica.",
+        "correction_type": "BEAM_MERGED",
+        "reason": "ARTIFICIAL_BEAM_FRAGMENTATION: same confirmed section/Z; paired continuous primary faces; no identified intermediate support/joint.",
         "primary_source": "2024_22-102.dxf",
-        "external_repo_clue": "SECONDARY_COMPARISON_ONLY",
-        "confidence": "HIGH_PRIMARY_SOURCE",
-        "results_compatibility": "P1L4_HISTORICAL_RESULTS_NOT_RECALCULATED"
+        "confidence": "CONFIRMED_FROM_PLAN",
+        "audit": "second_structural_cleanup/GLOBAL_BEAM_FRAGMENTATION_AUDIT.json",
+        "id_reason": "Prefer direct label-confirmed contour; then longer surviving historical span; deterministic stable-ID tie break.",
+        "results_compatibility": "HISTORICAL_NOT_RECALCULATED"
       },
       "source_floor": "4",
       "level_kind": "FLOOR",
-      "preserved_viewer_id": "E2-P4-V-085"
-    },
-    {
-      "solidTag": "SOL2_4_beam_0386",
-      "category": "beam",
-      "kind": "linear_prism",
-      "floor": "P4",
-      "start": [
-        25.5668,
-        8.9007,
-        19.400000000000002
-      ],
-      "end": [
-        27.602,
-        8.9007,
-        19.400000000000002
-      ],
-      "width_m": 0.6,
-      "height_m": 0.8,
-      "section_width_m": 0.6,
-      "section_height_m": 0.8,
-      "length_m": 2.0352,
-      "sourceTag": "P4-VP-018",
-      "sourceTags": [
-        "P4-E2-VB-0025",
-        "P4-E2-VB-0026"
-      ],
-      "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
-      "source_dxf": "2024_22-102.dxf",
-      "confidence": "confirmed_from_RLE_VIGA_geometry",
-      "building": "EDIFICIO_2",
-      "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
-      "section_confidence": "CONFIRMED_FROM_PLAN",
-      "geometry_confirmation": {
-        "status": "CONFIRMED_LABEL_WIDTH",
-        "audit_file": "entregas/POST_P1L4/ed2_beams/ed2_beam_centerline_proposal.json",
-        "face_ids": [
-          "P4-E2-VB-0025",
-          "P4-E2-VB-0026"
-        ],
-        "width_m": 0.6
-      },
-      "post_p1l4_correction": {
-        "correction_type": "MERGED",
-        "reason": "Caras y cierres RLE-VIGA consolidados en una centrolinea fisica.",
-        "primary_source": "2024_22-102.dxf",
-        "external_repo_clue": "SECONDARY_COMPARISON_ONLY",
-        "confidence": "HIGH_PRIMARY_SOURCE",
-        "results_compatibility": "P1L4_HISTORICAL_RESULTS_NOT_RECALCULATED"
-      },
-      "source_floor": "4",
-      "level_kind": "FLOOR",
-      "preserved_viewer_id": "E2-P4-V-090"
+      "preserved_viewer_id": "E2-P4-V-085",
+      "canonical_element_id": "E2-P4-V-085",
+      "merged_from": [
+        "E2-P4-V-090"
+      ]
     },
     {
       "solidTag": "SOL2_4_beam_0388",
@@ -10219,65 +10078,13 @@
       "preserved_viewer_id": "E2-P4-V-091"
     },
     {
-      "solidTag": "SOL2_4_beam_0393",
-      "category": "beam",
-      "kind": "linear_prism",
-      "floor": "P4",
-      "start": [
-        17.502,
-        0.3507,
-        19.400000000000002
-      ],
-      "end": [
-        17.502,
-        1.8257,
-        19.400000000000002
-      ],
-      "width_m": 0.6,
-      "height_m": 0.8,
-      "section_width_m": 0.6,
-      "section_height_m": 0.8,
-      "length_m": 1.475,
-      "sourceTag": "P4-VP-021",
-      "sourceTags": [
-        "P4-E2-VB-0033",
-        "P4-E2-VB-0034"
-      ],
-      "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
-      "source_dxf": "2024_22-102.dxf",
-      "confidence": "confirmed_from_RLE_VIGA_geometry",
-      "building": "EDIFICIO_2",
-      "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
-      "section_confidence": "CONFIRMED_FROM_PLAN",
-      "geometry_confirmation": {
-        "status": "CONFIRMED_REPEATED_PLAN_GEOMETRY",
-        "audit_file": "entregas/POST_P1L4/ed2_beams/ed2_beam_centerline_proposal.json",
-        "face_ids": [
-          "P4-E2-VB-0033",
-          "P4-E2-VB-0034"
-        ],
-        "width_m": 0.6
-      },
-      "post_p1l4_correction": {
-        "correction_type": "MERGED",
-        "reason": "Caras y cierres RLE-VIGA consolidados en una centrolinea fisica.",
-        "primary_source": "2024_22-102.dxf",
-        "external_repo_clue": "SECONDARY_COMPARISON_ONLY",
-        "confidence": "HIGH_PRIMARY_SOURCE",
-        "results_compatibility": "P1L4_HISTORICAL_RESULTS_NOT_RECALCULATED"
-      },
-      "source_floor": "4",
-      "level_kind": "FLOOR",
-      "preserved_viewer_id": "E2-P4-V-070"
-    },
-    {
       "solidTag": "SOL2_4_beam_0394",
       "category": "beam",
       "kind": "linear_prism",
       "floor": "P4",
       "start": [
         17.502,
-        1.9167,
+        0.3507,
         19.400000000000002
       ],
       "end": [
@@ -10289,7 +10096,7 @@
       "height_m": 0.8,
       "section_width_m": 0.6,
       "section_height_m": 0.8,
-      "length_m": 6.4343,
+      "length_m": 8.0004,
       "sourceTag": "P4-VP-022",
       "sourceTags": [
         "P4-E2-VB-0033",
@@ -10311,16 +10118,21 @@
         "width_m": 0.6
       },
       "post_p1l4_correction": {
-        "correction_type": "MERGED",
-        "reason": "Caras y cierres RLE-VIGA consolidados en una centrolinea fisica.",
+        "correction_type": "BEAM_MERGED",
+        "reason": "ARTIFICIAL_BEAM_FRAGMENTATION: same confirmed section/Z; paired continuous primary faces; no identified intermediate support/joint.",
         "primary_source": "2024_22-102.dxf",
-        "external_repo_clue": "SECONDARY_COMPARISON_ONLY",
-        "confidence": "HIGH_PRIMARY_SOURCE",
-        "results_compatibility": "P1L4_HISTORICAL_RESULTS_NOT_RECALCULATED"
+        "confidence": "CONFIRMED_FROM_PLAN",
+        "audit": "second_structural_cleanup/GLOBAL_BEAM_FRAGMENTATION_AUDIT.json",
+        "id_reason": "Prefer direct label-confirmed contour; then longer surviving historical span; deterministic stable-ID tie break.",
+        "results_compatibility": "HISTORICAL_NOT_RECALCULATED"
       },
       "source_floor": "4",
       "level_kind": "FLOOR",
-      "preserved_viewer_id": "E2-P4-V-071"
+      "preserved_viewer_id": "E2-P4-V-071",
+      "canonical_element_id": "E2-P4-V-071",
+      "merged_from": [
+        "E2-P4-V-070"
+      ]
     },
     {
       "solidTag": "SOL2_4_beam_0395",
@@ -12415,65 +12227,13 @@
       "preserved_viewer_id": "E2-P4-V-031"
     },
     {
-      "solidTag": "SOL2_4_beam_0479",
-      "category": "beam",
-      "kind": "linear_prism",
-      "floor": "P4",
-      "start": [
-        0.002,
-        0.3507,
-        19.400000000000002
-      ],
-      "end": [
-        0.002,
-        1.8257,
-        19.400000000000002
-      ],
-      "width_m": 0.6,
-      "height_m": 0.8,
-      "section_width_m": 0.6,
-      "section_height_m": 0.8,
-      "length_m": 1.475,
-      "sourceTag": "P4-VP-064",
-      "sourceTags": [
-        "P4-E2-VB-0121",
-        "P4-E2-VB-0122"
-      ],
-      "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
-      "source_dxf": "2024_22-102.dxf",
-      "confidence": "confirmed_from_RLE_VIGA_geometry",
-      "building": "EDIFICIO_2",
-      "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
-      "section_confidence": "CONFIRMED_FROM_PLAN",
-      "geometry_confirmation": {
-        "status": "CONFIRMED_LABEL_WIDTH",
-        "audit_file": "entregas/POST_P1L4/ed2_beams/ed2_beam_centerline_proposal.json",
-        "face_ids": [
-          "P4-E2-VB-0121",
-          "P4-E2-VB-0122"
-        ],
-        "width_m": 0.6
-      },
-      "post_p1l4_correction": {
-        "correction_type": "MERGED",
-        "reason": "Caras y cierres RLE-VIGA consolidados en una centrolinea fisica.",
-        "primary_source": "2024_22-102.dxf",
-        "external_repo_clue": "SECONDARY_COMPARISON_ONLY",
-        "confidence": "HIGH_PRIMARY_SOURCE",
-        "results_compatibility": "P1L4_HISTORICAL_RESULTS_NOT_RECALCULATED"
-      },
-      "source_floor": "4",
-      "level_kind": "FLOOR",
-      "preserved_viewer_id": "E2-P4-V-015"
-    },
-    {
       "solidTag": "SOL2_4_beam_0478",
       "category": "beam",
       "kind": "linear_prism",
       "floor": "P4",
       "start": [
         0.002,
-        1.9167,
+        0.3507,
         19.400000000000002
       ],
       "end": [
@@ -12485,7 +12245,7 @@
       "height_m": 0.8,
       "section_width_m": 0.6,
       "section_height_m": 0.8,
-      "length_m": 2.1989,
+      "length_m": 3.7650000000000006,
       "sourceTag": "P4-VP-065",
       "sourceTags": [
         "P4-E2-VB-0121",
@@ -12507,16 +12267,21 @@
         "width_m": 0.6
       },
       "post_p1l4_correction": {
-        "correction_type": "MERGED",
-        "reason": "Caras y cierres RLE-VIGA consolidados en una centrolinea fisica.",
+        "correction_type": "BEAM_MERGED",
+        "reason": "ARTIFICIAL_BEAM_FRAGMENTATION: same confirmed section/Z; paired continuous primary faces; no identified intermediate support/joint.",
         "primary_source": "2024_22-102.dxf",
-        "external_repo_clue": "SECONDARY_COMPARISON_ONLY",
-        "confidence": "HIGH_PRIMARY_SOURCE",
-        "results_compatibility": "P1L4_HISTORICAL_RESULTS_NOT_RECALCULATED"
+        "confidence": "CONFIRMED_FROM_PLAN",
+        "audit": "second_structural_cleanup/GLOBAL_BEAM_FRAGMENTATION_AUDIT.json",
+        "id_reason": "Prefer direct label-confirmed contour; then longer surviving historical span; deterministic stable-ID tie break.",
+        "results_compatibility": "HISTORICAL_NOT_RECALCULATED"
       },
       "source_floor": "4",
       "level_kind": "FLOOR",
-      "preserved_viewer_id": "E2-P4-V-016"
+      "preserved_viewer_id": "E2-P4-V-016",
+      "canonical_element_id": "E2-P4-V-016",
+      "merged_from": [
+        "E2-P4-V-015"
+      ]
     },
     {
       "solidTag": "SOL2_4_beam_0483",
@@ -13039,65 +12804,13 @@
       "preserved_viewer_id": "E2-P4-V-039"
     },
     {
-      "solidTag": "SOL2_4_beam_0504",
-      "category": "beam",
-      "kind": "linear_prism",
-      "floor": "P4",
-      "start": [
-        3.752,
-        0.3507,
-        19.400000000000002
-      ],
-      "end": [
-        3.752,
-        1.8257,
-        19.400000000000002
-      ],
-      "width_m": 0.6,
-      "height_m": 0.8,
-      "section_width_m": 0.6,
-      "section_height_m": 0.8,
-      "length_m": 1.475,
-      "sourceTag": "P4-VP-076",
-      "sourceTags": [
-        "P4-E2-VB-0147",
-        "P4-E2-VB-0148"
-      ],
-      "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
-      "source_dxf": "2024_22-102.dxf",
-      "confidence": "confirmed_from_RLE_VIGA_geometry",
-      "building": "EDIFICIO_2",
-      "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
-      "section_confidence": "CONFIRMED_FROM_PLAN",
-      "geometry_confirmation": {
-        "status": "CONFIRMED_LABEL_WIDTH",
-        "audit_file": "entregas/POST_P1L4/ed2_beams/ed2_beam_centerline_proposal.json",
-        "face_ids": [
-          "P4-E2-VB-0147",
-          "P4-E2-VB-0148"
-        ],
-        "width_m": 0.6
-      },
-      "post_p1l4_correction": {
-        "correction_type": "MERGED",
-        "reason": "Caras y cierres RLE-VIGA consolidados en una centrolinea fisica.",
-        "primary_source": "2024_22-102.dxf",
-        "external_repo_clue": "SECONDARY_COMPARISON_ONLY",
-        "confidence": "HIGH_PRIMARY_SOURCE",
-        "results_compatibility": "P1L4_HISTORICAL_RESULTS_NOT_RECALCULATED"
-      },
-      "source_floor": "4",
-      "level_kind": "FLOOR",
-      "preserved_viewer_id": "E2-P4-V-036"
-    },
-    {
       "solidTag": "SOL2_4_beam_0505",
       "category": "beam",
       "kind": "linear_prism",
       "floor": "P4",
       "start": [
         3.752,
-        1.9167,
+        0.3507,
         19.400000000000002
       ],
       "end": [
@@ -13109,7 +12822,7 @@
       "height_m": 0.8,
       "section_width_m": 0.6,
       "section_height_m": 0.8,
-      "length_m": 2.1989,
+      "length_m": 3.7650000000000006,
       "sourceTag": "P4-VP-077",
       "sourceTags": [
         "P4-E2-VB-0147",
@@ -13131,16 +12844,21 @@
         "width_m": 0.6
       },
       "post_p1l4_correction": {
-        "correction_type": "MERGED",
-        "reason": "Caras y cierres RLE-VIGA consolidados en una centrolinea fisica.",
+        "correction_type": "BEAM_MERGED",
+        "reason": "ARTIFICIAL_BEAM_FRAGMENTATION: same confirmed section/Z; paired continuous primary faces; no identified intermediate support/joint.",
         "primary_source": "2024_22-102.dxf",
-        "external_repo_clue": "SECONDARY_COMPARISON_ONLY",
-        "confidence": "HIGH_PRIMARY_SOURCE",
-        "results_compatibility": "P1L4_HISTORICAL_RESULTS_NOT_RECALCULATED"
+        "confidence": "CONFIRMED_FROM_PLAN",
+        "audit": "second_structural_cleanup/GLOBAL_BEAM_FRAGMENTATION_AUDIT.json",
+        "id_reason": "Prefer direct label-confirmed contour; then longer surviving historical span; deterministic stable-ID tie break.",
+        "results_compatibility": "HISTORICAL_NOT_RECALCULATED"
       },
       "source_floor": "4",
       "level_kind": "FLOOR",
-      "preserved_viewer_id": "E2-P4-V-037"
+      "preserved_viewer_id": "E2-P4-V-037",
+      "canonical_element_id": "E2-P4-V-037",
+      "merged_from": [
+        "E2-P4-V-036"
+      ]
     },
     {
       "solidTag": "SOL2_4_beam_0506",
