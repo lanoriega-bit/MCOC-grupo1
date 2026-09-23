@@ -1,5 +1,19 @@
 # P1L2 Status
 
+## PRE-P1L5 — continuidad manual de vigas (2026-09-23)
+
+- CURRENT: 695 sólidos; 466 vigas. Se consolidaron 29 grupos físicos (33 IDs absorbidos),
+  se agregaron cinco vigas equivalentes ED2 S1–P4, se reconectaron cuatro extremos y
+  se retiró `E1-S1-V-005` con trazabilidad archivada.
+- La anotación repetida `E1-P1-V-086 + V-086` se resolvió geométricamente como
+  `E1-P1-V-086 + E1-P1-V-087 → E1-P1-V-087`.
+- `E1-P1-V-066/067` llegan ahora a nudos existentes; no se agregaron nodos ni apoyos ficticios.
+- FE candidato: 647 miembros, 1126 nodos, 1203 restricciones y 33 apoyos; un pendiente/
+  un componente (`E2-P4-V-009`). No ejecutado.
+- Unity compile/Play/UX PASS. Cargas, OpenSees y resultados históricos intactos.
+- Informe vigente: [corrección manual de vigas](../PRE_P1L5/manual_beam_revision/REVIEW_STATUS.md).
+- Las secciones siguientes son checkpoints anteriores, no métricas CURRENT.
+
 ## PRE-P1L5 — segundo saneamiento (2026-09-23)
 
 - CURRENT: 724 sólidos; 143 columnas, 495 vigas, 30 muros ED2, 10 losas visuales y 46 apoyos geométricos.

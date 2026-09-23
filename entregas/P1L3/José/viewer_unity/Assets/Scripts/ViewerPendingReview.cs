@@ -101,7 +101,7 @@ namespace Mcoc.UnityViewer
             if(!revisionChangesExpanded)return;
             if(revisionChanges==null){GUILayout.Label("Registro no disponible para esta geometría.",currentBody);return;}
             GUILayout.Label("Exclusiones archivadas, no visibles como estructura actual. Sin resultados nuevos.",currentBody);
-            foreach(string kind in new[]{"WALL_REMOVED","WALL_SUPPORT_REMOVED","BEAM_MERGED","COLUMN_ALIGNED","REVIEW_REQUIRED","MERGED","REMOVED","CONNECTIVITY_FIXED"})
+            foreach(string kind in new[]{"BEAM_MERGED","BEAM_ADDED","BEAM_ENDPOINT_RECONNECTED","BEAM_REMOVED","WALL_REMOVED","WALL_SUPPORT_REMOVED","COLUMN_ALIGNED","REVIEW_REQUIRED","MERGED","REMOVED","CONNECTIVITY_FIXED"})
             {
                 if((kind=="MERGED"||kind=="REMOVED"||kind=="CONNECTIVITY_FIXED")&&!revisionChanges.rows.Exists(r=>r.type==kind))continue;
                 if(GUILayout.Button((revisionFilter==kind?"▶ ":"")+kind+" · "+revisionChanges.rows.FindAll(r=>r.type==kind).Count,currentButton))revisionFilter=kind;

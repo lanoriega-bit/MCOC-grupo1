@@ -1,107 +1,14 @@
 {
-  "geometry_version": "e2a1924f7bb5ef4ec88622ce47727456094e0e1403eb376c9166237ca4bb7e77",
+  "geometry_version": "ab3556d9daa8f472ef249f930268ecb0b808748f2ab50288e87166ccbb4965e1",
   "rows": [
     {
-      "id": "E1-S1-V-005",
-      "building": "EDIFICIO_1",
-      "floor": "S1",
-      "priority": "A",
-      "axes": "EDIFICIO_1 / S1 / Viga X entre Eb-Ec / Y < 1",
-      "plan": "2017_67-101.dxf",
-      "question": "Comprobar trayectoria física de cargas; no introducir apoyos ficticios.",
-      "neighbors": [
-        "E1-S1-V-005"
-      ],
-      "level_z": 3.56,
-      "label": "01/6",
-      "problem": "SIN CAMINO FE A APOYO; nuevo diagnóstico tras saneamiento."
-    },
-    {
-      "id": "E2-P4-V-004",
-      "label": "02/6",
-      "building": "EDIFICIO_2",
-      "floor": "P4",
-      "priority": "B",
-      "axes": "X OUTBOARD <A (A -3.5480 m) / Y 1–2 (2 -3.2916 m)",
-      "problem": "SIN CAMINO FE A APOYO; nuevo diagnóstico tras saneamiento.",
-      "plan": "2024_22-102, 2024_22-303",
-      "question": "¿La planta y el corte muestran una unión resistente entre E2-P4-V-004 y E2-P4-M-002, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
-      "neighbors": [
-        "E2-P3-V-002",
-        "E2-P4-C-001",
-        "E2-P4-M-002",
-        "E2-P4-V-004",
-        "E2-P4-V-005",
-        "E2-P4-V-006"
-      ],
-      "level_z": 19.8
-    },
-    {
-      "id": "E2-P4-V-005",
-      "label": "03/6",
-      "building": "EDIFICIO_2",
-      "floor": "P4",
-      "priority": "B",
-      "axes": "X OUTBOARD <A (A -3.5480 m) / Y 1–2 (2 -1.7239 m)",
-      "problem": "SIN CAMINO FE A APOYO; nuevo diagnóstico tras saneamiento.",
-      "plan": "2024_22-102, 2024_22-303",
-      "question": "¿La planta y el corte muestran una unión resistente entre E2-P4-V-005 y E2-P4-M-002, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
-      "neighbors": [
-        "E2-P3-V-002",
-        "E2-P4-C-001",
-        "E2-P4-M-002",
-        "E2-P4-V-004",
-        "E2-P4-V-005",
-        "E2-P4-V-006"
-      ],
-      "level_z": 19.8
-    },
-    {
-      "id": "E2-P4-V-006",
-      "label": "04/6",
-      "building": "EDIFICIO_2",
-      "floor": "P4",
-      "priority": "B",
-      "axes": "X OUTBOARD <A (A -3.5480 m) / Y 1–2 (2 -0.9489 m)",
-      "problem": "SIN CAMINO FE A APOYO; nuevo diagnóstico tras saneamiento.",
-      "plan": "2024_22-102, 2024_22-303",
-      "question": "¿La planta y el corte muestran una unión resistente entre E2-P4-V-006 y E2-P4-M-002, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
-      "neighbors": [
-        "E2-P3-V-002",
-        "E2-P4-C-001",
-        "E2-P4-M-002",
-        "E2-P4-V-004",
-        "E2-P4-V-005",
-        "E2-P4-V-006"
-      ],
-      "level_z": 19.8
-    },
-    {
-      "id": "E2-P4-V-007",
-      "label": "05/6",
-      "building": "EDIFICIO_2",
-      "floor": "P4",
-      "priority": "B",
-      "axes": "X OUTBOARD <A (A -3.5480 m) / Y 2–3 (2 +1.5932 m)",
-      "problem": "SIN CAMINO FE A APOYO; nuevo diagnóstico tras saneamiento.",
-      "plan": "2024_22-102, 2024_22-303",
-      "question": "¿La planta y el corte muestran una unión resistente entre E2-P4-V-007 y E2-P4-M-003, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
-      "neighbors": [
-        "E2-P3-V-003",
-        "E2-P4-C-001",
-        "E2-P4-M-003",
-        "E2-P4-V-007"
-      ],
-      "level_z": 19.8
-    },
-    {
       "id": "E2-P4-V-009",
-      "label": "06/6",
+      "label": "01/1",
       "building": "EDIFICIO_2",
       "floor": "P4",
       "priority": "B",
       "axes": "X OUTBOARD <A (A -2.7322 m) / Y 2–3 (3 -0.2993 m)",
-      "problem": "SIN CAMINO FE A APOYO; nuevo diagnóstico tras saneamiento.",
+      "problem": "SIN CAMINO FE A APOYO; no fue causado por esta revisión.",
       "plan": "2024_22-102, 2024_22-303",
       "question": "¿La planta y el corte muestran una unión resistente entre E2-P4-V-009 y E2-P4-M-006, o un apoyo/transferencia diferente? Indica la llamada del detalle.",
       "neighbors": [

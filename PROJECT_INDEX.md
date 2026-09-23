@@ -3,8 +3,8 @@
 Estado: `PRE-P1L5 / CONSOLIDACIÓN — BASELINE BLOCKED`
 
 Guía vigente: [PRE_P1L5_STATUS](entregas/PRE_P1L5/PRE_P1L5_STATUS.md).
-Revisión vigente: [segundo saneamiento estructural](entregas/PRE_P1L5/second_structural_cleanup/REVIEW_STATUS.md).
-Diagnóstico → Cambios de esta revisión / COLUMN STACKS / Pendientes FE: seis pendientes / cuatro componentes.
+Revisión vigente: [continuidad manual de vigas](entregas/PRE_P1L5/manual_beam_revision/REVIEW_STATUS.md).
+Diagnóstico → Cambios de esta revisión / COLUMN STACKS / Pendientes FE: un pendiente / un componente.
 Las [43 fichas originales](entregas/PRE_P1L5/FE_PENDING_43_DETAILED_REVIEW.md) se conservan
 como expediente previo, no diagnóstico actual. No hay nueva corrida FE.
 Incluye [QA global](entregas/PRE_P1L5/GLOBAL_VALIDATION.md),
@@ -43,16 +43,16 @@ activación explícita en Entregas o Avanzado y nunca se presenta como resultado
 
 | Capa | Estado | Interpretación |
 | --- | --- | --- |
-| Geometría | `POST_P1L4_CURRENT` | 724 sólidos; 167 exclusiones archivadas, 18 fusiones acumuladas y 74 ajustes XY de columnas. |
-| Diagnóstico FE | `CANDIDATE / NOT RUN` | 676 miembros, 7 relaciones 1:N; seis geometrías sin camino FE a apoyo / cuatro componentes. |
+| Geometría | `POST_P1L4_CURRENT` | 695 sólidos; 466 vigas; corrección manual con 29 grupos fusionados, cinco vigas agregadas y cuatro extremos reconectados. |
+| Diagnóstico FE | `CANDIDATE / NOT RUN` | 647 miembros, 1126 nodos; una geometría sin camino FE a apoyo / un componente. |
 | Resultados actuales | `NONE` | Sin corrida compatible; fuerzas, deformada y demanda actuales no disponibles. |
 | G/Q/EX/EY/R y capacidad anteriores | `HISTORICAL` | Avanzado → Histórico, apagado por defecto. |
 | Catálogo de cargas | Auditadas, no aplicadas | No confundir su geometría con G/Q recalculados. |
 
-El diagnóstico se reconstruyó: seis geometrías sin camino FE a apoyo,
-incluidas `E1-S1-V-005` y `E2-P4-V-009`. El foco de clasificación histórico
+El diagnóstico se reconstruyó: solo `E2-P4-V-009` permanece sin camino FE a apoyo.
+`E1-S1-V-005` fue retirado con aprobación y trazabilidad. El foco de clasificación histórico
 no sustituye ese inventario completo. Un extremo libre no prueba un voladizo real.
-QA vigente: [segundo saneamiento](entregas/PRE_P1L5/second_structural_cleanup/REVIEW_STATUS.md).
+QA vigente: [continuidad manual de vigas](entregas/PRE_P1L5/manual_beam_revision/REVIEW_STATUS.md).
 EXT-5 y sus conteos permanecen como antecedentes históricos.
 
 ## Fuentes canónicas

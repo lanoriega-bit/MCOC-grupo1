@@ -1,0 +1,99 @@
+{
+  "baseline_commit": "b5d07f3c5c482b8fa13afb37d8b2869ca46aec82",
+  "geometry_sha256": "ab3556d9daa8f472ef249f930268ecb0b808748f2ab50288e87166ccbb4965e1",
+  "fe_sha256": "c5cd54ff2e55bdb7fb93ef613c84fb734989b62b281c1582a4cea2a9de738c17",
+  "summary": {
+    "geometry_solids": 695,
+    "beams": 466,
+    "merge_groups": 29,
+    "absorbed_ids": 33,
+    "beams_added": 5,
+    "beams_removed": 1,
+    "endpoints_reconnected": 4,
+    "FE_members": 647,
+    "FE_nodes": 1126,
+    "FE_constraints": 1203,
+    "FE_supports": 33,
+    "FE_pending": 1,
+    "FE_components": 1,
+    "pending_ids": [
+      "E2-P4-V-009"
+    ],
+    "new_pending_ids": [],
+    "analysis_run": false,
+    "current_results": "NONE"
+  },
+  "checks": {
+    "CANONICAL_ID_SET": {
+      "status": "PASS"
+    },
+    "MERGES_SINGLE_PHYSICAL_ELEMENT": {
+      "status": "PASS"
+    },
+    "TRACEABILITY": {
+      "status": "PASS"
+    },
+    "ADDED_BEAMS": {
+      "status": "PASS"
+    },
+    "ENDPOINT_RECONNECTIONS": {
+      "status": "PASS"
+    },
+    "REMOVED_INVALID_BEAM": {
+      "status": "PASS"
+    },
+    "SECTIONS_MATERIALS_PRESERVED": {
+      "status": "PASS"
+    },
+    "NO_NEW_OVERLAPPING_BEAMS": {
+      "status": "PASS",
+      "note": "Pre-existing pairs retained: [('E2-P4-V-028', 'E2-P4-V-029')]"
+    },
+    "NO_DUPLICATE_FE_MEMBER": {
+      "status": "PASS"
+    },
+    "NO_DUPLICATE_FE_NODE": {
+      "status": "PASS"
+    },
+    "CROSSWALK": {
+      "status": "PASS"
+    },
+    "NO_RETIRED_FE_IDS": {
+      "status": "PASS"
+    },
+    "NO_NEW_FLOATING_GEOMETRY": {
+      "status": "PASS",
+      "note": "6 -> 1; current ['E2-P4-V-009']"
+    },
+    "NO_NEW_DISCONNECTED_COMPONENTS": {
+      "status": "PASS"
+    },
+    "FE_INPUT_HASH": {
+      "status": "PASS"
+    },
+    "NO_OPENSEES_RUN": {
+      "status": "PASS"
+    },
+    "LUIS_REFERENCE_UNCHANGED": {
+      "status": "PASS"
+    },
+    "HISTORICAL_RESULTS_UNCHANGED": {
+      "status": "PASS"
+    },
+    "UNITY_COMPILE": {
+      "status": "PASS",
+      "note": "Unity 6000.6.0f1 CurrentReviewBuild.Build: Build Finished, Result: Success"
+    },
+    "UNITY_PLAY": {
+      "status": "PASS",
+      "note": "Automated --ux-review completed: UI, CURRENT, P1L4 demo and UX REVIEW QA all PASS"
+    }
+  },
+  "new_overlaps": [],
+  "retained_overlaps": [
+    [
+      "E2-P4-V-028",
+      "E2-P4-V-029"
+    ]
+  ]
+}

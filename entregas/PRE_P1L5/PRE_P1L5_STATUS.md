@@ -10,15 +10,17 @@ y [CHECKPOINTS.md](CHECKPOINTS.md). P1L4_FINAL permanece en
 
 ## Qué está disponible
 
-- Revisión 2026-09-23: [REVIEW_STATUS](second_structural_cleanup/REVIEW_STATUS.md).
-- Geometría CURRENT: 724 sólidos; 143 columnas, 495 vigas, 30 muros ED2,
-  10 losas visuales y 46 apoyos geométricos. 167 exclusiones archivadas y 18 fusiones acumuladas.
+- Revisión vigente 2026-09-23: [continuidad manual de vigas](manual_beam_revision/REVIEW_STATUS.md).
+- Geometría CURRENT: 695 sólidos; 466 vigas. Este checkpoint consolidó 29 grupos
+  físicos (33 IDs absorbidos), agregó cinco vigas ED2 S1–P4, reconectó cuatro
+  extremos y retiró una geometría inválida con trazabilidad.
   ED1: cero muros activos por decisión de alcance, no ausencia de muros en el edificio real.
 - Propiedades: 588 miembros actuales con G35_10/fc35 MPa y A630-420H/fy420 MPa.
   Notas primarias 2024_22-100/53994 y 2017_67-100/1E116; propiedades de sobrevivientes intactas.
   Lámina 600 = sala eléctrica, no excepción genérica de escaleras. ED1 P4 y
   losas no asignados. No se dedujeron E ni armaduras.
-- FE candidato: 676 miembros, 7 relaciones 1:N, seis residuales/cuatro componentes.
+- FE candidato: 647 miembros, 1126 nodos, 1203 restricciones, 33 apoyos y un
+  residual/un componente (`E2-P4-V-009`).
   No hay FE canónico ejecutable aprobado nuevo: no llamar “canónico” al candidato.
 - Columnas: 38 stacks revisados; 74 ajustes XY basados en contornos/ejes. Secciones intactas.
   14 columnas siguen en revisión; registro P2 de columnas no equivale a reconciliación global de plantas/700.
@@ -32,7 +34,7 @@ y [CHECKPOINTS.md](CHECKPOINTS.md). P1L4_FINAL permanece en
 
 | Bloqueo | Evidencia / responsable de decisión | Qué falta |
 |---|---|---|
-| Seis caminos FE / cuatro componentes | Planos y decisión estructural del grupo | Confirmar E1-S1-V-005 y cinco vigas ED2 P4; no apoyos ficticios |
+| Un camino FE / un componente | Planos y decisión estructural del grupo | Resolver `E2-P4-V-009` sin apoyo ni enlace ficticio |
 | Registro global / stacks | Controles LINE RLE-EJES | Columnas referidas a P2; reconciliar con ejes nominales y registro de cargas antes de aprobar FE/cargas |
 | Brazos rígidos encadenados | FE-2, clusters hasta 26.448 m en planta | Revisar físicamente alcance del cuerpo rígido y formulación del adaptador |
 | 14 columnas en revisión | COLUMN_VERTICAL_STACKS.json | Falta de controles únicos o suficientes pisos superiores; no se movieron |
@@ -61,7 +63,7 @@ elementos excluidos, no fueron resueltas por asignación de valores.
 | Resultados históricos | entregas/P1L3/results/a7/cases/{G,Q,EX,EY,R} |
 | Unity único | entregas/P1L3/José/viewer_unity/Assets/Main.unity |
 | Metadata proyecto | entregas/PRE_P1L5/project_state.json → StreamingAssets/project_state.json |
-| QA CURRENT | entregas/PRE_P1L5/second_structural_cleanup/review_qa.json + REVIEW_STATUS.md |
+| QA CURRENT | entregas/PRE_P1L5/manual_beam_revision/review_qa.json + REVIEW_STATUS.md |
 | No aplicar | constraint_normalization_proposal.json, propuestas de losas EXT-4 |
 
 `Luis model_viewer.json` es referencia histórica inmutable, NO CURRENT.

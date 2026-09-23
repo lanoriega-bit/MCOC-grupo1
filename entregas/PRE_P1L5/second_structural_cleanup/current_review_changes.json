@@ -1,6 +1,6 @@
 {
   "baseline_commit": "d323e248434162bfc8cd5a888ad6578cd3600ac9",
-  "geometry_version": "e2a1924f7bb5ef4ec88622ce47727456094e0e1403eb376c9166237ca4bb7e77",
+  "geometry_version": "ab3556d9daa8f472ef249f930268ecb0b808748f2ab50288e87166ccbb4965e1",
   "rows": [
     {
       "id": "E1-S1-M-004",
@@ -15287,33 +15287,628 @@
       "historical_ids": [
         "E2-P4-C-008"
       ]
+    },
+    {
+      "id": "E1-P4-V-005",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E1-P4-V-004",
+        "E1-P4-V-005"
+      ],
+      "merged_from": [
+        "E1-P4-V-004"
+      ],
+      "gap_total_m": 0.20000000000000018,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E2-P4-V-082",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E2-P4-V-082",
+        "E2-P4-V-083"
+      ],
+      "merged_from": [
+        "E2-P4-V-083"
+      ],
+      "gap_total_m": 0.12530000000000108,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E2-P4-V-073",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E2-P4-V-072",
+        "E2-P4-V-073"
+      ],
+      "merged_from": [
+        "E2-P4-V-072"
+      ],
+      "gap_total_m": 0.12530000000000108,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E2-P4-V-075",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E2-P4-V-079",
+        "E2-P4-V-075"
+      ],
+      "merged_from": [
+        "E2-P4-V-079"
+      ],
+      "gap_total_m": 0.8000000000000007,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E2-P4-V-061",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E2-P4-V-061",
+        "E2-P4-V-062"
+      ],
+      "merged_from": [
+        "E2-P4-V-062"
+      ],
+      "gap_total_m": 0.12530000000000108,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E2-P4-V-050",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E2-P4-V-051",
+        "E2-P4-V-050"
+      ],
+      "merged_from": [
+        "E2-P4-V-051"
+      ],
+      "gap_total_m": 0.12530000000000108,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E2-P4-V-054",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E2-P4-V-058",
+        "E2-P4-V-054"
+      ],
+      "merged_from": [
+        "E2-P4-V-058"
+      ],
+      "gap_total_m": 0.9247999999999994,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E2-P4-V-053",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E2-P4-V-053",
+        "E2-P4-V-057"
+      ],
+      "merged_from": [
+        "E2-P4-V-057"
+      ],
+      "gap_total_m": 0.9247999999999994,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E2-P4-V-040",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E2-P4-V-040",
+        "E2-P4-V-041"
+      ],
+      "merged_from": [
+        "E2-P4-V-041"
+      ],
+      "gap_total_m": 0.12530000000000108,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E2-P4-V-031",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E2-P4-V-031",
+        "E2-P4-V-025"
+      ],
+      "merged_from": [
+        "E2-P4-V-025"
+      ],
+      "gap_total_m": 0.13890000000000002,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E2-P4-V-032",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E2-P4-V-026",
+        "E2-P4-V-032"
+      ],
+      "merged_from": [
+        "E2-P4-V-026"
+      ],
+      "gap_total_m": 0.13890000000000002,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E2-P4-V-033",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E2-P4-V-027",
+        "E2-P4-V-033"
+      ],
+      "merged_from": [
+        "E2-P4-V-027"
+      ],
+      "gap_total_m": 0.13890000000000002,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E1-P3-V-005",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E1-P3-V-005",
+        "E1-P3-V-004"
+      ],
+      "merged_from": [
+        "E1-P3-V-004"
+      ],
+      "gap_total_m": 0.20000000000000018,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E1-P2-V-005",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E1-P2-V-005",
+        "E1-P2-V-004"
+      ],
+      "merged_from": [
+        "E1-P2-V-004"
+      ],
+      "gap_total_m": 0.20000000000000018,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E1-P2-V-108",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E1-P2-V-111",
+        "E1-P2-V-108"
+      ],
+      "merged_from": [
+        "E1-P2-V-111"
+      ],
+      "gap_total_m": 0.20000000000000018,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E1-P2-V-013",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E1-P2-V-013",
+        "E1-P2-V-019"
+      ],
+      "merged_from": [
+        "E1-P2-V-019"
+      ],
+      "gap_total_m": 0.20000000000000018,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E1-P2-V-048",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E1-P2-V-048",
+        "E1-P2-V-051"
+      ],
+      "merged_from": [
+        "E1-P2-V-051"
+      ],
+      "gap_total_m": 0.20000000000000018,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E1-P2-V-076",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E1-P2-V-076",
+        "E1-P2-V-080"
+      ],
+      "merged_from": [
+        "E1-P2-V-080"
+      ],
+      "gap_total_m": 0.20000000000000018,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E1-P2-V-097",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E1-P2-V-097",
+        "E1-P2-V-100"
+      ],
+      "merged_from": [
+        "E1-P2-V-100"
+      ],
+      "gap_total_m": 0.20000000000000018,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E1-P2-V-029",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E1-P2-V-029",
+        "E1-P2-V-032"
+      ],
+      "merged_from": [
+        "E1-P2-V-032"
+      ],
+      "gap_total_m": 0.20000000000000018,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E1-P2-V-060",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E1-P2-V-060",
+        "E1-P2-V-067"
+      ],
+      "merged_from": [
+        "E1-P2-V-067"
+      ],
+      "gap_total_m": 0.20000000000000018,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E1-P2-V-087",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E1-P2-V-087",
+        "E1-P2-V-091"
+      ],
+      "merged_from": [
+        "E1-P2-V-091"
+      ],
+      "gap_total_m": 0.20000000000000018,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E1-P1-V-096",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E1-P1-V-096",
+        "E1-P1-V-094"
+      ],
+      "merged_from": [
+        "E1-P1-V-094"
+      ],
+      "gap_total_m": 0.20000000000000018,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E1-P1-V-002",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E1-P1-V-001",
+        "E1-P1-V-002"
+      ],
+      "merged_from": [
+        "E1-P1-V-001"
+      ],
+      "gap_total_m": 0.20000000000000018,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E1-P1-V-087",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E1-P1-V-086",
+        "E1-P1-V-087"
+      ],
+      "merged_from": [
+        "E1-P1-V-086"
+      ],
+      "gap_total_m": 0.20000000000000284,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E1-P1-V-078",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E1-P1-V-078",
+        "E1-P1-V-088"
+      ],
+      "merged_from": [
+        "E1-P1-V-088"
+      ],
+      "gap_total_m": 0.20000000000000284,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E1-S1-V-021",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E1-S1-V-018",
+        "E1-S1-V-021",
+        "E1-S1-V-020"
+      ],
+      "merged_from": [
+        "E1-S1-V-018",
+        "E1-S1-V-020"
+      ],
+      "gap_total_m": 0.3999999999999915,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E1-S1-V-025",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E1-S1-V-025",
+        "E1-S1-V-030",
+        "E1-S1-V-026",
+        "E1-S1-V-011"
+      ],
+      "merged_from": [
+        "E1-S1-V-030",
+        "E1-S1-V-026",
+        "E1-S1-V-011"
+      ],
+      "gap_total_m": 0.48989999999999156,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E2-P4-V-011",
+      "type": "BEAM_ENDPOINT_RECONNECTED",
+      "reason": "Extended along beam axis to existing structural joint; no support created.",
+      "source": "2024_22-102.dxf",
+      "historical_ids": [
+        "E2-P4-V-011"
+      ],
+      "old_endpoints": [
+        [
+          -1.6445,
+          4.2657,
+          19.400000000000002
+        ],
+        [
+          -0.298,
+          4.2657,
+          19.400000000000002
+        ]
+      ],
+      "target": [
+        -3.548,
+        4.2657,
+        19.4
+      ],
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E2-P4-V-012",
+      "type": "BEAM_ENDPOINT_RECONNECTED",
+      "reason": "Extended along beam axis to existing structural joint; no support created.",
+      "source": "2024_22-102.dxf",
+      "historical_ids": [
+        "E2-P4-V-012"
+      ],
+      "old_endpoints": [
+        [
+          -1.6445,
+          11.8857,
+          19.400000000000002
+        ],
+        [
+          -0.298,
+          11.8857,
+          19.400000000000002
+        ]
+      ],
+      "target": [
+        -3.548,
+        11.8857,
+        19.4
+      ],
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E1-P1-V-066",
+      "type": "BEAM_ENDPOINT_RECONNECTED",
+      "reason": "Extended along beam axis to existing structural joint; no support created.",
+      "source": "2017_67-101.dxf",
+      "historical_ids": [
+        "E1-P1-V-066"
+      ],
+      "old_endpoints": [
+        [
+          57.84100000000001,
+          8.9,
+          7.52
+        ],
+        [
+          61.241,
+          8.9,
+          7.52
+        ]
+      ],
+      "target": [
+        57.491,
+        8.9,
+        7.52
+      ],
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E1-P1-V-067",
+      "type": "BEAM_ENDPOINT_RECONNECTED",
+      "reason": "Extended along beam axis to existing structural joint; no support created.",
+      "source": "2017_67-101.dxf",
+      "historical_ids": [
+        "E1-P1-V-067"
+      ],
+      "old_endpoints": [
+        [
+          57.84100000000001,
+          16.15,
+          7.52
+        ],
+        [
+          61.241,
+          16.15,
+          7.52
+        ]
+      ],
+      "target": [
+        57.491,
+        16.15,
+        7.52
+      ],
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E2-S1-V-045",
+      "type": "BEAM_ADDED",
+      "reason": "User-identified missing member repeated at equivalent C-001 / V-002+V-003 joint on S1-P4.",
+      "source": "2024_22-101.dxf / reference E2-P3-V-006",
+      "historical_ids": [],
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E2-P1-V-045",
+      "type": "BEAM_ADDED",
+      "reason": "User-identified missing member repeated at equivalent C-001 / V-002+V-003 joint on S1-P4.",
+      "source": "2024_22-101.dxf / reference E2-P3-V-006",
+      "historical_ids": [],
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E2-P2-V-045",
+      "type": "BEAM_ADDED",
+      "reason": "User-identified missing member repeated at equivalent C-001 / V-002+V-003 joint on S1-P4.",
+      "source": "2024_22-101.dxf / reference E2-P3-V-006",
+      "historical_ids": [],
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E2-P3-V-045",
+      "type": "BEAM_ADDED",
+      "reason": "User-identified missing member repeated at equivalent C-001 / V-002+V-003 joint on S1-P4.",
+      "source": "2024_22-101.dxf / reference E2-P3-V-006",
+      "historical_ids": [],
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E2-P4-V-092",
+      "type": "BEAM_ADDED",
+      "reason": "User-identified missing member repeated at equivalent C-001 / V-002+V-003 joint on S1-P4.",
+      "source": "2024_22-102.dxf / reference E2-P3-V-006",
+      "historical_ids": [],
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E1-S1-V-005",
+      "type": "BEAM_REMOVED",
+      "reason": "USER_CONFIRMED_INVALID_ISOLATED_GEOMETRY; removal eliminates prior pending member, no valid load path depended on it.",
+      "source": "2017_67-101.dxf",
+      "historical_ids": [
+        "E1-S1-V-005"
+      ],
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E2-P4-V-052",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM; V-055 lay inside the 052+056 union and is absorbed to prevent duplicate geometry/stiffness.",
+      "source": "2024_22-102.dxf / overlap regression",
+      "historical_ids": [
+        "E2-P4-V-052",
+        "E2-P4-V-055",
+        "E2-P4-V-056"
+      ],
+      "merged_from": [
+        "E2-P4-V-055",
+        "E2-P4-V-056"
+      ],
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
     }
   ],
   "current_results": "NONE",
   "summary": {
-    "baseline_commit": "d323e248434162bfc8cd5a888ad6578cd3600ac9",
-    "geometry_solids": 724,
-    "ED1_active_walls": 0,
-    "walls_excluded_this_revision": 44,
-    "support_visuals_excluded_this_revision": 7,
-    "FE_wall_only_supports_removed": 13,
-    "FE_members": 676,
-    "FE_pending": 6,
-    "FE_components": 4,
-    "FE_constraints": 1205,
+    "geometry_solids": 695,
+    "beams": 466,
+    "merge_groups": 29,
+    "absorbed_ids": 33,
+    "beams_added": 5,
+    "beams_removed": 1,
+    "endpoints_reconnected": 4,
+    "FE_members": 647,
+    "FE_nodes": 1126,
+    "FE_constraints": 1203,
     "FE_supports": 33,
+    "FE_pending": 1,
+    "FE_components": 1,
     "pending_ids": [
-      "E1-S1-V-005",
-      "E2-P4-V-004",
-      "E2-P4-V-005",
-      "E2-P4-V-006",
-      "E2-P4-V-007",
       "E2-P4-V-009"
     ],
-    "new_pending_ids": [
-      "E1-S1-V-005"
-    ],
-    "current_results": "NONE",
-    "analysis_run": false
+    "new_pending_ids": [],
+    "analysis_run": false,
+    "current_results": "NONE"
   }
 }

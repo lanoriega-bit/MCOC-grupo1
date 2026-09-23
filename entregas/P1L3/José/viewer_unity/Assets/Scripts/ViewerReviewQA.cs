@@ -75,7 +75,7 @@ namespace Mcoc.UnityViewer
             if(revisionChanges==null)failures.Add("Current revision ledger/version missing");
             else foreach(var change in revisionChanges.rows)
             {
-                if((change.type=="REMOVED"||change.type=="WALL_REMOVED"||change.type=="WALL_SUPPORT_REMOVED")&&model.solids.Exists(s=>s.id==change.id))failures.Add("Excluded geometry present "+change.id);
+                if((change.type=="REMOVED"||change.type=="BEAM_REMOVED"||change.type=="WALL_REMOVED"||change.type=="WALL_SUPPORT_REMOVED")&&model.solids.Exists(s=>s.id==change.id))failures.Add("Excluded geometry present "+change.id);
                 if(change.type=="MERGED"||change.type=="BEAM_MERGED")
                 {
                     if(model.solids.FindAll(s=>s.id==change.id).Count!=1)failures.Add("Merged canonical count "+change.id);

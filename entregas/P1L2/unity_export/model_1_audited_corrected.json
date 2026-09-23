@@ -5737,57 +5737,6 @@
       "preserved_viewer_id": "E1-S1-A-022"
     },
     {
-      "solidTag": "SOL_1S_beam_0001",
-      "category": "beam",
-      "kind": "linear_prism",
-      "floor": "1S",
-      "sourceTag": "S1-VP-001",
-      "sourceTags": [
-        "S1-VB-0001",
-        "S1-VB-0002"
-      ],
-      "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
-      "source_dxf": "2017_67-101.dxf",
-      "start": [
-        0.5,
-        9.0813,
-        3.5599999999999996
-      ],
-      "end": [
-        3.0630999999999986,
-        9.0813,
-        3.5599999999999996
-      ],
-      "width_m": 0.6,
-      "height_m": 0.8,
-      "length_m": 2.5630999999999986,
-      "section_width_m": 0.6,
-      "section_height_m": 0.8,
-      "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
-      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
-      "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
-      "confidence": "confirmed_from_RLE_VIGA_geometry",
-      "preserved_viewer_id": "E1-S1-V-020",
-      "audit_resolution": {
-        "classification": "CONFIRMED_LABEL_WIDTH",
-        "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
-        "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
-      },
-      "geometry_confirmation": {
-        "status": "CONFIRMED_LABEL_WIDTH",
-        "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
-        "face_ids": [
-          "S1-VB-0001",
-          "S1-VB-0002"
-        ],
-        "width_m": 0.6
-      },
-      "section_evidence_labels": [
-        "LBL_1S_beam_label_0029"
-      ],
-      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
-    },
-    {
       "solidTag": "SOL_1S_beam_0005",
       "category": "beam",
       "kind": "linear_prism",
@@ -5800,18 +5749,18 @@
       "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
       "source_dxf": "2017_67-101.dxf",
       "start": [
-        3.2631000000000014,
+        0.5,
         9.0813,
         3.5599999999999996
       ],
       "end": [
-        6.476300000000002,
+        9.475299999999997,
         9.0813,
         3.5599999999999996
       ],
       "width_m": 0.6,
       "height_m": 0.8,
-      "length_m": 3.2132000000000005,
+      "length_m": 8.975299999999997,
       "section_width_m": 0.6,
       "section_height_m": 0.8,
       "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
@@ -5839,223 +5788,18 @@
       "historical_id_match_quality": "NEAREST_RETIRED_ID_SAME_ORIENTATION",
       "canonical_element_id": "E1-S1-V-021",
       "merged_from": [
-        "E1-S1-V-019"
+        "E1-S1-V-018",
+        "E1-S1-V-019",
+        "E1-S1-V-020"
       ],
       "post_p1l4_correction": {
         "correction_type": "BEAM_MERGED",
-        "reason": "ARTIFICIAL_BEAM_FRAGMENTATION: same confirmed section/Z; paired continuous primary faces; no identified intermediate support/joint.",
+        "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM; collinear, same section/material/Z; intermediate geometric cuts are artificial.",
         "primary_source": "2017_67-101.dxf",
-        "confidence": "CONFIRMED_FROM_PLAN",
-        "audit": "second_structural_cleanup/GLOBAL_BEAM_FRAGMENTATION_AUDIT.json",
-        "id_reason": "Prefer direct label-confirmed contour; then longer surviving historical span; deterministic stable-ID tie break.",
+        "confidence": "USER_CONFIRMED_WITH_CANONICAL_GEOMETRY",
+        "checkpoint": "PRE5_MANUAL_BEAM_REVISION",
         "results_compatibility": "HISTORICAL_NOT_RECALCULATED"
       }
-    },
-    {
-      "solidTag": "SOL_1S_beam_0003",
-      "category": "beam",
-      "kind": "linear_prism",
-      "floor": "1S",
-      "sourceTag": "S1-VP-004",
-      "sourceTags": [
-        "S1-VB-0001",
-        "S1-VB-0002"
-      ],
-      "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
-      "source_dxf": "2017_67-101.dxf",
-      "start": [
-        6.676299999999998,
-        9.0813,
-        3.5599999999999996
-      ],
-      "end": [
-        9.475299999999997,
-        9.0813,
-        3.5599999999999996
-      ],
-      "width_m": 0.6,
-      "height_m": 0.8,
-      "length_m": 2.7989999999999995,
-      "section_width_m": 0.6,
-      "section_height_m": 0.8,
-      "section_source": "CAD_CONTOUR_WIDTH+INFERRED_REPEATED_PLAN_LABEL",
-      "section_confidence": "INFERRED_SECTION_HEIGHT_FROM_CONFIRMED_FAMILY",
-      "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
-      "confidence": "confirmed_from_RLE_VIGA_geometry",
-      "preserved_viewer_id": "E1-S1-V-018",
-      "audit_resolution": {
-        "classification": "CONFIRMED_REPEATED_PLAN_GEOMETRY",
-        "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
-        "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
-      },
-      "geometry_confirmation": {
-        "status": "CONFIRMED_REPEATED_PLAN_GEOMETRY",
-        "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
-        "face_ids": [
-          "S1-VB-0001",
-          "S1-VB-0002"
-        ],
-        "width_m": 0.6
-      },
-      "section_evidence_labels": [
-        "LBL_2_beam_label_0030",
-        "LBL_3_beam_label_0029",
-        "LBL_4_beam_label_0030"
-      ],
-      "historical_id_match_quality": "NEAREST_RETIRED_ID_SAME_ORIENTATION"
-    },
-    {
-      "solidTag": "SOL_1S_beam_0004",
-      "category": "beam",
-      "kind": "linear_prism",
-      "floor": "1S",
-      "sourceTag": "S1-VP-005",
-      "sourceTags": [
-        "S1-VB-0003",
-        "S1-VB-0004"
-      ],
-      "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
-      "source_dxf": "2017_67-101.dxf",
-      "start": [
-        0.5,
-        0.1313,
-        3.5599999999999996
-      ],
-      "end": [
-        3.0630999999999986,
-        0.1313,
-        3.5599999999999996
-      ],
-      "width_m": 0.6,
-      "height_m": 0.8,
-      "length_m": 2.5630999999999986,
-      "section_width_m": 0.6,
-      "section_height_m": 0.8,
-      "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
-      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
-      "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
-      "confidence": "confirmed_from_RLE_VIGA_geometry",
-      "preserved_viewer_id": "E1-S1-V-011",
-      "audit_resolution": {
-        "classification": "CONFIRMED_LABEL_WIDTH",
-        "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
-        "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
-      },
-      "geometry_confirmation": {
-        "status": "CONFIRMED_LABEL_WIDTH",
-        "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
-        "face_ids": [
-          "S1-VB-0003",
-          "S1-VB-0004"
-        ],
-        "width_m": 0.6
-      },
-      "section_evidence_labels": [
-        "LBL_1S_beam_label_0021"
-      ],
-      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
-    },
-    {
-      "solidTag": "SOL_1S_beam_0078",
-      "category": "beam",
-      "kind": "linear_prism",
-      "floor": "1S",
-      "sourceTag": "S1-VP-006",
-      "sourceTags": [
-        "S1-VB-0003",
-        "S1-VB-0004"
-      ],
-      "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
-      "source_dxf": "2017_67-101.dxf",
-      "start": [
-        3.2631000000000014,
-        0.1313,
-        3.5599999999999996
-      ],
-      "end": [
-        4.586399999999998,
-        0.1313,
-        3.5599999999999996
-      ],
-      "width_m": 0.6,
-      "height_m": 0.8,
-      "length_m": 1.3232999999999961,
-      "section_width_m": 0.6,
-      "section_height_m": 0.8,
-      "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
-      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
-      "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
-      "confidence": "confirmed_from_RLE_VIGA_geometry",
-      "preserved_viewer_id": "E1-S1-V-026",
-      "audit_resolution": {
-        "classification": "CONFIRMED_LABEL_WIDTH",
-        "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
-        "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
-      },
-      "geometry_confirmation": {
-        "status": "CONFIRMED_LABEL_WIDTH",
-        "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
-        "face_ids": [
-          "S1-VB-0003",
-          "S1-VB-0004"
-        ],
-        "width_m": 0.6
-      },
-      "section_evidence_labels": [
-        "LBL_1S_beam_label_0021"
-      ],
-      "historical_id_match_quality": "NEAREST_RETIRED_ID_SAME_ORIENTATION"
-    },
-    {
-      "solidTag": "SOL_1S_beam_0077",
-      "category": "beam",
-      "kind": "linear_prism",
-      "floor": "1S",
-      "sourceTag": "S1-VP-007",
-      "sourceTags": [
-        "S1-VB-0003",
-        "S1-VB-0081"
-      ],
-      "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
-      "source_dxf": "2017_67-101.dxf",
-      "start": [
-        4.676299999999998,
-        0.1313,
-        3.5599999999999996
-      ],
-      "end": [
-        6.476300000000002,
-        0.1313,
-        3.5599999999999996
-      ],
-      "width_m": 0.6,
-      "height_m": 0.8,
-      "length_m": 1.8000000000000043,
-      "section_width_m": 0.6,
-      "section_height_m": 0.8,
-      "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
-      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
-      "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
-      "confidence": "confirmed_from_RLE_VIGA_geometry",
-      "preserved_viewer_id": "E1-S1-V-030",
-      "audit_resolution": {
-        "classification": "CONFIRMED_LABEL_WIDTH",
-        "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
-        "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
-      },
-      "geometry_confirmation": {
-        "status": "CONFIRMED_LABEL_WIDTH",
-        "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
-        "face_ids": [
-          "S1-VB-0003",
-          "S1-VB-0081"
-        ],
-        "width_m": 0.6
-      },
-      "section_evidence_labels": [
-        "LBL_1S_beam_label_0021"
-      ],
-      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
     },
     {
       "solidTag": "SOL_1S_beam_0079",
@@ -6065,12 +5809,13 @@
       "sourceTag": "S1-VP-008",
       "sourceTags": [
         "S1-VB-0003",
+        "S1-VB-0004",
         "S1-VB-0081"
       ],
       "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
       "source_dxf": "2017_67-101.dxf",
       "start": [
-        6.676299999999998,
+        0.5,
         0.1313,
         3.5599999999999996
       ],
@@ -6081,7 +5826,7 @@
       ],
       "width_m": 0.6,
       "height_m": 0.8,
-      "length_m": 2.7989999999999995,
+      "length_m": 8.975299999999997,
       "section_width_m": 0.6,
       "section_height_m": 0.8,
       "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
@@ -6099,6 +5844,7 @@
         "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
         "face_ids": [
           "S1-VB-0003",
+          "S1-VB-0004",
           "S1-VB-0081"
         ],
         "width_m": 0.6
@@ -6106,58 +5852,21 @@
       "section_evidence_labels": [
         "LBL_1S_beam_label_0021"
       ],
-      "historical_id_match_quality": "NEAREST_RETIRED_ID_SAME_ORIENTATION"
-    },
-    {
-      "solidTag": "SOL_1S_beam_0015",
-      "category": "beam",
-      "kind": "linear_prism",
-      "floor": "1S",
-      "sourceTag": "S1-VP-048",
-      "sourceTags": [
-        "S1-VB-0082",
-        "S1-VB-0083"
+      "historical_id_match_quality": "NEAREST_RETIRED_ID_SAME_ORIENTATION",
+      "canonical_element_id": "E1-S1-V-025",
+      "merged_from": [
+        "E1-S1-V-011",
+        "E1-S1-V-026",
+        "E1-S1-V-030"
       ],
-      "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
-      "source_dxf": "2017_67-101.dxf",
-      "start": [
-        4.676299999999998,
-        -0.3687,
-        3.5599999999999996
-      ],
-      "end": [
-        6.476300000000002,
-        -0.3687,
-        3.5599999999999996
-      ],
-      "width_m": 0.2,
-      "height_m": 0.8,
-      "length_m": 1.8000000000000043,
-      "section_width_m": 0.2,
-      "section_height_m": 0.8,
-      "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
-      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
-      "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
-      "confidence": "confirmed_from_RLE_VIGA_geometry",
-      "preserved_viewer_id": "E1-S1-V-005",
-      "audit_resolution": {
-        "classification": "CONFIRMED_LABEL_WIDTH",
-        "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
-        "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
-      },
-      "geometry_confirmation": {
-        "status": "CONFIRMED_LABEL_WIDTH",
-        "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
-        "face_ids": [
-          "S1-VB-0082",
-          "S1-VB-0083"
-        ],
-        "width_m": 0.2
-      },
-      "section_evidence_labels": [
-        "LBL_1S_beam_label_0043"
-      ],
-      "historical_id_match_quality": "NEAREST_RETIRED_ID_SAME_ORIENTATION"
+      "post_p1l4_correction": {
+        "correction_type": "BEAM_MERGED",
+        "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM; collinear, same section/material/Z; intermediate geometric cuts are artificial.",
+        "primary_source": "2017_67-101.dxf",
+        "confidence": "USER_CONFIRMED_WITH_CANONICAL_GEOMETRY",
+        "checkpoint": "PRE5_MANUAL_BEAM_REVISION",
+        "results_compatibility": "HISTORICAL_NOT_RECALCULATED"
+      }
     },
     {
       "solidTag": "SOL_1S_beam_0018",
@@ -6728,13 +6437,13 @@
         7.52
       ],
       "end": [
-        37.55,
+        39.650000000000006,
         8.9,
         7.52
       ],
       "width_m": 0.6,
       "height_m": 0.8,
-      "length_m": 2.25,
+      "length_m": 4.3500000000000085,
       "section_width_m": 0.6,
       "section_height_m": 0.8,
       "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
@@ -6759,58 +6468,19 @@
       "section_evidence_labels": [
         "LBL_1_beam_label_0026"
       ],
-      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
-    },
-    {
-      "solidTag": "SOL_1_beam_0092",
-      "category": "beam",
-      "kind": "linear_prism",
-      "floor": "1",
-      "sourceTag": "P1-VP-008",
-      "sourceTags": [
-        "P1-VB-0011",
-        "P1-VB-0013"
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP",
+      "canonical_element_id": "E1-P1-V-087",
+      "merged_from": [
+        "E1-P1-V-086"
       ],
-      "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
-      "source_dxf": "2017_67-101.dxf",
-      "start": [
-        37.75,
-        8.9,
-        7.52
-      ],
-      "end": [
-        39.650000000000006,
-        8.9,
-        7.52
-      ],
-      "width_m": 0.6,
-      "height_m": 0.8,
-      "length_m": 1.9000000000000057,
-      "section_width_m": 0.6,
-      "section_height_m": 0.8,
-      "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
-      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
-      "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
-      "confidence": "confirmed_from_RLE_VIGA_geometry",
-      "preserved_viewer_id": "E1-P1-V-086",
-      "audit_resolution": {
-        "classification": "CONFIRMED_LABEL_WIDTH",
-        "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
-        "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
-      },
-      "geometry_confirmation": {
-        "status": "CONFIRMED_LABEL_WIDTH",
-        "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
-        "face_ids": [
-          "P1-VB-0011",
-          "P1-VB-0013"
-        ],
-        "width_m": 0.6
-      },
-      "section_evidence_labels": [
-        "LBL_1_beam_label_0026"
-      ],
-      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      "post_p1l4_correction": {
+        "correction_type": "BEAM_MERGED",
+        "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM; collinear, same section/material/Z; intermediate geometric cuts are artificial.",
+        "primary_source": "2017_67-101.dxf",
+        "confidence": "USER_CONFIRMED_WITH_CANONICAL_GEOMETRY",
+        "checkpoint": "PRE5_MANUAL_BEAM_REVISION",
+        "results_compatibility": "HISTORICAL_NOT_RECALCULATED"
+      }
     },
     {
       "solidTag": "SOL_1_beam_0091",
@@ -6825,7 +6495,7 @@
       "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
       "source_dxf": "2017_67-101.dxf",
       "start": [
-        30.35,
+        30.0,
         8.9,
         7.52
       ],
@@ -6836,7 +6506,7 @@
       ],
       "width_m": 0.6,
       "height_m": 0.8,
-      "length_m": 3.3999999999999986,
+      "length_m": 3.75,
       "section_width_m": 0.6,
       "section_height_m": 0.8,
       "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
@@ -6861,7 +6531,15 @@
       "section_evidence_labels": [
         "LBL_1_beam_label_0025"
       ],
-      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP",
+      "post_p1l4_correction": {
+        "correction_type": "BEAM_ENDPOINT_RECONNECTED",
+        "reason": "Disconnected trimmed endpoint extended along its unchanged axis to the existing structural joint; no support created.",
+        "primary_source": "2017_67-101.dxf",
+        "confidence": "USER_CONFIRMED_WITH_EXISTING_NODE",
+        "checkpoint": "PRE5_MANUAL_BEAM_REVISION",
+        "results_compatibility": "HISTORICAL_NOT_RECALCULATED"
+      }
     },
     {
       "solidTag": "SOL_1_beam_0094",
@@ -7442,13 +7120,13 @@
         7.52
       ],
       "end": [
-        37.55,
+        39.650000000000006,
         16.15,
         7.52
       ],
       "width_m": 0.6,
       "height_m": 0.8,
-      "length_m": 2.25,
+      "length_m": 4.3500000000000085,
       "section_width_m": 0.6,
       "section_height_m": 0.8,
       "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
@@ -7473,58 +7151,19 @@
       "section_evidence_labels": [
         "LBL_1_beam_label_0051"
       ],
-      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
-    },
-    {
-      "solidTag": "SOL_1_beam_0116",
-      "category": "beam",
-      "kind": "linear_prism",
-      "floor": "1",
-      "sourceTag": "P1-VP-022",
-      "sourceTags": [
-        "P1-VB-0036",
-        "P1-VB-0037"
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP",
+      "canonical_element_id": "E1-P1-V-078",
+      "merged_from": [
+        "E1-P1-V-088"
       ],
-      "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
-      "source_dxf": "2017_67-101.dxf",
-      "start": [
-        37.75,
-        16.15,
-        7.52
-      ],
-      "end": [
-        39.650000000000006,
-        16.15,
-        7.52
-      ],
-      "width_m": 0.6,
-      "height_m": 0.8,
-      "length_m": 1.9000000000000057,
-      "section_width_m": 0.6,
-      "section_height_m": 0.8,
-      "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
-      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
-      "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
-      "confidence": "confirmed_from_RLE_VIGA_geometry",
-      "preserved_viewer_id": "E1-P1-V-088",
-      "audit_resolution": {
-        "classification": "CONFIRMED_LABEL_WIDTH",
-        "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
-        "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
-      },
-      "geometry_confirmation": {
-        "status": "CONFIRMED_LABEL_WIDTH",
-        "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
-        "face_ids": [
-          "P1-VB-0036",
-          "P1-VB-0037"
-        ],
-        "width_m": 0.6
-      },
-      "section_evidence_labels": [
-        "LBL_1_beam_label_0051"
-      ],
-      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      "post_p1l4_correction": {
+        "correction_type": "BEAM_MERGED",
+        "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM; collinear, same section/material/Z; intermediate geometric cuts are artificial.",
+        "primary_source": "2017_67-101.dxf",
+        "confidence": "USER_CONFIRMED_WITH_CANONICAL_GEOMETRY",
+        "checkpoint": "PRE5_MANUAL_BEAM_REVISION",
+        "results_compatibility": "HISTORICAL_NOT_RECALCULATED"
+      }
     },
     {
       "solidTag": "SOL_1_beam_0117",
@@ -7539,7 +7178,7 @@
       "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
       "source_dxf": "2017_67-101.dxf",
       "start": [
-        30.35,
+        30.0,
         16.15,
         7.52
       ],
@@ -7550,7 +7189,7 @@
       ],
       "width_m": 0.6,
       "height_m": 0.8,
-      "length_m": 3.3999999999999986,
+      "length_m": 3.75,
       "section_width_m": 0.6,
       "section_height_m": 0.8,
       "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
@@ -7575,7 +7214,15 @@
       "section_evidence_labels": [
         "LBL_1_beam_label_0050"
       ],
-      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP",
+      "post_p1l4_correction": {
+        "correction_type": "BEAM_ENDPOINT_RECONNECTED",
+        "reason": "Disconnected trimmed endpoint extended along its unchanged axis to the existing structural joint; no support created.",
+        "primary_source": "2017_67-101.dxf",
+        "confidence": "USER_CONFIRMED_WITH_EXISTING_NODE",
+        "checkpoint": "PRE5_MANUAL_BEAM_REVISION",
+        "results_compatibility": "HISTORICAL_NOT_RECALCULATED"
+      }
     },
     {
       "solidTag": "SOL_1_beam_0118",
@@ -8076,57 +7723,6 @@
       "historical_id_match_quality": "GEOMETRIC_OVERLAP"
     },
     {
-      "solidTag": "SOL_1_beam_0137",
-      "category": "beam",
-      "kind": "linear_prism",
-      "floor": "1",
-      "sourceTag": "P1-VP-036",
-      "sourceTags": [
-        "P1-VB-0058",
-        "P1-VB-0060"
-      ],
-      "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
-      "source_dxf": "2017_67-101.dxf",
-      "start": [
-        40.0,
-        0.3501,
-        7.52
-      ],
-      "end": [
-        40.0,
-        3.8001,
-        7.52
-      ],
-      "width_m": 0.6,
-      "height_m": 0.8,
-      "length_m": 3.45,
-      "section_width_m": 0.6,
-      "section_height_m": 0.8,
-      "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
-      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
-      "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
-      "confidence": "confirmed_from_RLE_VIGA_geometry",
-      "preserved_viewer_id": "E1-P1-V-094",
-      "audit_resolution": {
-        "classification": "CONFIRMED_LABEL_WIDTH",
-        "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
-        "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
-      },
-      "geometry_confirmation": {
-        "status": "CONFIRMED_LABEL_WIDTH",
-        "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
-        "face_ids": [
-          "P1-VB-0058",
-          "P1-VB-0060"
-        ],
-        "width_m": 0.6
-      },
-      "section_evidence_labels": [
-        "LBL_1_beam_label_0055"
-      ],
-      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
-    },
-    {
       "solidTag": "SOL_1_beam_0138",
       "category": "beam",
       "kind": "linear_prism",
@@ -8140,7 +7736,7 @@
       "source_dxf": "2017_67-101.dxf",
       "start": [
         40.0,
-        4.0001,
+        0.3501,
         7.52
       ],
       "end": [
@@ -8150,7 +7746,7 @@
       ],
       "width_m": 0.6,
       "height_m": 0.8,
-      "length_m": 4.549900000000001,
+      "length_m": 8.199900000000001,
       "section_width_m": 0.6,
       "section_height_m": 0.8,
       "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
@@ -8175,7 +7771,19 @@
       "section_evidence_labels": [
         "LBL_1_beam_label_0055"
       ],
-      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP",
+      "canonical_element_id": "E1-P1-V-096",
+      "merged_from": [
+        "E1-P1-V-094"
+      ],
+      "post_p1l4_correction": {
+        "correction_type": "BEAM_MERGED",
+        "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM; collinear, same section/material/Z; intermediate geometric cuts are artificial.",
+        "primary_source": "2017_67-101.dxf",
+        "confidence": "USER_CONFIRMED_WITH_CANONICAL_GEOMETRY",
+        "checkpoint": "PRE5_MANUAL_BEAM_REVISION",
+        "results_compatibility": "HISTORICAL_NOT_RECALCULATED"
+      }
     },
     {
       "solidTag": "SOL_1_beam_0139",
@@ -8229,14 +7837,16 @@
       "historical_id_match_quality": "GEOMETRIC_OVERLAP"
     },
     {
-      "solidTag": "SOL_1_beam_0141",
+      "solidTag": "SOL_1_beam_0143",
       "category": "beam",
       "kind": "linear_prism",
       "floor": "1",
-      "sourceTag": "P1-VP-039",
+      "sourceTag": "P1-VP-040",
       "sourceTags": [
         "P1-VB-0063",
-        "P1-VB-0064"
+        "P1-VB-0064",
+        "P1-VB-0065",
+        "P1-VB-0066"
       ],
       "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
       "source_dxf": "2017_67-101.dxf",
@@ -8247,63 +7857,12 @@
       ],
       "end": [
         0.0,
-        3.8001,
-        7.52
-      ],
-      "width_m": 0.6,
-      "height_m": 0.8,
-      "length_m": 3.45,
-      "section_width_m": 0.6,
-      "section_height_m": 0.8,
-      "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
-      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
-      "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
-      "confidence": "confirmed_from_RLE_VIGA_geometry",
-      "preserved_viewer_id": "E1-P1-V-001",
-      "audit_resolution": {
-        "classification": "CONFIRMED_LABEL_WIDTH",
-        "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
-        "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
-      },
-      "geometry_confirmation": {
-        "status": "CONFIRMED_LABEL_WIDTH",
-        "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
-        "face_ids": [
-          "P1-VB-0063",
-          "P1-VB-0064"
-        ],
-        "width_m": 0.6
-      },
-      "section_evidence_labels": [
-        "LBL_1_beam_label_0042"
-      ],
-      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
-    },
-    {
-      "solidTag": "SOL_1_beam_0143",
-      "category": "beam",
-      "kind": "linear_prism",
-      "floor": "1",
-      "sourceTag": "P1-VP-040",
-      "sourceTags": [
-        "P1-VB-0065",
-        "P1-VB-0066"
-      ],
-      "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
-      "source_dxf": "2017_67-101.dxf",
-      "start": [
-        0.0,
-        4.0001,
-        7.52
-      ],
-      "end": [
-        0.0,
         8.55,
         7.52
       ],
       "width_m": 0.6,
       "height_m": 0.8,
-      "length_m": 4.549900000000001,
+      "length_m": 8.199900000000001,
       "section_width_m": 0.6,
       "section_height_m": 0.8,
       "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
@@ -8320,6 +7879,8 @@
         "status": "CONFIRMED_LABEL_WIDTH",
         "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
         "face_ids": [
+          "P1-VB-0063",
+          "P1-VB-0064",
           "P1-VB-0065",
           "P1-VB-0066"
         ],
@@ -8328,7 +7889,19 @@
       "section_evidence_labels": [
         "LBL_1_beam_label_0016"
       ],
-      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP",
+      "canonical_element_id": "E1-P1-V-002",
+      "merged_from": [
+        "E1-P1-V-001"
+      ],
+      "post_p1l4_correction": {
+        "correction_type": "BEAM_MERGED",
+        "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM; collinear, same section/material/Z; intermediate geometric cuts are artificial.",
+        "primary_source": "2017_67-101.dxf",
+        "confidence": "USER_CONFIRMED_WITH_CANONICAL_GEOMETRY",
+        "checkpoint": "PRE5_MANUAL_BEAM_REVISION",
+        "results_compatibility": "HISTORICAL_NOT_RECALCULATED"
+      }
     },
     {
       "solidTag": "SOL_1_beam_0147",
@@ -10314,57 +9887,6 @@
       "historical_id_match_quality": "GEOMETRIC_OVERLAP"
     },
     {
-      "solidTag": "SOL_2_beam_0227",
-      "category": "beam",
-      "kind": "linear_prism",
-      "floor": "2",
-      "sourceTag": "P2-VP-024",
-      "sourceTags": [
-        "P2-VB-0039",
-        "P2-VB-0040"
-      ],
-      "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
-      "source_dxf": "2017_67-102.dxf",
-      "start": [
-        9.999900000000004,
-        0.5315,
-        11.48
-      ],
-      "end": [
-        9.999900000000004,
-        3.9815,
-        11.48
-      ],
-      "width_m": 0.6,
-      "height_m": 0.8,
-      "length_m": 3.45,
-      "section_width_m": 0.6,
-      "section_height_m": 0.8,
-      "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
-      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
-      "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
-      "confidence": "confirmed_from_RLE_VIGA_geometry",
-      "preserved_viewer_id": "E1-P2-V-019",
-      "audit_resolution": {
-        "classification": "CONFIRMED_LABEL_WIDTH",
-        "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
-        "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
-      },
-      "geometry_confirmation": {
-        "status": "CONFIRMED_LABEL_WIDTH",
-        "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
-        "face_ids": [
-          "P2-VB-0039",
-          "P2-VB-0040"
-        ],
-        "width_m": 0.6
-      },
-      "section_evidence_labels": [
-        "LBL_2_beam_label_0014"
-      ],
-      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
-    },
-    {
       "solidTag": "SOL_2_beam_0226",
       "category": "beam",
       "kind": "linear_prism",
@@ -10378,7 +9900,7 @@
       "source_dxf": "2017_67-102.dxf",
       "start": [
         9.999900000000004,
-        4.1815,
+        0.5315,
         11.48
       ],
       "end": [
@@ -10388,7 +9910,7 @@
       ],
       "width_m": 0.6,
       "height_m": 0.8,
-      "length_m": 4.549900000000001,
+      "length_m": 8.199900000000001,
       "section_width_m": 0.6,
       "section_height_m": 0.8,
       "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
@@ -10413,7 +9935,19 @@
       "section_evidence_labels": [
         "LBL_2_beam_label_0014"
       ],
-      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP",
+      "canonical_element_id": "E1-P2-V-013",
+      "merged_from": [
+        "E1-P2-V-019"
+      ],
+      "post_p1l4_correction": {
+        "correction_type": "BEAM_MERGED",
+        "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM; collinear, same section/material/Z; intermediate geometric cuts are artificial.",
+        "primary_source": "2017_67-102.dxf",
+        "confidence": "USER_CONFIRMED_WITH_CANONICAL_GEOMETRY",
+        "checkpoint": "PRE5_MANUAL_BEAM_REVISION",
+        "results_compatibility": "HISTORICAL_NOT_RECALCULATED"
+      }
     },
     {
       "solidTag": "SOL_2_beam_0229",
@@ -10583,57 +10117,6 @@
       "historical_id_match_quality": "GEOMETRIC_OVERLAP"
     },
     {
-      "solidTag": "SOL_2_beam_0237",
-      "category": "beam",
-      "kind": "linear_prism",
-      "floor": "2",
-      "sourceTag": "P2-VP-030",
-      "sourceTags": [
-        "P2-VB-0049",
-        "P2-VB-0050"
-      ],
-      "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
-      "source_dxf": "2017_67-102.dxf",
-      "start": [
-        19.999900000000004,
-        0.5315,
-        11.48
-      ],
-      "end": [
-        19.999900000000004,
-        3.9815,
-        11.48
-      ],
-      "width_m": 0.6,
-      "height_m": 0.8,
-      "length_m": 3.45,
-      "section_width_m": 0.6,
-      "section_height_m": 0.8,
-      "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
-      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
-      "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
-      "confidence": "confirmed_from_RLE_VIGA_geometry",
-      "preserved_viewer_id": "E1-P2-V-051",
-      "audit_resolution": {
-        "classification": "CONFIRMED_LABEL_WIDTH",
-        "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
-        "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
-      },
-      "geometry_confirmation": {
-        "status": "CONFIRMED_LABEL_WIDTH",
-        "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
-        "face_ids": [
-          "P2-VB-0049",
-          "P2-VB-0050"
-        ],
-        "width_m": 0.6
-      },
-      "section_evidence_labels": [
-        "LBL_2_beam_label_0010"
-      ],
-      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
-    },
-    {
       "solidTag": "SOL_2_beam_0236",
       "category": "beam",
       "kind": "linear_prism",
@@ -10647,7 +10130,7 @@
       "source_dxf": "2017_67-102.dxf",
       "start": [
         19.999900000000004,
-        4.1815,
+        0.5315,
         11.48
       ],
       "end": [
@@ -10657,7 +10140,7 @@
       ],
       "width_m": 0.6,
       "height_m": 0.8,
-      "length_m": 4.549900000000001,
+      "length_m": 8.199900000000001,
       "section_width_m": 0.6,
       "section_height_m": 0.8,
       "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
@@ -10682,7 +10165,19 @@
       "section_evidence_labels": [
         "LBL_2_beam_label_0010"
       ],
-      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP",
+      "canonical_element_id": "E1-P2-V-048",
+      "merged_from": [
+        "E1-P2-V-051"
+      ],
+      "post_p1l4_correction": {
+        "correction_type": "BEAM_MERGED",
+        "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM; collinear, same section/material/Z; intermediate geometric cuts are artificial.",
+        "primary_source": "2017_67-102.dxf",
+        "confidence": "USER_CONFIRMED_WITH_CANONICAL_GEOMETRY",
+        "checkpoint": "PRE5_MANUAL_BEAM_REVISION",
+        "results_compatibility": "HISTORICAL_NOT_RECALCULATED"
+      }
     },
     {
       "solidTag": "SOL_2_beam_0239",
@@ -10787,57 +10282,6 @@
       "historical_id_match_quality": "GEOMETRIC_OVERLAP"
     },
     {
-      "solidTag": "SOL_2_beam_0243",
-      "category": "beam",
-      "kind": "linear_prism",
-      "floor": "2",
-      "sourceTag": "P2-VP-034",
-      "sourceTags": [
-        "P2-VB-0055",
-        "P2-VB-0056"
-      ],
-      "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
-      "source_dxf": "2017_67-102.dxf",
-      "start": [
-        29.999900000000004,
-        0.5315,
-        11.48
-      ],
-      "end": [
-        29.999900000000004,
-        3.9815,
-        11.48
-      ],
-      "width_m": 0.6,
-      "height_m": 0.8,
-      "length_m": 3.45,
-      "section_width_m": 0.6,
-      "section_height_m": 0.8,
-      "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
-      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
-      "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
-      "confidence": "confirmed_from_RLE_VIGA_geometry",
-      "preserved_viewer_id": "E1-P2-V-080",
-      "audit_resolution": {
-        "classification": "CONFIRMED_LABEL_WIDTH",
-        "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
-        "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
-      },
-      "geometry_confirmation": {
-        "status": "CONFIRMED_LABEL_WIDTH",
-        "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
-        "face_ids": [
-          "P2-VB-0055",
-          "P2-VB-0056"
-        ],
-        "width_m": 0.6
-      },
-      "section_evidence_labels": [
-        "LBL_2_beam_label_0006"
-      ],
-      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
-    },
-    {
       "solidTag": "SOL_2_beam_0242",
       "category": "beam",
       "kind": "linear_prism",
@@ -10851,7 +10295,7 @@
       "source_dxf": "2017_67-102.dxf",
       "start": [
         29.999900000000004,
-        4.1815,
+        0.5315,
         11.48
       ],
       "end": [
@@ -10861,7 +10305,7 @@
       ],
       "width_m": 0.6,
       "height_m": 0.8,
-      "length_m": 4.549900000000001,
+      "length_m": 8.199900000000001,
       "section_width_m": 0.6,
       "section_height_m": 0.8,
       "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
@@ -10886,7 +10330,19 @@
       "section_evidence_labels": [
         "LBL_2_beam_label_0006"
       ],
-      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP",
+      "canonical_element_id": "E1-P2-V-076",
+      "merged_from": [
+        "E1-P2-V-080"
+      ],
+      "post_p1l4_correction": {
+        "correction_type": "BEAM_MERGED",
+        "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM; collinear, same section/material/Z; intermediate geometric cuts are artificial.",
+        "primary_source": "2017_67-102.dxf",
+        "confidence": "USER_CONFIRMED_WITH_CANONICAL_GEOMETRY",
+        "checkpoint": "PRE5_MANUAL_BEAM_REVISION",
+        "results_compatibility": "HISTORICAL_NOT_RECALCULATED"
+      }
     },
     {
       "solidTag": "SOL_2_beam_0245",
@@ -10940,57 +10396,6 @@
       "historical_id_match_quality": "GEOMETRIC_OVERLAP"
     },
     {
-      "solidTag": "SOL_2_beam_0248",
-      "category": "beam",
-      "kind": "linear_prism",
-      "floor": "2",
-      "sourceTag": "P2-VP-037",
-      "sourceTags": [
-        "P2-VB-0060",
-        "P2-VB-0061"
-      ],
-      "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
-      "source_dxf": "2017_67-102.dxf",
-      "start": [
-        39.9999,
-        0.5315,
-        11.48
-      ],
-      "end": [
-        39.9999,
-        3.9815,
-        11.48
-      ],
-      "width_m": 0.6,
-      "height_m": 0.8,
-      "length_m": 3.45,
-      "section_width_m": 0.6,
-      "section_height_m": 0.8,
-      "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
-      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
-      "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
-      "confidence": "confirmed_from_RLE_VIGA_geometry",
-      "preserved_viewer_id": "E1-P2-V-100",
-      "audit_resolution": {
-        "classification": "CONFIRMED_LABEL_WIDTH",
-        "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
-        "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
-      },
-      "geometry_confirmation": {
-        "status": "CONFIRMED_LABEL_WIDTH",
-        "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
-        "face_ids": [
-          "P2-VB-0060",
-          "P2-VB-0061"
-        ],
-        "width_m": 0.6
-      },
-      "section_evidence_labels": [
-        "LBL_2_beam_label_0048"
-      ],
-      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
-    },
-    {
       "solidTag": "SOL_2_beam_0247",
       "category": "beam",
       "kind": "linear_prism",
@@ -11004,7 +10409,7 @@
       "source_dxf": "2017_67-102.dxf",
       "start": [
         39.9999,
-        4.1815,
+        0.5315,
         11.48
       ],
       "end": [
@@ -11014,7 +10419,7 @@
       ],
       "width_m": 0.6,
       "height_m": 0.8,
-      "length_m": 4.549900000000001,
+      "length_m": 8.199900000000001,
       "section_width_m": 0.6,
       "section_height_m": 0.8,
       "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
@@ -11039,7 +10444,19 @@
       "section_evidence_labels": [
         "LBL_2_beam_label_0048"
       ],
-      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP",
+      "canonical_element_id": "E1-P2-V-097",
+      "merged_from": [
+        "E1-P2-V-100"
+      ],
+      "post_p1l4_correction": {
+        "correction_type": "BEAM_MERGED",
+        "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM; collinear, same section/material/Z; intermediate geometric cuts are artificial.",
+        "primary_source": "2017_67-102.dxf",
+        "confidence": "USER_CONFIRMED_WITH_CANONICAL_GEOMETRY",
+        "checkpoint": "PRE5_MANUAL_BEAM_REVISION",
+        "results_compatibility": "HISTORICAL_NOT_RECALCULATED"
+      }
     },
     {
       "solidTag": "SOL_2_beam_0250",
@@ -11093,14 +10510,16 @@
       "historical_id_match_quality": "GEOMETRIC_OVERLAP"
     },
     {
-      "solidTag": "SOL_2_beam_0252",
+      "solidTag": "SOL_2_beam_0254",
       "category": "beam",
       "kind": "linear_prism",
       "floor": "2",
-      "sourceTag": "P2-VP-040",
+      "sourceTag": "P2-VP-041",
       "sourceTags": [
         "P2-VB-0064",
-        "P2-VB-0065"
+        "P2-VB-0065",
+        "P2-VB-0066",
+        "P2-VB-0067"
       ],
       "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
       "source_dxf": "2017_67-102.dxf",
@@ -11111,63 +10530,12 @@
       ],
       "end": [
         -9.999999999976694e-05,
-        3.9815,
-        11.48
-      ],
-      "width_m": 0.6,
-      "height_m": 0.8,
-      "length_m": 3.45,
-      "section_width_m": 0.6,
-      "section_height_m": 0.8,
-      "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
-      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
-      "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
-      "confidence": "confirmed_from_RLE_VIGA_geometry",
-      "preserved_viewer_id": "E1-P2-V-004",
-      "audit_resolution": {
-        "classification": "CONFIRMED_LABEL_WIDTH",
-        "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
-        "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
-      },
-      "geometry_confirmation": {
-        "status": "CONFIRMED_LABEL_WIDTH",
-        "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
-        "face_ids": [
-          "P2-VB-0064",
-          "P2-VB-0065"
-        ],
-        "width_m": 0.6
-      },
-      "section_evidence_labels": [
-        "LBL_2_beam_label_0040"
-      ],
-      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
-    },
-    {
-      "solidTag": "SOL_2_beam_0254",
-      "category": "beam",
-      "kind": "linear_prism",
-      "floor": "2",
-      "sourceTag": "P2-VP-041",
-      "sourceTags": [
-        "P2-VB-0066",
-        "P2-VB-0067"
-      ],
-      "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
-      "source_dxf": "2017_67-102.dxf",
-      "start": [
-        -9.999999999976694e-05,
-        4.1815,
-        11.48
-      ],
-      "end": [
-        -9.999999999976694e-05,
         8.7314,
         11.48
       ],
       "width_m": 0.6,
       "height_m": 0.8,
-      "length_m": 4.549900000000001,
+      "length_m": 8.199900000000001,
       "section_width_m": 0.6,
       "section_height_m": 0.8,
       "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
@@ -11184,6 +10552,8 @@
         "status": "CONFIRMED_LABEL_WIDTH",
         "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
         "face_ids": [
+          "P2-VB-0064",
+          "P2-VB-0065",
           "P2-VB-0066",
           "P2-VB-0067"
         ],
@@ -11192,7 +10562,19 @@
       "section_evidence_labels": [
         "LBL_2_beam_label_0015"
       ],
-      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP",
+      "canonical_element_id": "E1-P2-V-005",
+      "merged_from": [
+        "E1-P2-V-004"
+      ],
+      "post_p1l4_correction": {
+        "correction_type": "BEAM_MERGED",
+        "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM; collinear, same section/material/Z; intermediate geometric cuts are artificial.",
+        "primary_source": "2017_67-102.dxf",
+        "confidence": "USER_CONFIRMED_WITH_CANONICAL_GEOMETRY",
+        "checkpoint": "PRE5_MANUAL_BEAM_REVISION",
+        "results_compatibility": "HISTORICAL_NOT_RECALCULATED"
+      }
     },
     {
       "solidTag": "SOL_2_beam_0256",
@@ -11246,57 +10628,6 @@
       "historical_id_match_quality": "GEOMETRIC_OVERLAP"
     },
     {
-      "solidTag": "SOL_2_beam_0259",
-      "category": "beam",
-      "kind": "linear_prism",
-      "floor": "2",
-      "sourceTag": "P2-VP-043",
-      "sourceTags": [
-        "P2-VB-0071",
-        "P2-VB-0072"
-      ],
-      "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
-      "source_dxf": "2017_67-102.dxf",
-      "start": [
-        44.9999,
-        0.5315,
-        11.48
-      ],
-      "end": [
-        44.9999,
-        3.9815,
-        11.48
-      ],
-      "width_m": 0.6,
-      "height_m": 0.8,
-      "length_m": 3.45,
-      "section_width_m": 0.6,
-      "section_height_m": 0.8,
-      "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
-      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
-      "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
-      "confidence": "confirmed_from_RLE_VIGA_geometry",
-      "preserved_viewer_id": "E1-P2-V-111",
-      "audit_resolution": {
-        "classification": "CONFIRMED_LABEL_WIDTH",
-        "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
-        "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
-      },
-      "geometry_confirmation": {
-        "status": "CONFIRMED_LABEL_WIDTH",
-        "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
-        "face_ids": [
-          "P2-VB-0071",
-          "P2-VB-0072"
-        ],
-        "width_m": 0.6
-      },
-      "section_evidence_labels": [
-        "LBL_2_beam_label_0021"
-      ],
-      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
-    },
-    {
       "solidTag": "SOL_2_beam_0258",
       "category": "beam",
       "kind": "linear_prism",
@@ -11310,7 +10641,7 @@
       "source_dxf": "2017_67-102.dxf",
       "start": [
         44.9999,
-        4.1815,
+        0.5315,
         11.48
       ],
       "end": [
@@ -11320,7 +10651,7 @@
       ],
       "width_m": 0.6,
       "height_m": 0.8,
-      "length_m": 4.549900000000001,
+      "length_m": 8.199900000000001,
       "section_width_m": 0.6,
       "section_height_m": 0.8,
       "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
@@ -11345,7 +10676,19 @@
       "section_evidence_labels": [
         "LBL_2_beam_label_0021"
       ],
-      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP",
+      "canonical_element_id": "E1-P2-V-108",
+      "merged_from": [
+        "E1-P2-V-111"
+      ],
+      "post_p1l4_correction": {
+        "correction_type": "BEAM_MERGED",
+        "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM; collinear, same section/material/Z; intermediate geometric cuts are artificial.",
+        "primary_source": "2017_67-102.dxf",
+        "confidence": "USER_CONFIRMED_WITH_CANONICAL_GEOMETRY",
+        "checkpoint": "PRE5_MANUAL_BEAM_REVISION",
+        "results_compatibility": "HISTORICAL_NOT_RECALCULATED"
+      }
     },
     {
       "solidTag": "SOL_2_beam_0261",
@@ -11399,57 +10742,6 @@
       "historical_id_match_quality": "GEOMETRIC_OVERLAP"
     },
     {
-      "solidTag": "SOL_2_beam_0263",
-      "category": "beam",
-      "kind": "linear_prism",
-      "floor": "2",
-      "sourceTag": "P2-VP-046",
-      "sourceTags": [
-        "P2-VB-0075",
-        "P2-VB-0076"
-      ],
-      "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
-      "source_dxf": "2017_67-102.dxf",
-      "start": [
-        14.999900000000004,
-        0.5315,
-        11.48
-      ],
-      "end": [
-        14.999900000000004,
-        3.9815,
-        11.48
-      ],
-      "width_m": 0.6,
-      "height_m": 0.8,
-      "length_m": 3.45,
-      "section_width_m": 0.6,
-      "section_height_m": 0.8,
-      "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
-      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
-      "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
-      "confidence": "confirmed_from_RLE_VIGA_geometry",
-      "preserved_viewer_id": "E1-P2-V-032",
-      "audit_resolution": {
-        "classification": "CONFIRMED_LABEL_WIDTH",
-        "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
-        "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
-      },
-      "geometry_confirmation": {
-        "status": "CONFIRMED_LABEL_WIDTH",
-        "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
-        "face_ids": [
-          "P2-VB-0075",
-          "P2-VB-0076"
-        ],
-        "width_m": 0.6
-      },
-      "section_evidence_labels": [
-        "LBL_2_beam_label_0011"
-      ],
-      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
-    },
-    {
       "solidTag": "SOL_2_beam_0262",
       "category": "beam",
       "kind": "linear_prism",
@@ -11463,7 +10755,7 @@
       "source_dxf": "2017_67-102.dxf",
       "start": [
         14.999900000000004,
-        4.1815,
+        0.5315,
         11.48
       ],
       "end": [
@@ -11473,7 +10765,7 @@
       ],
       "width_m": 0.6,
       "height_m": 0.8,
-      "length_m": 4.549900000000001,
+      "length_m": 8.199900000000001,
       "section_width_m": 0.6,
       "section_height_m": 0.8,
       "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
@@ -11498,7 +10790,19 @@
       "section_evidence_labels": [
         "LBL_2_beam_label_0011"
       ],
-      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP",
+      "canonical_element_id": "E1-P2-V-029",
+      "merged_from": [
+        "E1-P2-V-032"
+      ],
+      "post_p1l4_correction": {
+        "correction_type": "BEAM_MERGED",
+        "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM; collinear, same section/material/Z; intermediate geometric cuts are artificial.",
+        "primary_source": "2017_67-102.dxf",
+        "confidence": "USER_CONFIRMED_WITH_CANONICAL_GEOMETRY",
+        "checkpoint": "PRE5_MANUAL_BEAM_REVISION",
+        "results_compatibility": "HISTORICAL_NOT_RECALCULATED"
+      }
     },
     {
       "solidTag": "SOL_2_beam_0265",
@@ -11552,57 +10856,6 @@
       "historical_id_match_quality": "GEOMETRIC_OVERLAP"
     },
     {
-      "solidTag": "SOL_2_beam_0267",
-      "category": "beam",
-      "kind": "linear_prism",
-      "floor": "2",
-      "sourceTag": "P2-VP-049",
-      "sourceTags": [
-        "P2-VB-0079",
-        "P2-VB-0080"
-      ],
-      "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
-      "source_dxf": "2017_67-102.dxf",
-      "start": [
-        24.999900000000004,
-        0.5315,
-        11.48
-      ],
-      "end": [
-        24.999900000000004,
-        3.9815,
-        11.48
-      ],
-      "width_m": 0.6,
-      "height_m": 0.8,
-      "length_m": 3.45,
-      "section_width_m": 0.6,
-      "section_height_m": 0.8,
-      "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
-      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
-      "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
-      "confidence": "confirmed_from_RLE_VIGA_geometry",
-      "preserved_viewer_id": "E1-P2-V-067",
-      "audit_resolution": {
-        "classification": "CONFIRMED_LABEL_WIDTH",
-        "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
-        "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
-      },
-      "geometry_confirmation": {
-        "status": "CONFIRMED_LABEL_WIDTH",
-        "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
-        "face_ids": [
-          "P2-VB-0079",
-          "P2-VB-0080"
-        ],
-        "width_m": 0.6
-      },
-      "section_evidence_labels": [
-        "LBL_2_beam_label_0007"
-      ],
-      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
-    },
-    {
       "solidTag": "SOL_2_beam_0266",
       "category": "beam",
       "kind": "linear_prism",
@@ -11616,7 +10869,7 @@
       "source_dxf": "2017_67-102.dxf",
       "start": [
         24.999900000000004,
-        4.1815,
+        0.5315,
         11.48
       ],
       "end": [
@@ -11626,7 +10879,7 @@
       ],
       "width_m": 0.6,
       "height_m": 0.8,
-      "length_m": 4.549900000000001,
+      "length_m": 8.199900000000001,
       "section_width_m": 0.6,
       "section_height_m": 0.8,
       "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
@@ -11651,7 +10904,19 @@
       "section_evidence_labels": [
         "LBL_2_beam_label_0007"
       ],
-      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP",
+      "canonical_element_id": "E1-P2-V-060",
+      "merged_from": [
+        "E1-P2-V-067"
+      ],
+      "post_p1l4_correction": {
+        "correction_type": "BEAM_MERGED",
+        "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM; collinear, same section/material/Z; intermediate geometric cuts are artificial.",
+        "primary_source": "2017_67-102.dxf",
+        "confidence": "USER_CONFIRMED_WITH_CANONICAL_GEOMETRY",
+        "checkpoint": "PRE5_MANUAL_BEAM_REVISION",
+        "results_compatibility": "HISTORICAL_NOT_RECALCULATED"
+      }
     },
     {
       "solidTag": "SOL_2_beam_0269",
@@ -11705,57 +10970,6 @@
       "historical_id_match_quality": "GEOMETRIC_OVERLAP"
     },
     {
-      "solidTag": "SOL_2_beam_0271",
-      "category": "beam",
-      "kind": "linear_prism",
-      "floor": "2",
-      "sourceTag": "P2-VP-052",
-      "sourceTags": [
-        "P2-VB-0083",
-        "P2-VB-0084"
-      ],
-      "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
-      "source_dxf": "2017_67-102.dxf",
-      "start": [
-        34.999900000000004,
-        0.5315,
-        11.48
-      ],
-      "end": [
-        34.999900000000004,
-        3.9815,
-        11.48
-      ],
-      "width_m": 0.6,
-      "height_m": 0.8,
-      "length_m": 3.45,
-      "section_width_m": 0.6,
-      "section_height_m": 0.8,
-      "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
-      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
-      "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
-      "confidence": "confirmed_from_RLE_VIGA_geometry",
-      "preserved_viewer_id": "E1-P2-V-091",
-      "audit_resolution": {
-        "classification": "CONFIRMED_LABEL_WIDTH",
-        "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
-        "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
-      },
-      "geometry_confirmation": {
-        "status": "CONFIRMED_LABEL_WIDTH",
-        "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
-        "face_ids": [
-          "P2-VB-0083",
-          "P2-VB-0084"
-        ],
-        "width_m": 0.6
-      },
-      "section_evidence_labels": [
-        "LBL_2_beam_label_0003"
-      ],
-      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
-    },
-    {
       "solidTag": "SOL_2_beam_0270",
       "category": "beam",
       "kind": "linear_prism",
@@ -11769,7 +10983,7 @@
       "source_dxf": "2017_67-102.dxf",
       "start": [
         34.999900000000004,
-        4.1815,
+        0.5315,
         11.48
       ],
       "end": [
@@ -11779,7 +10993,7 @@
       ],
       "width_m": 0.6,
       "height_m": 0.8,
-      "length_m": 4.549900000000001,
+      "length_m": 8.199900000000001,
       "section_width_m": 0.6,
       "section_height_m": 0.8,
       "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
@@ -11804,7 +11018,19 @@
       "section_evidence_labels": [
         "LBL_2_beam_label_0003"
       ],
-      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP",
+      "canonical_element_id": "E1-P2-V-087",
+      "merged_from": [
+        "E1-P2-V-091"
+      ],
+      "post_p1l4_correction": {
+        "correction_type": "BEAM_MERGED",
+        "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM; collinear, same section/material/Z; intermediate geometric cuts are artificial.",
+        "primary_source": "2017_67-102.dxf",
+        "confidence": "USER_CONFIRMED_WITH_CANONICAL_GEOMETRY",
+        "checkpoint": "PRE5_MANUAL_BEAM_REVISION",
+        "results_compatibility": "HISTORICAL_NOT_RECALCULATED"
+      }
     },
     {
       "solidTag": "SOL_2_beam_0273",
@@ -13861,14 +13087,16 @@
       "historical_id_match_quality": "GEOMETRIC_OVERLAP"
     },
     {
-      "solidTag": "SOL_3_beam_0366",
+      "solidTag": "SOL_3_beam_0368",
       "category": "beam",
       "kind": "linear_prism",
       "floor": "3",
-      "sourceTag": "P3-VP-036",
+      "sourceTag": "P3-VP-037",
       "sourceTags": [
         "P3-VB-0066",
-        "P3-VB-0067"
+        "P3-VB-0067",
+        "P3-VB-0068",
+        "P3-VB-0069"
       ],
       "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
       "source_dxf": "2017_67-102.dxf",
@@ -13879,63 +13107,12 @@
       ],
       "end": [
         -9.999999999976694e-05,
-        3.9815,
-        15.44
-      ],
-      "width_m": 0.6,
-      "height_m": 0.8,
-      "length_m": 3.45,
-      "section_width_m": 0.6,
-      "section_height_m": 0.8,
-      "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
-      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
-      "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
-      "confidence": "confirmed_from_RLE_VIGA_geometry",
-      "preserved_viewer_id": "E1-P3-V-004",
-      "audit_resolution": {
-        "classification": "CONFIRMED_LABEL_WIDTH",
-        "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
-        "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
-      },
-      "geometry_confirmation": {
-        "status": "CONFIRMED_LABEL_WIDTH",
-        "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
-        "face_ids": [
-          "P3-VB-0066",
-          "P3-VB-0067"
-        ],
-        "width_m": 0.6
-      },
-      "section_evidence_labels": [
-        "LBL_3_beam_label_0039"
-      ],
-      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
-    },
-    {
-      "solidTag": "SOL_3_beam_0368",
-      "category": "beam",
-      "kind": "linear_prism",
-      "floor": "3",
-      "sourceTag": "P3-VP-037",
-      "sourceTags": [
-        "P3-VB-0068",
-        "P3-VB-0069"
-      ],
-      "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
-      "source_dxf": "2017_67-102.dxf",
-      "start": [
-        -9.999999999976694e-05,
-        4.1815,
-        15.44
-      ],
-      "end": [
-        -9.999999999976694e-05,
         8.7313,
         15.44
       ],
       "width_m": 0.6,
       "height_m": 0.8,
-      "length_m": 4.549799999999999,
+      "length_m": 8.1998,
       "section_width_m": 0.6,
       "section_height_m": 0.8,
       "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
@@ -13952,6 +13129,8 @@
         "status": "CONFIRMED_LABEL_WIDTH",
         "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
         "face_ids": [
+          "P3-VB-0066",
+          "P3-VB-0067",
           "P3-VB-0068",
           "P3-VB-0069"
         ],
@@ -13960,7 +13139,19 @@
       "section_evidence_labels": [
         "LBL_3_beam_label_0015"
       ],
-      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP",
+      "canonical_element_id": "E1-P3-V-005",
+      "merged_from": [
+        "E1-P3-V-004"
+      ],
+      "post_p1l4_correction": {
+        "correction_type": "BEAM_MERGED",
+        "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM; collinear, same section/material/Z; intermediate geometric cuts are artificial.",
+        "primary_source": "2017_67-102.dxf",
+        "confidence": "USER_CONFIRMED_WITH_CANONICAL_GEOMETRY",
+        "checkpoint": "PRE5_MANUAL_BEAM_REVISION",
+        "results_compatibility": "HISTORICAL_NOT_RECALCULATED"
+      }
     },
     {
       "solidTag": "SOL_3_beam_0370",
@@ -17079,14 +16270,16 @@
       "historical_id_match_quality": "GEOMETRIC_OVERLAP"
     },
     {
-      "solidTag": "SOL_4_beam_0499",
+      "solidTag": "SOL_4_beam_0501",
       "category": "beam",
       "kind": "linear_prism",
       "floor": "4",
-      "sourceTag": "P4-VP-039",
+      "sourceTag": "P4-VP-040",
       "sourceTags": [
         "P4-VB-0075",
-        "P4-VB-0076"
+        "P4-VB-0076",
+        "P4-VB-0077",
+        "P4-VB-0078"
       ],
       "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
       "source_dxf": "2017_67-103.dxf",
@@ -17097,63 +16290,12 @@
       ],
       "end": [
         -9.999999999976694e-05,
-        3.9815,
-        19.400000000000002
-      ],
-      "width_m": 0.6,
-      "height_m": 0.8,
-      "length_m": 3.45,
-      "section_width_m": 0.6,
-      "section_height_m": 0.8,
-      "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
-      "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
-      "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
-      "confidence": "confirmed_from_RLE_VIGA_geometry",
-      "preserved_viewer_id": "E1-P4-V-004",
-      "audit_resolution": {
-        "classification": "CONFIRMED_LABEL_WIDTH",
-        "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
-        "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
-      },
-      "geometry_confirmation": {
-        "status": "CONFIRMED_LABEL_WIDTH",
-        "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
-        "face_ids": [
-          "P4-VB-0075",
-          "P4-VB-0076"
-        ],
-        "width_m": 0.6
-      },
-      "section_evidence_labels": [
-        "LBL_4_beam_label_0039"
-      ],
-      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
-    },
-    {
-      "solidTag": "SOL_4_beam_0501",
-      "category": "beam",
-      "kind": "linear_prism",
-      "floor": "4",
-      "sourceTag": "P4-VP-040",
-      "sourceTags": [
-        "P4-VB-0077",
-        "P4-VB-0078"
-      ],
-      "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
-      "source_dxf": "2017_67-103.dxf",
-      "start": [
-        -9.999999999976694e-05,
-        4.1815,
-        19.400000000000002
-      ],
-      "end": [
-        -9.999999999976694e-05,
         8.7313,
         19.400000000000002
       ],
       "width_m": 0.6,
       "height_m": 0.8,
-      "length_m": 4.549799999999999,
+      "length_m": 8.1998,
       "section_width_m": 0.6,
       "section_height_m": 0.8,
       "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
@@ -17170,6 +16312,8 @@
         "status": "CONFIRMED_LABEL_WIDTH",
         "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
         "face_ids": [
+          "P4-VB-0075",
+          "P4-VB-0076",
           "P4-VB-0077",
           "P4-VB-0078"
         ],
@@ -17178,7 +16322,19 @@
       "section_evidence_labels": [
         "LBL_4_beam_label_0015"
       ],
-      "historical_id_match_quality": "GEOMETRIC_OVERLAP"
+      "historical_id_match_quality": "GEOMETRIC_OVERLAP",
+      "canonical_element_id": "E1-P4-V-005",
+      "merged_from": [
+        "E1-P4-V-004"
+      ],
+      "post_p1l4_correction": {
+        "correction_type": "BEAM_MERGED",
+        "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM; collinear, same section/material/Z; intermediate geometric cuts are artificial.",
+        "primary_source": "2017_67-103.dxf",
+        "confidence": "USER_CONFIRMED_WITH_CANONICAL_GEOMETRY",
+        "checkpoint": "PRE5_MANUAL_BEAM_REVISION",
+        "results_compatibility": "HISTORICAL_NOT_RECALCULATED"
+      }
     },
     {
       "solidTag": "SOL_4_beam_0503",

@@ -591,7 +591,10 @@ def main() -> None:
         import sys
         sys.path.insert(0, str(ROOT / "entregas/PRE_P1L5/scripts"))
         scope = json.loads((ROOT / "entregas/PRE_P1L5/CURRENT_MODEL_EXCLUSIONS.json").read_text(encoding="utf-8-sig"))
-        if scope.get("current_revision") == "SECOND_STRUCTURAL_CLEANUP":
+        if scope.get("current_revision") == "MANUAL_BEAM_REVISION":
+            from finalize_manual_beam_revision import main as finalize_manual_beams
+            finalize_manual_beams()
+        elif scope.get("current_revision") == "SECOND_STRUCTURAL_CLEANUP":
             from second_structural_cleanup import finalize
             finalize()
         else:

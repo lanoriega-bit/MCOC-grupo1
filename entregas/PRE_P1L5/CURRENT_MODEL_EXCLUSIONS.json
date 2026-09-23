@@ -31568,6 +31568,200 @@
       "removed_from_current_geometry": true,
       "removed_from_FE": true,
       "results_policy": "Historical immutable; no current applied loads or results"
+    },
+    {
+      "element_id": "E1-S1-V-005",
+      "before": {
+        "solidTag": "SOL_1S_beam_0015",
+        "category": "beam",
+        "kind": "linear_prism",
+        "floor": "S1",
+        "sourceTag": "S1-VP-048",
+        "sourceTags": [
+          "S1-VB-0082",
+          "S1-VB-0083"
+        ],
+        "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+        "source_dxf": "2017_67-101.dxf",
+        "start": [
+          32.1673,
+          -0.3687,
+          3.5599999999999996
+        ],
+        "end": [
+          33.96730000000001,
+          -0.3687,
+          3.5599999999999996
+        ],
+        "width_m": 0.2,
+        "height_m": 0.8,
+        "length_m": 1.8000000000000043,
+        "section_width_m": 0.2,
+        "section_height_m": 0.8,
+        "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
+        "section_confidence": "CONFIRMED_FROM_GEOMETRY_AND_LABEL",
+        "visual_height_source": "CONFIRMED_SECTION_HEIGHT",
+        "confidence": "confirmed_from_RLE_VIGA_geometry",
+        "preserved_viewer_id": "E1-S1-V-005",
+        "audit_resolution": {
+          "classification": "CONFIRMED_LABEL_WIDTH",
+          "resolution_group": "CONFIRMED_CORRECTED_GEOMETRY",
+          "reason": "La centrolinea y el ancho se obtienen de la auditoria reproducible de RLE-VIGA."
+        },
+        "geometry_confirmation": {
+          "status": "CONFIRMED_LABEL_WIDTH",
+          "proposal_file": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json",
+          "face_ids": [
+            "S1-VB-0082",
+            "S1-VB-0083"
+          ],
+          "width_m": 0.2
+        },
+        "section_evidence_labels": [
+          "LBL_1S_beam_label_0043"
+        ],
+        "historical_id_match_quality": "NEAREST_RETIRED_ID_SAME_ORIENTATION",
+        "source_floor": "1S",
+        "level_kind": "FLOOR",
+        "building": "EDIFICIO_1",
+        "id": "E1-S1-V-005",
+        "human_id": "E1-S1-V-005",
+        "elementTag": "SOL_1S_beam_0015",
+        "legacy_solidTag": "SOL_1S_beam_0015",
+        "model_z_m": 3.56,
+        "source_elevation_m": 3.56,
+        "source_sheet": "2017_67-101",
+        "coordinates": {
+          "start": [
+            32.167,
+            -0.369,
+            3.56
+          ],
+          "end": [
+            33.967,
+            -0.369,
+            3.56
+          ],
+          "center": [
+            33.067,
+            -0.369,
+            3.56
+          ],
+          "z_bottom_m": 3.16,
+          "z_top_m": 3.96
+        },
+        "axis_x": null,
+        "axis_y": null,
+        "axis_location": {
+          "center": {
+            "X": {
+              "axis": "Ec",
+              "axis_coord_m": 33.891,
+              "offset_m": -0.824,
+              "abs_offset_m": 0.824,
+              "status": "BETWEEN_OR_OFFSET",
+              "relation": "entre Eb-Ec",
+              "span": [
+                "Eb",
+                "Ec"
+              ],
+              "lower_axis_coord_m": 31.091,
+              "upper_axis_coord_m": 33.891
+            },
+            "Y": {
+              "axis": "1",
+              "axis_coord_m": 0.0,
+              "offset_m": -0.369,
+              "abs_offset_m": 0.369,
+              "status": "BETWEEN_OR_OFFSET",
+              "relation": "< 1",
+              "span": [
+                null,
+                "1"
+              ],
+              "upper_axis_coord_m": 0.0
+            }
+          },
+          "start": {
+            "X": {
+              "axis": "Eb",
+              "axis_coord_m": 31.091,
+              "offset_m": 1.076,
+              "abs_offset_m": 1.076,
+              "status": "BETWEEN_OR_OFFSET",
+              "relation": "entre Eb-Ec",
+              "span": [
+                "Eb",
+                "Ec"
+              ],
+              "lower_axis_coord_m": 31.091,
+              "upper_axis_coord_m": 33.891
+            },
+            "Y": {
+              "axis": "1",
+              "axis_coord_m": 0.0,
+              "offset_m": -0.369,
+              "abs_offset_m": 0.369,
+              "status": "BETWEEN_OR_OFFSET",
+              "relation": "< 1",
+              "span": [
+                null,
+                "1"
+              ],
+              "upper_axis_coord_m": 0.0
+            }
+          },
+          "end": {
+            "X": {
+              "axis": "Ec",
+              "axis_coord_m": 33.891,
+              "offset_m": 0.076,
+              "abs_offset_m": 0.076,
+              "status": "ON_AXIS",
+              "relation": "Ec",
+              "span": null
+            },
+            "Y": {
+              "axis": "1",
+              "axis_coord_m": 0.0,
+              "offset_m": -0.369,
+              "abs_offset_m": 0.369,
+              "status": "BETWEEN_OR_OFFSET",
+              "relation": "< 1",
+              "span": [
+                null,
+                "1"
+              ],
+              "upper_axis_coord_m": 0.0
+            }
+          }
+        },
+        "location_description": "EDIFICIO_1 / S1 / Viga X entre Eb-Ec / Y < 1",
+        "material": "G35_10",
+        "material_source": "2017_67-100.dxf / MTEXT 1E116 / Main ED1 through cielo P3; excludes P4, sheet600 electrical room, slabs and radier",
+        "material_confidence": "CONFIRMED_FROM_PLAN",
+        "concrete_fc_pa": 35000000,
+        "reinforcement_grade": "A630-420H",
+        "reinforcement_fy_pa": 420000000,
+        "material_scope_note": "Main ED1 through cielo P3; excludes P4, sheet600 electrical room, slabs and radier; E, nu, reinforcement layout and design factors not inferred.",
+        "property_correction": {
+          "correction_type": "PROPERTY_UPDATED",
+          "reason": "Primary general material note: Main ED1 through cielo P3; excludes P4, sheet600 electrical room, slabs and radier",
+          "primary_source": "2017_67-100.dxf",
+          "handle": "1E116",
+          "source_sha256": "982512c16f1facb6188d93954c24063b5910e2741e4499e1e1d9d77affeb595a",
+          "external_repo_clue": "CACERES material documentation prompted primary-note search; values are from our DXF",
+          "confidence": "CONFIRMED_FROM_PLAN",
+          "checkpoint": "EXT-7 primary_materials.py; resolve commit through Git history",
+          "results_compatibility": "HISTORICAL_RESULTS_NOT_RECALCULATED"
+        }
+      },
+      "reason": "USER_CONFIRMED_INVALID_ISOLATED_GEOMETRY",
+      "source": "Manual beam revision; prior FE pending after ED1 wall removal",
+      "historical_commit": "b5d07f3c5c482b8fa13afb37d8b2869ca46aec82",
+      "removed_from_current_geometry": true,
+      "removed_from_FE": true,
+      "results_policy": "Historical immutable; no current loads/results"
     }
   ],
   "merged_id_aliases": {
@@ -31588,7 +31782,40 @@
     "E2-P4-V-090": "E2-P4-V-085",
     "E2-P4-V-070": "E2-P4-V-071",
     "E2-P4-V-015": "E2-P4-V-016",
-    "E2-P4-V-036": "E2-P4-V-037"
+    "E2-P4-V-036": "E2-P4-V-037",
+    "E1-P4-V-004": "E1-P4-V-005",
+    "E2-P4-V-083": "E2-P4-V-082",
+    "E2-P4-V-072": "E2-P4-V-073",
+    "E2-P4-V-079": "E2-P4-V-075",
+    "E2-P4-V-062": "E2-P4-V-061",
+    "E2-P4-V-051": "E2-P4-V-050",
+    "E2-P4-V-058": "E2-P4-V-054",
+    "E2-P4-V-056": "E2-P4-V-052",
+    "E2-P4-V-057": "E2-P4-V-053",
+    "E2-P4-V-041": "E2-P4-V-040",
+    "E2-P4-V-025": "E2-P4-V-031",
+    "E2-P4-V-026": "E2-P4-V-032",
+    "E2-P4-V-027": "E2-P4-V-033",
+    "E1-P3-V-004": "E1-P3-V-005",
+    "E1-P2-V-004": "E1-P2-V-005",
+    "E1-P2-V-111": "E1-P2-V-108",
+    "E1-P2-V-019": "E1-P2-V-013",
+    "E1-P2-V-051": "E1-P2-V-048",
+    "E1-P2-V-080": "E1-P2-V-076",
+    "E1-P2-V-100": "E1-P2-V-097",
+    "E1-P2-V-032": "E1-P2-V-029",
+    "E1-P2-V-067": "E1-P2-V-060",
+    "E1-P2-V-091": "E1-P2-V-087",
+    "E1-P1-V-094": "E1-P1-V-096",
+    "E1-P1-V-001": "E1-P1-V-002",
+    "E1-P1-V-086": "E1-P1-V-087",
+    "E1-P1-V-088": "E1-P1-V-078",
+    "E1-S1-V-018": "E1-S1-V-021",
+    "E1-S1-V-020": "E1-S1-V-021",
+    "E1-S1-V-030": "E1-S1-V-025",
+    "E1-S1-V-026": "E1-S1-V-025",
+    "E1-S1-V-011": "E1-S1-V-025",
+    "E2-P4-V-055": "E2-P4-V-052"
   },
   "merge_history": [
     {
@@ -38300,7 +38527,449 @@
         }
       ],
       "id_reason": "Prefer direct label-confirmed contour; then longer surviving historical span; deterministic stable-ID tie break."
+    },
+    {
+      "id": "E1-P4-V-005",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E1-P4-V-004",
+        "E1-P4-V-005"
+      ],
+      "merged_from": [
+        "E1-P4-V-004"
+      ],
+      "gap_total_m": 0.20000000000000018,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E2-P4-V-082",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E2-P4-V-082",
+        "E2-P4-V-083"
+      ],
+      "merged_from": [
+        "E2-P4-V-083"
+      ],
+      "gap_total_m": 0.12530000000000108,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E2-P4-V-073",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E2-P4-V-072",
+        "E2-P4-V-073"
+      ],
+      "merged_from": [
+        "E2-P4-V-072"
+      ],
+      "gap_total_m": 0.12530000000000108,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E2-P4-V-075",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E2-P4-V-079",
+        "E2-P4-V-075"
+      ],
+      "merged_from": [
+        "E2-P4-V-079"
+      ],
+      "gap_total_m": 0.8000000000000007,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E2-P4-V-061",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E2-P4-V-061",
+        "E2-P4-V-062"
+      ],
+      "merged_from": [
+        "E2-P4-V-062"
+      ],
+      "gap_total_m": 0.12530000000000108,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E2-P4-V-050",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E2-P4-V-051",
+        "E2-P4-V-050"
+      ],
+      "merged_from": [
+        "E2-P4-V-051"
+      ],
+      "gap_total_m": 0.12530000000000108,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E2-P4-V-054",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E2-P4-V-058",
+        "E2-P4-V-054"
+      ],
+      "merged_from": [
+        "E2-P4-V-058"
+      ],
+      "gap_total_m": 0.9247999999999994,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E2-P4-V-053",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E2-P4-V-053",
+        "E2-P4-V-057"
+      ],
+      "merged_from": [
+        "E2-P4-V-057"
+      ],
+      "gap_total_m": 0.9247999999999994,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E2-P4-V-040",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E2-P4-V-040",
+        "E2-P4-V-041"
+      ],
+      "merged_from": [
+        "E2-P4-V-041"
+      ],
+      "gap_total_m": 0.12530000000000108,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E2-P4-V-031",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E2-P4-V-031",
+        "E2-P4-V-025"
+      ],
+      "merged_from": [
+        "E2-P4-V-025"
+      ],
+      "gap_total_m": 0.13890000000000002,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E2-P4-V-032",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E2-P4-V-026",
+        "E2-P4-V-032"
+      ],
+      "merged_from": [
+        "E2-P4-V-026"
+      ],
+      "gap_total_m": 0.13890000000000002,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E2-P4-V-033",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E2-P4-V-027",
+        "E2-P4-V-033"
+      ],
+      "merged_from": [
+        "E2-P4-V-027"
+      ],
+      "gap_total_m": 0.13890000000000002,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E1-P3-V-005",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E1-P3-V-005",
+        "E1-P3-V-004"
+      ],
+      "merged_from": [
+        "E1-P3-V-004"
+      ],
+      "gap_total_m": 0.20000000000000018,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E1-P2-V-005",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E1-P2-V-005",
+        "E1-P2-V-004"
+      ],
+      "merged_from": [
+        "E1-P2-V-004"
+      ],
+      "gap_total_m": 0.20000000000000018,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E1-P2-V-108",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E1-P2-V-111",
+        "E1-P2-V-108"
+      ],
+      "merged_from": [
+        "E1-P2-V-111"
+      ],
+      "gap_total_m": 0.20000000000000018,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E1-P2-V-013",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E1-P2-V-013",
+        "E1-P2-V-019"
+      ],
+      "merged_from": [
+        "E1-P2-V-019"
+      ],
+      "gap_total_m": 0.20000000000000018,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E1-P2-V-048",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E1-P2-V-048",
+        "E1-P2-V-051"
+      ],
+      "merged_from": [
+        "E1-P2-V-051"
+      ],
+      "gap_total_m": 0.20000000000000018,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E1-P2-V-076",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E1-P2-V-076",
+        "E1-P2-V-080"
+      ],
+      "merged_from": [
+        "E1-P2-V-080"
+      ],
+      "gap_total_m": 0.20000000000000018,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E1-P2-V-097",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E1-P2-V-097",
+        "E1-P2-V-100"
+      ],
+      "merged_from": [
+        "E1-P2-V-100"
+      ],
+      "gap_total_m": 0.20000000000000018,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E1-P2-V-029",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E1-P2-V-029",
+        "E1-P2-V-032"
+      ],
+      "merged_from": [
+        "E1-P2-V-032"
+      ],
+      "gap_total_m": 0.20000000000000018,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E1-P2-V-060",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E1-P2-V-060",
+        "E1-P2-V-067"
+      ],
+      "merged_from": [
+        "E1-P2-V-067"
+      ],
+      "gap_total_m": 0.20000000000000018,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E1-P2-V-087",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E1-P2-V-087",
+        "E1-P2-V-091"
+      ],
+      "merged_from": [
+        "E1-P2-V-091"
+      ],
+      "gap_total_m": 0.20000000000000018,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E1-P1-V-096",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E1-P1-V-096",
+        "E1-P1-V-094"
+      ],
+      "merged_from": [
+        "E1-P1-V-094"
+      ],
+      "gap_total_m": 0.20000000000000018,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E1-P1-V-002",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E1-P1-V-001",
+        "E1-P1-V-002"
+      ],
+      "merged_from": [
+        "E1-P1-V-001"
+      ],
+      "gap_total_m": 0.20000000000000018,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E1-P1-V-087",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E1-P1-V-086",
+        "E1-P1-V-087"
+      ],
+      "merged_from": [
+        "E1-P1-V-086"
+      ],
+      "gap_total_m": 0.20000000000000284,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E1-P1-V-078",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E1-P1-V-078",
+        "E1-P1-V-088"
+      ],
+      "merged_from": [
+        "E1-P1-V-088"
+      ],
+      "gap_total_m": 0.20000000000000284,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E1-S1-V-021",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E1-S1-V-018",
+        "E1-S1-V-021",
+        "E1-S1-V-020"
+      ],
+      "merged_from": [
+        "E1-S1-V-018",
+        "E1-S1-V-020"
+      ],
+      "gap_total_m": 0.3999999999999915,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E1-S1-V-025",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM",
+      "source": "manual beam revision + canonical geometry/sourceTags",
+      "historical_ids": [
+        "E1-S1-V-025",
+        "E1-S1-V-030",
+        "E1-S1-V-026",
+        "E1-S1-V-011"
+      ],
+      "merged_from": [
+        "E1-S1-V-030",
+        "E1-S1-V-026",
+        "E1-S1-V-011"
+      ],
+      "gap_total_m": 0.48989999999999156,
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
+    },
+    {
+      "id": "E2-P4-V-052",
+      "type": "BEAM_MERGED",
+      "reason": "USER_CONFIRMED_CONTINUOUS_PHYSICAL_BEAM; V-055 lay inside the 052+056 union and is absorbed to prevent duplicate geometry/stiffness.",
+      "source": "2024_22-102.dxf / overlap regression",
+      "historical_ids": [
+        "E2-P4-V-052",
+        "E2-P4-V-055",
+        "E2-P4-V-056"
+      ],
+      "merged_from": [
+        "E2-P4-V-055",
+        "E2-P4-V-056"
+      ],
+      "checkpoint": "PRE5_MANUAL_BEAM_REVISION"
     }
   ],
-  "current_revision": "SECOND_STRUCTURAL_CLEANUP"
+  "current_revision": "MANUAL_BEAM_REVISION"
 }
