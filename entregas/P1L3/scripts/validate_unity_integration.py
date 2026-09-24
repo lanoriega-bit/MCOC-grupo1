@@ -26,6 +26,15 @@ def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def accepted_sha256(path: Path) -> set[str]:
+    """Accept the tracked JSON hash across Git's Windows EOL checkout policy."""
+    data = path.read_bytes()
+    hashes = {hashlib.sha256(data).hexdigest()}
+    if path.suffix.lower() == ".json":
+        hashes.add(hashlib.sha256(data.replace(b"\r\n", b"\n")).hexdigest())
+    return hashes
+
+
 def main() -> None:
     geometry = load(GEOMETRY)
     unity_geometry = load(UNITY_DATA / "model_viewer.json")
@@ -66,7 +75,7 @@ def main() -> None:
     for item in manifest["files"]:
         path = UNITY_DATA / item["name"]
         assert path.is_file(), f"Falta {item['name']}"
-        assert sha256(path) == item["sha256"], f"Hash incorrecto: {item['name']}"
+        assert item["sha256"] in accepted_sha256(path), f"Hash incorrecto: {item['name']}"
 
     print("UNITY_INTEGRATION_VALIDATION = PASS")
     print(f"Geometria actual: {len(geometry['solids'])} solidos (POST_P1L4_CURRENT)")
