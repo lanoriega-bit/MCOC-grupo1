@@ -1,6 +1,6 @@
 {
   "format": "MCOC_P1L5_MODEL_MASTER_V1",
-  "generated_utc": "2026-09-24T02:55:45.039553+00:00",
+  "generated_utc": "2026-09-24T17:04:19.192114+00:00",
   "policy": "CENTRAL_CANONICAL_INPUT_PROTOTYPE_DO_NOT_OVERWRITE_PRODUCTION",
   "units": {
     "length": "m",
@@ -20,7 +20,7 @@
     },
     "current_contract": {
       "path": "entregas/PRE_P1L5/current_readiness/current_dataset_contract.json",
-      "status": "CURRENT_VERIFIED",
+      "status": "P1L5_ASSUMPTIONS_APPLIED_PENDING_RUN",
       "analysis_version": "P1L5_CURRENT_APPROX_V1",
       "results_manifest": "entregas/P1L5/analysis/results/current/manifest.json"
     },
@@ -31569,14 +31569,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -31638,14 +31640,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -31707,14 +31711,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -31776,14 +31782,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -31845,14 +31853,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -31914,14 +31924,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -31983,14 +31995,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -32052,14 +32066,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -32121,14 +32137,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -32194,14 +32212,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -32263,14 +32283,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -32332,14 +32354,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -32401,14 +32425,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -32474,14 +32500,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -32543,14 +32571,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -32612,14 +32642,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -32681,14 +32713,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -32750,14 +32784,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -32819,14 +32855,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -32888,14 +32926,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -32961,14 +33001,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -33034,14 +33076,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -33107,14 +33151,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -33180,14 +33226,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -33253,14 +33301,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -33326,14 +33376,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -33460,14 +33512,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -33537,14 +33591,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -33614,14 +33670,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -33691,14 +33749,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -33768,14 +33828,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -33845,14 +33907,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -33922,14 +33986,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -33999,14 +34065,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -34076,14 +34144,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -34153,14 +34223,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -34230,14 +34302,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -34307,14 +34381,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -34384,14 +34460,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -34461,14 +34539,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -34538,14 +34618,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -34615,14 +34697,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -34692,14 +34776,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -34769,14 +34855,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -34846,14 +34934,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -34923,14 +35013,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -35000,14 +35092,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -35077,14 +35171,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -35154,14 +35250,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -35231,14 +35329,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -35308,14 +35408,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -35385,14 +35487,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -35462,14 +35566,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -35539,14 +35645,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -35616,14 +35724,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -35693,14 +35803,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -35770,14 +35882,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -35847,14 +35961,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -35924,14 +36040,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -36001,14 +36119,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -36078,14 +36198,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -36155,14 +36277,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -36232,14 +36356,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -36309,14 +36435,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -36386,14 +36514,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -36463,14 +36593,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -36540,14 +36672,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -36617,14 +36751,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -36694,14 +36830,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -36771,14 +36909,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -36848,14 +36988,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -36934,14 +37076,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -37020,14 +37164,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -37106,14 +37252,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -37183,14 +37331,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -37260,14 +37410,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -37337,14 +37489,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -37414,14 +37568,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -37491,14 +37647,16 @@
       "material_id_previous": "MAT_UNKNOWN",
       "p1l5_assumptions": {
         "material_fallback": {
-          "status": "APPROX_FALLBACK",
+          "status": "INFERRED_MATERIAL_FALLBACK",
           "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
           "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
           "valid_material_use_counts_before_assignment": {
             "MAT_G35_10_2017_67_100_1E116": 239,
             "MAT_G35_10_2024_22_100_53994": 321
           },
-          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00",
+          "confirmed_by_plan": false,
+          "reason": "Predominant compatible structural material; retained as an explicit academic inference."
         }
       },
       "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
@@ -63887,7 +64045,7 @@
     "results_state": "P1L5_RESULTS_HISTORICAL_NOT_RECALCULATED"
   },
   "fe_topology": {
-    "status": "APPROVED_FOR_ANALYSIS",
+    "status": "APPROVED_FOR_P1L5_WITH_STOP_EXCLUSIONS",
     "migrated_utc": "2026-09-24T16:37:20.319415+00:00",
     "provenance": {
       "source": "entregas/P1L5/modelo_central/model_master.json",
@@ -118364,28 +118522,23 @@
       "stable_analysis_ids_reused": 633
     },
     "run_policy": {
-      "status": "GEOMETRY_APPROVED_RESULTS_NOT_RECALCULATED",
+      "status": "APPROVED_ACADEMIC_EXPERIMENTAL",
       "active_only": true,
       "stop_element_ids": [],
       "no_invented_supports": true,
-      "opensees_run": false,
-      "loads_changed": false,
-      "results_changed": false,
-      "authorised_utc": "2026-09-24T16:37:20.319415+00:00"
+      "authorised_utc": "2026-09-24T17:04:19.192114+00:00"
     }
   },
   "p1l5_analysis_policy": {
     "status": "APPROVED_ACADEMIC_EXPERIMENTAL",
-    "applied_utc": "2026-09-24T02:55:45.039553+00:00",
-    "stop_element_ids": [
-      "E2-P4-V-009"
-    ],
+    "applied_utc": "2026-09-24T17:04:19.192114+00:00",
+    "stop_element_ids": [],
     "structural_material_fallback": {
       "material_id": "MAT_G35_10_2024_22_100_53994",
-      "valid_use_count_before_assignment": 321,
+      "valid_use_count_before_assignment": 386,
       "all_valid_counts": {
         "MAT_G35_10_2017_67_100_1E116": 239,
-        "MAT_G35_10_2024_22_100_53994": 321
+        "MAT_G35_10_2024_22_100_53994": 386
       },
       "assigned_element_count": 79,
       "assigned_element_ids": [
@@ -118468,7 +118621,8 @@
         "E1-P4-V-116",
         "E1-P4-V-118",
         "E1-P4-V-119"
-      ]
+      ],
+      "status": "INFERRED_MATERIAL_FALLBACK"
     },
     "slabs": "GEOMETRY_AND_TRIBUTARY_ONLY_NOT_FE",
     "g35_elastic_modulus_pa": 28000000000.0,

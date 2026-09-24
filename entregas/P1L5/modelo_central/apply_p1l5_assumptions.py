@@ -43,6 +43,7 @@ def main() -> None:
     fallback_id, fallback_count = valid_counts.most_common(1)[0]
 
     reassigned = []
+    traced_fallbacks = []
     stopped = []
     for row in master["elements"]:
         if row["element_id"] == STOP_ID:
@@ -69,6 +70,13 @@ def main() -> None:
                 "authorised_utc": now,
             }
             reassigned.append(row["element_id"])
+
+        if row.get("material_id_previous") == "MAT_UNKNOWN" and row["type"] in STRUCTURAL_TYPES:
+            fallback = row.setdefault("p1l5_assumptions", {}).setdefault("material_fallback", {})
+            fallback["status"] = "INFERRED_MATERIAL_FALLBACK"
+            fallback["confirmed_by_plan"] = False
+            fallback["reason"] = "Predominant compatible structural material; retained as an explicit academic inference."
+            traced_fallbacks.append(row["element_id"])
 
     for material in materials["materials"]:
         if material["material_id"].startswith("MAT_G35_10_"):
@@ -109,11 +117,12 @@ def main() -> None:
         for row in master["elements"]
         if row["type"] in STRUCTURAL_TYPES and row["active"]
     )
-    identity["pending_case"].update({
-        "status": "STOP_EXCLUDED_P1L5",
-        "blocks_analysis": False,
-        "active": False,
-    })
+    if isinstance(identity.get("pending_case"), dict):
+        identity["pending_case"].update({
+            "status": "STOP_EXCLUDED_P1L5",
+            "blocks_analysis": False,
+            "active": False,
+        })
     master["p1l5_analysis_policy"] = {
         "status": "APPROVED_ACADEMIC_EXPERIMENTAL",
         "applied_utc": now,
@@ -122,8 +131,9 @@ def main() -> None:
             "material_id": fallback_id,
             "valid_use_count_before_assignment": fallback_count,
             "all_valid_counts": dict(valid_counts),
-            "assigned_element_count": len(reassigned),
-            "assigned_element_ids": reassigned,
+            "assigned_element_count": len(traced_fallbacks),
+            "assigned_element_ids": traced_fallbacks,
+            "status": "INFERRED_MATERIAL_FALLBACK",
         },
         "slabs": "GEOMETRY_AND_TRIBUTARY_ONLY_NOT_FE",
         "g35_elastic_modulus_pa": 28_000_000_000.0,
@@ -143,6 +153,7 @@ def main() -> None:
         "fallback_material": fallback_id,
         "valid_counts": valid_counts,
         "reassigned_structural_elements": len(reassigned),
+        "total_inferred_material_fallbacks": len(traced_fallbacks),
         "slabs_left_unknown": sum(
             1 for row in master["elements"] if row["type"] == "slab" and row["material_id"] == "MAT_UNKNOWN"
         ),

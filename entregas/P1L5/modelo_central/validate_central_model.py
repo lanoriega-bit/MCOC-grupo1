@@ -155,11 +155,17 @@ def validate() -> dict:
         fail(errors, "Active FE segment count differs from current identity")
 
     if loads.get("audited_load_catalog", {}).get("status") not in {
-        "AUDITED_NOT_APPLIED", "CURRENT_PARTIAL_WITH_DOCUMENTED_UNRESOLVED", "APPLIED_CURRENT"
+        "AUDITED_NOT_APPLIED",
+        "CURRENT_PARTIAL_WITH_DOCUMENTED_UNRESOLVED",
+        "CURRENT_RECONSTRUCTED_WITH_EXPLICIT_UNRESOLVED",
+        "APPLIED_CURRENT",
     }:
         fail(errors, "loads.json has an unsupported audited load catalog status")
     if loads.get("tributary_areas", {}).get("status") not in {
-        "HISTORICAL", "CURRENT_VALIDATED", "CURRENT_WITH_DOCUMENTED_FALLBACKS"
+        "HISTORICAL",
+        "CURRENT_VALIDATED",
+        "CURRENT_WITH_DOCUMENTED_FALLBACKS",
+        "CURRENT_RECOMPUTED",
     }:
         fail(errors, "loads.json has an unsupported tributary-area status")
 
