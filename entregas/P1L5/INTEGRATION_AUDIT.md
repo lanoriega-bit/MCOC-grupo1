@@ -62,6 +62,12 @@ Unity vuelve a usar una convención de cara interna común: `i=end1`, `j=-end2`.
 
 No se fabrican curvas parabólicas ni estaciones internas inexistentes. Los valores crudos de OpenSees se mantienen en el inspector.
 
+`E2-P1-V-056` permanece en el dataset histórico auditado (equilibrio manual
+PASS), pero ya no existe como ID seleccionable en la geometría CURRENT. Por
+eso el QA de ejecución verifica la misma conversión de signos sobre una viga
+vigente que sí conserva crosswalk histórico; no inventa una asociación para
+forzar la selección del ID antiguo.
+
 ## Decisión de avance
 
 La integración de software y la centralización pasan. El reanálisis del edificio actual y la implementación P1L5 permanecen bloqueados hasta resolver con evidencia:
