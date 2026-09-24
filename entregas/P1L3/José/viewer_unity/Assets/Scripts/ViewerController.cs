@@ -2064,7 +2064,7 @@ namespace Mcoc.UnityViewer
             }
             var sb = new StringBuilder();
             sb.AppendLine($"CASO ACTIVO: {activeAnalysisCase}");
-            sb.AppendLine($"Estado: {(currentResultsAvailable ? "CURRENT_APPROX_FALLBACK" : (p1l4Metadata == null ? "P1L3_ENTREGADO_HISTORICO" : p1l4Metadata.data_state))}");
+            sb.AppendLine($"Estado: {(currentResultsAvailable ? "CURRENT_WITH_DOCUMENTED_FALLBACKS" : (p1l4Metadata == null ? "P1L3_ENTREGADO_HISTORICO" : p1l4Metadata.data_state))}");
             if (rows.Count > 1) sb.AppendLine($"Crosswalk 1:{rows.Count}; se listan miembros por separado, sin combinar esfuerzos.");
             foreach (var row in rows)
             {

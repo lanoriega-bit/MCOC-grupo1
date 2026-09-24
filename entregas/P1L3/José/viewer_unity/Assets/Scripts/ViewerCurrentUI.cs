@@ -213,12 +213,12 @@ namespace Mcoc.UnityViewer
                 LayerToggle("Cargas superficiales", "p1l4_load_surface"); LayerToggle("Cargas lineales", "p1l4_load_line");
                 GUILayout.Label("Cargas puntuales: posición/receptor pendientes; no se dibujan en la posición del texto CAD.",currentBody);
                 LayerToggle("Apoyos geométricos", "support");
-                GUILayout.Label(currentResultsAvailable ? "G/Q transferidas desde 105 paños CURRENT; PP.LOSA usa fallback documentado de 0,15 m. Cargas sin receptor permanecen UNRESOLVED." : "G, Q y áreas tributarias actuales: pendientes de la nueva base FE. Referencias anteriores en Avanzado.",currentBody);
+                GUILayout.Label(currentResultsAvailable ? "G/Q transferidas desde 44 zonas CAD CURRENT. PP.LOSA usa fallback documentado de 0,15 m. Las 10 cargas sin receptor/unidad inequívoca permanecen UNRESOLVED y no se reemplazan por cero." : "G, Q y áreas tributarias actuales: pendientes de la nueva base FE. Referencias anteriores en Avanzado.",currentBody);
             }
             if (Accordion("ANÁLISIS"))
             {
                 GUILayout.Label(currentResultsAvailable ? "OpenSees CURRENT · PASS\nG / Q / EX / EY\nSuperposición lineal instantánea" : $"FE candidato · NO EJECUTADO\n{feDiagnostic?.summary?.fe_element_count ?? 0} miembros\n{feDiagnostic?.summary?.candidate_floating_geometry_elements ?? 0} geometrías flotantes",currentBody);
-                GUILayout.Label(currentResultsAvailable ? "Modelo académico/experimental. E2-P4-V-009 = STOP; aproximaciones visibles en trazabilidad." : "Las incidencias propuestas requieren revisión estructural antes de calcular fuerzas o desplazamientos.",currentBody);
+                GUILayout.Label(currentResultsAvailable ? "Modelo académico/experimental CURRENT. 79 materiales usan fallback trazable; las cargas irresueltas están excluidas explícitamente. Aproximaciones visibles en trazabilidad." : "Las incidencias propuestas requieren revisión estructural antes de calcular fuerzas o desplazamientos.",currentBody);
             }
             if (Accordion("CAPACIDAD"))
                 GUILayout.Label("P–M representa resistencia de una sección. La demanda actual estará disponible después de la nueva corrida. Los estudios anteriores están en Avanzado → Histórico.",currentBody);

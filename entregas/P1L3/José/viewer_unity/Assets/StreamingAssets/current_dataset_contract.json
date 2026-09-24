@@ -1,12 +1,12 @@
 {
   "format": "MCOC_CURRENT_DATASET_V1",
-  "geometry_version": "e61fd40cc29f1e0df908818b08a28effa207c95a82a86a08b187531324cd213b",
-  "fe_version": "7b74399fef270029b626a5a7c8af0223773073fce7e1f5544efa4400dc8d3fbb",
-  "loads_version": "4f23e180a6bcf3eedc65e7caead90bc1aa8cc710ec48325563f62960db4b2d13",
-  "analysis_version": "P1L5_CURRENT_APPROX_V1",
-  "git_commit": "284ec2f29e18a33993de97e345e139b51f92eba7",
-  "timestamp": "2026-09-24T16:39:59.552285+00:00",
-  "status": "BLOCKED_NOT_RUN",
+  "geometry_version": "43e46e2f9386ab60146bf14028198f2559828dd57219edfdad2c5fc1a0ab5429",
+  "fe_version": "01aaf40f528cad7d8d0027b702bbdfb5c78448a0397c03c9c1e940ec58d532fe",
+  "loads_version": "ef69c6dd48509b84fb1f8e12e4c00fc32b9e1ab3499313a9711957432718ea83",
+  "analysis_version": "P1L5_CURRENT_ZONED_V2",
+  "git_commit": "07e12aae5b43044e55ee001347c77d1e5c76bd69",
+  "timestamp": "2026-09-24T17:10:02.431027+00:00",
+  "status": "CURRENT_VERIFIED",
   "geometry_stream_sha256": "a3b8bb3d0ac7143a7053fba294f94dd44e51e17e35cea15bb0470f46fdfd1b04",
   "units": {
     "length": "m",
@@ -29,16 +29,19 @@
     "EX",
     "EY"
   ],
-  "analysis_available": false,
+  "analysis_available": true,
   "fe_approved": true,
   "loads_approved": true,
   "linear_verified": true,
   "payload_file": "p1l5_current_analysis_cases.json",
-  "payload_sha256": "89e51f8d6e6d07406e4e92c33dcbb437ef60e849bb689d65a632602f4101e521",
+  "payload_sha256": "06af58f03a81a5c69e63c79b906664603a862152e822281056c3e9c0e4484629",
   "source_geometry": "entregas/P1L5/modelo_central/model_master.json",
   "source_fe": "entregas/P1L5/modelo_central/model_master.json#/fe_topology",
   "source_loads": "entregas/P1L5/modelo_central/loads.json",
   "basis_policy": "Identical K, supports, local axes, node/member ordering and signed SI components.",
   "capacity_policy": "Demand changes by compatible linear superposition; section/material changes require reanalysis and capacity compatibility review.",
-  "result_state": "STALE_REANALYSIS_REQUIRED"
+  "result_state": "CURRENT_WITH_DOCUMENTED_FALLBACKS",
+  "unresolved_load_count": 10,
+  "current_element_loads_file": "p1l5_current_loads_by_element.json",
+  "current_element_loads_sha256": "45e72e3ffca5f6365e8e0692958965a14f5d24f0ed34b923936110b5119e8460"
 }

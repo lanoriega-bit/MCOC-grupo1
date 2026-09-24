@@ -20,6 +20,7 @@ namespace Mcoc.UnityViewer
         readonly HashSet<string> inspectorGroups = new HashSet<string>{"RESUMEN","RESULTADOS"};
         string inspectorSelection;
         Dictionary<string,CurrentElementContext> currentContexts;
+        Dictionary<string,CurrentElementLoadData> currentElementLoads;
 
         bool InspectorSection(string title)
         {
@@ -50,6 +51,41 @@ namespace Mcoc.UnityViewer
                 catch(Exception ex){Debug.LogWarning("Inspector context unavailable: "+ex.Message);}
             }
             return id!=null&&currentContexts.TryGetValue(id,out var context)?context:null;
+        }
+        CurrentElementLoadData CurrentElementLoad(string id)
+        {
+            if(currentElementLoads==null)
+            {
+                currentElementLoads=new Dictionary<string,CurrentElementLoadData>();
+                var data=JsonLoader.LoadP1L5CurrentElementLoads();
+                if(data?.elements!=null)foreach(var row in data.elements)
+                    if(row!=null&&!string.IsNullOrEmpty(row.element_id))currentElementLoads[row.element_id]=row;
+            }
+            return id!=null&&currentElementLoads.TryGetValue(id,out var load)?load:null;
+        }
+        string CurrentElementLoadText(string id,CurrentElementContext context)
+        {
+            if(!currentResultsAvailable)return context?.load_status??"NO DATA CURRENT: falta una base de cargas compatible.";
+            var row=CurrentElementLoad(id);
+            if(row==null)return "NO DATA: este elemento no tiene un registro en el contrato de cargas CURRENT. No se interpreta como carga cero.";
+            var lines=new List<string>();
+            if(row.Q!=null&&row.Q.status!="NO_DATA")
+            {
+                lines.Add($"Q · {row.Q.status}");
+                lines.Add($"Área tributaria: {row.Q.tributary_area_m2:F3} m² · ancho equivalente: {row.Q.equivalent_width_m:F3} m");
+                lines.Add($"qQ medio: {row.Q.average_surface_intensity_kN_m2:F3} kN/m² · wQ: {row.Q.equivalent_line_load_N_m/1000.0:F3} kN/m");
+                lines.Add($"Q transferida: {row.Q.surface_force_N/1000.0:F3} kN");
+                if(row.Q.zone_ids!=null&&row.Q.zone_ids.Count>0)lines.Add("Zonas: "+string.Join(", ",row.Q.zone_ids));
+            }
+            else lines.Add("Q: NO DATA para este elemento; no equivale a una carga cero confirmada.");
+            if(row.G!=null)
+            {
+                lines.Add($"G · {row.G.status}");
+                lines.Add($"Peso propio: {row.G.self_weight_N/1000.0:F3} kN · carga muerta tributaria: {row.G.tributary_dead_N/1000.0:F3} kN");
+                lines.Add($"G asociada total: {row.G.total_associated_N/1000.0:F3} kN");
+            }
+            if(row.source_load_ids!=null&&row.source_load_ids.Count>0)lines.Add("Fuentes: "+string.Join(", ",row.source_load_ids));
+            return string.Join("\n",lines);
         }
         string CurrentSectionText(SolidData s)
         {
@@ -126,7 +162,7 @@ namespace Mcoc.UnityViewer
                 GUILayout.Label(currentResultsAvailable ? BuildP1L4ResultsText(e,id) : "No disponibles todavía.\nLa estructura fue actualizada después de la última corrida OpenSees.\nSe requiere un nuevo análisis validado.",currentBody);
             }
             if(InspectorSection("CARGAS"))
-                GUILayout.Label(context?.load_status??"Asignación actual no aprobada. No hay carga cero confirmada: faltan áreas/receptores o validación del catálogo.",currentBody);
+                GUILayout.Label(CurrentElementLoadText(id,context),currentBody);
             if(InspectorSection("EJES"))
             {
                 bool show=GUILayout.Toggle(localAxesVisible,"Mostrar flechas x / y / z",GUILayout.Height(27));

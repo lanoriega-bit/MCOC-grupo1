@@ -136,6 +136,11 @@ namespace Mcoc.UnityViewer
             return LoadOptional<P1L4StructuralMetadataData>(fileName, "metadatos estructurales CURRENT P1L5");
         }
 
+        public static CurrentElementLoadsData LoadP1L5CurrentElementLoads(string fileName = "p1l5_current_loads_by_element.json")
+        {
+            return LoadOptional<CurrentElementLoadsData>(fileName, "cargas CURRENT P1L5 por elemento");
+        }
+
         public static DemandCapacityData LoadDemandCapacity(string fileName = "demanda_capacidad.json")
         {
             return LoadOptional<DemandCapacityData>(fileName, "demanda-capacidad P1L4");

@@ -19,6 +19,7 @@ STREAMING = ROOT / "entregas" / "P1L3" / "José" / "viewer_unity" / "Assets" / "
 TARGET = STREAMING / "p1l5_current_analysis_cases.json"
 METADATA_TARGET = STREAMING / "p1l5_current_structural_metadata.json"
 TRIBUTARY_TARGET = STREAMING / "p1l5_current_tributary_areas.json"
+LOADS_TARGET = STREAMING / "p1l5_current_loads_by_element.json"
 
 
 def read(path: Path) -> dict:
@@ -108,24 +109,19 @@ def main() -> None:
                 "ux_m": disp[0], "uy_m": disp[1], "uz_m": disp[2],
             })
         cases.append({
-            "format": "MCOC_P1L5_CURRENT_ANALYSIS_CASE_V1",
+            "format": "MCOC_P1L5_CURRENT_ANALYSIS_CASE_V2",
             "run_id": manifest["analysis_version"],
             "case_name": case_id,
-            "result_state": "CURRENT_APPROX_FALLBACK",
+            "result_state": "CURRENT_WITH_DOCUMENTED_FALLBACKS",
             "elements": elements,
             "nodes": nodes,
-            "excluded_elements": [{
-                "element_id": "E2-P4-V-009",
-                "analysis_id": "POST-A-00417",
-                "geometry_elementTag": central_by_id["E2-P4-V-009"].get("solidTag"),
-                "reason": "STOP_EXCLUDED_P1L5: unresolved isolated member; no support or connection invented.",
-            }],
+            "excluded_elements": [],
         })
 
     payload = {
         "format": "MCOC_P1L5_CURRENT_ANALYSIS_CASES_V1",
         "default_case": "R",
-        "result_state": "CURRENT_APPROX_FALLBACK",
+        "result_state": "CURRENT_WITH_DOCUMENTED_FALLBACKS",
         "analysis_version": manifest["analysis_version"],
         "generated_utc": datetime.now(timezone.utc).isoformat(),
         "basis_cases": ["G", "Q", "EX", "EY"],
@@ -166,7 +162,7 @@ def main() -> None:
                 "source_dxf": row.get("provenance", {}).get("source_dxf"),
             })
     metadata = {
-        "format": "MCOC_P1L5_CURRENT_STRUCTURAL_METADATA_V1", "data_state": "CURRENT_APPROX_FALLBACK",
+        "format": "MCOC_P1L5_CURRENT_STRUCTURAL_METADATA_V2", "data_state": "CURRENT_WITH_DOCUMENTED_FALLBACKS",
         "source": "entregas/P1L5/modelo_central/model_master.json + analysis/results/current",
         "units": {"length": "m", "force": "N", "moment": "N.m", "stress": "Pa"},
         "material": {"material_id": "PER_ELEMENT", "model": "LINEAR_ELASTIC", "E_pa": 28e9, "nu": 0.2, "G_pa": 28e9 / 2.4, "source": "P1L5 authorised approximation"},
@@ -184,21 +180,41 @@ def main() -> None:
         load_kn = sum(panel.get("case_force_N", {}).get(case, 0.0) for case in ("G", "Q")) / 1000.0
         total_area += panel["area_m2"]
         total_load_kn += load_kn
-        tributary_areas.append({
-            "building": panel["building"], "floor": panel["floor"],
-            "beam_id": panel["id"], "elementTag": "",
-            "start": panel["vertices"][0], "end": panel["vertices"][1],
-            "mid": [sum(point[0] for point in panel["vertices"]) / len(panel["vertices"]),
-                    sum(point[1] for point in panel["vertices"]) / len(panel["vertices"])],
-            "area_m2": panel["area_m2"], "load_kN": load_kn,
-            "polygon": [{"x": point[0], "y": point[1]} for point in panel["vertices"]],
-        })
+        geometry = panel.get("geometry") or panel.get("polygon") or {}
+        polygon_rings = geometry.get("coordinates", [])
+        exteriors = [polygon_rings[0]] if geometry.get("type") == "Polygon" and polygon_rings else []
+        if geometry.get("type") == "MultiPolygon":
+            exteriors = [polygon[0] for polygon in polygon_rings if polygon]
+        exterior_area_proxy = [abs(sum(ring[i][0] * ring[(i + 1) % len(ring)][1] - ring[(i + 1) % len(ring)][0] * ring[i][1] for i in range(len(ring))) / 2.0) for ring in exteriors]
+        proxy_sum = sum(exterior_area_proxy) or 1.0
+        for component_index, ring in enumerate(exteriors):
+            if len(ring) > 1 and ring[0] == ring[-1]:
+                ring = ring[:-1]
+            fraction = exterior_area_proxy[component_index] / proxy_sum
+            tributary_areas.append({
+                "building": panel["building"], "floor": panel["floor"],
+                "beam_id": panel["id"] + (f"-C{component_index + 1}" if len(exteriors) > 1 else ""), "elementTag": "",
+                "start": ring[0], "end": ring[1],
+                "mid": [sum(point[0] for point in ring) / len(ring), sum(point[1] for point in ring) / len(ring)],
+                "area_m2": panel["area_m2"] * fraction, "load_kN": load_kn * fraction,
+                "polygon": [{"x": point[0], "y": point[1]} for point in ring],
+                "data_state": "CURRENT_RECOMPUTED",
+                "visual_note": "Exterior visible; interior holes remain excluded in the numerical load contract.",
+            })
     write(TRIBUTARY_TARGET, {
         "units": "m / kN", "qG_kN_m2": total_load_kn / total_area if total_area else 0.0,
         "total_area_m2": total_area, "total_load_kN": total_load_kn, "buildings": {},
         "areas": tributary_areas, "point_areas": [],
         "data_state": "CURRENT_RECOMPUTED", "source": "P1L5 current_tributary_panels.json",
     })
+    current_element_loads = read(Path(__file__).resolve().parent / "generated" / "current_loads_by_element.json")
+    for row in current_element_loads.get("elements", []):
+        area = float(row.get("Q", {}).get("tributary_area_m2", 0.0) or 0.0)
+        force = float(row.get("Q", {}).get("surface_force_N", 0.0) or 0.0)
+        row["Q"]["average_surface_intensity_kN_m2"] = force / area / 1000.0 if area > 0.0 else None
+    current_element_loads["status"] = "PASS_WITH_EXPLICIT_UNRESOLVED"
+    current_element_loads["source"] = "entregas/P1L5/analysis/generated/current_loads_by_element.json"
+    write(LOADS_TARGET, current_element_loads)
     model_stream = STREAMING / "model_viewer.json"
     try:
         git_commit = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
@@ -223,10 +239,13 @@ def main() -> None:
         "source_loads": "entregas/P1L5/modelo_central/loads.json",
         "basis_policy": "Identical K, supports, local axes, node/member ordering and signed SI components.",
         "capacity_policy": "Demand changes by compatible linear superposition; section/material changes require reanalysis and capacity compatibility review.",
-        "result_state": "CURRENT_APPROX_FALLBACK",
+        "result_state": "CURRENT_WITH_DOCUMENTED_FALLBACKS",
+        "unresolved_load_count": len(manifest.get("load_contract", {}).get("unresolved_load_ids", [])),
+        "current_element_loads_file": LOADS_TARGET.name,
+        "current_element_loads_sha256": sha256(LOADS_TARGET),
     }
     write(STREAMING / "current_dataset_contract.json", contract)
-    print(json.dumps({"status": "PASS", "target": str(TARGET.relative_to(ROOT)), "metadata_target": str(METADATA_TARGET.relative_to(ROOT)), "tributary_target": str(TRIBUTARY_TARGET.relative_to(ROOT)), "current_contract": "CURRENT_VERIFIED", "basis_cases": len(cases), "elements_per_case": len(cases[0]["elements"]), "nodes_per_case": len(cases[0]["nodes"]), "current_tributary_panels": len(tributary_areas)}, indent=2))
+    print(json.dumps({"status": "PASS", "target": str(TARGET.relative_to(ROOT)), "metadata_target": str(METADATA_TARGET.relative_to(ROOT)), "tributary_target": str(TRIBUTARY_TARGET.relative_to(ROOT)), "loads_target": str(LOADS_TARGET.relative_to(ROOT)), "current_contract": "CURRENT_VERIFIED", "basis_cases": len(cases), "elements_per_case": len(cases[0]["elements"]), "nodes_per_case": len(cases[0]["nodes"]), "current_tributary_panels": len(tributary_areas)}, indent=2))
 
 
 if __name__ == "__main__":

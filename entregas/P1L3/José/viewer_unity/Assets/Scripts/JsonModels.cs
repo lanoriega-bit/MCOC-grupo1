@@ -1025,4 +1025,48 @@ namespace Mcoc.UnityViewer
         public string duplicate_classification;
         public string evidence;
     }
+
+    [Serializable]
+    public class CurrentElementLoadsData
+    {
+        public string format;
+        public string generated_utc;
+        public string data_state;
+        public string status;
+        public string source;
+        public List<CurrentElementLoadData> elements;
+    }
+
+    [Serializable]
+    public class CurrentElementLoadData
+    {
+        public string element_id;
+        public string building;
+        public string floor;
+        public string type;
+        public CurrentElementQData Q;
+        public CurrentElementGData G;
+        public List<string> source_load_ids;
+    }
+
+    [Serializable]
+    public class CurrentElementQData
+    {
+        public double tributary_area_m2;
+        public double equivalent_width_m;
+        public double surface_force_N;
+        public double equivalent_line_load_N_m;
+        public double average_surface_intensity_kN_m2;
+        public List<string> zone_ids;
+        public string status;
+    }
+
+    [Serializable]
+    public class CurrentElementGData
+    {
+        public double self_weight_N;
+        public double tributary_dead_N;
+        public double total_associated_N;
+        public string status;
+    }
 }
