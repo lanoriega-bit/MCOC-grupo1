@@ -1,13 +1,13 @@
 {
   "format": "MCOC_CURRENT_DATASET_V1",
-  "geometry_version": "a73809639881774b3fe7b63e3bd2cb3c830b5dc76baa66128b489be6126cbd25",
+  "geometry_version": "c979e701a9fc08027d35e898fc38c579e92325f3e55f8d10062b1f94e80b67a8",
   "fe_version": "7b74399fef270029b626a5a7c8af0223773073fce7e1f5544efa4400dc8d3fbb",
   "loads_version": "4f23e180a6bcf3eedc65e7caead90bc1aa8cc710ec48325563f62960db4b2d13",
   "analysis_version": "P1L5_CURRENT_APPROX_V1",
   "git_commit": "284ec2f29e18a33993de97e345e139b51f92eba7",
-  "timestamp": "2026-09-24T05:27:46.932812+00:00",
-  "status": "CURRENT_VERIFIED",
-  "geometry_stream_sha256": "5268d015a07ac34fef308e539fd225b4dead57774178cd6124a59fbaa590231b",
+  "timestamp": "2026-09-24T16:12:53.448878+00:00",
+  "status": "CURRENT_GEOMETRY_RESULTS_REQUIRE_REANALYSIS",
+  "geometry_stream_sha256": "0353f30bdcf97019d817ed5e8f708b6818e67d01a6643ba32f92a396d8660570",
   "units": {
     "length": "m",
     "force": "N",
@@ -29,7 +29,7 @@
     "EX",
     "EY"
   ],
-  "analysis_available": true,
+  "analysis_available": false,
   "fe_approved": true,
   "loads_approved": true,
   "linear_verified": true,
@@ -40,5 +40,5 @@
   "source_loads": "entregas/P1L5/modelo_central/loads.json",
   "basis_policy": "Identical K, supports, local axes, node/member ordering and signed SI components.",
   "capacity_policy": "Demand changes by compatible linear superposition; section/material changes require reanalysis and capacity compatibility review.",
-  "result_state": "CURRENT_APPROX_FALLBACK"
+  "result_state": "P1L5_RESULTS_HISTORICAL_NOT_RECALCULATED"
 }

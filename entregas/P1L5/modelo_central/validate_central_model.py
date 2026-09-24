@@ -130,19 +130,21 @@ def validate() -> dict:
             if str(ref.get("node_i")) not in fe_nodes or str(ref.get("node_j")) not in fe_nodes:
                 fail(errors, f"Embedded FE node missing for {ref.get('analysis_id')}")
 
-    central_pending = identity.get("pending_case", {})
+    central_pending = identity.get("pending_case")
     floating_ids = {
         element_id
         for component in topology.get("floating_excluded", {}).get("components", [])
         for element_id in component.get("geometry_element_ids", [])
     }
-    if central_pending.get("element_id") != "E2-P4-V-009":
-        fail(errors, "model_master pending_case does not preserve E2-P4-V-009")
-    if central_pending.get("element_id") not in floating_ids:
-        fail(errors, "Embedded FE topology does not preserve the documented disconnected component")
-    pending_row = next((row for row in elements if row.get("element_id") == central_pending.get("element_id")), None)
-    if not pending_row or pending_row.get("active") or pending_row.get("analysis_status") != "STOP_EXCLUDED_P1L5":
-        fail(errors, "P1L5 pending case must be retained but inactive with STOP_EXCLUDED_P1L5 status")
+    if central_pending:
+        pending_id = central_pending.get("element_id")
+        if pending_id not in floating_ids:
+            fail(errors, "Documented pending case is absent from the embedded disconnected components")
+        pending_row = next((row for row in elements if row.get("element_id") == pending_id), None)
+        if not pending_row or pending_row.get("active"):
+            fail(errors, "Documented pending case must be retained as an inactive element")
+    elif floating_ids:
+        fail(errors, "Embedded FE topology has disconnected elements but current identity has no pending case")
 
     active_analysis_refs = sum(
         len(row.get("analysis_refs", []))
@@ -186,7 +188,7 @@ def validate() -> dict:
             "fe_active_members": active_analysis_refs,
             "fe_nodes": len(fe_nodes),
             "fe_supports": len(fe_supports),
-            "pending": central_pending.get("element_id"),
+            "pending": central_pending.get("element_id") if central_pending else None,
         },
     }
     return result

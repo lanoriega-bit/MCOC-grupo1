@@ -1,0 +1,124 @@
+{
+  "summary": {
+    "status": "PASS",
+    "beams_before_total": 466,
+    "beams_after_total": 454,
+    "active_beams_before": 465,
+    "active_beams_after": 454,
+    "free_fe_beam_ends_before": 21,
+    "free_fe_beam_ends_after": 18,
+    "free_end_elements_corrected": [
+      "E1-P1-V-066",
+      "E1-P1-V-067",
+      "E2-P4-V-003",
+      "E2-P4-V-006",
+      "E2-P4-V-018",
+      "E2-P4-V-029"
+    ],
+    "remaining_free_end_elements": [
+      "E1-P3-V-101",
+      "E2-P1-V-043",
+      "E2-P1-V-044",
+      "E2-P2-V-043",
+      "E2-P2-V-044",
+      "E2-P3-V-043",
+      "E2-P3-V-044",
+      "E2-P4-V-002",
+      "E2-P4-V-004",
+      "E2-P4-V-008",
+      "E2-P4-V-017",
+      "E2-P4-V-020",
+      "E2-P4-V-042",
+      "E2-P4-V-043",
+      "E2-P4-V-085",
+      "E2-P4-V-091",
+      "E2-S1-V-043",
+      "E2-S1-V-044"
+    ],
+    "ambiguous_near_node_cases": [],
+    "fe_nodes": 1112,
+    "fe_segments": 635,
+    "fe_constraints": 1207,
+    "fe_supports": 33,
+    "fe_disconnected_components": 0,
+    "beam_overlaps_before": [
+      [
+        "E2-P4-V-028",
+        "E2-P4-V-029",
+        0.661
+      ]
+    ],
+    "beam_overlaps_after": []
+  },
+  "checks": {
+    "MERGED_IDS_RETIRED": {
+      "status": "PASS",
+      "note": ""
+    },
+    "CANONICAL_IDS_PRESENT": {
+      "status": "PASS",
+      "note": ""
+    },
+    "MERGE_TRACEABILITY": {
+      "status": "PASS",
+      "note": ""
+    },
+    "V009_REMOVED_CURRENT": {
+      "status": "PASS",
+      "note": ""
+    },
+    "V009_HISTORY": {
+      "status": "PASS",
+      "note": ""
+    },
+    "V013_PROJECTED": {
+      "status": "PASS",
+      "note": ""
+    },
+    "V066_RECONNECTED": {
+      "status": "PASS",
+      "note": ""
+    },
+    "V067_RECONNECTED": {
+      "status": "PASS",
+      "note": ""
+    },
+    "PROPERTIES_PRESERVED": {
+      "status": "PASS",
+      "note": ""
+    },
+    "NO_DUPLICATE_PHYSICAL_NODES": {
+      "status": "PASS",
+      "note": "0"
+    },
+    "NO_DUPLICATE_FE_NODES": {
+      "status": "PASS",
+      "note": "0"
+    },
+    "NO_ZERO_LENGTH": {
+      "status": "PASS",
+      "note": "[]"
+    },
+    "NO_DUPLICATE_FE_MEMBERS": {
+      "status": "PASS",
+      "note": ""
+    },
+    "NO_BEAM_AXIS_OVERLAPS": {
+      "status": "PASS",
+      "note": "before=[['E2-P4-V-028', 'E2-P4-V-029', 0.661]]; after=[]"
+    },
+    "NO_DISCONNECTED_FE_COMPONENTS": {
+      "status": "PASS",
+      "note": ""
+    },
+    "PROTECTED_DATASETS_UNCHANGED": {
+      "status": "PASS",
+      "note": "[]"
+    },
+    "UNITY_GEOMETRY_SYNC": {
+      "status": "PASS",
+      "note": ""
+    }
+  },
+  "method_note": "A free FE beam end is an end node with global graph degree 1 after rigid-joint constraints. It is not automatically a disconnected component; remaining cases repeat by floor or lie at perimeter/cantilever ends."
+}
