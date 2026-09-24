@@ -1,0 +1,33 @@
+{
+  "schema": "P1L2_QA_DINAMICO_v3",
+  "veredicto": "REVISAR",
+  "bundle": "UnityViewer\\Builds\\Windows\\MCOC-Viewer_Data\\StreamingAssets\\p1l4_jose",
+  "tributarias_src": "entregas\\P1L4\\Jose\\resultados\\tributarias.json",
+  "capacity_src": "UnityViewer\\Builds\\Windows\\MCOC-Viewer_Data\\StreamingAssets\\capacity_ha.json",
+  "checks": {
+    "elementos_G_Q": [
+      1312,
+      1312
+    ],
+    "fuerza_axial_total_cols_G_kN": 69959.2,
+    "fuerza_axial_total_cols_Q_kN": 27543.0,
+    "fuerza_vigas_G_kN": 87836.5,
+    "vigas_tributarias": 1551,
+    "area_tributaria_total_m2": 17131.7,
+    "P_grav_esperado_qA_kN": 81375.5,
+    "diferencia_G_vs_qA_kN": -11416.3,
+    "conservacion_P_G_eq_qA": "FALLA",
+    "equilibrio_G_eq_Q": "FALLA",
+    "casos_pm_interaction": {
+      "P0_Mflexion": "PASS",
+      "P25": "PASS",
+      "P50": "PARTIAL_FAIL_STEP_237_PHI_TARGET_REDUCED_TO_1.25PHIY",
+      "PureCompression": "AXIAL_ONLY_PASS"
+    },
+    "columna_bxh_m": [
+      0.7,
+      0.7
+    ]
+  },
+  "nota": "Dinamico: re-leido del bundle FE actual en cada ejecucion (no historicos). Unidades bundle N->kN convertidas aqui."
+}
