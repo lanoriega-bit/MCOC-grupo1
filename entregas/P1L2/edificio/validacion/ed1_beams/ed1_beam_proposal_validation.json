@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "checks": {
+    "proposal_ready": true,
+    "source_segment_count": true,
+    "centerline_count": true,
+    "short_edges_accounted": true,
+    "interior_details_accounted": true,
+    "zero_long_unresolved": true,
+    "zero_diagonal_unresolved": true,
+    "zero_review_items": true,
+    "unique_proposal_ids": true,
+    "unique_centerlines": true,
+    "valid_lengths": true,
+    "standard_traceable_widths": true,
+    "no_retained_label_conflicts": true,
+    "all_face_references_exist": true,
+    "short_edges_not_retained": true,
+    "classification_totals_match": true
+  },
+  "counts": {
+    "source_segments": 553,
+    "centerlines": 300,
+    "short_contour_edges": 46,
+    "interior_details_excluded": 4,
+    "long_source_faces": 507,
+    "long_source_faces_referenced": 507
+  },
+  "classifications": {
+    "CONFIRMED_LABEL_WIDTH": 267,
+    "CONFIRMED_REPEATED_PLAN_GEOMETRY": 3,
+    "CONFIRMED_CONNECTED_SECTION_FAMILY": 5,
+    "CONFIRMED_CONTOUR_PAIR_GEOMETRY": 14,
+    "CONFIRMED_SINGLE_CENTERLINE_BY_LABEL": 9,
+    "CONFIRMED_RESIDUAL_LABEL_WIDTH": 2
+  },
+  "failures": {
+    "review_items": [],
+    "invalid_lengths": [],
+    "invalid_widths": [],
+    "retained_label_conflicts": [],
+    "foreign_faces": [],
+    "uncovered_long_faces": [],
+    "short_used_as_beams": []
+  },
+  "source_proposal": "entregas/P1L2/edificio/validacion/ed1_beams/ed1_beam_centerline_proposal.json"
+}

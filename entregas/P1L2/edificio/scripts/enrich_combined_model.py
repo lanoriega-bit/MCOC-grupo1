@@ -305,6 +305,36 @@ def apply_property(solid: dict[str, object], assignment: dict[str, object] | Non
     if conflict:
         solid["property_review"] = conflict
 
+    if category == "beam" and str(solid.get("geometry_confirmation", {}).get("status", "")).startswith("CONFIRMED_"):
+        geometric_width = r3(solid["geometry_confirmation"].get("width_m", solid.get("width_m", 0.0)))
+        solid["section_width_m"] = geometric_width
+        solid.setdefault("section_height_m", None)
+        solid.setdefault("section_source", "CAD_CONTOUR_WIDTH_ONLY")
+        solid.setdefault("section_confidence", "WIDTH_CONFIRMED_HEIGHT_UNKNOWN")
+        if assignment and assignment["property_type"] == "beam_section":
+            labelled_width = r3(assignment["width_m"])
+            labelled_height = r3(assignment["height_m"])
+            width_conflict = abs(geometric_width - labelled_width) > 0.021
+            height_conflict = (
+                solid.get("section_height_m") is not None
+                and abs(float(solid["section_height_m"]) - labelled_height) > 0.021
+            )
+            if width_conflict or height_conflict:
+                geometry_conflict = {
+                    "status": "GEOMETRY_LABEL_BEAM_SECTION_CONFLICT",
+                    "geometry_width_m": geometric_width,
+                    "confirmed_height_m": solid.get("section_height_m"),
+                    "label_width_m": labelled_width,
+                    "label_height_m": labelled_height,
+                    "labelTag": assignment["labelTag"],
+                }
+                previous_review = solid.get("property_review")
+                solid["property_review"] = {
+                    "status": "MULTIPLE_PROPERTY_REVIEWS",
+                    "reviews": [previous_review, geometry_conflict] if previous_review else [geometry_conflict],
+                }
+        return
+
     if category in {"beam", "support"}:
         solid.setdefault("section_width_m", None)
         solid.setdefault("section_height_m", None)
@@ -349,13 +379,39 @@ def apply_property(solid: dict[str, object], assignment: dict[str, object] | Non
         return
 
     if category == "wall":
-        solid.setdefault("wall_thickness_m", None)
-        solid["thickness_source"] = "UNKNOWN"
-        solid["thickness_confidence"] = "UNKNOWN"
+        geometry_confirmation = solid.get("geometry_confirmation", {})
+        confirmed_contour = geometry_confirmation.get("status") == "CONFIRMED_CONTOUR_PAIR"
+        if confirmed_contour:
+            geometric_thickness = float(geometry_confirmation.get("thickness_m", solid.get("width_m", 0.0)))
+            solid["wall_thickness_m"] = geometric_thickness
+            solid["thickness_source"] = "CAD_CONTOUR_PAIR"
+            solid["thickness_confidence"] = "CONFIRMED_FROM_GEOMETRY"
+        else:
+            solid.setdefault("wall_thickness_m", None)
+            solid["thickness_source"] = "UNKNOWN"
+            solid["thickness_confidence"] = "UNKNOWN"
         if assignment and assignment["property_type"] == "wall_thickness":
-            solid["wall_thickness_m"] = assignment["thickness_m"]
-            solid["thickness_source"] = "TEXT_LABEL"
-            solid["thickness_confidence"] = "CONFIRMED_FROM_LABEL"
+            labelled_thickness = r3(assignment["thickness_m"])
+            if confirmed_contour and abs(float(solid["wall_thickness_m"]) - labelled_thickness) > 0.02:
+                geometry_conflict = {
+                    "status": "GEOMETRY_LABEL_THICKNESS_CONFLICT",
+                    "geometry_thickness_m": solid["wall_thickness_m"],
+                    "label_thickness_m": labelled_thickness,
+                    "labelTag": assignment["labelTag"],
+                }
+                previous_review = solid.get("property_review")
+                solid["property_review"] = {
+                    "status": "MULTIPLE_PROPERTY_REVIEWS",
+                    "reviews": [previous_review, geometry_conflict] if previous_review else [geometry_conflict],
+                }
+                solid["thickness_confidence"] = "CONFIRMED_FROM_GEOMETRY_LABEL_REVIEW"
+            elif confirmed_contour:
+                solid["thickness_source"] = "CAD_CONTOUR_PAIR+TEXT_LABEL"
+                solid["thickness_confidence"] = "CONFIRMED_FROM_GEOMETRY_AND_LABEL"
+            else:
+                solid["wall_thickness_m"] = labelled_thickness
+                solid["thickness_source"] = "TEXT_LABEL"
+                solid["thickness_confidence"] = "CONFIRMED_FROM_LABEL"
             solid["source_label"] = assignment["source_label"]
             solid["source_label_tag"] = assignment["labelTag"]
             solid["source_label_distance_m"] = assignment["association"]["distance_m"]
@@ -665,6 +721,10 @@ def main() -> int:
         apply_property(solid, selected, conflict)
 
     enrich_diaphragms(model, maps)
+    # PRE-P1L5 primary note overrides only explicitly covered RC members.
+    sys.path.insert(0, str(REPO / "entregas/PRE_P1L5/scripts"))
+    from primary_materials import enrich as enrich_primary_materials
+    enrich_primary_materials(model)
     model["metadata_enrichment"] = {
         "status": "APPLIED",
         "script": str(Path(__file__).relative_to(REPO)),

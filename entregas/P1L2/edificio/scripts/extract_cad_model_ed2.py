@@ -47,6 +47,9 @@ RESULTS_DIR = EDIF_DIR / "results"
 UNITY_DIR = EDIF_DIR.parent / "unity_export"
 
 BUILDING_ID = "EDIFICIO_2"
+POST_P1L4_WALL_AUDIT = REPO / "entregas" / "POST_P1L4" / "ed2_walls" / "ed2_wall_face_audit.json"
+POST_P1L4_BEAM_PROPOSAL = REPO / "entregas" / "POST_P1L4" / "ed2_beams" / "ed2_beam_centerline_proposal.json"
+POST_P1L4_BEAM_RESOLUTION = REPO / "entregas" / "POST_P1L4" / "ed2_beams" / "ed2_beam_resolution.json"
 
 LEVEL_REVIEW = {
     "status": "SOURCE_ELEVATIONS_REVIEWED",
@@ -358,6 +361,36 @@ def mkg(floor_id, ori, fx, lo, hi, src, i):
 
 
 def generate_wall_solids(segments):
+    # Desde EXT-2, la fuente canonica de muros es la recuperacion de
+    # centrolineas a partir de pares de caras RLE-MURO del DXF completo.
+    # El fallback historico se conserva solo para poder diagnosticar una
+    # instalacion que aun no haya generado la auditoria primaria.
+    if POST_P1L4_WALL_AUDIT.exists():
+        audit = json.loads(POST_P1L4_WALL_AUDIT.read_text(encoding="utf-8"))
+        if audit.get("status") != "PASS":
+            raise RuntimeError("EXT-2 EDIFICIO_2 wall audit must be PASS before regeneration")
+        solids = []
+        counter = 0
+        for floor_id in ("1S", "1", "2", "3", "4"):
+            canonical_floor = {"1S": "S1", "1": "P1", "2": "P2", "3": "P3", "4": "P4"}[floor_id]
+            ztop = next(f.z_m for f in FLOORS if f.floor_id == floor_id)
+            zbot = prev_z(floor_id)
+            for pair in audit["floors"][canonical_floor]["pairs"]:
+                counter += 1
+                start_xy = pair["centerline_start_xy_m"]
+                end_xy = pair["centerline_end_xy_m"]
+                solids.append({
+                    "solidTag": f"SOL2_{floor_id}_wall_{counter:04d}", "category": "wall", "kind": "linear_prism",
+                    "floor": floor_id, "start": [start_xy[0], start_xy[1], (zbot + ztop) / 2],
+                    "end": [end_xy[0], end_xy[1], (zbot + ztop) / 2], "width_m": pair["thickness_m"],
+                    "wall_thickness_m": pair["thickness_m"], "height_m": ztop-zbot, "length_m": pair["length_m"],
+                    "sourceTag": pair["pair_id"], "sourceTags": pair["face_ids"], "source_layer": "RLE-MURO_CONTOUR_PAIR",
+                    "source_dxf": pair["source_sheet"], "confidence": "confirmed_from_RLE_MURO_contour_pair", "building": BUILDING_ID,
+                    "thickness_source": pair["thickness_source"], "thickness_confidence": "CONFIRMED_FROM_PLAN",
+                    "geometry_confirmation": {"status": "CONFIRMED_CONTOUR_PAIR", "audit_file": str(POST_P1L4_WALL_AUDIT.relative_to(REPO)).replace("\\", "/"), "face_ids": pair["face_ids"], "thickness_m": pair["thickness_m"]},
+                    "post_p1l4_correction": {"correction_type": "MERGED", "reason": "Dos caras RLE-MURO representan un muro fisico.", "primary_source": pair["source_sheet"], "external_repo_clue": "SECONDARY_ONLY", "confidence": "HIGH_PRIMARY_SOURCE", "results_compatibility": "P1L4_HISTORICAL_RESULTS_NOT_RECALCULATED"},
+                })
+        return solids
     solids = []; counter = 0
     for f in FLOORS:
         if f.floor_id == "base":
@@ -370,6 +403,66 @@ def generate_wall_solids(segments):
                            "width_m": 0.22, "height_m": ztop - zbot, "length_m": math.dist(a, b),
                            "source_layer": "RLE-MURO", "source_dxf": seg["source_dxf"], "confidence": seg["confidence"],
                            "building": BUILDING_ID})
+    return solids
+
+
+def generate_beam_solids(segments):
+    """Genera una viga por eje fisico auditado, no una por cara CAD."""
+    if POST_P1L4_BEAM_PROPOSAL.exists():
+        audit = json.loads(POST_P1L4_BEAM_PROPOSAL.read_text(encoding="utf-8"))
+        if audit.get("status") != "PROPOSAL_READY":
+            raise RuntimeError("EXT-3 EDIFICIO_2 beam proposal must be ready before regeneration")
+        floor_ids = {"S1": "1S", "P1": "1", "P2": "2", "P3": "3", "P4": "4"}
+        proposals = [p for floor in ("S1", "P1", "P2", "P3", "P4") for p in audit["floors"][floor]["proposals"]]
+        preserved_tags = {}
+        if POST_P1L4_BEAM_RESOLUTION.exists():
+            resolution = json.loads(POST_P1L4_BEAM_RESOLUTION.read_text(encoding="utf-8"))
+            preserved_tags = {row["proposal_id"]: row["new_solidTag"] for row in resolution.get("crosswalk", [])}
+        heights = {}
+        for p in proposals:
+            height = p.get("height_m")
+            samples = [s for s in p.get("evidence_samples", []) if s.get("label_match")]
+            values = {float(s["nearest_label_height_m"]) for s in samples}
+            if height is None and len(values) == 1:
+                height = values.pop()
+            heights[p["proposal_id"]] = height
+        # Familias repetidas o conectadas heredan una unica seccion ya confirmada.
+        for p in proposals:
+            if heights[p["proposal_id"]] is not None:
+                continue
+            refs = p.get("repeat_evidence", []) + p.get("component_label_evidence", [])
+            values = {heights[r] for r in refs if r in heights and heights[r] is not None}
+            if len(values) == 1:
+                heights[p["proposal_id"]] = values.pop()
+        solids = []
+        for counter, p in enumerate(proposals, 1):
+            floor_id = floor_ids[p["floor"]]
+            ztop = next(f.z_m for f in FLOORS if f.floor_id == floor_id)
+            height = heights[p["proposal_id"]]
+            if height is None:
+                raise RuntimeError(f"Unresolved beam height in audited proposal: {p['proposal_id']}")
+            solids.append({
+                "solidTag": preserved_tags.get(p["proposal_id"], f"SOL2_{floor_id}_beam_{counter:04d}"), "category": "beam", "kind": "linear_prism",
+                "floor": floor_id, "start": [p["start"][0], p["start"][1], ztop-height/2],
+                "end": [p["end"][0], p["end"][1], ztop-height/2], "width_m": p["width_m"],
+                "height_m": height, "section_width_m": p["width_m"], "section_height_m": height,
+                "length_m": p["length_m"], "sourceTag": p["proposal_id"], "sourceTags": p["face_ids"],
+                "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE", "source_dxf": "2024_22-102.dxf" if p["floor"] == "P4" else "2024_22-101.dxf",
+                "confidence": "confirmed_from_RLE_VIGA_geometry", "building": BUILDING_ID,
+                "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL", "section_confidence": "CONFIRMED_FROM_PLAN",
+                "geometry_confirmation": {"status": p["classification"], "audit_file": str(POST_P1L4_BEAM_PROPOSAL.relative_to(REPO)).replace("\\", "/"), "face_ids": p["face_ids"], "width_m": p["width_m"]},
+                "post_p1l4_correction": {"correction_type": "MERGED", "reason": "Caras y cierres RLE-VIGA consolidados en una centrolinea fisica.", "primary_source": "2024_22-102.dxf" if p["floor"] == "P4" else "2024_22-101.dxf", "external_repo_clue": "SECONDARY_COMPARISON_ONLY", "confidence": "HIGH_PRIMARY_SOURCE", "results_compatibility": "P1L4_HISTORICAL_RESULTS_NOT_RECALCULATED"},
+            })
+        return solids
+    solids = []; counter = 0
+    for seg in segments:
+        if seg["category"] != "beam" or seg["floor"] == "base" or seg["length_m"] < 0.35:
+            continue
+        a, b = seg["points"]; counter += 1
+        solids.append({"solidTag": f"SOL2_{seg['floor']}_beam_{counter:04d}", "category": "beam", "kind": "linear_prism", "floor": seg["floor"],
+                       "start": [a[0], a[1], a[2]-0.30], "end": [b[0], b[1], b[2]-0.30], "width_m": 0.32,
+                       "height_m": 0.60, "length_m": math.dist(a, b), "source_layer": seg["source_layer"],
+                       "source_dxf": seg["source_dxf"], "sourceTag": seg["elementTag"], "confidence": seg["confidence"], "building": BUILDING_ID})
     return solids
 
 
@@ -403,19 +496,7 @@ def generate_supports(solids):
 
 
 def generate_solids(segments, diaphragms):
-    solids = []; cb = 0
-    for seg in segments:
-        f = seg["floor"]; cat = seg["category"]
-        if seg["length_m"] < 0.35:
-            continue
-        a, b = seg["points"]
-        if cat == "beam" and f != "base":
-            cb += 1
-            solids.append({"solidTag": f"SOL2_{f}_beam_{cb:04d}", "category": "beam", "kind": "linear_prism", "floor": f,
-                           "start": [a[0], a[1], a[2] - 0.30], "end": [b[0], b[1], b[2] - 0.30], "width_m": 0.32,
-                           "height_m": 0.60, "length_m": math.dist(a, b), "source_layer": seg["source_layer"],
-                           "source_dxf": seg["source_dxf"], "sourceTag": seg["elementTag"], "confidence": seg["confidence"],
-                           "building": BUILDING_ID})
+    solids = generate_beam_solids(segments)
     solids.extend(generate_wall_solids(segments))
     solids.extend(generate_column_solids(segments))
     solids.extend(generate_supports(solids))

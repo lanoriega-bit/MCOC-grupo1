@@ -1,96 +1,71 @@
-# Unity P1L3 — laboratorio estructural integrado
+# Unity — modelo actual POST-P1L4
 
-Proyecto Unity de la parte de visualizacion/interaccion del laboratorio (el lado
-"Unity" de la arquitectura OpenSees <-> Unity). Lee el mismo JSON de contrato del
-modelo (`model_viewer.json`) y permite mostrar/ocultar por tipo y piso, y hacer
-clic sobre elementos para inspeccionar sus datos.
+Este es el único proyecto Unity canónico. Su ubicación histórica bajo P1L3 no
+significa que muestre geometría antigua. OpenSees calcula; Unity visualiza;
+JSON es el contrato. Unidades del modelo: m, N, Pa.
 
-Este proyecto es la interfaz visual principal de P1L3. La escena se encuentra
-versionada y los datos se regeneran desde las fuentes vigentes mediante
-`entregas/P1L3/scripts/build_unity_bundle.py`.
+## Abrir sin recalcular
 
-## Que implementa (requisitos del rol "Unity Viewer")
+1. Desde la raíz, abrir `Abrir_Unity.bat`, o añadir esta carpeta en Unity Hub.
+2. Usar Unity **6000.6.0f1**, abrir `Assets/Main.unity` y pulsar **Play**.
+3. No ejecutar `run_p1l3_integrated.py` para abrir el visor: no es necesario
+   para revisar y podría recalcular el pipeline histórico.
+4. Para refrescar datos ya auditados: `python entregas/P1L3/scripts/build_unity_bundle.py`
+   desde la raíz. Validar con `validate_unity_integration.py` en esa misma carpeta.
 
-**Mostrar/ocultar** (toggles por tipo y por piso):
-- Nodos
-- Vigas
-- Columnas / pilares
-- Muros
-- Apoyos / fundaciones
-- Diafragmas
-- Ejes CAD / lineas de referencia
-- IDs (etiquetas)
+## Qué se muestra
 
-**Click sobre un elemento** (panel de seleccion):
-- ID (`elementTag` / `solidTag`)
-- Tipo y piso
-- Seccion (b x h)
-- Material
-- Nodos inicial (i) y final (j)
-- Longitud
-- Area tributaria y carga tributaria (campos del contrato de gravedad de Luis,
-  se muestran cuando el JSON los incluye; si no, indica "pendiente")
+- Modelo actual: `POST_P1L4_CURRENT`, 909 sólidos, resultado de EXT-1…EXT-4.
+- FE: candidato de 856 miembros, **NO EJECUTADO**, 43 geometrías flotantes.
+- Resultados actuales: **NO DISPONIBLES**. No hay corrida compatible todavía.
+- Avanzado → Histórico / Legacy: resultados entregados, solo mediante opt-in.
+  No corresponden a esta geometría; todas las gráficas históricas lo indican.
+- Cargas: catálogo auditado aún no aplicado. No confundirlo con G/Q definitivo.
+- Losas visuales: alcance parcial; ED1 S1/P1 y huecos siguen pendientes.
 
-## Contenido
+## Uso y presentación
 
-| Ruta | Descripcion |
-| --- | --- |
-| `Assets/Scripts/JsonModels.cs` | Clases de datos que mapean el `model_viewer.json` |
-| `Assets/Scripts/JsonLoader.cs` | Carga el JSON desde `StreamingAssets` |
-| `Assets/Scripts/ViewerController.cs` | Construye la escena, toggles y panel de click |
-| `Assets/StreamingAssets/model_viewer.json` | Contrato del modelo (producido por tus companeros) |
-| `Packages/manifest.json` | Dependencias base (UGUI, TextMeshPro, JSon) |
-| `ProjectSettings/` | Config minima de proyecto (Unity regenerea el resto) |
+Los grupos Modelo, Resultados, Cargas, Análisis, Capacidad, Diagnóstico,
+Contexto, Avanzado y Ayuda se despliegan/retraen y el panel tiene scroll.
 
-## Requisitos
+- Modelo: edificios, pisos, Solo, todos los pisos y tipos estructurales.
+- Clic en un elemento: resumen didáctico, dimensiones y confianza. Detalle
+  técnico expone fuente, IDs, extremos, crosswalk candidato y correcciones.
+- **F11** / botón: presentación. Oculta diagnóstico, histórico y paneles
+  secundarios. En ejecutable activa fullscreen sin bordes; en Editor aplica
+  layout de presentación, no controla toda la ventana del Editor.
+- **H**: solo modelo, sin interfaz. **R**: restablecer vista y filtros.
+- Giro: arrastrar; zoom: rueda; desplazar: botón central. Los paneles bloquean
+  la navegación de la cámara para no moverla mientras se usa el scroll.
+- GLOBAL: XYZ permanente en una esquina, rojo/verde/azul. Flechas grandes
+  opcionales desde el origen canónico. Z es vertical.
+- LOCAL: x/y/z sobre el elemento seleccionado; ejes geométricos, no ejes
+  certificados del futuro FE. En muros, x sigue la longitud en planta.
+- Planta mira desde +Z; Frente desde +Y; Lateral desde +X; Iso restablece
+  la vista oblicua. Los botones XYZ del indicador también cambian la vista.
 
-- **Unity Editor 6000.6.0f1** (coincide con `ProjectSettings/ProjectVersion.txt`).
-- Conexion descargada de paquetes base.
-- Modelo a inspeccionar en `Assets/StreamingAssets/model_viewer.json`.
+No se inventan resultados, receptores, materiales o dimensiones resistentes.
+Las cajas visuales y las secciones confirmadas se identifican por separado.
+Los estudios anteriores P–M, My/Mz/N/Vy/Vz y deformadas conservan su contrato;
+no se alteraron sus números. Presentación vuelve a bloquear el histórico.
 
-## Como abrir (Opcion A: compilar/ejecutar)
+## Código y QA
 
-1. Ejecuta `python entregas/P1L3/scripts/run_p1l3_integrated.py` desde la raiz.
-2. Ejecuta `python entregas/P1L3/scripts/build_unity_bundle.py`.
-3. En Unity Hub: **Add** y elige esta carpeta `viewer_unity/`.
-4. Abre `Assets/Main.unity`.
-5. Pulsa **Play**. El visor carga el edificio y abre el panel P1L3.
+| Archivo | Responsabilidad |
+|---|---|
+| `Assets/Scripts/ViewerController.cs` | Geometría, carga de contratos y visualizaciones |
+| `Assets/Scripts/ViewerCurrentUI.cs` | Paneles semánticos, barrera histórica e inspector |
+| `Assets/Scripts/ViewerOrientation.cs` | Vistas y ejes GLOBAL/LOCAL |
+| `Assets/Scripts/ViewerReviewQA.cs` | Prueba ejecutable con `--ux-review` |
+| `Assets/Editor/CurrentReviewBuild.cs` | Compilación y apertura de Main en Play |
+| `Assets/StreamingAssets/integration_manifest.json` | Estados y procedencia del bundle |
+| `Assets/StreamingAssets/post_p1l3_fe_diagnostic.json` | 116 elementos de foco y crosswalk 1:N |
 
-El panel permite demostrar el resumen verificable, alternar los resultados FE
-`G/Q/EX/EY/R` y mostrar Fiber Section, M-phi y P-M. EX/EY si corresponden a
-corridas OpenSees del modelo actual; sus masas siguen siendo una fuente
-historica provisional hasta completar la auditoria de losas.
+Construir con `-executeMethod Mcoc.UnityViewer.EditorTools.CurrentReviewBuild.Build`
+en Unity batchmode. El ejecutable local queda en `Builds/CurrentReview/` (ignorado
+por Git). Ejecutarlo con `--ux-review` produce capturas y `QA/UX_QA.txt`.
+Para apertura interactiva automatizada, sin `-batchmode` ni `-quit`, existe
+`-executeMethod Mcoc.UnityViewer.EditorTools.CurrentReviewBuild.OpenForReview`.
 
-## Interfaz de presentacion
-
-El arranque es limpio: vigas, columnas, muros, losas y apoyos visibles; todos
-los overlays, textos y resultados graficos apagados. Los numeros se leen desde
-los JSON del bundle y no estan hardcodeados en la UI.
-
-- **Visibilidad**: panel izquierdo colapsable. Incluye capas estructurales,
-  tributarias y sismicas, toggles por piso, `S` para aislar un piso y scroll.
-- **Navegacion**: lados A/B/C/D, planta, busqueda por ID y Reset.
-- **Inspector**: aparece al seleccionar un elemento y organiza identidad,
-  geometria, propiedades, tributarias, resultados FE y capacidad en acordeones.
-- **P1L3**: panel inferior desplegable con Resumen, Casos FE y Capacidad HA.
-- **Graficos**: cada imagen HA tiene boton `Ampliar` y vista modal legible.
-- **Leyenda**: aparece solo al activar overlays analiticos.
-- **Modo limpio**: tecla `H`; **Reset**: tecla `R`.
-
-Las deformadas EX/EY usan los desplazamientos nodales de OpenSees exportados en
-`analysis_cases.json`. La leyenda declara el factor de amplificacion visual.
-Las etiquetas de IDs y sismo usan decluttering para reducir solapes.
-
-Prueba reproducible desde el menu: **MCOC > Probar interfaz en Play**. El log
-debe contener `[UI QA] PASS: capas y pisos responden a ON/OFF` y
-`PLAY_SMOKE_COMPLETE`.
-
-## Contrato JSON
-
-El visor consume `model_viewer.json` (formato P1L2). Los campos de **area y carga
-tributaria** siguen el contrato de gravedad `MCOC-grupo1-gravity-v1` de tu
-companero Luis:
-- `A_tributaria_total_m2`, `P_total_kN`, `w_lineal_kN_m`, `qG_kN_m2`
-
-El loader ya deja preparados esos campos en `ElementInfo` (`tribAreaM2`,
-`tribLoadKN`). Cuando Luis integre su JSON al modelo, se llenan sin tocar el codigo.
+Guía completa, evidencias y limitaciones: `entregas/POST_P1L4/UNITY_CURRENT_UX_QA.md`
+desde la raíz del repositorio. Barrera estructural: `EXT_5_REMAINING_AUDIT.md`.

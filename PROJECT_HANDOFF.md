@@ -1,7 +1,33 @@
 # PROJECT_HANDOFF.md
 
+## Estado vigente — POST-P1L4, EXT-5 + Unity Current UX
+
+Esta sección sustituye los estados antiguos del resto del documento, que se
+conservan como memoria histórica, no como instrucciones para recalcular.
+
+- Rama: `codex/post-p1l4-structural-audit`; geometría `POST_P1L4_CURRENT`, 909 sólidos.
+- Unity canónico: `entregas/P1L3/José/viewer_unity`, escena `Assets/Main.unity`.
+- Interfaz semántica, inspector resumen/detalle, orientación GLOBAL/LOCAL,
+  F11 presentación, H limpio, R restablecer. Histórico solo en Avanzado.
+- Estado por defecto: `FE CANDIDATE / NOT RUN`, `RESULTADOS NONE`.
+- Candidato: 856 miembros, 16 relaciones 1:N, 43 flotantes/22 componentes.
+- EXT-5 no cambia geometría: corrige la omisión diagnóstica de E2-P4-V-009,
+  agrupa 43 pendientes y detecta ocho solapes entre huellas de muros que
+  requieren revisión del adaptador; no añade enlaces automáticos.
+- Barrera FE: 424 esclavos multi-maestro, 376 nodos retenidos/restringidos;
+  19 alturas ED1, materiales y losas S1/P1 continúan pendientes.
+- No ejecutar OpenSees, cargas, masas ni capacidad hasta cerrar esa barrera.
+- `P1L4_FINAL` es un tag anotado: objeto `ca16f8e3d05dffd7f25f983b21f401f4ef7aa408`,
+  commit evaluable `56e24ac0568b24eba3cf119f2e3cc66fc0af3a35`. No confundirlos.
+- Referencia original de Luis y resultados entregados intactos.
+- Continuar desde [EXT-5](entregas/POST_P1L4/EXT_5_REMAINING_AUDIT.md),
+  [backlog](entregas/POST_P1L4/STRUCTURAL_CORRECTION_BACKLOG.md) y
+  [guía/QA Unity](entregas/POST_P1L4/UNITY_CURRENT_UX_QA.md).
+
+## Archivo histórico PRE-P1L4 (estado superado)
+
 Transferencia tecnica completa del proyecto "Laboratorio estructural digital 3D de un edificio real".
-Fecha de revision: 2026-09-10. Base P1L3 integrada: `beb0006`.
+Fecha de revision: 2026-09-12. Base P1L3 entregada: `P1L3_DELIVERED` (`c847c13`).
 Este documento NO repite planificacion P1L3: eso vive en `entregas/P1L3/PLANIFICACION.md`.
 
 Estado vigente: P1L3 ya esta implementado e integrado en el Unity de Jose. Los
@@ -9,6 +35,80 @@ casos reales `G/Q/EX/EY/R`, resultados OpenSees y capacidad HA se adaptan a
 `Assets/StreamingAssets`; la interfaz principal tiene filtros, inspector,
 graficos ampliables y modo presentacion. Ver `entregas/P1L3/INFORME.md` y
 `entregas/P1L3/UI_QA.md`. No volver a tratar P1L3 como "solo planificado".
+
+Entrada actual: `PROJECT_INDEX.md`, `Abrir_Unity.bat` y
+`Validar_Modelo.bat`. Unity muestra geometría `POST_P1L3_CURRENT`, diagnóstico
+FE `CANDIDATE_NOT_RUN` y resultados `P1L3_DELIVERED_HISTORICAL` como estados
+separados. El viewer web es legado de depuración.
+
+## POST-P1L3 CONSOLIDATED BASELINE — EN CONSTRUCCION
+
+- Snapshot entregado preservado: tag `P1L3_DELIVERED` en
+  `c847c131512d00cc85bb95aa5719278d70da0c2b`.
+- Rama vigente de consolidacion: `codex/pre-p1l4-consolidation`.
+- Backlog maestro y auditoria de ramas/canonicos:
+  `PRE_P1L4_CLEANUP.md`.
+- No se inicia P1L4 y no se sobrescriben resultados A7. Las futuras salidas se
+  identificaran `POST_P1L3_VALIDATED`.
+- FASE 0 cerro la preservacion y el inventario sin merges de ramas historicas.
+- FASE 1 cerro las seis columnas S1: las elevaciones 309/I y 310/I' muestran
+  pilares 70x70 continuos hasta fundacion en 1/2/3. Los seis elementos estan
+  `CONFIRMED_BY_AXIS_ELEVATION` y normalizados a sus intersecciones canonicas.
+  Evidencia: `entregas/P1L2/edificio/validacion/s1_columns_final/REPORT.md`.
+- FASE 2 consolidó las caras DXF de muro: 134 prismas ED1 pasaron a 67
+  segmentos analíticos, con espesor medido, y los apoyos lineales S1 pasaron de
+  60 a 21. Evidencia y overlays: `entregas/P1L2/edificio/validacion/ed1_walls/`.
+- FASE 3 cerró las vigas ED1: 553 trazos `RLE-VIGA` se resolvieron en 300
+  centrolineas, reemplazando 545 prismas. Se excluyeron 46 cierres y 4 detalles
+  interiores, sin caras largas/diagonales pendientes. Ancho 300/300; altura
+  281 con evidencia inequívoca y 19 `UNKNOWN`. Evidencia:
+  `entregas/P1L2/edificio/validacion/ed1_beams/`.
+- FASE 4 cerró la geometría estructural especial: la elevación 308/H confirmó
+  tres columnas S1 y apoyos; un contorno cerrado añadió el muro dilatado local
+  S1. La interfaz D/E fue auditada y no existe conexión entre edificios
+  demostrada. ED1 queda con 524 sólidos, combinado 1212 y 0 elementos
+  `UNRESOLVED_REQUIRES_REVIEW`. Evidencia: `validacion/special_interface/`.
+- FASE 5 está en diagnóstico de losas. La lectura directa `RLE-LOSA(S)` muestra
+  contornos fragmentados: ED1 tiene 4/26/22/19/37 extremos abiertos en
+  S1/P1/P2/P3/P4 y ED2 22/22/22/22/26. La lámina 2024_22-101 confirma por
+  título una planta común desde cielo S1 hasta cielo P3; tres trazos del JSON
+  derivado quedaron fuera de la región de planta aprobada. Los cierres
+  colineales automáticos no resuelven el perímetro principal y no se han
+  modificado superficies, FE ni resultados. Evidencia:
+  `entregas/P1L2/edificio/validacion/slabs/`.
+- La propuesta exterior ED2 queda en 565.392 m² para S1-P3 y 566.465 m² para
+  P4, sin lados exteriores `REVIEW_REQUIRED`; aún no se aplica porque los
+  trazos interiores no distinguen inequívocamente hueco de borde de paño. El
+  bloque `losa-ne` aparece repetido por toda la planta y no prueba ausencia de
+  losa.
+- En ED1, P2 tiene un candidato de 806.605 m² y P3 de 914.175 m², sin lados
+  exteriores pendientes. S1 carece de borde exterior RLE-LOSA y P1 contiene
+  una transición norte/outboard que todavía no forma un perímetro único; no se
+  aplican por envolvente ni se copian desde otros pisos.
+- Antes de terminar losas se reevaluó la conectividad con el adaptador P1L3 en
+  memoria: 93 elementos/61 componentes flotantes pasan a 72/50. Solo
+  `E1-P1-M-015` conserva ID y recupera conexión; 37 IDs históricos fueron
+  eliminados/sustituidos por la consolidación. Los restantes revelan que el
+  esquema FE de muro con nodo central y viga con snap solo en extremos no es
+  compatible con centrolineas largas, solapes verticales ni encuentros en
+  mitad de vano. No se escribieron resultados ni se añadieron enlaces.
+  Evidencia: `validacion/fe_connectivity_post_geometry/`.
+- FASE 7 tiene un candidato analítico separado en
+  `entregas/P1L3/results/post_p1l3_candidate/`: usa incidencias físicas,
+  encuentros muro-muro, solapes verticales y crosswalk 1:N. Reduce 72/50 a
+  45 geometrías/23 componentes sin nuevos flotantes externos al conjunto foco.
+  Quedan 31 muros `DISCONNECTED_ERROR` y 9 elementos `UNRESOLVED`; requiere
+  revisión de planos antes de añadir más conexiones. A3-A4, OpenSees, cargas,
+  resultados y geometría permanecen intactos.
+- FASE U2–U5 integra en el Unity de José la geometría vigente y el diagnóstico
+  candidato: vista Geometría/FE/Ambos, filtros por estado/tipo/ED2, selección y
+  crosswalk 1:N. No ejecuta el candidato ni cambia resultados.
+- R1–R5 define canónicos en `PROJECT_INDEX.md`, inventaría cada archivo en
+  `REPOSITORY_INVENTORY.json`, marca viewers web como legacy y elimina 0
+  archivos por preservación histórica.
+- Próximo paso: revisar visualmente los 31 `DISCONNECTED_ERROR` y 9
+  `UNRESOLVED`, volver a planos y luego terminar losas/cobertura. No recalcular
+  cargas/OpenSees hasta validar Q completo.
 
 ---
 
@@ -26,10 +126,10 @@ graficos ampliables y modo presentacion. Ver `entregas/P1L3/INFORME.md` y
    - `entregas/P1L2/edificio/datos/luis_inferred_column_resolution.json` (clasificacion columnas).
    - `entregas/P1L2/edificio/datos/building_master.json` y `building_2_master.json` (modelos logicos).
 6. NO modifiques: `entregas/P1L2/unity_export/model_viewer.json` (referencia Luis, read-only), el working tree de otras personas, ni `recursos/` (ignorado por Git). Nunca: `force push`, `reset --hard`, `git clean`, borrar trabajo ajeno.
-7. Estado de geometria: EDIFICIO_1 auditado-corregido 873 solidos; EDIFICIO_2 688; combinado 1561 solidos en 5 pisos (S1/P1/P2/P3/P4). Ver seccion 8.
-8. Proximo trabajo recomendado: no reiniciar lo hecho. Continuar P1L2 con auditorias de muros/vigas
-
-EDIFICIO_1 (drafts por piso), revisar `outboard_room_reconstruction.json`, y luego P1L3 segun PLANIFICACION.md. No re-resolver las 6 columnas S1 `UNRESOLVED_REQUIRES_REVIEW` sin evidencia nueva real.
+7. Estado de geometria: EDIFICIO_1 auditado-corregido 524 solidos; EDIFICIO_2 688; combinado 1212 solidos en 5 pisos (S1/P1/P2/P3/P4). Ver seccion 8.
+8. Proximo trabajo recomendado: no reiniciar lo hecho. Continuar con losas y arquitectura visual ED1/ED2 y luego el resto de la consolidacion PRE-P1L4. No
+reabrir las seis columnas I/I' de S1 salvo contradiccion primaria: ya fueron
+confirmadas directamente en 309/310.
 
 Reglas Git obligatorias (ver seccion 20): cada hito = VALIDAR -> STATUS.md -> COMMIT -> PUSH; commits P1L2 y P1L3 separados.
 
@@ -96,18 +196,20 @@ Regla central evolucionada: primero se construye un MODELO LOGICO por piso (buil
 
 Fuente: `model_1_audited_corrected.json` (LOCAL-ED1) + `luis_inferred_column_resolution.json` + STATUS.md.
 
-- Pisos: `1S, 1, 2, 3, 4` + `base` (79 supports, nivel auxiliar).
-- Solid plan total: **873** (beam 545, wall 134, column 110, support 79, slab 5).
-- De los 927 solidos originales se retiraron **54**: 39 columnas inferidas rechazadas + 15 supports derivados invalidos.
+- Pisos: `1S, 1, 2, 3, 4` + `base` (40 supports, nivel auxiliar).
+- Solid plan total: **522** (beam 300, wall 67, column 110, support 40, slab 5).
+- Desde los 927 sólidos originales se retiraron 39 columnas inferidas, 15
+  apoyos derivados inválidos y representaciones duplicadas/de detalle de
+  muros, vigas y apoyos. Cada consolidación conserva su crosswalk y motivo.
 - Columnas por piso (ED1, total 110): S1 19, P1 26, P2 21, P3 18, P4 26.
 - **Clasificacion S1 (ultimas 19 columnas)**:
   - 10 `CONFIRMED_BY_BASEMENT_EVIDENCE` (X<=49.2 global, o sea zona oeste con estructura de subterraneo).
   - 3 `LIKELY_CORRECT` (slab-edge/transicional, 49.2<X<=60).
-  - 6 `UNRESOLVED_REQUIRES_REVIEW` = `E1-S1-C-014..019` (ejes I/I', X global 67.4..72.5, Y 0..16.35).
-- Las 6 `UNRESOLVED` se revisaron contra DXF (S1 y fundaciones), subtrraneo, ejes, muros, vigas, notas y cortes: no aparecio evidencia para confirmarlas ni rechazarlas. Son una DECISION VALIDA y quedan deliberadamente sin modificar. No re-resolverlas sin evidencia nueva (ver `aed47c3`).
+  - 6 `CONFIRMED_BY_AXIS_ELEVATION` = `E1-S1-C-014..019` (ejes I/I' × 1/2/3), verificadas en elevaciones 309/310 como pilares 70x70 continuos hasta fundacion.
 - 39 columnas rechazadas incluyen: 24 estaciones east-edge IB/J (P4-only, sin pilar en S1-P3 ni pedestal de fundacion) + outboard G/H de P2 + otros outboard.
 - Nucleo (core): `CORE_AXIS_CONTINUITY` PASS (nucleo identificado como bay de ejes con muros en S1..P4).
-- Muros/vigas ED1: NO auditados exhaustivamente aun (drafts por piso, ver seccion 17).
+- Muros ED1: auditoría exhaustiva cerrada; 67 segmentos analíticos confirmados y 0 caras sin clasificación.
+- Vigas ED1: 300 centrolineas; ancho 300/300, altura 281 con evidencia inequívoca y 19 `UNKNOWN`; 0 caras largas/diagonales sin resolver.
 - Zonas outboard (salas sobresalientes): hay reconstruccion documentada en `outboard_room_reconstruction.json` con grupos `UNRESOLVED_REQUIRES_REVIEW` (ver seccion 17).
 
 ## 6. ESTADO ACTUAL DE EDIFICIO_2
@@ -140,15 +242,16 @@ Fuente: `model_2_viewer.json`, `building_2_master.json`, `edificio_2_levels_revi
 | `unity_export/model_viewer.json` | Referencia original de Luis (ED1) | GOLDEN/REFERENCE de Luis; contiene inferencias | NO (referencia) | historico | SI (protegido) | `audit_luis_reference`, `validate_luis_reference_diff`, overlays, diff |
 | `unity_export/model_viewer_candidate.json` | ED1 3D candidato directo desde DXF | superseded | NO | SI (phase6_build_3d.py) | - | phase7/8, goldens viejos |
 | `unity_export/model_1_audited.json` | ED1 auditado (pre-correccion, 927 solidos) | checkpoint de auditoria | NO | SI (audit) | - | resolution |
-| `unity_export/model_1_audited_corrected.json` | ED1 corregido (873 solidos) | VIGENTE ED1 | SI | SI (resolve_luis_inferred_columns) | - | `build_combined_model.py`, viewer (dropdown) |
+| `unity_export/model_1_audited_corrected.json` | ED1 corregido (524 solidos) | VIGENTE ED1 | SI | SI (columnas + consolidación de muros/vigas + muro dilatado S1) | - | `build_combined_model.py`, viewer (dropdown) |
 | `unity_export/model_2_viewer.json` | ED2 (688 solidos, ejes A-D) | VIGENTE ED2 | SI | SI (extract_cad_model_ed2) | - | `build_combined_model.py`, viewer (dropdown) |
-| `unity_export/model_combined_viewer.json` | MODELO COMBINADO FINAL (1561 solidos, 3808 segmentos, 871 labels, 10 diaphragms) | VIGENTE - modelo que el grupo debe revisar | SI | SI (build_combined_model + enrich) | - | viewer por defecto; validaciones; P1L3 |
+| `unity_export/model_combined_viewer.json` | MODELO COMBINADO FINAL (1212 solidos, 3808 segmentos, 871 labels, 10 diaphragms) | VIGENTE - modelo que el grupo debe revisar | SI | SI (build_combined_model + enrich) | - | viewer por defecto; validaciones; P1L3 |
 | `edificio/datos/global_axes.json` | Ejes canonicos y regla de pisos | `AXES_CANONICALIZED_FROM_DXF` | SI | SI (extract_axes.py) | - | casi todos |
 | `edificio/datos/building_master.json` | Modelo logico consolidado ED1 | `LOGICAL_MODEL_REEXTRACTED_READY_FOR_3D` | medio | SI (phase5) | - | phase6 |
 | `edificio/datos/building_2_master.json` | Modelo logico ED2 | floor_validation PASS | SI | SI (ed2 extractor) | - | model_2_viewer |
 | `edificio/datos/luis_inferred_column_resolution.json` | Clasificacion de las 61 columnas inferidas + findings top | `PASS_WITH_CORRECTIONS_AND_UNRESOLVED_ITEMS` | SI | SI | - | decisiones |
-| `edificio/datos/luis_reference_diff.json` | Diff ED1 corregido vs referencia Luis (54 cambios) | vigente con `geometry_changes=54` | SI | SI | - | validate_luis_reference_diff |
-| `edificio/datos/outboard_room_reconstruction.json` | Reconstruccion de salas/outboard | grupos UNRESOLVED_REQUIRES_REVIEW | SI | SI | - | auditorias futuras |
+| `edificio/datos/luis_reference_diff.json` | Diff trazable ED1 corregido vs referencia Luis | vigente con columnas y consolidación de muros/vigas/apoyos | SI | SI | - | validate_luis_reference_diff |
+| `edificio/datos/outboard_room_reconstruction.json` | Reconstruccion histórica de salas/outboard | SUPERSEDED por evidencia DXF completa de FASE 4 | NO | SI | - | antecedente |
+| `edificio/validacion/special_interface/` | Auditoría de geometría especial, eje H, muro dilatado e interfaz D/E | PASS_WITH_ARCHITECTURAL_SCOPE_DEFERRED | SI | SI | - | FASE 5 losas/arquitectura y futura conectividad FE |
 
 Observacion: `model_combined_viewer.json` es el archivo que debe revisar el grupo y sobre el que se enriquecen ids/ejes/propiedades.
 
@@ -181,7 +284,7 @@ Fuente: `cad_property_audit.json` (PASS_WITH_REVIEW_NOTES) y `enriched_model_val
 
 - Columnas: 150/150 con dimensiones (la mayoria 0.70x0.70; casos especiales 0.85x0.92). Clasificacion: `CONFIRMED_FROM_PLAN` (66 por geometria CAD RLE-PILAR) + asociacion de etiquetas cuando existe.
 - Vigas: solo ~431/1060 con seccion conocida por etiqueta de texto (ej: `V. 20/130` S1, `V. 20/80` S1/P1, `V. 20/90`, `V. 30/45` P2, `V. 30/80` ED2...). El resto: `UNKNOWN` (geometria del solido en width/height pero sin etiqueta de seccion).
-- Muros: 73/234 con espesor conocido (~31%); resto `UNKNOWN`.
+- Muros ED1: 67/67 con espesor confirmado por pares de contorno; 58 también coinciden con etiqueta y 9 son confirmación geométrica exclusiva. ED2 permanece pendiente de auditoría equivalente.
 - Apoyos: 3/107 con dimensiones conocidas; resto `DEFAULT`/`UNKNOWN`.
 - Materiales: solo hints del tipo `M.H.A.` (hormigon armado) en etiquetas; NO hay f'c/fy, recubrimiento ni armadura confirmada (seccion 14 de PLANIFICACION: `DEPENDENCIA_PENDIENTE`). No inventar armadura.
 
@@ -216,6 +319,7 @@ Ubicacion: `entregas/P1L2/edificio/scripts/` (+ `entregas/P1L2/opensees/` para E
 | 6 | `audit_luis_reference.py` | candidate + `model_viewer.json` | `luis_reference_audit.json`, `model_1_audited.json` | red de referencia |
 | 7 | `resolve_luis_inferred_columns.py` | audited + DXF (100-103) + `fundacion.json` + P1 model | `luis_inferred_column_resolution.json`, `luis_reference_diff.json`, `model_1_audited_corrected.json` (+ overlays) | audited + DXF |
 | 7b | `validate_luis_reference_diff.py` | corrected + reference | `luis_reference_diff_validation.json` | corrected |
+| 7c | `audit_s1_axis_h.py`, `audit_ed1_dilatation.py`, `apply_s1_axis_h.py`, `apply_ed1_dilatation_wall.py`, `audit_special_interface.py` | elevaciones 308, plantas 101–103, serie completa y modelo corregido | evidencia `validacion/special_interface/`, ED1 corregido y decisión de interfaz | corrected + DXF |
 | 8 | `extract_cad_model_ed2.py` (en `opensees/`) | DXF 2024_22-100/101/102 | `building_2_master.json`, `edificio_2_levels_review.json` -> `model_2_viewer.json` | DXF |
 | 9 | `build_combined_model.py` | corrected ED1 + model_2_viewer | `model_combined_viewer.json` + `combined_model_validation.json` | ambos modelos |
 | 10 | `build_column_axis_matrix.py` | combined | `column_axis_matrix.{json,csv}` | combined |
@@ -245,18 +349,28 @@ Si se cambia geometria de ED1, se DEBE regenerar: `model_1_audited_corrected.jso
 | COMBINED_GEOMETRY | Geometria del combinado contra global_axes | `PASS` | `combined_geometry_validation.json` |
 | COMBINED_MODEL | Modelo combinado (pisos, contracto) | `PASS` | `combined_model_validation.json` |
 | VISUAL_AUDIT | Overlays/render del combinado | `PASS` | `validacion/visual/visual_audit_combined.json` |
-| LUIS_REFERENCE_DIFF | ED1 corregido vs referencia (54 cambios) | `PASS` (`geometry_changes=54`) | `luis_reference_diff_validation.json` |
+| LUIS_REFERENCE_DIFF | ED1 corregido vs referencia, incluidos muros/apoyos consolidados | `PASS`; original de Luis intacto | `luis_reference_diff_validation.json` |
+| ED1_BEAM_PROPOSAL / FINAL | 553 trazos contabilizados y 300 centrolineas aplicadas | `PASS` / `PASS` | `validacion/ed1_beams/BEAM_PROPOSAL_VALIDATION.md`, `VALIDATION.md` |
+| SPECIAL / INTERFACE | Eje H, muro dilatado, remates D/E y ausencia de conexión entre bloques | `PASS_WITH_ARCHITECTURAL_SCOPE_DEFERRED` | `validacion/special_interface/REPORT.md` |
 | GOLDEN_IN_COMBINED | Igualdad con golden de Luis | `SUPERSEDED_BY_LUIS_REFERENCE_DIFF` | `golden_in_combined_validation.json` |
 | FLOOR CONTRACT | 5 pisos canonico (por modelo) | `PASS` | `building_2_master.floor_validation`, `model_2_viewer/model_viewer_candidate.expectedFloors` |
 
-Nota: `AXIS_CONFIRMED` y todas las de arriba corresponden al estado actual (aed47c3). Al modificar geometria deben re-corrrerse las dependientes (paso 9-14 del HOW TO REBUILD).
+Nota: `AXIS_CONFIRMED` y las validaciones anteriores corresponden al modelo
+POST-P1L3 vigente. Al modificar geometria deben re-correrse las dependientes.
 
 ## 16. P1L2 - STABLE / TERMINADO vs OPEN / PENDIENTE
 
 STABLE / TERMINADO:
 - Pipeline DXF -> modelo logico -> 3D -> auditoria -> combinado -> enriquecido -> validado.
-- ED1 auditado-corregido (873 solidos) con evaluacion de las 61 inferencias de Luis (39 corregidas, 13 confirmadas, clasificacion S1).
+- ED1 auditado-corregido (524 solidos) con columnas S1 cerradas y muros/vigas consolidados desde sus caras DXF.
 - 15 supports derivados eliminados; east-edge IB/J P4-only rechazados.
+- Muros ED1: 67 segmentos regulares más 1 muro dilatado especial confirmados;
+  72 cierres de contorno excluidos; 22 apoyos lineales S1.
+- Vigas ED1: 300 centrolineas confirmadas; 46 cierres y 4 detalles interiores excluidos; 19 alturas siguen `UNKNOWN`.
+- Geometría especial estructural: H-1/H-2/H-3 confirmadas, muro dilatado S1
+  incorporado y 0 elementos `UNRESOLVED_REQUIRES_REVIEW`.
+- Interfaz D/E auditada: residual 9 mm, sin conexión ED1–ED2 demostrada y sin
+  links FE creados por proximidad.
 - `CALCE_A = AXIS_CONFIRMED` (9 mm) y sistemas de coordenadas/ejes canonicos.
 - Modelo combinado + enriquecimiento + validaciones PASS.
 - Viewer funcional con seleccion/busqueda/filtros.
@@ -264,13 +378,10 @@ STABLE / TERMINADO:
 - Documentacion: STATUS.md al dia y este handoff.
 
 OPEN / PENDIENTE:
-- 6 columnas S1 `E1-S1-C-014..019` = `UNRESOLVED_REQUIRES_REVIEW` (decision deliberada; solo re-abrir con evidencia nueva real, ver `aed47c3`).
-- Auditoria exhaustiva de MUROS EDIFICIO_1 (drafts `DRAFT_NEEDS_REVIEW` por piso; p.ej. P1=96: 67 POSIBLE, 10 FALSO_POSITIVO, 9 FRAGMENTADO, 10 CONFIRMADO; fundacion=75: 56 POSIBLE, 10 FRAGMENTADO, 1 DUPLICADO, 8 FALSO_POSITIVO).
-- Auditoria exhaustiva de VIGAS EDIFICIO_1 (p.ej. P1=205: 140 POSIBLE, 53 FRAGMENTADA, 4 CONFIRMADA, 6 FALSO_POSITIVO, 2 NEEDS_REVIEW; solo ~40% con seccion conocida).
-- Salas/zonas outboard y `outboard_room_reconstruction.json` (grupos `UNRESOLVED_REQUIRES_REVIEW`); imports P1 no-modelables/detalle (C-019/020/021 en review de piso_01).
-- Voladizos, cambios de perimetro y elementos fuera de ejes (candidatos detectados en reviews).
+- Losas S1–P4 de ED1/ED2 y arquitectura visual: perímetros, huecos, voladizos,
+  aleros y canopias; estos últimos deben permanecer fuera de FE.
 - Revision visual final despues de futuras correcciones (volver a correr paso 14 del pipeline).
-- Propiedades faltantes: vigas/muros/apoyos sin seccion/espesor confirmados, materiales/armadura (`DEPENDENCIA_PENDIENTE`).
+- Propiedades faltantes: vigas, muros ED2 y apoyos sin sección/espesor completamente confirmados; materiales/armadura siguen `DEPENDENCIA_PENDIENTE`.
 - OpenSees conectado al modelo vigente (ver seccion 12).
 
 ## 17. P1L3 - YA TIENE PLANIFICACION (NO duplicar)

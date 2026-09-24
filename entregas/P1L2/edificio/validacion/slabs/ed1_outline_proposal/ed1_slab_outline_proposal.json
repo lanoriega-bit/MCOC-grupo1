@@ -1,0 +1,660 @@
+{
+  "status": "PARTIAL_PROPOSAL_NOT_APPLIED",
+  "building": "EDIFICIO_1",
+  "participates_in_FE": false,
+  "floors": {
+    "S1": {
+      "status": "UNRESOLVED_OUTER_PERIMETER",
+      "reason": "RLE-LOSA contiene solo ocho trazos locales y no dibuja el borde exterior.",
+      "overlay": "entregas/P1L2/edificio/validacion/slabs/ed1_outline_proposal/edificio_1_s1_unresolved_context.png"
+    },
+    "P1": {
+      "status": "UNRESOLVED_OUTBOARD_TRANSITION",
+      "reason": "El borde base y los trazos outboard norte no forman una unica cadena; requiere clasificacion contra arquitectura/elevaciones.",
+      "overlay": "entregas/P1L2/edificio/validacion/slabs/ed1_outline_proposal/edificio_1_p1_unresolved_context.png"
+    },
+    "P4": {
+      "status": "FROZEN_APPROVED_PILOT",
+      "area_m2": 958.39275,
+      "source": "entregas/P1L3/arquitectura/architectural_visual_model.json"
+    },
+    "P2": {
+      "status": "CANDIDATE",
+      "source_sheet": "2017_67-102.dxf",
+      "source_sha256": "604331684dff83317a5585a9d6479d167fb2989a4b0a6fc7005ccbddf56a25a8",
+      "outline_xy": [
+        [
+          27.140857,
+          -0.968476
+        ],
+        [
+          72.840861,
+          -0.968476
+        ],
+        [
+          72.840861,
+          16.681524
+        ],
+        [
+          27.140857,
+          16.681524
+        ]
+      ],
+      "area_m2": 806.605071,
+      "perimeter_m": 126.700008,
+      "edge_evidence": [
+        {
+          "edge_index": 0,
+          "start": [
+            27.140857,
+            -0.968476
+          ],
+          "end": [
+            72.840861,
+            -0.968476
+          ],
+          "length_m": 45.700004,
+          "confidence": "CONFIRMED_RLE_LOSA",
+          "rle_losa": {
+            "coverage_ratio": 1.0,
+            "matches": [
+              {
+                "handle": "1EB0A",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 45.700004
+              }
+            ]
+          },
+          "structural_context": {
+            "coverage_ratio": 0.0,
+            "matches": []
+          }
+        },
+        {
+          "edge_index": 1,
+          "start": [
+            72.840861,
+            -0.968476
+          ],
+          "end": [
+            72.840861,
+            16.681524
+          ],
+          "length_m": 17.65,
+          "confidence": "LIKELY_RLE_PLUS_STRUCTURE",
+          "rle_losa": {
+            "coverage_ratio": 0.88102,
+            "matches": [
+              {
+                "handle": "1EB0C",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 8.2
+              },
+              {
+                "handle": "1EB0D",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 6.55
+              },
+              {
+                "handle": "1EB0B",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 0.8
+              }
+            ]
+          },
+          "structural_context": {
+            "coverage_ratio": 0.835685,
+            "matches": [
+              {
+                "handle": "1EB70",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 8.199833
+              },
+              {
+                "handle": "1EB72",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.05,
+                "overlap_m": 6.55
+              }
+            ]
+          }
+        },
+        {
+          "edge_index": 2,
+          "start": [
+            72.840861,
+            16.681524
+          ],
+          "end": [
+            27.140857,
+            16.681524
+          ],
+          "length_m": 45.700004,
+          "confidence": "LIKELY_RLE_PLUS_STRUCTURE",
+          "rle_losa": {
+            "coverage_ratio": 0.501094,
+            "matches": [
+              {
+                "handle": "1EB15",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 9.3
+              },
+              {
+                "handle": "1EB16",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 9.3
+              },
+              {
+                "handle": "1EB0E",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 4.3
+              }
+            ]
+          },
+          "structural_context": {
+            "coverage_ratio": 0.894967,
+            "matches": [
+              {
+                "handle": "1EB44",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.050166,
+                "overlap_m": 9.3
+              },
+              {
+                "handle": "1EB49",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.050166,
+                "overlap_m": 9.3
+              },
+              {
+                "handle": "1EBAD",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.050166,
+                "overlap_m": 9.3
+              },
+              {
+                "handle": "1EB46",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.050166,
+                "overlap_m": 6.84
+              },
+              {
+                "handle": "1EBC1",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.050166,
+                "overlap_m": 4.3
+              },
+              {
+                "handle": "1FC16",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.050166,
+                "overlap_m": 1.86
+              },
+              {
+                "handle": "1EBA7",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.050166,
+                "overlap_m": 0.6
+              }
+            ]
+          }
+        },
+        {
+          "edge_index": 3,
+          "start": [
+            27.140857,
+            16.681524
+          ],
+          "end": [
+            27.140857,
+            -0.968476
+          ],
+          "length_m": 17.65,
+          "confidence": "LIKELY_RLE_PLUS_STRUCTURE",
+          "rle_losa": {
+            "coverage_ratio": 0.869688,
+            "matches": [
+              {
+                "handle": "1EB17",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 6.550167
+              },
+              {
+                "handle": "1EB18",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 4.549825
+              },
+              {
+                "handle": "1EB19",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 3.450175
+              },
+              {
+                "handle": "1EB1A",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 0.799833
+              }
+            ]
+          },
+          "structural_context": {
+            "coverage_ratio": 0.835703,
+            "matches": [
+              {
+                "handle": "1EAE3",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 0.0,
+                "overlap_m": 0.2
+              },
+              {
+                "handle": "1EB6C",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.050004,
+                "overlap_m": 6.550167
+              },
+              {
+                "handle": "1EB6A",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.050004,
+                "overlap_m": 4.549825
+              },
+              {
+                "handle": "1EB68",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.050004,
+                "overlap_m": 3.450175
+              }
+            ]
+          }
+        }
+      ],
+      "confidence_counts": {
+        "CONFIRMED_RLE_LOSA": 1,
+        "LIKELY_RLE_PLUS_STRUCTURE": 3
+      },
+      "internal_features": "NOT_CLASSIFIED_AS_HOLES",
+      "overlay": "entregas/P1L2/edificio/validacion/slabs/ed1_outline_proposal/edificio_1_p2_outline_candidate.png"
+    },
+    "P3": {
+      "status": "CANDIDATE",
+      "source_sheet": "2017_67-102.dxf",
+      "source_sha256": "604331684dff83317a5585a9d6479d167fb2989a4b0a6fc7005ccbddf56a25a8",
+      "outline_xy": [
+        [
+          27.140863,
+          -0.968514
+        ],
+        [
+          78.640835,
+          -0.968514
+        ],
+        [
+          78.640835,
+          17.481471
+        ],
+        [
+          72.140835,
+          17.481471
+        ],
+        [
+          72.140835,
+          16.681508
+        ],
+        [
+          27.140863,
+          16.681508
+        ]
+      ],
+      "area_m2": 914.175398,
+      "perimeter_m": 139.899914,
+      "edge_evidence": [
+        {
+          "edge_index": 0,
+          "start": [
+            27.140863,
+            -0.968514
+          ],
+          "end": [
+            78.640835,
+            -0.968514
+          ],
+          "length_m": 51.499972,
+          "confidence": "CONFIRMED_RLE_LOSA",
+          "rle_losa": {
+            "coverage_ratio": 1.0,
+            "matches": [
+              {
+                "handle": "1F12C",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 5.849968
+              },
+              {
+                "handle": "1F10F",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 2.2e-05,
+                "overlap_m": 45.650004
+              }
+            ]
+          },
+          "structural_context": {
+            "coverage_ratio": 0.0,
+            "matches": []
+          }
+        },
+        {
+          "edge_index": 1,
+          "start": [
+            78.640835,
+            -0.968514
+          ],
+          "end": [
+            78.640835,
+            17.481471
+          ],
+          "length_m": 18.449985,
+          "confidence": "CONFIRMED_RLE_LOSA",
+          "rle_losa": {
+            "coverage_ratio": 1.0,
+            "matches": [
+              {
+                "handle": "1F12A",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 18.449985
+              }
+            ]
+          },
+          "structural_context": {
+            "coverage_ratio": 0.0,
+            "matches": []
+          }
+        },
+        {
+          "edge_index": 2,
+          "start": [
+            78.640835,
+            17.481471
+          ],
+          "end": [
+            72.140835,
+            17.481471
+          ],
+          "length_m": 6.5,
+          "confidence": "CONFIRMED_RLE_LOSA",
+          "rle_losa": {
+            "coverage_ratio": 0.999995,
+            "matches": [
+              {
+                "handle": "1FC2B",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 6.499968
+              }
+            ]
+          },
+          "structural_context": {
+            "coverage_ratio": 0.0,
+            "matches": []
+          }
+        },
+        {
+          "edge_index": 3,
+          "start": [
+            72.140835,
+            17.481471
+          ],
+          "end": [
+            72.140835,
+            16.681508
+          ],
+          "length_m": 0.799963,
+          "confidence": "CONFIRMED_RLE_LOSA",
+          "rle_losa": {
+            "coverage_ratio": 1.0,
+            "matches": [
+              {
+                "handle": "1FC2C",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 3.2e-05,
+                "overlap_m": 0.799963
+              }
+            ]
+          },
+          "structural_context": {
+            "coverage_ratio": 0.0,
+            "matches": []
+          }
+        },
+        {
+          "edge_index": 4,
+          "start": [
+            72.140835,
+            16.681508
+          ],
+          "end": [
+            27.140863,
+            16.681508
+          ],
+          "length_m": 44.999972,
+          "confidence": "LIKELY_RLE_PLUS_STRUCTURE",
+          "rle_losa": {
+            "coverage_ratio": 0.667776,
+            "matches": [
+              {
+                "handle": "1F117",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 9.3
+              },
+              {
+                "handle": "1F119",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 9.3
+              },
+              {
+                "handle": "1F118",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 7.149948
+              },
+              {
+                "handle": "1F112",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.000167,
+                "overlap_m": 4.299968
+              }
+            ]
+          },
+          "structural_context": {
+            "coverage_ratio": 0.908889,
+            "matches": [
+              {
+                "handle": "1F14B",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.050167,
+                "overlap_m": 9.3
+              },
+              {
+                "handle": "1F152",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.050167,
+                "overlap_m": 9.3
+              },
+              {
+                "handle": "1F156",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.050167,
+                "overlap_m": 9.3
+              },
+              {
+                "handle": "1F14D",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.050167,
+                "overlap_m": 7.149948
+              },
+              {
+                "handle": "1F1AB",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.050167,
+                "overlap_m": 3.799968
+              },
+              {
+                "handle": "1F14E",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.050167,
+                "overlap_m": 1.550052
+              },
+              {
+                "handle": "1F1AE",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.050167,
+                "overlap_m": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "edge_index": 5,
+          "start": [
+            27.140863,
+            16.681508
+          ],
+          "end": [
+            27.140863,
+            -0.968514
+          ],
+          "length_m": 17.650022,
+          "confidence": "LIKELY_RLE_PLUS_STRUCTURE",
+          "rle_losa": {
+            "coverage_ratio": 0.869687,
+            "matches": [
+              {
+                "handle": "1F11A",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 6.550167
+              },
+              {
+                "handle": "1F11B",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 4.549825
+              },
+              {
+                "handle": "1F11C",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 3.450175
+              },
+              {
+                "handle": "1F11D",
+                "segment_index": 0,
+                "layer": "RLE-LOSA",
+                "distance_m": 0.0,
+                "overlap_m": 0.799833
+              }
+            ]
+          },
+          "structural_context": {
+            "coverage_ratio": 0.835702,
+            "matches": [
+              {
+                "handle": "1F0EA",
+                "segment_index": 0,
+                "layer": "RLE-MURO",
+                "distance_m": 0.0,
+                "overlap_m": 0.2
+              },
+              {
+                "handle": "1F174",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.050004,
+                "overlap_m": 6.550167
+              },
+              {
+                "handle": "1F172",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.050004,
+                "overlap_m": 4.549825
+              },
+              {
+                "handle": "1F170",
+                "segment_index": 0,
+                "layer": "RLE-VIGA",
+                "distance_m": 0.050004,
+                "overlap_m": 3.450175
+              }
+            ]
+          }
+        }
+      ],
+      "confidence_counts": {
+        "CONFIRMED_RLE_LOSA": 4,
+        "LIKELY_RLE_PLUS_STRUCTURE": 2
+      },
+      "internal_features": "NOT_CLASSIFIED_AS_HOLES",
+      "overlay": "entregas/P1L2/edificio/validacion/slabs/ed1_outline_proposal/edificio_1_p3_outline_candidate.png"
+    }
+  },
+  "inputs": {
+    "recursos/planos/dxf_full/2017_67/2017_67-102.dxf": "604331684dff83317a5585a9d6479d167fb2989a4b0a6fc7005ccbddf56a25a8"
+  }
+}

@@ -2,6 +2,16 @@
 
 Repositorio de trabajo para el Proyecto 1 del curso. El grupo desarrollara durante el semestre un laboratorio estructural digital del Edificio de Ingenieria, usando OpenSeesPy para analisis estructural y Unity para visualizacion/interaccion en etapas posteriores.
 
+> Estado actual: consolidación `POST-P1L3 / PRE-P1L4`. La interfaz principal
+> es Unity; los viewers web permanecen solo como herramientas históricas de
+> depuración. Ver `PROJECT_INDEX.md` para las fuentes canónicas y estados.
+
+## Abrir y validar la versión actual
+
+- `Abrir_Unity.bat`: abre la única interfaz visual principal.
+- `Validar_Modelo.bat`: revisa geometría, diagnóstico FE, crosswalk y hashes
+  sin ejecutar OpenSees ni recalcular cargas.
+
 ## Entrada Rapida
 
 - Enunciado completo organizado: `docs/gestion/enunciado-proyecto-p1.md`.
@@ -13,6 +23,8 @@ Repositorio de trabajo para el Proyecto 1 del curso. El grupo desarrollara duran
 - Registro semanal: `docs/gestion/weekly-log.md`.
 - Registro de uso de IA: `docs/gestion/ai-usage-log.md`.
 - Reglas para agentes IA: `AGENTS.md`.
+- Índice de fuentes canónicas: `PROJECT_INDEX.md`.
+- Inventario reproducible completo: `REPOSITORY_INVENTORY.json`.
 
 ## Entregas
 
@@ -112,7 +124,7 @@ Para correr el esqueleto OpenSees de gravedad de P1L2:
 python entregas/P1L2/opensees/building_gravity_skeleton.py
 ```
 
-Para abrir el viewer web 3D de P1L2:
+Para abrir el viewer web 3D histórico de P1L2 (solo depuración):
 
 ```powershell
 entregas/P1L2/Abrir_Viewer_P1L2.bat

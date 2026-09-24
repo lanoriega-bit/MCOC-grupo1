@@ -1,18 +1,32 @@
 {
-  "format": "P1L3_UNITY_BUNDLE_v1",
-  "generated_utc": "2026-09-10T03:32:28.261612+00:00",
+  "format": "POST_P1L3_UNITY_BUNDLE_v2",
+  "generated_utc": "2026-09-23T19:17:52.641449+00:00",
+  "data_state": {
+    "geometry": "POST_P1L4_CURRENT",
+    "geometry_checkpoint": "PRE5 user scope / beam consolidation; see CURRENT_MODEL_EXCLUSIONS.json and current_review_changes.json",
+    "current_results": "NONE",
+    "default_mode": "CURRENT_MODEL",
+    "historical_results_default_visible": false,
+    "fe_diagnosis": "POST_P1L3_CANDIDATE_NOT_RUN",
+    "analysis_results": "P1L3_DELIVERED_HISTORICAL",
+    "loads": "P1L3_DELIVERED_HISTORICAL",
+    "capacity": "P1L3_DELIVERED_HISTORICAL",
+    "compatibility_warning": "GEOMETRIA_POST_P1L4; RESULTADOS_P1L4_HISTORICOS_NO_RECALCULADOS"
+  },
   "source_of_truth": {
     "geometry": "entregas/P1L2/unity_export/model_combined_viewer.json",
-    "analysis_model": "entregas/P1L3/results/a3a4/analysis_model.json",
+    "delivered_analysis_model": "entregas/P1L3/results/a3a4/analysis_model.json",
+    "post_p1l3_fe_candidate": "entregas/P1L3/results/post_p1l3_candidate/analysis_model_post_p1l3_candidate.json",
     "analysis_run": "entregas/P1L3/results/a5/superposicion_gq_v1",
     "integrated_run": "entregas/P1L3/results/a7",
     "seismic": "entregas/P1L3/José/results/seismic_ex_ey.json",
-    "capacity": "entregas/P1L3/capacidad_ha"
+    "capacity": "entregas/P1L3/capacidad_ha",
+    "architecture_visual": "entregas/P1L3/arquitectura/architectural_visual_model.json"
   },
   "files": [
     {
       "name": "model_viewer.json",
-      "sha256": "c091f99f516bfedcc0ddd5004fa0c74fc7016a0c5df44b18a7e5ac88b6f9704a"
+      "sha256": "e94cccb8dd6bda1378e69b4f8eb6813beb9fe59bfa94b65a9c126f81d188c05e"
     },
     {
       "name": "seismic_ex_ey.json",
@@ -45,10 +59,22 @@
     {
       "name": "pm_interaction.png",
       "sha256": "6f404d3e35b61701dd59f193b5cf8de36f2bf37bd1cd84105515ee17c13cb382"
+    },
+    {
+      "name": "architectural_visual_model.json",
+      "sha256": "7f9de0c56eba23bbe0b195a83570fdc0d71e07971b2a278a03ea28e2b7acc68a"
+    },
+    {
+      "name": "visual_lines.json",
+      "sha256": "ea2d3c072fa65e772b8f6c91e7087f1a65b706cb9032469ff60dd5d316f58926"
+    },
+    {
+      "name": "post_p1l3_fe_diagnostic.json",
+      "sha256": "e014ac257ecbc949d5d3d185730939da94192ef87035e92019b89891fd70026c"
     }
   ],
   "validation": {
-    "geometry_solids": 1561,
+    "geometry_solids": 695,
     "geometry_floors": [
       "S1",
       "P1",
@@ -61,6 +87,12 @@
     "superposition_status": "PASS",
     "gravity_reaction_deficit_percent": 0.763564,
     "seismic_is_applied_to_opensees": true,
-    "capacity_uses_lab_assumptions": true
+    "capacity_uses_lab_assumptions": true,
+    "architecture_visual_objects": 1,
+    "architecture_participates_in_FE": false,
+    "fe_candidate_status": "CANDIDATE_NOT_APPROVED_NOT_RUN",
+    "fe_candidate_members": 647,
+    "fe_diagnostic_focus_elements": 44,
+    "fe_candidate_was_run": false
   }
 }

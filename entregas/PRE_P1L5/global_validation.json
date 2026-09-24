@@ -1,0 +1,136 @@
+{
+  "regression_status": "PASS",
+  "baseline_status": "BLOCKED",
+  "opensees_run": false,
+  "checks": [
+    {
+      "script": "entregas/P1L2/edificio/scripts/validate_axes_and_calce.py",
+      "status": "PASS",
+      "returncode": 0,
+      "output": "CALCE_A: AXIS_CONFIRMED\nD/E residual m: 0.009\nY residuals: {'1': 0.0, '2': 0.0, '3': 0.0}\nReportes: C:\\Users\\matis\\OneDrive\\Documentos\\Proyecto_1_MCOC\\entregas\\P1L2\\edificio\\datos\\axis_calce_validation.json C:\\Users\\matis\\OneDrive\\Documentos\\Proyecto_1_MCOC\\entregas\\P1L2\\edificio\\validacion\\axis_calce_validation.md\n"
+    },
+    {
+      "script": "entregas/P1L2/edificio/scripts/validate_combined_geometry.py",
+      "status": "PASS",
+      "returncode": 0,
+      "output": "COMBINED_GEOMETRY_VALIDATION: PASS\nReporte: C:\\Users\\matis\\OneDrive\\Documentos\\Proyecto_1_MCOC\\entregas\\P1L2\\edificio\\datos\\combined_geometry_validation.json C:\\Users\\matis\\OneDrive\\Documentos\\Proyecto_1_MCOC\\entregas\\P1L2\\edificio\\validacion\\combined_geometry_validation.md\n"
+    },
+    {
+      "script": "entregas/P1L2/edificio/scripts/validate_luis_reference_diff.py",
+      "status": "PASS",
+      "returncode": 0,
+      "output": "LUIS_REFERENCE_DIFF_VALIDATION: PASS\nReporte: C:\\Users\\matis\\OneDrive\\Documentos\\Proyecto_1_MCOC\\entregas\\P1L2\\edificio\\datos\\luis_reference_diff_validation.json C:\\Users\\matis\\OneDrive\\Documentos\\Proyecto_1_MCOC\\entregas\\P1L2\\edificio\\validacion\\luis_reference_diff_validation.md\n"
+    },
+    {
+      "script": "entregas/P1L2/edificio/scripts/validate_core_axis_continuity.py",
+      "status": "PASS",
+      "returncode": 0,
+      "output": "CORE_AXIS_CONTINUITY: PASS\nReporte: C:\\Users\\matis\\OneDrive\\Documentos\\Proyecto_1_MCOC\\entregas\\P1L2\\edificio\\datos\\core_axis_continuity.json C:\\Users\\matis\\OneDrive\\Documentos\\Proyecto_1_MCOC\\entregas\\P1L2\\edificio\\validacion\\core_axis_continuity.md\n"
+    },
+    {
+      "script": "entregas/P1L2/edificio/scripts/validate_ed1_walls.py",
+      "status": "PASS",
+      "returncode": 0,
+      "output": "ED1_WALL_VALIDATION: PASS\nReporte: C:\\Users\\matis\\OneDrive\\Documentos\\Proyecto_1_MCOC\\entregas\\P1L2\\edificio\\datos\\ed1_wall_validation.json C:\\Users\\matis\\OneDrive\\Documentos\\Proyecto_1_MCOC\\entregas\\P1L2\\edificio\\validacion\\ed1_walls\\VALIDATION.md\n"
+    },
+    {
+      "script": "entregas/POST_P1L4/scripts/validate_ed2_walls.py",
+      "status": "PASS",
+      "returncode": 0,
+      "output": "ED2_WALL_VALIDATION: PASS\n"
+    },
+    {
+      "script": "entregas/P1L2/edificio/scripts/validate_ed1_beams.py",
+      "status": "PASS",
+      "returncode": 0,
+      "output": "ED1_BEAM_VALIDATION: PASS\nReporte: C:\\Users\\matis\\OneDrive\\Documentos\\Proyecto_1_MCOC\\entregas\\P1L2\\edificio\\datos\\ed1_beam_validation.json C:\\Users\\matis\\OneDrive\\Documentos\\Proyecto_1_MCOC\\entregas\\P1L2\\edificio\\validacion\\ed1_beams\\VALIDATION.md\n"
+    },
+    {
+      "script": "entregas/POST_P1L4/scripts/validate_ed2_beams.py",
+      "status": "PASS",
+      "returncode": 0,
+      "output": "ED2_BEAM_VALIDATION: PASS\n{\n  \"status\": \"PASS\",\n  \"checks\": {\n    \"proposal_ready\": true,\n    \"resolution_pass\": true,\n    \"beam_count_267\": true,\n    \"counts_by_floor\": true,\n    \"all_sections_confirmed\": true,\n    \"unique_ids\": true,\n    \"all_primary_traceable\": true,\n    \"no_opensees_recalculation\": true,\n    \"v050_v051_one_v60x80\": true\n  },\n  \"counts\": {\n    \"total\": 267,\n    \"by_floor\": {\n      \"S1\": 44,\n      \"P1\": 44,\n      \"P2\": 44,\n      \"P3\": 44,\n      \"P4\": 91\n    },\n    \"known_sections\": 267\n  },\n  \"special_E2_P4_V050_V051\": {\n    \"verdict\": \"TWO_FACES_OF_ONE_REAL_BEAM_V60x80\",\n    \"result_id\": null,\n    \"proposal_id\": \"P4-VP-085\"\n  },\n  \"opensees_results_recalculated\": false\n}\n"
+    },
+    {
+      "script": "entregas/POST_P1L4/scripts/validate_ext5_remaining.py",
+      "status": "PASS",
+      "returncode": 0,
+      "output": "EXT5_REMAINING_VALIDATION: PASS; 43 residuals covered; no geometry/analysis mutation\n"
+    },
+    {
+      "script": "entregas/P1L3/scripts/validate_unity_integration.py",
+      "status": "PASS",
+      "returncode": 0,
+      "output": "UNITY_INTEGRATION_VALIDATION = PASS\nGeometria actual: 909 solidos (POST_P1L4_CURRENT)\nMalla FE candidata: 856 miembros; NO EJECUTADA\nDiagnostico: 116 elementos; 16 crosswalks 1:N; todos los flotantes cubiertos\nResultados/cargas/capacidad: snapshot historico P1L3\n"
+    },
+    {
+      "script": "entregas/PRE_P1L5/scripts/audit_historical_equilibrium.py",
+      "status": "PASS",
+      "returncode": 0,
+      "output": "{\n  \"status\": \"PASS\",\n  \"scope\": \"HISTORICAL_ONLY_NOT_CURRENT_FE_VALIDATION\",\n  \"external_repo_clue\": \"jpCaceres123/Proyecto-1-MCOC b4a7bd8 Edificio/verification/tests/test_postproceso.py\",\n  \"member_cases\": 6560,\n  \"axis_count\": 1312,\n  \"force_failures\": 0,\n  \"axis_failures\": 0,\n  \"max_relative_residual\": 3.651763429241626e-16,\n  \"tolerance_relative\": 1e-06,\n  \"units\": \"N, N.m, m; nodal end actions\"\n}\n"
+    },
+    {
+      "script": "entregas/PRE_P1L5/scripts/validate_current_readiness.py",
+      "status": "PASS",
+      "returncode": 0,
+      "output": "{\"status\": \"PASS\", \"current_results\": \"NONE\", \"scope\": \"Versioned files, source-scoped materials, explicit blockers; no solver run\", \"materials\": 752, \"context_elements\": 909, \"pending_fe\": 43, \"height_blockers\": 19}\n"
+    },
+    {
+      "check": "immutable entregap1l2",
+      "status": "PASS",
+      "commit": "d2e40be4292b2a55b2e0db8be6be51cd31535bd6"
+    },
+    {
+      "check": "immutable P1L3_DELIVERED",
+      "status": "PASS",
+      "commit": "c847c131512d00cc85bb95aa5719278d70da0c2b"
+    },
+    {
+      "check": "immutable P1L4_FINAL",
+      "status": "PASS",
+      "commit": "56e24ac0568b24eba3cf119f2e3cc66fc0af3a35"
+    },
+    {
+      "check": "historical_results_and_luis_unchanged",
+      "status": "PASS",
+      "changed": []
+    },
+    {
+      "check": "geometry_sections_unchanged_scoped_materials",
+      "status": "PASS",
+      "property_updated": 752
+    },
+    {
+      "check": "canonical_unity_metadata_identity",
+      "status": "PASS"
+    },
+    {
+      "check": "constraint_proposal_only",
+      "status": "PASS"
+    },
+    {
+      "check": "unity_latest_source_runtime",
+      "status": "PASS",
+      "evidence": "entregas/P1L3/José/viewer_unity/Builds/CurrentReview/QA/UX_QA.txt"
+    },
+    {
+      "check": "documentation",
+      "status": "PASS"
+    }
+  ],
+  "technical_gates": {
+    "AXES": "PASS",
+    "FLOORS": "PASS",
+    "COLUMNS": "PASS_WITH_NOTE",
+    "WALLS": "PASS_WITH_NOTE",
+    "BEAMS": "REVIEW_REQUIRED",
+    "SLABS": "REVIEW_REQUIRED",
+    "PROPERTIES": "REVIEW_REQUIRED",
+    "CONNECTIVITY": "REVIEW_REQUIRED",
+    "CROSSWALK": "PASS",
+    "LOADS": "REVIEW_REQUIRED",
+    "UNITY": "PASS",
+    "DOCUMENTATION": "PASS"
+  },
+  "note": "Passing regressions do not certify pending physical properties, load coverage or FE formulation."
+}

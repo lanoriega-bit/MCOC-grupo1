@@ -1,5 +1,8 @@
 # Viewer Semana 2 (OpenSees → Unity)
 
+> **ENTREGA HISTÓRICA / LEGACY.** Se conserva para reproducir Semana 2. La
+> interfaz activa del proyecto es `entregas/P1L3/José/viewer_unity`.
+
 Viewer **3D autocontenido** (un solo `index.html`, sin librerías externas ni red)
 que consume el contrato JSON de la geometría del edificio
 (`results/geometria_unity.json`) y las verificaciones (`results/verificacion.json`).

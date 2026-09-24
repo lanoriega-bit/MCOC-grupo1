@@ -22,13 +22,17 @@ dibujar deformadas trazables.
 | Deformada no trazable | Perfil visual cuadratico fijo | Desplazamientos nodales EX/EY de OpenSees con escala declarada |
 | Graficos ilegibles | Tres imagenes pequenas sin zoom | Vista ampliada modal |
 | Botones A/B/C/D cortados | Ancho de 44 px | Ancho y tipografia ajustados |
+| `slab_edge` no respondia | Se registraba como referencia CAD generica y perdia el piso al reaplicar filtros | Categoria y piso persistentes para cada objeto lineal |
+| Diafragmas y contornos vacios | `JsonUtility` no admite listas anidadas de coordenadas | Adaptador `points_flat` sin alterar la fuente geometrica |
+| Losa visual confundida con analisis | Caja provisional visible como piso/techo | Arquitectura P4 separada, `participates_in_FE=false`; caja y diafragma OFF por defecto |
 
 ## Matriz de controles
 
 El metodo `RunVisibilitySelfCheck` prueba en Play que cada grupo tenga objetos,
 que `OFF` los desactive y que `ON` vuelva a activarlos. Incluye:
 
-- vigas, columnas, muros, losas y apoyos;
+- vigas, columnas, muros, losas provisionales y apoyos;
+- 259 bordes DXF, diafragmas analiticos, losa arquitectonica P4 y su borde;
 - areas tributarias;
 - flechas, CM, masa, corte basal y torsion;
 - deformadas OpenSees EX y EY;
@@ -44,12 +48,11 @@ pestanas P1L3, ampliacion/cierre de graficos, `H` y `R`.
 - Contrato Unity: cinco casos y 813 nodos por caso: PASS.
 - Hash de referencia original de Luis:
   `0193A4F37D77519FD10F86BADE537ACCDEE823DA8B261C8CECD008B44837FE5D`.
-- Prueba automatica Play: preparada en **MCOC > Probar interfaz en Play**.
-
-## Bloqueo ambiental de la ultima pasada
-
-El Editor instalado abrio el proyecto original y la escena correctamente, pero
-al reiniciarlo para la prueba final el cliente local devolvio codigo 198:
-`No valid Unity Editor license found`. La autenticacion debe realizarla el
-usuario desde Unity Hub. Una vez activa, ejecutar el menu de prueba y confirmar
-las dos lineas `[UI QA] ... PASS` del Console/Editor.log.
+- Contrato arquitectonico: 1 objeto EDIFICIO_1/P4, 0.15 m, 958.392618 m2,
+  `participates_in_FE=false`: PASS.
+- No interferencia: fuentes estructurales/resultados sin cambios y referencia
+  original de Luis con hash intacto: PASS.
+- Prueba automatica Play real: `[UI QA] PASS: capas y pisos responden a ON/OFF.`
+- Unity emitio una excepcion interna de `UnityEditor.Search.SearchDatabase`
+  durante el indexado de la copia temporal; no proviene del proyecto ni afecta
+  el arranque, la carga JSON o la prueba de visibilidad.

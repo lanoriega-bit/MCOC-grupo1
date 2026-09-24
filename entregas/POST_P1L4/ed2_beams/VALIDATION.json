@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "checks": {
+    "proposal_ready": true,
+    "resolution_pass": true,
+    "beam_count_267": true,
+    "counts_by_floor": true,
+    "all_sections_confirmed": true,
+    "unique_ids": true,
+    "all_primary_traceable": true,
+    "no_opensees_recalculation": true,
+    "v050_v051_one_v60x80": true
+  },
+  "counts": {
+    "total": 267,
+    "by_floor": {
+      "S1": 44,
+      "P1": 44,
+      "P2": 44,
+      "P3": 44,
+      "P4": 91
+    },
+    "known_sections": 267
+  },
+  "special_E2_P4_V050_V051": {
+    "verdict": "TWO_FACES_OF_ONE_REAL_BEAM_V60x80",
+    "result_id": null,
+    "proposal_id": "P4-VP-085"
+  },
+  "opensees_results_recalculated": false
+}

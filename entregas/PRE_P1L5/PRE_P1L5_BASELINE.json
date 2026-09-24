@@ -1,0 +1,57 @@
+{
+  "status": "BLOCKED",
+  "branch": "codex/post-p1l4-structural-audit",
+  "current_results": "NONE",
+  "fe_canonical_approved": null,
+  "loads_current_approved": null,
+  "historical_tags": {
+    "entregap1l2": "d2e40be4292b2a55b2e0db8be6be51cd31535bd6",
+    "P1L3_DELIVERED": "c847c131512d00cc85bb95aa5719278d70da0c2b",
+    "P1L4_FINAL": "56e24ac0568b24eba3cf119f2e3cc66fc0af3a35"
+  },
+  "files": {
+    "geometry": {
+      "path": "entregas/P1L2/unity_export/model_combined_viewer.json",
+      "sha256": "829f33867523be305f5e5cf573f3ef8710597096ca100b72f692b0095d116314"
+    },
+    "materials": {
+      "path": "entregas/PRE_P1L5/primary_material_catalog.json",
+      "sha256": "cf11916f2b60df80f4215f57e8f975e087b90c71f2b47766f4923aafc241562c"
+    },
+    "fe_candidate_not_approved": {
+      "path": "entregas/P1L3/results/post_p1l3_candidate/analysis_model_post_p1l3_candidate.json",
+      "sha256": "1995548cb230c6d87edc93860fcd485397473dffc2123e88f8b5f3a91a153a02"
+    },
+    "loads_audited_not_applied": {
+      "path": "entregas/P1L3/results/a1a2/load_zones_700_completion/load_catalog_700.json",
+      "sha256": "060ec4dc97f9a61dbe87a06cb8af8d1112b78994aa684777ecf494618f07402f"
+    },
+    "unity_scene": {
+      "path": "entregas/P1L3/José/viewer_unity/Assets/Main.unity",
+      "sha256": "d8e7045e1c2239fcee7aeea1d77dd7a2b82ea4fe559233da08743265ed766c22"
+    },
+    "project_state": {
+      "path": "entregas/PRE_P1L5/project_state.json",
+      "sha256": "81715134215d9ff7b575302a1e7b5d70b924f4ea0a4e2e3de7e4b91d2c20b51c"
+    }
+  },
+  "regression_status": "PASS",
+  "technical_gates": {
+    "AXES": "PASS",
+    "FLOORS": "PASS",
+    "COLUMNS": "PASS_WITH_NOTE",
+    "WALLS": "PASS_WITH_NOTE",
+    "BEAMS": "REVIEW_REQUIRED",
+    "SLABS": "REVIEW_REQUIRED",
+    "PROPERTIES": "REVIEW_REQUIRED",
+    "CONNECTIVITY": "REVIEW_REQUIRED",
+    "CROSSWALK": "PASS",
+    "LOADS": "REVIEW_REQUIRED",
+    "UNITY": "PASS",
+    "DOCUMENTATION": "PASS"
+  },
+  "blockers_document": "PRE_P1L5_STATUS.md",
+  "remaining_fe": 43,
+  "beam_heights_pending": 19,
+  "opensees_run": false
+}

@@ -1,9 +1,10 @@
 """Configuracion de cargas de P1L3 Parte A.
 
 q_G = PP.LOSA (espesor x densidad x g) + PM.ADIC (terminaciones).
-q_Q = sobrecarga de uso (SC). En el catalogo de planos SC esta en kgf/m2
-(200-500); el default aqui es 250 kgf/m2 = 2451.6625 N/m2 (zona intermedia) y es
-PARAMETRICO (el profesor puede ajustarlo sin tocar logica).
+q_Q = sobrecarga de uso (SC). El default uniforme de 250 kgf/m2 se conserva
+sin cambios exclusivamente como LEGACY_UNIFORM_Q_VALIDATION para demostrar la
+conservacion del motor tributario. No representa la zonificacion real de las
+laminas 700 y no debe promoverse a carga de proyecto sin el mapeo aprobado.
 
 Unidades SI (m, N, Pa).
 """
@@ -18,6 +19,7 @@ from carga_gravedad import GRAVITY, CONCRETE_DENSITY
 
 @dataclass
 class CargasConfig:
+    q_Q_case_status: str = "LEGACY_UNIFORM_Q_VALIDATION"
     q_Q_N_m2: dict = field(default_factory=dict)        # por piso -> SC
     thickness_m: dict = field(default_factory=dict)      # por piso -> espesor losa
     finishes_kN_m2: dict = field(default_factory=dict)   # por piso -> PM.ADIC

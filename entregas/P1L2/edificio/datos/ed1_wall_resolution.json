@@ -1,0 +1,1161 @@
+{
+  "status": "PASS",
+  "audit_sha256": "0673a8dea98c48a1b91324fee94134dd88a13d69c4be32d18f20a2e56cc7a665",
+  "old_wall_prisms": 134,
+  "new_wall_segments": 67,
+  "wall_replacements": 67,
+  "wall_faces_removed": 67,
+  "old_wall_supports": 60,
+  "new_wall_supports": 21,
+  "support_replacements": 21,
+  "support_duplicates_removed": 39,
+  "new_walls_by_floor": {
+    "S1": 21,
+    "P1": 25,
+    "P2": 7,
+    "P3": 7,
+    "P4": 7
+  },
+  "wall_crosswalk": [
+    {
+      "new_id": "E1-S1-M-001",
+      "solidTag": "SOL_1S_wall_0001",
+      "source_face_ids": [
+        "S1-RLE-MURO-0001",
+        "S1-RLE-MURO-0002"
+      ],
+      "centerline_start_xy_global_m": [
+        27.241,
+        -8.3686
+      ],
+      "centerline_end_xy_global_m": [
+        27.241,
+        -0.4687
+      ],
+      "thickness_m": 0.2
+    },
+    {
+      "new_id": "E1-S1-M-004",
+      "solidTag": "SOL_1S_wall_0004",
+      "source_face_ids": [
+        "S1-RLE-MURO-0039",
+        "S1-RLE-MURO-0040"
+      ],
+      "centerline_start_xy_global_m": [
+        27.241,
+        0.5314
+      ],
+      "centerline_end_xy_global_m": [
+        27.241,
+        6.3314
+      ],
+      "thickness_m": 0.2
+    },
+    {
+      "new_id": "E1-S1-M-002",
+      "solidTag": "SOL_1S_wall_0002",
+      "source_face_ids": [
+        "S1-RLE-MURO-0037",
+        "S1-RLE-MURO-0038"
+      ],
+      "centerline_start_xy_global_m": [
+        27.241,
+        9.4313
+      ],
+      "centerline_end_xy_global_m": [
+        27.241,
+        15.9814
+      ],
+      "thickness_m": 0.2
+    },
+    {
+      "new_id": "E1-S1-M-007",
+      "solidTag": "SOL_1S_wall_0051",
+      "source_face_ids": [
+        "S1-RLE-MURO-0061",
+        "S1-RLE-MURO-0077"
+      ],
+      "centerline_start_xy_global_m": [
+        27.341,
+        -8.4686
+      ],
+      "centerline_end_xy_global_m": [
+        27.991,
+        -8.4686
+      ],
+      "thickness_m": 0.2
+    },
+    {
+      "new_id": "E1-S1-M-031",
+      "solidTag": "SOL_1S_wall_0024",
+      "source_face_ids": [
+        "S1-RLE-MURO-0073",
+        "S1-RLE-MURO-0074"
+      ],
+      "centerline_start_xy_global_m": [
+        27.341,
+        -0.3687
+      ],
+      "centerline_end_xy_global_m": [
+        32.1673,
+        -0.3687
+      ],
+      "thickness_m": 0.2
+    },
+    {
+      "new_id": "E1-S1-M-016",
+      "solidTag": "SOL_1S_wall_0012",
+      "source_face_ids": [
+        "S1-RLE-MURO-0080",
+        "S1-RLE-MURO-0081"
+      ],
+      "centerline_start_xy_global_m": [
+        27.841,
+        -0.0687
+      ],
+      "centerline_end_xy_global_m": [
+        32.1673,
+        -0.0687
+      ],
+      "thickness_m": 0.2002
+    },
+    {
+      "new_id": "E1-S1-M-030",
+      "solidTag": "SOL_1S_wall_0034",
+      "source_face_ids": [
+        "S1-RLE-MURO-0042",
+        "S1-RLE-MURO-0043"
+      ],
+      "centerline_start_xy_global_m": [
+        27.841,
+        16.5314
+      ],
+      "centerline_end_xy_global_m": [
+        37.141,
+        16.5314
+      ],
+      "thickness_m": 0.3
+    },
+    {
+      "new_id": "E1-S1-M-005",
+      "solidTag": "SOL_1S_wall_0005",
+      "source_face_ids": [
+        "S1-RLE-MURO-0046",
+        "S1-RLE-MURO-0048"
+      ],
+      "centerline_start_xy_global_m": [
+        30.766,
+        12.4476
+      ],
+      "centerline_end_xy_global_m": [
+        30.766,
+        13.9264
+      ],
+      "thickness_m": 0.25
+    },
+    {
+      "new_id": "E1-S1-M-029",
+      "solidTag": "SOL_1S_wall_0035",
+      "source_face_ids": [
+        "S1-RLE-MURO-0044",
+        "S1-RLE-MURO-0045"
+      ],
+      "centerline_start_xy_global_m": [
+        30.891,
+        14.0264
+      ],
+      "centerline_end_xy_global_m": [
+        34.091,
+        14.0264
+      ],
+      "thickness_m": 0.2
+    },
+    {
+      "new_id": "E1-S1-M-020",
+      "solidTag": "SOL_1S_wall_0038",
+      "source_face_ids": [
+        "S1-RLE-MURO-0052",
+        "S1-RLE-MURO-0053"
+      ],
+      "centerline_start_xy_global_m": [
+        31.041,
+        4.1814
+      ],
+      "centerline_end_xy_global_m": [
+        31.041,
+        6.3314
+      ],
+      "thickness_m": 0.3
+    },
+    {
+      "new_id": "E1-S1-M-026",
+      "solidTag": "SOL_1S_wall_0045",
+      "source_face_ids": [
+        "S1-RLE-MURO-0058",
+        "S1-RLE-MURO-0059"
+      ],
+      "centerline_start_xy_global_m": [
+        31.191,
+        4.0814
+      ],
+      "centerline_end_xy_global_m": [
+        33.791,
+        4.0814
+      ],
+      "thickness_m": 0.2
+    },
+    {
+      "new_id": "E1-S1-M-027",
+      "solidTag": "SOL_1S_wall_0046",
+      "source_face_ids": [
+        "S1-RLE-MURO-0060",
+        "S1-RLE-MURO-0078"
+      ],
+      "centerline_start_xy_global_m": [
+        31.5673,
+        -8.4686
+      ],
+      "centerline_end_xy_global_m": [
+        32.1673,
+        -8.4686
+      ],
+      "thickness_m": 0.2
+    },
+    {
+      "new_id": "E1-S1-M-034",
+      "solidTag": "SOL_1S_wall_0040",
+      "source_face_ids": [
+        "S1-RLE-MURO-0055",
+        "S1-RLE-MURO-0056"
+      ],
+      "centerline_start_xy_global_m": [
+        33.941,
+        4.1814
+      ],
+      "centerline_end_xy_global_m": [
+        33.941,
+        6.3314
+      ],
+      "thickness_m": 0.3
+    },
+    {
+      "new_id": "E1-S1-M-051",
+      "solidTag": "SOL_1S_wall_0008",
+      "source_face_ids": [
+        "S1-RLE-MURO-0082",
+        "S1-RLE-MURO-0084"
+      ],
+      "centerline_start_xy_global_m": [
+        33.9673,
+        -8.4686
+      ],
+      "centerline_end_xy_global_m": [
+        34.5673,
+        -8.4686
+      ],
+      "thickness_m": 0.2
+    },
+    {
+      "new_id": "E1-S1-M-052",
+      "solidTag": "SOL_1S_wall_0007",
+      "source_face_ids": [
+        "S1-RLE-MURO-0004",
+        "S1-RLE-MURO-0005"
+      ],
+      "centerline_start_xy_global_m": [
+        33.9673,
+        -0.4187
+      ],
+      "centerline_end_xy_global_m": [
+        48.741,
+        -0.4187
+      ],
+      "thickness_m": 0.3
+    },
+    {
+      "new_id": "E1-S1-M-039",
+      "solidTag": "SOL_1S_wall_0059",
+      "source_face_ids": [
+        "S1-RLE-MURO-0067",
+        "S1-RLE-MURO-0069"
+      ],
+      "centerline_start_xy_global_m": [
+        33.9673,
+        -0.0686
+      ],
+      "centerline_end_xy_global_m": [
+        37.141,
+        -0.0686
+      ],
+      "thickness_m": 0.2
+    },
+    {
+      "new_id": "E1-S1-M-049",
+      "solidTag": "SOL_1S_wall_0033",
+      "source_face_ids": [
+        "S1-RLE-MURO-0049",
+        "S1-RLE-MURO-0051"
+      ],
+      "centerline_start_xy_global_m": [
+        34.216,
+        12.4476
+      ],
+      "centerline_end_xy_global_m": [
+        34.216,
+        13.9264
+      ],
+      "thickness_m": 0.25
+    },
+    {
+      "new_id": "E1-S1-M-053",
+      "solidTag": "SOL_1S_wall_0050",
+      "source_face_ids": [
+        "S1-RLE-MURO-0070",
+        "S1-RLE-MURO-0072"
+      ],
+      "centerline_start_xy_global_m": [
+        36.9663,
+        -8.4686
+      ],
+      "centerline_end_xy_global_m": [
+        48.741,
+        -8.4686
+      ],
+      "thickness_m": 0.2
+    },
+    {
+      "new_id": "E1-S1-M-050",
+      "solidTag": "SOL_1S_wall_0015",
+      "source_face_ids": [
+        "S1-RLE-MURO-0033",
+        "S1-RLE-MURO-0034"
+      ],
+      "centerline_start_xy_global_m": [
+        37.691,
+        0.5314
+      ],
+      "centerline_end_xy_global_m": [
+        37.691,
+        8.7313
+      ],
+      "thickness_m": 0.3
+    },
+    {
+      "new_id": "E1-S1-M-019",
+      "solidTag": "SOL_1S_wall_0037",
+      "source_face_ids": [
+        "S1-RLE-MURO-0035",
+        "S1-RLE-MURO-0036"
+      ],
+      "centerline_start_xy_global_m": [
+        37.691,
+        9.4313
+      ],
+      "centerline_end_xy_global_m": [
+        37.691,
+        15.9814
+      ],
+      "thickness_m": 0.3
+    },
+    {
+      "new_id": "E1-S1-M-060",
+      "solidTag": "SOL_1S_wall_0010",
+      "source_face_ids": [
+        "S1-RLE-MURO-0007",
+        "S1-RLE-MURO-0008"
+      ],
+      "centerline_start_xy_global_m": [
+        48.891,
+        -8.3686
+      ],
+      "centerline_end_xy_global_m": [
+        48.891,
+        -0.5687
+      ],
+      "thickness_m": 0.3
+    },
+    {
+      "new_id": "E1-P1-M-003",
+      "solidTag": "SOL_1_wall_0072",
+      "source_face_ids": [
+        "P1-RLE-MURO-0015",
+        "P1-RLE-MURO-0017"
+      ],
+      "centerline_start_xy_global_m": [
+        27.141,
+        3.9001
+      ],
+      "centerline_end_xy_global_m": [
+        30.891,
+        3.9001
+      ],
+      "thickness_m": 0.2
+    },
+    {
+      "new_id": "E1-P1-M-001",
+      "solidTag": "SOL_1_wall_0073",
+      "source_face_ids": [
+        "P1-RLE-MURO-0019",
+        "P1-RLE-MURO-0020"
+      ],
+      "centerline_start_xy_global_m": [
+        27.241,
+        9.2501
+      ],
+      "centerline_end_xy_global_m": [
+        27.241,
+        15.8
+      ],
+      "thickness_m": 0.2
+    },
+    {
+      "new_id": "E1-P1-M-002",
+      "solidTag": "SOL_1_wall_0074",
+      "source_face_ids": [
+        "P1-RLE-MURO-0003",
+        "P1-RLE-MURO-0005"
+      ],
+      "centerline_start_xy_global_m": [
+        30.766,
+        12.2663
+      ],
+      "centerline_end_xy_global_m": [
+        30.766,
+        13.7451
+      ],
+      "thickness_m": 0.25
+    },
+    {
+      "new_id": "E1-P1-M-010",
+      "solidTag": "SOL_1_wall_0061",
+      "source_face_ids": [
+        "P1-RLE-MURO-0001",
+        "P1-RLE-MURO-0002"
+      ],
+      "centerline_start_xy_global_m": [
+        30.891,
+        13.8451
+      ],
+      "centerline_end_xy_global_m": [
+        34.091,
+        13.8451
+      ],
+      "thickness_m": 0.2
+    },
+    {
+      "new_id": "E1-P1-M-012",
+      "solidTag": "SOL_1_wall_0066",
+      "source_face_ids": [
+        "P1-RLE-MURO-0009",
+        "P1-RLE-MURO-0010"
+      ],
+      "centerline_start_xy_global_m": [
+        31.041,
+        4.0001
+      ],
+      "centerline_end_xy_global_m": [
+        31.041,
+        6.1501
+      ],
+      "thickness_m": 0.3
+    },
+    {
+      "new_id": "E1-P1-M-004",
+      "solidTag": "SOL_1_wall_0071",
+      "source_face_ids": [
+        "P1-RLE-MURO-0015",
+        "P1-RLE-MURO-0016"
+      ],
+      "centerline_start_xy_global_m": [
+        31.191,
+        3.9001
+      ],
+      "centerline_end_xy_global_m": [
+        33.791,
+        3.9001
+      ],
+      "thickness_m": 0.2
+    },
+    {
+      "new_id": "E1-P1-M-025",
+      "solidTag": "SOL_1_wall_0075",
+      "source_face_ids": [
+        "P1-RLE-MURO-0012",
+        "P1-RLE-MURO-0013"
+      ],
+      "centerline_start_xy_global_m": [
+        33.941,
+        4.0001
+      ],
+      "centerline_end_xy_global_m": [
+        33.941,
+        6.1501
+      ],
+      "thickness_m": 0.3
+    },
+    {
+      "new_id": "E1-P1-M-026",
+      "solidTag": "SOL_1_wall_0076",
+      "source_face_ids": [
+        "P1-RLE-MURO-0006",
+        "P1-RLE-MURO-0008"
+      ],
+      "centerline_start_xy_global_m": [
+        34.216,
+        12.2663
+      ],
+      "centerline_end_xy_global_m": [
+        34.216,
+        13.7451
+      ],
+      "thickness_m": 0.25
+    },
+    {
+      "new_id": "E1-P1-M-015",
+      "solidTag": "SOL_1_wall_0081",
+      "source_face_ids": [
+        "P1-RLE-MURO-0026",
+        "P1-RLE-MURO-0027"
+      ],
+      "centerline_start_xy_global_m": [
+        57.841,
+        -0.1999
+      ],
+      "centerline_end_xy_global_m": [
+        67.141,
+        -0.1999
+      ],
+      "thickness_m": 0.3
+    },
+    {
+      "new_id": "E1-P1-M-024",
+      "solidTag": "SOL_1_wall_0097",
+      "source_face_ids": [
+        "P1-RLE-MURO-0050",
+        "P1-RLE-MURO-0052"
+      ],
+      "centerline_start_xy_global_m": [
+        61.241,
+        -0.5249
+      ],
+      "centerline_end_xy_global_m": [
+        67.791,
+        -0.5249
+      ],
+      "thickness_m": 0.15
+    },
+    {
+      "new_id": "E1-P1-M-023",
+      "solidTag": "SOL_1_wall_0098",
+      "source_face_ids": [
+        "P1-RLE-MURO-0044",
+        "P1-RLE-MURO-0046"
+      ],
+      "centerline_start_xy_global_m": [
+        62.7573,
+        -6.2249
+      ],
+      "centerline_end_xy_global_m": [
+        67.791,
+        -6.2249
+      ],
+      "thickness_m": 0.15
+    },
+    {
+      "new_id": "E1-P1-M-016",
+      "solidTag": "SOL_1_wall_0083",
+      "source_face_ids": [
+        "P1-RLE-MURO-0048",
+        "P1-RLE-MURO-0049"
+      ],
+      "centerline_start_xy_global_m": [
+        62.7573,
+        -3.5749
+      ],
+      "centerline_end_xy_global_m": [
+        66.241,
+        -3.5749
+      ],
+      "thickness_m": 0.15
+    },
+    {
+      "new_id": "E1-P1-M-020",
+      "solidTag": "SOL_1_wall_0092",
+      "source_face_ids": [
+        "P1-RLE-MURO-0042",
+        "P1-RLE-MURO-0043"
+      ],
+      "centerline_start_xy_global_m": [
+        66.316,
+        -3.4999
+      ],
+      "centerline_end_xy_global_m": [
+        66.316,
+        -0.5999
+      ],
+      "thickness_m": 0.15
+    },
+    {
+      "new_id": "E1-P1-M-028",
+      "solidTag": "SOL_1_wall_0078",
+      "source_face_ids": [
+        "P1-RLE-MURO-0024",
+        "P1-RLE-MURO-0025"
+      ],
+      "centerline_start_xy_global_m": [
+        67.641,
+        0.3501
+      ],
+      "centerline_end_xy_global_m": [
+        67.641,
+        8.5501
+      ],
+      "thickness_m": 0.3
+    },
+    {
+      "new_id": "E1-P1-M-029",
+      "solidTag": "SOL_1_wall_0079",
+      "source_face_ids": [
+        "P1-RLE-MURO-0021",
+        "P1-RLE-MURO-0022"
+      ],
+      "centerline_start_xy_global_m": [
+        67.641,
+        9.2501
+      ],
+      "centerline_end_xy_global_m": [
+        67.641,
+        15.8
+      ],
+      "thickness_m": 0.3
+    },
+    {
+      "new_id": "E1-P1-M-027",
+      "solidTag": "SOL_1_wall_0077",
+      "source_face_ids": [
+        "P1-RLE-MURO-0029",
+        "P1-RLE-MURO-0031"
+      ],
+      "centerline_start_xy_global_m": [
+        67.641,
+        16.7201
+      ],
+      "centerline_end_xy_global_m": [
+        67.641,
+        26.3258
+      ],
+      "thickness_m": 0.3
+    },
+    {
+      "new_id": "E1-P1-M-022",
+      "solidTag": "SOL_1_wall_0094",
+      "source_face_ids": [
+        "P1-RLE-MURO-0044",
+        "P1-RLE-MURO-0046"
+      ],
+      "centerline_start_xy_global_m": [
+        67.841,
+        -6.2249
+      ],
+      "centerline_end_xy_global_m": [
+        70.191,
+        -6.2249
+      ],
+      "thickness_m": 0.15
+    },
+    {
+      "new_id": "E1-P1-M-021",
+      "solidTag": "SOL_1_wall_0093",
+      "source_face_ids": [
+        "P1-RLE-MURO-0050",
+        "P1-RLE-MURO-0052"
+      ],
+      "centerline_start_xy_global_m": [
+        67.841,
+        -0.5249
+      ],
+      "centerline_end_xy_global_m": [
+        70.191,
+        -0.5249
+      ],
+      "thickness_m": 0.15
+    },
+    {
+      "new_id": "E1-P1-M-032",
+      "solidTag": "SOL_1_wall_0082",
+      "source_face_ids": [
+        "P1-RLE-MURO-0028",
+        "P1-RLE-MURO-0051"
+      ],
+      "centerline_start_xy_global_m": [
+        67.841,
+        -0.1999
+      ],
+      "centerline_end_xy_global_m": [
+        70.191,
+        -0.1999
+      ],
+      "thickness_m": 0.3
+    },
+    {
+      "new_id": "E1-P1-M-031",
+      "solidTag": "SOL_1_wall_0088",
+      "source_face_ids": [
+        "P1-RLE-MURO-0038",
+        "P1-RLE-MURO-0039"
+      ],
+      "centerline_start_xy_global_m": [
+        70.091,
+        -11.4754
+      ],
+      "centerline_end_xy_global_m": [
+        70.091,
+        -10.797
+      ],
+      "thickness_m": 0.2
+    },
+    {
+      "new_id": "E1-P1-M-034",
+      "solidTag": "SOL_1_wall_0085",
+      "source_face_ids": [
+        "P1-RLE-MURO-0035",
+        "P1-RLE-MURO-0039"
+      ],
+      "centerline_start_xy_global_m": [
+        70.091,
+        -10.597
+      ],
+      "centerline_end_xy_global_m": [
+        70.091,
+        -10.0651
+      ],
+      "thickness_m": 0.2
+    },
+    {
+      "new_id": "E1-P1-M-036",
+      "solidTag": "SOL_1_wall_0086",
+      "source_face_ids": [
+        "P1-RLE-MURO-0036",
+        "P1-RLE-MURO-0037"
+      ],
+      "centerline_start_xy_global_m": [
+        70.2113,
+        -10.697
+      ],
+      "centerline_end_xy_global_m": [
+        72.7363,
+        -10.697
+      ],
+      "thickness_m": 0.2
+    },
+    {
+      "new_id": "E1-P1-M-035",
+      "solidTag": "SOL_1_wall_0087",
+      "source_face_ids": [
+        "P1-RLE-MURO-0050",
+        "P1-RLE-MURO-0052"
+      ],
+      "centerline_start_xy_global_m": [
+        70.2113,
+        -0.5249
+      ],
+      "centerline_end_xy_global_m": [
+        72.7363,
+        -0.5249
+      ],
+      "thickness_m": 0.15
+    },
+    {
+      "new_id": "E1-P1-M-033",
+      "solidTag": "SOL_1_wall_0084",
+      "source_face_ids": [
+        "P1-RLE-MURO-0028",
+        "P1-RLE-MURO-0051"
+      ],
+      "centerline_start_xy_global_m": [
+        70.2113,
+        -0.1999
+      ],
+      "centerline_end_xy_global_m": [
+        72.141,
+        -0.1999
+      ],
+      "thickness_m": 0.3
+    },
+    {
+      "new_id": "E1-P1-M-037",
+      "solidTag": "SOL_1_wall_0090",
+      "source_face_ids": [
+        "P1-RLE-MURO-0040",
+        "P1-RLE-MURO-0041"
+      ],
+      "centerline_start_xy_global_m": [
+        72.8863,
+        -11.4754
+      ],
+      "centerline_end_xy_global_m": [
+        72.8863,
+        -0.4499
+      ],
+      "thickness_m": 0.3
+    },
+    {
+      "new_id": "E1-P2-M-002",
+      "solidTag": "SOL_2_wall_0109",
+      "source_face_ids": [
+        "P2-RLE-MURO-0015",
+        "P2-RLE-MURO-0017"
+      ],
+      "centerline_start_xy_global_m": [
+        27.1409,
+        4.0815
+      ],
+      "centerline_end_xy_global_m": [
+        30.8909,
+        4.0815
+      ],
+      "thickness_m": 0.2
+    },
+    {
+      "new_id": "E1-P2-M-003",
+      "solidTag": "SOL_2_wall_0101",
+      "source_face_ids": [
+        "P2-RLE-MURO-0003",
+        "P2-RLE-MURO-0005"
+      ],
+      "centerline_start_xy_global_m": [
+        30.7659,
+        12.4477
+      ],
+      "centerline_end_xy_global_m": [
+        30.7659,
+        13.9265
+      ],
+      "thickness_m": 0.25
+    },
+    {
+      "new_id": "E1-P2-M-008",
+      "solidTag": "SOL_2_wall_0099",
+      "source_face_ids": [
+        "P2-RLE-MURO-0001",
+        "P2-RLE-MURO-0002"
+      ],
+      "centerline_start_xy_global_m": [
+        30.8909,
+        14.0265
+      ],
+      "centerline_end_xy_global_m": [
+        34.0909,
+        14.0265
+      ],
+      "thickness_m": 0.2
+    },
+    {
+      "new_id": "E1-P2-M-010",
+      "solidTag": "SOL_2_wall_0104",
+      "source_face_ids": [
+        "P2-RLE-MURO-0009",
+        "P2-RLE-MURO-0010"
+      ],
+      "centerline_start_xy_global_m": [
+        31.0409,
+        4.1815
+      ],
+      "centerline_end_xy_global_m": [
+        31.0409,
+        6.3315
+      ],
+      "thickness_m": 0.3
+    },
+    {
+      "new_id": "E1-P2-M-007",
+      "solidTag": "SOL_2_wall_0100",
+      "source_face_ids": [
+        "P2-RLE-MURO-0015",
+        "P2-RLE-MURO-0016"
+      ],
+      "centerline_start_xy_global_m": [
+        31.1909,
+        4.0815
+      ],
+      "centerline_end_xy_global_m": [
+        33.7909,
+        4.0815
+      ],
+      "thickness_m": 0.2
+    },
+    {
+      "new_id": "E1-P2-M-009",
+      "solidTag": "SOL_2_wall_0108",
+      "source_face_ids": [
+        "P2-RLE-MURO-0012",
+        "P2-RLE-MURO-0013"
+      ],
+      "centerline_start_xy_global_m": [
+        33.9409,
+        4.1815
+      ],
+      "centerline_end_xy_global_m": [
+        33.9409,
+        6.3315
+      ],
+      "thickness_m": 0.3
+    },
+    {
+      "new_id": "E1-P2-M-005",
+      "solidTag": "SOL_2_wall_0103",
+      "source_face_ids": [
+        "P2-RLE-MURO-0006",
+        "P2-RLE-MURO-0008"
+      ],
+      "centerline_start_xy_global_m": [
+        34.2159,
+        12.4477
+      ],
+      "centerline_end_xy_global_m": [
+        34.2159,
+        13.9265
+      ],
+      "thickness_m": 0.25
+    },
+    {
+      "new_id": "E1-P3-M-002",
+      "solidTag": "SOL_3_wall_0121",
+      "source_face_ids": [
+        "P3-RLE-MURO-0015",
+        "P3-RLE-MURO-0017"
+      ],
+      "centerline_start_xy_global_m": [
+        27.1409,
+        4.0815
+      ],
+      "centerline_end_xy_global_m": [
+        30.8909,
+        4.0815
+      ],
+      "thickness_m": 0.2
+    },
+    {
+      "new_id": "E1-P3-M-003",
+      "solidTag": "SOL_3_wall_0113",
+      "source_face_ids": [
+        "P3-RLE-MURO-0003",
+        "P3-RLE-MURO-0005"
+      ],
+      "centerline_start_xy_global_m": [
+        30.7659,
+        12.4477
+      ],
+      "centerline_end_xy_global_m": [
+        30.7659,
+        13.9265
+      ],
+      "thickness_m": 0.25
+    },
+    {
+      "new_id": "E1-P3-M-008",
+      "solidTag": "SOL_3_wall_0111",
+      "source_face_ids": [
+        "P3-RLE-MURO-0001",
+        "P3-RLE-MURO-0002"
+      ],
+      "centerline_start_xy_global_m": [
+        30.8909,
+        14.0265
+      ],
+      "centerline_end_xy_global_m": [
+        34.0909,
+        14.0265
+      ],
+      "thickness_m": 0.2
+    },
+    {
+      "new_id": "E1-P3-M-010",
+      "solidTag": "SOL_3_wall_0116",
+      "source_face_ids": [
+        "P3-RLE-MURO-0009",
+        "P3-RLE-MURO-0010"
+      ],
+      "centerline_start_xy_global_m": [
+        31.0409,
+        4.1815
+      ],
+      "centerline_end_xy_global_m": [
+        31.0409,
+        6.3315
+      ],
+      "thickness_m": 0.3
+    },
+    {
+      "new_id": "E1-P3-M-007",
+      "solidTag": "SOL_3_wall_0112",
+      "source_face_ids": [
+        "P3-RLE-MURO-0015",
+        "P3-RLE-MURO-0016"
+      ],
+      "centerline_start_xy_global_m": [
+        31.1909,
+        4.0815
+      ],
+      "centerline_end_xy_global_m": [
+        33.7909,
+        4.0815
+      ],
+      "thickness_m": 0.2
+    },
+    {
+      "new_id": "E1-P3-M-009",
+      "solidTag": "SOL_3_wall_0120",
+      "source_face_ids": [
+        "P3-RLE-MURO-0012",
+        "P3-RLE-MURO-0013"
+      ],
+      "centerline_start_xy_global_m": [
+        33.9409,
+        4.1815
+      ],
+      "centerline_end_xy_global_m": [
+        33.9409,
+        6.3315
+      ],
+      "thickness_m": 0.3
+    },
+    {
+      "new_id": "E1-P3-M-005",
+      "solidTag": "SOL_3_wall_0115",
+      "source_face_ids": [
+        "P3-RLE-MURO-0006",
+        "P3-RLE-MURO-0008"
+      ],
+      "centerline_start_xy_global_m": [
+        34.2159,
+        12.4477
+      ],
+      "centerline_end_xy_global_m": [
+        34.2159,
+        13.9265
+      ],
+      "thickness_m": 0.25
+    },
+    {
+      "new_id": "E1-P4-M-002",
+      "solidTag": "SOL_4_wall_0133",
+      "source_face_ids": [
+        "P4-RLE-MURO-0015",
+        "P4-RLE-MURO-0017"
+      ],
+      "centerline_start_xy_global_m": [
+        27.1409,
+        4.0815
+      ],
+      "centerline_end_xy_global_m": [
+        30.8909,
+        4.0815
+      ],
+      "thickness_m": 0.2
+    },
+    {
+      "new_id": "E1-P4-M-003",
+      "solidTag": "SOL_4_wall_0125",
+      "source_face_ids": [
+        "P4-RLE-MURO-0003",
+        "P4-RLE-MURO-0005"
+      ],
+      "centerline_start_xy_global_m": [
+        30.7659,
+        12.4477
+      ],
+      "centerline_end_xy_global_m": [
+        30.7659,
+        13.9265
+      ],
+      "thickness_m": 0.25
+    },
+    {
+      "new_id": "E1-P4-M-008",
+      "solidTag": "SOL_4_wall_0123",
+      "source_face_ids": [
+        "P4-RLE-MURO-0001",
+        "P4-RLE-MURO-0002"
+      ],
+      "centerline_start_xy_global_m": [
+        30.8909,
+        14.0265
+      ],
+      "centerline_end_xy_global_m": [
+        34.0909,
+        14.0265
+      ],
+      "thickness_m": 0.2
+    },
+    {
+      "new_id": "E1-P4-M-009",
+      "solidTag": "SOL_4_wall_0132",
+      "source_face_ids": [
+        "P4-RLE-MURO-0009",
+        "P4-RLE-MURO-0010"
+      ],
+      "centerline_start_xy_global_m": [
+        31.0409,
+        4.1815
+      ],
+      "centerline_end_xy_global_m": [
+        31.0409,
+        6.3315
+      ],
+      "thickness_m": 0.3
+    },
+    {
+      "new_id": "E1-P4-M-007",
+      "solidTag": "SOL_4_wall_0124",
+      "source_face_ids": [
+        "P4-RLE-MURO-0015",
+        "P4-RLE-MURO-0016"
+      ],
+      "centerline_start_xy_global_m": [
+        31.1909,
+        4.0815
+      ],
+      "centerline_end_xy_global_m": [
+        33.7909,
+        4.0815
+      ],
+      "thickness_m": 0.2
+    },
+    {
+      "new_id": "E1-P4-M-010",
+      "solidTag": "SOL_4_wall_0128",
+      "source_face_ids": [
+        "P4-RLE-MURO-0012",
+        "P4-RLE-MURO-0013"
+      ],
+      "centerline_start_xy_global_m": [
+        33.9409,
+        4.1815
+      ],
+      "centerline_end_xy_global_m": [
+        33.9409,
+        6.3315
+      ],
+      "thickness_m": 0.3
+    },
+    {
+      "new_id": "E1-P4-M-012",
+      "solidTag": "SOL_4_wall_0130",
+      "source_face_ids": [
+        "P4-RLE-MURO-0006",
+        "P4-RLE-MURO-0008"
+      ],
+      "centerline_start_xy_global_m": [
+        34.2159,
+        12.4477
+      ],
+      "centerline_end_xy_global_m": [
+        34.2159,
+        13.9265
+      ],
+      "thickness_m": 0.25
+    }
+  ],
+  "luis_reference_files_modified": 0
+}

@@ -1,0 +1,431 @@
+{
+  "status": "PASS_WITH_REVIEW_REQUIRED",
+  "scope": "EXT-4_SLABS_PROPERTIES_CONNECTIVITY",
+  "slabs": {
+    "policy": "PROPOSALS_NOT_APPLIED",
+    "floors": [
+      {
+        "building": "EDIFICIO_1",
+        "floor": "S1",
+        "our_status": "UNRESOLVED_OUTER_PERIMETER",
+        "our_candidate_area_m2": null,
+        "source_sheet": null,
+        "edge_confidence": {},
+        "santiago": null,
+        "caceres": null,
+        "holes_policy": "NOT_CLASSIFIED_AS_HOLES",
+        "action": "DO_NOT_APPLY"
+      },
+      {
+        "building": "EDIFICIO_1",
+        "floor": "P1",
+        "our_status": "UNRESOLVED_OUTBOARD_TRANSITION",
+        "our_candidate_area_m2": null,
+        "source_sheet": null,
+        "edge_confidence": {},
+        "santiago": null,
+        "caceres": null,
+        "holes_policy": "NOT_CLASSIFIED_AS_HOLES",
+        "action": "DO_NOT_APPLY"
+      },
+      {
+        "building": "EDIFICIO_1",
+        "floor": "P2",
+        "our_status": "CANDIDATE",
+        "our_candidate_area_m2": 806.605,
+        "source_sheet": "2017_67-102.dxf",
+        "edge_confidence": {
+          "CONFIRMED_RLE_LOSA": 1,
+          "LIKELY_RLE_PLUS_STRUCTURE": 3
+        },
+        "santiago": {
+          "external_area_m2": 912.997,
+          "intersection_m2": 714.527,
+          "iou": 0.7109,
+          "candidate_coverage_by_external_percent": 88.58
+        },
+        "caceres": {
+          "external_area_m2": 1230.988,
+          "intersection_m2": 802.89,
+          "iou": 0.6503,
+          "candidate_coverage_by_external_percent": 99.54
+        },
+        "holes_policy": "NOT_CLASSIFIED_AS_HOLES",
+        "action": "DO_NOT_APPLY"
+      },
+      {
+        "building": "EDIFICIO_1",
+        "floor": "P3",
+        "our_status": "CANDIDATE",
+        "our_candidate_area_m2": 914.175,
+        "source_sheet": "2017_67-102.dxf",
+        "edge_confidence": {
+          "CONFIRMED_RLE_LOSA": 4,
+          "LIKELY_RLE_PLUS_STRUCTURE": 2
+        },
+        "santiago": {
+          "external_area_m2": 985.148,
+          "intersection_m2": 793.41,
+          "iou": 0.7174,
+          "candidate_coverage_by_external_percent": 86.79
+        },
+        "caceres": {
+          "external_area_m2": 1332.92,
+          "intersection_m2": 910.804,
+          "iou": 0.6816,
+          "candidate_coverage_by_external_percent": 99.63
+        },
+        "holes_policy": "NOT_CLASSIFIED_AS_HOLES",
+        "action": "DO_NOT_APPLY"
+      },
+      {
+        "building": "EDIFICIO_1",
+        "floor": "P4",
+        "our_status": "FROZEN_APPROVED_PILOT",
+        "our_candidate_area_m2": 958.39275,
+        "source_sheet": null,
+        "edge_confidence": {},
+        "santiago": null,
+        "caceres": null,
+        "holes_policy": "NOT_CLASSIFIED_AS_HOLES",
+        "action": "KEEP_VISUAL_PILOT_ONLY"
+      },
+      {
+        "building": "EDIFICIO_2",
+        "floor": "S1",
+        "our_status": "PROPOSAL_ONLY_NOT_APPLIED",
+        "our_candidate_area_m2": 565.392,
+        "source_sheet": "2024_22-101.dxf",
+        "edge_confidence": {
+          "CONFIRMED_RLE_LOSA": 2,
+          "LIKELY_RLE_PLUS_STRUCTURE": 4
+        },
+        "santiago": {
+          "external_area_m2": 331.757,
+          "intersection_m2": 331.757,
+          "iou": 0.5868,
+          "candidate_coverage_by_external_percent": 58.68
+        },
+        "caceres": {
+          "external_area_m2": 191.732,
+          "intersection_m2": 191.698,
+          "iou": 0.339,
+          "candidate_coverage_by_external_percent": 33.91
+        },
+        "holes_policy": "NOT_CLASSIFIED_AS_HOLES",
+        "action": "DO_NOT_APPLY"
+      },
+      {
+        "building": "EDIFICIO_2",
+        "floor": "P1",
+        "our_status": "PROPOSAL_ONLY_NOT_APPLIED",
+        "our_candidate_area_m2": 565.392,
+        "source_sheet": "2024_22-101.dxf",
+        "edge_confidence": {
+          "CONFIRMED_RLE_LOSA": 2,
+          "LIKELY_RLE_PLUS_STRUCTURE": 4
+        },
+        "santiago": {
+          "external_area_m2": 331.757,
+          "intersection_m2": 331.757,
+          "iou": 0.5868,
+          "candidate_coverage_by_external_percent": 58.68
+        },
+        "caceres": {
+          "external_area_m2": 191.732,
+          "intersection_m2": 191.698,
+          "iou": 0.339,
+          "candidate_coverage_by_external_percent": 33.91
+        },
+        "holes_policy": "NOT_CLASSIFIED_AS_HOLES",
+        "action": "DO_NOT_APPLY"
+      },
+      {
+        "building": "EDIFICIO_2",
+        "floor": "P2",
+        "our_status": "PROPOSAL_ONLY_NOT_APPLIED",
+        "our_candidate_area_m2": 565.392,
+        "source_sheet": "2024_22-101.dxf",
+        "edge_confidence": {
+          "CONFIRMED_RLE_LOSA": 2,
+          "LIKELY_RLE_PLUS_STRUCTURE": 4
+        },
+        "santiago": {
+          "external_area_m2": 331.757,
+          "intersection_m2": 331.757,
+          "iou": 0.5868,
+          "candidate_coverage_by_external_percent": 58.68
+        },
+        "caceres": {
+          "external_area_m2": 191.732,
+          "intersection_m2": 191.698,
+          "iou": 0.339,
+          "candidate_coverage_by_external_percent": 33.91
+        },
+        "holes_policy": "NOT_CLASSIFIED_AS_HOLES",
+        "action": "DO_NOT_APPLY"
+      },
+      {
+        "building": "EDIFICIO_2",
+        "floor": "P3",
+        "our_status": "PROPOSAL_ONLY_NOT_APPLIED",
+        "our_candidate_area_m2": 565.392,
+        "source_sheet": "2024_22-101.dxf",
+        "edge_confidence": {
+          "CONFIRMED_RLE_LOSA": 2,
+          "LIKELY_RLE_PLUS_STRUCTURE": 4
+        },
+        "santiago": {
+          "external_area_m2": 331.757,
+          "intersection_m2": 331.757,
+          "iou": 0.5868,
+          "candidate_coverage_by_external_percent": 58.68
+        },
+        "caceres": {
+          "external_area_m2": 191.732,
+          "intersection_m2": 191.698,
+          "iou": 0.339,
+          "candidate_coverage_by_external_percent": 33.91
+        },
+        "holes_policy": "NOT_CLASSIFIED_AS_HOLES",
+        "action": "DO_NOT_APPLY"
+      },
+      {
+        "building": "EDIFICIO_2",
+        "floor": "P4",
+        "our_status": "PROPOSAL_ONLY_NOT_APPLIED",
+        "our_candidate_area_m2": 566.465,
+        "source_sheet": "2024_22-102.dxf",
+        "edge_confidence": {
+          "CONFIRMED_RLE_LOSA": 4,
+          "LIKELY_RLE_PLUS_STRUCTURE": 2
+        },
+        "santiago": {
+          "external_area_m2": 317.115,
+          "intersection_m2": 317.115,
+          "iou": 0.5598,
+          "candidate_coverage_by_external_percent": 55.98
+        },
+        "caceres": {
+          "external_area_m2": 191.807,
+          "intersection_m2": 191.773,
+          "iou": 0.3385,
+          "candidate_coverage_by_external_percent": 33.85
+        },
+        "holes_policy": "NOT_CLASSIFIED_AS_HOLES",
+        "action": "DO_NOT_APPLY"
+      }
+    ],
+    "reason": "ED1 S1/P1 lack a defensible outer perimeter; internal RLE-LOSA features are not proven holes; external agreement is secondary only."
+  },
+  "properties": {
+    "model_summary": {
+      "beam": {
+        "total": 567,
+        "material_unknown": 567,
+        "section_confirmed": 545,
+        "section_unknown": 19,
+        "visual_only": 0
+      },
+      "column": {
+        "total": 150,
+        "material_unknown": 150,
+        "section_confirmed": 84,
+        "section_unknown": 0,
+        "visual_only": 0
+      },
+      "wall": {
+        "total": 122,
+        "material_unknown": 19,
+        "section_confirmed": 0,
+        "section_unknown": 0,
+        "visual_only": 0
+      },
+      "slab": {
+        "total": 10,
+        "material_unknown": 10,
+        "section_confirmed": 0,
+        "section_unknown": 0,
+        "visual_only": 10
+      }
+    },
+    "cad_labels_reviewed": {},
+    "policy": "Do not promote nearest-neighbor associations without direct visual/plan confirmation."
+  },
+  "connectivity": {
+    "historic_adapter": {
+      "included_nodes": 603,
+      "included_elements": 724,
+      "supports": 59,
+      "floating_components": 59,
+      "floating_elements": 115,
+      "floating_by_building_floor_type": {
+        "EDIFICIO_1/P1/beam": 6,
+        "EDIFICIO_1/P1/column": 6,
+        "EDIFICIO_1/P1/wall": 24,
+        "EDIFICIO_1/P2/beam": 3,
+        "EDIFICIO_1/P2/column": 1,
+        "EDIFICIO_1/P2/wall": 7,
+        "EDIFICIO_1/P3/wall": 7,
+        "EDIFICIO_1/P4/wall": 7,
+        "EDIFICIO_1/S1/beam": 6,
+        "EDIFICIO_2/P1/beam": 2,
+        "EDIFICIO_2/P2/beam": 2,
+        "EDIFICIO_2/P3/beam": 2,
+        "EDIFICIO_2/P4/beam": 40,
+        "EDIFICIO_2/S1/beam": 2
+      }
+    },
+    "candidate": {
+      "baseline_floating_elements": 115,
+      "baseline_components": 59,
+      "candidate_floating_fe_segments": 43,
+      "candidate_floating_geometry_elements": 43,
+      "candidate_floating_components": 22,
+      "focus_resolved_geometry_ids": [
+        "E1-P1-C-018",
+        "E1-P1-C-019",
+        "E1-P1-C-020",
+        "E1-P1-C-022",
+        "E1-P1-M-001",
+        "E1-P1-M-002",
+        "E1-P1-M-003",
+        "E1-P1-M-012",
+        "E1-P1-M-025",
+        "E1-P1-M-026",
+        "E1-P1-M-027",
+        "E1-P1-M-028",
+        "E1-P1-M-029",
+        "E1-P1-M-032",
+        "E1-P1-M-033",
+        "E1-P1-V-071",
+        "E1-P1-V-073",
+        "E1-P1-V-084",
+        "E1-P2-C-010",
+        "E1-P2-M-002",
+        "E1-P2-V-053",
+        "E1-P3-M-002",
+        "E1-P4-M-002",
+        "E1-S1-V-031",
+        "E1-S1-V-032",
+        "E1-S1-V-033",
+        "E1-S1-V-064",
+        "E1-S1-V-065",
+        "E1-S1-V-066",
+        "E2-P1-V-007",
+        "E2-P1-V-008",
+        "E2-P2-V-007",
+        "E2-P2-V-008",
+        "E2-P3-V-007",
+        "E2-P3-V-008",
+        "E2-P4-V-001",
+        "E2-P4-V-002",
+        "E2-P4-V-003",
+        "E2-P4-V-008",
+        "E2-P4-V-010",
+        "E2-P4-V-011",
+        "E2-P4-V-012",
+        "E2-P4-V-013",
+        "E2-P4-V-014",
+        "E2-P4-V-015",
+        "E2-P4-V-016",
+        "E2-P4-V-017",
+        "E2-P4-V-018",
+        "E2-P4-V-021",
+        "E2-P4-V-022",
+        "E2-P4-V-023",
+        "E2-P4-V-024",
+        "E2-P4-V-025",
+        "E2-P4-V-027",
+        "E2-P4-V-028",
+        "E2-P4-V-029",
+        "E2-P4-V-030",
+        "E2-P4-V-031",
+        "E2-P4-V-033",
+        "E2-P4-V-034",
+        "E2-P4-V-035",
+        "E2-P4-V-036",
+        "E2-P4-V-037",
+        "E2-P4-V-038",
+        "E2-P4-V-039",
+        "E2-P4-V-040",
+        "E2-P4-V-041",
+        "E2-P4-V-042",
+        "E2-P4-V-043",
+        "E2-P4-V-046",
+        "E2-P4-V-057",
+        "E2-S1-V-007",
+        "E2-S1-V-008"
+      ],
+      "focus_remaining_geometry_ids": [
+        "E1-P1-C-016",
+        "E1-P1-C-017",
+        "E1-P1-M-004",
+        "E1-P1-M-010",
+        "E1-P1-M-016",
+        "E1-P1-M-020",
+        "E1-P1-M-021",
+        "E1-P1-M-022",
+        "E1-P1-M-023",
+        "E1-P1-M-024",
+        "E1-P1-M-031",
+        "E1-P1-M-034",
+        "E1-P1-M-035",
+        "E1-P1-M-036",
+        "E1-P1-M-037",
+        "E1-P1-V-068",
+        "E1-P1-V-072",
+        "E1-P1-V-098",
+        "E1-P2-M-003",
+        "E1-P2-M-005",
+        "E1-P2-M-007",
+        "E1-P2-M-008",
+        "E1-P2-M-009",
+        "E1-P2-M-010",
+        "E1-P2-V-055",
+        "E1-P2-V-075",
+        "E1-P3-M-003",
+        "E1-P3-M-005",
+        "E1-P3-M-007",
+        "E1-P3-M-008",
+        "E1-P3-M-009",
+        "E1-P3-M-010",
+        "E1-P4-M-003",
+        "E1-P4-M-007",
+        "E1-P4-M-008",
+        "E1-P4-M-009",
+        "E1-P4-M-010",
+        "E1-P4-M-012",
+        "E2-P4-V-004",
+        "E2-P4-V-005",
+        "E2-P4-V-006",
+        "E2-P4-V-007"
+      ],
+      "classification_counts": {
+        "FE_ADAPTER_ERROR": 58,
+        "REAL_CANTILEVER": 10,
+        "TRANSFERRED": 5,
+        "UNRESOLVED": 42
+      },
+      "validation_counts": {
+        "CONNECTED_EXPECTED": 63,
+        "DISCONNECTED_ERROR": 31,
+        "FREE_END_EXPECTED": 10,
+        "UNRESOLVED": 11
+      },
+      "beam_wall_connections": 106,
+      "wall_wall_connections": 0,
+      "wall_vertical_overlaps": 126,
+      "column_beam_connections": 711,
+      "node_count": 1563,
+      "fe_element_count": 856,
+      "constraint_count": 1482,
+      "geometry_elements_split_into_multiple_fe": 16,
+      "max_fe_segments_per_geometry": 3,
+      "crosswalk_required_fields": "PASS"
+    },
+    "status": "CANDIDATE_NOT_APPROVED_NOT_RUN",
+    "opensees_run": false
+  },
+  "results_policy": "P1L4_HISTORICAL_RESULTS_UNCHANGED"
+}

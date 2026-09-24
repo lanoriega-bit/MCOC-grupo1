@@ -1,0 +1,520 @@
+{
+  "summary": {
+    "baseline_commit": "d323e248434162bfc8cd5a888ad6578cd3600ac9",
+    "geometry_solids": 724,
+    "ED1_active_walls": 0,
+    "walls_excluded_this_revision": 44,
+    "support_visuals_excluded_this_revision": 7,
+    "FE_wall_only_supports_removed": 13,
+    "FE_members": 676,
+    "FE_pending": 6,
+    "FE_components": 4,
+    "FE_constraints": 1205,
+    "FE_supports": 33,
+    "pending_ids": [
+      "E1-S1-V-005",
+      "E2-P4-V-004",
+      "E2-P4-V-005",
+      "E2-P4-V-006",
+      "E2-P4-V-007",
+      "E2-P4-V-009"
+    ],
+    "new_pending_ids": [
+      "E1-S1-V-005"
+    ],
+    "current_results": "NONE",
+    "analysis_run": false
+  },
+  "checks": {
+    "ED1_ACTIVE_WALLS_ZERO": "PASS",
+    "COLUMN_SUPPORTS_PRESERVED": "PASS",
+    "SHARED_SUPPORTS_PRESERVED": "PASS",
+    "UNKNOWN_SUPPORTS_PRESERVED": "PASS",
+    "COLUMNS_PRESERVED": "PASS",
+    "SLABS_PRESERVED": "PASS",
+    "STABLE_IDS": "PASS",
+    "CROSSWALK": "PASS",
+    "NO_EXCLUDED_FE": "PASS",
+    "FE_INPUT_HASH": "PASS",
+    "NO_ANALYSIS": "PASS",
+    "LUIS_REFERENCE": "PASS",
+    "FE_COLUMN_SHARED_SUPPORTS_PRESERVED": "PASS",
+    "COLUMN_XY_TARGET": "PASS",
+    "COLUMN_Z_SECTION_MATERIAL_PRESERVED": "PASS",
+    "STABLE_GLOBAL_AXES": "PASS",
+    "STACK_VERTICALITY": "PASS",
+    "MERGED_BEAM_LENGTHS_NO_MICROSEGMENTS": "PASS",
+    "NO_DUPLICATE_FE_MEMBER": "PASS",
+    "NO_DUPLICATE_FE_NODE": "PASS",
+    "DELIVERED_TAGS_PRESERVED": "PASS",
+    "HISTORICAL_RESULT_INPUTS_UNCHANGED": "PASS",
+    "BEAM_FRAGMENTATION": "PASS_WITH_NOTE",
+    "COLUMN_ALIGNMENT": "PASS_WITH_NOTE",
+    "UNITY_COMPILE": "PASS",
+    "UNITY_PLAY": "PASS"
+  },
+  "FE_support_protection": [
+    {
+      "baseline_node": 85,
+      "coordinate": [
+        37.491,
+        -0.0,
+        0.0
+      ],
+      "building": "EDIFICIO_1",
+      "classification": "COLUMN_SUPPORT",
+      "retained_members": [
+        "E1-S1-C-004"
+      ],
+      "excluded_walls": [],
+      "action": "PRESERVE",
+      "preserved_after_rebuild": true
+    },
+    {
+      "baseline_node": 87,
+      "coordinate": [
+        37.491,
+        16.15,
+        0.0
+      ],
+      "building": "EDIFICIO_1",
+      "classification": "COLUMN_SUPPORT",
+      "retained_members": [
+        "E1-S1-C-006"
+      ],
+      "excluded_walls": [],
+      "action": "PRESERVE",
+      "preserved_after_rebuild": true
+    },
+    {
+      "baseline_node": 89,
+      "coordinate": [
+        37.491,
+        8.9,
+        0.0
+      ],
+      "building": "EDIFICIO_1",
+      "classification": "COLUMN_SUPPORT",
+      "retained_members": [
+        "E1-S1-C-005"
+      ],
+      "excluded_walls": [],
+      "action": "PRESERVE",
+      "preserved_after_rebuild": true
+    },
+    {
+      "baseline_node": 91,
+      "coordinate": [
+        27.516,
+        8.9,
+        0.0
+      ],
+      "building": "EDIFICIO_1",
+      "classification": "COLUMN_SUPPORT",
+      "retained_members": [
+        "E1-S1-C-002"
+      ],
+      "excluded_walls": [],
+      "action": "PRESERVE",
+      "preserved_after_rebuild": true
+    },
+    {
+      "baseline_node": 93,
+      "coordinate": [
+        27.491,
+        -0.0,
+        0.0
+      ],
+      "building": "EDIFICIO_1",
+      "classification": "COLUMN_SUPPORT",
+      "retained_members": [
+        "E1-S1-C-001"
+      ],
+      "excluded_walls": [],
+      "action": "PRESERVE",
+      "preserved_after_rebuild": true
+    },
+    {
+      "baseline_node": 95,
+      "coordinate": [
+        27.516,
+        16.15,
+        0.0
+      ],
+      "building": "EDIFICIO_1",
+      "classification": "COLUMN_SUPPORT",
+      "retained_members": [
+        "E1-S1-C-003"
+      ],
+      "excluded_walls": [],
+      "action": "PRESERVE",
+      "preserved_after_rebuild": true
+    },
+    {
+      "baseline_node": 97,
+      "coordinate": [
+        47.491,
+        8.9,
+        0.0
+      ],
+      "building": "EDIFICIO_1",
+      "classification": "COLUMN_SUPPORT",
+      "retained_members": [
+        "E1-S1-C-009"
+      ],
+      "excluded_walls": [],
+      "action": "PRESERVE",
+      "preserved_after_rebuild": true
+    },
+    {
+      "baseline_node": 99,
+      "coordinate": [
+        47.491,
+        16.15,
+        0.0
+      ],
+      "building": "EDIFICIO_1",
+      "classification": "COLUMN_SUPPORT",
+      "retained_members": [
+        "E1-S1-C-010"
+      ],
+      "excluded_walls": [],
+      "action": "PRESERVE",
+      "preserved_after_rebuild": true
+    },
+    {
+      "baseline_node": 101,
+      "coordinate": [
+        57.491,
+        16.15,
+        0.0
+      ],
+      "building": "EDIFICIO_1",
+      "classification": "COLUMN_SUPPORT",
+      "retained_members": [
+        "E1-S1-C-013"
+      ],
+      "excluded_walls": [],
+      "action": "PRESERVE",
+      "preserved_after_rebuild": true
+    },
+    {
+      "baseline_node": 103,
+      "coordinate": [
+        67.491,
+        16.15,
+        0.0
+      ],
+      "building": "EDIFICIO_1",
+      "classification": "COLUMN_SUPPORT",
+      "retained_members": [
+        "E1-S1-C-016"
+      ],
+      "excluded_walls": [],
+      "action": "PRESERVE",
+      "preserved_after_rebuild": true
+    },
+    {
+      "baseline_node": 105,
+      "coordinate": [
+        67.491,
+        8.9,
+        0.0
+      ],
+      "building": "EDIFICIO_1",
+      "classification": "COLUMN_SUPPORT",
+      "retained_members": [
+        "E1-S1-C-014"
+      ],
+      "excluded_walls": [],
+      "action": "PRESERVE",
+      "preserved_after_rebuild": true
+    },
+    {
+      "baseline_node": 107,
+      "coordinate": [
+        67.491,
+        0.0,
+        0.0
+      ],
+      "building": "EDIFICIO_1",
+      "classification": "COLUMN_SUPPORT",
+      "retained_members": [
+        "E1-S1-C-015"
+      ],
+      "excluded_walls": [],
+      "action": "PRESERVE",
+      "preserved_after_rebuild": true
+    },
+    {
+      "baseline_node": 109,
+      "coordinate": [
+        57.491,
+        0.0,
+        0.0
+      ],
+      "building": "EDIFICIO_1",
+      "classification": "COLUMN_SUPPORT",
+      "retained_members": [
+        "E1-S1-C-011"
+      ],
+      "excluded_walls": [],
+      "action": "PRESERVE",
+      "preserved_after_rebuild": true
+    },
+    {
+      "baseline_node": 111,
+      "coordinate": [
+        57.491,
+        8.9,
+        0.0
+      ],
+      "building": "EDIFICIO_1",
+      "classification": "COLUMN_SUPPORT",
+      "retained_members": [
+        "E1-S1-C-012"
+      ],
+      "excluded_walls": [],
+      "action": "PRESERVE",
+      "preserved_after_rebuild": true
+    },
+    {
+      "baseline_node": 113,
+      "coordinate": [
+        47.491,
+        0.0,
+        0.0
+      ],
+      "building": "EDIFICIO_1",
+      "classification": "COLUMN_SUPPORT",
+      "retained_members": [
+        "E1-S1-C-008"
+      ],
+      "excluded_walls": [],
+      "action": "PRESERVE",
+      "preserved_after_rebuild": true
+    },
+    {
+      "baseline_node": 115,
+      "coordinate": [
+        72.491,
+        0.0,
+        0.0
+      ],
+      "building": "EDIFICIO_1",
+      "classification": "COLUMN_SUPPORT",
+      "retained_members": [
+        "E1-S1-C-017"
+      ],
+      "excluded_walls": [],
+      "action": "PRESERVE",
+      "preserved_after_rebuild": true
+    },
+    {
+      "baseline_node": 117,
+      "coordinate": [
+        72.491,
+        16.15,
+        0.0
+      ],
+      "building": "EDIFICIO_1",
+      "classification": "COLUMN_SUPPORT",
+      "retained_members": [
+        "E1-S1-C-019"
+      ],
+      "excluded_walls": [],
+      "action": "PRESERVE",
+      "preserved_after_rebuild": true
+    },
+    {
+      "baseline_node": 119,
+      "coordinate": [
+        72.491,
+        8.9,
+        0.0
+      ],
+      "building": "EDIFICIO_1",
+      "classification": "COLUMN_SUPPORT",
+      "retained_members": [
+        "E1-S1-C-018"
+      ],
+      "excluded_walls": [],
+      "action": "PRESERVE",
+      "preserved_after_rebuild": true
+    },
+    {
+      "baseline_node": 121,
+      "coordinate": [
+        44.981,
+        16.332,
+        0.0
+      ],
+      "building": "EDIFICIO_1",
+      "classification": "COLUMN_SUPPORT",
+      "retained_members": [
+        "E1-S1-C-007"
+      ],
+      "excluded_walls": [],
+      "action": "PRESERVE",
+      "preserved_after_rebuild": true
+    }
+  ],
+  "beam_length_checks": [
+    {
+      "id": "E2-P4-V-060",
+      "FE_segments": 1,
+      "geometry_length_m": 8.0004,
+      "FE_length_m": 8.0,
+      "residual_m": 0.0004000000000008441,
+      "minimum_segment_m": 8.0
+    },
+    {
+      "id": "E2-P4-V-081",
+      "FE_segments": 1,
+      "geometry_length_m": 8.0004,
+      "FE_length_m": 8.0,
+      "residual_m": 0.0004000000000008441,
+      "minimum_segment_m": 8.0
+    },
+    {
+      "id": "E2-P4-V-085",
+      "FE_segments": 1,
+      "geometry_length_m": 4.800000000000001,
+      "FE_length_m": 4.800000000000001,
+      "residual_m": 0.0,
+      "minimum_segment_m": 4.800000000000001
+    },
+    {
+      "id": "E2-P4-V-071",
+      "FE_segments": 1,
+      "geometry_length_m": 8.0004,
+      "FE_length_m": 8.0,
+      "residual_m": 0.0004000000000008441,
+      "minimum_segment_m": 8.0
+    },
+    {
+      "id": "E2-P4-V-016",
+      "FE_segments": 1,
+      "geometry_length_m": 3.7650000000000006,
+      "FE_length_m": 3.7649999999999997,
+      "residual_m": 8.881784197001252e-16,
+      "minimum_segment_m": 3.7649999999999997
+    },
+    {
+      "id": "E2-P4-V-037",
+      "FE_segments": 1,
+      "geometry_length_m": 3.7650000000000006,
+      "FE_length_m": 3.7649999999999997,
+      "residual_m": 8.881784197001252e-16,
+      "minimum_segment_m": 3.7649999999999997
+    },
+    {
+      "id": "E1-S1-V-021",
+      "FE_segments": 1,
+      "geometry_length_m": 3.213200000000004,
+      "FE_length_m": 3.2129999999999974,
+      "residual_m": 0.0002000000000066393,
+      "minimum_segment_m": 3.2129999999999974
+    },
+    {
+      "id": "E1-P1-V-016",
+      "FE_segments": 1,
+      "geometry_length_m": 8.199900000000001,
+      "FE_length_m": 8.200000000000001,
+      "residual_m": 9.999999999976694e-05,
+      "minimum_segment_m": 8.200000000000001
+    },
+    {
+      "id": "E1-P1-V-044",
+      "FE_segments": 1,
+      "geometry_length_m": 8.199900000000001,
+      "FE_length_m": 8.200000000000001,
+      "residual_m": 9.999999999976694e-05,
+      "minimum_segment_m": 8.200000000000001
+    },
+    {
+      "id": "E1-P1-V-062",
+      "FE_segments": 1,
+      "geometry_length_m": 8.199900000000001,
+      "FE_length_m": 8.200000000000001,
+      "residual_m": 9.999999999976694e-05,
+      "minimum_segment_m": 8.200000000000001
+    },
+    {
+      "id": "E1-P1-V-107",
+      "FE_segments": 1,
+      "geometry_length_m": 8.199900000000001,
+      "FE_length_m": 8.200000000000001,
+      "residual_m": 9.999999999976694e-05,
+      "minimum_segment_m": 8.200000000000001
+    },
+    {
+      "id": "E1-P1-V-029",
+      "FE_segments": 1,
+      "geometry_length_m": 8.199900000000001,
+      "FE_length_m": 8.200000000000001,
+      "residual_m": 9.999999999976694e-05,
+      "minimum_segment_m": 8.200000000000001
+    },
+    {
+      "id": "E1-P1-V-054",
+      "FE_segments": 1,
+      "geometry_length_m": 8.199900000000001,
+      "FE_length_m": 8.200000000000001,
+      "residual_m": 9.999999999976694e-05,
+      "minimum_segment_m": 8.200000000000001
+    },
+    {
+      "id": "E1-P1-V-079",
+      "FE_segments": 1,
+      "geometry_length_m": 8.199900000000001,
+      "FE_length_m": 8.200000000000001,
+      "residual_m": 9.999999999976694e-05,
+      "minimum_segment_m": 8.200000000000001
+    },
+    {
+      "id": "E1-P2-V-021",
+      "FE_segments": 1,
+      "geometry_length_m": 3.469999999999999,
+      "FE_length_m": 3.469999999999999,
+      "residual_m": 0.0,
+      "minimum_segment_m": 3.469999999999999
+    },
+    {
+      "id": "E1-P2-V-041",
+      "FE_segments": 1,
+      "geometry_length_m": 3.469999999999999,
+      "FE_length_m": 3.469999999999999,
+      "residual_m": 0.0,
+      "minimum_segment_m": 3.469999999999999
+    }
+  ],
+  "column_displacement_distribution": {
+    "<=1cm": 36,
+    "1–5cm": 0,
+    "5–10cm": 0,
+    ">10cm": 38
+  },
+  "column_stacks_reviewed": 38,
+  "columns_reviewed": 143,
+  "columns_aligned": 74,
+  "new_beam_pairs_merged": 16,
+  "geometry_sha256": "e2a1924f7bb5ef4ec88622ce47727456094e0e1403eb376c9166237ca4bb7e77",
+  "fe_sha256": "e7ff0330f3cae157d6eeb0e01ba5d82b714e921da472118d60f3b494386832f1",
+  "unity_evidence": {
+    "build_log_sha256": "992a6aa396ed9babd5c3cda29d1f77f0435c0ab82f83ea12a3efebd999b94eb4",
+    "play_log_sha256": "c314595cdb4142ece2fd7c932128fc0baa86084cfa7c5d7396bffe4f5e685c4b",
+    "fresh_report_sha256": "fd032d0290627688795bd23d727f81d344b64050db2705455db7a1d86226c6f6",
+    "payload_sha256": {
+      "model_viewer.json": "b9476a8d8f611c423e2182aa7702fb552eb22daa986acea0874457f2b73d8c27",
+      "post_p1l3_fe_diagnostic.json": "a222f38bcebfc46dd46a5e020dcdca0b17418c6109acecc8242e9e7e99409b84",
+      "project_state.json": "c959f47b0ed59d3d350c4789910289828b3d04e5715f9e524b1a811cdac39402",
+      "current_dataset_contract.json": "e06f6ca49a6dfe280ed72bcd68868a17d5a112eecb2ae6290d4c2ba475b6cee2",
+      "fe_pending_review.json": "d724aa1401c1b7a275b6544f4ee3aed1b27d9a6d2d067443f51d741efc2b93a2",
+      "current_review_changes.json": "3f16075aefd093305c845d88409d9179b134afd433bd537f4d3dc072b7b82085",
+      "column_vertical_stacks.json": "9824d61f1376170f5cc5e8c264c531ce57c255f9b871d452af0a44eeadd1f17a"
+    },
+    "report": "PASS: current model; archived layers blocked; beam/column/wall/slab inspector; summary/results defaults; current identity negative gates; signed basis/NaN tests; building/floor filters; 1366x768 and 1920x1080; non-overlapping panels; local axes; historical opt-in; presentation isolation; fullscreen.",
+    "additional_tests": "38 stack isolation selections; S1 toggle; reset; full vertical framing at 1366x768 and 1920x1080; zero ED1 walls; absence of removed/absorbed IDs; unknown material remains unconfirmed."
+  }
+}

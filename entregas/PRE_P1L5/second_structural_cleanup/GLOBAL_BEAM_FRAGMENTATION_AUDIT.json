@@ -1,0 +1,7749 @@
+{
+  "baseline_commit": "d323e248434162bfc8cd5a888ad6578cd3600ac9",
+  "beams_audited": 511,
+  "tolerances": {
+    "angle_deg": 0.5,
+    "transverse_m": 0.01,
+    "gap_m": 0.2,
+    "overlap_m": 0.005,
+    "primary_face_offset_m": 0.003
+  },
+  "policy": "0.20m detects prior confirmed gaps 0.1745/0.091, does not authorize merging. Archived walls remain physical clues.",
+  "counts": {
+    "REVIEW_REQUIRED_PRIMARY_SUPPORT_JOINT_OR_OPENING": 19,
+    "REVIEW_REQUIRED_NO_UNEQUIVOCAL_CONTINUOUS_FACES": 26,
+    "ARTIFICIAL_BEAM_FRAGMENTATION_CONFIRMED": 16,
+    "REVIEW_REQUIRED_INFERRED_HEIGHT": 1,
+    "RETAIN_PRIMARY_SUPPORT_REVIEW": 5
+  },
+  "candidates": [
+    {
+      "beam_A": "E2-P4-V-028",
+      "beam_B": "E2-P4-V-034",
+      "gap_m": 0.13890000000000002,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_2 / P4 / Viga X entre A-B / Y 3",
+      "source_faces_A": [
+        "P4-E2-VB-0001",
+        "P4-E2-VB-0002"
+      ],
+      "source_faces_B": [
+        "P4-E2-VB-0001",
+        "P4-E2-VB-0002"
+      ],
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "endpoints_A": [
+        [
+          0.352,
+          16.1507,
+          19.400000000000002
+        ],
+        [
+          1.7668,
+          16.1507,
+          19.400000000000002
+        ]
+      ],
+      "endpoints_B": [
+        [
+          1.9057,
+          16.1507,
+          19.400000000000002
+        ],
+        [
+          3.452,
+          16.1507,
+          19.400000000000002
+        ]
+      ],
+      "bridge": [
+        [
+          1.7668,
+          16.1507,
+          19.400000000000002
+        ],
+        [
+          1.9057,
+          16.1507,
+          19.400000000000002
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": [
+            {
+              "handle": "4D420",
+              "face_id": "P4-E2-VB-0001",
+              "start": [
+                -0.29800366577582965,
+                16.45066819557772
+              ],
+              "end": [
+                4.05199633455414,
+                16.45066819557773
+              ],
+              "sheet": "2024_22-102.dxf"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "continuous_faces": [
+            {
+              "handle": "4D421",
+              "face_id": "P4-E2-VB-0002",
+              "start": [
+                0.3019963342241795,
+                15.85066819557771
+              ],
+              "end": [
+                3.45199633455414,
+                15.85066819557772
+              ],
+              "sheet": "2024_22-102.dxf"
+            }
+          ]
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_PRIMARY_SUPPORT_JOINT_OR_OPENING",
+      "nearby_primary_texts": [
+        {
+          "handle": "4D7E9",
+          "text": "V. 60/80",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            1.9872768833574992,
+            15.65780767262273
+          ]
+        },
+        {
+          "handle": "4D8BA",
+          "text": "PASADA ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            2.047444431449039,
+            16.719981825412688
+          ]
+        },
+        {
+          "handle": "4D8BB",
+          "text": "45/30",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            2.0530352126990397,
+            16.91841932541269
+          ]
+        },
+        {
+          "handle": "4E6CF",
+          "text": "+V.I. 20/90",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            2.0098057070075495,
+            16.29542376741548
+          ]
+        }
+      ],
+      "primary_discontinuity_annotations": [
+        {
+          "handle": "4D8BA",
+          "text": "PASADA ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            2.047444431449039,
+            16.719981825412688
+          ]
+        }
+      ],
+      "primary_support_or_joint_lines": []
+    },
+    {
+      "beam_A": "E2-P4-V-034",
+      "beam_B": "E2-P4-V-029",
+      "gap_m": 0,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_2 / P4 / Viga X entre A-B / Y 3",
+      "source_faces_A": [
+        "P4-E2-VB-0001",
+        "P4-E2-VB-0002"
+      ],
+      "source_faces_B": [
+        "P4-E2-VB-0159",
+        "P4-E2-VB-0160"
+      ],
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "endpoints_A": [
+        [
+          1.9057,
+          16.1507,
+          19.400000000000002
+        ],
+        [
+          3.452,
+          16.1507,
+          19.400000000000002
+        ]
+      ],
+      "endpoints_B": [
+        [
+          1.1057,
+          16.1507,
+          19.400000000000002
+        ],
+        [
+          1.9057,
+          16.1507,
+          19.400000000000002
+        ]
+      ],
+      "bridge": [
+        [
+          1.9057,
+          16.1507,
+          19.400000000000002
+        ],
+        [
+          1.9057,
+          16.1507,
+          19.400000000000002
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": [
+            {
+              "handle": "4D420",
+              "face_id": "P4-E2-VB-0001",
+              "start": [
+                -0.29800366577582965,
+                16.45066819557772
+              ],
+              "end": [
+                4.05199633455414,
+                16.45066819557773
+              ],
+              "sheet": "2024_22-102.dxf"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "continuous_faces": [
+            {
+              "handle": "4D421",
+              "face_id": "P4-E2-VB-0002",
+              "start": [
+                0.3019963342241795,
+                15.85066819557771
+              ],
+              "end": [
+                3.45199633455414,
+                15.85066819557772
+              ],
+              "sheet": "2024_22-102.dxf"
+            }
+          ]
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_PRIMARY_SUPPORT_JOINT_OR_OPENING",
+      "nearby_primary_texts": [
+        {
+          "handle": "4D7E9",
+          "text": "V. 60/80",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            1.9872768833574992,
+            15.65780767262273
+          ]
+        },
+        {
+          "handle": "4D8BA",
+          "text": "PASADA ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            2.047444431449039,
+            16.719981825412688
+          ]
+        },
+        {
+          "handle": "4D8BB",
+          "text": "45/30",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            2.0530352126990397,
+            16.91841932541269
+          ]
+        },
+        {
+          "handle": "4E6CF",
+          "text": "+V.I. 20/90",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            2.0098057070075495,
+            16.29542376741548
+          ]
+        }
+      ],
+      "primary_discontinuity_annotations": [
+        {
+          "handle": "4D8BA",
+          "text": "PASADA ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            2.047444431449039,
+            16.719981825412688
+          ]
+        }
+      ],
+      "primary_support_or_joint_lines": []
+    },
+    {
+      "beam_A": "E2-P4-V-077",
+      "beam_B": "E2-P4-V-074",
+      "gap_m": 0,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_2 / P4 / Viga X entre C-D/E / Y 3",
+      "source_faces_A": [
+        "P4-E2-VB-0007",
+        "P4-E2-VB-0010"
+      ],
+      "source_faces_B": [
+        "P4-E2-VB-0008",
+        "P4-E2-VB-0011"
+      ],
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "endpoints_A": [
+        [
+          19.6923,
+          16.1507,
+          19.400000000000002
+        ],
+        [
+          20.4923,
+          16.1507,
+          19.400000000000002
+        ]
+      ],
+      "endpoints_B": [
+        [
+          17.852,
+          16.1507,
+          19.400000000000002
+        ],
+        [
+          19.6923,
+          16.1507,
+          19.400000000000002
+        ]
+      ],
+      "bridge": [
+        [
+          19.6923,
+          16.1507,
+          19.400000000000002
+        ],
+        [
+          19.6923,
+          16.1507,
+          19.400000000000002
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": []
+        },
+        {
+          "side": 1,
+          "continuous_faces": []
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_NO_UNEQUIVOCAL_CONTINUOUS_FACES"
+    },
+    {
+      "beam_A": "E2-P4-V-077",
+      "beam_B": "E2-P4-V-078",
+      "gap_m": 0,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_2 / P4 / Viga X entre C-D/E / Y 3",
+      "source_faces_A": [
+        "P4-E2-VB-0007",
+        "P4-E2-VB-0010"
+      ],
+      "source_faces_B": [
+        "P4-E2-VB-0009",
+        "P4-E2-VB-0012"
+      ],
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "endpoints_A": [
+        [
+          19.6923,
+          16.1507,
+          19.400000000000002
+        ],
+        [
+          20.4923,
+          16.1507,
+          19.400000000000002
+        ]
+      ],
+      "endpoints_B": [
+        [
+          20.4923,
+          16.1507,
+          19.400000000000002
+        ],
+        [
+          22.202,
+          16.1507,
+          19.400000000000002
+        ]
+      ],
+      "bridge": [
+        [
+          20.4923,
+          16.1507,
+          19.400000000000002
+        ],
+        [
+          20.4923,
+          16.1507,
+          19.400000000000002
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": []
+        },
+        {
+          "side": 1,
+          "continuous_faces": []
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_NO_UNEQUIVOCAL_CONTINUOUS_FACES"
+    },
+    {
+      "beam_A": "E2-P4-V-072",
+      "beam_B": "E2-P4-V-073",
+      "gap_m": 0.12530000000000108,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_2 / P4 / Viga X C / Y entre 2-3",
+      "source_faces_A": [
+        "P4-E2-VB-0013",
+        "P4-E2-VB-0014"
+      ],
+      "source_faces_B": [
+        "P4-E2-VB-0013",
+        "P4-E2-VB-0014"
+      ],
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "endpoints_A": [
+        [
+          17.502,
+          9.2507,
+          19.400000000000002
+        ],
+        [
+          17.502,
+          13.9171,
+          19.400000000000002
+        ]
+      ],
+      "endpoints_B": [
+        [
+          17.502,
+          14.0424,
+          19.400000000000002
+        ],
+        [
+          17.502,
+          15.8007,
+          19.400000000000002
+        ]
+      ],
+      "bridge": [
+        [
+          17.502,
+          13.9171,
+          19.400000000000002
+        ],
+        [
+          17.502,
+          14.0424,
+          19.400000000000002
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": [
+            {
+              "handle": "4D435",
+              "face_id": "P4-E2-VB-0014",
+              "start": [
+                17.20199633400167,
+                15.80066819557776
+              ],
+              "end": [
+                17.201996334001677,
+                9.250668195514558
+              ],
+              "sheet": "2024_22-102.dxf"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "continuous_faces": [
+            {
+              "handle": "4D434",
+              "face_id": "P4-E2-VB-0013",
+              "start": [
+                17.801996334001668,
+                15.80066819557776
+              ],
+              "end": [
+                17.80199633400168,
+                9.250668195514558
+              ],
+              "sheet": "2024_22-102.dxf"
+            }
+          ]
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_PRIMARY_SUPPORT_JOINT_OR_OPENING",
+      "nearby_primary_texts": [
+        {
+          "handle": "4D89E",
+          "text": "PASADA ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            18.221407025914882,
+            13.54041277667174
+          ]
+        },
+        {
+          "handle": "4D89F",
+          "text": "45/30",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            18.206997807164882,
+            13.738850276671752
+          ]
+        },
+        {
+          "handle": "4F51E",
+          "text": "P.H.I 20x20 ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            18.12121382020804,
+            14.679939595720509
+          ]
+        },
+        {
+          "handle": "4F51F",
+          "text": "N.S.P.=12.29",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            18.1106115911112,
+            14.50519410594741
+          ]
+        }
+      ],
+      "primary_discontinuity_annotations": [
+        {
+          "handle": "4D89E",
+          "text": "PASADA ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            18.221407025914882,
+            13.54041277667174
+          ]
+        }
+      ],
+      "primary_support_or_joint_lines": []
+    },
+    {
+      "beam_A": "E2-P4-V-059",
+      "beam_B": "E2-P4-V-060",
+      "gap_m": 0.09099999999999997,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_2 / P4 / Viga X entre B-C / Y entre 1-2",
+      "source_faces_A": [
+        "P4-E2-VB-0018",
+        "P4-E2-VB-0019"
+      ],
+      "source_faces_B": [
+        "P4-E2-VB-0018",
+        "P4-E2-VB-0019"
+      ],
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "endpoints_A": [
+        [
+          12.502,
+          0.3507,
+          19.400000000000002
+        ],
+        [
+          12.502,
+          1.8257,
+          19.400000000000002
+        ]
+      ],
+      "endpoints_B": [
+        [
+          12.502,
+          1.9167,
+          19.400000000000002
+        ],
+        [
+          12.502,
+          8.3511,
+          19.400000000000002
+        ]
+      ],
+      "bridge": [
+        [
+          12.502,
+          1.8257,
+          19.400000000000002
+        ],
+        [
+          12.502,
+          1.9167,
+          19.400000000000002
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": [
+            {
+              "handle": "4D440",
+              "face_id": "P4-E2-VB-0019",
+              "start": [
+                12.201996334001679,
+                8.600668195514581
+              ],
+              "end": [
+                12.2019963340017,
+                0.3006681954945907
+              ],
+              "sheet": "2024_22-102.dxf"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "continuous_faces": [
+            {
+              "handle": "4D43F",
+              "face_id": "P4-E2-VB-0018",
+              "start": [
+                12.801996334001679,
+                8.600668195514581
+              ],
+              "end": [
+                12.801996334001702,
+                0.3006681954945907
+              ],
+              "sheet": "2024_22-102.dxf"
+            }
+          ]
+        }
+      ],
+      "decision": "ARTIFICIAL_BEAM_FRAGMENTATION_CONFIRMED",
+      "nearby_primary_texts": [
+        {
+          "handle": "4F34E",
+          "text": "P.H.I 20x20 ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            13.446213820430511,
+            1.8843811284268213
+          ]
+        },
+        {
+          "handle": "4F34F",
+          "text": "N.S.P.=12.29",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            13.435611591333682,
+            1.7096356386537082
+          ]
+        }
+      ],
+      "primary_discontinuity_annotations": [],
+      "primary_support_or_joint_lines": []
+    },
+    {
+      "beam_A": "E2-P4-V-080",
+      "beam_B": "E2-P4-V-081",
+      "gap_m": 0.09099999999999997,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_2 / P4 / Viga X entre C-D/E / Y entre 1-2",
+      "source_faces_A": [
+        "P4-E2-VB-0021",
+        "P4-E2-VB-0022"
+      ],
+      "source_faces_B": [
+        "P4-E2-VB-0021",
+        "P4-E2-VB-0022"
+      ],
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "endpoints_A": [
+        [
+          22.502,
+          0.3507,
+          19.400000000000002
+        ],
+        [
+          22.502,
+          1.8257,
+          19.400000000000002
+        ]
+      ],
+      "endpoints_B": [
+        [
+          22.502,
+          1.9167,
+          19.400000000000002
+        ],
+        [
+          22.502,
+          8.3511,
+          19.400000000000002
+        ]
+      ],
+      "bridge": [
+        [
+          22.502,
+          1.8257,
+          19.400000000000002
+        ],
+        [
+          22.502,
+          1.9167,
+          19.400000000000002
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": [
+            {
+              "handle": "4D447",
+              "face_id": "P4-E2-VB-0022",
+              "start": [
+                22.201996333871588,
+                8.600668195514581
+              ],
+              "end": [
+                22.201996333871612,
+                0.300668195494618
+              ],
+              "sheet": "2024_22-102.dxf"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "continuous_faces": [
+            {
+              "handle": "4D446",
+              "face_id": "P4-E2-VB-0021",
+              "start": [
+                22.8019963338716,
+                8.600668195514581
+              ],
+              "end": [
+                22.8019963338716,
+                0.300668195494618
+              ],
+              "sheet": "2024_22-102.dxf"
+            }
+          ]
+        }
+      ],
+      "decision": "ARTIFICIAL_BEAM_FRAGMENTATION_CONFIRMED",
+      "nearby_primary_texts": [],
+      "primary_discontinuity_annotations": [],
+      "primary_support_or_joint_lines": []
+    },
+    {
+      "beam_A": "E2-P4-V-082",
+      "beam_B": "E2-P4-V-083",
+      "gap_m": 0.12530000000000108,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_2 / P4 / Viga X entre C-D/E / Y entre 2-3",
+      "source_faces_A": [
+        "P4-E2-VB-0023",
+        "P4-E2-VB-0024"
+      ],
+      "source_faces_B": [
+        "P4-E2-VB-0023",
+        "P4-E2-VB-0024"
+      ],
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "endpoints_A": [
+        [
+          22.502,
+          9.2507,
+          19.400000000000002
+        ],
+        [
+          22.502,
+          13.9171,
+          19.400000000000002
+        ]
+      ],
+      "endpoints_B": [
+        [
+          22.502,
+          14.0424,
+          19.400000000000002
+        ],
+        [
+          22.502,
+          15.8007,
+          19.400000000000002
+        ]
+      ],
+      "bridge": [
+        [
+          22.502,
+          13.9171,
+          19.400000000000002
+        ],
+        [
+          22.502,
+          14.0424,
+          19.400000000000002
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": [
+            {
+              "handle": "4D44C",
+              "face_id": "P4-E2-VB-0023",
+              "start": [
+                22.201996333871612,
+                9.20066819551458
+              ],
+              "end": [
+                22.201996333871588,
+                15.85066819557778
+              ],
+              "sheet": "2024_22-102.dxf"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "continuous_faces": [
+            {
+              "handle": "4D44D",
+              "face_id": "P4-E2-VB-0024",
+              "start": [
+                22.8019963338716,
+                9.20066819551459
+              ],
+              "end": [
+                22.8019963338716,
+                15.85066819557778
+              ],
+              "sheet": "2024_22-102.dxf"
+            }
+          ]
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_PRIMARY_SUPPORT_JOINT_OR_OPENING",
+      "nearby_primary_texts": [
+        {
+          "handle": "4D8AA",
+          "text": "PASADA ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            23.22140702578476,
+            13.54041277667176
+          ]
+        },
+        {
+          "handle": "4D8AB",
+          "text": "45/30",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            23.20699780703476,
+            13.73885027667176
+          ]
+        }
+      ],
+      "primary_discontinuity_annotations": [
+        {
+          "handle": "4D8AA",
+          "text": "PASADA ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            23.22140702578476,
+            13.54041277667176
+          ]
+        }
+      ],
+      "primary_support_or_joint_lines": []
+    },
+    {
+      "beam_A": "E2-P4-V-085",
+      "beam_B": "E2-P4-V-090",
+      "gap_m": 0.17450000000000188,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_2 / P4 / Viga X entre C-D/E / Y 2",
+      "source_faces_A": [
+        "P4-E2-VB-0025",
+        "P4-E2-VB-0026"
+      ],
+      "source_faces_B": [
+        "P4-E2-VB-0025",
+        "P4-E2-VB-0026"
+      ],
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "endpoints_A": [
+        [
+          22.802,
+          8.9007,
+          19.400000000000002
+        ],
+        [
+          25.3923,
+          8.9007,
+          19.400000000000002
+        ]
+      ],
+      "endpoints_B": [
+        [
+          25.5668,
+          8.9007,
+          19.400000000000002
+        ],
+        [
+          27.602,
+          8.9007,
+          19.400000000000002
+        ]
+      ],
+      "bridge": [
+        [
+          25.3923,
+          8.9007,
+          19.400000000000002
+        ],
+        [
+          25.5668,
+          8.9007,
+          19.400000000000002
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": [
+            {
+              "handle": "4D452",
+              "face_id": "P4-E2-VB-0025",
+              "start": [
+                22.8019963338716,
+                9.20066819551459
+              ],
+              "end": [
+                27.601996334819624,
+                9.2006681955146
+              ],
+              "sheet": "2024_22-102.dxf"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "continuous_faces": [
+            {
+              "handle": "4D453",
+              "face_id": "P4-E2-VB-0026",
+              "start": [
+                22.8019963338716,
+                8.600668195514581
+              ],
+              "end": [
+                27.601996334819624,
+                8.600668195514599
+              ],
+              "sheet": "2024_22-102.dxf"
+            }
+          ]
+        }
+      ],
+      "decision": "ARTIFICIAL_BEAM_FRAGMENTATION_CONFIRMED",
+      "nearby_primary_texts": [
+        {
+          "handle": "4D7E5",
+          "text": "V. 60/80",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            25.287276883313922,
+            8.460147256743689
+          ]
+        }
+      ],
+      "primary_discontinuity_annotations": [],
+      "primary_support_or_joint_lines": []
+    },
+    {
+      "beam_A": "E2-P4-V-086",
+      "beam_B": "E2-P4-V-088",
+      "gap_m": 0,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_2 / P4 / Viga X entre C-D/E / Y 3",
+      "source_faces_A": [
+        "P4-E2-VB-0028",
+        "P4-E2-VB-0031"
+      ],
+      "source_faces_B": [
+        "P4-E2-VB-0027",
+        "P4-E2-VB-0030"
+      ],
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "endpoints_A": [
+        [
+          22.802,
+          16.1507,
+          19.400000000000002
+        ],
+        [
+          25.3923,
+          16.1507,
+          19.400000000000002
+        ]
+      ],
+      "endpoints_B": [
+        [
+          25.3923,
+          16.1507,
+          19.400000000000002
+        ],
+        [
+          26.1923,
+          16.1507,
+          19.400000000000002
+        ]
+      ],
+      "bridge": [
+        [
+          25.3923,
+          16.1507,
+          19.400000000000002
+        ],
+        [
+          25.3923,
+          16.1507,
+          19.400000000000002
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": []
+        },
+        {
+          "side": 1,
+          "continuous_faces": []
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_NO_UNEQUIVOCAL_CONTINUOUS_FACES"
+    },
+    {
+      "beam_A": "E2-P4-V-091",
+      "beam_B": "E2-P4-V-088",
+      "gap_m": 0,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_2 / P4 / Viga X entre C-D/E / Y 3",
+      "source_faces_A": [
+        "P4-E2-VB-0029",
+        "P4-E2-VB-0032"
+      ],
+      "source_faces_B": [
+        "P4-E2-VB-0027",
+        "P4-E2-VB-0030"
+      ],
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "endpoints_A": [
+        [
+          26.1923,
+          16.1507,
+          19.400000000000002
+        ],
+        [
+          27.602,
+          16.1507,
+          19.400000000000002
+        ]
+      ],
+      "endpoints_B": [
+        [
+          25.3923,
+          16.1507,
+          19.400000000000002
+        ],
+        [
+          26.1923,
+          16.1507,
+          19.400000000000002
+        ]
+      ],
+      "bridge": [
+        [
+          26.1923,
+          16.1507,
+          19.400000000000002
+        ],
+        [
+          26.1923,
+          16.1507,
+          19.400000000000002
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": []
+        },
+        {
+          "side": 1,
+          "continuous_faces": []
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_NO_UNEQUIVOCAL_CONTINUOUS_FACES"
+    },
+    {
+      "beam_A": "E2-P4-V-070",
+      "beam_B": "E2-P4-V-071",
+      "gap_m": 0.09099999999999997,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_2 / P4 / Viga X C / Y entre 1-2",
+      "source_faces_A": [
+        "P4-E2-VB-0033",
+        "P4-E2-VB-0034"
+      ],
+      "source_faces_B": [
+        "P4-E2-VB-0033",
+        "P4-E2-VB-0034"
+      ],
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "endpoints_A": [
+        [
+          17.502,
+          0.3507,
+          19.400000000000002
+        ],
+        [
+          17.502,
+          1.8257,
+          19.400000000000002
+        ]
+      ],
+      "endpoints_B": [
+        [
+          17.502,
+          1.9167,
+          19.400000000000002
+        ],
+        [
+          17.502,
+          8.3511,
+          19.400000000000002
+        ]
+      ],
+      "bridge": [
+        [
+          17.502,
+          1.8257,
+          19.400000000000002
+        ],
+        [
+          17.502,
+          1.9167,
+          19.400000000000002
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": [
+            {
+              "handle": "4D45F",
+              "face_id": "P4-E2-VB-0034",
+              "start": [
+                17.20199633400169,
+                8.55066819551456
+              ],
+              "end": [
+                17.20199633400171,
+                0.35066819549455885
+              ],
+              "sheet": "2024_22-102.dxf"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "continuous_faces": [
+            {
+              "handle": "4D45E",
+              "face_id": "P4-E2-VB-0033",
+              "start": [
+                17.801996334001693,
+                8.55066819551456
+              ],
+              "end": [
+                17.80199633400171,
+                0.35066819549455885
+              ],
+              "sheet": "2024_22-102.dxf"
+            }
+          ]
+        }
+      ],
+      "decision": "ARTIFICIAL_BEAM_FRAGMENTATION_CONFIRMED",
+      "nearby_primary_texts": [
+        {
+          "handle": "4F35C",
+          "text": "P.H.I 20x20 ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            18.12121382020804,
+            1.8843811284268213
+          ]
+        },
+        {
+          "handle": "4F35D",
+          "text": "N.S.P.=12.29",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            18.1106115911112,
+            1.7096356386537217
+          ]
+        }
+      ],
+      "primary_discontinuity_annotations": [],
+      "primary_support_or_joint_lines": []
+    },
+    {
+      "beam_A": "E2-P4-V-084",
+      "beam_B": "E2-P4-V-087",
+      "gap_m": 0,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_2 / P4 / Viga X entre C-D/E / Y 1",
+      "source_faces_A": [
+        "P4-E2-VB-0040",
+        "P4-E2-VB-0043"
+      ],
+      "source_faces_B": [
+        "P4-E2-VB-0039",
+        "P4-E2-VB-0042"
+      ],
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "endpoints_A": [
+        [
+          22.802,
+          0.0007,
+          19.400000000000002
+        ],
+        [
+          24.7668,
+          0.0007,
+          19.400000000000002
+        ]
+      ],
+      "endpoints_B": [
+        [
+          24.7668,
+          0.0007,
+          19.400000000000002
+        ],
+        [
+          25.5668,
+          0.0007,
+          19.400000000000002
+        ]
+      ],
+      "bridge": [
+        [
+          24.7668,
+          0.0007,
+          19.400000000000002
+        ],
+        [
+          24.7668,
+          0.0007,
+          19.400000000000002
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": []
+        },
+        {
+          "side": 1,
+          "continuous_faces": []
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_NO_UNEQUIVOCAL_CONTINUOUS_FACES"
+    },
+    {
+      "beam_A": "E2-P4-V-089",
+      "beam_B": "E2-P4-V-087",
+      "gap_m": 0,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_2 / P4 / Viga X entre C-D/E / Y 1",
+      "source_faces_A": [
+        "P4-E2-VB-0041",
+        "P4-E2-VB-0044"
+      ],
+      "source_faces_B": [
+        "P4-E2-VB-0039",
+        "P4-E2-VB-0042"
+      ],
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "endpoints_A": [
+        [
+          25.5668,
+          0.0007,
+          19.400000000000002
+        ],
+        [
+          27.152,
+          0.0007,
+          19.400000000000002
+        ]
+      ],
+      "endpoints_B": [
+        [
+          24.7668,
+          0.0007,
+          19.400000000000002
+        ],
+        [
+          25.5668,
+          0.0007,
+          19.400000000000002
+        ]
+      ],
+      "bridge": [
+        [
+          25.5668,
+          0.0007,
+          19.400000000000002
+        ],
+        [
+          25.5668,
+          0.0007,
+          19.400000000000002
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": []
+        },
+        {
+          "side": 1,
+          "continuous_faces": []
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_NO_UNEQUIVOCAL_CONTINUOUS_FACES"
+    },
+    {
+      "beam_A": "E2-P4-V-066",
+      "beam_B": "E2-P4-V-068",
+      "gap_m": 0,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_2 / P4 / Viga X entre B-C / Y 1",
+      "source_faces_A": [
+        "P4-E2-VB-0045",
+        "P4-E2-VB-0048"
+      ],
+      "source_faces_B": [
+        "P4-E2-VB-0046",
+        "P4-E2-VB-0049"
+      ],
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "endpoints_A": [
+        [
+          14.7675,
+          0.0007,
+          19.400000000000002
+        ],
+        [
+          15.5675,
+          0.0007,
+          19.400000000000002
+        ]
+      ],
+      "endpoints_B": [
+        [
+          15.5675,
+          0.0007,
+          19.400000000000002
+        ],
+        [
+          17.152,
+          0.0007,
+          19.400000000000002
+        ]
+      ],
+      "bridge": [
+        [
+          15.5675,
+          0.0007,
+          19.400000000000002
+        ],
+        [
+          15.5675,
+          0.0007,
+          19.400000000000002
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": []
+        },
+        {
+          "side": 1,
+          "continuous_faces": []
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_NO_UNEQUIVOCAL_CONTINUOUS_FACES"
+    },
+    {
+      "beam_A": "E2-P4-V-066",
+      "beam_B": "E2-P4-V-063",
+      "gap_m": 0,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_2 / P4 / Viga X entre B-C / Y 1",
+      "source_faces_A": [
+        "P4-E2-VB-0045",
+        "P4-E2-VB-0048"
+      ],
+      "source_faces_B": [
+        "P4-E2-VB-0047",
+        "P4-E2-VB-0050"
+      ],
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "endpoints_A": [
+        [
+          14.7675,
+          0.0007,
+          19.400000000000002
+        ],
+        [
+          15.5675,
+          0.0007,
+          19.400000000000002
+        ]
+      ],
+      "endpoints_B": [
+        [
+          12.802,
+          0.0007,
+          19.400000000000002
+        ],
+        [
+          14.7675,
+          0.0007,
+          19.400000000000002
+        ]
+      ],
+      "bridge": [
+        [
+          14.7675,
+          0.0007,
+          19.400000000000002
+        ],
+        [
+          14.7675,
+          0.0007,
+          19.400000000000002
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": []
+        },
+        {
+          "side": 1,
+          "continuous_faces": []
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_NO_UNEQUIVOCAL_CONTINUOUS_FACES"
+    },
+    {
+      "beam_A": "E2-P4-V-056",
+      "beam_B": "E2-P4-V-055",
+      "gap_m": 0.12480000000000047,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_2 / P4 / Viga X entre B-C / Y 1",
+      "source_faces_A": [
+        "P4-E2-VB-0052",
+        "P4-E2-VB-0055"
+      ],
+      "source_faces_B": [
+        "P4-E2-VB-0051",
+        "P4-E2-VB-0054"
+      ],
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "endpoints_A": [
+        [
+          10.4923,
+          0.0007,
+          19.400000000000002
+        ],
+        [
+          12.202,
+          0.0007,
+          19.400000000000002
+        ]
+      ],
+      "endpoints_B": [
+        [
+          9.5675,
+          0.0007,
+          19.400000000000002
+        ],
+        [
+          10.3675,
+          0.0007,
+          19.400000000000002
+        ]
+      ],
+      "bridge": [
+        [
+          10.4923,
+          0.0007,
+          19.400000000000002
+        ],
+        [
+          10.3675,
+          0.0007,
+          19.400000000000002
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": []
+        },
+        {
+          "side": 1,
+          "continuous_faces": []
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_NO_UNEQUIVOCAL_CONTINUOUS_FACES"
+    },
+    {
+      "beam_A": "E2-P4-V-052",
+      "beam_B": "E2-P4-V-055",
+      "gap_m": 0,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_2 / P4 / Viga X entre B-C / Y 1",
+      "source_faces_A": [
+        "P4-E2-VB-0053",
+        "P4-E2-VB-0056"
+      ],
+      "source_faces_B": [
+        "P4-E2-VB-0051",
+        "P4-E2-VB-0054"
+      ],
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "endpoints_A": [
+        [
+          7.852,
+          0.0007,
+          19.400000000000002
+        ],
+        [
+          9.5675,
+          0.0007,
+          19.400000000000002
+        ]
+      ],
+      "endpoints_B": [
+        [
+          9.5675,
+          0.0007,
+          19.400000000000002
+        ],
+        [
+          10.3675,
+          0.0007,
+          19.400000000000002
+        ]
+      ],
+      "bridge": [
+        [
+          9.5675,
+          0.0007,
+          19.400000000000002
+        ],
+        [
+          9.5675,
+          0.0007,
+          19.400000000000002
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": []
+        },
+        {
+          "side": 1,
+          "continuous_faces": []
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_NO_UNEQUIVOCAL_CONTINUOUS_FACES"
+    },
+    {
+      "beam_A": "E2-P4-V-050",
+      "beam_B": "E2-P4-V-051",
+      "gap_m": 0.12530000000000108,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_2 / P4 / Viga X B / Y entre 2-3",
+      "source_faces_A": [
+        "P4-E2-VB-0063",
+        "P4-E2-VB-0064"
+      ],
+      "source_faces_B": [
+        "P4-E2-VB-0063",
+        "P4-E2-VB-0064"
+      ],
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "endpoints_A": [
+        [
+          7.502,
+          9.2507,
+          19.400000000000002
+        ],
+        [
+          7.502,
+          13.9171,
+          19.400000000000002
+        ]
+      ],
+      "endpoints_B": [
+        [
+          7.502,
+          14.0424,
+          19.400000000000002
+        ],
+        [
+          7.502,
+          15.8007,
+          19.400000000000002
+        ]
+      ],
+      "bridge": [
+        [
+          7.502,
+          13.9171,
+          19.400000000000002
+        ],
+        [
+          7.502,
+          14.0424,
+          19.400000000000002
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": [
+            {
+              "handle": "4D497",
+              "face_id": "P4-E2-VB-0064",
+              "start": [
+                7.201996334884102,
+                15.800668195577709
+              ],
+              "end": [
+                7.20199633488412,
+                9.250668195514558
+              ],
+              "sheet": "2024_22-102.dxf"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "continuous_faces": [
+            {
+              "handle": "4D496",
+              "face_id": "P4-E2-VB-0063",
+              "start": [
+                7.8019963348841115,
+                15.800668195577709
+              ],
+              "end": [
+                7.80199633488412,
+                9.250668195514558
+              ],
+              "sheet": "2024_22-102.dxf"
+            }
+          ]
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_PRIMARY_SUPPORT_JOINT_OR_OPENING",
+      "nearby_primary_texts": [
+        {
+          "handle": "4D886",
+          "text": "PASADA ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            8.22140702679731,
+            13.54041277667171
+          ]
+        },
+        {
+          "handle": "4D887",
+          "text": "45/30",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            8.206997808047308,
+            13.73885027667171
+          ]
+        },
+        {
+          "handle": "4F502",
+          "text": "P.H.I 20x20 ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            8.446213820430511,
+            14.679939595720509
+          ]
+        },
+        {
+          "handle": "4F503",
+          "text": "N.S.P.=12.29",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            8.435611591333668,
+            14.505194105947401
+          ]
+        }
+      ],
+      "primary_discontinuity_annotations": [
+        {
+          "handle": "4D886",
+          "text": "PASADA ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            8.22140702679731,
+            13.54041277667171
+          ]
+        }
+      ],
+      "primary_support_or_joint_lines": []
+    },
+    {
+      "beam_A": "E2-P4-V-061",
+      "beam_B": "E2-P4-V-062",
+      "gap_m": 0.12530000000000108,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_2 / P4 / Viga X entre B-C / Y entre 2-3",
+      "source_faces_A": [
+        "P4-E2-VB-0065",
+        "P4-E2-VB-0066"
+      ],
+      "source_faces_B": [
+        "P4-E2-VB-0065",
+        "P4-E2-VB-0066"
+      ],
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "endpoints_A": [
+        [
+          12.502,
+          9.2507,
+          19.400000000000002
+        ],
+        [
+          12.502,
+          13.9171,
+          19.400000000000002
+        ]
+      ],
+      "endpoints_B": [
+        [
+          12.502,
+          14.0424,
+          19.400000000000002
+        ],
+        [
+          12.502,
+          15.8007,
+          19.400000000000002
+        ]
+      ],
+      "bridge": [
+        [
+          12.502,
+          13.9171,
+          19.400000000000002
+        ],
+        [
+          12.502,
+          14.0424,
+          19.400000000000002
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": [
+            {
+              "handle": "4D49C",
+              "face_id": "P4-E2-VB-0065",
+              "start": [
+                12.201996334377869,
+                9.20066819551459
+              ],
+              "end": [
+                12.20199633437786,
+                15.85066819557775
+              ],
+              "sheet": "2024_22-102.dxf"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "continuous_faces": [
+            {
+              "handle": "4D49D",
+              "face_id": "P4-E2-VB-0066",
+              "start": [
+                12.801996334377868,
+                9.20066819551459
+              ],
+              "end": [
+                12.80199633437786,
+                15.85066819557775
+              ],
+              "sheet": "2024_22-102.dxf"
+            }
+          ]
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_PRIMARY_SUPPORT_JOINT_OR_OPENING",
+      "nearby_primary_texts": [
+        {
+          "handle": "4D892",
+          "text": "PASADA ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            13.221407025914841,
+            13.540412776671731
+          ]
+        },
+        {
+          "handle": "4D893",
+          "text": "45/30",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            13.20699780716484,
+            13.73885027667172
+          ]
+        },
+        {
+          "handle": "4F510",
+          "text": "P.H.I 20x20 ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            13.446213820430511,
+            14.679939595720509
+          ]
+        },
+        {
+          "handle": "4F511",
+          "text": "N.S.P.=12.29",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            13.435611591333682,
+            14.505194105947401
+          ]
+        }
+      ],
+      "primary_discontinuity_annotations": [
+        {
+          "handle": "4D892",
+          "text": "PASADA ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            13.221407025914841,
+            13.540412776671731
+          ]
+        }
+      ],
+      "primary_support_or_joint_lines": []
+    },
+    {
+      "beam_A": "E2-P4-V-035",
+      "beam_B": "E2-P4-V-030",
+      "gap_m": 0,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_2 / P4 / Viga X entre A-B / Y 1",
+      "source_faces_A": [
+        "P4-E2-VB-0076",
+        "P4-E2-VB-0079"
+      ],
+      "source_faces_B": [
+        "P4-E2-VB-0075",
+        "P4-E2-VB-0078"
+      ],
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "endpoints_A": [
+        [
+          2.5668,
+          0.0007,
+          19.400000000000002
+        ],
+        [
+          3.452,
+          0.0007,
+          19.400000000000002
+        ]
+      ],
+      "endpoints_B": [
+        [
+          1.7668,
+          0.0007,
+          19.400000000000002
+        ],
+        [
+          2.5668,
+          0.0007,
+          19.400000000000002
+        ]
+      ],
+      "bridge": [
+        [
+          2.5668,
+          0.0007,
+          19.400000000000002
+        ],
+        [
+          2.5668,
+          0.0007,
+          19.400000000000002
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": []
+        },
+        {
+          "side": 1,
+          "continuous_faces": []
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_NO_UNEQUIVOCAL_CONTINUOUS_FACES"
+    },
+    {
+      "beam_A": "E2-P4-V-024",
+      "beam_B": "E2-P4-V-030",
+      "gap_m": 0,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_2 / P4 / Viga X entre A-B / Y 1",
+      "source_faces_A": [
+        "P4-E2-VB-0077",
+        "P4-E2-VB-0080"
+      ],
+      "source_faces_B": [
+        "P4-E2-VB-0075",
+        "P4-E2-VB-0078"
+      ],
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "endpoints_A": [
+        [
+          0.352,
+          0.0007,
+          19.400000000000002
+        ],
+        [
+          1.7668,
+          0.0007,
+          19.400000000000002
+        ]
+      ],
+      "endpoints_B": [
+        [
+          1.7668,
+          0.0007,
+          19.400000000000002
+        ],
+        [
+          2.5668,
+          0.0007,
+          19.400000000000002
+        ]
+      ],
+      "bridge": [
+        [
+          1.7668,
+          0.0007,
+          19.400000000000002
+        ],
+        [
+          1.7668,
+          0.0007,
+          19.400000000000002
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": []
+        },
+        {
+          "side": 1,
+          "continuous_faces": []
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_NO_UNEQUIVOCAL_CONTINUOUS_FACES"
+    },
+    {
+      "beam_A": "E2-P4-V-026",
+      "beam_B": "E2-P4-V-032",
+      "gap_m": 0.13890000000000002,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_2 / P4 / Viga X entre A-B / Y 2",
+      "source_faces_A": [
+        "P4-E2-VB-0081",
+        "P4-E2-VB-0082"
+      ],
+      "source_faces_B": [
+        "P4-E2-VB-0081",
+        "P4-E2-VB-0082"
+      ],
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "endpoints_A": [
+        [
+          0.352,
+          8.9007,
+          19.400000000000002
+        ],
+        [
+          1.7668,
+          8.9007,
+          19.400000000000002
+        ]
+      ],
+      "endpoints_B": [
+        [
+          1.9057,
+          8.9007,
+          19.400000000000002
+        ],
+        [
+          3.452,
+          8.9007,
+          19.400000000000002
+        ]
+      ],
+      "bridge": [
+        [
+          1.7668,
+          8.9007,
+          19.400000000000002
+        ],
+        [
+          1.9057,
+          8.9007,
+          19.400000000000002
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": [
+            {
+              "handle": "4D4BA",
+              "face_id": "P4-E2-VB-0081",
+              "start": [
+                0.35199633422419085,
+                9.200668195514568
+              ],
+              "end": [
+                3.451996334554151,
+                9.200668195514568
+              ],
+              "sheet": "2024_22-102.dxf"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "continuous_faces": [
+            {
+              "handle": "4D4BB",
+              "face_id": "P4-E2-VB-0082",
+              "start": [
+                0.35199633422419085,
+                8.600668195514567
+              ],
+              "end": [
+                3.451996334554151,
+                8.600668195514558
+              ],
+              "sheet": "2024_22-102.dxf"
+            }
+          ]
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_PRIMARY_SUPPORT_JOINT_OR_OPENING",
+      "nearby_primary_texts": [
+        {
+          "handle": "4D7E0",
+          "text": "V. 60/80",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            1.8350089604877007,
+            8.49149653498162
+          ]
+        },
+        {
+          "handle": "4D8C6",
+          "text": "PASADA ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            2.2474444314490505,
+            9.499981825349519
+          ]
+        },
+        {
+          "handle": "4D8C7",
+          "text": "45/30",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            2.053035212699051,
+            9.69841932534951
+          ]
+        }
+      ],
+      "primary_discontinuity_annotations": [
+        {
+          "handle": "4D8C6",
+          "text": "PASADA ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            2.2474444314490505,
+            9.499981825349519
+          ]
+        }
+      ],
+      "primary_support_or_joint_lines": []
+    },
+    {
+      "beam_A": "E2-P4-V-044",
+      "beam_B": "E2-P4-V-045",
+      "gap_m": 0,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_2 / P4 / Viga X entre A-B / Y 3",
+      "source_faces_A": [
+        "P4-E2-VB-0084",
+        "P4-E2-VB-0087"
+      ],
+      "source_faces_B": [
+        "P4-E2-VB-0083",
+        "P4-E2-VB-0086"
+      ],
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "endpoints_A": [
+        [
+          4.052,
+          16.1507,
+          19.400000000000002
+        ],
+        [
+          5.5923,
+          16.1507,
+          19.400000000000002
+        ]
+      ],
+      "endpoints_B": [
+        [
+          5.5923,
+          16.1507,
+          19.400000000000002
+        ],
+        [
+          6.3923,
+          16.1507,
+          19.400000000000002
+        ]
+      ],
+      "bridge": [
+        [
+          5.5923,
+          16.1507,
+          19.400000000000002
+        ],
+        [
+          5.5923,
+          16.1507,
+          19.400000000000002
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": []
+        },
+        {
+          "side": 1,
+          "continuous_faces": []
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_NO_UNEQUIVOCAL_CONTINUOUS_FACES"
+    },
+    {
+      "beam_A": "E2-P4-V-067",
+      "beam_B": "E2-P4-V-064",
+      "gap_m": 0,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_2 / P4 / Viga X entre B-C / Y 3",
+      "source_faces_A": [
+        "P4-E2-VB-0089",
+        "P4-E2-VB-0092"
+      ],
+      "source_faces_B": [
+        "P4-E2-VB-0090",
+        "P4-E2-VB-0093"
+      ],
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "endpoints_A": [
+        [
+          15.2923,
+          16.1507,
+          19.400000000000002
+        ],
+        [
+          16.0923,
+          16.1507,
+          19.400000000000002
+        ]
+      ],
+      "endpoints_B": [
+        [
+          12.802,
+          16.1507,
+          19.400000000000002
+        ],
+        [
+          15.2923,
+          16.1507,
+          19.400000000000002
+        ]
+      ],
+      "bridge": [
+        [
+          15.2923,
+          16.1507,
+          19.400000000000002
+        ],
+        [
+          15.2923,
+          16.1507,
+          19.400000000000002
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": []
+        },
+        {
+          "side": 1,
+          "continuous_faces": []
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_NO_UNEQUIVOCAL_CONTINUOUS_FACES"
+    },
+    {
+      "beam_A": "E2-P4-V-067",
+      "beam_B": "E2-P4-V-069",
+      "gap_m": 0,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_2 / P4 / Viga X entre B-C / Y 3",
+      "source_faces_A": [
+        "P4-E2-VB-0089",
+        "P4-E2-VB-0092"
+      ],
+      "source_faces_B": [
+        "P4-E2-VB-0091",
+        "P4-E2-VB-0094"
+      ],
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "endpoints_A": [
+        [
+          15.2923,
+          16.1507,
+          19.400000000000002
+        ],
+        [
+          16.0923,
+          16.1507,
+          19.400000000000002
+        ]
+      ],
+      "endpoints_B": [
+        [
+          16.0923,
+          16.1507,
+          19.400000000000002
+        ],
+        [
+          17.152,
+          16.1507,
+          19.400000000000002
+        ]
+      ],
+      "bridge": [
+        [
+          16.0923,
+          16.1507,
+          19.400000000000002
+        ],
+        [
+          16.0923,
+          16.1507,
+          19.400000000000002
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": []
+        },
+        {
+          "side": 1,
+          "continuous_faces": []
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_NO_UNEQUIVOCAL_CONTINUOUS_FACES"
+    },
+    {
+      "beam_A": "E2-P4-V-006",
+      "beam_B": "E2-P4-V-005",
+      "gap_m": 0,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.4,
+        0.8
+      ],
+      "section_B": [
+        0.4,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_2 / P4 / Viga X < A / Y entre 1-2",
+      "source_faces_A": [
+        "P4-E2-VB-0101",
+        "P4-E2-VB-0104"
+      ],
+      "source_faces_B": [
+        "P4-E2-VB-0101",
+        "P4-E2-VB-0106"
+      ],
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "endpoints_A": [
+        [
+          -3.548,
+          7.5511,
+          19.400000000000002
+        ],
+        [
+          -3.548,
+          8.3511,
+          19.400000000000002
+        ]
+      ],
+      "endpoints_B": [
+        [
+          -3.548,
+          6.8011,
+          19.400000000000002
+        ],
+        [
+          -3.548,
+          7.5511,
+          19.400000000000002
+        ]
+      ],
+      "bridge": [
+        [
+          -3.548,
+          7.5511,
+          19.400000000000002
+        ],
+        [
+          -3.548,
+          7.5511,
+          19.400000000000002
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": []
+        },
+        {
+          "side": 1,
+          "continuous_faces": [
+            {
+              "handle": "4D4F0",
+              "face_id": "P4-E2-VB-0101",
+              "start": [
+                -3.3480056825557902,
+                8.351070624669552
+              ],
+              "end": [
+                -3.3480056825557902,
+                6.8010706246701105
+              ],
+              "sheet": "2024_22-102.dxf"
+            }
+          ]
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_NO_UNEQUIVOCAL_CONTINUOUS_FACES"
+    },
+    {
+      "beam_A": "E2-P4-V-005",
+      "beam_B": "E2-P4-V-004",
+      "gap_m": 0,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.4,
+        0.8
+      ],
+      "section_B": [
+        0.4,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_2 / P4 / Viga X < A / Y entre 1-2",
+      "source_faces_A": [
+        "P4-E2-VB-0101",
+        "P4-E2-VB-0106"
+      ],
+      "source_faces_B": [
+        "P4-E2-VB-0103",
+        "P4-E2-VB-0106"
+      ],
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "endpoints_A": [
+        [
+          -3.548,
+          6.8011,
+          19.400000000000002
+        ],
+        [
+          -3.548,
+          7.5511,
+          19.400000000000002
+        ]
+      ],
+      "endpoints_B": [
+        [
+          -3.548,
+          4.4157,
+          19.400000000000002
+        ],
+        [
+          -3.548,
+          6.8011,
+          19.400000000000002
+        ]
+      ],
+      "bridge": [
+        [
+          -3.548,
+          6.8011,
+          19.400000000000002
+        ],
+        [
+          -3.548,
+          6.8011,
+          19.400000000000002
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": [
+            {
+              "handle": "4D4F5",
+              "face_id": "P4-E2-VB-0106",
+              "start": [
+                -3.748005682555811,
+                7.5510706246701105
+              ],
+              "end": [
+                -3.748005682555811,
+                4.115668195494841
+              ],
+              "sheet": "2024_22-102.dxf"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "continuous_faces": []
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_NO_UNEQUIVOCAL_CONTINUOUS_FACES"
+    },
+    {
+      "beam_A": "E2-P4-V-003",
+      "beam_B": "E2-P4-V-002",
+      "gap_m": 0,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.4,
+        0.8
+      ],
+      "section_B": [
+        0.4,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_2 / P4 / Viga X < A / Y entre 1-2",
+      "source_faces_A": [
+        "P4-E2-VB-0107",
+        "P4-E2-VB-0110"
+      ],
+      "source_faces_B": [
+        "P4-E2-VB-0107",
+        "P4-E2-VB-0112"
+      ],
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "endpoints_A": [
+        [
+          -3.548,
+          2.6667,
+          19.400000000000002
+        ],
+        [
+          -3.548,
+          3.4667,
+          19.400000000000002
+        ]
+      ],
+      "endpoints_B": [
+        [
+          -3.548,
+          1.9167,
+          19.400000000000002
+        ],
+        [
+          -3.548,
+          2.6667,
+          19.400000000000002
+        ]
+      ],
+      "bridge": [
+        [
+          -3.548,
+          2.6667,
+          19.400000000000002
+        ],
+        [
+          -3.548,
+          2.6667,
+          19.400000000000002
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": []
+        },
+        {
+          "side": 1,
+          "continuous_faces": [
+            {
+              "handle": "4D4F6",
+              "face_id": "P4-E2-VB-0107",
+              "start": [
+                -3.3480056825557902,
+                3.466722107373912
+              ],
+              "end": [
+                -3.3480056825557902,
+                1.9167221073744805
+              ],
+              "sheet": "2024_22-102.dxf"
+            }
+          ]
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_NO_UNEQUIVOCAL_CONTINUOUS_FACES"
+    },
+    {
+      "beam_A": "E2-P4-V-027",
+      "beam_B": "E2-P4-V-033",
+      "gap_m": 0.13890000000000002,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.3,
+        0.8
+      ],
+      "section_B": [
+        0.3,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_2 / P4 / Viga X entre A-B / Y entre 2-3",
+      "source_faces_A": [
+        "P4-E2-VB-0117",
+        "P4-E2-VB-0118"
+      ],
+      "source_faces_B": [
+        "P4-E2-VB-0117",
+        "P4-E2-VB-0118"
+      ],
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "endpoints_A": [
+        [
+          0.352,
+          11.8857,
+          19.400000000000002
+        ],
+        [
+          1.7668,
+          11.8857,
+          19.400000000000002
+        ]
+      ],
+      "endpoints_B": [
+        [
+          1.9057,
+          11.8857,
+          19.400000000000002
+        ],
+        [
+          3.452,
+          11.8857,
+          19.400000000000002
+        ]
+      ],
+      "bridge": [
+        [
+          1.7668,
+          11.8857,
+          19.400000000000002
+        ],
+        [
+          1.9057,
+          11.8857,
+          19.400000000000002
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": [
+            {
+              "handle": "4D566",
+              "face_id": "P4-E2-VB-0117",
+              "start": [
+                0.3019963342241795,
+                12.0356681954957
+              ],
+              "end": [
+                3.45199633455414,
+                12.03566819549568
+              ],
+              "sheet": "2024_22-102.dxf"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "continuous_faces": [
+            {
+              "handle": "4D567",
+              "face_id": "P4-E2-VB-0118",
+              "start": [
+                0.3019963342241795,
+                11.73566819549569
+              ],
+              "end": [
+                3.45199633455414,
+                11.73566819549568
+              ],
+              "sheet": "2024_22-102.dxf"
+            }
+          ]
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_PRIMARY_SUPPORT_JOINT_OR_OPENING",
+      "nearby_primary_texts": [
+        {
+          "handle": "4D84F",
+          "text": "V. 30/80",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            2.0387792690340802,
+            12.16948448933342
+          ]
+        },
+        {
+          "handle": "4D850",
+          "text": "402a",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            2.0106917690340698,
+            12.45688391414635
+          ]
+        },
+        {
+          "handle": "4D870",
+          "text": "PASADAS ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            0.7915546823873001,
+            12.423314172943401
+          ]
+        },
+        {
+          "handle": "4D872",
+          "text": "PASADA ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            0.721407026137299,
+            11.36041277667168
+          ]
+        },
+        {
+          "handle": "4D873",
+          "text": "45/30",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            0.7069978073872994,
+            11.55885027667168
+          ]
+        }
+      ],
+      "primary_discontinuity_annotations": [
+        {
+          "handle": "4D870",
+          "text": "PASADAS ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            0.7915546823873001,
+            12.423314172943401
+          ]
+        },
+        {
+          "handle": "4D872",
+          "text": "PASADA ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            0.721407026137299,
+            11.36041277667168
+          ]
+        }
+      ],
+      "primary_support_or_joint_lines": []
+    },
+    {
+      "beam_A": "E2-P4-V-025",
+      "beam_B": "E2-P4-V-031",
+      "gap_m": 0.13890000000000002,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.3,
+        0.8
+      ],
+      "section_B": [
+        0.3,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_2 / P4 / Viga X entre A-B / Y entre 1-2",
+      "source_faces_A": [
+        "P4-E2-VB-0119",
+        "P4-E2-VB-0120"
+      ],
+      "source_faces_B": [
+        "P4-E2-VB-0119",
+        "P4-E2-VB-0120"
+      ],
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "endpoints_A": [
+        [
+          0.352,
+          4.2657,
+          19.400000000000002
+        ],
+        [
+          1.7668,
+          4.2657,
+          19.400000000000002
+        ]
+      ],
+      "endpoints_B": [
+        [
+          1.9057,
+          4.2657,
+          19.400000000000002
+        ],
+        [
+          3.452,
+          4.2657,
+          19.400000000000002
+        ]
+      ],
+      "bridge": [
+        [
+          1.7668,
+          4.2657,
+          19.400000000000002
+        ],
+        [
+          1.9057,
+          4.2657,
+          19.400000000000002
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": [
+            {
+              "handle": "4D568",
+              "face_id": "P4-E2-VB-0119",
+              "start": [
+                0.3019963342241795,
+                4.415668195494841
+              ],
+              "end": [
+                3.451996334554151,
+                4.415668195494818
+              ],
+              "sheet": "2024_22-102.dxf"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "continuous_faces": [
+            {
+              "handle": "4D569",
+              "face_id": "P4-E2-VB-0120",
+              "start": [
+                0.3019963342241795,
+                4.115668195494831
+              ],
+              "end": [
+                3.451996334554151,
+                4.115668195494818
+              ],
+              "sheet": "2024_22-102.dxf"
+            }
+          ]
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_PRIMARY_SUPPORT_JOINT_OR_OPENING",
+      "nearby_primary_texts": [
+        {
+          "handle": "4D852",
+          "text": "V. 30/80",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            2.1141553741994787,
+            4.018385733195459
+          ]
+        },
+        {
+          "handle": "4D853",
+          "text": "407a",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            2.074961623430961,
+            3.7280966820560115
+          ]
+        },
+        {
+          "handle": "4D86C",
+          "text": "PASADA ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            0.7214070261373103,
+            4.723314172943401
+          ]
+        }
+      ],
+      "primary_discontinuity_annotations": [
+        {
+          "handle": "4D86C",
+          "text": "PASADA ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            0.7214070261373103,
+            4.723314172943401
+          ]
+        }
+      ],
+      "primary_support_or_joint_lines": []
+    },
+    {
+      "beam_A": "E2-P4-V-015",
+      "beam_B": "E2-P4-V-016",
+      "gap_m": 0.09099999999999997,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_2 / P4 / Viga X A / Y entre 1-2",
+      "source_faces_A": [
+        "P4-E2-VB-0121",
+        "P4-E2-VB-0122"
+      ],
+      "source_faces_B": [
+        "P4-E2-VB-0121",
+        "P4-E2-VB-0122"
+      ],
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "endpoints_A": [
+        [
+          0.002,
+          0.3507,
+          19.400000000000002
+        ],
+        [
+          0.002,
+          1.8257,
+          19.400000000000002
+        ]
+      ],
+      "endpoints_B": [
+        [
+          0.002,
+          1.9167,
+          19.400000000000002
+        ],
+        [
+          0.002,
+          4.1157,
+          19.400000000000002
+        ]
+      ],
+      "bridge": [
+        [
+          0.002,
+          1.8257,
+          19.400000000000002
+        ],
+        [
+          0.002,
+          1.9167,
+          19.400000000000002
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": [
+            {
+              "handle": "4D56A",
+              "face_id": "P4-E2-VB-0121",
+              "start": [
+                -0.29800366577582965,
+                0.30066819549453155
+              ],
+              "end": [
+                -0.29800366577582965,
+                4.11566819549485
+              ],
+              "sheet": "2024_22-102.dxf"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "continuous_faces": [
+            {
+              "handle": "4D56B",
+              "face_id": "P4-E2-VB-0122",
+              "start": [
+                0.3019963342241795,
+                0.30066819549453155
+              ],
+              "end": [
+                0.3019963342241795,
+                4.115668195494831
+              ],
+              "sheet": "2024_22-102.dxf"
+            }
+          ]
+        }
+      ],
+      "decision": "ARTIFICIAL_BEAM_FRAGMENTATION_CONFIRMED",
+      "nearby_primary_texts": [
+        {
+          "handle": "4D855",
+          "text": "V. 60/80",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            -0.396237365875761,
+            2.27288764652641
+          ]
+        },
+        {
+          "handle": "4F32B",
+          "text": "P.H.I 20x20 ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            0.9462138204305097,
+            1.8843811284268213
+          ]
+        },
+        {
+          "handle": "4F32C",
+          "text": "N.S.P.=12.29",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            0.9356115913336702,
+            1.7096356386537082
+          ]
+        }
+      ],
+      "primary_discontinuity_annotations": [],
+      "primary_support_or_joint_lines": []
+    },
+    {
+      "beam_A": "E2-P4-V-020",
+      "beam_B": "E2-P4-V-019",
+      "gap_m": 0,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_2 / P4 / Viga X A / Y entre 2-3",
+      "source_faces_A": [
+        "P4-E2-VB-0123",
+        "P4-E2-VB-0126"
+      ],
+      "source_faces_B": [
+        "P4-E2-VB-0124",
+        "P4-E2-VB-0127"
+      ],
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "endpoints_A": [
+        [
+          0.002,
+          10.3171,
+          19.400000000000002
+        ],
+        [
+          0.002,
+          11.1171,
+          19.400000000000002
+        ]
+      ],
+      "endpoints_B": [
+        [
+          0.002,
+          9.2507,
+          19.400000000000002
+        ],
+        [
+          0.002,
+          10.3171,
+          19.400000000000002
+        ]
+      ],
+      "bridge": [
+        [
+          0.002,
+          10.3171,
+          19.400000000000002
+        ],
+        [
+          0.002,
+          10.3171,
+          19.400000000000002
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": []
+        },
+        {
+          "side": 1,
+          "continuous_faces": []
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_NO_UNEQUIVOCAL_CONTINUOUS_FACES"
+    },
+    {
+      "beam_A": "E2-P4-V-021",
+      "beam_B": "E2-P4-V-022",
+      "gap_m": 0,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_2 / P4 / Viga X A / Y entre 2-3",
+      "source_faces_A": [
+        "P4-E2-VB-0130",
+        "P4-E2-VB-0133"
+      ],
+      "source_faces_B": [
+        "P4-E2-VB-0129",
+        "P4-E2-VB-0132"
+      ],
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "endpoints_A": [
+        [
+          0.002,
+          12.0357,
+          19.400000000000002
+        ],
+        [
+          0.002,
+          13.9171,
+          19.400000000000002
+        ]
+      ],
+      "endpoints_B": [
+        [
+          0.002,
+          13.9171,
+          19.400000000000002
+        ],
+        [
+          0.002,
+          14.7171,
+          19.400000000000002
+        ]
+      ],
+      "bridge": [
+        [
+          0.002,
+          13.9171,
+          19.400000000000002
+        ],
+        [
+          0.002,
+          13.9171,
+          19.400000000000002
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": []
+        },
+        {
+          "side": 1,
+          "continuous_faces": []
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_NO_UNEQUIVOCAL_CONTINUOUS_FACES"
+    },
+    {
+      "beam_A": "E2-P4-V-023",
+      "beam_B": "E2-P4-V-022",
+      "gap_m": 0,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_2 / P4 / Viga X A / Y entre 2-3",
+      "source_faces_A": [
+        "P4-E2-VB-0131",
+        "P4-E2-VB-0134"
+      ],
+      "source_faces_B": [
+        "P4-E2-VB-0129",
+        "P4-E2-VB-0132"
+      ],
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "endpoints_A": [
+        [
+          0.002,
+          14.7171,
+          19.400000000000002
+        ],
+        [
+          0.002,
+          15.8007,
+          19.400000000000002
+        ]
+      ],
+      "endpoints_B": [
+        [
+          0.002,
+          13.9171,
+          19.400000000000002
+        ],
+        [
+          0.002,
+          14.7171,
+          19.400000000000002
+        ]
+      ],
+      "bridge": [
+        [
+          0.002,
+          14.7171,
+          19.400000000000002
+        ],
+        [
+          0.002,
+          14.7171,
+          19.400000000000002
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": []
+        },
+        {
+          "side": 1,
+          "continuous_faces": []
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_NO_UNEQUIVOCAL_CONTINUOUS_FACES"
+    },
+    {
+      "beam_A": "E2-P4-V-018",
+      "beam_B": "E2-P4-V-017",
+      "gap_m": 0,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_2 / P4 / Viga X A / Y entre 1-2",
+      "source_faces_A": [
+        "P4-E2-VB-0135",
+        "P4-E2-VB-0138"
+      ],
+      "source_faces_B": [
+        "P4-E2-VB-0136",
+        "P4-E2-VB-0139"
+      ],
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "endpoints_A": [
+        [
+          0.002,
+          7.0171,
+          19.400000000000002
+        ],
+        [
+          0.002,
+          7.8171,
+          19.400000000000002
+        ]
+      ],
+      "endpoints_B": [
+        [
+          0.002,
+          4.4157,
+          19.400000000000002
+        ],
+        [
+          0.002,
+          7.0171,
+          19.400000000000002
+        ]
+      ],
+      "bridge": [
+        [
+          0.002,
+          7.0171,
+          19.400000000000002
+        ],
+        [
+          0.002,
+          7.0171,
+          19.400000000000002
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": []
+        },
+        {
+          "side": 1,
+          "continuous_faces": []
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_NO_UNEQUIVOCAL_CONTINUOUS_FACES"
+    },
+    {
+      "beam_A": "E2-P4-V-040",
+      "beam_B": "E2-P4-V-041",
+      "gap_m": 0.12530000000000108,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_2 / P4 / Viga X entre A-B / Y entre 2-3",
+      "source_faces_A": [
+        "P4-E2-VB-0141",
+        "P4-E2-VB-0142"
+      ],
+      "source_faces_B": [
+        "P4-E2-VB-0141",
+        "P4-E2-VB-0142"
+      ],
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "endpoints_A": [
+        [
+          3.752,
+          12.0357,
+          19.400000000000002
+        ],
+        [
+          3.752,
+          13.9171,
+          19.400000000000002
+        ]
+      ],
+      "endpoints_B": [
+        [
+          3.752,
+          14.0424,
+          19.400000000000002
+        ],
+        [
+          3.752,
+          15.8007,
+          19.400000000000002
+        ]
+      ],
+      "bridge": [
+        [
+          3.752,
+          13.9171,
+          19.400000000000002
+        ],
+        [
+          3.752,
+          14.0424,
+          19.400000000000002
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": [
+            {
+              "handle": "4D57F",
+              "face_id": "P4-E2-VB-0142",
+              "start": [
+                3.45199633455414,
+                15.85066819557772
+              ],
+              "end": [
+                3.45199633455414,
+                12.03566819549568
+              ],
+              "sheet": "2024_22-102.dxf"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "continuous_faces": [
+            {
+              "handle": "4D57E",
+              "face_id": "P4-E2-VB-0141",
+              "start": [
+                4.05199633455414,
+                15.85066819557772
+              ],
+              "end": [
+                4.05199633455414,
+                11.73566819549568
+              ],
+              "sheet": "2024_22-102.dxf"
+            }
+          ]
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_PRIMARY_SUPPORT_JOINT_OR_OPENING",
+      "nearby_primary_texts": [
+        {
+          "handle": "4D83D",
+          "text": "V. 60/80",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            3.32102800185,
+            13.39439486418951
+          ]
+        },
+        {
+          "handle": "4D83E",
+          "text": "400",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            3.030738950710529,
+            13.44371095870802
+          ]
+        },
+        {
+          "handle": "4D87A",
+          "text": "PASADA ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            4.471407026467291,
+            13.540412776671701
+          ]
+        },
+        {
+          "handle": "4D87B",
+          "text": "45/30",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            4.4569978077173005,
+            13.73885027667169
+          ]
+        },
+        {
+          "handle": "4F4F4",
+          "text": "P.H.I 20x20 ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            3.4462138204305095,
+            14.679939595720509
+          ]
+        },
+        {
+          "handle": "4F4F5",
+          "text": "N.S.P.=12.29",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            3.4356115913336702,
+            14.505194105947401
+          ]
+        }
+      ],
+      "primary_discontinuity_annotations": [
+        {
+          "handle": "4D87A",
+          "text": "PASADA ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            4.471407026467291,
+            13.540412776671701
+          ]
+        }
+      ],
+      "primary_support_or_joint_lines": []
+    },
+    {
+      "beam_A": "E2-P4-V-036",
+      "beam_B": "E2-P4-V-037",
+      "gap_m": 0.09099999999999997,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_2 / P4 / Viga X entre A-B / Y entre 1-2",
+      "source_faces_A": [
+        "P4-E2-VB-0147",
+        "P4-E2-VB-0148"
+      ],
+      "source_faces_B": [
+        "P4-E2-VB-0147",
+        "P4-E2-VB-0148"
+      ],
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "endpoints_A": [
+        [
+          3.752,
+          0.3507,
+          19.400000000000002
+        ],
+        [
+          3.752,
+          1.8257,
+          19.400000000000002
+        ]
+      ],
+      "endpoints_B": [
+        [
+          3.752,
+          1.9167,
+          19.400000000000002
+        ],
+        [
+          3.752,
+          4.1157,
+          19.400000000000002
+        ]
+      ],
+      "bridge": [
+        [
+          3.752,
+          1.8257,
+          19.400000000000002
+        ],
+        [
+          3.752,
+          1.9167,
+          19.400000000000002
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": [
+            {
+              "handle": "4D585",
+              "face_id": "P4-E2-VB-0148",
+              "start": [
+                3.451996334554151,
+                4.115668195494818
+              ],
+              "end": [
+                3.45199633455416,
+                0.30066819549454976
+              ],
+              "sheet": "2024_22-102.dxf"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "continuous_faces": [
+            {
+              "handle": "4D584",
+              "face_id": "P4-E2-VB-0147",
+              "start": [
+                4.0519963345541505,
+                4.115668195494818
+              ],
+              "end": [
+                4.05199633455416,
+                0.30066819549454976
+              ],
+              "sheet": "2024_22-102.dxf"
+            }
+          ]
+        }
+      ],
+      "decision": "ARTIFICIAL_BEAM_FRAGMENTATION_CONFIRMED",
+      "nearby_primary_texts": [
+        {
+          "handle": "4F332",
+          "text": "P.H.I 20x20 ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            3.4462138204305095,
+            1.8843811284268213
+          ]
+        },
+        {
+          "handle": "4F333",
+          "text": "N.S.P.=12.29",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            3.4356115913336702,
+            1.7096356386537082
+          ]
+        }
+      ],
+      "primary_discontinuity_annotations": [],
+      "primary_support_or_joint_lines": []
+    },
+    {
+      "beam_A": "E2-P4-V-045",
+      "beam_B": "E2-P4-V-047",
+      "gap_m": 0,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_2 / P4 / Viga X entre A-B / Y 3",
+      "source_faces_A": [
+        "P4-E2-VB-0083",
+        "P4-E2-VB-0086"
+      ],
+      "source_faces_B": [
+        "P4-E2-VB-0085",
+        "P4-E2-VB-0088"
+      ],
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "endpoints_A": [
+        [
+          5.5923,
+          16.1507,
+          19.400000000000002
+        ],
+        [
+          6.3923,
+          16.1507,
+          19.400000000000002
+        ]
+      ],
+      "endpoints_B": [
+        [
+          6.3923,
+          16.1507,
+          19.400000000000002
+        ],
+        [
+          7.152,
+          16.1507,
+          19.400000000000002
+        ]
+      ],
+      "bridge": [
+        [
+          6.3923,
+          16.1507,
+          19.400000000000002
+        ],
+        [
+          6.3923,
+          16.1507,
+          19.400000000000002
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": []
+        },
+        {
+          "side": 1,
+          "continuous_faces": []
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_NO_UNEQUIVOCAL_CONTINUOUS_FACES"
+    },
+    {
+      "beam_A": "E1-S1-V-019",
+      "beam_B": "E1-S1-V-021",
+      "gap_m": 0.08990000000000009,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_1 / S1 / Viga Eb-2",
+      "source_faces_A": [
+        "S1-VB-0001",
+        "S1-VB-0002"
+      ],
+      "source_faces_B": [
+        "S1-VB-0001",
+        "S1-VB-0002"
+      ],
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "endpoints_A": [
+        [
+          30.754100000000005,
+          9.0813,
+          3.5599999999999996
+        ],
+        [
+          32.0774,
+          9.0813,
+          3.5599999999999996
+        ]
+      ],
+      "endpoints_B": [
+        [
+          32.1673,
+          9.0813,
+          3.5599999999999996
+        ],
+        [
+          33.96730000000001,
+          9.0813,
+          3.5599999999999996
+        ]
+      ],
+      "bridge": [
+        [
+          32.0774,
+          9.0813,
+          3.5599999999999996
+        ],
+        [
+          32.1673,
+          9.0813,
+          3.5599999999999996
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": [
+            {
+              "handle": "1C103",
+              "face_id": "S1-VB-0001",
+              "start": [
+                27.84102726893962,
+                9.381265463480394
+              ],
+              "end": [
+                37.141027268910904,
+                9.381265463480432
+              ],
+              "sheet": "2017_67-101.dxf"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "continuous_faces": [
+            {
+              "handle": "1C104",
+              "face_id": "S1-VB-0002",
+              "start": [
+                27.84102726893962,
+                8.781265463480386
+              ],
+              "end": [
+                37.141027268910904,
+                8.78126546348043
+              ],
+              "sheet": "2017_67-101.dxf"
+            }
+          ]
+        }
+      ],
+      "decision": "ARTIFICIAL_BEAM_FRAGMENTATION_CONFIRMED",
+      "nearby_primary_texts": [
+        {
+          "handle": "1C253",
+          "text": "V. 60/80",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            32.244787956392,
+            8.468155952168637
+          ]
+        }
+      ],
+      "primary_discontinuity_annotations": [],
+      "primary_support_or_joint_lines": []
+    },
+    {
+      "beam_A": "E1-S1-V-021",
+      "beam_B": "E1-S1-V-018",
+      "gap_m": 0.19999999999998863,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_1 / S1 / Viga X entre Eb-Ec / Y 2",
+      "source_faces_A": [
+        "S1-VB-0001",
+        "S1-VB-0002"
+      ],
+      "source_faces_B": [
+        "S1-VB-0001",
+        "S1-VB-0002"
+      ],
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "endpoints_A": [
+        [
+          32.1673,
+          9.0813,
+          3.5599999999999996
+        ],
+        [
+          33.96730000000001,
+          9.0813,
+          3.5599999999999996
+        ]
+      ],
+      "endpoints_B": [
+        [
+          34.1673,
+          9.0813,
+          3.5599999999999996
+        ],
+        [
+          36.966300000000004,
+          9.0813,
+          3.5599999999999996
+        ]
+      ],
+      "bridge": [
+        [
+          33.96730000000001,
+          9.0813,
+          3.5599999999999996
+        ],
+        [
+          34.1673,
+          9.0813,
+          3.5599999999999996
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": [
+            {
+              "handle": "1C103",
+              "face_id": "S1-VB-0001",
+              "start": [
+                27.84102726893962,
+                9.381265463480394
+              ],
+              "end": [
+                37.141027268910904,
+                9.381265463480432
+              ],
+              "sheet": "2017_67-101.dxf"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "continuous_faces": [
+            {
+              "handle": "1C104",
+              "face_id": "S1-VB-0002",
+              "start": [
+                27.84102726893962,
+                8.781265463480386
+              ],
+              "end": [
+                37.141027268910904,
+                8.78126546348043
+              ],
+              "sheet": "2017_67-101.dxf"
+            }
+          ]
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_INFERRED_HEIGHT",
+      "nearby_primary_texts": [],
+      "primary_discontinuity_annotations": [],
+      "primary_support_or_joint_lines": []
+    },
+    {
+      "beam_A": "E1-S1-V-026",
+      "beam_B": "E1-S1-V-030",
+      "gap_m": 0.08990000000000009,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_1 / S1 / Viga Eb-1",
+      "source_faces_A": [
+        "S1-VB-0003",
+        "S1-VB-0004"
+      ],
+      "source_faces_B": [
+        "S1-VB-0003",
+        "S1-VB-0081"
+      ],
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "endpoints_A": [
+        [
+          30.754100000000005,
+          0.1313,
+          3.5599999999999996
+        ],
+        [
+          32.0774,
+          0.1313,
+          3.5599999999999996
+        ]
+      ],
+      "endpoints_B": [
+        [
+          32.1673,
+          0.1313,
+          3.5599999999999996
+        ],
+        [
+          33.96730000000001,
+          0.1313,
+          3.5599999999999996
+        ]
+      ],
+      "bridge": [
+        [
+          32.0774,
+          0.1313,
+          3.5599999999999996
+        ],
+        [
+          32.1673,
+          0.1313,
+          3.5599999999999996
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": [
+            {
+              "handle": "1C10A",
+              "face_id": "S1-VB-0003",
+              "start": [
+                27.84102726893964,
+                0.4312654634605678
+              ],
+              "end": [
+                37.14102726891091,
+                0.43126546346059513
+              ],
+              "sheet": "2017_67-101.dxf"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "continuous_faces": []
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_NO_UNEQUIVOCAL_CONTINUOUS_FACES"
+    },
+    {
+      "beam_A": "E1-S1-V-030",
+      "beam_B": "E1-S1-V-025",
+      "gap_m": 0.19999999999998863,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_1 / S1 / Viga X entre Eb-Ec / Y 1",
+      "source_faces_A": [
+        "S1-VB-0003",
+        "S1-VB-0081"
+      ],
+      "source_faces_B": [
+        "S1-VB-0003",
+        "S1-VB-0081"
+      ],
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "endpoints_A": [
+        [
+          32.1673,
+          0.1313,
+          3.5599999999999996
+        ],
+        [
+          33.96730000000001,
+          0.1313,
+          3.5599999999999996
+        ]
+      ],
+      "endpoints_B": [
+        [
+          34.1673,
+          0.1313,
+          3.5599999999999996
+        ],
+        [
+          36.966300000000004,
+          0.1313,
+          3.5599999999999996
+        ]
+      ],
+      "bridge": [
+        [
+          33.96730000000001,
+          0.1313,
+          3.5599999999999996
+        ],
+        [
+          34.1673,
+          0.1313,
+          3.5599999999999996
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": [
+            {
+              "handle": "1C10A",
+              "face_id": "S1-VB-0003",
+              "start": [
+                27.84102726893964,
+                0.4312654634605678
+              ],
+              "end": [
+                37.14102726891091,
+                0.43126546346059513
+              ],
+              "sheet": "2017_67-101.dxf"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "continuous_faces": [
+            {
+              "handle": "24467",
+              "face_id": "S1-VB-0081",
+              "start": [
+                32.16727726859009,
+                -0.16873453653943216
+              ],
+              "end": [
+                37.14102726891091,
+                -0.16873453653941398
+              ],
+              "sheet": "2017_67-101.dxf"
+            }
+          ]
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_PRIMARY_SUPPORT_JOINT_OR_OPENING",
+      "nearby_primary_texts": [
+        {
+          "handle": "1C27D",
+          "text": "V. 20/80",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            33.21001375465568,
+            -0.7411408564152953
+          ]
+        }
+      ],
+      "primary_discontinuity_annotations": [],
+      "primary_support_or_joint_lines": [
+        {
+          "handle": "1C117",
+          "layer": "RLE-MURO",
+          "xy": [
+            [
+              37.141027268910904,
+              0.031432118783995974
+            ],
+            [
+              33.967277268800316,
+              0.031432118783959594
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "beam_A": "E1-P1-V-012",
+      "beam_B": "E1-P1-V-016",
+      "gap_m": 0.19999999999999973,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_1 / P1 / Viga eje F entre 1-1''",
+      "source_faces_A": [
+        "P1-VB-0041",
+        "P1-VB-0042"
+      ],
+      "source_faces_B": [
+        "P1-VB-0041",
+        "P1-VB-0042"
+      ],
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "endpoints_A": [
+        [
+          37.491,
+          0.3501,
+          7.52
+        ],
+        [
+          37.491,
+          3.8001,
+          7.52
+        ]
+      ],
+      "endpoints_B": [
+        [
+          37.491,
+          4.0001,
+          7.52
+        ],
+        [
+          37.491,
+          8.55,
+          7.52
+        ]
+      ],
+      "bridge": [
+        [
+          37.491,
+          3.8001,
+          7.52
+        ],
+        [
+          37.491,
+          4.0001,
+          7.52
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": [
+            {
+              "handle": "1CE6C",
+              "face_id": "P1-VB-0041",
+              "start": [
+                37.19102726891085,
+                0.3499699026705184
+              ],
+              "end": [
+                37.19102726891083,
+                8.549969902690341
+              ],
+              "sheet": "2017_67-101.dxf"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "continuous_faces": [
+            {
+              "handle": "1CE6D",
+              "face_id": "P1-VB-0042",
+              "start": [
+                37.79102726891085,
+                0.3499699026705184
+              ],
+              "end": [
+                37.79102726891084,
+                8.549969902690341
+              ],
+              "sheet": "2017_67-101.dxf"
+            }
+          ]
+        }
+      ],
+      "decision": "ARTIFICIAL_BEAM_FRAGMENTATION_CONFIRMED",
+      "nearby_primary_texts": [
+        {
+          "handle": "1CF78",
+          "text": "V. 60/80",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            36.87791775759909,
+            4.42266439172799
+          ]
+        },
+        {
+          "handle": "283D4",
+          "text": "45/30",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            38.37863977565504,
+            3.2125215315078686
+          ]
+        }
+      ],
+      "primary_discontinuity_annotations": [],
+      "primary_support_or_joint_lines": []
+    },
+    {
+      "beam_A": "E1-P1-V-042",
+      "beam_B": "E1-P1-V-044",
+      "gap_m": 0.19999999999999973,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_1 / P1 / Viga eje G entre 1-1''",
+      "source_faces_A": [
+        "P1-VB-0050",
+        "P1-VB-0051"
+      ],
+      "source_faces_B": [
+        "P1-VB-0050",
+        "P1-VB-0051"
+      ],
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "endpoints_A": [
+        [
+          47.491,
+          0.3501,
+          7.52
+        ],
+        [
+          47.491,
+          3.8001,
+          7.52
+        ]
+      ],
+      "endpoints_B": [
+        [
+          47.491,
+          4.0001,
+          7.52
+        ],
+        [
+          47.491,
+          8.55,
+          7.52
+        ]
+      ],
+      "bridge": [
+        [
+          47.491,
+          3.8001,
+          7.52
+        ],
+        [
+          47.491,
+          4.0001,
+          7.52
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": [
+            {
+              "handle": "1CE76",
+              "face_id": "P1-VB-0050",
+              "start": [
+                47.19102726903349,
+                0.35013655796090914
+              ],
+              "end": [
+                47.19102726903348,
+                8.549969902690368
+              ],
+              "sheet": "2017_67-101.dxf"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "continuous_faces": [
+            {
+              "handle": "1CE77",
+              "face_id": "P1-VB-0051",
+              "start": [
+                47.7910272690335,
+                0.35013655796090914
+              ],
+              "end": [
+                47.79102726903348,
+                8.549969902690368
+              ],
+              "sheet": "2017_67-101.dxf"
+            }
+          ]
+        }
+      ],
+      "decision": "ARTIFICIAL_BEAM_FRAGMENTATION_CONFIRMED",
+      "nearby_primary_texts": [
+        {
+          "handle": "1CF74",
+          "text": "V. 60/80",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            46.87791775772173,
+            4.422747719373201
+          ]
+        },
+        {
+          "handle": "283D8",
+          "text": "45/30",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            48.386440405408194,
+            3.2125215315079005
+          ]
+        }
+      ],
+      "primary_discontinuity_annotations": [],
+      "primary_support_or_joint_lines": []
+    },
+    {
+      "beam_A": "E1-P1-V-060",
+      "beam_B": "E1-P1-V-062",
+      "gap_m": 0.19999999999999973,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_1 / P1 / Viga eje H entre 1-1''",
+      "source_faces_A": [
+        "P1-VB-0054",
+        "P1-VB-0055"
+      ],
+      "source_faces_B": [
+        "P1-VB-0054",
+        "P1-VB-0055"
+      ],
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "endpoints_A": [
+        [
+          57.491,
+          0.3501,
+          7.52
+        ],
+        [
+          57.491,
+          3.8001,
+          7.52
+        ]
+      ],
+      "endpoints_B": [
+        [
+          57.491,
+          4.0001,
+          7.52
+        ],
+        [
+          57.491,
+          8.55,
+          7.52
+        ]
+      ],
+      "bridge": [
+        [
+          57.491,
+          3.8001,
+          7.52
+        ],
+        [
+          57.491,
+          4.0001,
+          7.52
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": [
+            {
+              "handle": "1CE7C",
+              "face_id": "P1-VB-0054",
+              "start": [
+                57.191027268962294,
+                0.3501365579609501
+              ],
+              "end": [
+                57.191027268962266,
+                8.549969902690409
+              ],
+              "sheet": "2017_67-101.dxf"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "continuous_faces": [
+            {
+              "handle": "1CE7D",
+              "face_id": "P1-VB-0055",
+              "start": [
+                57.791027268962296,
+                0.3501365579609501
+              ],
+              "end": [
+                57.791027268962274,
+                8.549969902690409
+              ],
+              "sheet": "2017_67-101.dxf"
+            }
+          ]
+        }
+      ],
+      "decision": "ARTIFICIAL_BEAM_FRAGMENTATION_CONFIRMED",
+      "nearby_primary_texts": [
+        {
+          "handle": "1CF70",
+          "text": "V. 60/80",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            56.87791775765051,
+            4.422747719373242
+          ]
+        },
+        {
+          "handle": "283DC",
+          "text": "45/30",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            58.39540096584847,
+            3.2125215315079276
+          ]
+        }
+      ],
+      "primary_discontinuity_annotations": [],
+      "primary_support_or_joint_lines": []
+    },
+    {
+      "beam_A": "E1-P1-V-094",
+      "beam_B": "E1-P1-V-096",
+      "gap_m": 0.19999999999999973,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_1 / P1 / Viga eje I entre 1-1''",
+      "source_faces_A": [
+        "P1-VB-0058",
+        "P1-VB-0060"
+      ],
+      "source_faces_B": [
+        "P1-VB-0058",
+        "P1-VB-0060"
+      ],
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "endpoints_A": [
+        [
+          67.491,
+          0.3501,
+          7.52
+        ],
+        [
+          67.491,
+          3.8001,
+          7.52
+        ]
+      ],
+      "endpoints_B": [
+        [
+          67.491,
+          4.0001,
+          7.52
+        ],
+        [
+          67.491,
+          8.55,
+          7.52
+        ]
+      ],
+      "bridge": [
+        [
+          67.491,
+          3.8001,
+          7.52
+        ],
+        [
+          67.491,
+          4.0001,
+          7.52
+        ]
+      ],
+      "intermediate_physical_supports": [
+        "E1-P1-M-028"
+      ],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": [
+            {
+              "handle": "1CE80",
+              "face_id": "P1-VB-0058",
+              "start": [
+                67.19102726889396,
+                0.3501365579609819
+              ],
+              "end": [
+                67.19102726889396,
+                8.54996990269044
+              ],
+              "sheet": "2017_67-101.dxf"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "continuous_faces": [
+            {
+              "handle": "1CE82",
+              "face_id": "P1-VB-0060",
+              "start": [
+                67.79102726889397,
+                0.3501365579609819
+              ],
+              "end": [
+                67.79102726889396,
+                8.54996990269044
+              ],
+              "sheet": "2017_67-101.dxf"
+            }
+          ]
+        }
+      ],
+      "decision": "RETAIN_PRIMARY_SUPPORT_REVIEW"
+    },
+    {
+      "beam_A": "E1-P1-V-001",
+      "beam_B": "E1-P1-V-002",
+      "gap_m": 0.19999999999999973,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_1 / P1 / Viga eje D/E entre 1-1''",
+      "source_faces_A": [
+        "P1-VB-0063",
+        "P1-VB-0064"
+      ],
+      "source_faces_B": [
+        "P1-VB-0065",
+        "P1-VB-0066"
+      ],
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "endpoints_A": [
+        [
+          27.491000000000003,
+          0.3501,
+          7.52
+        ],
+        [
+          27.491000000000003,
+          3.8001,
+          7.52
+        ]
+      ],
+      "endpoints_B": [
+        [
+          27.491000000000003,
+          4.0001,
+          7.52
+        ],
+        [
+          27.491000000000003,
+          8.55,
+          7.52
+        ]
+      ],
+      "bridge": [
+        [
+          27.491000000000003,
+          3.8001,
+          7.52
+        ],
+        [
+          27.491000000000003,
+          4.0001,
+          7.52
+        ]
+      ],
+      "intermediate_physical_supports": [
+        "E1-P1-M-003"
+      ],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": []
+        },
+        {
+          "side": 1,
+          "continuous_faces": []
+        }
+      ],
+      "decision": "RETAIN_PRIMARY_SUPPORT_REVIEW"
+    },
+    {
+      "beam_A": "E1-P1-V-105",
+      "beam_B": "E1-P1-V-107",
+      "gap_m": 0.19999999999999973,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_1 / P1 / Viga eje I' entre 1-1''",
+      "source_faces_A": [
+        "P1-VB-0068",
+        "P1-VB-0069"
+      ],
+      "source_faces_B": [
+        "P1-VB-0068",
+        "P1-VB-0069"
+      ],
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "endpoints_A": [
+        [
+          72.491,
+          0.3501,
+          7.52
+        ],
+        [
+          72.491,
+          3.8001,
+          7.52
+        ]
+      ],
+      "endpoints_B": [
+        [
+          72.491,
+          4.0001,
+          7.52
+        ],
+        [
+          72.491,
+          8.55,
+          7.52
+        ]
+      ],
+      "bridge": [
+        [
+          72.491,
+          3.8001,
+          7.52
+        ],
+        [
+          72.491,
+          4.0001,
+          7.52
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": [
+            {
+              "handle": "1CE8B",
+              "face_id": "P1-VB-0068",
+              "start": [
+                72.19102726889946,
+                0.350136557960991
+              ],
+              "end": [
+                72.19102726890019,
+                8.55013655799471
+              ],
+              "sheet": "2017_67-101.dxf"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "continuous_faces": [
+            {
+              "handle": "1CE8C",
+              "face_id": "P1-VB-0069",
+              "start": [
+                72.79102726889946,
+                0.350136557960991
+              ],
+              "end": [
+                72.7910272689002,
+                8.55013655799471
+              ],
+              "sheet": "2017_67-101.dxf"
+            }
+          ]
+        }
+      ],
+      "decision": "ARTIFICIAL_BEAM_FRAGMENTATION_CONFIRMED",
+      "nearby_primary_texts": [
+        {
+          "handle": "1CF7F",
+          "text": "V. 60/80",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            71.87791775758805,
+            4.422831047025438
+          ]
+        }
+      ],
+      "primary_discontinuity_annotations": [],
+      "primary_support_or_joint_lines": []
+    },
+    {
+      "beam_A": "E1-P1-V-026",
+      "beam_B": "E1-P1-V-029",
+      "gap_m": 0.19999999999999973,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_1 / P1 / Viga X entre F-G / Y entre 1-1''",
+      "source_faces_A": [
+        "P1-VB-0072",
+        "P1-VB-0073"
+      ],
+      "source_faces_B": [
+        "P1-VB-0072",
+        "P1-VB-0073"
+      ],
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "endpoints_A": [
+        [
+          42.491,
+          0.3501,
+          7.52
+        ],
+        [
+          42.491,
+          3.8001,
+          7.52
+        ]
+      ],
+      "endpoints_B": [
+        [
+          42.491,
+          4.0001,
+          7.52
+        ],
+        [
+          42.491,
+          8.55,
+          7.52
+        ]
+      ],
+      "bridge": [
+        [
+          42.491,
+          3.8001,
+          7.52
+        ],
+        [
+          42.491,
+          4.0001,
+          7.52
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": [
+            {
+              "handle": "1CE8F",
+              "face_id": "P1-VB-0072",
+              "start": [
+                42.191027268972185,
+                0.2999699026705321
+              ],
+              "end": [
+                42.191027268972164,
+                8.59996990269035
+              ],
+              "sheet": "2017_67-101.dxf"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "continuous_faces": [
+            {
+              "handle": "1CE90",
+              "face_id": "P1-VB-0073",
+              "start": [
+                42.79102726897219,
+                0.2999699026705321
+              ],
+              "end": [
+                42.79102726897217,
+                8.59996990269036
+              ],
+              "sheet": "2017_67-101.dxf"
+            }
+          ]
+        }
+      ],
+      "decision": "ARTIFICIAL_BEAM_FRAGMENTATION_CONFIRMED",
+      "nearby_primary_texts": [
+        {
+          "handle": "1CF75",
+          "text": "V. 60/80",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            41.87791775766042,
+            4.422664391727999
+          ]
+        },
+        {
+          "handle": "283D2",
+          "text": "45/30",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            43.40722319297894,
+            3.2125215315078774
+          ]
+        },
+        {
+          "handle": "28C6D",
+          "text": "101",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            42.01813276912613,
+            3.2607902287555315
+          ]
+        }
+      ],
+      "primary_discontinuity_annotations": [],
+      "primary_support_or_joint_lines": []
+    },
+    {
+      "beam_A": "E1-P1-V-050",
+      "beam_B": "E1-P1-V-054",
+      "gap_m": 0.19999999999999973,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_1 / P1 / Viga X entre Ga-H / Y entre 1-1''",
+      "source_faces_A": [
+        "P1-VB-0076",
+        "P1-VB-0077"
+      ],
+      "source_faces_B": [
+        "P1-VB-0076",
+        "P1-VB-0077"
+      ],
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "endpoints_A": [
+        [
+          52.491,
+          0.3501,
+          7.52
+        ],
+        [
+          52.491,
+          3.8001,
+          7.52
+        ]
+      ],
+      "endpoints_B": [
+        [
+          52.491,
+          4.0001,
+          7.52
+        ],
+        [
+          52.491,
+          8.55,
+          7.52
+        ]
+      ],
+      "bridge": [
+        [
+          52.491,
+          3.8001,
+          7.52
+        ],
+        [
+          52.491,
+          4.0001,
+          7.52
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": [
+            {
+              "handle": "1CE93",
+              "face_id": "P1-VB-0076",
+              "start": [
+                52.191027268900974,
+                0.29996990267055934
+              ],
+              "end": [
+                52.19102726890095,
+                8.599969902690383
+              ],
+              "sheet": "2017_67-101.dxf"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "continuous_faces": [
+            {
+              "handle": "1CE94",
+              "face_id": "P1-VB-0077",
+              "start": [
+                52.791027268900976,
+                0.29996990267055934
+              ],
+              "end": [
+                52.79102726890096,
+                8.599969902690383
+              ],
+              "sheet": "2017_67-101.dxf"
+            }
+          ]
+        }
+      ],
+      "decision": "ARTIFICIAL_BEAM_FRAGMENTATION_CONFIRMED",
+      "nearby_primary_texts": [
+        {
+          "handle": "1CF71",
+          "text": "V. 60/80",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            51.877917757589216,
+            4.4226643917280395
+          ]
+        },
+        {
+          "handle": "283AC",
+          "text": "45/30",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            53.386439649620044,
+            3.2125215315079187
+          ]
+        },
+        {
+          "handle": "28C73",
+          "text": "103",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            52.01813276905492,
+            3.2607902287555497
+          ]
+        }
+      ],
+      "primary_discontinuity_annotations": [],
+      "primary_support_or_joint_lines": []
+    },
+    {
+      "beam_A": "E1-P1-V-076",
+      "beam_B": "E1-P1-V-079",
+      "gap_m": 0.19999999999999973,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_1 / P1 / Viga X entre H'-H2 / Y entre 1-1''",
+      "source_faces_A": [
+        "P1-VB-0080",
+        "P1-VB-0081"
+      ],
+      "source_faces_B": [
+        "P1-VB-0080",
+        "P1-VB-0081"
+      ],
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "endpoints_A": [
+        [
+          62.491,
+          0.3501,
+          7.52
+        ],
+        [
+          62.491,
+          3.8001,
+          7.52
+        ]
+      ],
+      "endpoints_B": [
+        [
+          62.491,
+          4.0001,
+          7.52
+        ],
+        [
+          62.491,
+          8.55,
+          7.52
+        ]
+      ],
+      "bridge": [
+        [
+          62.491,
+          3.8001,
+          7.52
+        ],
+        [
+          62.491,
+          4.0001,
+          7.52
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": [
+            {
+              "handle": "1CE97",
+              "face_id": "P1-VB-0080",
+              "start": [
+                62.19102726883265,
+                0.2999699026705821
+              ],
+              "end": [
+                62.191027268832634,
+                8.59996990269041
+              ],
+              "sheet": "2017_67-101.dxf"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "continuous_faces": [
+            {
+              "handle": "1CE98",
+              "face_id": "P1-VB-0081",
+              "start": [
+                62.79102726883264,
+                0.2999699026705821
+              ],
+              "end": [
+                62.79102726883262,
+                8.59996990269041
+              ],
+              "sheet": "2017_67-101.dxf"
+            }
+          ]
+        }
+      ],
+      "decision": "ARTIFICIAL_BEAM_FRAGMENTATION_CONFIRMED",
+      "nearby_primary_texts": [
+        {
+          "handle": "1CF6D",
+          "text": "V. 60/80",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            61.87791775752088,
+            4.422664391728058
+          ]
+        },
+        {
+          "handle": "283A4",
+          "text": "45/30",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            63.42228038028693,
+            3.2125215315079503
+          ]
+        },
+        {
+          "handle": "28C79",
+          "text": "105",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            62.0181327689866,
+            3.260790228755568
+          ]
+        }
+      ],
+      "primary_discontinuity_annotations": [],
+      "primary_support_or_joint_lines": []
+    },
+    {
+      "beam_A": "E1-P2-V-019",
+      "beam_B": "E1-P2-V-013",
+      "gap_m": 0.19999999999999973,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_1 / P2 / Viga X F / Y entre 1-1''",
+      "source_faces_A": [
+        "P2-VB-0039",
+        "P2-VB-0040"
+      ],
+      "source_faces_B": [
+        "P2-VB-0039",
+        "P2-VB-0040"
+      ],
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "endpoints_A": [
+        [
+          37.49090000000001,
+          0.5315,
+          11.48
+        ],
+        [
+          37.49090000000001,
+          3.9815,
+          11.48
+        ]
+      ],
+      "endpoints_B": [
+        [
+          37.49090000000001,
+          4.1815,
+          11.48
+        ],
+        [
+          37.49090000000001,
+          8.7314,
+          11.48
+        ]
+      ],
+      "bridge": [
+        [
+          37.49090000000001,
+          3.9815,
+          11.48
+        ],
+        [
+          37.49090000000001,
+          4.1815,
+          11.48
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": [
+            {
+              "handle": "1EB4F",
+              "face_id": "P2-VB-0039",
+              "start": [
+                37.19086141589517,
+                0.5313577515897941
+              ],
+              "end": [
+                37.19086141589516,
+                8.731357751609602
+              ],
+              "sheet": "2017_67-102.dxf"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "continuous_faces": [
+            {
+              "handle": "1EB50",
+              "face_id": "P2-VB-0040",
+              "start": [
+                37.79086141589517,
+                0.5313577515897941
+              ],
+              "end": [
+                37.79086141589516,
+                8.731357751609602
+              ],
+              "sheet": "2017_67-102.dxf"
+            }
+          ]
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_PRIMARY_SUPPORT_JOINT_OR_OPENING",
+      "nearby_primary_texts": [
+        {
+          "handle": "1EC28",
+          "text": "V. 60/80",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            36.87775190458342,
+            4.604052240647261
+          ]
+        },
+        {
+          "handle": "245CA",
+          "text": "PASADA ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            37.90767448463829,
+            3.0268957903326825
+          ]
+        },
+        {
+          "handle": "245CB",
+          "text": "45/30",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            37.90767448463829,
+            3.324552040332692
+          ]
+        },
+        {
+          "handle": "245CC",
+          "text": "PASADAS",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            37.91600160980433,
+            4.379586463763135
+          ]
+        },
+        {
+          "handle": "245CD",
+          "text": "Ø7.5",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            37.91600160980433,
+            4.677242713763126
+          ]
+        }
+      ],
+      "primary_discontinuity_annotations": [
+        {
+          "handle": "245CA",
+          "text": "PASADA ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            37.90767448463829,
+            3.0268957903326825
+          ]
+        },
+        {
+          "handle": "245CC",
+          "text": "PASADAS",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            37.91600160980433,
+            4.379586463763135
+          ]
+        }
+      ],
+      "primary_support_or_joint_lines": []
+    },
+    {
+      "beam_A": "E1-P2-V-018",
+      "beam_B": "E1-P2-V-021",
+      "gap_m": 0.004699999999999704,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_1 / P2 / Viga X F / Y > 3",
+      "source_faces_A": [
+        "P2-VB-0044",
+        "P2-VB-0045"
+      ],
+      "source_faces_B": [
+        "P2-VB-0044",
+        "P2-VB-0045"
+      ],
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "endpoints_A": [
+        [
+          37.49090000000001,
+          16.6815,
+          11.48
+        ],
+        [
+          37.49090000000001,
+          18.1572,
+          11.48
+        ]
+      ],
+      "endpoints_B": [
+        [
+          37.49090000000001,
+          18.1619,
+          11.48
+        ],
+        [
+          37.49090000000001,
+          20.1515,
+          11.48
+        ]
+      ],
+      "bridge": [
+        [
+          37.49090000000001,
+          18.1572,
+          11.48
+        ],
+        [
+          37.49090000000001,
+          18.1619,
+          11.48
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": [
+            {
+              "handle": "1EB54",
+              "face_id": "P2-VB-0044",
+              "start": [
+                37.19086141589512,
+                16.681524406936852
+              ],
+              "end": [
+                37.19086141589512,
+                20.751524406992495
+              ],
+              "sheet": "2017_67-102.dxf"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "continuous_faces": [
+            {
+              "handle": "1EB55",
+              "face_id": "P2-VB-0045",
+              "start": [
+                37.79086141589513,
+                16.681524406936852
+              ],
+              "end": [
+                37.79086141589512,
+                20.151524406992493
+              ],
+              "sheet": "2017_67-102.dxf"
+            }
+          ]
+        }
+      ],
+      "decision": "ARTIFICIAL_BEAM_FRAGMENTATION_CONFIRMED",
+      "nearby_primary_texts": [
+        {
+          "handle": "1EC6D",
+          "text": "V. 60/80",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            36.87775190458338,
+            18.689218896012235
+          ]
+        },
+        {
+          "handle": "1EC73",
+          "text": "(ARR)",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            37.93951905428892,
+            17.61802425010358
+          ]
+        }
+      ],
+      "primary_discontinuity_annotations": [],
+      "primary_support_or_joint_lines": []
+    },
+    {
+      "beam_A": "E1-P2-V-051",
+      "beam_B": "E1-P2-V-048",
+      "gap_m": 0.19999999999999973,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_1 / P2 / Viga X G / Y entre 1-1''",
+      "source_faces_A": [
+        "P2-VB-0049",
+        "P2-VB-0050"
+      ],
+      "source_faces_B": [
+        "P2-VB-0049",
+        "P2-VB-0050"
+      ],
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "endpoints_A": [
+        [
+          47.49090000000001,
+          0.5315,
+          11.48
+        ],
+        [
+          47.49090000000001,
+          3.9815,
+          11.48
+        ]
+      ],
+      "endpoints_B": [
+        [
+          47.49090000000001,
+          4.1815,
+          11.48
+        ],
+        [
+          47.49090000000001,
+          8.7314,
+          11.48
+        ]
+      ],
+      "bridge": [
+        [
+          47.49090000000001,
+          3.9815,
+          11.48
+        ],
+        [
+          47.49090000000001,
+          4.1815,
+          11.48
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": [
+            {
+              "handle": "1EB59",
+              "face_id": "P2-VB-0049",
+              "start": [
+                47.19086141601782,
+                0.5315244068801985
+              ],
+              "end": [
+                47.190861416017796,
+                8.73135775160963
+              ],
+              "sheet": "2017_67-102.dxf"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "continuous_faces": [
+            {
+              "handle": "1EB5A",
+              "face_id": "P2-VB-0050",
+              "start": [
+                47.79086141601782,
+                0.5315244068801985
+              ],
+              "end": [
+                47.790861416017805,
+                8.73135775160963
+              ],
+              "sheet": "2017_67-102.dxf"
+            }
+          ]
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_PRIMARY_SUPPORT_JOINT_OR_OPENING",
+      "nearby_primary_texts": [
+        {
+          "handle": "1EC24",
+          "text": "V. 60/80",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            46.87775190470606,
+            4.6041355682924765
+          ]
+        },
+        {
+          "handle": "245D6",
+          "text": "PASADAS",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            47.91835173735768,
+            4.379586463763162
+          ]
+        },
+        {
+          "handle": "245D7",
+          "text": "Ø7.5",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            47.91835173735767,
+            4.677242713763144
+          ]
+        },
+        {
+          "handle": "2464F",
+          "text": "PASADA ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            47.87185026652152,
+            3.02689579033271
+          ]
+        },
+        {
+          "handle": "24650",
+          "text": "45/30",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            47.87185026652152,
+            3.3245520403327102
+          ]
+        }
+      ],
+      "primary_discontinuity_annotations": [
+        {
+          "handle": "245D6",
+          "text": "PASADAS",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            47.91835173735768,
+            4.379586463763162
+          ]
+        },
+        {
+          "handle": "2464F",
+          "text": "PASADA ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            47.87185026652152,
+            3.02689579033271
+          ]
+        }
+      ],
+      "primary_support_or_joint_lines": []
+    },
+    {
+      "beam_A": "E1-P2-V-080",
+      "beam_B": "E1-P2-V-076",
+      "gap_m": 0.19999999999999973,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_1 / P2 / Viga X H / Y entre 1-1''",
+      "source_faces_A": [
+        "P2-VB-0055",
+        "P2-VB-0056"
+      ],
+      "source_faces_B": [
+        "P2-VB-0055",
+        "P2-VB-0056"
+      ],
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "endpoints_A": [
+        [
+          57.49090000000001,
+          0.5315,
+          11.48
+        ],
+        [
+          57.49090000000001,
+          3.9815,
+          11.48
+        ]
+      ],
+      "endpoints_B": [
+        [
+          57.49090000000001,
+          4.1815,
+          11.48
+        ],
+        [
+          57.49090000000001,
+          8.7314,
+          11.48
+        ]
+      ],
+      "bridge": [
+        [
+          57.49090000000001,
+          3.9815,
+          11.48
+        ],
+        [
+          57.49090000000001,
+          4.1815,
+          11.48
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": [
+            {
+              "handle": "1EB5F",
+              "face_id": "P2-VB-0055",
+              "start": [
+                57.190861415946614,
+                0.5315244068802258
+              ],
+              "end": [
+                57.1908614159466,
+                8.731357751609675
+              ],
+              "sheet": "2017_67-102.dxf"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "continuous_faces": [
+            {
+              "handle": "1EB60",
+              "face_id": "P2-VB-0056",
+              "start": [
+                57.790861415946615,
+                0.5315244068802258
+              ],
+              "end": [
+                57.790861415946594,
+                8.731357751609675
+              ],
+              "sheet": "2017_67-102.dxf"
+            }
+          ]
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_PRIMARY_SUPPORT_JOINT_OR_OPENING",
+      "nearby_primary_texts": [
+        {
+          "handle": "1EC20",
+          "text": "V. 60/80",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            56.87775190463485,
+            4.604135568292523
+          ]
+        },
+        {
+          "handle": "245DA",
+          "text": "PASADA ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            57.92165422942238,
+            3.0268957903327554
+          ]
+        },
+        {
+          "handle": "245DB",
+          "text": "45/30",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            57.92165422942238,
+            3.3245520403327644
+          ]
+        },
+        {
+          "handle": "245DC",
+          "text": "PASADAS ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            57.912845724448886,
+            4.3795864637631805
+          ]
+        },
+        {
+          "handle": "245DD",
+          "text": "Ø7.5",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            57.912845724448886,
+            4.6772427137631984
+          ]
+        }
+      ],
+      "primary_discontinuity_annotations": [
+        {
+          "handle": "245DA",
+          "text": "PASADA ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            57.92165422942238,
+            3.0268957903327554
+          ]
+        },
+        {
+          "handle": "245DC",
+          "text": "PASADAS ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            57.912845724448886,
+            4.3795864637631805
+          ]
+        }
+      ],
+      "primary_support_or_joint_lines": []
+    },
+    {
+      "beam_A": "E1-P2-V-100",
+      "beam_B": "E1-P2-V-097",
+      "gap_m": 0.19999999999999973,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_1 / P2 / Viga X I / Y entre 1-1''",
+      "source_faces_A": [
+        "P2-VB-0060",
+        "P2-VB-0061"
+      ],
+      "source_faces_B": [
+        "P2-VB-0060",
+        "P2-VB-0061"
+      ],
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "endpoints_A": [
+        [
+          67.4909,
+          0.5315,
+          11.48
+        ],
+        [
+          67.4909,
+          3.9815,
+          11.48
+        ]
+      ],
+      "endpoints_B": [
+        [
+          67.4909,
+          4.1815,
+          11.48
+        ],
+        [
+          67.4909,
+          8.7314,
+          11.48
+        ]
+      ],
+      "bridge": [
+        [
+          67.4909,
+          3.9815,
+          11.48
+        ],
+        [
+          67.4909,
+          4.1815,
+          11.48
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": [
+            {
+              "handle": "1EB64",
+              "face_id": "P2-VB-0060",
+              "start": [
+                67.19086141587829,
+                0.5315244068802439
+              ],
+              "end": [
+                67.19086141587827,
+                8.731357751609703
+              ],
+              "sheet": "2017_67-102.dxf"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "continuous_faces": [
+            {
+              "handle": "1EB65",
+              "face_id": "P2-VB-0061",
+              "start": [
+                67.7908614158783,
+                0.5315244068802439
+              ],
+              "end": [
+                67.79086141587828,
+                8.731357751609703
+              ],
+              "sheet": "2017_67-102.dxf"
+            }
+          ]
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_PRIMARY_SUPPORT_JOINT_OR_OPENING",
+      "nearby_primary_texts": [
+        {
+          "handle": "1EC4A",
+          "text": "V. 60/80",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            66.87775190456651,
+            4.6041355682925404
+          ]
+        },
+        {
+          "handle": "245E6",
+          "text": "PASADA ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            67.87957835984041,
+            3.026895790332783
+          ]
+        },
+        {
+          "handle": "245E7",
+          "text": "45/30",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            67.87957835984041,
+            3.3245520403327826
+          ]
+        },
+        {
+          "handle": "245E8",
+          "text": "PASADAS ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            67.95456087666079,
+            4.379586463763235
+          ]
+        },
+        {
+          "handle": "245E9",
+          "text": "Ø7.5",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            67.95456087666079,
+            4.677242713763226
+          ]
+        }
+      ],
+      "primary_discontinuity_annotations": [
+        {
+          "handle": "245E6",
+          "text": "PASADA ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            67.87957835984041,
+            3.026895790332783
+          ]
+        },
+        {
+          "handle": "245E8",
+          "text": "PASADAS ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            67.95456087666079,
+            4.379586463763235
+          ]
+        }
+      ],
+      "primary_support_or_joint_lines": []
+    },
+    {
+      "beam_A": "E1-P2-V-004",
+      "beam_B": "E1-P2-V-005",
+      "gap_m": 0.19999999999999973,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_1 / P2 / Viga X D/E / Y entre 1-1''",
+      "source_faces_A": [
+        "P2-VB-0064",
+        "P2-VB-0065"
+      ],
+      "source_faces_B": [
+        "P2-VB-0066",
+        "P2-VB-0067"
+      ],
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "endpoints_A": [
+        [
+          27.490900000000003,
+          0.5315,
+          11.48
+        ],
+        [
+          27.490900000000003,
+          3.9815,
+          11.48
+        ]
+      ],
+      "endpoints_B": [
+        [
+          27.490900000000003,
+          4.1815,
+          11.48
+        ],
+        [
+          27.490900000000003,
+          8.7314,
+          11.48
+        ]
+      ],
+      "bridge": [
+        [
+          27.490900000000003,
+          3.9815,
+          11.48
+        ],
+        [
+          27.490900000000003,
+          4.1815,
+          11.48
+        ]
+      ],
+      "intermediate_physical_supports": [
+        "E1-P2-M-002"
+      ],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": []
+        },
+        {
+          "side": 1,
+          "continuous_faces": []
+        }
+      ],
+      "decision": "RETAIN_PRIMARY_SUPPORT_REVIEW"
+    },
+    {
+      "beam_A": "E1-P2-V-111",
+      "beam_B": "E1-P2-V-108",
+      "gap_m": 0.19999999999999973,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_1 / P2 / Viga X I' / Y entre 1-1''",
+      "source_faces_A": [
+        "P2-VB-0071",
+        "P2-VB-0072"
+      ],
+      "source_faces_B": [
+        "P2-VB-0071",
+        "P2-VB-0072"
+      ],
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "endpoints_A": [
+        [
+          72.4909,
+          0.5315,
+          11.48
+        ],
+        [
+          72.4909,
+          3.9815,
+          11.48
+        ]
+      ],
+      "endpoints_B": [
+        [
+          72.4909,
+          4.1815,
+          11.48
+        ],
+        [
+          72.4909,
+          8.7314,
+          11.48
+        ]
+      ],
+      "bridge": [
+        [
+          72.4909,
+          3.9815,
+          11.48
+        ],
+        [
+          72.4909,
+          4.1815,
+          11.48
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": [
+            {
+              "handle": "1EB6F",
+              "face_id": "P2-VB-0071",
+              "start": [
+                72.19086141588552,
+                0.5315244068802621
+              ],
+              "end": [
+                72.19086141588551,
+                8.731357751609721
+              ],
+              "sheet": "2017_67-102.dxf"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "continuous_faces": [
+            {
+              "handle": "1EB70",
+              "face_id": "P2-VB-0072",
+              "start": [
+                72.79086141588553,
+                0.5315244068802621
+              ],
+              "end": [
+                72.7908614158855,
+                8.731357751609721
+              ],
+              "sheet": "2017_67-102.dxf"
+            }
+          ]
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_PRIMARY_SUPPORT_JOINT_OR_OPENING",
+      "nearby_primary_texts": [
+        {
+          "handle": "1EC2F",
+          "text": "V. 60/80",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            71.87775190457374,
+            3.321645357880525
+          ]
+        },
+        {
+          "handle": "2461C",
+          "text": "PASADA ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            73.02470398235292,
+            3.096253130427276
+          ]
+        },
+        {
+          "handle": "2461D",
+          "text": "45/30",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            73.02470398235292,
+            3.393909380427276
+          ]
+        }
+      ],
+      "primary_discontinuity_annotations": [
+        {
+          "handle": "2461C",
+          "text": "PASADA ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            73.02470398235292,
+            3.096253130427276
+          ]
+        }
+      ],
+      "primary_support_or_joint_lines": []
+    },
+    {
+      "beam_A": "E1-P2-V-032",
+      "beam_B": "E1-P2-V-029",
+      "gap_m": 0.19999999999999973,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_1 / P2 / Viga X entre F-G / Y entre 1-1''",
+      "source_faces_A": [
+        "P2-VB-0075",
+        "P2-VB-0076"
+      ],
+      "source_faces_B": [
+        "P2-VB-0075",
+        "P2-VB-0076"
+      ],
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "endpoints_A": [
+        [
+          42.49090000000001,
+          0.5315,
+          11.48
+        ],
+        [
+          42.49090000000001,
+          3.9815,
+          11.48
+        ]
+      ],
+      "endpoints_B": [
+        [
+          42.49090000000001,
+          4.1815,
+          11.48
+        ],
+        [
+          42.49090000000001,
+          8.7314,
+          11.48
+        ]
+      ],
+      "bridge": [
+        [
+          42.49090000000001,
+          3.9815,
+          11.48
+        ],
+        [
+          42.49090000000001,
+          4.1815,
+          11.48
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": [
+            {
+              "handle": "1EB73",
+              "face_id": "P2-VB-0075",
+              "start": [
+                42.1908614159565,
+                0.4813577515898032
+              ],
+              "end": [
+                42.19086141595649,
+                8.781357751609612
+              ],
+              "sheet": "2017_67-102.dxf"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "continuous_faces": [
+            {
+              "handle": "1EB74",
+              "face_id": "P2-VB-0076",
+              "start": [
+                42.7908614159565,
+                0.4813577515898032
+              ],
+              "end": [
+                42.79086141595649,
+                8.78135775160963
+              ],
+              "sheet": "2017_67-102.dxf"
+            }
+          ]
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_PRIMARY_SUPPORT_JOINT_OR_OPENING",
+      "nearby_primary_texts": [
+        {
+          "handle": "1EC25",
+          "text": "V. 60/80",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            41.87775190464474,
+            4.60405224064727
+          ]
+        },
+        {
+          "handle": "245D0",
+          "text": "PASADA ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            42.8718502664602,
+            3.02689579033271
+          ]
+        },
+        {
+          "handle": "245D1",
+          "text": "45/30",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            42.8718502664602,
+            3.324552040332701
+          ]
+        },
+        {
+          "handle": "245D2",
+          "text": "PASADAS",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            42.91123889314539,
+            4.379586463763144
+          ]
+        },
+        {
+          "handle": "245D3",
+          "text": "Ø7.5",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            42.91123889314539,
+            4.677242713763144
+          ]
+        },
+        {
+          "handle": "24F6E",
+          "text": "201",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            42.03618404684255,
+            3.612734676055961
+          ]
+        }
+      ],
+      "primary_discontinuity_annotations": [
+        {
+          "handle": "245D0",
+          "text": "PASADA ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            42.8718502664602,
+            3.02689579033271
+          ]
+        },
+        {
+          "handle": "245D2",
+          "text": "PASADAS",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            42.91123889314539,
+            4.379586463763144
+          ]
+        }
+      ],
+      "primary_support_or_joint_lines": []
+    },
+    {
+      "beam_A": "E1-P2-V-067",
+      "beam_B": "E1-P2-V-060",
+      "gap_m": 0.19999999999999973,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_1 / P2 / Viga X entre Ga-H / Y entre 1-1''",
+      "source_faces_A": [
+        "P2-VB-0079",
+        "P2-VB-0080"
+      ],
+      "source_faces_B": [
+        "P2-VB-0079",
+        "P2-VB-0080"
+      ],
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "endpoints_A": [
+        [
+          52.49090000000001,
+          0.5315,
+          11.48
+        ],
+        [
+          52.49090000000001,
+          3.9815,
+          11.48
+        ]
+      ],
+      "endpoints_B": [
+        [
+          52.49090000000001,
+          4.1815,
+          11.48
+        ],
+        [
+          52.49090000000001,
+          8.7314,
+          11.48
+        ]
+      ],
+      "bridge": [
+        [
+          52.49090000000001,
+          3.9815,
+          11.48
+        ],
+        [
+          52.49090000000001,
+          4.1815,
+          11.48
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": [
+            {
+              "handle": "1EB77",
+              "face_id": "P2-VB-0079",
+              "start": [
+                52.190861415885294,
+                0.4813577515898214
+              ],
+              "end": [
+                52.19086141588528,
+                8.781357751609667
+              ],
+              "sheet": "2017_67-102.dxf"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "continuous_faces": [
+            {
+              "handle": "1EB78",
+              "face_id": "P2-VB-0080",
+              "start": [
+                52.7908614158853,
+                0.4813577515898214
+              ],
+              "end": [
+                52.79086141588529,
+                8.781357751609667
+              ],
+              "sheet": "2017_67-102.dxf"
+            }
+          ]
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_PRIMARY_SUPPORT_JOINT_OR_OPENING",
+      "nearby_primary_texts": [
+        {
+          "handle": "1EC21",
+          "text": "V. 60/80",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            51.87775190457354,
+            4.604052240647307
+          ]
+        },
+        {
+          "handle": "24653",
+          "text": "PASADAS",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            52.91835173722517,
+            4.379586463763162
+          ]
+        },
+        {
+          "handle": "24654",
+          "text": "Ø7.5",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            52.918351737225166,
+            4.677242713763162
+          ]
+        },
+        {
+          "handle": "24655",
+          "text": "PASADA ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            52.871850266388996,
+            3.026895790332737
+          ]
+        },
+        {
+          "handle": "24656",
+          "text": "45/30",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            52.871850266388996,
+            3.3245520403327373
+          ]
+        },
+        {
+          "handle": "24F75",
+          "text": "204",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            52.036184046771346,
+            3.6127346760559975
+          ]
+        }
+      ],
+      "primary_discontinuity_annotations": [
+        {
+          "handle": "24653",
+          "text": "PASADAS",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            52.91835173722517,
+            4.379586463763162
+          ]
+        },
+        {
+          "handle": "24655",
+          "text": "PASADA ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            52.871850266388996,
+            3.026895790332737
+          ]
+        }
+      ],
+      "primary_support_or_joint_lines": []
+    },
+    {
+      "beam_A": "E1-P2-V-091",
+      "beam_B": "E1-P2-V-087",
+      "gap_m": 0.19999999999999973,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_1 / P2 / Viga X entre H'-H2 / Y entre 1-1''",
+      "source_faces_A": [
+        "P2-VB-0083",
+        "P2-VB-0084"
+      ],
+      "source_faces_B": [
+        "P2-VB-0083",
+        "P2-VB-0084"
+      ],
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "endpoints_A": [
+        [
+          62.49090000000001,
+          0.5315,
+          11.48
+        ],
+        [
+          62.49090000000001,
+          3.9815,
+          11.48
+        ]
+      ],
+      "endpoints_B": [
+        [
+          62.49090000000001,
+          4.1815,
+          11.48
+        ],
+        [
+          62.49090000000001,
+          8.7314,
+          11.48
+        ]
+      ],
+      "bridge": [
+        [
+          62.49090000000001,
+          3.9815,
+          11.48
+        ],
+        [
+          62.49090000000001,
+          4.1815,
+          11.48
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": [
+            {
+              "handle": "1EB7B",
+              "face_id": "P2-VB-0083",
+              "start": [
+                62.19086141581696,
+                0.4813577515898578
+              ],
+              "end": [
+                62.19086141581694,
+                8.781357751609685
+              ],
+              "sheet": "2017_67-102.dxf"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "continuous_faces": [
+            {
+              "handle": "1EB7C",
+              "face_id": "P2-VB-0084",
+              "start": [
+                62.790861415816956,
+                0.4813577515898578
+              ],
+              "end": [
+                62.790861415816956,
+                8.781357751609685
+              ],
+              "sheet": "2017_67-102.dxf"
+            }
+          ]
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_PRIMARY_SUPPORT_JOINT_OR_OPENING",
+      "nearby_primary_texts": [
+        {
+          "handle": "1EC1D",
+          "text": "V. 60/80",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            61.87775190450519,
+            4.604052240647333
+          ]
+        },
+        {
+          "handle": "245E0",
+          "text": "PASADA ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            62.92322358349015,
+            3.0268957903327736
+          ]
+        },
+        {
+          "handle": "245E1",
+          "text": "45/30",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            63.0552460909649,
+            3.3245520403327737
+          ]
+        },
+        {
+          "handle": "245E2",
+          "text": "PASADAS ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            62.9045226816576,
+            4.379586463763207
+          ]
+        },
+        {
+          "handle": "245E3",
+          "text": "Ø7.5",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            62.9045226816576,
+            4.677242713763207
+          ]
+        },
+        {
+          "handle": "24F7E",
+          "text": "206",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            62.03618404670301,
+            3.612734676056025
+          ]
+        }
+      ],
+      "primary_discontinuity_annotations": [
+        {
+          "handle": "245E0",
+          "text": "PASADA ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            62.92322358349015,
+            3.0268957903327736
+          ]
+        },
+        {
+          "handle": "245E2",
+          "text": "PASADAS ",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            62.9045226816576,
+            4.379586463763207
+          ]
+        }
+      ],
+      "primary_support_or_joint_lines": []
+    },
+    {
+      "beam_A": "E1-P2-V-043",
+      "beam_B": "E1-P2-V-041",
+      "gap_m": 0.004699999999999704,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_1 / P2 / Viga X entre F-G / Y > 3",
+      "source_faces_A": [
+        "P2-VB-0108",
+        "P2-VB-0109"
+      ],
+      "source_faces_B": [
+        "P2-VB-0108",
+        "P2-VB-0109"
+      ],
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "endpoints_A": [
+        [
+          44.980900000000005,
+          16.6815,
+          11.48
+        ],
+        [
+          44.980900000000005,
+          18.1572,
+          11.48
+        ]
+      ],
+      "endpoints_B": [
+        [
+          44.980900000000005,
+          18.1619,
+          11.48
+        ],
+        [
+          44.980900000000005,
+          20.1515,
+          11.48
+        ]
+      ],
+      "bridge": [
+        [
+          44.980900000000005,
+          18.1572,
+          11.48
+        ],
+        [
+          44.980900000000005,
+          18.1619,
+          11.48
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": [
+            {
+              "handle": "1FC18",
+              "face_id": "P2-VB-0109",
+              "start": [
+                44.68086141601778,
+                16.631357751672958
+              ],
+              "end": [
+                44.68086141601776,
+                20.15152440699252
+              ],
+              "sheet": "2017_67-102.dxf"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "continuous_faces": [
+            {
+              "handle": "1FC17",
+              "face_id": "P2-VB-0108",
+              "start": [
+                45.280861416017785,
+                16.631357751672958
+              ],
+              "end": [
+                45.280861416017785,
+                20.15152440699252
+              ],
+              "sheet": "2017_67-102.dxf"
+            }
+          ]
+        }
+      ],
+      "decision": "ARTIFICIAL_BEAM_FRAGMENTATION_CONFIRMED",
+      "nearby_primary_texts": [
+        {
+          "handle": "1EC66",
+          "text": "(ARR)",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            45.42951905440938,
+            17.750663230760164
+          ]
+        },
+        {
+          "handle": "1EC6E",
+          "text": "V. 60/80",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            44.36775190470602,
+            18.50602962907721
+          ]
+        },
+        {
+          "handle": "259A7",
+          "text": "210",
+          "layer": "RLE-TEXTO-1",
+          "xy": [
+            44.202726338955884,
+            18.705862795843913
+          ]
+        }
+      ],
+      "primary_discontinuity_annotations": [],
+      "primary_support_or_joint_lines": []
+    },
+    {
+      "beam_A": "E1-P3-V-004",
+      "beam_B": "E1-P3-V-005",
+      "gap_m": 0.19999999999999973,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_1 / P3 / Viga X D/E / Y entre 1-1''",
+      "source_faces_A": [
+        "P3-VB-0066",
+        "P3-VB-0067"
+      ],
+      "source_faces_B": [
+        "P3-VB-0068",
+        "P3-VB-0069"
+      ],
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "endpoints_A": [
+        [
+          27.490900000000003,
+          0.5315,
+          15.44
+        ],
+        [
+          27.490900000000003,
+          3.9815,
+          15.44
+        ]
+      ],
+      "endpoints_B": [
+        [
+          27.490900000000003,
+          4.1815,
+          15.44
+        ],
+        [
+          27.490900000000003,
+          8.7313,
+          15.44
+        ]
+      ],
+      "bridge": [
+        [
+          27.490900000000003,
+          3.9815,
+          15.44
+        ],
+        [
+          27.490900000000003,
+          4.1815,
+          15.44
+        ]
+      ],
+      "intermediate_physical_supports": [
+        "E1-P3-M-002"
+      ],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": []
+        },
+        {
+          "side": 1,
+          "continuous_faces": []
+        }
+      ],
+      "decision": "RETAIN_PRIMARY_SUPPORT_REVIEW"
+    },
+    {
+      "beam_A": "E1-P3-V-109",
+      "beam_B": "E1-P3-V-119",
+      "gap_m": 0,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 9.999999999976694e-05,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_1 / P3 / Viga X entre IB-J / Y 2",
+      "source_faces_A": [
+        "P3-VB-0098",
+        "P3-VB-0099"
+      ],
+      "source_faces_B": [
+        "P3-VB-0100",
+        "P3-VB-0101"
+      ],
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "endpoints_A": [
+        [
+          72.8409,
+          9.0813,
+          15.44
+        ],
+        [
+          75.2409,
+          9.0813,
+          15.44
+        ]
+      ],
+      "endpoints_B": [
+        [
+          75.2409,
+          9.0814,
+          15.44
+        ],
+        [
+          77.0908,
+          9.0814,
+          15.44
+        ]
+      ],
+      "bridge": [
+        [
+          75.2409,
+          9.0813,
+          15.44
+        ],
+        [
+          75.2409,
+          9.0814,
+          15.44
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": []
+        },
+        {
+          "side": 1,
+          "continuous_faces": []
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_NO_UNEQUIVOCAL_CONTINUOUS_FACES"
+    },
+    {
+      "beam_A": "E1-P4-V-004",
+      "beam_B": "E1-P4-V-005",
+      "gap_m": 0.19999999999999973,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_1 / P4 / Viga X D/E / Y entre 1-1''",
+      "source_faces_A": [
+        "P4-VB-0075",
+        "P4-VB-0076"
+      ],
+      "source_faces_B": [
+        "P4-VB-0077",
+        "P4-VB-0078"
+      ],
+      "building": "EDIFICIO_1",
+      "floor": "P4",
+      "endpoints_A": [
+        [
+          27.490900000000003,
+          0.5315,
+          19.400000000000002
+        ],
+        [
+          27.490900000000003,
+          3.9815,
+          19.400000000000002
+        ]
+      ],
+      "endpoints_B": [
+        [
+          27.490900000000003,
+          4.1815,
+          19.400000000000002
+        ],
+        [
+          27.490900000000003,
+          8.7313,
+          19.400000000000002
+        ]
+      ],
+      "bridge": [
+        [
+          27.490900000000003,
+          3.9815,
+          19.400000000000002
+        ],
+        [
+          27.490900000000003,
+          4.1815,
+          19.400000000000002
+        ]
+      ],
+      "intermediate_physical_supports": [
+        "E1-P4-M-002"
+      ],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": []
+        },
+        {
+          "side": 1,
+          "continuous_faces": []
+        }
+      ],
+      "decision": "RETAIN_PRIMARY_SUPPORT_REVIEW"
+    },
+    {
+      "beam_A": "E1-P4-V-094",
+      "beam_B": "E1-P4-V-116",
+      "gap_m": 0,
+      "overlap_m": 0,
+      "angle_deg": 0.0,
+      "perpendicular_m": 0.0,
+      "z_difference_m": 0.0,
+      "section_A": [
+        0.6,
+        0.8
+      ],
+      "section_B": [
+        0.6,
+        0.8
+      ],
+      "axis_location": "EDIFICIO_1 / P4 / Viga X entre IB-J / Y 2",
+      "source_faces_A": [
+        "P4-VB-0105",
+        "P4-VB-0106"
+      ],
+      "source_faces_B": [
+        "P4-VB-0107",
+        "P4-VB-0108"
+      ],
+      "building": "EDIFICIO_1",
+      "floor": "P4",
+      "endpoints_A": [
+        [
+          72.8409,
+          9.0813,
+          19.400000000000002
+        ],
+        [
+          75.2409,
+          9.0813,
+          19.400000000000002
+        ]
+      ],
+      "endpoints_B": [
+        [
+          75.2409,
+          9.0813,
+          19.400000000000002
+        ],
+        [
+          77.0908,
+          9.0813,
+          19.400000000000002
+        ]
+      ],
+      "bridge": [
+        [
+          75.2409,
+          9.0813,
+          19.400000000000002
+        ],
+        [
+          75.2409,
+          9.0813,
+          19.400000000000002
+        ]
+      ],
+      "intermediate_physical_supports": [],
+      "primary_face_evidence": [
+        {
+          "side": -1,
+          "continuous_faces": []
+        },
+        {
+          "side": 1,
+          "continuous_faces": []
+        }
+      ],
+      "decision": "REVIEW_REQUIRED_NO_UNEQUIVOCAL_CONTINUOUS_FACES"
+    }
+  ],
+  "chains": [
+    {
+      "ids": [
+        "E2-P4-V-028",
+        "E2-P4-V-029",
+        "E2-P4-V-034"
+      ],
+      "status": "CANDIDATE_CHAIN_NOT_MERGE_AUTHORIZATION"
+    },
+    {
+      "ids": [
+        "E2-P4-V-074",
+        "E2-P4-V-077",
+        "E2-P4-V-078"
+      ],
+      "status": "CANDIDATE_CHAIN_NOT_MERGE_AUTHORIZATION"
+    },
+    {
+      "ids": [
+        "E2-P4-V-086",
+        "E2-P4-V-088",
+        "E2-P4-V-091"
+      ],
+      "status": "CANDIDATE_CHAIN_NOT_MERGE_AUTHORIZATION"
+    },
+    {
+      "ids": [
+        "E2-P4-V-084",
+        "E2-P4-V-087",
+        "E2-P4-V-089"
+      ],
+      "status": "CANDIDATE_CHAIN_NOT_MERGE_AUTHORIZATION"
+    },
+    {
+      "ids": [
+        "E2-P4-V-063",
+        "E2-P4-V-066",
+        "E2-P4-V-068"
+      ],
+      "status": "CANDIDATE_CHAIN_NOT_MERGE_AUTHORIZATION"
+    },
+    {
+      "ids": [
+        "E2-P4-V-052",
+        "E2-P4-V-055",
+        "E2-P4-V-056"
+      ],
+      "status": "CANDIDATE_CHAIN_NOT_MERGE_AUTHORIZATION"
+    },
+    {
+      "ids": [
+        "E2-P4-V-024",
+        "E2-P4-V-030",
+        "E2-P4-V-035"
+      ],
+      "status": "CANDIDATE_CHAIN_NOT_MERGE_AUTHORIZATION"
+    },
+    {
+      "ids": [
+        "E2-P4-V-044",
+        "E2-P4-V-045",
+        "E2-P4-V-047"
+      ],
+      "status": "CANDIDATE_CHAIN_NOT_MERGE_AUTHORIZATION"
+    },
+    {
+      "ids": [
+        "E2-P4-V-064",
+        "E2-P4-V-067",
+        "E2-P4-V-069"
+      ],
+      "status": "CANDIDATE_CHAIN_NOT_MERGE_AUTHORIZATION"
+    },
+    {
+      "ids": [
+        "E2-P4-V-004",
+        "E2-P4-V-005",
+        "E2-P4-V-006"
+      ],
+      "status": "CANDIDATE_CHAIN_NOT_MERGE_AUTHORIZATION"
+    },
+    {
+      "ids": [
+        "E2-P4-V-021",
+        "E2-P4-V-022",
+        "E2-P4-V-023"
+      ],
+      "status": "CANDIDATE_CHAIN_NOT_MERGE_AUTHORIZATION"
+    },
+    {
+      "ids": [
+        "E1-S1-V-018",
+        "E1-S1-V-019",
+        "E1-S1-V-021"
+      ],
+      "status": "CANDIDATE_CHAIN_NOT_MERGE_AUTHORIZATION"
+    },
+    {
+      "ids": [
+        "E1-S1-V-025",
+        "E1-S1-V-026",
+        "E1-S1-V-030"
+      ],
+      "status": "CANDIDATE_CHAIN_NOT_MERGE_AUTHORIZATION"
+    }
+  ],
+  "microsegments": [],
+  "new_auto_merges": []
+}

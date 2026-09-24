@@ -1,0 +1,2541 @@
+{
+  "status": "PASS",
+  "scope": "EXT-2_ED2_WALL_PRIMARY_AUDIT",
+  "primary_source": "2024_22-101/102 full DXF",
+  "policy": "paired opposite RLE-MURO contour faces define one physical wall centerline; short closures are not independent walls",
+  "totals": {
+    "source_contour_segments": 144,
+    "confirmed_physical_walls": 54,
+    "unmatched_faces": 50,
+    "unresolved_unmatched_faces": 0,
+    "label_conflicts": 0,
+    "continuous_between_adjacent_floors": 43
+  },
+  "floors": {
+    "S1": {
+      "source_contour_segments": 29,
+      "confirmed_physical_walls": 11,
+      "unmatched_faces": 10,
+      "unresolved_unmatched_faces": 0,
+      "label_conflicts": 0,
+      "thicknesses_m": {
+        "0.25": 4,
+        "0.3": 3,
+        "0.6": 4
+      },
+      "unmatched_classification": [
+        {
+          "face_id": "S1-RLE-MURO-0002",
+          "length_m": 0.25,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "S1-RLE-MURO-0004",
+          "length_m": 0.25,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "S1-RLE-MURO-0006",
+          "length_m": 0.25,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "S1-RLE-MURO-0013",
+          "length_m": 0.25,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "S1-RLE-MURO-0015",
+          "length_m": 0.3,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "S1-RLE-MURO-0019",
+          "length_m": 0.6,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "S1-RLE-MURO-0021",
+          "length_m": 0.6,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "S1-RLE-MURO-0024",
+          "length_m": 0.6,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "S1-RLE-MURO-0026",
+          "length_m": 0.6,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "S1-RLE-MURO-0029",
+          "length_m": 0.3,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        }
+      ],
+      "pairs": [
+        {
+          "pair_id": "S1-E2-WP-001",
+          "floor": "S1",
+          "orientation": "V",
+          "face_ids": [
+            "S1-RLE-MURO-0001",
+            "S1-RLE-MURO-0003"
+          ],
+          "centerline_start_xy_m": [
+            27.727,
+            8.5507
+          ],
+          "centerline_end_xy_m": [
+            27.727,
+            16.5007
+          ],
+          "length_m": 7.95,
+          "thickness_m": 0.25,
+          "measured_face_separation_m": 0.25,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=25",
+            "xy_m": [
+              27.487656662981646,
+              12.56560259599241
+            ],
+            "thickness_m": 0.25,
+            "distance_m": 0.2393,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "S1-E2-WP-002",
+          "floor": "S1",
+          "orientation": "V",
+          "face_ids": [
+            "S1-RLE-MURO-0005",
+            "S1-RLE-MURO-0007"
+          ],
+          "centerline_start_xy_m": [
+            25.082,
+            3.3307
+          ],
+          "centerline_end_xy_m": [
+            25.082,
+            6.1507
+          ],
+          "length_m": 2.82,
+          "thickness_m": 0.25,
+          "measured_face_separation_m": 0.25,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=25",
+            "xy_m": [
+              24.861980573745868,
+              4.454204548897792
+            ],
+            "thickness_m": 0.25,
+            "distance_m": 0.22,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "S1-E2-WP-003",
+          "floor": "S1",
+          "orientation": "H",
+          "face_ids": [
+            "S1-RLE-MURO-0008",
+            "S1-RLE-MURO-0009"
+          ],
+          "centerline_start_xy_m": [
+            25.207,
+            3.1807
+          ],
+          "centerline_end_xy_m": [
+            27.602,
+            3.1807
+          ],
+          "length_m": 2.395,
+          "thickness_m": 0.3,
+          "measured_face_separation_m": 0.3,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=30",
+            "xy_m": [
+              26.44540991865222,
+              2.9311738673775016
+            ],
+            "thickness_m": 0.3,
+            "distance_m": 0.2495,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "S1-E2-WP-004",
+          "floor": "S1",
+          "orientation": "V",
+          "face_ids": [
+            "S1-RLE-MURO-0010",
+            "S1-RLE-MURO-0012"
+          ],
+          "centerline_start_xy_m": [
+            27.727,
+            3.3307
+          ],
+          "centerline_end_xy_m": [
+            27.727,
+            6.1507
+          ],
+          "length_m": 2.82,
+          "thickness_m": 0.25,
+          "measured_face_separation_m": 0.25,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=25",
+            "xy_m": [
+              27.484628898621214,
+              4.764599942229902
+            ],
+            "thickness_m": 0.25,
+            "distance_m": 0.2424,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "S1-E2-WP-005",
+          "floor": "S1",
+          "orientation": "V",
+          "face_ids": [
+            "S1-RLE-MURO-0011",
+            "S1-RLE-MURO-0012"
+          ],
+          "centerline_start_xy_m": [
+            27.727,
+            0.3507
+          ],
+          "centerline_end_xy_m": [
+            27.727,
+            3.0307
+          ],
+          "length_m": 2.68,
+          "thickness_m": 0.25,
+          "measured_face_separation_m": 0.25,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=25",
+            "xy_m": [
+              27.496451771521368,
+              1.67402666791319
+            ],
+            "thickness_m": 0.25,
+            "distance_m": 0.2305,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "S1-E2-WP-006",
+          "floor": "S1",
+          "orientation": "H",
+          "face_ids": [
+            "S1-RLE-MURO-0014",
+            "S1-RLE-MURO-0016"
+          ],
+          "centerline_start_xy_m": [
+            -3.348,
+            16.3007
+          ],
+          "centerline_end_xy_m": [
+            -1.898,
+            16.3007
+          ],
+          "length_m": 1.45,
+          "thickness_m": 0.3,
+          "measured_face_separation_m": 0.3,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=30",
+            "xy_m": [
+              -2.5230920141301794,
+              16.06214382388134
+            ],
+            "thickness_m": 0.3,
+            "distance_m": 0.2386,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "S1-E2-WP-007",
+          "floor": "S1",
+          "orientation": "V",
+          "face_ids": [
+            "S1-RLE-MURO-0017",
+            "S1-RLE-MURO-0020"
+          ],
+          "centerline_start_xy_m": [
+            -3.648,
+            14.3257
+          ],
+          "centerline_end_xy_m": [
+            -3.648,
+            16.1507
+          ],
+          "length_m": 1.825,
+          "thickness_m": 0.6,
+          "measured_face_separation_m": 0.6,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=60",
+            "xy_m": [
+              -4.031270358643731,
+              15.52576504677888
+            ],
+            "thickness_m": 0.6,
+            "distance_m": 0.3833,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "S1-E2-WP-008",
+          "floor": "S1",
+          "orientation": "V",
+          "face_ids": [
+            "S1-RLE-MURO-0018",
+            "S1-RLE-MURO-0020"
+          ],
+          "centerline_start_xy_m": [
+            -3.648,
+            16.4507
+          ],
+          "centerline_end_xy_m": [
+            -3.648,
+            17.2407
+          ],
+          "length_m": 0.79,
+          "thickness_m": 0.6,
+          "measured_face_separation_m": 0.6,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=60",
+            "xy_m": [
+              -4.031270358643731,
+              15.52576504677888
+            ],
+            "thickness_m": 0.6,
+            "distance_m": 1.0012,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "S1-E2-WP-009",
+          "floor": "S1",
+          "orientation": "V",
+          "face_ids": [
+            "S1-RLE-MURO-0022",
+            "S1-RLE-MURO-0025"
+          ],
+          "centerline_start_xy_m": [
+            -3.648,
+            -1.0943
+          ],
+          "centerline_end_xy_m": [
+            -3.648,
+            -0.2993
+          ],
+          "length_m": 0.795,
+          "thickness_m": 0.6,
+          "measured_face_separation_m": 0.6,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=60",
+            "xy_m": [
+              -4.037616113047529,
+              0.495296623025979
+            ],
+            "thickness_m": 0.6,
+            "distance_m": 0.885,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "S1-E2-WP-010",
+          "floor": "S1",
+          "orientation": "V",
+          "face_ids": [
+            "S1-RLE-MURO-0023",
+            "S1-RLE-MURO-0025"
+          ],
+          "centerline_start_xy_m": [
+            -3.648,
+            0.0007
+          ],
+          "centerline_end_xy_m": [
+            -3.648,
+            1.8257
+          ],
+          "length_m": 1.825,
+          "thickness_m": 0.6,
+          "measured_face_separation_m": 0.6,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=60",
+            "xy_m": [
+              -4.037616113047529,
+              0.495296623025979
+            ],
+            "thickness_m": 0.6,
+            "distance_m": 0.3896,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "S1-E2-WP-011",
+          "floor": "S1",
+          "orientation": "H",
+          "face_ids": [
+            "S1-RLE-MURO-0027",
+            "S1-RLE-MURO-0028"
+          ],
+          "centerline_start_xy_m": [
+            -3.348,
+            -0.1493
+          ],
+          "centerline_end_xy_m": [
+            -1.898,
+            -0.1493
+          ],
+          "length_m": 1.45,
+          "thickness_m": 0.3,
+          "measured_face_separation_m": 0.3,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=30",
+            "xy_m": [
+              -2.5203085678734807,
+              -0.3991829925606589
+            ],
+            "thickness_m": 0.3,
+            "distance_m": 0.2499,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        }
+      ],
+      "overlay": "entregas/POST_P1L4/ed2_walls/s1_wall_face_pairs.png"
+    },
+    "P1": {
+      "source_contour_segments": 29,
+      "confirmed_physical_walls": 11,
+      "unmatched_faces": 10,
+      "unresolved_unmatched_faces": 0,
+      "label_conflicts": 0,
+      "thicknesses_m": {
+        "0.25": 4,
+        "0.3": 3,
+        "0.6": 4
+      },
+      "unmatched_classification": [
+        {
+          "face_id": "P1-RLE-MURO-0002",
+          "length_m": 0.25,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "P1-RLE-MURO-0004",
+          "length_m": 0.25,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "P1-RLE-MURO-0006",
+          "length_m": 0.25,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "P1-RLE-MURO-0013",
+          "length_m": 0.25,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "P1-RLE-MURO-0015",
+          "length_m": 0.3,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "P1-RLE-MURO-0019",
+          "length_m": 0.6,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "P1-RLE-MURO-0021",
+          "length_m": 0.6,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "P1-RLE-MURO-0024",
+          "length_m": 0.6,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "P1-RLE-MURO-0026",
+          "length_m": 0.6,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "P1-RLE-MURO-0029",
+          "length_m": 0.3,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        }
+      ],
+      "pairs": [
+        {
+          "pair_id": "P1-E2-WP-001",
+          "floor": "P1",
+          "orientation": "V",
+          "face_ids": [
+            "P1-RLE-MURO-0001",
+            "P1-RLE-MURO-0003"
+          ],
+          "centerline_start_xy_m": [
+            27.727,
+            8.5507
+          ],
+          "centerline_end_xy_m": [
+            27.727,
+            16.5007
+          ],
+          "length_m": 7.95,
+          "thickness_m": 0.25,
+          "measured_face_separation_m": 0.25,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=25",
+            "xy_m": [
+              27.487656662981646,
+              12.56560259599241
+            ],
+            "thickness_m": 0.25,
+            "distance_m": 0.2393,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "P1-E2-WP-002",
+          "floor": "P1",
+          "orientation": "V",
+          "face_ids": [
+            "P1-RLE-MURO-0005",
+            "P1-RLE-MURO-0007"
+          ],
+          "centerline_start_xy_m": [
+            25.082,
+            3.3307
+          ],
+          "centerline_end_xy_m": [
+            25.082,
+            6.1507
+          ],
+          "length_m": 2.82,
+          "thickness_m": 0.25,
+          "measured_face_separation_m": 0.25,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=25",
+            "xy_m": [
+              24.861980573745868,
+              4.454204548897792
+            ],
+            "thickness_m": 0.25,
+            "distance_m": 0.22,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "P1-E2-WP-003",
+          "floor": "P1",
+          "orientation": "H",
+          "face_ids": [
+            "P1-RLE-MURO-0008",
+            "P1-RLE-MURO-0009"
+          ],
+          "centerline_start_xy_m": [
+            25.207,
+            3.1807
+          ],
+          "centerline_end_xy_m": [
+            27.602,
+            3.1807
+          ],
+          "length_m": 2.395,
+          "thickness_m": 0.3,
+          "measured_face_separation_m": 0.3,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=30",
+            "xy_m": [
+              26.44540991865222,
+              2.9311738673775016
+            ],
+            "thickness_m": 0.3,
+            "distance_m": 0.2495,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "P1-E2-WP-004",
+          "floor": "P1",
+          "orientation": "V",
+          "face_ids": [
+            "P1-RLE-MURO-0010",
+            "P1-RLE-MURO-0012"
+          ],
+          "centerline_start_xy_m": [
+            27.727,
+            3.3307
+          ],
+          "centerline_end_xy_m": [
+            27.727,
+            6.1507
+          ],
+          "length_m": 2.82,
+          "thickness_m": 0.25,
+          "measured_face_separation_m": 0.25,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=25",
+            "xy_m": [
+              27.484628898621214,
+              4.764599942229902
+            ],
+            "thickness_m": 0.25,
+            "distance_m": 0.2424,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "P1-E2-WP-005",
+          "floor": "P1",
+          "orientation": "V",
+          "face_ids": [
+            "P1-RLE-MURO-0011",
+            "P1-RLE-MURO-0012"
+          ],
+          "centerline_start_xy_m": [
+            27.727,
+            0.3507
+          ],
+          "centerline_end_xy_m": [
+            27.727,
+            3.0307
+          ],
+          "length_m": 2.68,
+          "thickness_m": 0.25,
+          "measured_face_separation_m": 0.25,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=25",
+            "xy_m": [
+              27.496451771521368,
+              1.67402666791319
+            ],
+            "thickness_m": 0.25,
+            "distance_m": 0.2305,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "P1-E2-WP-006",
+          "floor": "P1",
+          "orientation": "H",
+          "face_ids": [
+            "P1-RLE-MURO-0014",
+            "P1-RLE-MURO-0016"
+          ],
+          "centerline_start_xy_m": [
+            -3.348,
+            16.3007
+          ],
+          "centerline_end_xy_m": [
+            -1.898,
+            16.3007
+          ],
+          "length_m": 1.45,
+          "thickness_m": 0.3,
+          "measured_face_separation_m": 0.3,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=30",
+            "xy_m": [
+              -2.5230920141301794,
+              16.06214382388134
+            ],
+            "thickness_m": 0.3,
+            "distance_m": 0.2386,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "P1-E2-WP-007",
+          "floor": "P1",
+          "orientation": "V",
+          "face_ids": [
+            "P1-RLE-MURO-0017",
+            "P1-RLE-MURO-0020"
+          ],
+          "centerline_start_xy_m": [
+            -3.648,
+            14.3257
+          ],
+          "centerline_end_xy_m": [
+            -3.648,
+            16.1507
+          ],
+          "length_m": 1.825,
+          "thickness_m": 0.6,
+          "measured_face_separation_m": 0.6,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=60",
+            "xy_m": [
+              -4.031270358643731,
+              15.52576504677888
+            ],
+            "thickness_m": 0.6,
+            "distance_m": 0.3833,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "P1-E2-WP-008",
+          "floor": "P1",
+          "orientation": "V",
+          "face_ids": [
+            "P1-RLE-MURO-0018",
+            "P1-RLE-MURO-0020"
+          ],
+          "centerline_start_xy_m": [
+            -3.648,
+            16.4507
+          ],
+          "centerline_end_xy_m": [
+            -3.648,
+            17.2407
+          ],
+          "length_m": 0.79,
+          "thickness_m": 0.6,
+          "measured_face_separation_m": 0.6,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=60",
+            "xy_m": [
+              -4.031270358643731,
+              15.52576504677888
+            ],
+            "thickness_m": 0.6,
+            "distance_m": 1.0012,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "P1-E2-WP-009",
+          "floor": "P1",
+          "orientation": "V",
+          "face_ids": [
+            "P1-RLE-MURO-0022",
+            "P1-RLE-MURO-0025"
+          ],
+          "centerline_start_xy_m": [
+            -3.648,
+            -1.0943
+          ],
+          "centerline_end_xy_m": [
+            -3.648,
+            -0.2993
+          ],
+          "length_m": 0.795,
+          "thickness_m": 0.6,
+          "measured_face_separation_m": 0.6,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=60",
+            "xy_m": [
+              -4.037616113047529,
+              0.495296623025979
+            ],
+            "thickness_m": 0.6,
+            "distance_m": 0.885,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "P1-E2-WP-010",
+          "floor": "P1",
+          "orientation": "V",
+          "face_ids": [
+            "P1-RLE-MURO-0023",
+            "P1-RLE-MURO-0025"
+          ],
+          "centerline_start_xy_m": [
+            -3.648,
+            0.0007
+          ],
+          "centerline_end_xy_m": [
+            -3.648,
+            1.8257
+          ],
+          "length_m": 1.825,
+          "thickness_m": 0.6,
+          "measured_face_separation_m": 0.6,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=60",
+            "xy_m": [
+              -4.037616113047529,
+              0.495296623025979
+            ],
+            "thickness_m": 0.6,
+            "distance_m": 0.3896,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "P1-E2-WP-011",
+          "floor": "P1",
+          "orientation": "H",
+          "face_ids": [
+            "P1-RLE-MURO-0027",
+            "P1-RLE-MURO-0028"
+          ],
+          "centerline_start_xy_m": [
+            -3.348,
+            -0.1493
+          ],
+          "centerline_end_xy_m": [
+            -1.898,
+            -0.1493
+          ],
+          "length_m": 1.45,
+          "thickness_m": 0.3,
+          "measured_face_separation_m": 0.3,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=30",
+            "xy_m": [
+              -2.5203085678734807,
+              -0.3991829925606589
+            ],
+            "thickness_m": 0.3,
+            "distance_m": 0.2499,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        }
+      ],
+      "overlay": "entregas/POST_P1L4/ed2_walls/p1_wall_face_pairs.png"
+    },
+    "P2": {
+      "source_contour_segments": 29,
+      "confirmed_physical_walls": 11,
+      "unmatched_faces": 10,
+      "unresolved_unmatched_faces": 0,
+      "label_conflicts": 0,
+      "thicknesses_m": {
+        "0.25": 4,
+        "0.3": 3,
+        "0.6": 4
+      },
+      "unmatched_classification": [
+        {
+          "face_id": "P2-RLE-MURO-0002",
+          "length_m": 0.25,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "P2-RLE-MURO-0004",
+          "length_m": 0.25,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "P2-RLE-MURO-0006",
+          "length_m": 0.25,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "P2-RLE-MURO-0013",
+          "length_m": 0.25,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "P2-RLE-MURO-0015",
+          "length_m": 0.3,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "P2-RLE-MURO-0019",
+          "length_m": 0.6,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "P2-RLE-MURO-0021",
+          "length_m": 0.6,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "P2-RLE-MURO-0024",
+          "length_m": 0.6,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "P2-RLE-MURO-0026",
+          "length_m": 0.6,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "P2-RLE-MURO-0029",
+          "length_m": 0.3,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        }
+      ],
+      "pairs": [
+        {
+          "pair_id": "P2-E2-WP-001",
+          "floor": "P2",
+          "orientation": "V",
+          "face_ids": [
+            "P2-RLE-MURO-0001",
+            "P2-RLE-MURO-0003"
+          ],
+          "centerline_start_xy_m": [
+            27.727,
+            8.5507
+          ],
+          "centerline_end_xy_m": [
+            27.727,
+            16.5007
+          ],
+          "length_m": 7.95,
+          "thickness_m": 0.25,
+          "measured_face_separation_m": 0.25,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=25",
+            "xy_m": [
+              27.487656662981646,
+              12.56560259599241
+            ],
+            "thickness_m": 0.25,
+            "distance_m": 0.2393,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "P2-E2-WP-002",
+          "floor": "P2",
+          "orientation": "V",
+          "face_ids": [
+            "P2-RLE-MURO-0005",
+            "P2-RLE-MURO-0007"
+          ],
+          "centerline_start_xy_m": [
+            25.082,
+            3.3307
+          ],
+          "centerline_end_xy_m": [
+            25.082,
+            6.1507
+          ],
+          "length_m": 2.82,
+          "thickness_m": 0.25,
+          "measured_face_separation_m": 0.25,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=25",
+            "xy_m": [
+              24.861980573745868,
+              4.454204548897792
+            ],
+            "thickness_m": 0.25,
+            "distance_m": 0.22,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "P2-E2-WP-003",
+          "floor": "P2",
+          "orientation": "H",
+          "face_ids": [
+            "P2-RLE-MURO-0008",
+            "P2-RLE-MURO-0009"
+          ],
+          "centerline_start_xy_m": [
+            25.207,
+            3.1807
+          ],
+          "centerline_end_xy_m": [
+            27.602,
+            3.1807
+          ],
+          "length_m": 2.395,
+          "thickness_m": 0.3,
+          "measured_face_separation_m": 0.3,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=30",
+            "xy_m": [
+              26.44540991865222,
+              2.9311738673775016
+            ],
+            "thickness_m": 0.3,
+            "distance_m": 0.2495,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "P2-E2-WP-004",
+          "floor": "P2",
+          "orientation": "V",
+          "face_ids": [
+            "P2-RLE-MURO-0010",
+            "P2-RLE-MURO-0012"
+          ],
+          "centerline_start_xy_m": [
+            27.727,
+            3.3307
+          ],
+          "centerline_end_xy_m": [
+            27.727,
+            6.1507
+          ],
+          "length_m": 2.82,
+          "thickness_m": 0.25,
+          "measured_face_separation_m": 0.25,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=25",
+            "xy_m": [
+              27.484628898621214,
+              4.764599942229902
+            ],
+            "thickness_m": 0.25,
+            "distance_m": 0.2424,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "P2-E2-WP-005",
+          "floor": "P2",
+          "orientation": "V",
+          "face_ids": [
+            "P2-RLE-MURO-0011",
+            "P2-RLE-MURO-0012"
+          ],
+          "centerline_start_xy_m": [
+            27.727,
+            0.3507
+          ],
+          "centerline_end_xy_m": [
+            27.727,
+            3.0307
+          ],
+          "length_m": 2.68,
+          "thickness_m": 0.25,
+          "measured_face_separation_m": 0.25,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=25",
+            "xy_m": [
+              27.496451771521368,
+              1.67402666791319
+            ],
+            "thickness_m": 0.25,
+            "distance_m": 0.2305,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "P2-E2-WP-006",
+          "floor": "P2",
+          "orientation": "H",
+          "face_ids": [
+            "P2-RLE-MURO-0014",
+            "P2-RLE-MURO-0016"
+          ],
+          "centerline_start_xy_m": [
+            -3.348,
+            16.3007
+          ],
+          "centerline_end_xy_m": [
+            -1.898,
+            16.3007
+          ],
+          "length_m": 1.45,
+          "thickness_m": 0.3,
+          "measured_face_separation_m": 0.3,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=30",
+            "xy_m": [
+              -2.5230920141301794,
+              16.06214382388134
+            ],
+            "thickness_m": 0.3,
+            "distance_m": 0.2386,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "P2-E2-WP-007",
+          "floor": "P2",
+          "orientation": "V",
+          "face_ids": [
+            "P2-RLE-MURO-0017",
+            "P2-RLE-MURO-0020"
+          ],
+          "centerline_start_xy_m": [
+            -3.648,
+            14.3257
+          ],
+          "centerline_end_xy_m": [
+            -3.648,
+            16.1507
+          ],
+          "length_m": 1.825,
+          "thickness_m": 0.6,
+          "measured_face_separation_m": 0.6,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=60",
+            "xy_m": [
+              -4.031270358643731,
+              15.52576504677888
+            ],
+            "thickness_m": 0.6,
+            "distance_m": 0.3833,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "P2-E2-WP-008",
+          "floor": "P2",
+          "orientation": "V",
+          "face_ids": [
+            "P2-RLE-MURO-0018",
+            "P2-RLE-MURO-0020"
+          ],
+          "centerline_start_xy_m": [
+            -3.648,
+            16.4507
+          ],
+          "centerline_end_xy_m": [
+            -3.648,
+            17.2407
+          ],
+          "length_m": 0.79,
+          "thickness_m": 0.6,
+          "measured_face_separation_m": 0.6,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=60",
+            "xy_m": [
+              -4.031270358643731,
+              15.52576504677888
+            ],
+            "thickness_m": 0.6,
+            "distance_m": 1.0012,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "P2-E2-WP-009",
+          "floor": "P2",
+          "orientation": "V",
+          "face_ids": [
+            "P2-RLE-MURO-0022",
+            "P2-RLE-MURO-0025"
+          ],
+          "centerline_start_xy_m": [
+            -3.648,
+            -1.0943
+          ],
+          "centerline_end_xy_m": [
+            -3.648,
+            -0.2993
+          ],
+          "length_m": 0.795,
+          "thickness_m": 0.6,
+          "measured_face_separation_m": 0.6,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=60",
+            "xy_m": [
+              -4.037616113047529,
+              0.495296623025979
+            ],
+            "thickness_m": 0.6,
+            "distance_m": 0.885,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "P2-E2-WP-010",
+          "floor": "P2",
+          "orientation": "V",
+          "face_ids": [
+            "P2-RLE-MURO-0023",
+            "P2-RLE-MURO-0025"
+          ],
+          "centerline_start_xy_m": [
+            -3.648,
+            0.0007
+          ],
+          "centerline_end_xy_m": [
+            -3.648,
+            1.8257
+          ],
+          "length_m": 1.825,
+          "thickness_m": 0.6,
+          "measured_face_separation_m": 0.6,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=60",
+            "xy_m": [
+              -4.037616113047529,
+              0.495296623025979
+            ],
+            "thickness_m": 0.6,
+            "distance_m": 0.3896,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "P2-E2-WP-011",
+          "floor": "P2",
+          "orientation": "H",
+          "face_ids": [
+            "P2-RLE-MURO-0027",
+            "P2-RLE-MURO-0028"
+          ],
+          "centerline_start_xy_m": [
+            -3.348,
+            -0.1493
+          ],
+          "centerline_end_xy_m": [
+            -1.898,
+            -0.1493
+          ],
+          "length_m": 1.45,
+          "thickness_m": 0.3,
+          "measured_face_separation_m": 0.3,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=30",
+            "xy_m": [
+              -2.5203085678734807,
+              -0.3991829925606589
+            ],
+            "thickness_m": 0.3,
+            "distance_m": 0.2499,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        }
+      ],
+      "overlay": "entregas/POST_P1L4/ed2_walls/p2_wall_face_pairs.png"
+    },
+    "P3": {
+      "source_contour_segments": 29,
+      "confirmed_physical_walls": 11,
+      "unmatched_faces": 10,
+      "unresolved_unmatched_faces": 0,
+      "label_conflicts": 0,
+      "thicknesses_m": {
+        "0.25": 4,
+        "0.3": 3,
+        "0.6": 4
+      },
+      "unmatched_classification": [
+        {
+          "face_id": "P3-RLE-MURO-0002",
+          "length_m": 0.25,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "P3-RLE-MURO-0004",
+          "length_m": 0.25,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "P3-RLE-MURO-0006",
+          "length_m": 0.25,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "P3-RLE-MURO-0013",
+          "length_m": 0.25,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "P3-RLE-MURO-0015",
+          "length_m": 0.3,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "P3-RLE-MURO-0019",
+          "length_m": 0.6,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "P3-RLE-MURO-0021",
+          "length_m": 0.6,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "P3-RLE-MURO-0024",
+          "length_m": 0.6,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "P3-RLE-MURO-0026",
+          "length_m": 0.6,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "P3-RLE-MURO-0029",
+          "length_m": 0.3,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        }
+      ],
+      "pairs": [
+        {
+          "pair_id": "P3-E2-WP-001",
+          "floor": "P3",
+          "orientation": "V",
+          "face_ids": [
+            "P3-RLE-MURO-0001",
+            "P3-RLE-MURO-0003"
+          ],
+          "centerline_start_xy_m": [
+            27.727,
+            8.5507
+          ],
+          "centerline_end_xy_m": [
+            27.727,
+            16.5007
+          ],
+          "length_m": 7.95,
+          "thickness_m": 0.25,
+          "measured_face_separation_m": 0.25,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=25",
+            "xy_m": [
+              27.487656662981646,
+              12.56560259599241
+            ],
+            "thickness_m": 0.25,
+            "distance_m": 0.2393,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "P3-E2-WP-002",
+          "floor": "P3",
+          "orientation": "V",
+          "face_ids": [
+            "P3-RLE-MURO-0005",
+            "P3-RLE-MURO-0007"
+          ],
+          "centerline_start_xy_m": [
+            25.082,
+            3.3307
+          ],
+          "centerline_end_xy_m": [
+            25.082,
+            6.1507
+          ],
+          "length_m": 2.82,
+          "thickness_m": 0.25,
+          "measured_face_separation_m": 0.25,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=25",
+            "xy_m": [
+              24.861980573745868,
+              4.454204548897792
+            ],
+            "thickness_m": 0.25,
+            "distance_m": 0.22,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "P3-E2-WP-003",
+          "floor": "P3",
+          "orientation": "H",
+          "face_ids": [
+            "P3-RLE-MURO-0008",
+            "P3-RLE-MURO-0009"
+          ],
+          "centerline_start_xy_m": [
+            25.207,
+            3.1807
+          ],
+          "centerline_end_xy_m": [
+            27.602,
+            3.1807
+          ],
+          "length_m": 2.395,
+          "thickness_m": 0.3,
+          "measured_face_separation_m": 0.3,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=30",
+            "xy_m": [
+              26.44540991865222,
+              2.9311738673775016
+            ],
+            "thickness_m": 0.3,
+            "distance_m": 0.2495,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "P3-E2-WP-004",
+          "floor": "P3",
+          "orientation": "V",
+          "face_ids": [
+            "P3-RLE-MURO-0010",
+            "P3-RLE-MURO-0012"
+          ],
+          "centerline_start_xy_m": [
+            27.727,
+            3.3307
+          ],
+          "centerline_end_xy_m": [
+            27.727,
+            6.1507
+          ],
+          "length_m": 2.82,
+          "thickness_m": 0.25,
+          "measured_face_separation_m": 0.25,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=25",
+            "xy_m": [
+              27.484628898621214,
+              4.764599942229902
+            ],
+            "thickness_m": 0.25,
+            "distance_m": 0.2424,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "P3-E2-WP-005",
+          "floor": "P3",
+          "orientation": "V",
+          "face_ids": [
+            "P3-RLE-MURO-0011",
+            "P3-RLE-MURO-0012"
+          ],
+          "centerline_start_xy_m": [
+            27.727,
+            0.3507
+          ],
+          "centerline_end_xy_m": [
+            27.727,
+            3.0307
+          ],
+          "length_m": 2.68,
+          "thickness_m": 0.25,
+          "measured_face_separation_m": 0.25,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=25",
+            "xy_m": [
+              27.496451771521368,
+              1.67402666791319
+            ],
+            "thickness_m": 0.25,
+            "distance_m": 0.2305,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "P3-E2-WP-006",
+          "floor": "P3",
+          "orientation": "H",
+          "face_ids": [
+            "P3-RLE-MURO-0014",
+            "P3-RLE-MURO-0016"
+          ],
+          "centerline_start_xy_m": [
+            -3.348,
+            16.3007
+          ],
+          "centerline_end_xy_m": [
+            -1.898,
+            16.3007
+          ],
+          "length_m": 1.45,
+          "thickness_m": 0.3,
+          "measured_face_separation_m": 0.3,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=30",
+            "xy_m": [
+              -2.5230920141301794,
+              16.06214382388134
+            ],
+            "thickness_m": 0.3,
+            "distance_m": 0.2386,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "P3-E2-WP-007",
+          "floor": "P3",
+          "orientation": "V",
+          "face_ids": [
+            "P3-RLE-MURO-0017",
+            "P3-RLE-MURO-0020"
+          ],
+          "centerline_start_xy_m": [
+            -3.648,
+            14.3257
+          ],
+          "centerline_end_xy_m": [
+            -3.648,
+            16.1507
+          ],
+          "length_m": 1.825,
+          "thickness_m": 0.6,
+          "measured_face_separation_m": 0.6,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=60",
+            "xy_m": [
+              -4.031270358643731,
+              15.52576504677888
+            ],
+            "thickness_m": 0.6,
+            "distance_m": 0.3833,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "P3-E2-WP-008",
+          "floor": "P3",
+          "orientation": "V",
+          "face_ids": [
+            "P3-RLE-MURO-0018",
+            "P3-RLE-MURO-0020"
+          ],
+          "centerline_start_xy_m": [
+            -3.648,
+            16.4507
+          ],
+          "centerline_end_xy_m": [
+            -3.648,
+            17.2407
+          ],
+          "length_m": 0.79,
+          "thickness_m": 0.6,
+          "measured_face_separation_m": 0.6,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=60",
+            "xy_m": [
+              -4.031270358643731,
+              15.52576504677888
+            ],
+            "thickness_m": 0.6,
+            "distance_m": 1.0012,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "P3-E2-WP-009",
+          "floor": "P3",
+          "orientation": "V",
+          "face_ids": [
+            "P3-RLE-MURO-0022",
+            "P3-RLE-MURO-0025"
+          ],
+          "centerline_start_xy_m": [
+            -3.648,
+            -1.0943
+          ],
+          "centerline_end_xy_m": [
+            -3.648,
+            -0.2993
+          ],
+          "length_m": 0.795,
+          "thickness_m": 0.6,
+          "measured_face_separation_m": 0.6,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=60",
+            "xy_m": [
+              -4.037616113047529,
+              0.495296623025979
+            ],
+            "thickness_m": 0.6,
+            "distance_m": 0.885,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "P3-E2-WP-010",
+          "floor": "P3",
+          "orientation": "V",
+          "face_ids": [
+            "P3-RLE-MURO-0023",
+            "P3-RLE-MURO-0025"
+          ],
+          "centerline_start_xy_m": [
+            -3.648,
+            0.0007
+          ],
+          "centerline_end_xy_m": [
+            -3.648,
+            1.8257
+          ],
+          "length_m": 1.825,
+          "thickness_m": 0.6,
+          "measured_face_separation_m": 0.6,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=60",
+            "xy_m": [
+              -4.037616113047529,
+              0.495296623025979
+            ],
+            "thickness_m": 0.6,
+            "distance_m": 0.3896,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "P3-E2-WP-011",
+          "floor": "P3",
+          "orientation": "H",
+          "face_ids": [
+            "P3-RLE-MURO-0027",
+            "P3-RLE-MURO-0028"
+          ],
+          "centerline_start_xy_m": [
+            -3.348,
+            -0.1493
+          ],
+          "centerline_end_xy_m": [
+            -1.898,
+            -0.1493
+          ],
+          "length_m": 1.45,
+          "thickness_m": 0.3,
+          "measured_face_separation_m": 0.3,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-101.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=30",
+            "xy_m": [
+              -2.5203085678734807,
+              -0.3991829925606589
+            ],
+            "thickness_m": 0.3,
+            "distance_m": 0.2499,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        }
+      ],
+      "overlay": "entregas/POST_P1L4/ed2_walls/p3_wall_face_pairs.png"
+    },
+    "P4": {
+      "source_contour_segments": 28,
+      "confirmed_physical_walls": 10,
+      "unmatched_faces": 10,
+      "unresolved_unmatched_faces": 0,
+      "label_conflicts": 0,
+      "thicknesses_m": {
+        "0.25": 3,
+        "0.3": 3,
+        "0.6": 4
+      },
+      "unmatched_classification": [
+        {
+          "face_id": "P4-RLE-MURO-0002",
+          "length_m": 0.25,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "P4-RLE-MURO-0004",
+          "length_m": 0.25,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "P4-RLE-MURO-0006",
+          "length_m": 0.25,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "P4-RLE-MURO-0012",
+          "length_m": 0.25,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "P4-RLE-MURO-0014",
+          "length_m": 0.3,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "P4-RLE-MURO-0018",
+          "length_m": 0.6,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "P4-RLE-MURO-0020",
+          "length_m": 0.6,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "P4-RLE-MURO-0023",
+          "length_m": 0.6,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "P4-RLE-MURO-0025",
+          "length_m": 0.6,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        },
+        {
+          "face_id": "P4-RLE-MURO-0028",
+          "length_m": 0.3,
+          "classification": "CONTOUR_CLOSING_EDGE_EXCLUDED"
+        }
+      ],
+      "pairs": [
+        {
+          "pair_id": "P4-E2-WP-001",
+          "floor": "P4",
+          "orientation": "V",
+          "face_ids": [
+            "P4-RLE-MURO-0001",
+            "P4-RLE-MURO-0003"
+          ],
+          "centerline_start_xy_m": [
+            27.727,
+            8.5507
+          ],
+          "centerline_end_xy_m": [
+            27.727,
+            16.5007
+          ],
+          "length_m": 7.95,
+          "thickness_m": 0.25,
+          "measured_face_separation_m": 0.25,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-102.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=25",
+            "xy_m": [
+              27.476798308001044,
+              12.466658213001152
+            ],
+            "thickness_m": 0.25,
+            "distance_m": 0.2502,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "P4-E2-WP-002",
+          "floor": "P4",
+          "orientation": "V",
+          "face_ids": [
+            "P4-RLE-MURO-0005",
+            "P4-RLE-MURO-0007"
+          ],
+          "centerline_start_xy_m": [
+            25.082,
+            3.3307
+          ],
+          "centerline_end_xy_m": [
+            25.082,
+            6.1507
+          ],
+          "length_m": 2.82,
+          "thickness_m": 0.25,
+          "measured_face_separation_m": 0.25,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-102.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=25",
+            "xy_m": [
+              24.862094244212972,
+              4.51426146911082
+            ],
+            "thickness_m": 0.25,
+            "distance_m": 0.2199,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "P4-E2-WP-003",
+          "floor": "P4",
+          "orientation": "H",
+          "face_ids": [
+            "P4-RLE-MURO-0008",
+            "P4-RLE-MURO-0009"
+          ],
+          "centerline_start_xy_m": [
+            25.207,
+            3.1807
+          ],
+          "centerline_end_xy_m": [
+            27.602,
+            3.1807
+          ],
+          "length_m": 2.395,
+          "thickness_m": 0.3,
+          "measured_face_separation_m": 0.3,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-102.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=30",
+            "xy_m": [
+              26.416499300619662,
+              2.962317322755489
+            ],
+            "thickness_m": 0.3,
+            "distance_m": 0.2184,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "P4-E2-WP-004",
+          "floor": "P4",
+          "orientation": "V",
+          "face_ids": [
+            "P4-RLE-MURO-0010",
+            "P4-RLE-MURO-0011"
+          ],
+          "centerline_start_xy_m": [
+            27.727,
+            3.3307
+          ],
+          "centerline_end_xy_m": [
+            27.727,
+            6.1507
+          ],
+          "length_m": 2.82,
+          "thickness_m": 0.25,
+          "measured_face_separation_m": 0.25,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-102.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=25",
+            "xy_m": [
+              27.42261646065497,
+              4.6175756487902895
+            ],
+            "thickness_m": 0.25,
+            "distance_m": 0.3044,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "P4-E2-WP-005",
+          "floor": "P4",
+          "orientation": "H",
+          "face_ids": [
+            "P4-RLE-MURO-0013",
+            "P4-RLE-MURO-0015"
+          ],
+          "centerline_start_xy_m": [
+            -3.348,
+            16.3007
+          ],
+          "centerline_end_xy_m": [
+            -1.898,
+            16.3007
+          ],
+          "length_m": 1.45,
+          "thickness_m": 0.3,
+          "measured_face_separation_m": 0.3,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-102.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=30",
+            "xy_m": [
+              -1.6842163886007802,
+              16.73881258506343
+            ],
+            "thickness_m": 0.3,
+            "distance_m": 0.4875,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "P4-E2-WP-006",
+          "floor": "P4",
+          "orientation": "V",
+          "face_ids": [
+            "P4-RLE-MURO-0016",
+            "P4-RLE-MURO-0019"
+          ],
+          "centerline_start_xy_m": [
+            -3.648,
+            14.3257
+          ],
+          "centerline_end_xy_m": [
+            -3.648,
+            16.1507
+          ],
+          "length_m": 1.825,
+          "thickness_m": 0.6,
+          "measured_face_separation_m": 0.6,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-102.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=60",
+            "xy_m": [
+              -4.068268540256991,
+              15.583591746189871
+            ],
+            "thickness_m": 0.6,
+            "distance_m": 0.4203,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "P4-E2-WP-007",
+          "floor": "P4",
+          "orientation": "V",
+          "face_ids": [
+            "P4-RLE-MURO-0017",
+            "P4-RLE-MURO-0019"
+          ],
+          "centerline_start_xy_m": [
+            -3.648,
+            16.4507
+          ],
+          "centerline_end_xy_m": [
+            -3.648,
+            17.2407
+          ],
+          "length_m": 0.79,
+          "thickness_m": 0.6,
+          "measured_face_separation_m": 0.6,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-102.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=60",
+            "xy_m": [
+              -4.068268540256991,
+              15.583591746189871
+            ],
+            "thickness_m": 0.6,
+            "distance_m": 0.9636,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "P4-E2-WP-008",
+          "floor": "P4",
+          "orientation": "V",
+          "face_ids": [
+            "P4-RLE-MURO-0021",
+            "P4-RLE-MURO-0024"
+          ],
+          "centerline_start_xy_m": [
+            -3.648,
+            -1.0943
+          ],
+          "centerline_end_xy_m": [
+            -3.648,
+            -0.2993
+          ],
+          "length_m": 0.795,
+          "thickness_m": 0.6,
+          "measured_face_separation_m": 0.6,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-102.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=60",
+            "xy_m": [
+              -4.027259220788319,
+              0.25955326473018886
+            ],
+            "thickness_m": 0.6,
+            "distance_m": 0.6754,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "P4-E2-WP-009",
+          "floor": "P4",
+          "orientation": "V",
+          "face_ids": [
+            "P4-RLE-MURO-0022",
+            "P4-RLE-MURO-0024"
+          ],
+          "centerline_start_xy_m": [
+            -3.648,
+            0.0007
+          ],
+          "centerline_end_xy_m": [
+            -3.648,
+            1.8257
+          ],
+          "length_m": 1.825,
+          "thickness_m": 0.6,
+          "measured_face_separation_m": 0.6,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-102.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=60",
+            "xy_m": [
+              -4.027259220788319,
+              0.25955326473018886
+            ],
+            "thickness_m": 0.6,
+            "distance_m": 0.3793,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        },
+        {
+          "pair_id": "P4-E2-WP-010",
+          "floor": "P4",
+          "orientation": "H",
+          "face_ids": [
+            "P4-RLE-MURO-0026",
+            "P4-RLE-MURO-0027"
+          ],
+          "centerline_start_xy_m": [
+            -3.348,
+            -0.1493
+          ],
+          "centerline_end_xy_m": [
+            -1.898,
+            -0.1493
+          ],
+          "length_m": 1.45,
+          "thickness_m": 0.3,
+          "measured_face_separation_m": 0.3,
+          "standard_residual_m": 0.0,
+          "source_sheet": "2024_22-102.dxf",
+          "classification": "CONFIRMED_CONTOUR_PAIR",
+          "nearest_wall_label": {
+            "text": "M.H.A. e=30",
+            "xy_m": [
+              -2.627066850206479,
+              -0.3773249165295192
+            ],
+            "thickness_m": 0.3,
+            "distance_m": 0.228,
+            "agrees_with_geometry": true
+          },
+          "thickness_source": "CAD_CONTOUR_PAIR+TEXT_LABEL"
+        }
+      ],
+      "overlay": "entregas/POST_P1L4/ed2_walls/p4_wall_face_pairs.png"
+    }
+  },
+  "vertical_continuity": [
+    {
+      "lower_floor": "S1",
+      "upper_floor": "P1",
+      "lower_pair_id": "S1-E2-WP-001",
+      "upper_pair_id": "P1-E2-WP-001",
+      "overlap_m": 7.95,
+      "status": "CONTINUOUS"
+    },
+    {
+      "lower_floor": "S1",
+      "upper_floor": "P1",
+      "lower_pair_id": "S1-E2-WP-002",
+      "upper_pair_id": "P1-E2-WP-002",
+      "overlap_m": 2.82,
+      "status": "CONTINUOUS"
+    },
+    {
+      "lower_floor": "S1",
+      "upper_floor": "P1",
+      "lower_pair_id": "S1-E2-WP-003",
+      "upper_pair_id": "P1-E2-WP-003",
+      "overlap_m": 2.395,
+      "status": "CONTINUOUS"
+    },
+    {
+      "lower_floor": "S1",
+      "upper_floor": "P1",
+      "lower_pair_id": "S1-E2-WP-004",
+      "upper_pair_id": "P1-E2-WP-004",
+      "overlap_m": 2.82,
+      "status": "CONTINUOUS"
+    },
+    {
+      "lower_floor": "S1",
+      "upper_floor": "P1",
+      "lower_pair_id": "S1-E2-WP-005",
+      "upper_pair_id": "P1-E2-WP-005",
+      "overlap_m": 2.68,
+      "status": "CONTINUOUS"
+    },
+    {
+      "lower_floor": "S1",
+      "upper_floor": "P1",
+      "lower_pair_id": "S1-E2-WP-006",
+      "upper_pair_id": "P1-E2-WP-006",
+      "overlap_m": 1.45,
+      "status": "CONTINUOUS"
+    },
+    {
+      "lower_floor": "S1",
+      "upper_floor": "P1",
+      "lower_pair_id": "S1-E2-WP-007",
+      "upper_pair_id": "P1-E2-WP-007",
+      "overlap_m": 1.825,
+      "status": "CONTINUOUS"
+    },
+    {
+      "lower_floor": "S1",
+      "upper_floor": "P1",
+      "lower_pair_id": "S1-E2-WP-008",
+      "upper_pair_id": "P1-E2-WP-008",
+      "overlap_m": 0.79,
+      "status": "CONTINUOUS"
+    },
+    {
+      "lower_floor": "S1",
+      "upper_floor": "P1",
+      "lower_pair_id": "S1-E2-WP-009",
+      "upper_pair_id": "P1-E2-WP-009",
+      "overlap_m": 0.795,
+      "status": "CONTINUOUS"
+    },
+    {
+      "lower_floor": "S1",
+      "upper_floor": "P1",
+      "lower_pair_id": "S1-E2-WP-010",
+      "upper_pair_id": "P1-E2-WP-010",
+      "overlap_m": 1.825,
+      "status": "CONTINUOUS"
+    },
+    {
+      "lower_floor": "S1",
+      "upper_floor": "P1",
+      "lower_pair_id": "S1-E2-WP-011",
+      "upper_pair_id": "P1-E2-WP-011",
+      "overlap_m": 1.45,
+      "status": "CONTINUOUS"
+    },
+    {
+      "lower_floor": "P1",
+      "upper_floor": "P2",
+      "lower_pair_id": "P1-E2-WP-001",
+      "upper_pair_id": "P2-E2-WP-001",
+      "overlap_m": 7.95,
+      "status": "CONTINUOUS"
+    },
+    {
+      "lower_floor": "P1",
+      "upper_floor": "P2",
+      "lower_pair_id": "P1-E2-WP-002",
+      "upper_pair_id": "P2-E2-WP-002",
+      "overlap_m": 2.82,
+      "status": "CONTINUOUS"
+    },
+    {
+      "lower_floor": "P1",
+      "upper_floor": "P2",
+      "lower_pair_id": "P1-E2-WP-003",
+      "upper_pair_id": "P2-E2-WP-003",
+      "overlap_m": 2.395,
+      "status": "CONTINUOUS"
+    },
+    {
+      "lower_floor": "P1",
+      "upper_floor": "P2",
+      "lower_pair_id": "P1-E2-WP-004",
+      "upper_pair_id": "P2-E2-WP-004",
+      "overlap_m": 2.82,
+      "status": "CONTINUOUS"
+    },
+    {
+      "lower_floor": "P1",
+      "upper_floor": "P2",
+      "lower_pair_id": "P1-E2-WP-005",
+      "upper_pair_id": "P2-E2-WP-005",
+      "overlap_m": 2.68,
+      "status": "CONTINUOUS"
+    },
+    {
+      "lower_floor": "P1",
+      "upper_floor": "P2",
+      "lower_pair_id": "P1-E2-WP-006",
+      "upper_pair_id": "P2-E2-WP-006",
+      "overlap_m": 1.45,
+      "status": "CONTINUOUS"
+    },
+    {
+      "lower_floor": "P1",
+      "upper_floor": "P2",
+      "lower_pair_id": "P1-E2-WP-007",
+      "upper_pair_id": "P2-E2-WP-007",
+      "overlap_m": 1.825,
+      "status": "CONTINUOUS"
+    },
+    {
+      "lower_floor": "P1",
+      "upper_floor": "P2",
+      "lower_pair_id": "P1-E2-WP-008",
+      "upper_pair_id": "P2-E2-WP-008",
+      "overlap_m": 0.79,
+      "status": "CONTINUOUS"
+    },
+    {
+      "lower_floor": "P1",
+      "upper_floor": "P2",
+      "lower_pair_id": "P1-E2-WP-009",
+      "upper_pair_id": "P2-E2-WP-009",
+      "overlap_m": 0.795,
+      "status": "CONTINUOUS"
+    },
+    {
+      "lower_floor": "P1",
+      "upper_floor": "P2",
+      "lower_pair_id": "P1-E2-WP-010",
+      "upper_pair_id": "P2-E2-WP-010",
+      "overlap_m": 1.825,
+      "status": "CONTINUOUS"
+    },
+    {
+      "lower_floor": "P1",
+      "upper_floor": "P2",
+      "lower_pair_id": "P1-E2-WP-011",
+      "upper_pair_id": "P2-E2-WP-011",
+      "overlap_m": 1.45,
+      "status": "CONTINUOUS"
+    },
+    {
+      "lower_floor": "P2",
+      "upper_floor": "P3",
+      "lower_pair_id": "P2-E2-WP-001",
+      "upper_pair_id": "P3-E2-WP-001",
+      "overlap_m": 7.95,
+      "status": "CONTINUOUS"
+    },
+    {
+      "lower_floor": "P2",
+      "upper_floor": "P3",
+      "lower_pair_id": "P2-E2-WP-002",
+      "upper_pair_id": "P3-E2-WP-002",
+      "overlap_m": 2.82,
+      "status": "CONTINUOUS"
+    },
+    {
+      "lower_floor": "P2",
+      "upper_floor": "P3",
+      "lower_pair_id": "P2-E2-WP-003",
+      "upper_pair_id": "P3-E2-WP-003",
+      "overlap_m": 2.395,
+      "status": "CONTINUOUS"
+    },
+    {
+      "lower_floor": "P2",
+      "upper_floor": "P3",
+      "lower_pair_id": "P2-E2-WP-004",
+      "upper_pair_id": "P3-E2-WP-004",
+      "overlap_m": 2.82,
+      "status": "CONTINUOUS"
+    },
+    {
+      "lower_floor": "P2",
+      "upper_floor": "P3",
+      "lower_pair_id": "P2-E2-WP-005",
+      "upper_pair_id": "P3-E2-WP-005",
+      "overlap_m": 2.68,
+      "status": "CONTINUOUS"
+    },
+    {
+      "lower_floor": "P2",
+      "upper_floor": "P3",
+      "lower_pair_id": "P2-E2-WP-006",
+      "upper_pair_id": "P3-E2-WP-006",
+      "overlap_m": 1.45,
+      "status": "CONTINUOUS"
+    },
+    {
+      "lower_floor": "P2",
+      "upper_floor": "P3",
+      "lower_pair_id": "P2-E2-WP-007",
+      "upper_pair_id": "P3-E2-WP-007",
+      "overlap_m": 1.825,
+      "status": "CONTINUOUS"
+    },
+    {
+      "lower_floor": "P2",
+      "upper_floor": "P3",
+      "lower_pair_id": "P2-E2-WP-008",
+      "upper_pair_id": "P3-E2-WP-008",
+      "overlap_m": 0.79,
+      "status": "CONTINUOUS"
+    },
+    {
+      "lower_floor": "P2",
+      "upper_floor": "P3",
+      "lower_pair_id": "P2-E2-WP-009",
+      "upper_pair_id": "P3-E2-WP-009",
+      "overlap_m": 0.795,
+      "status": "CONTINUOUS"
+    },
+    {
+      "lower_floor": "P2",
+      "upper_floor": "P3",
+      "lower_pair_id": "P2-E2-WP-010",
+      "upper_pair_id": "P3-E2-WP-010",
+      "overlap_m": 1.825,
+      "status": "CONTINUOUS"
+    },
+    {
+      "lower_floor": "P2",
+      "upper_floor": "P3",
+      "lower_pair_id": "P2-E2-WP-011",
+      "upper_pair_id": "P3-E2-WP-011",
+      "overlap_m": 1.45,
+      "status": "CONTINUOUS"
+    },
+    {
+      "lower_floor": "P3",
+      "upper_floor": "P4",
+      "lower_pair_id": "P3-E2-WP-001",
+      "upper_pair_id": "P4-E2-WP-001",
+      "overlap_m": 7.95,
+      "status": "CONTINUOUS"
+    },
+    {
+      "lower_floor": "P3",
+      "upper_floor": "P4",
+      "lower_pair_id": "P3-E2-WP-002",
+      "upper_pair_id": "P4-E2-WP-002",
+      "overlap_m": 2.82,
+      "status": "CONTINUOUS"
+    },
+    {
+      "lower_floor": "P3",
+      "upper_floor": "P4",
+      "lower_pair_id": "P3-E2-WP-003",
+      "upper_pair_id": "P4-E2-WP-003",
+      "overlap_m": 2.395,
+      "status": "CONTINUOUS"
+    },
+    {
+      "lower_floor": "P3",
+      "upper_floor": "P4",
+      "lower_pair_id": "P3-E2-WP-004",
+      "upper_pair_id": "P4-E2-WP-004",
+      "overlap_m": 2.82,
+      "status": "CONTINUOUS"
+    },
+    {
+      "lower_floor": "P3",
+      "upper_floor": "P4",
+      "lower_pair_id": "P3-E2-WP-005",
+      "upper_pair_id": null,
+      "overlap_m": 0.0,
+      "status": "TERMINATES_VALIDLY_OR_REVIEW"
+    },
+    {
+      "lower_floor": "P3",
+      "upper_floor": "P4",
+      "lower_pair_id": "P3-E2-WP-006",
+      "upper_pair_id": "P4-E2-WP-005",
+      "overlap_m": 1.45,
+      "status": "CONTINUOUS"
+    },
+    {
+      "lower_floor": "P3",
+      "upper_floor": "P4",
+      "lower_pair_id": "P3-E2-WP-007",
+      "upper_pair_id": "P4-E2-WP-006",
+      "overlap_m": 1.825,
+      "status": "CONTINUOUS"
+    },
+    {
+      "lower_floor": "P3",
+      "upper_floor": "P4",
+      "lower_pair_id": "P3-E2-WP-008",
+      "upper_pair_id": "P4-E2-WP-007",
+      "overlap_m": 0.79,
+      "status": "CONTINUOUS"
+    },
+    {
+      "lower_floor": "P3",
+      "upper_floor": "P4",
+      "lower_pair_id": "P3-E2-WP-009",
+      "upper_pair_id": "P4-E2-WP-008",
+      "overlap_m": 0.795,
+      "status": "CONTINUOUS"
+    },
+    {
+      "lower_floor": "P3",
+      "upper_floor": "P4",
+      "lower_pair_id": "P3-E2-WP-010",
+      "upper_pair_id": "P4-E2-WP-009",
+      "overlap_m": 1.825,
+      "status": "CONTINUOUS"
+    },
+    {
+      "lower_floor": "P3",
+      "upper_floor": "P4",
+      "lower_pair_id": "P3-E2-WP-011",
+      "upper_pair_id": "P4-E2-WP-010",
+      "overlap_m": 1.45,
+      "status": "CONTINUOUS"
+    }
+  ]
+}

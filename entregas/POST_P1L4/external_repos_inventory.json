@@ -1,0 +1,87 @@
+{
+  "format": "MCOC_POST_P1L4_EXTERNAL_REPOS_INVENTORY_V1",
+  "generated_date": "2026-09-21",
+  "our_baseline": {
+    "tag": "P1L4_FINAL",
+    "commit": "56e24ac0568b24eba3cf119f2e3cc66fc0af3a35",
+    "branch": "codex/post-p1l4-structural-audit",
+    "geometry_contract": "entregas/P1L3/José/viewer_unity/Assets/StreamingAssets/model_viewer.json",
+    "structural_counts": {
+      "beams": 815,
+      "columns": 150,
+      "walls": 168
+    }
+  },
+  "external_repositories": [
+    {
+      "alias": "SANTIAGO",
+      "url": "https://github.com/Santiago411323/Trabajo-MCOC",
+      "commit": "c1f434b",
+      "branch": "main",
+      "access": "READ_ONLY_PUSH_DISABLED",
+      "mature_geometry": "P1L4/unity_visualizador/Assets/Resources/estructura_completo_unity.json",
+      "mature_fe_results": "P1L4/unity_visualizador/Assets/Resources/estructura_p1l4_unity.json",
+      "mature_unity": "P1L4/unity_visualizador",
+      "counts": {
+        "nodes": 553,
+        "frame_elements": 462,
+        "beams": 333,
+        "columns": 129,
+        "walls_by_story": 75,
+        "supports": 30,
+        "slabs": 226
+      },
+      "units": "kN,m",
+      "notes": [
+        "EDIFICIO_2 bars have no floor label in the enriched contract.",
+        "The base combined contract contains 30 walls; the enriched contract contains 75 story wall records.",
+        "External disconnected-component anchoring is not evidence for our FE connectivity."
+      ]
+    },
+    {
+      "alias": "CACERES",
+      "url": "https://github.com/jpCaceres123/Proyecto-1-MCOC",
+      "commit": "b4a7bd8",
+      "branch": "main",
+      "access": "READ_ONLY_PUSH_DISABLED",
+      "mature_geometry_source": "Edificio/data/geometry/geometria_manual.json",
+      "mature_geometry_fe": "Edificio/results/modelo_3d_manual.json",
+      "mature_unity": "Edificio/visualization/unity/UnityVisualization",
+      "mature_results": "Edificio/results",
+      "counts": {
+        "nodes": 1251,
+        "elements_total": 694,
+        "rc_columns": 124,
+        "steel_columns": 4,
+        "primary_beams_xy": 463,
+        "special_beams_and_offsets": 21,
+        "source_walls": 24,
+        "walls_by_story": 82,
+        "slabs": 652
+      },
+      "units": "kN,m,s",
+      "notes": [
+        "The current geometry contracts exist on main, not on the divergent Semana4 branches.",
+        "Most geometry is explicitly manual and must not be treated as independent CAD proof.",
+        "Wall records are story segments derived from source walls."
+      ]
+    }
+  ],
+  "comparison_policy": {
+    "authority": "PRIMARY_PLANS_OVER_EXTERNAL_CONSENSUS",
+    "match_by_id": false,
+    "allow_one_to_many": true,
+    "column_xy_strong_m": 0.15,
+    "column_xy_candidate_m": 0.30,
+    "centerline_strong_m": 0.15,
+    "angle_tolerance_deg": 3.0,
+    "endpoint_tolerance_m": 0.25,
+    "minimum_overlap_ratio": 0.80,
+    "length_absolute_tolerance_m": 0.20,
+    "length_relative_tolerance": 0.05,
+    "automatic_correction_requires": [
+      "P0_OR_P1",
+      "PRIMARY_SOURCE_EVIDENCE"
+    ]
+  }
+}

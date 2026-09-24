@@ -1,4 +1,91 @@
-# P1L3 - Estado de integracion
+# P1L3 - Estado de integración y consolidación POST-P1L3
+
+## Auditoría de contexto físico P1L4 (2026-09-15)
+
+- Se reevaluaron los 31 `DISCONNECTED_ERROR` y 9 `UNRESOLVED` sin modificar
+  OpenSees: 20 corresponden al núcleo con revisión del adaptador FE, 14 al
+  acceso/escalera D, 4 al acceso/escalera B y 2 continúan `UNRESOLVED_REAL`.
+- El núcleo S1–P4 conserva seis paredes/retornos físicos repetidos verticalmente;
+  no se encontró ningún `DUPLICATE_EXTRACTION` inequívoco ni se eliminó geometría.
+- La evidencia `RADIER SOBRE TERRENO` y las cotas variables de 2017_67-101,
+  junto con la información física del edificio, confirman que S1 queda enterrado
+  en gran parte de B/D. A/C permanecen sin una cota exterior continua cerrada.
+- Unity incorpora la capa apagada por defecto `CONTEXTO FÍSICO (VISUAL ONLY)`
+  con tres clusters, labels y marcadores de nivel. `participates_in_FE=false`.
+- QA de contrato, compilación Unity 6000.6.0f1 y arranque Play: `PASS`; el
+  runtime registró `contexto-fisico=40`.
+- Se mantuvieron intactos geometría canónica, 1312 resultados históricos P1L3,
+  cargas, masas, EX/EY, superposición y capacidad.
+- Reporte: `entregas/P1L4/physical_context_audit/PHYSICAL_CONTEXT_AUDIT.md`.
+
+## Interfaz vigente PRE-P1L4 (2026-09-12)
+
+- Unity de José es la única interfaz principal; los viewers web son legacy.
+- Geometría visible actual: 1212 sólidos (ED1 524, ED2 688).
+- Diagnóstico FE candidato: 1167 miembros, no ejecutado; foco de 72 elementos
+  con 31 `CONNECTED_EXPECTED`, 1 `FREE_END_EXPECTED`, 31
+  `DISCONNECTED_ERROR` y 9 `UNRESOLVED`.
+- La interfaz distingue resultados/cargas/capacidad P1L3 históricos de la
+  geometría y topología candidatas actuales.
+- Inicio: `Abrir_Unity.bat`; validación sin OpenSees: `Validar_Modelo.bat`;
+  fuentes canónicas: `PROJECT_INDEX.md`.
+
+## Cierre espacial de cargas 700 — ambos edificios (2026-09-10)
+
+- Se congelo sin cambios el calce aprobado de `2017_67-700` para EDIFICIO_1.
+- Se confirmaron las dos transformaciones de `2024_22-700` para EDIFICIO_2:
+  escala `0.01`, giro 0 grados, inversion Y y residuales menores que `1.3e-14 m`.
+- La cobertura de los seis panos actuales por piso de EDIFICIO_2 es 100% en
+  S1/P1/P2/P3/P4, sin `UNMAPPED` ni `OVERLAP`; S1-P3 tienen seis panos
+  multizona cada uno y P4 ninguno.
+- La lectura directa del respaldo DWG 2018 confirma `PM.ADIC=2800 kgf/m2`.
+  Las tres cargas puntuales E1 conservan estado `UNRESOLVED`; la franja lineal
+  E1-P4 de 800/7600 kgf/m queda `LIKELY` sobre una cadena de 11 segmentos.
+- Se genero `results/a1a2/load_zones_700_completion/load_catalog_700.json`
+  con 108 entradas y tipos separados SC, PM adicional y PP losa.
+- No se recalcularon Q, G, masas, EX/EY, superposicion, capacidad, OpenSees ni
+  Unity. Reporte: `results/a1a2/load_zones_700_completion/REPORT.md`.
+
+## Auditoria espacial de cargas 700 — EDIFICIO_1 (2026-09-10)
+
+- Se confirmaron por piso las transformaciones de `2017_67-700` contra
+  `global_axes.json` usando seis intersecciones de ejes independientes.
+- La evidencia principal son los xrefs 101/102/103 insertados 1:1, sin giro;
+  la transformacion usa escala `0.01`, inversion Y y el calce global confirmado
+  `dx=27.491 m`. Residual maximo numerico: menor que `1e-12 m`.
+- Se corrigio la cuenta: existen seis intensidades superficiales SC distintas
+  (100, 200, 250, 300, 400 y 500 kgf/m2).
+- Se generaron overlays S1/P1/P2/P3/P4 y un contrato espacial por pano con
+  areas `CONFIRMED`, `UNMAPPED`, `OVERLAP` y `REVIEW_REQUIRED`.
+- El Q uniforme vigente permanece intacto y se etiqueta
+  `LEGACY_UNIFORM_Q_VALIDATION`. No se recalcularon Q, G, masas, EX/EY,
+  superposicion ni resultados; OpenSees y Unity no se regeneraron.
+- Las cargas puntuales P2/P3 conservan texto y coordenada de anotacion, pero su
+  punto de aplicacion/receptor queda `REVIEW_REQUIRED`. La banda lineal P4 tiene
+  centrolinea geometrica candidata y tampoco se aplica.
+- Reporte: `results/a1a2/load_zones_700_alignment/REPORT.md`.
+
+## Piloto arquitectonico EDIFICIO_1 / P4 (2026-09-10)
+
+- Se creo `arquitectura/architectural_visual_model.json` como contrato visual
+  separado. Su unico objeto es `ARCH-E1-P4-SLAB-001`, esta marcado
+  `participates_in_FE=false` y no alimenta OpenSees, cargas ni masas.
+- La cubierta P4 reconstruida tiene `958.392618 m2` y `0.15 m` de espesor. El
+  espesor proviene de la nota `LOSA e=15` de la lamina `2017_67-103`; el
+  contorno combina 13 segmentos RLE-LOSA directos, seis cierres cortos
+  inferidos y un resalto norte probable respaldado por seis vigas P4.
+- La caja provisional `E1-P4-L-001` se conserva sin mover ni editar
+  (`1802.478751 m2`), pero queda apagada por defecto. El diafragma analitico
+  tambien permanece separado y apagado por defecto.
+- Unity expone controles propios para losa arquitectonica, borde reconstruido,
+  259 bordes DXF RLE-LOSA y diafragma analitico. El registro explicito de piso
+  corrige los filtros de objetos lineales.
+- Compilacion Unity 6000.6.0f1: PASS. Prueba Play: `[UI QA] PASS` para capas y
+  pisos, incluidas las cuatro categorias anteriores.
+- Auditoria y plano comparativo: `arquitectura/P4_AUDITORIA.md` y
+  `arquitectura/p4_architectural_plan.png`.
+- No se modificaron geometria estructural, IDs, crosswalk, resultados, capacidad
+  HA ni el archivo original de Luis.
 
 ## Checkpoint funcional integrado 2026-09-09
 
@@ -54,8 +141,9 @@
   cerrada autorizada para recalcular el edificio.
 - Se transcribieron por piso las combinaciones superficiales, lineales y
   puntuales de ambas laminas 700, con conversion exacta a SI, en
-  `../P1L2/edificio/validacion/cargas/INTERPRETACION_LAMINAS_700.md`. Queda una
-  unidad ambigua en la banda `SC=500 / PM.ADIC.=2800` de EDIFICIO_1 P1.
+  `../P1L2/edificio/validacion/cargas/INTERPRETACION_LAMINAS_700.md`. La unidad
+  de la banda `SC=500 / PM.ADIC.=2800` de EDIFICIO_1 P1 fue confirmada como
+  superficial mediante el superindice separado presente en el DWG original.
 - Se extrajeron 34 zonas HATCH sin solapes y se superpusieron sobre el modelo.
   El calce es visualmente consistente en LT2 y E1 P1-P4, pendiente de cerrar
   transformaciones con ejes rotulados. En E1 S1 aparece una zona cargada entre
@@ -63,7 +151,7 @@
   historica no tiene un sesgo corregible por factor global: la razon
   HATCH/historica varia de 0.339 a 1.306.
 
-Actualizado: 2026-09-09.
+Actualizado: 2026-09-10.
 
 ## Objetivo vigente
 
@@ -76,8 +164,9 @@ antecedente tecnico; no es la interfaz final.
 | Componente | Fuente vigente | Estado |
 | --- | --- | --- |
 | Planos | `C:/Users/matis/OneDrive/Documentos/Planos_edificio_ingeniera/` | Fuente primaria local; contiene archivos ZIP/RAR que deben inventariarse y extraerse de forma controlada. |
-| Geometria | `entregas/P1L2/unity_export/model_combined_viewer.json` | Vigente: 1561 solidos, cinco pisos. |
-| Topologia FE | `results/a3a4/analysis_model.json` | 813 nodos, 1312 elementos, 106 apoyos. |
+| Geometria | `entregas/P1L2/unity_export/model_combined_viewer.json` | Vigente POST-P1L3: 1212 solidos, cinco pisos. |
+| Topologia FE actual | `results/post_p1l3_candidate/analysis_model_post_p1l3_candidate.json` | Candidato no aprobado/no ejecutado: 1832 nodos, 1167 miembros y 1508 restricciones. |
+| Topologia FE entregada | `results/a3a4/analysis_model.json` | Histórica P1L3: 813 nodos, 1312 elementos, 106 apoyos. |
 | G/Q | `results/a1a2/` y `results/a5/` | Conservacion y superposicion `PASS`. |
 | EX/EY | `Jose/results/seismic_ex_ey.json` + `results/a7/` | Aplicados a OpenSees y verificados; masas historicas provisionales. |
 | Capacidad HA | `capacidad_ha/` | Fiber/M-phi/P-M integrado; propiedades mecanicas y armadura son hipotesis de laboratorio. |
@@ -93,7 +182,9 @@ python entregas/P1L3/scripts/build_unity_bundle.py
 
 El generador valida las fuentes y crea en `Assets/StreamingAssets/`:
 
-- `model_viewer.json`: copia compacta de la geometria vigente.
+- `model_viewer.json`: copia compacta semanticamente exacta de la geometria vigente.
+- `visual_lines.json`: adaptador de coordenadas lineales para `JsonUtility`.
+- `architectural_visual_model.json`: capa visual separada del piloto P4.
 - `analysis_results.json`: resultados FE aplanados por `element_id`.
 - `seismic_ex_ey.json`: definicion sismica de Jose.
 - `capacity_ha.json`: capacidad no lineal y advertencias de procedencia.
@@ -113,6 +204,7 @@ marcan como `Modelo FE: no incluido`.
 - Superposicion G/Q: `PASS`, errores del orden de `1e-12`.
 - Deficit de reaccion vertical por elementos flotantes: 0.763564 %.
 - Version Unity requerida/instalada: 6000.6.0f1.
+- Piloto arquitectonico P4: 1 objeto, 958.392618 m2, no participa en FE.
 
 ## Errores y bloqueos abiertos
 

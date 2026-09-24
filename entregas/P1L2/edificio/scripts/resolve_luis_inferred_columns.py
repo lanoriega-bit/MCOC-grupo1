@@ -41,6 +41,7 @@ OUTBOARD_MD = VALID / "outboard_room_reconstruction.md"
 DIFF_JSON = DATA / "luis_reference_diff.json"
 DIFF_MD = VALID / "luis_reference_diff.md"
 OVERLAY_DIR = VALID / "luis_reference_overlays"
+FINAL_S1_AUDIT = VALID / "s1_columns_final" / "s1_columns_final_audit.json"
 
 CALCE_A_DX_M = 27.491
 Y3_M = 16.15
@@ -503,6 +504,9 @@ def resolve_columns(
     previous: dict[str, object] | None = None,
 ) -> list[dict[str, object]]:
     id_map = build_id_map(combined, audited, previous)
+    final_s1_rows = {}
+    if FINAL_S1_AUDIT.exists():
+        final_s1_rows = {row["id"]: row for row in load(FINAL_S1_AUDIT).get("columns", [])}
     rows = []
     for source_solid in luis.get("solids", []):
         if not is_inferred_column(source_solid):
@@ -581,9 +585,22 @@ def resolve_columns(
             "outboard_y_gt_y3_plus_tolerance": point[1] > OUTBOARD_LIMIT_Y_M,
         }
         classification, reason, reason_codes = classify_column(evidence)
+        viewer_id = enriched.get("id") or enriched.get("human_id")
+        final_s1 = final_s1_rows.get(viewer_id)
+        if final_s1:
+            target_xy = final_s1.get("canonical_center_xy_m", [])
+            if len(target_xy) != 2 or dist_points(point, (float(target_xy[0]), float(target_xy[1]))) > 0.50:
+                # Legacy IDs are not globally unique in the old viewer.  The
+                # full-plan verdict applies only to the audited axis station.
+                final_s1 = None
+        if final_s1 and final_s1.get("classification") == "CONFIRMED":
+            classification = "CONFIRMED_BY_AXIS_ELEVATION"
+            reason = str(final_s1["reason"])
+            reason_codes = ["direct_axis_elevation", "lower_story_contours_to_foundation", "explicit_p70x70"]
+            evidence["final_full_plan_audit"] = final_s1
         row = {
-            "viewer_id": enriched.get("id") or enriched.get("human_id"),
-            "id": enriched.get("id") or enriched.get("human_id"),
+            "viewer_id": viewer_id,
+            "id": viewer_id,
             "elementTag": enriched.get("elementTag"),
             "solidTag": tag,
             "legacy_solidTag": enriched.get("legacy_solidTag"),
@@ -701,6 +718,38 @@ def corrected_model(
                 "resolution_group": resolution.get("resolution_group"),
                 "reason": resolution.get("reason"),
             }
+            final_audit = resolution.get("evidence", {}).get("final_full_plan_audit")
+            if final_audit and final_audit.get("classification") == "CONFIRMED":
+                old_geometry = {key: copy.deepcopy(solid.get(key)) for key in GEOMETRY_KEYS if key in solid}
+                global_xy = final_audit["canonical_center_xy_m"]
+                solid["center"][0] = float(global_xy[0]) - CALCE_A_DX_M
+                solid["center"][1] = float(global_xy[1])
+                solid["width_m"] = float(final_audit["section_m"][0])
+                solid["depth_m"] = float(final_audit["section_m"][1])
+                solid["geometry_confirmation"] = {
+                    "status": "CONFIRMED_BY_AXIS_ELEVATION",
+                    "source_sheet": final_audit["evidence"]["source_sheet"],
+                    "axis_x": final_audit["axis_x"],
+                    "axis_y": final_audit["axis_y"],
+                    "section_m": final_audit["section_m"],
+                    "audit_file": rel(FINAL_S1_AUDIT),
+                }
+                new_geometry = {key: copy.deepcopy(solid.get(key)) for key in GEOMETRY_KEYS if key in solid}
+                if old_geometry != new_geometry:
+                    changes.append(
+                        {
+                            "id": resolution.get("id"),
+                            "solidTag": tag,
+                            "category": solid.get("category"),
+                            "old_geometry": old_geometry,
+                            "new_geometry": new_geometry,
+                            "reason": "Centro y seccion normalizados con elevacion estructural primaria.",
+                            "classification": resolution.get("classification"),
+                            "source_dxf": final_audit["evidence"]["source_sheet"] + ".dxf",
+                            "evidence": final_audit["evidence"],
+                            "confidence": "HIGH",
+                        }
+                    )
     out["model"] = "P1L2 - EDIFICIO_1_AUDITED_CORRECTED"
     out["referenceStatus"] = "EDIFICIO_1_AUDITED_CORRECTED"
     out["correction"] = {
@@ -711,7 +760,7 @@ def corrected_model(
         "removed_columns": len(remove_columns),
         "removed_supports": len(remove_supports),
         "removed_solidTags": sorted(remove_tags),
-        "caveat": "Original DXF files were not present in this workspace; corrections are based on DXF-derived extracts and should be reviewed against drawings when available.",
+        "caveat": "Las seis columnas S1 de los ejes I e I' fueron contrastadas directamente con las elevaciones estructurales completas 309 y 310; los demas veredictos conservan su evidencia y alcance originales.",
     }
     return out, changes
 

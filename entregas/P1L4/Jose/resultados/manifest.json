@@ -1,0 +1,147 @@
+{
+  "format": "P1L4_JOSE_EXPORT_v1",
+  "generated_utc": "2026-09-15T03:52:04.806532+00:00",
+  "status": "P1L3_ENTREGADO_HISTORICO",
+  "cases": {
+    "G": "p1l3_integrated_g",
+    "Q": "p1l3_integrated_q",
+    "EX": "p1l3_integrated_ex",
+    "EY": "p1l3_integrated_ey",
+    "R": "p1l3_integrated_r"
+  },
+  "units": {
+    "length": "m",
+    "force": "N",
+    "moment": "N.m",
+    "angle": "rad",
+    "load": "kN / kN/m2"
+  },
+  "counts": {
+    "displacements_per_case": {
+      "G": 813,
+      "Q": 813,
+      "EX": 813,
+      "EY": 813,
+      "R": 813
+    },
+    "internal_forces_per_case": {
+      "G": 1312,
+      "Q": 1312,
+      "EX": 1312,
+      "EY": 1312,
+      "R": 1312
+    },
+    "supports": 106,
+    "loads_total": 1659,
+    "loads_applied": 1551,
+    "tributary_areas": 1060,
+    "tributary_point_areas": 491
+  },
+  "load_catalog_700_status": "READY_FOR_Q_REVIEW_NOT_APPLIED",
+  "files": [
+    {
+      "name": "apoyos.csv",
+      "sha256": "c6178a1f8d9de85f194c9d5edb3a6f1d049f8ad7fd098e48a36cf59baf0e59c2"
+    },
+    {
+      "name": "apoyos.json",
+      "sha256": "182a54c72a55214cdaa8417751fa23c8bb1ad22bd33e5c433e0862b7fee33332"
+    },
+    {
+      "name": "cargas.csv",
+      "sha256": "361a57ecc232a1afbe9687f0660a9c3c3d46490d71bcfcf5d8746064826e3d8d"
+    },
+    {
+      "name": "cargas.json",
+      "sha256": "b78154777259df542a7803efa8f72731ef9560da7c15df9091bdb10da16623eb"
+    },
+    {
+      "name": "desplazamientos/EX.csv",
+      "sha256": "fb5172b87b3bef28ad7adb6be5e423a90ca25a616f4f81ea9336abdb89ed3930"
+    },
+    {
+      "name": "desplazamientos/EX.json",
+      "sha256": "4aa16201c69dded3d554c162a7e1f1bd7ea38697687f30ecbe6fbe7e76def7a2"
+    },
+    {
+      "name": "desplazamientos/EY.csv",
+      "sha256": "17d505fe64467bd5a91fb456cea0868fac0662ddf0bd1514334df4ec716ea28c"
+    },
+    {
+      "name": "desplazamientos/EY.json",
+      "sha256": "82b597ce6b9097c6363aa612c638eb84a13a497df85a9f4172352fc2355ec5e8"
+    },
+    {
+      "name": "desplazamientos/G.csv",
+      "sha256": "3d13b99200460f6a802425abe8f7341293bf95c5118aef8cfbfde527d719bb0c"
+    },
+    {
+      "name": "desplazamientos/G.json",
+      "sha256": "02f427a1dd6fef205e371d8002c246af320dbb4bca81152545493e0714852faa"
+    },
+    {
+      "name": "desplazamientos/Q.csv",
+      "sha256": "27413ecc50b31b4c52c7a5dd47d6b13799b5d58fa5bd7a7093ccd61d50411589"
+    },
+    {
+      "name": "desplazamientos/Q.json",
+      "sha256": "b80015968688e18aaa0323950840a7b0dba6ae3b169241e84b07b70d2c76e584"
+    },
+    {
+      "name": "desplazamientos/R.csv",
+      "sha256": "a9be59a9c213f6ecc318eaaafbf131d9fdcb0de52ad45fb9aef1349a15232c34"
+    },
+    {
+      "name": "desplazamientos/R.json",
+      "sha256": "a144e98697673ab724fc8fe6b1376908f0fbf90864d8f9bea211556b478210e8"
+    },
+    {
+      "name": "fuerzas_internas/EX.csv",
+      "sha256": "b4f75a213bab19a3d4fede8401bd002e7a2e1f9ebaa6474c863db00bec08885b"
+    },
+    {
+      "name": "fuerzas_internas/EX.json",
+      "sha256": "6010ef16be0bcc3c068539a02910bca5389e6d1585c7ec113300ef12a67d06e7"
+    },
+    {
+      "name": "fuerzas_internas/EY.csv",
+      "sha256": "8bd4e1c3cc02abd646f371f99aa38e02e94d6fb93b8cce88de23910a367af260"
+    },
+    {
+      "name": "fuerzas_internas/EY.json",
+      "sha256": "a08390aa42f6c6798a15255d7b1d2ed0585a3859288d41a9fde4902a4c3e2903"
+    },
+    {
+      "name": "fuerzas_internas/G.csv",
+      "sha256": "e2e06ee01263ffaf332d804d4a57ea33cb7d8eaa61990b29a4c132416ba18a2d"
+    },
+    {
+      "name": "fuerzas_internas/G.json",
+      "sha256": "b160a8cd0ff66561165eec2290801d183a1da0b579d02876429673f478e2a411"
+    },
+    {
+      "name": "fuerzas_internas/Q.csv",
+      "sha256": "ca6e660f3dfed99cd7849ff0a878d8782de838cc991f3f0643560807b038cdda"
+    },
+    {
+      "name": "fuerzas_internas/Q.json",
+      "sha256": "07cd6f8ade1e1927f6d2449c58bcc05bcd4e58e13138471eb27b659843e92e7d"
+    },
+    {
+      "name": "fuerzas_internas/R.csv",
+      "sha256": "dbc800d6dcdfbfddb50b85a06e04a1686d000485182d5f6fe9d666cb180ad80d"
+    },
+    {
+      "name": "fuerzas_internas/R.json",
+      "sha256": "270468ee216d20a53b92e97be89efcea42fc12e58fc2330af7b92ec4c35a4d73"
+    },
+    {
+      "name": "tributarias.csv",
+      "sha256": "bfaf55f9ea781930ffd232e86bc7468dbbdece3d58dc02bb0d411fd669f2ee2f"
+    },
+    {
+      "name": "tributarias.json",
+      "sha256": "a8e01971c46b6ad2748d5cf6a000505e9fc8d9a8aedffbac907ac430d8d48b6f"
+    }
+  ]
+}

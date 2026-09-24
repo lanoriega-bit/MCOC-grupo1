@@ -1,0 +1,202 @@
+{
+  "status": "PASS",
+  "scope": "GEO-SPECIAL-001_S1_AXIS_H",
+  "method": "DIRECT_AXIS_ELEVATION_GRID_LINES_LABELS_AND_LOWER_STORY_CONTOURS",
+  "source_sheet": "2017_67-308",
+  "source_file": "recursos/planos/dxf_full/2017_67/2017_67-308.dxf",
+  "title": "ELEVACION EJE H",
+  "axis_stations_drawing_units": {
+    "1": 410.201,
+    "2": -479.816,
+    "3": -1204.816
+  },
+  "measured_spans_m": {
+    "1-2": 8.90017,
+    "2-3": 7.25
+  },
+  "residuals_m": {
+    "1-2": 0.00017,
+    "2-3": 0.0
+  },
+  "section_labels_by_axis": {
+    "1": [
+      {
+        "text": "P. 70x70",
+        "x": 530.476,
+        "y": 964.032
+      },
+      {
+        "text": "P. 70x70",
+        "x": 530.476,
+        "y": 586.903
+      },
+      {
+        "text": "P. 70x70",
+        "x": 530.476,
+        "y": 226.413
+      },
+      {
+        "text": "P. 70x70",
+        "x": 530.476,
+        "y": -199.587
+      }
+    ],
+    "2": [
+      {
+        "text": "P. 70x70",
+        "x": -369.79,
+        "y": 964.032
+      },
+      {
+        "text": "P. 70x70",
+        "x": -369.79,
+        "y": 586.903
+      },
+      {
+        "text": "P. 70x70",
+        "x": -369.79,
+        "y": 226.413
+      },
+      {
+        "text": "P. 70x70",
+        "x": -369.79,
+        "y": -199.587
+      }
+    ],
+    "3": [
+      {
+        "text": "P. 70x70",
+        "x": -1094.79,
+        "y": 964.032
+      },
+      {
+        "text": "P. 70x70",
+        "x": -1094.79,
+        "y": 586.903
+      },
+      {
+        "text": "P. 70x70",
+        "x": -1094.79,
+        "y": 226.413
+      },
+      {
+        "text": "P. 70x70",
+        "x": -1094.79,
+        "y": -199.587
+      }
+    ]
+  },
+  "lower_story_contours_by_axis": {
+    "1": [
+      {
+        "x": 375.184,
+        "y_min": -401.0,
+        "y_max": -20.0,
+        "layer": "EJEH$0$RLA-CONTORNO"
+      },
+      {
+        "x": 445.184,
+        "y_min": -461.0,
+        "y_max": -5.0,
+        "layer": "EJEH$0$RLA-CONTORNO"
+      }
+    ],
+    "2": [
+      {
+        "x": -514.816,
+        "y_min": -401.0,
+        "y_max": -20.0,
+        "layer": "EJEH$0$RLA-CONTORNO"
+      },
+      {
+        "x": -444.816,
+        "y_min": -401.0,
+        "y_max": -20.0,
+        "layer": "EJEH$0$RLA-CONTORNO"
+      }
+    ],
+    "3": [
+      {
+        "x": -1239.816,
+        "y_min": -401.0,
+        "y_max": -20.0,
+        "layer": "EJEH$0$RLA-CONTORNO"
+      },
+      {
+        "x": -1169.816,
+        "y_min": -401.0,
+        "y_max": -20.0,
+        "layer": "EJEH$0$RLA-CONTORNO"
+      }
+    ]
+  },
+  "columns": [
+    {
+      "id": "E1-S1-C-011",
+      "axis_x": "H",
+      "axis_y": "1",
+      "canonical_center_xy_m": [
+        57.491,
+        0.0
+      ],
+      "section_m": [
+        0.7,
+        0.7
+      ],
+      "classification": "CONFIRMED",
+      "evidence": {
+        "source_sheet": "2017_67-308",
+        "block": "EJEH",
+        "elevation_title": "ELEVACION EJE H",
+        "axis_station_drawing_units": 410.201,
+        "p70x70_label_count_at_station": 4,
+        "lower_story_contour_count": 2
+      }
+    },
+    {
+      "id": "E1-S1-C-012",
+      "axis_x": "H",
+      "axis_y": "2",
+      "canonical_center_xy_m": [
+        57.491,
+        8.9
+      ],
+      "section_m": [
+        0.7,
+        0.7
+      ],
+      "classification": "CONFIRMED",
+      "evidence": {
+        "source_sheet": "2017_67-308",
+        "block": "EJEH",
+        "elevation_title": "ELEVACION EJE H",
+        "axis_station_drawing_units": -479.816,
+        "p70x70_label_count_at_station": 4,
+        "lower_story_contour_count": 2
+      }
+    },
+    {
+      "id": "E1-S1-C-013",
+      "axis_x": "H",
+      "axis_y": "3",
+      "canonical_center_xy_m": [
+        57.491,
+        16.15
+      ],
+      "section_m": [
+        0.7,
+        0.7
+      ],
+      "classification": "CONFIRMED",
+      "evidence": {
+        "source_sheet": "2017_67-308",
+        "block": "EJEH",
+        "elevation_title": "ELEVACION EJE H",
+        "axis_station_drawing_units": -1204.816,
+        "p70x70_label_count_at_station": 4,
+        "lower_story_contour_count": 2
+      }
+    }
+  ],
+  "render": "entregas/P1L2/edificio/validacion/special_interface/2017_67-308_H_crop.png"
+}

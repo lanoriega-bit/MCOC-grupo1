@@ -96,6 +96,16 @@ namespace Mcoc.UnityViewer
             }
         }
 
+        public static ArchitecturalVisualModelData LoadArchitecture(string fileName = "architectural_visual_model.json")
+        {
+            return LoadOptional<ArchitecturalVisualModelData>(fileName, "modelo visual arquitectonico");
+        }
+
+        public static VisualLinesData LoadVisualLines(string fileName = "visual_lines.json")
+        {
+            return LoadOptional<VisualLinesData>(fileName, "lineas visuales compatibles");
+        }
+
         public static AnalysisResultsData LoadAnalysisResults(string fileName = "analysis_results.json")
         {
             return LoadOptional<AnalysisResultsData>(fileName, "resultados de analisis");
@@ -106,6 +116,31 @@ namespace Mcoc.UnityViewer
             return LoadOptional<AnalysisCasesData>(fileName, "casos G/Q/EX/EY/R");
         }
 
+        public static FeDiagnosticData LoadFeDiagnostic(string fileName = "post_p1l3_fe_diagnostic.json")
+        {
+            return LoadOptional<FeDiagnosticData>(fileName, "diagnostico FE POST-P1L3");
+        }
+
+        public static P1L4StructuralMetadataData LoadP1L4StructuralMetadata(string fileName = "p1l4_structural_metadata.json")
+        {
+            return LoadOptional<P1L4StructuralMetadataData>(fileName, "metadatos estructurales P1L4");
+        }
+
+        public static DemandCapacityData LoadDemandCapacity(string fileName = "demanda_capacidad.json")
+        {
+            return LoadOptional<DemandCapacityData>(fileName, "demanda-capacidad P1L4");
+        }
+
+        public static P1L4LoadCatalogData LoadP1L4LoadCatalog(string fileName = "p1l4_load_catalog.json")
+        {
+            return LoadOptional<P1L4LoadCatalogData>(fileName, "catalogo de cargas P1L4");
+        }
+
+        public static PhysicalContextData LoadPhysicalContext(string fileName = "p1l4_physical_context.json")
+        {
+            return LoadOptional<PhysicalContextData>(fileName, "contexto fisico P1L4");
+        }
+
         public static P1L3DeliveryData LoadDelivery(string fileName = "p1l3_delivery.json")
         {
             return LoadOptional<P1L3DeliveryData>(fileName, "resumen P1L3");
@@ -114,6 +149,28 @@ namespace Mcoc.UnityViewer
         public static CapacityData LoadCapacity(string fileName = "capacity_ha.json")
         {
             return LoadOptional<CapacityData>(fileName, "capacidad HA");
+        }
+
+        public static JoseInternalForcesData LoadJoseForces(string caseName, string folder = "p1l4_jose/fuerzas_internas")
+        {
+            return LoadOptional<JoseInternalForcesData>(
+                $"{folder}/{caseName}.json", $"fuerzas P1L4 Jose caso {caseName}");
+        }
+
+        public static JoseDisplacementsData LoadJoseDisplacements(string caseName, string folder = "p1l4_jose/desplazamientos")
+        {
+            return LoadOptional<JoseDisplacementsData>(
+                $"{folder}/{caseName}.json", $"desplazamientos P1L4 Jose caso {caseName}");
+        }
+
+        public static JoseSupportsData LoadJoseSupports(string fileName = "p1l4_jose/apoyos.json")
+        {
+            return LoadOptional<JoseSupportsData>(fileName, "apoyos P1L4 Jose");
+        }
+
+        public static DemandaCapacidadData LoadDemandaCapacidad(string fileName = "demanda_capacidad.json")
+        {
+            return LoadOptional<DemandaCapacidadData>(fileName, "demanda-capacidad P1L4");
         }
 
         public static Texture2D LoadPng(string fileName)
