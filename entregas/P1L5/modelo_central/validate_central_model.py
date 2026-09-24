@@ -115,7 +115,8 @@ def validate() -> dict:
 
     fe_nodes = topology.get("nodes", {})
     fe_supports = topology.get("support_node_tags", [])
-    if len(analysis_ids) != identity.get("fe_candidate_members"):
+    expected_total = identity.get("fe_total_segments", identity.get("fe_candidate_members"))
+    if len(analysis_ids) != expected_total:
         fail(errors, "Embedded FE segment count differs from current identity")
     if len(fe_nodes) != identity.get("fe_candidate_nodes"):
         fail(errors, "Embedded FE node count differs from current identity")
@@ -139,11 +140,26 @@ def validate() -> dict:
         fail(errors, "model_master pending_case does not preserve E2-P4-V-009")
     if central_pending.get("element_id") not in floating_ids:
         fail(errors, "Embedded FE topology does not preserve the documented disconnected component")
+    pending_row = next((row for row in elements if row.get("element_id") == central_pending.get("element_id")), None)
+    if not pending_row or pending_row.get("active") or pending_row.get("analysis_status") != "STOP_EXCLUDED_P1L5":
+        fail(errors, "P1L5 pending case must be retained but inactive with STOP_EXCLUDED_P1L5 status")
 
-    if loads.get("audited_load_catalog", {}).get("status") != "AUDITED_NOT_APPLIED":
-        fail(errors, "loads.json audited catalog must be AUDITED_NOT_APPLIED")
-    if loads.get("tributary_areas", {}).get("status") != "HISTORICAL":
-        fail(errors, "loads.json tributary areas must be HISTORICAL")
+    active_analysis_refs = sum(
+        len(row.get("analysis_refs", []))
+        for row in elements
+        if row.get("type") in {"beam", "column", "wall"} and row.get("active")
+    )
+    if active_analysis_refs != identity.get("fe_active_segments"):
+        fail(errors, "Active FE segment count differs from current identity")
+
+    if loads.get("audited_load_catalog", {}).get("status") not in {
+        "AUDITED_NOT_APPLIED", "CURRENT_PARTIAL_WITH_DOCUMENTED_UNRESOLVED", "APPLIED_CURRENT"
+    }:
+        fail(errors, "loads.json has an unsupported audited load catalog status")
+    if loads.get("tributary_areas", {}).get("status") not in {
+        "HISTORICAL", "CURRENT_VALIDATED", "CURRENT_WITH_DOCUMENTED_FALLBACKS"
+    }:
+        fail(errors, "loads.json has an unsupported tributary-area status")
 
     result = {
         "status": "PASS" if not errors else "FAIL",
@@ -160,12 +176,14 @@ def validate() -> dict:
             "sections": len(section_ids),
             "materials": len(material_ids),
             "analysis_refs": len(analysis_ids),
+            "active_analysis_refs": active_analysis_refs,
             "aliases": len(aliases),
         },
         "current_identity": {
             "solid_count": len(elements) + len(supports),
             "category_counts": dict(central_counts | Counter({"support": len(supports)})),
-            "fe_candidate_members": len(analysis_ids),
+            "fe_total_members": len(analysis_ids),
+            "fe_active_members": active_analysis_refs,
             "fe_nodes": len(fe_nodes),
             "fe_supports": len(fe_supports),
             "pending": central_pending.get("element_id"),

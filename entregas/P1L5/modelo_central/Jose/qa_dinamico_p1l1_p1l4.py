@@ -54,6 +54,8 @@ def main() -> None:
     displacement_counts = set(displacements.values())
     historical_consistent = not missing and len(force_counts) == 1 and len(displacement_counts) == 1 and support_count > 0
     current = master["current_pre5_identity"]
+    current_manifest_path = ROOT / "entregas/P1L5/analysis/results/current/manifest.json"
+    current_manifest = load(current_manifest_path) if current_manifest_path.exists() else {}
     result = {
         "schema": "P1L1_P1L4_RETROSPECTIVE_QA_v2",
         "dataset_status": "HISTORICAL_P1L4_DELIVERED",
@@ -70,7 +72,8 @@ def main() -> None:
             "solid_count": current["solid_count"],
             "fe_candidate_members": current["fe_candidate_members"],
             "pending_case": current["pending_case"]["element_id"],
-            "results_status": "NONE_CURRENT",
+            "results_status": current_manifest.get("status", "NONE_CURRENT"),
+            "analysis_version": current_manifest.get("analysis_version"),
         },
         "deliveries": {
             "P1L1": "STILL_VALID_METHOD_INDEPENDENT_BENCHMARK",
@@ -85,11 +88,11 @@ def main() -> None:
         "Este control es portable y valida el bundle **histórico entregado**. No lo presenta como resultado CURRENT.", "",
         "| Dataset | Estado | Alcance |", "|---|---|---|",
         f"| P1L4 entregado | {'PASS' if historical_consistent else 'FAIL'} | {forces}; apoyos={support_count} |",
-        f"| Modelo central actual | BLOCKED | {current['fe_candidate_members']} segmentos FE candidatos; resultados NONE_CURRENT |", "",
-        "La geometría vigente debe reanalizarse antes de reemplazar los resultados históricos.",
+        f"| Modelo central actual | {current_manifest.get('status','NONE_CURRENT')} | {current.get('fe_active_segments',current['fe_candidate_members'])} segmentos FE activos; {current_manifest.get('analysis_version','sin corrida')} |", "",
+        "Los resultados CURRENT no reemplazan ni reescriben el bundle histórico entregado.",
     ]
     (HERE / "QA_DINAMICO_P1L1_P1L4.md").write_text("\n".join(md) + "\n", encoding="utf-8")
-    print(json.dumps({"historical": result["historical_bundle"]["status"], "current_results": "NONE_CURRENT"}))
+    print(json.dumps({"historical": result["historical_bundle"]["status"], "current_results": current_manifest.get("status", "NONE_CURRENT")}))
 
 
 if __name__ == "__main__":

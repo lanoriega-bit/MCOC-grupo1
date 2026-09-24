@@ -1,6 +1,6 @@
 {
   "format": "MCOC_P1L5_MODEL_MASTER_V1",
-  "generated_utc": "2026-09-23T22:45:53.742123+00:00",
+  "generated_utc": "2026-09-24T02:55:45.039553+00:00",
   "policy": "CENTRAL_CANONICAL_INPUT_PROTOTYPE_DO_NOT_OVERWRITE_PRODUCTION",
   "units": {
     "length": "m",
@@ -20,8 +20,9 @@
     },
     "current_contract": {
       "path": "entregas/PRE_P1L5/current_readiness/current_dataset_contract.json",
-      "status": "BLOCKED_NOT_RUN",
-      "analysis_version": "NONE_NOT_RUN"
+      "status": "CURRENT_VERIFIED",
+      "analysis_version": "P1L5_CURRENT_APPROX_V1",
+      "results_manifest": "entregas/P1L5/analysis/results/current/manifest.json"
     },
     "exclusions_aliases": {
       "path": "entregas/PRE_P1L5/CURRENT_MODEL_EXCLUSIONS.json",
@@ -31218,7 +31219,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_COLUMN_RECT_0.700x0.700",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00152",
       "opensees_tag": 10152,
@@ -31250,7 +31251,20 @@
         "axis_x": "D/E",
         "axis_y": "1"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-C-002",
@@ -31273,7 +31287,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_COLUMN_RECT_0.700x0.700",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00151",
       "opensees_tag": 10151,
@@ -31305,7 +31319,20 @@
         "axis_x": "D/E",
         "axis_y": "2"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-C-003",
@@ -31328,7 +31355,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_COLUMN_RECT_0.700x0.700",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00153",
       "opensees_tag": 10153,
@@ -31360,7 +31387,20 @@
         "axis_x": "D/E",
         "axis_y": "3"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-C-004",
@@ -31383,7 +31423,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_COLUMN_RECT_0.700x0.700",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00148",
       "opensees_tag": 10148,
@@ -31415,7 +31455,20 @@
         "axis_x": "F",
         "axis_y": "1"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-C-005",
@@ -31438,7 +31491,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_COLUMN_RECT_0.700x0.700",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00150",
       "opensees_tag": 10150,
@@ -31470,7 +31523,20 @@
         "axis_x": "F",
         "axis_y": "2"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-C-006",
@@ -31493,7 +31559,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_COLUMN_RECT_0.700x0.700",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00149",
       "opensees_tag": 10149,
@@ -31525,7 +31591,20 @@
         "axis_x": "F",
         "axis_y": "3"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-C-007",
@@ -31548,7 +31627,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_COLUMN_RECT_0.700x0.700",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00162",
       "opensees_tag": 10162,
@@ -31580,7 +31659,20 @@
         "axis_x": "G",
         "axis_y": "1"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-C-008",
@@ -31603,7 +31695,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_COLUMN_RECT_0.700x0.700",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00154",
       "opensees_tag": 10154,
@@ -31635,7 +31727,20 @@
         "axis_x": "G",
         "axis_y": "2"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-C-009",
@@ -31658,7 +31763,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_COLUMN_RECT_0.700x0.700",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00155",
       "opensees_tag": 10155,
@@ -31690,7 +31795,20 @@
         "axis_x": "G",
         "axis_y": "3"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-C-010",
@@ -31713,7 +31831,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_COLUMN_RECT_0.350x0.350",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00169",
       "opensees_tag": 10169,
@@ -31749,7 +31867,20 @@
         "axis_x": "G",
         "axis_y": null
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-C-011",
@@ -31772,7 +31903,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_COLUMN_RECT_0.700x0.700",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00160",
       "opensees_tag": 10160,
@@ -31804,7 +31935,20 @@
         "axis_x": "H",
         "axis_y": "1"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-C-012",
@@ -31827,7 +31971,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_COLUMN_RECT_0.700x0.700",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00161",
       "opensees_tag": 10161,
@@ -31859,7 +32003,20 @@
         "axis_x": "H",
         "axis_y": "2"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-C-013",
@@ -31882,7 +32039,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_COLUMN_RECT_0.700x0.700",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00156",
       "opensees_tag": 10156,
@@ -31914,7 +32071,20 @@
         "axis_x": "H",
         "axis_y": "3"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-C-014",
@@ -31937,7 +32107,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_COLUMN_RECT_0.350x0.350",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00168",
       "opensees_tag": 10168,
@@ -31973,7 +32143,20 @@
         "axis_x": "H",
         "axis_y": null
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-C-015",
@@ -31996,7 +32179,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_COLUMN_RECT_0.700x0.700",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00159",
       "opensees_tag": 10159,
@@ -32028,7 +32211,20 @@
         "axis_x": "I",
         "axis_y": "1"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-C-016",
@@ -32051,7 +32247,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_COLUMN_RECT_0.700x0.700",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00158",
       "opensees_tag": 10158,
@@ -32083,7 +32279,20 @@
         "axis_x": "I",
         "axis_y": "2"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-C-017",
@@ -32106,7 +32315,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_COLUMN_RECT_0.700x0.700",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00157",
       "opensees_tag": 10157,
@@ -32138,7 +32347,20 @@
         "axis_x": "I",
         "axis_y": "3"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-C-018",
@@ -32161,7 +32383,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_COLUMN_RECT_0.700x0.700",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00163",
       "opensees_tag": 10163,
@@ -32193,7 +32415,20 @@
         "axis_x": "I'",
         "axis_y": "1"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-C-019",
@@ -32216,7 +32451,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_COLUMN_RECT_0.700x0.700",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00173",
       "opensees_tag": 10173,
@@ -32248,7 +32483,20 @@
         "axis_x": "I'",
         "axis_y": "2"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-C-020",
@@ -32271,7 +32519,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_COLUMN_RECT_0.700x0.700",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00164",
       "opensees_tag": 10164,
@@ -32303,7 +32551,20 @@
         "axis_x": "I'",
         "axis_y": "3"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-C-021",
@@ -32326,7 +32587,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_COLUMN_RECT_0.350x0.350",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00170",
       "opensees_tag": 10170,
@@ -32362,7 +32623,20 @@
         "axis_x": null,
         "axis_y": "1"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-C-022",
@@ -32385,7 +32659,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_COLUMN_RECT_0.350x0.350",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00172",
       "opensees_tag": 10172,
@@ -32421,7 +32695,20 @@
         "axis_x": null,
         "axis_y": "2"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-C-023",
@@ -32444,7 +32731,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_COLUMN_RECT_0.350x0.350",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00171",
       "opensees_tag": 10171,
@@ -32480,7 +32767,20 @@
         "axis_x": null,
         "axis_y": "3"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-C-024",
@@ -32503,7 +32803,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_COLUMN_RECT_0.350x0.350",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00167",
       "opensees_tag": 10167,
@@ -32539,7 +32839,20 @@
         "axis_x": "J",
         "axis_y": "1"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-C-025",
@@ -32562,7 +32875,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_COLUMN_RECT_0.350x0.350",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00165",
       "opensees_tag": 10165,
@@ -32598,7 +32911,20 @@
         "axis_x": "J",
         "axis_y": "2"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-C-026",
@@ -32621,7 +32947,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_COLUMN_RECT_0.350x0.350",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00166",
       "opensees_tag": 10166,
@@ -32657,7 +32983,20 @@
         "axis_x": "J",
         "axis_y": "3"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-L-001",
@@ -32730,7 +33069,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00632",
       "opensees_tag": 10632,
@@ -32777,7 +33116,20 @@
           ],
           "gap_m": null
         }
-      ]
+      ],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-006",
@@ -32810,7 +33162,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00633",
       "opensees_tag": 10633,
@@ -32840,7 +33192,20 @@
         "axis_x": "D/E",
         "axis_y": null
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-007",
@@ -32873,7 +33238,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00606",
       "opensees_tag": 10606,
@@ -32903,7 +33268,20 @@
         "axis_x": null,
         "axis_y": "1"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-009",
@@ -32936,7 +33314,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00598",
       "opensees_tag": 10598,
@@ -32966,7 +33344,20 @@
         "axis_x": null,
         "axis_y": "2"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-011",
@@ -32999,7 +33390,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00614",
       "opensees_tag": 10614,
@@ -33029,7 +33420,20 @@
         "axis_x": null,
         "axis_y": "3"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-015",
@@ -33062,7 +33466,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00622",
       "opensees_tag": 10622,
@@ -33092,7 +33496,20 @@
         "axis_x": "F",
         "axis_y": null
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-016",
@@ -33125,7 +33542,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00623",
       "opensees_tag": 10623,
@@ -33155,7 +33572,20 @@
         "axis_x": "F",
         "axis_y": null
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-017",
@@ -33188,7 +33618,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00608",
       "opensees_tag": 10608,
@@ -33218,7 +33648,20 @@
         "axis_x": null,
         "axis_y": "1"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-018",
@@ -33251,7 +33694,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00600",
       "opensees_tag": 10600,
@@ -33281,7 +33724,20 @@
         "axis_x": null,
         "axis_y": "2"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-023",
@@ -33314,7 +33770,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00607",
       "opensees_tag": 10607,
@@ -33344,7 +33800,20 @@
         "axis_x": null,
         "axis_y": "1"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-024",
@@ -33377,7 +33846,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00616",
       "opensees_tag": 10616,
@@ -33407,7 +33876,20 @@
         "axis_x": null,
         "axis_y": "3"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-025",
@@ -33440,7 +33922,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00636",
       "opensees_tag": 10636,
@@ -33470,7 +33952,20 @@
         "axis_x": null,
         "axis_y": null
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-026",
@@ -33503,7 +33998,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00637",
       "opensees_tag": 10637,
@@ -33533,7 +34028,20 @@
         "axis_x": null,
         "axis_y": null
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-028",
@@ -33566,7 +34074,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00599",
       "opensees_tag": 10599,
@@ -33596,7 +34104,20 @@
         "axis_x": null,
         "axis_y": "2"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-030",
@@ -33629,7 +34150,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00615",
       "opensees_tag": 10615,
@@ -33659,7 +34180,20 @@
         "axis_x": null,
         "axis_y": "3"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-037",
@@ -33692,7 +34226,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00625",
       "opensees_tag": 10625,
@@ -33722,7 +34256,20 @@
         "axis_x": "G",
         "axis_y": null
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-038",
@@ -33755,7 +34302,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00626",
       "opensees_tag": 10626,
@@ -33785,7 +34332,20 @@
         "axis_x": "G",
         "axis_y": null
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-039",
@@ -33818,7 +34378,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00627",
       "opensees_tag": 10627,
@@ -33848,7 +34408,20 @@
         "axis_x": "G",
         "axis_y": null
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-040",
@@ -33881,7 +34454,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00610",
       "opensees_tag": 10610,
@@ -33911,7 +34484,20 @@
         "axis_x": null,
         "axis_y": "1"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-041",
@@ -33944,7 +34530,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00602",
       "opensees_tag": 10602,
@@ -33974,7 +34560,20 @@
         "axis_x": null,
         "axis_y": "2"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-046",
@@ -34007,7 +34606,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00609",
       "opensees_tag": 10609,
@@ -34037,7 +34636,20 @@
         "axis_x": null,
         "axis_y": "1"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-047",
@@ -34070,7 +34682,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00618",
       "opensees_tag": 10618,
@@ -34100,7 +34712,20 @@
         "axis_x": null,
         "axis_y": "3"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-049",
@@ -34133,7 +34758,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00624",
       "opensees_tag": 10624,
@@ -34163,7 +34788,20 @@
         "axis_x": null,
         "axis_y": null
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-050",
@@ -34196,7 +34834,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00638",
       "opensees_tag": 10638,
@@ -34226,7 +34864,20 @@
         "axis_x": null,
         "axis_y": null
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-051",
@@ -34259,7 +34910,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00639",
       "opensees_tag": 10639,
@@ -34289,7 +34940,20 @@
         "axis_x": null,
         "axis_y": null
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-053",
@@ -34322,7 +34986,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00601",
       "opensees_tag": 10601,
@@ -34352,7 +35016,20 @@
         "axis_x": null,
         "axis_y": "2"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-055",
@@ -34385,7 +35062,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00617",
       "opensees_tag": 10617,
@@ -34415,7 +35092,20 @@
         "axis_x": null,
         "axis_y": "3"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-061",
@@ -34448,7 +35138,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00628",
       "opensees_tag": 10628,
@@ -34478,7 +35168,20 @@
         "axis_x": "H",
         "axis_y": null
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-062",
@@ -34511,7 +35214,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00629",
       "opensees_tag": 10629,
@@ -34541,7 +35244,20 @@
         "axis_x": "H",
         "axis_y": null
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-063",
@@ -34574,7 +35290,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00642",
       "opensees_tag": 10642,
@@ -34604,7 +35320,20 @@
         "axis_x": "H",
         "axis_y": null
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-065",
@@ -34637,7 +35366,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00612",
       "opensees_tag": 10612,
@@ -34667,7 +35396,20 @@
         "axis_x": null,
         "axis_y": "1"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-066",
@@ -34700,7 +35442,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00604",
       "opensees_tag": 10604,
@@ -34730,7 +35472,20 @@
         "axis_x": null,
         "axis_y": "2"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-071",
@@ -34763,7 +35518,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00611",
       "opensees_tag": 10611,
@@ -34793,7 +35548,20 @@
         "axis_x": null,
         "axis_y": "1"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-072",
@@ -34826,7 +35594,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00620",
       "opensees_tag": 10620,
@@ -34856,7 +35624,20 @@
         "axis_x": null,
         "axis_y": "3"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-073",
@@ -34889,7 +35670,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00640",
       "opensees_tag": 10640,
@@ -34919,7 +35700,20 @@
         "axis_x": null,
         "axis_y": null
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-074",
@@ -34952,7 +35746,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00641",
       "opensees_tag": 10641,
@@ -34982,7 +35776,20 @@
         "axis_x": null,
         "axis_y": null
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-076",
@@ -35015,7 +35822,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00603",
       "opensees_tag": 10603,
@@ -35045,7 +35852,20 @@
         "axis_x": null,
         "axis_y": "2"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-078",
@@ -35078,7 +35898,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00619",
       "opensees_tag": 10619,
@@ -35108,7 +35928,20 @@
         "axis_x": null,
         "axis_y": "3"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-082",
@@ -35141,7 +35974,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00630",
       "opensees_tag": 10630,
@@ -35171,7 +36004,20 @@
         "axis_x": "I",
         "axis_y": null
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-083",
@@ -35204,7 +36050,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00631",
       "opensees_tag": 10631,
@@ -35234,7 +36080,20 @@
         "axis_x": "I",
         "axis_y": null
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-084",
@@ -35267,7 +36126,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00613",
       "opensees_tag": 10613,
@@ -35297,7 +36156,20 @@
         "axis_x": "IA",
         "axis_y": "1"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-086",
@@ -35330,7 +36202,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00605",
       "opensees_tag": 10605,
@@ -35360,7 +36232,20 @@
         "axis_x": "IA",
         "axis_y": "2"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-088",
@@ -35393,7 +36278,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00621",
       "opensees_tag": 10621,
@@ -35423,7 +36308,20 @@
         "axis_x": "IA",
         "axis_y": "3"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-092",
@@ -35456,7 +36354,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00634",
       "opensees_tag": 10634,
@@ -35486,7 +36384,20 @@
         "axis_x": "I'",
         "axis_y": null
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-093",
@@ -35519,7 +36430,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00635",
       "opensees_tag": 10635,
@@ -35549,7 +36460,20 @@
         "axis_x": "I'",
         "axis_y": null
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-094",
@@ -35582,7 +36506,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": null,
       "opensees_tag": null,
@@ -35621,7 +36545,20 @@
         "axis_x": null,
         "axis_y": "2"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-104",
@@ -35654,7 +36591,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": null,
       "opensees_tag": null,
@@ -35693,7 +36630,20 @@
         "axis_x": null,
         "axis_y": "1"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-106",
@@ -35726,7 +36676,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": null,
       "opensees_tag": null,
@@ -35765,7 +36715,20 @@
         "axis_x": null,
         "axis_y": "3"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-108",
@@ -35798,7 +36761,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.400x0.600",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00647",
       "opensees_tag": 10647,
@@ -35828,7 +36791,20 @@
         "axis_x": null,
         "axis_y": null
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-109",
@@ -35861,7 +36837,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.400x0.600",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00646",
       "opensees_tag": 10646,
@@ -35891,7 +36867,20 @@
         "axis_x": null,
         "axis_y": null
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-116",
@@ -35924,7 +36913,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00645",
       "opensees_tag": 10645,
@@ -35954,7 +36943,20 @@
         "axis_x": null,
         "axis_y": "2"
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-118",
@@ -35987,7 +36989,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00593",
       "opensees_tag": 10593,
@@ -36017,7 +37019,20 @@
         "axis_x": "J",
         "axis_y": null
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-P4-V-119",
@@ -36050,7 +37065,7 @@
         "z_top_m": 19.8
       },
       "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "material_id": "MAT_UNKNOWN",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
       "active": true,
       "analysis_id": "POST-A-00592",
       "opensees_tag": 10592,
@@ -36080,7 +37095,20 @@
         "axis_x": "J",
         "axis_y": null
       },
-      "merge_history": []
+      "merge_history": [],
+      "material_id_previous": "MAT_UNKNOWN",
+      "p1l5_assumptions": {
+        "material_fallback": {
+          "status": "APPROX_FALLBACK",
+          "rule": "MOST_FREQUENT_VALID_STRUCTURAL_MATERIAL",
+          "assigned_material_id": "MAT_G35_10_2024_22_100_53994",
+          "valid_material_use_counts_before_assignment": {
+            "MAT_G35_10_2017_67_100_1E116": 239,
+            "MAT_G35_10_2024_22_100_53994": 321
+          },
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E1-S1-C-001",
@@ -49650,7 +50678,23 @@
         "axis_x": null,
         "axis_y": null
       },
-      "merge_history": []
+      "merge_history": [],
+      "p1l5_modifications": [
+        {
+          "type": "SET_SECTION",
+          "previous_section_id": "SEC_BEAM_RECT_0.200x0.900",
+          "section_id": "SEC_BEAM_RECT_0.400x0.800",
+          "request_id": "QA-P1L5-MODIFICATIONS-FORWARD",
+          "applied_utc": "2026-09-24T05:19:51.082257+00:00"
+        },
+        {
+          "type": "SET_SECTION",
+          "previous_section_id": "SEC_BEAM_RECT_0.400x0.800",
+          "section_id": "SEC_BEAM_RECT_0.200x0.900",
+          "request_id": "QA-P1L5-MODIFICATIONS-RESTORE",
+          "applied_utc": "2026-09-24T05:20:33.270175+00:00"
+        }
+      ]
     },
     {
       "element_id": "E2-P4-V-002",
@@ -50125,7 +51169,7 @@
       },
       "section_id": "SEC_BEAM_RECT_0.200x0.900",
       "material_id": "MAT_G35_10_2024_22_100_53994",
-      "active": true,
+      "active": false,
       "analysis_id": "POST-A-00417",
       "opensees_tag": 10417,
       "analysis_refs": [
@@ -50136,7 +51180,7 @@
           "node_j": 684,
           "geometry_segment_index": 0,
           "source": "entregas/P1L3/results/post_p1l3_candidate/analysis_model_post_p1l3_candidate.json",
-          "status": "CANDIDATE_NOT_APPROVED_NOT_RUN"
+          "status": "STOP_EXCLUDED_P1L5_NOT_ANALYSED"
         }
       ],
       "aliases": [],
@@ -50153,7 +51197,16 @@
         "axis_x": null,
         "axis_y": "3"
       },
-      "merge_history": []
+      "merge_history": [],
+      "analysis_status": "STOP_EXCLUDED_P1L5",
+      "p1l5_assumptions": {
+        "stop_exclusion": {
+          "status": "AUTHORISED",
+          "reason": "Isolated unresolved beam excluded so it does not block the academic CURRENT run.",
+          "no_support_or_connection_invented": true,
+          "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
+        }
+      }
     },
     {
       "element_id": "E2-P4-V-010",
@@ -62181,7 +63234,7 @@
     "fe_candidate_supports": 33,
     "pending_case": {
       "element_id": "E2-P4-V-009",
-      "status": "PENDING_FE_PATH_CURRENT_PRE5",
+      "status": "STOP_EXCLUDED_P1L5",
       "readiness_record": {
         "element_id": "E2-P4-V-009",
         "type": "beam",
@@ -62195,11 +63248,15 @@
         "analysis_blocking": true,
         "final_classification": "UNRESOLVED_REAL",
         "reason": "Support path/formulation unapproved; no deletion, fixation or live-load omission justified"
-      }
-    }
+      },
+      "blocks_analysis": false,
+      "active": false
+    },
+    "fe_total_segments": 647,
+    "fe_active_segments": 646
   },
   "fe_topology": {
-    "status": "CANDIDATE_NOT_APPROVED_NOT_RUN",
+    "status": "APPROVED_FOR_P1L5_WITH_STOP_EXCLUSIONS",
     "migrated_utc": "2026-09-24T02:17:58.263612+00:00",
     "provenance": {
       "source": "entregas/P1L3/results/post_p1l3_candidate/analysis_model_post_p1l3_candidate.json",
@@ -116445,10 +117502,152 @@
       "crosswalk_required_fields": "PASS"
     },
     "run_policy": {
-      "opensees_run": false,
-      "loads_changed": false,
-      "results_changed": false,
-      "unity_changed": false
+      "status": "APPROVED_ACADEMIC_EXPERIMENTAL",
+      "active_only": true,
+      "stop_element_ids": [
+        "E2-P4-V-009"
+      ],
+      "no_invented_supports": true,
+      "authorised_utc": "2026-09-24T02:55:45.039553+00:00"
     }
-  }
+  },
+  "p1l5_analysis_policy": {
+    "status": "APPROVED_ACADEMIC_EXPERIMENTAL",
+    "applied_utc": "2026-09-24T02:55:45.039553+00:00",
+    "stop_element_ids": [
+      "E2-P4-V-009"
+    ],
+    "structural_material_fallback": {
+      "material_id": "MAT_G35_10_2024_22_100_53994",
+      "valid_use_count_before_assignment": 321,
+      "all_valid_counts": {
+        "MAT_G35_10_2017_67_100_1E116": 239,
+        "MAT_G35_10_2024_22_100_53994": 321
+      },
+      "assigned_element_count": 79,
+      "assigned_element_ids": [
+        "E1-P4-C-001",
+        "E1-P4-C-002",
+        "E1-P4-C-003",
+        "E1-P4-C-004",
+        "E1-P4-C-005",
+        "E1-P4-C-006",
+        "E1-P4-C-007",
+        "E1-P4-C-008",
+        "E1-P4-C-009",
+        "E1-P4-C-010",
+        "E1-P4-C-011",
+        "E1-P4-C-012",
+        "E1-P4-C-013",
+        "E1-P4-C-014",
+        "E1-P4-C-015",
+        "E1-P4-C-016",
+        "E1-P4-C-017",
+        "E1-P4-C-018",
+        "E1-P4-C-019",
+        "E1-P4-C-020",
+        "E1-P4-C-021",
+        "E1-P4-C-022",
+        "E1-P4-C-023",
+        "E1-P4-C-024",
+        "E1-P4-C-025",
+        "E1-P4-C-026",
+        "E1-P4-V-005",
+        "E1-P4-V-006",
+        "E1-P4-V-007",
+        "E1-P4-V-009",
+        "E1-P4-V-011",
+        "E1-P4-V-015",
+        "E1-P4-V-016",
+        "E1-P4-V-017",
+        "E1-P4-V-018",
+        "E1-P4-V-023",
+        "E1-P4-V-024",
+        "E1-P4-V-025",
+        "E1-P4-V-026",
+        "E1-P4-V-028",
+        "E1-P4-V-030",
+        "E1-P4-V-037",
+        "E1-P4-V-038",
+        "E1-P4-V-039",
+        "E1-P4-V-040",
+        "E1-P4-V-041",
+        "E1-P4-V-046",
+        "E1-P4-V-047",
+        "E1-P4-V-049",
+        "E1-P4-V-050",
+        "E1-P4-V-051",
+        "E1-P4-V-053",
+        "E1-P4-V-055",
+        "E1-P4-V-061",
+        "E1-P4-V-062",
+        "E1-P4-V-063",
+        "E1-P4-V-065",
+        "E1-P4-V-066",
+        "E1-P4-V-071",
+        "E1-P4-V-072",
+        "E1-P4-V-073",
+        "E1-P4-V-074",
+        "E1-P4-V-076",
+        "E1-P4-V-078",
+        "E1-P4-V-082",
+        "E1-P4-V-083",
+        "E1-P4-V-084",
+        "E1-P4-V-086",
+        "E1-P4-V-088",
+        "E1-P4-V-092",
+        "E1-P4-V-093",
+        "E1-P4-V-094",
+        "E1-P4-V-104",
+        "E1-P4-V-106",
+        "E1-P4-V-108",
+        "E1-P4-V-109",
+        "E1-P4-V-116",
+        "E1-P4-V-118",
+        "E1-P4-V-119"
+      ]
+    },
+    "slabs": "GEOMETRY_AND_TRIBUTARY_ONLY_NOT_FE",
+    "g35_elastic_modulus_pa": 28000000000.0,
+    "limitations": [
+      "Not intended for structural design.",
+      "Fallback material assignments and approximate elastic properties must remain visible in downstream results."
+    ]
+  },
+  "p1l5_modification_history": [
+    {
+      "request_id": "QA-P1L5-MODIFICATIONS-FORWARD",
+      "applied_utc": "2026-09-24T05:19:51.082257+00:00",
+      "operations": [
+        {
+          "type": "SET_Q_SCALE",
+          "previous": 1.0,
+          "value": 1.1
+        },
+        {
+          "type": "SET_SECTION",
+          "element_id": "E2-P4-V-001",
+          "previous": "SEC_BEAM_RECT_0.200x0.900",
+          "value": "SEC_BEAM_RECT_0.400x0.800"
+        }
+      ]
+    },
+    {
+      "request_id": "QA-P1L5-MODIFICATIONS-RESTORE",
+      "applied_utc": "2026-09-24T05:20:33.270175+00:00",
+      "operations": [
+        {
+          "type": "SET_Q_SCALE",
+          "previous": 1.1,
+          "value": 1.0
+        },
+        {
+          "type": "SET_SECTION",
+          "element_id": "E2-P4-V-001",
+          "previous": "SEC_BEAM_RECT_0.400x0.800",
+          "value": "SEC_BEAM_RECT_0.200x0.900"
+        }
+      ]
+    }
+  ]
 }

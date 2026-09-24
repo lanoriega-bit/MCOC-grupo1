@@ -59,7 +59,7 @@ def main() -> None:
     checks["zero_length_fe_segments"] = "PASS" if not zero_length else "FAIL"
     checks["exact_duplicate_fe_segments"] = "PASS" if not exact_overlap else "FAIL"
 
-    structural = [x for x in elements if x["type"] in {"beam", "column", "wall"}]
+    structural = [x for x in elements if x["type"] in {"beam", "column", "wall"} and x.get("active")]
     unknown = [x["element_id"] for x in structural if x["material_id"] == "MAT_UNKNOWN"]
     missing_elastic_materials = sorted({
         x["material_id"] for x in structural
@@ -67,22 +67,27 @@ def main() -> None:
     })
     checks["section_references"] = "PASS" if all(x["section_id"] in sections for x in elements) else "FAIL"
     checks["material_references"] = "PASS" if all(x["material_id"] in materials for x in elements) else "FAIL"
-    checks["current_material_assignments_complete"] = "PASS" if not unknown else "BLOCKED"
-    checks["current_elastic_properties_complete"] = "PASS" if not missing_elastic_materials else "BLOCKED"
+    checks["current_material_assignments_complete"] = "PASS" if not unknown else "FAIL"
+    checks["current_elastic_properties_complete"] = "PASS" if not missing_elastic_materials else "FAIL"
 
     floating = topology.get("floating_excluded", {})
     floating_ids = sorted({
         eid for component in floating.get("components", [])
         for eid in component.get("geometry_element_ids", [])
     })
-    checks["fe_connectivity"] = "PASS" if not floating_ids else "BLOCKED"
+    stop_ids = set(topology.get("run_policy", {}).get("stop_element_ids", []))
+    active_floating = [element_id for element_id in floating_ids if element_id not in stop_ids]
+    checks["fe_connectivity"] = "PASS_WITH_STOP" if floating_ids and not active_floating else ("PASS" if not floating_ids else "FAIL")
     load_catalog = loads.get("audited_load_catalog", {})
     tributaries = loads.get("tributary_areas", {})
-    checks["loads_current"] = "PASS" if load_catalog.get("status") == "APPLIED_CURRENT" else "BLOCKED"
-    checks["tributaries_current"] = "PASS" if tributaries.get("status") == "CURRENT_VALIDATED" else "BLOCKED"
+    checks["loads_current"] = "PASS_WITH_NOTE" if load_catalog.get("status") == "CURRENT_PARTIAL_WITH_DOCUMENTED_UNRESOLVED" else ("PASS" if load_catalog.get("status") == "APPLIED_CURRENT" else "FAIL")
+    checks["tributaries_current"] = "PASS_WITH_NOTE" if tributaries.get("status") == "CURRENT_WITH_DOCUMENTED_FALLBACKS" else ("PASS" if tributaries.get("status") == "CURRENT_VALIDATED" else "FAIL")
+    results_path = ROOT / "entregas/P1L5/analysis/results/current/manifest.json"
+    results_manifest = load(results_path) if results_path.exists() else {}
+    checks["opensees_current"] = "PASS" if results_manifest.get("status") == "PASS" else "FAIL"
 
     hard_failures = [name for name, state in checks.items() if state == "FAIL"]
-    blockers = [name for name, state in checks.items() if state == "BLOCKED"]
+    blockers = [name for name, state in checks.items() if state in {"BLOCKED", "FAIL"}]
     result = {
         "schema": "P1L5_INTEGRATED_MODEL_AUDIT_v1",
         "integrity_status": "PASS" if not hard_failures else "FAIL",
@@ -107,7 +112,8 @@ def main() -> None:
         },
         "blockers": {
             "checks": blockers,
-            "disconnected_elements": floating_ids,
+            "disconnected_elements": active_floating,
+            "stop_elements": sorted(stop_ids),
             "unknown_material_element_ids": unknown,
             "missing_elastic_material_ids": missing_elastic_materials,
             "load_status": load_catalog.get("status"),

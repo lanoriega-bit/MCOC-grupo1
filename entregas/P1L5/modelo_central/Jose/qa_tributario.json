@@ -1,15 +1,28 @@
 {
   "schema": "P1L2_TRIBUTARY_READINESS_v4",
-  "status": "BLOCKED",
+  "status": "PASS",
   "catalog_entries": 108,
-  "tributary_pans": 110,
-  "catalog_status": "AUDITED_NOT_APPLIED",
-  "tributary_status": "HISTORICAL",
-  "blockers": [
-    "load catalog status=AUDITED_NOT_APPLIED",
-    "tributary status=HISTORICAL",
-    "CURRENT OpenSees results are absent; reaction equilibrium cannot be evaluated"
-  ],
+  "tributary_pans": 105,
+  "catalog_status": "CURRENT_PARTIAL_WITH_DOCUMENTED_UNRESOLVED",
+  "tributary_status": "CURRENT_WITH_DOCUMENTED_FALLBACKS",
+  "conservation": {
+    "G": {
+      "expected_N": 24684754.998,
+      "transferred_N": 24684754.998,
+      "difference_N": 0.0,
+      "relative_error": 0.0,
+      "status": "PASS"
+    },
+    "Q": {
+      "expected_N": 11259193.078,
+      "transferred_N": 11259193.078,
+      "difference_N": -0.0,
+      "relative_error": -0.0,
+      "status": "PASS"
+    }
+  },
+  "opensees_status": "PASS",
+  "blockers": [],
   "correction": "G and Q are independent load cases and are not expected to have equal column axial sums.",
   "historical_results_policy": "May be audited retrospectively, never used as CURRENT fallback."
 }

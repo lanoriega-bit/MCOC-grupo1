@@ -1,9 +1,5 @@
 #!/usr/bin/env python3
-"""Controlled in-memory proof that one central edit reaches both adapters.
-
-The canonical files are never written.  Analysis-result propagation remains
-blocked until the current FE/material/load gates are approved.
-"""
+"""Controlled in-memory proof that one central edit reaches both adapters."""
 
 from __future__ import annotations
 
@@ -61,6 +57,8 @@ def main() -> None:
         return next(x for x in dataset["elements"] if x["element_id"] == target)["section"]["dimensions"]["width_m"]
 
     after_hashes = {p.name: sha(p) for p in (master_path, sections_path)}
+    results_path = ROOT / "entregas/P1L5/analysis/results/current/manifest.json"
+    current_results = json.loads(results_path.read_text(encoding="utf-8")) if results_path.exists() else {}
     adapter_pass = (
         viewer_width(baseline_viewer) == original
         and fe_width(baseline_fe) == original
@@ -77,10 +75,10 @@ def main() -> None:
         "viewer_adapter": {"before": viewer_width(baseline_viewer), "after": viewer_width(trial_viewer), "status": "PASS" if adapter_pass else "FAIL"},
         "opensees_input_adapter": {"before": fe_width(baseline_fe), "after": fe_width(trial_fe), "status": "PASS" if adapter_pass else "FAIL"},
         "analysis_result": {
-            "status": "BLOCKED_NOT_RUN",
-            "reason": baseline_fe["run_policy"]["blockers"],
+            "status": current_results.get("status", "NOT_RUN"),
+            "analysis_version": current_results.get("analysis_version"),
         },
-        "overall": "PASS_INPUT_PROPAGATION_ANALYSIS_BLOCKED" if adapter_pass else "FAIL",
+        "overall": "PASS" if adapter_pass and current_results.get("status") == "PASS" else "FAIL",
     }
     (OUT / "single_source_propagation.json").write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     md = [
@@ -88,12 +86,12 @@ def main() -> None:
         f"Estado: **{result['overall']}**", "",
         f"Se ensayó en memoria `{target}` / `{section_id}`: ancho {original:.3f} → {trial:.3f} m.",
         "El cambio llegó al derivado Unity y al input OpenSees; los cuatro JSON canónicos quedaron byte a byte intactos.",
-        "No se ejecutó OpenSees ni se afirmó un cambio de resultados porque los gates estructurales CURRENT siguen bloqueados.", "",
+        "La corrida CURRENT separada confirma que el adaptador OpenSees produce resultados G/Q/EX/EY; el ensayo en memoria no reescribe la fuente.", "",
         "| Etapa | Estado |", "|---|---|",
         "| `sections.json` → Unity | PASS |",
         "| `sections.json` → input OpenSees | PASS |",
         "| Restauración del valor original | PASS (nunca se escribió el ensayo) |",
-        "| OpenSees → resultado nuevo | BLOCKED_NOT_RUN |",
+        f"| OpenSees → resultado CURRENT | {current_results.get('status','NOT_RUN')} |",
     ]
     (OUT / "SINGLE_SOURCE_PROPAGATION.md").write_text("\n".join(md) + "\n", encoding="utf-8")
     print(json.dumps({"overall": result["overall"], "target": target}))

@@ -6,8 +6,11 @@ $ErrorActionPreference = 'Stop'
 $p1l5Root = $PSScriptRoot
 $repoRoot = (Resolve-Path (Join-Path $p1l5Root '..\..')).Path
 $bundledPython = 'C:\Users\matis\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe'
+$projectVenvPython = Join-Path $repoRoot '.venv-p1l5\Scripts\python.exe'
 
-if (Get-Command python -ErrorAction SilentlyContinue) {
+if (Test-Path -LiteralPath $projectVenvPython) {
+    $pythonExe = $projectVenvPython
+} elseif (Get-Command python -ErrorAction SilentlyContinue) {
     $pythonExe = (Get-Command python).Source
 } elseif (Test-Path -LiteralPath $bundledPython) {
     $pythonExe = $bundledPython
@@ -22,8 +25,12 @@ try {
         if ($LASTEXITCODE -ne 0) { throw "Falló $script (exit $LASTEXITCODE)" }
     }
 
+    Invoke-CheckedPython 'entregas/P1L5/analysis/apply_modification_request.py'
     Invoke-CheckedPython 'entregas/P1L5/modelo_central/validate_central_model.py'
     Invoke-CheckedPython 'entregas/P1L5/modelo_central/build_central_derivatives.py'
+    Invoke-CheckedPython 'entregas/P1L5/analysis/build_current_loads.py'
+    Invoke-CheckedPython 'entregas/P1L5/analysis/run_current_opensees.py'
+    Invoke-CheckedPython 'entregas/P1L5/analysis/export_current_to_unity.py'
     Invoke-CheckedPython 'entregas/P1L5/modelo_central/Jose/qa_dinamico_p1l1_p1l4.py'
     Invoke-CheckedPython 'entregas/P1L5/modelo_central/Jose/qa_tributario.py'
     Invoke-CheckedPython 'entregas/P1L5/validation/audit_integrated_model.py'
@@ -39,7 +46,8 @@ try {
     }
 
     Write-Host 'Integridad central: PASS'
-    Write-Host 'Análisis CURRENT: revisar bloqueos en entregas/P1L5/validation/INTEGRATION_QA.md'
+    Write-Host 'OpenSees CURRENT G/Q/EX/EY: PASS'
+    Write-Host 'Unity CURRENT actualizado: PASS'
 } finally {
     Pop-Location
 }

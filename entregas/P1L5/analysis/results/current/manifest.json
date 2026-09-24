@@ -1,0 +1,33 @@
+{
+  "format": "MCOC_P1L5_CURRENT_RESULTS_MANIFEST_V1",
+  "generated_utc": "2026-09-24T05:27:46.538223+00:00",
+  "status": "PASS",
+  "analysis_version": "P1L5_CURRENT_APPROX_V1",
+  "cases": {
+    "G": {
+      "status": "PASS",
+      "max_translation_m": 0.04054800733642186,
+      "equilibrium_relative_residual": 8.300303834885538e-15
+    },
+    "Q": {
+      "status": "PASS",
+      "max_translation_m": 0.014316005565697345,
+      "equilibrium_relative_residual": 2.1506325322691737e-15
+    },
+    "EX": {
+      "status": "PASS",
+      "max_translation_m": 0.04055231180253647,
+      "equilibrium_relative_residual": 1.0522342249975186e-13
+    },
+    "EY": {
+      "status": "PASS",
+      "max_translation_m": 0.04746429096681042,
+      "equilibrium_relative_residual": 1.474664023354165e-14
+    }
+  },
+  "linear_superposition_compatible": true,
+  "stop_elements": [
+    "E2-P4-V-009"
+  ],
+  "result_state": "CURRENT_APPROX_FALLBACK"
+}

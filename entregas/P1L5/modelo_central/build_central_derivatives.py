@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Build fail-closed derivatives from the P1L5 central model.
+"""Build traceable derivatives from the P1L5 central model.
 
 Outputs are written only to entregas/P1L5/modelo_central/generated.
-No historical file is used as a fallback.  OpenSees execution is enabled only
-after geometry, topology, material and load gates are all ready.
+No historical file is used silently.  Authorised STOP elements and documented
+P1L5 approximations are propagated explicitly.
 """
 
 from __future__ import annotations
@@ -121,6 +121,7 @@ def build_opensees_preview(master: dict, sections: dict, materials: dict, loads:
                 "geometry_segment_index": ref.get("geometry_segment_index", 0),
                 "type": row["type"],
                 "active": row["active"],
+                "analysis_status": row.get("analysis_status", "CURRENT_ACTIVE" if row["active"] else "INACTIVE"),
                 "opensees_node_i": ref["node_i"],
                 "opensees_node_j": ref["node_j"],
                 "section_id": row["section_id"],
@@ -140,22 +141,32 @@ def build_opensees_preview(master: dict, sections: dict, materials: dict, loads:
         if materials[material_id].get("elastic", {}).get("E_pa", {}).get("value") is None
     )
     disconnected = topology.get("floating_excluded", {}).get("components", [])
+    stop_ids = set(topology.get("run_policy", {}).get("stop_element_ids", []))
+    unresolved_active_components = [
+        component for component in disconnected
+        if any(element_id not in stop_ids for element_id in component.get("geometry_element_ids", []))
+    ]
     load_status = loads.get("audited_load_catalog", {}).get("status")
     blockers = []
-    if topology.get("status") != "APPROVED_FOR_ANALYSIS":
-        blockers.append("FE topology is CANDIDATE_NOT_APPROVED_NOT_RUN")
-    if disconnected:
-        blockers.append("Disconnected FE component remains: E2-P4-V-009")
+    if topology.get("status") not in {"APPROVED_FOR_ANALYSIS", "APPROVED_FOR_P1L5_WITH_STOP_EXCLUSIONS"}:
+        blockers.append(f"FE topology is not approved ({topology.get('status')})")
+    if unresolved_active_components:
+        blockers.append("An active disconnected FE component remains")
     if missing_elastic:
         blockers.append("Missing current elastic modulus for: " + ", ".join(missing_elastic))
-    if load_status != "APPLIED_CURRENT":
+    if load_status not in {"APPLIED_CURRENT", "CURRENT_PARTIAL_WITH_DOCUMENTED_UNRESOLVED"}:
         blockers.append(f"Current loads are not applied ({load_status})")
     return {
         "format": "MCOC_P1L5_OPENSEES_PREVIEW_FROM_CENTRAL_V1",
         "generated_utc": datetime.now(timezone.utc).isoformat(),
         "source": rel(HERE / "model_master.json"),
         "status": "BLOCKED" if blockers else "READY_TO_RUN",
-        "run_policy": {"opensees_run": False, "production_files_written": False, "blockers": blockers},
+        "run_policy": {
+            "opensees_run": not blockers,
+            "production_files_written": False,
+            "blockers": blockers,
+            "warnings": [f"STOP exclusions: {', '.join(sorted(stop_ids))}"] if stop_ids else [],
+        },
         "nodes": topology.get("nodes", {}),
         "elements": fe_elements,
         "constraints": topology.get("constraints", []),
@@ -165,6 +176,7 @@ def build_opensees_preview(master: dict, sections: dict, materials: dict, loads:
         "summary": {
             "nodes": len(topology.get("nodes", {})),
             "elements": len(fe_elements),
+            "active_elements": sum(1 for row in fe_elements if row["active"]),
             "supports": len(topology.get("support_node_tags", [])),
             "constraints": len(topology.get("constraints", [])),
             "physical_structural_elements": sum(1 for row in master["elements"] if row["type"] in {"beam", "column", "wall"}),

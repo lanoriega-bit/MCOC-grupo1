@@ -1,13 +1,11 @@
 # Preparación tributaria actual
 
-**Estado: BLOCKED**
+**Estado: PASS**
 
-- Catálogo auditado: 108 entradas (`AUDITED_NOT_APPLIED`).
-- Paños tributarios conservados: 110 (`HISTORICAL`).
+- Catálogo auditado: 108 entradas (`CURRENT_PARTIAL_WITH_DOCUMENTED_UNRESOLVED`).
+- Paños tributarios conservados: 105 (`CURRENT_WITH_DOCUMENTED_FALLBACKS`).
 - No se compara G con Q como si debieran ser iguales: son casos físicos distintos.
-- La conservación CURRENT se evaluará solo tras aplicar cargas y ejecutar OpenSees sobre el modelo central.
+- Conservación G: `PASS`; Q: `PASS`.
+- OpenSees CURRENT: `PASS`.
 
 Bloqueos:
-- load catalog status=AUDITED_NOT_APPLIED
-- tributary status=HISTORICAL
-- CURRENT OpenSees results are absent; reaction equilibrium cannot be evaluated

@@ -5,6 +5,6 @@ Este control es portable y valida el bundle **histórico entregado**. No lo pres
 | Dataset | Estado | Alcance |
 |---|---|---|
 | P1L4 entregado | PASS | {'G': 1312, 'Q': 1312, 'EX': 1312, 'EY': 1312, 'R': 1312}; apoyos=106 |
-| Modelo central actual | BLOCKED | 647 segmentos FE candidatos; resultados NONE_CURRENT |
+| Modelo central actual | PASS | 646 segmentos FE activos; P1L5_CURRENT_APPROX_V1 |
 
-La geometría vigente debe reanalizarse antes de reemplazar los resultados históricos.
+Los resultados CURRENT no reemplazan ni reescriben el bundle histórico entregado.

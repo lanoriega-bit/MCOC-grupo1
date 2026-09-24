@@ -1,7 +1,7 @@
 # QA del modelo integrado
 
 - Integridad de contratos: **PASS**
-- Preparación para análisis CURRENT: **BLOCKED**
+- Preparación para análisis CURRENT: **READY**
 
 | Control | Estado |
 |---|---|
@@ -13,11 +13,12 @@
 | exact_duplicate_fe_segments | PASS |
 | section_references | PASS |
 | material_references | PASS |
-| current_material_assignments_complete | BLOCKED |
-| current_elastic_properties_complete | BLOCKED |
-| fe_connectivity | BLOCKED |
-| loads_current | BLOCKED |
-| tributaries_current | BLOCKED |
+| current_material_assignments_complete | PASS |
+| current_elastic_properties_complete | PASS |
+| fe_connectivity | PASS_WITH_STOP |
+| loads_current | PASS_WITH_NOTE |
+| tributaries_current | PASS_WITH_NOTE |
+| opensees_current | PASS |
 
 ## Conteos
 
@@ -35,16 +36,16 @@
   "fe_constraints": 1203,
   "fe_support_nodes": 33,
   "disconnected_components": 1,
-  "unknown_structural_materials": 79,
+  "unknown_structural_materials": 0,
   "load_catalog_entries": 108,
-  "tributary_pans": 110
+  "tributary_pans": 105
 }
 ```
 
 ## Bloqueos reales
 
 - Componente desconectado: E2-P4-V-009.
-- Elementos estructurales con material desconocido: 79.
-- Materiales sin E actual: MAT_G35_10_2017_67_100_1E116, MAT_G35_10_2024_22_100_53994, MAT_UNKNOWN.
-- Cargas: `AUDITED_NOT_APPLIED`; tributarias: `HISTORICAL`.
+- Elementos estructurales con material desconocido: 0.
+- Materiales sin E actual: ninguno.
+- Cargas: `CURRENT_PARTIAL_WITH_DOCUMENTED_UNRESOLVED`; tributarias: `CURRENT_WITH_DOCUMENTED_FALLBACKS`.
 - No se agregaron apoyos, enlaces ni propiedades ficticias para cambiar este veredicto.
