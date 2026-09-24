@@ -6,7 +6,6 @@ from __future__ import annotations
 import json
 import math
 from collections import Counter, defaultdict
-from datetime import datetime, timezone
 from pathlib import Path
 
 
@@ -86,7 +85,6 @@ def main() -> None:
     blockers = [name for name, state in checks.items() if state == "BLOCKED"]
     result = {
         "schema": "P1L5_INTEGRATED_MODEL_AUDIT_v1",
-        "generated_utc": datetime.now(timezone.utc).isoformat(),
         "integrity_status": "PASS" if not hard_failures else "FAIL",
         "analysis_readiness": "READY" if not hard_failures and not blockers else "BLOCKED",
         "checks": checks,

@@ -1,0 +1,32 @@
+{
+  "schema": "P1L5_SINGLE_SOURCE_PROPAGATION_TEST_v1",
+  "target": "E2-P4-V-001",
+  "section_id": "SEC_BEAM_RECT_0.200x0.900",
+  "temporary_change": {
+    "field": "width_m",
+    "original": 0.2,
+    "trial": 0.201,
+    "unit": "m"
+  },
+  "canonical_files_unchanged": true,
+  "viewer_adapter": {
+    "before": 0.2,
+    "after": 0.201,
+    "status": "PASS"
+  },
+  "opensees_input_adapter": {
+    "before": 0.2,
+    "after": 0.201,
+    "status": "PASS"
+  },
+  "analysis_result": {
+    "status": "BLOCKED_NOT_RUN",
+    "reason": [
+      "FE topology is CANDIDATE_NOT_APPROVED_NOT_RUN",
+      "Disconnected FE component remains: E2-P4-V-009",
+      "Missing current elastic modulus for: MAT_G35_10_2017_67_100_1E116, MAT_G35_10_2024_22_100_53994, MAT_UNKNOWN",
+      "Current loads are not applied (AUDITED_NOT_APPLIED)"
+    ]
+  },
+  "overall": "PASS_INPUT_PROPAGATION_ANALYSIS_BLOCKED"
+}

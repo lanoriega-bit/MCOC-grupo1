@@ -27,6 +27,7 @@ try {
     Invoke-CheckedPython 'entregas/P1L5/modelo_central/Jose/qa_dinamico_p1l1_p1l4.py'
     Invoke-CheckedPython 'entregas/P1L5/modelo_central/Jose/qa_tributario.py'
     Invoke-CheckedPython 'entregas/P1L5/validation/audit_integrated_model.py'
+    Invoke-CheckedPython 'entregas/P1L5/validation/test_single_source_propagation.py'
 
     if ($UnityCompile) {
         $unity = 'C:\Program Files\Unity\Hub\Editor\6000.6.0f1\Editor\Unity.exe'

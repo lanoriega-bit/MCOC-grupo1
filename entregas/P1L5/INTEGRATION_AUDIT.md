@@ -51,6 +51,7 @@ El generador central:
 | Unity compile | PASS | `validation/unity_compile.log` |
 | Unity build | PASS | `validation/unity_build.log` |
 | Unity runtime UX | PASS | `Builds/CurrentReview/QA/UX_QA.txt` |
+| Prueba de fuente única | PASS de adapters / BLOCKED resultado | `validation/SINGLE_SOURCE_PROPAGATION.md` |
 
 ## Corrección de diagramas
 

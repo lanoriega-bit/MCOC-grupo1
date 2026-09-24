@@ -8,7 +8,6 @@ FE and load readiness are read from modelo_central and reported separately.
 from __future__ import annotations
 
 import json
-from datetime import datetime, timezone
 from pathlib import Path
 
 
@@ -57,7 +56,6 @@ def main() -> None:
     current = master["current_pre5_identity"]
     result = {
         "schema": "P1L1_P1L4_RETROSPECTIVE_QA_v2",
-        "generated_utc": datetime.now(timezone.utc).isoformat(),
         "dataset_status": "HISTORICAL_P1L4_DELIVERED",
         "rule": "This QA validates internal completeness of the delivered bundle only; it never certifies CURRENT.",
         "historical_bundle": {

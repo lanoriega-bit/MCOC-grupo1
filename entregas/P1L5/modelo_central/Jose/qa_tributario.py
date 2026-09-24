@@ -4,7 +4,6 @@
 from __future__ import annotations
 
 import json
-from datetime import datetime, timezone
 from pathlib import Path
 
 
@@ -31,7 +30,6 @@ def main() -> None:
     blockers.append("CURRENT OpenSees results are absent; reaction equilibrium cannot be evaluated")
     result = {
         "schema": "P1L2_TRIBUTARY_READINESS_v4",
-        "generated_utc": datetime.now(timezone.utc).isoformat(),
         "status": "BLOCKED" if blockers else "PASS",
         "catalog_entries": len(entries),
         "tributary_pans": len(pans),
