@@ -123,8 +123,7 @@ namespace Mcoc.UnityViewer
             if(InspectorSection("RESULTADOS"))
             {
                 GUILayout.Label("RESULTADOS ACTUALES",currentHeading);
-                GUILayout.Label("No disponibles todavía.\nLa estructura fue actualizada después de la última corrida OpenSees.\nSe requiere un nuevo análisis validado.",currentBody);
-                // Current numbers are never obtained from analysisByElementId (archive).
+                GUILayout.Label(currentResultsAvailable ? BuildP1L4ResultsText(e,id) : "No disponibles todavía.\nLa estructura fue actualizada después de la última corrida OpenSees.\nSe requiere un nuevo análisis validado.",currentBody);
             }
             if(InspectorSection("CARGAS"))
                 GUILayout.Label(context?.load_status??"Asignación actual no aprobada. No hay carga cero confirmada: faltan áreas/receptores o validación del catálogo.",currentBody);
@@ -136,7 +135,7 @@ namespace Mcoc.UnityViewer
                 GUILayout.Label(e.category=="wall"?"En este muro, x geométrico recorre su longitud en planta. No equivale al eje de la barra FE vertical.":"Triada geométrica actual. La corrida deberá exportar y verificar sus propios ejes FE.",currentBody);
             }
             if(InspectorSection("CAPACIDAD"))
-                GUILayout.Label("Demanda actual no disponible. La capacidad requiere sección, material y armadura compatibles. Cambiar la combinación mueve la demanda; cambiar sección/material obliga a revisar también la capacidad.",currentBody);
+                GUILayout.Label(currentResultsAvailable ? BuildDemandCapacityText(id) : "Demanda actual no disponible. La capacidad requiere sección, material y armadura compatibles. Cambiar la combinación mueve la demanda; cambiar sección/material obliga a revisar también la capacidad.",currentBody);
             if(InspectorSection("FUENTE / CONFIANZA"))
             {
                 GUILayout.Label("Geometría: "+e.sourceDxf+"\nConfianza: "+ConfidenceFriendly(e.confidence),currentBody);
@@ -154,8 +153,8 @@ namespace Mcoc.UnityViewer
             }
             if(InspectorSection("MODIFICACIONES · P1L5"))
             {
-                GUILayout.Label("PRÓXIMAMENTE · DESHABILITADO\nCarga · apoyo · sección · material · activación · área tributaria",currentBody);
-                GUILayout.Label("SUPERPOSICIÓN: coeficientes de casos lineales compatibles; respuesta instantánea.\nMODIFICACIÓN DEL MODELO: cambia rigidez, apoyos o distribución; requiere reanálisis.",currentBody);
+                if(currentResultsAvailable)DrawP1L5ModificationControls(e);
+                else GUILayout.Label("Carga · sección: disponibles después de una base CURRENT.",currentBody);
             }
             GUILayout.EndScrollView();GUILayout.EndArea();
         }

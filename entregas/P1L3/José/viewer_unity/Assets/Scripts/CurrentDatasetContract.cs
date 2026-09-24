@@ -77,7 +77,7 @@ namespace Mcoc.UnityViewer
             if(currentContract==null)return "Contrato de resultados actuales: no disponible; acceso bloqueado.";
             return "Versión geometría: "+currentContract.geometry_version+"\nVersión FE: "+currentContract.fe_version+
                 "\nVersión cargas: "+currentContract.loads_version+"\nAnálisis: "+currentContract.analysis_version+
-                "\nSin payload actual aprobado; importación numérica bloqueada.";
+                "\nEstado: "+currentContract.status+" · payload: "+currentContract.payload_file;
         }
     }
 }

@@ -116,6 +116,11 @@ namespace Mcoc.UnityViewer
             return LoadOptional<AnalysisCasesData>(fileName, "casos G/Q/EX/EY/R");
         }
 
+        public static AnalysisCasesData LoadP1L5CurrentAnalysisCases(string fileName = "p1l5_current_analysis_cases.json")
+        {
+            return LoadOptional<AnalysisCasesData>(fileName, "casos CURRENT P1L5 G/Q/EX/EY");
+        }
+
         public static FeDiagnosticData LoadFeDiagnostic(string fileName = "post_p1l3_fe_diagnostic.json")
         {
             return LoadOptional<FeDiagnosticData>(fileName, "diagnostico FE POST-P1L3");
@@ -124,6 +129,11 @@ namespace Mcoc.UnityViewer
         public static P1L4StructuralMetadataData LoadP1L4StructuralMetadata(string fileName = "p1l4_structural_metadata.json")
         {
             return LoadOptional<P1L4StructuralMetadataData>(fileName, "metadatos estructurales P1L4");
+        }
+
+        public static P1L4StructuralMetadataData LoadP1L5CurrentStructuralMetadata(string fileName = "p1l5_current_structural_metadata.json")
+        {
+            return LoadOptional<P1L4StructuralMetadataData>(fileName, "metadatos estructurales CURRENT P1L5");
         }
 
         public static DemandCapacityData LoadDemandCapacity(string fileName = "demanda_capacidad.json")

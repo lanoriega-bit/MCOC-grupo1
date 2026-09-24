@@ -195,8 +195,10 @@ namespace Mcoc.UnityViewer
                 model.diaphragms = visualLines.diaphragms;
             }
             architecture = JsonLoader.LoadArchitecture();
-            analysisResults = JsonLoader.LoadAnalysisResults();
-            analysisCases = JsonLoader.LoadAnalysisCases();
+            var currentCases = JsonLoader.LoadP1L5CurrentAnalysisCases();
+            currentResultsAvailable = currentCases != null && currentCases.cases != null && currentCases.cases.Count >= 4;
+            analysisResults = currentResultsAvailable ? null : JsonLoader.LoadAnalysisResults();
+            analysisCases = currentResultsAvailable ? currentCases : JsonLoader.LoadAnalysisCases();
             feDiagnostic = JsonLoader.LoadFeDiagnostic();
             diagnosticByElementId.Clear();
             if (feDiagnostic != null && feDiagnostic.elements != null)
@@ -205,7 +207,7 @@ namespace Mcoc.UnityViewer
                         diagnosticByElementId[item.element_id] = item;
             delivery = JsonLoader.LoadDelivery();
             capacity = JsonLoader.LoadCapacity();
-            p1l4Metadata = JsonLoader.LoadP1L4StructuralMetadata();
+            p1l4Metadata = currentResultsAvailable ? JsonLoader.LoadP1L5CurrentStructuralMetadata() : JsonLoader.LoadP1L4StructuralMetadata();
             demandCapacity = JsonLoader.LoadDemandCapacity();
             p1l4LoadCatalog = JsonLoader.LoadP1L4LoadCatalog();
             physicalContext = JsonLoader.LoadPhysicalContext();
@@ -219,8 +221,9 @@ namespace Mcoc.UnityViewer
             momentCurvatureTexture = JsonLoader.LoadPng("moment_curvature.png");
             pmInteractionTexture = JsonLoader.LoadPng("pm_interaction.png");
             joseSupports = JsonLoader.LoadJoseSupports();
+            if (currentResultsAvailable) InitializeP1L5Superposition();
             ActivateAnalysisCase(analysisCases != null && !string.IsNullOrEmpty(analysisCases.default_case) ? analysisCases.default_case : "R");
-            tributaries = JsonLoader.LoadTributaries();
+            tributaries = JsonLoader.LoadTributaries(currentResultsAvailable ? "p1l5_current_tributary_areas.json" : "tributary_areas.json");
             if (tributaries != null)
             {
                 // indice por elementTag para asignar carga tributaria a vigas/columnas/apoyos
@@ -246,8 +249,8 @@ namespace Mcoc.UnityViewer
             historicalResultsEnabled = true; // explicit QA scope; reset below before first rendered frame
             RunVisibilitySelfCheck();
             RunDiagnosticSelfCheck();
-            RunP1L4SelfCheck();
-            RunP1L4DemoSequenceCheck();
+            if (currentResultsAvailable) { RunP1L5SelfCheck(); RunP1L5DemoSequenceCheck(); }
+            else { RunP1L4SelfCheck(); RunP1L4DemoSequenceCheck(); }
             ResetPresentation();
             RunCurrentUiSelfCheck();
             if (System.Array.IndexOf(System.Environment.GetCommandLineArgs(), "--ux-review") >= 0) StartCoroutine(RunUxReview());
@@ -334,21 +337,27 @@ namespace Mcoc.UnityViewer
                 foreach (var item in chosen.excluded_elements)
                     if (!string.IsNullOrEmpty(item.element_id)) excludedByElementId[item.element_id] = item;
 
-            // La salida plana entregada por José es la fuente integrada de Semana 4.
-            // Se indexa por analysis_id para preservar relaciones geometría 1:N.
             joseByAnalysisId.Clear();
-            var joseForces = JsonLoader.LoadJoseForces(normalized);
-            joseForcesStatus = joseForces != null && !string.IsNullOrEmpty(joseForces.status)
-                ? joseForces.status : "N/A";
-            if (joseForces != null && joseForces.elements != null)
-                foreach (var item in joseForces.elements)
-                    if (item != null && !string.IsNullOrEmpty(item.analysis_id))
-                        joseByAnalysisId[item.analysis_id] = item;
             joseDisplacementByNode.Clear();
-            var joseDisplacements = JsonLoader.LoadJoseDisplacements(normalized);
-            if (joseDisplacements != null && joseDisplacements.nodes != null)
-                foreach (var item in joseDisplacements.nodes)
-                    if (item != null) joseDisplacementByNode[item.node_tag] = item;
+            if (currentResultsAvailable)
+            {
+                joseForcesStatus = "CURRENT_P1L5_OPENSEES";
+            }
+            else
+            {
+                // Archivo plano histórico P1L4; el CURRENT usa directamente el contrato nuevo.
+                var joseForces = JsonLoader.LoadJoseForces(normalized);
+                joseForcesStatus = joseForces != null && !string.IsNullOrEmpty(joseForces.status)
+                    ? joseForces.status : "N/A";
+                if (joseForces != null && joseForces.elements != null)
+                    foreach (var item in joseForces.elements)
+                        if (item != null && !string.IsNullOrEmpty(item.analysis_id))
+                            joseByAnalysisId[item.analysis_id] = item;
+                var joseDisplacements = JsonLoader.LoadJoseDisplacements(normalized);
+                if (joseDisplacements != null && joseDisplacements.nodes != null)
+                    foreach (var item in joseDisplacements.nodes)
+                        if (item != null) joseDisplacementByNode[item.node_tag] = item;
+            }
             if (model != null && model.solids != null) RebuildActiveDeformedShape();
             if (lastSelected != null) ShowInfo(lastSelected);
         }
@@ -2051,7 +2060,7 @@ namespace Mcoc.UnityViewer
             }
             var sb = new StringBuilder();
             sb.AppendLine($"CASO ACTIVO: {activeAnalysisCase}");
-            sb.AppendLine($"Estado: {(p1l4Metadata == null ? "P1L3_ENTREGADO_HISTORICO" : p1l4Metadata.data_state)}");
+            sb.AppendLine($"Estado: {(currentResultsAvailable ? "CURRENT_APPROX_FALLBACK" : (p1l4Metadata == null ? "P1L3_ENTREGADO_HISTORICO" : p1l4Metadata.data_state))}");
             if (rows.Count > 1) sb.AppendLine($"Crosswalk 1:{rows.Count}; se listan miembros por separado, sin combinar esfuerzos.");
             foreach (var row in rows)
             {
@@ -2068,14 +2077,16 @@ namespace Mcoc.UnityViewer
                 }
             }
             int expectedCount = analysisResults != null && analysisResults.elements != null ? analysisResults.elements.Count : 0;
-            sb.AppendLine($"Fuente integrada José: {joseForcesStatus} ({joseByAnalysisId.Count}/{expectedCount} miembros del caso cargados)");
+            if (currentResultsAvailable) sb.AppendLine($"Fuente: OpenSees CURRENT P1L5 ({expectedCount} segmentos del caso)");
+            else sb.AppendLine($"Fuente integrada José: {joseForcesStatus} ({joseByAnalysisId.Count}/{expectedCount} miembros del caso cargados)");
             return sb.ToString().TrimEnd();
         }
 
         string BuildDemandCapacityText(string id)
         {
             if (!demandCapacityByElementId.TryGetValue(id, out var item))
-                return "Este elemento no tiene contrato de demanda-capacidad P1L4.";
+                return currentResultsAvailable ? "NO CAPACITY DATA: este elemento no tiene una curva P-M compatible." : "Este elemento no tiene contrato de demanda-capacidad P1L4.";
+            if (currentResultsAvailable) return BuildP1L5DemandCapacityText(id, item);
             string contractCase = (item.demand_capacity.@case ?? "").Replace("CASE_", "").ToUpperInvariant();
             var sb = new StringBuilder();
             sb.AppendLine($"Elemento historico: {item.element_id} | OpenSees {item.opensees_tag}");
@@ -2671,15 +2682,21 @@ namespace Mcoc.UnityViewer
             GUI.DrawTexture(panel, MakeTex(2, 2, new Color(0.01f, 0.02f, 0.045f, 0.98f)));
             var title = new GUIStyle(GUI.skin.label);
             title.fontSize = 15; title.fontStyle = FontStyle.Bold; title.normal.textColor = Color.white;
-            GUI.Label(new Rect(panel.x + 14, panel.y + 9, panel.width - 70, 24), $"HISTÓRICO P-M | {item.element_id} | {item.capacity.pm_axis}", title);
+            double currentP = 0, currentM = 0, currentCapacity = 0, currentRatio = 0;
+            string currentAxis = item.capacity.pm_axis ?? "My", currentStatus = "NO CAPACITY DATA";
+            bool hasCurrentDemand = currentResultsAvailable && TryP1L5DemandCapacity(id, item,
+                out currentP, out currentM, out currentCapacity,
+                out currentRatio, out currentAxis, out currentStatus);
+            string plotState = hasCurrentDemand ? "CURRENT" : "HISTÓRICO";
+            GUI.Label(new Rect(panel.x + 14, panel.y + 9, panel.width - 70, 24), $"{plotState} P-M | {item.element_id} | {item.capacity.pm_axis}", title);
             if (GUI.Button(new Rect(panel.xMax - 44, panel.y + 7, 32, 25), "X")) { demandCapacityPlotVisible = false; return; }
 
             Rect plot = new Rect(panel.x + 70, panel.y + 48, panel.width - 100, panel.height - 122);
             DrawGuiLine(new Vector2(plot.x, plot.yMax), new Vector2(plot.xMax, plot.yMax), Color.white, 2f);
             DrawGuiLine(new Vector2(plot.x, plot.yMax), new Vector2(plot.x, plot.y), Color.white, 2f);
             var valid = new List<DemandCapacityPoint>();
-            double maxM = System.Math.Abs(item.demand_capacity.M_kNm);
-            double maxP = item.demand_capacity.compression_magnitude_kN;
+            double maxM = hasCurrentDemand ? currentM : System.Math.Abs(item.demand_capacity.M_kNm);
+            double maxP = hasCurrentDemand ? currentP : item.demand_capacity.compression_magnitude_kN;
             foreach (var point in item.capacity.points)
             {
                 maxM = System.Math.Max(maxM, System.Math.Abs(point.M_kNm));
@@ -2709,7 +2726,14 @@ namespace Mcoc.UnityViewer
                 DrawGuiLine(pos + new Vector2(-4, 4), pos + new Vector2(4, -4), Color.gray, 1f);
             }
             string contractCase = (item.demand_capacity.@case ?? "").Replace("CASE_", "").ToUpperInvariant();
-            if (contractCase == activeAnalysisCase)
+            if (hasCurrentDemand)
+            {
+                Vector2 demand = PlotPoint(plot, currentM, currentP, maxM, maxP);
+                GUI.color = currentStatus == "EXCEEDS" ? Color.red : currentStatus == "WARNING" ? new Color(1f, 0.65f, 0.05f) : new Color(0.15f, 0.85f, 1f);
+                GUI.DrawTexture(new Rect(demand.x - 6, demand.y - 6, 12, 12), whiteTex);
+                GUI.color = Color.white;
+            }
+            else if (contractCase == activeAnalysisCase)
             {
                 Vector2 demand = PlotPoint(plot, item.demand_capacity.M_abs_kNm, item.demand_capacity.compression_magnitude_kN, maxM, maxP);
                 GUI.color = Color.red;
@@ -2720,9 +2744,11 @@ namespace Mcoc.UnityViewer
             label.fontSize = 11; label.normal.textColor = new Color(0.92f, 0.95f, 1f); label.wordWrap = true;
             GUI.Label(new Rect(plot.x, plot.yMax + 5, plot.width, 20), $"|M| [kN.m]   max={maxM:F1}", label);
             GUI.Label(new Rect(panel.x + 8, plot.y, 60, 50), $"|P|\n[kN]\n{maxP:F1}", label);
-            string demandText = contractCase == activeAnalysisCase
-                ? $"Demanda {item.demand_capacity.@case}: P={item.demand_capacity.P_kN:F2} kN, {item.demand_capacity.pm_axis}={item.demand_capacity.M_kNm:F2} kN.m — {(item.demand_capacity.inside_envelope ? "DENTRO" : "FUERA")}"
-                : $"CASO ACTIVO {activeAnalysisCase}: punto de demanda N/A; la demanda disponible corresponde a {item.demand_capacity.@case}.";
+            string demandText = hasCurrentDemand
+                ? $"Demanda CURRENT {activeAnalysisCase}: |P|={currentP:F2} kN, |{currentAxis}|={currentM:F2} kN.m · Capacidad={currentCapacity:F2} kN.m · D/C={currentRatio:F2} · {currentStatus}"
+                : contractCase == activeAnalysisCase
+                    ? $"Demanda HISTÓRICA {item.demand_capacity.@case}: P={item.demand_capacity.P_kN:F2} kN, {item.demand_capacity.pm_axis}={item.demand_capacity.M_kNm:F2} kN.m — {(item.demand_capacity.inside_envelope ? "DENTRO" : "FUERA")}"
+                    : $"CASO ACTIVO {activeAnalysisCase}: punto CURRENT no disponible; la demanda histórica corresponde a {item.demand_capacity.@case}.";
             GUI.Label(new Rect(panel.x + 14, panel.yMax - 58, panel.width - 28, 44), demandText + (item.type == "wall" ? "\nArmadura: ASUMIDO_LAB" : ""), label);
         }
 

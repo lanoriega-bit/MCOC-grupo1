@@ -62,7 +62,7 @@ namespace Mcoc.UnityViewer.EditorTools
 
         static void CaptureLog(string condition, string stackTrace, LogType type)
         {
-            if (condition.Contains("[UI QA]") || condition.Contains("[P1L4 QA]") || condition.Contains("[P1L4 DEMO QA]") || type == LogType.Error || type == LogType.Exception)
+            if (condition.Contains("[UI QA]") || condition.Contains("[P1L4 QA]") || condition.Contains("[P1L4 DEMO QA]") || condition.Contains("[P1L5 QA]") || condition.Contains("[P1L5 DEMO QA]") || type == LogType.Error || type == LogType.Exception)
                 captured.Add(condition);
         }
 
@@ -75,7 +75,7 @@ namespace Mcoc.UnityViewer.EditorTools
                 demoExecuted = true;
                 var viewer = Object.FindFirstObjectByType<ViewerController>();
                 if (viewer == null) Debug.LogError("[P1L4 DEMO QA] FAIL: ViewerController no encontrado en Play.");
-                else viewer.RunP1L4DemoSequenceCheck();
+                else viewer.RunActiveDemoSequenceCheck();
             }
             if (elapsed < 14.0) return;
             EditorApplication.update -= WaitForRuntimeChecks;

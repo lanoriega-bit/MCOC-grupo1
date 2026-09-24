@@ -20,7 +20,7 @@ namespace Mcoc.UnityViewer
         private readonly Dictionary<string, bool> contextVisible = new Dictionary<string, bool>();
         private readonly List<GameObject> globalAxisObjects = new List<GameObject>();
         private GUIStyle currentBody, currentTitle, currentButton, currentHeading;
-        private bool ResultsAllowed => historicalResultsEnabled && !presentationMode;
+        private bool ResultsAllowed => currentResultsAvailable || (historicalResultsEnabled && !presentationMode);
 
         static bool IsHistoricalLayer(string type)
         {
@@ -199,22 +199,26 @@ namespace Mcoc.UnityViewer
             DrawDeliveryPanels();
             if (Accordion("RESULTADOS"))
             {
-                GUILayout.Label("SIN RESULTADOS ACTUALES PARA ESTA GEOMETRÍA",currentHeading);
-                GUILayout.Label("Se habilitarán al validar el nuevo modelo FE y su corrida compatible.",currentBody);
-                GUI.enabled=false; GUILayout.Button("Caso · Deformada · N / V / T / M",currentButton); GUI.enabled=true;
+                if (currentResultsAvailable) DrawP1L5CurrentResultsControls();
+                else
+                {
+                    GUILayout.Label("SIN RESULTADOS ACTUALES PARA ESTA GEOMETRÍA",currentHeading);
+                    GUILayout.Label("Se habilitarán al validar el nuevo modelo FE y su corrida compatible.",currentBody);
+                    GUI.enabled=false; GUILayout.Button("Caso · Deformada · N / V / T / M",currentButton); GUI.enabled=true;
+                }
             }
             if (Accordion("CARGAS"))
             {
-                GUILayout.Label("Catálogo auditado · aún no aplicado",currentHeading);
+                GUILayout.Label(currentResultsAvailable ? "Cargas CURRENT aplicadas" : "Catálogo auditado · aún no aplicado",currentHeading);
                 LayerToggle("Cargas superficiales", "p1l4_load_surface"); LayerToggle("Cargas lineales", "p1l4_load_line");
                 GUILayout.Label("Cargas puntuales: posición/receptor pendientes; no se dibujan en la posición del texto CAD.",currentBody);
                 LayerToggle("Apoyos geométricos", "support");
-                GUILayout.Label("G, Q y áreas tributarias actuales: pendientes de la nueva base FE. Referencias anteriores en Avanzado.",currentBody);
+                GUILayout.Label(currentResultsAvailable ? "G/Q transferidas desde 105 paños CURRENT; PP.LOSA usa fallback documentado de 0,15 m. Cargas sin receptor permanecen UNRESOLVED." : "G, Q y áreas tributarias actuales: pendientes de la nueva base FE. Referencias anteriores en Avanzado.",currentBody);
             }
             if (Accordion("ANÁLISIS"))
             {
-                GUILayout.Label($"FE candidato · NO EJECUTADO\n{feDiagnostic?.summary?.fe_element_count ?? 0} miembros\n{feDiagnostic?.summary?.candidate_floating_geometry_elements ?? 0} geometrías flotantes",currentBody);
-                GUILayout.Label("Las incidencias propuestas requieren revisión estructural antes de calcular fuerzas o desplazamientos.",currentBody);
+                GUILayout.Label(currentResultsAvailable ? "OpenSees CURRENT · PASS\nG / Q / EX / EY\nSuperposición lineal instantánea" : $"FE candidato · NO EJECUTADO\n{feDiagnostic?.summary?.fe_element_count ?? 0} miembros\n{feDiagnostic?.summary?.candidate_floating_geometry_elements ?? 0} geometrías flotantes",currentBody);
+                GUILayout.Label(currentResultsAvailable ? "Modelo académico/experimental. E2-P4-V-009 = STOP; aproximaciones visibles en trazabilidad." : "Las incidencias propuestas requieren revisión estructural antes de calcular fuerzas o desplazamientos.",currentBody);
             }
             if (Accordion("CAPACIDAD"))
                 GUILayout.Label("P–M representa resistencia de una sección. La demanda actual estará disponible después de la nueva corrida. Los estudios anteriores están en Avanzado → Histórico.",currentBody);
@@ -320,11 +324,11 @@ namespace Mcoc.UnityViewer
         public void RunCurrentUiSelfCheck()
         {
             var errors=new List<string>();
-            if(historicalResultsEnabled||ResultsAllowed)errors.Add("historico activo por defecto");
+            if(historicalResultsEnabled)errors.Add("historico activo por defecto");
             foreach(var pair in byType)if(IsHistoricalLayer(pair.Key))foreach(var go in pair.Value)if(go!=null&&go.activeSelf){errors.Add("capa historica visible: "+pair.Key);break;}
             if(model?.solids==null||model.solids.Count==0)errors.Add("modelo actual ausente");
-            if(diagram2DVisible||demandCapacityPlotVisible||activeDeformationVisible)errors.Add("resultado visible sin corrida actual");
-            Debug.Log((errors.Count==0?"[CURRENT UI QA] PASS: modelo actual; historico apagado; resultados actuales NONE; FE NOT RUN.":"[CURRENT UI QA] FAIL: "+string.Join(", ",errors)));
+            if(!currentResultsAvailable&&(diagram2DVisible||demandCapacityPlotVisible||activeDeformationVisible))errors.Add("resultado visible sin corrida actual");
+            Debug.Log((errors.Count==0?(currentResultsAvailable?"[CURRENT UI QA] PASS: modelo actual; histórico apagado; resultados CURRENT disponibles.":"[CURRENT UI QA] PASS: modelo actual; historico apagado; resultados actuales NONE; FE NOT RUN."):"[CURRENT UI QA] FAIL: "+string.Join(", ",errors)));
         }
     }
 }
