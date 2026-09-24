@@ -1,33 +1,48 @@
 {
-  "format": "MCOC_P1L5_CURRENT_RESULTS_MANIFEST_V1",
-  "generated_utc": "2026-09-24T05:27:46.538223+00:00",
+  "format": "MCOC_P1L5_CURRENT_RESULTS_MANIFEST_V2",
+  "generated_utc": "2026-09-24T17:07:17.032878+00:00",
   "status": "PASS",
-  "analysis_version": "P1L5_CURRENT_APPROX_V1",
+  "analysis_version": "P1L5_CURRENT_ZONED_V2",
   "cases": {
     "G": {
       "status": "PASS",
-      "max_translation_m": 0.04054800733642186,
-      "equilibrium_relative_residual": 8.300303834885538e-15
+      "max_translation_m": 0.0938407107953782,
+      "equilibrium_relative_residual": 4.720551894984759e-15
     },
     "Q": {
       "status": "PASS",
-      "max_translation_m": 0.014316005565697345,
-      "equilibrium_relative_residual": 2.1506325322691737e-15
+      "max_translation_m": 0.03870579294120632,
+      "equilibrium_relative_residual": 2.2949208422688378e-15
     },
     "EX": {
       "status": "PASS",
-      "max_translation_m": 0.04055231180253647,
-      "equilibrium_relative_residual": 1.0522342249975186e-13
+      "max_translation_m": 0.06810420545489065,
+      "equilibrium_relative_residual": 2.5418675505173538e-14
     },
     "EY": {
       "status": "PASS",
-      "max_translation_m": 0.04746429096681042,
-      "equilibrium_relative_residual": 1.474664023354165e-14
+      "max_translation_m": 0.10213254191230113,
+      "equilibrium_relative_residual": 5.486197463199654e-14
     }
   },
   "linear_superposition_compatible": true,
-  "stop_elements": [
-    "E2-P4-V-009"
-  ],
-  "result_state": "CURRENT_APPROX_FALLBACK"
+  "stop_elements": [],
+  "result_state": "CURRENT_WITH_DOCUMENTED_FALLBACKS",
+  "load_contract": {
+    "status": "PASS_WITH_EXPLICIT_UNRESOLVED",
+    "G_total_N": 75759757.893,
+    "Q_total_N": 24349142.51,
+    "unresolved_load_ids": [
+      "L700-P2-POINT-SC-7000-SC_POINT",
+      "L700-P2-POINT-SC-7000-PM_ADIC_POINT",
+      "L700-P3-POINT-SC-6000-SC_POINT",
+      "L700-P3-POINT-SC-6000-PM_ADIC_POINT",
+      "L700-P3-POINT-SC-6700-SC_POINT",
+      "L700-P3-POINT-SC-6700-PM_ADIC_POINT",
+      "L700-P4-LINE-SC-800-SC_LINE",
+      "L700-P4-LINE-SC-800-PM_ADIC_LINE",
+      "L700-E2-P4-LINE-SC-100-SC_LINE",
+      "L700-E2-P4-LINE-SC-100-PM_ADIC_LINE"
+    ]
+  }
 }

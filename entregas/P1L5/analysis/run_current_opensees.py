@@ -108,11 +108,50 @@ def prepare_contract(master: dict, sections: dict, materials: dict, loads: dict)
             if tag in used_nodes:
                 aggregated[tag_to_retained[tag]] += value
         nodal[case] = dict(aggregated)
-    seismic_weight = defaultdict(float)
-    for tag in used_nodes:
-        root = tag_to_retained[tag]
-        seismic_weight[root] = abs(nodal["G"].get(root, 0.0)) + 0.5 * abs(nodal["Q"].get(root, 0.0))
-    lateral = {tag: 0.20 * weight for tag, weight in seismic_weight.items() if weight > 0.0}
+    # Pseudo-static seismic actions are applied once per building/floor at the
+    # closest retained structural node to the floor geometry centroid.  The
+    # force magnitude comes from the audited floor weights, not from a visual
+    # or evenly distributed approximation.
+    group_nodes = defaultdict(set)
+    node_groups = defaultdict(list)
+    for row, ref in active:
+        group = (row["building"], row["floor"])
+        for key in ("node_i", "node_j"):
+            tag = int(ref[key])
+            retained = tag_to_retained[tag]
+            group_nodes[group].add(retained)
+            node_groups[tag].append(group)
+    floor_loads = {(row["building"], row["floor"]): row for row in loads["current_load_application"]["by_floor"]}
+    seismic_floor_loads = []
+    lateral = defaultdict(float)
+    for group, candidates in sorted(group_nodes.items()):
+        source = floor_loads.get(group)
+        if not source or not candidates:
+            continue
+        unique_xyz = [nodes[str(tag)] for tag in sorted(candidates)]
+        centroid = [sum(point[axis] for point in unique_xyz) / len(unique_xyz) for axis in "xyz"]
+        application_tag = min(
+            candidates,
+            key=lambda tag: sum((nodes[str(tag)][axis] - centroid[i]) ** 2 for i, axis in enumerate("xyz")),
+        )
+        weight = float(source["G_total_N"]) + 0.5 * float(source["Q_N"])
+        force = 0.20 * weight
+        lateral[application_tag] += force
+        point = nodes[str(application_tag)]
+        seismic_floor_loads.append({
+            "building": group[0],
+            "lt_block": source.get("lt_block"),
+            "floor": group[1],
+            "G_N": float(source["G_total_N"]),
+            "Q_N": float(source["Q_N"]),
+            "seismic_weight_N": weight,
+            "lateral_force_N": force,
+            "target_centroid_m": centroid,
+            "application_node": application_tag,
+            "application_position_m": [point[axis] for axis in "xyz"],
+            "centroid_offset_m": math.hypot(point["x"] - centroid[0], point["y"] - centroid[1]),
+            "application_basis": "CLOSEST_RETAINED_NODE_TO_FLOOR_GEOMETRY_CENTROID",
+        })
 
     return {
         "nodes": nodes,
@@ -122,7 +161,9 @@ def prepare_contract(master: dict, sections: dict, materials: dict, loads: dict)
         "tag_to_retained": tag_to_retained,
         "retained_supports": retained_supports,
         "nodal": nodal,
-        "lateral": lateral,
+        "lateral": dict(lateral),
+        "seismic_floor_loads": seismic_floor_loads,
+        "node_groups": node_groups,
         "sections": sections,
         "materials": materials,
     }
@@ -254,11 +295,11 @@ def run_case(contract: dict, case: str) -> dict:
     relative_residual = max(abs(x) for x in residual) / reference
     status = "PASS" if finite and relative_residual < 1e-6 and max_translation < 1.0 else "FAIL"
     return {
-        "format": "MCOC_P1L5_CURRENT_OPENSEES_CASE_V1",
+        "format": "MCOC_P1L5_CURRENT_OPENSEES_CASE_V2",
         "generated_utc": datetime.now(timezone.utc).isoformat(),
         "case_id": case,
         "status": status,
-        "result_state": "CURRENT_APPROX_FALLBACK",
+        "result_state": "CURRENT_WITH_DOCUMENTED_FALLBACKS",
         "units": {"length": "m", "force": "N", "moment": "N.m"},
         "model": {
             "active_physical_segments_requested": len(contract["active"]),
@@ -271,9 +312,11 @@ def run_case(contract: dict, case: str) -> dict:
                 "Linear elastic 3D academic model.",
                 "G35 E=28 GPa and nu=0.2 are authorised P1L5 approximations.",
                 "Rigid-arm graph is normalised to one retained node per local cluster.",
-                "E2-P4-V-009 is STOP and excluded; no support or connection was invented.",
+                "Seismic force is 0.20*(G+0.5Q) per building/floor at the closest retained node to its geometry centroid.",
+                "No unresolved point or line load is silently replaced by zero; those loads remain excluded and explicit in loads.json.",
             ],
         },
+        "seismic_floor_loads": contract["seismic_floor_loads"] if case in {"EX", "EY"} else [],
         "qa": {
             "finite": finite,
             "max_translation_m": max_translation,
@@ -308,14 +351,20 @@ def main() -> None:
         }
     overall = "PASS" if all(row["status"] == "PASS" for row in cases.values()) else "FAIL"
     manifest = {
-        "format": "MCOC_P1L5_CURRENT_RESULTS_MANIFEST_V1",
+        "format": "MCOC_P1L5_CURRENT_RESULTS_MANIFEST_V2",
         "generated_utc": datetime.now(timezone.utc).isoformat(),
         "status": overall,
-        "analysis_version": "P1L5_CURRENT_APPROX_V1",
+        "analysis_version": "P1L5_CURRENT_ZONED_V2",
         "cases": cases,
         "linear_superposition_compatible": overall == "PASS",
-        "stop_elements": ["E2-P4-V-009"],
-        "result_state": "CURRENT_APPROX_FALLBACK",
+        "stop_elements": [],
+        "result_state": "CURRENT_WITH_DOCUMENTED_FALLBACKS",
+        "load_contract": {
+            "status": loads["current_load_application"]["status"],
+            "G_total_N": loads["current_load_application"]["totals"]["G_total_N"],
+            "Q_total_N": loads["current_load_application"]["totals"]["Q_N"],
+            "unresolved_load_ids": loads["current_load_application"]["unresolved_load_ids"],
+        },
     }
     write(OUT / "manifest.json", manifest)
     if overall == "PASS":
