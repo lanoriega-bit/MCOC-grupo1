@@ -1,5 +1,7 @@
 # P1L5 — Guía simple de uso
 
+Estado técnico detallado: [P1L5_CURRENT_STATUS.md](P1L5_CURRENT_STATUS.md). La base vigente es `P1L5_CURRENT_ZONED_V2`, con las cargas ambiguas identificadas explícitamente y sin tratarlas como cero.
+
 ## Abrir Unity
 
 1. Abre **Unity Hub**.

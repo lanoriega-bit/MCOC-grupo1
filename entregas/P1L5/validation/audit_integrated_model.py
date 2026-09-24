@@ -80,8 +80,8 @@ def main() -> None:
     checks["fe_connectivity"] = "PASS_WITH_STOP" if floating_ids and not active_floating else ("PASS" if not floating_ids else "FAIL")
     load_catalog = loads.get("audited_load_catalog", {})
     tributaries = loads.get("tributary_areas", {})
-    checks["loads_current"] = "PASS_WITH_NOTE" if load_catalog.get("status") == "CURRENT_PARTIAL_WITH_DOCUMENTED_UNRESOLVED" else ("PASS" if load_catalog.get("status") == "APPLIED_CURRENT" else "FAIL")
-    checks["tributaries_current"] = "PASS_WITH_NOTE" if tributaries.get("status") == "CURRENT_WITH_DOCUMENTED_FALLBACKS" else ("PASS" if tributaries.get("status") == "CURRENT_VALIDATED" else "FAIL")
+    checks["loads_current"] = "PASS_WITH_NOTE" if load_catalog.get("status") in {"CURRENT_PARTIAL_WITH_DOCUMENTED_UNRESOLVED", "CURRENT_RECONSTRUCTED_WITH_EXPLICIT_UNRESOLVED"} else ("PASS" if load_catalog.get("status") == "APPLIED_CURRENT" else "FAIL")
+    checks["tributaries_current"] = "PASS_WITH_NOTE" if tributaries.get("status") in {"CURRENT_WITH_DOCUMENTED_FALLBACKS", "CURRENT_RECOMPUTED"} else ("PASS" if tributaries.get("status") == "CURRENT_VALIDATED" else "FAIL")
     results_path = ROOT / "entregas/P1L5/analysis/results/current/manifest.json"
     results_manifest = load(results_path) if results_path.exists() else {}
     checks["opensees_current"] = "PASS" if results_manifest.get("status") == "PASS" else "FAIL"

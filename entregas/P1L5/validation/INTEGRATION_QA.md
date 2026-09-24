@@ -15,7 +15,7 @@
 | material_references | PASS |
 | current_material_assignments_complete | PASS |
 | current_elastic_properties_complete | PASS |
-| fe_connectivity | PASS_WITH_STOP |
+| fe_connectivity | PASS |
 | loads_current | PASS_WITH_NOTE |
 | tributaries_current | PASS_WITH_NOTE |
 | opensees_current | PASS |
@@ -24,28 +24,28 @@
 
 ```json
 {
-  "central_nodes": 1210,
-  "fe_nodes": 1126,
-  "physical_elements": 649,
+  "central_nodes": 1218,
+  "fe_nodes": 1110,
+  "physical_elements": 635,
   "visual_supports": 46,
-  "beams": 466,
+  "beams": 452,
   "columns": 143,
   "walls": 30,
   "slabs": 10,
-  "fe_segments": 647,
-  "fe_constraints": 1203,
+  "fe_segments": 633,
+  "fe_constraints": 1223,
   "fe_support_nodes": 33,
-  "disconnected_components": 1,
+  "disconnected_components": 0,
   "unknown_structural_materials": 0,
   "load_catalog_entries": 108,
-  "tributary_pans": 105
+  "tributary_pans": 44
 }
 ```
 
 ## Bloqueos reales
 
-- Componente desconectado: E2-P4-V-009.
+- Componente desconectado: ninguno.
 - Elementos estructurales con material desconocido: 0.
 - Materiales sin E actual: ninguno.
-- Cargas: `CURRENT_PARTIAL_WITH_DOCUMENTED_UNRESOLVED`; tributarias: `CURRENT_WITH_DOCUMENTED_FALLBACKS`.
+- Cargas: `CURRENT_RECONSTRUCTED_WITH_EXPLICIT_UNRESOLVED`; tributarias: `CURRENT_RECOMPUTED`.
 - No se agregaron apoyos, enlaces ni propiedades ficticias para cambiar este veredicto.

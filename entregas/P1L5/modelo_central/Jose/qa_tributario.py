@@ -23,9 +23,9 @@ def main() -> None:
     entries = catalog.get("entries", [])
     pans = tributary.get("panos", [])
     blockers = []
-    if catalog.get("status") not in {"APPLIED_CURRENT", "CURRENT_PARTIAL_WITH_DOCUMENTED_UNRESOLVED"}:
+    if catalog.get("status") not in {"APPLIED_CURRENT", "CURRENT_PARTIAL_WITH_DOCUMENTED_UNRESOLVED", "CURRENT_RECONSTRUCTED_WITH_EXPLICIT_UNRESOLVED"}:
         blockers.append(f"load catalog status={catalog.get('status')}")
-    if tributary.get("status") not in {"CURRENT_VALIDATED", "CURRENT_WITH_DOCUMENTED_FALLBACKS"}:
+    if tributary.get("status") not in {"CURRENT_VALIDATED", "CURRENT_WITH_DOCUMENTED_FALLBACKS", "CURRENT_RECOMPUTED"}:
         blockers.append(f"tributary status={tributary.get('status')}")
     current = loads.get("current_load_application", {})
     conservation = current.get("conservation", {})

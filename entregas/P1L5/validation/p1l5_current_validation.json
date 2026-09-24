@@ -1,0 +1,531 @@
+{
+  "format": "MCOC_P1L5_CURRENT_VALIDATION_V1",
+  "generated_utc": "2026-09-24T17:16:33.722031+00:00",
+  "status": "PASS_WITH_EXPLICIT_UNRESOLVED",
+  "branch": "codex/p1l5-integration",
+  "geometry": {
+    "base_commit": "1d81b945fca7567bbf5aa8cc0bd374315a3d6a38",
+    "frozen": true,
+    "base_contract_sha256": "9812631b383e7a20fb981e7fbf88b2d805cea8f37635c2d7fc376d97b639b42d",
+    "current_contract_sha256": "9812631b383e7a20fb981e7fbf88b2d805cea8f37635c2d7fc376d97b639b42d",
+    "physical_beams": 452,
+    "fe_nodes": 1110,
+    "fe_segments": 633,
+    "constraints": 1223,
+    "fe_supports": 33
+  },
+  "loads": {
+    "status": "PASS_WITH_EXPLICIT_UNRESOLVED",
+    "catalog_status_counts": {
+      "CURRENT_RECONSTRUCTED": 88,
+      "UNRESOLVED": 8,
+      "UNIT_CONFLICT_UNRESOLVED": 2,
+      "HISTORICAL_FALLBACK": 10
+    },
+    "unresolved_ids": [
+      "L700-P2-POINT-SC-7000-SC_POINT",
+      "L700-P2-POINT-SC-7000-PM_ADIC_POINT",
+      "L700-P3-POINT-SC-6000-SC_POINT",
+      "L700-P3-POINT-SC-6000-PM_ADIC_POINT",
+      "L700-P3-POINT-SC-6700-SC_POINT",
+      "L700-P3-POINT-SC-6700-PM_ADIC_POINT",
+      "L700-P4-LINE-SC-800-SC_LINE",
+      "L700-P4-LINE-SC-800-PM_ADIC_LINE",
+      "L700-E2-P4-LINE-SC-100-SC_LINE",
+      "L700-E2-P4-LINE-SC-100-PM_ADIC_LINE"
+    ],
+    "unit_conflicts": [
+      "L700-P4-LINE-SC-800-PM_ADIC_LINE",
+      "L700-P4-LINE-SC-800-SC_LINE"
+    ],
+    "totals": {
+      "Q_N": 24349142.51,
+      "G_self_weight_N": 32901990.8,
+      "G_superimposed_dead_N": 42857767.093,
+      "G_total_N": 75759757.893
+    },
+    "by_building": {
+      "EDIFICIO_1": {
+        "lt_block": "LT1",
+        "Q_N": 13147329.213,
+        "G_self_weight_N": 18718709.438,
+        "G_superimposed_dead_N": 25940972.965,
+        "G_total_N": 44659682.403,
+        "etabs_CV_N": 11620380.0,
+        "etabs_CM_N": 47140276.0,
+        "Q_difference_percent": 13.14,
+        "G_difference_percent": -5.262
+      },
+      "EDIFICIO_2": {
+        "lt_block": "LT2",
+        "Q_N": 11201813.297,
+        "G_self_weight_N": 14183281.39,
+        "G_superimposed_dead_N": 16916794.129,
+        "G_total_N": 31100075.518,
+        "etabs_CV_N": 11096777.0,
+        "etabs_CM_N": 34723194.0,
+        "Q_difference_percent": 0.947,
+        "G_difference_percent": -10.434
+      }
+    },
+    "by_floor": [
+      {
+        "building": "EDIFICIO_1",
+        "lt_block": "LT1",
+        "floor": "P1",
+        "area_total_m2": 997.042,
+        "area_with_Q_m2": 997.042,
+        "area_without_Q_m2": 0.0,
+        "Q_N": 3826342.645,
+        "G_superimposed_N": 3255107.877,
+        "G_slab_N": 3666617.308,
+        "interior_hole_area_m2": 13.824,
+        "panels": 8,
+        "G_self_weight_N": 4026980.691,
+        "G_total_N": 10948705.876
+      },
+      {
+        "building": "EDIFICIO_1",
+        "lt_block": "LT1",
+        "floor": "P2",
+        "area_total_m2": 843.914,
+        "area_with_Q_m2": 843.914,
+        "area_without_Q_m2": 0.0,
+        "Q_N": 3069019.178,
+        "G_superimposed_N": 2130242.261,
+        "G_slab_N": 3103488.302,
+        "interior_hole_area_m2": 14.332,
+        "panels": 7,
+        "G_self_weight_N": 4080981.009,
+        "G_total_N": 9314711.573
+      },
+      {
+        "building": "EDIFICIO_1",
+        "lt_block": "LT1",
+        "floor": "P3",
+        "area_total_m2": 956.721,
+        "area_with_Q_m2": 956.721,
+        "area_without_Q_m2": 0.0,
+        "Q_N": 2843203.845,
+        "G_superimposed_N": 2401009.744,
+        "G_slab_N": 3518334.584,
+        "interior_hole_area_m2": 0.0,
+        "panels": 4,
+        "G_self_weight_N": 4557873.986,
+        "G_total_N": 10477218.314
+      },
+      {
+        "building": "EDIFICIO_1",
+        "lt_block": "LT1",
+        "floor": "P4",
+        "area_total_m2": 934.561,
+        "area_with_Q_m2": 934.561,
+        "area_without_Q_m2": 0.0,
+        "Q_N": 1771681.469,
+        "G_superimposed_N": 1924934.957,
+        "G_slab_N": 3436842.87,
+        "interior_hole_area_m2": 0.0,
+        "panels": 3,
+        "G_self_weight_N": 4516850.807,
+        "G_total_N": 9878628.634
+      },
+      {
+        "building": "EDIFICIO_1",
+        "lt_block": "LT1",
+        "floor": "S1",
+        "area_total_m2": 387.863,
+        "area_with_Q_m2": 387.863,
+        "area_without_Q_m2": 0.0,
+        "Q_N": 1637082.075,
+        "G_superimposed_N": 1078029.889,
+        "G_slab_N": 1426365.172,
+        "interior_hole_area_m2": 14.332,
+        "panels": 5,
+        "G_self_weight_N": 1536022.944,
+        "G_total_N": 4040418.006
+      },
+      {
+        "building": "EDIFICIO_2",
+        "lt_block": "LT2",
+        "floor": "P1",
+        "area_total_m2": 557.894,
+        "area_with_Q_m2": 557.894,
+        "area_without_Q_m2": 0.0,
+        "Q_N": 2537821.443,
+        "G_superimposed_N": 1422479.192,
+        "G_slab_N": 2051652.681,
+        "interior_hole_area_m2": 6.395,
+        "panels": 4,
+        "G_self_weight_N": 2856940.944,
+        "G_total_N": 6331072.816
+      },
+      {
+        "building": "EDIFICIO_2",
+        "lt_block": "LT2",
+        "floor": "P2",
+        "area_total_m2": 557.894,
+        "area_with_Q_m2": 557.894,
+        "area_without_Q_m2": 0.0,
+        "Q_N": 2537821.443,
+        "G_superimposed_N": 1422479.192,
+        "G_slab_N": 2051652.681,
+        "interior_hole_area_m2": 6.395,
+        "panels": 4,
+        "G_self_weight_N": 2856940.944,
+        "G_total_N": 6331072.816
+      },
+      {
+        "building": "EDIFICIO_2",
+        "lt_block": "LT2",
+        "floor": "P3",
+        "area_total_m2": 557.894,
+        "area_with_Q_m2": 557.894,
+        "area_without_Q_m2": 0.0,
+        "Q_N": 2537821.443,
+        "G_superimposed_N": 1422479.192,
+        "G_slab_N": 2051652.681,
+        "interior_hole_area_m2": 6.395,
+        "panels": 4,
+        "G_self_weight_N": 2856940.944,
+        "G_total_N": 6331072.816
+      },
+      {
+        "building": "EDIFICIO_2",
+        "lt_block": "LT2",
+        "floor": "P4",
+        "area_total_m2": 535.62,
+        "area_with_Q_m2": 535.62,
+        "area_without_Q_m2": 0.0,
+        "Q_N": 1050527.527,
+        "G_superimposed_N": 1050527.527,
+        "G_slab_N": 1969739.112,
+        "interior_hole_area_m2": 21.813,
+        "panels": 1,
+        "G_self_weight_N": 2755517.614,
+        "G_total_N": 5775784.253
+      },
+      {
+        "building": "EDIFICIO_2",
+        "lt_block": "LT2",
+        "floor": "S1",
+        "area_total_m2": 557.894,
+        "area_with_Q_m2": 557.894,
+        "area_without_Q_m2": 0.0,
+        "Q_N": 2537821.443,
+        "G_superimposed_N": 1422479.192,
+        "G_slab_N": 2051652.681,
+        "interior_hole_area_m2": 6.395,
+        "panels": 4,
+        "G_self_weight_N": 2856940.944,
+        "G_total_N": 6331072.816
+      }
+    ],
+    "conservation": {
+      "G": {
+        "generated_N": 75759757.893,
+        "transferred_N": 75759757.921,
+        "residual_N": 0.027813,
+        "residual_percent": 3.6713e-08,
+        "status": "PASS"
+      },
+      "Q": {
+        "generated_N": 24349142.51,
+        "transferred_N": 24349142.51,
+        "residual_N": -0.0,
+        "residual_percent": -0.0,
+        "status": "PASS"
+      }
+    }
+  },
+  "materials": {
+    "CONFIRMED_OR_PREEXISTING": 546,
+    "INFERRED_MATERIAL_FALLBACK": 79
+  },
+  "analysis": {
+    "manifest": {
+      "format": "MCOC_P1L5_CURRENT_RESULTS_MANIFEST_V2",
+      "generated_utc": "2026-09-24T17:16:32.658163+00:00",
+      "status": "PASS",
+      "analysis_version": "P1L5_CURRENT_ZONED_V2",
+      "cases": {
+        "G": {
+          "status": "PASS",
+          "max_translation_m": 0.0938407107953782,
+          "equilibrium_relative_residual": 4.720551894984759e-15
+        },
+        "Q": {
+          "status": "PASS",
+          "max_translation_m": 0.03870579294120632,
+          "equilibrium_relative_residual": 2.2949208422688378e-15
+        },
+        "EX": {
+          "status": "PASS",
+          "max_translation_m": 0.06810420545489065,
+          "equilibrium_relative_residual": 2.5418675505173538e-14
+        },
+        "EY": {
+          "status": "PASS",
+          "max_translation_m": 0.10213254191230113,
+          "equilibrium_relative_residual": 5.486197463199654e-14
+        }
+      },
+      "linear_superposition_compatible": true,
+      "stop_elements": [],
+      "result_state": "CURRENT_WITH_DOCUMENTED_FALLBACKS",
+      "load_contract": {
+        "status": "PASS_WITH_EXPLICIT_UNRESOLVED",
+        "G_total_N": 75759757.893,
+        "Q_total_N": 24349142.51,
+        "unresolved_load_ids": [
+          "L700-P2-POINT-SC-7000-SC_POINT",
+          "L700-P2-POINT-SC-7000-PM_ADIC_POINT",
+          "L700-P3-POINT-SC-6000-SC_POINT",
+          "L700-P3-POINT-SC-6000-PM_ADIC_POINT",
+          "L700-P3-POINT-SC-6700-SC_POINT",
+          "L700-P3-POINT-SC-6700-PM_ADIC_POINT",
+          "L700-P4-LINE-SC-800-SC_LINE",
+          "L700-P4-LINE-SC-800-PM_ADIC_LINE",
+          "L700-E2-P4-LINE-SC-100-SC_LINE",
+          "L700-E2-P4-LINE-SC-100-PM_ADIC_LINE"
+        ]
+      }
+    },
+    "case_qa": {
+      "G": {
+        "finite": true,
+        "max_translation_m": 0.0938407107953782,
+        "external_force_N": [
+          0.0,
+          0.0,
+          -75759757.88599999
+        ],
+        "reaction_force_N": [
+          3.861634922941448e-08,
+          -3.2448951969854534e-08,
+          75759757.88599963
+        ],
+        "equilibrium_residual_N": [
+          3.861634922941448e-08,
+          -3.2448951969854534e-08,
+          -3.5762786865234375e-07
+        ],
+        "equilibrium_relative_residual": 4.720551894984759e-15,
+        "equilibrium_status": "PASS"
+      },
+      "Q": {
+        "finite": true,
+        "max_translation_m": 0.03870579294120632,
+        "external_force_N": [
+          0.0,
+          0.0,
+          -24349142.44
+        ],
+        "reaction_force_N": [
+          4.433059075381607e-08,
+          -2.8725480660796165e-08,
+          24349142.439999945
+        ],
+        "equilibrium_residual_N": [
+          4.433059075381607e-08,
+          -2.8725480660796165e-08,
+          -5.587935447692871e-08
+        ],
+        "equilibrium_relative_residual": 2.2949208422688378e-15,
+        "equilibrium_status": "PASS"
+      },
+      "EX": {
+        "finite": true,
+        "max_translation_m": 0.06810420545489065,
+        "external_force_N": [
+          17586865.8351,
+          0.0,
+          0.0
+        ],
+        "reaction_force_N": [
+          -17586865.83509955,
+          -7.069957064231858e-08,
+          8.381903171539307e-09
+        ],
+        "equilibrium_residual_N": [
+          4.470348358154297e-07,
+          -7.069957064231858e-08,
+          8.381903171539307e-09
+        ],
+        "equilibrium_relative_residual": 2.5418675505173538e-14,
+        "equilibrium_status": "PASS"
+      },
+      "EY": {
+        "finite": true,
+        "max_translation_m": 0.10213254191230113,
+        "external_force_N": [
+          0.0,
+          17586865.8351,
+          0.0
+        ],
+        "reaction_force_N": [
+          -2.0427978597581387e-07,
+          -17586865.835100964,
+          -9.66247171163559e-09
+        ],
+        "equilibrium_residual_N": [
+          -2.0427978597581387e-07,
+          -9.648501873016357e-07,
+          -9.66247171163559e-09
+        ],
+        "equilibrium_relative_residual": 5.486197463199654e-14,
+        "equilibrium_status": "PASS"
+      }
+    },
+    "analysed_segments": 629,
+    "rigid_cluster_segments_skipped": [
+      "POST-A-00587",
+      "POST-A-00589",
+      "POST-A-00580",
+      "POST-A-00644"
+    ],
+    "p3_vertical_benchmark": [
+      {
+        "building": "EDIFICIO_1",
+        "lt_block": "LT1",
+        "floor": "P3",
+        "case": "G",
+        "node_tag": 482,
+        "selection": "same retained node nearest P3 geometry centroid used for seismic application",
+        "current_Uz_mm": -4.617086,
+        "etabs_reference_Uz_mm": -5.06,
+        "ratio_current_to_etabs": 0.9125,
+        "comparability": "SECONDARY_ORDER_OF_MAGNITUDE_ONLY"
+      },
+      {
+        "building": "EDIFICIO_1",
+        "lt_block": "LT1",
+        "floor": "P3",
+        "case": "Q",
+        "node_tag": 482,
+        "selection": "same retained node nearest P3 geometry centroid used for seismic application",
+        "current_Uz_mm": -1.365862,
+        "etabs_reference_Uz_mm": -1.466,
+        "ratio_current_to_etabs": 0.9317,
+        "comparability": "SECONDARY_ORDER_OF_MAGNITUDE_ONLY"
+      },
+      {
+        "building": "EDIFICIO_2",
+        "lt_block": "LT2",
+        "floor": "P3",
+        "case": "G",
+        "node_tag": 177,
+        "selection": "same retained node nearest P3 geometry centroid used for seismic application",
+        "current_Uz_mm": -2.820192,
+        "etabs_reference_Uz_mm": -7.181,
+        "ratio_current_to_etabs": 0.3927,
+        "comparability": "SECONDARY_ORDER_OF_MAGNITUDE_ONLY"
+      },
+      {
+        "building": "EDIFICIO_2",
+        "lt_block": "LT2",
+        "floor": "P3",
+        "case": "Q",
+        "node_tag": 177,
+        "selection": "same retained node nearest P3 geometry centroid used for seismic application",
+        "current_Uz_mm": -1.097867,
+        "etabs_reference_Uz_mm": -3.213,
+        "ratio_current_to_etabs": 0.3417,
+        "comparability": "SECONDARY_ORDER_OF_MAGNITUDE_ONLY"
+      }
+    ],
+    "modal_benchmark": {
+      "status": "NOT_DIRECTLY_COMPARABLE",
+      "reason": "ETABS LT1/LT2 are separate diaphragm models; CURRENT is a combined frame model without FE slabs/rigid floor diaphragms.",
+      "etabs_periods_s": {
+        "LT1": [
+          0.64,
+          0.579,
+          0.475
+        ],
+        "LT2": [
+          0.735,
+          0.628,
+          0.331
+        ]
+      }
+    }
+  },
+  "unity": {
+    "status": "CURRENT",
+    "contract": {
+      "format": "MCOC_CURRENT_DATASET_V1",
+      "geometry_version": "0edaa2daa79db5632867fb31fdf560914d970a9eb5eb26407710abaf3d41fd82",
+      "fe_version": "2121889007b7ebcfc3b63185c96f2eabc6409384c5095b8c41f70c1d00869a29",
+      "loads_version": "2a3e682d46be3fa984b73e677d4265b4a13bab5c7b091c65ad6b5b9bf0dfbec6",
+      "analysis_version": "P1L5_CURRENT_ZONED_V2",
+      "git_commit": "23d86fa996f63594e1d8eac135de898ddbfa1533",
+      "timestamp": "2026-09-24T17:16:33.092465+00:00",
+      "status": "CURRENT_VERIFIED",
+      "geometry_stream_sha256": "a3b8bb3d0ac7143a7053fba294f94dd44e51e17e35cea15bb0470f46fdfd1b04",
+      "units": {
+        "length": "m",
+        "force": "N",
+        "moment": "N.m",
+        "stress": "Pa",
+        "mass": "kg",
+        "rotation": "rad"
+      },
+      "cases": [
+        "G",
+        "Q",
+        "EX",
+        "EY",
+        "R"
+      ],
+      "basis_cases": [
+        "G",
+        "Q",
+        "EX",
+        "EY"
+      ],
+      "analysis_available": true,
+      "fe_approved": true,
+      "loads_approved": true,
+      "linear_verified": true,
+      "payload_file": "p1l5_current_analysis_cases.json",
+      "payload_sha256": "dcdad55c751c1e4f5c4fcf0433bbc828e1d0f84f9ecd503b628b598c592a7ba2",
+      "source_geometry": "entregas/P1L5/modelo_central/model_master.json",
+      "source_fe": "entregas/P1L5/modelo_central/model_master.json#/fe_topology",
+      "source_loads": "entregas/P1L5/modelo_central/loads.json",
+      "basis_policy": "Identical K, supports, local axes, node/member ordering and signed SI components.",
+      "capacity_policy": "Demand changes by compatible linear superposition; section/material changes require reanalysis and capacity compatibility review.",
+      "result_state": "CURRENT_WITH_DOCUMENTED_FALLBACKS",
+      "unresolved_load_count": 10,
+      "current_element_loads_file": "p1l5_current_loads_by_element.json",
+      "current_element_loads_sha256": "f70c8908a8795610903712a304217f025ef476c24c075ea1ef67611181e861e8"
+    },
+    "load_inspector": "PASS",
+    "basis_cases": [
+      "G",
+      "Q",
+      "EX",
+      "EY"
+    ],
+    "instant_superposition_R": true
+  },
+  "external_read_only_sources": {
+    "Santiago": {
+      "commit": "d4e1468d88d90116ebc037388306f6f2d8d83559",
+      "use": "uniform-load and tributary-method benchmark only"
+    },
+    "Caceres": {
+      "commit": "fd6353f5be3d01c2386ea76e8751311fcd66f6c5",
+      "use": "zoned-load, polygon-hole and 45-degree-method benchmark only"
+    }
+  },
+  "checks": {
+    "geometry_frozen_from_1d81b945": true,
+    "central_contract": true,
+    "load_conservation_G": true,
+    "load_conservation_Q": true,
+    "opensees_G_Q_EX_EY": true,
+    "unity_current_hashes": true,
+    "no_nan_or_infinity": true,
+    "linear_superposition": true
+  }
+}

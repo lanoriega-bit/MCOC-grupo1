@@ -295,12 +295,15 @@ namespace Mcoc.UnityViewer
             var failures = new List<string>();
             if (analysisCases?.cases == null) failures.Add("contrato de casos ausente");
             else foreach (string name in new[] { "G", "Q", "EX", "EY", "R" }) if (FindP1L5Case(name) == null) failures.Add("caso " + name + " ausente");
-            if (p1l4Metadata?.elements == null || p1l4Metadata.elements.Count != 642) failures.Add("metadata CURRENT != 642 segmentos");
+            var g = FindP1L5Case("G");
+            int expectedElements=g?.elements?.Count??0, expectedNodes=g?.nodes?.Count??0;
+            if (expectedElements==0||expectedNodes==0)failures.Add("caso base G vacío");
+            if (p1l4Metadata?.elements == null || p1l4Metadata.elements.Count != expectedElements) failures.Add("metadata CURRENT no coincide con segmentos analizados");
             if (p1l4Metadata?.qa == null || !p1l4Metadata.qa.all_nodes_exist || !p1l4Metadata.qa.all_local_axes_unit_and_orthogonal) failures.Add("QA ejes/nodos CURRENT");
             var r = FindP1L5Case("R");
-            if (r?.nodes == null || r.nodes.Count != 1124 || r.elements == null || r.elements.Count != 642) failures.Add("R CURRENT incompleto");
+            if (r?.nodes == null || r.nodes.Count != expectedNodes || r.elements == null || r.elements.Count != expectedElements) failures.Add("R CURRENT incompleto");
             Debug.Log(failures.Count == 0
-                ? "[P1L5 QA] PASS: G/Q/EX/EY/R CURRENT; 642 segmentos; 1124 nodos; ejes locales; superposición lista."
+                ? $"[P1L5 QA] PASS: G/Q/EX/EY/R CURRENT; {expectedElements} segmentos; {expectedNodes} nodos; ejes locales; superposición lista."
                 : "[P1L5 QA] FAIL: " + string.Join(", ", failures));
         }
 

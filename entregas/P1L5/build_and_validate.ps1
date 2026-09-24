@@ -26,15 +26,19 @@ try {
     }
 
     Invoke-CheckedPython 'entregas/P1L5/analysis/apply_modification_request.py'
+    Invoke-CheckedPython 'entregas/P1L5/modelo_central/apply_p1l5_assumptions.py'
+    Invoke-CheckedPython 'entregas/P1L5/modelo_central/rebuild_central_fe_topology.py'
     Invoke-CheckedPython 'entregas/P1L5/modelo_central/validate_central_model.py'
     Invoke-CheckedPython 'entregas/P1L5/modelo_central/build_central_derivatives.py'
     Invoke-CheckedPython 'entregas/P1L5/analysis/build_current_loads.py'
+    Invoke-CheckedPython 'entregas/P1L5/modelo_central/validate_central_model.py'
     Invoke-CheckedPython 'entregas/P1L5/analysis/run_current_opensees.py'
     Invoke-CheckedPython 'entregas/P1L5/analysis/export_current_to_unity.py'
     Invoke-CheckedPython 'entregas/P1L5/modelo_central/Jose/qa_dinamico_p1l1_p1l4.py'
     Invoke-CheckedPython 'entregas/P1L5/modelo_central/Jose/qa_tributario.py'
     Invoke-CheckedPython 'entregas/P1L5/validation/audit_integrated_model.py'
     Invoke-CheckedPython 'entregas/P1L5/validation/test_single_source_propagation.py'
+    Invoke-CheckedPython 'entregas/P1L5/validation/validate_current_loads_and_results.py'
 
     if ($UnityCompile) {
         $unity = 'C:\Program Files\Unity\Hub\Editor\6000.6.0f1\Editor\Unity.exe'

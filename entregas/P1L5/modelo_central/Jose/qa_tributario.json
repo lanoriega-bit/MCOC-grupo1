@@ -2,22 +2,22 @@
   "schema": "P1L2_TRIBUTARY_READINESS_v4",
   "status": "PASS",
   "catalog_entries": 108,
-  "tributary_pans": 105,
-  "catalog_status": "CURRENT_PARTIAL_WITH_DOCUMENTED_UNRESOLVED",
-  "tributary_status": "CURRENT_WITH_DOCUMENTED_FALLBACKS",
+  "tributary_pans": 44,
+  "catalog_status": "CURRENT_RECONSTRUCTED_WITH_EXPLICIT_UNRESOLVED",
+  "tributary_status": "CURRENT_RECOMPUTED",
   "conservation": {
     "G": {
-      "expected_N": 24684754.998,
-      "transferred_N": 24684754.998,
-      "difference_N": 0.0,
-      "relative_error": 0.0,
+      "generated_N": 75759757.893,
+      "transferred_N": 75759757.921,
+      "residual_N": 0.027813,
+      "residual_percent": 3.6713e-08,
       "status": "PASS"
     },
     "Q": {
-      "expected_N": 11259193.078,
-      "transferred_N": 11259193.078,
-      "difference_N": -0.0,
-      "relative_error": -0.0,
+      "generated_N": 24349142.51,
+      "transferred_N": 24349142.51,
+      "residual_N": -0.0,
+      "residual_percent": -0.0,
       "status": "PASS"
     }
   },

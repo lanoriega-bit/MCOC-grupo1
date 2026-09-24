@@ -71,7 +71,7 @@ def main() -> None:
         "current_central_model": {
             "solid_count": current["solid_count"],
             "fe_candidate_members": current["fe_candidate_members"],
-            "pending_case": current["pending_case"]["element_id"],
+            "pending_case": current["pending_case"]["element_id"] if isinstance(current.get("pending_case"), dict) else None,
             "results_status": current_manifest.get("status", "NONE_CURRENT"),
             "analysis_version": current_manifest.get("analysis_version"),
         },

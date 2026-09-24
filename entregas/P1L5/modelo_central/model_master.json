@@ -1,6 +1,6 @@
 {
   "format": "MCOC_P1L5_MODEL_MASTER_V1",
-  "generated_utc": "2026-09-24T17:04:19.192114+00:00",
+  "generated_utc": "2026-09-24T17:16:23.691830+00:00",
   "policy": "CENTRAL_CANONICAL_INPUT_PROTOTYPE_DO_NOT_OVERWRITE_PRODUCTION",
   "units": {
     "length": "m",
@@ -64045,8 +64045,8 @@
     "results_state": "P1L5_RESULTS_HISTORICAL_NOT_RECALCULATED"
   },
   "fe_topology": {
-    "status": "APPROVED_FOR_P1L5_WITH_STOP_EXCLUSIONS",
-    "migrated_utc": "2026-09-24T16:37:20.319415+00:00",
+    "status": "APPROVED_FOR_ANALYSIS",
+    "migrated_utc": "2026-09-24T17:16:25.730387+00:00",
     "provenance": {
       "source": "entregas/P1L5/modelo_central/model_master.json",
       "method": "central adapter + audited PRE5 physical-footprint topology algorithm",
@@ -118522,16 +118522,19 @@
       "stable_analysis_ids_reused": 633
     },
     "run_policy": {
-      "status": "APPROVED_ACADEMIC_EXPERIMENTAL",
+      "status": "GEOMETRY_APPROVED_RESULTS_NOT_RECALCULATED",
       "active_only": true,
       "stop_element_ids": [],
       "no_invented_supports": true,
-      "authorised_utc": "2026-09-24T17:04:19.192114+00:00"
+      "opensees_run": false,
+      "loads_changed": false,
+      "results_changed": false,
+      "authorised_utc": "2026-09-24T17:16:25.730387+00:00"
     }
   },
   "p1l5_analysis_policy": {
     "status": "APPROVED_ACADEMIC_EXPERIMENTAL",
-    "applied_utc": "2026-09-24T17:04:19.192114+00:00",
+    "applied_utc": "2026-09-24T17:16:23.691830+00:00",
     "stop_element_ids": [],
     "structural_material_fallback": {
       "material_id": "MAT_G35_10_2024_22_100_53994",
@@ -118663,6 +118666,28 @@
           "element_id": "E2-P4-V-001",
           "previous": "SEC_BEAM_RECT_0.400x0.800",
           "value": "SEC_BEAM_RECT_0.200x0.900"
+        }
+      ]
+    },
+    {
+      "request_id": "20260924T112617849Z",
+      "applied_utc": "2026-09-24T17:14:29.513302+00:00",
+      "operations": [
+        {
+          "type": "SET_Q_SCALE",
+          "previous": 1.0,
+          "value": 0.7400000095367432
+        }
+      ]
+    },
+    {
+      "request_id": "P1L5_BASELINE_RESTORE_Q_SCALE_1",
+      "applied_utc": "2026-09-24T17:15:34.239907+00:00",
+      "operations": [
+        {
+          "type": "SET_Q_SCALE",
+          "previous": 0.7400000095367432,
+          "value": 1.0
         }
       ]
     }
