@@ -196,7 +196,11 @@ namespace Mcoc.UnityViewer
             }
             architecture = JsonLoader.LoadArchitecture();
             var currentCases = JsonLoader.LoadP1L5CurrentAnalysisCases();
-            currentResultsAvailable = currentCases != null && currentCases.cases != null && currentCases.cases.Count >= 4;
+            LoadCurrentContract();
+            currentResultsAvailable = currentContract != null
+                && currentContract.status == "CURRENT_VERIFIED"
+                && currentContract.analysis_available
+                && currentCases != null && currentCases.cases != null && currentCases.cases.Count >= 4;
             analysisResults = currentResultsAvailable ? null : JsonLoader.LoadAnalysisResults();
             analysisCases = currentResultsAvailable ? currentCases : JsonLoader.LoadAnalysisCases();
             feDiagnostic = JsonLoader.LoadFeDiagnostic();

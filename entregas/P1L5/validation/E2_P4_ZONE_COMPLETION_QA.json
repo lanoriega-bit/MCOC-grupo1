@@ -1,0 +1,350 @@
+{
+  "summary": {
+    "status": "PASS",
+    "beams_before": 454,
+    "beams_after": 452,
+    "free_ends_before": 18,
+    "free_ends_after": 11,
+    "reconnected": [
+      "E2-P4-V-002",
+      "E2-P4-V-004",
+      "E2-P4-V-008",
+      "E2-P4-V-017",
+      "E2-P4-V-020",
+      "E2-P4-V-042",
+      "E2-P4-V-043"
+    ],
+    "expected_cantilevers": [
+      "E2-S1-V-043",
+      "E2-S1-V-044",
+      "E2-P1-V-043",
+      "E2-P1-V-044",
+      "E2-P2-V-043",
+      "E2-P2-V-044",
+      "E2-P3-V-043",
+      "E2-P3-V-044",
+      "E2-P4-V-085",
+      "E2-P4-V-091"
+    ],
+    "review_required": [
+      "E1-P3-V-101"
+    ],
+    "fe_nodes": 1110,
+    "fe_segments": 633,
+    "fe_constraints": 1223,
+    "fe_supports": 33,
+    "disconnected_components": 0
+  },
+  "checks": {
+    "MERGE_SINGLE_ELEMENT": {
+      "status": "PASS",
+      "note": ""
+    },
+    "MERGE_TRACEABILITY": {
+      "status": "PASS",
+      "note": ""
+    },
+    "MERGE_GEOMETRY": {
+      "status": "PASS",
+      "note": ""
+    },
+    "RECONNECTED_GEOMETRY": {
+      "status": "PASS",
+      "note": ""
+    },
+    "PROPERTIES_PRESERVED": {
+      "status": "PASS",
+      "note": ""
+    },
+    "DUPLICATE_IDS_ZERO": {
+      "status": "PASS",
+      "note": ""
+    },
+    "DUPLICATE_EXACT_NODES_ZERO": {
+      "status": "PASS",
+      "note": "physical=0; FE=0"
+    },
+    "OVERLAPPING_BEAMS_ZERO": {
+      "status": "PASS",
+      "note": "[]"
+    },
+    "ZERO_LENGTH_ZERO": {
+      "status": "PASS",
+      "note": "[]"
+    },
+    "DUPLICATE_FE_MEMBERS_ZERO": {
+      "status": "PASS",
+      "note": ""
+    },
+    "DISCONNECTED_COMPONENTS_ZERO": {
+      "status": "PASS",
+      "note": ""
+    },
+    "PROTECTED_DATASETS_UNCHANGED": {
+      "status": "PASS",
+      "note": "[]"
+    },
+    "UNITY_SYNC": {
+      "status": "PASS",
+      "note": ""
+    },
+    "RESULTS_STALE": {
+      "status": "PASS",
+      "note": ""
+    },
+    "UNITY_COMPILE": {
+      "status": "PASS",
+      "note": ""
+    },
+    "UNITY_PLAY_RUNTIME": {
+      "status": "PASS",
+      "note": ""
+    },
+    "UNITY_STALE_GATE": {
+      "status": "PASS",
+      "note": ""
+    },
+    "FREE_END_CLASSIFICATION_COMPLETE": {
+      "status": "PASS",
+      "note": "['E1-P3-V-101', 'E2-P1-V-043', 'E2-P1-V-044', 'E2-P2-V-043', 'E2-P2-V-044', 'E2-P3-V-043', 'E2-P3-V-044', 'E2-P4-V-085', 'E2-P4-V-091', 'E2-S1-V-043', 'E2-S1-V-044']"
+    }
+  },
+  "vertical_comparison": {
+    "P4_vs_P3": {
+      "exact_matches": [
+        [
+          "E2-P4-V-004",
+          "E2-P3-V-002"
+        ],
+        [
+          "E2-P4-V-007",
+          "E2-P3-V-003"
+        ],
+        [
+          "E2-P4-V-013",
+          "E2-P3-V-008"
+        ],
+        [
+          "E2-P4-V-016",
+          "E2-P3-V-009"
+        ],
+        [
+          "E2-P4-V-017",
+          "E2-P3-V-010"
+        ],
+        [
+          "E2-P4-V-020",
+          "E2-P3-V-011"
+        ],
+        [
+          "E2-P4-V-021",
+          "E2-P3-V-012"
+        ],
+        [
+          "E2-P4-V-024",
+          "E2-P3-V-013"
+        ],
+        [
+          "E2-P4-V-031",
+          "E2-P3-V-014"
+        ],
+        [
+          "E2-P4-V-032",
+          "E2-P3-V-015"
+        ],
+        [
+          "E2-P4-V-033",
+          "E2-P3-V-016"
+        ],
+        [
+          "E2-P4-V-034",
+          "E2-P3-V-017"
+        ],
+        [
+          "E2-P4-V-037",
+          "E2-P3-V-018"
+        ],
+        [
+          "E2-P4-V-039",
+          "E2-P3-V-020"
+        ],
+        [
+          "E2-P4-V-040",
+          "E2-P3-V-021"
+        ],
+        [
+          "E2-P4-V-042",
+          "E2-P3-V-022"
+        ],
+        [
+          "E2-P4-V-043",
+          "E2-P3-V-023"
+        ],
+        [
+          "E2-P4-V-047",
+          "E2-P3-V-024"
+        ],
+        [
+          "E2-P4-V-050",
+          "E2-P3-V-026"
+        ],
+        [
+          "E2-P4-V-052",
+          "E2-P3-V-027"
+        ],
+        [
+          "E2-P4-V-053",
+          "E2-P3-V-028"
+        ],
+        [
+          "E2-P4-V-054",
+          "E2-P3-V-029"
+        ],
+        [
+          "E2-P4-V-092",
+          "E2-P3-V-045"
+        ]
+      ],
+      "p4_without_exact_lower_equivalent": [
+        "E2-P4-V-001",
+        "E2-P4-V-002",
+        "E2-P4-V-008",
+        "E2-P4-V-010",
+        "E2-P4-V-011",
+        "E2-P4-V-012",
+        "E2-P4-V-014",
+        "E2-P4-V-038",
+        "E2-P4-V-049"
+      ],
+      "lower_without_exact_p4_equivalent": [
+        "E2-P3-V-001",
+        "E2-P3-V-004",
+        "E2-P3-V-005",
+        "E2-P3-V-006",
+        "E2-P3-V-007",
+        "E2-P3-V-019",
+        "E2-P3-V-025"
+      ]
+    },
+    "P4_vs_P2": {
+      "exact_matches": [
+        [
+          "E2-P4-V-004",
+          "E2-P2-V-002"
+        ],
+        [
+          "E2-P4-V-007",
+          "E2-P2-V-003"
+        ],
+        [
+          "E2-P4-V-013",
+          "E2-P2-V-008"
+        ],
+        [
+          "E2-P4-V-016",
+          "E2-P2-V-009"
+        ],
+        [
+          "E2-P4-V-017",
+          "E2-P2-V-010"
+        ],
+        [
+          "E2-P4-V-020",
+          "E2-P2-V-011"
+        ],
+        [
+          "E2-P4-V-021",
+          "E2-P2-V-012"
+        ],
+        [
+          "E2-P4-V-024",
+          "E2-P2-V-013"
+        ],
+        [
+          "E2-P4-V-031",
+          "E2-P2-V-014"
+        ],
+        [
+          "E2-P4-V-032",
+          "E2-P2-V-015"
+        ],
+        [
+          "E2-P4-V-033",
+          "E2-P2-V-016"
+        ],
+        [
+          "E2-P4-V-034",
+          "E2-P2-V-017"
+        ],
+        [
+          "E2-P4-V-037",
+          "E2-P2-V-018"
+        ],
+        [
+          "E2-P4-V-039",
+          "E2-P2-V-020"
+        ],
+        [
+          "E2-P4-V-040",
+          "E2-P2-V-021"
+        ],
+        [
+          "E2-P4-V-042",
+          "E2-P2-V-022"
+        ],
+        [
+          "E2-P4-V-043",
+          "E2-P2-V-023"
+        ],
+        [
+          "E2-P4-V-047",
+          "E2-P2-V-024"
+        ],
+        [
+          "E2-P4-V-050",
+          "E2-P2-V-026"
+        ],
+        [
+          "E2-P4-V-052",
+          "E2-P2-V-027"
+        ],
+        [
+          "E2-P4-V-053",
+          "E2-P2-V-028"
+        ],
+        [
+          "E2-P4-V-054",
+          "E2-P2-V-029"
+        ],
+        [
+          "E2-P4-V-092",
+          "E2-P2-V-045"
+        ]
+      ],
+      "p4_without_exact_lower_equivalent": [
+        "E2-P4-V-001",
+        "E2-P4-V-002",
+        "E2-P4-V-008",
+        "E2-P4-V-010",
+        "E2-P4-V-011",
+        "E2-P4-V-012",
+        "E2-P4-V-014",
+        "E2-P4-V-038",
+        "E2-P4-V-049"
+      ],
+      "lower_without_exact_p4_equivalent": [
+        "E2-P2-V-001",
+        "E2-P2-V-004",
+        "E2-P2-V-005",
+        "E2-P2-V-006",
+        "E2-P2-V-007",
+        "E2-P2-V-019",
+        "E2-P2-V-025"
+      ]
+    },
+    "reviewed_differences": {
+      "E2-P4-V-008": "Roof-specific upper endpoint at the V-001 transition is retained; only the lower endpoint was restored to P3/P2 Y=12.036.",
+      "E2-P4-V-001_and_V-010": "0.20x0.90 m roof/detail members have no direct lower-floor analogue and remain unchanged."
+    }
+  }
+}
