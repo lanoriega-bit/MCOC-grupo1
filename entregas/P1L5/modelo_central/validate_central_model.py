@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Validate the P1L5 central model against current PRE5 identity."""
+"""Validate the self-contained P1L5 central model.
+
+Historical/PRE5 files are provenance, never a silent runtime fallback.
+"""
 
 from __future__ import annotations
 
@@ -15,18 +18,6 @@ MODEL_MASTER = HERE / "model_master.json"
 SECTIONS = HERE / "sections.json"
 MATERIALS = HERE / "materials.json"
 LOADS = HERE / "loads.json"
-GEOMETRY = ROOT / "entregas/P1L2/unity_export/model_combined_viewer.json"
-FE_CANDIDATE = ROOT / "entregas/P1L3/results/post_p1l3_candidate/analysis_model_post_p1l3_candidate.json"
-READINESS = ROOT / "entregas/PRE_P1L5/current_readiness/structural_readiness.json"
-
-DOCUMENTED_PRE5 = {
-    "solid_count": 695,
-    "beam_count": 466,
-    "fe_candidate_members": 647,
-    "pending_element_id": "E2-P4-V-009",
-}
-
-
 def load(path: Path):
     with path.open(encoding="utf-8-sig") as handle:
         return json.load(handle)
@@ -43,14 +34,13 @@ def validate() -> dict:
     sections = load(SECTIONS)
     materials = load(MATERIALS)
     loads = load(LOADS)
-    geometry = load(GEOMETRY)
-    fe = load(FE_CANDIDATE)
-    readiness = load(READINESS)
 
     nodes = master.get("nodes", [])
     elements = master.get("elements", [])
     supports = master.get("supports", [])
     aliases = master.get("aliases", [])
+    topology = master.get("fe_topology", {})
+    identity = master.get("current_pre5_identity", {})
 
     node_ids = [row.get("node_id") for row in nodes]
     element_ids = [row.get("element_id") for row in elements]
@@ -113,29 +103,42 @@ def validate() -> dict:
     if len(analysis_ids) != len(set(analysis_ids)):
         fail(errors, "Duplicate analysis_id in analysis_refs")
 
-    source_counts = Counter(row.get("category") for row in geometry.get("solids", []))
     central_counts = Counter(row.get("type") for row in elements)
-    if len(geometry.get("solids", [])) != DOCUMENTED_PRE5["solid_count"]:
-        fail(errors, f"Current source solid count differs from documented PRE5: {len(geometry.get('solids', []))} != {DOCUMENTED_PRE5['solid_count']}")
-    if source_counts.get("beam", 0) != DOCUMENTED_PRE5["beam_count"]:
-        fail(errors, f"Current source beam count differs from documented PRE5: {source_counts.get('beam', 0)} != {DOCUMENTED_PRE5['beam_count']}")
-    if len(fe.get("elements", [])) != DOCUMENTED_PRE5["fe_candidate_members"]:
-        fail(errors, f"Current FE candidate member count differs from documented PRE5: {len(fe.get('elements', []))} != {DOCUMENTED_PRE5['fe_candidate_members']}")
-
-    if len(elements) + len(supports) != len(geometry.get("solids", [])):
-        fail(errors, "Central active elements + supports do not reproduce source solid count")
+    expected_counts = identity.get("category_counts", {})
+    if len(elements) + len(supports) != identity.get("solid_count"):
+        fail(errors, "Central active elements + visual supports do not match current_pre5_identity.solid_count")
     for category in ("beam", "column", "wall", "slab"):
-        if central_counts.get(category, 0) != source_counts.get(category, 0):
-            fail(errors, f"Central {category} count differs from source: {central_counts.get(category, 0)} != {source_counts.get(category, 0)}")
-    if len(supports) != source_counts.get("support", 0):
-        fail(errors, f"Central support count differs from source: {len(supports)} != {source_counts.get('support', 0)}")
+        if central_counts.get(category, 0) != expected_counts.get(category, 0):
+            fail(errors, f"Central {category} count differs from current identity")
+    if len(supports) != expected_counts.get("support", 0):
+        fail(errors, "Central visual support count differs from current identity")
 
-    pending_rows = [row for row in readiness.get("pending_elements", []) if row.get("element_id") == DOCUMENTED_PRE5["pending_element_id"]]
-    central_pending = master.get("current_pre5_identity", {}).get("pending_case", {})
-    if not pending_rows:
-        fail(errors, "Readiness source does not contain pending E2-P4-V-009")
-    if central_pending.get("element_id") != DOCUMENTED_PRE5["pending_element_id"]:
+    fe_nodes = topology.get("nodes", {})
+    fe_supports = topology.get("support_node_tags", [])
+    if len(analysis_ids) != identity.get("fe_candidate_members"):
+        fail(errors, "Embedded FE segment count differs from current identity")
+    if len(fe_nodes) != identity.get("fe_candidate_nodes"):
+        fail(errors, "Embedded FE node count differs from current identity")
+    if len(fe_supports) != identity.get("fe_candidate_supports"):
+        fail(errors, "Embedded FE support count differs from current identity")
+    for tag in fe_supports:
+        if str(tag) not in fe_nodes:
+            fail(errors, f"FE support node {tag} is absent from embedded FE nodes")
+    for row in elements:
+        for ref in row.get("analysis_refs", []):
+            if str(ref.get("node_i")) not in fe_nodes or str(ref.get("node_j")) not in fe_nodes:
+                fail(errors, f"Embedded FE node missing for {ref.get('analysis_id')}")
+
+    central_pending = identity.get("pending_case", {})
+    floating_ids = {
+        element_id
+        for component in topology.get("floating_excluded", {}).get("components", [])
+        for element_id in component.get("geometry_element_ids", [])
+    }
+    if central_pending.get("element_id") != "E2-P4-V-009":
         fail(errors, "model_master pending_case does not preserve E2-P4-V-009")
+    if central_pending.get("element_id") not in floating_ids:
+        fail(errors, "Embedded FE topology does not preserve the documented disconnected component")
 
     if loads.get("audited_load_catalog", {}).get("status") != "AUDITED_NOT_APPLIED":
         fail(errors, "loads.json audited catalog must be AUDITED_NOT_APPLIED")
@@ -159,11 +162,13 @@ def validate() -> dict:
             "analysis_refs": len(analysis_ids),
             "aliases": len(aliases),
         },
-        "source_identity": {
-            "solid_count": len(geometry.get("solids", [])),
-            "category_counts": dict(source_counts),
-            "fe_candidate_members": len(fe.get("elements", [])),
-            "pending": DOCUMENTED_PRE5["pending_element_id"],
+        "current_identity": {
+            "solid_count": len(elements) + len(supports),
+            "category_counts": dict(central_counts | Counter({"support": len(supports)})),
+            "fe_candidate_members": len(analysis_ids),
+            "fe_nodes": len(fe_nodes),
+            "fe_supports": len(fe_supports),
+            "pending": central_pending.get("element_id"),
         },
     }
     return result

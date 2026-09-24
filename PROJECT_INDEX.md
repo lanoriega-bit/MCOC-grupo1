@@ -1,6 +1,15 @@
 # Índice maestro del proyecto
 
-Estado: `PRE-P1L5 / CONSOLIDACIÓN — BASELINE BLOCKED`
+Estado: `P1L5 INTEGRATION / CENTRAL MODEL VALID — ANALYSIS BLOCKED`
+
+Integración vigente: [auditoría P1L5](entregas/P1L5/INTEGRATION_AUDIT.md) y
+[QA del modelo integrado](entregas/P1L5/validation/INTEGRATION_QA.md).
+La fuente editable única está en `entregas/P1L5/modelo_central/`.
+
+Estado central: 695 sólidos (466 vigas, 143 columnas, 30 muros, 10 losas y
+46 apoyos visuales); candidato FE embebido con 1126 nodos, 647 segmentos,
+1203 restricciones y 33 nodos apoyados. Queda un componente desconectado:
+`E2-P4-V-009`. Los resultados CURRENT continúan `NONE`.
 
 Guía vigente: [PRE_P1L5_STATUS](entregas/PRE_P1L5/PRE_P1L5_STATUS.md).
 Revisión vigente: [continuidad manual de vigas](entregas/PRE_P1L5/manual_beam_revision/REVIEW_STATUS.md).
@@ -15,7 +24,7 @@ No ejecutar P1L5 ni el candidato FE hasta resolver los bloqueos documentados.
 588 materiales confirmados en miembros actualmente incluidos; resultados históricos intactos.
 Unity agrega ENTREGAS, Evolución y Estado del proyecto desde metadata.
 
-Rama de trabajo: `codex/post-p1l4-structural-audit`
+Rama de trabajo: `codex/p1l5-integration`
 
 Snapshot P1L4 preservado: tag `P1L4_FINAL`, commit `56e24ac0568b24eba3cf119f2e3cc66fc0af3a35`
 
@@ -32,6 +41,8 @@ máquina de todos los archivos, hashes, ramas y duplicados está en
 2. En Unity, abrir `Assets/Main.unity` y pulsar **Play**.
 3. Para revisar los contratos sin recalcular OpenSees, doble clic en
    `Validar_Modelo.bat`.
+4. Para regenerar y auditar el sistema central, ejecutar
+   `powershell -ExecutionPolicy Bypass -File entregas/P1L5/build_and_validate.ps1`.
 
 Unity 6000.6.0f1 debe tener una licencia activa mediante Unity Hub. El botón no
 instala ni activa licencias.

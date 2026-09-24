@@ -1,72 +1,38 @@
 {
-  "schema": "P1L1_P1L4_DINAMICO_v1",
-  "fuente_de_verdad": "UnityViewer\\Builds\\Windows\\MCOC-Viewer_Data\\StreamingAssets",
-  "regla": "Se recalcula en cada ejecucion desde el bundle actual; sin numeros historicos.",
-  "checks": {
-    "P1L1": {
-      "fuente": "benchmark_3d/3D_2 OpenSees (repo)",
-      "dinamico": true,
-      "disponible": true
+  "schema": "P1L1_P1L4_RETROSPECTIVE_QA_v2",
+  "generated_utc": "2026-09-24T02:23:16.500360+00:00",
+  "dataset_status": "HISTORICAL_P1L4_DELIVERED",
+  "rule": "This QA validates internal completeness of the delivered bundle only; it never certifies CURRENT.",
+  "historical_bundle": {
+    "path": "entregas/P1L3/José/viewer_unity/Assets/StreamingAssets/p1l4_jose",
+    "forces_per_case": {
+      "G": 1312,
+      "Q": 1312,
+      "EX": 1312,
+      "EY": 1312,
+      "R": 1312
     },
-    "P1L2": {
-      "fuerzas_por_caso": {
-        "G": {
-          "n": 1312,
-          "axial_cols_kN": 169149.2
-        },
-        "Q": {
-          "n": 1312,
-          "axial_cols_kN": 66594.2
-        },
-        "EX": {
-          "n": 1312,
-          "axial_cols_kN": 54563.5
-        },
-        "EY": {
-          "n": 1312,
-          "axial_cols_kN": 70789.0
-        },
-        "R": {
-          "n": 1312,
-          "axial_cols_kN": 251526.7
-        }
-      },
-      "apoyos": 106,
-      "pm_interaction": {
-        "P0_Mflexion": "PASS",
-        "P25": "PASS",
-        "P50": "PARTIAL_FAIL_STEP_237_PHI_TARGET_REDUCED_TO_1.25PHIY",
-        "PureCompression": "AXIAL_ONLY_PASS"
-      },
-      "veredicto": "REVISAR"
+    "displacement_nodes_per_case": {
+      "G": 813,
+      "Q": 813,
+      "EX": 813,
+      "EY": 813,
+      "R": 813
     },
-    "P1L3": {
-      "fuerzas_ok_1312": true,
-      "apoyos_ok_106": true,
-      "pm": {
-        "P0_Mflexion": "PASS",
-        "P25": "PASS",
-        "P50": "PARTIAL_FAIL_STEP_237_PHI_TARGET_REDUCED_TO_1.25PHIY",
-        "PureCompression": "AXIAL_ONLY_PASS"
-      },
-      "veredicto": "REVISAR"
-    },
-    "P1L4": {
-      "desplazamientos_por_caso": {
-        "G": 813,
-        "Q": 813,
-        "EX": 813,
-        "EY": 813,
-        "R": 813
-      },
-      "demanda_capacidad": [
-        "format",
-        "active_case",
-        "units",
-        "source_of_truth",
-        "validation"
-      ],
-      "veredicto": "PASS"
-    }
+    "supports": 106,
+    "status": "PASS",
+    "missing_cases": []
+  },
+  "current_central_model": {
+    "solid_count": 695,
+    "fe_candidate_members": 647,
+    "pending_case": "E2-P4-V-009",
+    "results_status": "NONE_CURRENT"
+  },
+  "deliveries": {
+    "P1L1": "STILL_VALID_METHOD_INDEPENDENT_BENCHMARK",
+    "P1L2": "GEOMETRY_SUPERSEDED_BY_CURRENT_CENTRAL",
+    "P1L3": "STILL_VALID_METHOD_SUPERSEDED_INPUT",
+    "P1L4": "STILL_VALID_UI_HISTORICAL_DATASET"
   }
 }

@@ -1,13 +1,15 @@
 # Modelo central P1L5
 
-Esta carpeta introduce una fuente central reversible para Semana 5. No reemplaza
-aun los contratos productivos de P1L2/P1L3/Unity y no ejecuta OpenSees.
+Esta carpeta es la fuente central reversible para el estado POST-P1L4. Los
+contratos históricos de P1L2/P1L3/P1L4 se conservan, pero nunca se usan como
+fallback CURRENT. OpenSees permanece bloqueado hasta cerrar los gates indicados
+por el generador y `../validation/INTEGRATION_QA.md`.
 
 ## Fuentes Editables Canonicas
 
 Editar manualmente solo estos archivos cuando se migre el flujo de produccion:
 
-- `model_master.json`: nodos, elementos, apoyos, `section_id`, `material_id`, `active`, aliases y trazabilidad PRE5.
+- `model_master.json`: nodos geométricos, elementos, apoyos visuales, topología FE, restricciones, `section_id`, `material_id`, `active`, aliases y trazabilidad PRE5.
 - `sections.json`: catalogo unico de secciones.
 - `materials.json`: catalogo unico de materiales, separando propiedades elasticas y resistentes.
 - `loads.json`: casos, catalogo de cargas, tributarias y estado `AUDITED_NOT_APPLIED` / `HISTORICAL`.
@@ -86,7 +88,7 @@ si requiere reanalisis.
 - No usar para sobrescribir cambios manuales futuros en `model_master.json`,
   `sections.json`, `materials.json` o `loads.json`.
 
-## Generador Productivo
+## Generador fail-closed
 
 ```text
 model_master.json
@@ -97,10 +99,29 @@ loads.json
     -> OpenSees / Unity
 ```
 
-- `build_central_derivatives.py` lee los cuatro canonical inputs y genera
-  derivados para OpenSees/Unity.
-- En esta etapa escribe solo previews en `generated/`, sin tocar produccion.
+- `build_central_derivatives.py` lee exclusivamente los cuatro canonical inputs.
+- Escribe contratos regenerables en `generated/`, expande crosswalk 1:N y separa
+  apoyos visuales de condiciones de borde FE.
+- Si falta evidencia estructural, el derivado OpenSees queda `BLOCKED`; no usa
+  resultados históricos ni valores por defecto ocultos.
 
 ## Validador
 
 - `validate_central_model.py`: valida identidad, referencias, aliases y politica de cargas.
+
+## Comando único
+
+Desde la raíz del repositorio:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File entregas/P1L5/build_and_validate.ps1
+```
+
+Para incluir compilación de Unity:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File entregas/P1L5/build_and_validate.ps1 -UnityCompile
+```
+
+El comando falla ante errores de integridad, pero informa los bloqueos
+estructurales honestos por separado.

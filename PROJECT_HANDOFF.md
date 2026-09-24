@@ -1,28 +1,28 @@
 # PROJECT_HANDOFF.md
 
-## Estado vigente — POST-P1L4, EXT-5 + Unity Current UX
+## Estado vigente — integración central P1L5 (2026-09-23)
 
 Esta sección sustituye los estados antiguos del resto del documento, que se
 conservan como memoria histórica, no como instrucciones para recalcular.
 
-- Rama: `codex/post-p1l4-structural-audit`; geometría `POST_P1L4_CURRENT`, 909 sólidos.
+- Rama: `codex/p1l5-integration`; fuente única en `entregas/P1L5/modelo_central/`.
+- Geometría CURRENT: 695 sólidos; 466 vigas, 143 columnas, 30 muros, 10 losas y 46 apoyos visuales.
 - Unity canónico: `entregas/P1L3/José/viewer_unity`, escena `Assets/Main.unity`.
 - Interfaz semántica, inspector resumen/detalle, orientación GLOBAL/LOCAL,
   F11 presentación, H limpio, R restablecer. Histórico solo en Avanzado.
 - Estado por defecto: `FE CANDIDATE / NOT RUN`, `RESULTADOS NONE`.
-- Candidato: 856 miembros, 16 relaciones 1:N, 43 flotantes/22 componentes.
-- EXT-5 no cambia geometría: corrige la omisión diagnóstica de E2-P4-V-009,
-  agrupa 43 pendientes y detecta ocho solapes entre huellas de muros que
-  requieren revisión del adaptador; no añade enlaces automáticos.
-- Barrera FE: 424 esclavos multi-maestro, 376 nodos retenidos/restringidos;
-  19 alturas ED1, materiales y losas S1/P1 continúan pendientes.
-- No ejecutar OpenSees, cargas, masas ni capacidad hasta cerrar esa barrera.
+- Candidato FE centralizado: 1126 nodos, 647 segmentos, 1203 restricciones,
+  33 nodos apoyados y siete elementos físicos con crosswalk 1:N.
+- Barreras vigentes: `E2-P4-V-009`, 79 elementos estructurales con material
+  desconocido, propiedades elásticas CURRENT incompletas y cargas/tributarias
+  todavía no aplicadas. No ejecutar OpenSees hasta cerrar estas barreras.
+- P1L4 histórico permanece reproducible y separado; Unity vuelve a usar la
+  convención auditada de cara interna común para sus diagramas.
 - `P1L4_FINAL` es un tag anotado: objeto `ca16f8e3d05dffd7f25f983b21f401f4ef7aa408`,
   commit evaluable `56e24ac0568b24eba3cf119f2e3cc66fc0af3a35`. No confundirlos.
 - Referencia original de Luis y resultados entregados intactos.
-- Continuar desde [EXT-5](entregas/POST_P1L4/EXT_5_REMAINING_AUDIT.md),
-  [backlog](entregas/POST_P1L4/STRUCTURAL_CORRECTION_BACKLOG.md) y
-  [guía/QA Unity](entregas/POST_P1L4/UNITY_CURRENT_UX_QA.md).
+- Continuar desde [auditoría de integración](entregas/P1L5/INTEGRATION_AUDIT.md)
+  y [QA central](entregas/P1L5/validation/INTEGRATION_QA.md).
 
 ## Archivo histórico PRE-P1L4 (estado superado)
 

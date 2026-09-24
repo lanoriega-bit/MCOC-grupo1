@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
-"""Build non-production derivatives from the P1L5 central model.
+"""Build fail-closed derivatives from the P1L5 central model.
 
 Outputs are written only to entregas/P1L5/modelo_central/generated.
+No historical file is used as a fallback.  OpenSees execution is enabled only
+after geometry, topology, material and load gates are all ready.
 """
 
 from __future__ import annotations
@@ -105,38 +107,68 @@ def build_viewer_preview(master: dict, sections: dict, materials: dict) -> dict:
     }
 
 
-def build_opensees_preview(master: dict, sections: dict, materials: dict) -> dict:
+def build_opensees_preview(master: dict, sections: dict, materials: dict, loads: dict) -> dict:
+    topology = master.get("fe_topology", {})
     fe_elements = []
     for row in master["elements"]:
         if row["type"] not in {"beam", "column", "wall"}:
             continue
-        fe_elements.append({
-            "element_id": row["element_id"],
-            "type": row["type"],
-            "active": row["active"],
-            "nodes": row["nodes"],
-            "section_id": row["section_id"],
-            "section": sections[row["section_id"]],
-            "material_id": row["material_id"],
-            "material": materials[row["material_id"]],
-            "candidate_analysis_refs": row.get("analysis_refs", []),
-            "requires_reanalysis_if_modified": ["active", "nodes", "section_id", "material_id"],
-        })
+        for ref in row.get("analysis_refs", []):
+            fe_elements.append({
+                "analysis_id": ref["analysis_id"],
+                "opensees_element_tag": ref["opensees_tag"],
+                "element_id": row["element_id"],
+                "geometry_segment_index": ref.get("geometry_segment_index", 0),
+                "type": row["type"],
+                "active": row["active"],
+                "opensees_node_i": ref["node_i"],
+                "opensees_node_j": ref["node_j"],
+                "section_id": row["section_id"],
+                "section": sections[row["section_id"]],
+                "material_id": row["material_id"],
+                "material": materials[row["material_id"]],
+                "requires_reanalysis_if_modified": ["active", "nodes", "section_id", "material_id"],
+            })
+
+    structural_material_ids = {
+        row["material_id"]
+        for row in master["elements"]
+        if row["type"] in {"beam", "column", "wall"} and row.get("active")
+    }
+    missing_elastic = sorted(
+        material_id for material_id in structural_material_ids
+        if materials[material_id].get("elastic", {}).get("E_pa", {}).get("value") is None
+    )
+    disconnected = topology.get("floating_excluded", {}).get("components", [])
+    load_status = loads.get("audited_load_catalog", {}).get("status")
+    blockers = []
+    if topology.get("status") != "APPROVED_FOR_ANALYSIS":
+        blockers.append("FE topology is CANDIDATE_NOT_APPROVED_NOT_RUN")
+    if disconnected:
+        blockers.append("Disconnected FE component remains: E2-P4-V-009")
+    if missing_elastic:
+        blockers.append("Missing current elastic modulus for: " + ", ".join(missing_elastic))
+    if load_status != "APPLIED_CURRENT":
+        blockers.append(f"Current loads are not applied ({load_status})")
     return {
         "format": "MCOC_P1L5_OPENSEES_PREVIEW_FROM_CENTRAL_V1",
         "generated_utc": datetime.now(timezone.utc).isoformat(),
         "source": rel(HERE / "model_master.json"),
-        "status": "PREVIEW_ONLY_NOT_RUN",
-        "run_policy": {"opensees_run": False, "production_files_written": False},
-        "nodes": master["nodes"],
+        "status": "BLOCKED" if blockers else "READY_TO_RUN",
+        "run_policy": {"opensees_run": False, "production_files_written": False, "blockers": blockers},
+        "nodes": topology.get("nodes", {}),
         "elements": fe_elements,
-        "supports": master["supports"],
+        "constraints": topology.get("constraints", []),
+        "support_node_tags": topology.get("support_node_tags", []),
+        "visual_supports_excluded_from_boundary_conditions": len(master["supports"]),
         "modification_policy": master["modification_policy"],
         "summary": {
-            "nodes": len(master["nodes"]),
+            "nodes": len(topology.get("nodes", {})),
             "elements": len(fe_elements),
-            "supports": len(master["supports"]),
-            "candidate_refs": sum(len(row.get("candidate_analysis_refs", [])) for row in fe_elements),
+            "supports": len(topology.get("support_node_tags", [])),
+            "constraints": len(topology.get("constraints", [])),
+            "physical_structural_elements": sum(1 for row in master["elements"] if row["type"] in {"beam", "column", "wall"}),
+            "fe_segments": len(fe_elements),
         },
     }
 
@@ -145,17 +177,18 @@ def main() -> None:
     master = load(HERE / "model_master.json")
     sections_data = load(HERE / "sections.json")
     materials_data = load(HERE / "materials.json")
+    loads = load(HERE / "loads.json")
     sections = by_id(sections_data["sections"], "section_id")
     materials = by_id(materials_data["materials"], "material_id")
     viewer = build_viewer_preview(master, sections, materials)
-    opensees = build_opensees_preview(master, sections, materials)
+    opensees = build_opensees_preview(master, sections, materials, loads)
     manifest = {
         "format": "MCOC_P1L5_CENTRAL_DERIVATIVES_MANIFEST_V1",
         "generated_utc": datetime.now(timezone.utc).isoformat(),
-        "status": "PREVIEW_ONLY",
+        "status": opensees["status"],
         "files": [
             {"path": rel(OUT / "viewer_model_preview.json"), "purpose": "Unity/viewer shape preview"},
-            {"path": rel(OUT / "opensees_model_preview.json"), "purpose": "Future OpenSees input preview; not executed"},
+            {"path": rel(OUT / "opensees_model_preview.json"), "purpose": "Exact current FE candidate contract; fail-closed and not executed"},
         ],
         "production_files_written": False,
     }
