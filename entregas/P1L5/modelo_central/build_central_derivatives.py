@@ -154,7 +154,7 @@ def build_opensees_preview(master: dict, sections: dict, materials: dict, loads:
         blockers.append("An active disconnected FE component remains")
     if missing_elastic:
         blockers.append("Missing current elastic modulus for: " + ", ".join(missing_elastic))
-    if load_status not in {"APPLIED_CURRENT", "CURRENT_PARTIAL_WITH_DOCUMENTED_UNRESOLVED"}:
+    if load_status not in {"APPLIED_CURRENT", "CURRENT_PARTIAL_WITH_DOCUMENTED_UNRESOLVED", "CURRENT_RECONSTRUCTED_WITH_EXPLICIT_UNRESOLVED"}:
         blockers.append(f"Current loads are not applied ({load_status})")
     return {
         "format": "MCOC_P1L5_OPENSEES_PREVIEW_FROM_CENTRAL_V1",
