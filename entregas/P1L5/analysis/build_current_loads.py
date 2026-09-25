@@ -7,8 +7,10 @@ the numerical form of an equal-distance (approximately 45-degree) tributary
 boundary. Every clipped cell is assigned exactly once.
 
 Member self-weight is computed separately from section, FE length and density.
-Slab self-weight remains the documented 0.15 m academic fallback. The open
-7600/800 line-load unit conflict is not applied.
+Slab self-weight remains the documented 0.15 m academic fallback. The facade
+line loads L700-P4-LINE-SC-800 are resolved by review onto the P4 facade beams
+(7600/800 dual values kept; receptor = E1-P4-V-024/030/047/055/072/078/088).
+Remaining unresolvable point/line loads stay explicit, never interpreted as zero.
 """
 
 from __future__ import annotations
@@ -279,17 +281,54 @@ def main() -> None:
         summary["G_self_weight_N"] = self_by_floor[key]
         summary["G_total_N"] = summary["G_self_weight_N"] + summary["G_superimposed_N"] + summary["G_slab_N"]
 
+    line_load_applications = []
     for entry in entries:
-        if entry["load_id"] in surface_ids:
+        override = entry.get("review_resolution")
+        if override and override.get("status") == "RESOLVED_BY_REVIEW":
+            receptors = list(override.get("receptor_element_ids", []))
+            entry["current_application"] = {
+                "status": "RESOLVED_BY_REVIEW", "applied": True,
+                "method": "LINE_PROJECTION_TO_RECEPTOR_BEAMS",
+                "receptor_element_ids": receptors, "reason": override.get("reason", ""),
+            }
+            si = float(entry["SI_value"])
+            w_n_m = si * 1000.0
+            case = "Q" if entry["load_type"].startswith("SC") else "G"
+            (x0, y0), (x1, y1) = entry["geometry"]["coordinates"]
+            if y1 != y0:
+                x0, y0, x1, y1 = y0, x0, y1, x1
+            lo, hi = sorted((x0, x1))
+            total = 0.0
+            transfer_rows = []
+            for rid in receptors:
+                row = elements[rid]
+                ref = row["analysis_refs"][0]
+                ni, nj = int(ref["node_i"]), int(ref["node_j"])
+                s, e = sorted((row["geometry"]["start_m"][0], row["geometry"]["end_m"][0]))
+                clipped_lo, clipped_hi = max(lo, s), min(hi, e)
+                if clipped_hi <= clipped_lo:
+                    continue
+                force = w_n_m * (clipped_hi - clipped_lo)
+                total += force
+                add_node_load(nodal, case, ni, -force / 2.0)
+                add_node_load(nodal, case, nj, -force / 2.0)
+                transfer_rows.append({"element_id": rid, "node_i": ni, "node_j": nj, "P_N": round(force, 3)})
+            floor_summary[(entry["building"], entry["floor"])]["Q_N" if case == "Q" else "G_superimposed_N"] += total
+            line_load_applications.append({
+                "load_id": entry["load_id"], "building": entry["building"], "floor": entry["floor"],
+                "case": case, "line_N_m": round(w_n_m, 3), "P_total_N": round(total, 3),
+                "receptor_beams": transfer_rows,
+            })
+        elif entry["load_id"] in surface_ids:
             entry["current_application"] = {"status": "CURRENT_RECONSTRUCTED", "applied": True, "method": "AUDITED_ZONE_POLYGON_TO_CURRENT_BEAM_TRIBUTARIES"}
         elif entry["load_type"] == "PP_LOSA":
             entry["current_application"] = {"status": "HISTORICAL_FALLBACK", "applied": True, "thickness_m": PP_THICKNESS_FALLBACK_M}
         elif entry["load_id"] in CONFLICT_IDS:
             entry["current_application"] = {"status": "UNIT_CONFLICT_UNRESOLVED", "applied": False, "reason": "PM.ADIC=7600 / SC=800 unit/type conflict; excluded without treating unknown as zero."}
         elif entry["load_type"].endswith("POINT"):
-            entry["current_application"] = {"status": "UNRESOLVED", "applied": False, "reason": "Application position and receiver are not uniquely evidenced."}
+            entry["current_application"] = {"status": "UNRESOLVED", "applied": False, "reason": "Application position and receiver are not uniquely evidenced; plan position not recorded in CURRENT catalog."}
         elif entry["load_type"].endswith("LINE"):
-            entry["current_application"] = {"status": "UNRESOLVED", "applied": False, "reason": "Line-load receiver/type is not sufficiently evidenced for CURRENT application."}
+            entry["current_application"] = {"status": "UNRESOLVED", "applied": False, "reason": "Line-load receiver/type is not sufficiently evidenced for CURRENT application; plan receptor not recorded."}
 
     generated = {
         "Q": sum(row["Q_N"] for row in floor_summary.values()),
@@ -374,11 +413,13 @@ def main() -> None:
     loads["current_load_application"] = {
         "status": "PASS_WITH_EXPLICIT_UNRESOLVED" if all(row["status"] == "PASS" for row in conservation.values()) else "FAIL",
         "generated_utc": now, "basis": "CURRENT_AUDITED_ZONE_POLYGONS_AND_COMPUTED_MEMBER_SELF_WEIGHT",
-        "q_intensity_scale": q_scale, "unresolved_load_ids": unresolved, "unit_conflicts": sorted(CONFLICT_IDS),
+        "q_intensity_scale": q_scale, "unresolved_load_ids": unresolved,
+        "unit_conflicts": sorted(row["load_id"] for row in entries if row["current_application"]["status"] == "UNIT_CONFLICT_UNRESOLVED"),
         "catalog_status_counts": dict(status_counts), "conservation": conservation,
         "totals": {"Q_N": round(generated["Q"], 3), "G_self_weight_N": round(generated["G_self_weight"], 3), "G_superimposed_dead_N": round(generated["G_superimposed"], 3), "G_total_N": round(generated["G"], 3)},
         "by_building": by_building, "by_floor": coverage_rows,
         "physical_beam_loads": physical_rows, "element_loads": element_loads,
+        "line_load_applications": line_load_applications,
         "self_weight_by_element": self_rows,
         "nodal_loads": {case: [{"node_tag": tag, "Fz_N": round(value, 3)} for tag, value in sorted(values.items())] for case, values in nodal.items()},
         "approximations": [

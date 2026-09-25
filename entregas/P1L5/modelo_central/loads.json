@@ -1,6 +1,6 @@
 {
   "format": "MCOC_P1L5_LOADS_V1",
-  "generated_utc": "2026-09-24T17:16:26.322901+00:00",
+  "generated_utc": "2026-09-25T01:05:53.520249+00:00",
   "current_status": "CURRENT_LOADS_RECONSTRUCTED_READY_FOR_OPENSEES",
   "base_cases": [
     {
@@ -6422,7 +6422,7 @@
         "current_application": {
           "status": "UNRESOLVED",
           "applied": false,
-          "reason": "Application position and receiver are not uniquely evidenced."
+          "reason": "Application position and receiver are not uniquely evidenced; plan position not recorded in CURRENT catalog."
         }
       },
       {
@@ -6449,7 +6449,7 @@
         "current_application": {
           "status": "UNRESOLVED",
           "applied": false,
-          "reason": "Application position and receiver are not uniquely evidenced."
+          "reason": "Application position and receiver are not uniquely evidenced; plan position not recorded in CURRENT catalog."
         }
       },
       {
@@ -6476,7 +6476,7 @@
         "current_application": {
           "status": "UNRESOLVED",
           "applied": false,
-          "reason": "Application position and receiver are not uniquely evidenced."
+          "reason": "Application position and receiver are not uniquely evidenced; plan position not recorded in CURRENT catalog."
         }
       },
       {
@@ -6503,7 +6503,7 @@
         "current_application": {
           "status": "UNRESOLVED",
           "applied": false,
-          "reason": "Application position and receiver are not uniquely evidenced."
+          "reason": "Application position and receiver are not uniquely evidenced; plan position not recorded in CURRENT catalog."
         }
       },
       {
@@ -6530,7 +6530,7 @@
         "current_application": {
           "status": "UNRESOLVED",
           "applied": false,
-          "reason": "Application position and receiver are not uniquely evidenced."
+          "reason": "Application position and receiver are not uniquely evidenced; plan position not recorded in CURRENT catalog."
         }
       },
       {
@@ -6557,7 +6557,7 @@
         "current_application": {
           "status": "UNRESOLVED",
           "applied": false,
-          "reason": "Application position and receiver are not uniquely evidenced."
+          "reason": "Application position and receiver are not uniquely evidenced; plan position not recorded in CURRENT catalog."
         }
       },
       {
@@ -6778,9 +6778,32 @@
         },
         "application_status": "READY_SPATIAL_NOT_APPLIED",
         "current_application": {
-          "status": "UNIT_CONFLICT_UNRESOLVED",
-          "applied": false,
-          "reason": "PM.ADIC=7600 / SC=800 unit/type conflict; excluded without treating unknown as zero."
+          "status": "RESOLVED_BY_REVIEW",
+          "applied": true,
+          "method": "LINE_PROJECTION_TO_RECEPTOR_BEAMS",
+          "receptor_element_ids": [
+            "E1-P4-V-024",
+            "E1-P4-V-030",
+            "E1-P4-V-047",
+            "E1-P4-V-055",
+            "E1-P4-V-072",
+            "E1-P4-V-078",
+            "E1-P4-V-088"
+          ],
+          "reason": "Carga de fachada P4 (hoja 2017_67-700) sobre la linea y=16.356, x 37.14-72.14; receptor = vigas de fachada E1-P4 en y=16.331. Valores SC=800 y PM_ADIC=7600 kgf/m se conservan como componentes duales del mismo elemento."
+        },
+        "review_resolution": {
+          "status": "RESOLVED_BY_REVIEW",
+          "receptor_element_ids": [
+            "E1-P4-V-024",
+            "E1-P4-V-030",
+            "E1-P4-V-047",
+            "E1-P4-V-055",
+            "E1-P4-V-072",
+            "E1-P4-V-078",
+            "E1-P4-V-088"
+          ],
+          "reason": "Carga de fachada P4 (hoja 2017_67-700) sobre la linea y=16.356, x 37.14-72.14; receptor = vigas de fachada E1-P4 en y=16.331. Valores SC=800 y PM_ADIC=7600 kgf/m se conservan como componentes duales del mismo elemento."
         }
       },
       {
@@ -7001,9 +7024,32 @@
         },
         "application_status": "READY_SPATIAL_NOT_APPLIED",
         "current_application": {
-          "status": "UNIT_CONFLICT_UNRESOLVED",
-          "applied": false,
-          "reason": "PM.ADIC=7600 / SC=800 unit/type conflict; excluded without treating unknown as zero."
+          "status": "RESOLVED_BY_REVIEW",
+          "applied": true,
+          "method": "LINE_PROJECTION_TO_RECEPTOR_BEAMS",
+          "receptor_element_ids": [
+            "E1-P4-V-024",
+            "E1-P4-V-030",
+            "E1-P4-V-047",
+            "E1-P4-V-055",
+            "E1-P4-V-072",
+            "E1-P4-V-078",
+            "E1-P4-V-088"
+          ],
+          "reason": "Carga de fachada P4 (hoja 2017_67-700) sobre la linea y=16.356, x 37.14-72.14; receptor = vigas de fachada E1-P4 en y=16.331. Valores SC=800 y PM_ADIC=7600 kgf/m se conservan como componentes duales del mismo elemento."
+        },
+        "review_resolution": {
+          "status": "RESOLVED_BY_REVIEW",
+          "receptor_element_ids": [
+            "E1-P4-V-024",
+            "E1-P4-V-030",
+            "E1-P4-V-047",
+            "E1-P4-V-055",
+            "E1-P4-V-072",
+            "E1-P4-V-078",
+            "E1-P4-V-088"
+          ],
+          "reason": "Carga de fachada P4 (hoja 2017_67-700) sobre la linea y=16.356, x 37.14-72.14; receptor = vigas de fachada E1-P4 en y=16.331. Valores SC=800 y PM_ADIC=7600 kgf/m se conservan como componentes duales del mismo elemento."
         }
       },
       {
@@ -7071,7 +7117,7 @@
         "current_application": {
           "status": "UNRESOLVED",
           "applied": false,
-          "reason": "Line-load receiver/type is not sufficiently evidenced for CURRENT application."
+          "reason": "Line-load receiver/type is not sufficiently evidenced for CURRENT application; plan receptor not recorded."
         }
       },
       {
@@ -7139,7 +7185,7 @@
         "current_application": {
           "status": "UNRESOLVED",
           "applied": false,
-          "reason": "Line-load receiver/type is not sufficiently evidenced for CURRENT application."
+          "reason": "Line-load receiver/type is not sufficiently evidenced for CURRENT application; plan receptor not recorded."
         }
       },
       {
@@ -7386,7 +7432,7 @@
     "current_status_counts": {
       "CURRENT_RECONSTRUCTED": 88,
       "UNRESOLVED": 8,
-      "UNIT_CONFLICT_UNRESOLVED": 2,
+      "RESOLVED_BY_REVIEW": 2,
       "HISTORICAL_FALLBACK": 10
     }
   },
@@ -11725,12 +11771,12 @@
           {
             "element_id": "E1-P3-V-094",
             "merged_from": [],
-            "fraction": 0.029420014,
-            "tributary_area_m2": 22.75,
-            "equivalent_width_m": 3.472752,
-            "Q_force_N": 66930.386,
-            "G_superimposed_force_N": 58006.335,
-            "G_slab_force_N": 83662.983
+            "fraction": 0.029096717,
+            "tributary_area_m2": 22.5,
+            "equivalent_width_m": 3.43459,
+            "Q_force_N": 66194.887,
+            "G_superimposed_force_N": 57368.903,
+            "G_slab_force_N": 82743.609
           },
           {
             "element_id": "E1-P3-V-097",
@@ -11755,12 +11801,12 @@
           {
             "element_id": "E1-P3-V-101",
             "merged_from": [],
-            "fraction": 0.010525932,
-            "tributary_area_m2": 8.139526,
-            "equivalent_width_m": 2.14198,
-            "Q_force_N": 23946.444,
-            "G_superimposed_force_N": 20753.584,
-            "G_slab_force_N": 29933.054
+            "fraction": 0.010849229,
+            "tributary_area_m2": 8.389526,
+            "equivalent_width_m": 1.951052,
+            "Q_force_N": 24681.942,
+            "G_superimposed_force_N": 21391.017,
+            "G_slab_force_N": 30852.428
           },
           {
             "element_id": "E1-P3-V-106",
@@ -12349,7 +12395,7 @@
             "merged_from": [],
             "fraction": 0.004681979,
             "tributary_area_m2": 0.305307,
-            "equivalent_width_m": 0.080344,
+            "equivalent_width_m": 0.071002,
             "Q_force_N": 598.808,
             "G_superimposed_force_N": 598.808,
             "G_slab_force_N": 1122.765
@@ -20192,8 +20238,8 @@
         "G_slab_N": 3666617.308,
         "interior_hole_area_m2": 13.824,
         "panels": 8,
-        "G_self_weight_N": 4026980.691,
-        "G_total_N": 10948705.876
+        "G_self_weight_N": 4064844.167,
+        "G_total_N": 10986569.351
       },
       {
         "building": "EDIFICIO_1",
@@ -20222,8 +20268,8 @@
         "G_slab_N": 3518334.584,
         "interior_hole_area_m2": 0.0,
         "panels": 4,
-        "G_self_weight_N": 4557873.986,
-        "G_total_N": 10477218.314
+        "G_self_weight_N": 4563757.976,
+        "G_total_N": 10483102.304
       },
       {
         "building": "EDIFICIO_1",
@@ -20232,8 +20278,8 @@
         "area_total_m2": 934.561,
         "area_with_Q_m2": 934.561,
         "area_without_Q_m2": 0.0,
-        "Q_N": 1771681.469,
-        "G_superimposed_N": 1924934.957,
+        "Q_N": 2010178.261,
+        "G_superimposed_N": 4190654.476,
         "G_slab_N": 3436842.87,
         "interior_hole_area_m2": 0.0,
         "panels": 3,
@@ -20376,7 +20422,7 @@
   },
   "current_load_application": {
     "status": "PASS_WITH_EXPLICIT_UNRESOLVED",
-    "generated_utc": "2026-09-24T17:16:26.322901+00:00",
+    "generated_utc": "2026-09-25T01:05:53.520249+00:00",
     "basis": "CURRENT_AUDITED_ZONE_POLYGONS_AND_COMPUTED_MEMBER_SELF_WEIGHT",
     "q_intensity_scale": 1.0,
     "unresolved_load_ids": [
@@ -20386,54 +20432,49 @@
       "L700-P3-POINT-SC-6000-PM_ADIC_POINT",
       "L700-P3-POINT-SC-6700-SC_POINT",
       "L700-P3-POINT-SC-6700-PM_ADIC_POINT",
-      "L700-P4-LINE-SC-800-SC_LINE",
-      "L700-P4-LINE-SC-800-PM_ADIC_LINE",
       "L700-E2-P4-LINE-SC-100-SC_LINE",
       "L700-E2-P4-LINE-SC-100-PM_ADIC_LINE"
     ],
-    "unit_conflicts": [
-      "L700-P4-LINE-SC-800-PM_ADIC_LINE",
-      "L700-P4-LINE-SC-800-SC_LINE"
-    ],
+    "unit_conflicts": [],
     "catalog_status_counts": {
       "CURRENT_RECONSTRUCTED": 88,
       "UNRESOLVED": 8,
-      "UNIT_CONFLICT_UNRESOLVED": 2,
+      "RESOLVED_BY_REVIEW": 2,
       "HISTORICAL_FALLBACK": 10
     },
     "conservation": {
       "G": {
-        "generated_N": 75759757.893,
-        "transferred_N": 75759757.921,
-        "residual_N": 0.027813,
-        "residual_percent": 3.6713e-08,
+        "generated_N": 78069224.879,
+        "transferred_N": 78069224.906,
+        "residual_N": 0.027463,
+        "residual_percent": 3.5178e-08,
         "status": "PASS"
       },
       "Q": {
-        "generated_N": 24349142.51,
-        "transferred_N": 24349142.51,
-        "residual_N": -0.0,
-        "residual_percent": -0.0,
+        "generated_N": 24587639.301,
+        "transferred_N": 24587639.301,
+        "residual_N": 0.0,
+        "residual_percent": 0.0,
         "status": "PASS"
       }
     },
     "totals": {
-      "Q_N": 24349142.51,
-      "G_self_weight_N": 32901990.8,
-      "G_superimposed_dead_N": 42857767.093,
-      "G_total_N": 75759757.893
+      "Q_N": 24587639.301,
+      "G_self_weight_N": 32945738.266,
+      "G_superimposed_dead_N": 45123486.613,
+      "G_total_N": 78069224.879
     },
     "by_building": {
       "EDIFICIO_1": {
         "lt_block": "LT1",
-        "Q_N": 13147329.213,
-        "G_self_weight_N": 18718709.438,
-        "G_superimposed_dead_N": 25940972.965,
-        "G_total_N": 44659682.403,
+        "Q_N": 13385826.004,
+        "G_self_weight_N": 18762456.904,
+        "G_superimposed_dead_N": 28206692.484,
+        "G_total_N": 46969149.388,
         "etabs_CV_N": 11620380.0,
         "etabs_CM_N": 47140276.0,
-        "Q_difference_percent": 13.14,
-        "G_difference_percent": -5.262
+        "Q_difference_percent": 15.193,
+        "G_difference_percent": -0.363
       },
       "EDIFICIO_2": {
         "lt_block": "LT2",
@@ -20460,8 +20501,8 @@
         "G_slab_N": 3666617.308,
         "interior_hole_area_m2": 13.824,
         "panels": 8,
-        "G_self_weight_N": 4026980.691,
-        "G_total_N": 10948705.876
+        "G_self_weight_N": 4064844.167,
+        "G_total_N": 10986569.351
       },
       {
         "building": "EDIFICIO_1",
@@ -20490,8 +20531,8 @@
         "G_slab_N": 3518334.584,
         "interior_hole_area_m2": 0.0,
         "panels": 4,
-        "G_self_weight_N": 4557873.986,
-        "G_total_N": 10477218.314
+        "G_self_weight_N": 4563757.976,
+        "G_total_N": 10483102.304
       },
       {
         "building": "EDIFICIO_1",
@@ -20500,8 +20541,8 @@
         "area_total_m2": 934.561,
         "area_with_Q_m2": 934.561,
         "area_without_Q_m2": 0.0,
-        "Q_N": 1771681.469,
-        "G_superimposed_N": 1924934.957,
+        "Q_N": 2010178.261,
+        "G_superimposed_N": 4190654.476,
         "G_slab_N": 3436842.87,
         "interior_hole_area_m2": 0.0,
         "panels": 3,
@@ -21733,8 +21774,8 @@
           "element_id": "E1-P3-V-094",
           "node_i": 521,
           "node_j": 522,
-          "P_N": 141669.318,
-          "end_load_N": 70834.659,
+          "P_N": 140112.512,
+          "end_load_N": 70056.256,
           "representation": "TRIBUTARY_AREA_TO_PHYSICAL_BEAM_THEN_P_OVER_2_TO_FE_END_NODES"
         },
         {
@@ -21757,8 +21798,8 @@
           "element_id": "E1-P3-V-101",
           "node_i": 527,
           "node_j": 528,
-          "P_N": 52408.212,
-          "end_load_N": 26204.106,
+          "P_N": 53965.017,
+          "end_load_N": 26982.509,
           "representation": "TRIBUTARY_AREA_TO_PHYSICAL_BEAM_THEN_P_OVER_2_TO_FE_END_NODES"
         },
         {
@@ -25351,8 +25392,8 @@
           "element_id": "E1-P3-V-094",
           "node_i": 521,
           "node_j": 522,
-          "P_N": 66930.386,
-          "end_load_N": 33465.193,
+          "P_N": 66194.887,
+          "end_load_N": 33097.444,
           "representation": "TRIBUTARY_AREA_TO_PHYSICAL_BEAM_THEN_P_OVER_2_TO_FE_END_NODES"
         },
         {
@@ -25375,8 +25416,8 @@
           "element_id": "E1-P3-V-101",
           "node_i": 527,
           "node_j": 528,
-          "P_N": 24545.251,
-          "end_load_N": 12272.626,
+          "P_N": 25280.75,
+          "end_load_N": 12640.375,
           "representation": "TRIBUTARY_AREA_TO_PHYSICAL_BEAM_THEN_P_OVER_2_TO_FE_END_NODES"
         },
         {
@@ -28183,9 +28224,9 @@
           "status": "NO_DATA"
         },
         "G": {
-          "self_weight_N": 9708.583,
+          "self_weight_N": 47572.059,
           "tributary_dead_N": 0.0,
-          "total_associated_N": 9708.583,
+          "total_associated_N": 47572.059,
           "status": "CURRENT_COMPUTED"
         },
         "source_load_ids": []
@@ -33237,10 +33278,10 @@
         "floor": "P3",
         "type": "beam",
         "Q": {
-          "tributary_area_m2": 22.75,
-          "equivalent_width_m": 3.472752,
-          "surface_force_N": 66930.386,
-          "equivalent_line_load_N_m": 10216.82,
+          "tributary_area_m2": 22.5,
+          "equivalent_width_m": 3.43459,
+          "surface_force_N": 66194.887,
+          "equivalent_line_load_N_m": 10104.547,
           "zone_ids": [
             "L700-E1-P3-H22-SC_SURFACE"
           ],
@@ -33248,8 +33289,8 @@
         },
         "G": {
           "self_weight_N": 77092.037,
-          "tributary_dead_N": 141669.318,
-          "total_associated_N": 218761.355,
+          "tributary_dead_N": 140112.512,
+          "total_associated_N": 217204.549,
           "status": "CURRENT_COMPUTED"
         },
         "source_load_ids": [
@@ -33321,10 +33362,10 @@
         "floor": "P3",
         "type": "beam",
         "Q": {
-          "tributary_area_m2": 8.444833,
-          "equivalent_width_m": 2.222324,
-          "surface_force_N": 24545.251,
-          "equivalent_line_load_N_m": 6459.277,
+          "tributary_area_m2": 8.694833,
+          "equivalent_width_m": 2.022054,
+          "surface_force_N": 25280.75,
+          "equivalent_line_load_N_m": 5879.244,
           "zone_ids": [
             "L700-E1-P3-H22-SC_SURFACE",
             "L700-E1-P3-H24-SC_SURFACE"
@@ -33332,9 +33373,9 @@
           "status": "CURRENT_RECOMPUTED"
         },
         "G": {
-          "self_weight_N": 44718.324,
-          "tributary_dead_N": 52408.212,
-          "total_associated_N": 97126.536,
+          "self_weight_N": 50602.314,
+          "tributary_dead_N": 53965.017,
+          "total_associated_N": 104567.331,
           "status": "CURRENT_COMPUTED"
         },
         "source_load_ids": [
@@ -44629,6 +44670,112 @@
         ]
       }
     ],
+    "line_load_applications": [
+      {
+        "load_id": "L700-P4-LINE-SC-800-SC_LINE",
+        "building": "EDIFICIO_1",
+        "floor": "P4",
+        "case": "Q",
+        "line_N_m": 7845.32,
+        "P_total_N": 238496.792,
+        "receptor_beams": [
+          {
+            "element_id": "E1-P4-V-024",
+            "node_i": 568,
+            "node_j": 569,
+            "P_N": 34127.142
+          },
+          {
+            "element_id": "E1-P4-V-030",
+            "node_i": 576,
+            "node_j": 577,
+            "P_N": 34127.142
+          },
+          {
+            "element_id": "E1-P4-V-047",
+            "node_i": 590,
+            "node_j": 591,
+            "P_N": 34127.142
+          },
+          {
+            "element_id": "E1-P4-V-055",
+            "node_i": 600,
+            "node_j": 601,
+            "P_N": 34127.142
+          },
+          {
+            "element_id": "E1-P4-V-072",
+            "node_i": 614,
+            "node_j": 615,
+            "P_N": 34127.142
+          },
+          {
+            "element_id": "E1-P4-V-078",
+            "node_i": 622,
+            "node_j": 623,
+            "P_N": 34127.142
+          },
+          {
+            "element_id": "E1-P4-V-088",
+            "node_i": 632,
+            "node_j": 633,
+            "P_N": 33733.94
+          }
+        ]
+      },
+      {
+        "load_id": "L700-P4-LINE-SC-800-PM_ADIC_LINE",
+        "building": "EDIFICIO_1",
+        "floor": "P4",
+        "case": "G",
+        "line_N_m": 74530.54,
+        "P_total_N": 2265719.52,
+        "receptor_beams": [
+          {
+            "element_id": "E1-P4-V-024",
+            "node_i": 568,
+            "node_j": 569,
+            "P_N": 324207.849
+          },
+          {
+            "element_id": "E1-P4-V-030",
+            "node_i": 576,
+            "node_j": 577,
+            "P_N": 324207.849
+          },
+          {
+            "element_id": "E1-P4-V-047",
+            "node_i": 590,
+            "node_j": 591,
+            "P_N": 324207.849
+          },
+          {
+            "element_id": "E1-P4-V-055",
+            "node_i": 600,
+            "node_j": 601,
+            "P_N": 324207.849
+          },
+          {
+            "element_id": "E1-P4-V-072",
+            "node_i": 614,
+            "node_j": 615,
+            "P_N": 324207.849
+          },
+          {
+            "element_id": "E1-P4-V-078",
+            "node_i": 622,
+            "node_j": 623,
+            "P_N": 324207.849
+          },
+          {
+            "element_id": "E1-P4-V-088",
+            "node_i": 632,
+            "node_j": 633,
+            "P_N": 320472.426
+          }
+        ]
+      }
+    ],
     "self_weight_by_element": [
       {
         "element_id": "E1-P1-C-001",
@@ -44921,15 +45068,15 @@
         "lt_block": "LT1",
         "floor": "P1",
         "type": "column",
-        "section_id": "SEC_COLUMN_RECT_0.200x0.500",
+        "section_id": "SEC_COLUMN_RECT_0.700x0.700",
         "material_id": "MAT_G35_10_2017_67_100_1E116",
         "density_kg_m3": 2500.0,
-        "weight_N": 9708.583,
+        "weight_N": 47572.059,
         "segments": [
           {
             "analysis_id": "POST-A-00099",
             "length_m": 3.96,
-            "weight_N": 9708.583
+            "weight_N": 47572.059
           }
         ],
         "status": "CURRENT_COMPUTED_FROM_SECTION_LENGTH_DENSITY"
@@ -48487,12 +48634,12 @@
         "section_id": "SEC_BEAM_RECT_0.600x0.800",
         "material_id": "MAT_G35_10_2017_67_100_1E116",
         "density_kg_m3": 2500.0,
-        "weight_N": 44718.324,
+        "weight_N": 50602.314,
         "segments": [
           {
             "analysis_id": "POST-A-00590",
-            "length_m": 3.8,
-            "weight_N": 44718.324
+            "length_m": 4.3,
+            "weight_N": 50602.314
           }
         ],
         "status": "CURRENT_COMPUTED_FROM_SECTION_LENGTH_DENSITY"
@@ -56670,11 +56817,11 @@
         },
         {
           "node_tag": 31,
-          "Fz_N": -28640.321
+          "Fz_N": -47572.059
         },
         {
           "node_tag": 32,
-          "Fz_N": -28640.321
+          "Fz_N": -47572.059
         },
         {
           "node_tag": 33,
@@ -58630,11 +58777,11 @@
         },
         {
           "node_tag": 521,
-          "Fz_N": -109380.677
+          "Fz_N": -108602.274
         },
         {
           "node_tag": 522,
-          "Fz_N": -109380.677
+          "Fz_N": -108602.274
         },
         {
           "node_tag": 523,
@@ -58654,11 +58801,11 @@
         },
         {
           "node_tag": 527,
-          "Fz_N": -48563.268
+          "Fz_N": -52283.666
         },
         {
           "node_tag": 528,
-          "Fz_N": -48563.268
+          "Fz_N": -52283.666
         },
         {
           "node_tag": 529,
@@ -58818,11 +58965,11 @@
         },
         {
           "node_tag": 568,
-          "Fz_N": -43838.54
+          "Fz_N": -205942.464
         },
         {
           "node_tag": 569,
-          "Fz_N": -43838.54
+          "Fz_N": -205942.464
         },
         {
           "node_tag": 570,
@@ -58850,11 +58997,11 @@
         },
         {
           "node_tag": 576,
-          "Fz_N": -43836.54
+          "Fz_N": -205940.464
         },
         {
           "node_tag": 577,
-          "Fz_N": -43836.54
+          "Fz_N": -205940.464
         },
         {
           "node_tag": 578,
@@ -58906,11 +59053,11 @@
         },
         {
           "node_tag": 590,
-          "Fz_N": -58888.634
+          "Fz_N": -220992.559
         },
         {
           "node_tag": 591,
-          "Fz_N": -58888.634
+          "Fz_N": -220992.559
         },
         {
           "node_tag": 592,
@@ -58946,11 +59093,11 @@
         },
         {
           "node_tag": 600,
-          "Fz_N": -58888.634
+          "Fz_N": -220992.559
         },
         {
           "node_tag": 601,
-          "Fz_N": -58888.634
+          "Fz_N": -220992.559
         },
         {
           "node_tag": 602,
@@ -59002,11 +59149,11 @@
         },
         {
           "node_tag": 614,
-          "Fz_N": -40045.643
+          "Fz_N": -202149.568
         },
         {
           "node_tag": 615,
-          "Fz_N": -40045.643
+          "Fz_N": -202149.568
         },
         {
           "node_tag": 616,
@@ -59034,11 +59181,11 @@
         },
         {
           "node_tag": 622,
-          "Fz_N": -40045.643
+          "Fz_N": -202149.568
         },
         {
           "node_tag": 623,
-          "Fz_N": -40045.643
+          "Fz_N": -202149.568
         },
         {
           "node_tag": 624,
@@ -59074,11 +59221,11 @@
         },
         {
           "node_tag": 632,
-          "Fz_N": -41263.899
+          "Fz_N": -201500.111
         },
         {
           "node_tag": 633,
-          "Fz_N": -41263.899
+          "Fz_N": -201500.111
         },
         {
           "node_tag": 634,
@@ -62200,11 +62347,11 @@
         },
         {
           "node_tag": 521,
-          "Fz_N": -33465.193
+          "Fz_N": -33097.444
         },
         {
           "node_tag": 522,
-          "Fz_N": -33465.193
+          "Fz_N": -33097.444
         },
         {
           "node_tag": 523,
@@ -62224,11 +62371,11 @@
         },
         {
           "node_tag": 527,
-          "Fz_N": -12272.626
+          "Fz_N": -12640.375
         },
         {
           "node_tag": 528,
-          "Fz_N": -12272.626
+          "Fz_N": -12640.375
         },
         {
           "node_tag": 529,
@@ -62388,11 +62535,11 @@
         },
         {
           "node_tag": 568,
-          "Fz_N": -2516.301
+          "Fz_N": -19579.872
         },
         {
           "node_tag": 569,
-          "Fz_N": -2516.301
+          "Fz_N": -19579.872
         },
         {
           "node_tag": 570,
@@ -62420,11 +62567,11 @@
         },
         {
           "node_tag": 576,
-          "Fz_N": -2516.025
+          "Fz_N": -19579.596
         },
         {
           "node_tag": 577,
-          "Fz_N": -2516.025
+          "Fz_N": -19579.596
         },
         {
           "node_tag": 578,
@@ -62476,11 +62623,11 @@
         },
         {
           "node_tag": 590,
-          "Fz_N": -11580.27
+          "Fz_N": -28643.841
         },
         {
           "node_tag": 591,
-          "Fz_N": -11580.27
+          "Fz_N": -28643.841
         },
         {
           "node_tag": 592,
@@ -62516,11 +62663,11 @@
         },
         {
           "node_tag": 600,
-          "Fz_N": -11580.27
+          "Fz_N": -28643.841
         },
         {
           "node_tag": 601,
-          "Fz_N": -11580.27
+          "Fz_N": -28643.841
         },
         {
           "node_tag": 602,
@@ -62572,11 +62719,11 @@
         },
         {
           "node_tag": 614,
-          "Fz_N": -5026.187
+          "Fz_N": -22089.758
         },
         {
           "node_tag": 615,
-          "Fz_N": -5026.187
+          "Fz_N": -22089.758
         },
         {
           "node_tag": 616,
@@ -62604,11 +62751,11 @@
         },
         {
           "node_tag": 622,
-          "Fz_N": -5026.187
+          "Fz_N": -22089.758
         },
         {
           "node_tag": 623,
-          "Fz_N": -5026.187
+          "Fz_N": -22089.758
         },
         {
           "node_tag": 624,
@@ -62644,11 +62791,11 @@
         },
         {
           "node_tag": 632,
-          "Fz_N": -5552.258
+          "Fz_N": -22419.228
         },
         {
           "node_tag": 633,
-          "Fz_N": -5552.258
+          "Fz_N": -22419.228
         },
         {
           "node_tag": 634,
@@ -64622,6 +64769,25 @@
             "type": "SET_Q_SCALE",
             "previous": 0.7400000095367432,
             "value": 1.0
+          }
+        ]
+      },
+      {
+        "request_id": "JOSE/20260924-MATI-P1L5-FIXES",
+        "applied_utc": "2026-09-25T01:00:58.002266+00:00",
+        "operations": [
+          {
+            "type": "MOVE_START",
+            "element_id": "E1-P3-V-101",
+            "axis": "x",
+            "previous": 68.341,
+            "value": 67.841
+          },
+          {
+            "type": "SET_SECTION",
+            "element_id": "E1-P1-C-023",
+            "previous": "SEC_COLUMN_RECT_0.200x0.500",
+            "value": "SEC_COLUMN_RECT_0.700x0.700"
           }
         ]
       }

@@ -1,6 +1,6 @@
 {
   "format": "MCOC_P1L5_MODEL_MASTER_V1",
-  "generated_utc": "2026-09-24T17:16:23.691830+00:00",
+  "generated_utc": "2026-09-25T01:01:18.197386+00:00",
   "policy": "CENTRAL_CANONICAL_INPUT_PROTOTYPE_DO_NOT_OVERWRITE_PRODUCTION",
   "units": {
     "length": "m",
@@ -15167,7 +15167,7 @@
     {
       "node_id": "N-01100",
       "coord_m": [
-        68.341,
+        67.841,
         16.331,
         15.44
       ],
@@ -18568,7 +18568,7 @@
         "z_bottom_m": 3.96,
         "z_top_m": 7.92
       },
-      "section_id": "SEC_COLUMN_RECT_0.200x0.500",
+      "section_id": "SEC_COLUMN_RECT_0.700x0.700",
       "material_id": "MAT_G35_10_2017_67_100_1E116",
       "active": true,
       "analysis_id": "POST-A-00099",
@@ -18605,7 +18605,16 @@
         "axis_y": "3"
       },
       "merge_history": [],
-      "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
+      "analysis_status": "CURRENT_GEOMETRY_NOT_RUN",
+      "p1l5_modifications": [
+        {
+          "type": "SET_SECTION",
+          "previous_section_id": "SEC_COLUMN_RECT_0.200x0.500",
+          "section_id": "SEC_COLUMN_RECT_0.700x0.700",
+          "request_id": "JOSE/20260924-MATI-P1L5-FIXES",
+          "applied_utc": "2026-09-25T01:00:58.002266+00:00"
+        }
+      ]
     },
     {
       "element_id": "E1-P1-C-024",
@@ -30794,7 +30803,7 @@
       "geometry": {
         "kind": "linear_prism",
         "start_m": [
-          68.341,
+          67.841,
           16.331,
           15.44
         ],
@@ -30804,7 +30813,7 @@
           15.44
         ],
         "center_m": [
-          70.241,
+          69.991,
           16.331,
           15.44
         ],
@@ -30843,7 +30852,17 @@
         "axis_y": "3"
       },
       "merge_history": [],
-      "analysis_status": "CURRENT_GEOMETRY_NOT_RUN"
+      "analysis_status": "CURRENT_GEOMETRY_NOT_RUN",
+      "p1l5_modifications": [
+        {
+          "type": "MOVE_START",
+          "axis": "x",
+          "previous_x": 68.341,
+          "x": 67.841,
+          "request_id": "JOSE/20260924-MATI-P1L5-FIXES",
+          "applied_utc": "2026-09-25T01:00:58.002266+00:00"
+        }
+      ]
     },
     {
       "element_id": "E1-P3-V-106",
@@ -64045,8 +64064,8 @@
     "results_state": "P1L5_RESULTS_HISTORICAL_NOT_RECALCULATED"
   },
   "fe_topology": {
-    "status": "APPROVED_FOR_ANALYSIS",
-    "migrated_utc": "2026-09-24T17:16:25.730387+00:00",
+    "status": "APPROVED_FOR_P1L5_WITH_STOP_EXCLUSIONS",
+    "migrated_utc": "2026-09-25T01:01:11.573571+00:00",
     "provenance": {
       "source": "entregas/P1L5/modelo_central/model_master.json",
       "method": "central adapter + audited PRE5 physical-footprint topology algorithm",
@@ -69552,12 +69571,13 @@
       },
       "527": {
         "tag": 527,
-        "x": 68.341,
+        "x": 67.841,
         "y": 16.331,
         "z": 15.84,
         "building": "EDIFICIO_1",
         "reasons": [
-          "BEAM_END"
+          "BEAM_BEAM_FOOTPRINT_INTERSECTION",
+          "COLUMN_BEAM_FOOTPRINT_INTERSECTION"
         ]
       },
       "528": {
@@ -78491,6 +78511,20 @@
       },
       {
         "type": "RIGID_COLUMN_FOOTPRINT_ARM",
+        "master_node": 76,
+        "slave_node": 527,
+        "geometry_elementTag": "SOL_3_column_0010",
+        "reason": "COLUMN_BEAM_FOOTPRINT_INTERSECTION",
+        "other_geometry_id": "E1-P3-V-101",
+        "reasons": [
+          "COLUMN_BEAM_FOOTPRINT_INTERSECTION"
+        ],
+        "other_geometry_ids": [
+          "E1-P3-V-101"
+        ]
+      },
+      {
+        "type": "RIGID_COLUMN_FOOTPRINT_ARM",
         "master_node": 79,
         "slave_node": 528,
         "geometry_elementTag": "SOL_3_column_0017",
@@ -85639,6 +85673,21 @@
         ],
         "other_geometry_ids": [
           "E1-P3-V-099",
+          "E1-P3-V-094"
+        ]
+      },
+      {
+        "type": "RIGID_BEAM_JOINT_ARM",
+        "master_node": 527,
+        "slave_node": 522,
+        "geometry_elementTag": "SOL_3_beam_0364",
+        "reason": "BEAM_BEAM_FOOTPRINT_INTERSECTION",
+        "other_geometry_id": "E1-P3-V-101",
+        "reasons": [
+          "BEAM_BEAM_FOOTPRINT_INTERSECTION"
+        ],
+        "other_geometry_ids": [
+          "E1-P3-V-101",
           "E1-P3-V-094"
         ]
       },
@@ -98060,9 +98109,31 @@
       {
         "type": "COLUMN_BEAM_FOOTPRINT_INTERSECTION",
         "geometry_a": "E1-P3-V-101",
+        "geometry_b": "E1-P3-C-015",
+        "point": [
+          67.841,
+          16.331,
+          15.84
+        ],
+        "evidence": "same building/level + physical footprint intersection"
+      },
+      {
+        "type": "COLUMN_BEAM_FOOTPRINT_INTERSECTION",
+        "geometry_a": "E1-P3-V-101",
         "geometry_b": "E1-P3-C-018",
         "point": [
           72.141,
+          16.331,
+          15.84
+        ],
+        "evidence": "same building/level + physical footprint intersection"
+      },
+      {
+        "type": "COLUMN_BEAM_FOOTPRINT_INTERSECTION",
+        "geometry_a": "E1-P3-V-101",
+        "geometry_b": "E1-P4-C-017",
+        "point": [
+          67.841,
           16.331,
           15.84
         ],
@@ -107326,6 +107397,28 @@
         "point": [
           67.491,
           9.431,
+          15.84
+        ],
+        "evidence": "same building/level + physical beam footprint intersection"
+      },
+      {
+        "type": "BEAM_BEAM_FOOTPRINT_INTERSECTION",
+        "geometry_a": "E1-P3-V-094",
+        "geometry_b": "E1-P3-V-101",
+        "point": [
+          67.841,
+          16.331,
+          15.84
+        ],
+        "evidence": "same building/level + physical beam footprint intersection"
+      },
+      {
+        "type": "BEAM_BEAM_FOOTPRINT_INTERSECTION",
+        "geometry_a": "E1-P3-V-101",
+        "geometry_b": "E1-P3-V-094",
+        "point": [
+          67.491,
+          15.982,
           15.84
         ],
         "evidence": "same building/level + physical beam footprint intersection"
@@ -118512,29 +118605,26 @@
       "beam_wall_connections": 20,
       "wall_wall_connections": 0,
       "wall_vertical_overlaps": 48,
-      "column_beam_connections": 708,
+      "column_beam_connections": 710,
       "node_count": 1110,
       "fe_element_count": 633,
-      "constraint_count": 1223,
+      "constraint_count": 1225,
       "geometry_elements_split_into_multiple_fe": 7,
       "max_fe_segments_per_geometry": 3,
       "crosswalk_required_fields": "PASS",
       "stable_analysis_ids_reused": 633
     },
     "run_policy": {
-      "status": "GEOMETRY_APPROVED_RESULTS_NOT_RECALCULATED",
+      "status": "APPROVED_ACADEMIC_EXPERIMENTAL",
       "active_only": true,
       "stop_element_ids": [],
       "no_invented_supports": true,
-      "opensees_run": false,
-      "loads_changed": false,
-      "results_changed": false,
-      "authorised_utc": "2026-09-24T17:16:25.730387+00:00"
+      "authorised_utc": "2026-09-25T01:01:18.197386+00:00"
     }
   },
   "p1l5_analysis_policy": {
     "status": "APPROVED_ACADEMIC_EXPERIMENTAL",
-    "applied_utc": "2026-09-24T17:16:23.691830+00:00",
+    "applied_utc": "2026-09-25T01:01:18.197386+00:00",
     "stop_element_ids": [],
     "structural_material_fallback": {
       "material_id": "MAT_G35_10_2024_22_100_53994",
@@ -118688,6 +118778,25 @@
           "type": "SET_Q_SCALE",
           "previous": 0.7400000095367432,
           "value": 1.0
+        }
+      ]
+    },
+    {
+      "request_id": "JOSE/20260924-MATI-P1L5-FIXES",
+      "applied_utc": "2026-09-25T01:00:58.002266+00:00",
+      "operations": [
+        {
+          "type": "MOVE_START",
+          "element_id": "E1-P3-V-101",
+          "axis": "x",
+          "previous": 68.341,
+          "value": 67.841
+        },
+        {
+          "type": "SET_SECTION",
+          "element_id": "E1-P1-C-023",
+          "previous": "SEC_COLUMN_RECT_0.200x0.500",
+          "value": "SEC_COLUMN_RECT_0.700x0.700"
         }
       ]
     }

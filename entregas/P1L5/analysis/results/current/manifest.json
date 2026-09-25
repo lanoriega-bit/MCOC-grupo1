@@ -1,28 +1,28 @@
 {
   "format": "MCOC_P1L5_CURRENT_RESULTS_MANIFEST_V2",
-  "generated_utc": "2026-09-24T17:16:32.658163+00:00",
+  "generated_utc": "2026-09-25T01:06:20.061296+00:00",
   "status": "PASS",
   "analysis_version": "P1L5_CURRENT_ZONED_V2",
   "cases": {
     "G": {
       "status": "PASS",
       "max_translation_m": 0.0938407107953782,
-      "equilibrium_relative_residual": 4.720551894984759e-15
+      "equilibrium_relative_residual": 4.390035997160478e-15
     },
     "Q": {
       "status": "PASS",
-      "max_translation_m": 0.03870579294120632,
-      "equilibrium_relative_residual": 2.2949208422688378e-15
+      "max_translation_m": 0.038705792941206955,
+      "equilibrium_relative_residual": 1.0605748621565496e-15
     },
     "EX": {
       "status": "PASS",
-      "max_translation_m": 0.06810420545489065,
-      "equilibrium_relative_residual": 2.5418675505173538e-14
+      "max_translation_m": 0.06697750514083883,
+      "equilibrium_relative_residual": 1.4165835903277292e-14
     },
     "EY": {
       "status": "PASS",
-      "max_translation_m": 0.10213254191230113,
-      "equilibrium_relative_residual": 5.486197463199654e-14
+      "max_translation_m": 0.09928750923069962,
+      "equilibrium_relative_residual": 5.391474858709724e-14
     }
   },
   "linear_superposition_compatible": true,
@@ -30,8 +30,8 @@
   "result_state": "CURRENT_WITH_DOCUMENTED_FALLBACKS",
   "load_contract": {
     "status": "PASS_WITH_EXPLICIT_UNRESOLVED",
-    "G_total_N": 75759757.893,
-    "Q_total_N": 24349142.51,
+    "G_total_N": 78069224.879,
+    "Q_total_N": 24587639.301,
     "unresolved_load_ids": [
       "L700-P2-POINT-SC-7000-SC_POINT",
       "L700-P2-POINT-SC-7000-PM_ADIC_POINT",
@@ -39,8 +39,6 @@
       "L700-P3-POINT-SC-6000-PM_ADIC_POINT",
       "L700-P3-POINT-SC-6700-SC_POINT",
       "L700-P3-POINT-SC-6700-PM_ADIC_POINT",
-      "L700-P4-LINE-SC-800-SC_LINE",
-      "L700-P4-LINE-SC-800-PM_ADIC_LINE",
       "L700-E2-P4-LINE-SC-100-SC_LINE",
       "L700-E2-P4-LINE-SC-100-PM_ADIC_LINE"
     ]

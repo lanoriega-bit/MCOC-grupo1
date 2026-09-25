@@ -33,7 +33,7 @@
   "walls": 30,
   "slabs": 10,
   "fe_segments": 633,
-  "fe_constraints": 1223,
+  "fe_constraints": 1225,
   "fe_support_nodes": 33,
   "disconnected_components": 0,
   "unknown_structural_materials": 0,

@@ -61,6 +61,35 @@ def main():
                 "request_id": request.get("request_id"), "applied_utc": now,
             })
             applied.append({"type": kind, "element_id": element_id, "previous": previous, "value": section_id})
+        elif kind == "MOVE_START":
+            element_id = operation["element_id"]
+            axis = operation.get("axis", "x")
+            if element_id not in by_id:
+                raise KeyError(f"Unknown element {element_id}")
+            row = by_id[element_id]
+            geometry = row.get("geometry") or {}
+            if geometry.get("kind") != "linear_prism":
+                raise ValueError(f"MOVE_START is only supported for linear_prism elements, got {geometry.get('kind')!r}")
+            previous = float(operation["previous"])
+            value = float(operation["value"])
+            if axis not in ("x", "y", "z"):
+                raise ValueError(f"Unsupported axis {axis!r}")
+            start = list(geometry["start_m"])
+            if not abs(start[("x", "y", "z").index(axis)] - previous) <= 1e-6:
+                raise ValueError(f"Current {axis} of {element_id} start is {start[('x','y','z').index(axis)]}, not {previous}")
+            start[("x", "y", "z").index(axis)] = value
+            end = list(geometry["end_m"])
+            center = [(start[i] + end[i]) / 2 for i in range(3)]
+            geometry["start_m"] = start
+            geometry["center_m"] = center
+            for node in master.get("nodes", []):
+                if node.get("node_id") in row.get("nodes", []) and node["sources"][0]["reason"] == "beam_start" and node["sources"][0]["owner"] == element_id:
+                    node["coord_m"][("x", "y", "z").index(axis)] = value
+            row.setdefault("p1l5_modifications", []).append({
+                "type": kind, "axis": axis, "previous_%s" % axis: previous, "%s" % axis: value,
+                "request_id": request.get("request_id"), "applied_utc": now,
+            })
+            applied.append({"type": kind, "element_id": element_id, "axis": axis, "previous": previous, "value": value})
         elif kind == "SET_ACTIVE":
             element_id = operation["element_id"]
             if element_id not in by_id:
