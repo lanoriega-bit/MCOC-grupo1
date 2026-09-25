@@ -12,10 +12,10 @@ Geometría congelada respecto de `1d81b945fca7567bbf5aa8cc0bd374315a3d6a38`: **F
 
 - `CURRENT_RECONSTRUCTED`: 88 entradas.
 - `HISTORICAL_FALLBACK`: 10 entradas de PP.LOSA a 0,15 m.
-- `UNRESOLVED`: 8 entradas.
+- `UNRESOLVED`: 6 entradas.
 - `UNIT_CONFLICT_UNRESOLVED`: 0 entradas (conflicto 7600/800).
 - Paños/zonas `CURRENT_RECOMPUTED`: 44. La exportación visual genera 49 polígonos exteriores porque cinco zonas multipolígono se dibujan por componente.
-- Conservación G: residual 0.027463 N (3.518e-08 %), **PASS**.
+- Conservación G: residual 0.027463 N (3.515e-08 %), **PASS**.
 - Conservación Q: residual 0.000000 N (0.000e+00 %), **PASS**.
 
 | Piso | Bloque | Área total m² | Área con Q m² | Área sin Q m² | Q kN |
@@ -28,7 +28,7 @@ Geometría congelada respecto de `1d81b945fca7567bbf5aa8cc0bd374315a3d6a38`: **F
 | P1 | LT2 | 557.894 | 557.894 | 0.000 | 2537.821 |
 | P2 | LT2 | 557.894 | 557.894 | 0.000 | 2537.821 |
 | P3 | LT2 | 557.894 | 557.894 | 0.000 | 2537.821 |
-| P4 | LT2 | 535.620 | 535.620 | 0.000 | 1050.528 |
+| P4 | LT2 | 541.860 | 541.860 | 0.000 | 1099.482 |
 | S1 | LT2 | 557.894 | 557.894 | 0.000 | 2537.821 |
 
 Los huecos interiores se conservan y suman dentro de cada registro como exclusiones geométricas. `área sin Q = 0` significa que toda la superficie neta de las 44 zonas CAD confirmadas tiene una intensidad Q; no afirma que todo vacío arquitectónico esté cargado.
@@ -37,10 +37,10 @@ Los huecos interiores se conservan y suman dentro de cada registro como exclusio
 
 | Magnitud | Nuestro LT1 kN | ETABS LT1 kN | Dif. | Nuestro LT2 kN | ETABS LT2 kN | Dif. | Nuestro total kN | ETABS total kN | Dif. |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| Q / CV | 13385.826 | 11620.380 | +15.19% | 11201.813 | 11096.777 | +0.95% | 24587.639 | 22717.157 | +8.23% |
-| G / CM | 46969.149 | 47140.276 | -0.36% | 31100.076 | 34723.194 | -10.43% | 78069.225 | 81863.470 | -4.63% |
+| Q / CV | 13385.826 | 11620.380 | +15.19% | 11250.768 | 11096.777 | +1.39% | 24636.594 | 22717.157 | +8.45% |
+| G / CM | 46969.149 | 47140.276 | -0.36% | 31171.978 | 34723.194 | -10.23% | 78141.127 | 81863.470 | -4.55% |
 
-Nuestro G se separa en 32945.738 kN de peso propio y 45123.487 kN de carga muerta adicional, para 78069.225 kN. No se forzó ETABS: las diferencias son coherentes con un modelo de barras sin losas FE, fallbacks documentados y cargas puntuales/lineales aún sin receptor o unidad inequívoca.
+Nuestro G se separa en 32945.738 kN de peso propio y 45195.389 kN de carga muerta adicional, para 78141.127 kN. No se forzó ETABS: las diferencias son coherentes con un modelo de barras sin losas FE, fallbacks documentados y cargas puntuales/lineales aún sin receptor o unidad inequívoca.
 
 ## Materiales
 
@@ -52,9 +52,9 @@ Hay 79 elementos estructurales con `INFERRED_MATERIAL_FALLBACK`; no se presentan
 - 1.110 nodos FE, 633 segmentos físicos activos, 629 barras analizadas y 4 segmentos redundantes dentro de clusters rígidos omitidos para evitar lazos de deformación nula.
 - 1.223 restricciones FE y 33 apoyos FE.
 - G/Q/EX/EY: finitos, sin NaN ni infinitos, equilibrio **PASS**.
-- Reacción vertical G: 78069.225 kN; Q: 24587.639 kN.
-- Corte basal EX: 17619.465 kN; EY: 17619.465 kN.
-- Desplazamientos máximos vectoriales: G 93.841 mm; Q 38.706 mm; EX 66.978 mm; EY 99.288 mm.
+- Reacción vertical G: 78141.127 kN; Q: 24636.594 kN.
+- Corte basal EX: 17638.741 kN; EY: 17638.741 kN.
+- Desplazamientos máximos vectoriales: G 97.320 mm; Q 38.701 mm; EX 66.978 mm; EY 99.288 mm.
 
 ### Contraste vertical P3
 
@@ -62,8 +62,8 @@ Hay 79 elementos estructurales con `INFERRED_MATERIAL_FALLBACK`; no se presentan
 |---|---|---:|---:|---:|---:|
 | LT1 | G | 482 | -4.715 | -5.060 | 0.93 |
 | LT1 | Q | 482 | -1.376 | -1.466 | 0.94 |
-| LT2 | G | 177 | -2.820 | -7.181 | 0.39 |
-| LT2 | Q | 177 | -1.098 | -3.213 | 0.34 |
+| LT2 | G | 177 | -2.815 | -7.181 | 0.39 |
+| LT2 | Q | 177 | -1.094 | -3.213 | 0.34 |
 
 Es un contraste secundario de orden de magnitud: se usa el nodo retenido más cercano al centro geométrico de P3, no el mismo punto ETABS. Los períodos ETABS se registran, pero no se comparan directamente porque LT1/LT2 son modelos separados con diafragmas, mientras CURRENT es un marco combinado sin losas FE ni diafragma rígido.
 

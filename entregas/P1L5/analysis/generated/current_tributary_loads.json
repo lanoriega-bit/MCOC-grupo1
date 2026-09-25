@@ -1,6 +1,6 @@
 {
   "status": "PASS_WITH_EXPLICIT_UNRESOLVED",
-  "generated_utc": "2026-09-25T01:05:53.520249+00:00",
+  "generated_utc": "2026-09-25T02:49:19.137205+00:00",
   "basis": "CURRENT_AUDITED_ZONE_POLYGONS_AND_COMPUTED_MEMBER_SELF_WEIGHT",
   "q_intensity_scale": 1.0,
   "unresolved_load_ids": [
@@ -9,38 +9,37 @@
     "L700-P3-POINT-SC-6000-SC_POINT",
     "L700-P3-POINT-SC-6000-PM_ADIC_POINT",
     "L700-P3-POINT-SC-6700-SC_POINT",
-    "L700-P3-POINT-SC-6700-PM_ADIC_POINT",
-    "L700-E2-P4-LINE-SC-100-SC_LINE",
-    "L700-E2-P4-LINE-SC-100-PM_ADIC_LINE"
+    "L700-P3-POINT-SC-6700-PM_ADIC_POINT"
   ],
   "unit_conflicts": [],
   "catalog_status_counts": {
     "CURRENT_RECONSTRUCTED": 88,
-    "UNRESOLVED": 8,
+    "UNRESOLVED": 6,
     "RESOLVED_BY_REVIEW": 2,
+    "RESOLVED_BY_REVIEW_SLAB_ROUTE": 2,
     "HISTORICAL_FALLBACK": 10
   },
   "conservation": {
     "G": {
-      "generated_N": 78069224.879,
-      "transferred_N": 78069224.906,
+      "generated_N": 78141127.002,
+      "transferred_N": 78141127.029,
       "residual_N": 0.027463,
-      "residual_percent": 3.5178e-08,
+      "residual_percent": 3.5146e-08,
       "status": "PASS"
     },
     "Q": {
-      "generated_N": 24587639.301,
-      "transferred_N": 24587639.301,
+      "generated_N": 24636593.938,
+      "transferred_N": 24636593.938,
       "residual_N": 0.0,
       "residual_percent": 0.0,
       "status": "PASS"
     }
   },
   "totals": {
-    "Q_N": 24587639.301,
+    "Q_N": 24636593.938,
     "G_self_weight_N": 32945738.266,
-    "G_superimposed_dead_N": 45123486.613,
-    "G_total_N": 78069224.879
+    "G_superimposed_dead_N": 45195388.736,
+    "G_total_N": 78141127.002
   },
   "by_building": {
     "EDIFICIO_1": {
@@ -56,14 +55,14 @@
     },
     "EDIFICIO_2": {
       "lt_block": "LT2",
-      "Q_N": 11201813.297,
+      "Q_N": 11250767.934,
       "G_self_weight_N": 14183281.39,
-      "G_superimposed_dead_N": 16916794.129,
-      "G_total_N": 31100075.518,
+      "G_superimposed_dead_N": 16988696.252,
+      "G_total_N": 31171977.641,
       "etabs_CV_N": 11096777.0,
       "etabs_CM_N": 34723194.0,
-      "Q_difference_percent": 0.947,
-      "G_difference_percent": -10.434
+      "Q_difference_percent": 1.388,
+      "G_difference_percent": -10.227
     }
   },
   "by_floor": [
@@ -191,16 +190,16 @@
       "building": "EDIFICIO_2",
       "lt_block": "LT2",
       "floor": "P4",
-      "area_total_m2": 535.62,
-      "area_with_Q_m2": 535.62,
+      "area_total_m2": 541.86,
+      "area_with_Q_m2": 541.86,
       "area_without_Q_m2": 0.0,
-      "Q_N": 1050527.527,
-      "G_superimposed_N": 1050527.527,
-      "G_slab_N": 1969739.112,
+      "Q_N": 1099482.163,
+      "G_superimposed_N": 1099482.163,
+      "G_slab_N": 1992686.598,
       "interior_hole_area_m2": 21.813,
-      "panels": 1,
+      "panels": 3,
       "G_self_weight_N": 2755517.614,
-      "G_total_N": 5775784.253
+      "G_total_N": 5847686.376
     },
     {
       "building": "EDIFICIO_2",
@@ -3400,8 +3399,8 @@
         "element_id": "E2-P4-V-081",
         "node_i": 1009,
         "node_j": 1010,
-        "P_N": 155452.838,
-        "end_load_N": 77726.419,
+        "P_N": 181800.021,
+        "end_load_N": 90900.01,
         "representation": "TRIBUTARY_AREA_TO_PHYSICAL_BEAM_THEN_P_OVER_2_TO_FE_END_NODES"
       },
       {
@@ -3424,8 +3423,8 @@
         "element_id": "E2-P4-V-085",
         "node_i": 1015,
         "node_j": 1016,
-        "P_N": 125009.087,
-        "end_load_N": 62504.544,
+        "P_N": 155087.199,
+        "end_load_N": 77543.6,
         "representation": "TRIBUTARY_AREA_TO_PHYSICAL_BEAM_THEN_P_OVER_2_TO_FE_END_NODES"
       },
       {
@@ -3456,8 +3455,8 @@
         "element_id": "E2-P4-V-089",
         "node_i": 1019,
         "node_j": 1021,
-        "P_N": 55437.337,
-        "end_load_N": 27718.668,
+        "P_N": 70914.165,
+        "end_load_N": 35457.082,
         "representation": "TRIBUTARY_AREA_TO_PHYSICAL_BEAM_THEN_P_OVER_2_TO_FE_END_NODES"
       },
       {
@@ -7018,8 +7017,8 @@
         "element_id": "E2-P4-V-081",
         "node_i": 1009,
         "node_j": 1010,
-        "P_N": 54070.552,
-        "end_load_N": 27035.276,
+        "P_N": 72009.06,
+        "end_load_N": 36004.53,
         "representation": "TRIBUTARY_AREA_TO_PHYSICAL_BEAM_THEN_P_OVER_2_TO_FE_END_NODES"
       },
       {
@@ -7042,8 +7041,8 @@
         "element_id": "E2-P4-V-085",
         "node_i": 1015,
         "node_j": 1016,
-        "P_N": 43481.422,
-        "end_load_N": 21740.711,
+        "P_N": 63960.136,
+        "end_load_N": 31980.068,
         "representation": "TRIBUTARY_AREA_TO_PHYSICAL_BEAM_THEN_P_OVER_2_TO_FE_END_NODES"
       },
       {
@@ -7074,8 +7073,8 @@
         "element_id": "E2-P4-V-089",
         "node_i": 1019,
         "node_j": 1021,
-        "P_N": 19282.552,
-        "end_load_N": 9641.276,
+        "P_N": 29819.967,
+        "end_load_N": 14909.983,
         "representation": "TRIBUTARY_AREA_TO_PHYSICAL_BEAM_THEN_P_OVER_2_TO_FE_END_NODES"
       },
       {
@@ -22359,24 +22358,28 @@
       "floor": "P4",
       "type": "beam",
       "Q": {
-        "tributary_area_m2": 27.568309,
-        "equivalent_width_m": 3.446039,
-        "surface_force_N": 54070.552,
-        "equivalent_line_load_N_m": 6758.819,
+        "tributary_area_m2": 29.854833,
+        "equivalent_width_m": 3.731854,
+        "surface_force_N": 72009.06,
+        "equivalent_line_load_N_m": 9001.132,
         "zone_ids": [
-          "L700-E2-P4-H05-SC_SURFACE"
+          "L700-E2-P4-H05-SC_SURFACE",
+          "L700-E2-P4-LINE-SC-100-STRIP-PM_ADIC_SURFACE",
+          "L700-E2-P4-LINE-SC-100-STRIP-SC_SURFACE"
         ],
         "status": "CURRENT_RECOMPUTED"
       },
       "G": {
         "self_weight_N": 94143.84,
-        "tributary_dead_N": 155452.838,
-        "total_associated_N": 249596.678,
+        "tributary_dead_N": 181800.021,
+        "total_associated_N": 275943.861,
         "status": "CURRENT_COMPUTED"
       },
       "source_load_ids": [
         "L700-E2-P4-H05-PM_ADIC_SURFACE",
-        "L700-E2-P4-H05-SC_SURFACE"
+        "L700-E2-P4-H05-SC_SURFACE",
+        "L700-E2-P4-LINE-SC-100-STRIP-PM_ADIC_SURFACE",
+        "L700-E2-P4-LINE-SC-100-STRIP-SC_SURFACE"
       ]
     },
     {
@@ -22440,24 +22443,28 @@
       "floor": "P4",
       "type": "beam",
       "Q": {
-        "tributary_area_m2": 22.169355,
-        "equivalent_width_m": 4.618616,
-        "surface_force_N": 43481.422,
-        "equivalent_line_load_N_m": 9058.63,
+        "tributary_area_m2": 24.779665,
+        "equivalent_width_m": 5.16243,
+        "surface_force_N": 63960.136,
+        "equivalent_line_load_N_m": 13325.028,
         "zone_ids": [
-          "L700-E2-P4-H05-SC_SURFACE"
+          "L700-E2-P4-H05-SC_SURFACE",
+          "L700-E2-P4-LINE-SC-100-STRIP-PM_ADIC_SURFACE",
+          "L700-E2-P4-LINE-SC-100-STRIP-SC_SURFACE"
         ],
         "status": "CURRENT_RECOMPUTED"
       },
       "G": {
         "self_weight_N": 56486.304,
-        "tributary_dead_N": 125009.087,
-        "total_associated_N": 181495.391,
+        "tributary_dead_N": 155087.199,
+        "total_associated_N": 211573.503,
         "status": "CURRENT_COMPUTED"
       },
       "source_load_ids": [
         "L700-E2-P4-H05-PM_ADIC_SURFACE",
-        "L700-E2-P4-H05-SC_SURFACE"
+        "L700-E2-P4-H05-SC_SURFACE",
+        "L700-E2-P4-LINE-SC-100-STRIP-PM_ADIC_SURFACE",
+        "L700-E2-P4-LINE-SC-100-STRIP-SC_SURFACE"
       ]
     },
     {
@@ -22548,24 +22555,28 @@
       "floor": "P4",
       "type": "beam",
       "Q": {
-        "tributary_area_m2": 9.831365,
-        "equivalent_width_m": 6.202754,
-        "surface_force_N": 19282.552,
-        "equivalent_line_load_N_m": 12165.648,
+        "tributary_area_m2": 11.174512,
+        "equivalent_width_m": 7.050165,
+        "surface_force_N": 29819.967,
+        "equivalent_line_load_N_m": 18813.859,
         "zone_ids": [
-          "L700-E2-P4-H05-SC_SURFACE"
+          "L700-E2-P4-H05-SC_SURFACE",
+          "L700-E2-P4-LINE-SC-100-STRIP-PM_ADIC_SURFACE",
+          "L700-E2-P4-LINE-SC-100-STRIP-SC_SURFACE"
         ],
         "status": "CURRENT_RECOMPUTED"
       },
       "G": {
         "self_weight_N": 18652.248,
-        "tributary_dead_N": 55437.337,
-        "total_associated_N": 74089.585,
+        "tributary_dead_N": 70914.165,
+        "total_associated_N": 89566.413,
         "status": "CURRENT_COMPUTED"
       },
       "source_load_ids": [
         "L700-E2-P4-H05-PM_ADIC_SURFACE",
-        "L700-E2-P4-H05-SC_SURFACE"
+        "L700-E2-P4-H05-SC_SURFACE",
+        "L700-E2-P4-LINE-SC-100-STRIP-PM_ADIC_SURFACE",
+        "L700-E2-P4-LINE-SC-100-STRIP-SC_SURFACE"
       ]
     },
     {
@@ -40307,11 +40318,11 @@
       },
       {
         "node_tag": 1009,
-        "Fz_N": -124798.339
+        "Fz_N": -137971.93
       },
       {
         "node_tag": 1010,
-        "Fz_N": -124798.339
+        "Fz_N": -137971.93
       },
       {
         "node_tag": 1011,
@@ -40331,11 +40342,11 @@
       },
       {
         "node_tag": 1015,
-        "Fz_N": -90747.696
+        "Fz_N": -105786.752
       },
       {
         "node_tag": 1016,
-        "Fz_N": -90747.696
+        "Fz_N": -105786.752
       },
       {
         "node_tag": 1017,
@@ -40347,7 +40358,7 @@
       },
       {
         "node_tag": 1019,
-        "Fz_N": -46896.477
+        "Fz_N": -54634.891
       },
       {
         "node_tag": 1020,
@@ -40355,7 +40366,7 @@
       },
       {
         "node_tag": 1021,
-        "Fz_N": -37044.793
+        "Fz_N": -44783.207
       },
       {
         "node_tag": 1022,
@@ -43877,11 +43888,11 @@
       },
       {
         "node_tag": 1009,
-        "Fz_N": -27035.276
+        "Fz_N": -36004.53
       },
       {
         "node_tag": 1010,
-        "Fz_N": -27035.276
+        "Fz_N": -36004.53
       },
       {
         "node_tag": 1011,
@@ -43901,11 +43912,11 @@
       },
       {
         "node_tag": 1015,
-        "Fz_N": -21740.711
+        "Fz_N": -31980.068
       },
       {
         "node_tag": 1016,
-        "Fz_N": -21740.711
+        "Fz_N": -31980.068
       },
       {
         "node_tag": 1017,
@@ -43917,7 +43928,7 @@
       },
       {
         "node_tag": 1019,
-        "Fz_N": -11430.665
+        "Fz_N": -16699.372
       },
       {
         "node_tag": 1020,
@@ -43925,7 +43936,7 @@
       },
       {
         "node_tag": 1021,
-        "Fz_N": -9641.276
+        "Fz_N": -14909.983
       },
       {
         "node_tag": 1022,

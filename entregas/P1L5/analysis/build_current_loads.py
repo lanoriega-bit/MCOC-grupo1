@@ -167,10 +167,43 @@ def main() -> None:
     surface_ids = set()
 
     sc_entries = [row for row in entries if row["load_type"] == "SC_SURFACE"]
-    for sc in sorted(sc_entries, key=lambda row: row["load_id"]):
-        pm = match_pair(entries_by_id, sc)
-        if pm is None:
-            raise RuntimeError(f"Missing PM_ADIC pair for {sc['load_id']}")
+
+    synthetic_entries = []
+    for row in entries:
+        override = row.get("review_resolution")
+        if not override or override.get("status") != "RESOLVED_BY_REVIEW_SLAB_ROUTE":
+            continue
+        geometry = shape(row["geometry"])
+        if geometry.geom_type != "LineString":
+            raise RuntimeError(f"Slab-route review requires a LineString: {row['load_id']}")
+        strip = geometry.buffer(override.get("equivalent_strip_width_m", 1.0) / 2.0, cap_style="flat")
+        base = row["load_id"].replace("-SC_LINE", "").replace("-PM_ADIC_LINE", "") + "-STRIP"
+        synthetic_entries.append({
+            "load_id": base + "-SC_SURFACE" if row["load_type"] == "SC_LINE" else base + "-PM_ADIC_SURFACE",
+            "load_type": "SC_SURFACE" if row["load_type"] == "SC_LINE" else "PM_ADIC_SURFACE",
+            "building": row["building"], "floor": row["floor"],
+            "source_sheet": row["source_sheet"], "source_value": row["source_value"],
+            "source_unit": row["source_unit"], "SI_value": row["SI_value"], "SI_unit": row["SI_unit"],
+            "geometry": mapping(strip), "_from_line": row["load_id"],
+            "_line_base": base,
+            "equivalent_strip_width_m": override.get("equivalent_strip_width_m", 1.0),
+            "receptor_panel_id": override.get("receptor_panel_id"),
+            "review_reason": override.get("reason", ""),
+        })
+    all_surface_entries = list(sc_entries) + synthetic_entries
+
+    for sc in sorted(all_surface_entries, key=lambda row: row["load_id"]):
+        line_source_id = sc.get("_from_line")
+        pm = None
+        if line_source_id:
+            for row in synthetic_entries:
+                if row["_line_base"] == sc["_line_base"] and row["load_type"] != sc["load_type"]:
+                    pm = row
+                    break
+            if pm is None:
+                raise RuntimeError(f"Missing synthetic PM_ADIC pair for {line_source_id}")
+        else:
+            pm = match_pair(entries_by_id, sc)
         polygon = shape(sc["geometry"])
         candidates = beam_lines[(sc["building"], sc["floor"])]
         assigned, unresolved_area = assign_polygon_to_beams(polygon, candidates)
@@ -229,6 +262,22 @@ def main() -> None:
             "receiver_fraction_sum": round(sum(row["fraction"] for row in receiver_rows), 9),
             "unresolved_area_m2": round(unresolved_area, 9),
         })
+        if line_source_id:
+            panels[-1].update({
+                "derivation": "LINE_LOAD_EQUIVALENT_STRIP_W_1.0M",
+                "source_line_load_id": line_source_id,
+                "receptor_panel_id": sc.get("receptor_panel_id"),
+                "equivalent_strip_width_m": sc.get("equivalent_strip_width_m"),
+                "review_reason": sc.get("review_reason", ""),
+            })
+            for row in entries:
+                if row["load_id"] == line_source_id:
+                    row["current_application"] = {
+                        "status": "RESOLVED_BY_REVIEW_SLAB_ROUTE", "applied": True,
+                        "method": "LINE_LOAD_TO_EQUIVALENT_STRIP_ON_TRIBUTARY_SLAB_THEN_NEAREST_BEAM",
+                        "receptor_panel_ids": [sc.get("receptor_panel_id")],
+                        "reason": sc.get("review_reason", ""),
+                    }
         surface_ids.update((sc["load_id"], pm["load_id"]))
 
     physical_rows = {"G": [], "Q": []}
@@ -284,6 +333,15 @@ def main() -> None:
     line_load_applications = []
     for entry in entries:
         override = entry.get("review_resolution")
+        if override and override.get("status") == "RESOLVED_BY_REVIEW_SLAB_ROUTE":
+            if entry["current_application"].get("status") != "RESOLVED_BY_REVIEW_SLAB_ROUTE":
+                entry["current_application"] = {
+                    "status": "RESOLVED_BY_REVIEW_SLAB_ROUTE", "applied": True,
+                    "method": "LINE_LOAD_TO_EQUIVALENT_STRIP_ON_TRIBUTARY_SLAB_THEN_NEAREST_BEAM",
+                    "receptor_panel_ids": [override.get("receptor_panel_id")],
+                    "reason": override.get("reason", ""),
+                }
+            continue
         if override and override.get("status") == "RESOLVED_BY_REVIEW":
             receptors = list(override.get("receptor_element_ids", []))
             entry["current_application"] = {

@@ -1,8 +1,8 @@
 {
   "units": "m / kN",
-  "qG_kN_m2": 9.758094160695299,
-  "total_area_m2": 6887.298739000001,
-  "total_load_kN": 67206.909608,
+  "qG_kN_m2": 9.766793096038022,
+  "total_area_m2": 6893.538719000001,
+  "total_load_kN": 67327.766368,
   "buildings": {},
   "areas": [
     {
@@ -2276,6 +2276,86 @@
         {
           "x": 27.85199556571516,
           "y": 6.15066261824189
+        }
+      ],
+      "data_state": "CURRENT_RECOMPUTED",
+      "visual_note": "Exterior visible; interior holes remain excluded in the numerical load contract."
+    },
+    {
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "beam_id": "L700-E2-P4-LINE-SC-100-STRIP-PM_ADIC_SURFACE",
+      "elementTag": "",
+      "start": [
+        26.904492212100948,
+        3.030672806084863
+      ],
+      "end": [
+        25.904492212100948,
+        3.030672806084863
+      ],
+      "mid": [
+        26.404492212100948,
+        4.590667712163377
+      ],
+      "area_m2": 3.11999,
+      "load_kN": 60.428380000000004,
+      "polygon": [
+        {
+          "x": 26.904492212100948,
+          "y": 3.030672806084863
+        },
+        {
+          "x": 25.904492212100948,
+          "y": 3.030672806084863
+        },
+        {
+          "x": 25.904492212100948,
+          "y": 6.150662618241891
+        },
+        {
+          "x": 26.904492212100948,
+          "y": 6.150662618241891
+        }
+      ],
+      "data_state": "CURRENT_RECOMPUTED",
+      "visual_note": "Exterior visible; interior holes remain excluded in the numerical load contract."
+    },
+    {
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "beam_id": "L700-E2-P4-LINE-SC-100-STRIP",
+      "elementTag": "",
+      "start": [
+        26.904492212100948,
+        3.030672806084863
+      ],
+      "end": [
+        25.904492212100948,
+        3.030672806084863
+      ],
+      "mid": [
+        26.404492212100948,
+        4.590667712163377
+      ],
+      "area_m2": 3.11999,
+      "load_kN": 60.42838,
+      "polygon": [
+        {
+          "x": 26.904492212100948,
+          "y": 3.030672806084863
+        },
+        {
+          "x": 25.904492212100948,
+          "y": 3.030672806084863
+        },
+        {
+          "x": 25.904492212100948,
+          "y": 6.150662618241891
+        },
+        {
+          "x": 26.904492212100948,
+          "y": 6.150662618241891
         }
       ],
       "data_state": "CURRENT_RECOMPUTED",

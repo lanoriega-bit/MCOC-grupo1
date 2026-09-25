@@ -1,6 +1,6 @@
 {
   "format": "MCOC_P1L5_CURRENT_VALIDATION_V1",
-  "generated_utc": "2026-09-25T01:06:31.226341+00:00",
+  "generated_utc": "2026-09-25T02:50:17.052166+00:00",
   "status": "FAIL",
   "branch": "jose/mati-p1l5-fixes",
   "geometry": {
@@ -18,8 +18,9 @@
     "status": "PASS_WITH_EXPLICIT_UNRESOLVED",
     "catalog_status_counts": {
       "CURRENT_RECONSTRUCTED": 88,
-      "UNRESOLVED": 8,
+      "UNRESOLVED": 6,
       "RESOLVED_BY_REVIEW": 2,
+      "RESOLVED_BY_REVIEW_SLAB_ROUTE": 2,
       "HISTORICAL_FALLBACK": 10
     },
     "unresolved_ids": [
@@ -28,16 +29,14 @@
       "L700-P3-POINT-SC-6000-SC_POINT",
       "L700-P3-POINT-SC-6000-PM_ADIC_POINT",
       "L700-P3-POINT-SC-6700-SC_POINT",
-      "L700-P3-POINT-SC-6700-PM_ADIC_POINT",
-      "L700-E2-P4-LINE-SC-100-SC_LINE",
-      "L700-E2-P4-LINE-SC-100-PM_ADIC_LINE"
+      "L700-P3-POINT-SC-6700-PM_ADIC_POINT"
     ],
     "unit_conflicts": [],
     "totals": {
-      "Q_N": 24587639.301,
+      "Q_N": 24636593.938,
       "G_self_weight_N": 32945738.266,
-      "G_superimposed_dead_N": 45123486.613,
-      "G_total_N": 78069224.879
+      "G_superimposed_dead_N": 45195388.736,
+      "G_total_N": 78141127.002
     },
     "by_building": {
       "EDIFICIO_1": {
@@ -53,14 +52,14 @@
       },
       "EDIFICIO_2": {
         "lt_block": "LT2",
-        "Q_N": 11201813.297,
+        "Q_N": 11250767.934,
         "G_self_weight_N": 14183281.39,
-        "G_superimposed_dead_N": 16916794.129,
-        "G_total_N": 31100075.518,
+        "G_superimposed_dead_N": 16988696.252,
+        "G_total_N": 31171977.641,
         "etabs_CV_N": 11096777.0,
         "etabs_CM_N": 34723194.0,
-        "Q_difference_percent": 0.947,
-        "G_difference_percent": -10.434
+        "Q_difference_percent": 1.388,
+        "G_difference_percent": -10.227
       }
     },
     "by_floor": [
@@ -188,16 +187,16 @@
         "building": "EDIFICIO_2",
         "lt_block": "LT2",
         "floor": "P4",
-        "area_total_m2": 535.62,
-        "area_with_Q_m2": 535.62,
+        "area_total_m2": 541.86,
+        "area_with_Q_m2": 541.86,
         "area_without_Q_m2": 0.0,
-        "Q_N": 1050527.527,
-        "G_superimposed_N": 1050527.527,
-        "G_slab_N": 1969739.112,
+        "Q_N": 1099482.163,
+        "G_superimposed_N": 1099482.163,
+        "G_slab_N": 1992686.598,
         "interior_hole_area_m2": 21.813,
-        "panels": 1,
+        "panels": 3,
         "G_self_weight_N": 2755517.614,
-        "G_total_N": 5775784.253
+        "G_total_N": 5847686.376
       },
       {
         "building": "EDIFICIO_2",
@@ -217,15 +216,15 @@
     ],
     "conservation": {
       "G": {
-        "generated_N": 78069224.879,
-        "transferred_N": 78069224.906,
+        "generated_N": 78141127.002,
+        "transferred_N": 78141127.029,
         "residual_N": 0.027463,
-        "residual_percent": 3.5178e-08,
+        "residual_percent": 3.5146e-08,
         "status": "PASS"
       },
       "Q": {
-        "generated_N": 24587639.301,
-        "transferred_N": 24587639.301,
+        "generated_N": 24636593.938,
+        "transferred_N": 24636593.938,
         "residual_N": 0.0,
         "residual_percent": 0.0,
         "status": "PASS"
@@ -239,29 +238,29 @@
   "analysis": {
     "manifest": {
       "format": "MCOC_P1L5_CURRENT_RESULTS_MANIFEST_V2",
-      "generated_utc": "2026-09-25T01:06:20.061296+00:00",
+      "generated_utc": "2026-09-25T02:49:54.866471+00:00",
       "status": "PASS",
       "analysis_version": "P1L5_CURRENT_ZONED_V2",
       "cases": {
         "G": {
           "status": "PASS",
-          "max_translation_m": 0.0938407107953782,
-          "equilibrium_relative_residual": 4.390035997160478e-15
+          "max_translation_m": 0.09732046410825426,
+          "equilibrium_relative_residual": 3.623214478399367e-15
         },
         "Q": {
           "status": "PASS",
-          "max_translation_m": 0.038705792941206955,
-          "equilibrium_relative_residual": 1.0605748621565496e-15
+          "max_translation_m": 0.03870087975829413,
+          "equilibrium_relative_residual": 2.1169348513801135e-15
         },
         "EX": {
           "status": "PASS",
           "max_translation_m": 0.06697750514083883,
-          "equilibrium_relative_residual": 1.4165835903277292e-14
+          "equilibrium_relative_residual": 8.321253689759968e-14
         },
         "EY": {
           "status": "PASS",
           "max_translation_m": 0.09928750923069962,
-          "equilibrium_relative_residual": 5.391474858709724e-14
+          "equilibrium_relative_residual": 6.673898898385722e-14
         }
       },
       "linear_superposition_compatible": true,
@@ -269,82 +268,80 @@
       "result_state": "CURRENT_WITH_DOCUMENTED_FALLBACKS",
       "load_contract": {
         "status": "PASS_WITH_EXPLICIT_UNRESOLVED",
-        "G_total_N": 78069224.879,
-        "Q_total_N": 24587639.301,
+        "G_total_N": 78141127.002,
+        "Q_total_N": 24636593.938,
         "unresolved_load_ids": [
           "L700-P2-POINT-SC-7000-SC_POINT",
           "L700-P2-POINT-SC-7000-PM_ADIC_POINT",
           "L700-P3-POINT-SC-6000-SC_POINT",
           "L700-P3-POINT-SC-6000-PM_ADIC_POINT",
           "L700-P3-POINT-SC-6700-SC_POINT",
-          "L700-P3-POINT-SC-6700-PM_ADIC_POINT",
-          "L700-E2-P4-LINE-SC-100-SC_LINE",
-          "L700-E2-P4-LINE-SC-100-PM_ADIC_LINE"
+          "L700-P3-POINT-SC-6700-PM_ADIC_POINT"
         ]
       }
     },
     "case_qa": {
       "G": {
         "finite": true,
-        "max_translation_m": 0.0938407107953782,
+        "max_translation_m": 0.09732046410825426,
         "external_force_N": [
           0.0,
           0.0,
-          -78069224.872
+          -78141126.994
         ],
         "reaction_force_N": [
-          3.538582404871704e-08,
-          -3.432614903431386e-08,
-          78069224.87199965
+          8.555048225389328e-08,
+          -4.884986992692575e-08,
+          78141126.99400029
         ],
         "equilibrium_residual_N": [
-          3.538582404871704e-08,
-          -3.432614903431386e-08,
-          -3.427267074584961e-07
+          8.555048225389328e-08,
+          -4.884986992692575e-08,
+          2.8312206268310547e-07
         ],
-        "equilibrium_relative_residual": 4.390035997160478e-15,
+        "equilibrium_relative_residual": 3.623214478399367e-15,
         "equilibrium_status": "PASS"
       },
       "Q": {
         "finite": true,
-        "max_translation_m": 0.038705792941206955,
+        "max_translation_m": 0.03870087975829413,
         "external_force_N": [
           0.0,
           0.0,
-          -24587639.232
+          -24636593.868
         ],
         "reaction_force_N": [
-          -2.2830136003904045e-08,
-          -1.767102730809711e-08,
-          24587639.232000027
+          2.131037035724148e-08,
+          -1.737271304591559e-08,
+          24636593.86799995
         ],
         "equilibrium_residual_N": [
-          -2.2830136003904045e-08,
-          -1.767102730809711e-08,
-          2.60770320892334e-08
+          2.131037035724148e-08,
+          -1.737271304591559e-08,
+          -5.21540641784668e-08
         ],
-        "equilibrium_relative_residual": 1.0605748621565496e-15,
+        "equilibrium_relative_residual": 2.1169348513801135e-15,
         "equilibrium_status": "PASS"
       },
       "EX": {
         "finite": true,
         "max_translation_m": 0.06697750514083883,
         "external_force_N": [
-          17619465.0073,
+          17638740.8955,
           0.0,
           0.0
         ],
         "reaction_force_N": [
-          -17619465.00729975,
-          -6.67851054458879e-08,
-          1.0710209608078003e-08
+          -17638740.895498533,
+          -1.1205884220544249e-08,
+          -9.313225746154785e-10
         ],
         "equilibrium_residual_N": [
-          2.4959444999694824e-07,
-          -6.67851054458879e-08,
-          1.0710209608078003e-08
+          1.4677643775939941e-06,
+          -1.1205884220544249e-08,
+          -9.313225746154785e-10
         ],
-        "equilibrium_relative_residual": 1.4165835903277292e-14,
+        "equilibrium_relative_residual": 8.321253689759968e-14,
         "equilibrium_status": "PASS"
       },
       "EY": {
@@ -352,20 +349,20 @@
         "max_translation_m": 0.09928750923069962,
         "external_force_N": [
           0.0,
-          17619465.0073,
+          17638740.8955,
           0.0
         ],
         "reaction_force_N": [
-          -3.79732227884233e-08,
-          -17619465.00730095,
-          -1.0128132998943329e-08
+          -6.511254468932748e-08,
+          -17638740.895501178,
+          -1.1175870895385742e-08
         ],
         "equilibrium_residual_N": [
-          -3.79732227884233e-08,
-          -9.499490261077881e-07,
-          -1.0128132998943329e-08
+          -6.511254468932748e-08,
+          -1.1771917343139648e-06,
+          -1.1175870895385742e-08
         ],
-        "equilibrium_relative_residual": 5.391474858709724e-14,
+        "equilibrium_relative_residual": 6.673898898385722e-14,
         "equilibrium_status": "PASS"
       }
     },
@@ -408,9 +405,9 @@
         "case": "G",
         "node_tag": 177,
         "selection": "same retained node nearest P3 geometry centroid used for seismic application",
-        "current_Uz_mm": -2.820192,
+        "current_Uz_mm": -2.814782,
         "etabs_reference_Uz_mm": -7.181,
-        "ratio_current_to_etabs": 0.3927,
+        "ratio_current_to_etabs": 0.392,
         "comparability": "SECONDARY_ORDER_OF_MAGNITUDE_ONLY"
       },
       {
@@ -420,9 +417,9 @@
         "case": "Q",
         "node_tag": 177,
         "selection": "same retained node nearest P3 geometry centroid used for seismic application",
-        "current_Uz_mm": -1.097867,
+        "current_Uz_mm": -1.094183,
         "etabs_reference_Uz_mm": -3.213,
-        "ratio_current_to_etabs": 0.3417,
+        "ratio_current_to_etabs": 0.3405,
         "comparability": "SECONDARY_ORDER_OF_MAGNITUDE_ONLY"
       }
     ],
@@ -449,10 +446,10 @@
       "format": "MCOC_CURRENT_DATASET_V1",
       "geometry_version": "8497cdeefbacaf1e1338a90c39f840a3d0495c51a69c94a260260720207a3d97",
       "fe_version": "2c6cea298664a2d1a81c43f55c4780e3aa06d4a5298d40ef55f0f542e46d6920",
-      "loads_version": "23868d3ac967ae4c66861f1a9f5ca5a6ba9c8cd89d29a1f16f0210b7d37ec1b7",
+      "loads_version": "546500baf02dde4a490f8f2626eac8df3ddac2b5f1115f617bf821ed085a0dff",
       "analysis_version": "P1L5_CURRENT_ZONED_V2",
-      "git_commit": "3bc9749c34fc7ddd2ab732de05c6e2ac91e1c560",
-      "timestamp": "2026-09-25T01:02:36.752434+00:00",
+      "git_commit": "917c09fd6c8140aaa8c7ee6d1eb97e25ec75cddc",
+      "timestamp": "2026-09-25T02:49:59.567447+00:00",
       "status": "CURRENT_VERIFIED",
       "geometry_stream_sha256": "a3b8bb3d0ac7143a7053fba294f94dd44e51e17e35cea15bb0470f46fdfd1b04",
       "units": {
@@ -481,16 +478,16 @@
       "loads_approved": true,
       "linear_verified": true,
       "payload_file": "p1l5_current_analysis_cases.json",
-      "payload_sha256": "ddde61696cd7b88577dd2a947f96ece7be9624a26ad2c34036552a750eba21f8",
+      "payload_sha256": "76415544aeea7e4334b44c4e2f6e51bf594e8a2acaa35c6752f687293ad33006",
       "source_geometry": "entregas/P1L5/modelo_central/model_master.json",
       "source_fe": "entregas/P1L5/modelo_central/model_master.json#/fe_topology",
       "source_loads": "entregas/P1L5/modelo_central/loads.json",
       "basis_policy": "Identical K, supports, local axes, node/member ordering and signed SI components.",
       "capacity_policy": "Demand changes by compatible linear superposition; section/material changes require reanalysis and capacity compatibility review.",
       "result_state": "CURRENT_WITH_DOCUMENTED_FALLBACKS",
-      "unresolved_load_count": 10,
+      "unresolved_load_count": 6,
       "current_element_loads_file": "p1l5_current_loads_by_element.json",
-      "current_element_loads_sha256": "d24ddd7efce682d108198ec7008d78b048f4591991c59e14f4d1f1e70d58df98"
+      "current_element_loads_sha256": "5cc46fbcb1e27f77b93d14775e0999e6eb6349d4c713f42da677b72cc96b9d5a"
     },
     "load_inspector": "PASS",
     "basis_cases": [

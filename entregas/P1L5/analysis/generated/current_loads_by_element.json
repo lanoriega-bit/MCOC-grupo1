@@ -1,6 +1,6 @@
 {
   "format": "MCOC_P1L5_CURRENT_ELEMENT_LOADS_V1",
-  "generated_utc": "2026-09-25T01:05:53.520249+00:00",
+  "generated_utc": "2026-09-25T02:49:19.137205+00:00",
   "data_state": "CURRENT_RECOMPUTED",
   "elements": [
     {
@@ -14905,24 +14905,28 @@
       "floor": "P4",
       "type": "beam",
       "Q": {
-        "tributary_area_m2": 27.568309,
-        "equivalent_width_m": 3.446039,
-        "surface_force_N": 54070.552,
-        "equivalent_line_load_N_m": 6758.819,
+        "tributary_area_m2": 29.854833,
+        "equivalent_width_m": 3.731854,
+        "surface_force_N": 72009.06,
+        "equivalent_line_load_N_m": 9001.132,
         "zone_ids": [
-          "L700-E2-P4-H05-SC_SURFACE"
+          "L700-E2-P4-H05-SC_SURFACE",
+          "L700-E2-P4-LINE-SC-100-STRIP-PM_ADIC_SURFACE",
+          "L700-E2-P4-LINE-SC-100-STRIP-SC_SURFACE"
         ],
         "status": "CURRENT_RECOMPUTED"
       },
       "G": {
         "self_weight_N": 94143.84,
-        "tributary_dead_N": 155452.838,
-        "total_associated_N": 249596.678,
+        "tributary_dead_N": 181800.021,
+        "total_associated_N": 275943.861,
         "status": "CURRENT_COMPUTED"
       },
       "source_load_ids": [
         "L700-E2-P4-H05-PM_ADIC_SURFACE",
-        "L700-E2-P4-H05-SC_SURFACE"
+        "L700-E2-P4-H05-SC_SURFACE",
+        "L700-E2-P4-LINE-SC-100-STRIP-PM_ADIC_SURFACE",
+        "L700-E2-P4-LINE-SC-100-STRIP-SC_SURFACE"
       ]
     },
     {
@@ -14986,24 +14990,28 @@
       "floor": "P4",
       "type": "beam",
       "Q": {
-        "tributary_area_m2": 22.169355,
-        "equivalent_width_m": 4.618616,
-        "surface_force_N": 43481.422,
-        "equivalent_line_load_N_m": 9058.63,
+        "tributary_area_m2": 24.779665,
+        "equivalent_width_m": 5.16243,
+        "surface_force_N": 63960.136,
+        "equivalent_line_load_N_m": 13325.028,
         "zone_ids": [
-          "L700-E2-P4-H05-SC_SURFACE"
+          "L700-E2-P4-H05-SC_SURFACE",
+          "L700-E2-P4-LINE-SC-100-STRIP-PM_ADIC_SURFACE",
+          "L700-E2-P4-LINE-SC-100-STRIP-SC_SURFACE"
         ],
         "status": "CURRENT_RECOMPUTED"
       },
       "G": {
         "self_weight_N": 56486.304,
-        "tributary_dead_N": 125009.087,
-        "total_associated_N": 181495.391,
+        "tributary_dead_N": 155087.199,
+        "total_associated_N": 211573.503,
         "status": "CURRENT_COMPUTED"
       },
       "source_load_ids": [
         "L700-E2-P4-H05-PM_ADIC_SURFACE",
-        "L700-E2-P4-H05-SC_SURFACE"
+        "L700-E2-P4-H05-SC_SURFACE",
+        "L700-E2-P4-LINE-SC-100-STRIP-PM_ADIC_SURFACE",
+        "L700-E2-P4-LINE-SC-100-STRIP-SC_SURFACE"
       ]
     },
     {
@@ -15094,24 +15102,28 @@
       "floor": "P4",
       "type": "beam",
       "Q": {
-        "tributary_area_m2": 9.831365,
-        "equivalent_width_m": 6.202754,
-        "surface_force_N": 19282.552,
-        "equivalent_line_load_N_m": 12165.648,
+        "tributary_area_m2": 11.174512,
+        "equivalent_width_m": 7.050165,
+        "surface_force_N": 29819.967,
+        "equivalent_line_load_N_m": 18813.859,
         "zone_ids": [
-          "L700-E2-P4-H05-SC_SURFACE"
+          "L700-E2-P4-H05-SC_SURFACE",
+          "L700-E2-P4-LINE-SC-100-STRIP-PM_ADIC_SURFACE",
+          "L700-E2-P4-LINE-SC-100-STRIP-SC_SURFACE"
         ],
         "status": "CURRENT_RECOMPUTED"
       },
       "G": {
         "self_weight_N": 18652.248,
-        "tributary_dead_N": 55437.337,
-        "total_associated_N": 74089.585,
+        "tributary_dead_N": 70914.165,
+        "total_associated_N": 89566.413,
         "status": "CURRENT_COMPUTED"
       },
       "source_load_ids": [
         "L700-E2-P4-H05-PM_ADIC_SURFACE",
-        "L700-E2-P4-H05-SC_SURFACE"
+        "L700-E2-P4-H05-SC_SURFACE",
+        "L700-E2-P4-LINE-SC-100-STRIP-PM_ADIC_SURFACE",
+        "L700-E2-P4-LINE-SC-100-STRIP-SC_SURFACE"
       ]
     },
     {
