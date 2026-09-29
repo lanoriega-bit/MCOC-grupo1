@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.Networking;
 
 namespace Mcoc.UnityViewer.P1L6AR
 {
@@ -26,8 +27,6 @@ namespace Mcoc.UnityViewer.P1L6AR
         IEnumerator Load()
         {
             string path = Path.Combine(Application.streamingAssetsPath, datasetFileName);
-            // Desktop prototype: Android packaging/transport will be supplied
-            // by the final phone integration without changing this data contract.
             string json;
             if (!path.Contains("://") && !path.Contains(":///"))
             {
@@ -40,8 +39,16 @@ namespace Mcoc.UnityViewer.P1L6AR
             }
             else
             {
-                Fail("La ruta StreamingAssets requiere el adaptador móvil P1L6: " + path);
-                yield break;
+                using (UnityWebRequest request = UnityWebRequest.Get(path))
+                {
+                    yield return request.SendWebRequest();
+                    if (request.result != UnityWebRequest.Result.Success)
+                    {
+                        Fail("No se pudo cargar el dataset AR desde StreamingAssets: " + request.error);
+                        yield break;
+                    }
+                    json = request.downloadHandler.text;
+                }
             }
 
             try
