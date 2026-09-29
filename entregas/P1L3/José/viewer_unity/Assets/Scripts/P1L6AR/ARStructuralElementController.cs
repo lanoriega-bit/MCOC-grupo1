@@ -22,6 +22,7 @@ namespace Mcoc.UnityViewer.P1L6AR
 
         void Awake()
         {
+            if (anchorProviderBehaviour == null) anchorProviderBehaviour = FindAnyObjectByType<FakeAnchorProvider>();
             anchorProvider = anchorProviderBehaviour as IAnchorProvider;
             transformAdapter = transformBehaviour as IModelToARTransform;
             directAnchor = new GameObject("DirectAnchorAdapter").transform;
