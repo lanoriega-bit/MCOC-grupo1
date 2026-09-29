@@ -878,6 +878,7 @@ namespace Mcoc.UnityViewer
         public string section_id;
         public DemandCapacityDemand demand;
         public DemandCapacityCurve capacity;
+        public BeamCapacityData beam_capacity;
         public DemandCapacityCheck demand_capacity;
         public DemandCapacityTraceability traceability;
     }
@@ -906,6 +907,10 @@ namespace Mcoc.UnityViewer
         public string source;
         public string note;
         public List<DemandCapacityPoint> points;
+        public List<DemandCapacityPoint> points_my;
+        public List<DemandCapacityPoint> points_mz;
+        public string capacity_signature;
+        public string assumption_status;
         public string invalid_points_note;
     }
 
@@ -1031,6 +1036,20 @@ namespace Mcoc.UnityViewer
         public string revised_diagnostic;
         public string duplicate_classification;
         public string evidence;
+    }
+
+    [Serializable]
+    public class BeamCapacityData
+    {
+        public string status;
+        public string capacity_signature;
+        public string assumption_status;
+        public double phi_Mny_kNm;
+        public double phi_Mnz_kNm;
+        public double phi_Vy_kN;
+        public double phi_Vz_kN;
+        public string source;
+        public string note;
     }
 
     [Serializable]

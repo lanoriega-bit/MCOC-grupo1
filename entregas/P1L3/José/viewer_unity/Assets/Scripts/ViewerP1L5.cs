@@ -247,42 +247,82 @@ namespace Mcoc.UnityViewer
             out double capacityM, out double ratio, out string axis, out string status)
         {
             p = 0; moment = 0; capacityM = double.NaN; ratio = double.NaN;
-            axis = (item?.capacity?.pm_axis ?? "My").ToUpperInvariant(); status = "NO CAPACITY DATA";
+            axis = "MY"; status = "NO CAPACITY DATA";
             var rows = analysisByElementId.TryGetValue(id, out var available) ? available : null;
-            if (rows == null || rows.Count == 0 || item?.capacity?.points == null)
+            if (rows == null || rows.Count == 0 || item?.capacity == null)
                 return false;
-            int component = axis == "MZ" ? 5 : 4;
+            double momentMy=0,momentMz=0;
             foreach (var row in rows)
             {
                 var i = ForceVector(row, true); var j = ForceVector(row, false);
                 if (i == null || j == null) continue;
                 p = Math.Max(p, Math.Max(Math.Abs(i[0]), Math.Abs(j[0])) / 1000.0);
-                moment = Math.Max(moment, Math.Max(Math.Abs(i[component]), Math.Abs(j[component])) / 1000.0);
+                momentMy = Math.Max(momentMy, Math.Max(Math.Abs(i[4]), Math.Abs(j[4])) / 1000.0);
+                momentMz = Math.Max(momentMz, Math.Max(Math.Abs(i[5]), Math.Abs(j[5])) / 1000.0);
             }
-            var points = new List<DemandCapacityPoint>();
-            foreach (var point in item.capacity.points) if (point.valid && point.M_kNm >= 0) points.Add(point);
-            points.Sort((a, b) => a.compression_magnitude_kN.CompareTo(b.compression_magnitude_kN));
-            if (points.Count < 2) return false;
-            for (int k = 0; k < points.Count - 1; k++)
+            double axialDemand=p;
+            double CapacityAt(List<DemandCapacityPoint> source)
             {
-                double p0 = points[k].compression_magnitude_kN, p1 = points[k + 1].compression_magnitude_kN;
-                if (p < p0 || p > p1) continue;
-                double t = Math.Abs(p1 - p0) < 1e-9 ? 0 : (p - p0) / (p1 - p0);
-                capacityM = points[k].M_kNm + t * (points[k + 1].M_kNm - points[k].M_kNm);
-                break;
+                if(source==null)return double.NaN;
+                var points = new List<DemandCapacityPoint>();
+                foreach (var point in source) if (point.valid && point.M_kNm >= 0) points.Add(point);
+                points.Sort((a, b) => a.compression_magnitude_kN.CompareTo(b.compression_magnitude_kN));
+                for (int k = 0; k < points.Count - 1; k++)
+                {
+                    double p0 = points[k].compression_magnitude_kN, p1 = points[k + 1].compression_magnitude_kN;
+                    if (axialDemand < p0 || axialDemand > p1) continue;
+                    double t = Math.Abs(p1 - p0) < 1e-9 ? 0 : (axialDemand - p0) / (p1 - p0);
+                    return points[k].M_kNm + t * (points[k + 1].M_kNm - points[k].M_kNm);
+                }
+                return double.NaN;
             }
+            var myPoints=item.capacity.points_my??item.capacity.points;
+            var mzPoints=item.capacity.points_mz??item.capacity.points;
+            double capacityMy=CapacityAt(myPoints),capacityMz=CapacityAt(mzPoints);
+            double ratioMy=capacityMy>0?momentMy/capacityMy:double.NaN;
+            double ratioMz=capacityMz>0?momentMz/capacityMz:double.NaN;
+            if(double.IsNaN(ratioMy)&&double.IsNaN(ratioMz))return false;
+            bool useMz=double.IsNaN(ratioMy)||(!double.IsNaN(ratioMz)&&ratioMz>ratioMy);
+            axis=useMz?"MZ":"MY";
+            moment=useMz?momentMz:momentMy;
+            capacityM=useMz?capacityMz:capacityMy;
+            ratio=useMz?ratioMz:ratioMy;
             if (double.IsNaN(capacityM) || capacityM <= 0) return false;
-            ratio = moment / capacityM;
             status = ratio > 1.0 ? "EXCEEDS" : ratio > 0.85 ? "WARNING" : "OK";
             return true;
         }
 
         string BuildP1L5DemandCapacityText(string id, DemandCapacityElement item)
         {
+            if (item?.beam_capacity != null && item.type == "beam")
+                return BuildP1L5BeamCapacityText(id, item);
             if (!TryP1L5DemandCapacity(id, item, out double p, out double moment,
                 out double capacityM, out double ratio, out string axis, out string status))
                 return "NO CAPACITY DATA o demanda CURRENT fuera del rango/crosswalk compatible.";
-            return $"CURRENT R DINÁMICO\nP={p:F2} kN · {axis}={moment:F2} kN·m\nCapacidad interpolada={capacityM:F2} kN·m\nD/C={ratio:F2} · {status}\nCapacidad histórica compatible; demanda CURRENT superpuesta.";
+            return $"CURRENT R DINÁMICO\nP={p:F2} kN · {axis}={moment:F2} kN·m\nCapacidad interpolada={capacityM:F2} kN·m\nD/C={ratio:F2} · {status}\n{item.capacity.assumption_status}\nFirma: {item.capacity.capacity_signature}";
+        }
+
+        string BuildP1L5BeamCapacityText(string id, DemandCapacityElement item)
+        {
+            if (!analysisByElementId.TryGetValue(id, out var rows) || rows == null || rows.Count == 0)
+                return "NO CURRENT DEMAND DATA para esta viga.";
+            double my=0,mz=0,vy=0,vz=0;
+            foreach(var row in rows)
+            {
+                var i=ForceVector(row,true);var j=ForceVector(row,false);if(i==null||j==null)continue;
+                vy=Math.Max(vy,Math.Max(Math.Abs(i[1]),Math.Abs(j[1]))/1000.0);
+                vz=Math.Max(vz,Math.Max(Math.Abs(i[2]),Math.Abs(j[2]))/1000.0);
+                my=Math.Max(my,Math.Max(Math.Abs(i[4]),Math.Abs(j[4]))/1000.0);
+                mz=Math.Max(mz,Math.Max(Math.Abs(i[5]),Math.Abs(j[5]))/1000.0);
+            }
+            var c=item.beam_capacity;
+            double rMy=c.phi_Mny_kNm>0?my/c.phi_Mny_kNm:double.NaN;
+            double rMz=c.phi_Mnz_kNm>0?mz/c.phi_Mnz_kNm:double.NaN;
+            double rVy=c.phi_Vy_kN>0?vy/c.phi_Vy_kN:double.NaN;
+            double rVz=c.phi_Vz_kN>0?vz/c.phi_Vz_kN:double.NaN;
+            double ratio=Math.Max(Math.Max(rMy,rMz),Math.Max(rVy,rVz));
+            string state=ratio>1.0?"EXCEEDS":ratio>0.85?"WARNING":"OK";
+            return $"CURRENT R DINÁMICO · VIGA\nMy {my:F1}/{c.phi_Mny_kNm:F1} kN·m · D/C {rMy:F2}\nMz {mz:F1}/{c.phi_Mnz_kNm:F1} kN·m · D/C {rMz:F2}\nVy {vy:F1}/{c.phi_Vy_kN:F1} kN · D/C {rVy:F2}\nVz {vz:F1}/{c.phi_Vz_kN:F1} kN · D/C {rVz:F2}\nControl D/C={ratio:F2} · {state}\n{c.assumption_status}\nFirma: {c.capacity_signature}";
         }
 
         public void RunActiveDemoSequenceCheck()

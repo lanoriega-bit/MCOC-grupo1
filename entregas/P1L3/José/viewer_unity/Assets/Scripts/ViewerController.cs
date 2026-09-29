@@ -210,7 +210,7 @@ namespace Mcoc.UnityViewer
             delivery = null;
             capacity = null;
             p1l4Metadata = currentResultsAvailable ? JsonLoader.LoadP1L5CurrentStructuralMetadata() : null;
-            demandCapacity = null;
+            demandCapacity = currentResultsAvailable ? JsonLoader.LoadP1L6CurrentCapacity() : null;
             p1l4LoadCatalog = null;
             physicalContext = JsonLoader.LoadPhysicalContext();
             physicalContextByElementId.Clear();

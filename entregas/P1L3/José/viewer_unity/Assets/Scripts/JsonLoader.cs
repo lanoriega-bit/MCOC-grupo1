@@ -146,6 +146,11 @@ namespace Mcoc.UnityViewer
             return LoadOptional<DemandCapacityData>(fileName, "demanda-capacidad P1L4");
         }
 
+        public static DemandCapacityData LoadP1L6CurrentCapacity(string fileName = "p1l6_current_capacity.json")
+        {
+            return LoadOptional<DemandCapacityData>(fileName, "capacidad CURRENT para preparación P1L6");
+        }
+
         public static P1L4LoadCatalogData LoadP1L4LoadCatalog(string fileName = "p1l4_load_catalog.json")
         {
             return LoadOptional<P1L4LoadCatalogData>(fileName, "catalogo de cargas P1L4");
