@@ -11,6 +11,10 @@ namespace Mcoc.UnityViewer
             new Dictionary<string, FailureResult>();
         private bool structuralFailureVisualizationEnabled = true;
         private bool structuralDamageOverlayEnabled;
+        private readonly HashSet<string> previouslyExceededElementIds = new HashSet<string>();
+        private FailureResult firstExceededEvent;
+        private FailureResult currentCriticalFailure;
+        private int failureOkCount, failureWarningCount, failureExceededCount, failureNoDataCount;
 
         FailureResult StructuralFailureFor(string elementId)
         {
@@ -21,16 +25,43 @@ namespace Mcoc.UnityViewer
         void RefreshStructuralFailureStates()
         {
             structuralFailureByElementId.Clear();
-            if (!currentResultsAvailable || p1l5ReanalysisRequired || analysisResults == null) return;
+            failureOkCount = failureWarningCount = failureExceededCount = failureNoDataCount = 0;
+            currentCriticalFailure = null;
+            if (!currentResultsAvailable || p1l5ReanalysisRequired || analysisResults == null)
+            { previouslyExceededElementIds.Clear(); ApplyStructuralFailureVisualization(); return; }
             var visited = new HashSet<string>();
+            var exceededNow = new HashSet<string>();
+            FailureResult newlyExceeded = null;
             foreach (var info in allElements)
             {
                 if (info == null || info.isFeCandidateVisual ||
                     (info.category != "beam" && info.category != "column" && info.category != "wall")) continue;
                 string id = string.IsNullOrEmpty(info.humanId) ? info.id : info.humanId;
                 if (string.IsNullOrEmpty(id) || !visited.Add(id)) continue;
-                structuralFailureByElementId[id] = EvaluatePhysicalElementFailure(info, id);
+                var result = EvaluatePhysicalElementFailure(info, id);
+                structuralFailureByElementId[id] = result;
+                if (result.state == StructuralFailureState.OK) failureOkCount++;
+                else if (result.state == StructuralFailureState.WARNING) failureWarningCount++;
+                else if (result.state == StructuralFailureState.CAPACITY_EXCEEDED)
+                {
+                    failureExceededCount++; exceededNow.Add(id);
+                    if (currentCriticalFailure == null || result.demandCapacityRatio > currentCriticalFailure.demandCapacityRatio)
+                        currentCriticalFailure = result;
+                    if (!previouslyExceededElementIds.Contains(id) &&
+                        (newlyExceeded == null || result.demandCapacityRatio < newlyExceeded.demandCapacityRatio))
+                        newlyExceeded = result;
+                }
+                else failureNoDataCount++;
             }
+            if (newlyExceeded != null)
+            {
+                newlyExceeded.lambdaG = p1l5LambdaG; newlyExceeded.lambdaQ = p1l5LambdaQ;
+                newlyExceeded.lambdaEX = p1l5LambdaEX; newlyExceeded.lambdaEY = p1l5LambdaEY;
+                firstExceededEvent = newlyExceeded;
+            }
+            else if (exceededNow.Count == 0) firstExceededEvent = null;
+            previouslyExceededElementIds.Clear();
+            foreach (string id in exceededNow) previouslyExceededElementIds.Add(id);
             ApplyStructuralFailureVisualization();
             if (lastSelected != null) ShowInfo(lastSelected);
         }
@@ -117,6 +148,33 @@ namespace Mcoc.UnityViewer
             GUI.Label(new Rect(box.x + 6, box.y + 4, box.width - 12, 25), title, centered);
             GUI.Label(new Rect(box.x + 6, box.y + 29, box.width - 12, 28),
                 $"{id}  ·  D/C {result.demandCapacityRatio:F2}  ·  {result.governingMode}", centered);
+        }
+
+        void DrawStructuralFailureGlobalPanel()
+        {
+            GUILayout.Label("CAPACIDAD ESTRUCTURAL · CURRENT", currentHeading);
+            if (p1l5ReanalysisRequired)
+            {
+                GUILayout.Label("RESULTS STALE · evaluación bloqueada hasta reanálisis.", currentBody);
+                return;
+            }
+            int evaluated = failureOkCount + failureWarningCount + failureExceededCount;
+            GUILayout.Label($"{evaluated} elementos evaluados\n" +
+                $"{failureOkCount} OK  ·  {failureWarningCount} WARNING\n" +
+                $"{failureExceededCount} CAPACITY_EXCEEDED  ·  {failureNoDataCount} NO_DATA", currentBody);
+            if (firstExceededEvent != null)
+            {
+                GUILayout.Label("PRIMERA CAPACIDAD EXCEDIDA", currentHeading);
+                GUILayout.Label($"{firstExceededEvent.elementTag}\nD/C {firstExceededEvent.demandCapacityRatio:F2} · {firstExceededEvent.governingMode}\n" +
+                    $"λG={firstExceededEvent.lambdaG:F2}  λQ={firstExceededEvent.lambdaQ:F2}  λEX={firstExceededEvent.lambdaEX:F2}  λEY={firstExceededEvent.lambdaEY:F2}", currentBody);
+            }
+            if (currentCriticalFailure != null && GUILayout.Button("Ver elemento crítico", currentButton))
+            {
+                var target = allElements.Find(e => e != null && !e.isFeCandidateVisual &&
+                    (e.humanId ?? e.id) == currentCriticalFailure.elementTag);
+                if (target != null) Select(target);
+            }
+            GUILayout.Label("La marca indica demanda/capacidad en el análisis lineal. No simula redistribución ni colapso progresivo.", currentBody);
         }
 
         partial void ApplyStructuralFailureVisualization()

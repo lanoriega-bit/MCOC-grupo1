@@ -248,7 +248,10 @@ namespace Mcoc.UnityViewer
                 GUILayout.Label(currentResultsAvailable ? "Modelo académico/experimental CURRENT. 79 materiales usan fallback trazable; las cargas irresueltas están excluidas explícitamente. Aproximaciones visibles en trazabilidad." : "Las incidencias propuestas requieren revisión estructural antes de calcular fuerzas o desplazamientos.",currentBody);
             }
             if (Accordion("CAPACIDAD"))
-                GUILayout.Label("P–M representa resistencia de una sección. La demanda actual estará disponible después de la nueva corrida. Los estudios anteriores están en Avanzado → Histórico.",currentBody);
+            {
+                if (currentResultsAvailable) DrawStructuralFailureGlobalPanel();
+                else GUILayout.Label("P–M representa resistencia de una sección. La demanda actual estará disponible después de la nueva corrida. Los estudios anteriores están en Avanzado → Histórico.",currentBody);
+            }
             if (!presentationMode && Accordion("DIAGNÓSTICO"))
             {
                 DrawRevisionChanges();

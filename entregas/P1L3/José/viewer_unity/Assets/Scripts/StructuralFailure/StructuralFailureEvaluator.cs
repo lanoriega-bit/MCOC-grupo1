@@ -35,6 +35,7 @@ namespace Mcoc.UnityViewer
         public CurrentElementDemand demand;
         public string controllingAnalysisId;
         public int controllingOpenSeesTag;
+        public double lambdaG, lambdaQ, lambdaEX, lambdaEY;
         public string message;
     }
 
