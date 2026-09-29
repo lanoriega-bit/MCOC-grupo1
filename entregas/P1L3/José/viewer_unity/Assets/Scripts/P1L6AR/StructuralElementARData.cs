@@ -71,6 +71,7 @@ namespace Mcoc.UnityViewer.P1L6AR
         public double height_m;
         public double depth_m;
         public double thickness_m;
+        public double length_m;
     }
 
     [Serializable] public sealed class ARMaterial
