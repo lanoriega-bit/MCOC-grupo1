@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
@@ -7,6 +8,13 @@ public class LuisARImageAnchor : MonoBehaviour
     [SerializeField] ARTrackedImageManager trackedImageManager;
     [SerializeField] ARAnchorManager anchorManager;
     [SerializeField] GameObject cubePrefab;
+
+    public string ReferenceImageName { get; private set; }
+    public Pose AnchorPose { get; private set; }
+    public TrackingState TrackingStatus { get; private set; }
+    public bool HasAnchor => currentAnchor != null;
+
+    public event Action<string, Pose, TrackingState> TrackingUpdated;
 
     ARAnchor currentAnchor;
     GameObject currentCube;
@@ -41,11 +49,32 @@ public class LuisARImageAnchor : MonoBehaviour
         if (image.referenceImage.name != "ImagenPrueba")
             return;
 
+        ReferenceImageName = image.referenceImage.name;
+        TrackingStatus = image.trackingState;
+
+        Pose detectedPose = new Pose(
+            image.transform.position,
+            image.transform.rotation
+        );
+
+        AnchorPose = currentAnchor != null
+            ? new Pose(
+                currentAnchor.transform.position,
+                currentAnchor.transform.rotation
+            )
+            : detectedPose;
+
+        TrackingUpdated?.Invoke(
+            ReferenceImageName,
+            AnchorPose,
+            TrackingStatus
+        );
+
         Debug.Log(
-            $"IMAGEN DETECTADA: {image.referenceImage.name}\n" +
-            $"Tracking: {image.trackingState}\n" +
-            $"Position: {image.transform.position}\n" +
-            $"Rotation: {image.transform.rotation}"
+            $"IMAGEN DETECTADA: {ReferenceImageName}\n" +
+            $"Tracking: {TrackingStatus}\n" +
+            $"Position: {AnchorPose.position}\n" +
+            $"Rotation: {AnchorPose.rotation}"
         );
 
         if (image.trackingState != TrackingState.Tracking)
@@ -56,18 +85,18 @@ public class LuisARImageAnchor : MonoBehaviour
 
         creatingAnchor = true;
 
-        Pose anchorPose = new Pose(
-            image.transform.position,
-            image.transform.rotation
-        );
-
-        var result = await anchorManager.TryAddAnchorAsync(anchorPose);
+        var result = await anchorManager.TryAddAnchorAsync(detectedPose);
 
         creatingAnchor = false;
 
         if (result.status.IsSuccess())
         {
             currentAnchor = result.value;
+
+            AnchorPose = new Pose(
+                currentAnchor.transform.position,
+                currentAnchor.transform.rotation
+            );
 
             currentCube = Instantiate(
                 cubePrefab,
@@ -80,10 +109,16 @@ public class LuisARImageAnchor : MonoBehaviour
             currentCube.transform.localRotation =
                 Quaternion.identity;
 
+            TrackingUpdated?.Invoke(
+                ReferenceImageName,
+                AnchorPose,
+                TrackingStatus
+            );
+
             Debug.Log(
                 $"ANCHOR CREADO\n" +
-                $"Position: {currentAnchor.transform.position}\n" +
-                $"Rotation: {currentAnchor.transform.rotation}"
+                $"Position: {AnchorPose.position}\n" +
+                $"Rotation: {AnchorPose.rotation}"
             );
         }
         else
