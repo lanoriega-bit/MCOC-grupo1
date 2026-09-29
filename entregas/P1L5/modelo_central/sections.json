@@ -1114,7 +1114,7 @@
         "section_source": null,
         "section_confidence": null
       },
-      "used_by_count": 10,
+      "used_by_count": 0,
       "provenance_examples": [
         {
           "element_id": "E2-S1-L-001",
@@ -2034,6 +2034,74 @@
           "source_layer": "RLE-MURO_CONTOUR_PAIR",
           "section_source": null,
           "section_confidence": null
+        }
+      ]
+    },
+    {
+      "section_id": "SEC_SLAB_POLYGON_0.150",
+      "type": "slab_polygonal",
+      "units": "m",
+      "dimensions": {
+        "thickness_m": 0.15
+      },
+      "status": "CURRENT_CAD_POLYGON_NOT_FE_MODELED",
+      "provenance": {
+        "source": "entregas/P1L5/analysis/generated/current_tributary_panels.json",
+        "source_layer": "AUDITED_CAD_LOAD_ZONE_POLYGONS",
+        "section_source": "APPROVED_UNIFORM_SLAB_THICKNESS",
+        "section_confidence": "APPROVED_FOR_CURRENT_BASELINE"
+      },
+      "used_by_count": 10,
+      "provenance_examples": [
+        {
+          "element_id": "E1-P1-L-001",
+          "building": "EDIFICIO_1",
+          "floor": "P1"
+        },
+        {
+          "element_id": "E1-P2-L-001",
+          "building": "EDIFICIO_1",
+          "floor": "P2"
+        },
+        {
+          "element_id": "E1-P3-L-001",
+          "building": "EDIFICIO_1",
+          "floor": "P3"
+        },
+        {
+          "element_id": "E1-P4-L-001",
+          "building": "EDIFICIO_1",
+          "floor": "P4"
+        },
+        {
+          "element_id": "E1-S1-L-001",
+          "building": "EDIFICIO_1",
+          "floor": "S1"
+        },
+        {
+          "element_id": "E2-P1-L-001",
+          "building": "EDIFICIO_2",
+          "floor": "P1"
+        },
+        {
+          "element_id": "E2-P2-L-001",
+          "building": "EDIFICIO_2",
+          "floor": "P2"
+        },
+        {
+          "element_id": "E2-P3-L-001",
+          "building": "EDIFICIO_2",
+          "floor": "P3"
+        },
+        {
+          "element_id": "E2-P4-L-001",
+          "building": "EDIFICIO_2",
+          "floor": "P4"
+        },
+        {
+          "element_id": "E2-S1-L-001",
+          "building": "EDIFICIO_2",
+          "floor": "S1"
         }
       ]
     }
