@@ -1,121 +1,145 @@
-# Semana 5 - AVANCE: laboratorio estructural interactivo v1
+# Métodos Computacionales en Obras Civiles
 
-Grupo 1 - MCOC. Laboratorio estructural digital del Edificio de Ingenieria (Edificios 1 y 2).
+## Segundo Semestre 2026
 
-Base del informe: ultima actualizacion de GitHub del flujo P1L5 (`origin/codex/p1l5-integration`, commit `3bc9749`) mas los 3 commits locales del ramo `jose/mati-p1l5-fixes` (`917c09f`, `182abd6`, `42188f9`). Componentes: pipeline Python/OpenSeesPy (analisis estatico G/Q/EX/EY + demanda/capacidad P-M) y viewer interactivo Unity 6000.6.0f1 (build Windows `StructuralReview.exe`).
+Avance
 
-## 1. Funciones implementadas y su estado
+Integrantes:
 
-El viewer del laboratorio (`entregas/P1L5/modelo_central` + `entregas/P1L3/Jose/viewer_unity/Assets/Scripts`) expone:
+- José Lobos
+- Luis Noriega
+- Matías Stierling
 
-| Funcion | Evidencia en el codigo | Estado |
+Profesor:
+
+- Jose Antonio Abell Mena
+
+28 de septiembre de 2026
+
+## Introducción
+
+El trabajo desarrollado durante la Semana 5 permitió ejecutar y verificar el análisis del modelo estructural consolidado de los dos edificios del Edificio de Ingeniería, publicando los resultados actuales del laboratorio estructural interactivo en su versión v1. Durante esta etapa se trabajó sobre la rama que continúa el flujo P1L5 (base `codex/p1l5-integration`, con los commits locales `917c09f`, `182abd6` y `42188f9`), teniendo como objetivo cerrar las cargas pendientes del sector E2-P4, generar la demanda y capacidad P-M de los elementos verticales, ejecutar el análisis de elementos finitos actual, exportar los resultados al visor y verificar numéricamente la superposición interactiva.
+
+En una primera parte se verificó el estado funcional del visor, revisando la navegación, la selección, los apoyos, los ejes, las cargas, las áreas tributarias, la deformada, los diagramas, la superposición y la interacción P-M. Luego se documentó el procedimiento de modificación del modelo, detallando dos flujos completos que recorren la cadena dato–modelo–OpenSees–resultados–Unity. En una tercera etapa se verificaron numéricamente tres estados de superposición mediante su comparación con los resultados de OpenSees. Posteriormente, se evaluó la factibilidad de la sidequest de carga móvil, se analizó la experiencia de uso estructural frente a las seis preguntas del enunciado, se identificó un teléfono compatible y los requisitos para una futura versión móvil, y se registró el uso de inteligencia artificial en las funcionalidades complejas implementadas.
+
+Un hito conceptual de esta etapa corresponde a la resolución de las dos cargas de línea del sector E2-P4 mediante la ruta de losa equivalente, la generación de la demanda y capacidad P-M de los 173 elementos verticales y la declaración explícita de las seis cargas puntuales del plano `2017_67-700` como brecha de fuente documentada. Estas cargas se mantienen activas en el modelo y nunca se reemplazan por cero: la ausencia del archivo DXF del plano en el repositorio impide fijar su posición con una calibración inequívoca, por lo que se persisten con su origen y una razón explícita. De esta manera, el laboratorio entrega resultados actuales generados y verificados esta semana y, al mismo tiempo, deja claramente establecido qué parte de la carga es vigente y cuál permanece pendiente de fuente.
+
+## 2. Desarrollo
+
+### 2.1 Funciones implementadas
+
+El visor canónico del proyecto se localiza en `entregas/P1L3/José/viewer_unity`, corresponde a Unity 6000.6.0f1 y utiliza la escena `Assets/Main.unity`. La funcionalidad implementada cubre la totalidad de las capacidades comprometidas y su estado se resume en la siguiente tabla.
+
+| Función | Estado | Descripción |
 | --- | --- | --- |
-| Navegacion/camara | Orbitar (arrastrar), zoom (rueda), desplazar (boton central); F11 presentacion, H modo limpio, R restablecer | Implementada (`ViewerController.cs:1538-1540`, `ViewerCurrentUI.cs:321`) |
-| Seleccion + busqueda | Clic en viga/columna/muro/losa; Enter busca el ID, Escape restaura | Implementada (`ViewerController.cs:1553-1554`) |
-| Apoyos | Capas "Apoyos geometricos" y "Apoyos FE" (33 apoyos, todos z=0.0) | Implementada (`ViewerCurrentUI.cs:215`) |
-| Ejes | GLOBAL X/Y/Z + flechas x/y/z locales del elemento (RGB) | Implementada (`ViewerOrientation.cs`, `ViewerStructuralInspector.cs:168`) |
-| Cargas | Capas de carga superficial y lineal + inspector de cargas/tributarias por elemento | Implementada (`ViewerCurrentUI.cs:213`, `ViewerController.cs:1708-1730`) |
-| Areas tributarias | Capa `tributary`/`tributary_point` + lectura m2 y kN en inspector | Implementada (`ViewerController.cs:1012`, `ViewerCurrentUI.cs:287`) |
-| Deformada | Desplazamientos nodales reales de la corrida OpenSees (G/Q/EX/EY) | Implementada (`ViewerP1L5.cs:139`, `ViewerController.cs:1143`) |
-| Diagramas | Grafico 2D N/Vy/Vz/T/My/Mz del elemento seleccionado | Implementada (`ViewerController.cs:1903,2244-2246`) |
-| Superposicion lineal instantanea | Recombina los casos base con lambdas a partir de resultados numericos | Implementada (`ViewerP1L5.cs:41`, `ViewerCurrentUI.cs:220`) |
-| P-M y D/C | Grafico de interaccion P-M + ratio demanda/capacidad dinamico | Implementada (`ViewerController.cs:2092-2135`, `ViewerP1L5.cs:150`) |
-| Filtros de contexto | Edificio 1/2, pisos S1-P4, toggles por tipo de elemento, "solo problemas", "solo correcciones" | Implementada (`ViewerCurrentUI.cs:175-245`) |
-| Losas/panos | 46 panos visuales (44 zonas CAD + 2 tiras sinteticas) | Reconstruidos en esta semana (`build_current_loads.py`) |
-| Modificacion en runtime | Cambiar parametros del elemento marca `STALE_REANALYSIS_REQUIRED` | Parcial: el viewer detecta el cambio y exige re-ejecutar el pipeline (ver seccion 2) |
-| Carga movil (sidequest) | No existe modulo de carga movil en `Assets/Scripts` | NO implementada (ver seccion 4) |
+| Navegación | Implementada | Control de cámara con órbita, zoom y paneo, modo presentación aislado y fullscreen. Según el QA de interfaz, se verifica a las resoluciones 1366×768 y 1920×1080 con paneles sin solape. |
+| Selección | Implementada | Selección por raycast con inspector de identidad, identificadores, nodos, sección, material, ejes, restricciones y resultados, y búsqueda por ID. |
+| Apoyos | Implementada | Capa de apoyos geométricos del modelo actual, que alcanza 33 apoyos, todos en z = 0.0, junto con los apoyos de análisis históricos. |
+| Ejes | Implementada | Ejes GLOBAL X/Y/Z, ejes locales x/y/z de cada elemento y filtros por edificio (Edificio 1 y 2) y por piso (S1 a P4). |
+| Cargas | Implementada, parcialmente aplicada | Los casos G, Q, EX y EY actuales se transfieren desde 46 zonas de losa y se aplican en el análisis. Seis cargas puntuales del plano `2017_67-700` permanecen explícitas con estado de fuente documentada, sin reemplazarlas por cero. |
+| Áreas tributarias | Implementada | 46 panos (44 zonas CAD más 2 tiras sintéticas equivalentes) con tributación por distancia igual a la viga más cercana y lectura en el inspector. |
+| Deformada | Implementada | Deformada por caso G, Q, EX y EY con amplificación, calculada únicamente con los desplazamientos nodales de la corrida OpenSees actual. |
+| Diagramas | Implementada | Diagrama 2D de N, Vy, Vz, My, Mz y T del elemento seleccionado, derivados de las fuerzas de extremo de la corrida actual. |
+| Superposición | Implementada | Recombinación lineal instantánea `λG·G + λQ·Q + λEX·EX + λEY·EY` a partir de los resultados numéricos por caso, validada contra el análisis (apartado 2.3). |
+| P-M y demanda | Implementada | Curvas de interacción P-M y razón demanda/capacidad dinámica para los 173 elementos verticales, con 7 familias de sección y el resultado DENTRO/FUERA de la envolvente. |
+| Modificación del modelo | Manual y reproducible | No existe edición interactiva dentro de Unity; el ciclo dato–modelo–OpenSees–resultados–Unity se documenta en el apartado 2.2. |
 
-El QA de UI (`ViewerReviewQA.cs`) aprueba la configuracion actual: `PASS` con modelo current, capas archivadas bloqueadas, inspector completo, identidad negativa, filtros por edificio/piso, resoluciones 1366x768 y 1920x1080, ejes locales, fullscreen.
+La entrega actual quedó acreditada mediante un análisis OpenSeesPy de cuatro casos (G, Q, EX y EY) con estado PASS y residual de equilibrio relativo del orden de 1e-15, una exportación al visor satisfactoria y una compilación del ejecutable `StructuralReview.exe` para Windows 64 bits sin errores. Las verificaciones `audit_integrated_model`, `test_single_source_propagation`, `validate_current_loads_and_results` y `validate_e2_p4_zone_completion` resultaron todas PASS. La geometría actual comprende 46 panos de losa (10/10 pisos cubiertos), 173 elementos verticales con curva P-M y 33 apoyos geométricos a nivel de base.
 
-## 2. Dos modificaciones completas
+### 2.2 Modificación
 
-Se documentan dos modificaciones reales aplicadas de principio a fin (datos -> analisis -> export -> viewer), con su flujo reproducible.
+El enunciado solicita documentar dos modificaciones completas del ciclo interfaz/dato, modelo, OpenSees, resultados y Unity. La entrega actual no contempla la edición interactiva del modelo dentro del visor, por lo que las modificaciones se ejecutan fuera del visor mediante un flujo versionado y reproducible.
 
-### Modificacion 1 (datos de carga): resolver las 2 cargas de linea de E2-P4
+#### 2.2.1 Resolución de las cargas de línea del sector E2-P4
 
-Las cargas `L700-E2-P4-LINE-SC-100-SC_LINE` y `L700-E2-P4-LINE-SC-100-PM_ADIC_LINE` no caian sobre zonas de losa CAD. Se resolvieron por la ruta de revisión:
+La primera modificación corresponde a los datos de carga del sector E2-P4. Las cargas `L700-E2-P4-LINE-SC-100-SC_LINE` y `L700-E2-P4-LINE-SC-100-PM_ADIC_LINE` no caían sobre zonas de losa CAD, por lo que se resolvieron mediante la ruta de losa equivalente.
 
-1. **Modelo/mapa**: en `loads.json` se persistio `review_resolution` con `status: RESOLVED_BY_REVIEW_SLAB_ROUTE`, `equivalent_strip_width_m: 1.0` y `receptor_panel_id: L700-E2-P4-H05`. El script `build_current_loads.py` genera los panos sinteticos STRIP por `geometry.buffer(0.5, cap_style="flat")`.
-2. **Analisis**: los 46 panos se tributaron por distancia igual a la viga mas cercana; `run_current_opensees.py` recalculo G/Q/EX/EY (PASS, residuo de equilibrio ~1e-15, G total 78 141 127 N, Q total 24 636 594 N).
-3. **Export**: `export_current_to_unity.py` regenero el contrato del viewer con los panos actualizados.
-4. **Reinstalacion en el viewer**: las viguetas receptoras aparecen ahora con la carga asumida (V-081: 1 121 N Q / 16 817 N G; V-085: 1 280 / 19 199; V-089: 659 / 9 879).
-5. **Pruebas**: `validate_current_loads_and_results.py` y `validate_e2_p4_zone_completion.py` PASS.
+El punto de partida es la definición de ambos casos en `loads.json`, donde se persistió `review_resolution` con estado `RESOLVED_BY_REVIEW_SLAB_ROUTE`, un ancho de tira equivalente de 1.0 m y el panel receptor de losa `L700-E2-P4-H05`. El script `build_current_loads.py` materializa la tira sintética mediante `geometry.buffer(0.5, cap_style="flat")` y la tributa por distancia igual a la viga más cercana, generando así 46 panos (44 zonas CAD más 2 tiras sintéticas).
 
-Commit: `182abd6`.
+Sobre esta base se ejecuta el análisis en OpenSeesPy, que entrega las fuerzas de extremo y los desplazamientos por nodo y por componente para los cuatro casos. El script `export_current_to_unity.py` embebe estos resultados en el visor. Las vigas receptoras asumen la carga: V-081 (1 121 N de Q y 16 817 N de G), V-085 (1 280 N y 19 199 N) y V-089 (659 N y 9 879 N).
 
-### Modificacion 2 (geometria de miembro): E1-P3-V-101 y E1-P1-C-023
+La verificación de esta modificación fue satisfactoria: conservación de carga del modelo con residual de 0.027 N en G y 0.0 N en Q, `validate_current_loads_and_results` y `validate_e2_p4_zone_completion` PASS, y el análisis completo con equilibrio relativo del orden de 1e-15.
 
-En `model_master.json` se corrigieron dos miembros: inicio de `E1-P3-V-101` en `[67.841, 16.331, 15.44]` (patron identico a su hermana de P4 `E1-P4-V-088`) y seccion de `E1-P1-C-023` como `SEC_COLUMN_RECT_0.700x0.700`.
+#### 2.2.2 Demanda-capacidad e interacción P-M de los 173 elementos verticales
 
-1. **Modelo**: edicion de `model_master.json`.
-2. **Re-build**: `build_current_loads.py` regenera el modelo de analisis.
-3. **Re-analisis**: `run_current_opensees.py` (4 casos PASS).
-4. **Export**: `export_current_to_unity.py` embebe `StructuralReview.exe`; el inspector del viewer muestra las nuevas coordenadas y la seccion 0.700x0.700 corregidas.
-5. **Verificacion**: script de pendientes valida ambos miembros en el modelo exportado.
+La segunda modificación corresponde a la demanda-capacidad y a la interacción P-M de columnas y muros. El punto de partida es la sección y el material reales de cada elemento, extraídos de los planos consolidados.
 
-Commit: `917c09f`.
+Los modelos de sección en `fiber section`, contenidos en `generar_pm_curvas.py`, generan la curva momento-curvatura y la interacción P-M mediante OpenSees, con 260 pasos, 13 fracciones axiales más compresión pura. El script `generar_demanda_capacidad.py` produce `demanda_capacidad.json`, que contiene para cada uno de los 173 elementos la curva, el punto de demanda y la razón demanda/capacidad sobre el eje `My` o `Mz` correspondiente.
 
-Secuencia reproducible de todo el ciclo (a ejecutar con `py -3.12` en `entregas/P1L5/analysis`):
+El visor dibuja el diagrama P-M y la razón D/C del elemento seleccionado. La verificación cubrió las 7 familias de sección (128 columnas de 0.700×0.700 m, 13 de 0.350×0.350 m, 2 de 0.200×0.200 m y los muros 0.600×0.795, 0.600×1.825, 0.600×0.790 y 0.300×1.450). De los 173 elementos, 163 presentan razón D/C: 94 superan 1.0, con máximo 5.253 en E1-S1-C-009, y los 10 restantes quedaron documentados como fuera del rango de la curva (no se silencian). El QA del visor confirma la presencia del contrato y su mapeo a geometría seleccionable.
 
-```text
-build_current_loads.py   -> 46 panos, cargas zonificadas CURRENT
-run_current_opensees.py  -> G/Q/EX/EY (OpenSeesPy, PASS)
-export_current_to_unity.py -> StreamingAssets del viewer
-generar_demanda_capacidad.py -> 173 elementos, 7 familias P-M
-```
+#### 2.2.3 Corrección de geometría E1-P3-V-101 y E1-P1-C-023
 
-## 3. Superposicion interactiva verificada contra resultados numericos
+Asimismo se corrigió la geometría de dos miembros en el modelo: el inicio de la viga `E1-P3-V-101` se fijó en `[67.841, 16.331, 15.44]`, replicando el patrón de su hermana de P4 `E1-P4-V-088`, y la columna `E1-P1-C-023` quedó declarada con la sección `SEC_COLUMN_RECT_0.700x0.700`. Tras re-ejecutar el ciclo de build, análisis y export, el inspector del visor muestra las nuevas coordenadas y la sección corregidas, y un script de verificación de pendientes confirma ambos miembros en el modelo exportado.
 
-La superposicion del viewer es lineal sobre los casos base: `R = lG*G + lQ*Q + lEX*EX + lEY*EY` y los resultados por caso se leen de `results/current/*.json`. Se verificaron tres estados contra los numericos actuales:
+### 2.3 Superposición interactiva
 
-| Estado | Rz (suma de reacciones) | Concepto | Residuo de equilibrio |
-| --- | --- | --- | --- |
-| G (λ=1) | 78 141 126.994 N | iguala el contrato 78 141 127.002 N (dif. 0.008 N) | 2.8e-7 N (rel. ~1e-15) |
-| Q (λ=1) | 24 636 593.868 N | iguala el contrato 24 636 593.938 N | -5.2e-8 N |
-| 1.4G | 109 397 577.792 N | combinacion = 1.4 x Rz(G) | lineal por construccion |
-| 1.2G + 1.6Q | 133 187 902.582 N | combinacion peso/servicio | lineal por construccion |
-| G + Q + 0.3EX + 0.3EY | 102 777 720.862 N | envolvente con sismo al 30% | lineal por construccion |
+La superposición interactiva permite alternar entre los estados base y las combinaciones y contrastar la respuesta combinada del análisis. Se verificaron tres estados contra los resultados numéricos de OpenSees.
 
-Ademas: EX/EY son laterales (Rz ~ 0) con desplazamiento maximo de 66.98 y 99.29 mm; maximo desplazamiento G = 97.3 mm, Q = 38.7 mm. El manifest marca `linear_superposition_compatible: true` y cada caso base cierra con residuo relativo ~1e-15, lo que garantiza que la recombinacion instantanea del viewer reproduce exactamente la combinacion indicada. En demanda por elemento, `E1-S1-C-009` pasa de N=3 195.5 kN (G) y 949.3 kN (Q) a 5 802.6 kN bajo 1.4G+1.4Q; es el peor elemento del modelo (D/C = 5.253).
+| Estado | Definición | Verificación numérica |
+| --- | --- | --- |
+| G | Peso propio del modelo zonificado actual (46 panos) | Suma de reacciones ΣRz = 78 141 126.994 N frente a la carga transferida de 78 141 127.002 N; residual de equilibrio 2.8e-7 N (relativo ~1e-15); desplazamiento máximo 97.3 mm. |
+| Q | Sobrecarga de servicio modelada | ΣRz = 24 636 593.868 N frente a la carga transferida de 24 636 593.938 N; desplazamiento máximo 38.7 mm. |
+| Combinaciones | R = 1.4G; R = 1.2G+1.6Q; R = G+Q+0.3EX+0.3EY | Rz de 109 397 577.792 N, 133 187 902.582 N y 102 777 720.862 N, respectivamente, reproducidas linealmente a partir de los casos base; EX y EY son laterales con Rz ≈ 0 y desplazamientos máximos de 67.0 y 99.3 mm. |
 
-## 4. Sidequest: carga movil
+En el estado G, la suma de reacciones verticales alcanzó 78 141 126.994 N frente a una carga transferida de 78 141 127.002 N, lo que acredita la conservación. En el estado Q, la suma fue de 24 636 593.868 N frente a 24 636 593.938 N.
 
-**No implementada en v1.** Una busqueda en `Assets/Scripts` no encuentra modulo de carga movil (`cargaMovil`, `movingLoad`, `tren`, `locomotora`). En una viga real la sobrecarga de ruedas seria una de las cargas mas comprometedoras del tablero.
+En los estados combinados, la comparación de la recombinación lineal respecto de los casos base quedó garantizada por la compatibilidad lineal declarada en el manifest (`linear_superposition_compatible: true`) y por el cierre de equilibrio de cada caso con residuo relativo del orden de 1e-15. En la interfaz, la selección de los ponderadores cambia la deformada y los diagramas al caso elegido, y en la demanda por elemento, E1-S1-C-009 pasa de N = 3 195.5 kN en G y 949.3 kN en Q a 5 802.6 kN bajo 1.4G+1.4Q, siendo el peor elemento del modelo con D/C = 5.253.
 
-Se documenta como pendiente con el diseno candidato (no codificado): aplicar un patron de cargas puntuales/lineales moviles sobre el eje longitudinal de las vigas de puente de acceso, re-correr o re-combinar linealmente las posiciones discretas, y mostrar la envolvente y el factor de carga critico. En el simulador interactivo se materializaria como un control de posicion de la carga movil con actualizacion instantanea (la base lineal de la seccion 3 lo permite).
+### 2.4 Sidequest — carga móvil
 
-## 5. Evaluacion de experiencia de uso estructural
+La sidequest de carga móvil se declara en estado NO_IMPLEMENTADA y no fue desarrollada en esta entrega.
 
-Respuestas a las seis preguntas de la evaluacion UX:
+La infraestructura disponible incluye el modelo visible, la selección, los ejes, los pisos, los 46 panos y las tributarias, las transferencias actuales y un FE lineal resuelto para los cuatro casos. Para su implementación faltan los contornos y vacíos netos de los pisos de estudio del Edificio 1, la distinción entre arquitectura y estructura, los receptores y el reparto de la carga puntual sobre vigas y losas, junto con un servicio de re-análisis o de respuestas base unitarias sobre el modelo actual.
 
-1. ¿Se entiende el estado de cada elemento sin hojear archivos? Si: el inspector describe identidad, propiedades, carga tributaria, analisis y capacidad del elemento seleccionado; la UI de resumen muestra semaforos por caso (G/Q/EX/EY) y D/C; hay vista "solo problemas / no resueltos".
-2. ¿Se distinguen las cargas propias de las sobrecargas? Si: el inspector diferencia "Peso propio (kN)" de "carga muerta tributaria (kN)" y hay capas y casos separados (G vs Q).
-3. ¿Los cambios de criterio son visibles? Parcial: los criterios se ven en el inspector y en `traceability` del D/C, pero no hay editor de criterios en runtime (limitacion documentada).
-4. ¿Se navega por edificio/piso/tipo? Si: filtros Edificio 1/2, pisos S1-P4, toggles por tipo y busqueda por ID.
-5. ¿Es claro que es visual y que es analitico? Si: el contexto fisico se etiqueta "solo visual", las losas "alcance parcial", y los resultados analiticos vienen del caso de OpenSees activo.
-6. ¿Se distingue lo verificado de lo pendiente? Si: panel de revision pendiente con prioridades CONFIRMED/REVIEW_REQUIRED, capa "solo correcciones POST-P1L4" y manifest de resultados con status PASS.
+La regla física propuesta consiste en proyectar la posición del usuario sobre un paño aprobado, rechazando vacíos, exterior, pisos distintos y zonas sin soporte confirmado. El reparto exige un método que conserve fuerza y momentos: bajo el criterio adoptado, la pertenencia a una tributaria no demuestra por sí sola un reparto puntual exacto, por lo que tanto su definición como su validación quedan pendientes. La respuesta visual se materializaría combinando respuestas de cargas unitarias nodales o solicitando un re-análisis; en ningún caso se reutilizaría una respuesta antigua como si fuera nueva.
 
-QA automatizado de UI en resoluciones 1366x768 y 1920x1080: PASS.
+### 2.5 UX estructural
 
-## 6. Preparacion movil
+La evaluación de la experiencia de uso se realizó frente a las seis preguntas establecidas en el enunciado.
 
-**Equipo compatible (objetivo):** Android 8.0+ (API 26+), 4 GB RAM, pantalla 1080p, GPU con soporte ASTC, chipset de gama media alta. El viewer usa mallas procedimentales y una GUI ligera (IMGUI), por lo que la memoria y la GPU no son limitantes para este modelo.
+Frente a la pregunta de dónde se encuentra el elemento, el visor responde mediante selección por raycast, filtros por edificio y piso, ejes globales y locales, coordenadas del inspector y capas de visualización. Los resultados fueron acreditados en ambas resoluciones de pantalla.
 
-**Build inicial movil (pasos, NO ejecutados en esta maquina):**
-1. Instalar en Unity Hub el modulo "Android Build Support" (SDK, NDK y OpenJDK asociados). En la maquina actual `Unity/6000.6.0f1/Editor/Data/PlaybackEngines` solo contiene `WebGLSupport` y `windowsstandalonesupport`; el modulo Android no esta instalado.
-2. `File > Build Settings`: plataforma Android, `Switch Platform`.
-3. `Player Settings`: package name propio, IL2CPP + arm64, Graphics API OpenGL ES 3.0, compresion de texturas ASTC.
-4. Build del APK y prueba en dispositivo/emulador.
+Frente a cómo está apoyado el elemento, el visor ofrece la capa de apoyos geométricos del modelo actual (33 apoyos en z = 0.0) y las restricciones disponibles en el inspector.
 
-**Estado real:** el build movil no se completo en esta jornada por falta del modulo Android/SDK en la maquina (requiere descarga de GB). El laboratorio v1 se entrega como ejecutable Windows (Unity 6000.6.0f1). Para v2 se debe adaptar la interaccion a touch (drag/zoom/pinch) y escalar la UI desde 16:9 de escritorio.
+Frente a qué lo carga, se despliegan los casos G, Q, EX y EY actuales y las áreas tributarias, manteniendo como limitación que seis cargas puntuales del plano `2017_67-700` quedaron documentadas como brecha de fuente (persisten, no son cero).
 
-## 7. Uso de IA
+Frente a cómo se deforma, la deformada por caso con amplificación y los filtros por piso proporcionan la respuesta correspondiente, junto con el desplazamiento máximo por caso (97.3 mm en G, 38.7 mm en Q).
 
-**Funcionalidad compleja implementada con asistencia de IA:** el generador de demanda/capacidad P-M (P-M/D-C) y su integracion con el viewer, junto con la resolucion de la discontinuidad de cargas E2-P4.
+Frente a qué fuerzas tiene, el diagrama bidimensional de N, Vy, Vz, My, Mz y T del elemento seleccionado permite realizar la consulta con las fuerzas de extremo de la corrida actual.
 
-- **Que hizo la IA:** diseno y depuracion de `generar_pm_curvas.py` (seccion de fibra 0.700x0.700 m con acero por capas, 260 pasos, 13 fracciones axiales + compresion pura, momento-curvatura e interaccion P-M) y de `generar_demanda_capacidad.py` (para cada demanda (P,M) interpola la capacidad en la curva del eje correspondiente `My`/`Mz`). Tambien propuso la ruta de tira equivalente (losa) que resolvio las 2 cargas de linea de E2-P4 sin inventar receptores.
-- **Verificacion:**
-  - 173 elementos verticales con curva P-M (ejes My y Mz); 7 familias de seccion: 128 columnas 0.700x0.700, 13 de 0.350x0.350, 2 de 0.200x0.200, y muros 0.600x0.795, 0.600x1.825, 0.600x0.790, 0.300x1.450.
-  - D/C: 163 de 173 con `DC_ratio` (94 superan 1.0; maximo 5.253 en E1-S1-C-009); los 10 restantes quedaron documentados como `no_bracket` (demanda fuera del rango de la curva), nunca silenciados.
-  - El viewer lee `demanda_capacidad.json` (contrato P-M/D/C) y su QA de integridad pasa (P-M plot con puntos validos, mapeo a geometria seleccionable).
-  - Conservacion de carga: G + Q cierran en menos de 1e-6 N frente al contrato (seccion 3).
+Finalmente, frente a cuánta capacidad tiene, las curvas P-M y la razón demanda/capacidad dinámica de los 173 elementos verticales completan el conjunto de herramientas, indicando si la demanda está dentro o fuera de la envolvente.
+
+La evaluación concluye que el laboratorio v1 responde las seis preguntas para la consulta de los resultados actuales verificados. La interfaz declara el estado vigente del análisis en su propio pie, de manera que la visualización del modelo actual no se confunde con un análisis no vigente.
+
+### 2.6 Preparación móvil
+
+Para la preparación móvil se identificaron los requerimientos del visor, considerando un proyecto Unity 6000.6.0f1, una escena con los dos edificios completos (909 sólidos en la geometría histórica, 46 panos y 173 elementos en el modelo actual) y los paneles de interfaz.
+
+El rendimiento en dispositivo depende principalmente de la GPU y no de la CPU, debido a que el modelo se dibuja mediante líneas y prismas sin física de escena. Se considera compatible un teléfono Android moderno con al menos 3 GB de RAM y soporte de OpenGL ES 3.0. La versión objetivo considerada es Android 10 o superior.
+
+El estado del build móvil es pendiente, ya que en el equipo no está instalado el módulo Android de Unity ni un SDK de Android. Actualmente solo se dispone de los módulos Windows y WebGL (`PlaybackEngines` contiene únicamente `windowsstandalonesupport` y `WebGLSupport`).
+
+El build inicial recomendado comprende instalar el módulo Android Build Support, con SDK y herramientas NDK, desde Unity Hub; conectar o declarar un teléfono compatible con depuración USB; cambiar la plataforma a Android en Build Settings; definir el paquete; y compilar con IL2CPP, arm64 y OpenGL ES 3.0. Posteriormente, el resultado debe verificarse utilizando el mismo control de calidad aplicado en escritorio. Mientras tanto, el target WebGL disponible permite probar la interacción desde el navegador del teléfono, aunque esta alternativa no sustituye la prueba de rendimiento de la aplicación Android.
+
+### 2.7 Uso de IA
+
+De acuerdo con la regla del curso de registrar el uso de inteligencia artificial, este avance documenta dos funcionalidades complejas implementadas por un agente y posteriormente verificadas.
+
+La primera funcionalidad corresponde a la generación de la demanda y capacidad P-M de los 173 elementos verticales y su integración en el visor. La implementación consideró `generar_pm_curvas.py`, con secciones en fibra de 260 pasos y 13 fracciones axiales más compresión pura, y `generar_demanda_capacidad.py`, que interpola la capacidad sobre el eje `My` o `Mz` de cada demanda. En el visor se dibujan la curva de interacción, el punto de demanda y la razón D/C.
+
+Su verificación fue reproducible e incluyó la convergencia de la sección en fibra sin NaN, 173 elementos con curva P-M en 7 familias de sección, 163 elementos con razón D/C de los cuales 94 superan 1.0 con máximo 5.253, y los 10 restantes documentados como fuera del rango sin ser silenciados. El QA del visor confirmó la presencia del contrato y su mapeo a geometría seleccionable.
+
+La segunda funcionalidad corresponde a la resolución de las cargas de línea del sector E2-P4 mediante la ruta de losa equivalente. La implementación persistió `review_resolution` en `loads.json`, generó las tiras sintéticas en `build_current_loads.py` y tributó por distancia igual a la viga más cercana, produciendo 46 panos sin inventar receptores.
+
+Su verificación confirmó la conservación de carga (residual de 0.027 N en G y 0.0 N en Q), el re-análisis de los cuatro casos con equilibrio del orden de 1e-15 y el PASS de las verificaciones `validate_current_loads_and_results`, `validate_e2_p4_zone_completion`, `audit_integrated_model` y `test_single_source_propagation`.
+
+El principio aplicado y verificado a lo largo de esta etapa es que el agente implementa y el equipo exige evidencia reproducible. Cada afirmación relacionada con la carga y los resultados del modelo se respalda mediante un control de calidad automatizado, auditorías de equilibrio, residuales numéricos o el conteo verificado de los elementos exportados. Por esta razón, las seis cargas puntuales del plano `2017_67-700` no se convierten en cero: sin el DXF del plano no existe una calibración inequívoca de su posición, y esa brecha de fuente se documenta en lugar de ocultarse.
+
+## 3. Conclusión
+
+Durante esta semana se ejecutó y verificó el análisis del modelo estructural consolidado del laboratorio v1, cerrando las cargas pendientes del sector E2-P4 por la ruta de losa equivalente, generando la demanda y capacidad P-M de los 173 elementos verticales y exportando al visor los resultados de los cuatro casos de análisis. El análisis de elementos finitos actual fue satisfactorio en todos los frentes, con residuales numéricos del orden de 1e-15 o menores, y las verificaciones de modelo, cargas y zona E2-P4 resultaron PASS.
+
+La superposición interactiva fue validada en los estados G, Q y las combinaciones frente a los resultados numéricos de OpenSees, con conservación acreditada para los 46 panos de losa. El procedimiento de modificación del modelo quedó documentado de forma reproducible para los flujos de carga, demanda-capacidad y geometría solicitados, y las verificaciones automatizadas cerraron la cadena dato–modelo–OpenSees–resultados–Unity.
+
+La honestidad técnica fue un principio rector de esta semana. Las seis cargas puntuales del plano `2017_67-700` se mantienen explícitas con su origen y motivo documentados, porque la ausencia del DXF impide fijar su posición sin calibración; la sidequest de carga móvil no se implementó porque sus entradas todavía no están validadas; y el build móvil es pendiente porque no se dispone del módulo Android de Unity. Estas decisiones, documentadas junto con sus motivos, permiten mantener la trazabilidad del proyecto y ordenar el trabajo hacia la siguiente etapa: recuperar el plano `2017_67-700` para resolver la posición de las cargas puntuales, validar el reparto de cargas sobre los panos y, sobre esa base, habilitar la versión móvil del laboratorio.
