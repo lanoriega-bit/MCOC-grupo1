@@ -210,7 +210,7 @@ namespace Mcoc.UnityViewer
                 }
                 analysisCases = JsonLoader.LoadP1L5CurrentAnalysisCases();
                 p1l4Metadata = JsonLoader.LoadP1L5CurrentStructuralMetadata();
-                currentResultsAvailable = analysisCases?.cases != null && analysisCases.cases.Count >= 4;
+                currentResultsAvailable = ReloadCurrentContractAndCheck() && analysisCases?.cases != null && analysisCases.cases.Count >= 4;
                 BuildP1L4Indexes(); InitializeP1L5Superposition(); ActivateAnalysisCase("R");
                 p1l5ModelModified = false; p1l5ReanalysisRequired = false;
                 p1l5ModificationMessage = "Reanálisis PASS. Resultados CURRENT recargados.";

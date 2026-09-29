@@ -76,6 +76,13 @@ namespace Mcoc.UnityViewer
         public string axis_y;
         public string source_elevation_m;
         public double model_z_m;
+        public double area_m2;
+        public int hole_count;
+        public List<double> surface_vertices_xy_flat;
+        public List<int> surface_triangles;
+        public List<double> boundary_xy_flat;
+        public List<int> boundary_ring_offsets;
+        public List<string> source_panel_ids;
         public PostP1L4CorrectionData post_p1l4_correction;
     }
 

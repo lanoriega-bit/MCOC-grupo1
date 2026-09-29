@@ -197,23 +197,21 @@ namespace Mcoc.UnityViewer
             architecture = JsonLoader.LoadArchitecture();
             var currentCases = JsonLoader.LoadP1L5CurrentAnalysisCases();
             LoadCurrentContract();
-            currentResultsAvailable = currentContract != null
-                && currentContract.status == "CURRENT_VERIFIED"
-                && currentContract.analysis_available
+            currentResultsAvailable = currentGateStatus == "CURRENT_VERIFIED"
                 && currentCases != null && currentCases.cases != null && currentCases.cases.Count >= 4;
-            analysisResults = currentResultsAvailable ? null : JsonLoader.LoadAnalysisResults();
-            analysisCases = currentResultsAvailable ? currentCases : JsonLoader.LoadAnalysisCases();
+            analysisResults = null;
+            analysisCases = currentResultsAvailable ? currentCases : null;
             feDiagnostic = JsonLoader.LoadFeDiagnostic();
             diagnosticByElementId.Clear();
             if (feDiagnostic != null && feDiagnostic.elements != null)
                 foreach (var item in feDiagnostic.elements)
                     if (item != null && !string.IsNullOrEmpty(item.element_id))
                         diagnosticByElementId[item.element_id] = item;
-            delivery = JsonLoader.LoadDelivery();
-            capacity = JsonLoader.LoadCapacity();
-            p1l4Metadata = currentResultsAvailable ? JsonLoader.LoadP1L5CurrentStructuralMetadata() : JsonLoader.LoadP1L4StructuralMetadata();
-            demandCapacity = JsonLoader.LoadDemandCapacity();
-            p1l4LoadCatalog = JsonLoader.LoadP1L4LoadCatalog();
+            delivery = null;
+            capacity = null;
+            p1l4Metadata = currentResultsAvailable ? JsonLoader.LoadP1L5CurrentStructuralMetadata() : null;
+            demandCapacity = null;
+            p1l4LoadCatalog = null;
             physicalContext = JsonLoader.LoadPhysicalContext();
             physicalContextByElementId.Clear();
             if (physicalContext != null && physicalContext.classifications != null)
@@ -221,13 +219,13 @@ namespace Mcoc.UnityViewer
                     if (item != null && !string.IsNullOrEmpty(item.element_id))
                         physicalContextByElementId[item.element_id] = item;
             BuildP1L4Indexes();
-            fiberTexture = JsonLoader.LoadPng("fiber_section.png");
-            momentCurvatureTexture = JsonLoader.LoadPng("moment_curvature.png");
-            pmInteractionTexture = JsonLoader.LoadPng("pm_interaction.png");
-            joseSupports = JsonLoader.LoadJoseSupports();
+            fiberTexture = null;
+            momentCurvatureTexture = null;
+            pmInteractionTexture = null;
+            joseSupports = null;
             if (currentResultsAvailable) InitializeP1L5Superposition();
             ActivateAnalysisCase(analysisCases != null && !string.IsNullOrEmpty(analysisCases.default_case) ? analysisCases.default_case : "R");
-            tributaries = JsonLoader.LoadTributaries(currentResultsAvailable ? "p1l5_current_tributary_areas.json" : "tributary_areas.json");
+            tributaries = currentResultsAvailable ? JsonLoader.LoadTributaries("p1l5_current_tributary_areas.json") : null;
             if (tributaries != null)
             {
                 // indice por elementTag para asignar carga tributaria a vigas/columnas/apoyos
@@ -248,7 +246,7 @@ namespace Mcoc.UnityViewer
             if (tributaries != null) BuildTributaries();
             BuildP1L4Loads();
             BuildPhysicalContext();
-            seismic = JsonLoader.LoadSeismic();
+            seismic = null;
             if (seismic != null) BuildSeismic();
             historicalResultsEnabled = true; // explicit QA scope; reset below before first rendered frame
             RunVisibilitySelfCheck();
@@ -739,7 +737,7 @@ namespace Mcoc.UnityViewer
 
         GameObject CreateSolid(SolidData solid)
         {
-            var go = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            var go = solid.kind == "slab_polygon" ? new GameObject() : GameObject.CreatePrimitive(PrimitiveType.Cube);
             go.name = string.IsNullOrEmpty(solid.id) ? solid.solidTag : solid.id;
             var data = go.AddComponent<ElementInfo>();
             data.go = go;
@@ -793,7 +791,18 @@ namespace Mcoc.UnityViewer
 
             Vector3 start = V(solid.start);
             Vector3 end = V(solid.end);
-            if (solid.kind == "linear_prism")
+            if (solid.kind == "slab_polygon")
+            {
+                ConfigureCurrentSlabMesh(go, solid);
+                data.nodeI = solid.center == null ? Vector3.zero : V(solid.center);
+                data.nodeJ = data.nodeI;
+                data.coordCenter = data.nodeI;
+                data.widthM = solid.area_m2;
+                data.heightM = solid.height_m;
+                data.participatesInFE = false;
+                data.hasFEParticipationFlag = true;
+            }
+            else if (solid.kind == "linear_prism")
             {
                 Vector3 center = (start + end) * 0.5f;
                 float lenXY = Mathf.Max(Vector3.Distance(start, end), 0.05f);
@@ -818,6 +827,64 @@ namespace Mcoc.UnityViewer
             Register(go, solid.category, solid.floor);
             allElements.Add(data);
             return go;
+        }
+
+        void ConfigureCurrentSlabMesh(GameObject go, SolidData solid)
+        {
+            if (solid.surface_vertices_xy_flat == null || solid.surface_triangles == null ||
+                solid.surface_vertices_xy_flat.Count < 6 || solid.surface_triangles.Count < 3)
+                throw new System.InvalidOperationException("Losa CURRENT sin triangulación: " + solid.id);
+            int surfaceCount = solid.surface_vertices_xy_flat.Count / 2;
+            float top = solid.center != null && solid.center.Count >= 3
+                ? (float)(solid.center[2] + solid.height_m * 0.5) : (float)solid.model_z_m;
+            float bottom = top - (float)solid.height_m;
+            var vertices = new List<Vector3>(surfaceCount * 2);
+            for (int i = 0; i < surfaceCount; i++)
+            {
+                float x = (float)solid.surface_vertices_xy_flat[i * 2];
+                float y = (float)solid.surface_vertices_xy_flat[i * 2 + 1];
+                vertices.Add(new Vector3(x, y, top));
+            }
+            for (int i = 0; i < surfaceCount; i++)
+            {
+                float x = (float)solid.surface_vertices_xy_flat[i * 2];
+                float y = (float)solid.surface_vertices_xy_flat[i * 2 + 1];
+                vertices.Add(new Vector3(x, y, bottom));
+            }
+            var triangles = new List<int>(solid.surface_triangles.Count * 2);
+            for (int i = 0; i + 2 < solid.surface_triangles.Count; i += 3)
+            {
+                int a = solid.surface_triangles[i], b = solid.surface_triangles[i + 1], c = solid.surface_triangles[i + 2];
+                triangles.Add(a); triangles.Add(b); triangles.Add(c);
+                triangles.Add(c + surfaceCount); triangles.Add(b + surfaceCount); triangles.Add(a + surfaceCount);
+            }
+            if (solid.boundary_xy_flat != null && solid.boundary_ring_offsets != null)
+            {
+                for (int ring = 0; ring + 1 < solid.boundary_ring_offsets.Count; ring++)
+                {
+                    int begin = solid.boundary_ring_offsets[ring];
+                    int end = solid.boundary_ring_offsets[ring + 1];
+                    for (int index = begin; index < end; index++)
+                    {
+                        int next = index + 1 < end ? index + 1 : begin;
+                        Vector3 a = new Vector3((float)solid.boundary_xy_flat[index * 2], (float)solid.boundary_xy_flat[index * 2 + 1], top);
+                        Vector3 b = new Vector3((float)solid.boundary_xy_flat[next * 2], (float)solid.boundary_xy_flat[next * 2 + 1], top);
+                        int baseIndex = vertices.Count;
+                        vertices.Add(a); vertices.Add(b); vertices.Add(new Vector3(b.x, b.y, bottom)); vertices.Add(new Vector3(a.x, a.y, bottom));
+                        triangles.Add(baseIndex); triangles.Add(baseIndex + 1); triangles.Add(baseIndex + 2);
+                        triangles.Add(baseIndex); triangles.Add(baseIndex + 2); triangles.Add(baseIndex + 3);
+                    }
+                }
+            }
+            var mesh = new Mesh { name = solid.id + "_current_slab_mesh" };
+            if (vertices.Count > 65535) mesh.indexFormat = UnityEngine.Rendering.IndexFormat.UInt32;
+            mesh.SetVertices(vertices);
+            mesh.SetTriangles(triangles, 0);
+            mesh.RecalculateNormals();
+            mesh.RecalculateBounds();
+            go.AddComponent<MeshFilter>().sharedMesh = mesh;
+            go.AddComponent<MeshRenderer>();
+            go.AddComponent<MeshCollider>().sharedMesh = mesh;
         }
 
         void ApplyDiagnosticInfo(ElementInfo info, FeDiagnosticElement diagnostic)

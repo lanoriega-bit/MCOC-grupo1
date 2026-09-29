@@ -58,8 +58,14 @@ def build_viewer_preview(master: dict, sections: dict, materials: dict) -> dict:
             "material": material.get("name"),
             "active": row["active"],
             "merged_from": row.get("merged_from", []),
+            "aliases": row.get("aliases", []),
+            "elementTag": row.get("solidTag"),
+            "human_id": row["element_id"],
             "source_dxf": row.get("provenance", {}).get("source_dxf"),
             "source_layer": row.get("provenance", {}).get("source_layer"),
+            "axis_x": row.get("provenance", {}).get("axis_x"),
+            "axis_y": row.get("provenance", {}).get("axis_y"),
+            "confidence": row.get("provenance", {}).get("confidence"),
         }
         dims = section.get("dimensions", {})
         if "start_m" in geometry:
@@ -95,6 +101,37 @@ def build_viewer_preview(master: dict, sections: dict, materials: dict) -> dict:
             solid["height_m"] = dims.get("height_m")
         elif row["type"] == "slab":
             solid["height_m"] = dims.get("thickness_m")
+            solid["area_m2"] = geometry.get("area_m2")
+            solid["surface_vertices_xy_flat"] = [
+                value for point in geometry.get("surface_vertices_xy", []) for value in point
+            ]
+            solid["surface_triangles"] = geometry.get("surface_triangles", [])
+            rings = geometry.get("boundary_rings_xy", [])
+            solid["boundary_xy_flat"] = [value for ring in rings for point in ring for value in point]
+            offsets = [0]
+            for ring in rings:
+                offsets.append(offsets[-1] + len(ring))
+            solid["boundary_ring_offsets"] = offsets
+            solid["hole_count"] = geometry.get("hole_count", 0)
+            solid["source_panel_ids"] = geometry.get("source_panel_ids", [])
+        if row.get("merge_history"):
+            latest = row["merge_history"][-1]
+            solid["post_p1l4_correction"] = {
+                "correction_type": "MERGED",
+                "reason": latest.get("reason"),
+                "primary_source": latest.get("source", latest.get("review_checkpoint")),
+                "confidence": "HIGH_CONFIDENCE_APPROVED",
+                "results_compatibility": "REANALYSIS_REQUIRED",
+            }
+        elif row.get("geometry_review"):
+            latest = row["geometry_review"][-1]
+            solid["post_p1l4_correction"] = {
+                "correction_type": latest.get("type"),
+                "reason": latest.get("reason"),
+                "primary_source": latest.get("review_checkpoint"),
+                "confidence": "HIGH_CONFIDENCE_APPROVED",
+                "results_compatibility": "REANALYSIS_REQUIRED",
+            }
         solids.append(solid)
     return {
         "format": "MCOC_P1L5_VIEWER_PREVIEW_FROM_CENTRAL_V1",

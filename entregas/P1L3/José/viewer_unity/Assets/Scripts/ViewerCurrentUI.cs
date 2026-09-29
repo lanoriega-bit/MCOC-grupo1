@@ -8,6 +8,7 @@ namespace Mcoc.UnityViewer
     public partial class ViewerController
     {
         private bool historicalResultsEnabled;
+        private bool historicalArchiveLoaded;
         private bool presentationMode;
         private bool navigationExpanded = true;
         private bool technicalDetail;
@@ -30,6 +31,7 @@ namespace Mcoc.UnityViewer
 
         void SetHistoricalResults(bool enabled)
         {
+            if (enabled && !currentResultsAvailable && !historicalArchiveLoaded) LoadHistoricalArchiveExplicitly();
             historicalResultsEnabled = enabled && !presentationMode;
             activeDeformationVisible = false;
             diagramMode = 0;
@@ -41,6 +43,30 @@ namespace Mcoc.UnityViewer
                 if (IsHistoricalLayer(key)) typeVisible[key] = false;
             ClearSelectedDiagram();
             ReapplyAll();
+        }
+
+        void LoadHistoricalArchiveExplicitly()
+        {
+            historicalArchiveLoaded = true;
+            delivery = JsonLoader.LoadDelivery();
+            capacity = JsonLoader.LoadCapacity();
+            p1l4Metadata = JsonLoader.LoadP1L4StructuralMetadata();
+            demandCapacity = JsonLoader.LoadDemandCapacity();
+            p1l4LoadCatalog = JsonLoader.LoadP1L4LoadCatalog();
+            fiberTexture = JsonLoader.LoadPng("fiber_section.png");
+            momentCurvatureTexture = JsonLoader.LoadPng("moment_curvature.png");
+            pmInteractionTexture = JsonLoader.LoadPng("pm_interaction.png");
+            joseSupports = JsonLoader.LoadJoseSupports();
+            analysisCases = JsonLoader.LoadAnalysisCases();
+            BuildP1L4Indexes();
+            ActivateAnalysisCase("R");
+            tributaries = JsonLoader.LoadTributaries("tributary_areas.json");
+            if (tributaries != null) BuildTributaries();
+            BuildP1L4Supports();
+            BuildP1L4Loads();
+            seismic = JsonLoader.LoadSeismic();
+            if (seismic != null) BuildSeismic();
+            Debug.Log("[HISTÓRICO] Archivo P1L3/P1L4 cargado por solicitud explícita; no es CURRENT.");
         }
 
         void SetPresentationMode(bool enabled)

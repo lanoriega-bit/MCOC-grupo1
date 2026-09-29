@@ -42,6 +42,13 @@ namespace Mcoc.UnityViewer
         }
         public static string HashFile(string path)
         {using(var sha=SHA256.Create())using(var stream=File.OpenRead(path))return BitConverter.ToString(sha.ComputeHash(stream)).Replace("-","").ToLowerInvariant();}
+        public static string CheckRuntime(CurrentDatasetContract contract,string geometryStreamHash,string payloadHash)
+        {
+            string identity=Check(contract,contract,geometryStreamHash);
+            if(identity!="IDENTITY_MATCH_REQUIRES_PAYLOAD_QA")return identity;
+            if(string.IsNullOrEmpty(payloadHash)||payloadHash!=contract.payload_sha256)return "PAYLOAD_FILE_MISMATCH";
+            return "CURRENT_VERIFIED";
+        }
     }
     // Pure numerical preparation, not a P1L5 slider or a new FE analysis.
     public static class LinearBasisResponse
@@ -63,21 +70,32 @@ namespace Mcoc.UnityViewer
     }
     public partial class ViewerController
     {
-        CurrentDatasetContract currentContract;bool currentContractLoaded;
+        CurrentDatasetContract currentContract;bool currentContractLoaded;string currentGateStatus="CONTRACT_NOT_CHECKED";
         void LoadCurrentContract()
         {
             if(currentContractLoaded)return;currentContractLoaded=true;
             string path=Path.Combine(Application.streamingAssetsPath,"current_dataset_contract.json");
-            if(File.Exists(path))try{currentContract=JsonUtility.FromJson<CurrentDatasetContract>(File.ReadAllText(path));}
+            if(File.Exists(path))try
+            {
+                currentContract=JsonUtility.FromJson<CurrentDatasetContract>(File.ReadAllText(path));
+                string geometryPath=Path.Combine(Application.streamingAssetsPath,jsonFileName);
+                string geometryHash=File.Exists(geometryPath)?CurrentVersionGate.HashFile(geometryPath):"";
+                string payloadPath=string.IsNullOrEmpty(currentContract.payload_file)?"":Path.Combine(Application.streamingAssetsPath,currentContract.payload_file);
+                string payloadHash=!string.IsNullOrEmpty(payloadPath)&&File.Exists(payloadPath)?CurrentVersionGate.HashFile(payloadPath):"";
+                currentGateStatus=CurrentVersionGate.CheckRuntime(currentContract,geometryHash,payloadHash);
+                if(currentGateStatus!="CURRENT_VERIFIED")Debug.LogWarning("CURRENT bloqueado: "+currentGateStatus);
+            }
             catch(Exception ex){Debug.LogWarning("Current contract unavailable: "+ex.Message);}
         }
+        bool ReloadCurrentContractAndCheck()
+        {currentContractLoaded=false;currentContract=null;currentGateStatus="CONTRACT_NOT_CHECKED";LoadCurrentContract();return currentGateStatus=="CURRENT_VERIFIED";}
         string CurrentVersionDiagnostic()
         {
             LoadCurrentContract();
             if(currentContract==null)return "Contrato de resultados actuales: no disponible; acceso bloqueado.";
             return "Versión geometría: "+currentContract.geometry_version+"\nVersión FE: "+currentContract.fe_version+
                 "\nVersión cargas: "+currentContract.loads_version+"\nAnálisis: "+currentContract.analysis_version+
-                "\nEstado: "+currentContract.status+" · payload: "+currentContract.payload_file;
+                "\nEstado: "+currentContract.status+" · gate: "+currentGateStatus+" · payload: "+currentContract.payload_file;
         }
     }
 }
