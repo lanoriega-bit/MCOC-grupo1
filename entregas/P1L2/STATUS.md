@@ -1,5 +1,16 @@
 # P1L2 Status
 
+## P1L6 readiness CURRENT (2026-09-29)
+
+- Fuente vigente: `entregas/P1L5/modelo_central/model_master.json`.
+- 658 sólidos: 442 vigas, 143 columnas, 30 muros, 10 losas poligonales de
+  0,15 m y 33 apoyos visuales coincidentes con los 33 apoyos FE.
+- FE: 1.100 nodos, 623 segmentos, 1.225 restricciones, 0 componentes
+  desconectados. OpenSees CURRENT G/Q/EX/EY/R verificado.
+- Los checkpoints históricos siguientes se conservan para reproducibilidad;
+  sus conteos ya no describen CURRENT.
+- Estado completo: [P1L6_READINESS](../P1L6/P1L6_READINESS.md).
+
 ## PRE-P1L5 — continuidad manual de vigas (2026-09-23)
 
 - CURRENT: 695 sólidos; 466 vigas. Se consolidaron 29 grupos físicos (33 IDs absorbidos),

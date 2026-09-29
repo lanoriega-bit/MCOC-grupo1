@@ -34,11 +34,14 @@ try {
     Invoke-CheckedPython 'entregas/P1L5/modelo_central/validate_central_model.py'
     Invoke-CheckedPython 'entregas/P1L5/analysis/run_current_opensees.py'
     Invoke-CheckedPython 'entregas/P1L5/analysis/export_current_to_unity.py'
+    Invoke-CheckedPython 'entregas/P1L5/analysis/build_current_capacity.py'
+    Invoke-CheckedPython 'entregas/P1L6/preparation/build_ar_dataset.py'
     Invoke-CheckedPython 'entregas/P1L5/modelo_central/Jose/qa_dinamico_p1l1_p1l4.py'
     Invoke-CheckedPython 'entregas/P1L5/modelo_central/Jose/qa_tributario.py'
     Invoke-CheckedPython 'entregas/P1L5/validation/audit_integrated_model.py'
     Invoke-CheckedPython 'entregas/P1L5/validation/test_single_source_propagation.py'
     Invoke-CheckedPython 'entregas/P1L5/validation/validate_current_loads_and_results.py'
+    Invoke-CheckedPython 'entregas/P1L6/preparation/validate_readiness.py'
 
     if ($UnityCompile) {
         $unity = 'C:\Program Files\Unity\Hub\Editor\6000.6.0f1\Editor\Unity.exe'

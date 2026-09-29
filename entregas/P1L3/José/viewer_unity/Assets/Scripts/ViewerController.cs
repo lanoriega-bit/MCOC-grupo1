@@ -248,7 +248,7 @@ namespace Mcoc.UnityViewer
             BuildPhysicalContext();
             seismic = null;
             if (seismic != null) BuildSeismic();
-            historicalResultsEnabled = true; // explicit QA scope; reset below before first rendered frame
+            historicalResultsEnabled = false;
             RunVisibilitySelfCheck();
             RunDiagnosticSelfCheck();
             if (currentResultsAvailable) { RunP1L5SelfCheck(); RunP1L5DemoSequenceCheck(); }
@@ -3044,13 +3044,14 @@ namespace Mcoc.UnityViewer
 
         void RunVisibilitySelfCheck()
         {
-            string[] requiredTypes = {
+            var requiredTypes = new List<string> {
                 "beam", "column", "wall", "slab", "support", "slab_edge", "diaphragm",
                 "p1l4_support",
-                "architectural_slab", "architectural_slab_edge", "tributary",
-                "seismic_arrow", "seismic_cm", "seismic_mass", "seismic_shear",
-                "seismic_torsion", "seismic_deform_ex", "seismic_deform_ey"
+                "architectural_slab", "architectural_slab_edge", "tributary"
             };
+            if (historicalArchiveLoaded)
+                requiredTypes.AddRange(new[] { "seismic_arrow", "seismic_cm", "seismic_mass", "seismic_shear",
+                    "seismic_torsion", "seismic_deform_ex", "seismic_deform_ey" });
             var failures = new List<string>();
             foreach (var key in requiredTypes)
             {

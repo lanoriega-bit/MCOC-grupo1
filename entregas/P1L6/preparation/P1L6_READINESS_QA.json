@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "checks": {
+    "central_counts": true,
+    "fe_counts": true,
+    "supports_fixed_6dof": true,
+    "no_disconnected_components": true,
+    "slab_polygons_015": true,
+    "slab_holes_preserved": true,
+    "capacity_full_coverage": true,
+    "ar_identity_unique": true,
+    "ar_results_and_capacity": true,
+    "opensees_cases_pass": true,
+    "opensees_finite": true,
+    "linear_superposition": true,
+    "load_conservation_G": true,
+    "load_conservation_Q": true,
+    "unity_geometry_hash": true,
+    "unity_payload_hash": true,
+    "unity_load_hash": true,
+    "current_verified": true
+  },
+  "counts": {
+    "solids": 658,
+    "elements": 625,
+    "supports": 33,
+    "fe_nodes": 1100,
+    "fe_segments": 623,
+    "constraints": 1225,
+    "capacity_elements": 615,
+    "ar_records": 658
+  }
+}

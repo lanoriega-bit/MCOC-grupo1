@@ -1,17 +1,17 @@
 # Índice maestro del proyecto
 
-Estado: `P1L5 INTEGRATION / CENTRAL MODEL VALID — ANALYSIS BLOCKED`
+Estado: `P1L6 READINESS COMPLETE / CURRENT VERIFIED`
 
 Integración vigente: [auditoría P1L5](entregas/P1L5/INTEGRATION_AUDIT.md) y
 [QA del modelo integrado](entregas/P1L5/validation/INTEGRATION_QA.md).
 La fuente editable única está en `entregas/P1L5/modelo_central/`.
 
-Estado central: 695 sólidos (466 vigas, 143 columnas, 30 muros, 10 losas y
-46 apoyos visuales); candidato FE embebido con 1126 nodos, 647 segmentos,
-1203 restricciones y 33 nodos apoyados. Queda un componente desconectado:
-`E2-P4-V-009`. Los resultados CURRENT continúan `NONE`.
+Estado central: 658 sólidos (442 vigas, 143 columnas, 30 muros, 10 losas
+poligonales y 33 apoyos); FE CURRENT con 1100 nodos, 623 segmentos, 1225
+restricciones y 33 nodos fijos. Componentes desconectados: 0. OpenSees CURRENT
+G/Q/EX/EY y superposición R: verificados.
 
-Guía vigente: [PRE_P1L5_STATUS](entregas/PRE_P1L5/PRE_P1L5_STATUS.md).
+Guía vigente: [P1L6_READINESS](entregas/P1L6/P1L6_READINESS.md).
 Revisión vigente: [continuidad manual de vigas](entregas/PRE_P1L5/manual_beam_revision/REVIEW_STATUS.md).
 Diagnóstico → Cambios de esta revisión / COLUMN STACKS / Pendientes FE: un pendiente / un componente.
 Las [43 fichas originales](entregas/PRE_P1L5/FE_PENDING_43_DETAILED_REVIEW.md) se conservan
@@ -54,11 +54,11 @@ activación explícita en Entregas o Avanzado y nunca se presenta como resultado
 
 | Capa | Estado | Interpretación |
 | --- | --- | --- |
-| Geometría | `POST_P1L4_CURRENT` | 695 sólidos; 466 vigas; corrección manual con 29 grupos fusionados, cinco vigas agregadas y cuatro extremos reconectados. |
-| Diagnóstico FE | `CANDIDATE / NOT RUN` | 647 miembros, 1126 nodos; una geometría sin camino FE a apoyo / un componente. |
-| Resultados actuales | `NONE` | Sin corrida compatible; fuerzas, deformada y demanda actuales no disponibles. |
+| Geometría | `CURRENT VERIFIED` | 658 sólidos; 442 vigas; 10 losas CAD poligonales de 0,15 m. |
+| Diagnóstico FE | `CURRENT / PASS` | 623 segmentos, 1100 nodos; 0 componentes desconectados. |
+| Resultados actuales | `CURRENT VERIFIED` | G/Q/EX/EY y R compatibles; hashes de geometría, cargas y payload verificados. |
 | G/Q/EX/EY/R y capacidad anteriores | `HISTORICAL` | Avanzado → Histórico, apagado por defecto. |
-| Catálogo de cargas | Auditadas, no aplicadas | No confundir su geometría con G/Q recalculados. |
+| Catálogo de cargas | `CURRENT_RECOMPUTED` | 44 paños; conservación G/Q PASS; 10 cargas especiales siguen unresolved. |
 
 El diagnóstico se reconstruyó: solo `E2-P4-V-009` permanece sin camino FE a apoyo.
 `E1-S1-V-005` fue retirado con aprobación y trazabilidad. El foco de clasificación histórico

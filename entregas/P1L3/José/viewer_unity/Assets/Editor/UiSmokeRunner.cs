@@ -15,6 +15,8 @@ namespace Mcoc.UnityViewer.EditorTools
     {
         static readonly string RequestPath = Path.Combine(Directory.GetCurrentDirectory(), "Temp", "p1l3-ui-smoke.request");
         static readonly string ResultPath = Path.Combine(Directory.GetCurrentDirectory(), "Temp", "p1l4-ui-smoke.result.txt");
+        static readonly string CapturePath = Path.Combine(Directory.GetCurrentDirectory(), "Temp", "p1l4-ui-smoke.capture.txt");
+        const string ActiveKey = "Mcoc.UiSmokeRunner.Active";
         static double playStarted;
         static bool running;
         static bool demoExecuted;
@@ -22,9 +24,15 @@ namespace Mcoc.UnityViewer.EditorTools
 
         static UiSmokeRunner()
         {
-            if (!File.Exists(RequestPath)) return;
-            File.Delete(RequestPath);
-            EditorApplication.delayCall += StartSmoke;
+            if (File.Exists(RequestPath))
+            {
+                File.Delete(RequestPath);
+                EditorApplication.delayCall += StartSmoke;
+            }
+            else if (SessionState.GetBool(ActiveKey, false))
+            {
+                EditorApplication.delayCall += ResumeSmoke;
+            }
         }
 
         [MenuItem("MCOC/Probar interfaz en Play")]
@@ -35,6 +43,8 @@ namespace Mcoc.UnityViewer.EditorTools
             demoExecuted = false;
             captured.Clear();
             if (File.Exists(ResultPath)) File.Delete(ResultPath);
+            if (File.Exists(CapturePath)) File.Delete(CapturePath);
+            SessionState.SetBool(ActiveKey, true);
             Application.logMessageReceived += CaptureLog;
             EditorSceneManager.OpenScene("Assets/Main.unity", OpenSceneMode.Single);
             EditorApplication.playModeStateChanged += OnPlayModeChanged;
@@ -55,15 +65,38 @@ namespace Mcoc.UnityViewer.EditorTools
                 Application.logMessageReceived -= CaptureLog;
                 running = false;
                 Debug.Log("[UI QA] PLAY_SMOKE_COMPLETE: arranque y ciclo Play/Edit finalizados.");
-                captured.Add("[UI QA] PLAY_SMOKE_COMPLETE: arranque y ciclo Play/Edit finalizados.");
-                File.WriteAllLines(ResultPath, captured.ToArray());
+                AppendCapture("[UI QA] PLAY_SMOKE_COMPLETE: arranque y ciclo Play/Edit finalizados.");
+                File.Copy(CapturePath, ResultPath, true);
+                SessionState.SetBool(ActiveKey, false);
+                if (System.Array.IndexOf(System.Environment.GetCommandLineArgs(), "--quit-after-smoke") >= 0)
+                    EditorApplication.delayCall += () => EditorApplication.Exit(0);
             }
+        }
+
+        static void ResumeSmoke()
+        {
+            running = true;
+            Application.logMessageReceived -= CaptureLog;
+            Application.logMessageReceived += CaptureLog;
+            EditorApplication.playModeStateChanged -= OnPlayModeChanged;
+            EditorApplication.playModeStateChanged += OnPlayModeChanged;
+            if (!EditorApplication.isPlaying) return;
+            playStarted = EditorApplication.timeSinceStartup;
+            demoExecuted = false;
+            EditorApplication.update -= WaitForRuntimeChecks;
+            EditorApplication.update += WaitForRuntimeChecks;
         }
 
         static void CaptureLog(string condition, string stackTrace, LogType type)
         {
             if (condition.Contains("[UI QA]") || condition.Contains("[P1L4 QA]") || condition.Contains("[P1L4 DEMO QA]") || condition.Contains("[P1L5 QA]") || condition.Contains("[P1L5 DEMO QA]") || type == LogType.Error || type == LogType.Exception)
-                captured.Add(condition);
+                AppendCapture(condition);
+        }
+
+        static void AppendCapture(string line)
+        {
+            captured.Add(line);
+            File.AppendAllText(CapturePath, line + System.Environment.NewLine);
         }
 
         static void WaitForRuntimeChecks()
