@@ -240,6 +240,7 @@ namespace Mcoc.UnityViewer
                             memberTrib[a.elementTag] = new Vector2((float)a.area_m2, (float)a.load_kN);
             }
             BuildScene();
+            RefreshStructuralFailureStates();
             BuildP1L4Supports();
             if (feDiagnostic != null) BuildFeCandidate();
             if (architecture != null) BuildArchitecture();
@@ -361,6 +362,7 @@ namespace Mcoc.UnityViewer
                         if (item != null) joseDisplacementByNode[item.node_tag] = item;
             }
             if (model != null && model.solids != null) RebuildActiveDeformedShape();
+            RefreshStructuralFailureStates();
             if (lastSelected != null) ShowInfo(lastSelected);
         }
 

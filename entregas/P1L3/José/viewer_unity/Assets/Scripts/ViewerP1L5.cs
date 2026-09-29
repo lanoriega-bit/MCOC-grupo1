@@ -107,6 +107,7 @@ namespace Mcoc.UnityViewer
                 ActivateAnalysisCase("R");
                 if (diagramMode != 0) RebuildSelectedDiagram();
             }
+            else RefreshStructuralFailureStates();
         }
 
         float DrawCoefficient(string label, float value)
