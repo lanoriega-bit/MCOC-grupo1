@@ -18,7 +18,7 @@
         "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
         "section_confidence": "CONFIRMED_FROM_PLAN"
       },
-      "used_by_count": 3,
+      "used_by_count": 2,
       "provenance_examples": [
         {
           "element_id": "E2-P4-V-001",
@@ -318,7 +318,7 @@
         "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
         "section_confidence": "CONFIRMED_FROM_PLAN"
       },
-      "used_by_count": 23,
+      "used_by_count": 20,
       "provenance_examples": [
         {
           "element_id": "E2-S1-V-004",
@@ -517,7 +517,7 @@
         "section_source": "CAD_CONTOUR_WIDTH+TEXT_LABEL",
         "section_confidence": "CONFIRMED_FROM_PLAN"
       },
-      "used_by_count": 411,
+      "used_by_count": 391,
       "provenance_examples": [
         {
           "element_id": "E2-S1-V-017",
@@ -753,18 +753,8 @@
         "section_source": "TEXT_LABEL",
         "section_confidence": "CONFIRMED_FROM_LABEL_GEOMETRY_REVIEW"
       },
-      "used_by_count": 1,
-      "provenance_examples": [
-        {
-          "element_id": "E1-P1-C-023",
-          "building": "EDIFICIO_1",
-          "floor": "P1",
-          "source_dxf": "2017_67-101.dxf",
-          "source_layer": "RLE-PILAR",
-          "section_source": "TEXT_LABEL",
-          "section_confidence": "CONFIRMED_FROM_LABEL_GEOMETRY_REVIEW"
-        }
-      ]
+      "used_by_count": 0,
+      "provenance_examples": []
     },
     {
       "section_id": "SEC_COLUMN_RECT_0.350x0.350",
@@ -917,7 +907,7 @@
         "section_source": "CAD_GEOMETRY_RLE-PILAR",
         "section_confidence": "CAD_GEOMETRY"
       },
-      "used_by_count": 127,
+      "used_by_count": 128,
       "provenance_examples": [
         {
           "element_id": "E2-S1-C-002",
@@ -1098,6 +1088,15 @@
           "source_layer": "RLE-PILAR",
           "section_source": "CAD_GEOMETRY_RLE-PILAR",
           "section_confidence": "CAD_GEOMETRY"
+        },
+        {
+          "element_id": "E1-P1-C-023",
+          "building": "EDIFICIO_1",
+          "floor": "P1",
+          "source_dxf": "2017_67-101.dxf",
+          "source_layer": "RLE-PILAR",
+          "section_source": "VERTICAL_STACK_CONTINUITY_S1_P2_P3_P4",
+          "section_confidence": "CONFIRMED_FROM_VERTICAL_STACK"
         }
       ]
     },
