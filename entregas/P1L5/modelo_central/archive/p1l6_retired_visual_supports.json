@@ -1,0 +1,806 @@
+{
+  "format": "MCOC_P1L6_RETIRED_VISUAL_SUPPORTS_V1",
+  "timestamp_utc": "2026-09-29T05:58:09.274253+00:00",
+  "reason": "Approved visual/historical extras; not FE restraints in CURRENT.",
+  "fe_supports_preserved": 33,
+  "fixed_dofs": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "retired_supports": [
+    {
+      "element_id": "E1-S1-A-002",
+      "solidTag": "SOL_base_support_0002",
+      "type": "support",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "nodes": [
+        "N-00767",
+        "N-00768"
+      ],
+      "geometry": {
+        "kind": "linear_prism",
+        "start_m": [
+          27.241,
+          9.431,
+          -0.15
+        ],
+        "end_m": [
+          27.241,
+          15.981,
+          -0.15
+        ],
+        "center_m": [
+          27.241,
+          12.706,
+          -0.15
+        ],
+        "z_bottom_m": -0.3,
+        "z_top_m": 0.0
+      },
+      "section_id": "SEC_SUPPORT_VISUAL_0.450x0.300",
+      "material_id": "MAT_UNKNOWN",
+      "active": true,
+      "analysis_id": null,
+      "opensees_tag": null,
+      "analysis_refs": [],
+      "aliases": [],
+      "merged_from": [],
+      "provenance": {
+        "source_file": "entregas/P1L2/unity_export/model_combined_viewer.json",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "generated_from_confirmed_wall_centerline",
+        "sourceTags": null,
+        "confidence": "derived_from_confirmed_wall_centerline",
+        "location_description": "EDIFICIO_1 / S1 / Apoyo X D/E / Y entre 2-2a",
+        "axis_x": "D/E",
+        "axis_y": null
+      },
+      "merge_history": [],
+      "support_id": "E1-S1-A-002",
+      "fixity": {
+        "UX": true,
+        "UY": true,
+        "UZ": true,
+        "RX": true,
+        "RY": true,
+        "RZ": true
+      },
+      "status": "GEOMETRIC_SUPPORT_CURRENT_PRE5; FE candidate supports are separate generated node constraints."
+    },
+    {
+      "element_id": "E1-S1-A-019",
+      "solidTag": "SOL_base_support_0012",
+      "type": "support",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "nodes": [
+        "N-00771",
+        "N-00772"
+      ],
+      "geometry": {
+        "kind": "linear_prism",
+        "start_m": [
+          27.841,
+          -0.069,
+          -0.15
+        ],
+        "end_m": [
+          32.167,
+          -0.069,
+          -0.15
+        ],
+        "center_m": [
+          30.004,
+          -0.069,
+          -0.15
+        ],
+        "z_bottom_m": -0.3,
+        "z_top_m": 0.0
+      },
+      "section_id": "SEC_SUPPORT_VISUAL_0.450x0.300",
+      "material_id": "MAT_UNKNOWN",
+      "active": true,
+      "analysis_id": null,
+      "opensees_tag": null,
+      "analysis_refs": [],
+      "aliases": [],
+      "merged_from": [],
+      "provenance": {
+        "source_file": "entregas/P1L2/unity_export/model_combined_viewer.json",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "generated_from_confirmed_wall_centerline",
+        "sourceTags": null,
+        "confidence": "derived_from_confirmed_wall_centerline",
+        "location_description": "EDIFICIO_1 / S1 / Apoyo X entre D/E-Ea / Y 1",
+        "axis_x": null,
+        "axis_y": "1"
+      },
+      "merge_history": [],
+      "support_id": "E1-S1-A-019",
+      "fixity": {
+        "UX": true,
+        "UY": true,
+        "UZ": true,
+        "RX": true,
+        "RY": true,
+        "RZ": true
+      },
+      "status": "GEOMETRIC_SUPPORT_CURRENT_PRE5; FE candidate supports are separate generated node constraints."
+    },
+    {
+      "element_id": "E1-S1-A-022",
+      "solidTag": "SOL_base_support_0037",
+      "type": "support",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "nodes": [
+        "N-00779",
+        "N-00780"
+      ],
+      "geometry": {
+        "kind": "linear_prism",
+        "start_m": [
+          37.691,
+          9.431,
+          -0.15
+        ],
+        "end_m": [
+          37.691,
+          15.981,
+          -0.15
+        ],
+        "center_m": [
+          37.691,
+          12.706,
+          -0.15
+        ],
+        "z_bottom_m": -0.3,
+        "z_top_m": 0.0
+      },
+      "section_id": "SEC_SUPPORT_VISUAL_0.450x0.300",
+      "material_id": "MAT_UNKNOWN",
+      "active": true,
+      "analysis_id": null,
+      "opensees_tag": null,
+      "analysis_refs": [],
+      "aliases": [],
+      "merged_from": [],
+      "provenance": {
+        "source_file": "entregas/P1L2/unity_export/model_combined_viewer.json",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "generated_from_confirmed_wall_centerline",
+        "sourceTags": null,
+        "confidence": "derived_from_confirmed_wall_centerline",
+        "location_description": "EDIFICIO_1 / S1 / Apoyo X F / Y entre 2-2a",
+        "axis_x": "F",
+        "axis_y": null
+      },
+      "merge_history": [],
+      "support_id": "E1-S1-A-022",
+      "fixity": {
+        "UX": true,
+        "UY": true,
+        "UZ": true,
+        "RX": true,
+        "RY": true,
+        "RZ": true
+      },
+      "status": "GEOMETRIC_SUPPORT_CURRENT_PRE5; FE candidate supports are separate generated node constraints."
+    },
+    {
+      "element_id": "E1-S1-A-033",
+      "solidTag": "SOL_base_support_0034",
+      "type": "support",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "nodes": [
+        "N-00773",
+        "N-00774"
+      ],
+      "geometry": {
+        "kind": "linear_prism",
+        "start_m": [
+          27.841,
+          16.531,
+          -0.15
+        ],
+        "end_m": [
+          37.141,
+          16.531,
+          -0.15
+        ],
+        "center_m": [
+          32.491,
+          16.531,
+          -0.15
+        ],
+        "z_bottom_m": -0.3,
+        "z_top_m": 0.0
+      },
+      "section_id": "SEC_SUPPORT_VISUAL_0.450x0.300",
+      "material_id": "MAT_UNKNOWN",
+      "active": true,
+      "analysis_id": null,
+      "opensees_tag": null,
+      "analysis_refs": [],
+      "aliases": [],
+      "merged_from": [],
+      "provenance": {
+        "source_file": "entregas/P1L2/unity_export/model_combined_viewer.json",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "generated_from_confirmed_wall_centerline",
+        "sourceTags": null,
+        "confidence": "derived_from_confirmed_wall_centerline",
+        "location_description": "EDIFICIO_1 / S1 / Apoyo X entre Eb-Ec / Y > 3",
+        "axis_x": null,
+        "axis_y": null
+      },
+      "merge_history": [],
+      "support_id": "E1-S1-A-033",
+      "fixity": {
+        "UX": true,
+        "UY": true,
+        "UZ": true,
+        "RX": true,
+        "RY": true,
+        "RZ": true
+      },
+      "status": "GEOMETRIC_SUPPORT_CURRENT_PRE5; FE candidate supports are separate generated node constraints."
+    },
+    {
+      "element_id": "E1-S1-A-034",
+      "solidTag": "SOL_base_support_0024",
+      "type": "support",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "nodes": [
+        "N-00769",
+        "N-00770"
+      ],
+      "geometry": {
+        "kind": "linear_prism",
+        "start_m": [
+          27.341,
+          -0.369,
+          -0.15
+        ],
+        "end_m": [
+          32.167,
+          -0.369,
+          -0.15
+        ],
+        "center_m": [
+          29.754,
+          -0.369,
+          -0.15
+        ],
+        "z_bottom_m": -0.3,
+        "z_top_m": 0.0
+      },
+      "section_id": "SEC_SUPPORT_VISUAL_0.450x0.300",
+      "material_id": "MAT_UNKNOWN",
+      "active": true,
+      "analysis_id": null,
+      "opensees_tag": null,
+      "analysis_refs": [],
+      "aliases": [],
+      "merged_from": [],
+      "provenance": {
+        "source_file": "entregas/P1L2/unity_export/model_combined_viewer.json",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "generated_from_confirmed_wall_centerline",
+        "sourceTags": null,
+        "confidence": "derived_from_confirmed_wall_centerline",
+        "location_description": "EDIFICIO_1 / S1 / Apoyo X entre D/E-Ea / Y < 1",
+        "axis_x": null,
+        "axis_y": null
+      },
+      "merge_history": [],
+      "support_id": "E1-S1-A-034",
+      "fixity": {
+        "UX": true,
+        "UY": true,
+        "UZ": true,
+        "RX": true,
+        "RY": true,
+        "RZ": true
+      },
+      "status": "GEOMETRIC_SUPPORT_CURRENT_PRE5; FE candidate supports are separate generated node constraints."
+    },
+    {
+      "element_id": "E1-S1-A-042",
+      "solidTag": "SOL_base_support_0059",
+      "type": "support",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "nodes": [
+        "N-00775",
+        "N-00776"
+      ],
+      "geometry": {
+        "kind": "linear_prism",
+        "start_m": [
+          33.967,
+          -0.069,
+          -0.15
+        ],
+        "end_m": [
+          37.141,
+          -0.069,
+          -0.15
+        ],
+        "center_m": [
+          35.554,
+          -0.069,
+          -0.15
+        ],
+        "z_bottom_m": -0.3,
+        "z_top_m": 0.0
+      },
+      "section_id": "SEC_SUPPORT_VISUAL_0.450x0.300",
+      "material_id": "MAT_UNKNOWN",
+      "active": true,
+      "analysis_id": null,
+      "opensees_tag": null,
+      "analysis_refs": [],
+      "aliases": [],
+      "merged_from": [],
+      "provenance": {
+        "source_file": "entregas/P1L2/unity_export/model_combined_viewer.json",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "generated_from_confirmed_wall_centerline",
+        "sourceTags": null,
+        "confidence": "derived_from_confirmed_wall_centerline",
+        "location_description": "EDIFICIO_1 / S1 / Apoyo X entre Ed-F / Y 1",
+        "axis_x": null,
+        "axis_y": "1"
+      },
+      "merge_history": [],
+      "support_id": "E1-S1-A-042",
+      "fixity": {
+        "UX": true,
+        "UY": true,
+        "UZ": true,
+        "RX": true,
+        "RY": true,
+        "RZ": true
+      },
+      "status": "GEOMETRIC_SUPPORT_CURRENT_PRE5; FE candidate supports are separate generated node constraints."
+    },
+    {
+      "element_id": "E1-S1-A-056",
+      "solidTag": "SOL_base_support_0015",
+      "type": "support",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "nodes": [
+        "N-00777",
+        "N-00778"
+      ],
+      "geometry": {
+        "kind": "linear_prism",
+        "start_m": [
+          37.691,
+          0.531,
+          -0.15
+        ],
+        "end_m": [
+          37.691,
+          8.731,
+          -0.15
+        ],
+        "center_m": [
+          37.691,
+          4.631,
+          -0.15
+        ],
+        "z_bottom_m": -0.3,
+        "z_top_m": 0.0
+      },
+      "section_id": "SEC_SUPPORT_VISUAL_0.450x0.300",
+      "material_id": "MAT_UNKNOWN",
+      "active": true,
+      "analysis_id": null,
+      "opensees_tag": null,
+      "analysis_refs": [],
+      "aliases": [],
+      "merged_from": [],
+      "provenance": {
+        "source_file": "entregas/P1L2/unity_export/model_combined_viewer.json",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "generated_from_confirmed_wall_centerline",
+        "sourceTags": null,
+        "confidence": "derived_from_confirmed_wall_centerline",
+        "location_description": "EDIFICIO_1 / S1 / Apoyo X F / Y entre 1''-2",
+        "axis_x": "F",
+        "axis_y": null
+      },
+      "merge_history": [],
+      "support_id": "E1-S1-A-056",
+      "fixity": {
+        "UX": true,
+        "UY": true,
+        "UZ": true,
+        "RX": true,
+        "RY": true,
+        "RZ": true
+      },
+      "status": "GEOMETRIC_SUPPORT_CURRENT_PRE5; FE candidate supports are separate generated node constraints."
+    },
+    {
+      "element_id": "E1-S1-A-080",
+      "solidTag": "SOL_base_support_dilatation_001",
+      "type": "support",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "nodes": [
+        "N-01209",
+        "N-01210"
+      ],
+      "geometry": {
+        "kind": "linear_prism",
+        "start_m": [
+          27.241,
+          6.351,
+          -0.15
+        ],
+        "end_m": [
+          27.241,
+          8.711,
+          -0.15
+        ],
+        "center_m": [
+          27.241,
+          7.531,
+          -0.15
+        ],
+        "z_bottom_m": -0.3,
+        "z_top_m": 0.0
+      },
+      "section_id": "SEC_SUPPORT_VISUAL_0.450x0.300",
+      "material_id": "MAT_UNKNOWN",
+      "active": true,
+      "analysis_id": null,
+      "opensees_tag": null,
+      "analysis_refs": [],
+      "aliases": [],
+      "merged_from": [],
+      "provenance": {
+        "source_file": "entregas/P1L2/unity_export/model_combined_viewer.json",
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "generated_from_confirmed_special_wall",
+        "sourceTags": null,
+        "confidence": "derived_from_confirmed_special_wall",
+        "location_description": "EDIFICIO_1 / S1 / Apoyo X D/E / Y entre 1''-2",
+        "axis_x": "D/E",
+        "axis_y": null
+      },
+      "merge_history": [],
+      "support_id": "E1-S1-A-080",
+      "fixity": {
+        "UX": true,
+        "UY": true,
+        "UZ": true,
+        "RX": true,
+        "RY": true,
+        "RZ": true
+      },
+      "status": "GEOMETRIC_SUPPORT_CURRENT_PRE5; FE candidate supports are separate generated node constraints."
+    },
+    {
+      "element_id": "E2-S1-A-014",
+      "solidTag": "SOL2_base_support_0002",
+      "type": "support",
+      "building": "EDIFICIO_2",
+      "floor": "S1",
+      "nodes": [
+        "N-00558",
+        "N-00559"
+      ],
+      "geometry": {
+        "kind": "linear_prism",
+        "start_m": [
+          25.082,
+          3.331,
+          -0.15
+        ],
+        "end_m": [
+          25.082,
+          6.151,
+          -0.15
+        ],
+        "center_m": [
+          25.082,
+          4.741,
+          -0.15
+        ],
+        "z_bottom_m": -0.3,
+        "z_top_m": 0.0
+      },
+      "section_id": "SEC_SUPPORT_VISUAL_0.450x0.300",
+      "material_id": "MAT_UNKNOWN",
+      "active": true,
+      "analysis_id": null,
+      "opensees_tag": null,
+      "analysis_refs": [],
+      "aliases": [],
+      "merged_from": [],
+      "provenance": {
+        "source_file": "entregas/P1L2/unity_export/model_combined_viewer.json",
+        "source_dxf": "2024_22-101.dxf",
+        "source_layer": "generated_connected_support",
+        "sourceTags": [
+          "SOL2_1S_wall_0002"
+        ],
+        "confidence": "qa_connected",
+        "location_description": "EDIFICIO_2 / S1 / Apoyo X entre C-D/E / Y entre 1-2",
+        "axis_x": null,
+        "axis_y": null
+      },
+      "merge_history": [],
+      "support_id": "E2-S1-A-014",
+      "fixity": {
+        "UX": true,
+        "UY": true,
+        "UZ": true,
+        "RX": true,
+        "RY": true,
+        "RZ": true
+      },
+      "status": "GEOMETRIC_SUPPORT_CURRENT_PRE5; FE candidate supports are separate generated node constraints."
+    },
+    {
+      "element_id": "E2-S1-A-015",
+      "solidTag": "SOL2_base_support_0003",
+      "type": "support",
+      "building": "EDIFICIO_2",
+      "floor": "S1",
+      "nodes": [
+        "N-00560",
+        "N-00561"
+      ],
+      "geometry": {
+        "kind": "linear_prism",
+        "start_m": [
+          25.207,
+          3.181,
+          -0.15
+        ],
+        "end_m": [
+          27.602,
+          3.181,
+          -0.15
+        ],
+        "center_m": [
+          26.404,
+          3.181,
+          -0.15
+        ],
+        "z_bottom_m": -0.3,
+        "z_top_m": 0.0
+      },
+      "section_id": "SEC_SUPPORT_VISUAL_0.540x0.300",
+      "material_id": "MAT_UNKNOWN",
+      "active": true,
+      "analysis_id": null,
+      "opensees_tag": null,
+      "analysis_refs": [],
+      "aliases": [],
+      "merged_from": [],
+      "provenance": {
+        "source_file": "entregas/P1L2/unity_export/model_combined_viewer.json",
+        "source_dxf": "2024_22-101.dxf",
+        "source_layer": "generated_connected_support",
+        "sourceTags": [
+          "SOL2_1S_wall_0003"
+        ],
+        "confidence": "qa_connected",
+        "location_description": "EDIFICIO_2 / S1 / Apoyo X entre C-D/E / Y entre 1-2",
+        "axis_x": null,
+        "axis_y": null
+      },
+      "merge_history": [],
+      "support_id": "E2-S1-A-015",
+      "fixity": {
+        "UX": true,
+        "UY": true,
+        "UZ": true,
+        "RX": true,
+        "RY": true,
+        "RZ": true
+      },
+      "status": "GEOMETRIC_SUPPORT_CURRENT_PRE5; FE candidate supports are separate generated node constraints."
+    },
+    {
+      "element_id": "E2-S1-A-017",
+      "solidTag": "SOL2_base_support_0005",
+      "type": "support",
+      "building": "EDIFICIO_2",
+      "floor": "S1",
+      "nodes": [
+        "N-00564",
+        "N-00565"
+      ],
+      "geometry": {
+        "kind": "linear_prism",
+        "start_m": [
+          27.727,
+          0.351,
+          -0.15
+        ],
+        "end_m": [
+          27.727,
+          3.031,
+          -0.15
+        ],
+        "center_m": [
+          27.727,
+          1.691,
+          -0.15
+        ],
+        "z_bottom_m": -0.3,
+        "z_top_m": 0.0
+      },
+      "section_id": "SEC_SUPPORT_VISUAL_0.450x0.300",
+      "material_id": "MAT_UNKNOWN",
+      "active": true,
+      "analysis_id": null,
+      "opensees_tag": null,
+      "analysis_refs": [],
+      "aliases": [],
+      "merged_from": [],
+      "provenance": {
+        "source_file": "entregas/P1L2/unity_export/model_combined_viewer.json",
+        "source_dxf": "2024_22-101.dxf",
+        "source_layer": "generated_connected_support",
+        "sourceTags": [
+          "SOL2_1S_wall_0005"
+        ],
+        "confidence": "qa_connected",
+        "location_description": "EDIFICIO_2 / S1 / Apoyo X D/E / Y entre 1-2",
+        "axis_x": "D/E",
+        "axis_y": null
+      },
+      "merge_history": [],
+      "support_id": "E2-S1-A-017",
+      "fixity": {
+        "UX": true,
+        "UY": true,
+        "UZ": true,
+        "RX": true,
+        "RY": true,
+        "RZ": true
+      },
+      "status": "GEOMETRIC_SUPPORT_CURRENT_PRE5; FE candidate supports are separate generated node constraints."
+    },
+    {
+      "element_id": "E2-S1-A-018",
+      "solidTag": "SOL2_base_support_0004",
+      "type": "support",
+      "building": "EDIFICIO_2",
+      "floor": "S1",
+      "nodes": [
+        "N-00562",
+        "N-00563"
+      ],
+      "geometry": {
+        "kind": "linear_prism",
+        "start_m": [
+          27.727,
+          3.331,
+          -0.15
+        ],
+        "end_m": [
+          27.727,
+          6.151,
+          -0.15
+        ],
+        "center_m": [
+          27.727,
+          4.741,
+          -0.15
+        ],
+        "z_bottom_m": -0.3,
+        "z_top_m": 0.0
+      },
+      "section_id": "SEC_SUPPORT_VISUAL_0.450x0.300",
+      "material_id": "MAT_UNKNOWN",
+      "active": true,
+      "analysis_id": null,
+      "opensees_tag": null,
+      "analysis_refs": [],
+      "aliases": [],
+      "merged_from": [],
+      "provenance": {
+        "source_file": "entregas/P1L2/unity_export/model_combined_viewer.json",
+        "source_dxf": "2024_22-101.dxf",
+        "source_layer": "generated_connected_support",
+        "sourceTags": [
+          "SOL2_1S_wall_0004"
+        ],
+        "confidence": "qa_connected",
+        "location_description": "EDIFICIO_2 / S1 / Apoyo X D/E / Y entre 1-2",
+        "axis_x": "D/E",
+        "axis_y": null
+      },
+      "merge_history": [],
+      "support_id": "E2-S1-A-018",
+      "fixity": {
+        "UX": true,
+        "UY": true,
+        "UZ": true,
+        "RX": true,
+        "RY": true,
+        "RZ": true
+      },
+      "status": "GEOMETRIC_SUPPORT_CURRENT_PRE5; FE candidate supports are separate generated node constraints."
+    },
+    {
+      "element_id": "E2-S1-A-019",
+      "solidTag": "SOL2_base_support_0001",
+      "type": "support",
+      "building": "EDIFICIO_2",
+      "floor": "S1",
+      "nodes": [
+        "N-00556",
+        "N-00557"
+      ],
+      "geometry": {
+        "kind": "linear_prism",
+        "start_m": [
+          27.727,
+          8.551,
+          -0.15
+        ],
+        "end_m": [
+          27.727,
+          16.501,
+          -0.15
+        ],
+        "center_m": [
+          27.727,
+          12.526,
+          -0.15
+        ],
+        "z_bottom_m": -0.3,
+        "z_top_m": 0.0
+      },
+      "section_id": "SEC_SUPPORT_VISUAL_0.450x0.300",
+      "material_id": "MAT_UNKNOWN",
+      "active": true,
+      "analysis_id": null,
+      "opensees_tag": null,
+      "analysis_refs": [],
+      "aliases": [],
+      "merged_from": [],
+      "provenance": {
+        "source_file": "entregas/P1L2/unity_export/model_combined_viewer.json",
+        "source_dxf": "2024_22-101.dxf",
+        "source_layer": "generated_connected_support",
+        "sourceTags": [
+          "SOL2_1S_wall_0001"
+        ],
+        "confidence": "qa_connected",
+        "location_description": "EDIFICIO_2 / S1 / Apoyo X D/E / Y entre 2-3",
+        "axis_x": "D/E",
+        "axis_y": null
+      },
+      "merge_history": [],
+      "support_id": "E2-S1-A-019",
+      "fixity": {
+        "UX": true,
+        "UY": true,
+        "UZ": true,
+        "RX": true,
+        "RY": true,
+        "RZ": true
+      },
+      "status": "GEOMETRIC_SUPPORT_CURRENT_PRE5; FE candidate supports are separate generated node constraints."
+    }
+  ]
+}
