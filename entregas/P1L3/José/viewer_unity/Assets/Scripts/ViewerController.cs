@@ -1698,6 +1698,7 @@ namespace Mcoc.UnityViewer
                 mat.EnableKeyword("_EMISSION");
                 mat.SetColor("_EmissionColor", new Color(0.15f, 0.3f, 0.35f));
             }
+            ApplyStructuralFailureVisualization();
             ShowInfo(ei);
         }
 
@@ -1744,6 +1745,7 @@ namespace Mcoc.UnityViewer
                         }
                     }
                     ei.isHighlighted = false;
+                    ApplyStructuralFailureVisualization();
                 }
             }
             selected = null;

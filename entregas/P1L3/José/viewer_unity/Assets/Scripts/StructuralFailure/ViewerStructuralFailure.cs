@@ -9,6 +9,8 @@ namespace Mcoc.UnityViewer
     {
         private readonly Dictionary<string, FailureResult> structuralFailureByElementId =
             new Dictionary<string, FailureResult>();
+        private bool structuralFailureVisualizationEnabled = true;
+        private bool structuralDamageOverlayEnabled;
 
         FailureResult StructuralFailureFor(string elementId)
         {
@@ -96,7 +98,22 @@ namespace Mcoc.UnityViewer
                 $"Segmento controlador: {result.controllingAnalysisId} | OpenSees {result.controllingOpenSeesTag}";
         }
 
-        // Implemented by the presentation layer in the following milestone.
-        partial void ApplyStructuralFailureVisualization();
+        partial void ApplyStructuralFailureVisualization()
+        {
+            foreach (var info in allElements)
+            {
+                if (info == null || info.go == null || info.isFeCandidateVisual ||
+                    (info.category != "beam" && info.category != "column" && info.category != "wall")) continue;
+                string id = string.IsNullOrEmpty(info.humanId) ? info.id : info.humanId;
+                var visualizer = info.go.GetComponent<ElementFailureVisualizer>();
+                if (visualizer == null)
+                {
+                    visualizer = info.go.AddComponent<ElementFailureVisualizer>();
+                    visualizer.Initialize(info.baseColor);
+                }
+                visualizer.Apply(StructuralFailureFor(id), structuralFailureVisualizationEnabled,
+                    structuralDamageOverlayEnabled, info.isHighlighted);
+            }
+        }
     }
 }
