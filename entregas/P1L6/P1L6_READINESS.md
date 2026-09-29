@@ -23,6 +23,7 @@ Rama: `codex/p1l5-integration`
 | Flujo CURRENT | PASS | hashes de geometría, payload y cargas; fallback histórico bloqueado |
 | Unity compile | PASS | Unity 6000.6.0f1 sin errores C# |
 | Dataset AR | PASS | 658 registros; 615 con resultados y capacidad |
+| Visualización AR PC | PASS_WITH_NOTE | escena separada, FakeAnchor, columna/viga CURRENT; muro completo espera altura en contrato |
 | Referencia Luis | PASS | `entregas/P1L2/unity_export/model_viewer.json` sin modificar |
 
 ## Resultados CURRENT

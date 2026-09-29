@@ -9,6 +9,8 @@ precalculados.
 
 - Estado y QA: [P1L6_READINESS.md](P1L6_READINESS.md)
 - Prueba Unity en Play: [UNITY_PLAY_QA.md](preparation/UNITY_PLAY_QA.md)
+- Visualización AR y FakeAnchor: [AR_VISUALIZATION.md](AR_VISUALIZATION.md)
+- QA del prototipo AR: [AR_VISUALIZATION_QA.md](preparation/AR_VISUALIZATION_QA.md)
 - Transformación de coordenadas: [AR_TRANSFORM_CONTRACT.md](AR_TRANSFORM_CONTRACT.md)
 - Dataset AR: `preparation/current_ar_elements.json`
 - Fuente geométrica: `../P1L5/modelo_central/model_master.json`
