@@ -2,10 +2,10 @@
   "format": "MCOC_CURRENT_DATASET_V1",
   "geometry_version": "36c18d76fd0b95bef08da0ca0562ddd2a366d5a88b4c11f0c91201d85d244e1d",
   "fe_version": "fad19aafe311a3493fc11ecffcb90112fa193bf5c65ff818053402fd8d21c3cf",
-  "loads_version": "4e170ead4fda1fb82fb17bb45b4d8b5999c172bc9a48878f15964c2fa70b1363",
+  "loads_version": "f4ea5cc1f47e8e113837d9561ebd27f5a5eda03533f7666b3f4ced9d1d72ded5",
   "analysis_version": "P1L5_CURRENT_ZONED_V2",
-  "git_commit": "9172acc008bc87074e3ab0b6a1fb07398e97bf38",
-  "timestamp": "2026-09-29T05:59:27.859234+00:00",
+  "git_commit": "21d287a6eeafcb29019a8d5aad11065181f1df6e",
+  "timestamp": "2026-09-29T14:45:58.172984+00:00",
   "status": "CURRENT_VERIFIED",
   "geometry_stream_sha256": "4201023f51c9f5b99bf8352e383649cff734c95116c71a3f6fc131dca4912e1a",
   "units": {
@@ -34,14 +34,14 @@
   "loads_approved": true,
   "linear_verified": true,
   "payload_file": "p1l5_current_analysis_cases.json",
-  "payload_sha256": "307679231c1b6a202439daf5769da5d7e8a24971df8fe9ba4e13903096ba283e",
+  "payload_sha256": "5a579a6149f41ccfa373e3ce2e16f26bb143510618c0c4a2c84a3d10aa426116",
   "source_geometry": "entregas/P1L5/modelo_central/model_master.json",
   "source_fe": "entregas/P1L5/modelo_central/model_master.json#/fe_topology",
   "source_loads": "entregas/P1L5/modelo_central/loads.json",
   "basis_policy": "Identical K, supports, local axes, node/member ordering and signed SI components.",
   "capacity_policy": "Demand changes by compatible linear superposition; section/material changes require reanalysis and capacity compatibility review.",
   "result_state": "CURRENT_WITH_DOCUMENTED_FALLBACKS",
-  "unresolved_load_count": 10,
+  "unresolved_load_count": 6,
   "current_element_loads_file": "p1l5_current_loads_by_element.json",
-  "current_element_loads_sha256": "7b929c1f47fd9427d03daf4425423c9429850857e2baf79c8203e5b9b0469aad"
+  "current_element_loads_sha256": "d6567df57c8a29678a5f4d7d0d66770e0e701de3cfe1c6b956613aae225fc675"
 }

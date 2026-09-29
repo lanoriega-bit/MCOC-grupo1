@@ -58,7 +58,7 @@ activación explícita en Entregas o Avanzado y nunca se presenta como resultado
 | Diagnóstico FE | `CURRENT / PASS` | 623 segmentos, 1100 nodos; 0 componentes desconectados. |
 | Resultados actuales | `CURRENT VERIFIED` | G/Q/EX/EY y R compatibles; hashes de geometría, cargas y payload verificados. |
 | G/Q/EX/EY/R y capacidad anteriores | `HISTORICAL` | Avanzado → Histórico, apagado por defecto. |
-| Catálogo de cargas | `CURRENT_RECOMPUTED` | 44 paños; conservación G/Q PASS; 10 cargas especiales siguen unresolved. |
+| Catálogo de cargas | `CURRENT_RECOMPUTED` | 46 paños/rutas; conservación G/Q PASS; 6 cargas puntuales siguen unresolved. |
 
 El diagnóstico se reconstruyó: solo `E2-P4-V-009` permanece sin camino FE a apoyo.
 `E1-S1-V-005` fue retirado con aprobación y trazabilidad. El foco de clasificación histórico

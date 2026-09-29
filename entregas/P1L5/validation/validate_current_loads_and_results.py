@@ -190,8 +190,10 @@ Geometría congelada respecto de `{BASE}`: **{'PASS' if geometry_frozen else 'FA
 - `CURRENT_RECONSTRUCTED`: {current['catalog_status_counts'].get('CURRENT_RECONSTRUCTED', 0)} entradas.
 - `HISTORICAL_FALLBACK`: {current['catalog_status_counts'].get('HISTORICAL_FALLBACK', 0)} entradas de PP.LOSA a 0,15 m.
 - `UNRESOLVED`: {current['catalog_status_counts'].get('UNRESOLVED', 0)} entradas.
+- `RESOLVED_BY_REVIEW`: {current['catalog_status_counts'].get('RESOLVED_BY_REVIEW', 0)} entradas (líneas de fachada E1-P4, dual 7600/800).
+- `RESOLVED_BY_REVIEW_SLAB_ROUTE`: {current['catalog_status_counts'].get('RESOLVED_BY_REVIEW_SLAB_ROUTE', 0)} entradas (líneas E2-P4 vía losa/tira equivalente).
 - `UNIT_CONFLICT_UNRESOLVED`: {current['catalog_status_counts'].get('UNIT_CONFLICT_UNRESOLVED', 0)} entradas (conflicto 7600/800).
-- Paños/zonas `CURRENT_RECOMPUTED`: 44. La exportación visual genera 49 polígonos exteriores porque cinco zonas multipolígono se dibujan por componente.
+- Paños/zonas `CURRENT_RECOMPUTED`: 46 (44 zonas CAD + 2 tiras equivalentes de las cargas lineales E2-P4). La exportación visual genera 51 polígonos exteriores porque cinco zonas multipolígono se dibujan por componente y las dos tiras se exportan por separado.
 - Conservación G: residual {current['conservation']['G']['residual_N']:.6f} N ({current['conservation']['G']['residual_percent']:.3e} %), **PASS**.
 - Conservación Q: residual {current['conservation']['Q']['residual_N']:.6f} N ({current['conservation']['Q']['residual_percent']:.3e} %), **PASS**.
 

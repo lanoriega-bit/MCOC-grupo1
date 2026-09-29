@@ -7,8 +7,10 @@ the numerical form of an equal-distance (approximately 45-degree) tributary
 boundary. Every clipped cell is assigned exactly once.
 
 Member self-weight is computed separately from section, FE length and density.
-Slab self-weight remains the documented 0.15 m academic fallback. The open
-7600/800 line-load unit conflict is not applied.
+Slab self-weight remains the documented 0.15 m academic fallback. The facade
+line loads L700-P4-LINE-SC-800 are resolved by review onto the P4 facade beams
+(7600/800 dual values kept; receptor = E1-P4-V-024/030/047/055/072/078/088).
+Remaining unresolvable point/line loads stay explicit, never interpreted as zero.
 """
 
 from __future__ import annotations
@@ -165,10 +167,43 @@ def main() -> None:
     surface_ids = set()
 
     sc_entries = [row for row in entries if row["load_type"] == "SC_SURFACE"]
-    for sc in sorted(sc_entries, key=lambda row: row["load_id"]):
-        pm = match_pair(entries_by_id, sc)
-        if pm is None:
-            raise RuntimeError(f"Missing PM_ADIC pair for {sc['load_id']}")
+
+    synthetic_entries = []
+    for row in entries:
+        override = row.get("review_resolution")
+        if not override or override.get("status") != "RESOLVED_BY_REVIEW_SLAB_ROUTE":
+            continue
+        geometry = shape(row["geometry"])
+        if geometry.geom_type != "LineString":
+            raise RuntimeError(f"Slab-route review requires a LineString: {row['load_id']}")
+        strip = geometry.buffer(override.get("equivalent_strip_width_m", 1.0) / 2.0, cap_style="flat")
+        base = row["load_id"].replace("-SC_LINE", "").replace("-PM_ADIC_LINE", "") + "-STRIP"
+        synthetic_entries.append({
+            "load_id": base + "-SC_SURFACE" if row["load_type"] == "SC_LINE" else base + "-PM_ADIC_SURFACE",
+            "load_type": "SC_SURFACE" if row["load_type"] == "SC_LINE" else "PM_ADIC_SURFACE",
+            "building": row["building"], "floor": row["floor"],
+            "source_sheet": row["source_sheet"], "source_value": row["source_value"],
+            "source_unit": row["source_unit"], "SI_value": row["SI_value"], "SI_unit": row["SI_unit"],
+            "geometry": mapping(strip), "_from_line": row["load_id"],
+            "_line_base": base,
+            "equivalent_strip_width_m": override.get("equivalent_strip_width_m", 1.0),
+            "receptor_panel_id": override.get("receptor_panel_id"),
+            "review_reason": override.get("reason", ""),
+        })
+    all_surface_entries = list(sc_entries) + synthetic_entries
+
+    for sc in sorted(all_surface_entries, key=lambda row: row["load_id"]):
+        line_source_id = sc.get("_from_line")
+        pm = None
+        if line_source_id:
+            for row in synthetic_entries:
+                if row["_line_base"] == sc["_line_base"] and row["load_type"] != sc["load_type"]:
+                    pm = row
+                    break
+            if pm is None:
+                raise RuntimeError(f"Missing synthetic PM_ADIC pair for {line_source_id}")
+        else:
+            pm = match_pair(entries_by_id, sc)
         polygon = shape(sc["geometry"])
         candidates = beam_lines[(sc["building"], sc["floor"])]
         assigned, unresolved_area = assign_polygon_to_beams(polygon, candidates)
@@ -227,6 +262,22 @@ def main() -> None:
             "receiver_fraction_sum": round(sum(row["fraction"] for row in receiver_rows), 9),
             "unresolved_area_m2": round(unresolved_area, 9),
         })
+        if line_source_id:
+            panels[-1].update({
+                "derivation": "LINE_LOAD_EQUIVALENT_STRIP_W_1.0M",
+                "source_line_load_id": line_source_id,
+                "receptor_panel_id": sc.get("receptor_panel_id"),
+                "equivalent_strip_width_m": sc.get("equivalent_strip_width_m"),
+                "review_reason": sc.get("review_reason", ""),
+            })
+            for row in entries:
+                if row["load_id"] == line_source_id:
+                    row["current_application"] = {
+                        "status": "RESOLVED_BY_REVIEW_SLAB_ROUTE", "applied": True,
+                        "method": "LINE_LOAD_TO_EQUIVALENT_STRIP_ON_TRIBUTARY_SLAB_THEN_NEAREST_BEAM",
+                        "receptor_panel_ids": [sc.get("receptor_panel_id")],
+                        "reason": sc.get("review_reason", ""),
+                    }
         surface_ids.update((sc["load_id"], pm["load_id"]))
 
     physical_rows = {"G": [], "Q": []}
@@ -279,17 +330,63 @@ def main() -> None:
         summary["G_self_weight_N"] = self_by_floor[key]
         summary["G_total_N"] = summary["G_self_weight_N"] + summary["G_superimposed_N"] + summary["G_slab_N"]
 
+    line_load_applications = []
     for entry in entries:
-        if entry["load_id"] in surface_ids:
+        override = entry.get("review_resolution")
+        if override and override.get("status") == "RESOLVED_BY_REVIEW_SLAB_ROUTE":
+            if entry["current_application"].get("status") != "RESOLVED_BY_REVIEW_SLAB_ROUTE":
+                entry["current_application"] = {
+                    "status": "RESOLVED_BY_REVIEW_SLAB_ROUTE", "applied": True,
+                    "method": "LINE_LOAD_TO_EQUIVALENT_STRIP_ON_TRIBUTARY_SLAB_THEN_NEAREST_BEAM",
+                    "receptor_panel_ids": [override.get("receptor_panel_id")],
+                    "reason": override.get("reason", ""),
+                }
+            continue
+        if override and override.get("status") == "RESOLVED_BY_REVIEW":
+            receptors = list(override.get("receptor_element_ids", []))
+            entry["current_application"] = {
+                "status": "RESOLVED_BY_REVIEW", "applied": True,
+                "method": "LINE_PROJECTION_TO_RECEPTOR_BEAMS",
+                "receptor_element_ids": receptors, "reason": override.get("reason", ""),
+            }
+            si = float(entry["SI_value"])
+            w_n_m = si * 1000.0
+            case = "Q" if entry["load_type"].startswith("SC") else "G"
+            (x0, y0), (x1, y1) = entry["geometry"]["coordinates"]
+            if y1 != y0:
+                x0, y0, x1, y1 = y0, x0, y1, x1
+            lo, hi = sorted((x0, x1))
+            total = 0.0
+            transfer_rows = []
+            for rid in receptors:
+                row = elements[rid]
+                ref = row["analysis_refs"][0]
+                ni, nj = int(ref["node_i"]), int(ref["node_j"])
+                s, e = sorted((row["geometry"]["start_m"][0], row["geometry"]["end_m"][0]))
+                clipped_lo, clipped_hi = max(lo, s), min(hi, e)
+                if clipped_hi <= clipped_lo:
+                    continue
+                force = w_n_m * (clipped_hi - clipped_lo)
+                total += force
+                add_node_load(nodal, case, ni, -force / 2.0)
+                add_node_load(nodal, case, nj, -force / 2.0)
+                transfer_rows.append({"element_id": rid, "node_i": ni, "node_j": nj, "P_N": round(force, 3)})
+            floor_summary[(entry["building"], entry["floor"])]["Q_N" if case == "Q" else "G_superimposed_N"] += total
+            line_load_applications.append({
+                "load_id": entry["load_id"], "building": entry["building"], "floor": entry["floor"],
+                "case": case, "line_N_m": round(w_n_m, 3), "P_total_N": round(total, 3),
+                "receptor_beams": transfer_rows,
+            })
+        elif entry["load_id"] in surface_ids:
             entry["current_application"] = {"status": "CURRENT_RECONSTRUCTED", "applied": True, "method": "AUDITED_ZONE_POLYGON_TO_CURRENT_BEAM_TRIBUTARIES"}
         elif entry["load_type"] == "PP_LOSA":
             entry["current_application"] = {"status": "HISTORICAL_FALLBACK", "applied": True, "thickness_m": PP_THICKNESS_FALLBACK_M}
         elif entry["load_id"] in CONFLICT_IDS:
             entry["current_application"] = {"status": "UNIT_CONFLICT_UNRESOLVED", "applied": False, "reason": "PM.ADIC=7600 / SC=800 unit/type conflict; excluded without treating unknown as zero."}
         elif entry["load_type"].endswith("POINT"):
-            entry["current_application"] = {"status": "UNRESOLVED", "applied": False, "reason": "Application position and receiver are not uniquely evidenced."}
+            entry["current_application"] = {"status": "UNRESOLVED", "applied": False, "reason": "Application position and receiver are not uniquely evidenced; plan position not recorded in CURRENT catalog."}
         elif entry["load_type"].endswith("LINE"):
-            entry["current_application"] = {"status": "UNRESOLVED", "applied": False, "reason": "Line-load receiver/type is not sufficiently evidenced for CURRENT application."}
+            entry["current_application"] = {"status": "UNRESOLVED", "applied": False, "reason": "Line-load receiver/type is not sufficiently evidenced for CURRENT application; plan receptor not recorded."}
 
     generated = {
         "Q": sum(row["Q_N"] for row in floor_summary.values()),
@@ -374,11 +471,13 @@ def main() -> None:
     loads["current_load_application"] = {
         "status": "PASS_WITH_EXPLICIT_UNRESOLVED" if all(row["status"] == "PASS" for row in conservation.values()) else "FAIL",
         "generated_utc": now, "basis": "CURRENT_AUDITED_ZONE_POLYGONS_AND_COMPUTED_MEMBER_SELF_WEIGHT",
-        "q_intensity_scale": q_scale, "unresolved_load_ids": unresolved, "unit_conflicts": sorted(CONFLICT_IDS),
+        "q_intensity_scale": q_scale, "unresolved_load_ids": unresolved,
+        "unit_conflicts": sorted(row["load_id"] for row in entries if row["current_application"]["status"] == "UNIT_CONFLICT_UNRESOLVED"),
         "catalog_status_counts": dict(status_counts), "conservation": conservation,
         "totals": {"Q_N": round(generated["Q"], 3), "G_self_weight_N": round(generated["G_self_weight"], 3), "G_superimposed_dead_N": round(generated["G_superimposed"], 3), "G_total_N": round(generated["G"], 3)},
         "by_building": by_building, "by_floor": coverage_rows,
         "physical_beam_loads": physical_rows, "element_loads": element_loads,
+        "line_load_applications": line_load_applications,
         "self_weight_by_element": self_rows,
         "nodal_loads": {case: [{"node_tag": tag, "Fz_N": round(value, 3)} for tag, value in sorted(values.items())] for case, values in nodal.items()},
         "approximations": [

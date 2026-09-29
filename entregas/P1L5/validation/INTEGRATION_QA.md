@@ -38,7 +38,7 @@
   "disconnected_components": 0,
   "unknown_structural_materials": 0,
   "load_catalog_entries": 108,
-  "tributary_pans": 44
+  "tributary_pans": 46
 }
 ```
 

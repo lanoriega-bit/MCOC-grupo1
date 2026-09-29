@@ -1,6 +1,6 @@
 {
   "format": "MCOC_P1L5_CURRENT_VALIDATION_V1",
-  "generated_utc": "2026-09-29T05:59:28.563580+00:00",
+  "generated_utc": "2026-09-29T14:46:00.097022+00:00",
   "status": "PASS_WITH_EXPLICIT_UNRESOLVED",
   "branch": "codex/p1l5-integration",
   "geometry": {
@@ -18,8 +18,9 @@
     "status": "PASS_WITH_EXPLICIT_UNRESOLVED",
     "catalog_status_counts": {
       "CURRENT_RECONSTRUCTED": 88,
-      "UNRESOLVED": 8,
-      "UNIT_CONFLICT_UNRESOLVED": 2,
+      "UNRESOLVED": 6,
+      "RESOLVED_BY_REVIEW": 2,
+      "RESOLVED_BY_REVIEW_SLAB_ROUTE": 2,
       "HISTORICAL_FALLBACK": 10
     },
     "unresolved_ids": [
@@ -28,44 +29,37 @@
       "L700-P3-POINT-SC-6000-SC_POINT",
       "L700-P3-POINT-SC-6000-PM_ADIC_POINT",
       "L700-P3-POINT-SC-6700-SC_POINT",
-      "L700-P3-POINT-SC-6700-PM_ADIC_POINT",
-      "L700-P4-LINE-SC-800-SC_LINE",
-      "L700-P4-LINE-SC-800-PM_ADIC_LINE",
-      "L700-E2-P4-LINE-SC-100-SC_LINE",
-      "L700-E2-P4-LINE-SC-100-PM_ADIC_LINE"
+      "L700-P3-POINT-SC-6700-PM_ADIC_POINT"
     ],
-    "unit_conflicts": [
-      "L700-P4-LINE-SC-800-PM_ADIC_LINE",
-      "L700-P4-LINE-SC-800-SC_LINE"
-    ],
+    "unit_conflicts": [],
     "totals": {
-      "Q_N": 24349142.51,
+      "Q_N": 24636593.938,
       "G_self_weight_N": 32945738.266,
-      "G_superimposed_dead_N": 42857767.093,
-      "G_total_N": 75803505.359
+      "G_superimposed_dead_N": 45195388.736,
+      "G_total_N": 78141127.002
     },
     "by_building": {
       "EDIFICIO_1": {
         "lt_block": "LT1",
-        "Q_N": 13147329.213,
+        "Q_N": 13385826.004,
         "G_self_weight_N": 18762456.904,
-        "G_superimposed_dead_N": 25940972.965,
-        "G_total_N": 44703429.869,
+        "G_superimposed_dead_N": 28206692.484,
+        "G_total_N": 46969149.388,
         "etabs_CV_N": 11620380.0,
         "etabs_CM_N": 47140276.0,
-        "Q_difference_percent": 13.14,
-        "G_difference_percent": -5.169
+        "Q_difference_percent": 15.193,
+        "G_difference_percent": -0.363
       },
       "EDIFICIO_2": {
         "lt_block": "LT2",
-        "Q_N": 11201813.297,
+        "Q_N": 11250767.934,
         "G_self_weight_N": 14183281.39,
-        "G_superimposed_dead_N": 16916794.129,
-        "G_total_N": 31100075.518,
+        "G_superimposed_dead_N": 16988696.252,
+        "G_total_N": 31171977.641,
         "etabs_CV_N": 11096777.0,
         "etabs_CM_N": 34723194.0,
-        "Q_difference_percent": 0.947,
-        "G_difference_percent": -10.434
+        "Q_difference_percent": 1.388,
+        "G_difference_percent": -10.227
       }
     },
     "by_floor": [
@@ -121,8 +115,8 @@
         "area_total_m2": 934.561,
         "area_with_Q_m2": 934.561,
         "area_without_Q_m2": 0.0,
-        "Q_N": 1771681.469,
-        "G_superimposed_N": 1924934.957,
+        "Q_N": 2010178.261,
+        "G_superimposed_N": 4190654.476,
         "G_slab_N": 3436842.87,
         "interior_hole_area_m2": 0.0,
         "panels": 3,
@@ -193,16 +187,16 @@
         "building": "EDIFICIO_2",
         "lt_block": "LT2",
         "floor": "P4",
-        "area_total_m2": 535.62,
-        "area_with_Q_m2": 535.62,
+        "area_total_m2": 541.86,
+        "area_with_Q_m2": 541.86,
         "area_without_Q_m2": 0.0,
-        "Q_N": 1050527.527,
-        "G_superimposed_N": 1050527.527,
-        "G_slab_N": 1969739.112,
+        "Q_N": 1099482.163,
+        "G_superimposed_N": 1099482.163,
+        "G_slab_N": 1992686.598,
         "interior_hole_area_m2": 21.813,
-        "panels": 1,
+        "panels": 3,
         "G_self_weight_N": 2755517.614,
-        "G_total_N": 5775784.253
+        "G_total_N": 5847686.376
       },
       {
         "building": "EDIFICIO_2",
@@ -222,17 +216,17 @@
     ],
     "conservation": {
       "G": {
-        "generated_N": 75803505.359,
-        "transferred_N": 75803505.387,
+        "generated_N": 78141127.002,
+        "transferred_N": 78141127.029,
         "residual_N": 0.027463,
-        "residual_percent": 3.623e-08,
+        "residual_percent": 3.5146e-08,
         "status": "PASS"
       },
       "Q": {
-        "generated_N": 24349142.51,
-        "transferred_N": 24349142.51,
-        "residual_N": -0.0,
-        "residual_percent": -0.0,
+        "generated_N": 24636593.938,
+        "transferred_N": 24636593.938,
+        "residual_N": 0.0,
+        "residual_percent": 0.0,
         "status": "PASS"
       }
     }
@@ -244,29 +238,29 @@
   "analysis": {
     "manifest": {
       "format": "MCOC_P1L5_CURRENT_RESULTS_MANIFEST_V2",
-      "generated_utc": "2026-09-29T05:59:27.423914+00:00",
+      "generated_utc": "2026-09-29T14:45:57.572636+00:00",
       "status": "PASS",
       "analysis_version": "P1L5_CURRENT_ZONED_V2",
       "cases": {
         "G": {
           "status": "PASS",
-          "max_translation_m": 0.09337783689629364,
-          "equilibrium_relative_residual": 1.2161574499710538e-15
+          "max_translation_m": 0.09685348520106923,
+          "equilibrium_relative_residual": 5.249131044383562e-16
         },
         "Q": {
           "status": "PASS",
-          "max_translation_m": 0.0387072606558352,
-          "equilibrium_relative_residual": 8.072003068305129e-16
+          "max_translation_m": 0.03870199276166316,
+          "equilibrium_relative_residual": 1.380230890892449e-15
         },
         "EX": {
           "status": "PASS",
-          "max_translation_m": 0.06673438614539443,
-          "equilibrium_relative_residual": 1.5667055510467605e-14
+          "max_translation_m": 0.06697750514083883,
+          "equilibrium_relative_residual": 2.1331132554968443e-14
         },
         "EY": {
           "status": "PASS",
-          "max_translation_m": 0.09887683399883386,
-          "equilibrium_relative_residual": 3.578016731444556e-14
+          "max_translation_m": 0.09928750923070101,
+          "equilibrium_relative_residual": 6.18814043426274e-14
         }
       },
       "linear_superposition_compatible": true,
@@ -274,105 +268,101 @@
       "result_state": "CURRENT_WITH_DOCUMENTED_FALLBACKS",
       "load_contract": {
         "status": "PASS_WITH_EXPLICIT_UNRESOLVED",
-        "G_total_N": 75803505.359,
-        "Q_total_N": 24349142.51,
+        "G_total_N": 78141127.002,
+        "Q_total_N": 24636593.938,
         "unresolved_load_ids": [
           "L700-P2-POINT-SC-7000-SC_POINT",
           "L700-P2-POINT-SC-7000-PM_ADIC_POINT",
           "L700-P3-POINT-SC-6000-SC_POINT",
           "L700-P3-POINT-SC-6000-PM_ADIC_POINT",
           "L700-P3-POINT-SC-6700-SC_POINT",
-          "L700-P3-POINT-SC-6700-PM_ADIC_POINT",
-          "L700-P4-LINE-SC-800-SC_LINE",
-          "L700-P4-LINE-SC-800-PM_ADIC_LINE",
-          "L700-E2-P4-LINE-SC-100-SC_LINE",
-          "L700-E2-P4-LINE-SC-100-PM_ADIC_LINE"
+          "L700-P3-POINT-SC-6700-PM_ADIC_POINT"
         ]
       }
     },
     "case_qa": {
       "G": {
         "finite": true,
-        "max_translation_m": 0.09337783689629364,
+        "max_translation_m": 0.09685348520106923,
         "external_force_N": [
           0.0,
           0.0,
-          -75803505.353
+          -78141126.995
         ],
         "reaction_force_N": [
-          9.21889977689716e-08,
-          -3.971217665821314e-08,
-          75803505.353
+          3.298566753073828e-08,
+          -4.101730155525729e-08,
+          78141126.995
         ],
         "equilibrium_residual_N": [
-          9.21889977689716e-08,
-          -3.971217665821314e-08,
+          3.298566753073828e-08,
+          -4.101730155525729e-08,
           0.0
         ],
-        "equilibrium_relative_residual": 1.2161574499710538e-15,
+        "equilibrium_relative_residual": 5.249131044383562e-16,
         "equilibrium_status": "PASS"
       },
       "Q": {
         "finite": true,
-        "max_translation_m": 0.0387072606558352,
+        "max_translation_m": 0.03870199276166316,
         "external_force_N": [
           0.0,
           0.0,
-          -24349142.445
+          -24636593.873
         ],
         "reaction_force_N": [
-          5.6470526033081114e-09,
-          -1.9654635252663866e-08,
-          24349142.444999993
+          3.400418790988624e-08,
+          -1.7508227756479755e-08,
+          24636593.872999992
         ],
         "equilibrium_residual_N": [
-          5.6470526033081114e-09,
-          -1.9654635252663866e-08,
+          3.400418790988624e-08,
+          -1.7508227756479755e-08,
           -7.450580596923828e-09
         ],
-        "equilibrium_relative_residual": 8.072003068305129e-16,
+        "equilibrium_relative_residual": 1.380230890892449e-15,
         "equilibrium_status": "PASS"
       },
       "EX": {
         "finite": true,
-        "max_translation_m": 0.06673438614539443,
+        "max_translation_m": 0.06697750514083883,
         "external_force_N": [
-          17595615.3281,
+          17638740.8955,
           0.0,
           0.0
         ],
         "reaction_force_N": [
-          -17595615.328100275,
-          -1.1438714864198118e-08,
-          1.4901161193847656e-08
+          -17638740.895499624,
+          -5.866513674845919e-08,
+          6.752088665962219e-09
         ],
         "equilibrium_residual_N": [
-          -2.7567148208618164e-07,
-          -1.1438714864198118e-08,
-          1.4901161193847656e-08
+          3.762543201446533e-07,
+          -5.866513674845919e-08,
+          6.752088665962219e-09
         ],
-        "equilibrium_relative_residual": 1.5667055510467605e-14,
+        "equilibrium_relative_residual": 2.1331132554968443e-14,
         "equilibrium_status": "PASS"
       },
       "EY": {
         "finite": true,
-        "max_translation_m": 0.09887683399883386,
+        "max_translation_m": 0.09928750923070101,
         "external_force_N": [
           0.0,
-          17595615.3281,
+          17638740.8955,
           0.0
         ],
         "reaction_force_N": [
-          -3.427703632041812e-08,
-          -17595615.32810063,
-          -1.4435499906539917e-08
+          -1.43554643727839e-07,
+          -17638740.895501092,
+          -9.313225746154785e-10
         ],
         "equilibrium_residual_N": [
-          -3.427703632041812e-08,
-          -6.295740604400635e-07,
-          -1.4435499906539917e-08
+          -1.43554643727839e-07,
+          -1.0915100574493408e-06,
+          -9.313225746154785e-10
         ],
-        "equilibrium_relative_residual": 3.578016731444556e-14,
+        "equilibrium_relative_residual": 6.18814043426274e-14,
         "equilibrium_status": "PASS"
       }
     },
@@ -391,9 +381,9 @@
         "case": "G",
         "node_tag": 482,
         "selection": "same retained node nearest P3 geometry centroid used for seismic application",
-        "current_Uz_mm": -4.614395,
+        "current_Uz_mm": -4.715193,
         "etabs_reference_Uz_mm": -5.06,
-        "ratio_current_to_etabs": 0.9119,
+        "ratio_current_to_etabs": 0.9319,
         "comparability": "SECONDARY_ORDER_OF_MAGNITUDE_ONLY"
       },
       {
@@ -403,9 +393,9 @@
         "case": "Q",
         "node_tag": 482,
         "selection": "same retained node nearest P3 geometry centroid used for seismic application",
-        "current_Uz_mm": -1.365007,
+        "current_Uz_mm": -1.375617,
         "etabs_reference_Uz_mm": -1.466,
-        "ratio_current_to_etabs": 0.9311,
+        "ratio_current_to_etabs": 0.9383,
         "comparability": "SECONDARY_ORDER_OF_MAGNITUDE_ONLY"
       },
       {
@@ -415,9 +405,9 @@
         "case": "G",
         "node_tag": 177,
         "selection": "same retained node nearest P3 geometry centroid used for seismic application",
-        "current_Uz_mm": -2.821706,
+        "current_Uz_mm": -2.81628,
         "etabs_reference_Uz_mm": -7.181,
-        "ratio_current_to_etabs": 0.3929,
+        "ratio_current_to_etabs": 0.3922,
         "comparability": "SECONDARY_ORDER_OF_MAGNITUDE_ONLY"
       },
       {
@@ -427,9 +417,9 @@
         "case": "Q",
         "node_tag": 177,
         "selection": "same retained node nearest P3 geometry centroid used for seismic application",
-        "current_Uz_mm": -1.098353,
+        "current_Uz_mm": -1.094659,
         "etabs_reference_Uz_mm": -3.213,
-        "ratio_current_to_etabs": 0.3418,
+        "ratio_current_to_etabs": 0.3407,
         "comparability": "SECONDARY_ORDER_OF_MAGNITUDE_ONLY"
       }
     ],
@@ -456,10 +446,10 @@
       "format": "MCOC_CURRENT_DATASET_V1",
       "geometry_version": "36c18d76fd0b95bef08da0ca0562ddd2a366d5a88b4c11f0c91201d85d244e1d",
       "fe_version": "fad19aafe311a3493fc11ecffcb90112fa193bf5c65ff818053402fd8d21c3cf",
-      "loads_version": "4e170ead4fda1fb82fb17bb45b4d8b5999c172bc9a48878f15964c2fa70b1363",
+      "loads_version": "f4ea5cc1f47e8e113837d9561ebd27f5a5eda03533f7666b3f4ced9d1d72ded5",
       "analysis_version": "P1L5_CURRENT_ZONED_V2",
-      "git_commit": "9172acc008bc87074e3ab0b6a1fb07398e97bf38",
-      "timestamp": "2026-09-29T05:59:27.859234+00:00",
+      "git_commit": "21d287a6eeafcb29019a8d5aad11065181f1df6e",
+      "timestamp": "2026-09-29T14:45:58.172984+00:00",
       "status": "CURRENT_VERIFIED",
       "geometry_stream_sha256": "4201023f51c9f5b99bf8352e383649cff734c95116c71a3f6fc131dca4912e1a",
       "units": {
@@ -488,16 +478,16 @@
       "loads_approved": true,
       "linear_verified": true,
       "payload_file": "p1l5_current_analysis_cases.json",
-      "payload_sha256": "307679231c1b6a202439daf5769da5d7e8a24971df8fe9ba4e13903096ba283e",
+      "payload_sha256": "5a579a6149f41ccfa373e3ce2e16f26bb143510618c0c4a2c84a3d10aa426116",
       "source_geometry": "entregas/P1L5/modelo_central/model_master.json",
       "source_fe": "entregas/P1L5/modelo_central/model_master.json#/fe_topology",
       "source_loads": "entregas/P1L5/modelo_central/loads.json",
       "basis_policy": "Identical K, supports, local axes, node/member ordering and signed SI components.",
       "capacity_policy": "Demand changes by compatible linear superposition; section/material changes require reanalysis and capacity compatibility review.",
       "result_state": "CURRENT_WITH_DOCUMENTED_FALLBACKS",
-      "unresolved_load_count": 10,
+      "unresolved_load_count": 6,
       "current_element_loads_file": "p1l5_current_loads_by_element.json",
-      "current_element_loads_sha256": "7b929c1f47fd9427d03daf4425423c9429850857e2baf79c8203e5b9b0469aad"
+      "current_element_loads_sha256": "d6567df57c8a29678a5f4d7d0d66770e0e701de3cfe1c6b956613aae225fc675"
     },
     "load_inspector": "PASS",
     "basis_cases": [

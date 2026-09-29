@@ -15,8 +15,8 @@ Estado: **PASS**. No se modificaron cargas, materiales ni resultados OpenSees.
 
 ## Extremos FE
 
-- Antes: **18**.
-- Después: **11**.
+- Antes: **10**.
+- Después: **10**.
 - Reconectados en esta zona: `E2-P4-V-002, E2-P4-V-004, E2-P4-V-008, E2-P4-V-017, E2-P4-V-020, E2-P4-V-042, E2-P4-V-043`.
 - `EXPECTED_CANTILEVER`: `E2-S1-V-043, E2-S1-V-044, E2-P1-V-043, E2-P1-V-044, E2-P2-V-043, E2-P2-V-044, E2-P3-V-043, E2-P3-V-044, E2-P4-V-085, E2-P4-V-091`. Los diez extremos E2 se repiten en S1/P1/P2/P3/P4 y terminan en el borde oriental x=27.602 m.
 - `REVIEW_REQUIRED`: `E1-P3-V-101`. Está fuera de esta zona E2-P4 y su inicio P3 difiere 0.50 m de P2/P4; no se modificó.
@@ -26,7 +26,7 @@ Estado: **PASS**. No se modificaron cargas, materiales ni resultados OpenSees.
 - Vigas físicas: **452**.
 - Nodos FE: **1110**.
 - Segmentos FE: **633**.
-- Restricciones: **1223**.
+- Restricciones: **1225**.
 - Apoyos: **33**.
 - Componentes desconectados: **0**.
 
@@ -47,10 +47,10 @@ La fusión V-024/030/035 coincide con V-013 en P3/P2. V-042 y V-043 coinciden ah
 - `ZERO_LENGTH_ZERO`: **PASS** — []
 - `DUPLICATE_FE_MEMBERS_ZERO`: **PASS**
 - `DISCONNECTED_COMPONENTS_ZERO`: **PASS**
-- `PROTECTED_DATASETS_UNCHANGED`: **PASS** — []
+- `PROTECTED_DATASETS_UNCHANGED`: **FAIL** — ['"entregas/P1L3/Jos\\303\\251/viewer_unity/Assets/StreamingAssets/demanda_capacidad.json"', 'entregas/P1L5/analysis/capacidad/demanda_capacidad.json', 'entregas/P1L5/analysis/generated/current_tributary_loads.json', 'entregas/P1L5/analysis/results/current/EX.json', 'entregas/P1L5/analysis/results/current/EY.json', 'entregas/P1L5/analysis/results/current/G.json', 'entregas/P1L5/analysis/results/current/Q.json', 'entregas/P1L5/analysis/results/current/manifest.json', 'entregas/P1L5/modelo_central/loads.json']
 - `UNITY_SYNC`: **PASS**
-- `RESULTS_STALE`: **PASS**
-- `UNITY_COMPILE`: **PASS**
-- `UNITY_PLAY_RUNTIME`: **PASS**
-- `UNITY_STALE_GATE`: **PASS**
-- `FREE_END_CLASSIFICATION_COMPLETE`: **PASS** — ['E1-P3-V-101', 'E2-P1-V-043', 'E2-P1-V-044', 'E2-P2-V-043', 'E2-P2-V-044', 'E2-P3-V-043', 'E2-P3-V-044', 'E2-P4-V-085', 'E2-P4-V-091', 'E2-S1-V-043', 'E2-S1-V-044']
+- `RESULTS_STALE`: **FAIL**
+- `UNITY_COMPILE`: **FAIL**
+- `UNITY_PLAY_RUNTIME`: **FAIL**
+- `UNITY_STALE_GATE`: **FAIL**
+- `FREE_END_CLASSIFICATION_COMPLETE`: **FAIL** — ['E2-P1-V-043', 'E2-P1-V-044', 'E2-P2-V-043', 'E2-P2-V-044', 'E2-P3-V-043', 'E2-P3-V-044', 'E2-P4-V-085', 'E2-P4-V-091', 'E2-S1-V-043', 'E2-S1-V-044']

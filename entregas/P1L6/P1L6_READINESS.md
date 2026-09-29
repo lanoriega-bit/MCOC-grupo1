@@ -14,8 +14,8 @@ Rama: `codex/p1l5-integration`
 | Losas | PASS | 10 polígonos CURRENT, 6.887,299 m², 18 huecos, espesor 0,15 m, 0 shells FE |
 | Apoyos | PASS | 33 visuales = 33 FE; fijos en 6 GDL; 13 extras archivados |
 | FE | PASS | 1.100 nodos, 623 segmentos físicos, 1.225 restricciones, 0 componentes desconectados |
-| Cargas | PASS_WITH_NOTE | 44 paños; 10 cargas especiales siguen explícitamente unresolved |
-| Conservación G | PASS | residual 0,027 N (3,62×10⁻⁸ %) |
+| Cargas | PASS_WITH_NOTE | 46 paños/rutas; 6 cargas puntuales siguen explícitamente unresolved |
+| Conservación G | PASS | residual 0,027 N (3,51×10⁻⁸ %) |
 | Conservación Q | PASS | residual numérico ≈ 0 N |
 | OpenSees G/Q/EX/EY | PASS | finito y equilibrio relativo ≤ 3,58×10⁻¹⁴ |
 | Superposición R | PASS | misma K, apoyos, ejes y orden; combinación lineal en Unity |
@@ -27,10 +27,10 @@ Rama: `codex/p1l5-integration`
 
 ## Resultados CURRENT
 
-- G total: **75.803,505 kN**.
-- Q total: **24.349,143 kN**.
+- G total: **78.141,127 kN**.
+- Q total: **24.636,594 kN**.
 - G propio: **32.945,738 kN**.
-- G sobrecarga permanente: **42.857,767 kN**.
+- G sobrecarga permanente: **45.195,389 kN**.
 - segmentos exportados por caso: 619; cuatro segmentos redundantes dentro de
   clusters rígidos se omiten para evitar lazos de deformación nula.
 
@@ -59,7 +59,8 @@ desplazamientos, capacidad y carga/tributaria. La primera demostración debe usa
 
 ## Pendientes que no bloquean P1L6
 
-Las 10 cargas especiales sin receptor o unidad inequívoca siguen
-`UNRESOLVED`; no se sustituyen por cero ni se inventan receptores. La capacidad
+Las 6 entradas de cargas puntuales sin posición/receptor inequívoco siguen
+`UNRESOLVED`; no se sustituyen por cero ni se inventan receptores. Las cuatro
+cargas lineales revisadas quedaron aplicadas con una ruta documentada. La capacidad
 usa hipótesis de laboratorio visibles. Estos puntos son limitaciones declaradas,
 no inconsistencias ocultas del contrato CURRENT.

@@ -1,10 +1,10 @@
 {
   "summary": {
-    "status": "PASS",
-    "beams_before": 454,
+    "status": "FAIL",
+    "beams_before": 452,
     "beams_after": 452,
-    "free_ends_before": 18,
-    "free_ends_after": 11,
+    "free_ends_before": 10,
+    "free_ends_after": 10,
     "reconnected": [
       "E2-P4-V-002",
       "E2-P4-V-004",
@@ -31,7 +31,7 @@
     ],
     "fe_nodes": 1110,
     "fe_segments": 633,
-    "fe_constraints": 1223,
+    "fe_constraints": 1225,
     "fe_supports": 33,
     "disconnected_components": 0
   },
@@ -81,32 +81,32 @@
       "note": ""
     },
     "PROTECTED_DATASETS_UNCHANGED": {
-      "status": "PASS",
-      "note": "[]"
+      "status": "FAIL",
+      "note": "['\"entregas/P1L3/Jos\\\\303\\\\251/viewer_unity/Assets/StreamingAssets/demanda_capacidad.json\"', 'entregas/P1L5/analysis/capacidad/demanda_capacidad.json', 'entregas/P1L5/analysis/generated/current_tributary_loads.json', 'entregas/P1L5/analysis/results/current/EX.json', 'entregas/P1L5/analysis/results/current/EY.json', 'entregas/P1L5/analysis/results/current/G.json', 'entregas/P1L5/analysis/results/current/Q.json', 'entregas/P1L5/analysis/results/current/manifest.json', 'entregas/P1L5/modelo_central/loads.json']"
     },
     "UNITY_SYNC": {
       "status": "PASS",
       "note": ""
     },
     "RESULTS_STALE": {
-      "status": "PASS",
+      "status": "FAIL",
       "note": ""
     },
     "UNITY_COMPILE": {
-      "status": "PASS",
+      "status": "FAIL",
       "note": ""
     },
     "UNITY_PLAY_RUNTIME": {
-      "status": "PASS",
+      "status": "FAIL",
       "note": ""
     },
     "UNITY_STALE_GATE": {
-      "status": "PASS",
+      "status": "FAIL",
       "note": ""
     },
     "FREE_END_CLASSIFICATION_COMPLETE": {
-      "status": "PASS",
-      "note": "['E1-P3-V-101', 'E2-P1-V-043', 'E2-P1-V-044', 'E2-P2-V-043', 'E2-P2-V-044', 'E2-P3-V-043', 'E2-P3-V-044', 'E2-P4-V-085', 'E2-P4-V-091', 'E2-S1-V-043', 'E2-S1-V-044']"
+      "status": "FAIL",
+      "note": "['E2-P1-V-043', 'E2-P1-V-044', 'E2-P2-V-043', 'E2-P2-V-044', 'E2-P3-V-043', 'E2-P3-V-044', 'E2-P4-V-085', 'E2-P4-V-091', 'E2-S1-V-043', 'E2-S1-V-044']"
     }
   },
   "vertical_comparison": {
