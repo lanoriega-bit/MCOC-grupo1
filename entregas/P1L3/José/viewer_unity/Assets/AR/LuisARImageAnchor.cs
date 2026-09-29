@@ -13,6 +13,9 @@ public class LuisARImageAnchor : MonoBehaviour
     public Pose AnchorPose { get; private set; }
     public TrackingState TrackingStatus { get; private set; }
     public bool HasAnchor => currentAnchor != null;
+    public Transform AnchorTransform => currentAnchor != null
+        ? currentAnchor.transform
+        : null;
 
     public event Action<string, Pose, TrackingState> TrackingUpdated;
 
@@ -98,16 +101,22 @@ public class LuisARImageAnchor : MonoBehaviour
                 currentAnchor.transform.rotation
             );
 
-            currentCube = Instantiate(
-                cubePrefab,
-                currentAnchor.transform
-            );
+            // The cube is useful only in Luis's isolated tracking scene.  The
+            // final P1L6 scene leaves cubePrefab empty and lets the structural
+            // renderer own the visual object under this anchor.
+            if (cubePrefab != null)
+            {
+                currentCube = Instantiate(
+                    cubePrefab,
+                    currentAnchor.transform
+                );
 
-            currentCube.transform.localPosition =
-                new Vector3(0f, 0.025f, 0f);
+                currentCube.transform.localPosition =
+                    new Vector3(0f, 0.025f, 0f);
 
-            currentCube.transform.localRotation =
-                Quaternion.identity;
+                currentCube.transform.localRotation =
+                    Quaternion.identity;
+            }
 
             TrackingUpdated?.Invoke(
                 ReferenceImageName,
