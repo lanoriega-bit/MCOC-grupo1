@@ -114,7 +114,8 @@ namespace Mcoc.UnityViewer
         {
             GUILayout.BeginHorizontal();
             GUILayout.Label(label + " = " + value.ToString("F2"), currentBody, GUILayout.Width(82));
-            float next = GUILayout.HorizontalSlider(value, -1.5f, 1.5f, GUILayout.Width(130));
+            bool gravity = label == "G" || label == "Q";
+            float next = GUILayout.HorizontalSlider(value, gravity ? 0f : -5f, 5f, GUILayout.Width(130));
             GUILayout.EndHorizontal();
             return Mathf.Round(next * 100f) / 100f;
         }
@@ -150,6 +151,15 @@ namespace Mcoc.UnityViewer
             if (plot != diagram2DVisible) { diagram2DVisible = plot; if (plot) demandCapacityPlotVisible = false; }
             bool pm = GUILayout.Toggle(demandCapacityPlotVisible, "P–M y D/C dinámico", GUILayout.Height(25));
             if (pm != demandCapacityPlotVisible) { demandCapacityPlotVisible = pm; if (pm) diagram2DVisible = false; }
+            bool failureView = GUILayout.Toggle(structuralFailureVisualizationEnabled,
+                "Mapa de capacidad del edificio", GUILayout.Height(25));
+            if (failureView != structuralFailureVisualizationEnabled)
+            { structuralFailureVisualizationEnabled = failureView; ApplyStructuralFailureVisualization(); }
+            bool damage = GUILayout.Toggle(structuralDamageOverlayEnabled,
+                "Daño visual (no analítico)", GUILayout.Height(25));
+            if (damage != structuralDamageOverlayEnabled)
+            { structuralDamageOverlayEnabled = damage; ApplyStructuralFailureVisualization(); }
+            GUILayout.Label("Normal: OK  ·  Naranjo: D/C ≥ 0,80  ·  Rojo: D/C ≥ 1,00  ·  Gris: sin datos", currentBody);
             GUILayout.Space(4);
             GUILayout.Label(ProjectAnalysisState(), currentBody);
         }
@@ -295,12 +305,10 @@ namespace Mcoc.UnityViewer
 
         string BuildP1L5DemandCapacityText(string id, DemandCapacityElement item)
         {
-            if (item?.beam_capacity != null && item.type == "beam")
-                return BuildP1L5BeamCapacityText(id, item);
-            if (!TryP1L5DemandCapacity(id, item, out double p, out double moment,
-                out double capacityM, out double ratio, out string axis, out string status))
-                return "NO CAPACITY DATA o demanda CURRENT fuera del rango/crosswalk compatible.";
-            return $"CURRENT R DINÁMICO\nP={p:F2} kN · {axis}={moment:F2} kN·m\nCapacidad interpolada={capacityM:F2} kN·m\nD/C={ratio:F2} · {status}\n{item.capacity.assumption_status}\nFirma: {item.capacity.capacity_signature}";
+            string text = BuildStructuralFailureText(id);
+            string assumption = item?.beam_capacity != null ? item.beam_capacity.assumption_status : item?.capacity?.assumption_status;
+            string signature = item?.beam_capacity != null ? item.beam_capacity.capacity_signature : item?.capacity?.capacity_signature;
+            return text + $"\nSupuesto: {assumption ?? "-"}\nFirma: {signature ?? "-"}";
         }
 
         string BuildP1L5BeamCapacityText(string id, DemandCapacityElement item)

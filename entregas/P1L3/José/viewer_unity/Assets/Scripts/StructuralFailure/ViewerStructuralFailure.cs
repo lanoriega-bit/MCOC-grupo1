@@ -98,6 +98,27 @@ namespace Mcoc.UnityViewer
                 $"Segmento controlador: {result.controllingAnalysisId} | OpenSees {result.controllingOpenSeesTag}";
         }
 
+        void DrawStructuralFailureSelectedOverlay()
+        {
+            if (!structuralFailureVisualizationEnabled || lastSelected == null || uiHidden) return;
+            string id = string.IsNullOrEmpty(lastSelected.humanId) ? lastSelected.id : lastSelected.humanId;
+            var result = StructuralFailureFor(id);
+            if (result == null || (result.state != StructuralFailureState.WARNING &&
+                result.state != StructuralFailureState.CAPACITY_EXCEEDED)) return;
+            string title = result.state == StructuralFailureState.CAPACITY_EXCEEDED
+                ? "⚠ CAPACIDAD EXCEDIDA" : "⚠ ADVERTENCIA DE CAPACIDAD";
+            Rect box = new Rect(Screen.width * 0.5f - 175f, 82f, 350f, 64f);
+            Color old = GUI.color;
+            GUI.color = result.state == StructuralFailureState.CAPACITY_EXCEEDED
+                ? new Color(0.55f, 0.02f, 0.02f, 0.95f) : new Color(0.58f, 0.25f, 0.01f, 0.95f);
+            GUI.DrawTexture(box, whiteTex);
+            GUI.color = old;
+            var centered = new GUIStyle(currentHeading) { alignment = TextAnchor.MiddleCenter };
+            GUI.Label(new Rect(box.x + 6, box.y + 4, box.width - 12, 25), title, centered);
+            GUI.Label(new Rect(box.x + 6, box.y + 29, box.width - 12, 28),
+                $"{id}  ·  D/C {result.demandCapacityRatio:F2}  ·  {result.governingMode}", centered);
+        }
+
         partial void ApplyStructuralFailureVisualization()
         {
             foreach (var info in allElements)

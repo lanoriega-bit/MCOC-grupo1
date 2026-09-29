@@ -3009,6 +3009,8 @@ namespace Mcoc.UnityViewer
             ExitPendingReview();
             historicalResultsEnabled = false;
             demandCapacityPlotVisible = false;
+            structuralFailureVisualizationEnabled = true;
+            structuralDamageOverlayEnabled = false;
             correctionsOnly = false;
             foreach (var key in new List<string>(buildingVisible.Keys)) buildingVisible[key] = true;
             yaw = 30f;
@@ -3039,6 +3041,7 @@ namespace Mcoc.UnityViewer
             foreach (var key in new List<string>(floorVisible.Keys)) floorVisible[key] = true;
             foreach (var key in new List<string>(typeVisible.Keys)) typeVisible[key] = DefaultTypeVisibility(key);
             ReapplyAll();
+            ApplyStructuralFailureVisualization();
             RestoreHighlight();
             lastInfo = "";
             lastSelected = null;

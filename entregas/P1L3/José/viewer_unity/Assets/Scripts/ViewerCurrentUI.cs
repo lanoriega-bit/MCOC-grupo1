@@ -152,6 +152,7 @@ namespace Mcoc.UnityViewer
             DrawCurrentAxisLabels();
             DrawPendingGridLabels();
             if (labelsVisible && !presentationMode) DrawLabels();
+            DrawStructuralFailureSelectedOverlay();
             if (ResultsAllowed)
             {
                 DrawElementDiagram2D();
