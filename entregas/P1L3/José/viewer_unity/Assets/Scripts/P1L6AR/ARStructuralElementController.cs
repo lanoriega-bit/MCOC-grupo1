@@ -22,14 +22,18 @@ namespace Mcoc.UnityViewer.P1L6AR
 
         void Awake()
         {
-            if (anchorProviderBehaviour == null) anchorProviderBehaviour = FindAnyObjectByType<FakeAnchorProvider>();
+            if (anchorProviderBehaviour == null)
+                anchorProviderBehaviour = (MonoBehaviour)FindAnyObjectByType<LuisAnchorProviderAdapter>() ??
+                    (MonoBehaviour)FindAnyObjectByType<FakeAnchorProvider>();
             anchorProvider = anchorProviderBehaviour as IAnchorProvider;
             transformAdapter = transformBehaviour as IModelToARTransform;
             directAnchor = new GameObject("DirectAnchorAdapter").transform;
             directAnchor.SetParent(transform, false);
             if (repository == null) repository = FindAnyObjectByType<ARDatasetRepository>();
             if (elementRenderer == null) elementRenderer = FindAnyObjectByType<StructuralARElementRenderer>();
-            if (transformAdapter == null) transformAdapter = FindAnyObjectByType<IdentityModelToARTransform>();
+            if (transformAdapter == null)
+                transformAdapter = (IModelToARTransform)FindAnyObjectByType<TrackedModelToARTransformBehaviour>() ??
+                    (IModelToARTransform)FindAnyObjectByType<IdentityModelToARTransform>();
         }
 
         void OnEnable()
@@ -64,9 +68,24 @@ namespace Mcoc.UnityViewer.P1L6AR
                 elementRenderer?.Clear();
                 return false;
             }
+            SelectedElement = row;
             AnchorPoseData pose;
             Transform anchor = directAnchor;
-            if (anchorProvider != null && anchorProvider.TryGetAnchor(out pose)) anchor = anchorProvider.AnchorTransform;
+            if (anchorProvider != null)
+            {
+                if (!anchorProvider.TryGetAnchor(out pose) ||
+                    pose.trackingState != AnchorTrackingState.Tracking ||
+                    anchorProvider.AnchorTransform == null)
+                {
+                    State = pose.trackingState == AnchorTrackingState.Limited
+                        ? "TRACKING LIMITED / ELEMENT HIDDEN"
+                        : "TRACKING UNAVAILABLE / ELEMENT HIDDEN";
+                    elementRenderer?.Clear();
+                    ElementShown?.Invoke(row, State, pose);
+                    return false;
+                }
+                anchor = anchorProvider.AnchorTransform;
+            }
             else pose = DirectPose();
             return RenderRow(row, anchor, pose);
         }
@@ -102,6 +121,17 @@ namespace Mcoc.UnityViewer.P1L6AR
 
         void OnAnchorUpdated(AnchorPoseData pose)
         {
+            if (pose.trackingState == AnchorTrackingState.Tracking)
+            {
+                string tag = SelectedElement != null ? SelectedElement.elementTag : initialElementTag;
+                ShowElement(tag);
+                return;
+            }
+
+            elementRenderer?.Clear();
+            State = pose.trackingState == AnchorTrackingState.Limited
+                ? "TRACKING LIMITED / ELEMENT HIDDEN"
+                : "TRACKING UNAVAILABLE / ELEMENT HIDDEN";
             if (SelectedElement != null) ElementShown?.Invoke(SelectedElement, State, pose);
         }
 

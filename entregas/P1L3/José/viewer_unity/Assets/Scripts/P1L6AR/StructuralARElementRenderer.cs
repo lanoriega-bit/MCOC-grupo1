@@ -17,7 +17,8 @@ namespace Mcoc.UnityViewer.P1L6AR
             rendered.name = "AR_ELEMENT_" + data.elementTag;
             rendered.transform.SetParent(anchor, false);
             Vector3 direction = ArrayVector(data.orientation_unity, Vector3.up);
-            rendered.transform.localPosition = Vector3.zero;
+            Vector3 centre = ArrayVector(data.unity_coordinates_m?.center, Vector3.zero);
+            rendered.transform.localPosition = transformAdapter.ToAnchorLocalPoint(centre, centre, scale);
             rendered.transform.localRotation = transformAdapter.ToAnchorLocalRotation(direction);
             rendered.transform.localScale = transformAdapter.ToAnchorLocalScale(SizeFor(data), scale);
             Renderer meshRenderer = rendered.GetComponent<Renderer>();

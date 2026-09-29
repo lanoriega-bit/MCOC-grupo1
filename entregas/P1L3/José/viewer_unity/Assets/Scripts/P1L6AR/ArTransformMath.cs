@@ -123,7 +123,10 @@ namespace Mcoc.UnityViewer.P1L6AR
 
         public Quaternion ToAnchorLocalRotation(Vector3 datasetUnityDirection)
         {
-            return Quaternion.LookRotation(ArTransformMath.ModelToUnityDirection(datasetUnityDirection), Vector3.up);
+            if (datasetUnityDirection.sqrMagnitude < 1e-8f) return _anchorR;
+            // orientation_unity is already expressed in Unity coordinates.
+            // The structural primitive stores its length on local +Y.
+            return _anchorR * Quaternion.FromToRotation(Vector3.up, datasetUnityDirection.normalized);
         }
 
         public Vector3 ToAnchorLocalScale(Vector3 sizeMetres, float scale)
