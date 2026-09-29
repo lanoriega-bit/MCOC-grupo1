@@ -241,6 +241,7 @@ namespace Mcoc.UnityViewer
             }
             BuildScene();
             RefreshStructuralFailureStates();
+            RunStructuralFailureSelfCheck();
             BuildP1L4Supports();
             if (feDiagnostic != null) BuildFeCandidate();
             if (architecture != null) BuildArchitecture();

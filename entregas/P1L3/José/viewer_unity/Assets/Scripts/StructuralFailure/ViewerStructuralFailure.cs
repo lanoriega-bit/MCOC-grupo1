@@ -177,7 +177,43 @@ namespace Mcoc.UnityViewer
             GUILayout.Label("La marca indica demanda/capacidad en el análisis lineal. No simula redistribución ni colapso progresivo.", currentBody);
         }
 
-        partial void ApplyStructuralFailureVisualization()
+        void RunStructuralFailureSelfCheck()
+        {
+            var failures = new List<string>();
+            var beamCapacity = new DemandCapacityElement { type = "beam", beam_capacity = new BeamCapacityData {
+                status = "APPROX_ASSUMED_FOR_LAB", phi_Mny_kNm = 100, phi_Mnz_kNm = 100,
+                phi_Vy_kN = 100, phi_Vz_kN = 100 } };
+            FailureResult Beam(double my) => StructuralFailureEvaluator.Evaluate(new CurrentElementDemand {
+                elementTag = "QA-BEAM", elementType = "beam", caseName = "R", My_kNm = my
+            }, beamCapacity);
+            if (Beam(79).state != StructuralFailureState.OK) failures.Add("beam OK");
+            if (Beam(80).state != StructuralFailureState.WARNING) failures.Add("beam WARNING");
+            if (Beam(100).state != StructuralFailureState.CAPACITY_EXCEEDED) failures.Add("beam EXCEEDED");
+            var points = new List<DemandCapacityPoint> {
+                new DemandCapacityPoint { valid=true, compression_magnitude_kN=0, M_kNm=100 },
+                new DemandCapacityPoint { valid=true, compression_magnitude_kN=1000, M_kNm=80 }
+            };
+            var pmCapacity = new DemandCapacityElement { type = "column", capacity = new DemandCapacityCurve {
+                points = points, points_my = points, points_mz = points } };
+            FailureResult PM(string type, double m) {
+                pmCapacity.type = type;
+                return StructuralFailureEvaluator.Evaluate(new CurrentElementDemand {
+                    elementTag = "QA-" + type, elementType = type, caseName = "R", N_kN = 500, My_kNm = m
+                }, pmCapacity);
+            }
+            if (PM("column", 71).state != StructuralFailureState.OK) failures.Add("column OK");
+            if (PM("column", 72).state != StructuralFailureState.WARNING) failures.Add("column WARNING");
+            if (PM("column", 90).state != StructuralFailureState.CAPACITY_EXCEEDED) failures.Add("column EXCEEDED");
+            if (PM("wall", 90).state != StructuralFailureState.CAPACITY_EXCEEDED) failures.Add("wall EXCEEDED");
+            if (StructuralFailureEvaluator.Evaluate(new CurrentElementDemand { elementType="wall" }, null).state
+                != StructuralFailureState.NO_DATA) failures.Add("NO_DATA fail-safe");
+            if (currentResultsAvailable && structuralFailureByElementId.Count == 0) failures.Add("global scan empty");
+            Debug.Log(failures.Count == 0
+                ? $"[STRUCTURAL FAILURE QA] PASS: thresholds; beam; column P-M; wall P-M; NO_DATA; global={structuralFailureByElementId.Count}."
+                : "[STRUCTURAL FAILURE QA] FAIL: " + string.Join(", ", failures));
+        }
+
+        void ApplyStructuralFailureVisualization()
         {
             foreach (var info in allElements)
             {

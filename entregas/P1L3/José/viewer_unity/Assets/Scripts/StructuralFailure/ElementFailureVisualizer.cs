@@ -30,7 +30,8 @@ namespace Mcoc.UnityViewer
             if (target == null) return;
             Color color = baseColor;
             bool exceeded = false;
-            if (visualizationEnabled && result != null)
+            if (visualizationEnabled && result == null) color = StructuralFailureVisualStyle.NoData;
+            else if (visualizationEnabled)
             {
                 if (result.state == StructuralFailureState.WARNING) color = StructuralFailureVisualStyle.Warning;
                 else if (result.state == StructuralFailureState.CAPACITY_EXCEEDED)

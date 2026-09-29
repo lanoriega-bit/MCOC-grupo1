@@ -196,6 +196,7 @@ namespace Mcoc.UnityViewer
             File.WriteAllText(path, JsonUtility.ToJson(request, true));
             p1l5ModelModified = true; p1l5ReanalysisRequired = true;
             p1l5ModificationMessage = "Cambio guardado en la fuente de solicitudes. Resultados STALE.";
+            RefreshStructuralFailureStates();
         }
 
         void ReanalyseP1L5()

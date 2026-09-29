@@ -62,7 +62,8 @@ namespace Mcoc.UnityViewer
 
         static FailureResult EvaluateBeam(CurrentElementDemand d, BeamCapacityData c)
         {
-            if (c == null || !string.Equals(c.status, "PASS", StringComparison.OrdinalIgnoreCase))
+            if (c == null || string.Equals(c.status, "FAIL", StringComparison.OrdinalIgnoreCase) ||
+                string.Equals(c.status, "INVALID", StringComparison.OrdinalIgnoreCase))
                 return NoData(d, "NO VALID BEAM CAPACITY DATA");
             var checks = new List<ModeCheck>();
             Add(checks, "MOMENT_Y", Math.Abs(d.My_kNm), c.phi_Mny_kNm, "kN·m");
@@ -116,6 +117,8 @@ namespace Mcoc.UnityViewer
                 double t = Math.Abs(p1 - p0) < 1e-12 ? 0 : (axial - p0) / (p1 - p0);
                 capacity = points[i].M_kNm + t * (points[i + 1].M_kNm - points[i].M_kNm);
                 if (capacity > 0) checks.Add(new ModeCheck(mode, moment, capacity, moment / capacity, "kN·m"));
+                else if (Math.Abs(axial - points[points.Count - 1].compression_magnitude_kN) < 1e-6)
+                    checks.Add(new ModeCheck(mode, moment, 0, moment > 0 ? double.PositiveInfinity : 1.0, "kN·m"));
                 return;
             }
         }
