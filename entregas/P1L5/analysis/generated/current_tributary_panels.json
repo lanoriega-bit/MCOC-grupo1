@@ -4333,12 +4333,12 @@
         {
           "element_id": "E1-P3-V-094",
           "merged_from": [],
-          "fraction": 0.029420014,
-          "tributary_area_m2": 22.75,
-          "equivalent_width_m": 3.472752,
-          "Q_force_N": 66930.386,
-          "G_superimposed_force_N": 58006.335,
-          "G_slab_force_N": 83662.983
+          "fraction": 0.029096717,
+          "tributary_area_m2": 22.5,
+          "equivalent_width_m": 3.43459,
+          "Q_force_N": 66194.887,
+          "G_superimposed_force_N": 57368.903,
+          "G_slab_force_N": 82743.609
         },
         {
           "element_id": "E1-P3-V-097",
@@ -4363,12 +4363,12 @@
         {
           "element_id": "E1-P3-V-101",
           "merged_from": [],
-          "fraction": 0.010525932,
-          "tributary_area_m2": 8.139526,
-          "equivalent_width_m": 2.14198,
-          "Q_force_N": 23946.444,
-          "G_superimposed_force_N": 20753.584,
-          "G_slab_force_N": 29933.054
+          "fraction": 0.010849229,
+          "tributary_area_m2": 8.389526,
+          "equivalent_width_m": 1.951052,
+          "Q_force_N": 24681.942,
+          "G_superimposed_force_N": 21391.017,
+          "G_slab_force_N": 30852.428
         },
         {
           "element_id": "E1-P3-V-106",
@@ -4957,7 +4957,7 @@
           "merged_from": [],
           "fraction": 0.004681979,
           "tributary_area_m2": 0.305307,
-          "equivalent_width_m": 0.080344,
+          "equivalent_width_m": 0.071002,
           "Q_force_N": 598.808,
           "G_superimposed_force_N": 598.808,
           "G_slab_force_N": 1122.765
@@ -11238,23 +11238,29 @@
         },
         {
           "element_id": "E2-P4-V-063",
-          "merged_from": [],
-          "fraction": 0.010498756,
-          "tributary_area_m2": 5.623343,
-          "equivalent_width_m": 2.860297,
-          "Q_force_N": 11029.232,
-          "G_superimposed_force_N": 11029.232,
-          "G_slab_force_N": 20679.81
+          "merged_from": [
+            "E2-P4-V-066",
+            "E2-P4-V-068"
+          ],
+          "fraction": 0.022864507,
+          "tributary_area_m2": 12.246687,
+          "equivalent_width_m": 2.81533,
+          "Q_force_N": 24019.794,
+          "G_superimposed_force_N": 24019.794,
+          "G_slab_force_N": 45037.115
         },
         {
           "element_id": "E2-P4-V-064",
-          "merged_from": [],
-          "fraction": 0.009338688,
-          "tributary_area_m2": 5.001988,
-          "equivalent_width_m": 2.00883,
-          "Q_force_N": 9810.549,
-          "G_superimposed_force_N": 9810.549,
-          "G_slab_force_N": 18394.779
+          "merged_from": [
+            "E2-P4-V-067",
+            "E2-P4-V-069"
+          ],
+          "fraction": 0.014008651,
+          "tributary_area_m2": 7.503313,
+          "equivalent_width_m": 1.7249,
+          "Q_force_N": 14716.473,
+          "G_superimposed_force_N": 14716.473,
+          "G_slab_force_N": 27593.387
         },
         {
           "element_id": "E2-P4-V-065",
@@ -11265,46 +11271,6 @@
           "Q_force_N": 24516.625,
           "G_superimposed_force_N": 24516.625,
           "G_slab_force_N": 45968.672
-        },
-        {
-          "element_id": "E2-P4-V-066",
-          "merged_from": [],
-          "fraction": 0.003406648,
-          "tributary_area_m2": 1.824669,
-          "equivalent_width_m": 2.280836,
-          "Q_force_N": 3578.777,
-          "G_superimposed_force_N": 3578.777,
-          "G_slab_force_N": 6710.208
-        },
-        {
-          "element_id": "E2-P4-V-067",
-          "merged_from": [],
-          "fraction": 0.001867614,
-          "tributary_area_m2": 1.000331,
-          "equivalent_width_m": 1.250414,
-          "Q_force_N": 1961.98,
-          "G_superimposed_force_N": 1961.98,
-          "G_slab_force_N": 3678.712
-        },
-        {
-          "element_id": "E2-P4-V-068",
-          "merged_from": [],
-          "fraction": 0.008959103,
-          "tributary_area_m2": 4.798675,
-          "equivalent_width_m": 3.029466,
-          "Q_force_N": 9411.785,
-          "G_superimposed_force_N": 9411.785,
-          "G_slab_force_N": 17647.096
-        },
-        {
-          "element_id": "E2-P4-V-069",
-          "merged_from": [],
-          "fraction": 0.002802349,
-          "tributary_area_m2": 1.500994,
-          "equivalent_width_m": 1.416032,
-          "Q_force_N": 2943.944,
-          "G_superimposed_force_N": 2943.944,
-          "G_slab_force_N": 5519.896
         },
         {
           "element_id": "E2-P4-V-071",
@@ -11332,13 +11298,16 @@
         },
         {
           "element_id": "E2-P4-V-074",
-          "merged_from": [],
-          "fraction": 0.004669963,
-          "tributary_area_m2": 2.501325,
-          "equivalent_width_m": 1.359416,
-          "Q_force_N": 4905.924,
-          "G_superimposed_force_N": 4905.924,
-          "G_slab_force_N": 9198.608
+          "merged_from": [
+            "E2-P4-V-077",
+            "E2-P4-V-078"
+          ],
+          "fraction": 0.014008651,
+          "tributary_area_m2": 7.503313,
+          "equivalent_width_m": 1.7249,
+          "Q_force_N": 14716.473,
+          "G_superimposed_force_N": 14716.473,
+          "G_slab_force_N": 27593.387
         },
         {
           "element_id": "E2-P4-V-075",
@@ -11361,26 +11330,6 @@
           "Q_force_N": 24516.625,
           "G_superimposed_force_N": 24516.625,
           "G_slab_force_N": 45968.672
-        },
-        {
-          "element_id": "E2-P4-V-077",
-          "merged_from": [],
-          "fraction": 0.004668725,
-          "tributary_area_m2": 2.500663,
-          "equivalent_width_m": 3.125828,
-          "Q_force_N": 4904.625,
-          "G_superimposed_force_N": 4904.625,
-          "G_slab_force_N": 9196.171
-        },
-        {
-          "element_id": "E2-P4-V-078",
-          "merged_from": [],
-          "fraction": 0.004669963,
-          "tributary_area_m2": 2.501325,
-          "equivalent_width_m": 1.462763,
-          "Q_force_N": 4905.924,
-          "G_superimposed_force_N": 4905.924,
-          "G_slab_force_N": 9198.608
         },
         {
           "element_id": "E2-P4-V-081",
@@ -11408,13 +11357,16 @@
         },
         {
           "element_id": "E2-P4-V-084",
-          "merged_from": [],
-          "fraction": 0.010498756,
-          "tributary_area_m2": 5.623343,
-          "equivalent_width_m": 2.861752,
-          "Q_force_N": 11029.232,
-          "G_superimposed_force_N": 11029.232,
-          "G_slab_force_N": 20679.81
+          "merged_from": [
+            "E2-P4-V-087",
+            "E2-P4-V-089"
+          ],
+          "fraction": 0.032260517,
+          "tributary_area_m2": 17.279378,
+          "equivalent_width_m": 3.972271,
+          "Q_force_N": 33890.562,
+          "G_superimposed_force_N": 33890.562,
+          "G_slab_force_N": 63544.803
         },
         {
           "element_id": "E2-P4-V-085",
@@ -11430,53 +11382,16 @@
         },
         {
           "element_id": "E2-P4-V-086",
-          "merged_from": [],
-          "fraction": 0.009805437,
-          "tributary_area_m2": 5.251988,
-          "equivalent_width_m": 2.027795,
-          "Q_force_N": 10300.881,
-          "G_superimposed_force_N": 10300.881,
-          "G_slab_force_N": 19314.153
-        },
-        {
-          "element_id": "E2-P4-V-087",
-          "merged_from": [],
-          "fraction": 0.003406648,
-          "tributary_area_m2": 1.824669,
-          "equivalent_width_m": 2.280836,
-          "Q_force_N": 3578.777,
-          "G_superimposed_force_N": 3578.777,
-          "G_slab_force_N": 6710.208
-        },
-        {
-          "element_id": "E2-P4-V-088",
-          "merged_from": [],
-          "fraction": 0.00326786,
-          "tributary_area_m2": 1.750331,
-          "equivalent_width_m": 2.187914,
-          "Q_force_N": 3432.977,
-          "G_superimposed_force_N": 3432.977,
-          "G_slab_force_N": 6436.832
-        },
-        {
-          "element_id": "E2-P4-V-089",
-          "merged_from": [],
-          "fraction": 0.018355113,
-          "tributary_area_m2": 9.831365,
-          "equivalent_width_m": 6.202754,
-          "Q_force_N": 19282.552,
-          "G_superimposed_force_N": 19282.552,
-          "G_slab_force_N": 36154.785
-        },
-        {
-          "element_id": "E2-P4-V-091",
-          "merged_from": [],
-          "fraction": 0.01383296,
-          "tributary_area_m2": 7.409209,
-          "equivalent_width_m": 5.254758,
-          "Q_force_N": 14531.905,
-          "G_superimposed_force_N": 14531.905,
-          "G_slab_force_N": 27247.321
+          "merged_from": [
+            "E2-P4-V-088",
+            "E2-P4-V-091"
+          ],
+          "fraction": 0.026906257,
+          "tributary_area_m2": 14.411529,
+          "equivalent_width_m": 3.002402,
+          "Q_force_N": 28265.763,
+          "G_superimposed_force_N": 28265.763,
+          "G_slab_force_N": 52998.306
         },
         {
           "element_id": "E2-P4-V-092",
@@ -12800,8 +12715,8 @@
       "G_slab_N": 3666617.308,
       "interior_hole_area_m2": 13.824,
       "panels": 8,
-      "G_self_weight_N": 4026980.691,
-      "G_total_N": 10948705.876
+      "G_self_weight_N": 4064844.167,
+      "G_total_N": 10986569.351
     },
     {
       "building": "EDIFICIO_1",
@@ -12830,8 +12745,8 @@
       "G_slab_N": 3518334.584,
       "interior_hole_area_m2": 0.0,
       "panels": 4,
-      "G_self_weight_N": 4557873.986,
-      "G_total_N": 10477218.314
+      "G_self_weight_N": 4563757.976,
+      "G_total_N": 10483102.304
     },
     {
       "building": "EDIFICIO_1",

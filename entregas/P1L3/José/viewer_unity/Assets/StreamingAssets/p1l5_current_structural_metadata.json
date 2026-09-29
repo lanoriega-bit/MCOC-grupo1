@@ -20,36 +20,36 @@
     {
       "case_id": "G",
       "folder": "current",
-      "element_count": 629,
-      "node_count": 1110,
+      "element_count": 619,
+      "node_count": 1100,
       "manifest_source": "entregas/P1L5/analysis/results/current/manifest.json"
     },
     {
       "case_id": "Q",
       "folder": "current",
-      "element_count": 629,
-      "node_count": 1110,
+      "element_count": 619,
+      "node_count": 1100,
       "manifest_source": "entregas/P1L5/analysis/results/current/manifest.json"
     },
     {
       "case_id": "EX",
       "folder": "current",
-      "element_count": 629,
-      "node_count": 1110,
+      "element_count": 619,
+      "node_count": 1100,
       "manifest_source": "entregas/P1L5/analysis/results/current/manifest.json"
     },
     {
       "case_id": "EY",
       "folder": "current",
-      "element_count": 629,
-      "node_count": 1110,
+      "element_count": 619,
+      "node_count": 1100,
       "manifest_source": "entregas/P1L5/analysis/results/current/manifest.json"
     },
     {
       "case_id": "R",
       "folder": "current",
-      "element_count": 629,
-      "node_count": 1110,
+      "element_count": 619,
+      "node_count": 1100,
       "manifest_source": "entregas/P1L5/analysis/results/current/manifest.json"
     }
   ],
@@ -929,14 +929,14 @@
         16.332,
         7.92
       ],
-      "section_id": "SEC_COLUMN_RECT_0.200x0.500",
+      "section_id": "SEC_COLUMN_RECT_0.700x0.700",
       "section": {
-        "A_m2": 0.1,
-        "Iy_m4": 0.0020833333333333333,
-        "Iz_m4": 0.00033333333333333343,
-        "J_m4": 0.0009980501333333334,
-        "dim_local_y_m": 0.2,
-        "dim_local_z_m": 0.5,
+        "A_m2": 0.48999999999999994,
+        "Iy_m4": 0.020008333333333326,
+        "Iz_m4": 0.020008333333333326,
+        "J_m4": 0.03381408333333332,
+        "dim_local_y_m": 0.7,
+        "dim_local_z_m": 0.7,
         "source": "CONFIRMED_OR_CURRENT_SOURCE"
       },
       "material_id": "MAT_G35_10_2017_67_100_1E116",
@@ -11579,7 +11579,7 @@
       "node_i": 527,
       "node_j": 528,
       "node_i_coord_m": [
-        68.341,
+        67.841,
         16.331,
         15.84
       ],
@@ -31192,7 +31192,7 @@
         19.8
       ],
       "node_j_coord_m": [
-        14.768,
+        17.152,
         0.001,
         19.8
       ],
@@ -31249,7 +31249,7 @@
         19.8
       ],
       "node_j_coord_m": [
-        15.292,
+        17.152,
         16.151,
         19.8
       ],
@@ -31348,234 +31348,6 @@
       "source_dxf": "2024_22-102.dxf"
     },
     {
-      "element_id": "E2-P4-V-066",
-      "geometry_elementTag": "SOL2_4_beam_0408",
-      "analysis_id": "POST-A-00368",
-      "opensees_tag": 10368,
-      "type": "beam",
-      "building": "EDIFICIO_2",
-      "floor": "P4",
-      "node_i": 988,
-      "node_j": 993,
-      "node_i_coord_m": [
-        14.768,
-        0.001,
-        19.8
-      ],
-      "node_j_coord_m": [
-        15.568,
-        0.001,
-        19.8
-      ],
-      "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "section": {
-        "A_m2": 0.48,
-        "Iy_m4": 0.025600000000000008,
-        "Iz_m4": 0.014399999999999998,
-        "J_m4": 0.03110160937499999,
-        "dim_local_y_m": 0.6,
-        "dim_local_z_m": 0.8,
-        "source": "CONFIRMED_OR_CURRENT_SOURCE"
-      },
-      "material_id": "MAT_G35_10_2024_22_100_53994",
-      "local_axes": {
-        "x": [
-          1.0,
-          0.0,
-          0.0
-        ],
-        "y": [
-          0.0,
-          1.0,
-          0.0
-        ],
-        "z": [
-          0.0,
-          0.0,
-          1.0
-        ],
-        "vecxz": [
-          0.0,
-          0.0,
-          1.0
-        ],
-        "source": "CURRENT_OPENSEES_GEOMTRANSF_RULE"
-      },
-      "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
-      "source_dxf": "2024_22-102.dxf"
-    },
-    {
-      "element_id": "E2-P4-V-067",
-      "geometry_elementTag": "SOL2_4_beam_0449",
-      "analysis_id": "POST-A-00383",
-      "opensees_tag": 10383,
-      "type": "beam",
-      "building": "EDIFICIO_2",
-      "floor": "P4",
-      "node_i": 990,
-      "node_j": 994,
-      "node_i_coord_m": [
-        15.292,
-        16.151,
-        19.8
-      ],
-      "node_j_coord_m": [
-        16.092,
-        16.151,
-        19.8
-      ],
-      "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "section": {
-        "A_m2": 0.48,
-        "Iy_m4": 0.025600000000000008,
-        "Iz_m4": 0.014399999999999998,
-        "J_m4": 0.03110160937499999,
-        "dim_local_y_m": 0.6,
-        "dim_local_z_m": 0.8,
-        "source": "CONFIRMED_OR_CURRENT_SOURCE"
-      },
-      "material_id": "MAT_G35_10_2024_22_100_53994",
-      "local_axes": {
-        "x": [
-          1.0,
-          0.0,
-          0.0
-        ],
-        "y": [
-          0.0,
-          1.0,
-          0.0
-        ],
-        "z": [
-          0.0,
-          0.0,
-          1.0
-        ],
-        "vecxz": [
-          0.0,
-          0.0,
-          1.0
-        ],
-        "source": "CURRENT_OPENSEES_GEOMTRANSF_RULE"
-      },
-      "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
-      "source_dxf": "2024_22-102.dxf"
-    },
-    {
-      "element_id": "E2-P4-V-068",
-      "geometry_elementTag": "SOL2_4_beam_0409",
-      "analysis_id": "POST-A-00369",
-      "opensees_tag": 10369,
-      "type": "beam",
-      "building": "EDIFICIO_2",
-      "floor": "P4",
-      "node_i": 993,
-      "node_j": 995,
-      "node_i_coord_m": [
-        15.568,
-        0.001,
-        19.8
-      ],
-      "node_j_coord_m": [
-        17.152,
-        0.001,
-        19.8
-      ],
-      "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "section": {
-        "A_m2": 0.48,
-        "Iy_m4": 0.025600000000000008,
-        "Iz_m4": 0.014399999999999998,
-        "J_m4": 0.03110160937499999,
-        "dim_local_y_m": 0.6,
-        "dim_local_z_m": 0.8,
-        "source": "CONFIRMED_OR_CURRENT_SOURCE"
-      },
-      "material_id": "MAT_G35_10_2024_22_100_53994",
-      "local_axes": {
-        "x": [
-          1.0,
-          0.0,
-          0.0
-        ],
-        "y": [
-          0.0,
-          1.0,
-          0.0
-        ],
-        "z": [
-          0.0,
-          0.0,
-          1.0
-        ],
-        "vecxz": [
-          0.0,
-          0.0,
-          1.0
-        ],
-        "source": "CURRENT_OPENSEES_GEOMTRANSF_RULE"
-      },
-      "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
-      "source_dxf": "2024_22-102.dxf"
-    },
-    {
-      "element_id": "E2-P4-V-069",
-      "geometry_elementTag": "SOL2_4_beam_0451",
-      "analysis_id": "POST-A-00385",
-      "opensees_tag": 10385,
-      "type": "beam",
-      "building": "EDIFICIO_2",
-      "floor": "P4",
-      "node_i": 994,
-      "node_j": 996,
-      "node_i_coord_m": [
-        16.092,
-        16.151,
-        19.8
-      ],
-      "node_j_coord_m": [
-        17.152,
-        16.151,
-        19.8
-      ],
-      "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "section": {
-        "A_m2": 0.48,
-        "Iy_m4": 0.025600000000000008,
-        "Iz_m4": 0.014399999999999998,
-        "J_m4": 0.03110160937499999,
-        "dim_local_y_m": 0.6,
-        "dim_local_z_m": 0.8,
-        "source": "CONFIRMED_OR_CURRENT_SOURCE"
-      },
-      "material_id": "MAT_G35_10_2024_22_100_53994",
-      "local_axes": {
-        "x": [
-          1.0,
-          0.0,
-          0.0
-        ],
-        "y": [
-          0.0,
-          1.0,
-          0.0
-        ],
-        "z": [
-          0.0,
-          0.0,
-          1.0
-        ],
-        "vecxz": [
-          0.0,
-          0.0,
-          1.0
-        ],
-        "source": "CURRENT_OPENSEES_GEOMTRANSF_RULE"
-      },
-      "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
-      "source_dxf": "2024_22-102.dxf"
-    },
-    {
       "element_id": "E2-P4-V-071",
       "geometry_elementTag": "SOL2_4_beam_0394",
       "analysis_id": "POST-A-00364",
@@ -31583,8 +31355,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "P4",
-      "node_i": 997,
-      "node_j": 998,
+      "node_i": 993,
+      "node_j": 994,
       "node_i_coord_m": [
         17.502,
         0.351,
@@ -31640,8 +31412,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "P4",
-      "node_i": 999,
-      "node_j": 1000,
+      "node_i": 995,
+      "node_j": 996,
       "node_i_coord_m": [
         17.502,
         9.251,
@@ -31697,15 +31469,15 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "P4",
-      "node_i": 1001,
-      "node_j": 1002,
+      "node_i": 997,
+      "node_j": 998,
       "node_i_coord_m": [
         17.852,
         16.151,
         19.8
       ],
       "node_j_coord_m": [
-        19.692,
+        22.202,
         16.151,
         19.8
       ],
@@ -31754,8 +31526,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "P4",
-      "node_i": 1003,
-      "node_j": 1004,
+      "node_i": 999,
+      "node_j": 1000,
       "node_i_coord_m": [
         17.852,
         0.001,
@@ -31811,8 +31583,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "P4",
-      "node_i": 1005,
-      "node_j": 1006,
+      "node_i": 1001,
+      "node_j": 1002,
       "node_i_coord_m": [
         17.852,
         8.901,
@@ -31861,120 +31633,6 @@
       "source_dxf": "2024_22-102.dxf"
     },
     {
-      "element_id": "E2-P4-V-077",
-      "geometry_elementTag": "SOL2_4_beam_0367",
-      "analysis_id": "POST-A-00353",
-      "opensees_tag": 10353,
-      "type": "beam",
-      "building": "EDIFICIO_2",
-      "floor": "P4",
-      "node_i": 1002,
-      "node_j": 1007,
-      "node_i_coord_m": [
-        19.692,
-        16.151,
-        19.8
-      ],
-      "node_j_coord_m": [
-        20.492,
-        16.151,
-        19.8
-      ],
-      "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "section": {
-        "A_m2": 0.48,
-        "Iy_m4": 0.025600000000000008,
-        "Iz_m4": 0.014399999999999998,
-        "J_m4": 0.03110160937499999,
-        "dim_local_y_m": 0.6,
-        "dim_local_z_m": 0.8,
-        "source": "CONFIRMED_OR_CURRENT_SOURCE"
-      },
-      "material_id": "MAT_G35_10_2024_22_100_53994",
-      "local_axes": {
-        "x": [
-          1.0,
-          0.0,
-          0.0
-        ],
-        "y": [
-          0.0,
-          1.0,
-          0.0
-        ],
-        "z": [
-          0.0,
-          0.0,
-          1.0
-        ],
-        "vecxz": [
-          0.0,
-          0.0,
-          1.0
-        ],
-        "source": "CURRENT_OPENSEES_GEOMTRANSF_RULE"
-      },
-      "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
-      "source_dxf": "2024_22-102.dxf"
-    },
-    {
-      "element_id": "E2-P4-V-078",
-      "geometry_elementTag": "SOL2_4_beam_0369",
-      "analysis_id": "POST-A-00355",
-      "opensees_tag": 10355,
-      "type": "beam",
-      "building": "EDIFICIO_2",
-      "floor": "P4",
-      "node_i": 1007,
-      "node_j": 1008,
-      "node_i_coord_m": [
-        20.492,
-        16.151,
-        19.8
-      ],
-      "node_j_coord_m": [
-        22.202,
-        16.151,
-        19.8
-      ],
-      "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "section": {
-        "A_m2": 0.48,
-        "Iy_m4": 0.025600000000000008,
-        "Iz_m4": 0.014399999999999998,
-        "J_m4": 0.03110160937499999,
-        "dim_local_y_m": 0.6,
-        "dim_local_z_m": 0.8,
-        "source": "CONFIRMED_OR_CURRENT_SOURCE"
-      },
-      "material_id": "MAT_G35_10_2024_22_100_53994",
-      "local_axes": {
-        "x": [
-          1.0,
-          0.0,
-          0.0
-        ],
-        "y": [
-          0.0,
-          1.0,
-          0.0
-        ],
-        "z": [
-          0.0,
-          0.0,
-          1.0
-        ],
-        "vecxz": [
-          0.0,
-          0.0,
-          1.0
-        ],
-        "source": "CURRENT_OPENSEES_GEOMTRANSF_RULE"
-      },
-      "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
-      "source_dxf": "2024_22-102.dxf"
-    },
-    {
       "element_id": "E2-P4-V-081",
       "geometry_elementTag": "SOL2_4_beam_0382",
       "analysis_id": "POST-A-00359",
@@ -31982,8 +31640,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "P4",
-      "node_i": 1009,
-      "node_j": 1010,
+      "node_i": 1003,
+      "node_j": 1004,
       "node_i_coord_m": [
         22.502,
         0.351,
@@ -32039,8 +31697,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "P4",
-      "node_i": 1011,
-      "node_j": 1012,
+      "node_i": 1005,
+      "node_j": 1006,
       "node_i_coord_m": [
         22.502,
         9.251,
@@ -32096,15 +31754,15 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "P4",
-      "node_i": 1013,
-      "node_j": 1014,
+      "node_i": 1007,
+      "node_j": 1008,
       "node_i_coord_m": [
         22.802,
         0.001,
         19.8
       ],
       "node_j_coord_m": [
-        24.767,
+        27.152,
         0.001,
         19.8
       ],
@@ -32153,8 +31811,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "P4",
-      "node_i": 1015,
-      "node_j": 1016,
+      "node_i": 1009,
+      "node_j": 1010,
       "node_i_coord_m": [
         22.802,
         8.901,
@@ -32210,238 +31868,10 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "P4",
-      "node_i": 1017,
-      "node_j": 1018,
+      "node_i": 1011,
+      "node_j": 1012,
       "node_i_coord_m": [
         22.802,
-        16.151,
-        19.8
-      ],
-      "node_j_coord_m": [
-        25.392,
-        16.151,
-        19.8
-      ],
-      "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "section": {
-        "A_m2": 0.48,
-        "Iy_m4": 0.025600000000000008,
-        "Iz_m4": 0.014399999999999998,
-        "J_m4": 0.03110160937499999,
-        "dim_local_y_m": 0.6,
-        "dim_local_z_m": 0.8,
-        "source": "CONFIRMED_OR_CURRENT_SOURCE"
-      },
-      "material_id": "MAT_G35_10_2024_22_100_53994",
-      "local_axes": {
-        "x": [
-          1.0,
-          0.0,
-          0.0
-        ],
-        "y": [
-          0.0,
-          1.0,
-          0.0
-        ],
-        "z": [
-          0.0,
-          0.0,
-          1.0
-        ],
-        "vecxz": [
-          0.0,
-          0.0,
-          1.0
-        ],
-        "source": "CURRENT_OPENSEES_GEOMTRANSF_RULE"
-      },
-      "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
-      "source_dxf": "2024_22-102.dxf"
-    },
-    {
-      "element_id": "E2-P4-V-087",
-      "geometry_elementTag": "SOL2_4_beam_0399",
-      "analysis_id": "POST-A-00410",
-      "opensees_tag": 10410,
-      "type": "beam",
-      "building": "EDIFICIO_2",
-      "floor": "P4",
-      "node_i": 1014,
-      "node_j": 1019,
-      "node_i_coord_m": [
-        24.767,
-        0.001,
-        19.8
-      ],
-      "node_j_coord_m": [
-        25.567,
-        0.001,
-        19.8
-      ],
-      "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "section": {
-        "A_m2": 0.48,
-        "Iy_m4": 0.025600000000000008,
-        "Iz_m4": 0.014399999999999998,
-        "J_m4": 0.03110160937499999,
-        "dim_local_y_m": 0.6,
-        "dim_local_z_m": 0.8,
-        "source": "CONFIRMED_OR_CURRENT_SOURCE"
-      },
-      "material_id": "MAT_G35_10_2024_22_100_53994",
-      "local_axes": {
-        "x": [
-          1.0,
-          0.0,
-          0.0
-        ],
-        "y": [
-          0.0,
-          1.0,
-          0.0
-        ],
-        "z": [
-          0.0,
-          0.0,
-          1.0
-        ],
-        "vecxz": [
-          0.0,
-          0.0,
-          1.0
-        ],
-        "source": "CURRENT_OPENSEES_GEOMTRANSF_RULE"
-      },
-      "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
-      "source_dxf": "2024_22-102.dxf"
-    },
-    {
-      "element_id": "E2-P4-V-088",
-      "geometry_elementTag": "SOL2_4_beam_0387",
-      "analysis_id": "POST-A-00414",
-      "opensees_tag": 10414,
-      "type": "beam",
-      "building": "EDIFICIO_2",
-      "floor": "P4",
-      "node_i": 1018,
-      "node_j": 1020,
-      "node_i_coord_m": [
-        25.392,
-        16.151,
-        19.8
-      ],
-      "node_j_coord_m": [
-        26.192,
-        16.151,
-        19.8
-      ],
-      "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "section": {
-        "A_m2": 0.48,
-        "Iy_m4": 0.025600000000000008,
-        "Iz_m4": 0.014399999999999998,
-        "J_m4": 0.03110160937499999,
-        "dim_local_y_m": 0.6,
-        "dim_local_z_m": 0.8,
-        "source": "CONFIRMED_OR_CURRENT_SOURCE"
-      },
-      "material_id": "MAT_G35_10_2024_22_100_53994",
-      "local_axes": {
-        "x": [
-          1.0,
-          0.0,
-          0.0
-        ],
-        "y": [
-          0.0,
-          1.0,
-          0.0
-        ],
-        "z": [
-          0.0,
-          0.0,
-          1.0
-        ],
-        "vecxz": [
-          0.0,
-          0.0,
-          1.0
-        ],
-        "source": "CURRENT_OPENSEES_GEOMTRANSF_RULE"
-      },
-      "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
-      "source_dxf": "2024_22-102.dxf"
-    },
-    {
-      "element_id": "E2-P4-V-089",
-      "geometry_elementTag": "SOL2_4_beam_0401",
-      "analysis_id": "POST-A-00367",
-      "opensees_tag": 10367,
-      "type": "beam",
-      "building": "EDIFICIO_2",
-      "floor": "P4",
-      "node_i": 1019,
-      "node_j": 1021,
-      "node_i_coord_m": [
-        25.567,
-        0.001,
-        19.8
-      ],
-      "node_j_coord_m": [
-        27.152,
-        0.001,
-        19.8
-      ],
-      "section_id": "SEC_BEAM_RECT_0.600x0.800",
-      "section": {
-        "A_m2": 0.48,
-        "Iy_m4": 0.025600000000000008,
-        "Iz_m4": 0.014399999999999998,
-        "J_m4": 0.03110160937499999,
-        "dim_local_y_m": 0.6,
-        "dim_local_z_m": 0.8,
-        "source": "CONFIRMED_OR_CURRENT_SOURCE"
-      },
-      "material_id": "MAT_G35_10_2024_22_100_53994",
-      "local_axes": {
-        "x": [
-          1.0,
-          0.0,
-          0.0
-        ],
-        "y": [
-          0.0,
-          1.0,
-          0.0
-        ],
-        "z": [
-          0.0,
-          0.0,
-          1.0
-        ],
-        "vecxz": [
-          0.0,
-          0.0,
-          1.0
-        ],
-        "source": "CURRENT_OPENSEES_GEOMTRANSF_RULE"
-      },
-      "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
-      "source_dxf": "2024_22-102.dxf"
-    },
-    {
-      "element_id": "E2-P4-V-091",
-      "geometry_elementTag": "SOL2_4_beam_0389",
-      "analysis_id": "POST-A-00363",
-      "opensees_tag": 10363,
-      "type": "beam",
-      "building": "EDIFICIO_2",
-      "floor": "P4",
-      "node_i": 1020,
-      "node_j": 1022,
-      "node_i_coord_m": [
-        26.192,
         16.151,
         19.8
       ],
@@ -32495,8 +31925,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "P4",
-      "node_i": 1023,
-      "node_j": 1024,
+      "node_i": 1013,
+      "node_j": 1014,
       "node_i_coord_m": [
         -3.348,
         8.901,
@@ -33351,7 +32781,7 @@
       "building": "EDIFICIO_2",
       "floor": "S1",
       "node_i": 233,
-      "node_j": 1025,
+      "node_j": 1015,
       "node_i_coord_m": [
         -3.548,
         1.826,
@@ -33407,8 +32837,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "S1",
-      "node_i": 1026,
-      "node_j": 1027,
+      "node_i": 1016,
+      "node_j": 1017,
       "node_i_coord_m": [
         -3.548,
         4.416,
@@ -33464,8 +32894,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "S1",
-      "node_i": 1028,
-      "node_j": 1029,
+      "node_i": 1018,
+      "node_j": 1019,
       "node_i_coord_m": [
         -3.548,
         9.251,
@@ -33521,7 +32951,7 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "S1",
-      "node_i": 1030,
+      "node_i": 1020,
       "node_j": 234,
       "node_i_coord_m": [
         -3.548,
@@ -33578,8 +33008,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "S1",
-      "node_i": 1031,
-      "node_j": 1032,
+      "node_i": 1021,
+      "node_j": 1022,
       "node_i_coord_m": [
         -3.348,
         4.266,
@@ -33635,8 +33065,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "S1",
-      "node_i": 1033,
-      "node_j": 1034,
+      "node_i": 1023,
+      "node_j": 1024,
       "node_i_coord_m": [
         -3.348,
         11.886,
@@ -33693,7 +33123,7 @@
       "building": "EDIFICIO_2",
       "floor": "S1",
       "node_i": 235,
-      "node_j": 1035,
+      "node_j": 1025,
       "node_i_coord_m": [
         -1.898,
         0.001,
@@ -33750,7 +33180,7 @@
       "building": "EDIFICIO_2",
       "floor": "S1",
       "node_i": 236,
-      "node_j": 1036,
+      "node_j": 1026,
       "node_i_coord_m": [
         -1.898,
         16.151,
@@ -33806,8 +33236,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "S1",
-      "node_i": 1037,
-      "node_j": 1038,
+      "node_i": 1027,
+      "node_j": 1028,
       "node_i_coord_m": [
         0.002,
         0.351,
@@ -33863,8 +33293,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "S1",
-      "node_i": 1039,
-      "node_j": 1040,
+      "node_i": 1029,
+      "node_j": 1030,
       "node_i_coord_m": [
         0.002,
         4.416,
@@ -33920,8 +33350,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "S1",
-      "node_i": 1041,
-      "node_j": 1042,
+      "node_i": 1031,
+      "node_j": 1032,
       "node_i_coord_m": [
         0.002,
         9.251,
@@ -33977,8 +33407,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "S1",
-      "node_i": 1043,
-      "node_j": 1044,
+      "node_i": 1033,
+      "node_j": 1034,
       "node_i_coord_m": [
         0.002,
         12.036,
@@ -34034,8 +33464,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "S1",
-      "node_i": 1045,
-      "node_j": 1046,
+      "node_i": 1035,
+      "node_j": 1036,
       "node_i_coord_m": [
         0.352,
         0.001,
@@ -34091,8 +33521,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "S1",
-      "node_i": 1047,
-      "node_j": 1048,
+      "node_i": 1037,
+      "node_j": 1038,
       "node_i_coord_m": [
         0.352,
         4.266,
@@ -34148,8 +33578,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "S1",
-      "node_i": 1049,
-      "node_j": 1050,
+      "node_i": 1039,
+      "node_j": 1040,
       "node_i_coord_m": [
         0.352,
         8.901,
@@ -34205,8 +33635,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "S1",
-      "node_i": 1051,
-      "node_j": 1052,
+      "node_i": 1041,
+      "node_j": 1042,
       "node_i_coord_m": [
         0.352,
         11.886,
@@ -34262,8 +33692,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "S1",
-      "node_i": 1053,
-      "node_j": 1054,
+      "node_i": 1043,
+      "node_j": 1044,
       "node_i_coord_m": [
         0.352,
         16.151,
@@ -34319,8 +33749,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "S1",
-      "node_i": 1055,
-      "node_j": 1056,
+      "node_i": 1045,
+      "node_j": 1046,
       "node_i_coord_m": [
         3.752,
         0.351,
@@ -34376,8 +33806,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "S1",
-      "node_i": 1057,
-      "node_j": 1058,
+      "node_i": 1047,
+      "node_j": 1048,
       "node_i_coord_m": [
         3.752,
         4.416,
@@ -34433,8 +33863,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "S1",
-      "node_i": 1059,
-      "node_j": 1060,
+      "node_i": 1049,
+      "node_j": 1050,
       "node_i_coord_m": [
         3.752,
         9.251,
@@ -34490,8 +33920,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "S1",
-      "node_i": 1061,
-      "node_j": 1062,
+      "node_i": 1051,
+      "node_j": 1052,
       "node_i_coord_m": [
         3.752,
         12.036,
@@ -34547,8 +33977,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "S1",
-      "node_i": 1063,
-      "node_j": 1064,
+      "node_i": 1053,
+      "node_j": 1054,
       "node_i_coord_m": [
         4.052,
         0.001,
@@ -34604,8 +34034,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "S1",
-      "node_i": 1065,
-      "node_j": 1066,
+      "node_i": 1055,
+      "node_j": 1056,
       "node_i_coord_m": [
         4.052,
         8.901,
@@ -34661,8 +34091,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "S1",
-      "node_i": 1067,
-      "node_j": 1068,
+      "node_i": 1057,
+      "node_j": 1058,
       "node_i_coord_m": [
         4.052,
         16.151,
@@ -34718,8 +34148,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "S1",
-      "node_i": 1069,
-      "node_j": 1070,
+      "node_i": 1059,
+      "node_j": 1060,
       "node_i_coord_m": [
         7.502,
         0.351,
@@ -34775,8 +34205,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "S1",
-      "node_i": 1071,
-      "node_j": 1072,
+      "node_i": 1061,
+      "node_j": 1062,
       "node_i_coord_m": [
         7.502,
         9.251,
@@ -34832,8 +34262,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "S1",
-      "node_i": 1073,
-      "node_j": 1074,
+      "node_i": 1063,
+      "node_j": 1064,
       "node_i_coord_m": [
         7.852,
         0.001,
@@ -34889,8 +34319,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "S1",
-      "node_i": 1075,
-      "node_j": 1076,
+      "node_i": 1065,
+      "node_j": 1066,
       "node_i_coord_m": [
         7.852,
         8.901,
@@ -34946,8 +34376,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "S1",
-      "node_i": 1077,
-      "node_j": 1078,
+      "node_i": 1067,
+      "node_j": 1068,
       "node_i_coord_m": [
         7.852,
         16.151,
@@ -35003,8 +34433,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "S1",
-      "node_i": 1079,
-      "node_j": 1080,
+      "node_i": 1069,
+      "node_j": 1070,
       "node_i_coord_m": [
         12.502,
         0.351,
@@ -35060,8 +34490,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "S1",
-      "node_i": 1081,
-      "node_j": 1082,
+      "node_i": 1071,
+      "node_j": 1072,
       "node_i_coord_m": [
         12.502,
         9.251,
@@ -35117,8 +34547,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "S1",
-      "node_i": 1083,
-      "node_j": 1084,
+      "node_i": 1073,
+      "node_j": 1074,
       "node_i_coord_m": [
         12.802,
         0.001,
@@ -35174,8 +34604,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "S1",
-      "node_i": 1085,
-      "node_j": 1086,
+      "node_i": 1075,
+      "node_j": 1076,
       "node_i_coord_m": [
         12.802,
         8.901,
@@ -35231,8 +34661,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "S1",
-      "node_i": 1087,
-      "node_j": 1088,
+      "node_i": 1077,
+      "node_j": 1078,
       "node_i_coord_m": [
         12.802,
         16.151,
@@ -35288,8 +34718,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "S1",
-      "node_i": 1089,
-      "node_j": 1090,
+      "node_i": 1079,
+      "node_j": 1080,
       "node_i_coord_m": [
         17.502,
         0.351,
@@ -35345,8 +34775,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "S1",
-      "node_i": 1091,
-      "node_j": 1092,
+      "node_i": 1081,
+      "node_j": 1082,
       "node_i_coord_m": [
         17.502,
         9.251,
@@ -35402,8 +34832,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "S1",
-      "node_i": 1093,
-      "node_j": 1094,
+      "node_i": 1083,
+      "node_j": 1084,
       "node_i_coord_m": [
         17.852,
         0.001,
@@ -35459,8 +34889,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "S1",
-      "node_i": 1095,
-      "node_j": 1096,
+      "node_i": 1085,
+      "node_j": 1086,
       "node_i_coord_m": [
         17.852,
         8.901,
@@ -35516,8 +34946,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "S1",
-      "node_i": 1097,
-      "node_j": 1098,
+      "node_i": 1087,
+      "node_j": 1088,
       "node_i_coord_m": [
         17.852,
         16.151,
@@ -35573,8 +35003,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "S1",
-      "node_i": 1099,
-      "node_j": 1100,
+      "node_i": 1089,
+      "node_j": 1090,
       "node_i_coord_m": [
         22.502,
         0.351,
@@ -35630,8 +35060,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "S1",
-      "node_i": 1101,
-      "node_j": 1102,
+      "node_i": 1091,
+      "node_j": 1092,
       "node_i_coord_m": [
         22.502,
         9.251,
@@ -35687,8 +35117,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "S1",
-      "node_i": 1103,
-      "node_j": 1104,
+      "node_i": 1093,
+      "node_j": 1094,
       "node_i_coord_m": [
         22.802,
         0.001,
@@ -35744,8 +35174,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "S1",
-      "node_i": 1105,
-      "node_j": 1106,
+      "node_i": 1095,
+      "node_j": 1096,
       "node_i_coord_m": [
         22.802,
         8.901,
@@ -35801,8 +35231,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "S1",
-      "node_i": 1107,
-      "node_j": 1108,
+      "node_i": 1097,
+      "node_j": 1098,
       "node_i_coord_m": [
         22.802,
         16.151,
@@ -35858,8 +35288,8 @@
       "type": "beam",
       "building": "EDIFICIO_2",
       "floor": "S1",
-      "node_i": 1109,
-      "node_j": 1110,
+      "node_i": 1099,
+      "node_j": 1100,
       "node_i_coord_m": [
         -3.348,
         8.901,
@@ -36439,9 +35869,9 @@
     }
   ],
   "qa": {
-    "element_count": 629,
-    "unique_opensees_tags": 629,
-    "unique_analysis_ids": 629,
+    "element_count": 619,
+    "unique_opensees_tags": 619,
+    "unique_analysis_ids": 619,
     "support_count": 33,
     "all_nodes_exist": true,
     "all_local_axes_unit_and_orthogonal": true

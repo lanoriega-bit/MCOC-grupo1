@@ -16,7 +16,8 @@ P1L5 = ROOT / "entregas" / "P1L5"
 CENTRAL = P1L5 / "modelo_central"
 RESULTS = P1L5 / "analysis" / "results" / "current"
 STREAMING = ROOT / "entregas" / "P1L3" / "José" / "viewer_unity" / "Assets" / "StreamingAssets"
-BASE = "1d81b945fca7567bbf5aa8cc0bd374315a3d6a38"
+# Approved geometry/support checkpoint immediately before load regeneration.
+BASE = "9172acc"
 
 
 def read(path: Path) -> dict:
@@ -28,7 +29,7 @@ def sha(path: Path) -> str:
 
 
 def geometry_contract(master: dict) -> dict:
-    element_fields = ("element_id", "type", "building", "floor", "nodes", "geometry", "active", "analysis_id", "opensees_tag", "analysis_refs")
+    element_fields = ("element_id", "type", "building", "floor", "nodes", "geometry", "section_id", "material_id", "active", "analysis_id", "opensees_tag", "analysis_refs")
     return {
         "elements": [{key: row.get(key) for key in element_fields} for row in master["elements"]],
         "nodes": master["nodes"],
@@ -102,7 +103,7 @@ def main() -> None:
         and contract["current_element_loads_sha256"] == sha(STREAMING / contract["current_element_loads_file"])
     )
     checks = {
-        "geometry_frozen_from_1d81b945": geometry_frozen,
+        "geometry_frozen_from_approved_p1l6_checkpoint": geometry_frozen,
         "central_contract": True,
         "load_conservation_G": current["conservation"]["G"]["status"] == "PASS",
         "load_conservation_Q": current["conservation"]["Q"]["status"] == "PASS",
@@ -122,7 +123,7 @@ def main() -> None:
             "frozen": geometry_frozen,
             "base_contract_sha256": geometry_base_hash,
             "current_contract_sha256": geometry_current_hash,
-            "physical_beams": 452,
+            "physical_beams": sum(row.get("type") == "beam" for row in master["elements"]),
             "fe_nodes": len(master["fe_topology"]["nodes"]),
             "fe_segments": master["current_pre5_identity"]["fe_active_segments"],
             "constraints": len(master["fe_topology"]["constraints"]),
@@ -216,8 +217,8 @@ Hay {materials.get('INFERRED_MATERIAL_FALLBACK', 0)} elementos estructurales con
 ## OpenSees CURRENT
 
 - Estado: **{manifest['status']}**; versión `{manifest['analysis_version']}`.
-- 1.110 nodos FE, 633 segmentos físicos activos, 629 barras analizadas y 4 segmentos redundantes dentro de clusters rígidos omitidos para evitar lazos de deformación nula.
-- 1.223 restricciones FE y 33 apoyos FE.
+- {len(master['fe_topology']['nodes']):,} nodos FE, {master['current_pre5_identity']['fe_active_segments']:,} segmentos físicos activos y {cases['G']['model']['analysed_segments']:,} barras analizadas.
+- {len(master['fe_topology']['constraints']):,} restricciones FE y {len(master['fe_topology']['support_node_tags']):,} apoyos FE.
 - G/Q/EX/EY: finitos, sin NaN ni infinitos, equilibrio **PASS**.
 - Reacción vertical G: {cases['G']['qa']['reaction_force_N'][2]/1000:.3f} kN; Q: {cases['Q']['qa']['reaction_force_N'][2]/1000:.3f} kN.
 - Corte basal EX: {abs(cases['EX']['qa']['reaction_force_N'][0])/1000:.3f} kN; EY: {abs(cases['EY']['qa']['reaction_force_N'][1])/1000:.3f} kN.

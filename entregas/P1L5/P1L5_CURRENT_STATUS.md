@@ -2,7 +2,7 @@
 
 Estado: **PASS_WITH_EXPLICIT_UNRESOLVED**  
 Rama: `codex/p1l5-integration`  
-Geometría congelada respecto de `1d81b945fca7567bbf5aa8cc0bd374315a3d6a38`: **PASS**
+Geometría congelada respecto de `9172acc`: **PASS**
 
 ## Correspondencia y alcance
 
@@ -15,7 +15,7 @@ Geometría congelada respecto de `1d81b945fca7567bbf5aa8cc0bd374315a3d6a38`: **P
 - `UNRESOLVED`: 8 entradas.
 - `UNIT_CONFLICT_UNRESOLVED`: 2 entradas (conflicto 7600/800).
 - Paños/zonas `CURRENT_RECOMPUTED`: 44. La exportación visual genera 49 polígonos exteriores porque cinco zonas multipolígono se dibujan por componente.
-- Conservación G: residual 0.027813 N (3.671e-08 %), **PASS**.
+- Conservación G: residual 0.027463 N (3.623e-08 %), **PASS**.
 - Conservación Q: residual -0.000000 N (-0.000e+00 %), **PASS**.
 
 | Piso | Bloque | Área total m² | Área con Q m² | Área sin Q m² | Q kN |
@@ -38,9 +38,9 @@ Los huecos interiores se conservan y suman dentro de cada registro como exclusio
 | Magnitud | Nuestro LT1 kN | ETABS LT1 kN | Dif. | Nuestro LT2 kN | ETABS LT2 kN | Dif. | Nuestro total kN | ETABS total kN | Dif. |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | Q / CV | 13147.329 | 11620.380 | +13.14% | 11201.813 | 11096.777 | +0.95% | 24349.143 | 22717.157 | +7.18% |
-| G / CM | 44659.682 | 47140.276 | -5.26% | 31100.076 | 34723.194 | -10.43% | 75759.758 | 81863.470 | -7.46% |
+| G / CM | 44703.430 | 47140.276 | -5.17% | 31100.076 | 34723.194 | -10.43% | 75803.505 | 81863.470 | -7.40% |
 
-Nuestro G se separa en 32901.991 kN de peso propio y 42857.767 kN de carga muerta adicional, para 75759.758 kN. No se forzó ETABS: las diferencias son coherentes con un modelo de barras sin losas FE, fallbacks documentados y cargas puntuales/lineales aún sin receptor o unidad inequívoca.
+Nuestro G se separa en 32945.738 kN de peso propio y 42857.767 kN de carga muerta adicional, para 75803.505 kN. No se forzó ETABS: las diferencias son coherentes con un modelo de barras sin losas FE, fallbacks documentados y cargas puntuales/lineales aún sin receptor o unidad inequívoca.
 
 ## Materiales
 
@@ -49,20 +49,20 @@ Hay 79 elementos estructurales con `INFERRED_MATERIAL_FALLBACK`; no se presentan
 ## OpenSees CURRENT
 
 - Estado: **PASS**; versión `P1L5_CURRENT_ZONED_V2`.
-- 1.110 nodos FE, 633 segmentos físicos activos, 629 barras analizadas y 4 segmentos redundantes dentro de clusters rígidos omitidos para evitar lazos de deformación nula.
-- 1.223 restricciones FE y 33 apoyos FE.
+- 1,100 nodos FE, 623 segmentos físicos activos y 619 barras analizadas.
+- 1,225 restricciones FE y 33 apoyos FE.
 - G/Q/EX/EY: finitos, sin NaN ni infinitos, equilibrio **PASS**.
-- Reacción vertical G: 75759.758 kN; Q: 24349.142 kN.
-- Corte basal EX: 17586.866 kN; EY: 17586.866 kN.
-- Desplazamientos máximos vectoriales: G 93.841 mm; Q 38.706 mm; EX 68.104 mm; EY 102.133 mm.
+- Reacción vertical G: 75803.505 kN; Q: 24349.142 kN.
+- Corte basal EX: 17595.615 kN; EY: 17595.615 kN.
+- Desplazamientos máximos vectoriales: G 93.378 mm; Q 38.707 mm; EX 66.734 mm; EY 98.877 mm.
 
 ### Contraste vertical P3
 
 | Bloque | Caso | Nodo CURRENT comparable | Uz CURRENT mm | Uz ETABS mm | Razón |
 |---|---|---:|---:|---:|---:|
-| LT1 | G | 482 | -4.617 | -5.060 | 0.91 |
-| LT1 | Q | 482 | -1.366 | -1.466 | 0.93 |
-| LT2 | G | 177 | -2.820 | -7.181 | 0.39 |
+| LT1 | G | 482 | -4.614 | -5.060 | 0.91 |
+| LT1 | Q | 482 | -1.365 | -1.466 | 0.93 |
+| LT2 | G | 177 | -2.822 | -7.181 | 0.39 |
 | LT2 | Q | 177 | -1.098 | -3.213 | 0.34 |
 
 Es un contraste secundario de orden de magnitud: se usa el nodo retenido más cercano al centro geométrico de P3, no el mismo punto ETABS. Los períodos ETABS se registran, pero no se comparan directamente porque LT1/LT2 son modelos separados con diafragmas, mientras CURRENT es un marco combinado sin losas FE ni diafragma rígido.
