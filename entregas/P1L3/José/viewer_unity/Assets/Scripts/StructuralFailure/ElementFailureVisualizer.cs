@@ -38,12 +38,12 @@ namespace Mcoc.UnityViewer
                 { color = StructuralFailureVisualStyle.Exceeded; exceeded = true; }
                 else if (result.state == StructuralFailureState.NO_DATA) color = StructuralFailureVisualStyle.NoData;
             }
-            if (selected) color = Color.Lerp(color, StructuralFailureVisualStyle.Selection, 0.42f);
+            if (selected) color = Color.Lerp(color, StructuralFailureVisualStyle.Selection, 0.78f);
             var block = new MaterialPropertyBlock();
             target.GetPropertyBlock(block);
             block.SetColor("_Color", color);
             block.SetColor("_BaseColor", color);
-            Color emission = exceeded ? color * 0.75f : (selected ? StructuralFailureVisualStyle.Selection * 0.22f : Color.black);
+            Color emission = exceeded ? color * 0.75f : (selected ? StructuralFailureVisualStyle.Selection * 0.48f : Color.black);
             block.SetColor("_EmissionColor", emission);
             target.SetPropertyBlock(block);
             bool showDamage = visualizationEnabled && damageEnabled && exceeded;

@@ -65,7 +65,7 @@ namespace Mcoc.UnityViewer
         private float activeDeformationScale = 50f;
         private bool activeDeformationVisible = false;
         private readonly List<GameObject> activeDeformationObjects = new List<GameObject>();
-        private int diagramMode = 0; // 0 off, 1 My, 2 Mz, 3 N, 4 Vy, 5 Vz
+        private int diagramMode = 0; // 0 off, 1 My, 2 Mz, 3 N, 4 Vy, 5 Vz, 6 T
         private string diagramCaption = "Diagramas: seleccione un elemento";
         private readonly List<GameObject> selectedDiagramObjects = new List<GameObject>();
         private bool diagram2DVisible = false;
@@ -253,7 +253,7 @@ namespace Mcoc.UnityViewer
             historicalResultsEnabled = false;
             RunVisibilitySelfCheck();
             RunDiagnosticSelfCheck();
-            if (currentResultsAvailable) { RunP1L5SelfCheck(); RunP1L5DemoSequenceCheck(); }
+            if (currentResultsAvailable) { RunP1L5SelfCheck(); RunP1L5DemoSequenceCheck(); RunE1P2V041SelfCheck(); }
             else { RunP1L4SelfCheck(); RunP1L4DemoSequenceCheck(); }
             ResetPresentation();
             RunCurrentUiSelfCheck();
@@ -809,6 +809,9 @@ namespace Mcoc.UnityViewer
             {
                 Vector3 center = (start + end) * 0.5f;
                 float lenXY = Mathf.Max(Vector3.Distance(start, end), 0.05f);
+                // Some CURRENT beam solids carry endpoints but omit length_m.
+                // Derive the displayed length from those same canonical endpoints.
+                data.lengthM = Vector3.Distance(start, end);
                 go.transform.position = center;
                 go.transform.localScale = new Vector3(lenXY, (float)(solid.width_m <= 0 ? 0.32 : solid.width_m), (float)(solid.height_m <= 0 ? 0.6 : solid.height_m));
                 float ang = Mathf.Atan2(end.y - start.y, end.x - start.x) * Mathf.Rad2Deg;
@@ -1573,6 +1576,7 @@ namespace Mcoc.UnityViewer
             }
             if(pendingReviewRow!=null)vis=isStructuralGeometry&&pendingReviewIds.Contains(info.humanId??"");
             if(stackReviewActive&&info!=null)vis=vis&&floorVisible.ContainsKey(info.floor)&&floorVisible[info.floor];
+            if(isolateSelected)vis=info!=null&&info==lastSelected;
             go.SetActive(vis);
         }
 
@@ -1978,9 +1982,9 @@ namespace Mcoc.UnityViewer
             string id = string.IsNullOrEmpty(lastSelected.humanId) ? lastSelected.id : lastSelected.humanId;
             var results = ResultsForSelection(lastSelected, id);
             var metadata = MetadataForSelection(lastSelected, id);
-            int component = diagramMode == 1 ? 4 : diagramMode == 2 ? 5 : diagramMode == 3 ? 0 : diagramMode == 4 ? 1 : 2;
-            string componentName = diagramMode == 1 ? "My" : diagramMode == 2 ? "Mz" : diagramMode == 3 ? "N" : diagramMode == 4 ? "Vy" : "Vz";
-            string units = diagramMode <= 2 ? "kN.m" : "kN";
+            int component = diagramMode == 1 ? 4 : diagramMode == 2 ? 5 : diagramMode == 3 ? 0 : diagramMode == 4 ? 1 : diagramMode == 5 ? 2 : 3;
+            string componentName = diagramMode == 1 ? "My" : diagramMode == 2 ? "Mz" : diagramMode == 3 ? "N" : diagramMode == 4 ? "Vy" : diagramMode == 5 ? "Vz" : "T";
+            string units = diagramMode <= 2 || diagramMode == 6 ? "kN.m" : "kN";
             if (results.Count == 0 || metadata.Count == 0)
             {
                 diagramCaption = $"{componentName}: N/A para {id} en {activeAnalysisCase}";
@@ -2150,8 +2154,12 @@ namespace Mcoc.UnityViewer
                 {
                     sb.AppendLine($"ui=({ni.ux_m:F6}, {ni.uy_m:F6}, {ni.uz_m:F6}) m");
                     sb.AppendLine($"uj=({nj.ux_m:F6}, {nj.uy_m:F6}, {nj.uz_m:F6}) m");
+                    double ui=System.Math.Sqrt(ni.ux_m*ni.ux_m+ni.uy_m*ni.uy_m+ni.uz_m*ni.uz_m);
+                    double uj=System.Math.Sqrt(nj.ux_m*nj.ux_m+nj.uy_m*nj.uy_m+nj.uz_m*nj.uz_m);
+                    sb.AppendLine($"|u|max relacionado = {System.Math.Max(ui,uj)*1000.0:F3} mm ({(ui>=uj?"nodo i":"nodo j")})");
                 }
             }
+            sb.AppendLine("Signos: ejes locales del miembro; vector OpenSees [N, Vy, Vz, T, My, Mz]. Los valores i/j son fuerzas de extremo crudas.");
             int expectedCount = analysisResults != null && analysisResults.elements != null ? analysisResults.elements.Count : 0;
             if (currentResultsAvailable) sb.AppendLine($"Fuente: OpenSees CURRENT P1L5 ({expectedCount} segmentos del caso)");
             else sb.AppendLine($"Fuente integrada José: {joseForcesStatus} ({joseByAnalysisId.Count}/{expectedCount} miembros del caso cargados)");
@@ -2310,12 +2318,12 @@ namespace Mcoc.UnityViewer
             Rect r = new Rect(x, 142f, width, 58f);
             GUI.Box(r, "");
             GUI.DrawTexture(r, MakeTex(2, 2, new Color(0.015f, 0.035f, 0.07f, 0.93f)));
-            string[] labels = { "OFF", "My", "Mz", "N", "Vy", "Vz" };
+            string[] labels = { "OFF", "My", "Mz", "N", "Vy", "Vz", "T" };
             for (int i = 0; i < labels.Length; i++)
             {
                 var button = new GUIStyle(GUI.skin.button);
                 if (diagramMode == i) button.normal.textColor = new Color(0.25f, 1f, 0.5f);
-                if (GUI.Button(new Rect(r.x + 7 + i * 55f, r.y + 5, 50f, 22f), labels[i], button)) SetDiagramMode(i);
+                if (GUI.Button(new Rect(r.x + 7 + i * 48f, r.y + 5, 44f, 22f), labels[i], button)) SetDiagramMode(i);
             }
             bool axes = GUI.Toggle(new Rect(r.x + 344, r.y + 6, 105, 20), localAxesVisible, "Ejes x/y/z");
             if (axes != localAxesVisible)
@@ -2338,9 +2346,9 @@ namespace Mcoc.UnityViewer
             if (rows.Count == 0) return;
             selectedDiagramMemberIndex = Mathf.Clamp(selectedDiagramMemberIndex, 0, rows.Count - 1);
             var row = rows[selectedDiagramMemberIndex];
-            int component = diagramMode == 1 ? 4 : diagramMode == 2 ? 5 : diagramMode == 3 ? 0 : diagramMode == 4 ? 1 : 2;
-            string componentName = diagramMode == 1 ? "My" : diagramMode == 2 ? "Mz" : diagramMode == 3 ? "N" : diagramMode == 4 ? "Vy" : "Vz";
-            string units = diagramMode <= 2 ? "kN.m" : "kN";
+            int component = diagramMode == 1 ? 4 : diagramMode == 2 ? 5 : diagramMode == 3 ? 0 : diagramMode == 4 ? 1 : diagramMode == 5 ? 2 : 3;
+            string componentName = diagramMode == 1 ? "My" : diagramMode == 2 ? "Mz" : diagramMode == 3 ? "N" : diagramMode == 4 ? "Vy" : diagramMode == 5 ? "Vz" : "T";
+            string units = diagramMode <= 2 || diagramMode == 6 ? "kN.m" : "kN";
             var end1 = DiagramForceVector(row, true);
             var end2 = DiagramForceVector(row, false);
             if (end1 == null || end2 == null || end1.Count <= component || end2.Count <= component) return;
@@ -2353,7 +2361,8 @@ namespace Mcoc.UnityViewer
             GUI.DrawTexture(panel, MakeTex(2, 2, new Color(0.01f, 0.02f, 0.045f, 0.98f)));
             var title = new GUIStyle(GUI.skin.label);
             title.fontSize = 15; title.fontStyle = FontStyle.Bold; title.normal.textColor = Color.white;
-            GUI.Label(new Rect(panel.x + 14, panel.y + 9, panel.width - 60, 24), $"HISTÓRICO | {componentName} | caso {activeAnalysisCase} | {id}", title);
+            string datasetLabel=currentResultsAvailable?"CURRENT":"HISTÓRICO";
+            GUI.Label(new Rect(panel.x + 14, panel.y + 9, panel.width - 60, 24), $"{datasetLabel} | {componentName} | caso {activeAnalysisCase} | {id}", title);
             if (GUI.Button(new Rect(panel.xMax - 44, panel.y + 7, 32, 25), "X")) { diagram2DVisible = false; return; }
 
             if (rows.Count > 1)
@@ -2402,7 +2411,7 @@ namespace Mcoc.UnityViewer
             string maxAt = v0 >= v1 ? "i (x=0)" : "j (x=L)";
             GUI.Label(new Rect(panel.x + 360, panel.y + 39, panel.width - 374, 34), $"mín={minValue:F3} {units} @ {minAt}\nmáx={maxValue:F3} {units} @ {maxAt}", label);
             GUI.Label(new Rect(panel.x + 14, panel.yMax - 70, panel.width - 28, 60),
-                $"DATOS: fuerzas de extremos OpenSees ({joseForcesStatus}); acciones locales i/j.\nREPRESENTACIÓN: END_FORCES_INTERPOLATION; extremo j convertido a cara interna común. CARGA INTERIOR: ninguna; G/Q/EX/EY/R históricos se aplicaron como cargas nodales. Recta coherente por equilibrio del miembro FE, sin inventar estaciones.", label);
+                $"DATOS: fuerzas de extremos OpenSees ({(currentResultsAvailable?"CURRENT":joseForcesStatus)}); acciones locales i/j.\nREPRESENTACIÓN: END_FORCES_INTERPOLATION; extremo j convertido a cara interna común. CARGA INTERIOR: ninguna; G/Q/EX/EY/R se aplican como cargas nodales. Recta coherente con el modelo FE, no un resultado interno exacto entre nodos.", label);
         }
 
         void DrawP1L4Header()
@@ -3030,6 +3039,7 @@ namespace Mcoc.UnityViewer
             if (typeVisible.ContainsKey("analysis_deformed")) typeVisible["analysis_deformed"] = false;
             diagramMode = 0;
             diagram2DVisible = false;
+            isolateSelected = false;
             selectedDiagramMemberIndex = 0;
             diagramCaption = "Diagramas: seleccione un elemento";
             ClearSelectedDiagram();
@@ -3213,7 +3223,7 @@ namespace Mcoc.UnityViewer
                     var rows = ResultsForSelection(beam, beamId);
                     if (rows.Count == 0 || joseByAnalysisId.Count != 1312) failures.Add($"caso {caseName} sin resultados integrados");
                 }
-                foreach (var mode in new[] { 1, 2, 3, 4, 5 })
+                foreach (var mode in new[] { 1, 2, 3, 4, 5, 6 })
                 {
                     SetDiagramMode(mode);
                     if (selectedDiagramObjects.Count == 0 || !diagram2DVisible)
@@ -3497,8 +3507,22 @@ namespace Mcoc.UnityViewer
             if (string.IsNullOrEmpty(searchText)) return;
             string q = searchText.Trim().ToLowerInvariant();
             ElementInfo hit = null;
+            // Prefer an exact current ID. This avoids selecting a similarly named
+            // historical/merged element when the user pastes a canonical ID.
             foreach (var ei in allElements)
             {
+                if (ei == null || ei.go == null) continue;
+                if (string.Equals(ei.humanId, searchText.Trim(), System.StringComparison.OrdinalIgnoreCase) ||
+                    string.Equals(ei.id, searchText.Trim(), System.StringComparison.OrdinalIgnoreCase) ||
+                    string.Equals(ei.elementTag, searchText.Trim(), System.StringComparison.OrdinalIgnoreCase))
+                {
+                    hit = ei;
+                    break;
+                }
+            }
+            foreach (var ei in allElements)
+            {
+                if (hit != null) break;
                 if (ei == null || ei.go == null) continue;
                 string hay = (ei.humanId ?? "") + " " + (ei.id ?? "") + " " + (ei.elementTag ?? "");
                 if (hay.ToLowerInvariant().Contains(q)) { hit = ei; break; }

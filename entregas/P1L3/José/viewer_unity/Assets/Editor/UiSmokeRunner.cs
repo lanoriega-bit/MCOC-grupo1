@@ -89,7 +89,7 @@ namespace Mcoc.UnityViewer.EditorTools
 
         static void CaptureLog(string condition, string stackTrace, LogType type)
         {
-            if (condition.Contains("[UI QA]") || condition.Contains("[P1L4 QA]") || condition.Contains("[P1L4 DEMO QA]") || condition.Contains("[P1L5 QA]") || condition.Contains("[P1L5 DEMO QA]") || type == LogType.Error || type == LogType.Exception)
+            if (condition.Contains("[UI QA]") || condition.Contains("[P1L4 QA]") || condition.Contains("[P1L4 DEMO QA]") || condition.Contains("[P1L5 QA]") || condition.Contains("[P1L5 DEMO QA]") || condition.Contains("[E1-P2-V-041 QA]") || type == LogType.Error || type == LogType.Exception)
                 AppendCapture(condition);
         }
 

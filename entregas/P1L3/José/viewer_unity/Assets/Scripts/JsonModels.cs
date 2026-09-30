@@ -71,6 +71,10 @@ namespace Mcoc.UnityViewer
         public string id;
         public string human_id;
         public string elementTag;
+        public string section_id;
+        public string material_id;
+        public List<string> aliases;
+        public List<string> merged_from;
         public string building;
         public string axis_x;
         public string axis_y;
@@ -1094,5 +1098,75 @@ namespace Mcoc.UnityViewer
         public double tributary_dead_N;
         public double total_associated_N;
         public string status;
+    }
+
+    [Serializable]
+    public class CurrentMaterialsData
+    {
+        public string format;
+        public string data_state;
+        public string source;
+        public List<CurrentMaterialData> materials;
+    }
+
+    [Serializable]
+    public class CurrentMemberIdentityCatalog
+    {
+        public string format;
+        public string data_state;
+        public string source;
+        public List<CurrentMemberIdentity> members;
+    }
+
+    [Serializable]
+    public class CurrentMemberIdentity
+    {
+        public string element_id;
+        public string physical_node_i;
+        public string physical_node_j;
+    }
+
+    [Serializable]
+    public class CurrentMaterialData
+    {
+        public string material_id;
+        public string name;
+        public string scope;
+        public CurrentMaterialElasticData elastic;
+        public CurrentMaterialResistanceData resistance;
+    }
+
+    [Serializable]
+    public class CurrentMaterialElasticData
+    {
+        public CurrentNumericProperty E_pa;
+        public CurrentNumericProperty nu;
+        public CurrentNumericProperty density_kg_m3;
+    }
+
+    [Serializable]
+    public class CurrentMaterialResistanceData
+    {
+        public CurrentNumericProperty concrete_fc_pa;
+        public CurrentNumericProperty reinforcement_fy_pa;
+        public CurrentStringProperty reinforcement_grade;
+    }
+
+    [Serializable]
+    public class CurrentNumericProperty
+    {
+        public double value;
+        public string unit;
+        public string status;
+        public string source;
+    }
+
+    [Serializable]
+    public class CurrentStringProperty
+    {
+        public string value;
+        public string unit;
+        public string status;
+        public string source;
     }
 }

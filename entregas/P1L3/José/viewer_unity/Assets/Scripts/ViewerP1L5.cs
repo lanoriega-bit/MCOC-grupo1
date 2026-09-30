@@ -144,7 +144,7 @@ namespace Mcoc.UnityViewer
             float scale = GUILayout.HorizontalSlider(activeDeformationScale, 1, 250);
             if (Mathf.Abs(scale - activeDeformationScale) > 0.1f) { activeDeformationScale = scale; RebuildActiveDeformedShape(); }
             GUILayout.BeginHorizontal();
-            string[] diagramNames = { "OFF", "My", "Mz", "N", "Vy", "Vz" };
+            string[] diagramNames = { "OFF", "My", "Mz", "N", "Vy", "Vz", "T" };
             for (int i = 0; i < diagramNames.Length; i++) if (GUILayout.Button(diagramNames[i])) SetDiagramMode(i);
             GUILayout.EndHorizontal();
             bool plot = GUILayout.Toggle(diagram2DVisible, "Gráfico 2D", GUILayout.Height(25));
@@ -306,6 +306,7 @@ namespace Mcoc.UnityViewer
 
         string BuildP1L5DemandCapacityText(string id, DemandCapacityElement item)
         {
+            if (item?.beam_capacity != null) return BuildP1L5BeamCapacityText(id, item);
             string text = BuildStructuralFailureText(id);
             string assumption = item?.beam_capacity != null ? item.beam_capacity.assumption_status : item?.capacity?.assumption_status;
             string signature = item?.beam_capacity != null ? item.beam_capacity.capacity_signature : item?.capacity?.capacity_signature;
@@ -331,8 +332,84 @@ namespace Mcoc.UnityViewer
             double rVy=c.phi_Vy_kN>0?vy/c.phi_Vy_kN:double.NaN;
             double rVz=c.phi_Vz_kN>0?vz/c.phi_Vz_kN:double.NaN;
             double ratio=Math.Max(Math.Max(rMy,rMz),Math.Max(rVy,rVz));
-            string state=ratio>1.0?"EXCEEDS":ratio>0.85?"WARNING":"OK";
-            return $"CURRENT R DINÁMICO · VIGA\nMy {my:F1}/{c.phi_Mny_kNm:F1} kN·m · D/C {rMy:F2}\nMz {mz:F1}/{c.phi_Mnz_kNm:F1} kN·m · D/C {rMz:F2}\nVy {vy:F1}/{c.phi_Vy_kN:F1} kN · D/C {rVy:F2}\nVz {vz:F1}/{c.phi_Vz_kN:F1} kN · D/C {rVz:F2}\nControl D/C={ratio:F2} · {state}\n{c.assumption_status}\nFirma: {c.capacity_signature}";
+            string[] modes={"My","Mz","Vy","Vz"};double[] ratios={rMy,rMz,rVy,rVz};
+            int control=0;for(int k=1;k<ratios.Length;k++)if(ratios[k]>ratios[control])control=k;
+            string state=ratio>=1.0?"CAPACIDAD EXCEDIDA":ratio>=0.8?"WARNING":"OK";
+            return $"CAPACIDAD DE VIGA · CASO {activeAnalysisCase} · CURRENT\n"+
+                $"My  {my:F2} / {c.phi_Mny_kNm:F2} kN·m   D/C {rMy:F3}\n"+
+                $"Mz  {mz:F2} / {c.phi_Mnz_kNm:F2} kN·m   D/C {rMz:F3}\n"+
+                $"Vy  {vy:F2} / {c.phi_Vy_kN:F2} kN      D/C {rVy:F3}\n"+
+                $"Vz  {vz:F2} / {c.phi_Vz_kN:F2} kN      D/C {rVz:F3}\n"+
+                "Axial: NO DATA (sin capacidad axial de viga en el contrato)\n"+
+                $"CONTROL: {modes[control]} · D/C GLOBAL {ratio:F3}\nESTADO: {state}\n"+
+                $"{c.status} · {c.assumption_status}\n{c.note}\nFirma: {c.capacity_signature}";
+        }
+
+        void RunE1P2V041SelfCheck()
+        {
+            const string id="E1-P2-V-041";
+            var failures=new List<string>();
+            var info=allElements.Find(e=>e!=null&&!e.isFeCandidateVisual&&(e.humanId??e.id)==id);
+            if(info==null){Debug.LogError("[E1-P2-V-041 QA] FAIL: elemento no seleccionable");return;}
+            var solid=CurrentSolid(info);
+            var metadata=MetadataForSelection(info,id);
+            var load=CurrentElementLoad(id);
+            if(solid==null)failures.Add("solid CURRENT ausente");
+            else
+            {
+                double geometric=Vector3.Distance(info.nodeI,info.nodeJ);
+                if(Math.Abs(geometric-info.lengthM)>1e-4)failures.Add("longitud no coincide");
+                if(Math.Abs(solid.width_m-0.6)>1e-6||Math.Abs(solid.height_m-0.8)>1e-6)failures.Add("sección no coincide");
+                var material=CurrentMaterial(solid.material_id);
+                if(solid.material!="G35_10"||material?.resistance?.concrete_fc_pa?.value!=35e6||
+                    material?.resistance?.reinforcement_fy_pa?.value!=420e6)failures.Add("material incompleto");
+            }
+            if(metadata.Count!=1||metadata[0].opensees_tag!=10527||metadata[0].node_i!=367||metadata[0].node_j!=368)
+                failures.Add("crosswalk FE no coincide");
+            var identity=CurrentMember(id);
+            if(identity?.physical_node_i!="N-00985"||identity?.physical_node_j!="N-00986")
+                failures.Add("nodos físicos no coinciden");
+            if(load?.Q==null||Math.Abs(load.Q.tributary_area_m2-5.208903)>1e-6||load.G==null)
+                failures.Add("carga tributaria no coincide");
+            foreach(string name in new[]{"G","Q","EX","EY"})
+            {
+                ActivateAnalysisCase(name);
+                if(ResultsForSelection(info,id).Count!=1)failures.Add("resultado "+name+" ausente");
+            }
+            RebuildP1L5Combination(true);
+            var rRows=ResultsForSelection(info,id);
+            if(rRows.Count!=1)failures.Add("R ausente");
+            else
+            {
+                var r=ForceVector(rRows[0],true);
+                var gCase=FindP1L5Case("G");var qCase=FindP1L5Case("Q");
+                var g=gCase?.elements?.Find(x=>x.element_id==id);var q=qCase?.elements?.Find(x=>x.element_id==id);
+                var gv=ForceVector(g,true);var qv=ForceVector(q,true);
+                if(r==null||gv==null||qv==null)failures.Add("vectores R incompletos");
+                else for(int k=0;k<6;k++)if(Math.Abs(r[k]-(p1l5LambdaG*gv[k]+p1l5LambdaQ*qv[k]))>1e-5)
+                {failures.Add("superposición R no coincide");break;}
+            }
+            if(!demandCapacityByElementId.TryGetValue(id,out var cap)||cap?.beam_capacity==null)
+                failures.Add("capacidad de viga ausente");
+            var failure=StructuralFailureFor(id);
+            if(failure==null||failure.state==StructuralFailureState.NO_DATA)failures.Add("D/C dinámico ausente");
+            float initialG=p1l5LambdaG;
+            p1l5LambdaG=2.5f;RebuildP1L5Combination(true);
+            if(StructuralFailureFor(id)?.state!=StructuralFailureState.WARNING)
+                failures.Add("transición WARNING ausente");
+            p1l5LambdaG=3.0f;RebuildP1L5Combination(true);
+            if(StructuralFailureFor(id)?.state!=StructuralFailureState.CAPACITY_EXCEEDED)
+                failures.Add("transición CAPACITY_EXCEEDED ausente");
+            p1l5LambdaG=initialG;RebuildP1L5Combination(true);
+            ShowInfo(info);
+            SetDiagramMode(1);
+            if(selectedDiagramObjects.Count==0||!diagramCaption.Contains("END_FORCES_INTERPOLATION"))
+                failures.Add("diagrama My no trazable");
+            ClearSelectedDiagram();diagramMode=0;diagram2DVisible=false;
+            ActivateAnalysisCase("R");
+            Debug.Log(failures.Count==0
+                ?"[E1-P2-V-041 QA] PASS: identidad; geometría; sección; material; cargas; G/Q/EX/EY/R; superposición; D/C; OK/WARNING/CAPACITY_EXCEEDED; END_FORCES_INTERPOLATION."
+                :"[E1-P2-V-041 QA] FAIL: "+string.Join(", ",failures));
         }
 
         public void RunActiveDemoSequenceCheck()
@@ -376,7 +453,7 @@ namespace Mcoc.UnityViewer
                     ActivateAnalysisCase(name);
                     if (ResultsForSelection(beam, beam.humanId ?? beam.id).Count == 0) failures.Add("sin resultado " + name);
                 }
-                foreach (int mode in new[] { 1, 2, 3, 4, 5 })
+                foreach (int mode in new[] { 1, 2, 3, 4, 5, 6 })
                 {
                     SetDiagramMode(mode);
                     if (selectedDiagramObjects.Count == 0) failures.Add("diagrama CURRENT modo " + mode);

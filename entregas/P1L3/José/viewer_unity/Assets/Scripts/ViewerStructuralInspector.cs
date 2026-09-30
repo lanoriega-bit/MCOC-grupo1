@@ -21,6 +21,32 @@ namespace Mcoc.UnityViewer
         string inspectorSelection;
         Dictionary<string,CurrentElementContext> currentContexts;
         Dictionary<string,CurrentElementLoadData> currentElementLoads;
+        Dictionary<string,CurrentMaterialData> currentMaterials;
+        Dictionary<string,CurrentMemberIdentity> currentMemberIdentities;
+
+        CurrentMemberIdentity CurrentMember(string id)
+        {
+            if(currentMemberIdentities==null)
+            {
+                currentMemberIdentities=new Dictionary<string,CurrentMemberIdentity>();
+                var data=JsonLoader.LoadP1L6CurrentMemberIdentity();
+                if(data?.members!=null)foreach(var row in data.members)
+                    if(row!=null&&!string.IsNullOrEmpty(row.element_id))currentMemberIdentities[row.element_id]=row;
+            }
+            return id!=null&&currentMemberIdentities.TryGetValue(id,out var rowIdentity)?rowIdentity:null;
+        }
+
+        CurrentMaterialData CurrentMaterial(string materialId)
+        {
+            if(currentMaterials==null)
+            {
+                currentMaterials=new Dictionary<string,CurrentMaterialData>();
+                var data=JsonLoader.LoadP1L6CurrentMaterials();
+                if(data?.materials!=null)foreach(var row in data.materials)
+                    if(row!=null&&!string.IsNullOrEmpty(row.material_id))currentMaterials[row.material_id]=row;
+            }
+            return materialId!=null&&currentMaterials.TryGetValue(materialId,out var material)?material:null;
+        }
 
         bool InspectorSection(string title)
         {
@@ -83,8 +109,20 @@ namespace Mcoc.UnityViewer
                 lines.Add($"G · {row.G.status}");
                 lines.Add($"Peso propio: {row.G.self_weight_N/1000.0:F3} kN · carga muerta tributaria: {row.G.tributary_dead_N/1000.0:F3} kN");
                 lines.Add($"G asociada total: {row.G.total_associated_N/1000.0:F3} kN");
+                if(row.Q!=null&&row.Q.tributary_area_m2>0)
+                    lines.Add($"qG tributario medio: {row.G.tributary_dead_N/1000.0/row.Q.tributary_area_m2:F3} kN/m²");
+                double length=lastSelected!=null?lastSelected.lengthM:0;
+                if(length>0)
+                    lines.Add($"wG equivalente: total {row.G.total_associated_N/1000.0/length:F3} kN/m · peso propio {row.G.self_weight_N/1000.0/length:F3} kN/m · adicional {row.G.tributary_dead_N/1000.0/length:F3} kN/m");
             }
-            if(row.source_load_ids!=null&&row.source_load_ids.Count>0)lines.Add("Fuentes: "+string.Join(", ",row.source_load_ids));
+            if(row.source_load_ids!=null&&row.source_load_ids.Count>0)
+            {
+                lines.Add("Fuentes: "+string.Join(", ",row.source_load_ids));
+                bool point=row.source_load_ids.Exists(x=>(x??"").Contains("POINT"));
+                bool line=row.source_load_ids.Exists(x=>(x??"").Contains("LINE"));
+                lines.Add("Cargas puntuales asociadas: "+(point?"ver IDs fuente":"NO DATA / ninguna en el contrato del elemento"));
+                lines.Add("Cargas lineales especiales asociadas: "+(line?"ver IDs fuente":"NO DATA / ninguna en el contrato del elemento"));
+            }
             return string.Join("\n",lines);
         }
         string CurrentSectionText(SolidData s)
@@ -92,20 +130,25 @@ namespace Mcoc.UnityViewer
             if(s==null)return "Dimensiones no disponibles";
             if(s.category=="wall")return $"Espesor: {s.width_m*100:F1} cm · largo {s.length_m:F2} m";
             if(s.category=="slab")return "Superficie visual provisional; perímetro y huecos por revisar";
-            double h=s.category=="column"?s.section_depth_m:s.section_height_m;
-            return (s.section_width_m>0&&h>0?$"Sección: {s.section_width_m*100:F0} × {h*100:F0} cm":"Sección resistente: por confirmar")+
-                (s.category=="column"?$" · altura {s.height_m:F2} m":$" · largo {s.length_m:F2} m");
+            double b=s.section_width_m>0?s.section_width_m:s.width_m;
+            double h=s.category=="column"?(s.section_depth_m>0?s.section_depth_m:s.depth_m):(s.section_height_m>0?s.section_height_m:s.height_m);
+            double length=s.length_m>0?s.length_m:(lastSelected!=null?lastSelected.lengthM:0);
+            return (b>0&&h>0?$"Sección: {b*100:F0} × {h*100:F0} cm":"Sección resistente: por confirmar")+
+                (s.category=="column"?$" · altura {length:F2} m":$" · largo {length:F2} m");
         }
         string CurrentMaterialText(SolidData s)
         {
             if(s==null||string.IsNullOrEmpty(s.material)||s.material=="UNKNOWN")return "Material: por confirmar";
+            var material=CurrentMaterial(s.material_id);
+            string steel=material?.resistance?.reinforcement_grade?.value;
             if(s.material=="M.H.A.")return "Hormigón armado · grado por confirmar";
-            return "Hormigón "+s.material.Replace("_10","")+(string.IsNullOrEmpty(s.reinforcement_grade)?"":" · Acero "+s.reinforcement_grade);
+            return "Hormigón "+s.material.Replace("_10","")+(string.IsNullOrEmpty(steel)?"":" · Acero "+steel);
         }
         string CurrentMaterialStatus(SolidData s)
         {
-            if(s==null||s.concrete_fc_pa<=0)return "Grado resistente: POR CONFIRMAR";
-            return "Material: "+ConfidenceFriendly(s.material_confidence);
+            var material=CurrentMaterial(s?.material_id);
+            string status=material?.resistance?.concrete_fc_pa?.status;
+            return string.IsNullOrEmpty(status)?"Grado resistente: NO DATA":"Material: "+ConfidenceFriendly(status);
         }
         static string StructuralRole(ElementInfo e,CurrentElementContext context)
         {
@@ -121,11 +164,25 @@ namespace Mcoc.UnityViewer
             var e=lastSelected;if(e==null)return;
             string id=e.humanId??e.id;
             if(inspectorSelection!=id)ResetInspectorSections(e);
-            var s=CurrentSolid(e);var context=ElementContext(id);
+            var s=CurrentSolid(e);var context=ElementContext(id);var feRows=MetadataForSelection(e,id);
             Rect r=CurrentInspectorRect();PanelBackground(r);
             GUILayout.BeginArea(new Rect(r.x+10,r.y+8,r.width-20,r.height-16));
             GUILayout.BeginHorizontal();GUILayout.Label("FICHA ESTRUCTURAL",currentHeading);
-            if(GUILayout.Button("×",currentButton,GUILayout.Width(30)))inspectorVisible=false;
+            if(GUILayout.Button("×",currentButton,GUILayout.Width(30)))
+            {inspectorVisible=false;if(isolateSelected){isolateSelected=false;ReapplyAll();}}
+            GUILayout.EndHorizontal();
+            GUILayout.BeginHorizontal();
+            if(GUILayout.Button(isolateSelected?"Mostrar edificio":"Aislar elemento",currentButton,GUILayout.Height(28)))
+            {
+                isolateSelected=!isolateSelected;
+                Vector3 c=(e.nodeI+e.nodeJ)*0.5f;
+                if(c==Vector3.zero)c=e.coordCenter;
+                orbitTarget=transform.TransformPoint(c);
+                orbitDist=Mathf.Clamp(isolateSelected?Mathf.Max(12f,(float)e.lengthM*3f):60f,minZoom,maxZoom);
+                ReapplyAll();ApplyStructuralFailureVisualization();
+            }
+            if(GUILayout.Button("Centrar",currentButton,GUILayout.Width(70),GUILayout.Height(28)))
+            {Vector3 c=(e.nodeI+e.nodeJ)*0.5f;if(c==Vector3.zero)c=e.coordCenter;orbitTarget=transform.TransformPoint(c);orbitDist=Mathf.Clamp(22f,minZoom,maxZoom);}
             GUILayout.EndHorizontal();
             currentInspectorScroll=GUILayout.BeginScrollView(currentInspectorScroll);
             DrawPendingPlanCard(id);
@@ -133,6 +190,7 @@ namespace Mcoc.UnityViewer
             {
                 GUILayout.Label(TypeFriendly(e.category).ToUpperInvariant()+" · "+id,currentHeading);
                 GUILayout.Label((e.building??"Sin edificio").Replace("EDIFICIO_","Edificio ")+" · "+FloorFriendly(e.floor),currentBody);
+                GUILayout.Label($"elementTag: {id}\nsolidTag: {(s?.solidTag??e.elementTag??"NO DATA")}\nOpenSees: {(feRows.Count>0?feRows[0].opensees_tag.ToString():"NO DATA")} · segmentos FE: {feRows.Count}",currentBody);
                 GUILayout.Label(CurrentSectionText(s),currentBody);
                 GUILayout.Label(CurrentMaterialText(s),currentBody);
                 GUILayout.Label(StructuralRole(e,context),currentBody);
@@ -144,9 +202,16 @@ namespace Mcoc.UnityViewer
                 GUILayout.Label(CurrentSectionText(s),currentBody);
                 if(s!=null)
                 {
-                    GUILayout.Label("Sección: "+ConfidenceFriendly(s.section_confidence),currentBody);
-                    if(s.concrete_fc_pa>0)GUILayout.Label($"f'c de plano: {s.concrete_fc_pa/1e6:F0} MPa",currentBody);
-                    if(s.reinforcement_fy_pa>0)GUILayout.Label($"fy de acero: {s.reinforcement_fy_pa/1e6:F0} MPa",currentBody);
+                    var material=CurrentMaterial(s.material_id);
+                    GUILayout.Label($"section_id: {s.section_id??"NO DATA"}\nmaterial_id: {s.material_id??"NO DATA"}",currentBody);
+                    string sectionStatus=feRows.Count>0&&feRows[0].section!=null?feRows[0].section.source:s.section_confidence;
+                    GUILayout.Label("Sección: "+ConfidenceFriendly(sectionStatus),currentBody);
+                    if(material?.resistance?.concrete_fc_pa!=null)GUILayout.Label($"f'c: {material.resistance.concrete_fc_pa.value/1e6:F0} MPa · {material.resistance.concrete_fc_pa.status}",currentBody);
+                    else GUILayout.Label("f'c: NO DATA",currentBody);
+                    if(material?.elastic?.E_pa!=null)GUILayout.Label($"E: {material.elastic.E_pa.value/1e9:F2} GPa · {material.elastic.E_pa.status}",currentBody);
+                    else GUILayout.Label("E: NO DATA",currentBody);
+                    if(material?.resistance?.reinforcement_fy_pa!=null)GUILayout.Label($"Acero {material.resistance.reinforcement_grade?.value??"NO DATA"} · fy {material.resistance.reinforcement_fy_pa.value/1e6:F0} MPa · {material.resistance.reinforcement_fy_pa.status}",currentBody);
+                    else GUILayout.Label("Acero / fy: NO DATA",currentBody);
                     GUILayout.Label("Grado de material ≠ módulo elástico ni disposición de armaduras. No usar tamaño visual como sección resistente confirmada.",currentBody);
                 }
             }
@@ -180,9 +245,11 @@ namespace Mcoc.UnityViewer
             technicalDetail=InspectorSection("DETALLE TÉCNICO");
             if(technicalDetail)
             {
-                GUILayout.Label($"ID: {id}\ngeometry_elementTag: {e.elementTag}\nEjes CAD: {e.axisX} / {e.axisY}\nExtremo i [m]: {P(e.nodeI)}\nExtremo j [m]: {P(e.nodeJ)}\nLayer: {e.sourceLayer}",currentBody);
-                if(e.crosswalk!=null)foreach(var x in e.crosswalk)GUILayout.Label($"FE PROPUESTO · NO EJECUTADO\n{x.analysis_id} · tag {x.opensees_element_tag}\nNodos {x.opensees_node_i}–{x.opensees_node_j}",currentBody);
-                GUILayout.Label("N/Vy/Vz [N], T/My/Mz [N·m], desplazamientos [m]: sin valores i/j actuales. Ejes geométricos no sustituyen vectores FE.",currentBody);
+                var member=CurrentMember(id);
+                GUILayout.Label($"ID: {id}\nsolidTag: {(s?.solidTag??e.elementTag??"NO DATA")}\nEjes CAD: {e.axisX} / {e.axisY}\nNodos físicos i/j: {member?.physical_node_i??"NO DATA"} / {member?.physical_node_j??"NO DATA"}\nExtremo i [m]: {P(e.nodeI)}\nExtremo j [m]: {P(e.nodeJ)}\nOrientación geométrica: {(e.nodeJ-e.nodeI).normalized}\nLayer: {e.sourceLayer}",currentBody);
+                if(s?.merged_from!=null&&s.merged_from.Count>0)GUILayout.Label("merged_from: "+string.Join(", ",s.merged_from),currentBody);
+                if(e.crosswalk!=null)foreach(var x in e.crosswalk)GUILayout.Label($"FE {(currentResultsAvailable?"CURRENT":"PROPUESTO · NO EJECUTADO")}\n{x.analysis_id} · tag {x.opensees_element_tag}\nNodos FE {x.opensees_node_i}–{x.opensees_node_j}",currentBody);
+                GUILayout.Label("Convención OpenSees local: [N, Vy, Vz, T, My, Mz]. Fuerzas del elemento sobre los nodos i/j; el extremo j se invierte solo al dibujar ambos extremos sobre una cara interna común.",currentBody);
                 if(!string.IsNullOrEmpty(e.correctionType))GUILayout.Label($"Auditoría: {e.correctionType}\n{e.correctionReason}\n{e.correctionPrimarySource}\n{e.correctionExternalClue}",currentBody);
                 if(s?.property_correction!=null)GUILayout.Label(s.material_scope_note,currentBody);
                 GUILayout.Label(CurrentVersionDiagnostic(),currentBody);

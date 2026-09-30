@@ -38,6 +38,9 @@ namespace Mcoc.UnityViewer
         {
             LoadProjectState();
             if(projectState==null)return "ESTADO: metadata no disponible; no habilitar resultados actuales";
+            if(currentResultsAvailable)
+                return $"GEOMETRÍA: CURRENT | FE: OPENSEES CURRENT | RESULTADOS: CURRENT ({activeAnalysisCase})"+
+                    (p1l5ReanalysisRequired?" · REANÁLISIS REQUERIDO":"");
             return $"GEOMETRÍA: {projectState.geometry} | FE: {projectState.fe} | RESULTADOS: "+
                 (ResultsAllowed?"HISTORICAL · "+historicalDelivery:projectState.results);
         }
@@ -50,7 +53,7 @@ namespace Mcoc.UnityViewer
                 if(projectState==null)GUILayout.Label("Metadata no disponible",currentBody);
                 else
                 {
-                    GUILayout.Label($"Geometría: {projectState.geometry}\nSólidos: {projectState.geometry_count}\nPropiedades: {projectState.properties}\nFE: {projectState.fe}\nMiembros: {projectState.fe_members}\nResultados: {projectState.results}\nUnity: {projectState.unity}\nPendientes FE: {projectState.pending}\nComponentes flotantes: {projectState.floating_components}\nPRE-P1L5: {projectState.baseline_status}",currentBody);
+                    GUILayout.Label($"Geometría: {(currentResultsAvailable?"CURRENT":projectState.geometry)}\nSólidos: {projectState.geometry_count}\nPropiedades: {projectState.properties}\nFE: {(currentResultsAvailable?"OPENSEES CURRENT":projectState.fe)}\nMiembros: {(currentResultsAvailable?(analysisResults?.elements?.Count??0):projectState.fe_members)}\nResultados: {(currentResultsAvailable?(p1l5ReanalysisRequired?"STALE / REANALYSIS REQUIRED":"CURRENT · "+activeAnalysisCase):projectState.results)}\nUnity: {projectState.unity}\nPendientes FE históricos: {projectState.pending}\nComponentes flotantes históricos: {projectState.floating_components}\nPRE-P1L5: {projectState.baseline_status}",currentBody);
                     if(projectState.blockers!=null)foreach(var note in projectState.blockers)GUILayout.Label("• "+note,currentBody);
                 }
             }

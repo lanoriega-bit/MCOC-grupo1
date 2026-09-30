@@ -1,0 +1,192 @@
+{
+  "format": "MCOC_P1L6_DESKTOP_CURRENT_MATERIALS_V1",
+  "data_state": "CURRENT",
+  "source": "entregas/P1L5/modelo_central/materials.json",
+  "materials": [
+    {
+      "material_id": "MAT_FE_LINEAR_ELASTIC_P1L3_HISTORICAL",
+      "name": "LINEAR_ELASTIC_FE_GLOBAL",
+      "scope": "Historical P1L3/P1L4 results only; not CURRENT PRE5 material assignment.",
+      "elastic": {
+        "E_pa": {
+          "value": 25000000000.0,
+          "unit": "Pa",
+          "status": "HISTORICAL",
+          "source": "entregas/P1L3/results/a3a4/analysis_model.json"
+        },
+        "nu": {
+          "value": 0.2,
+          "unit": "1",
+          "status": "HISTORICAL",
+          "source": "entregas/P1L3/results/a3a4/analysis_model.json"
+        },
+        "density_kg_m3": {
+          "value": null,
+          "unit": "kg/m3",
+          "status": "MISSING",
+          "source": "Not stored in FE material."
+        }
+      },
+      "resistance": {},
+      "provenance": {
+        "status": "HISTORICAL_NOT_CURRENT"
+      }
+    },
+    {
+      "material_id": "MAT_G35_10_2017_67_100_1E116",
+      "name": "G35_10",
+      "scope": "Main ED1 through cielo P3; excludes P4, sheet600 electrical room, slabs and radier; E, nu, reinforcement layout and design factors not inferred.",
+      "elastic": {
+        "E_pa": {
+          "value": 28000000000.0,
+          "unit": "Pa",
+          "status": "APPROX_P1L5_AUTHORIZED",
+          "source": "Academic P1L5 assumption authorised by the project owner for G35 concrete."
+        },
+        "nu": {
+          "value": 0.2,
+          "unit": "1",
+          "status": "APPROX_P1L5_AUTHORIZED",
+          "source": "Conventional linear-elastic concrete Poisson ratio adopted for P1L5."
+        },
+        "density_kg_m3": {
+          "value": 2500.0,
+          "unit": "kg/m3",
+          "status": "APPROX_P1L5_AUTHORIZED",
+          "source": "Conventional reinforced-concrete density adopted for P1L5 gravity/mass bookkeeping."
+        }
+      },
+      "resistance": {
+        "concrete_fc_pa": {
+          "value": 35000000,
+          "unit": "Pa",
+          "status": "CONFIRMED",
+          "source": "2017_67-100.dxf / MTEXT 1E116 / Main ED1 through cielo P3; excludes P4, sheet600 electrical room, slabs and radier"
+        },
+        "reinforcement_fy_pa": {
+          "value": 420000000,
+          "unit": "Pa",
+          "status": "CONFIRMED",
+          "source": "2017_67-100.dxf / MTEXT 1E116 / Main ED1 through cielo P3; excludes P4, sheet600 electrical room, slabs and radier"
+        },
+        "reinforcement_grade": {
+          "value": "A630-420H",
+          "unit": "",
+          "status": "CONFIRMED",
+          "source": "2017_67-100.dxf / MTEXT 1E116 / Main ED1 through cielo P3; excludes P4, sheet600 electrical room, slabs and radier"
+        }
+      },
+      "provenance": {
+        "material_source": "2017_67-100.dxf / MTEXT 1E116 / Main ED1 through cielo P3; excludes P4, sheet600 electrical room, slabs and radier",
+        "material_confidence": "CONFIRMED_FROM_PLAN",
+        "primary_source": "2017_67-100.dxf",
+        "handle": "1E116",
+        "source_sha256": "982512c16f1facb6188d93954c24063b5910e2741e4499e1e1d9d77affeb595a"
+      }
+    },
+    {
+      "material_id": "MAT_G35_10_2024_22_100_53994",
+      "name": "G35_10",
+      "scope": "Main ED2 through cielo P4; excludes slabs and radier; E, nu, reinforcement layout and design factors not inferred.",
+      "elastic": {
+        "E_pa": {
+          "value": 28000000000.0,
+          "unit": "Pa",
+          "status": "APPROX_P1L5_AUTHORIZED",
+          "source": "Academic P1L5 assumption authorised by the project owner for G35 concrete."
+        },
+        "nu": {
+          "value": 0.2,
+          "unit": "1",
+          "status": "APPROX_P1L5_AUTHORIZED",
+          "source": "Conventional linear-elastic concrete Poisson ratio adopted for P1L5."
+        },
+        "density_kg_m3": {
+          "value": 2500.0,
+          "unit": "kg/m3",
+          "status": "APPROX_P1L5_AUTHORIZED",
+          "source": "Conventional reinforced-concrete density adopted for P1L5 gravity/mass bookkeeping."
+        }
+      },
+      "resistance": {
+        "concrete_fc_pa": {
+          "value": 35000000,
+          "unit": "Pa",
+          "status": "CONFIRMED",
+          "source": "2024_22-100.dxf / MTEXT 53994 / Main ED2 through cielo P4; excludes slabs and radier"
+        },
+        "reinforcement_fy_pa": {
+          "value": 420000000,
+          "unit": "Pa",
+          "status": "CONFIRMED",
+          "source": "2024_22-100.dxf / MTEXT 53994 / Main ED2 through cielo P4; excludes slabs and radier"
+        },
+        "reinforcement_grade": {
+          "value": "A630-420H",
+          "unit": "",
+          "status": "CONFIRMED",
+          "source": "2024_22-100.dxf / MTEXT 53994 / Main ED2 through cielo P4; excludes slabs and radier"
+        }
+      },
+      "provenance": {
+        "material_source": "2024_22-100.dxf / MTEXT 53994 / Main ED2 through cielo P4; excludes slabs and radier",
+        "material_confidence": "CONFIRMED_FROM_PLAN",
+        "primary_source": "2024_22-100.dxf",
+        "handle": "53994",
+        "source_sha256": "1c69385668a85b2714816f198f89fb74bec476d1286103853a853fc8d9e5639c"
+      }
+    },
+    {
+      "material_id": "MAT_UNKNOWN",
+      "name": "UNKNOWN",
+      "scope": "UNKNOWN",
+      "elastic": {
+        "E_pa": {
+          "value": null,
+          "unit": "Pa",
+          "status": "MISSING",
+          "source": "Not inferred by PRE5."
+        },
+        "nu": {
+          "value": null,
+          "unit": "1",
+          "status": "MISSING",
+          "source": "Not inferred by PRE5."
+        },
+        "density_kg_m3": {
+          "value": null,
+          "unit": "kg/m3",
+          "status": "MISSING",
+          "source": "Not inferred by PRE5."
+        }
+      },
+      "resistance": {
+        "concrete_fc_pa": {
+          "value": null,
+          "unit": "Pa",
+          "status": "MISSING",
+          "source": "UNKNOWN"
+        },
+        "reinforcement_fy_pa": {
+          "value": null,
+          "unit": "Pa",
+          "status": "MISSING",
+          "source": "UNKNOWN"
+        },
+        "reinforcement_grade": {
+          "value": null,
+          "unit": "",
+          "status": "MISSING",
+          "source": "UNKNOWN"
+        }
+      },
+      "provenance": {
+        "material_source": "UNKNOWN",
+        "material_confidence": "UNKNOWN",
+        "primary_source": null,
+        "handle": null,
+        "source_sha256": null
+      }
+    }
+  ]
+}

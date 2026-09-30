@@ -141,6 +141,16 @@ namespace Mcoc.UnityViewer
             return LoadOptional<CurrentElementLoadsData>(fileName, "cargas CURRENT P1L5 por elemento");
         }
 
+        public static CurrentMaterialsData LoadP1L6CurrentMaterials(string fileName = "p1l6_current_materials.json")
+        {
+            return LoadOptional<CurrentMaterialsData>(fileName, "materiales CURRENT para inspector desktop P1L6");
+        }
+
+        public static CurrentMemberIdentityCatalog LoadP1L6CurrentMemberIdentity(string fileName = "p1l6_current_member_identity.json")
+        {
+            return LoadOptional<CurrentMemberIdentityCatalog>(fileName, "nodos físicos CURRENT para inspector desktop P1L6");
+        }
+
         public static DemandCapacityData LoadDemandCapacity(string fileName = "demanda_capacidad.json")
         {
             return LoadOptional<DemandCapacityData>(fileName, "demanda-capacidad P1L4");

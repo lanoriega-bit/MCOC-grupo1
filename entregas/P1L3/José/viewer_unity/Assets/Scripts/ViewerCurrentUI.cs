@@ -13,6 +13,7 @@ namespace Mcoc.UnityViewer
         private bool navigationExpanded = true;
         private bool technicalDetail;
         private bool correctionsOnly;
+        private bool isolateSelected;
         private bool globalAxesVisible;
         private FullScreenMode previousScreenMode;
         private Vector2 semanticScroll, currentInspectorScroll;
@@ -221,6 +222,15 @@ namespace Mcoc.UnityViewer
                 bool axes = GUILayout.Toggle(globalAxesVisible,"Mostrar GLOBAL X/Y/Z",GUILayout.Height(25));
                 if (axes != globalAxesVisible) SetGlobalAxesVisible(axes);
                 DrawQuickViews();
+                GUILayout.Space(5);
+                GUILayout.Label("Elemento de demostración", currentHeading);
+                if (GUILayout.Button("Seleccionar E1-P2-V-041", currentButton, GUILayout.Height(32)))
+                    SelectElementById("E1-P2-V-041", true);
+                GUILayout.BeginHorizontal();
+                searchText=GUILayout.TextField(searchText,40,GUILayout.Height(27));
+                if(GUILayout.Button("Buscar ID",currentButton,GUILayout.Width(72)))DoSearch();
+                GUILayout.EndHorizontal();
+                if(!string.IsNullOrEmpty(searchResult))GUILayout.Label(searchResult,currentBody);
                 if (GUILayout.Button("Restablecer modelo · R",currentButton)) ResetPresentation();
             }
             DrawDeliveryPanels();
@@ -307,10 +317,10 @@ namespace Mcoc.UnityViewer
             float scale=GUILayout.HorizontalSlider(activeDeformationScale,1,250);
             if(Mathf.Abs(scale-activeDeformationScale)>0.1f){activeDeformationScale=scale;RebuildActiveDeformedShape();}
             GUILayout.BeginHorizontal();
-            string[] names={"OFF","My","Mz","N","Vy","Vz"};
+            string[] names={"OFF","My","Mz","N","Vy","Vz","T"};
             for(int i=0;i<names.Length;i++)if(GUILayout.Button(names[i]))SetDiagramMode(i);
             GUILayout.EndHorizontal();
-            bool plot2d=GUILayout.Toggle(diagram2DVisible,"Gráfico 2D histórico",GUILayout.Height(25));
+            bool plot2d=GUILayout.Toggle(diagram2DVisible,currentResultsAvailable?"Gráfico 2D CURRENT":"Gráfico 2D histórico",GUILayout.Height(25));
             if(plot2d!=diagram2DVisible){diagram2DVisible=plot2d;if(plot2d)demandCapacityPlotVisible=false;}
             bool pm=GUILayout.Toggle(demandCapacityPlotVisible,"P–M histórico / demanda",GUILayout.Height(25));
             if(pm!=demandCapacityPlotVisible){demandCapacityPlotVisible=pm;if(pm)diagram2DVisible=false;}
@@ -344,6 +354,30 @@ namespace Mcoc.UnityViewer
         }
 
         void DrawCurrentInspector() => DrawStructuralInspector();
+
+        void SelectElementById(string id, bool focus)
+        {
+            var hit=allElements.Find(e=>e!=null&&e.go!=null&&
+                string.Equals(e.humanId??e.id,id,StringComparison.OrdinalIgnoreCase));
+            if(hit==null){searchResult="Sin resultado: "+id;return;}
+            isolateSelected=false;
+            if(buildingVisible.ContainsKey(hit.building))buildingVisible[hit.building]=true;
+            if(floorVisible.ContainsKey(hit.floor))floorVisible[hit.floor]=true;
+            if(typeVisible.ContainsKey(hit.category))typeVisible[hit.category]=true;
+            ReapplyAll();
+            Select(hit);
+            searchResult="Encontrado CURRENT: "+id;
+            if(focus)
+            {
+                Vector3 c=(hit.nodeI+hit.nodeJ)*0.5f;
+                if(c==Vector3.zero)c=hit.coordCenter;
+                orbitTarget=transform.TransformPoint(c);
+                // Approach from the facade at a useful framing distance: the
+                // top slab otherwise fills the camera when focusing a P2 beam.
+                pitch=8f;
+                orbitDist=Mathf.Clamp(60f,minZoom,maxZoom);
+            }
+        }
 
         void DrawUsageHelp()
         {
