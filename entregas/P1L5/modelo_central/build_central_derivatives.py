@@ -9,6 +9,7 @@ P1L5 approximations are propagated explicitly.
 from __future__ import annotations
 
 import json
+import math
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
@@ -69,8 +70,15 @@ def build_viewer_preview(master: dict, sections: dict, materials: dict) -> dict:
         }
         dims = section.get("dimensions", {})
         if "start_m" in geometry:
+            vector = [b - a for a, b in zip(geometry["start_m"], geometry["end_m"])]
+            length = math.sqrt(sum(component * component for component in vector))
+            if not math.isfinite(length) or length <= 0:
+                raise ValueError(f"Invalid physical length for {row['element_id']}")
             solid["start"] = geometry["start_m"]
             solid["end"] = geometry["end_m"]
+            solid["length_m"] = round(length, 6)
+            solid["direction_unit"] = [round(component / length, 9) for component in vector]
+            solid["orientation_deg_xy"] = round(math.degrees(math.atan2(vector[1], vector[0])), 6)
             solid["coordinates"].update({
                 "start": geometry["start_m"],
                 "end": geometry["end_m"],
@@ -94,7 +102,6 @@ def build_viewer_preview(master: dict, sections: dict, materials: dict) -> dict:
             solid["height_m"] = geometry.get("z_top_m", 0) - geometry.get("z_bottom_m", 0)
         elif row["type"] == "wall":
             solid["width_m"] = dims.get("thickness_m")
-            solid["length_m"] = dims.get("length_m")
             solid["height_m"] = geometry.get("z_top_m", 0) - geometry.get("z_bottom_m", 0)
         elif row["type"] == "support":
             solid["width_m"] = dims.get("width_m")
