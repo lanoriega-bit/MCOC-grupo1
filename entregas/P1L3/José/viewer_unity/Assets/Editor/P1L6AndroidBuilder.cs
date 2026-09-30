@@ -3,6 +3,7 @@ using System.IO;
 using UnityEditor;
 using UnityEditor.Build.Reporting;
 using UnityEditor.Build;
+using UnityEditor.Android;
 using UnityEngine;
 
 namespace Mcoc.UnityViewer.EditorTools
@@ -17,6 +18,12 @@ namespace Mcoc.UnityViewer.EditorTools
             if (!BuildPipeline.IsBuildTargetSupported(BuildTargetGroup.Android, BuildTarget.Android))
                 throw new BuildFailedException(
                     "ANDROID_BUILD_SUPPORT_MISSING: install Android Build Support, SDK/NDK Tools and OpenJDK for Unity 6000.6.0f1.");
+
+            string localAppData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+            string jdk = Path.Combine(localAppData, "Unity", "Toolchains", "OpenJDK17");
+            if (!File.Exists(Path.Combine(jdk, "bin", "java.exe")))
+                throw new BuildFailedException("OPENJDK17_MISSING: " + jdk);
+            AndroidExternalToolsSettings.jdkRootPath = jdk;
 
             P1L6ARFinalSceneBuilder.BuildFinalScene();
             P1L6ARFinalSceneBuilder.ValidateFinalScene();

@@ -158,12 +158,14 @@ def capacity(tag: str):
         rec = find(tag)
         return {"available": False, "note": rec.get("data_state", "NO_CAPACITY")}
     dc = c.get("demand_capacity", {})
+    pm = c.get("capacity") or {}
+    beam = c.get("beam_capacity") or {}
     return {
         "available": True,
-        "status": c.get("capacity", {}).get("status"),
+        "status": pm.get("status") or beam.get("status"),
         "dc_ratio": dc.get("DC_ratio"),
         "inside_envelope": dc.get("inside_envelope"),
-        "pm_axis": c.get("capacity", {}).get("pm_axis"),
+        "pm_axis": pm.get("pm_axis"),
     }
 
 
