@@ -1,0 +1,44 @@
+{
+  "format": "MCOC_P1L5_CURRENT_RESULTS_MANIFEST_V2",
+  "generated_utc": "2026-10-01T00:49:13.085625+00:00",
+  "status": "PASS",
+  "analysis_version": "P1L5_CURRENT_ZONED_V2",
+  "cases": {
+    "G": {
+      "status": "PASS",
+      "max_translation_m": 0.09486792927002431,
+      "equilibrium_relative_residual": 2.362886486218497e-16
+    },
+    "Q": {
+      "status": "PASS",
+      "max_translation_m": 0.02236640070881047,
+      "equilibrium_relative_residual": 1.5120963221074868e-16
+    },
+    "EX": {
+      "status": "PASS",
+      "max_translation_m": 0.0670465755131935,
+      "equilibrium_relative_residual": 6.233815610567041e-14
+    },
+    "EY": {
+      "status": "PASS",
+      "max_translation_m": 0.09936988594678171,
+      "equilibrium_relative_residual": 5.284294027500259e-14
+    }
+  },
+  "linear_superposition_compatible": true,
+  "stop_elements": [],
+  "result_state": "CURRENT_WITH_DOCUMENTED_FALLBACKS",
+  "load_contract": {
+    "status": "PASS_WITH_EXPLICIT_UNRESOLVED",
+    "G_total_N": 80184104.226,
+    "Q_total_N": 24636593.938,
+    "unresolved_load_ids": [
+      "L700-P2-POINT-SC-7000-SC_POINT",
+      "L700-P2-POINT-SC-7000-PM_ADIC_POINT",
+      "L700-P3-POINT-SC-6000-SC_POINT",
+      "L700-P3-POINT-SC-6000-PM_ADIC_POINT",
+      "L700-P3-POINT-SC-6700-SC_POINT",
+      "L700-P3-POINT-SC-6700-PM_ADIC_POINT"
+    ]
+  }
+}

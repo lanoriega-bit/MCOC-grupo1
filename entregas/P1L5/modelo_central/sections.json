@@ -1350,7 +1350,7 @@
         "section_source": "UNKNOWN",
         "section_confidence": "UNKNOWN"
       },
-      "used_by_count": 2,
+      "used_by_count": 0,
       "provenance_examples": [
         {
           "element_id": "E2-S1-A-015",
@@ -1396,7 +1396,7 @@
         "section_source": "UNKNOWN",
         "section_confidence": "UNKNOWN"
       },
-      "used_by_count": 1,
+      "used_by_count": 0,
       "provenance_examples": [
         {
           "element_id": "E1-S1-A-061",
@@ -1424,7 +1424,7 @@
         "section_source": "UNKNOWN",
         "section_confidence": "UNKNOWN"
       },
-      "used_by_count": 4,
+      "used_by_count": 0,
       "provenance_examples": [
         {
           "element_id": "E2-S1-A-003",
@@ -1479,7 +1479,7 @@
         "section_source": "UNKNOWN",
         "section_confidence": "UNKNOWN"
       },
-      "used_by_count": 25,
+      "used_by_count": 0,
       "provenance_examples": [
         {
           "element_id": "E2-S1-A-008",
@@ -1678,7 +1678,7 @@
         "section_source": "UNKNOWN",
         "section_confidence": "UNKNOWN"
       },
-      "used_by_count": 1,
+      "used_by_count": 0,
       "provenance_examples": [
         {
           "element_id": "E1-S1-A-076",
@@ -2129,7 +2129,7 @@
           "source": "ED1 paired contour audit"
         }
       },
-      "used_by_count": 1,
+      "used_by_count": 5,
       "provenance_examples": [
         {
           "element_id": "E1-S1-M-026",
@@ -2164,7 +2164,7 @@
           "source": "ED1 paired contour audit"
         }
       },
-      "used_by_count": 1,
+      "used_by_count": 5,
       "provenance_examples": [
         {
           "element_id": "E1-S1-M-029",
@@ -2199,7 +2199,7 @@
           "source": "ED2 paired contour audit"
         }
       },
-      "used_by_count": 8,
+      "used_by_count": 10,
       "provenance_examples": [
         {
           "element_id": "E2-S1-M-007",
@@ -2234,7 +2234,7 @@
           "source": "ED2 paired contour audit"
         }
       },
-      "used_by_count": 4,
+      "used_by_count": 5,
       "provenance_examples": [
         {
           "element_id": "E2-S1-M-008",
@@ -2269,7 +2269,7 @@
           "source": "ED2 paired contour audit"
         }
       },
-      "used_by_count": 4,
+      "used_by_count": 5,
       "provenance_examples": [
         {
           "element_id": "E2-S1-M-011",
@@ -2374,7 +2374,7 @@
           "source": "ED1 paired contour audit"
         }
       },
-      "used_by_count": 0,
+      "used_by_count": 8,
       "provenance_examples": [
         {
           "element_id": "E1-P1-M-002",
@@ -2384,6 +2384,21 @@
           "source_layer": "RLE-MURO_CONTOUR_PAIR"
         }
       ]
+    },
+    {
+      "section_id": "SEC_WALL_0.300x2.150",
+      "type": "wall_equivalent_rectangular",
+      "units": "m",
+      "dimensions": {
+        "thickness_m": 0.3,
+        "length_m": 2.15
+      },
+      "status": "GEOMETRY_DERIVED_LENGTH",
+      "provenance": {
+        "source_dxf": "2017_67-101.dxf"
+      },
+      "used_by_count": 10,
+      "provenance_examples": []
     }
   ]
 }
