@@ -51,7 +51,7 @@ namespace Mcoc.UnityViewer
         bool InspectorSection(string title)
         {
             bool open=inspectorGroups.Contains(title);
-            if(GUILayout.Button((open?"−  ":"+  ")+title,currentButton))
+            if(GUILayout.Toggle(open,new GUIContent((open?"−  ":"+  ")+title,"Mostrar/ocultar "+title.ToLowerInvariant()+"; los datos permanecen disponibles."),currentButton)!=open)
             {if(open)inspectorGroups.Remove(title);else inspectorGroups.Add(title);open=!open;}
             return open;
         }
@@ -77,6 +77,13 @@ namespace Mcoc.UnityViewer
                 catch(Exception ex){Debug.LogWarning("Inspector context unavailable: "+ex.Message);}
             }
             return id!=null&&currentContexts.TryGetValue(id,out var context)?context:null;
+        }
+        void InspectorRow(string label,string value,string help="")
+        {
+            GUILayout.BeginHorizontal();
+            GUILayout.Label(new GUIContent(label,help),currentBody,GUILayout.Width(96));
+            GUILayout.Label(new GUIContent(value??"NO DATA",help),currentBody);
+            GUILayout.EndHorizontal();
         }
         CurrentElementLoadData CurrentElementLoad(string id)
         {
@@ -190,29 +197,37 @@ namespace Mcoc.UnityViewer
             {
                 GUILayout.Label(TypeFriendly(e.category).ToUpperInvariant()+" · "+id,currentHeading);
                 GUILayout.Label((e.building??"Sin edificio").Replace("EDIFICIO_","Edificio ")+" · "+FloorFriendly(e.floor),currentBody);
-                GUILayout.Label($"elementTag: {id}\nsolidTag: {(s?.solidTag??e.elementTag??"NO DATA")}\nOpenSees: {(feRows.Count>0?feRows[0].opensees_tag.ToString():"NO DATA")} · segmentos FE: {feRows.Count}",currentBody);
                 GUILayout.Label(CurrentSectionText(s),currentBody);
-                GUILayout.Label(CurrentMaterialText(s),currentBody);
-                GUILayout.Label(StructuralRole(e,context),currentBody);
-                GUILayout.Label("Geometría: "+ConfidenceFriendly(s?.confidence??e.confidence),currentBody);
+                InspectorRow("Material",CurrentMaterialText(s),"El acabado visual no cambia el material estructural del contrato.");
+                GUILayout.Label(new GUIContent("Rol estructural · ver ayuda",StructuralRole(e,context)),currentBody);
+                InspectorRow("Geometría",ConfidenceFriendly(s?.confidence??e.confidence));
                 if(s!=null&&s.category!="slab")GUILayout.Label(CurrentMaterialStatus(s),currentBody);
             }
-            if(InspectorSection("PROPIEDADES"))
+            if(InspectorSection("GEOMETRÍA"))
             {
                 GUILayout.Label(CurrentSectionText(s),currentBody);
+                InspectorRow("Sección ID",s?.section_id);
+                InspectorRow("Nodos i / j",CurrentMember(id)?.physical_node_i+" / "+CurrentMember(id)?.physical_node_j);
+                InspectorRow("Extremo i",P(e.nodeI),"Coordenadas canónicas en metros; Z vertical.");
+                InspectorRow("Extremo j",P(e.nodeJ),"Coordenadas canónicas en metros; Z vertical.");
+                InspectorRow("FE",feRows.Count+" segmentos", "Una geometría física puede tener varios segmentos FE (crosswalk 1:N).");
+                InspectorRow("OpenSees",feRows.Count>0?feRows[0].opensees_tag.ToString():"NO DATA");
+                string sectionStatus=feRows.Count>0&&feRows[0].section!=null?feRows[0].section.source:s?.section_confidence;
+                InspectorRow("Fuente",ConfidenceFriendly(sectionStatus));
+            }
+            if(InspectorSection("MATERIAL"))
+            {
                 if(s!=null)
                 {
                     var material=CurrentMaterial(s.material_id);
-                    GUILayout.Label($"section_id: {s.section_id??"NO DATA"}\nmaterial_id: {s.material_id??"NO DATA"}",currentBody);
-                    string sectionStatus=feRows.Count>0&&feRows[0].section!=null?feRows[0].section.source:s.section_confidence;
-                    GUILayout.Label("Sección: "+ConfidenceFriendly(sectionStatus),currentBody);
+                    InspectorRow("Material ID",s.material_id);
                     if(material?.resistance?.concrete_fc_pa!=null)GUILayout.Label($"f'c: {material.resistance.concrete_fc_pa.value/1e6:F0} MPa · {material.resistance.concrete_fc_pa.status}",currentBody);
                     else GUILayout.Label("f'c: NO DATA",currentBody);
                     if(material?.elastic?.E_pa!=null)GUILayout.Label($"E: {material.elastic.E_pa.value/1e9:F2} GPa · {material.elastic.E_pa.status}",currentBody);
                     else GUILayout.Label("E: NO DATA",currentBody);
                     if(material?.resistance?.reinforcement_fy_pa!=null)GUILayout.Label($"Acero {material.resistance.reinforcement_grade?.value??"NO DATA"} · fy {material.resistance.reinforcement_fy_pa.value/1e6:F0} MPa · {material.resistance.reinforcement_fy_pa.status}",currentBody);
                     else GUILayout.Label("Acero / fy: NO DATA",currentBody);
-                    GUILayout.Label("Grado de material ≠ módulo elástico ni disposición de armaduras. No usar tamaño visual como sección resistente confirmada.",currentBody);
+                    GUILayout.Label(new GUIContent("Propiedades estructurales · no acabado visual","Grado de material ≠ módulo elástico ni disposición de armaduras. El estilo de ladrillo o acero es solo una clave por tipo."),currentBody);
                 }
             }
             if(InspectorSection("CONEXIONES"))
@@ -223,7 +238,7 @@ namespace Mcoc.UnityViewer
             }
             if(InspectorSection("RESULTADOS"))
             {
-                GUILayout.Label("RESULTADOS ACTUALES",currentHeading);
+                GUILayout.Label(new GUIContent("CURRENT · Caso "+activeAnalysisCase,"Fuerzas locales OpenSees: [N, Vy, Vz, T, My, Mz]. Consultar unidades y convención en Detalle técnico."),currentHeading);
                 GUILayout.Label(currentResultsAvailable ? BuildP1L4ResultsText(e,id) : "No disponibles todavía.\nLa estructura fue actualizada después de la última corrida OpenSees.\nSe requiere un nuevo análisis validado.",currentBody);
             }
             if(InspectorSection("CARGAS"))
