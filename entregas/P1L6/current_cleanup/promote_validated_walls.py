@@ -72,6 +72,9 @@ def main() -> None:
                      "loads_approved": False, "linear_verified": False,
                      "analysis_version": "NONE_REANALYSIS_REQUIRED", "payload_file": "", "payload_sha256": ""})
     write(CONTRACT, contract)
+    candidate["sources"]["current_contract"].update({
+        "status": "STALE_REANALYSIS_REQUIRED", "analysis_version": "NONE_REANALYSIS_REQUIRED",
+    })
     write(CENTRAL / "model_master.json", candidate)
     write(CENTRAL / "sections.json", candidate_sections)
     python = sys.executable
