@@ -11,6 +11,8 @@ from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
+from current_contract_config import DEFAULT_R_COEFFICIENTS
+
 
 ROOT = Path(__file__).resolve().parents[3]
 CENTRAL = ROOT / "entregas" / "P1L5" / "modelo_central"
@@ -125,7 +127,7 @@ def main() -> None:
         "analysis_version": manifest["analysis_version"],
         "generated_utc": datetime.now(timezone.utc).isoformat(),
         "basis_cases": ["G", "Q", "EX", "EY"],
-        "default_coefficients": {"G": 1.0, "Q": 0.5, "EX": 0.0, "EY": 0.0},
+        "default_coefficients": DEFAULT_R_COEFFICIENTS,
         "cases": cases,
         "qa": manifest["cases"],
         "limitations": [
