@@ -118,7 +118,7 @@ namespace Mcoc.UnityViewer
                 case "Q": return "Q · Sobrecarga de uso: cargas variables de ocupación, transferidas por áreas tributarias.";
                 case "EX": return "EX · Acción horizontal en X: caso lateral/sísmico en el eje global X.";
                 case "EY": return "EY · Acción horizontal en Y: caso lateral/sísmico en el eje global Y.";
-                case "R": return "R · Respuesta combinada: superposición de G, Q, EX y EY con los multiplicadores seleccionados.";
+                case "R": return "R · Respuesta combinada\nR = λG·G + λQ·Q + λEX·EX + λEY·EY\nλ: coeficientes adimensionales sobre resultados ya calculados. No reejecuta OpenSees.";
                 default: return "Seleccione un caso base o la respuesta combinada R.";
             }
         }
@@ -126,7 +126,7 @@ namespace Mcoc.UnityViewer
         float DrawCoefficient(string label, float value)
         {
             GUILayout.BeginHorizontal();
-            GUILayout.Label(label + " = " + value.ToString("F2"), currentBody, GUILayout.Width(82));
+            GUILayout.Label(new GUIContent(label + " = " + value.ToString("F2"),"Coeficiente adimensional. "+LoadCaseExplanation(label)), currentBody, GUILayout.Width(82));
             bool gravity = label == "G" || label == "Q";
             float next = GUILayout.HorizontalSlider(value, gravity ? 0f : -5f, 5f, GUILayout.Width(130));
             GUILayout.EndHorizontal();
@@ -135,8 +135,7 @@ namespace Mcoc.UnityViewer
 
         void DrawP1L5CurrentResultsControls()
         {
-            GUILayout.Label("RESULTADOS CURRENT · OpenSees PASS", currentHeading);
-            GUILayout.Label("R = λG·G + λQ·Q + λEX·EX + λEY·EY", currentBody);
+            GUILayout.Label(new GUIContent("CURRENT · Caso "+activeAnalysisCase,"OpenSees verificado. R combina bases compatibles sin reanálisis."), currentHeading);
             float g = DrawCoefficient("G", p1l5LambdaG);
             float q = DrawCoefficient("Q", p1l5LambdaQ);
             float ex = DrawCoefficient("EX", p1l5LambdaEX);
@@ -148,34 +147,31 @@ namespace Mcoc.UnityViewer
             }
             GUILayout.BeginHorizontal();
             foreach (string name in new[] { "G", "Q", "EX", "EY", "R" })
-                if (GUILayout.Button(name, currentButton)) ActivateAnalysisCase(name);
+                if (GUILayout.Toggle(activeAnalysisCase==name,new GUIContent(name,LoadCaseExplanation(name)), currentButton)!= (activeAnalysisCase==name))
+                { ActivateAnalysisCase(name); ShowCaseHelp(name); }
             GUILayout.EndHorizontal();
-            GUILayout.Label("Caso activo: " + activeAnalysisCase + " · CURRENT con supuestos documentados", currentBody);
-            GUILayout.Label(LoadCaseExplanation(activeAnalysisCase), currentBody);
-            if (activeAnalysisCase == "R")
-                GUILayout.Label("λ: coeficientes adimensionales. Combinan resultados ya calculados; no ejecutan OpenSees.", currentBody);
-            bool deform = GUILayout.Toggle(activeDeformationVisible, "Deformada CURRENT", GUILayout.Height(25));
+            bool deform = VisualToggle(activeDeformationVisible, "Deformada CURRENT","Desplazamientos del caso activo, amplificados solo visualmente.");
             if (deform != activeDeformationVisible) { activeDeformationVisible = deform; typeVisible["analysis_deformed"] = deform; ReapplyAll(); }
             GUILayout.Label("Amplificación visual ×" + activeDeformationScale.ToString("F0"), currentBody);
             float scale = GUILayout.HorizontalSlider(activeDeformationScale, 1, 250);
             if (Mathf.Abs(scale - activeDeformationScale) > 0.1f) { activeDeformationScale = scale; RebuildActiveDeformedShape(); }
             GUILayout.BeginHorizontal();
             string[] diagramNames = { "OFF", "My", "Mz", "N", "Vy", "Vz", "T" };
-            for (int i = 0; i < diagramNames.Length; i++) if (GUILayout.Button(diagramNames[i])) SetDiagramMode(i);
+            for (int i = 0; i < diagramNames.Length; i++) if (GUILayout.Button(new GUIContent(diagramNames[i],"Diagrama 3D "+diagramNames[i]+" del caso activo; fuerzas de extremos OpenSees."),currentButton)) SetDiagramMode(i);
             GUILayout.EndHorizontal();
-            bool plot = GUILayout.Toggle(diagram2DVisible, "Gráfico 2D", GUILayout.Height(25));
+            bool plot = VisualToggle(diagram2DVisible, "Gráfico 2D","Gráfico del elemento seleccionado. Mantiene convención de signos, unidades y END_FORCES_INTERPOLATION.");
             if (plot != diagram2DVisible) { diagram2DVisible = plot; if (plot) demandCapacityPlotVisible = false; }
-            bool pm = GUILayout.Toggle(demandCapacityPlotVisible, "P–M y D/C dinámico", GUILayout.Height(25));
+            bool pm = VisualToggle(demandCapacityPlotVisible, "P–M y D/C dinámico","Demanda del caso activo sobre capacidad compatible. Armaduras y capacidad de laboratorio asumidas, no diseño certificado.");
             if (pm != demandCapacityPlotVisible) { demandCapacityPlotVisible = pm; if (pm) diagram2DVisible = false; }
-            bool failureView = GUILayout.Toggle(structuralFailureVisualizationEnabled,
-                "Mapa de capacidad del edificio", GUILayout.Height(25));
+            bool failureView = VisualToggle(structuralFailureVisualizationEnabled,
+                "Mapa de capacidad", "OK: material normal. WARNING: naranja. Excedido: rojo. Sin datos: gris. Umbrales existentes sin cambios.");
             if (failureView != structuralFailureVisualizationEnabled)
             { structuralFailureVisualizationEnabled = failureView; ApplyStructuralFailureVisualization(); }
-            bool damage = GUILayout.Toggle(structuralDamageOverlayEnabled,
-                "Daño visual (no analítico)", GUILayout.Height(25));
+            bool damage = VisualToggle(structuralDamageOverlayEnabled,
+                "Daño visual (no analítico)","Ilustración visual. No simula grietas reales ni cambia rigidez o capacidad.");
             if (damage != structuralDamageOverlayEnabled)
             { structuralDamageOverlayEnabled = damage; ApplyStructuralFailureVisualization(); }
-            GUILayout.Label("Normal: OK  ·  Naranjo: D/C ≥ 0,80  ·  Rojo: D/C ≥ 1,00  ·  Gris: sin datos", currentBody);
+            GUILayout.Label(new GUIContent("OK · normal   WARNING · naranja   EXCEEDS · rojo", "Umbrales actuales: 0,80 y 1,00. Gris = NO DATA. Selección cyan tiene prioridad visual."), currentBody);
             GUILayout.Space(4);
             GUILayout.Label(ProjectAnalysisState(), currentBody);
         }
