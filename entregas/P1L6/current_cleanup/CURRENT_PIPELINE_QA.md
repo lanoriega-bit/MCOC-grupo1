@@ -32,7 +32,7 @@ Estado: **PASS_WITH_EXPLICIT_NOTES**. Verifica identidad geométrica, FE, cargas
 - capacity_records: 669
 - unresolved_loads: 6
 
-Control manual `E1-P2-V-041`: R My = 402.989479 kN·m.
+Control manual `E1-P2-V-041`: R My = 402.994338 kN·m.
 
 ## Notas explícitas
 
@@ -40,5 +40,5 @@ Control manual `E1-P2-V-041`: R My = 402.989479 kN·m.
 - 85 active ED1/P4 structural members retain an explicitly inferred material fallback.
 - 10 non-FE slabs have MAT_UNKNOWN; slab thickness 0.15 m is an academic load fallback.
 - 6 point-load catalog entries lack an unequivocal receiver and remain excluded.
-- LT1 Q differs by +5.610% from ETABS; benchmark, not a calibration target.
+- LT1 Q differs by -1.617% from ETABS; benchmark, not a calibration target.
 - Unity compile/Play requires a separate editor test; this script verifies the JSON contract only.

@@ -455,8 +455,8 @@ namespace Mcoc.UnityViewer
         {
             if (model.solids != null)
                 foreach (var solid in model.solids) CreateSolid(solid);
-            if (model.segments != null)
-                foreach (var seg in model.segments) CreateSegment(seg);
+            // CAD segments remain in source files for audits, never as Viewer layers.
+            // Physical members and FE axes are constructed independently of these references.
             if (model.diaphragms != null)
                 foreach (var dia in model.diaphragms) CreateDiaphragm(dia);
             CreateNodes();

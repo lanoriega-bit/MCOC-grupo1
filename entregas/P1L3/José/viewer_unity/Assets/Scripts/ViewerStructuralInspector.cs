@@ -130,18 +130,26 @@ namespace Mcoc.UnityViewer
             var lines=new List<string>();
             if(row.Q!=null&&row.Q.status!="NO_DATA")
             {
-                lines.Add($"Q · {row.Q.status}");
-                lines.Add($"Área tributaria: {row.Q.tributary_area_m2:F3} m² · ancho equivalente: {row.Q.equivalent_width_m:F3} m");
-                lines.Add($"qQ medio: {row.Q.average_surface_intensity_kN_m2:F3} kN/m² · wQ: {row.Q.equivalent_line_load_N_m/1000.0:F3} kN/m");
+                lines.Add("Q · Sobrecarga de uso");
+                if(row.Q.tributary_area_m2>0)
+                {
+                    lines.Add($"qQ base (media multizona): {row.Q.average_surface_intensity_kN_m2:F3} kN/m²");
+                    lines.Add($"Área tributaria: {row.Q.tributary_area_m2:F3} m²");
+                    lines.Add($"Ancho tributario equivalente: {row.Q.equivalent_width_m:F3} m");
+                    lines.Add($"wQ equivalente base: {row.Q.equivalent_line_load_N_m/1000.0:F3} kN/m");
+                    lines.Add($"λQ: {p1l5LambdaQ:F2} · qQ equivalente en R: {p1l5LambdaQ*row.Q.average_surface_intensity_kN_m2:F3} kN/m²");
+                    lines.Add("Equivalencia de combinación, no nueva corrida.");
+                }
+                else lines.Add("Sin área tributaria asignada; qQ/ancho/wQ no definidos.");
                 lines.Add($"Q transferida: {row.Q.surface_force_N/1000.0:F3} kN");
-                if(row.Q.zone_ids!=null&&row.Q.zone_ids.Count>0)lines.Add("Zonas: "+string.Join(", ",row.Q.zone_ids));
             }
             else lines.Add("Q: NO DATA para este elemento; no equivale a una carga cero confirmada.");
             if(row.G!=null)
             {
-                lines.Add($"G · {row.G.status}");
+                lines.Add($"G · Permanente base · λG {p1l5LambdaG:F2}");
                 lines.Add($"Peso propio: {row.G.self_weight_N/1000.0:F3} kN · carga muerta tributaria: {row.G.tributary_dead_N/1000.0:F3} kN");
                 lines.Add($"G asociada total: {row.G.total_associated_N/1000.0:F3} kN");
+                lines.Add($"λG × G asociada: {p1l5LambdaG*row.G.total_associated_N/1000.0:F3} kN (equivalente en R)");
                 if(row.Q!=null&&row.Q.tributary_area_m2>0)
                     lines.Add($"qG tributario medio: {row.G.tributary_dead_N/1000.0/row.Q.tributary_area_m2:F3} kN/m²");
                 double length=lastSelected!=null?lastSelected.lengthM:0;
@@ -150,12 +158,14 @@ namespace Mcoc.UnityViewer
             }
             if(row.source_load_ids!=null&&row.source_load_ids.Count>0)
             {
-                lines.Add("Fuentes: "+string.Join(", ",row.source_load_ids));
+                lines.Add("Fuentes: "+row.source_load_ids.Count+" IDs · ver tooltip");
                 bool point=row.source_load_ids.Exists(x=>(x??"").Contains("POINT"));
                 bool line=row.source_load_ids.Exists(x=>(x??"").Contains("LINE"));
                 lines.Add("Cargas puntuales asociadas: "+(point?"ver IDs fuente":"NO DATA / ninguna en el contrato del elemento"));
                 lines.Add("Cargas lineales especiales asociadas: "+(line?"ver IDs fuente":"NO DATA / ninguna en el contrato del elemento"));
             }
+            lines.Add($"EX · lateral X · λEX {p1l5LambdaEX:F2}\nEY · lateral Y · λEY {p1l5LambdaEY:F2}");
+            lines.Add("λ multiplica respuestas calculadas en R; no reanaliza.");
             return string.Join("\n",lines);
         }
         string CurrentSectionText(SolidData s)
@@ -270,7 +280,11 @@ namespace Mcoc.UnityViewer
                 else GUILayout.Label("Sin análisis actual compatible. Se requiere una corrida validada.",currentBody);
             }
             if(InspectorSection("CARGAS"))
-                GUILayout.Label(CurrentElementLoadText(id,context),currentBody);
+            {
+                var load=CurrentElementLoad(id);
+                string sources=load?.source_load_ids==null?"":string.Join(", ",load.source_load_ids);
+                GUILayout.Label(new GUIContent(CurrentElementLoadText(id,context),CoefficientExplanation("Q")+"\nqQ base = Q superficial / área; media ponderada si hay varias zonas. Ancho = área / longitud física; wQ = Q / longitud. Las equivalencias son interpretativas: FE aplica estas acciones como cargas nodales.\nFuentes: "+sources),currentBody);
+            }
             if(InspectorSection("EJES"))
             {
                 bool show=GUILayout.Toggle(localAxesVisible,"Mostrar flechas x / y / z",GUILayout.Height(27));

@@ -126,11 +126,16 @@ namespace Mcoc.UnityViewer
         float DrawCoefficient(string label, float value)
         {
             GUILayout.BeginHorizontal();
-            GUILayout.Label(new GUIContent(label + " = " + value.ToString("F2"),"Coeficiente adimensional. "+LoadCaseExplanation(label)), currentBody, GUILayout.Width(82));
+            GUILayout.Label(new GUIContent("λ" + label + " = " + value.ToString("F2"),CoefficientExplanation(label)), currentBody, GUILayout.Width(82));
             bool gravity = label == "G" || label == "Q";
             float next = GUILayout.HorizontalSlider(value, gravity ? 0f : -5f, 5f, GUILayout.Width(130));
             GUILayout.EndHorizontal();
             return Mathf.Round(next * 100f) / 100f;
+        }
+
+        internal static string CoefficientExplanation(string name)
+        {
+            return LoadCaseExplanation(name)+"\nλ"+name+" = 1,00 usa exactamente la respuesta del caso base calculado.\nλ"+name+" = 2,00 aporta dos veces esa respuesta a R; λ"+name+" = 0 la excluye de R.\nModificar λ"+name+" no vuelve a ejecutar OpenSees ni cambia el caso base. Una carga equivalente de R no es una nueva corrida estructural.";
         }
 
         void DrawP1L5CurrentResultsControls()
@@ -150,6 +155,7 @@ namespace Mcoc.UnityViewer
                 if (GUILayout.Toggle(activeAnalysisCase==name,new GUIContent(name,LoadCaseExplanation(name)), currentButton,GUILayout.Width(44))!= (activeAnalysisCase==name))
                 { ActivateAnalysisCase(name); ShowCaseHelp(name); }
             GUILayout.EndHorizontal();
+            if(activeAnalysisCase=="R")GUILayout.Label(new GUIContent("R = λG·G + λQ·Q + λEX·EX + λEY·EY","Superposición de respuestas compatibles ya calculadas; los cuatro coeficientes visibles arriba pertenecen a R, no alteran los casos base."),currentBody);
             bool deform = VisualToggle(activeDeformationVisible, "Deformada CURRENT","Desplazamientos del caso activo, amplificados solo visualmente.");
             if (deform != activeDeformationVisible) { activeDeformationVisible = deform; typeVisible["analysis_deformed"] = deform; ReapplyAll(); }
             GUILayout.Label("Amplificación visual ×" + activeDeformationScale.ToString("F0"), currentBody);
@@ -380,7 +386,14 @@ namespace Mcoc.UnityViewer
                 if(solid.material!="G35_10"||material?.resistance?.concrete_fc_pa?.value!=35e6||
                     material?.resistance?.reinforcement_fy_pa?.value!=420e6)failures.Add("material incompleto");
             }
-            if(metadata.Count!=1||metadata[0].opensees_tag!=10527||metadata[0].node_i!=367||metadata[0].node_j!=368)
+            // FE node numbering changes after central topology regeneration.
+            // Verify the actual CURRENT crosswalk, not historical numeric tags.
+            // Candidate diagnostics retain pre-adapter node tags; the analysed
+            // result and its metadata must agree after retained-node mapping.
+            var currentResult=FindP1L5Case("G")?.elements?.Find(x=>x.element_id==id);
+            if(metadata.Count!=1||currentResult==null||
+               metadata[0].analysis_id!=currentResult.analysis_id||metadata[0].opensees_tag!=currentResult.opensees_tag||
+               metadata[0].node_i!=currentResult.node_i||metadata[0].node_j!=currentResult.node_j)
                 failures.Add("crosswalk FE no coincide");
             var identity=CurrentMember(id);
             if(identity?.physical_node_i!="N-00985"||identity?.physical_node_j!="N-00986")

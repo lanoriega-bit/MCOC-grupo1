@@ -9,7 +9,7 @@ def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def baseline(path):return json.loads(subprocess.check_output(['git','show','21aa110:'+path],cwd=ROOT,text=True,encoding='utf-8-sig'))
 def main():
     path='entregas/P1L5/modelo_central/model_master.json';old=baseline(path);master=read(ROOT/path)
-    loads=read(ROOT/'entregas/P1L5/modelo_central/loads.json');report=read(HERE/'after/SLAB_SOURCE_AUDIT.json')
+    loads=read(ROOT/'entregas/P1L5/modelo_central/loads.json');report=read(HERE/('p1_lateral_after' if (HERE/'P1_LATERAL_EXCLUSION.json').exists() else 'after')/'SLAB_SOURCE_AUDIT.json')
     panels=read(ROOT/'entregas/P1L5/analysis/generated/current_tributary_panels.json')['panos']
     visual=read(ROOT/'entregas/P1L3/José/viewer_unity/Assets/StreamingAssets/p1l5_current_tributary_areas.json')['areas']
     old_elements={e['element_id']:e for e in old['elements']};slabs=[e for e in master['elements'] if e.get('active') and e['type']=='slab']

@@ -4,6 +4,13 @@ namespace Mcoc.UnityViewer.EditorTools
 {
     public static class VisualUxReviewMenu
     {
+        [MenuItem("MCOC/Validar losas y cargas Q")]
+        public static void SlabsAndLoads()
+        {
+            var viewer=Object.FindFirstObjectByType<ViewerController>();
+            if(!Application.isPlaying||viewer==null){Debug.LogWarning("Abra Main.unity y entre en Play primero.");return;}
+            viewer.RunSlabLoadReview();
+        }
         [MenuItem("MCOC/Validar losas CURRENT")]
         public static void Slabs()
         {

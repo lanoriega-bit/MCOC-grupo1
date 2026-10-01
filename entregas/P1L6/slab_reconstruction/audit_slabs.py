@@ -41,7 +41,9 @@ def plot_polygon(ax,poly,color,alpha=0.2):
 
 def main():
     global HERE
-    if '--after' in sys.argv:
+    if '--p1-lateral' in sys.argv:
+        HERE = HERE / 'p1_lateral_after'
+    elif '--after' in sys.argv:
         HERE = HERE / 'after'
     HERE.mkdir(parents=True,exist_ok=True)
     master=read(CENTRAL/'model_master.json')
@@ -118,7 +120,7 @@ def main():
         'active_slabs':len(slabs),'active_boxes':sum(e['geometry']['kind']!='slab_polygon' for e in slabs),
         'current_panels':len(panels),'orphan_receivers':orphan,'duplicate_panel_ids':duplicate_panels,
         'unity_tributary_orphans':visual_orphans,'floors':result,
-        'ui_cause':'MODEL LOSAS toggles architectural_slab (old P4); current slabs are category slab under AVANZADO mislabeled boxes',
+        'ui_cause':('CURRENT: Modelo → Losas controls ten physical polygons; CAD remains evidence only' if '--p1-lateral' in sys.argv else 'Initial checkpoint: MODEL LOSAS toggled architectural_slab (old P4); current slabs were mislabeled under AVANZADO'),
         'notes':['Convex hull is diagnostic only: valid overhangs may lie outside it.',
                  'All current physical slabs were derived from load zones by apply_p1l6_slab_polygons.py; this is not independent evidence.',
                  'Historical data remains immutable, not a fallback for CURRENT.']}
@@ -136,6 +138,12 @@ def main():
          '- Cajas antiguas en `geometry_review.old_geometry` son trazabilidad, no objetos activos; no borrar historia.',
          '- Los overlays permiten revisar piso por piso antes de promover cambios. Huecos CAD cerrados sin clasificación no se convierten automáticamente en vacíos.']
     (HERE/'SLAB_SOURCE_AUDIT.md').write_text('\n'.join(md)+'\n',encoding='utf-8')
+    if '--p1-lateral' in sys.argv:
+        # The old UI findings remain historical, not current regression failures.
+        text=(HERE/'SLAB_SOURCE_AUDIT.md').read_text(encoding='utf-8')
+        text=text.replace('Auditoría inicial','Auditoría posterior a exclusión P1').replace('Base `21aa110`; no modifica cargas ni modelos.','Base de comparación `d81514d`; auditoría de lectura sobre CURRENT regenerado.')
+        text=text.replace('- El toggle principal controla el P4 histórico; las diez losas CURRENT están en Avanzado como cajas, aunque ya son polígonos.','- Modelo → Losas controla los diez polígonos físicos; CAD permanece únicamente como evidencia de auditoría.')
+        (HERE/'SLAB_SOURCE_AUDIT.md').write_text(text,encoding='utf-8')
     print(json.dumps({'slabs':len(slabs),'panels':len(panels),'orphan_receivers':len(orphan),'visual_rows':len(visual_rows),'floors':result},ensure_ascii=False,indent=2))
 
 if __name__=='__main__':main()

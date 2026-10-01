@@ -73,8 +73,8 @@ No certifican huecos ni cierres pendientes. [Informe](EXTERNAL_SLAB_CONTRAST.jso
 
 ## Pendientes que impiden cerrar completamente la reconstrucción física
 
-1. Confirmar extensiones ED1-P1 norte (X≈61–73, Y≈16,5–28,7) y sur
-   (X≈61–73, Y≈−10,7–−1,1): no hay respaldo inequívoco para recortarlas.
+1. RESUELTO por aprobación del usuario: las extensiones ED1-P1 H08 y H10/H12
+   quedan excluidas física y tributariamente. Ver [revisión lateral](P1_LATERAL_FINAL.md).
 2. Cierres RLE-LOSA de S1/P1 y outboard ED1; no extrapolar perímetros entre pisos.
 3. Clasificar vacíos físicos independientemente de huecos de carga: especialmente
    ED1-P4 sin vacío y ED2-P4 con seis. Los otros repos no resuelven esta contradicción.
@@ -90,6 +90,15 @@ Orden: `apply_confirmed_cleanup.py` (idempotente) → `build_current_loads.py` �
 Los scripts físicos están en `entregas/P1L5/analysis/`; centrales en `modelo_central/`.
 
 Unity: proyecto `entregas/P1L3/José/viewer_unity`, `Assets/Main.unity`, Play.
-Modelo → Losas CURRENT. Filtros edificio/piso. `MCOC → Validar losas CURRENT`
+Modelo → Losas. Filtros edificio/piso. `MCOC → Validar losas y cargas Q`
 genera diez capturas TOP y prueba selección, casos, gráficos, deformada y capacidad.
 La revisión visual y sus límites se registran separadamente; compile no confirma geometría.
+
+## Checkpoint posterior — exclusiones P1 e información de Q
+
+El checkpoint anterior `d81514d` permanece reproducible. Los totales anteriores
+arriba corresponden a ese checkpoint; los vigentes y su comparación están en
+[P1_LATERAL_FINAL.md](P1_LATERAL_FINAL.md) y [QA numérico](P1_LATERAL_QA.json).
+Para regenerar este hito, aplicar además `apply_p1_lateral_exclusion.py` antes de
+`build_current_loads.py`. Auditar con `audit_slabs.py --p1-lateral` y
+`validate_p1_lateral.py`. Capturas/regresión nuevas: `p1_lateral_qa/`.

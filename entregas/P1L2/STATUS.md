@@ -1,5 +1,12 @@
 # P1L2 Status
 
+## Exclusión lateral ED1-P1 y cargas visibles (2026-10-01)
+
+- Excluidos H08 (100,850 m²) y H10/H12 (70,422 m²), incluida su SC/PM y tributarias.
+- CURRENT recalculado: G 78.716,059 kN; Q 22.637,353 kN; cuatro casos en equilibrio.
+- Losas OFF por defecto; CAD fuera del flujo visual; ficha CARGAS explica Q base y λ.
+- FE estructural/Luis original sin cambios. [Reporte](../P1L6/slab_reconstruction/P1_LATERAL_FINAL.md).
+
 ## Losas CURRENT — saneamiento aprobado (2026-10-01)
 
 - Rama `codex/current-slab-reconstruction`: exclusión sur ED1-S1 227,099 m²,

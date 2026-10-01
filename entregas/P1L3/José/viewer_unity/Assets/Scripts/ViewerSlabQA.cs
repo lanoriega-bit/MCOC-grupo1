@@ -9,11 +9,62 @@ namespace Mcoc.UnityViewer
     public partial class ViewerController
     {
         public void RunSlabReview() { if(Application.isPlaying) StartCoroutine(SlabReview()); }
-        IEnumerator SlabReview()
+        public void RunSlabLoadReview() { if(Application.isPlaying) StartCoroutine(SlabLoadReview()); }
+        IEnumerator SlabLoadReview()
         {
             var checks=new List<WallReviewCheck>();
             Action<string,bool> check=(name,pass)=>checks.Add(new WallReviewCheck{check=name,pass=pass});
-            string folder=Path.Combine(FindRepositoryRoot(),"entregas","P1L6","slab_reconstruction","unity_qa");
+            string folder=Path.Combine(FindRepositoryRoot(),"entregas","P1L6","slab_reconstruction","p1_lateral_qa");
+            Directory.CreateDirectory(folder);
+            check("CURRENT results verified",currentResultsAvailable);
+            check("CAD layers not constructed",!allElements.Exists(e=>e.category=="axis"||e.category=="slab_edge"||e.category=="cad_reference"));
+            float g=p1l5LambdaG,q=p1l5LambdaQ,ex=p1l5LambdaEX,ey=p1l5LambdaEY;
+            p1l5LambdaG=p1l5LambdaEX=p1l5LambdaEY=0;
+            foreach(string id in new[]{"E1-P1-V-002","E1-P2-V-041","E2-P3-V-001"})
+            {
+                var load=CurrentElementLoad(id);
+                check(id+" Q tributary data",load?.Q!=null&&load.Q.tributary_area_m2>0);
+                if(load?.Q==null)continue;
+                check(id+" qQ weighted mean",Math.Abs(load.Q.average_surface_intensity_kN_m2-load.Q.surface_force_N/load.Q.tributary_area_m2/1000)<1e-6);
+                foreach(float factor in new[]{0f,1f,2f})
+                {
+                    p1l5LambdaQ=factor;RebuildP1L5Combination(true);
+                    bool pass=true;int count=0;
+                    foreach(var row in FindP1L5Case("Q").elements)
+                    {
+                        if(row.element_id!=id)continue;
+                        var combined=FindP1L5Case("R").elements.Find(e=>e.analysis_id==row.analysis_id);
+                        count++;
+                        for(int i=0;i<6;i++)pass &= combined!=null&&Math.Abs(combined.localForce_end1[i]-factor*row.localForce_end1[i])<1e-6&&Math.Abs(combined.localForce_end2[i]-factor*row.localForce_end2[i])<1e-6;
+                    }
+                    check(id+" lambdaQ "+factor+" exact end responses",pass&&count>0);
+                }
+                ResetPresentation();
+                p1l5LambdaG=p1l5LambdaEX=p1l5LambdaEY=0;p1l5LambdaQ=1;RebuildP1L5Combination(true);
+                SelectElementById(id,false);
+                check(id+" selection",lastSelected!=null&&(lastSelected.humanId??lastSelected.id)==id);
+                if(lastSelected!=null)
+                {
+                    check(id+" equivalent width",Math.Abs(load.Q.equivalent_width_m-load.Q.tributary_area_m2/lastSelected.lengthM)<1e-4);
+                    check(id+" equivalent line load",Math.Abs(load.Q.equivalent_line_load_N_m-load.Q.surface_force_N/lastSelected.lengthM)<.1);
+                }
+                inspectorVisible=lastSelected!=null;
+                inspectorSelection=id;inspectorGroups.Clear();inspectorGroups.Add("CARGAS");
+                openGroups.Clear();openGroups.Add("RESULTADOS");
+                check(id+" explanatory text",CurrentElementLoadText(id,null).Contains("qQ base")&&CoefficientExplanation("Q").Contains("OpenSees"));
+                yield return new WaitForEndOfFrame();SaveVisualFrame(folder,id+"_Q.png");
+            }
+            p1l5LambdaG=g;p1l5LambdaQ=q;p1l5LambdaEX=ex;p1l5LambdaEY=ey;RebuildP1L5Combination(true);
+            var report=new WallReviewReport{status=checks.TrueForAll(c=>c.pass)?"PASS":"FAIL",dataset=currentGateStatus,checks=checks};
+            File.WriteAllText(Path.Combine(folder,"UNITY_Q_QA.json"),JsonUtility.ToJson(report,true));
+            Debug.Log("[Q UI QA] "+report.status+": "+checks.Count+" checks");
+            yield return StartCoroutine(SlabReview(folder));
+        }
+        IEnumerator SlabReview(string outputFolder=null)
+        {
+            var checks=new List<WallReviewCheck>();
+            Action<string,bool> check=(name,pass)=>checks.Add(new WallReviewCheck{check=name,pass=pass});
+            string folder=outputFolder??Path.Combine(FindRepositoryRoot(),"entregas","P1L6","slab_reconstruction","unity_qa");
             Directory.CreateDirectory(folder);
             ResetPresentation();
             check("slabs default OFF",!typeVisible["slab"]);

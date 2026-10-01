@@ -1,6 +1,6 @@
 {
   "format": "MCOC_P1L5_LOADS_V1",
-  "generated_utc": "2026-10-01T16:59:00.451481+00:00",
+  "generated_utc": "2026-10-01T18:11:44.562908+00:00",
   "current_status": "CURRENT_LOADS_RECONSTRUCTED_READY_FOR_OPENSEES",
   "base_cases": [
     {
@@ -683,162 +683,6 @@
         }
       },
       {
-        "load_id": "L700-E1-P1-H08-SC_SURFACE",
-        "load_type": "SC_SURFACE",
-        "building": "EDIFICIO_1",
-        "floor": "P1",
-        "source_sheet": "2017_67-700",
-        "source_value": 500,
-        "source_unit": "kgf/m2",
-        "SI_value": 4.903325,
-        "SI_unit": "kN/m2",
-        "geometry": {
-          "type": "Polygon",
-          "coordinates": [
-            [
-              [
-                72.04118546768566,
-                16.520136558017715
-              ],
-              [
-                65.04097125946556,
-                16.52013655801766
-              ],
-              [
-                65.0409744588972,
-                18.762412853231595
-              ],
-              [
-                61.81810273495488,
-                18.76241745184317
-              ],
-              [
-                61.81810498951636,
-                20.342494884255235
-              ],
-              [
-                61.21810499401343,
-                20.342478304361645
-              ],
-              [
-                61.21810499401337,
-                28.841244245402507
-              ],
-              [
-                67.6033817943905,
-                26.32577486557178
-              ],
-              [
-                67.79102726889387,
-                26.32577486557178
-              ],
-              [
-                67.79102726889387,
-                26.291305168647956
-              ],
-              [
-                72.04118546768566,
-                24.577606485101146
-              ],
-              [
-                72.04118546768566,
-                16.520136558017715
-              ]
-            ]
-          ]
-        },
-        "location": {
-          "source_floor": "PLANTA CIELO PISO 1°",
-          "hatch_pattern": "_USER"
-        },
-        "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
-        "receiver": null,
-        "application_status": "READY_SPATIAL_NOT_APPLIED",
-        "current_application": {
-          "status": "CURRENT_RECONSTRUCTED",
-          "applied": true,
-          "method": "AUDITED_ZONE_POLYGON_TO_CURRENT_BEAM_TRIBUTARIES"
-        }
-      },
-      {
-        "load_id": "L700-E1-P1-H08-PM_ADIC_SURFACE",
-        "load_type": "PM_ADIC_SURFACE",
-        "building": "EDIFICIO_1",
-        "floor": "P1",
-        "source_sheet": "2017_67-700",
-        "source_value": 260,
-        "source_unit": "kgf/m2",
-        "SI_value": 2.549729,
-        "SI_unit": "kN/m2",
-        "geometry": {
-          "type": "Polygon",
-          "coordinates": [
-            [
-              [
-                72.04118546768566,
-                16.520136558017715
-              ],
-              [
-                65.04097125946556,
-                16.52013655801766
-              ],
-              [
-                65.0409744588972,
-                18.762412853231595
-              ],
-              [
-                61.81810273495488,
-                18.76241745184317
-              ],
-              [
-                61.81810498951636,
-                20.342494884255235
-              ],
-              [
-                61.21810499401343,
-                20.342478304361645
-              ],
-              [
-                61.21810499401337,
-                28.841244245402507
-              ],
-              [
-                67.6033817943905,
-                26.32577486557178
-              ],
-              [
-                67.79102726889387,
-                26.32577486557178
-              ],
-              [
-                67.79102726889387,
-                26.291305168647956
-              ],
-              [
-                72.04118546768566,
-                24.577606485101146
-              ],
-              [
-                72.04118546768566,
-                16.520136558017715
-              ]
-            ]
-          ]
-        },
-        "location": {
-          "source_floor": "PLANTA CIELO PISO 1°",
-          "hatch_pattern": "_USER"
-        },
-        "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
-        "receiver": null,
-        "application_status": "READY_SPATIAL_NOT_APPLIED",
-        "current_application": {
-          "status": "CURRENT_RECONSTRUCTED",
-          "applied": true,
-          "method": "AUDITED_ZONE_POLYGON_TO_CURRENT_BEAM_TRIBUTARIES"
-        }
-      },
-      {
         "load_id": "L700-E1-P1-H09-SC_SURFACE",
         "load_type": "SC_SURFACE",
         "building": "EDIFICIO_1",
@@ -1011,130 +855,6 @@
         }
       },
       {
-        "load_id": "L700-E1-P1-H10-SC_SURFACE",
-        "load_type": "SC_SURFACE",
-        "building": "EDIFICIO_1",
-        "floor": "P1",
-        "source_sheet": "2017_67-700",
-        "source_value": 500,
-        "source_unit": "kgf/m2",
-        "SI_value": 4.903325,
-        "SI_unit": "kN/m2",
-        "geometry": {
-          "type": "Polygon",
-          "coordinates": [
-            [
-              [
-                73.03626130281648,
-                -3.6498911795604227
-              ],
-              [
-                62.75731438620872,
-                -3.6498911795604227
-              ],
-              [
-                62.75731438620872,
-                -6.299892174034853
-              ],
-              [
-                69.9910272691625,
-                -6.299892174034853
-              ],
-              [
-                69.9910272691625,
-                -10.796960107593682
-              ],
-              [
-                73.03626130281648,
-                -10.796960107593682
-              ],
-              [
-                73.03626130281648,
-                -6.299892174034853
-              ],
-              [
-                73.03626130281648,
-                -3.6498911795604227
-              ]
-            ]
-          ]
-        },
-        "location": {
-          "source_floor": "PLANTA CIELO PISO 1°",
-          "hatch_pattern": "_USER"
-        },
-        "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
-        "receiver": null,
-        "application_status": "READY_SPATIAL_NOT_APPLIED",
-        "current_application": {
-          "status": "CURRENT_RECONSTRUCTED",
-          "applied": true,
-          "method": "AUDITED_ZONE_POLYGON_TO_CURRENT_BEAM_TRIBUTARIES"
-        }
-      },
-      {
-        "load_id": "L700-E1-P1-H10-PM_ADIC_SURFACE",
-        "load_type": "PM_ADIC_SURFACE",
-        "building": "EDIFICIO_1",
-        "floor": "P1",
-        "source_sheet": "2017_67-700",
-        "source_value": 260,
-        "source_unit": "kgf/m2",
-        "SI_value": 2.549729,
-        "SI_unit": "kN/m2",
-        "geometry": {
-          "type": "Polygon",
-          "coordinates": [
-            [
-              [
-                73.03626130281648,
-                -3.6498911795604227
-              ],
-              [
-                62.75731438620872,
-                -3.6498911795604227
-              ],
-              [
-                62.75731438620872,
-                -6.299892174034853
-              ],
-              [
-                69.9910272691625,
-                -6.299892174034853
-              ],
-              [
-                69.9910272691625,
-                -10.796960107593682
-              ],
-              [
-                73.03626130281648,
-                -10.796960107593682
-              ],
-              [
-                73.03626130281648,
-                -6.299892174034853
-              ],
-              [
-                73.03626130281648,
-                -3.6498911795604227
-              ]
-            ]
-          ]
-        },
-        "location": {
-          "source_floor": "PLANTA CIELO PISO 1°",
-          "hatch_pattern": "_USER"
-        },
-        "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
-        "receiver": null,
-        "application_status": "READY_SPATIAL_NOT_APPLIED",
-        "current_application": {
-          "status": "CURRENT_RECONSTRUCTED",
-          "applied": true,
-          "method": "AUDITED_ZONE_POLYGON_TO_CURRENT_BEAM_TRIBUTARIES"
-        }
-      },
-      {
         "load_id": "L700-E1-P1-H11-SC_SURFACE",
         "load_type": "SC_SURFACE",
         "building": "EDIFICIO_1",
@@ -1242,106 +962,6 @@
           "hatch_pattern": "AR-HBONE"
         },
         "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
-        "receiver": null,
-        "application_status": "READY_SPATIAL_NOT_APPLIED",
-        "current_application": {
-          "status": "CURRENT_RECONSTRUCTED",
-          "applied": true,
-          "method": "AUDITED_ZONE_POLYGON_TO_CURRENT_BEAM_TRIBUTARIES"
-        }
-      },
-      {
-        "load_id": "L700-E1-P1-H12-SC_SURFACE",
-        "load_type": "SC_SURFACE",
-        "building": "EDIFICIO_1",
-        "floor": "P1",
-        "source_sheet": "2017_67-700",
-        "source_value": 500,
-        "source_unit": "kgf/m2",
-        "SI_value": 4.903325,
-        "SI_unit": "kN/m2",
-        "geometry": {
-          "type": "Polygon",
-          "coordinates": [
-            [
-              [
-                73.03626130281648,
-                -3.6498911795604227
-              ],
-              [
-                61.24102726893048,
-                -3.6498911795604227
-              ],
-              [
-                61.24102726893048,
-                -1.1498634420468852
-              ],
-              [
-                73.03626130281648,
-                -1.1498634420468852
-              ],
-              [
-                73.03626130281648,
-                -3.6498911795604227
-              ]
-            ]
-          ]
-        },
-        "location": {
-          "source_floor": "PLANTA CIELO PISO 1°",
-          "hatch_pattern": "BRASS"
-        },
-        "confidence": "CONFIRMED_FROM_ORIGINAL_DWG_BACKUP_AND_DXF_TYPOGRAPHY",
-        "receiver": null,
-        "application_status": "READY_SPATIAL_NOT_APPLIED",
-        "current_application": {
-          "status": "CURRENT_RECONSTRUCTED",
-          "applied": true,
-          "method": "AUDITED_ZONE_POLYGON_TO_CURRENT_BEAM_TRIBUTARIES"
-        }
-      },
-      {
-        "load_id": "L700-E1-P1-H12-PM_ADIC_SURFACE",
-        "load_type": "PM_ADIC_SURFACE",
-        "building": "EDIFICIO_1",
-        "floor": "P1",
-        "source_sheet": "2017_67-700",
-        "source_value": 2800,
-        "source_unit": "kgf/m2",
-        "SI_value": 27.45862,
-        "SI_unit": "kN/m2",
-        "geometry": {
-          "type": "Polygon",
-          "coordinates": [
-            [
-              [
-                73.03626130281648,
-                -3.6498911795604227
-              ],
-              [
-                61.24102726893048,
-                -3.6498911795604227
-              ],
-              [
-                61.24102726893048,
-                -1.1498634420468852
-              ],
-              [
-                73.03626130281648,
-                -1.1498634420468852
-              ],
-              [
-                73.03626130281648,
-                -3.6498911795604227
-              ]
-            ]
-          ]
-        },
-        "location": {
-          "source_floor": "PLANTA CIELO PISO 1°",
-          "hatch_pattern": "BRASS"
-        },
-        "confidence": "CONFIRMED_FROM_ORIGINAL_DWG_BACKUP_AND_DXF_TYPOGRAPHY",
         "receiver": null,
         "application_status": "READY_SPATIAL_NOT_APPLIED",
         "current_application": {
@@ -7254,7 +6874,7 @@
       }
     ],
     "current_status_counts": {
-      "CURRENT_RECONSTRUCTED": 84,
+      "CURRENT_RECONSTRUCTED": 78,
       "UNRESOLVED": 6,
       "RESOLVED_BY_REVIEW": 2,
       "RESOLVED_BY_REVIEW_SLAB_ROUTE": 2,
@@ -7621,174 +7241,6 @@
           }
         ],
         "receiver_fraction_sum": 0.999999999,
-        "unresolved_area_m2": 0.0
-      },
-      {
-        "id": "L700-E1-P1-H08",
-        "building": "EDIFICIO_1",
-        "lt_block": "LT1",
-        "floor": "P1",
-        "geometry": {
-          "type": "Polygon",
-          "coordinates": [
-            [
-              [
-                72.04118546768566,
-                16.520136558017715
-              ],
-              [
-                65.04097125946556,
-                16.52013655801766
-              ],
-              [
-                65.0409744588972,
-                18.762412853231595
-              ],
-              [
-                61.81810273495488,
-                18.76241745184317
-              ],
-              [
-                61.81810498951636,
-                20.342494884255235
-              ],
-              [
-                61.21810499401343,
-                20.342478304361645
-              ],
-              [
-                61.21810499401337,
-                28.841244245402507
-              ],
-              [
-                67.6033817943905,
-                26.32577486557178
-              ],
-              [
-                67.79102726889387,
-                26.32577486557178
-              ],
-              [
-                67.79102726889387,
-                26.291305168647956
-              ],
-              [
-                72.04118546768566,
-                24.577606485101146
-              ],
-              [
-                72.04118546768566,
-                16.520136558017715
-              ]
-            ]
-          ]
-        },
-        "polygon": {
-          "type": "Polygon",
-          "coordinates": [
-            [
-              [
-                72.04118546768566,
-                16.520136558017715
-              ],
-              [
-                65.04097125946556,
-                16.52013655801766
-              ],
-              [
-                65.0409744588972,
-                18.762412853231595
-              ],
-              [
-                61.81810273495488,
-                18.76241745184317
-              ],
-              [
-                61.81810498951636,
-                20.342494884255235
-              ],
-              [
-                61.21810499401343,
-                20.342478304361645
-              ],
-              [
-                61.21810499401337,
-                28.841244245402507
-              ],
-              [
-                67.6033817943905,
-                26.32577486557178
-              ],
-              [
-                67.79102726889387,
-                26.32577486557178
-              ],
-              [
-                67.79102726889387,
-                26.291305168647956
-              ],
-              [
-                72.04118546768566,
-                24.577606485101146
-              ],
-              [
-                72.04118546768566,
-                16.520136558017715
-              ]
-            ]
-          ]
-        },
-        "area_m2": 100.849974,
-        "usage_zone": "L700-E1-P1-H08",
-        "qG_superimposed_kN_m2": 2.549729,
-        "qG_slab_kN_m2": 3.677494,
-        "qQ_kN_m2": 4.903325,
-        "case_force_N": {
-          "G": 628015.252,
-          "Q": 494500.198
-        },
-        "source_load_ids": [
-          "L700-E1-P1-H08-SC_SURFACE",
-          "L700-E1-P1-H08-PM_ADIC_SURFACE"
-        ],
-        "source_sheet": "2017_67-700",
-        "classification": "CURRENT_RECOMPUTED",
-        "method": "NEAREST_ACTIVE_BEAM_EQUAL_DISTANCE_GRID_0.50M",
-        "receivers": [
-          {
-            "element_id": "E1-P1-V-067",
-            "merged_from": [],
-            "fraction": 0.115501067,
-            "tributary_area_m2": 11.64828,
-            "equivalent_width_m": 2.478357,
-            "Q_force_N": 57115.301,
-            "G_superimposed_force_N": 29699.956,
-            "G_slab_force_N": 42836.475
-          },
-          {
-            "element_id": "E1-P1-V-078",
-            "merged_from": [
-              "E1-P1-V-088"
-            ],
-            "fraction": 0.480501996,
-            "tributary_area_m2": 48.458614,
-            "equivalent_width_m": 11.139911,
-            "Q_force_N": 237608.332,
-            "G_superimposed_force_N": 123556.333,
-            "G_slab_force_N": 178206.249
-          },
-          {
-            "element_id": "E1-P1-V-104",
-            "merged_from": [],
-            "fraction": 0.403996937,
-            "tributary_area_m2": 40.74308,
-            "equivalent_width_m": 9.475135,
-            "Q_force_N": 199776.565,
-            "G_superimposed_force_N": 103883.814,
-            "G_slab_force_N": 149832.424
-          }
-        ],
-        "receiver_fraction_sum": 1.0,
         "unresolved_area_m2": 0.0
       },
       {
@@ -8206,142 +7658,6 @@
         "unresolved_area_m2": 0.0
       },
       {
-        "id": "L700-E1-P1-H10",
-        "building": "EDIFICIO_1",
-        "lt_block": "LT1",
-        "floor": "P1",
-        "geometry": {
-          "type": "Polygon",
-          "coordinates": [
-            [
-              [
-                73.03626130281648,
-                -3.6498911795604227
-              ],
-              [
-                62.75731438620872,
-                -3.6498911795604227
-              ],
-              [
-                62.75731438620872,
-                -6.299892174034853
-              ],
-              [
-                69.9910272691625,
-                -6.299892174034853
-              ],
-              [
-                69.9910272691625,
-                -10.796960107593682
-              ],
-              [
-                73.03626130281648,
-                -10.796960107593682
-              ],
-              [
-                73.03626130281648,
-                -6.299892174034853
-              ],
-              [
-                73.03626130281648,
-                -3.6498911795604227
-              ]
-            ]
-          ]
-        },
-        "polygon": {
-          "type": "Polygon",
-          "coordinates": [
-            [
-              [
-                73.03626130281648,
-                -3.6498911795604227
-              ],
-              [
-                62.75731438620872,
-                -3.6498911795604227
-              ],
-              [
-                62.75731438620872,
-                -6.299892174034853
-              ],
-              [
-                69.9910272691625,
-                -6.299892174034853
-              ],
-              [
-                69.9910272691625,
-                -10.796960107593682
-              ],
-              [
-                73.03626130281648,
-                -10.796960107593682
-              ],
-              [
-                73.03626130281648,
-                -6.299892174034853
-              ],
-              [
-                73.03626130281648,
-                -3.6498911795604227
-              ]
-            ]
-          ]
-        },
-        "area_m2": 40.933844,
-        "usage_zone": "L700-E1-P1-H10",
-        "qG_superimposed_kN_m2": 2.549729,
-        "qG_slab_kN_m2": 3.677494,
-        "qQ_kN_m2": 4.903325,
-        "case_force_N": {
-          "G": 254904.164,
-          "Q": 200711.94
-        },
-        "source_load_ids": [
-          "L700-E1-P1-H10-SC_SURFACE",
-          "L700-E1-P1-H10-PM_ADIC_SURFACE"
-        ],
-        "source_sheet": "2017_67-700",
-        "classification": "CURRENT_RECOMPUTED",
-        "method": "NEAREST_ACTIVE_BEAM_EQUAL_DISTANCE_GRID_0.50M",
-        "receivers": [
-          {
-            "element_id": "E1-P1-V-085",
-            "merged_from": [],
-            "fraction": 0.307034972,
-            "tributary_area_m2": 12.568122,
-            "equivalent_width_m": 2.889223,
-            "Q_force_N": 61625.585,
-            "G_superimposed_force_N": 32045.304,
-            "G_slab_force_N": 46219.189
-          },
-          {
-            "element_id": "E1-P1-V-100",
-            "merged_from": [],
-            "fraction": 0.692211958,
-            "tributary_area_m2": 28.334896,
-            "equivalent_width_m": 6.589511,
-            "Q_force_N": 138935.205,
-            "G_superimposed_force_N": 72246.307,
-            "G_slab_force_N": 104201.404
-          },
-          {
-            "element_id": "E1-P1-V-107",
-            "merged_from": [
-              "E1-P1-V-105"
-            ],
-            "fraction": 0.00075307,
-            "tributary_area_m2": 0.030826,
-            "equivalent_width_m": 0.003759,
-            "Q_force_N": 151.15,
-            "G_superimposed_force_N": 78.598,
-            "G_slab_force_N": 113.363
-          }
-        ],
-        "receiver_fraction_sum": 1.0,
-        "unresolved_area_m2": 0.0
-      },
-      {
         "id": "L700-E1-P1-H11",
         "building": "EDIFICIO_1",
         "lt_block": "LT1",
@@ -8633,128 +7949,6 @@
           }
         ],
         "receiver_fraction_sum": 0.999999999,
-        "unresolved_area_m2": 0.0
-      },
-      {
-        "id": "L700-E1-P1-H12",
-        "building": "EDIFICIO_1",
-        "lt_block": "LT1",
-        "floor": "P1",
-        "geometry": {
-          "type": "Polygon",
-          "coordinates": [
-            [
-              [
-                73.03626130281648,
-                -3.6498911795604227
-              ],
-              [
-                61.24102726893048,
-                -3.6498911795604227
-              ],
-              [
-                61.24102726893048,
-                -1.1498634420468852
-              ],
-              [
-                73.03626130281648,
-                -1.1498634420468852
-              ],
-              [
-                73.03626130281648,
-                -3.6498911795604227
-              ]
-            ]
-          ]
-        },
-        "polygon": {
-          "type": "Polygon",
-          "coordinates": [
-            [
-              [
-                73.03626130281648,
-                -3.6498911795604227
-              ],
-              [
-                61.24102726893048,
-                -3.6498911795604227
-              ],
-              [
-                61.24102726893048,
-                -1.1498634420468852
-              ],
-              [
-                73.03626130281648,
-                -1.1498634420468852
-              ],
-              [
-                73.03626130281648,
-                -3.6498911795604227
-              ]
-            ]
-          ]
-        },
-        "area_m2": 29.488412,
-        "usage_zone": "L700-E1-P1-H12",
-        "qG_superimposed_kN_m2": 27.45862,
-        "qG_slab_kN_m2": 3.677494,
-        "qQ_kN_m2": 4.903325,
-        "case_force_N": {
-          "G": 918154.558,
-          "Q": 144591.269
-        },
-        "source_load_ids": [
-          "L700-E1-P1-H12-SC_SURFACE",
-          "L700-E1-P1-H12-PM_ADIC_SURFACE"
-        ],
-        "source_sheet": "2017_67-700",
-        "classification": "CURRENT_RECOMPUTED",
-        "method": "NEAREST_ACTIVE_BEAM_EQUAL_DISTANCE_GRID_0.50M",
-        "receivers": [
-          {
-            "element_id": "E1-P1-V-064",
-            "merged_from": [],
-            "fraction": 0.106735714,
-            "tributary_area_m2": 3.147467,
-            "equivalent_width_m": 0.723556,
-            "Q_force_N": 15433.052,
-            "G_superimposed_force_N": 86425.093,
-            "G_slab_force_N": 11574.789
-          },
-          {
-            "element_id": "E1-P1-V-085",
-            "merged_from": [],
-            "fraction": 0.423900025,
-            "tributary_area_m2": 12.500139,
-            "equivalent_width_m": 2.873595,
-            "Q_force_N": 61292.243,
-            "G_superimposed_force_N": 343236.558,
-            "G_slab_force_N": 45969.182
-          },
-          {
-            "element_id": "E1-P1-V-100",
-            "merged_from": [],
-            "fraction": 0.443397365,
-            "tributary_area_m2": 13.075084,
-            "equivalent_width_m": 3.040717,
-            "Q_force_N": 64111.388,
-            "G_superimposed_force_N": 359023.771,
-            "G_slab_force_N": 48083.541
-          },
-          {
-            "element_id": "E1-P1-V-107",
-            "merged_from": [
-              "E1-P1-V-105"
-            ],
-            "fraction": 0.025966896,
-            "tributary_area_m2": 0.765723,
-            "equivalent_width_m": 0.093381,
-            "Q_force_N": 3754.586,
-            "G_superimposed_force_N": 21025.684,
-            "G_slab_force_N": 2815.94
-          }
-        ],
-        "receiver_fraction_sum": 1.0,
         "unresolved_area_m2": 0.0
       },
       {
@@ -19894,16 +19088,16 @@
         "building": "EDIFICIO_1",
         "lt_block": "LT1",
         "floor": "P1",
-        "area_total_m2": 997.042,
-        "area_with_Q_m2": 997.042,
+        "area_total_m2": 825.77,
+        "area_with_Q_m2": 825.77,
         "area_without_Q_m2": 0.0,
-        "Q_N": 3826342.645,
-        "G_superimposed_N": 3255107.877,
-        "G_slab_N": 3666617.308,
+        "Q_N": 2986539.238,
+        "G_superimposed_N": 2083886.459,
+        "G_slab_N": 3036764.752,
         "interior_hole_area_m2": 13.824,
-        "panels": 8,
+        "panels": 5,
         "G_self_weight_N": 4374499.44,
-        "G_total_N": 11296224.624
+        "G_total_N": 9495150.651
       },
       {
         "building": "EDIFICIO_1",
@@ -20042,7 +19236,7 @@
       }
     ],
     "classification_counts": {
-      "CURRENT_RECOMPUTED": 43
+      "CURRENT_RECOMPUTED": 40
     },
     "conservation_note": "Every clipped cell is assigned once; holes remain excluded."
   },
@@ -20086,7 +19280,7 @@
   },
   "current_load_application": {
     "status": "PASS_WITH_EXPLICIT_UNRESOLVED",
-    "generated_utc": "2026-10-01T16:59:00.451481+00:00",
+    "generated_utc": "2026-10-01T18:11:44.562908+00:00",
     "basis": "CURRENT_AUDITED_ZONE_POLYGONS_AND_COMPUTED_MEMBER_SELF_WEIGHT",
     "q_intensity_scale": 1.0,
     "unresolved_load_ids": [
@@ -20099,7 +19293,7 @@
     ],
     "unit_conflicts": [],
     "catalog_status_counts": {
-      "CURRENT_RECONSTRUCTED": 84,
+      "CURRENT_RECONSTRUCTED": 78,
       "UNRESOLVED": 6,
       "RESOLVED_BY_REVIEW": 2,
       "RESOLVED_BY_REVIEW_SLAB_ROUTE": 2,
@@ -20107,37 +19301,37 @@
     },
     "conservation": {
       "G": {
-        "generated_N": 80517133.308,
-        "transferred_N": 80517133.337,
+        "generated_N": 78716059.334,
+        "transferred_N": 78716059.363,
         "residual_N": 0.029098,
-        "residual_percent": 3.6138e-08,
+        "residual_percent": 3.6965e-08,
         "status": "PASS"
       },
       "Q": {
-        "generated_N": 23477156.839,
-        "transferred_N": 23477156.839,
-        "residual_N": 0.0,
-        "residual_percent": 0.0,
+        "generated_N": 22637353.432,
+        "transferred_N": 22637353.432,
+        "residual_N": -0.0,
+        "residual_percent": -0.0,
         "status": "PASS"
       }
     },
     "totals": {
-      "Q_N": 23477156.839,
+      "Q_N": 22637353.432,
       "G_self_weight_N": 36839559.851,
-      "G_superimposed_dead_N": 43677573.457,
-      "G_total_N": 80517133.308
+      "G_superimposed_dead_N": 41876499.483,
+      "G_total_N": 78716059.334
     },
     "by_building": {
       "EDIFICIO_1": {
         "lt_block": "LT1",
-        "Q_N": 12272283.877,
+        "Q_N": 11432480.47,
         "G_self_weight_N": 20310684.717,
-        "G_superimposed_dead_N": 26703410.613,
-        "G_total_N": 47014095.33,
+        "G_superimposed_dead_N": 24902336.64,
+        "G_total_N": 45213021.356,
         "etabs_CV_N": 11620380.0,
         "etabs_CM_N": 47140276.0,
-        "Q_difference_percent": 5.61,
-        "G_difference_percent": -0.268
+        "Q_difference_percent": -1.617,
+        "G_difference_percent": -4.088
       },
       "EDIFICIO_2": {
         "lt_block": "LT2",
@@ -20156,16 +19350,16 @@
         "building": "EDIFICIO_1",
         "lt_block": "LT1",
         "floor": "P1",
-        "area_total_m2": 997.042,
-        "area_with_Q_m2": 997.042,
+        "area_total_m2": 825.77,
+        "area_with_Q_m2": 825.77,
         "area_without_Q_m2": 0.0,
-        "Q_N": 3826342.645,
-        "G_superimposed_N": 3255107.877,
-        "G_slab_N": 3666617.308,
+        "Q_N": 2986539.238,
+        "G_superimposed_N": 2083886.459,
+        "G_slab_N": 3036764.752,
         "interior_hole_area_m2": 13.824,
-        "panels": 8,
+        "panels": 5,
         "G_self_weight_N": 4374499.44,
-        "G_total_N": 11296224.624
+        "G_total_N": 9495150.651
       },
       {
         "building": "EDIFICIO_1",
@@ -20573,8 +19767,8 @@
           "element_id": "E1-P1-V-064",
           "node_i": 383,
           "node_j": 384,
-          "P_N": 176320.504,
-          "end_load_N": 88160.252,
+          "P_N": 78320.621,
+          "end_load_N": 39160.31,
           "representation": "TRIBUTARY_AREA_TO_PHYSICAL_BEAM_THEN_P_OVER_2_TO_FE_END_NODES"
         },
         {
@@ -20589,8 +19783,8 @@
           "element_id": "E1-P1-V-067",
           "node_i": 387,
           "node_j": 388,
-          "P_N": 119244.854,
-          "end_load_N": 59622.427,
+          "P_N": 46708.423,
+          "end_load_N": 23354.211,
           "representation": "TRIBUTARY_AREA_TO_PHYSICAL_BEAM_THEN_P_OVER_2_TO_FE_END_NODES"
         },
         {
@@ -20605,8 +19799,8 @@
           "element_id": "E1-P1-V-078",
           "node_i": 391,
           "node_j": 392,
-          "P_N": 348471.005,
-          "end_load_N": 174235.502,
+          "P_N": 46708.423,
+          "end_load_N": 23354.211,
           "representation": "TRIBUTARY_AREA_TO_PHYSICAL_BEAM_THEN_P_OVER_2_TO_FE_END_NODES"
         },
         {
@@ -20621,8 +19815,8 @@
           "element_id": "E1-P1-V-085",
           "node_i": 395,
           "node_j": 396,
-          "P_N": 547623.086,
-          "end_load_N": 273811.543,
+          "P_N": 80152.854,
+          "end_load_N": 40076.427,
           "representation": "TRIBUTARY_AREA_TO_PHYSICAL_BEAM_THEN_P_OVER_2_TO_FE_END_NODES"
         },
         {
@@ -20653,8 +19847,8 @@
           "element_id": "E1-P1-V-100",
           "node_i": 403,
           "node_j": 404,
-          "P_N": 663707.875,
-          "end_load_N": 331853.938,
+          "P_N": 80152.854,
+          "end_load_N": 40076.427,
           "representation": "TRIBUTARY_AREA_TO_PHYSICAL_BEAM_THEN_P_OVER_2_TO_FE_END_NODES"
         },
         {
@@ -20669,8 +19863,8 @@
           "element_id": "E1-P1-V-104",
           "node_i": 407,
           "node_j": 408,
-          "P_N": 300424.95,
-          "end_load_N": 150212.475,
+          "P_N": 46708.713,
+          "end_load_N": 23354.356,
           "representation": "TRIBUTARY_AREA_TO_PHYSICAL_BEAM_THEN_P_OVER_2_TO_FE_END_NODES"
         },
         {
@@ -20685,8 +19879,8 @@
           "element_id": "E1-P1-V-107",
           "node_i": 411,
           "node_j": 412,
-          "P_N": 139716.896,
-          "end_load_N": 69858.448,
+          "P_N": 115683.311,
+          "end_load_N": 57841.655,
           "representation": "TRIBUTARY_AREA_TO_PHYSICAL_BEAM_THEN_P_OVER_2_TO_FE_END_NODES"
         },
         {
@@ -24111,8 +23305,8 @@
           "element_id": "E1-P1-V-064",
           "node_i": 383,
           "node_j": 384,
-          "P_N": 49852.519,
-          "end_load_N": 24926.26,
+          "P_N": 34419.467,
+          "end_load_N": 17209.733,
           "representation": "TRIBUTARY_AREA_TO_PHYSICAL_BEAM_THEN_P_OVER_2_TO_FE_END_NODES"
         },
         {
@@ -24127,8 +23321,8 @@
           "element_id": "E1-P1-V-067",
           "node_i": 387,
           "node_j": 388,
-          "P_N": 86537.929,
-          "end_load_N": 43268.964,
+          "P_N": 29422.628,
+          "end_load_N": 14711.314,
           "representation": "TRIBUTARY_AREA_TO_PHYSICAL_BEAM_THEN_P_OVER_2_TO_FE_END_NODES"
         },
         {
@@ -24143,8 +23337,8 @@
           "element_id": "E1-P1-V-078",
           "node_i": 391,
           "node_j": 392,
-          "P_N": 267207.025,
-          "end_load_N": 133603.512,
+          "P_N": 29598.692,
+          "end_load_N": 14799.346,
           "representation": "TRIBUTARY_AREA_TO_PHYSICAL_BEAM_THEN_P_OVER_2_TO_FE_END_NODES"
         },
         {
@@ -24159,8 +23353,8 @@
           "element_id": "E1-P1-V-085",
           "node_i": 395,
           "node_j": 396,
-          "P_N": 157974.592,
-          "end_load_N": 78987.296,
+          "P_N": 35056.765,
+          "end_load_N": 17528.382,
           "representation": "TRIBUTARY_AREA_TO_PHYSICAL_BEAM_THEN_P_OVER_2_TO_FE_END_NODES"
         },
         {
@@ -24191,8 +23385,8 @@
           "element_id": "E1-P1-V-100",
           "node_i": 403,
           "node_j": 404,
-          "P_N": 238103.358,
-          "end_load_N": 119051.679,
+          "P_N": 35056.765,
+          "end_load_N": 17528.382,
           "representation": "TRIBUTARY_AREA_TO_PHYSICAL_BEAM_THEN_P_OVER_2_TO_FE_END_NODES"
         },
         {
@@ -24207,8 +23401,8 @@
           "element_id": "E1-P1-V-104",
           "node_i": 407,
           "node_j": 408,
-          "P_N": 236555.079,
-          "end_load_N": 118277.539,
+          "P_N": 36778.514,
+          "end_load_N": 18389.257,
           "representation": "TRIBUTARY_AREA_TO_PHYSICAL_BEAM_THEN_P_OVER_2_TO_FE_END_NODES"
         },
         {
@@ -24223,8 +23417,8 @@
           "element_id": "E1-P1-V-107",
           "node_i": 411,
           "node_j": 412,
-          "P_N": 66782.811,
-          "end_load_N": 33391.405,
+          "P_N": 62877.074,
+          "end_load_N": 31438.537,
           "representation": "TRIBUTARY_AREA_TO_PHYSICAL_BEAM_THEN_P_OVER_2_TO_FE_END_NODES"
         },
         {
@@ -28899,30 +28093,27 @@
         "floor": "P1",
         "type": "beam",
         "Q": {
-          "tributary_area_m2": 16.071852,
-          "equivalent_width_m": 3.694679,
-          "surface_force_N": 49852.519,
-          "equivalent_line_load_N_m": 11460.349,
+          "tributary_area_m2": 12.924385,
+          "equivalent_width_m": 2.971123,
+          "surface_force_N": 34419.467,
+          "equivalent_line_load_N_m": 7912.521,
           "zone_ids": [
             "L700-E1-P1-H06-SC_SURFACE",
-            "L700-E1-P1-H11-SC_SURFACE",
-            "L700-E1-P1-H12-SC_SURFACE"
+            "L700-E1-P1-H11-SC_SURFACE"
           ],
           "status": "CURRENT_RECOMPUTED"
         },
         "G": {
           "self_weight_N": 51190.713,
-          "tributary_dead_N": 176320.504,
-          "total_associated_N": 227511.217,
+          "tributary_dead_N": 78320.621,
+          "total_associated_N": 129511.334,
           "status": "CURRENT_COMPUTED"
         },
         "source_load_ids": [
           "L700-E1-P1-H06-PM_ADIC_SURFACE",
           "L700-E1-P1-H06-SC_SURFACE",
           "L700-E1-P1-H11-PM_ADIC_SURFACE",
-          "L700-E1-P1-H11-SC_SURFACE",
-          "L700-E1-P1-H12-PM_ADIC_SURFACE",
-          "L700-E1-P1-H12-SC_SURFACE"
+          "L700-E1-P1-H11-SC_SURFACE"
         ]
       },
       {
@@ -28962,25 +28153,22 @@
         "floor": "P1",
         "type": "beam",
         "Q": {
-          "tributary_area_m2": 19.148962,
-          "equivalent_width_m": 4.074247,
-          "surface_force_N": 86537.929,
-          "equivalent_line_load_N_m": 18412.325,
+          "tributary_area_m2": 7.500683,
+          "equivalent_width_m": 1.59589,
+          "surface_force_N": 29422.628,
+          "equivalent_line_load_N_m": 6260.134,
           "zone_ids": [
-            "L700-E1-P1-H08-SC_SURFACE",
             "L700-E1-P1-H13-SC_SURFACE"
           ],
           "status": "CURRENT_RECOMPUTED"
         },
         "G": {
           "self_weight_N": 55309.506,
-          "tributary_dead_N": 119244.854,
-          "total_associated_N": 174554.36,
+          "tributary_dead_N": 46708.423,
+          "total_associated_N": 102017.929,
           "status": "CURRENT_COMPUTED"
         },
         "source_load_ids": [
-          "L700-E1-P1-H08-PM_ADIC_SURFACE",
-          "L700-E1-P1-H08-SC_SURFACE",
           "L700-E1-P1-H13-PM_ADIC_SURFACE",
           "L700-E1-P1-H13-SC_SURFACE"
         ]
@@ -29019,12 +28207,11 @@
         "floor": "P1",
         "type": "beam",
         "Q": {
-          "tributary_area_m2": 55.959297,
-          "equivalent_width_m": 12.864206,
-          "surface_force_N": 267207.025,
-          "equivalent_line_load_N_m": 61426.902,
+          "tributary_area_m2": 7.500683,
+          "equivalent_width_m": 1.724295,
+          "surface_force_N": 29598.692,
+          "equivalent_line_load_N_m": 6804.297,
           "zone_ids": [
-            "L700-E1-P1-H08-SC_SURFACE",
             "L700-E1-P1-H09-SC_SURFACE",
             "L700-E1-P1-H13-SC_SURFACE"
           ],
@@ -29032,13 +28219,11 @@
         },
         "G": {
           "self_weight_N": 51190.713,
-          "tributary_dead_N": 348471.005,
-          "total_associated_N": 399661.718,
+          "tributary_dead_N": 46708.423,
+          "total_associated_N": 97899.136,
           "status": "CURRENT_COMPUTED"
         },
         "source_load_ids": [
-          "L700-E1-P1-H08-PM_ADIC_SURFACE",
-          "L700-E1-P1-H08-SC_SURFACE",
           "L700-E1-P1-H09-PM_ADIC_SURFACE",
           "L700-E1-P1-H09-SC_SURFACE",
           "L700-E1-P1-H13-PM_ADIC_SURFACE",
@@ -29082,33 +28267,27 @@
         "floor": "P1",
         "type": "beam",
         "Q": {
-          "tributary_area_m2": 38.317577,
-          "equivalent_width_m": 8.808639,
-          "surface_force_N": 157974.592,
-          "equivalent_line_load_N_m": 36315.998,
+          "tributary_area_m2": 13.249317,
+          "equivalent_width_m": 3.04582,
+          "surface_force_N": 35056.765,
+          "equivalent_line_load_N_m": 8059.026,
           "zone_ids": [
             "L700-E1-P1-H06-SC_SURFACE",
-            "L700-E1-P1-H10-SC_SURFACE",
-            "L700-E1-P1-H11-SC_SURFACE",
-            "L700-E1-P1-H12-SC_SURFACE"
+            "L700-E1-P1-H11-SC_SURFACE"
           ],
           "status": "CURRENT_RECOMPUTED"
         },
         "G": {
           "self_weight_N": 51190.713,
-          "tributary_dead_N": 547623.086,
-          "total_associated_N": 598813.799,
+          "tributary_dead_N": 80152.854,
+          "total_associated_N": 131343.567,
           "status": "CURRENT_COMPUTED"
         },
         "source_load_ids": [
           "L700-E1-P1-H06-PM_ADIC_SURFACE",
           "L700-E1-P1-H06-SC_SURFACE",
-          "L700-E1-P1-H10-PM_ADIC_SURFACE",
-          "L700-E1-P1-H10-SC_SURFACE",
           "L700-E1-P1-H11-PM_ADIC_SURFACE",
-          "L700-E1-P1-H11-SC_SURFACE",
-          "L700-E1-P1-H12-PM_ADIC_SURFACE",
-          "L700-E1-P1-H12-SC_SURFACE"
+          "L700-E1-P1-H11-SC_SURFACE"
         ]
       },
       {
@@ -29208,33 +28387,27 @@
         "floor": "P1",
         "type": "beam",
         "Q": {
-          "tributary_area_m2": 54.659298,
-          "equivalent_width_m": 12.711465,
-          "surface_force_N": 238103.358,
-          "equivalent_line_load_N_m": 55372.874,
+          "tributary_area_m2": 13.249317,
+          "equivalent_width_m": 3.081237,
+          "surface_force_N": 35056.765,
+          "equivalent_line_load_N_m": 8152.736,
           "zone_ids": [
             "L700-E1-P1-H06-SC_SURFACE",
-            "L700-E1-P1-H10-SC_SURFACE",
-            "L700-E1-P1-H11-SC_SURFACE",
-            "L700-E1-P1-H12-SC_SURFACE"
+            "L700-E1-P1-H11-SC_SURFACE"
           ],
           "status": "CURRENT_RECOMPUTED"
         },
         "G": {
           "self_weight_N": 50602.314,
-          "tributary_dead_N": 663707.875,
-          "total_associated_N": 714310.189,
+          "tributary_dead_N": 80152.854,
+          "total_associated_N": 130755.168,
           "status": "CURRENT_COMPUTED"
         },
         "source_load_ids": [
           "L700-E1-P1-H06-PM_ADIC_SURFACE",
           "L700-E1-P1-H06-SC_SURFACE",
-          "L700-E1-P1-H10-PM_ADIC_SURFACE",
-          "L700-E1-P1-H10-SC_SURFACE",
           "L700-E1-P1-H11-PM_ADIC_SURFACE",
-          "L700-E1-P1-H11-SC_SURFACE",
-          "L700-E1-P1-H12-PM_ADIC_SURFACE",
-          "L700-E1-P1-H12-SC_SURFACE"
+          "L700-E1-P1-H11-SC_SURFACE"
         ]
       },
       {
@@ -29271,25 +28444,22 @@
         "floor": "P1",
         "type": "beam",
         "Q": {
-          "tributary_area_m2": 48.24381,
-          "equivalent_width_m": 11.219491,
-          "surface_force_N": 236555.079,
-          "equivalent_line_load_N_m": 55012.809,
+          "tributary_area_m2": 7.500729,
+          "equivalent_width_m": 1.744356,
+          "surface_force_N": 36778.514,
+          "equivalent_line_load_N_m": 8553.143,
           "zone_ids": [
-            "L700-E1-P1-H08-SC_SURFACE",
             "L700-E1-P1-H09-SC_SURFACE"
           ],
           "status": "CURRENT_RECOMPUTED"
         },
         "G": {
           "self_weight_N": 50602.314,
-          "tributary_dead_N": 300424.95,
-          "total_associated_N": 351027.264,
+          "tributary_dead_N": 46708.713,
+          "total_associated_N": 97311.027,
           "status": "CURRENT_COMPUTED"
         },
         "source_load_ids": [
-          "L700-E1-P1-H08-PM_ADIC_SURFACE",
-          "L700-E1-P1-H08-SC_SURFACE",
           "L700-E1-P1-H09-PM_ADIC_SURFACE",
           "L700-E1-P1-H09-SC_SURFACE"
         ]
@@ -29328,23 +28498,21 @@
         "floor": "P1",
         "type": "beam",
         "Q": {
-          "tributary_area_m2": 19.414116,
-          "equivalent_width_m": 2.367575,
-          "surface_force_N": 66782.811,
-          "equivalent_line_load_N_m": 8144.245,
+          "tributary_area_m2": 18.617567,
+          "equivalent_width_m": 2.270435,
+          "surface_force_N": 62877.074,
+          "equivalent_line_load_N_m": 7667.936,
           "zone_ids": [
             "L700-E1-P1-H06-SC_SURFACE",
             "L700-E1-P1-H09-SC_SURFACE",
-            "L700-E1-P1-H10-SC_SURFACE",
-            "L700-E1-P1-H11-SC_SURFACE",
-            "L700-E1-P1-H12-SC_SURFACE"
+            "L700-E1-P1-H11-SC_SURFACE"
           ],
           "status": "CURRENT_RECOMPUTED"
         },
         "G": {
           "self_weight_N": 96497.436,
-          "tributary_dead_N": 139716.896,
-          "total_associated_N": 236214.332,
+          "tributary_dead_N": 115683.311,
+          "total_associated_N": 212180.747,
           "status": "CURRENT_COMPUTED"
         },
         "source_load_ids": [
@@ -29352,12 +28520,8 @@
           "L700-E1-P1-H06-SC_SURFACE",
           "L700-E1-P1-H09-PM_ADIC_SURFACE",
           "L700-E1-P1-H09-SC_SURFACE",
-          "L700-E1-P1-H10-PM_ADIC_SURFACE",
-          "L700-E1-P1-H10-SC_SURFACE",
           "L700-E1-P1-H11-PM_ADIC_SURFACE",
-          "L700-E1-P1-H11-SC_SURFACE",
-          "L700-E1-P1-H12-PM_ADIC_SURFACE",
-          "L700-E1-P1-H12-SC_SURFACE"
+          "L700-E1-P1-H11-SC_SURFACE"
         ]
       },
       {
@@ -59462,11 +58626,11 @@
         },
         {
           "node_tag": 383,
-          "Fz_N": -113755.608
+          "Fz_N": -64755.667
         },
         {
           "node_tag": 384,
-          "Fz_N": -113755.608
+          "Fz_N": -64755.667
         },
         {
           "node_tag": 385,
@@ -59478,11 +58642,11 @@
         },
         {
           "node_tag": 387,
-          "Fz_N": -87277.18
+          "Fz_N": -51008.964
         },
         {
           "node_tag": 388,
-          "Fz_N": -87277.18
+          "Fz_N": -51008.964
         },
         {
           "node_tag": 389,
@@ -59494,11 +58658,11 @@
         },
         {
           "node_tag": 391,
-          "Fz_N": -199830.859
+          "Fz_N": -48949.568
         },
         {
           "node_tag": 392,
-          "Fz_N": -199830.859
+          "Fz_N": -48949.568
         },
         {
           "node_tag": 393,
@@ -59510,11 +58674,11 @@
         },
         {
           "node_tag": 395,
-          "Fz_N": -299406.9
+          "Fz_N": -65671.783
         },
         {
           "node_tag": 396,
-          "Fz_N": -299406.9
+          "Fz_N": -65671.783
         },
         {
           "node_tag": 397,
@@ -59542,11 +58706,11 @@
         },
         {
           "node_tag": 403,
-          "Fz_N": -357155.095
+          "Fz_N": -65377.584
         },
         {
           "node_tag": 404,
-          "Fz_N": -357155.095
+          "Fz_N": -65377.584
         },
         {
           "node_tag": 405,
@@ -59558,11 +58722,11 @@
         },
         {
           "node_tag": 407,
-          "Fz_N": -175513.632
+          "Fz_N": -48655.513
         },
         {
           "node_tag": 408,
-          "Fz_N": -175513.632
+          "Fz_N": -48655.513
         },
         {
           "node_tag": 409,
@@ -59574,11 +58738,11 @@
         },
         {
           "node_tag": 411,
-          "Fz_N": -118107.166
+          "Fz_N": -106090.373
         },
         {
           "node_tag": 412,
-          "Fz_N": -118107.166
+          "Fz_N": -106090.373
         },
         {
           "node_tag": 413,
@@ -63000,11 +62164,11 @@
         },
         {
           "node_tag": 383,
-          "Fz_N": -24926.26
+          "Fz_N": -17209.733
         },
         {
           "node_tag": 384,
-          "Fz_N": -24926.26
+          "Fz_N": -17209.733
         },
         {
           "node_tag": 385,
@@ -63016,11 +62180,11 @@
         },
         {
           "node_tag": 387,
-          "Fz_N": -43268.964
+          "Fz_N": -14711.314
         },
         {
           "node_tag": 388,
-          "Fz_N": -43268.964
+          "Fz_N": -14711.314
         },
         {
           "node_tag": 389,
@@ -63032,11 +62196,11 @@
         },
         {
           "node_tag": 391,
-          "Fz_N": -133603.512
+          "Fz_N": -14799.346
         },
         {
           "node_tag": 392,
-          "Fz_N": -133603.512
+          "Fz_N": -14799.346
         },
         {
           "node_tag": 393,
@@ -63048,11 +62212,11 @@
         },
         {
           "node_tag": 395,
-          "Fz_N": -78987.296
+          "Fz_N": -17528.382
         },
         {
           "node_tag": 396,
-          "Fz_N": -78987.296
+          "Fz_N": -17528.382
         },
         {
           "node_tag": 397,
@@ -63080,11 +62244,11 @@
         },
         {
           "node_tag": 403,
-          "Fz_N": -119051.679
+          "Fz_N": -17528.382
         },
         {
           "node_tag": 404,
-          "Fz_N": -119051.679
+          "Fz_N": -17528.382
         },
         {
           "node_tag": 405,
@@ -63096,11 +62260,11 @@
         },
         {
           "node_tag": 407,
-          "Fz_N": -118277.539
+          "Fz_N": -18389.257
         },
         {
           "node_tag": 408,
-          "Fz_N": -118277.539
+          "Fz_N": -18389.257
         },
         {
           "node_tag": 409,
@@ -63112,11 +62276,11 @@
         },
         {
           "node_tag": 411,
-          "Fz_N": -33391.405
+          "Fz_N": -31438.537
         },
         {
           "node_tag": 412,
-          "Fz_N": -33391.405
+          "Fz_N": -31438.537
         },
         {
           "node_tag": 413,
