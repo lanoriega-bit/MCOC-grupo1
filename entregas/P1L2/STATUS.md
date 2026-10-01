@@ -1,5 +1,14 @@
 # P1L2 Status
 
+## Viewer CURRENT — checkpoint visual/UX (2026-10-01)
+
+- Rama `codex/unity-visual-ux`: materiales visuales, paneles compactos,
+  ayuda contextual y ficha ordenada. No modifica el modelo ni resultados.
+- Validación compile/Play y regresión visual: [QA](../P1L6/visual_ux/FINAL_QA.md).
+- Losas parciales y overlays de cargas sin datos CURRENT siguen explícitos;
+  no se sustituyen por datasets históricos.
+- Export original de Luis, geometría central y `P1L4_FINAL` intactos.
+
 ## main CURRENT — organización y núcleos (2026-10-01)
 
 - Fuente única: `entregas/P1L5/modelo_central/`; 712 sólidos: 442 vigas,

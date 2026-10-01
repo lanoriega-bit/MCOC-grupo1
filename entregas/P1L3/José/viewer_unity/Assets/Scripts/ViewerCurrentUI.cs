@@ -183,7 +183,11 @@ namespace Mcoc.UnityViewer
         void LayerToggle(string title, params string[] keys)
         {
             bool was = keys.Length > 0 && typeVisible.TryGetValue(keys[0], out var first) && first;
-            bool now = VisualToggle(was,title,HelpForControl(title));
+            bool available=false;
+            foreach(string key in keys)if(byType.ContainsKey(key)&&byType[key].Count>0)available=true;
+            bool enabled=GUI.enabled;GUI.enabled=enabled&&available;
+            bool now = VisualToggle(was,title,available?HelpForControl(title):"NO DATA: esta capa no existe en el dataset cargado. No se usa el histórico como reemplazo.");
+            GUI.enabled=enabled;
             if (was == now) return;
             foreach (string key in keys) typeVisible[key] = now;
             ReapplyAll();
@@ -249,6 +253,8 @@ namespace Mcoc.UnityViewer
             {
                 GUILayout.Label(currentResultsAvailable ? "Cargas CURRENT aplicadas" : "Catálogo auditado · aún no aplicado",currentHeading);
                 LayerToggle("Cargas superficiales", "p1l4_load_surface"); LayerToggle("Cargas lineales", "p1l4_load_line");
+                if(p1l4LoadCatalog==null)GUILayout.Label(new GUIContent("Zonas/líneas 3D · NO DATA CURRENT", "Los controles heredados no tienen geometría de cargas CURRENT. Consulte Cargas en la ficha; no cargar el catálogo histórico como si fuera actual."),currentBody);
+                LayerToggle("Áreas tributarias CURRENT","tributary","tributary_point");
                 GUILayout.Label(new GUIContent("Puntuales · pendientes de receptor", "No se dibujan ni aplican en la posición del texto CAD. Revisar las cargas unresolved."),currentBody);
                 LayerToggle("Apoyos geométricos", "support");
                 GUILayout.Label(new GUIContent(currentResultsAvailable ? "CURRENT · con supuestos documentados" : "Pendiente de base FE actual", "G/Q y zonas provienen del contrato CURRENT; PP.LOSA conserva espesor académico de 0,15 m. Las cargas unresolved se excluyen, no equivalen a cero confirmado."),currentBody);

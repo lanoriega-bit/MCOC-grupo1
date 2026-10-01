@@ -85,6 +85,32 @@ namespace Mcoc.UnityViewer
             GUILayout.Label(new GUIContent(value??"NO DATA",help),currentBody);
             GUILayout.EndHorizontal();
         }
+        void DrawCompactCurrentForces(ElementInfo element,string id)
+        {
+            var rows=ResultsForSelection(element,id);
+            if(rows.Count==0){GUILayout.Label("NO DATA para la selección y caso activo.",currentBody);return;}
+            string[] components={"N","Vy","Vz","T","My","Mz"};
+            foreach(var row in rows)
+            {
+                GUILayout.Label(new GUIContent(row.analysis_id,"OpenSees tag "+row.opensees_tag+"; signos de fuerzas locales sobre nodos i/j, sin invertir j en esta tabla."),currentBody);
+                GUILayout.BeginHorizontal();
+                GUILayout.Label("Comp.",currentBody,GUILayout.Width(45));
+                GUILayout.Label("i",currentBody,GUILayout.Width(78));
+                GUILayout.Label("j",currentBody,GUILayout.Width(78));
+                GUILayout.Label("Unidad",currentBody);GUILayout.EndHorizontal();
+                for(int k=0;k<6;k++)
+                {
+                    string vi=row.localForce_end1!=null&&row.localForce_end1.Count>k?(row.localForce_end1[k]/1000).ToString("F3"):"NO DATA";
+                    string vj=row.localForce_end2!=null&&row.localForce_end2.Count>k?(row.localForce_end2[k]/1000).ToString("F3"):"NO DATA";
+                    GUILayout.BeginHorizontal();
+                    GUILayout.Label(new GUIContent(components[k],"Componente local OpenSees. Datos de extremos; no diagrama interno exacto."),currentBody,GUILayout.Width(45));
+                    GUILayout.Label(vi,currentBody,GUILayout.Width(78));
+                    GUILayout.Label(vj,currentBody,GUILayout.Width(78));
+                    GUILayout.Label(k<3?"kN":"kN·m",currentBody);GUILayout.EndHorizontal();
+                }
+            }
+            GUILayout.Label(new GUIContent("Desplazamientos y trazabilidad → Detalle técnico","La tabla conserva fuerzas de extremos originales. Desplazamientos, nodos y estado íntegro permanecen en Detalle técnico."),currentBody);
+        }
         CurrentElementLoadData CurrentElementLoad(string id)
         {
             if(currentElementLoads==null)
@@ -140,6 +166,7 @@ namespace Mcoc.UnityViewer
             double b=s.section_width_m>0?s.section_width_m:s.width_m;
             double h=s.category=="column"?(s.section_depth_m>0?s.section_depth_m:s.depth_m):(s.section_height_m>0?s.section_height_m:s.height_m);
             double length=s.length_m>0?s.length_m:(lastSelected!=null?lastSelected.lengthM:0);
+            if(s.category=="column")length=s.height_m;
             return (b>0&&h>0?$"Sección: {b*100:F0} × {h*100:F0} cm":"Sección resistente: por confirmar")+
                 (s.category=="column"?$" · altura {length:F2} m":$" · largo {length:F2} m");
         }
@@ -239,7 +266,8 @@ namespace Mcoc.UnityViewer
             if(InspectorSection("RESULTADOS"))
             {
                 GUILayout.Label(new GUIContent("CURRENT · Caso "+activeAnalysisCase,"Fuerzas locales OpenSees: [N, Vy, Vz, T, My, Mz]. Consultar unidades y convención en Detalle técnico."),currentHeading);
-                GUILayout.Label(currentResultsAvailable ? BuildP1L4ResultsText(e,id) : "No disponibles todavía.\nLa estructura fue actualizada después de la última corrida OpenSees.\nSe requiere un nuevo análisis validado.",currentBody);
+                if(currentResultsAvailable)DrawCompactCurrentForces(e,id);
+                else GUILayout.Label("Sin análisis actual compatible. Se requiere una corrida validada.",currentBody);
             }
             if(InspectorSection("CARGAS"))
                 GUILayout.Label(CurrentElementLoadText(id,context),currentBody);
@@ -268,6 +296,7 @@ namespace Mcoc.UnityViewer
                 if(!string.IsNullOrEmpty(e.correctionType))GUILayout.Label($"Auditoría: {e.correctionType}\n{e.correctionReason}\n{e.correctionPrimarySource}\n{e.correctionExternalClue}",currentBody);
                 if(s?.property_correction!=null)GUILayout.Label(s.material_scope_note,currentBody);
                 GUILayout.Label(CurrentVersionDiagnostic(),currentBody);
+                if(currentResultsAvailable)GUILayout.Label(BuildP1L4ResultsText(e,id),currentBody);
             }
             if(InspectorSection("MODIFICACIONES · P1L5"))
             {

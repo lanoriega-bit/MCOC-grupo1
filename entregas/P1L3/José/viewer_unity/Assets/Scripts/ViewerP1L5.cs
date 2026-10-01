@@ -147,7 +147,7 @@ namespace Mcoc.UnityViewer
             }
             GUILayout.BeginHorizontal();
             foreach (string name in new[] { "G", "Q", "EX", "EY", "R" })
-                if (GUILayout.Toggle(activeAnalysisCase==name,new GUIContent(name,LoadCaseExplanation(name)), currentButton)!= (activeAnalysisCase==name))
+                if (GUILayout.Toggle(activeAnalysisCase==name,new GUIContent(name,LoadCaseExplanation(name)), currentButton,GUILayout.Width(44))!= (activeAnalysisCase==name))
                 { ActivateAnalysisCase(name); ShowCaseHelp(name); }
             GUILayout.EndHorizontal();
             bool deform = VisualToggle(activeDeformationVisible, "Deformada CURRENT","Desplazamientos del caso activo, amplificados solo visualmente.");
@@ -157,7 +157,11 @@ namespace Mcoc.UnityViewer
             if (Mathf.Abs(scale - activeDeformationScale) > 0.1f) { activeDeformationScale = scale; RebuildActiveDeformedShape(); }
             GUILayout.BeginHorizontal();
             string[] diagramNames = { "OFF", "My", "Mz", "N", "Vy", "Vz", "T" };
-            for (int i = 0; i < diagramNames.Length; i++) if (GUILayout.Button(new GUIContent(diagramNames[i],"Diagrama 3D "+diagramNames[i]+" del caso activo; fuerzas de extremos OpenSees."),currentButton)) SetDiagramMode(i);
+            for (int i = 0; i < diagramNames.Length; i++)
+            {
+                if(i==4){GUILayout.EndHorizontal();GUILayout.BeginHorizontal();}
+                if (GUILayout.Button(new GUIContent(diagramNames[i],"Diagrama 3D "+diagramNames[i]+" del caso activo; fuerzas de extremos OpenSees."),currentButton,GUILayout.Width(58))) SetDiagramMode(i);
+            }
             GUILayout.EndHorizontal();
             bool plot = VisualToggle(diagram2DVisible, "Gráfico 2D","Gráfico del elemento seleccionado. Mantiene convención de signos, unidades y END_FORCES_INTERPOLATION.");
             if (plot != diagram2DVisible) { diagram2DVisible = plot; if (plot) demandCapacityPlotVisible = false; }

@@ -18,6 +18,7 @@ namespace Mcoc.UnityViewer
             style.hover.textColor=Color.white; style.active.textColor=Color.white;
             style.onNormal.textColor=new Color(0.45f,0.93f,1f); style.onHover.textColor=Color.white;
             style.border=new RectOffset(0,0,0,0);
+            style.margin=new RectOffset(2,2,3,3);
         }
 
         bool VisualToggle(bool value,string label,string help)
