@@ -37,9 +37,9 @@ namespace Mcoc.UnityViewer
         void DrawQuickViews()
         {
             GUILayout.BeginHorizontal();
-            foreach(string v in new[]{"Planta","Frente"})if(GUILayout.Button(v,currentButton))SetQuickView(v);
+            foreach(string v in new[]{"Planta","Frente"})if(GUILayout.Button(new GUIContent(v=="Planta"?"TOP":"FRONT","Vista "+v.ToLowerInvariant()+"; ajusta el encuadre al modelo visible."),currentButton))SetQuickView(v);
             GUILayout.EndHorizontal();GUILayout.BeginHorizontal();
-            foreach(string v in new[]{"Lateral","Iso"})if(GUILayout.Button(v,currentButton))SetQuickView(v);
+            foreach(string v in new[]{"Lateral","Iso"})if(GUILayout.Button(new GUIContent(v=="Lateral"?"RIGHT":"ISO","Vista "+v.ToLowerInvariant()+"; no modifica ejes o geometría."),currentButton))SetQuickView(v);
             GUILayout.EndHorizontal();
         }
 
@@ -61,7 +61,8 @@ namespace Mcoc.UnityViewer
                 GUI.color=old;
             }
             string[] views={"Planta","Frente","Lateral","Iso"};
-            for(int i=0;i<4;i++)if(GUI.Button(new Rect(r.x+122,r.y+29+i*27,86,25),views[i]))SetQuickView(views[i]);
+            string[] captions={"TOP","FRONT","RIGHT","ISO"};
+            for(int i=0;i<4;i++)if(GUI.Button(new Rect(r.x+122,r.y+29+i*27,86,25),new GUIContent(captions[i],"Vista "+views[i].ToLowerInvariant()),currentButton))SetQuickView(views[i]);
             GUI.Label(new Rect(r.x+8,r.y+121,112,22),"Z = vertical",currentBody);
         }
 

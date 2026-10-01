@@ -21,7 +21,7 @@ namespace Mcoc.UnityViewer
         private readonly Dictionary<string, bool> buildingVisible = new Dictionary<string, bool> { { "EDIFICIO_1", true }, { "EDIFICIO_2", true } };
         private readonly Dictionary<string, bool> contextVisible = new Dictionary<string, bool>();
         private readonly List<GameObject> globalAxisObjects = new List<GameObject>();
-        private GUIStyle currentBody, currentTitle, currentButton, currentHeading;
+        private GUIStyle currentBody, currentTitle, currentButton, currentHeading, currentChip;
         private bool ResultsAllowed => currentResultsAvailable || (historicalResultsEnabled && !presentationMode);
 
         static bool IsHistoricalLayer(string type)
@@ -101,10 +101,10 @@ namespace Mcoc.UnityViewer
             ReapplyAll();
         }
 
-        Rect SemanticPanelRect() => new Rect(12, 82, 274, Mathf.Max(160, Screen.height - 128));
+        Rect SemanticPanelRect() => new Rect(12, 82, 294, Mathf.Max(160, Screen.height - 128));
         Rect CurrentInspectorRect() => new Rect(Screen.width - 358, 82, 346, Mathf.Max(140, Screen.height - 280));
         Rect OrientationRect() => new Rect(Screen.width - 230, Screen.height - 192, 218, 148);
-        Rect CurrentPlotRect() => new Rect(300, 86, Mathf.Max(240, Screen.width - 680), Mathf.Max(220, Screen.height - 145));
+        Rect CurrentPlotRect() => new Rect(320, 86, Mathf.Max(240, Screen.width - 700), Mathf.Max(220, Screen.height - 145));
 
         bool IsPointerOverCurrentUi()
         {
@@ -124,13 +124,15 @@ namespace Mcoc.UnityViewer
             currentBody.normal.textColor = new Color(0.88f, 0.93f, 0.98f);
             currentTitle = new GUIStyle(currentBody) { fontSize = 19, fontStyle = FontStyle.Bold };
             currentHeading = new GUIStyle(currentBody) { fontSize = 14, fontStyle = FontStyle.Bold };
-            currentButton = new GUIStyle(GUI.skin.button) { fontSize = 13, padding = new RectOffset(8,8,6,6), wordWrap = true };
+            currentButton = new GUIStyle(GUI.skin.button) { fontSize = 13, padding = new RectOffset(10,10,6,6), wordWrap = true };
+            StyleVisualControl(currentButton);
+            currentChip=new GUIStyle(currentButton) { alignment=TextAnchor.MiddleLeft, fontSize=12 };
         }
 
         void PanelBackground(Rect r)
         {
             Color old = GUI.color;
-            GUI.color = new Color(0.035f, 0.065f, 0.10f, 0.96f);
+            GUI.color = new Color(0.045f, 0.068f, 0.095f, 0.97f);
             GUI.DrawTexture(r, whiteTex);
             GUI.color = old;
         }
@@ -142,7 +144,8 @@ namespace Mcoc.UnityViewer
             if (uiHidden) return;
             PanelBackground(new Rect(0,0,Screen.width,72));
             GUI.Label(new Rect(16,8,400,28), "LABORATORIO ESTRUCTURAL", currentTitle);
-            GUI.Label(new Rect(17,37,600,26), "MODELO ACTUAL  ·  Edificios 1 y 2  ·  Revisión estructural", currentBody);
+            GUI.Label(new Rect(17,37,600,26), new GUIContent("CURRENT  ·  Edificios 1 y 2  ·  Caso "+activeAnalysisCase,
+                "Modelo canónico vigente. Los estilos ladrillo/acero son claves visuales, no materiales estructurales."), currentBody);
             float bx = Screen.width - 515;
             if (GUI.Button(new Rect(bx,17,108,34), navigationExpanded ? "Paneles  −" : "Paneles  +", currentButton)) navigationExpanded = !navigationExpanded;
             if (GUI.Button(new Rect(bx+116,17,226,34), presentationMode ? "Salir de presentación · F11" : "MODO PRESENTACIÓN · F11", currentButton)) SetPresentationMode(!presentationMode);
@@ -163,17 +166,13 @@ namespace Mcoc.UnityViewer
             PanelBackground(new Rect(0,Screen.height-36,Screen.width,36));
             GUI.Label(new Rect(12,Screen.height-32,Screen.width-24,28),
                 CurrentStatusLine(), currentBody);
-            if (!string.IsNullOrEmpty(GUI.tooltip))
-            {
-                Rect tip = new Rect(300,Screen.height-103,Mathf.Min(520,Screen.width-620),60);
-                PanelBackground(tip); GUI.Label(tip, GUI.tooltip, currentBody);
-            }
+            DrawVisualTooltip();
         }
 
         bool Accordion(string name)
         {
             bool on = openGroups.Contains(name);
-            if (GUILayout.Button((on ? "−  " : "+  ") + name, currentButton, GUILayout.Height(32)))
+            if (GUILayout.Toggle(on, new GUIContent((on ? "−  " : "+  ") + name, "Abrir/cerrar "+name.ToLowerInvariant()),currentButton, GUILayout.Height(34))!=on)
             {
                 if (on) openGroups.Remove(name); else openGroups.Add(name);
                 on = !on;
@@ -184,7 +183,7 @@ namespace Mcoc.UnityViewer
         void LayerToggle(string title, params string[] keys)
         {
             bool was = keys.Length > 0 && typeVisible.TryGetValue(keys[0], out var first) && first;
-            bool now = GUILayout.Toggle(was, title, GUILayout.Height(25));
+            bool now = VisualToggle(was,title,HelpForControl(title));
             if (was == now) return;
             foreach (string key in keys) typeVisible[key] = now;
             ReapplyAll();
@@ -197,24 +196,26 @@ namespace Mcoc.UnityViewer
             semanticScroll = GUILayout.BeginScrollView(semanticScroll);
             if (Accordion("MODELO"))
             {
-                GUILayout.Label("Modelo actual", currentHeading);
+                GUILayout.Label("EDIFICIOS Y PISOS", currentHeading);
                 foreach (string key in new List<string>(buildingVisible.Keys))
                 {
-                    bool on = GUILayout.Toggle(buildingVisible[key], key == "EDIFICIO_1" ? "Edificio 1" : "Edificio 2", GUILayout.Height(23));
+                    bool on = VisualToggle(buildingVisible[key], key == "EDIFICIO_1" ? "Edificio 1" : "Edificio 2","Mostrar u ocultar esta ala; no cambia el modelo ni su FE.");
                     if (on != buildingVisible[key]) { buildingVisible[key]=on; ReapplyAll(); }
                 }
                 foreach (string floor in new[] { "S1", "P1", "P2", "P3", "P4" })
                 {
                     GUILayout.BeginHorizontal();
                     bool was = floorVisible.TryGetValue(floor, out var fv) && fv;
-                    bool now = GUILayout.Toggle(was, FloorFriendly(floor), GUILayout.Height(25));
+                    bool now = VisualToggle(was, FloorFriendly(floor),"Visibilidad del piso; no activa ni excluye elementos del cálculo.");
                     if (was != now) { floorVisible[floor]=now; ReapplyAll(); }
                     if (GUILayout.Button("Solo", currentButton, GUILayout.Width(54)))
                     { foreach (string f in new List<string>(floorVisible.Keys)) floorVisible[f]=f==floor; ReapplyAll(); }
                     GUILayout.EndHorizontal();
                 }
                 if (GUILayout.Button("Todos los pisos", currentButton)) { foreach (string f in new List<string>(floorVisible.Keys)) floorVisible[f]=true; ReapplyAll(); }
+                GUILayout.Space(6); GUILayout.Label("ELEMENTOS",currentHeading);
                 LayerToggle("Columnas", "column"); LayerToggle("Vigas", "beam"); LayerToggle("Muros", "wall");
+                LayerToggle("Nodos", "node");
                 LayerToggle("Losas visuales · alcance parcial", "architectural_slab", "architectural_slab_edge");
                 LayerToggle("Bordes de losa CAD", "slab_edge");
                 bool fe = GUILayout.Toggle(diagnosticViewMode==2, "Mostrar malla FE candidata", GUILayout.Height(25));
@@ -248,14 +249,14 @@ namespace Mcoc.UnityViewer
             {
                 GUILayout.Label(currentResultsAvailable ? "Cargas CURRENT aplicadas" : "Catálogo auditado · aún no aplicado",currentHeading);
                 LayerToggle("Cargas superficiales", "p1l4_load_surface"); LayerToggle("Cargas lineales", "p1l4_load_line");
-                GUILayout.Label("Cargas puntuales: posición/receptor pendientes; no se dibujan en la posición del texto CAD.",currentBody);
+                GUILayout.Label(new GUIContent("Puntuales · pendientes de receptor", "No se dibujan ni aplican en la posición del texto CAD. Revisar las cargas unresolved."),currentBody);
                 LayerToggle("Apoyos geométricos", "support");
-                GUILayout.Label(currentResultsAvailable ? "G/Q transferidas desde 44 zonas CAD CURRENT. PP.LOSA usa fallback documentado de 0,15 m. Las 10 cargas sin receptor/unidad inequívoca permanecen UNRESOLVED y no se reemplazan por cero." : "G, Q y áreas tributarias actuales: pendientes de la nueva base FE. Referencias anteriores en Avanzado.",currentBody);
+                GUILayout.Label(new GUIContent(currentResultsAvailable ? "CURRENT · con supuestos documentados" : "Pendiente de base FE actual", "G/Q y zonas provienen del contrato CURRENT; PP.LOSA conserva espesor académico de 0,15 m. Las cargas unresolved se excluyen, no equivalen a cero confirmado."),currentBody);
             }
             if (Accordion("ANÁLISIS"))
             {
                 GUILayout.Label(currentResultsAvailable ? "OpenSees CURRENT · PASS\nG / Q / EX / EY\nSuperposición lineal instantánea" : $"FE candidato · NO EJECUTADO\n{feDiagnostic?.summary?.fe_element_count ?? 0} miembros\n{feDiagnostic?.summary?.candidate_floating_geometry_elements ?? 0} geometrías flotantes",currentBody);
-                GUILayout.Label(currentResultsAvailable ? "Modelo académico/experimental CURRENT. 79 materiales usan fallback trazable; las cargas irresueltas están excluidas explícitamente. Aproximaciones visibles en trazabilidad." : "Las incidencias propuestas requieren revisión estructural antes de calcular fuerzas o desplazamientos.",currentBody);
+                GUILayout.Label(new GUIContent("Modelo académico · ver trazabilidad", "Materiales inferidos y cargas excluidas están documentados en las fuentes CURRENT. No es un modelo de diseño certificado."),currentBody);
             }
             if (Accordion("CAPACIDAD"))
             {
