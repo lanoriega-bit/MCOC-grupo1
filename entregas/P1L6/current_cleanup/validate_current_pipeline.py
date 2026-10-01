@@ -102,10 +102,8 @@ def main() -> None:
         "manual_sample": {"element_id": sample_id, "R_My_kNm": manual_my},
         "unsupported_fe_components": unsupported,
         "limitations": [
-            "10 ED1 wall candidates have no demonstrated FE path to support.",
-            "4 ED1/P4 wall candidates have unresolved primary material scope.",
-            "4 E2/P4 wall candidates conflict with earlier owner scope review.",
-            "79 active ED1/P4 structural members retain an explicitly inferred material fallback.",
+            "Remaining wall candidates are review-only; see the latest wall-continuity audit, not previous checkpoint counts.",
+            f"{sum(r['building'] == 'EDIFICIO_1' and r['floor'] == 'P4' for r in active)} active ED1/P4 structural members retain an explicitly inferred material fallback.",
             "10 non-FE slabs have MAT_UNKNOWN; slab thickness 0.15 m is an academic load fallback.",
             "6 point-load catalog entries lack an unequivocal receiver and remain excluded.",
             "LT1 Q differs by +15.193% from ETABS; benchmark, not a calibration target.",

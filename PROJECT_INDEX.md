@@ -6,10 +6,17 @@ Integración vigente: [auditoría P1L5](entregas/P1L5/INTEGRATION_AUDIT.md) y
 [QA del modelo integrado](entregas/P1L5/validation/INTEGRATION_QA.md).
 La fuente editable única está en `entregas/P1L5/modelo_central/`.
 
-Estado central: 658 sólidos (442 vigas, 143 columnas, 30 muros, 10 losas
-poligonales y 33 apoyos); FE CURRENT con 1100 nodos, 623 segmentos, 1225
-restricciones y 33 nodos fijos. Componentes desconectados: 0. OpenSees CURRENT
+Estado central: 712 sólidos (442 vigas, 143 columnas, 84 muros, 10 losas
+poligonales y 33 apoyos visuales); FE CURRENT con 1170 nodos topológicos,
+677 segmentos (673 analizados), 1240 restricciones y 44 nodos fijos.
+Componentes desconectados: 0. OpenSees CURRENT
 G/Q/EX/EY y superposición R: verificados.
+
+Revisión vigente de muros y columnas:
+[núcleos CURRENT y comparación antes/después](entregas/P1L6/wall_continuity/WALL_CONTINUITY_AFTER.md).
+Tres grupos en C S1–P4; material ED1-P4 y armaduras conservan supuestos de
+laboratorio explícitos. No confundir continuidad geométrica con una sección C
+monolítica en el FE. 38 candidatos de muros siguen en revisión, fuera del modelo.
 
 Guía vigente: [P1L6_READINESS](entregas/P1L6/P1L6_READINESS.md).
 Revisión vigente: [continuidad manual de vigas](entregas/PRE_P1L5/manual_beam_revision/REVIEW_STATUS.md).
@@ -54,8 +61,8 @@ activación explícita en Entregas o Avanzado y nunca se presenta como resultado
 
 | Capa | Estado | Interpretación |
 | --- | --- | --- |
-| Geometría | `CURRENT VERIFIED` | 658 sólidos; 442 vigas; 10 losas CAD poligonales de 0,15 m. |
-| Diagnóstico FE | `CURRENT / PASS` | 623 segmentos, 1100 nodos; 0 componentes desconectados. |
+| Geometría | `CURRENT VERIFIED` | 712 sólidos; 442 vigas; 143 columnas; 84 muros; 10 losas CAD poligonales de 0,15 m. |
+| Diagnóstico FE | `CURRENT / PASS` | 677 segmentos, 1170 nodos topológicos; 0 componentes desconectados. |
 | Resultados actuales | `CURRENT VERIFIED` | G/Q/EX/EY y R compatibles; hashes de geometría, cargas y payload verificados. |
 | G/Q/EX/EY/R y capacidad anteriores | `HISTORICAL` | Avanzado → Histórico, apagado por defecto. |
 | Catálogo de cargas | `CURRENT_RECOMPUTED` | 46 paños/rutas; conservación G/Q PASS; 6 cargas puntuales siguen unresolved. |

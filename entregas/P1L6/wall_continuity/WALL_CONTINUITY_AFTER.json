@@ -1,0 +1,2230 @@
+{
+  "status": "PASS_WITH_EXPLICIT_NOTES",
+  "checks": {
+    "unrelated_beams_and_slabs_preserved": true,
+    "wall_materials_preserved": true,
+    "CORE_C_ED1_01_vertical": true,
+    "CORE_C_ED1_02_vertical": true,
+    "CORE_C_ED2_01_vertical": true,
+    "wall_duplicates_zero": true,
+    "unexpected_wall_overlap_zero": true,
+    "columns_follow_immediately_lower_section": true,
+    "luis_reference_unchanged": true
+  },
+  "wall_count": 84,
+  "cores": [
+    {
+      "group": "CORE_C_ED1_01",
+      "floor": "S1",
+      "ids": [
+        "E1-S1-M-020",
+        "E1-S1-M-026",
+        "E1-S1-M-034"
+      ],
+      "status": "CONTINUOUS"
+    },
+    {
+      "group": "CORE_C_ED1_01",
+      "floor": "P1",
+      "ids": [
+        "E1-P1-M-012",
+        "E1-P1-M-004",
+        "E1-P1-M-025"
+      ],
+      "status": "CONTINUOUS"
+    },
+    {
+      "group": "CORE_C_ED1_01",
+      "floor": "P2",
+      "ids": [
+        "E1-P2-M-010",
+        "E1-P2-M-007",
+        "E1-P2-M-009"
+      ],
+      "status": "CONTINUOUS"
+    },
+    {
+      "group": "CORE_C_ED1_01",
+      "floor": "P3",
+      "ids": [
+        "E1-P3-M-010",
+        "E1-P3-M-007",
+        "E1-P3-M-009"
+      ],
+      "status": "CONTINUOUS"
+    },
+    {
+      "group": "CORE_C_ED1_01",
+      "floor": "P4",
+      "ids": [
+        "E1-P4-M-009",
+        "E1-P4-M-007",
+        "E1-P4-M-010"
+      ],
+      "status": "CONTINUOUS"
+    },
+    {
+      "group": "CORE_C_ED1_02",
+      "floor": "S1",
+      "ids": [
+        "E1-S1-M-005",
+        "E1-S1-M-029",
+        "E1-S1-M-049"
+      ],
+      "status": "CONTINUOUS"
+    },
+    {
+      "group": "CORE_C_ED1_02",
+      "floor": "P1",
+      "ids": [
+        "E1-P1-M-002",
+        "E1-P1-M-010",
+        "E1-P1-M-026"
+      ],
+      "status": "CONTINUOUS"
+    },
+    {
+      "group": "CORE_C_ED1_02",
+      "floor": "P2",
+      "ids": [
+        "E1-P2-M-003",
+        "E1-P2-M-008",
+        "E1-P2-M-005"
+      ],
+      "status": "CONTINUOUS"
+    },
+    {
+      "group": "CORE_C_ED1_02",
+      "floor": "P3",
+      "ids": [
+        "E1-P3-M-003",
+        "E1-P3-M-008",
+        "E1-P3-M-005"
+      ],
+      "status": "CONTINUOUS"
+    },
+    {
+      "group": "CORE_C_ED1_02",
+      "floor": "P4",
+      "ids": [
+        "E1-P4-M-003",
+        "E1-P4-M-008",
+        "E1-P4-M-012"
+      ],
+      "status": "CONTINUOUS"
+    },
+    {
+      "group": "CORE_C_ED2_01",
+      "floor": "S1",
+      "ids": [
+        "E2-S1-M-007",
+        "E2-S1-M-008",
+        "E2-S1-M-010"
+      ],
+      "status": "CONTINUOUS"
+    },
+    {
+      "group": "CORE_C_ED2_01",
+      "floor": "P1",
+      "ids": [
+        "E2-P1-M-007",
+        "E2-P1-M-008",
+        "E2-P1-M-010"
+      ],
+      "status": "CONTINUOUS"
+    },
+    {
+      "group": "CORE_C_ED2_01",
+      "floor": "P2",
+      "ids": [
+        "E2-P2-M-007",
+        "E2-P2-M-008",
+        "E2-P2-M-010"
+      ],
+      "status": "CONTINUOUS"
+    },
+    {
+      "group": "CORE_C_ED2_01",
+      "floor": "P3",
+      "ids": [
+        "E2-P3-M-007",
+        "E2-P3-M-008",
+        "E2-P3-M-010"
+      ],
+      "status": "CONTINUOUS"
+    },
+    {
+      "group": "CORE_C_ED2_01",
+      "floor": "P4",
+      "ids": [
+        "E2-P4-M-007",
+        "E2-P4-M-008",
+        "E2-P4-M-009"
+      ],
+      "status": "CONTINUOUS"
+    }
+  ],
+  "wall_lines": [
+    {
+      "line_id": "WALL_LINE_001",
+      "building": "EDIFICIO_2",
+      "start": [
+        -3.648,
+        -1.094
+      ],
+      "end": [
+        -3.648,
+        -0.299
+      ],
+      "thickness_m": 0.6,
+      "floors": {
+        "P1": [
+          "E2-P1-M-001"
+        ],
+        "P2": [
+          "E2-P2-M-001"
+        ],
+        "P3": [
+          "E2-P3-M-001"
+        ],
+        "P4": [
+          "E2-P4-M-001"
+        ],
+        "S1": [
+          "E2-S1-M-001"
+        ]
+      },
+      "status": "CONTINUOUS"
+    },
+    {
+      "line_id": "WALL_LINE_002",
+      "building": "EDIFICIO_2",
+      "start": [
+        -3.648,
+        0.001
+      ],
+      "end": [
+        -3.648,
+        1.826
+      ],
+      "thickness_m": 0.6,
+      "floors": {
+        "P1": [
+          "E2-P1-M-002"
+        ],
+        "P2": [
+          "E2-P2-M-002"
+        ],
+        "P3": [
+          "E2-P3-M-002"
+        ],
+        "P4": [
+          "E2-P4-M-002"
+        ],
+        "S1": [
+          "E2-S1-M-002"
+        ]
+      },
+      "status": "CONTINUOUS"
+    },
+    {
+      "line_id": "WALL_LINE_003",
+      "building": "EDIFICIO_2",
+      "start": [
+        -3.648,
+        14.326
+      ],
+      "end": [
+        -3.648,
+        16.151
+      ],
+      "thickness_m": 0.6,
+      "floors": {
+        "P1": [
+          "E2-P1-M-003"
+        ],
+        "P2": [
+          "E2-P2-M-003"
+        ],
+        "P3": [
+          "E2-P3-M-003"
+        ],
+        "P4": [
+          "E2-P4-M-003"
+        ],
+        "S1": [
+          "E2-S1-M-003"
+        ]
+      },
+      "status": "CONTINUOUS"
+    },
+    {
+      "line_id": "WALL_LINE_004",
+      "building": "EDIFICIO_2",
+      "start": [
+        -3.648,
+        16.451
+      ],
+      "end": [
+        -3.648,
+        17.241
+      ],
+      "thickness_m": 0.6,
+      "floors": {
+        "P1": [
+          "E2-P1-M-004"
+        ],
+        "P2": [
+          "E2-P2-M-004"
+        ],
+        "P3": [
+          "E2-P3-M-004"
+        ],
+        "P4": [
+          "E2-P4-M-004"
+        ],
+        "S1": [
+          "E2-S1-M-004"
+        ]
+      },
+      "status": "CONTINUOUS"
+    },
+    {
+      "line_id": "WALL_LINE_005",
+      "building": "EDIFICIO_2",
+      "start": [
+        -3.348,
+        -0.149
+      ],
+      "end": [
+        -1.898,
+        -0.149
+      ],
+      "thickness_m": 0.3,
+      "floors": {
+        "P1": [
+          "E2-P1-M-005"
+        ],
+        "P2": [
+          "E2-P2-M-005"
+        ],
+        "P3": [
+          "E2-P3-M-005"
+        ],
+        "P4": [
+          "E2-P4-M-005"
+        ],
+        "S1": [
+          "E2-S1-M-005"
+        ]
+      },
+      "status": "CONTINUOUS"
+    },
+    {
+      "line_id": "WALL_LINE_006",
+      "building": "EDIFICIO_2",
+      "start": [
+        -3.348,
+        16.301
+      ],
+      "end": [
+        -1.898,
+        16.301
+      ],
+      "thickness_m": 0.3,
+      "floors": {
+        "P1": [
+          "E2-P1-M-006"
+        ],
+        "P2": [
+          "E2-P2-M-006"
+        ],
+        "P3": [
+          "E2-P3-M-006"
+        ],
+        "P4": [
+          "E2-P4-M-006"
+        ],
+        "S1": [
+          "E2-S1-M-006"
+        ]
+      },
+      "status": "CONTINUOUS"
+    },
+    {
+      "line_id": "WALL_LINE_007",
+      "building": "EDIFICIO_1",
+      "start": [
+        31.191,
+        3.9
+      ],
+      "end": [
+        33.791,
+        3.9
+      ],
+      "thickness_m": 0.2,
+      "floors": {
+        "S1": [
+          "E1-S1-M-026"
+        ],
+        "P1": [
+          "E1-P1-M-004"
+        ],
+        "P2": [
+          "E1-P2-M-007"
+        ],
+        "P3": [
+          "E1-P3-M-007"
+        ],
+        "P4": [
+          "E1-P4-M-007"
+        ]
+      },
+      "status": "CONTINUOUS"
+    },
+    {
+      "line_id": "WALL_LINE_008",
+      "building": "EDIFICIO_1",
+      "start": [
+        30.891,
+        13.845
+      ],
+      "end": [
+        34.091,
+        13.845
+      ],
+      "thickness_m": 0.2,
+      "floors": {
+        "S1": [
+          "E1-S1-M-029"
+        ],
+        "P1": [
+          "E1-P1-M-010"
+        ],
+        "P2": [
+          "E1-P2-M-008"
+        ],
+        "P3": [
+          "E1-P3-M-008"
+        ],
+        "P4": [
+          "E1-P4-M-008"
+        ]
+      },
+      "status": "CONTINUOUS"
+    },
+    {
+      "line_id": "WALL_LINE_009",
+      "building": "EDIFICIO_2",
+      "start": [
+        25.082,
+        3.331
+      ],
+      "end": [
+        25.082,
+        6.151
+      ],
+      "thickness_m": 0.25,
+      "floors": {
+        "S1": [
+          "E2-S1-M-007"
+        ],
+        "P1": [
+          "E2-P1-M-007"
+        ],
+        "P2": [
+          "E2-P2-M-007"
+        ],
+        "P3": [
+          "E2-P3-M-007"
+        ],
+        "P4": [
+          "E2-P4-M-007"
+        ]
+      },
+      "status": "CONTINUOUS"
+    },
+    {
+      "line_id": "WALL_LINE_010",
+      "building": "EDIFICIO_2",
+      "start": [
+        25.207,
+        3.181
+      ],
+      "end": [
+        27.602,
+        3.181
+      ],
+      "thickness_m": 0.3,
+      "floors": {
+        "S1": [
+          "E2-S1-M-008"
+        ],
+        "P1": [
+          "E2-P1-M-008"
+        ],
+        "P2": [
+          "E2-P2-M-008"
+        ],
+        "P3": [
+          "E2-P3-M-008"
+        ],
+        "P4": [
+          "E2-P4-M-008"
+        ]
+      },
+      "status": "CONTINUOUS"
+    },
+    {
+      "line_id": "WALL_LINE_011",
+      "building": "EDIFICIO_2",
+      "start": [
+        27.727,
+        3.331
+      ],
+      "end": [
+        27.727,
+        6.151
+      ],
+      "thickness_m": 0.25,
+      "floors": {
+        "S1": [
+          "E2-S1-M-010"
+        ],
+        "P1": [
+          "E2-P1-M-010"
+        ],
+        "P2": [
+          "E2-P2-M-010"
+        ],
+        "P3": [
+          "E2-P3-M-010"
+        ],
+        "P4": [
+          "E2-P4-M-009"
+        ]
+      },
+      "status": "CONTINUOUS"
+    },
+    {
+      "line_id": "WALL_LINE_012",
+      "building": "EDIFICIO_2",
+      "start": [
+        27.727,
+        8.551
+      ],
+      "end": [
+        27.727,
+        16.501
+      ],
+      "thickness_m": 0.25,
+      "floors": {
+        "S1": [
+          "E2-S1-M-011"
+        ],
+        "P1": [
+          "E2-P1-M-011"
+        ],
+        "P2": [
+          "E2-P2-M-011"
+        ],
+        "P3": [
+          "E2-P3-M-011"
+        ],
+        "P4": [
+          "E2-P4-M-010"
+        ]
+      },
+      "status": "CONTINUOUS"
+    },
+    {
+      "line_id": "WALL_LINE_013",
+      "building": "EDIFICIO_2",
+      "start": [
+        27.727,
+        0.351
+      ],
+      "end": [
+        27.727,
+        3.031
+      ],
+      "thickness_m": 0.25,
+      "floors": {
+        "S1": [
+          "E2-S1-M-009"
+        ],
+        "P1": [
+          "E2-P1-M-009"
+        ],
+        "P2": [
+          "E2-P2-M-009"
+        ],
+        "P3": [
+          "E2-P3-M-009"
+        ]
+      },
+      "status": "EXPECTED_TERMINATION"
+    },
+    {
+      "line_id": "WALL_LINE_014",
+      "building": "EDIFICIO_1",
+      "start": [
+        30.766,
+        12.267
+      ],
+      "end": [
+        30.766,
+        13.745
+      ],
+      "thickness_m": 0.25,
+      "floors": {
+        "S1": [
+          "E1-S1-M-005"
+        ],
+        "P1": [
+          "E1-P1-M-002"
+        ],
+        "P2": [
+          "E1-P2-M-003"
+        ],
+        "P3": [
+          "E1-P3-M-003"
+        ],
+        "P4": [
+          "E1-P4-M-003"
+        ]
+      },
+      "status": "CONTINUOUS"
+    },
+    {
+      "line_id": "WALL_LINE_015",
+      "building": "EDIFICIO_1",
+      "start": [
+        34.216,
+        12.267
+      ],
+      "end": [
+        34.216,
+        13.745
+      ],
+      "thickness_m": 0.25,
+      "floors": {
+        "S1": [
+          "E1-S1-M-049"
+        ],
+        "P1": [
+          "E1-P1-M-026"
+        ],
+        "P2": [
+          "E1-P2-M-005"
+        ],
+        "P3": [
+          "E1-P3-M-005"
+        ],
+        "P4": [
+          "E1-P4-M-012"
+        ]
+      },
+      "status": "CONTINUOUS"
+    },
+    {
+      "line_id": "WALL_LINE_016",
+      "building": "EDIFICIO_1",
+      "start": [
+        31.041,
+        4.0
+      ],
+      "end": [
+        31.041,
+        6.15
+      ],
+      "thickness_m": 0.3,
+      "floors": {
+        "S1": [
+          "E1-S1-M-020"
+        ],
+        "P1": [
+          "E1-P1-M-012"
+        ],
+        "P2": [
+          "E1-P2-M-010"
+        ],
+        "P3": [
+          "E1-P3-M-010"
+        ],
+        "P4": [
+          "E1-P4-M-009"
+        ]
+      },
+      "status": "CONTINUOUS"
+    },
+    {
+      "line_id": "WALL_LINE_017",
+      "building": "EDIFICIO_1",
+      "start": [
+        33.941,
+        4.0
+      ],
+      "end": [
+        33.941,
+        6.15
+      ],
+      "thickness_m": 0.3,
+      "floors": {
+        "S1": [
+          "E1-S1-M-034"
+        ],
+        "P1": [
+          "E1-P1-M-025"
+        ],
+        "P2": [
+          "E1-P2-M-009"
+        ],
+        "P3": [
+          "E1-P3-M-009"
+        ],
+        "P4": [
+          "E1-P4-M-010"
+        ]
+      },
+      "status": "CONTINUOUS"
+    }
+  ],
+  "continuity_tolerance_m": 0.002,
+  "all_walls": [
+    {
+      "id": "E2-P1-M-001",
+      "building": "EDIFICIO_2",
+      "floor": "P1",
+      "start": [
+        -3.648,
+        -1.094
+      ],
+      "end": [
+        -3.648,
+        -0.299
+      ],
+      "thickness_m": 0.6,
+      "length_m": 0.795,
+      "group": "OTHER_CAD_WALL",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E2-P1-M-002",
+      "building": "EDIFICIO_2",
+      "floor": "P1",
+      "start": [
+        -3.648,
+        0.001
+      ],
+      "end": [
+        -3.648,
+        1.826
+      ],
+      "thickness_m": 0.6,
+      "length_m": 1.825,
+      "group": "OTHER_CAD_WALL",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E2-P1-M-003",
+      "building": "EDIFICIO_2",
+      "floor": "P1",
+      "start": [
+        -3.648,
+        14.326
+      ],
+      "end": [
+        -3.648,
+        16.151
+      ],
+      "thickness_m": 0.6,
+      "length_m": 1.825,
+      "group": "OTHER_CAD_WALL",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E2-P1-M-004",
+      "building": "EDIFICIO_2",
+      "floor": "P1",
+      "start": [
+        -3.648,
+        16.451
+      ],
+      "end": [
+        -3.648,
+        17.241
+      ],
+      "thickness_m": 0.6,
+      "length_m": 0.79,
+      "group": "OTHER_CAD_WALL",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E2-P1-M-005",
+      "building": "EDIFICIO_2",
+      "floor": "P1",
+      "start": [
+        -3.348,
+        -0.149
+      ],
+      "end": [
+        -1.898,
+        -0.149
+      ],
+      "thickness_m": 0.3,
+      "length_m": 1.45,
+      "group": "OTHER_CAD_WALL",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E2-P1-M-006",
+      "building": "EDIFICIO_2",
+      "floor": "P1",
+      "start": [
+        -3.348,
+        16.301
+      ],
+      "end": [
+        -1.898,
+        16.301
+      ],
+      "thickness_m": 0.3,
+      "length_m": 1.45,
+      "group": "OTHER_CAD_WALL",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E2-P2-M-001",
+      "building": "EDIFICIO_2",
+      "floor": "P2",
+      "start": [
+        -3.648,
+        -1.094
+      ],
+      "end": [
+        -3.648,
+        -0.299
+      ],
+      "thickness_m": 0.6,
+      "length_m": 0.795,
+      "group": "OTHER_CAD_WALL",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E2-P2-M-002",
+      "building": "EDIFICIO_2",
+      "floor": "P2",
+      "start": [
+        -3.648,
+        0.001
+      ],
+      "end": [
+        -3.648,
+        1.826
+      ],
+      "thickness_m": 0.6,
+      "length_m": 1.825,
+      "group": "OTHER_CAD_WALL",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E2-P2-M-003",
+      "building": "EDIFICIO_2",
+      "floor": "P2",
+      "start": [
+        -3.648,
+        14.326
+      ],
+      "end": [
+        -3.648,
+        16.151
+      ],
+      "thickness_m": 0.6,
+      "length_m": 1.825,
+      "group": "OTHER_CAD_WALL",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E2-P2-M-004",
+      "building": "EDIFICIO_2",
+      "floor": "P2",
+      "start": [
+        -3.648,
+        16.451
+      ],
+      "end": [
+        -3.648,
+        17.241
+      ],
+      "thickness_m": 0.6,
+      "length_m": 0.79,
+      "group": "OTHER_CAD_WALL",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E2-P2-M-005",
+      "building": "EDIFICIO_2",
+      "floor": "P2",
+      "start": [
+        -3.348,
+        -0.149
+      ],
+      "end": [
+        -1.898,
+        -0.149
+      ],
+      "thickness_m": 0.3,
+      "length_m": 1.45,
+      "group": "OTHER_CAD_WALL",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E2-P2-M-006",
+      "building": "EDIFICIO_2",
+      "floor": "P2",
+      "start": [
+        -3.348,
+        16.301
+      ],
+      "end": [
+        -1.898,
+        16.301
+      ],
+      "thickness_m": 0.3,
+      "length_m": 1.45,
+      "group": "OTHER_CAD_WALL",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E2-P3-M-001",
+      "building": "EDIFICIO_2",
+      "floor": "P3",
+      "start": [
+        -3.648,
+        -1.094
+      ],
+      "end": [
+        -3.648,
+        -0.299
+      ],
+      "thickness_m": 0.6,
+      "length_m": 0.795,
+      "group": "OTHER_CAD_WALL",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E2-P3-M-002",
+      "building": "EDIFICIO_2",
+      "floor": "P3",
+      "start": [
+        -3.648,
+        0.001
+      ],
+      "end": [
+        -3.648,
+        1.826
+      ],
+      "thickness_m": 0.6,
+      "length_m": 1.825,
+      "group": "OTHER_CAD_WALL",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E2-P3-M-003",
+      "building": "EDIFICIO_2",
+      "floor": "P3",
+      "start": [
+        -3.648,
+        14.326
+      ],
+      "end": [
+        -3.648,
+        16.151
+      ],
+      "thickness_m": 0.6,
+      "length_m": 1.825,
+      "group": "OTHER_CAD_WALL",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E2-P3-M-004",
+      "building": "EDIFICIO_2",
+      "floor": "P3",
+      "start": [
+        -3.648,
+        16.451
+      ],
+      "end": [
+        -3.648,
+        17.241
+      ],
+      "thickness_m": 0.6,
+      "length_m": 0.79,
+      "group": "OTHER_CAD_WALL",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E2-P3-M-005",
+      "building": "EDIFICIO_2",
+      "floor": "P3",
+      "start": [
+        -3.348,
+        -0.149
+      ],
+      "end": [
+        -1.898,
+        -0.149
+      ],
+      "thickness_m": 0.3,
+      "length_m": 1.45,
+      "group": "OTHER_CAD_WALL",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E2-P3-M-006",
+      "building": "EDIFICIO_2",
+      "floor": "P3",
+      "start": [
+        -3.348,
+        16.301
+      ],
+      "end": [
+        -1.898,
+        16.301
+      ],
+      "thickness_m": 0.3,
+      "length_m": 1.45,
+      "group": "OTHER_CAD_WALL",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E2-P4-M-001",
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "start": [
+        -3.648,
+        -1.094
+      ],
+      "end": [
+        -3.648,
+        -0.299
+      ],
+      "thickness_m": 0.6,
+      "length_m": 0.795,
+      "group": "OTHER_CAD_WALL",
+      "source": "2024_22-102.dxf"
+    },
+    {
+      "id": "E2-P4-M-002",
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "start": [
+        -3.648,
+        0.001
+      ],
+      "end": [
+        -3.648,
+        1.826
+      ],
+      "thickness_m": 0.6,
+      "length_m": 1.825,
+      "group": "OTHER_CAD_WALL",
+      "source": "2024_22-102.dxf"
+    },
+    {
+      "id": "E2-P4-M-003",
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "start": [
+        -3.648,
+        14.326
+      ],
+      "end": [
+        -3.648,
+        16.151
+      ],
+      "thickness_m": 0.6,
+      "length_m": 1.825,
+      "group": "OTHER_CAD_WALL",
+      "source": "2024_22-102.dxf"
+    },
+    {
+      "id": "E2-P4-M-004",
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "start": [
+        -3.648,
+        16.451
+      ],
+      "end": [
+        -3.648,
+        17.241
+      ],
+      "thickness_m": 0.6,
+      "length_m": 0.79,
+      "group": "OTHER_CAD_WALL",
+      "source": "2024_22-102.dxf"
+    },
+    {
+      "id": "E2-P4-M-005",
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "start": [
+        -3.348,
+        -0.149
+      ],
+      "end": [
+        -1.898,
+        -0.149
+      ],
+      "thickness_m": 0.3,
+      "length_m": 1.45,
+      "group": "OTHER_CAD_WALL",
+      "source": "2024_22-102.dxf"
+    },
+    {
+      "id": "E2-P4-M-006",
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "start": [
+        -3.348,
+        16.301
+      ],
+      "end": [
+        -1.898,
+        16.301
+      ],
+      "thickness_m": 0.3,
+      "length_m": 1.45,
+      "group": "OTHER_CAD_WALL",
+      "source": "2024_22-102.dxf"
+    },
+    {
+      "id": "E2-S1-M-001",
+      "building": "EDIFICIO_2",
+      "floor": "S1",
+      "start": [
+        -3.648,
+        -1.094
+      ],
+      "end": [
+        -3.648,
+        -0.299
+      ],
+      "thickness_m": 0.6,
+      "length_m": 0.795,
+      "group": "OTHER_CAD_WALL",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E2-S1-M-002",
+      "building": "EDIFICIO_2",
+      "floor": "S1",
+      "start": [
+        -3.648,
+        0.001
+      ],
+      "end": [
+        -3.648,
+        1.826
+      ],
+      "thickness_m": 0.6,
+      "length_m": 1.825,
+      "group": "OTHER_CAD_WALL",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E2-S1-M-003",
+      "building": "EDIFICIO_2",
+      "floor": "S1",
+      "start": [
+        -3.648,
+        14.326
+      ],
+      "end": [
+        -3.648,
+        16.151
+      ],
+      "thickness_m": 0.6,
+      "length_m": 1.825,
+      "group": "OTHER_CAD_WALL",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E2-S1-M-004",
+      "building": "EDIFICIO_2",
+      "floor": "S1",
+      "start": [
+        -3.648,
+        16.451
+      ],
+      "end": [
+        -3.648,
+        17.241
+      ],
+      "thickness_m": 0.6,
+      "length_m": 0.79,
+      "group": "OTHER_CAD_WALL",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E2-S1-M-005",
+      "building": "EDIFICIO_2",
+      "floor": "S1",
+      "start": [
+        -3.348,
+        -0.149
+      ],
+      "end": [
+        -1.898,
+        -0.149
+      ],
+      "thickness_m": 0.3,
+      "length_m": 1.45,
+      "group": "OTHER_CAD_WALL",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E2-S1-M-006",
+      "building": "EDIFICIO_2",
+      "floor": "S1",
+      "start": [
+        -3.348,
+        16.301
+      ],
+      "end": [
+        -1.898,
+        16.301
+      ],
+      "thickness_m": 0.3,
+      "length_m": 1.45,
+      "group": "OTHER_CAD_WALL",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E1-S1-M-026",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "start": [
+        31.191,
+        3.9
+      ],
+      "end": [
+        33.791,
+        3.9
+      ],
+      "thickness_m": 0.2,
+      "length_m": 2.6,
+      "group": "CORE_C_ED1_01",
+      "source": "2017_67-101.dxf"
+    },
+    {
+      "id": "E1-S1-M-029",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "start": [
+        30.891,
+        13.845
+      ],
+      "end": [
+        34.091,
+        13.845
+      ],
+      "thickness_m": 0.2,
+      "length_m": 3.2,
+      "group": "CORE_C_ED1_02",
+      "source": "2017_67-101.dxf"
+    },
+    {
+      "id": "E2-S1-M-007",
+      "building": "EDIFICIO_2",
+      "floor": "S1",
+      "start": [
+        25.082,
+        3.331
+      ],
+      "end": [
+        25.082,
+        6.151
+      ],
+      "thickness_m": 0.25,
+      "length_m": 2.82,
+      "group": "CORE_C_ED2_01",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E2-P1-M-007",
+      "building": "EDIFICIO_2",
+      "floor": "P1",
+      "start": [
+        25.082,
+        3.331
+      ],
+      "end": [
+        25.082,
+        6.151
+      ],
+      "thickness_m": 0.25,
+      "length_m": 2.82,
+      "group": "CORE_C_ED2_01",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E2-P2-M-007",
+      "building": "EDIFICIO_2",
+      "floor": "P2",
+      "start": [
+        25.082,
+        3.331
+      ],
+      "end": [
+        25.082,
+        6.151
+      ],
+      "thickness_m": 0.25,
+      "length_m": 2.82,
+      "group": "CORE_C_ED2_01",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E2-P3-M-007",
+      "building": "EDIFICIO_2",
+      "floor": "P3",
+      "start": [
+        25.082,
+        3.331
+      ],
+      "end": [
+        25.082,
+        6.151
+      ],
+      "thickness_m": 0.25,
+      "length_m": 2.82,
+      "group": "CORE_C_ED2_01",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E2-S1-M-008",
+      "building": "EDIFICIO_2",
+      "floor": "S1",
+      "start": [
+        25.207,
+        3.181
+      ],
+      "end": [
+        27.602,
+        3.181
+      ],
+      "thickness_m": 0.3,
+      "length_m": 2.395,
+      "group": "CORE_C_ED2_01",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E2-P1-M-008",
+      "building": "EDIFICIO_2",
+      "floor": "P1",
+      "start": [
+        25.207,
+        3.181
+      ],
+      "end": [
+        27.602,
+        3.181
+      ],
+      "thickness_m": 0.3,
+      "length_m": 2.395,
+      "group": "CORE_C_ED2_01",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E2-P2-M-008",
+      "building": "EDIFICIO_2",
+      "floor": "P2",
+      "start": [
+        25.207,
+        3.181
+      ],
+      "end": [
+        27.602,
+        3.181
+      ],
+      "thickness_m": 0.3,
+      "length_m": 2.395,
+      "group": "CORE_C_ED2_01",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E2-P3-M-008",
+      "building": "EDIFICIO_2",
+      "floor": "P3",
+      "start": [
+        25.207,
+        3.181
+      ],
+      "end": [
+        27.602,
+        3.181
+      ],
+      "thickness_m": 0.3,
+      "length_m": 2.395,
+      "group": "CORE_C_ED2_01",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E2-S1-M-010",
+      "building": "EDIFICIO_2",
+      "floor": "S1",
+      "start": [
+        27.727,
+        3.331
+      ],
+      "end": [
+        27.727,
+        6.151
+      ],
+      "thickness_m": 0.25,
+      "length_m": 2.82,
+      "group": "CORE_C_ED2_01",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E2-P1-M-010",
+      "building": "EDIFICIO_2",
+      "floor": "P1",
+      "start": [
+        27.727,
+        3.331
+      ],
+      "end": [
+        27.727,
+        6.151
+      ],
+      "thickness_m": 0.25,
+      "length_m": 2.82,
+      "group": "CORE_C_ED2_01",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E2-P2-M-010",
+      "building": "EDIFICIO_2",
+      "floor": "P2",
+      "start": [
+        27.727,
+        3.331
+      ],
+      "end": [
+        27.727,
+        6.151
+      ],
+      "thickness_m": 0.25,
+      "length_m": 2.82,
+      "group": "CORE_C_ED2_01",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E2-P3-M-010",
+      "building": "EDIFICIO_2",
+      "floor": "P3",
+      "start": [
+        27.727,
+        3.331
+      ],
+      "end": [
+        27.727,
+        6.151
+      ],
+      "thickness_m": 0.25,
+      "length_m": 2.82,
+      "group": "CORE_C_ED2_01",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E2-S1-M-011",
+      "building": "EDIFICIO_2",
+      "floor": "S1",
+      "start": [
+        27.727,
+        8.551
+      ],
+      "end": [
+        27.727,
+        16.501
+      ],
+      "thickness_m": 0.25,
+      "length_m": 7.95,
+      "group": "OTHER_CAD_WALL",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E2-P1-M-011",
+      "building": "EDIFICIO_2",
+      "floor": "P1",
+      "start": [
+        27.727,
+        8.551
+      ],
+      "end": [
+        27.727,
+        16.501
+      ],
+      "thickness_m": 0.25,
+      "length_m": 7.95,
+      "group": "OTHER_CAD_WALL",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E2-P2-M-011",
+      "building": "EDIFICIO_2",
+      "floor": "P2",
+      "start": [
+        27.727,
+        8.551
+      ],
+      "end": [
+        27.727,
+        16.501
+      ],
+      "thickness_m": 0.25,
+      "length_m": 7.95,
+      "group": "OTHER_CAD_WALL",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E2-P3-M-011",
+      "building": "EDIFICIO_2",
+      "floor": "P3",
+      "start": [
+        27.727,
+        8.551
+      ],
+      "end": [
+        27.727,
+        16.501
+      ],
+      "thickness_m": 0.25,
+      "length_m": 7.95,
+      "group": "OTHER_CAD_WALL",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E2-S1-M-009",
+      "building": "EDIFICIO_2",
+      "floor": "S1",
+      "start": [
+        27.727,
+        0.351
+      ],
+      "end": [
+        27.727,
+        3.031
+      ],
+      "thickness_m": 0.25,
+      "length_m": 2.68,
+      "group": "OTHER_CAD_WALL",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E2-P1-M-009",
+      "building": "EDIFICIO_2",
+      "floor": "P1",
+      "start": [
+        27.727,
+        0.351
+      ],
+      "end": [
+        27.727,
+        3.031
+      ],
+      "thickness_m": 0.25,
+      "length_m": 2.68,
+      "group": "OTHER_CAD_WALL",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E2-P2-M-009",
+      "building": "EDIFICIO_2",
+      "floor": "P2",
+      "start": [
+        27.727,
+        0.351
+      ],
+      "end": [
+        27.727,
+        3.031
+      ],
+      "thickness_m": 0.25,
+      "length_m": 2.68,
+      "group": "OTHER_CAD_WALL",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E2-P3-M-009",
+      "building": "EDIFICIO_2",
+      "floor": "P3",
+      "start": [
+        27.727,
+        0.351
+      ],
+      "end": [
+        27.727,
+        3.031
+      ],
+      "thickness_m": 0.25,
+      "length_m": 2.68,
+      "group": "OTHER_CAD_WALL",
+      "source": "2024_22-101.dxf"
+    },
+    {
+      "id": "E1-S1-M-005",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "start": [
+        30.766,
+        12.267
+      ],
+      "end": [
+        30.766,
+        13.745
+      ],
+      "thickness_m": 0.25,
+      "length_m": 1.478,
+      "group": "CORE_C_ED1_02",
+      "source": "2017_67-101.dxf"
+    },
+    {
+      "id": "E1-S1-M-049",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "start": [
+        34.216,
+        12.267
+      ],
+      "end": [
+        34.216,
+        13.745
+      ],
+      "thickness_m": 0.25,
+      "length_m": 1.478,
+      "group": "CORE_C_ED1_02",
+      "source": "2017_67-101.dxf"
+    },
+    {
+      "id": "E1-S1-M-020",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "start": [
+        31.041,
+        4.0
+      ],
+      "end": [
+        31.041,
+        6.15
+      ],
+      "thickness_m": 0.3,
+      "length_m": 2.15,
+      "group": "CORE_C_ED1_01",
+      "source": "2017_67-101.dxf"
+    },
+    {
+      "id": "E1-S1-M-034",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "start": [
+        33.941,
+        4.0
+      ],
+      "end": [
+        33.941,
+        6.15
+      ],
+      "thickness_m": 0.3,
+      "length_m": 2.15,
+      "group": "CORE_C_ED1_01",
+      "source": "2017_67-101.dxf"
+    },
+    {
+      "id": "E1-P1-M-012",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "start": [
+        31.041,
+        4.0
+      ],
+      "end": [
+        31.041,
+        6.15
+      ],
+      "thickness_m": 0.3,
+      "length_m": 2.15,
+      "group": "CORE_C_ED1_01",
+      "source": "2017_67-101.dxf"
+    },
+    {
+      "id": "E1-P1-M-004",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "start": [
+        31.191,
+        3.9
+      ],
+      "end": [
+        33.791,
+        3.9
+      ],
+      "thickness_m": 0.2,
+      "length_m": 2.6,
+      "group": "CORE_C_ED1_01",
+      "source": "2017_67-101.dxf"
+    },
+    {
+      "id": "E1-P1-M-025",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "start": [
+        33.941,
+        4.0
+      ],
+      "end": [
+        33.941,
+        6.15
+      ],
+      "thickness_m": 0.3,
+      "length_m": 2.15,
+      "group": "CORE_C_ED1_01",
+      "source": "2017_67-101.dxf"
+    },
+    {
+      "id": "E1-P2-M-010",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "start": [
+        31.041,
+        4.0
+      ],
+      "end": [
+        31.041,
+        6.15
+      ],
+      "thickness_m": 0.3,
+      "length_m": 2.15,
+      "group": "CORE_C_ED1_01",
+      "source": "2017_67-102.dxf"
+    },
+    {
+      "id": "E1-P2-M-007",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "start": [
+        31.191,
+        3.9
+      ],
+      "end": [
+        33.791,
+        3.9
+      ],
+      "thickness_m": 0.2,
+      "length_m": 2.6,
+      "group": "CORE_C_ED1_01",
+      "source": "2017_67-102.dxf"
+    },
+    {
+      "id": "E1-P2-M-009",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "start": [
+        33.941,
+        4.0
+      ],
+      "end": [
+        33.941,
+        6.15
+      ],
+      "thickness_m": 0.3,
+      "length_m": 2.15,
+      "group": "CORE_C_ED1_01",
+      "source": "2017_67-102.dxf"
+    },
+    {
+      "id": "E1-P3-M-010",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "start": [
+        31.041,
+        4.0
+      ],
+      "end": [
+        31.041,
+        6.15
+      ],
+      "thickness_m": 0.3,
+      "length_m": 2.15,
+      "group": "CORE_C_ED1_01",
+      "source": "2017_67-102.dxf"
+    },
+    {
+      "id": "E1-P3-M-007",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "start": [
+        31.191,
+        3.9
+      ],
+      "end": [
+        33.791,
+        3.9
+      ],
+      "thickness_m": 0.2,
+      "length_m": 2.6,
+      "group": "CORE_C_ED1_01",
+      "source": "2017_67-102.dxf"
+    },
+    {
+      "id": "E1-P3-M-009",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "start": [
+        33.941,
+        4.0
+      ],
+      "end": [
+        33.941,
+        6.15
+      ],
+      "thickness_m": 0.3,
+      "length_m": 2.15,
+      "group": "CORE_C_ED1_01",
+      "source": "2017_67-102.dxf"
+    },
+    {
+      "id": "E1-P4-M-009",
+      "building": "EDIFICIO_1",
+      "floor": "P4",
+      "start": [
+        31.041,
+        4.0
+      ],
+      "end": [
+        31.041,
+        6.15
+      ],
+      "thickness_m": 0.3,
+      "length_m": 2.15,
+      "group": "CORE_C_ED1_01",
+      "source": "2017_67-103.dxf"
+    },
+    {
+      "id": "E1-P4-M-007",
+      "building": "EDIFICIO_1",
+      "floor": "P4",
+      "start": [
+        31.191,
+        3.9
+      ],
+      "end": [
+        33.791,
+        3.9
+      ],
+      "thickness_m": 0.2,
+      "length_m": 2.6,
+      "group": "CORE_C_ED1_01",
+      "source": "2017_67-103.dxf"
+    },
+    {
+      "id": "E1-P4-M-010",
+      "building": "EDIFICIO_1",
+      "floor": "P4",
+      "start": [
+        33.941,
+        4.0
+      ],
+      "end": [
+        33.941,
+        6.15
+      ],
+      "thickness_m": 0.3,
+      "length_m": 2.15,
+      "group": "CORE_C_ED1_01",
+      "source": "2017_67-103.dxf"
+    },
+    {
+      "id": "E1-P1-M-002",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "start": [
+        30.766,
+        12.266
+      ],
+      "end": [
+        30.766,
+        13.745
+      ],
+      "thickness_m": 0.25,
+      "length_m": 1.479,
+      "group": "CORE_C_ED1_02",
+      "source": "2017_67-101.dxf"
+    },
+    {
+      "id": "E1-P1-M-010",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "start": [
+        30.891,
+        13.845
+      ],
+      "end": [
+        34.091,
+        13.845
+      ],
+      "thickness_m": 0.2,
+      "length_m": 3.2,
+      "group": "CORE_C_ED1_02",
+      "source": "2017_67-101.dxf"
+    },
+    {
+      "id": "E1-P1-M-026",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "start": [
+        34.216,
+        12.266
+      ],
+      "end": [
+        34.216,
+        13.745
+      ],
+      "thickness_m": 0.25,
+      "length_m": 1.479,
+      "group": "CORE_C_ED1_02",
+      "source": "2017_67-101.dxf"
+    },
+    {
+      "id": "E1-P2-M-003",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "start": [
+        30.766,
+        12.266
+      ],
+      "end": [
+        30.766,
+        13.745
+      ],
+      "thickness_m": 0.25,
+      "length_m": 1.479,
+      "group": "CORE_C_ED1_02",
+      "source": "2017_67-102.dxf"
+    },
+    {
+      "id": "E1-P2-M-008",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "start": [
+        30.891,
+        13.845
+      ],
+      "end": [
+        34.091,
+        13.845
+      ],
+      "thickness_m": 0.2,
+      "length_m": 3.2,
+      "group": "CORE_C_ED1_02",
+      "source": "2017_67-102.dxf"
+    },
+    {
+      "id": "E1-P2-M-005",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "start": [
+        34.216,
+        12.266
+      ],
+      "end": [
+        34.216,
+        13.745
+      ],
+      "thickness_m": 0.25,
+      "length_m": 1.479,
+      "group": "CORE_C_ED1_02",
+      "source": "2017_67-102.dxf"
+    },
+    {
+      "id": "E1-P3-M-003",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "start": [
+        30.766,
+        12.266
+      ],
+      "end": [
+        30.766,
+        13.745
+      ],
+      "thickness_m": 0.25,
+      "length_m": 1.479,
+      "group": "CORE_C_ED1_02",
+      "source": "2017_67-102.dxf"
+    },
+    {
+      "id": "E1-P3-M-008",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "start": [
+        30.891,
+        13.845
+      ],
+      "end": [
+        34.091,
+        13.845
+      ],
+      "thickness_m": 0.2,
+      "length_m": 3.2,
+      "group": "CORE_C_ED1_02",
+      "source": "2017_67-102.dxf"
+    },
+    {
+      "id": "E1-P3-M-005",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "start": [
+        34.216,
+        12.266
+      ],
+      "end": [
+        34.216,
+        13.745
+      ],
+      "thickness_m": 0.25,
+      "length_m": 1.479,
+      "group": "CORE_C_ED1_02",
+      "source": "2017_67-102.dxf"
+    },
+    {
+      "id": "E1-P4-M-003",
+      "building": "EDIFICIO_1",
+      "floor": "P4",
+      "start": [
+        30.766,
+        12.266
+      ],
+      "end": [
+        30.766,
+        13.745
+      ],
+      "thickness_m": 0.25,
+      "length_m": 1.479,
+      "group": "CORE_C_ED1_02",
+      "source": "2017_67-103.dxf"
+    },
+    {
+      "id": "E1-P4-M-008",
+      "building": "EDIFICIO_1",
+      "floor": "P4",
+      "start": [
+        30.891,
+        13.845
+      ],
+      "end": [
+        34.091,
+        13.845
+      ],
+      "thickness_m": 0.2,
+      "length_m": 3.2,
+      "group": "CORE_C_ED1_02",
+      "source": "2017_67-103.dxf"
+    },
+    {
+      "id": "E1-P4-M-012",
+      "building": "EDIFICIO_1",
+      "floor": "P4",
+      "start": [
+        34.216,
+        12.266
+      ],
+      "end": [
+        34.216,
+        13.745
+      ],
+      "thickness_m": 0.25,
+      "length_m": 1.479,
+      "group": "CORE_C_ED1_02",
+      "source": "2017_67-103.dxf"
+    },
+    {
+      "id": "E2-P4-M-007",
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "start": [
+        25.082,
+        3.331
+      ],
+      "end": [
+        25.082,
+        6.151
+      ],
+      "thickness_m": 0.25,
+      "length_m": 2.82,
+      "group": "CORE_C_ED2_01",
+      "source": "2024_22-102.dxf"
+    },
+    {
+      "id": "E2-P4-M-008",
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "start": [
+        25.207,
+        3.181
+      ],
+      "end": [
+        27.602,
+        3.181
+      ],
+      "thickness_m": 0.3,
+      "length_m": 2.395,
+      "group": "CORE_C_ED2_01",
+      "source": "2024_22-102.dxf"
+    },
+    {
+      "id": "E2-P4-M-009",
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "start": [
+        27.727,
+        3.331
+      ],
+      "end": [
+        27.727,
+        6.151
+      ],
+      "thickness_m": 0.25,
+      "length_m": 2.82,
+      "group": "CORE_C_ED2_01",
+      "source": "2024_22-102.dxf"
+    },
+    {
+      "id": "E2-P4-M-010",
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "start": [
+        27.727,
+        8.551
+      ],
+      "end": [
+        27.727,
+        16.501
+      ],
+      "thickness_m": 0.25,
+      "length_m": 7.95,
+      "group": "ED2_LONG_WALL_CAD_POSITION",
+      "source": "2024_22-102.dxf"
+    }
+  ],
+  "duplicate_walls": [],
+  "wall_overlap_reviews": [],
+  "analysis_comparison": {
+    "G": {
+      "before_max_translation_m": 0.09486792927002431,
+      "after_max_translation_m": 0.011054195111213172,
+      "equilibrium_relative_residual": 7.265762434873885e-16,
+      "before_reaction_force_N": [
+        1.894659362733364e-08,
+        -1.4661054592579603e-09,
+        80184104.22099999
+      ],
+      "after_reaction_force_N": [
+        2.3312168195843697e-08,
+        7.618068869333276e-10,
+        82034948.58199994
+      ]
+    },
+    "Q": {
+      "before_max_translation_m": 0.02236640070881047,
+      "after_max_translation_m": 0.0023813628803056337,
+      "equilibrium_relative_residual": 4.53628896632246e-16,
+      "before_reaction_force_N": [
+        1.9936123862862587e-09,
+        1.9190338207408786e-09,
+        24636593.872999996
+      ],
+      "after_reaction_force_N": [
+        1.6298145055770874e-09,
+        2.209617377957329e-09,
+        24636593.87299999
+      ]
+    },
+    "EX": {
+      "before_max_translation_m": 0.0670465755131935,
+      "after_max_translation_m": 0.06887272139364846,
+      "equilibrium_relative_residual": 7.686221868927501e-15,
+      "before_reaction_force_N": [
+        -18047336.341298874,
+        -1.386524672852829e-09,
+        6.868503987789154e-09
+      ],
+      "after_reaction_force_N": [
+        -18417505.21329986,
+        -6.543359631905332e-09,
+        4.540197551250458e-09
+      ]
+    },
+    "EY": {
+      "before_max_translation_m": 0.09936988594678171,
+      "after_max_translation_m": 0.09972030889895302,
+      "equilibrium_relative_residual": 5.0769518134229075e-14,
+      "before_reaction_force_N": [
+        -1.1865631677210331e-07,
+        -18047336.341300953,
+        -8.512870408594608e-09
+      ],
+      "after_reaction_force_N": [
+        -3.798049874603748e-09,
+        -18417505.213300936,
+        -7.246853783726692e-09
+      ]
+    }
+  },
+  "remaining_removed_wall_candidates": [
+    "E1-P1-M-027",
+    "E1-P1-M-028",
+    "E1-P1-M-029",
+    "E1-P1-M-003",
+    "E1-P2-M-002",
+    "E1-P3-M-002",
+    "E1-P4-M-002",
+    "E1-S1-M-001",
+    "E1-S1-M-007",
+    "E1-S1-M-027",
+    "E1-S1-M-051",
+    "E1-S1-M-052",
+    "E1-S1-M-053",
+    "E1-S1-M-060",
+    "E1-S1-M-004",
+    "E1-S1-M-002",
+    "E1-S1-M-031",
+    "E1-S1-M-016",
+    "E1-S1-M-030",
+    "E1-S1-M-039",
+    "E1-S1-M-050",
+    "E1-S1-M-019",
+    "E1-P1-M-001",
+    "E1-P1-M-015",
+    "E1-P1-M-024",
+    "E1-P1-M-023",
+    "E1-P1-M-016",
+    "E1-P1-M-020",
+    "E1-P1-M-022",
+    "E1-P1-M-021",
+    "E1-P1-M-032",
+    "E1-P1-M-031",
+    "E1-P1-M-034",
+    "E1-P1-M-036",
+    "E1-P1-M-035",
+    "E1-P1-M-033",
+    "E1-P1-M-037",
+    "E1-S1-M-061"
+  ],
+  "wrong_side_verdict": "CAD_POSITION_RETAINED; not moved; no evidence for reflection",
+  "material_note": "ED1-P4 G35 is existing lab fallback, not newly primary-confirmed; capacity reinforcement remains ASSUMED_FOR_LAB."
+}

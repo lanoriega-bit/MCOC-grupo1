@@ -330,3 +330,13 @@ Todavía no promovido en este checkpoint. ED1-P4 conserva el supuesto material
 G35 explícito; no se declara confirmación primaria nueva. El muro largo ED2
 se mantiene en su lado CAD, según aclaración del usuario.
 Ver `entregas/P1L6/wall_continuity/WALL_CONTINUITY_BEFORE.md`.
+
+### Promoción y análisis CURRENT de núcleos
+
+30 muros reintegrados, cuatro muros S1 registrados contra ejes primarios;
+84 muros activos. E2-P4-C-004/C-007: sección existente 70×70 cm de P3,
+con XY, altura, material e IDs preservados. FE 677 segmentos, 1170 nodos,
+44 apoyos FE, 0 componentes sin apoyo. OpenSees G/Q/EX/EY PASS; capacidad
+669 registros y export CURRENT_VERIFIED con hashes coherentes.
+Muros duplicados y solapes accidentales: 0. Luis original intacto.
+Véase `entregas/P1L6/wall_continuity/WALL_CONTINUITY_AFTER.md`.
