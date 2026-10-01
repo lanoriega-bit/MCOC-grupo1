@@ -10,15 +10,15 @@ namespace Mcoc.UnityViewer
     {
         public void RunVisualUxReview() { if(Application.isPlaying)StartCoroutine(VisualUxReview()); }
 
-        IEnumerator VisualUxReview()
+        IEnumerator VisualUxReview(string outputFolder = null)
         {
             var checks=new List<WallReviewCheck>();
             Action<string,bool> check=(name,pass)=>checks.Add(new WallReviewCheck { check=name,pass=pass });
             check("CURRENT verified",currentResultsAvailable&&ReloadCurrentContractAndCheck());
             check("startup nodes ON",typeVisible["node"]);
-            check("startup slabs OFF",!typeVisible["architectural_slab"]);
+            check("startup slabs OFF",!typeVisible["slab"]&&(!typeVisible.ContainsKey("architectural_slab")||!typeVisible["architectural_slab"]));
             check("startup capacity OFF",!structuralFailureVisualizationEnabled);
-            string folder=Path.Combine(FindRepositoryRoot(),"entregas","P1L6","visual_ux");
+            string folder=outputFolder??Path.Combine(FindRepositoryRoot(),"entregas","P1L6","visual_ux");
             Directory.CreateDirectory(folder);
             ResetPresentation();SetQuickView("Iso");
             foreach(string type in new[]{"beam","column","wall"})
@@ -28,7 +28,7 @@ namespace Mcoc.UnityViewer
                 check(type+" category pattern",material.GetFloat("_Pattern")== (type=="column"?1:type=="wall"?2:0));
             }
             check("slab white transparent",MatFor("architectural_slab").color==new Color(1,1,1,0.18f)&&MatFor("architectural_slab").renderQueue==3000);
-            foreach(string type in new[]{"beam","column","wall","node","architectural_slab","support","tributary"})
+            foreach(string type in new[]{"beam","column","wall","node","slab","support","tributary"})
             {
                 ToggleType(type,true);
                 check(type+" layer available",byType.ContainsKey(type)&&byType[type].Exists(go=>go!=null&&go.activeSelf));

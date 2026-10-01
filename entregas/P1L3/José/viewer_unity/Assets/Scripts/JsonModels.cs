@@ -249,6 +249,10 @@ namespace Mcoc.UnityViewer
     [Serializable]
     public class TributaryArea
     {
+        public string panel_id;
+        public List<string> receiver_ids;
+        public List<double> surface_vertices_xy_flat;
+        public List<int> surface_triangles;
         public string building;
         public string floor;
         public string beam_id;

@@ -1,5 +1,14 @@
 # P1L2 Status
 
+## Losas CURRENT — saneamiento aprobado (2026-10-01)
+
+- Rama `codex/current-slab-reconstruction`: exclusión sur ED1-S1 227,099 m²,
+  franja lineal duplicada corregida y cargas/análisis/capacidades regenerados.
+- Diez losas poligonales accesibles en Modelo, OFF al iniciar; sin piloto P4 duplicado.
+- FE y referencia original Luis intactos. Contornos físicos todavía REVIEW_REQUIRED;
+  no confundir QA numérico con certificación de perímetros/huecos.
+- Fuente/tabla/pendientes: [losas CURRENT](../P1L6/slab_reconstruction/README.md).
+
 ## Viewer CURRENT — checkpoint visual/UX (2026-10-01)
 
 - Rama `codex/unity-visual-ux`: materiales visuales, paneles compactos,

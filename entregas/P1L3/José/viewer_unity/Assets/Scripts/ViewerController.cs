@@ -632,6 +632,8 @@ namespace Mcoc.UnityViewer
 
         void BuildArchitecture()
         {
+            // Historical P4 pilot is archived, not a second physical slab in CURRENT.
+            if (model != null && model.solids != null && model.solids.Exists(s => s.kind == "slab_polygon")) return;
             if (architecture.objects == null) return;
             foreach (var item in architecture.objects)
             {
@@ -1111,6 +1113,26 @@ namespace Mcoc.UnityViewer
                     float z = slabZ.TryGetValue((a.building ?? "") + "|" + (a.floor ?? ""), out var zz) ? zz : 0f;
                     z += 0.06f;
                     var ei = CreateTribPoly("trib_" + (a.beam_id ?? idx.ToString()), a.polygon, z, maxLoad, (float)a.load_kN, "tributary", a.building, a.floor, a.beam_id, a.elementTag);
+                    // CURRENT carries exact hole-aware triangles; legacy datasets retain their fallback.
+                    if (a.surface_vertices_xy_flat != null && a.surface_triangles != null && a.surface_triangles.Count > 0)
+                    {
+                        var vertices = new Vector3[a.surface_vertices_xy_flat.Count / 2];
+                        for (int v = 0; v < vertices.Length; v++)
+                            vertices[v] = new Vector3((float)a.surface_vertices_xy_flat[2*v], (float)a.surface_vertices_xy_flat[2*v+1], z);
+                        var indices = new List<int>();
+                        for (int t = 0; t < a.surface_triangles.Count; t += 3)
+                        {
+                            indices.Add(a.surface_triangles[t]); indices.Add(a.surface_triangles[t+1]); indices.Add(a.surface_triangles[t+2]);
+                            indices.Add(a.surface_triangles[t+2]); indices.Add(a.surface_triangles[t+1]); indices.Add(a.surface_triangles[t]);
+                        }
+                        var exactMesh = new Mesh();
+                        exactMesh.vertices = vertices; exactMesh.triangles = indices.ToArray();
+                        exactMesh.RecalculateNormals(); exactMesh.RecalculateBounds();
+                        var oldMesh = ei.go.GetComponent<MeshFilter>().sharedMesh;
+                        ei.go.GetComponent<MeshFilter>().sharedMesh = exactMesh;
+                        ei.go.GetComponent<MeshCollider>().sharedMesh = exactMesh;
+                        Destroy(oldMesh);
+                    }
                     ei.tribAreaM2 = a.area_m2;
                     ei.tribLoadKN = a.load_kN;
                     if (a.start != null && a.start.Count >= 2) ei.nodeI = new Vector3((float)a.start[0], (float)a.start[1], z);

@@ -31,7 +31,7 @@
   },
   "manual_sample": {
     "element_id": "E1-P2-V-041",
-    "R_My_kNm": 402.4272013799679
+    "R_My_kNm": 402.9894785570404
   },
   "unsupported_fe_components": [],
   "limitations": [
@@ -39,7 +39,7 @@
     "85 active ED1/P4 structural members retain an explicitly inferred material fallback.",
     "10 non-FE slabs have MAT_UNKNOWN; slab thickness 0.15 m is an academic load fallback.",
     "6 point-load catalog entries lack an unequivocal receiver and remain excluded.",
-    "LT1 Q differs by +15.193% from ETABS; benchmark, not a calibration target.",
+    "LT1 Q differs by +5.610% from ETABS; benchmark, not a calibration target.",
     "Unity compile/Play requires a separate editor test; this script verifies the JSON contract only."
   ]
 }

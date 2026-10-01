@@ -40,6 +40,9 @@ def plot_polygon(ax,poly,color,alpha=0.2):
         for hole in p.interiors:ax.plot(*hole.xy,color='#cf1a70',lw=1.5)
 
 def main():
+    global HERE
+    if '--after' in sys.argv:
+        HERE = HERE / 'after'
     HERE.mkdir(parents=True,exist_ok=True)
     master=read(CENTRAL/'model_master.json')
     elements={e['element_id']:e for e in master['elements'] if e.get('active')}
@@ -60,7 +63,7 @@ def main():
     visual=read(STREAM/'p1l5_current_tributary_areas.json')
     visual_rows=visual.get('areas',visual.get('tributary_areas',[]))
     for p in visual_rows:
-        for eid in p.get('member_ids',[]):
+        for eid in p.get('receiver_ids',p.get('member_ids',[])):
             if eid not in elements:visual_orphans.append({'area':p.get('id'),'receiver':eid})
     result=[]
     for slab in sorted(slabs,key=lambda e:(e['building'],['S1','P1','P2','P3','P4'].index(e['floor']))):
@@ -97,7 +100,7 @@ def main():
             'cad_source':str(source.relative_to(ROOT)).replace('\\','/'),'cad_sha256':digest(source),
             'cad_slab_segments':len(segments),'raw_cad_closed_loops':cad_closed,
             'historical_boxes_not_active':len(old_boxes),
-            'origin':'LOAD_ZONE_UNION_NOT_INDEPENDENT_PHYSICAL_CONTOUR',
+            'origin':g.get('physical_boundary_source','LOAD_ZONE_UNION_NOT_INDEPENDENT_PHYSICAL_CONTOUR'),
             'status':'REVIEW_REQUIRED_PHYSICAL_BOUNDARY',
         }
         fig,axes=plt.subplots(1,2,figsize=(16,5.5),sharex=True,sharey=True)

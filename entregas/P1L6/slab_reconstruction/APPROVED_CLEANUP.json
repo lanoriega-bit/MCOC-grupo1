@@ -1,0 +1,286 @@
+{
+  "checkpoint": "CURRENT_SLAB_S1_SOUTH_EXCLUSION_AND_MESH_REPAIR",
+  "removed_area_m2": 227.09939209685209,
+  "excluded_load_entries": [
+    {
+      "load_id": "L700-E1-S1-H04-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "source_sheet": "2017_67-700",
+      "source_value": 500,
+      "source_unit": "kgf/m2",
+      "SI_value": 4.903325,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              49.04102726870053,
+              -9.82816454677677
+            ],
+            [
+              27.141023235132845,
+              -9.82816454677677
+            ],
+            [
+              27.141023235132845,
+              -0.26873453653937757
+            ],
+            [
+              49.04102726870053,
+              -0.26873453653937757
+            ],
+            [
+              49.04102726870053,
+              -9.82816454677677
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO 1° SUBTERRANEO",
+        "hatch_pattern": "HONEY"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED",
+      "current_application": {
+        "status": "REMOVED_USER_APPROVED_PHYSICAL_SECTOR",
+        "applied": false
+      }
+    },
+    {
+      "load_id": "L700-E1-S1-H04-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "source_sheet": "2017_67-700",
+      "source_value": 300,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.941995,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              49.04102726870053,
+              -9.82816454677677
+            ],
+            [
+              27.141023235132845,
+              -9.82816454677677
+            ],
+            [
+              27.141023235132845,
+              -0.26873453653937757
+            ],
+            [
+              49.04102726870053,
+              -0.26873453653937757
+            ],
+            [
+              49.04102726870053,
+              -9.82816454677677
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO 1° SUBTERRANEO",
+        "hatch_pattern": "HONEY"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED",
+      "current_application": {
+        "status": "REMOVED_USER_APPROVED_PHYSICAL_SECTOR",
+        "applied": false
+      }
+    },
+    {
+      "load_id": "L700-E1-S1-H05-SC_SURFACE",
+      "load_type": "SC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "source_sheet": "2017_67-700",
+      "source_value": 500,
+      "source_unit": "kgf/m2",
+      "SI_value": 4.903325,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              49.04102726870053,
+              -10.63856788217533
+            ],
+            [
+              27.141023235132845,
+              -10.63856788217533
+            ],
+            [
+              27.141023235132845,
+              -9.82816454677677
+            ],
+            [
+              49.04102726870053,
+              -9.82816454677677
+            ],
+            [
+              49.04102726870053,
+              -10.63856788217533
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO 1° SUBTERRANEO",
+        "hatch_pattern": "AR-CONC"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED",
+      "current_application": {
+        "status": "REMOVED_USER_APPROVED_PHYSICAL_SECTOR",
+        "applied": false
+      }
+    },
+    {
+      "load_id": "L700-E1-S1-H05-PM_ADIC_SURFACE",
+      "load_type": "PM_ADIC_SURFACE",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "source_sheet": "2017_67-700",
+      "source_value": 300,
+      "source_unit": "kgf/m2",
+      "SI_value": 2.941995,
+      "SI_unit": "kN/m2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              49.04102726870053,
+              -10.63856788217533
+            ],
+            [
+              27.141023235132845,
+              -10.63856788217533
+            ],
+            [
+              27.141023235132845,
+              -9.82816454677677
+            ],
+            [
+              49.04102726870053,
+              -9.82816454677677
+            ],
+            [
+              49.04102726870053,
+              -10.63856788217533
+            ]
+          ]
+        ]
+      },
+      "location": {
+        "source_floor": "PLANTA CIELO 1° SUBTERRANEO",
+        "hatch_pattern": "AR-CONC"
+      },
+      "confidence": "CONFIRMED_FROM_PLAN_AND_AXES",
+      "receiver": null,
+      "application_status": "READY_SPATIAL_NOT_APPLIED",
+      "current_application": {
+        "status": "REMOVED_USER_APPROVED_PHYSICAL_SECTOR",
+        "applied": false
+      }
+    }
+  ],
+  "slabs": [
+    {
+      "element_id": "E1-P1-L-001",
+      "old_area_m2": 997.042431,
+      "area_m2": 997.042426,
+      "holes": 1,
+      "components": 2,
+      "triangles": 42
+    },
+    {
+      "element_id": "E1-P2-L-001",
+      "old_area_m2": 843.913957,
+      "area_m2": 843.913976,
+      "holes": 2,
+      "components": 2,
+      "triangles": 31
+    },
+    {
+      "element_id": "E1-P3-L-001",
+      "old_area_m2": 956.720751,
+      "area_m2": 956.720753,
+      "holes": 3,
+      "components": 1,
+      "triangles": 38
+    },
+    {
+      "element_id": "E1-P4-L-001",
+      "old_area_m2": 934.561139,
+      "area_m2": 934.561129,
+      "holes": 0,
+      "components": 2,
+      "triangles": 13
+    },
+    {
+      "element_id": "E1-S1-L-001",
+      "old_area_m2": 387.863384,
+      "area_m2": 160.763996,
+      "holes": 2,
+      "components": 1,
+      "triangles": 18
+    },
+    {
+      "element_id": "E2-P1-L-001",
+      "old_area_m2": 557.894267,
+      "area_m2": 557.894266,
+      "holes": 1,
+      "components": 1,
+      "triangles": 14
+    },
+    {
+      "element_id": "E2-P2-L-001",
+      "old_area_m2": 557.894267,
+      "area_m2": 557.894266,
+      "holes": 1,
+      "components": 1,
+      "triangles": 14
+    },
+    {
+      "element_id": "E2-P3-L-001",
+      "old_area_m2": 557.894267,
+      "area_m2": 557.894266,
+      "holes": 1,
+      "components": 1,
+      "triangles": 14
+    },
+    {
+      "element_id": "E2-P4-L-001",
+      "old_area_m2": 535.619975,
+      "area_m2": 535.619974,
+      "holes": 6,
+      "components": 1,
+      "triangles": 44
+    },
+    {
+      "element_id": "E2-S1-L-001",
+      "old_area_m2": 557.894267,
+      "area_m2": 557.894266,
+      "holes": 1,
+      "components": 1,
+      "triangles": 14
+    }
+  ],
+  "physics_changed": true,
+  "sources": "user explicit S1 south approval + current mesh (not new load-zone union)"
+}

@@ -190,7 +190,12 @@ def main() -> None:
             "receptor_panel_id": override.get("receptor_panel_id"),
             "review_reason": override.get("reason", ""),
         })
-    all_surface_entries = list(sc_entries) + synthetic_entries
+    # PM_ADIC is the paired permanent intensity, NOT another SC surface.
+    # Iterating both synthetic entries applied the same strip twice and
+    # swapped live/permanent intensities on the second pass.
+    all_surface_entries = list(sc_entries) + [
+        row for row in synthetic_entries if row["load_type"] == "SC_SURFACE"
+    ]
 
     for sc in sorted(all_surface_entries, key=lambda row: row["load_id"]):
         line_source_id = sc.get("_from_line")

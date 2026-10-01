@@ -220,7 +220,7 @@ namespace Mcoc.UnityViewer
                 GUILayout.Space(6); GUILayout.Label("ELEMENTOS",currentHeading);
                 LayerToggle("Columnas", "column"); LayerToggle("Vigas", "beam"); LayerToggle("Muros", "wall");
                 LayerToggle("Nodos", "node");
-                LayerToggle("Losas visuales · alcance parcial", "architectural_slab", "architectural_slab_edge");
+                LayerToggle("Losas CURRENT · contornos en revisión", "slab");
                 LayerToggle("Bordes de losa CAD", "slab_edge");
                 bool fe = GUILayout.Toggle(diagnosticViewMode==2, "Mostrar malla FE candidata", GUILayout.Height(25));
                 if (fe != (diagnosticViewMode==2)) { diagnosticViewMode=fe?2:0; typeVisible["fe_candidate"]=fe; ReapplyAll(); }
@@ -300,7 +300,7 @@ namespace Mcoc.UnityViewer
             {
                 labelsVisible=GUILayout.Toggle(labelsVisible,"IDs técnicos",GUILayout.Height(25));
                 LayerToggle("Referencias CAD","cad_reference"); LayerToggle("Ejes CAD","axis");
-                LayerToggle("Cajas provisionales de losa","slab"); LayerToggle("Nodos geométricos","node");
+                LayerToggle("Referencia arquitectónica P4 histórica","architectural_slab", "architectural_slab_edge"); LayerToggle("Nodos geométricos","node");
                 GUILayout.BeginHorizontal(); searchText=GUILayout.TextField(searchText,40,GUILayout.Height(27));
                 if(GUILayout.Button("Buscar",currentButton,GUILayout.Width(64))) DoSearch(); GUILayout.EndHorizontal();
                 if(!string.IsNullOrEmpty(searchResult))GUILayout.Label(searchResult,currentBody);

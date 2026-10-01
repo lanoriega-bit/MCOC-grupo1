@@ -10,6 +10,8 @@ import subprocess
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
+from shapely.geometry import shape
+from shapely import constrained_delaunay_triangles
 
 from current_contract_config import DEFAULT_R_COEFFICIENTS
 
@@ -187,12 +189,22 @@ def main() -> None:
         exteriors = [polygon_rings[0]] if geometry.get("type") == "Polygon" and polygon_rings else []
         if geometry.get("type") == "MultiPolygon":
             exteriors = [polygon[0] for polygon in polygon_rings if polygon]
-        exterior_area_proxy = [abs(sum(ring[i][0] * ring[(i + 1) % len(ring)][1] - ring[(i + 1) % len(ring)][0] * ring[i][1] for i in range(len(ring))) / 2.0) for ring in exteriors]
+        physical_load_geometry = shape(geometry)
+        components = [physical_load_geometry] if physical_load_geometry.geom_type == "Polygon" else list(physical_load_geometry.geoms)
+        exterior_area_proxy = [component.area for component in components]
         proxy_sum = sum(exterior_area_proxy) or 1.0
         for component_index, ring in enumerate(exteriors):
             if len(ring) > 1 and ring[0] == ring[-1]:
                 ring = ring[:-1]
             fraction = exterior_area_proxy[component_index] / proxy_sum
+            vertices, triangles = [], []
+            for triangle in constrained_delaunay_triangles(components[component_index]).geoms:
+                if triangle.area <= 1e-10:
+                    continue
+                offset = len(vertices) // 2
+                for x, y in list(triangle.exterior.coords)[:3]:
+                    vertices.extend([x, y])
+                triangles.extend([offset, offset + 1, offset + 2])
             tributary_areas.append({
                 "building": panel["building"], "floor": panel["floor"],
                 "beam_id": panel["id"] + (f"-C{component_index + 1}" if len(exteriors) > 1 else ""), "elementTag": "",
@@ -200,8 +212,11 @@ def main() -> None:
                 "mid": [sum(point[0] for point in ring) / len(ring), sum(point[1] for point in ring) / len(ring)],
                 "area_m2": panel["area_m2"] * fraction, "load_kN": load_kn * fraction,
                 "polygon": [{"x": point[0], "y": point[1]} for point in ring],
+                "panel_id": panel["id"],
+                "receiver_ids": [receiver["element_id"] for receiver in panel["receivers"]],
+                "surface_vertices_xy_flat": vertices, "surface_triangles": triangles,
                 "data_state": "CURRENT_RECOMPUTED",
-                "visual_note": "Exterior visible; interior holes remain excluded in the numerical load contract.",
+                "visual_note": "Hole-aware constrained triangulation of the load zone, not the physical slab; receiver_ids identify CURRENT receiving beams.",
             })
     write(TRIBUTARY_TARGET, {
         "units": "m / kN", "qG_kN_m2": total_load_kn / total_area if total_area else 0.0,

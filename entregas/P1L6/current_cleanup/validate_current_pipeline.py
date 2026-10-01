@@ -106,7 +106,7 @@ def main() -> None:
             f"{sum(r['building'] == 'EDIFICIO_1' and r['floor'] == 'P4' for r in active)} active ED1/P4 structural members retain an explicitly inferred material fallback.",
             "10 non-FE slabs have MAT_UNKNOWN; slab thickness 0.15 m is an academic load fallback.",
             "6 point-load catalog entries lack an unequivocal receiver and remain excluded.",
-            "LT1 Q differs by +15.193% from ETABS; benchmark, not a calibration target.",
+            f"LT1 Q differs by {loads['current_load_application']['by_building']['EDIFICIO_1']['Q_difference_percent']:+.3f}% from ETABS; benchmark, not a calibration target.",
             "Unity compile/Play requires a separate editor test; this script verifies the JSON contract only.",
         ],
     }

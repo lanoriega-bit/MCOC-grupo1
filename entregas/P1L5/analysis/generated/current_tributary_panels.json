@@ -6389,204 +6389,6 @@
       "unresolved_area_m2": 0.0
     },
     {
-      "id": "L700-E1-S1-H04",
-      "building": "EDIFICIO_1",
-      "lt_block": "LT1",
-      "floor": "S1",
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              49.04102726870053,
-              -9.82816454677677
-            ],
-            [
-              27.141023235132845,
-              -9.82816454677677
-            ],
-            [
-              27.141023235132845,
-              -0.26873453653937757
-            ],
-            [
-              49.04102726870053,
-              -0.26873453653937757
-            ],
-            [
-              49.04102726870053,
-              -9.82816454677677
-            ]
-          ]
-        ]
-      },
-      "polygon": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              49.04102726870053,
-              -9.82816454677677
-            ],
-            [
-              27.141023235132845,
-              -9.82816454677677
-            ],
-            [
-              27.141023235132845,
-              -0.26873453653937757
-            ],
-            [
-              49.04102726870053,
-              -0.26873453653937757
-            ],
-            [
-              49.04102726870053,
-              -9.82816454677677
-            ]
-          ]
-        ]
-      },
-      "area_m2": 209.351556,
-      "usage_zone": "L700-E1-S1-H04",
-      "qG_superimposed_kN_m2": 2.941995,
-      "qG_slab_kN_m2": 3.677494,
-      "qQ_kN_m2": 4.903325,
-      "case_force_N": {
-        "G": 1385800.268,
-        "Q": 1026518.717
-      },
-      "source_load_ids": [
-        "L700-E1-S1-H04-SC_SURFACE",
-        "L700-E1-S1-H04-PM_ADIC_SURFACE"
-      ],
-      "source_sheet": "2017_67-700",
-      "classification": "CURRENT_RECOMPUTED",
-      "method": "NEAREST_ACTIVE_BEAM_EQUAL_DISTANCE_GRID_0.50M",
-      "receivers": [
-        {
-          "element_id": "E1-S1-V-025",
-          "merged_from": [
-            "E1-S1-V-011",
-            "E1-S1-V-026",
-            "E1-S1-V-030"
-          ],
-          "fraction": 0.798849774,
-          "tributary_area_m2": 167.240443,
-          "equivalent_width_m": 18.634033,
-          "Q_force_N": 820034.245,
-          "G_superimposed_force_N": 492020.547,
-          "G_slab_force_N": 615025.684
-        },
-        {
-          "element_id": "E1-S1-V-038",
-          "merged_from": [],
-          "fraction": 0.201150226,
-          "tributary_area_m2": 42.111113,
-          "equivalent_width_m": 5.135502,
-          "Q_force_N": 206484.472,
-          "G_superimposed_force_N": 123890.683,
-          "G_slab_force_N": 154863.354
-        }
-      ],
-      "receiver_fraction_sum": 1.0,
-      "unresolved_area_m2": 0.0
-    },
-    {
-      "id": "L700-E1-S1-H05",
-      "building": "EDIFICIO_1",
-      "lt_block": "LT1",
-      "floor": "S1",
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              49.04102726870053,
-              -10.63856788217533
-            ],
-            [
-              27.141023235132845,
-              -10.63856788217533
-            ],
-            [
-              27.141023235132845,
-              -9.82816454677677
-            ],
-            [
-              49.04102726870053,
-              -9.82816454677677
-            ],
-            [
-              49.04102726870053,
-              -10.63856788217533
-            ]
-          ]
-        ]
-      },
-      "polygon": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              49.04102726870053,
-              -10.63856788217533
-            ],
-            [
-              27.141023235132845,
-              -10.63856788217533
-            ],
-            [
-              27.141023235132845,
-              -9.82816454677677
-            ],
-            [
-              49.04102726870053,
-              -9.82816454677677
-            ],
-            [
-              49.04102726870053,
-              -10.63856788217533
-            ]
-          ]
-        ]
-      },
-      "area_m2": 17.747836,
-      "usage_zone": "L700-E1-S1-H05",
-      "qG_superimposed_kN_m2": 2.941995,
-      "qG_slab_kN_m2": 3.677494,
-      "qQ_kN_m2": 4.903325,
-      "case_force_N": {
-        "G": 117481.603,
-        "Q": 87023.409
-      },
-      "source_load_ids": [
-        "L700-E1-S1-H05-SC_SURFACE",
-        "L700-E1-S1-H05-PM_ADIC_SURFACE"
-      ],
-      "source_sheet": "2017_67-700",
-      "classification": "CURRENT_RECOMPUTED",
-      "method": "NEAREST_ACTIVE_BEAM_EQUAL_DISTANCE_GRID_0.50M",
-      "receivers": [
-        {
-          "element_id": "E1-S1-V-025",
-          "merged_from": [
-            "E1-S1-V-011",
-            "E1-S1-V-026",
-            "E1-S1-V-030"
-          ],
-          "fraction": 1.0,
-          "tributary_area_m2": 17.747836,
-          "equivalent_width_m": 1.977475,
-          "Q_force_N": 87023.409,
-          "G_superimposed_force_N": 52214.046,
-          "G_slab_force_N": 65267.557
-        }
-      ],
-      "receiver_fraction_sum": 1.0,
-      "unresolved_area_m2": 0.0
-    },
-    {
       "id": "L700-E2-P1-H01",
       "building": "EDIFICIO_2",
       "lt_block": "LT2",
@@ -11408,128 +11210,6 @@
       "unresolved_area_m2": 0.0
     },
     {
-      "id": "L700-E2-P4-LINE-SC-100-STRIP-PM_ADIC_SURFACE",
-      "building": "EDIFICIO_2",
-      "lt_block": "LT2",
-      "floor": "P4",
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              26.904492212100948,
-              3.030672806084863
-            ],
-            [
-              25.904492212100948,
-              3.030672806084863
-            ],
-            [
-              25.904492212100948,
-              6.150662618241891
-            ],
-            [
-              26.904492212100948,
-              6.150662618241891
-            ],
-            [
-              26.904492212100948,
-              3.030672806084863
-            ]
-          ]
-        ]
-      },
-      "polygon": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              26.904492212100948,
-              3.030672806084863
-            ],
-            [
-              25.904492212100948,
-              3.030672806084863
-            ],
-            [
-              25.904492212100948,
-              6.150662618241891
-            ],
-            [
-              26.904492212100948,
-              6.150662618241891
-            ],
-            [
-              26.904492212100948,
-              3.030672806084863
-            ]
-          ]
-        ]
-      },
-      "area_m2": 3.11999,
-      "usage_zone": "L700-E2-P4-LINE-SC-100-STRIP-PM_ADIC_SURFACE",
-      "qG_superimposed_kN_m2": 0.980665,
-      "qG_slab_kN_m2": 3.677494,
-      "qQ_kN_m2": 14.709975,
-      "case_force_N": {
-        "G": 14533.408,
-        "Q": 45894.972
-      },
-      "source_load_ids": [
-        "L700-E2-P4-LINE-SC-100-STRIP-PM_ADIC_SURFACE",
-        "L700-E2-P4-LINE-SC-100-STRIP-SC_SURFACE"
-      ],
-      "source_sheet": "2024_22-700",
-      "classification": "CURRENT_RECOMPUTED",
-      "method": "NEAREST_ACTIVE_BEAM_EQUAL_DISTANCE_GRID_0.50M",
-      "receivers": [
-        {
-          "element_id": "E2-P4-V-081",
-          "merged_from": [
-            "E2-P4-V-080"
-          ],
-          "fraction": 0.366431223,
-          "tributary_area_m2": 1.143262,
-          "equivalent_width_m": 0.142908,
-          "Q_force_N": 16817.351,
-          "G_superimposed_force_N": 1121.157,
-          "G_slab_force_N": 4204.338
-        },
-        {
-          "element_id": "E2-P4-V-084",
-          "merged_from": [
-            "E2-P4-V-087",
-            "E2-P4-V-089"
-          ],
-          "fraction": 0.215248555,
-          "tributary_area_m2": 0.671573,
-          "equivalent_width_m": 0.154385,
-          "Q_force_N": 9878.826,
-          "G_superimposed_force_N": 658.588,
-          "G_slab_force_N": 2469.707
-        },
-        {
-          "element_id": "E2-P4-V-085",
-          "merged_from": [
-            "E2-P4-V-090"
-          ],
-          "fraction": 0.418320222,
-          "tributary_area_m2": 1.305155,
-          "equivalent_width_m": 0.271907,
-          "Q_force_N": 19198.795,
-          "G_superimposed_force_N": 1279.92,
-          "G_slab_force_N": 4799.699
-        }
-      ],
-      "receiver_fraction_sum": 1.0,
-      "unresolved_area_m2": 0.0,
-      "derivation": "LINE_LOAD_EQUIVALENT_STRIP_W_1.0M",
-      "source_line_load_id": "L700-E2-P4-LINE-SC-100-PM_ADIC_LINE",
-      "receptor_panel_id": "L700-E2-P4-H05",
-      "equivalent_strip_width_m": 1.0,
-      "review_reason": "No beam coincides with the line (x=26.4045, y 3.031-6.151); the load lies inside the east interior slab bay of E2-P4 bounded by beams y=0.001 (V-084/087/089) and y=8.901 (V-085). Receiver is the slab panel via an equivalent 1.0 m strip run through the documented equal-distance nearest-beam tributary. Total line force ~3.1 kN (SC), ~45.9 kN (PM_ADIC)."
-    },
-    {
       "id": "L700-E2-P4-LINE-SC-100-STRIP",
       "building": "EDIFICIO_2",
       "lt_block": "LT2",
@@ -13011,16 +12691,16 @@
       "building": "EDIFICIO_1",
       "lt_block": "LT1",
       "floor": "S1",
-      "area_total_m2": 387.863,
-      "area_with_Q_m2": 387.863,
+      "area_total_m2": 160.764,
+      "area_with_Q_m2": 160.764,
       "area_without_Q_m2": 0.0,
-      "Q_N": 1637082.075,
-      "G_superimposed_N": 1078029.889,
-      "G_slab_N": 1426365.172,
+      "Q_N": 523539.948,
+      "G_superimposed_N": 409904.613,
+      "G_slab_N": 591208.577,
       "interior_hole_area_m2": 14.332,
-      "panels": 5,
+      "panels": 3,
       "G_self_weight_N": 1845629.672,
-      "G_total_N": 4350024.734
+      "G_total_N": 2846742.863
     },
     {
       "building": "EDIFICIO_2",
@@ -13071,16 +12751,16 @@
       "building": "EDIFICIO_2",
       "lt_block": "LT2",
       "floor": "P4",
-      "area_total_m2": 541.86,
-      "area_with_Q_m2": 541.86,
+      "area_total_m2": 538.74,
+      "area_with_Q_m2": 538.74,
       "area_without_Q_m2": 0.0,
-      "Q_N": 1099482.163,
-      "G_superimposed_N": 1099482.163,
-      "G_slab_N": 1992686.598,
+      "Q_N": 1053587.191,
+      "G_superimposed_N": 1096422.499,
+      "G_slab_N": 1981212.855,
       "interior_hole_area_m2": 21.813,
-      "panels": 3,
+      "panels": 2,
       "G_self_weight_N": 3242500.163,
-      "G_total_N": 6334668.924
+      "G_total_N": 6320135.517
     },
     {
       "building": "EDIFICIO_2",
@@ -13099,7 +12779,7 @@
     }
   ],
   "classification_counts": {
-    "CURRENT_RECOMPUTED": 46
+    "CURRENT_RECOMPUTED": 43
   },
   "conservation_note": "Every clipped cell is assigned once; holes remain excluded."
 }
