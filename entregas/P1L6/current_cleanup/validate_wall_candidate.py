@@ -8,6 +8,8 @@ import importlib.util
 import json
 from pathlib import Path
 
+from fe_support_graph import unsupported_components
+
 
 ROOT = Path(__file__).resolve().parents[3]
 CENTRAL = ROOT / "entregas/P1L5/modelo_central"
@@ -45,6 +47,7 @@ def main() -> None:
     result = validation.validate()
     master = json.loads((directory / "model_master.json").read_text(encoding="utf-8"))
     topology = master["fe_topology"]
+    unsupported = unsupported_components(master)
     floating_ids = sorted({identifier
                            for component in topology["floating_excluded"]["components"]
                            for identifier in component["geometry_element_ids"]})
@@ -54,12 +57,13 @@ def main() -> None:
         "floating_components": topology["floating_excluded"]["n_componentes"],
         "floating_geometry_elements": topology["floating_excluded"]["n_geometry_elements"],
         "floating_ids": floating_ids,
+        "fe_components_without_support": unsupported,
         "connectivity_validation": topology.get("connectivity_validation"),
         "opensees_executed": False,
     }
     (directory / "candidate_qa.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(report, ensure_ascii=False, indent=2))
-    if result["status"] != "PASS" or report["floating_components"] != 0:
+    if result["status"] != "PASS" or report["floating_components"] != 0 or unsupported:
         raise SystemExit(1)
 
 

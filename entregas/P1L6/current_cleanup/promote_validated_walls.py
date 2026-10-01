@@ -14,6 +14,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+from fe_support_graph import unsupported_components
+
 
 ROOT = Path(__file__).resolve().parents[3]
 CENTRAL = ROOT / "entregas/P1L5/modelo_central"
@@ -48,7 +50,8 @@ def main() -> None:
     live_sections = read(CENTRAL / "sections.json")
     if manifest["status"] != "CANDIDATE_NOT_PROMOTED" or manifest.get("exploratory_ids"):
         raise SystemExit("Exploratory wall candidate cannot be promoted")
-    if qa["status"] != "PASS" or qa["errors"] or qa["floating_components"] != 0:
+    if (qa["status"] != "PASS" or qa["errors"] or qa["floating_components"] != 0
+            or qa.get("fe_components_without_support") or unsupported_components(candidate)):
         raise SystemExit("Wall candidate has not passed topology and model QA")
     restored_ids = {r["element_id"] for r in manifest["restored"]}
     if len(restored_ids) != manifest["restored_count"] or len(restored_ids) != 30:

@@ -1,5 +1,5 @@
 {
-  "status": "PROMOTED_GEOMETRY_RESULTS_STALE",
+  "status": "PARTIAL_PROMOTION_24_ACTIVE_6_DEFERRED_RESULTS_STALE",
   "restored_count": 30,
   "exploratory_ids": [],
   "by_building_floor": {
@@ -918,8 +918,17 @@
     "E1-P4-M-012",
     "E1-S1-M-061"
   ],
-  "model_master_sha256": "c3cfbc787098e7864be1323e81baefce96dcbcdeb9a89334ad046215a645237b",
-  "loads_rebuilt": false,
+  "model_master_sha256": "c502ca2df893e93b5e302c80fa7bd784345e5a2df6c8b3696e53ba4b64a0ed3f",
+  "loads_rebuilt": true,
   "opensees_executed": false,
-  "unity_results_current": false
+  "unity_results_current": false,
+  "deferred_after_support_graph_qa": [
+    "E1-P1-M-002",
+    "E1-P1-M-026",
+    "E1-P2-M-003",
+    "E1-P2-M-005",
+    "E1-P3-M-003",
+    "E1-P3-M-005"
+  ],
+  "active_restored_wall_count": 24
 }
