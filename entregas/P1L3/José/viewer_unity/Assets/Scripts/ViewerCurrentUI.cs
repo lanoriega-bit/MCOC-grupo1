@@ -215,6 +215,7 @@ namespace Mcoc.UnityViewer
                 }
                 if (GUILayout.Button("Todos los pisos", currentButton)) { foreach (string f in new List<string>(floorVisible.Keys)) floorVisible[f]=true; ReapplyAll(); }
                 LayerToggle("Columnas", "column"); LayerToggle("Vigas", "beam"); LayerToggle("Muros", "wall");
+                LayerToggle("Losas", "slab");
                 LayerToggle("Losas visuales · alcance parcial", "architectural_slab", "architectural_slab_edge");
                 LayerToggle("Bordes de losa CAD", "slab_edge");
                 bool fe = GUILayout.Toggle(diagnosticViewMode==2, "Mostrar malla FE candidata", GUILayout.Height(25));

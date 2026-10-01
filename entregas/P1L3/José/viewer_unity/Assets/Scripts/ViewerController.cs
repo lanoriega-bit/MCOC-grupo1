@@ -3006,6 +3006,9 @@ namespace Mcoc.UnityViewer
                 case "column_plan":
                 case "wall":
                 case "support":
+                case "slab":
+                case "slab_edge":
+                case "diaphragm":
                 case "architectural_slab":
                 case "architectural_slab_edge":
                     return true;

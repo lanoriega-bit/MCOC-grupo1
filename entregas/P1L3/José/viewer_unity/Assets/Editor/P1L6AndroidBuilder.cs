@@ -3,7 +3,9 @@ using System.IO;
 using UnityEditor;
 using UnityEditor.Build.Reporting;
 using UnityEditor.Build;
+#if UNITY_ANDROID
 using UnityEditor.Android;
+#endif
 using UnityEngine;
 
 namespace Mcoc.UnityViewer.EditorTools
@@ -23,7 +25,9 @@ namespace Mcoc.UnityViewer.EditorTools
             string jdk = Path.Combine(localAppData, "Unity", "Toolchains", "OpenJDK17");
             if (!File.Exists(Path.Combine(jdk, "bin", "java.exe")))
                 throw new BuildFailedException("OPENJDK17_MISSING: " + jdk);
+#if UNITY_ANDROID
             AndroidExternalToolsSettings.jdkRootPath = jdk;
+#endif
 
             P1L6ARFinalSceneBuilder.BuildFinalScene();
             P1L6ARFinalSceneBuilder.ValidateFinalScene();
