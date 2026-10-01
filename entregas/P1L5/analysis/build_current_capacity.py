@@ -175,6 +175,8 @@ def main() -> None:
             "type": row["type"], "section_id": row["section_id"], "material_id": row["material_id"],
             "dim_local_y_m": dim_y, "dim_local_z_m": dim_z, "fc_pa": fc, "fy_pa": fy,
             "reinforcement_ratio": rho, "cover_m": 0.05, "phi_flexure": 0.9, "phi_shear": 0.75,
+            "orientation": {k: row["geometry"][k] for k in ("direction_unit", "orientation_deg_xy", "rotation_deg") if k in row["geometry"]},
+            "reinforcement_status": "ASSUMED_FOR_LAB_NOT_AS_BUILT",
         }
         cap_signature = signature(signature_input)
         signatures.setdefault(cap_signature, {**signature_input, "assumption_status": "APPROX / ASSUMED_FOR_LAB"})
