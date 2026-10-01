@@ -38,11 +38,15 @@ namespace Mcoc.UnityViewer
                 { color = StructuralFailureVisualStyle.Exceeded; exceeded = true; }
                 else if (result.state == StructuralFailureState.NO_DATA) color = StructuralFailureVisualStyle.NoData;
             }
-            if (selected) color = Color.Lerp(color, StructuralFailureVisualStyle.Selection, 0.78f);
+            if (selected) color = StructuralFailureVisualStyle.Selection;
             var block = new MaterialPropertyBlock();
             target.GetPropertyBlock(block);
             block.SetColor("_Color", color);
             block.SetColor("_BaseColor", color);
+            // State/selection colours must not inherit brick mortar or concrete noise.
+            if(target.sharedMaterial!=null&&target.sharedMaterial.HasProperty("_PatternStrength"))
+                block.SetFloat("_PatternStrength",selected||(visualizationEnabled&&(result==null||result.state!=StructuralFailureState.OK))
+                    ? 0 : target.sharedMaterial.GetFloat("_PatternStrength"));
             Color emission = exceeded ? color * 0.75f : (selected ? StructuralFailureVisualStyle.Selection * 0.48f : Color.black);
             block.SetColor("_EmissionColor", emission);
             target.SetPropertyBlock(block);

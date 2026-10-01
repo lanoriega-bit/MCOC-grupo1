@@ -181,9 +181,7 @@ namespace Mcoc.UnityViewer
             orbitTarget = new Vector3(16.41f, 5.99f, -14.73f);
             if (cam != null)
             {
-                cam.clearFlags = CameraClearFlags.Skybox;
-                RenderSettings.ambientMode = UnityEngine.Rendering.AmbientMode.Trilight;
-                RenderSettings.ambientSkyColor = new Color(0.6f, 0.7f, 0.85f);
+                ConfigureVisualEnvironment();
             }
             LoadMaterials();
             model = JsonLoader.LoadModel(jsonFileName);
@@ -427,19 +425,19 @@ namespace Mcoc.UnityViewer
 
         void LoadMaterials()
         {
-            MaterialsByCat["beam"] = LoadMat("MatAcero", new Color(1f, 0.7f, 0.25f));
-            MaterialsByCat["column"] = LoadMat("MatConcreto", new Color(1f, 0.6f, 0.2f));
-            MaterialsByCat["column_plan"] = LoadMat("MatConcreto", new Color(1f, 0.65f, 0.22f));
-            MaterialsByCat["wall"] = LoadMat("MatConcreto", new Color(1f, 0.75f, 0.3f));
+            MaterialsByCat["beam"] = VisualSurface("beam", new Color(0.43f,0.57f,0.67f),0,0.55f,0.42f);
+            MaterialsByCat["column"] = VisualSurface("column", new Color(0.66f,0.29f,0.20f),1,0,0.22f);
+            MaterialsByCat["column_plan"] = MaterialsByCat["column"];
+            MaterialsByCat["wall"] = VisualSurface("wall", new Color(0.66f,0.68f,0.67f),2,0,0.18f);
             MaterialsByCat["support"] = LoadMat("MatAluminio", new Color(0.9f, 0.5f, 0.1f));
-            MaterialsByCat["slab"] = LoadMat("MatVidrio", new Color(0.45f, 0.72f, 0.85f));
+            MaterialsByCat["slab"] = VisualSlab();
             MaterialsByCat["slab_edge"] = LoadMat("MatVidrio", new Color(0.6f, 0.8f, 0.9f));
             MaterialsByCat["diaphragm"] = LoadMat("MatVidrio", new Color(0.9f, 0.9f, 1f));
             MaterialsByCat["axis"] = LoadMat("MatAluminio", new Color(0.85f, 0.85f, 0.85f));
             MaterialsByCat["node"] = LoadMat("MatAcero", new Color(1f, 0.85f, 0.35f));
             MaterialsByCat["cad_reference"] = LoadMat("MatAcero", new Color(0.6f, 0.7f, 0.8f));
-            MaterialsByCat["architectural_slab"] = LoadMat("MatConcreto", new Color(0.28f, 0.72f, 0.68f));
-            MaterialsByCat["architectural_slab_edge"] = LoadMat("MatAcero", new Color(0.95f, 0.82f, 0.25f));
+            MaterialsByCat["architectural_slab"] = MaterialsByCat["slab"];
+            MaterialsByCat["architectural_slab_edge"] = LoadMat("MatAcero", new Color(0.80f,0.85f,0.90f));
         }
 
         static Material LoadMat(string resName, Color tint)
@@ -1699,7 +1697,8 @@ namespace Mcoc.UnityViewer
                 // de la categoria, por lo que el color base (naranja) se conserva.
                 var baseMat = rnd.sharedMaterial;
                 var mat = rnd.material;
-                mat.color = Color.Lerp(baseMat.color, Color.cyan, 0.65f);
+                mat.color = StructuralFailureVisualStyle.Selection;
+                if(mat.HasProperty("_PatternStrength"))mat.SetFloat("_PatternStrength",0);
                 mat.EnableKeyword("_EMISSION");
                 mat.SetColor("_EmissionColor", new Color(0.15f, 0.3f, 0.35f));
             }
