@@ -320,3 +320,13 @@ Inspector semántico con Resumen/Resultados; actuales no disponibles, archivo
 histórico sólo opt-in. Contrato de versiones y preparación de superposición.
 Persisten 43/22, alturas19 y restricciones físicamente no aprobadas. Ver informe
 `entregas/PRE_P1L5/current_readiness/CURRENT_READINESS_REPORT.md`.
+
+## CURRENT — auditoría de continuidad de núcleos (2026-10-01)
+
+Rama `codex/p1l6-wall-continuity-correction`. Auditoría de 54 muros activos,
+15 líneas y tres conjuntos en C contra ejes y caras CAD. El candidato aislado
+de 84 muros pasa FE (0 componentes sin apoyo) y OpenSees G/Q/EX/EY.
+Todavía no promovido en este checkpoint. ED1-P4 conserva el supuesto material
+G35 explícito; no se declara confirmación primaria nueva. El muro largo ED2
+se mantiene en su lado CAD, según aclaración del usuario.
+Ver `entregas/P1L6/wall_continuity/WALL_CONTINUITY_BEFORE.md`.
