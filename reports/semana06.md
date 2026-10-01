@@ -120,7 +120,7 @@ escena. Para relacionar ambos sistemas se definió una rotación fija, de
 noventa grados alrededor del eje horizontal, que puede escribirse como el
 producto de una matriz de tres por tres por el vector de coordenadas del punto.
 
-Esta rotación es una transformación orthogonal: su inversa es su matriz
+Esta rotación es una transformación ortogonal: su inversa es su matriz
 transpuesta y, como consecuencia, conserva tanto las distancias entre puntos
 como los ángulos entre direcciones. En otras palabras, la estructura no se
 distorsiona al pasar de un sistema a otro, lo que resulta indispensable cuando
@@ -132,7 +132,7 @@ coordenadas del punto en el visor por la rotación del ancla, escalando el
 resultado y sumando la traslación de la imagen detectada. La escala es, en la
 práctica, unitaria, porque el modelo ya está expresado en metros; se conserva
 en la fórmula para que el sistema pueda atender en el futuro una maqueta a
-escala real, uso previsto en versiones posteriores.
+escala reducida, uso previsto en versiones posteriores.
 
 La operación inversa también está definida y se utiliza en dos situaciones:
 para llevar una posición observada en la escena de vuelta al sistema del modelo
@@ -141,7 +141,7 @@ verificación se ejecutó sobre el conjunto completo de elementos, confirmando
 que el recorrido de ida y vuelta entre los dos sistemas reproduce las
 coordenadas originales con un error despreciable.
 
-Para desarrollar sin depender de un teléfono seEstablished una pose de
+Para desarrollar sin depender de un teléfono se estableció una pose de
 referencia fija, con traslación nula, rotación identidad y escala unitaria. Con
 esta pose el modelo se despliega en su posición de diseño y todas las etapas
 posteriores del flujo pueden probarse con los mismos procedimientos que se
@@ -159,7 +159,7 @@ realizadas, forma parte de la documentación de la entrega.
 
 La pregunta que responde esta sección es cuán exactamente el modelo se superpone
 al edificio. La respuesta se construyó por partes, separando las fuentes de
-error que tienen origen en el procesamiento de lasaude las que dependen del
+error que tienen origen en el procesamiento de los datos y las que dependen del
 dispositivo y del entorno.
 
 La primera fuente es la transformación matemática. Al tratarse de operaciones
@@ -184,11 +184,11 @@ puede calcularse ni acotarse desde el escritorio, porque depende de variables
 que solo existen en el lugar de la instalación: la distancia a la que se toma
 la imagen, el ángulo de incidencia, la iluminación, la curvatura del papel, la
 textura de la superficie y el algoritmo de estimación del propio motor. Cualquier
-cifra que se presentara como definitive antes de medir en terreno sería
+cifra que se presentara como definitiva antes de medir en terreno sería
 meramente una conjetura.
 
 Lo que sí es posible es construir una estimación de orden de magnitud. Si la
-pose estimadapresentara un error angular de uno o dos grados respecto de la
+pose estimada presentara un error angular de uno o dos grados respecto de la
 posición verdadera de la lámina, la desviación resultante en el modelo crearía
 de manera proporcional con la distancia a la lámina. Tomando como referencia la
 altura del edificio, cercana a 90 m, un error de esa magnitud podría producir
@@ -231,7 +231,7 @@ longitud del elemento en el archivo de resultados, con la diferencia mínima
 mencionada en la sección anterior. La tercera es la coherencia del resultado:
 el axial de 2 698 kN y los momentos indicados se obtienen directamente de las
 fuerzas de extremo de la envolvente de los casos de carga combinados, y no
-corresponden a valores adoptados por criterio del analysta.
+corresponden a valores adoptados por criterio del analista.
 
 Este ejercicio se repitió con elementos de otras tipologías, como vigas, muros
 y losas, con el mismo resultado. La conclusión es que la correspondencia entre
@@ -260,7 +260,7 @@ dataset de realidad aumentada corresponden a un análisis consistente.
 | Cadena de realidad aumentada | Pendiente | Compilada y probada; falta la prueba en terreno |
 
 Sobre el equilibrio de los casos G y Q, el residuo relativo quedó en el orden
-de 1e-15, lo que confirma que laumersión y el reparto de cargas conservan el
+de 1e-15, lo que confirma que la imposición y el reparto de cargas conservan el
 equilibrio del conjunto. En el caso sísmico, el corte basal alcanzó 17 638,7 kN
 en ambas direcciones, valor consistente con la suma de las fuerzas laterales
 aplicadas en los diez niveles del edificio y con el peso sísmico considerado,
@@ -268,12 +268,12 @@ de 88 194 kN. La superposición de los casos de carga se verificó numéricament
 contra los resultados directos de OpenSees para las combinaciones habituales
 del proyecto, con diferencias del orden de la precisión de la máquina.
 
-Las tres pruebas de capacidad merecen una precisión. Las curvas momento-curvatura
+Las tres pruebas de capacidad merecen una aclaración. Las curvas momento-curvatura
 y las envolventes de interacción axial-momento se calcularon con parámetros de
 armadura y recubrimiento asumidos para el ámbito de laboratorio, y no
-constituyen una verificación normativa. SeذاPerfectamente posible que, al
+constituyen una verificación normativa. Es perfectamente posible que, al
 incorporar el refuerzo definitivo, algunas de las curvas se modifiquen y
-cambien los conteos señalados en la tabla. Aun así, se-publicó el estado
+cambien los conteos señalados en la tabla. Aun así, se publicó el estado
 actual porque es el que corresponde al modelo entregado, y la correspondencia
 entre el resultado del visor y el del análisis está verificada con
 independencia del criterio de cálculo de la capacidad.
@@ -298,7 +298,7 @@ partir de ella.
 - **Envolvente de demanda del dataset.** En el archivo de capacidad que
   acompaña al dataset de realidad aumentada, la envolvente de demanda figura
   en cero en la totalidad de los registros, pese a que las curvas se encuentran
-  pobladas. La consulta de resultados utiliza la envolvente correcta,proveniente
+  pobladas. La consulta de resultados utiliza la envolvente correcta, proveniente
   del archivo de resultados del análisis, de modo que la información mostrada
   es válida; lo que debe corregirse es el generador del dataset, para que ambos
   valores coincidan.
