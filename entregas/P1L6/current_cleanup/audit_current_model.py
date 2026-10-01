@@ -159,11 +159,17 @@ def main() -> None:
         "counts": {k: dict(v) for k, v in sorted(by_type.items())},
         "issues": dict(issue_counts.most_common()),
         "elements": rows,
-        "notable_pipeline_issue": "Capacity builder expects an R row, but CURRENT basis export contains only G/Q/EX/EY; all 615 stored demand vectors are zero.",
+        "notable_pipeline_issue": (
+            "CURRENT capacity demands are rebuilt from signed G/Q/EX/EY basis cases and "
+            "cross-checked against the analysis manifest. Physical capacity screening "
+            "remains approximate and is not design certification."
+            if results_current else
+            "CURRENT result/capacity contract is stale; on-disk artifacts must not be presented as current."
+        ),
     }
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "current_model_health.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    md = ["# CURRENT model health — checkpoint audit", "", "Inventory of active `model_master.json` elements. Result and capacity coverage counts are zero while the CURRENT contract is stale, even if historical files remain on disk.", "", f"Base: `{report['base_commit']}`. Contract: `{report['contract_status']}`.", "", "| Type | Total | Usable geometry | Valid section | Resolved material | G/Q/EX/EY CURRENT | Capacity CURRENT |", "| --- | ---: | ---: | ---: | ---: | ---: | ---: |"]
+    md = ["# CURRENT model health — checkpoint audit", "", "Inventory of active `model_master.json` elements. Result and capacity coverage is counted only when the CURRENT contract is verified; historical files on disk do not establish current coverage.", "", f"Base: `{report['base_commit']}`. Contract: `{report['contract_status']}`.", "", "| Type | Total | Usable geometry | Valid section | Resolved material | G/Q/EX/EY CURRENT | Capacity CURRENT |", "| --- | ---: | ---: | ---: | ---: | ---: | ---: |"]
     for kind, c in sorted(by_type.items()):
         result_count = str(c['all_four_results']) if kind != "slab" else "N/A"
         capacity_count = str(c['capacity_record']) if kind != "slab" else "N/A"
@@ -172,7 +178,7 @@ def main() -> None:
     for name, count in issue_counts.most_common():
         ids = [r["element_id"] for r in rows if name in r["problems"]]
         md.append(f"- `{name}`: {count}. IDs: {', '.join(ids[:12])}{' …' if len(ids) > 12 else ''}")
-    md += ["", "## Important distinction", "", "`LENGTH_METADATA_MISSING_DERIVABLE` is not a zero-length element: both endpoints exist and the length can be calculated. A zero numerical force in a result is not treated as missing. Slabs are visual/tributary surfaces, not FE members; missing FE results/capacity are not counted against them.", "", "## Pipeline finding", "", report["notable_pipeline_issue"], "The static capacity demand/D-C fields must not be described as verified until rebuilt from the compatible basis cases. Unity's separate runtime combination is not evidence that the stored zero-demand artifact is correct.", "", "## Next evidence gates", "", "1. Add explicitly derived geometric metadata only where endpoints/sections support it.", "2. Re-examine wall candidates against original CAD/plans and both external repos; no automatic reintegration from consensus.", "3. Any structural activation invalidates CURRENT results immediately and requires load/FE/OpenSees/capacity rebuild before re-export.", ""]
+    md += ["", "## Important distinction", "", "A zero numerical force in a result is not treated as missing. Slabs are visual/tributary surfaces, not FE members; missing FE results/capacity are not counted against them.", "", "## Pipeline finding", "", report["notable_pipeline_issue"], "", "## Next evidence gates", "", "1. Re-examine wall candidates against original CAD/plans and both external repos; no automatic reintegration from consensus.", "2. Any structural activation invalidates CURRENT results immediately and requires load/FE/OpenSees/capacity rebuild before re-export.", "3. Verify Unity compilation and Play once the local Unity licensing service starts reliably.", ""]
     (OUT / "CURRENT_MODEL_HEALTH_REPORT.md").write_text("\n".join(md), encoding="utf-8")
     print(json.dumps({"counts": report["counts"], "issues": report["issues"]}, ensure_ascii=False, indent=2))
 

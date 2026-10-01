@@ -1,6 +1,6 @@
 # Reintegración de muros — prueba FE aislada
 
-Estado: **24 ACTIVE / 6 DEFERRED / RESULTS STALE**. Una primera promoción de 30 muros pasó el control geométrico pero hizo singular a OpenSees. El control nuevo de camino FE hasta apoyos detectó seis muros ED1 en cuatro grupos aislados. Esos seis se retiraron del modelo activo y quedaron documentados como `FE_SUPPORT_PATH_UNRESOLVED`; los 24 restantes están en `model_master.json` y en los derivados para Unity. El contrato sigue `STALE_REANALYSIS_REQUIRED` hasta publicar análisis y capacidad de esta revisión.
+Estado: **24 ACTIVE / 6 DEFERRED / CURRENT VERIFIED WITH NOTES**. Una primera promoción de 30 muros pasó el control geométrico pero hizo singular a OpenSees. El control nuevo de camino FE hasta apoyos detectó seis muros ED1 en cuatro grupos aislados. Esos seis se retiraron del modelo activo y quedaron documentados como `FE_SUPPORT_PATH_UNRESOLVED`; los 24 restantes están en `model_master.json`, en el análisis recalculado y en los derivados para Unity.
 
 ## Evidencia y límites
 
@@ -27,7 +27,7 @@ Los 30 candidatos iniciales constan en `removed_wall_candidates.json` y en `prom
 
 Las vigas P1 más cercanas a los paños P2 diferidos están a 3,70 m y 2,12 m, respectivamente. No se puede crear una unión por simple proximidad. Requieren corte/detalle o una interpretación verificable de su ruta de cargas.
 
-La prueba aislada de este subconjunto recalculó cargas y ejecutó OpenSees G/Q/EX/EY con estado **PASS** y equilibrio relativo mejor que 6,3×10⁻¹⁴. El modelo activo ya recibió esta geometría y estas cargas, pero los resultados live aún no se han publicado; siguen bloqueados. Faltan capacidades, contratos y QA Play de Unity. El `CURRENT_VERIFIED` previo correspondía a la geometría anterior y no debe reutilizarse.
+La prueba aislada de este subconjunto recalculó cargas y ejecutó OpenSees G/Q/EX/EY con estado **PASS** y equilibrio relativo mejor que 6,3×10⁻¹⁴. Después, la misma geometría se analizó en el modelo activo, se reconstruyeron capacidades y se exportó el contrato `CURRENT_VERIFIED`. Falta QA de compilación y Play en Unity. Los diez muros ED1 sin ruta FE, cuatro ED1/P4 con material sin alcance primario y cuatro E2/P4 en conflicto con la revisión manual continúan explícitamente pendientes.
 
 ## Reproducción
 

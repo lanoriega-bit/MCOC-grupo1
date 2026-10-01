@@ -8,4 +8,4 @@ Control manual: en `E1-P2-V-041`, la envolvente My de extremos para `G + 0,5Q` c
 
 El screening académico señala cinco vigas con D/C >1 (`E1-P3-V-109`, `E2-P4-V-064`, `E2-P4-V-065`, `E2-P4-V-074`, `E2-P4-V-076`) y una columna fuera de la envolvente P–M (`E2-P4-C-007`). Son alertas de laboratorio, no dictámenes de diseño: `fc'`/`fy` se toman del catálogo donde su alcance lo respalda, mientras cuantías, recubrimiento, φ y la forma P–M son `ASSUMED_FOR_LAB`. Las 79 asignaciones ED1/P4 siguen bajo revisión de alcance.
 
-La exportación final de resultados/contrato Unity todavía debe verificarse antes de habilitar CURRENT en el Viewer.
+La exportación final de resultados/contrato Unity terminó con `CURRENT_VERIFIED`; resta confirmar compilación y Play de la escena canónica. El contrato enlaza la geometría, FE, cargas y payload mediante hashes.

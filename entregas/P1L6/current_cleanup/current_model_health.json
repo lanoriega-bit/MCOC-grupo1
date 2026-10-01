@@ -1,6 +1,6 @@
 {
   "base_commit": "7f216bb7b4835c167af3862ffc594c91ce4e38ed",
-  "contract_status": "CURRENT_GEOMETRY_STALE_REANALYSIS_REQUIRED",
+  "contract_status": "CURRENT_VERIFIED",
   "scope": "ACTIVE_CURRENT_ELEMENTS_ONLY",
   "counts": {
     "beam": {
@@ -8,16 +8,16 @@
       "without_blocking_geometry": 442,
       "section_valid": 442,
       "material_resolved": 389,
-      "all_four_results": 0,
-      "capacity_record": 0
+      "all_four_results": 442,
+      "capacity_record": 442
     },
     "column": {
       "total": 143,
       "without_blocking_geometry": 143,
       "section_valid": 143,
       "material_resolved": 117,
-      "all_four_results": 0,
-      "capacity_record": 0
+      "all_four_results": 143,
+      "capacity_record": 143
     },
     "slab": {
       "total": 10,
@@ -30,20 +30,12 @@
       "without_blocking_geometry": 54,
       "section_valid": 54,
       "material_resolved": 54,
-      "all_four_results": 0,
-      "capacity_record": 0
+      "all_four_results": 54,
+      "capacity_record": 54
     }
   },
   "issues": {
-    "CURRENT_RESULT_CONTRACT_STALE": 639,
-    "CAPACITY_CONTRACT_STALE": 639,
-    "LENGTH_METADATA_MISSING_DERIVABLE": 496,
     "MATERIAL_SCOPE_REVIEW_REQUIRED": 79,
-    "RESULT_G_MISSING": 24,
-    "RESULT_Q_MISSING": 24,
-    "RESULT_EX_MISSING": 24,
-    "RESULT_EY_MISSING": 24,
-    "CAPACITY_RECORD_MISSING": 24,
     "MATERIAL_UNRESOLVED": 10
   },
   "elements": [
@@ -58,10 +50,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-C-002",
@@ -74,10 +63,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-C-003",
@@ -90,10 +76,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-C-004",
@@ -106,10 +89,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-C-005",
@@ -122,10 +102,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-C-006",
@@ -138,10 +115,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-C-008",
@@ -154,10 +128,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-C-010",
@@ -170,10 +141,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-C-011",
@@ -186,10 +154,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-C-012",
@@ -202,10 +167,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-C-013",
@@ -218,10 +180,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-C-014",
@@ -234,10 +193,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-C-015",
@@ -250,10 +206,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-C-021",
@@ -266,10 +219,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-C-022",
@@ -282,10 +232,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-C-023",
@@ -298,10 +245,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-C-024",
@@ -314,10 +258,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-C-025",
@@ -330,10 +271,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-C-026",
@@ -346,10 +284,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-L-001",
@@ -375,11 +310,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-005",
@@ -392,11 +323,7 @@
       "derived": {
         "length_m": 6.55
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-007",
@@ -409,11 +336,7 @@
       "derived": {
         "length_m": 9.3
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-009",
@@ -426,11 +349,7 @@
       "derived": {
         "length_m": 9.3
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-011",
@@ -443,11 +362,7 @@
       "derived": {
         "length_m": 9.3
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-013",
@@ -460,11 +375,7 @@
       "derived": {
         "length_m": 6.55
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-014",
@@ -477,11 +388,7 @@
       "derived": {
         "length_m": 3.45
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-016",
@@ -494,11 +401,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-019",
@@ -511,11 +414,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-021",
@@ -528,11 +427,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-022",
@@ -545,11 +440,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-023",
@@ -562,11 +453,7 @@
       "derived": {
         "length_m": 6.84
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-024",
@@ -579,11 +466,7 @@
       "derived": {
         "length_m": 1.89
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-027",
@@ -596,11 +479,7 @@
       "derived": {
         "length_m": 6.55
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-028",
@@ -613,11 +492,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-029",
@@ -630,11 +505,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-031",
@@ -647,11 +518,7 @@
       "derived": {
         "length_m": 1.89
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-033",
@@ -664,11 +531,7 @@
       "derived": {
         "length_m": 6.55
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-034",
@@ -681,11 +544,7 @@
       "derived": {
         "length_m": 3.45
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-036",
@@ -698,11 +557,7 @@
       "derived": {
         "length_m": 1.86
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-041",
@@ -715,11 +570,7 @@
       "derived": {
         "length_m": 1.86
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-043",
@@ -732,11 +583,7 @@
       "derived": {
         "length_m": 6.55
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-044",
@@ -749,11 +596,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-046",
@@ -766,11 +609,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-048",
@@ -783,11 +622,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-049",
@@ -800,11 +635,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-051",
@@ -817,11 +648,7 @@
       "derived": {
         "length_m": 6.55
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-052",
@@ -834,11 +661,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-053",
@@ -851,11 +674,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-054",
@@ -868,11 +687,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-058",
@@ -885,11 +700,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-061",
@@ -902,11 +713,7 @@
       "derived": {
         "length_m": 6.55
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-062",
@@ -919,11 +726,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-064",
@@ -936,11 +739,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-066",
@@ -953,11 +752,7 @@
       "derived": {
         "length_m": 4.7
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-067",
@@ -970,11 +765,7 @@
       "derived": {
         "length_m": 4.7
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-077",
@@ -987,11 +778,7 @@
       "derived": {
         "length_m": 6.55
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-078",
@@ -1004,11 +791,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-079",
@@ -1021,11 +804,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-085",
@@ -1038,11 +817,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-087",
@@ -1055,11 +830,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-095",
@@ -1072,11 +843,7 @@
       "derived": {
         "length_m": 6.55
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-096",
@@ -1089,11 +856,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-100",
@@ -1106,11 +869,7 @@
       "derived": {
         "length_m": 4.3
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-102",
@@ -1123,11 +882,7 @@
       "derived": {
         "length_m": 4.3
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-104",
@@ -1140,11 +895,7 @@
       "derived": {
         "length_m": 4.3
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-106",
@@ -1157,11 +908,7 @@
       "derived": {
         "length_m": 6.55
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P1-V-107",
@@ -1174,11 +921,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-C-001",
@@ -1191,10 +934,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-C-002",
@@ -1207,10 +947,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-C-003",
@@ -1223,10 +960,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-C-004",
@@ -1239,10 +973,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-C-005",
@@ -1255,10 +986,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-C-006",
@@ -1271,10 +999,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-C-007",
@@ -1287,10 +1012,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-C-008",
@@ -1303,10 +1025,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-C-009",
@@ -1319,10 +1038,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-C-010",
@@ -1335,10 +1051,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-C-011",
@@ -1351,10 +1064,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-C-012",
@@ -1367,10 +1077,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-C-013",
@@ -1383,10 +1090,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-C-014",
@@ -1399,10 +1103,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-C-015",
@@ -1415,10 +1116,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-C-016",
@@ -1431,10 +1129,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-C-017",
@@ -1447,10 +1142,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-C-018",
@@ -1463,10 +1155,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-C-019",
@@ -1479,10 +1168,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-C-020",
@@ -1495,10 +1181,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-C-021",
@@ -1511,10 +1194,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-L-001",
@@ -1540,11 +1220,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-006",
@@ -1557,11 +1233,7 @@
       "derived": {
         "length_m": 6.551
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-008",
@@ -1574,11 +1246,7 @@
       "derived": {
         "length_m": 9.3
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-010",
@@ -1591,11 +1259,7 @@
       "derived": {
         "length_m": 9.3
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-012",
@@ -1608,11 +1272,7 @@
       "derived": {
         "length_m": 9.3
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-013",
@@ -1625,11 +1285,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-020",
@@ -1642,11 +1298,7 @@
       "derived": {
         "length_m": 6.551
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-021",
@@ -1659,11 +1311,7 @@
       "derived": {
         "length_m": 3.47
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-023",
@@ -1676,11 +1324,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-025",
@@ -1693,11 +1337,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-027",
@@ -1710,11 +1350,7 @@
       "derived": {
         "length_m": 1.89
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-028",
@@ -1727,11 +1363,7 @@
       "derived": {
         "length_m": 6.84
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-029",
@@ -1744,11 +1376,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-031",
@@ -1761,11 +1389,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-033",
@@ -1778,11 +1402,7 @@
       "derived": {
         "length_m": 6.551
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-039",
@@ -1795,11 +1415,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-040",
@@ -1812,11 +1428,7 @@
       "derived": {
         "length_m": 1.89
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-041",
@@ -1829,11 +1441,7 @@
       "derived": {
         "length_m": 3.47
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-042",
@@ -1846,11 +1454,7 @@
       "derived": {
         "length_m": 6.551
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-045",
@@ -1863,11 +1467,7 @@
       "derived": {
         "length_m": 1.86
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-047",
@@ -1880,11 +1480,7 @@
       "derived": {
         "length_m": 1.86
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-048",
@@ -1897,11 +1493,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-052",
@@ -1914,11 +1506,7 @@
       "derived": {
         "length_m": 6.551
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-058",
@@ -1931,11 +1519,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-059",
@@ -1948,11 +1532,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-060",
@@ -1965,11 +1545,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-063",
@@ -1982,11 +1558,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-064",
@@ -1999,11 +1571,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-068",
@@ -2016,11 +1584,7 @@
       "derived": {
         "length_m": 6.551
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-071",
@@ -2033,11 +1597,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-073",
@@ -2050,11 +1610,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-076",
@@ -2067,11 +1623,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-081",
@@ -2084,11 +1636,7 @@
       "derived": {
         "length_m": 6.551
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-084",
@@ -2101,11 +1649,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-087",
@@ -2118,11 +1662,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-089",
@@ -2135,11 +1675,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-090",
@@ -2152,11 +1688,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-092",
@@ -2169,11 +1701,7 @@
       "derived": {
         "length_m": 6.551
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-093",
@@ -2186,11 +1714,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-095",
@@ -2203,11 +1727,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-096",
@@ -2220,11 +1740,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-097",
@@ -2237,11 +1753,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-101",
@@ -2254,11 +1766,7 @@
       "derived": {
         "length_m": 6.551
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-103",
@@ -2271,11 +1779,7 @@
       "derived": {
         "length_m": 4.3
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-105",
@@ -2288,11 +1792,7 @@
       "derived": {
         "length_m": 4.3
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-106",
@@ -2305,11 +1805,7 @@
       "derived": {
         "length_m": 4.3
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-108",
@@ -2322,11 +1818,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P2-V-112",
@@ -2339,11 +1831,7 @@
       "derived": {
         "length_m": 6.551
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-C-001",
@@ -2356,10 +1844,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-C-002",
@@ -2372,10 +1857,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-C-003",
@@ -2388,10 +1870,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-C-004",
@@ -2404,10 +1883,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-C-005",
@@ -2420,10 +1896,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-C-006",
@@ -2436,10 +1909,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-C-007",
@@ -2452,10 +1922,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-C-008",
@@ -2468,10 +1935,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-C-009",
@@ -2484,10 +1948,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-C-010",
@@ -2500,10 +1961,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-C-011",
@@ -2516,10 +1974,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-C-012",
@@ -2532,10 +1987,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-C-013",
@@ -2548,10 +2000,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-C-014",
@@ -2564,10 +2013,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-C-015",
@@ -2580,10 +2026,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-C-016",
@@ -2596,10 +2039,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-C-017",
@@ -2612,10 +2052,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-C-018",
@@ -2628,10 +2065,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-L-001",
@@ -2657,11 +2091,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-006",
@@ -2674,11 +2104,7 @@
       "derived": {
         "length_m": 6.551
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-007",
@@ -2691,11 +2117,7 @@
       "derived": {
         "length_m": 9.3
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-009",
@@ -2708,11 +2130,7 @@
       "derived": {
         "length_m": 9.3
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-011",
@@ -2725,11 +2143,7 @@
       "derived": {
         "length_m": 9.3
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-018",
@@ -2742,11 +2156,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-019",
@@ -2759,11 +2169,7 @@
       "derived": {
         "length_m": 6.551
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-020",
@@ -2776,11 +2182,7 @@
       "derived": {
         "length_m": 1.96
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-021",
@@ -2793,11 +2195,7 @@
       "derived": {
         "length_m": 2.8
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-023",
@@ -2810,11 +2208,7 @@
       "derived": {
         "length_m": 1.55
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-024",
@@ -2827,11 +2221,7 @@
       "derived": {
         "length_m": 1.55
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-026",
@@ -2844,11 +2234,7 @@
       "derived": {
         "length_m": 6.551
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-027",
@@ -2861,11 +2247,7 @@
       "derived": {
         "length_m": 1.96
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-032",
@@ -2878,11 +2260,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-033",
@@ -2895,11 +2273,7 @@
       "derived": {
         "length_m": 2.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-038",
@@ -2912,11 +2286,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-039",
@@ -2929,11 +2299,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-040",
@@ -2946,11 +2312,7 @@
       "derived": {
         "length_m": 6.551
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-041",
@@ -2963,11 +2325,7 @@
       "derived": {
         "length_m": 2.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-043",
@@ -2980,11 +2338,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-045",
@@ -2997,11 +2351,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-050",
@@ -3014,11 +2364,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-051",
@@ -3031,11 +2377,7 @@
       "derived": {
         "length_m": 6.551
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-052",
@@ -3048,11 +2390,7 @@
       "derived": {
         "length_m": 3.47
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-053",
@@ -3065,11 +2403,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-054",
@@ -3082,11 +2416,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-059",
@@ -3099,11 +2429,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-060",
@@ -3116,11 +2442,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-061",
@@ -3133,11 +2455,7 @@
       "derived": {
         "length_m": 9.3
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-063",
@@ -3150,11 +2468,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-064",
@@ -3167,11 +2481,7 @@
       "derived": {
         "length_m": 6.551
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-066",
@@ -3184,11 +2494,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-068",
@@ -3201,11 +2507,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-072",
@@ -3218,11 +2520,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-073",
@@ -3235,11 +2533,7 @@
       "derived": {
         "length_m": 6.551
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-074",
@@ -3252,11 +2546,7 @@
       "derived": {
         "length_m": 3.47
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-076",
@@ -3269,11 +2559,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-077",
@@ -3286,11 +2572,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-082",
@@ -3303,11 +2585,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-083",
@@ -3320,11 +2598,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-084",
@@ -3337,11 +2611,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-085",
@@ -3354,11 +2624,7 @@
       "derived": {
         "length_m": 6.551
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-087",
@@ -3371,11 +2637,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-089",
@@ -3388,11 +2650,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-093",
@@ -3405,11 +2663,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-094",
@@ -3422,11 +2676,7 @@
       "derived": {
         "length_m": 6.551
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-097",
@@ -3439,11 +2689,7 @@
       "derived": {
         "length_m": 4.3
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-099",
@@ -3456,11 +2702,7 @@
       "derived": {
         "length_m": 4.3
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-101",
@@ -3473,11 +2715,7 @@
       "derived": {
         "length_m": 4.3
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-106",
@@ -3490,11 +2728,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-107",
@@ -3507,11 +2741,7 @@
       "derived": {
         "length_m": 6.551
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-109",
@@ -3524,11 +2754,7 @@
       "derived": {
         "length_m": 2.4
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-112",
@@ -3541,11 +2767,7 @@
       "derived": {
         "length_m": 4.25
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-114",
@@ -3558,11 +2780,7 @@
       "derived": {
         "length_m": 4.25
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-116",
@@ -3575,11 +2793,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-117",
@@ -3592,11 +2806,7 @@
       "derived": {
         "length_m": 6.551
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-119",
@@ -3609,11 +2819,7 @@
       "derived": {
         "length_m": 1.85
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-120",
@@ -3626,11 +2832,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P3-V-121",
@@ -3643,11 +2845,7 @@
       "derived": {
         "length_m": 6.551
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-P4-C-001",
@@ -3661,9 +2859,7 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -3678,9 +2874,7 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -3695,9 +2889,7 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -3712,9 +2904,7 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -3729,9 +2919,7 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -3746,9 +2934,7 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -3763,9 +2949,7 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -3780,9 +2964,7 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -3797,9 +2979,7 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -3814,9 +2994,7 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -3831,9 +3009,7 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -3848,9 +3024,7 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -3865,9 +3039,7 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -3882,9 +3054,7 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -3899,9 +3069,7 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -3916,9 +3084,7 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -3933,9 +3099,7 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -3950,9 +3114,7 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -3967,9 +3129,7 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -3984,9 +3144,7 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4001,9 +3159,7 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4018,9 +3174,7 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4035,9 +3189,7 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4052,9 +3204,7 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4069,9 +3219,7 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4086,9 +3234,7 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4116,10 +3262,7 @@
         "length_m": 8.2
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4134,10 +3277,7 @@
         "length_m": 6.551
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4152,10 +3292,7 @@
         "length_m": 9.3
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4170,10 +3307,7 @@
         "length_m": 9.3
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4188,10 +3322,7 @@
         "length_m": 9.3
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4206,10 +3337,7 @@
         "length_m": 8.2
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4224,10 +3352,7 @@
         "length_m": 6.551
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4242,10 +3367,7 @@
         "length_m": 4.35
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4260,10 +3382,7 @@
         "length_m": 4.35
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4278,10 +3397,7 @@
         "length_m": 4.35
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4296,10 +3412,7 @@
         "length_m": 4.35
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4314,10 +3427,7 @@
         "length_m": 8.2
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4332,10 +3442,7 @@
         "length_m": 6.551
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4350,10 +3457,7 @@
         "length_m": 4.35
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4368,10 +3472,7 @@
         "length_m": 4.35
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4386,10 +3487,7 @@
         "length_m": 8.2
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4404,10 +3502,7 @@
         "length_m": 6.551
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4422,10 +3517,7 @@
         "length_m": 3.47
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4440,10 +3532,7 @@
         "length_m": 4.35
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4458,10 +3547,7 @@
         "length_m": 4.35
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4476,10 +3562,7 @@
         "length_m": 4.35
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4494,10 +3577,7 @@
         "length_m": 4.35
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4512,10 +3592,7 @@
         "length_m": 9.3
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4530,10 +3607,7 @@
         "length_m": 8.2
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4548,10 +3622,7 @@
         "length_m": 6.551
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4566,10 +3637,7 @@
         "length_m": 4.35
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4584,10 +3652,7 @@
         "length_m": 4.35
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4602,10 +3667,7 @@
         "length_m": 8.2
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4620,10 +3682,7 @@
         "length_m": 6.551
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4638,10 +3697,7 @@
         "length_m": 3.47
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4656,10 +3712,7 @@
         "length_m": 4.35
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4674,10 +3727,7 @@
         "length_m": 4.35
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4692,10 +3742,7 @@
         "length_m": 4.35
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4710,10 +3757,7 @@
         "length_m": 4.35
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4728,10 +3772,7 @@
         "length_m": 8.2
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4746,10 +3787,7 @@
         "length_m": 6.551
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4764,10 +3802,7 @@
         "length_m": 4.35
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4782,10 +3817,7 @@
         "length_m": 4.35
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4800,10 +3832,7 @@
         "length_m": 8.2
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4818,10 +3847,7 @@
         "length_m": 6.551
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4836,10 +3862,7 @@
         "length_m": 4.3
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4854,10 +3877,7 @@
         "length_m": 4.3
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4872,10 +3892,7 @@
         "length_m": 4.3
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4890,10 +3907,7 @@
         "length_m": 8.2
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4908,10 +3922,7 @@
         "length_m": 6.551
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4926,10 +3937,7 @@
         "length_m": 2.4
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4944,10 +3952,7 @@
         "length_m": 4.25
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4962,10 +3967,7 @@
         "length_m": 4.25
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4980,10 +3982,7 @@
         "length_m": 8.2
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -4998,10 +3997,7 @@
         "length_m": 6.551
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -5016,10 +4012,7 @@
         "length_m": 1.85
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -5034,10 +4027,7 @@
         "length_m": 8.2
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -5052,10 +4042,7 @@
         "length_m": 6.551
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED"
       ]
     },
     {
@@ -5069,10 +4056,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-S1-C-002",
@@ -5085,10 +4069,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-S1-C-003",
@@ -5101,10 +4082,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-S1-C-004",
@@ -5117,10 +4095,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-S1-C-005",
@@ -5133,10 +4108,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-S1-C-006",
@@ -5149,10 +4121,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-S1-C-007",
@@ -5165,10 +4134,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-S1-C-008",
@@ -5181,10 +4147,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-S1-C-009",
@@ -5197,10 +4160,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-S1-C-010",
@@ -5213,10 +4173,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-S1-C-011",
@@ -5229,10 +4186,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-S1-C-012",
@@ -5245,10 +4199,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-S1-C-013",
@@ -5261,10 +4212,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-S1-C-014",
@@ -5277,10 +4225,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-S1-C-015",
@@ -5293,10 +4238,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-S1-C-016",
@@ -5309,10 +4251,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-S1-C-017",
@@ -5325,10 +4264,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-S1-C-018",
@@ -5341,10 +4277,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-S1-C-019",
@@ -5357,10 +4290,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-S1-L-001",
@@ -5386,11 +4316,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-S1-V-004",
@@ -5403,11 +4329,7 @@
       "derived": {
         "length_m": 6.55
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-S1-V-021",
@@ -5420,11 +4342,7 @@
       "derived": {
         "length_m": 8.975
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-S1-V-025",
@@ -5437,11 +4355,7 @@
       "derived": {
         "length_m": 8.975
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-S1-V-038",
@@ -5454,11 +4368,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-S1-V-039",
@@ -5471,11 +4381,7 @@
       "derived": {
         "length_m": 6.55
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-S1-V-055",
@@ -5488,11 +4394,7 @@
       "derived": {
         "length_m": 9.3
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-C-001",
@@ -5505,10 +4407,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-C-002",
@@ -5521,10 +4420,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-C-003",
@@ -5537,10 +4433,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-C-004",
@@ -5553,10 +4446,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-C-005",
@@ -5569,10 +4459,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-C-006",
@@ -5585,10 +4472,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-C-007",
@@ -5601,10 +4485,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-C-008",
@@ -5617,10 +4498,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-L-001",
@@ -5646,11 +4524,7 @@
       "derived": {
         "length_m": 0.795
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-M-002",
@@ -5663,11 +4537,7 @@
       "derived": {
         "length_m": 1.825
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-M-003",
@@ -5680,11 +4550,7 @@
       "derived": {
         "length_m": 1.825
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-M-004",
@@ -5697,11 +4563,7 @@
       "derived": {
         "length_m": 0.79
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-M-005",
@@ -5714,11 +4576,7 @@
       "derived": {
         "length_m": 1.45
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-M-006",
@@ -5731,11 +4589,7 @@
       "derived": {
         "length_m": 1.45
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-001",
@@ -5748,11 +4602,7 @@
       "derived": {
         "length_m": 2.29
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-002",
@@ -5765,11 +4615,7 @@
       "derived": {
         "length_m": 4.135
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-003",
@@ -5782,11 +4628,7 @@
       "derived": {
         "length_m": 2.485
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-004",
@@ -5799,11 +4641,7 @@
       "derived": {
         "length_m": 2.29
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-005",
@@ -5816,11 +4654,7 @@
       "derived": {
         "length_m": 3.05
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-006",
@@ -5833,11 +4667,7 @@
       "derived": {
         "length_m": 3.05
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-007",
@@ -5850,11 +4680,7 @@
       "derived": {
         "length_m": 1.6
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-008",
@@ -5867,11 +4693,7 @@
       "derived": {
         "length_m": 1.6
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-009",
@@ -5884,11 +4706,7 @@
       "derived": {
         "length_m": 3.765
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-010",
@@ -5901,11 +4719,7 @@
       "derived": {
         "length_m": 4.135
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-011",
@@ -5918,11 +4732,7 @@
       "derived": {
         "length_m": 2.485
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-012",
@@ -5935,11 +4745,7 @@
       "derived": {
         "length_m": 3.765
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-013",
@@ -5952,11 +4758,7 @@
       "derived": {
         "length_m": 3.1
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-014",
@@ -5969,11 +4771,7 @@
       "derived": {
         "length_m": 3.1
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-015",
@@ -5986,11 +4784,7 @@
       "derived": {
         "length_m": 3.1
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-016",
@@ -6003,11 +4797,7 @@
       "derived": {
         "length_m": 3.1
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-017",
@@ -6020,11 +4810,7 @@
       "derived": {
         "length_m": 3.1
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-018",
@@ -6037,11 +4823,7 @@
       "derived": {
         "length_m": 3.765
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-019",
@@ -6054,11 +4836,7 @@
       "derived": {
         "length_m": 4.135
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-020",
@@ -6071,11 +4849,7 @@
       "derived": {
         "length_m": 2.485
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-021",
@@ -6088,11 +4862,7 @@
       "derived": {
         "length_m": 3.765
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-022",
@@ -6105,11 +4875,7 @@
       "derived": {
         "length_m": 3.1
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-023",
@@ -6122,11 +4888,7 @@
       "derived": {
         "length_m": 3.1
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-024",
@@ -6139,11 +4901,7 @@
       "derived": {
         "length_m": 3.1
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-025",
@@ -6156,11 +4914,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-026",
@@ -6173,11 +4927,7 @@
       "derived": {
         "length_m": 6.55
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-027",
@@ -6190,11 +4940,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-028",
@@ -6207,11 +4953,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-029",
@@ -6224,11 +4966,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-030",
@@ -6241,11 +4979,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-031",
@@ -6258,11 +4992,7 @@
       "derived": {
         "length_m": 6.55
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-032",
@@ -6275,11 +5005,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-033",
@@ -6292,11 +5018,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-034",
@@ -6309,11 +5031,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-035",
@@ -6326,11 +5044,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-036",
@@ -6343,11 +5057,7 @@
       "derived": {
         "length_m": 6.55
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-037",
@@ -6360,11 +5070,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-038",
@@ -6377,11 +5083,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-039",
@@ -6394,11 +5096,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-040",
@@ -6411,11 +5109,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-041",
@@ -6428,11 +5122,7 @@
       "derived": {
         "length_m": 6.55
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-042",
@@ -6445,11 +5135,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-043",
@@ -6462,11 +5148,7 @@
       "derived": {
         "length_m": 4.8
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-044",
@@ -6479,11 +5161,7 @@
       "derived": {
         "length_m": 4.8
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-V-045",
@@ -6496,11 +5174,7 @@
       "derived": {
         "length_m": 3.05
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-C-001",
@@ -6513,10 +5187,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-C-002",
@@ -6529,10 +5200,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-C-003",
@@ -6545,10 +5213,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-C-004",
@@ -6561,10 +5226,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-C-005",
@@ -6577,10 +5239,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-C-006",
@@ -6593,10 +5252,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-C-007",
@@ -6609,10 +5265,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-C-008",
@@ -6625,10 +5278,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-L-001",
@@ -6654,11 +5304,7 @@
       "derived": {
         "length_m": 0.795
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-M-002",
@@ -6671,11 +5317,7 @@
       "derived": {
         "length_m": 1.825
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-M-003",
@@ -6688,11 +5330,7 @@
       "derived": {
         "length_m": 1.825
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-M-004",
@@ -6705,11 +5343,7 @@
       "derived": {
         "length_m": 0.79
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-M-005",
@@ -6722,11 +5356,7 @@
       "derived": {
         "length_m": 1.45
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-M-006",
@@ -6739,11 +5369,7 @@
       "derived": {
         "length_m": 1.45
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-001",
@@ -6756,11 +5382,7 @@
       "derived": {
         "length_m": 2.29
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-002",
@@ -6773,11 +5395,7 @@
       "derived": {
         "length_m": 4.135
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-003",
@@ -6790,11 +5408,7 @@
       "derived": {
         "length_m": 2.485
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-004",
@@ -6807,11 +5421,7 @@
       "derived": {
         "length_m": 2.29
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-005",
@@ -6824,11 +5434,7 @@
       "derived": {
         "length_m": 3.05
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-006",
@@ -6841,11 +5447,7 @@
       "derived": {
         "length_m": 3.05
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-007",
@@ -6858,11 +5460,7 @@
       "derived": {
         "length_m": 1.6
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-008",
@@ -6875,11 +5473,7 @@
       "derived": {
         "length_m": 1.6
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-009",
@@ -6892,11 +5486,7 @@
       "derived": {
         "length_m": 3.765
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-010",
@@ -6909,11 +5499,7 @@
       "derived": {
         "length_m": 4.135
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-011",
@@ -6926,11 +5512,7 @@
       "derived": {
         "length_m": 2.485
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-012",
@@ -6943,11 +5525,7 @@
       "derived": {
         "length_m": 3.765
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-013",
@@ -6960,11 +5538,7 @@
       "derived": {
         "length_m": 3.1
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-014",
@@ -6977,11 +5551,7 @@
       "derived": {
         "length_m": 3.1
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-015",
@@ -6994,11 +5564,7 @@
       "derived": {
         "length_m": 3.1
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-016",
@@ -7011,11 +5577,7 @@
       "derived": {
         "length_m": 3.1
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-017",
@@ -7028,11 +5590,7 @@
       "derived": {
         "length_m": 3.1
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-018",
@@ -7045,11 +5603,7 @@
       "derived": {
         "length_m": 3.765
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-019",
@@ -7062,11 +5616,7 @@
       "derived": {
         "length_m": 4.135
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-020",
@@ -7079,11 +5629,7 @@
       "derived": {
         "length_m": 2.485
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-021",
@@ -7096,11 +5642,7 @@
       "derived": {
         "length_m": 3.765
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-022",
@@ -7113,11 +5655,7 @@
       "derived": {
         "length_m": 3.1
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-023",
@@ -7130,11 +5668,7 @@
       "derived": {
         "length_m": 3.1
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-024",
@@ -7147,11 +5681,7 @@
       "derived": {
         "length_m": 3.1
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-025",
@@ -7164,11 +5694,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-026",
@@ -7181,11 +5707,7 @@
       "derived": {
         "length_m": 6.55
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-027",
@@ -7198,11 +5720,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-028",
@@ -7215,11 +5733,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-029",
@@ -7232,11 +5746,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-030",
@@ -7249,11 +5759,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-031",
@@ -7266,11 +5772,7 @@
       "derived": {
         "length_m": 6.55
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-032",
@@ -7283,11 +5785,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-033",
@@ -7300,11 +5798,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-034",
@@ -7317,11 +5811,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-035",
@@ -7334,11 +5824,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-036",
@@ -7351,11 +5837,7 @@
       "derived": {
         "length_m": 6.55
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-037",
@@ -7368,11 +5850,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-038",
@@ -7385,11 +5863,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-039",
@@ -7402,11 +5876,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-040",
@@ -7419,11 +5889,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-041",
@@ -7436,11 +5902,7 @@
       "derived": {
         "length_m": 6.55
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-042",
@@ -7453,11 +5915,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-043",
@@ -7470,11 +5928,7 @@
       "derived": {
         "length_m": 4.8
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-044",
@@ -7487,11 +5941,7 @@
       "derived": {
         "length_m": 4.8
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-V-045",
@@ -7504,11 +5954,7 @@
       "derived": {
         "length_m": 3.05
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-C-001",
@@ -7521,10 +5967,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-C-002",
@@ -7537,10 +5980,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-C-003",
@@ -7553,10 +5993,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-C-004",
@@ -7569,10 +6006,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-C-005",
@@ -7585,10 +6019,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-C-006",
@@ -7601,10 +6032,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-C-007",
@@ -7617,10 +6045,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-C-008",
@@ -7633,10 +6058,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-L-001",
@@ -7662,11 +6084,7 @@
       "derived": {
         "length_m": 0.795
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-M-002",
@@ -7679,11 +6097,7 @@
       "derived": {
         "length_m": 1.825
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-M-003",
@@ -7696,11 +6110,7 @@
       "derived": {
         "length_m": 1.825
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-M-004",
@@ -7713,11 +6123,7 @@
       "derived": {
         "length_m": 0.79
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-M-005",
@@ -7730,11 +6136,7 @@
       "derived": {
         "length_m": 1.45
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-M-006",
@@ -7747,11 +6149,7 @@
       "derived": {
         "length_m": 1.45
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-001",
@@ -7764,11 +6162,7 @@
       "derived": {
         "length_m": 2.29
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-002",
@@ -7781,11 +6175,7 @@
       "derived": {
         "length_m": 4.135
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-003",
@@ -7798,11 +6188,7 @@
       "derived": {
         "length_m": 2.485
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-004",
@@ -7815,11 +6201,7 @@
       "derived": {
         "length_m": 2.29
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-005",
@@ -7832,11 +6214,7 @@
       "derived": {
         "length_m": 3.05
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-006",
@@ -7849,11 +6227,7 @@
       "derived": {
         "length_m": 3.05
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-007",
@@ -7866,11 +6240,7 @@
       "derived": {
         "length_m": 1.6
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-008",
@@ -7883,11 +6253,7 @@
       "derived": {
         "length_m": 1.6
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-009",
@@ -7900,11 +6266,7 @@
       "derived": {
         "length_m": 3.765
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-010",
@@ -7917,11 +6279,7 @@
       "derived": {
         "length_m": 4.135
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-011",
@@ -7934,11 +6292,7 @@
       "derived": {
         "length_m": 2.485
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-012",
@@ -7951,11 +6305,7 @@
       "derived": {
         "length_m": 3.765
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-013",
@@ -7968,11 +6318,7 @@
       "derived": {
         "length_m": 3.1
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-014",
@@ -7985,11 +6331,7 @@
       "derived": {
         "length_m": 3.1
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-015",
@@ -8002,11 +6344,7 @@
       "derived": {
         "length_m": 3.1
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-016",
@@ -8019,11 +6357,7 @@
       "derived": {
         "length_m": 3.1
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-017",
@@ -8036,11 +6370,7 @@
       "derived": {
         "length_m": 3.1
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-018",
@@ -8053,11 +6383,7 @@
       "derived": {
         "length_m": 3.765
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-019",
@@ -8070,11 +6396,7 @@
       "derived": {
         "length_m": 4.135
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-020",
@@ -8087,11 +6409,7 @@
       "derived": {
         "length_m": 2.485
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-021",
@@ -8104,11 +6422,7 @@
       "derived": {
         "length_m": 3.765
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-022",
@@ -8121,11 +6435,7 @@
       "derived": {
         "length_m": 3.1
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-023",
@@ -8138,11 +6448,7 @@
       "derived": {
         "length_m": 3.1
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-024",
@@ -8155,11 +6461,7 @@
       "derived": {
         "length_m": 3.1
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-025",
@@ -8172,11 +6474,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-026",
@@ -8189,11 +6487,7 @@
       "derived": {
         "length_m": 6.55
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-027",
@@ -8206,11 +6500,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-028",
@@ -8223,11 +6513,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-029",
@@ -8240,11 +6526,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-030",
@@ -8257,11 +6539,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-031",
@@ -8274,11 +6552,7 @@
       "derived": {
         "length_m": 6.55
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-032",
@@ -8291,11 +6565,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-033",
@@ -8308,11 +6578,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-034",
@@ -8325,11 +6591,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-035",
@@ -8342,11 +6604,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-036",
@@ -8359,11 +6617,7 @@
       "derived": {
         "length_m": 6.55
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-037",
@@ -8376,11 +6630,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-038",
@@ -8393,11 +6643,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-039",
@@ -8410,11 +6656,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-040",
@@ -8427,11 +6669,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-041",
@@ -8444,11 +6682,7 @@
       "derived": {
         "length_m": 6.55
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-042",
@@ -8461,11 +6695,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-043",
@@ -8478,11 +6708,7 @@
       "derived": {
         "length_m": 4.8
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-044",
@@ -8495,11 +6721,7 @@
       "derived": {
         "length_m": 4.8
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-V-045",
@@ -8512,11 +6734,7 @@
       "derived": {
         "length_m": 3.05
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-C-001",
@@ -8529,10 +6747,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-C-002",
@@ -8545,10 +6760,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-C-003",
@@ -8561,10 +6773,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-C-004",
@@ -8577,10 +6786,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-C-005",
@@ -8593,10 +6799,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-C-006",
@@ -8609,10 +6812,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-C-007",
@@ -8625,10 +6825,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-C-008",
@@ -8641,10 +6838,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-L-001",
@@ -8670,11 +6864,7 @@
       "derived": {
         "length_m": 0.795
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-M-002",
@@ -8687,11 +6877,7 @@
       "derived": {
         "length_m": 1.825
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-M-003",
@@ -8704,11 +6890,7 @@
       "derived": {
         "length_m": 1.825
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-M-004",
@@ -8721,11 +6903,7 @@
       "derived": {
         "length_m": 0.79
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-M-005",
@@ -8738,11 +6916,7 @@
       "derived": {
         "length_m": 1.45
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-M-006",
@@ -8755,11 +6929,7 @@
       "derived": {
         "length_m": 1.45
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-001",
@@ -8772,11 +6942,7 @@
       "derived": {
         "length_m": 0.8
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-002",
@@ -8789,11 +6955,7 @@
       "derived": {
         "length_m": 2.199
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-004",
@@ -8806,11 +6968,7 @@
       "derived": {
         "length_m": 4.135
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-007",
@@ -8823,11 +6981,7 @@
       "derived": {
         "length_m": 2.485
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-008",
@@ -8840,11 +6994,7 @@
       "derived": {
         "length_m": 1.206
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-010",
@@ -8857,11 +7007,7 @@
       "derived": {
         "length_m": 1.703
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-011",
@@ -8874,11 +7020,7 @@
       "derived": {
         "length_m": 3.25
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-012",
@@ -8891,11 +7033,7 @@
       "derived": {
         "length_m": 3.25
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-013",
@@ -8908,11 +7046,7 @@
       "derived": {
         "length_m": 1.6
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-014",
@@ -8925,11 +7059,7 @@
       "derived": {
         "length_m": 1.051
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-016",
@@ -8942,11 +7072,7 @@
       "derived": {
         "length_m": 3.765
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-017",
@@ -8959,11 +7085,7 @@
       "derived": {
         "length_m": 4.135
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-020",
@@ -8976,11 +7098,7 @@
       "derived": {
         "length_m": 2.485
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-021",
@@ -8993,11 +7111,7 @@
       "derived": {
         "length_m": 3.765
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-024",
@@ -9010,11 +7124,7 @@
       "derived": {
         "length_m": 3.1
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-031",
@@ -9027,11 +7137,7 @@
       "derived": {
         "length_m": 3.1
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-032",
@@ -9044,11 +7150,7 @@
       "derived": {
         "length_m": 3.1
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-033",
@@ -9061,11 +7163,7 @@
       "derived": {
         "length_m": 3.1
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-034",
@@ -9078,11 +7176,7 @@
       "derived": {
         "length_m": 3.1
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-037",
@@ -9095,11 +7189,7 @@
       "derived": {
         "length_m": 3.765
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-038",
@@ -9112,11 +7202,7 @@
       "derived": {
         "length_m": 3.935
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-039",
@@ -9129,11 +7215,7 @@
       "derived": {
         "length_m": 2.485
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-040",
@@ -9146,11 +7228,7 @@
       "derived": {
         "length_m": 3.765
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-042",
@@ -9163,11 +7241,7 @@
       "derived": {
         "length_m": 3.1
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-043",
@@ -9180,11 +7254,7 @@
       "derived": {
         "length_m": 3.1
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-047",
@@ -9197,11 +7267,7 @@
       "derived": {
         "length_m": 3.1
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-049",
@@ -9214,11 +7280,7 @@
       "derived": {
         "length_m": 8.0
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-050",
@@ -9231,11 +7293,7 @@
       "derived": {
         "length_m": 6.55
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-052",
@@ -9248,11 +7306,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-053",
@@ -9265,11 +7319,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-054",
@@ -9282,11 +7332,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-060",
@@ -9299,11 +7345,7 @@
       "derived": {
         "length_m": 8.0
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-061",
@@ -9316,11 +7358,7 @@
       "derived": {
         "length_m": 6.55
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-063",
@@ -9333,11 +7371,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-064",
@@ -9350,11 +7384,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-065",
@@ -9367,11 +7397,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-071",
@@ -9384,11 +7410,7 @@
       "derived": {
         "length_m": 8.0
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-073",
@@ -9401,11 +7423,7 @@
       "derived": {
         "length_m": 6.55
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-074",
@@ -9418,11 +7436,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-075",
@@ -9435,11 +7449,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-076",
@@ -9452,11 +7462,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-081",
@@ -9469,11 +7475,7 @@
       "derived": {
         "length_m": 8.0
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-082",
@@ -9486,11 +7488,7 @@
       "derived": {
         "length_m": 6.55
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-084",
@@ -9503,11 +7501,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-085",
@@ -9520,11 +7514,7 @@
       "derived": {
         "length_m": 4.8
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-086",
@@ -9537,11 +7527,7 @@
       "derived": {
         "length_m": 4.8
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P4-V-092",
@@ -9554,11 +7540,7 @@
       "derived": {
         "length_m": 3.05
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-C-001",
@@ -9571,10 +7553,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-C-002",
@@ -9587,10 +7566,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-C-003",
@@ -9603,10 +7579,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-C-004",
@@ -9619,10 +7592,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-C-005",
@@ -9635,10 +7605,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-C-006",
@@ -9651,10 +7618,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-C-007",
@@ -9667,10 +7631,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-C-008",
@@ -9683,10 +7644,7 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": [
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-L-001",
@@ -9712,11 +7670,7 @@
       "derived": {
         "length_m": 0.795
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-M-002",
@@ -9729,11 +7683,7 @@
       "derived": {
         "length_m": 1.825
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-M-003",
@@ -9746,11 +7696,7 @@
       "derived": {
         "length_m": 1.825
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-M-004",
@@ -9763,11 +7709,7 @@
       "derived": {
         "length_m": 0.79
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-M-005",
@@ -9780,11 +7722,7 @@
       "derived": {
         "length_m": 1.45
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-M-006",
@@ -9797,11 +7735,7 @@
       "derived": {
         "length_m": 1.45
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-001",
@@ -9814,11 +7748,7 @@
       "derived": {
         "length_m": 2.29
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-002",
@@ -9831,11 +7761,7 @@
       "derived": {
         "length_m": 4.135
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-003",
@@ -9848,11 +7774,7 @@
       "derived": {
         "length_m": 2.485
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-004",
@@ -9865,11 +7787,7 @@
       "derived": {
         "length_m": 2.29
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-005",
@@ -9882,11 +7800,7 @@
       "derived": {
         "length_m": 3.05
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-006",
@@ -9899,11 +7813,7 @@
       "derived": {
         "length_m": 3.05
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-007",
@@ -9916,11 +7826,7 @@
       "derived": {
         "length_m": 1.6
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-008",
@@ -9933,11 +7839,7 @@
       "derived": {
         "length_m": 1.6
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-009",
@@ -9950,11 +7852,7 @@
       "derived": {
         "length_m": 3.765
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-010",
@@ -9967,11 +7865,7 @@
       "derived": {
         "length_m": 4.135
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-011",
@@ -9984,11 +7878,7 @@
       "derived": {
         "length_m": 2.485
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-012",
@@ -10001,11 +7891,7 @@
       "derived": {
         "length_m": 3.765
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-013",
@@ -10018,11 +7904,7 @@
       "derived": {
         "length_m": 3.1
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-014",
@@ -10035,11 +7917,7 @@
       "derived": {
         "length_m": 3.1
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-015",
@@ -10052,11 +7930,7 @@
       "derived": {
         "length_m": 3.1
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-016",
@@ -10069,11 +7943,7 @@
       "derived": {
         "length_m": 3.1
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-017",
@@ -10086,11 +7956,7 @@
       "derived": {
         "length_m": 3.1
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-018",
@@ -10103,11 +7969,7 @@
       "derived": {
         "length_m": 3.765
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-019",
@@ -10120,11 +7982,7 @@
       "derived": {
         "length_m": 4.135
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-020",
@@ -10137,11 +7995,7 @@
       "derived": {
         "length_m": 2.485
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-021",
@@ -10154,11 +8008,7 @@
       "derived": {
         "length_m": 3.765
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-022",
@@ -10171,11 +8021,7 @@
       "derived": {
         "length_m": 3.1
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-023",
@@ -10188,11 +8034,7 @@
       "derived": {
         "length_m": 3.1
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-024",
@@ -10205,11 +8047,7 @@
       "derived": {
         "length_m": 3.1
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-025",
@@ -10222,11 +8060,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-026",
@@ -10239,11 +8073,7 @@
       "derived": {
         "length_m": 6.55
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-027",
@@ -10256,11 +8086,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-028",
@@ -10273,11 +8099,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-029",
@@ -10290,11 +8112,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-030",
@@ -10307,11 +8125,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-031",
@@ -10324,11 +8138,7 @@
       "derived": {
         "length_m": 6.55
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-032",
@@ -10341,11 +8151,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-033",
@@ -10358,11 +8164,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-034",
@@ -10375,11 +8177,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-035",
@@ -10392,11 +8190,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-036",
@@ -10409,11 +8203,7 @@
       "derived": {
         "length_m": 6.55
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-037",
@@ -10426,11 +8216,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-038",
@@ -10443,11 +8229,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-039",
@@ -10460,11 +8242,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-040",
@@ -10477,11 +8255,7 @@
       "derived": {
         "length_m": 8.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-041",
@@ -10494,11 +8268,7 @@
       "derived": {
         "length_m": 6.55
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-042",
@@ -10511,11 +8281,7 @@
       "derived": {
         "length_m": 4.35
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-043",
@@ -10528,11 +8294,7 @@
       "derived": {
         "length_m": 4.8
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-044",
@@ -10545,11 +8307,7 @@
       "derived": {
         "length_m": 4.8
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-V-045",
@@ -10562,11 +8320,7 @@
       "derived": {
         "length_m": 3.05
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-S1-M-026",
@@ -10579,16 +8333,7 @@
       "derived": {
         "length_m": 2.6
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE",
-        "RESULT_G_MISSING",
-        "RESULT_Q_MISSING",
-        "RESULT_EX_MISSING",
-        "RESULT_EY_MISSING",
-        "CAPACITY_RECORD_MISSING"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-S1-M-029",
@@ -10601,16 +8346,7 @@
       "derived": {
         "length_m": 3.2
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE",
-        "RESULT_G_MISSING",
-        "RESULT_Q_MISSING",
-        "RESULT_EX_MISSING",
-        "RESULT_EY_MISSING",
-        "CAPACITY_RECORD_MISSING"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-M-007",
@@ -10623,16 +8359,7 @@
       "derived": {
         "length_m": 2.82
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE",
-        "RESULT_G_MISSING",
-        "RESULT_Q_MISSING",
-        "RESULT_EX_MISSING",
-        "RESULT_EY_MISSING",
-        "CAPACITY_RECORD_MISSING"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-M-007",
@@ -10645,16 +8372,7 @@
       "derived": {
         "length_m": 2.82
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE",
-        "RESULT_G_MISSING",
-        "RESULT_Q_MISSING",
-        "RESULT_EX_MISSING",
-        "RESULT_EY_MISSING",
-        "CAPACITY_RECORD_MISSING"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-M-007",
@@ -10667,16 +8385,7 @@
       "derived": {
         "length_m": 2.82
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE",
-        "RESULT_G_MISSING",
-        "RESULT_Q_MISSING",
-        "RESULT_EX_MISSING",
-        "RESULT_EY_MISSING",
-        "CAPACITY_RECORD_MISSING"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-M-007",
@@ -10689,16 +8398,7 @@
       "derived": {
         "length_m": 2.82
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE",
-        "RESULT_G_MISSING",
-        "RESULT_Q_MISSING",
-        "RESULT_EX_MISSING",
-        "RESULT_EY_MISSING",
-        "CAPACITY_RECORD_MISSING"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-M-008",
@@ -10711,16 +8411,7 @@
       "derived": {
         "length_m": 2.395
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE",
-        "RESULT_G_MISSING",
-        "RESULT_Q_MISSING",
-        "RESULT_EX_MISSING",
-        "RESULT_EY_MISSING",
-        "CAPACITY_RECORD_MISSING"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-M-008",
@@ -10733,16 +8424,7 @@
       "derived": {
         "length_m": 2.395
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE",
-        "RESULT_G_MISSING",
-        "RESULT_Q_MISSING",
-        "RESULT_EX_MISSING",
-        "RESULT_EY_MISSING",
-        "CAPACITY_RECORD_MISSING"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-M-008",
@@ -10755,16 +8437,7 @@
       "derived": {
         "length_m": 2.395
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE",
-        "RESULT_G_MISSING",
-        "RESULT_Q_MISSING",
-        "RESULT_EX_MISSING",
-        "RESULT_EY_MISSING",
-        "CAPACITY_RECORD_MISSING"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-M-008",
@@ -10777,16 +8450,7 @@
       "derived": {
         "length_m": 2.395
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE",
-        "RESULT_G_MISSING",
-        "RESULT_Q_MISSING",
-        "RESULT_EX_MISSING",
-        "RESULT_EY_MISSING",
-        "CAPACITY_RECORD_MISSING"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-M-010",
@@ -10799,16 +8463,7 @@
       "derived": {
         "length_m": 2.82
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE",
-        "RESULT_G_MISSING",
-        "RESULT_Q_MISSING",
-        "RESULT_EX_MISSING",
-        "RESULT_EY_MISSING",
-        "CAPACITY_RECORD_MISSING"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-M-010",
@@ -10821,16 +8476,7 @@
       "derived": {
         "length_m": 2.82
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE",
-        "RESULT_G_MISSING",
-        "RESULT_Q_MISSING",
-        "RESULT_EX_MISSING",
-        "RESULT_EY_MISSING",
-        "CAPACITY_RECORD_MISSING"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-M-010",
@@ -10843,16 +8489,7 @@
       "derived": {
         "length_m": 2.82
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE",
-        "RESULT_G_MISSING",
-        "RESULT_Q_MISSING",
-        "RESULT_EX_MISSING",
-        "RESULT_EY_MISSING",
-        "CAPACITY_RECORD_MISSING"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-M-010",
@@ -10865,16 +8502,7 @@
       "derived": {
         "length_m": 2.82
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE",
-        "RESULT_G_MISSING",
-        "RESULT_Q_MISSING",
-        "RESULT_EX_MISSING",
-        "RESULT_EY_MISSING",
-        "CAPACITY_RECORD_MISSING"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-M-011",
@@ -10887,16 +8515,7 @@
       "derived": {
         "length_m": 7.95
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE",
-        "RESULT_G_MISSING",
-        "RESULT_Q_MISSING",
-        "RESULT_EX_MISSING",
-        "RESULT_EY_MISSING",
-        "CAPACITY_RECORD_MISSING"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-M-011",
@@ -10909,16 +8528,7 @@
       "derived": {
         "length_m": 7.95
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE",
-        "RESULT_G_MISSING",
-        "RESULT_Q_MISSING",
-        "RESULT_EX_MISSING",
-        "RESULT_EY_MISSING",
-        "CAPACITY_RECORD_MISSING"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-M-011",
@@ -10931,16 +8541,7 @@
       "derived": {
         "length_m": 7.95
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE",
-        "RESULT_G_MISSING",
-        "RESULT_Q_MISSING",
-        "RESULT_EX_MISSING",
-        "RESULT_EY_MISSING",
-        "CAPACITY_RECORD_MISSING"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-M-011",
@@ -10953,16 +8554,7 @@
       "derived": {
         "length_m": 7.95
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE",
-        "RESULT_G_MISSING",
-        "RESULT_Q_MISSING",
-        "RESULT_EX_MISSING",
-        "RESULT_EY_MISSING",
-        "CAPACITY_RECORD_MISSING"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-S1-M-009",
@@ -10975,16 +8567,7 @@
       "derived": {
         "length_m": 2.68
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE",
-        "RESULT_G_MISSING",
-        "RESULT_Q_MISSING",
-        "RESULT_EX_MISSING",
-        "RESULT_EY_MISSING",
-        "CAPACITY_RECORD_MISSING"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P1-M-009",
@@ -10997,16 +8580,7 @@
       "derived": {
         "length_m": 2.68
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE",
-        "RESULT_G_MISSING",
-        "RESULT_Q_MISSING",
-        "RESULT_EX_MISSING",
-        "RESULT_EY_MISSING",
-        "CAPACITY_RECORD_MISSING"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P2-M-009",
@@ -11019,16 +8593,7 @@
       "derived": {
         "length_m": 2.68
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE",
-        "RESULT_G_MISSING",
-        "RESULT_Q_MISSING",
-        "RESULT_EX_MISSING",
-        "RESULT_EY_MISSING",
-        "CAPACITY_RECORD_MISSING"
-      ]
+      "problems": []
     },
     {
       "element_id": "E2-P3-M-009",
@@ -11041,16 +8606,7 @@
       "derived": {
         "length_m": 2.68
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE",
-        "RESULT_G_MISSING",
-        "RESULT_Q_MISSING",
-        "RESULT_EX_MISSING",
-        "RESULT_EY_MISSING",
-        "CAPACITY_RECORD_MISSING"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-S1-M-005",
@@ -11063,16 +8619,7 @@
       "derived": {
         "length_m": 1.478
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE",
-        "RESULT_G_MISSING",
-        "RESULT_Q_MISSING",
-        "RESULT_EX_MISSING",
-        "RESULT_EY_MISSING",
-        "CAPACITY_RECORD_MISSING"
-      ]
+      "problems": []
     },
     {
       "element_id": "E1-S1-M-049",
@@ -11085,17 +8632,8 @@
       "derived": {
         "length_m": 1.478
       },
-      "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE",
-        "CURRENT_RESULT_CONTRACT_STALE",
-        "CAPACITY_CONTRACT_STALE",
-        "RESULT_G_MISSING",
-        "RESULT_Q_MISSING",
-        "RESULT_EX_MISSING",
-        "RESULT_EY_MISSING",
-        "CAPACITY_RECORD_MISSING"
-      ]
+      "problems": []
     }
   ],
-  "notable_pipeline_issue": "Capacity builder expects an R row, but CURRENT basis export contains only G/Q/EX/EY; all 615 stored demand vectors are zero."
+  "notable_pipeline_issue": "CURRENT capacity demands are rebuilt from signed G/Q/EX/EY basis cases and cross-checked against the analysis manifest. Physical capacity screening remains approximate and is not design certification."
 }
