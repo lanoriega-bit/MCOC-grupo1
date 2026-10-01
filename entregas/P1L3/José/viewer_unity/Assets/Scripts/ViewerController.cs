@@ -3006,8 +3006,7 @@ namespace Mcoc.UnityViewer
                 case "column_plan":
                 case "wall":
                 case "support":
-                case "architectural_slab":
-                case "architectural_slab_edge":
+                case "node":
                     return true;
                 default:
                     return false;
@@ -3019,7 +3018,7 @@ namespace Mcoc.UnityViewer
             ExitPendingReview();
             historicalResultsEnabled = false;
             demandCapacityPlotVisible = false;
-            structuralFailureVisualizationEnabled = true;
+            structuralFailureVisualizationEnabled = false;
             structuralDamageOverlayEnabled = false;
             correctionsOnly = false;
             foreach (var key in new List<string>(buildingVisible.Keys)) buildingVisible[key] = true;
