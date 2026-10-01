@@ -1,10 +1,10 @@
 # Reintegración de muros — prueba FE aislada
 
-Estado: **CANDIDATE_NOT_PROMOTED**. Ningún muro de esta prueba se agregó aún al `model_master.json` activo; `loads.json`, resultados OpenSees, capacidad y Unity siguen sin cambios. Los archivos grandes del candidato se generaron en una carpeta temporal local y no son fuente canónica.
+Estado: **PROMOTED_GEOMETRY_RESULTS_STALE**. Los 30 muros que pasaron la prueba se incorporaron al `model_master.json` activo, se reconstruyó la topología FE y se publicaron los sólidos derivados para Unity. `loads.json`, resultados OpenSees y capacidad todavía no se han recalculado. El contrato de Unity quedó bloqueado como `STALE_REANALYSIS_REQUIRED`: no debe mostrar esfuerzos antiguos como CURRENT.
 
 ## Evidencia y límites
 
-De 92 muros retirados, la auditoría CAD de pares de caras y el contraste geométrico con Santiago/Cáceres dejan 29 candidatos `CONFIRMED_REINTEGRATE`. Otros 55 siguen `REVIEW_REQUIRED`; cuatro de ED1/P4 carecen de confirmación del alcance de material; cuatro de E2/P4 contradicen la instrucción manual previa de retirar esa zona. Los repositorios externos no son fuente primaria ni fueron modificados.
+De 92 muros retirados, 30 quedan `CONFIRMED_REINTEGRATE`: par de caras único en nuestro CAD, correspondencia externa cuando hay cobertura y continuidad comprobada en una prueba FE aislada. Otros 50 siguen `REVIEW_REQUIRED` general; cuatro de ED1/P4 carecen de confirmación del alcance de material; cuatro de E2/P4 contradicen la instrucción manual previa de retirar esa zona; cuatro ED1/P2–P3 carecen de camino FE inferior comprobado. Los repositorios externos no son fuente primaria ni fueron modificados.
 
 La prueba reconstruyó la topología FE de forma aislada, sin correr OpenSees ni modificar resultados. **Los 29 juntos no pasan conectividad:** 16 muros aparecen en seis componentes flotantes. No se añadió ningún apoyo ni enlace artificial.
 
@@ -17,18 +17,18 @@ La prueba reconstruyó la topología FE de forma aislada, sin correr OpenSees ni
 | 5 | E2-P1-M-010, E2-P2-M-010, E2-P3-M-010 | Revisar continuidad a S1 y adaptador FE |
 | 6 | E2-P1-M-009, E2-P2-M-009, E2-P3-M-009 | Revisar continuidad a S1 y adaptador FE |
 
-Los muros E2-S1-M-007/008/009/010/011 tienen pares de caras CAD únicos y coincidencia con Cáceres, pero Santiago no ofrece un control S1 equivalente. La posible continuidad vertical es una pista, **no** una justificación para activarlos o apoyar los flotantes automáticamente. Debe cotejarse planta/corte y formulación de conexión.
+Los muros E2-S1-M-007/008/009/010/011 tienen pares de caras CAD únicos, coincidencia con Cáceres y continuidad geométrica exacta con P1. Santiago no ofrece un control S1 equivalente. Al introducirlos en el candidato aislado, las cuatro cadenas flotantes E2/P1–P3 pasan a estar conectadas sin apoyos ficticios. Esta es evidencia de topología, no de capacidad ni de resultados.
 
-## Subconjunto técnicamente conectable
+## Subconjunto promovido
 
-Una segunda prueba aislada, excluyendo los 16 miembros flotantes, pasa la validación del modelo central con **0 componentes flotantes**: 43 muros totales (30 actuales + 13 candidatos), 1.208 nodos físicos, 636 segmentos FE y 0 errores del validador.
+La prueba final difiere los cuatro ED1/P2–P3 sin soporte inferior e incluye cinco E2/S1 con continuidad primaria. Pasa la validación central con **0 componentes flotantes**: 60 muros totales (30 actuales + 30 candidatos), 1.242 nodos físicos y 0 errores del validador.
 
-Los 13 candidatos son:
+Los 30 candidatos constan en `removed_wall_candidates.json` y se enumeran con geometría, sección, material y fuente en el `restoration_manifest.json` que genera la prueba. Los cuatro diferidos son `E1-P2-M-007`, `E1-P2-M-008`, `E1-P3-M-007` y `E1-P3-M-008`.
 
-`E1-S1-M-005`, `E1-S1-M-026`, `E1-S1-M-029`, `E1-S1-M-049`, `E1-P1-M-002`, `E1-P1-M-026`, `E1-P2-M-003`, `E1-P2-M-005`, `E1-P3-M-003`, `E1-P3-M-005`, `E2-P1-M-011`, `E2-P2-M-011`, `E2-P3-M-011`.
+Las vigas P1 más cercanas a los paños P2 diferidos están a 3,70 m y 2,12 m, respectivamente. No se puede crear una unión por simple proximidad. Requieren corte/detalle o una interpretación verificable de su ruta de cargas.
 
-**PASS de topología no equivale a modelo CURRENT listo.** Antes de promover el subconjunto hay que decidir cómo manejar los 16 muros físicamente respaldados pero FE-desconectados, y regenerar cargas, masa, análisis, capacidades, contratos y Unity en una misma revisión. El `CURRENT_VERIFIED` vigente corresponde a la geometría anterior y no debe reutilizarse tras cualquier promoción.
+**PASS de topología no equivale a modelo CURRENT listo.** Ya se bloqueó el contrato de resultados antes de publicar la nueva geometría. Faltan cargas, masa, análisis, capacidades, contratos y QA Play de Unity. El `CURRENT_VERIFIED` previo correspondía a la geometría anterior y no debe reutilizarse.
 
 ## Reproducción
 
-Ejecutar `prepare_confirmed_walls.py --output-dir <carpeta temporal>` y luego `validate_wall_candidate.py --candidate-dir <carpeta temporal>` con el Python del entorno `.venv-p1l5` (requiere `shapely`). La primera prueba termina con error por los seis componentes, de forma esperada; el archivo `candidate_qa.json` lista los IDs flotantes. Para probar el subconjunto, preparar otra carpeta con `--exclude-floating-from <candidate_qa.json>` y validarla de la misma forma. Ambas herramientas escriben solo en la carpeta de candidato indicada.
+Ejecutar `prepare_confirmed_walls.py --output-dir <carpeta temporal>` y luego `validate_wall_candidate.py --candidate-dir <carpeta temporal>` con el Python del entorno `.venv-p1l5` (requiere `shapely`). La promoción se realizó con `promote_validated_walls.py`, que exige QA PASS, cero componentes flotantes y que ningún sólido o sección existente cambie; preserva el archivo original de Luis. `promoted_walls_manifest.json` registra los IDs, geometrías y fuentes del hito. Para regenerar la clasificación CAD/externos, `audit_removed_walls.py` requiere los dos clones como argumentos de solo lectura y un Python con Pillow.

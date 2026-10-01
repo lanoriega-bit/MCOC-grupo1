@@ -35,7 +35,8 @@ def write(path: Path, data: dict) -> None:
 
 
 def prepare(master: dict, sections: dict, candidates: dict, exclusions: dict,
-            only_ids: set[str] | None = None) -> tuple[dict, dict, dict]:
+            only_ids: set[str] | None = None,
+            exploratory_ids: set[str] | None = None) -> tuple[dict, dict, dict]:
     master, sections = copy.deepcopy(master), copy.deepcopy(sections)
     selected = [r for r in candidates["candidates"] if r["decision"] == "CONFIRMED_REINTEGRATE"]
     if only_ids is not None:
@@ -43,6 +44,15 @@ def prepare(master: dict, sections: dict, candidates: dict, exclusions: dict,
         if unknown:
             raise ValueError(f"Requested IDs are not confirmed: {sorted(unknown)}")
         selected = [r for r in selected if r["candidate_id"] in only_ids]
+    exploratory_ids = exploratory_ids or set()
+    if exploratory_ids:
+        exploratory = [r for r in candidates["candidates"] if r["candidate_id"] in exploratory_ids]
+        if len(exploratory) != len(exploratory_ids):
+            raise ValueError("Unknown exploratory wall ID")
+        for row in exploratory:
+            if row["building"] != "EDIFICIO_2" or row["floor"] != "S1" or row["decision"] != "REVIEW_REQUIRED":
+                raise ValueError(f"Exploration is limited to E2/S1 review walls: {row['candidate_id']}")
+        selected += exploratory
     by_id = {r["element_id"]: r for r in exclusions["exclusions"]}
     active_ids = {r["element_id"] for r in master["elements"]}
     solid_tags = {r["solidTag"] for r in master["elements"] + master["supports"]}
@@ -55,19 +65,22 @@ def prepare(master: dict, sections: dict, candidates: dict, exclusions: dict,
     restored = []
     for candidate in selected:
         identifier = candidate["candidate_id"]
+        building, floor = candidate["building"], candidate["floor"]
         if identifier in active_ids or identifier not in by_id:
             raise ValueError(f"Unexpected active/missing exclusion: {identifier}")
         source = by_id[identifier]["before"]
         primary = candidate["primary_pair_audit"]
         if not primary["confirmed_pair"] or primary["pair_count"] != 1:
             raise ValueError(f"No unique primary CAD face pair: {identifier}")
-        if not all(candidate[k] and candidate[k]["strong"] for k in ("santiago", "caceres")):
+        if identifier in exploratory_ids or (building == "EDIFICIO_2" and floor == "S1"):
+            if not candidate["caceres"] or not candidate["caceres"]["strong"]:
+                raise ValueError(f"No external S1 control: {identifier}")
+        elif not all(candidate[k] and candidate[k]["strong"] for k in ("santiago", "caceres")):
             raise ValueError(f"External geometry check changed: {identifier}")
         if candidate["active_duplicate"]:
             raise ValueError(f"Active duplicate: {identifier}")
         if source["solidTag"] in solid_tags:
             raise ValueError(f"Duplicate solidTag: {identifier}")
-        building, floor = candidate["building"], candidate["floor"]
         if building == "EDIFICIO_1" and floor == "P4":
             raise ValueError(f"ED1/P4 material scope unresolved: {identifier}")
         if building == "EDIFICIO_2" and floor == "P4":
@@ -132,7 +145,7 @@ def prepare(master: dict, sections: dict, candidates: dict, exclusions: dict,
                            "source_dxf": source["source_dxf"], "source_layer": source["source_layer"],
                            "sourceTags": source["sourceTags"], "confidence": source["confidence"],
                            "primary_pair_audit": primary,
-                           "external_repo_clue": [candidate["santiago"]["id"], candidate["caceres"]["id"]],
+                           "external_repo_clue": [candidate[k]["id"] for k in ("santiago", "caceres") if candidate[k]],
                            "prior_exclusion_reason": candidate["previous_removal_reason"]},
             "merge_history": [], "analysis_status": "STALE_REANALYSIS_REQUIRED",
         }
@@ -149,7 +162,8 @@ def prepare(master: dict, sections: dict, candidates: dict, exclusions: dict,
         "restored_ids": [r["element_id"] for r in restored],
         "source_audit": (HERE / "removed_wall_candidates.json").relative_to(ROOT).as_posix(),
     })
-    manifest = {"status": "CANDIDATE_NOT_PROMOTED", "restored_count": len(restored),
+    manifest = {"status": "EXPLORATORY_NOT_PROMOTABLE" if exploratory_ids else "CANDIDATE_NOT_PROMOTED", "restored_count": len(restored),
+                "exploratory_ids": sorted(exploratory_ids),
                 "by_building_floor": {str(k): v for k, v in Counter((r["building"], r["floor"]) for r in restored).items()},
                 "restored": restored,
                 "excluded_review_required": [r["candidate_id"] for r in candidates["candidates"] if r["decision"].startswith("REVIEW_REQUIRED")]}
@@ -162,6 +176,8 @@ def main() -> None:
     parser.add_argument("--only-ids", type=Path, help="JSON array of confirmed IDs to prepare as a subset")
     parser.add_argument("--exclude-floating-from", type=Path,
                         help="Isolated FE candidate QA whose floating IDs remain deferred")
+    parser.add_argument("--explore-e2-s1", action="store_true",
+                        help="Add four E2/S1 review walls ONLY as an isolated connectivity experiment")
     args = parser.parse_args()
     only_ids = set(read(args.only_ids)) if args.only_ids else None
     if args.exclude_floating_from:
@@ -172,6 +188,7 @@ def main() -> None:
     master, sections, manifest = prepare(
         read(CENTRAL / "model_master.json"), read(CENTRAL / "sections.json"),
         read(HERE / "removed_wall_candidates.json"), read(EXCLUSIONS), only_ids,
+        {f"E2-S1-M-{i:03d}" for i in (7, 8, 9, 10, 11)} if args.explore_e2_s1 else None,
     )
     write(args.output_dir / "model_master.json", master)
     write(args.output_dir / "sections.json", sections)

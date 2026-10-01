@@ -2104,6 +2104,286 @@
           "floor": "S1"
         }
       ]
+    },
+    {
+      "section_id": "SEC_WALL_0.200x2.600",
+      "type": "wall_equivalent_rectangular",
+      "units": "m",
+      "dimensions": {
+        "thickness_m": 0.2,
+        "length_m": 2.6
+      },
+      "status": "GEOMETRY_DERIVED_LENGTH",
+      "provenance": {
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "source_tags": [
+          "S1-RLE-MURO-0058",
+          "S1-RLE-MURO-0059"
+        ],
+        "primary_pair_audit": {
+          "confirmed_pair": true,
+          "pair_count": 1,
+          "endpoint_error_m": 0.0,
+          "thickness_error_m": 0.0,
+          "source": "ED1 paired contour audit"
+        }
+      },
+      "used_by_count": 1,
+      "provenance_examples": [
+        {
+          "element_id": "E1-S1-M-026",
+          "building": "EDIFICIO_1",
+          "floor": "S1",
+          "source_dxf": "2017_67-101.dxf",
+          "source_layer": "RLE-MURO_CONTOUR_PAIR"
+        }
+      ]
+    },
+    {
+      "section_id": "SEC_WALL_0.200x3.200",
+      "type": "wall_equivalent_rectangular",
+      "units": "m",
+      "dimensions": {
+        "thickness_m": 0.2,
+        "length_m": 3.2
+      },
+      "status": "GEOMETRY_DERIVED_LENGTH",
+      "provenance": {
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "source_tags": [
+          "S1-RLE-MURO-0044",
+          "S1-RLE-MURO-0045"
+        ],
+        "primary_pair_audit": {
+          "confirmed_pair": true,
+          "pair_count": 1,
+          "endpoint_error_m": 0.0,
+          "thickness_error_m": 0.0,
+          "source": "ED1 paired contour audit"
+        }
+      },
+      "used_by_count": 1,
+      "provenance_examples": [
+        {
+          "element_id": "E1-S1-M-029",
+          "building": "EDIFICIO_1",
+          "floor": "S1",
+          "source_dxf": "2017_67-101.dxf",
+          "source_layer": "RLE-MURO_CONTOUR_PAIR"
+        }
+      ]
+    },
+    {
+      "section_id": "SEC_WALL_0.250x2.820",
+      "type": "wall_equivalent_rectangular",
+      "units": "m",
+      "dimensions": {
+        "thickness_m": 0.25,
+        "length_m": 2.82
+      },
+      "status": "GEOMETRY_DERIVED_LENGTH",
+      "provenance": {
+        "source_dxf": "2024_22-101.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "source_tags": [
+          "S1-RLE-MURO-0005",
+          "S1-RLE-MURO-0007"
+        ],
+        "primary_pair_audit": {
+          "confirmed_pair": true,
+          "pair_count": 1,
+          "endpoint_error_m": 0.0,
+          "thickness_error_m": 0.0,
+          "source": "ED2 paired contour audit"
+        }
+      },
+      "used_by_count": 8,
+      "provenance_examples": [
+        {
+          "element_id": "E2-S1-M-007",
+          "building": "EDIFICIO_2",
+          "floor": "S1",
+          "source_dxf": "2024_22-101.dxf",
+          "source_layer": "RLE-MURO_CONTOUR_PAIR"
+        }
+      ]
+    },
+    {
+      "section_id": "SEC_WALL_0.300x2.395",
+      "type": "wall_equivalent_rectangular",
+      "units": "m",
+      "dimensions": {
+        "thickness_m": 0.3,
+        "length_m": 2.395
+      },
+      "status": "GEOMETRY_DERIVED_LENGTH",
+      "provenance": {
+        "source_dxf": "2024_22-101.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "source_tags": [
+          "S1-RLE-MURO-0008",
+          "S1-RLE-MURO-0009"
+        ],
+        "primary_pair_audit": {
+          "confirmed_pair": true,
+          "pair_count": 1,
+          "endpoint_error_m": 0.0,
+          "thickness_error_m": 0.0,
+          "source": "ED2 paired contour audit"
+        }
+      },
+      "used_by_count": 4,
+      "provenance_examples": [
+        {
+          "element_id": "E2-S1-M-008",
+          "building": "EDIFICIO_2",
+          "floor": "S1",
+          "source_dxf": "2024_22-101.dxf",
+          "source_layer": "RLE-MURO_CONTOUR_PAIR"
+        }
+      ]
+    },
+    {
+      "section_id": "SEC_WALL_0.250x7.950",
+      "type": "wall_equivalent_rectangular",
+      "units": "m",
+      "dimensions": {
+        "thickness_m": 0.25,
+        "length_m": 7.95
+      },
+      "status": "GEOMETRY_DERIVED_LENGTH",
+      "provenance": {
+        "source_dxf": "2024_22-101.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "source_tags": [
+          "S1-RLE-MURO-0001",
+          "S1-RLE-MURO-0003"
+        ],
+        "primary_pair_audit": {
+          "confirmed_pair": true,
+          "pair_count": 1,
+          "endpoint_error_m": 0.0,
+          "thickness_error_m": 0.0,
+          "source": "ED2 paired contour audit"
+        }
+      },
+      "used_by_count": 4,
+      "provenance_examples": [
+        {
+          "element_id": "E2-S1-M-011",
+          "building": "EDIFICIO_2",
+          "floor": "S1",
+          "source_dxf": "2024_22-101.dxf",
+          "source_layer": "RLE-MURO_CONTOUR_PAIR"
+        }
+      ]
+    },
+    {
+      "section_id": "SEC_WALL_0.250x2.680",
+      "type": "wall_equivalent_rectangular",
+      "units": "m",
+      "dimensions": {
+        "thickness_m": 0.25,
+        "length_m": 2.68
+      },
+      "status": "GEOMETRY_DERIVED_LENGTH",
+      "provenance": {
+        "source_dxf": "2024_22-101.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "source_tags": [
+          "S1-RLE-MURO-0011",
+          "S1-RLE-MURO-0012"
+        ],
+        "primary_pair_audit": {
+          "confirmed_pair": true,
+          "pair_count": 1,
+          "endpoint_error_m": 0.0,
+          "thickness_error_m": 0.0,
+          "source": "ED2 paired contour audit"
+        }
+      },
+      "used_by_count": 4,
+      "provenance_examples": [
+        {
+          "element_id": "E2-S1-M-009",
+          "building": "EDIFICIO_2",
+          "floor": "S1",
+          "source_dxf": "2024_22-101.dxf",
+          "source_layer": "RLE-MURO_CONTOUR_PAIR"
+        }
+      ]
+    },
+    {
+      "section_id": "SEC_WALL_0.250x1.478",
+      "type": "wall_equivalent_rectangular",
+      "units": "m",
+      "dimensions": {
+        "thickness_m": 0.25,
+        "length_m": 1.478
+      },
+      "status": "GEOMETRY_DERIVED_LENGTH",
+      "provenance": {
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "source_tags": [
+          "S1-RLE-MURO-0046",
+          "S1-RLE-MURO-0048"
+        ],
+        "primary_pair_audit": {
+          "confirmed_pair": true,
+          "pair_count": 1,
+          "endpoint_error_m": 0.0,
+          "thickness_error_m": 0.0,
+          "source": "ED1 paired contour audit"
+        }
+      },
+      "used_by_count": 2,
+      "provenance_examples": [
+        {
+          "element_id": "E1-S1-M-005",
+          "building": "EDIFICIO_1",
+          "floor": "S1",
+          "source_dxf": "2017_67-101.dxf",
+          "source_layer": "RLE-MURO_CONTOUR_PAIR"
+        }
+      ]
+    },
+    {
+      "section_id": "SEC_WALL_0.250x1.479",
+      "type": "wall_equivalent_rectangular",
+      "units": "m",
+      "dimensions": {
+        "thickness_m": 0.25,
+        "length_m": 1.479
+      },
+      "status": "GEOMETRY_DERIVED_LENGTH",
+      "provenance": {
+        "source_dxf": "2017_67-101.dxf",
+        "source_layer": "RLE-MURO_CONTOUR_PAIR",
+        "source_tags": [
+          "P1-RLE-MURO-0003",
+          "P1-RLE-MURO-0005"
+        ],
+        "primary_pair_audit": {
+          "confirmed_pair": true,
+          "pair_count": 1,
+          "endpoint_error_m": 0.0,
+          "thickness_error_m": 0.0,
+          "source": "ED1 paired contour audit"
+        }
+      },
+      "used_by_count": 6,
+      "provenance_examples": [
+        {
+          "element_id": "E1-P1-M-002",
+          "building": "EDIFICIO_1",
+          "floor": "P1",
+          "source_dxf": "2017_67-101.dxf",
+          "source_layer": "RLE-MURO_CONTOUR_PAIR"
+        }
+      ]
     }
   ]
 }

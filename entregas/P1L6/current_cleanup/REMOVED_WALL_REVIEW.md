@@ -8,8 +8,9 @@ Activos: 30. Retirados examinados: 92. Santiago: 66 muros; Cáceres: 82 muros.
 
 | Decisión provisional | Cantidad |
 | --- | ---: |
-| REVIEW_REQUIRED | 55 |
-| CONFIRMED_REINTEGRATE | 29 |
+| REVIEW_REQUIRED | 50 |
+| CONFIRMED_REINTEGRATE | 30 |
+| REVIEW_REQUIRED_FE_SUPPORT | 4 |
 | REVIEW_REQUIRED_MATERIAL_SCOPE | 4 |
 | REVIEW_REQUIRED_PRIOR_SCOPE_CONFLICT | 4 |
 
@@ -18,12 +19,12 @@ Activos: 30. Retirados examinados: 92. Santiago: 66 muros; Cáceres: 82 muros.
 | Candidato | Piso | Santiago | Cáceres | Plano/layer nuestro | Decisión |
 | --- | --- | --- | --- | --- | --- |
 | E1-S1-M-026 | S1 | S-W-16 | C-W-1701 | 2017_67-101.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
-| E1-P2-M-007 | P2 | S-W-18 | C-W-1003 | 2017_67-102.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
-| E1-P3-M-007 | P3 | S-W-19 | C-W-1004 | 2017_67-102.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
+| E1-P2-M-007 | P2 | S-W-18 | C-W-1003 | 2017_67-102.dxf / RLE-MURO_CONTOUR_PAIR | REVIEW_REQUIRED_FE_SUPPORT |
+| E1-P3-M-007 | P3 | S-W-19 | C-W-1004 | 2017_67-102.dxf / RLE-MURO_CONTOUR_PAIR | REVIEW_REQUIRED_FE_SUPPORT |
 | E1-P4-M-007 | P4 | S-W-20 | C-W-1005 | 2017_67-103.dxf / RLE-MURO_CONTOUR_PAIR | REVIEW_REQUIRED_MATERIAL_SCOPE |
 | E1-S1-M-029 | S1 | S-W-1 | C-W-1401 | 2017_67-101.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
-| E1-P2-M-008 | P2 | S-W-3 | C-W-1403 | 2017_67-102.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
-| E1-P3-M-008 | P3 | S-W-4 | C-W-1404 | 2017_67-102.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
+| E1-P2-M-008 | P2 | S-W-3 | C-W-1403 | 2017_67-102.dxf / RLE-MURO_CONTOUR_PAIR | REVIEW_REQUIRED_FE_SUPPORT |
+| E1-P3-M-008 | P3 | S-W-4 | C-W-1404 | 2017_67-102.dxf / RLE-MURO_CONTOUR_PAIR | REVIEW_REQUIRED_FE_SUPPORT |
 | E1-P4-M-008 | P4 | S-W-5 | C-W-1405 | 2017_67-103.dxf / RLE-MURO_CONTOUR_PAIR | REVIEW_REQUIRED_MATERIAL_SCOPE |
 | E2-P1-M-007 | P1 | S-W-37 | C-W-902 | 2024_22-101.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
 | E2-P2-M-007 | P2 | S-W-38 | C-W-903 | 2024_22-101.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
@@ -61,3 +62,5 @@ Activos: 30. Retirados examinados: 92. Santiago: 66 muros; Cáceres: 82 muros.
 
 
 Nota de precedencia: los cuatro candidatos E2-P4 marcados REVIEW_REQUIRED_PRIOR_SCOPE_CONFLICT no se reintegran automáticamente. Una instrucción manual anterior pidió retirar esa zona; la coincidencia de contornos y repositorios externos no resuelve por sí sola su rol estructural.
+
+Excepción a la regla de ambos repositorios: los cinco E2-S1-M-007…011 tienen par de caras primario único, coincidencia Cáceres y continuidad geométrica exacta con P1; Santiago no tiene control S1 equivalente. La prueba FE aislada confirma que la continuidad S1 conecta las cadenas P1–P3 sin apoyos inventados. Los cuatro E1-P2/P3-M-007/008 quedan REVIEW_REQUIRED_FE_SUPPORT: el candidato FE los deja flotantes y no hay viga P1 directamente debajo. No se consideran listos para análisis.

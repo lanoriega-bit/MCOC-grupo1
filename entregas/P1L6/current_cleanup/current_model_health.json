@@ -1,6 +1,6 @@
 {
   "base_commit": "7f216bb7b4835c167af3862ffc594c91ce4e38ed",
-  "contract_status": "CURRENT_VERIFIED",
+  "contract_status": "CURRENT_GEOMETRY_STALE_REANALYSIS_REQUIRED",
   "scope": "ACTIVE_CURRENT_ELEMENTS_ONLY",
   "counts": {
     "beam": {
@@ -8,16 +8,16 @@
       "without_blocking_geometry": 442,
       "section_valid": 442,
       "material_resolved": 389,
-      "all_four_results": 442,
-      "capacity_record": 442
+      "all_four_results": 0,
+      "capacity_record": 0
     },
     "column": {
       "total": 143,
       "without_blocking_geometry": 143,
       "section_valid": 143,
       "material_resolved": 117,
-      "all_four_results": 143,
-      "capacity_record": 143
+      "all_four_results": 0,
+      "capacity_record": 0
     },
     "slab": {
       "total": 10,
@@ -26,17 +26,25 @@
       "material_resolved": 0
     },
     "wall": {
-      "total": 30,
-      "without_blocking_geometry": 30,
-      "section_valid": 30,
-      "material_resolved": 30,
-      "all_four_results": 30,
-      "capacity_record": 30
+      "total": 60,
+      "without_blocking_geometry": 60,
+      "section_valid": 60,
+      "material_resolved": 60,
+      "all_four_results": 0,
+      "capacity_record": 0
     }
   },
   "issues": {
-    "LENGTH_METADATA_MISSING_DERIVABLE": 472,
+    "CURRENT_RESULT_CONTRACT_STALE": 645,
+    "CAPACITY_CONTRACT_STALE": 645,
+    "LENGTH_METADATA_MISSING_DERIVABLE": 502,
     "MATERIAL_SCOPE_REVIEW_REQUIRED": 79,
+    "LOAD_RECORD_MISSING": 30,
+    "RESULT_G_MISSING": 30,
+    "RESULT_Q_MISSING": 30,
+    "RESULT_EX_MISSING": 30,
+    "RESULT_EY_MISSING": 30,
+    "CAPACITY_RECORD_MISSING": 30,
     "MATERIAL_UNRESOLVED": 10
   },
   "elements": [
@@ -51,7 +59,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P1-C-002",
@@ -64,7 +75,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P1-C-003",
@@ -77,7 +91,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P1-C-004",
@@ -90,7 +107,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P1-C-005",
@@ -103,7 +123,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P1-C-006",
@@ -116,7 +139,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P1-C-008",
@@ -129,7 +155,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P1-C-010",
@@ -142,7 +171,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P1-C-011",
@@ -155,7 +187,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P1-C-012",
@@ -168,7 +203,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P1-C-013",
@@ -181,7 +219,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P1-C-014",
@@ -194,7 +235,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P1-C-015",
@@ -207,7 +251,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P1-C-021",
@@ -220,7 +267,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P1-C-022",
@@ -233,7 +283,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P1-C-023",
@@ -246,7 +299,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P1-C-024",
@@ -259,7 +315,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P1-C-025",
@@ -272,7 +331,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P1-C-026",
@@ -285,7 +347,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P1-L-001",
@@ -312,7 +377,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -327,7 +394,9 @@
         "length_m": 6.55
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -342,7 +411,9 @@
         "length_m": 9.3
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -357,7 +428,9 @@
         "length_m": 9.3
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -372,7 +445,9 @@
         "length_m": 9.3
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -387,7 +462,9 @@
         "length_m": 6.55
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -402,7 +479,9 @@
         "length_m": 3.45
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -417,7 +496,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -432,7 +513,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -447,7 +530,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -462,7 +547,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -477,7 +564,9 @@
         "length_m": 6.84
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -492,7 +581,9 @@
         "length_m": 1.89
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -507,7 +598,9 @@
         "length_m": 6.55
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -522,7 +615,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -537,7 +632,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -552,7 +649,9 @@
         "length_m": 1.89
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -567,7 +666,9 @@
         "length_m": 6.55
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -582,7 +683,9 @@
         "length_m": 3.45
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -597,7 +700,9 @@
         "length_m": 1.86
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -612,7 +717,9 @@
         "length_m": 1.86
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -627,7 +734,9 @@
         "length_m": 6.55
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -642,7 +751,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -657,7 +768,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -672,7 +785,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -687,7 +802,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -702,7 +819,9 @@
         "length_m": 6.55
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -717,7 +836,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -732,7 +853,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -747,7 +870,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -762,7 +887,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -777,7 +904,9 @@
         "length_m": 6.55
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -792,7 +921,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -807,7 +938,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -822,7 +955,9 @@
         "length_m": 4.7
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -837,7 +972,9 @@
         "length_m": 4.7
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -852,7 +989,9 @@
         "length_m": 6.55
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -867,7 +1006,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -882,7 +1023,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -897,7 +1040,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -912,7 +1057,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -927,7 +1074,9 @@
         "length_m": 6.55
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -942,7 +1091,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -957,7 +1108,9 @@
         "length_m": 4.3
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -972,7 +1125,9 @@
         "length_m": 4.3
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -987,7 +1142,9 @@
         "length_m": 4.3
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1002,7 +1159,9 @@
         "length_m": 6.55
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1017,7 +1176,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1031,7 +1192,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P2-C-002",
@@ -1044,7 +1208,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P2-C-003",
@@ -1057,7 +1224,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P2-C-004",
@@ -1070,7 +1240,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P2-C-005",
@@ -1083,7 +1256,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P2-C-006",
@@ -1096,7 +1272,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P2-C-007",
@@ -1109,7 +1288,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P2-C-008",
@@ -1122,7 +1304,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P2-C-009",
@@ -1135,7 +1320,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P2-C-010",
@@ -1148,7 +1336,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P2-C-011",
@@ -1161,7 +1352,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P2-C-012",
@@ -1174,7 +1368,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P2-C-013",
@@ -1187,7 +1384,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P2-C-014",
@@ -1200,7 +1400,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P2-C-015",
@@ -1213,7 +1416,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P2-C-016",
@@ -1226,7 +1432,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P2-C-017",
@@ -1239,7 +1448,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P2-C-018",
@@ -1252,7 +1464,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P2-C-019",
@@ -1265,7 +1480,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P2-C-020",
@@ -1278,7 +1496,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P2-C-021",
@@ -1291,7 +1512,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P2-L-001",
@@ -1318,7 +1542,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1333,7 +1559,9 @@
         "length_m": 6.551
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1348,7 +1576,9 @@
         "length_m": 9.3
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1363,7 +1593,9 @@
         "length_m": 9.3
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1378,7 +1610,9 @@
         "length_m": 9.3
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1393,7 +1627,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1408,7 +1644,9 @@
         "length_m": 6.551
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1423,7 +1661,9 @@
         "length_m": 3.47
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1438,7 +1678,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1453,7 +1695,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1468,7 +1712,9 @@
         "length_m": 1.89
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1483,7 +1729,9 @@
         "length_m": 6.84
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1498,7 +1746,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1513,7 +1763,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1528,7 +1780,9 @@
         "length_m": 6.551
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1543,7 +1797,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1558,7 +1814,9 @@
         "length_m": 1.89
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1573,7 +1831,9 @@
         "length_m": 3.47
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1588,7 +1848,9 @@
         "length_m": 6.551
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1603,7 +1865,9 @@
         "length_m": 1.86
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1618,7 +1882,9 @@
         "length_m": 1.86
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1633,7 +1899,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1648,7 +1916,9 @@
         "length_m": 6.551
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1663,7 +1933,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1678,7 +1950,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1693,7 +1967,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1708,7 +1984,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1723,7 +2001,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1738,7 +2018,9 @@
         "length_m": 6.551
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1753,7 +2035,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1768,7 +2052,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1783,7 +2069,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1798,7 +2086,9 @@
         "length_m": 6.551
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1813,7 +2103,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1828,7 +2120,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1843,7 +2137,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1858,7 +2154,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1873,7 +2171,9 @@
         "length_m": 6.551
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1888,7 +2188,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1903,7 +2205,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1918,7 +2222,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1933,7 +2239,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1948,7 +2256,9 @@
         "length_m": 6.551
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1963,7 +2273,9 @@
         "length_m": 4.3
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1978,7 +2290,9 @@
         "length_m": 4.3
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -1993,7 +2307,9 @@
         "length_m": 4.3
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2008,7 +2324,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2023,7 +2341,9 @@
         "length_m": 6.551
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2037,7 +2357,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P3-C-002",
@@ -2050,7 +2373,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P3-C-003",
@@ -2063,7 +2389,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P3-C-004",
@@ -2076,7 +2405,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P3-C-005",
@@ -2089,7 +2421,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P3-C-006",
@@ -2102,7 +2437,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P3-C-007",
@@ -2115,7 +2453,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P3-C-008",
@@ -2128,7 +2469,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P3-C-009",
@@ -2141,7 +2485,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P3-C-010",
@@ -2154,7 +2501,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P3-C-011",
@@ -2167,7 +2517,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P3-C-012",
@@ -2180,7 +2533,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P3-C-013",
@@ -2193,7 +2549,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P3-C-014",
@@ -2206,7 +2565,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P3-C-015",
@@ -2219,7 +2581,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P3-C-016",
@@ -2232,7 +2597,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P3-C-017",
@@ -2245,7 +2613,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P3-C-018",
@@ -2258,7 +2629,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-P3-L-001",
@@ -2285,7 +2659,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2300,7 +2676,9 @@
         "length_m": 6.551
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2315,7 +2693,9 @@
         "length_m": 9.3
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2330,7 +2710,9 @@
         "length_m": 9.3
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2345,7 +2727,9 @@
         "length_m": 9.3
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2360,7 +2744,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2375,7 +2761,9 @@
         "length_m": 6.551
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2390,7 +2778,9 @@
         "length_m": 1.96
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2405,7 +2795,9 @@
         "length_m": 2.8
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2420,7 +2812,9 @@
         "length_m": 1.55
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2435,7 +2829,9 @@
         "length_m": 1.55
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2450,7 +2846,9 @@
         "length_m": 6.551
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2465,7 +2863,9 @@
         "length_m": 1.96
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2480,7 +2880,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2495,7 +2897,9 @@
         "length_m": 2.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2510,7 +2914,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2525,7 +2931,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2540,7 +2948,9 @@
         "length_m": 6.551
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2555,7 +2965,9 @@
         "length_m": 2.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2570,7 +2982,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2585,7 +2999,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2600,7 +3016,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2615,7 +3033,9 @@
         "length_m": 6.551
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2630,7 +3050,9 @@
         "length_m": 3.47
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2645,7 +3067,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2660,7 +3084,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2675,7 +3101,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2690,7 +3118,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2705,7 +3135,9 @@
         "length_m": 9.3
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2720,7 +3152,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2735,7 +3169,9 @@
         "length_m": 6.551
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2750,7 +3186,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2765,7 +3203,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2780,7 +3220,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2795,7 +3237,9 @@
         "length_m": 6.551
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2810,7 +3254,9 @@
         "length_m": 3.47
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2825,7 +3271,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2840,7 +3288,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2855,7 +3305,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2870,7 +3322,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2885,7 +3339,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2900,7 +3356,9 @@
         "length_m": 6.551
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2915,7 +3373,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2930,7 +3390,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2945,7 +3407,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2960,7 +3424,9 @@
         "length_m": 6.551
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2975,7 +3441,9 @@
         "length_m": 4.3
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -2990,7 +3458,9 @@
         "length_m": 4.3
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3005,7 +3475,9 @@
         "length_m": 4.3
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3020,7 +3492,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3035,7 +3509,9 @@
         "length_m": 6.551
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3050,7 +3526,9 @@
         "length_m": 2.4
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3065,7 +3543,9 @@
         "length_m": 4.25
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3080,7 +3560,9 @@
         "length_m": 4.25
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3095,7 +3577,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3110,7 +3594,9 @@
         "length_m": 6.551
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3125,7 +3611,9 @@
         "length_m": 1.85
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3140,7 +3628,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3155,7 +3645,9 @@
         "length_m": 6.551
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3170,7 +3662,9 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3185,7 +3679,9 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3200,7 +3696,9 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3215,7 +3713,9 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3230,7 +3730,9 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3245,7 +3747,9 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3260,7 +3764,9 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3275,7 +3781,9 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3290,7 +3798,9 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3305,7 +3815,9 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3320,7 +3832,9 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3335,7 +3849,9 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3350,7 +3866,9 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3365,7 +3883,9 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3380,7 +3900,9 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3395,7 +3917,9 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3410,7 +3934,9 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3425,7 +3951,9 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3440,7 +3968,9 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3455,7 +3985,9 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3470,7 +4002,9 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3485,7 +4019,9 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3500,7 +4036,9 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3515,7 +4053,9 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3530,7 +4070,9 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3545,7 +4087,9 @@
         "height_m": 3.96
       },
       "problems": [
-        "MATERIAL_SCOPE_REVIEW_REQUIRED"
+        "MATERIAL_SCOPE_REVIEW_REQUIRED",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3574,7 +4118,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3590,7 +4136,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3606,7 +4154,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3622,7 +4172,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3638,7 +4190,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3654,7 +4208,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3670,7 +4226,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3686,7 +4244,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3702,7 +4262,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3718,7 +4280,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3734,7 +4298,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3750,7 +4316,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3766,7 +4334,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3782,7 +4352,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3798,7 +4370,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3814,7 +4388,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3830,7 +4406,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3846,7 +4424,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3862,7 +4442,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3878,7 +4460,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3894,7 +4478,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3910,7 +4496,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3926,7 +4514,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3942,7 +4532,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3958,7 +4550,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3974,7 +4568,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -3990,7 +4586,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -4006,7 +4604,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -4022,7 +4622,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -4038,7 +4640,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -4054,7 +4658,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -4070,7 +4676,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -4086,7 +4694,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -4102,7 +4712,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -4118,7 +4730,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -4134,7 +4748,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -4150,7 +4766,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -4166,7 +4784,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -4182,7 +4802,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -4198,7 +4820,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -4214,7 +4838,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -4230,7 +4856,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -4246,7 +4874,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -4262,7 +4892,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -4278,7 +4910,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -4294,7 +4928,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -4310,7 +4946,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -4326,7 +4964,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -4342,7 +4982,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -4358,7 +5000,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -4374,7 +5018,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -4390,7 +5036,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -4406,7 +5054,9 @@
       },
       "problems": [
         "MATERIAL_SCOPE_REVIEW_REQUIRED",
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -4420,7 +5070,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-S1-C-002",
@@ -4433,7 +5086,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-S1-C-003",
@@ -4446,7 +5102,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-S1-C-004",
@@ -4459,7 +5118,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-S1-C-005",
@@ -4472,7 +5134,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-S1-C-006",
@@ -4485,7 +5150,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-S1-C-007",
@@ -4498,7 +5166,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-S1-C-008",
@@ -4511,7 +5182,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-S1-C-009",
@@ -4524,7 +5198,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-S1-C-010",
@@ -4537,7 +5214,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-S1-C-011",
@@ -4550,7 +5230,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-S1-C-012",
@@ -4563,7 +5246,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-S1-C-013",
@@ -4576,7 +5262,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-S1-C-014",
@@ -4589,7 +5278,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-S1-C-015",
@@ -4602,7 +5294,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-S1-C-016",
@@ -4615,7 +5310,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-S1-C-017",
@@ -4628,7 +5326,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-S1-C-018",
@@ -4641,7 +5342,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-S1-C-019",
@@ -4654,7 +5358,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E1-S1-L-001",
@@ -4681,7 +5388,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -4696,7 +5405,9 @@
         "length_m": 6.55
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -4711,7 +5422,9 @@
         "length_m": 8.975
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -4726,7 +5439,9 @@
         "length_m": 8.975
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -4741,7 +5456,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -4756,7 +5473,9 @@
         "length_m": 6.55
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -4771,7 +5490,9 @@
         "length_m": 9.3
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -4785,7 +5506,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E2-P1-C-002",
@@ -4798,7 +5522,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E2-P1-C-003",
@@ -4811,7 +5538,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E2-P1-C-004",
@@ -4824,7 +5554,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E2-P1-C-005",
@@ -4837,7 +5570,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E2-P1-C-006",
@@ -4850,7 +5586,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E2-P1-C-007",
@@ -4863,7 +5602,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E2-P1-C-008",
@@ -4876,7 +5618,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E2-P1-L-001",
@@ -4903,7 +5648,9 @@
         "length_m": 0.795
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -4918,7 +5665,9 @@
         "length_m": 1.825
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -4933,7 +5682,9 @@
         "length_m": 1.825
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -4948,7 +5699,9 @@
         "length_m": 0.79
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -4963,7 +5716,9 @@
         "length_m": 1.45
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -4978,7 +5733,9 @@
         "length_m": 1.45
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -4993,7 +5750,9 @@
         "length_m": 2.29
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5008,7 +5767,9 @@
         "length_m": 4.135
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5023,7 +5784,9 @@
         "length_m": 2.485
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5038,7 +5801,9 @@
         "length_m": 2.29
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5053,7 +5818,9 @@
         "length_m": 3.05
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5068,7 +5835,9 @@
         "length_m": 3.05
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5083,7 +5852,9 @@
         "length_m": 1.6
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5098,7 +5869,9 @@
         "length_m": 1.6
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5113,7 +5886,9 @@
         "length_m": 3.765
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5128,7 +5903,9 @@
         "length_m": 4.135
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5143,7 +5920,9 @@
         "length_m": 2.485
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5158,7 +5937,9 @@
         "length_m": 3.765
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5173,7 +5954,9 @@
         "length_m": 3.1
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5188,7 +5971,9 @@
         "length_m": 3.1
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5203,7 +5988,9 @@
         "length_m": 3.1
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5218,7 +6005,9 @@
         "length_m": 3.1
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5233,7 +6022,9 @@
         "length_m": 3.1
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5248,7 +6039,9 @@
         "length_m": 3.765
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5263,7 +6056,9 @@
         "length_m": 4.135
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5278,7 +6073,9 @@
         "length_m": 2.485
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5293,7 +6090,9 @@
         "length_m": 3.765
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5308,7 +6107,9 @@
         "length_m": 3.1
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5323,7 +6124,9 @@
         "length_m": 3.1
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5338,7 +6141,9 @@
         "length_m": 3.1
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5353,7 +6158,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5368,7 +6175,9 @@
         "length_m": 6.55
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5383,7 +6192,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5398,7 +6209,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5413,7 +6226,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5428,7 +6243,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5443,7 +6260,9 @@
         "length_m": 6.55
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5458,7 +6277,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5473,7 +6294,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5488,7 +6311,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5503,7 +6328,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5518,7 +6345,9 @@
         "length_m": 6.55
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5533,7 +6362,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5548,7 +6379,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5563,7 +6396,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5578,7 +6413,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5593,7 +6430,9 @@
         "length_m": 6.55
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5608,7 +6447,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5623,7 +6464,9 @@
         "length_m": 4.8
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5638,7 +6481,9 @@
         "length_m": 4.8
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5653,7 +6498,9 @@
         "length_m": 3.05
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5667,7 +6514,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E2-P2-C-002",
@@ -5680,7 +6530,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E2-P2-C-003",
@@ -5693,7 +6546,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E2-P2-C-004",
@@ -5706,7 +6562,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E2-P2-C-005",
@@ -5719,7 +6578,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E2-P2-C-006",
@@ -5732,7 +6594,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E2-P2-C-007",
@@ -5745,7 +6610,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E2-P2-C-008",
@@ -5758,7 +6626,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E2-P2-L-001",
@@ -5785,7 +6656,9 @@
         "length_m": 0.795
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5800,7 +6673,9 @@
         "length_m": 1.825
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5815,7 +6690,9 @@
         "length_m": 1.825
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5830,7 +6707,9 @@
         "length_m": 0.79
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5845,7 +6724,9 @@
         "length_m": 1.45
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5860,7 +6741,9 @@
         "length_m": 1.45
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5875,7 +6758,9 @@
         "length_m": 2.29
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5890,7 +6775,9 @@
         "length_m": 4.135
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5905,7 +6792,9 @@
         "length_m": 2.485
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5920,7 +6809,9 @@
         "length_m": 2.29
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5935,7 +6826,9 @@
         "length_m": 3.05
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5950,7 +6843,9 @@
         "length_m": 3.05
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5965,7 +6860,9 @@
         "length_m": 1.6
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5980,7 +6877,9 @@
         "length_m": 1.6
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -5995,7 +6894,9 @@
         "length_m": 3.765
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6010,7 +6911,9 @@
         "length_m": 4.135
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6025,7 +6928,9 @@
         "length_m": 2.485
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6040,7 +6945,9 @@
         "length_m": 3.765
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6055,7 +6962,9 @@
         "length_m": 3.1
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6070,7 +6979,9 @@
         "length_m": 3.1
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6085,7 +6996,9 @@
         "length_m": 3.1
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6100,7 +7013,9 @@
         "length_m": 3.1
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6115,7 +7030,9 @@
         "length_m": 3.1
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6130,7 +7047,9 @@
         "length_m": 3.765
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6145,7 +7064,9 @@
         "length_m": 4.135
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6160,7 +7081,9 @@
         "length_m": 2.485
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6175,7 +7098,9 @@
         "length_m": 3.765
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6190,7 +7115,9 @@
         "length_m": 3.1
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6205,7 +7132,9 @@
         "length_m": 3.1
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6220,7 +7149,9 @@
         "length_m": 3.1
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6235,7 +7166,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6250,7 +7183,9 @@
         "length_m": 6.55
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6265,7 +7200,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6280,7 +7217,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6295,7 +7234,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6310,7 +7251,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6325,7 +7268,9 @@
         "length_m": 6.55
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6340,7 +7285,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6355,7 +7302,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6370,7 +7319,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6385,7 +7336,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6400,7 +7353,9 @@
         "length_m": 6.55
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6415,7 +7370,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6430,7 +7387,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6445,7 +7404,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6460,7 +7421,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6475,7 +7438,9 @@
         "length_m": 6.55
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6490,7 +7455,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6505,7 +7472,9 @@
         "length_m": 4.8
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6520,7 +7489,9 @@
         "length_m": 4.8
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6535,7 +7506,9 @@
         "length_m": 3.05
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6549,7 +7522,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E2-P3-C-002",
@@ -6562,7 +7538,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E2-P3-C-003",
@@ -6575,7 +7554,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E2-P3-C-004",
@@ -6588,7 +7570,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E2-P3-C-005",
@@ -6601,7 +7586,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E2-P3-C-006",
@@ -6614,7 +7602,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E2-P3-C-007",
@@ -6627,7 +7618,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E2-P3-C-008",
@@ -6640,7 +7634,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E2-P3-L-001",
@@ -6667,7 +7664,9 @@
         "length_m": 0.795
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6682,7 +7681,9 @@
         "length_m": 1.825
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6697,7 +7698,9 @@
         "length_m": 1.825
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6712,7 +7715,9 @@
         "length_m": 0.79
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6727,7 +7732,9 @@
         "length_m": 1.45
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6742,7 +7749,9 @@
         "length_m": 1.45
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6757,7 +7766,9 @@
         "length_m": 2.29
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6772,7 +7783,9 @@
         "length_m": 4.135
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6787,7 +7800,9 @@
         "length_m": 2.485
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6802,7 +7817,9 @@
         "length_m": 2.29
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6817,7 +7834,9 @@
         "length_m": 3.05
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6832,7 +7851,9 @@
         "length_m": 3.05
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6847,7 +7868,9 @@
         "length_m": 1.6
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6862,7 +7885,9 @@
         "length_m": 1.6
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6877,7 +7902,9 @@
         "length_m": 3.765
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6892,7 +7919,9 @@
         "length_m": 4.135
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6907,7 +7936,9 @@
         "length_m": 2.485
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6922,7 +7953,9 @@
         "length_m": 3.765
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6937,7 +7970,9 @@
         "length_m": 3.1
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6952,7 +7987,9 @@
         "length_m": 3.1
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6967,7 +8004,9 @@
         "length_m": 3.1
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6982,7 +8021,9 @@
         "length_m": 3.1
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -6997,7 +8038,9 @@
         "length_m": 3.1
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7012,7 +8055,9 @@
         "length_m": 3.765
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7027,7 +8072,9 @@
         "length_m": 4.135
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7042,7 +8089,9 @@
         "length_m": 2.485
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7057,7 +8106,9 @@
         "length_m": 3.765
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7072,7 +8123,9 @@
         "length_m": 3.1
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7087,7 +8140,9 @@
         "length_m": 3.1
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7102,7 +8157,9 @@
         "length_m": 3.1
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7117,7 +8174,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7132,7 +8191,9 @@
         "length_m": 6.55
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7147,7 +8208,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7162,7 +8225,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7177,7 +8242,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7192,7 +8259,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7207,7 +8276,9 @@
         "length_m": 6.55
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7222,7 +8293,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7237,7 +8310,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7252,7 +8327,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7267,7 +8344,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7282,7 +8361,9 @@
         "length_m": 6.55
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7297,7 +8378,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7312,7 +8395,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7327,7 +8412,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7342,7 +8429,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7357,7 +8446,9 @@
         "length_m": 6.55
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7372,7 +8463,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7387,7 +8480,9 @@
         "length_m": 4.8
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7402,7 +8497,9 @@
         "length_m": 4.8
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7417,7 +8514,9 @@
         "length_m": 3.05
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7431,7 +8530,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E2-P4-C-002",
@@ -7444,7 +8546,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E2-P4-C-003",
@@ -7457,7 +8562,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E2-P4-C-004",
@@ -7470,7 +8578,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E2-P4-C-005",
@@ -7483,7 +8594,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E2-P4-C-006",
@@ -7496,7 +8610,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E2-P4-C-007",
@@ -7509,7 +8626,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E2-P4-C-008",
@@ -7522,7 +8642,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E2-P4-L-001",
@@ -7549,7 +8672,9 @@
         "length_m": 0.795
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7564,7 +8689,9 @@
         "length_m": 1.825
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7579,7 +8706,9 @@
         "length_m": 1.825
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7594,7 +8723,9 @@
         "length_m": 0.79
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7609,7 +8740,9 @@
         "length_m": 1.45
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7624,7 +8757,9 @@
         "length_m": 1.45
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7639,7 +8774,9 @@
         "length_m": 0.8
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7654,7 +8791,9 @@
         "length_m": 2.199
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7669,7 +8808,9 @@
         "length_m": 4.135
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7684,7 +8825,9 @@
         "length_m": 2.485
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7699,7 +8842,9 @@
         "length_m": 1.206
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7714,7 +8859,9 @@
         "length_m": 1.703
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7729,7 +8876,9 @@
         "length_m": 3.25
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7744,7 +8893,9 @@
         "length_m": 3.25
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7759,7 +8910,9 @@
         "length_m": 1.6
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7774,7 +8927,9 @@
         "length_m": 1.051
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7789,7 +8944,9 @@
         "length_m": 3.765
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7804,7 +8961,9 @@
         "length_m": 4.135
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7819,7 +8978,9 @@
         "length_m": 2.485
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7834,7 +8995,9 @@
         "length_m": 3.765
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7849,7 +9012,9 @@
         "length_m": 3.1
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7864,7 +9029,9 @@
         "length_m": 3.1
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7879,7 +9046,9 @@
         "length_m": 3.1
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7894,7 +9063,9 @@
         "length_m": 3.1
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7909,7 +9080,9 @@
         "length_m": 3.1
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7924,7 +9097,9 @@
         "length_m": 3.765
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7939,7 +9114,9 @@
         "length_m": 3.935
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7954,7 +9131,9 @@
         "length_m": 2.485
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7969,7 +9148,9 @@
         "length_m": 3.765
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7984,7 +9165,9 @@
         "length_m": 3.1
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -7999,7 +9182,9 @@
         "length_m": 3.1
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8014,7 +9199,9 @@
         "length_m": 3.1
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8029,7 +9216,9 @@
         "length_m": 8.0
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8044,7 +9233,9 @@
         "length_m": 6.55
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8059,7 +9250,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8074,7 +9267,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8089,7 +9284,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8104,7 +9301,9 @@
         "length_m": 8.0
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8119,7 +9318,9 @@
         "length_m": 6.55
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8134,7 +9335,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8149,7 +9352,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8164,7 +9369,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8179,7 +9386,9 @@
         "length_m": 8.0
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8194,7 +9403,9 @@
         "length_m": 6.55
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8209,7 +9420,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8224,7 +9437,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8239,7 +9454,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8254,7 +9471,9 @@
         "length_m": 8.0
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8269,7 +9488,9 @@
         "length_m": 6.55
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8284,7 +9505,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8299,7 +9522,9 @@
         "length_m": 4.8
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8314,7 +9539,9 @@
         "length_m": 4.8
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8329,7 +9556,9 @@
         "length_m": 3.05
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8343,7 +9572,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E2-S1-C-002",
@@ -8356,7 +9588,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E2-S1-C-003",
@@ -8369,7 +9604,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E2-S1-C-004",
@@ -8382,7 +9620,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E2-S1-C-005",
@@ -8395,7 +9636,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E2-S1-C-006",
@@ -8408,7 +9652,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E2-S1-C-007",
@@ -8421,7 +9668,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E2-S1-C-008",
@@ -8434,7 +9684,10 @@
       "derived": {
         "height_m": 3.96
       },
-      "problems": []
+      "problems": [
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
     },
     {
       "element_id": "E2-S1-L-001",
@@ -8461,7 +9714,9 @@
         "length_m": 0.795
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8476,7 +9731,9 @@
         "length_m": 1.825
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8491,7 +9748,9 @@
         "length_m": 1.825
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8506,7 +9765,9 @@
         "length_m": 0.79
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8521,7 +9782,9 @@
         "length_m": 1.45
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8536,7 +9799,9 @@
         "length_m": 1.45
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8551,7 +9816,9 @@
         "length_m": 2.29
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8566,7 +9833,9 @@
         "length_m": 4.135
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8581,7 +9850,9 @@
         "length_m": 2.485
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8596,7 +9867,9 @@
         "length_m": 2.29
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8611,7 +9884,9 @@
         "length_m": 3.05
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8626,7 +9901,9 @@
         "length_m": 3.05
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8641,7 +9918,9 @@
         "length_m": 1.6
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8656,7 +9935,9 @@
         "length_m": 1.6
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8671,7 +9952,9 @@
         "length_m": 3.765
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8686,7 +9969,9 @@
         "length_m": 4.135
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8701,7 +9986,9 @@
         "length_m": 2.485
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8716,7 +10003,9 @@
         "length_m": 3.765
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8731,7 +10020,9 @@
         "length_m": 3.1
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8746,7 +10037,9 @@
         "length_m": 3.1
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8761,7 +10054,9 @@
         "length_m": 3.1
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8776,7 +10071,9 @@
         "length_m": 3.1
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8791,7 +10088,9 @@
         "length_m": 3.1
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8806,7 +10105,9 @@
         "length_m": 3.765
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8821,7 +10122,9 @@
         "length_m": 4.135
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8836,7 +10139,9 @@
         "length_m": 2.485
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8851,7 +10156,9 @@
         "length_m": 3.765
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8866,7 +10173,9 @@
         "length_m": 3.1
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8881,7 +10190,9 @@
         "length_m": 3.1
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8896,7 +10207,9 @@
         "length_m": 3.1
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8911,7 +10224,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8926,7 +10241,9 @@
         "length_m": 6.55
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8941,7 +10258,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8956,7 +10275,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8971,7 +10292,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -8986,7 +10309,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -9001,7 +10326,9 @@
         "length_m": 6.55
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -9016,7 +10343,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -9031,7 +10360,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -9046,7 +10377,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -9061,7 +10394,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -9076,7 +10411,9 @@
         "length_m": 6.55
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -9091,7 +10428,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -9106,7 +10445,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -9121,7 +10462,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -9136,7 +10479,9 @@
         "length_m": 8.2
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -9151,7 +10496,9 @@
         "length_m": 6.55
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -9166,7 +10513,9 @@
         "length_m": 4.35
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -9181,7 +10530,9 @@
         "length_m": 4.8
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -9196,7 +10547,9 @@
         "length_m": 4.8
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
       ]
     },
     {
@@ -9211,7 +10564,699 @@
         "length_m": 3.05
       },
       "problems": [
-        "LENGTH_METADATA_MISSING_DERIVABLE"
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE"
+      ]
+    },
+    {
+      "element_id": "E1-S1-M-026",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "type": "wall",
+      "section_id": "SEC_WALL_0.200x2.600",
+      "section_status": "GEOMETRY_DERIVED_LENGTH",
+      "material_id": "MAT_G35_10_2017_67_100_1E116",
+      "derived": {
+        "length_m": 2.6
+      },
+      "problems": [
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE",
+        "LOAD_RECORD_MISSING",
+        "RESULT_G_MISSING",
+        "RESULT_Q_MISSING",
+        "RESULT_EX_MISSING",
+        "RESULT_EY_MISSING",
+        "CAPACITY_RECORD_MISSING"
+      ]
+    },
+    {
+      "element_id": "E1-S1-M-029",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "type": "wall",
+      "section_id": "SEC_WALL_0.200x3.200",
+      "section_status": "GEOMETRY_DERIVED_LENGTH",
+      "material_id": "MAT_G35_10_2017_67_100_1E116",
+      "derived": {
+        "length_m": 3.2
+      },
+      "problems": [
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE",
+        "LOAD_RECORD_MISSING",
+        "RESULT_G_MISSING",
+        "RESULT_Q_MISSING",
+        "RESULT_EX_MISSING",
+        "RESULT_EY_MISSING",
+        "CAPACITY_RECORD_MISSING"
+      ]
+    },
+    {
+      "element_id": "E2-S1-M-007",
+      "building": "EDIFICIO_2",
+      "floor": "S1",
+      "type": "wall",
+      "section_id": "SEC_WALL_0.250x2.820",
+      "section_status": "GEOMETRY_DERIVED_LENGTH",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
+      "derived": {
+        "length_m": 2.82
+      },
+      "problems": [
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE",
+        "LOAD_RECORD_MISSING",
+        "RESULT_G_MISSING",
+        "RESULT_Q_MISSING",
+        "RESULT_EX_MISSING",
+        "RESULT_EY_MISSING",
+        "CAPACITY_RECORD_MISSING"
+      ]
+    },
+    {
+      "element_id": "E2-P1-M-007",
+      "building": "EDIFICIO_2",
+      "floor": "P1",
+      "type": "wall",
+      "section_id": "SEC_WALL_0.250x2.820",
+      "section_status": "GEOMETRY_DERIVED_LENGTH",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
+      "derived": {
+        "length_m": 2.82
+      },
+      "problems": [
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE",
+        "LOAD_RECORD_MISSING",
+        "RESULT_G_MISSING",
+        "RESULT_Q_MISSING",
+        "RESULT_EX_MISSING",
+        "RESULT_EY_MISSING",
+        "CAPACITY_RECORD_MISSING"
+      ]
+    },
+    {
+      "element_id": "E2-P2-M-007",
+      "building": "EDIFICIO_2",
+      "floor": "P2",
+      "type": "wall",
+      "section_id": "SEC_WALL_0.250x2.820",
+      "section_status": "GEOMETRY_DERIVED_LENGTH",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
+      "derived": {
+        "length_m": 2.82
+      },
+      "problems": [
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE",
+        "LOAD_RECORD_MISSING",
+        "RESULT_G_MISSING",
+        "RESULT_Q_MISSING",
+        "RESULT_EX_MISSING",
+        "RESULT_EY_MISSING",
+        "CAPACITY_RECORD_MISSING"
+      ]
+    },
+    {
+      "element_id": "E2-P3-M-007",
+      "building": "EDIFICIO_2",
+      "floor": "P3",
+      "type": "wall",
+      "section_id": "SEC_WALL_0.250x2.820",
+      "section_status": "GEOMETRY_DERIVED_LENGTH",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
+      "derived": {
+        "length_m": 2.82
+      },
+      "problems": [
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE",
+        "LOAD_RECORD_MISSING",
+        "RESULT_G_MISSING",
+        "RESULT_Q_MISSING",
+        "RESULT_EX_MISSING",
+        "RESULT_EY_MISSING",
+        "CAPACITY_RECORD_MISSING"
+      ]
+    },
+    {
+      "element_id": "E2-S1-M-008",
+      "building": "EDIFICIO_2",
+      "floor": "S1",
+      "type": "wall",
+      "section_id": "SEC_WALL_0.300x2.395",
+      "section_status": "GEOMETRY_DERIVED_LENGTH",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
+      "derived": {
+        "length_m": 2.395
+      },
+      "problems": [
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE",
+        "LOAD_RECORD_MISSING",
+        "RESULT_G_MISSING",
+        "RESULT_Q_MISSING",
+        "RESULT_EX_MISSING",
+        "RESULT_EY_MISSING",
+        "CAPACITY_RECORD_MISSING"
+      ]
+    },
+    {
+      "element_id": "E2-P1-M-008",
+      "building": "EDIFICIO_2",
+      "floor": "P1",
+      "type": "wall",
+      "section_id": "SEC_WALL_0.300x2.395",
+      "section_status": "GEOMETRY_DERIVED_LENGTH",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
+      "derived": {
+        "length_m": 2.395
+      },
+      "problems": [
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE",
+        "LOAD_RECORD_MISSING",
+        "RESULT_G_MISSING",
+        "RESULT_Q_MISSING",
+        "RESULT_EX_MISSING",
+        "RESULT_EY_MISSING",
+        "CAPACITY_RECORD_MISSING"
+      ]
+    },
+    {
+      "element_id": "E2-P2-M-008",
+      "building": "EDIFICIO_2",
+      "floor": "P2",
+      "type": "wall",
+      "section_id": "SEC_WALL_0.300x2.395",
+      "section_status": "GEOMETRY_DERIVED_LENGTH",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
+      "derived": {
+        "length_m": 2.395
+      },
+      "problems": [
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE",
+        "LOAD_RECORD_MISSING",
+        "RESULT_G_MISSING",
+        "RESULT_Q_MISSING",
+        "RESULT_EX_MISSING",
+        "RESULT_EY_MISSING",
+        "CAPACITY_RECORD_MISSING"
+      ]
+    },
+    {
+      "element_id": "E2-P3-M-008",
+      "building": "EDIFICIO_2",
+      "floor": "P3",
+      "type": "wall",
+      "section_id": "SEC_WALL_0.300x2.395",
+      "section_status": "GEOMETRY_DERIVED_LENGTH",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
+      "derived": {
+        "length_m": 2.395
+      },
+      "problems": [
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE",
+        "LOAD_RECORD_MISSING",
+        "RESULT_G_MISSING",
+        "RESULT_Q_MISSING",
+        "RESULT_EX_MISSING",
+        "RESULT_EY_MISSING",
+        "CAPACITY_RECORD_MISSING"
+      ]
+    },
+    {
+      "element_id": "E2-S1-M-010",
+      "building": "EDIFICIO_2",
+      "floor": "S1",
+      "type": "wall",
+      "section_id": "SEC_WALL_0.250x2.820",
+      "section_status": "GEOMETRY_DERIVED_LENGTH",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
+      "derived": {
+        "length_m": 2.82
+      },
+      "problems": [
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE",
+        "LOAD_RECORD_MISSING",
+        "RESULT_G_MISSING",
+        "RESULT_Q_MISSING",
+        "RESULT_EX_MISSING",
+        "RESULT_EY_MISSING",
+        "CAPACITY_RECORD_MISSING"
+      ]
+    },
+    {
+      "element_id": "E2-P1-M-010",
+      "building": "EDIFICIO_2",
+      "floor": "P1",
+      "type": "wall",
+      "section_id": "SEC_WALL_0.250x2.820",
+      "section_status": "GEOMETRY_DERIVED_LENGTH",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
+      "derived": {
+        "length_m": 2.82
+      },
+      "problems": [
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE",
+        "LOAD_RECORD_MISSING",
+        "RESULT_G_MISSING",
+        "RESULT_Q_MISSING",
+        "RESULT_EX_MISSING",
+        "RESULT_EY_MISSING",
+        "CAPACITY_RECORD_MISSING"
+      ]
+    },
+    {
+      "element_id": "E2-P2-M-010",
+      "building": "EDIFICIO_2",
+      "floor": "P2",
+      "type": "wall",
+      "section_id": "SEC_WALL_0.250x2.820",
+      "section_status": "GEOMETRY_DERIVED_LENGTH",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
+      "derived": {
+        "length_m": 2.82
+      },
+      "problems": [
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE",
+        "LOAD_RECORD_MISSING",
+        "RESULT_G_MISSING",
+        "RESULT_Q_MISSING",
+        "RESULT_EX_MISSING",
+        "RESULT_EY_MISSING",
+        "CAPACITY_RECORD_MISSING"
+      ]
+    },
+    {
+      "element_id": "E2-P3-M-010",
+      "building": "EDIFICIO_2",
+      "floor": "P3",
+      "type": "wall",
+      "section_id": "SEC_WALL_0.250x2.820",
+      "section_status": "GEOMETRY_DERIVED_LENGTH",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
+      "derived": {
+        "length_m": 2.82
+      },
+      "problems": [
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE",
+        "LOAD_RECORD_MISSING",
+        "RESULT_G_MISSING",
+        "RESULT_Q_MISSING",
+        "RESULT_EX_MISSING",
+        "RESULT_EY_MISSING",
+        "CAPACITY_RECORD_MISSING"
+      ]
+    },
+    {
+      "element_id": "E2-S1-M-011",
+      "building": "EDIFICIO_2",
+      "floor": "S1",
+      "type": "wall",
+      "section_id": "SEC_WALL_0.250x7.950",
+      "section_status": "GEOMETRY_DERIVED_LENGTH",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
+      "derived": {
+        "length_m": 7.95
+      },
+      "problems": [
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE",
+        "LOAD_RECORD_MISSING",
+        "RESULT_G_MISSING",
+        "RESULT_Q_MISSING",
+        "RESULT_EX_MISSING",
+        "RESULT_EY_MISSING",
+        "CAPACITY_RECORD_MISSING"
+      ]
+    },
+    {
+      "element_id": "E2-P1-M-011",
+      "building": "EDIFICIO_2",
+      "floor": "P1",
+      "type": "wall",
+      "section_id": "SEC_WALL_0.250x7.950",
+      "section_status": "GEOMETRY_DERIVED_LENGTH",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
+      "derived": {
+        "length_m": 7.95
+      },
+      "problems": [
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE",
+        "LOAD_RECORD_MISSING",
+        "RESULT_G_MISSING",
+        "RESULT_Q_MISSING",
+        "RESULT_EX_MISSING",
+        "RESULT_EY_MISSING",
+        "CAPACITY_RECORD_MISSING"
+      ]
+    },
+    {
+      "element_id": "E2-P2-M-011",
+      "building": "EDIFICIO_2",
+      "floor": "P2",
+      "type": "wall",
+      "section_id": "SEC_WALL_0.250x7.950",
+      "section_status": "GEOMETRY_DERIVED_LENGTH",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
+      "derived": {
+        "length_m": 7.95
+      },
+      "problems": [
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE",
+        "LOAD_RECORD_MISSING",
+        "RESULT_G_MISSING",
+        "RESULT_Q_MISSING",
+        "RESULT_EX_MISSING",
+        "RESULT_EY_MISSING",
+        "CAPACITY_RECORD_MISSING"
+      ]
+    },
+    {
+      "element_id": "E2-P3-M-011",
+      "building": "EDIFICIO_2",
+      "floor": "P3",
+      "type": "wall",
+      "section_id": "SEC_WALL_0.250x7.950",
+      "section_status": "GEOMETRY_DERIVED_LENGTH",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
+      "derived": {
+        "length_m": 7.95
+      },
+      "problems": [
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE",
+        "LOAD_RECORD_MISSING",
+        "RESULT_G_MISSING",
+        "RESULT_Q_MISSING",
+        "RESULT_EX_MISSING",
+        "RESULT_EY_MISSING",
+        "CAPACITY_RECORD_MISSING"
+      ]
+    },
+    {
+      "element_id": "E2-S1-M-009",
+      "building": "EDIFICIO_2",
+      "floor": "S1",
+      "type": "wall",
+      "section_id": "SEC_WALL_0.250x2.680",
+      "section_status": "GEOMETRY_DERIVED_LENGTH",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
+      "derived": {
+        "length_m": 2.68
+      },
+      "problems": [
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE",
+        "LOAD_RECORD_MISSING",
+        "RESULT_G_MISSING",
+        "RESULT_Q_MISSING",
+        "RESULT_EX_MISSING",
+        "RESULT_EY_MISSING",
+        "CAPACITY_RECORD_MISSING"
+      ]
+    },
+    {
+      "element_id": "E2-P1-M-009",
+      "building": "EDIFICIO_2",
+      "floor": "P1",
+      "type": "wall",
+      "section_id": "SEC_WALL_0.250x2.680",
+      "section_status": "GEOMETRY_DERIVED_LENGTH",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
+      "derived": {
+        "length_m": 2.68
+      },
+      "problems": [
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE",
+        "LOAD_RECORD_MISSING",
+        "RESULT_G_MISSING",
+        "RESULT_Q_MISSING",
+        "RESULT_EX_MISSING",
+        "RESULT_EY_MISSING",
+        "CAPACITY_RECORD_MISSING"
+      ]
+    },
+    {
+      "element_id": "E2-P2-M-009",
+      "building": "EDIFICIO_2",
+      "floor": "P2",
+      "type": "wall",
+      "section_id": "SEC_WALL_0.250x2.680",
+      "section_status": "GEOMETRY_DERIVED_LENGTH",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
+      "derived": {
+        "length_m": 2.68
+      },
+      "problems": [
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE",
+        "LOAD_RECORD_MISSING",
+        "RESULT_G_MISSING",
+        "RESULT_Q_MISSING",
+        "RESULT_EX_MISSING",
+        "RESULT_EY_MISSING",
+        "CAPACITY_RECORD_MISSING"
+      ]
+    },
+    {
+      "element_id": "E2-P3-M-009",
+      "building": "EDIFICIO_2",
+      "floor": "P3",
+      "type": "wall",
+      "section_id": "SEC_WALL_0.250x2.680",
+      "section_status": "GEOMETRY_DERIVED_LENGTH",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
+      "derived": {
+        "length_m": 2.68
+      },
+      "problems": [
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE",
+        "LOAD_RECORD_MISSING",
+        "RESULT_G_MISSING",
+        "RESULT_Q_MISSING",
+        "RESULT_EX_MISSING",
+        "RESULT_EY_MISSING",
+        "CAPACITY_RECORD_MISSING"
+      ]
+    },
+    {
+      "element_id": "E1-S1-M-005",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "type": "wall",
+      "section_id": "SEC_WALL_0.250x1.478",
+      "section_status": "GEOMETRY_DERIVED_LENGTH",
+      "material_id": "MAT_G35_10_2017_67_100_1E116",
+      "derived": {
+        "length_m": 1.478
+      },
+      "problems": [
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE",
+        "LOAD_RECORD_MISSING",
+        "RESULT_G_MISSING",
+        "RESULT_Q_MISSING",
+        "RESULT_EX_MISSING",
+        "RESULT_EY_MISSING",
+        "CAPACITY_RECORD_MISSING"
+      ]
+    },
+    {
+      "element_id": "E1-S1-M-049",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "type": "wall",
+      "section_id": "SEC_WALL_0.250x1.478",
+      "section_status": "GEOMETRY_DERIVED_LENGTH",
+      "material_id": "MAT_G35_10_2017_67_100_1E116",
+      "derived": {
+        "length_m": 1.478
+      },
+      "problems": [
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE",
+        "LOAD_RECORD_MISSING",
+        "RESULT_G_MISSING",
+        "RESULT_Q_MISSING",
+        "RESULT_EX_MISSING",
+        "RESULT_EY_MISSING",
+        "CAPACITY_RECORD_MISSING"
+      ]
+    },
+    {
+      "element_id": "E1-P1-M-002",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "type": "wall",
+      "section_id": "SEC_WALL_0.250x1.479",
+      "section_status": "GEOMETRY_DERIVED_LENGTH",
+      "material_id": "MAT_G35_10_2017_67_100_1E116",
+      "derived": {
+        "length_m": 1.479
+      },
+      "problems": [
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE",
+        "LOAD_RECORD_MISSING",
+        "RESULT_G_MISSING",
+        "RESULT_Q_MISSING",
+        "RESULT_EX_MISSING",
+        "RESULT_EY_MISSING",
+        "CAPACITY_RECORD_MISSING"
+      ]
+    },
+    {
+      "element_id": "E1-P1-M-026",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "type": "wall",
+      "section_id": "SEC_WALL_0.250x1.479",
+      "section_status": "GEOMETRY_DERIVED_LENGTH",
+      "material_id": "MAT_G35_10_2017_67_100_1E116",
+      "derived": {
+        "length_m": 1.479
+      },
+      "problems": [
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE",
+        "LOAD_RECORD_MISSING",
+        "RESULT_G_MISSING",
+        "RESULT_Q_MISSING",
+        "RESULT_EX_MISSING",
+        "RESULT_EY_MISSING",
+        "CAPACITY_RECORD_MISSING"
+      ]
+    },
+    {
+      "element_id": "E1-P2-M-003",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "type": "wall",
+      "section_id": "SEC_WALL_0.250x1.479",
+      "section_status": "GEOMETRY_DERIVED_LENGTH",
+      "material_id": "MAT_G35_10_2017_67_100_1E116",
+      "derived": {
+        "length_m": 1.479
+      },
+      "problems": [
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE",
+        "LOAD_RECORD_MISSING",
+        "RESULT_G_MISSING",
+        "RESULT_Q_MISSING",
+        "RESULT_EX_MISSING",
+        "RESULT_EY_MISSING",
+        "CAPACITY_RECORD_MISSING"
+      ]
+    },
+    {
+      "element_id": "E1-P2-M-005",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "type": "wall",
+      "section_id": "SEC_WALL_0.250x1.479",
+      "section_status": "GEOMETRY_DERIVED_LENGTH",
+      "material_id": "MAT_G35_10_2017_67_100_1E116",
+      "derived": {
+        "length_m": 1.479
+      },
+      "problems": [
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE",
+        "LOAD_RECORD_MISSING",
+        "RESULT_G_MISSING",
+        "RESULT_Q_MISSING",
+        "RESULT_EX_MISSING",
+        "RESULT_EY_MISSING",
+        "CAPACITY_RECORD_MISSING"
+      ]
+    },
+    {
+      "element_id": "E1-P3-M-003",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "type": "wall",
+      "section_id": "SEC_WALL_0.250x1.479",
+      "section_status": "GEOMETRY_DERIVED_LENGTH",
+      "material_id": "MAT_G35_10_2017_67_100_1E116",
+      "derived": {
+        "length_m": 1.479
+      },
+      "problems": [
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE",
+        "LOAD_RECORD_MISSING",
+        "RESULT_G_MISSING",
+        "RESULT_Q_MISSING",
+        "RESULT_EX_MISSING",
+        "RESULT_EY_MISSING",
+        "CAPACITY_RECORD_MISSING"
+      ]
+    },
+    {
+      "element_id": "E1-P3-M-005",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "type": "wall",
+      "section_id": "SEC_WALL_0.250x1.479",
+      "section_status": "GEOMETRY_DERIVED_LENGTH",
+      "material_id": "MAT_G35_10_2017_67_100_1E116",
+      "derived": {
+        "length_m": 1.479
+      },
+      "problems": [
+        "LENGTH_METADATA_MISSING_DERIVABLE",
+        "CURRENT_RESULT_CONTRACT_STALE",
+        "CAPACITY_CONTRACT_STALE",
+        "LOAD_RECORD_MISSING",
+        "RESULT_G_MISSING",
+        "RESULT_Q_MISSING",
+        "RESULT_EX_MISSING",
+        "RESULT_EY_MISSING",
+        "CAPACITY_RECORD_MISSING"
       ]
     }
   ],

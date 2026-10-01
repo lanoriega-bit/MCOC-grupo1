@@ -1337,6 +1337,124 @@
       }
     },
     {
+      "id": "E1-P1-M-002",
+      "solidTag": "SOL_1_wall_0074",
+      "category": "wall",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "kind": "linear_prism",
+      "coordinates": {
+        "start": [
+          30.766,
+          12.266,
+          5.94
+        ],
+        "end": [
+          30.766,
+          13.745,
+          5.94
+        ],
+        "center": [
+          30.766,
+          13.0055,
+          5.94
+        ],
+        "z_bottom_m": 3.96,
+        "z_top_m": 7.92
+      },
+      "section_id": "SEC_WALL_0.250x1.479",
+      "material_id": "MAT_G35_10_2017_67_100_1E116",
+      "material": "G35_10",
+      "active": true,
+      "merged_from": [],
+      "aliases": [],
+      "elementTag": "SOL_1_wall_0074",
+      "human_id": "E1-P1-M-002",
+      "source_dxf": "2017_67-101.dxf",
+      "source_layer": "RLE-MURO_CONTOUR_PAIR",
+      "axis_x": null,
+      "axis_y": null,
+      "confidence": "confirmed_from_RLE_MURO_contour_pair",
+      "start": [
+        30.766,
+        12.266,
+        5.94
+      ],
+      "end": [
+        30.766,
+        13.745,
+        5.94
+      ],
+      "length_m": 1.479,
+      "direction_unit": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.25,
+      "height_m": 3.96
+    },
+    {
+      "id": "E1-P1-M-026",
+      "solidTag": "SOL_1_wall_0076",
+      "category": "wall",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "kind": "linear_prism",
+      "coordinates": {
+        "start": [
+          34.216,
+          12.266,
+          5.94
+        ],
+        "end": [
+          34.216,
+          13.745,
+          5.94
+        ],
+        "center": [
+          34.216,
+          13.0055,
+          5.94
+        ],
+        "z_bottom_m": 3.96,
+        "z_top_m": 7.92
+      },
+      "section_id": "SEC_WALL_0.250x1.479",
+      "material_id": "MAT_G35_10_2017_67_100_1E116",
+      "material": "G35_10",
+      "active": true,
+      "merged_from": [],
+      "aliases": [],
+      "elementTag": "SOL_1_wall_0076",
+      "human_id": "E1-P1-M-026",
+      "source_dxf": "2017_67-101.dxf",
+      "source_layer": "RLE-MURO_CONTOUR_PAIR",
+      "axis_x": null,
+      "axis_y": null,
+      "confidence": "confirmed_from_RLE_MURO_contour_pair",
+      "start": [
+        34.216,
+        12.266,
+        5.94
+      ],
+      "end": [
+        34.216,
+        13.745,
+        5.94
+      ],
+      "length_m": 1.479,
+      "direction_unit": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.25,
+      "height_m": 3.96
+    },
+    {
       "id": "E1-P1-V-002",
       "solidTag": "SOL_1_beam_0143",
       "category": "beam",
@@ -1389,6 +1507,13 @@
         8.55,
         7.52
       ],
+      "length_m": 8.2,
+      "direction_unit": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_deg_xy": 90.0,
       "width_m": 0.6,
       "height_m": 0.8,
       "post_p1l4_correction": {
@@ -1397,14 +1522,7 @@
         "primary_source": "manual beam revision + canonical geometry/sourceTags",
         "confidence": "HIGH_CONFIDENCE_APPROVED",
         "results_compatibility": "REANALYSIS_REQUIRED"
-      },
-      "length_m": 8.2,
-      "direction_unit": [
-        0.0,
-        1.0,
-        0.0
-      ],
-      "orientation_deg_xy": 90.0
+      }
     },
     {
       "id": "E1-P1-V-005",
@@ -1455,15 +1573,15 @@
         15.8,
         7.52
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.55,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P1-V-007",
@@ -1514,15 +1632,15 @@
         0.0,
         7.52
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 9.3,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P1-V-009",
@@ -1573,15 +1691,15 @@
         8.9,
         7.52
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 9.3,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P1-V-011",
@@ -1632,15 +1750,15 @@
         16.15,
         7.52
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 9.3,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P1-V-013",
@@ -1691,15 +1809,15 @@
         15.8,
         7.52
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.55,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P1-V-014",
@@ -1750,15 +1868,15 @@
         19.97,
         7.52
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 3.45,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P1-V-016",
@@ -1813,6 +1931,13 @@
         8.55,
         7.52
       ],
+      "length_m": 8.2,
+      "direction_unit": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_deg_xy": 90.0,
       "width_m": 0.6,
       "height_m": 0.8,
       "post_p1l4_correction": {
@@ -1821,14 +1946,7 @@
         "primary_source": "2017_67-101.dxf / GLOBAL_BEAM_FRAGMENTATION_AUDIT.json",
         "confidence": "HIGH_CONFIDENCE_APPROVED",
         "results_compatibility": "REANALYSIS_REQUIRED"
-      },
-      "length_m": 8.2,
-      "direction_unit": [
-        0.0,
-        1.0,
-        0.0
-      ],
-      "orientation_deg_xy": 90.0
+      }
     },
     {
       "id": "E1-P1-V-019",
@@ -1879,15 +1997,15 @@
         0.0,
         7.52
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P1-V-021",
@@ -1938,15 +2056,15 @@
         8.9,
         7.52
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P1-V-022",
@@ -1997,15 +2115,15 @@
         16.15,
         7.52
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P1-V-023",
@@ -2056,15 +2174,15 @@
         20.27,
         7.52
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.84,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P1-V-024",
@@ -2115,15 +2233,15 @@
         16.15,
         7.52
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 1.89,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P1-V-027",
@@ -2174,15 +2292,15 @@
         15.8,
         7.52
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.55,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P1-V-028",
@@ -2233,15 +2351,15 @@
         0.0,
         7.52
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P1-V-029",
@@ -2296,6 +2414,13 @@
         8.55,
         7.52
       ],
+      "length_m": 8.2,
+      "direction_unit": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_deg_xy": 90.0,
       "width_m": 0.6,
       "height_m": 0.8,
       "post_p1l4_correction": {
@@ -2304,14 +2429,7 @@
         "primary_source": "2017_67-101.dxf / GLOBAL_BEAM_FRAGMENTATION_AUDIT.json",
         "confidence": "HIGH_CONFIDENCE_APPROVED",
         "results_compatibility": "REANALYSIS_REQUIRED"
-      },
-      "length_m": 8.2,
-      "direction_unit": [
-        0.0,
-        1.0,
-        0.0
-      ],
-      "orientation_deg_xy": 90.0
+      }
     },
     {
       "id": "E1-P1-V-031",
@@ -2362,15 +2480,15 @@
         8.9,
         7.52
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 1.89,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P1-V-033",
@@ -2421,15 +2539,15 @@
         15.8,
         7.52
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.55,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P1-V-034",
@@ -2480,15 +2598,15 @@
         19.97,
         7.52
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 3.45,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P1-V-036",
@@ -2539,15 +2657,15 @@
         8.9,
         7.52
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 1.86,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P1-V-041",
@@ -2598,15 +2716,15 @@
         16.15,
         7.52
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 1.86,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P1-V-043",
@@ -2657,15 +2775,15 @@
         15.8,
         7.52
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.55,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P1-V-044",
@@ -2720,6 +2838,13 @@
         8.55,
         7.52
       ],
+      "length_m": 8.2,
+      "direction_unit": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_deg_xy": 90.0,
       "width_m": 0.6,
       "height_m": 0.8,
       "post_p1l4_correction": {
@@ -2728,14 +2853,7 @@
         "primary_source": "2017_67-101.dxf / GLOBAL_BEAM_FRAGMENTATION_AUDIT.json",
         "confidence": "HIGH_CONFIDENCE_APPROVED",
         "results_compatibility": "REANALYSIS_REQUIRED"
-      },
-      "length_m": 8.2,
-      "direction_unit": [
-        0.0,
-        1.0,
-        0.0
-      ],
-      "orientation_deg_xy": 90.0
+      }
     },
     {
       "id": "E1-P1-V-046",
@@ -2786,15 +2904,15 @@
         0.0,
         7.52
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P1-V-048",
@@ -2845,15 +2963,15 @@
         8.9,
         7.52
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P1-V-049",
@@ -2904,15 +3022,15 @@
         16.15,
         7.52
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P1-V-051",
@@ -2963,15 +3081,15 @@
         15.8,
         7.52
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.55,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P1-V-052",
@@ -3022,15 +3140,15 @@
         0.0,
         7.52
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P1-V-053",
@@ -3081,15 +3199,15 @@
         16.15,
         7.52
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P1-V-054",
@@ -3144,6 +3262,13 @@
         8.55,
         7.52
       ],
+      "length_m": 8.2,
+      "direction_unit": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_deg_xy": 90.0,
       "width_m": 0.6,
       "height_m": 0.8,
       "post_p1l4_correction": {
@@ -3152,14 +3277,7 @@
         "primary_source": "2017_67-101.dxf / GLOBAL_BEAM_FRAGMENTATION_AUDIT.json",
         "confidence": "HIGH_CONFIDENCE_APPROVED",
         "results_compatibility": "REANALYSIS_REQUIRED"
-      },
-      "length_m": 8.2,
-      "direction_unit": [
-        0.0,
-        1.0,
-        0.0
-      ],
-      "orientation_deg_xy": 90.0
+      }
     },
     {
       "id": "E1-P1-V-058",
@@ -3210,15 +3328,15 @@
         8.9,
         7.52
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P1-V-061",
@@ -3269,15 +3387,15 @@
         15.8,
         7.52
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.55,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P1-V-062",
@@ -3332,6 +3450,13 @@
         8.55,
         7.52
       ],
+      "length_m": 8.2,
+      "direction_unit": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_deg_xy": 90.0,
       "width_m": 0.6,
       "height_m": 0.8,
       "post_p1l4_correction": {
@@ -3340,14 +3465,7 @@
         "primary_source": "2017_67-101.dxf / GLOBAL_BEAM_FRAGMENTATION_AUDIT.json",
         "confidence": "HIGH_CONFIDENCE_APPROVED",
         "results_compatibility": "REANALYSIS_REQUIRED"
-      },
-      "length_m": 8.2,
-      "direction_unit": [
-        0.0,
-        1.0,
-        0.0
-      ],
-      "orientation_deg_xy": 90.0
+      }
     },
     {
       "id": "E1-P1-V-064",
@@ -3398,15 +3516,15 @@
         0.3,
         7.52
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P1-V-066",
@@ -3457,6 +3575,13 @@
         8.9,
         7.52
       ],
+      "length_m": 4.7,
+      "direction_unit": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "orientation_deg_xy": 0.0,
       "width_m": 0.6,
       "height_m": 0.8,
       "post_p1l4_correction": {
@@ -3465,14 +3590,7 @@
         "primary_source": "FINAL_BEAM_GEOMETRY_REVIEW",
         "confidence": "HIGH_CONFIDENCE_APPROVED",
         "results_compatibility": "REANALYSIS_REQUIRED"
-      },
-      "length_m": 4.7,
-      "direction_unit": [
-        1.0,
-        0.0,
-        0.0
-      ],
-      "orientation_deg_xy": 0.0
+      }
     },
     {
       "id": "E1-P1-V-067",
@@ -3523,6 +3641,13 @@
         16.15,
         7.52
       ],
+      "length_m": 4.7,
+      "direction_unit": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "orientation_deg_xy": 0.0,
       "width_m": 0.6,
       "height_m": 0.8,
       "post_p1l4_correction": {
@@ -3531,14 +3656,7 @@
         "primary_source": "FINAL_BEAM_GEOMETRY_REVIEW",
         "confidence": "HIGH_CONFIDENCE_APPROVED",
         "results_compatibility": "REANALYSIS_REQUIRED"
-      },
-      "length_m": 4.7,
-      "direction_unit": [
-        1.0,
-        0.0,
-        0.0
-      ],
-      "orientation_deg_xy": 0.0
+      }
     },
     {
       "id": "E1-P1-V-077",
@@ -3589,15 +3707,15 @@
         15.8,
         7.52
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.55,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P1-V-078",
@@ -3652,6 +3770,13 @@
         16.15,
         7.52
       ],
+      "length_m": 4.35,
+      "direction_unit": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "orientation_deg_xy": 0.0,
       "width_m": 0.6,
       "height_m": 0.8,
       "post_p1l4_correction": {
@@ -3660,14 +3785,7 @@
         "primary_source": "manual beam revision + canonical geometry/sourceTags",
         "confidence": "HIGH_CONFIDENCE_APPROVED",
         "results_compatibility": "REANALYSIS_REQUIRED"
-      },
-      "length_m": 4.35,
-      "direction_unit": [
-        1.0,
-        0.0,
-        0.0
-      ],
-      "orientation_deg_xy": 0.0
+      }
     },
     {
       "id": "E1-P1-V-079",
@@ -3722,6 +3840,13 @@
         8.55,
         7.52
       ],
+      "length_m": 8.2,
+      "direction_unit": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_deg_xy": 90.0,
       "width_m": 0.6,
       "height_m": 0.8,
       "post_p1l4_correction": {
@@ -3730,14 +3855,7 @@
         "primary_source": "2017_67-101.dxf / GLOBAL_BEAM_FRAGMENTATION_AUDIT.json",
         "confidence": "HIGH_CONFIDENCE_APPROVED",
         "results_compatibility": "REANALYSIS_REQUIRED"
-      },
-      "length_m": 8.2,
-      "direction_unit": [
-        0.0,
-        1.0,
-        0.0
-      ],
-      "orientation_deg_xy": 90.0
+      }
     },
     {
       "id": "E1-P1-V-085",
@@ -3788,15 +3906,15 @@
         0.3,
         7.52
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P1-V-087",
@@ -3851,6 +3969,13 @@
         8.9,
         7.52
       ],
+      "length_m": 4.35,
+      "direction_unit": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "orientation_deg_xy": 0.0,
       "width_m": 0.6,
       "height_m": 0.8,
       "post_p1l4_correction": {
@@ -3859,14 +3984,7 @@
         "primary_source": "manual beam revision + canonical geometry/sourceTags",
         "confidence": "HIGH_CONFIDENCE_APPROVED",
         "results_compatibility": "REANALYSIS_REQUIRED"
-      },
-      "length_m": 4.35,
-      "direction_unit": [
-        1.0,
-        0.0,
-        0.0
-      ],
-      "orientation_deg_xy": 0.0
+      }
     },
     {
       "id": "E1-P1-V-095",
@@ -3917,15 +4035,15 @@
         15.8,
         7.52
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.55,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P1-V-096",
@@ -3980,6 +4098,13 @@
         8.55,
         7.52
       ],
+      "length_m": 8.2,
+      "direction_unit": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_deg_xy": 90.0,
       "width_m": 0.6,
       "height_m": 0.8,
       "post_p1l4_correction": {
@@ -3988,14 +4113,7 @@
         "primary_source": "manual beam revision + canonical geometry/sourceTags",
         "confidence": "HIGH_CONFIDENCE_APPROVED",
         "results_compatibility": "REANALYSIS_REQUIRED"
-      },
-      "length_m": 8.2,
-      "direction_unit": [
-        0.0,
-        1.0,
-        0.0
-      ],
-      "orientation_deg_xy": 90.0
+      }
     },
     {
       "id": "E1-P1-V-100",
@@ -4046,15 +4164,15 @@
         0.3,
         7.52
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.3,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P1-V-102",
@@ -4105,15 +4223,15 @@
         8.9,
         7.52
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.3,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P1-V-104",
@@ -4164,15 +4282,15 @@
         16.15,
         7.52
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.3,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P1-V-106",
@@ -4223,15 +4341,15 @@
         15.8,
         7.52
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.55,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P1-V-107",
@@ -4286,6 +4404,13 @@
         8.55,
         7.52
       ],
+      "length_m": 8.2,
+      "direction_unit": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_deg_xy": 90.0,
       "width_m": 0.6,
       "height_m": 0.8,
       "post_p1l4_correction": {
@@ -4294,14 +4419,7 @@
         "primary_source": "2017_67-101.dxf / GLOBAL_BEAM_FRAGMENTATION_AUDIT.json",
         "confidence": "HIGH_CONFIDENCE_APPROVED",
         "results_compatibility": "REANALYSIS_REQUIRED"
-      },
-      "length_m": 8.2,
-      "direction_unit": [
-        0.0,
-        1.0,
-        0.0
-      ],
-      "orientation_deg_xy": 90.0
+      }
     },
     {
       "id": "E1-P2-C-001",
@@ -5554,6 +5672,124 @@
       }
     },
     {
+      "id": "E1-P2-M-003",
+      "solidTag": "SOL_2_wall_0101",
+      "category": "wall",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "kind": "linear_prism",
+      "coordinates": {
+        "start": [
+          30.766,
+          12.448,
+          9.9
+        ],
+        "end": [
+          30.766,
+          13.927,
+          9.9
+        ],
+        "center": [
+          30.766,
+          13.1875,
+          9.9
+        ],
+        "z_bottom_m": 7.92,
+        "z_top_m": 11.88
+      },
+      "section_id": "SEC_WALL_0.250x1.479",
+      "material_id": "MAT_G35_10_2017_67_100_1E116",
+      "material": "G35_10",
+      "active": true,
+      "merged_from": [],
+      "aliases": [],
+      "elementTag": "SOL_2_wall_0101",
+      "human_id": "E1-P2-M-003",
+      "source_dxf": "2017_67-102.dxf",
+      "source_layer": "RLE-MURO_CONTOUR_PAIR",
+      "axis_x": null,
+      "axis_y": null,
+      "confidence": "confirmed_from_RLE_MURO_contour_pair",
+      "start": [
+        30.766,
+        12.448,
+        9.9
+      ],
+      "end": [
+        30.766,
+        13.927,
+        9.9
+      ],
+      "length_m": 1.479,
+      "direction_unit": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.25,
+      "height_m": 3.960000000000001
+    },
+    {
+      "id": "E1-P2-M-005",
+      "solidTag": "SOL_2_wall_0103",
+      "category": "wall",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "kind": "linear_prism",
+      "coordinates": {
+        "start": [
+          34.216,
+          12.448,
+          9.9
+        ],
+        "end": [
+          34.216,
+          13.927,
+          9.9
+        ],
+        "center": [
+          34.216,
+          13.1875,
+          9.9
+        ],
+        "z_bottom_m": 7.92,
+        "z_top_m": 11.88
+      },
+      "section_id": "SEC_WALL_0.250x1.479",
+      "material_id": "MAT_G35_10_2017_67_100_1E116",
+      "material": "G35_10",
+      "active": true,
+      "merged_from": [],
+      "aliases": [],
+      "elementTag": "SOL_2_wall_0103",
+      "human_id": "E1-P2-M-005",
+      "source_dxf": "2017_67-102.dxf",
+      "source_layer": "RLE-MURO_CONTOUR_PAIR",
+      "axis_x": null,
+      "axis_y": null,
+      "confidence": "confirmed_from_RLE_MURO_contour_pair",
+      "start": [
+        34.216,
+        12.448,
+        9.9
+      ],
+      "end": [
+        34.216,
+        13.927,
+        9.9
+      ],
+      "length_m": 1.479,
+      "direction_unit": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.25,
+      "height_m": 3.960000000000001
+    },
+    {
       "id": "E1-P2-V-005",
       "solidTag": "SOL_2_beam_0254",
       "category": "beam",
@@ -5606,6 +5842,13 @@
         8.731,
         11.48
       ],
+      "length_m": 8.2,
+      "direction_unit": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_deg_xy": 90.0,
       "width_m": 0.6,
       "height_m": 0.8,
       "post_p1l4_correction": {
@@ -5614,14 +5857,7 @@
         "primary_source": "manual beam revision + canonical geometry/sourceTags",
         "confidence": "HIGH_CONFIDENCE_APPROVED",
         "results_compatibility": "REANALYSIS_REQUIRED"
-      },
-      "length_m": 8.2,
-      "direction_unit": [
-        0.0,
-        1.0,
-        0.0
-      ],
-      "orientation_deg_xy": 90.0
+      }
     },
     {
       "id": "E1-P2-V-006",
@@ -5672,15 +5908,15 @@
         15.982,
         11.48
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.551,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P2-V-008",
@@ -5731,15 +5967,15 @@
         0.181,
         11.48
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 9.3,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P2-V-010",
@@ -5790,15 +6026,15 @@
         9.081,
         11.48
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 9.3,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P2-V-012",
@@ -5849,15 +6085,15 @@
         16.331,
         11.48
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 9.3,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P2-V-013",
@@ -5912,6 +6148,13 @@
         8.731,
         11.48
       ],
+      "length_m": 8.2,
+      "direction_unit": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_deg_xy": 90.0,
       "width_m": 0.6,
       "height_m": 0.8,
       "post_p1l4_correction": {
@@ -5920,14 +6163,7 @@
         "primary_source": "manual beam revision + canonical geometry/sourceTags",
         "confidence": "HIGH_CONFIDENCE_APPROVED",
         "results_compatibility": "REANALYSIS_REQUIRED"
-      },
-      "length_m": 8.2,
-      "direction_unit": [
-        0.0,
-        1.0,
-        0.0
-      ],
-      "orientation_deg_xy": 90.0
+      }
     },
     {
       "id": "E1-P2-V-020",
@@ -5978,15 +6214,15 @@
         15.982,
         11.48
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.551,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P2-V-021",
@@ -6041,6 +6277,13 @@
         20.151,
         11.48
       ],
+      "length_m": 3.47,
+      "direction_unit": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_deg_xy": 90.0,
       "width_m": 0.6,
       "height_m": 0.8,
       "post_p1l4_correction": {
@@ -6049,14 +6292,7 @@
         "primary_source": "2017_67-102.dxf / GLOBAL_BEAM_FRAGMENTATION_AUDIT.json",
         "confidence": "HIGH_CONFIDENCE_APPROVED",
         "results_compatibility": "REANALYSIS_REQUIRED"
-      },
-      "length_m": 3.47,
-      "direction_unit": [
-        0.0,
-        1.0,
-        0.0
-      ],
-      "orientation_deg_xy": 90.0
+      }
     },
     {
       "id": "E1-P2-V-023",
@@ -6107,15 +6343,15 @@
         9.081,
         11.48
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P2-V-025",
@@ -6166,15 +6402,15 @@
         16.331,
         11.48
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P2-V-027",
@@ -6225,15 +6461,15 @@
         16.331,
         11.48
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 1.89,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P2-V-028",
@@ -6284,15 +6520,15 @@
         20.451,
         11.48
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.84,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P2-V-029",
@@ -6347,6 +6583,13 @@
         8.731,
         11.48
       ],
+      "length_m": 8.2,
+      "direction_unit": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_deg_xy": 90.0,
       "width_m": 0.6,
       "height_m": 0.8,
       "post_p1l4_correction": {
@@ -6355,14 +6598,7 @@
         "primary_source": "manual beam revision + canonical geometry/sourceTags",
         "confidence": "HIGH_CONFIDENCE_APPROVED",
         "results_compatibility": "REANALYSIS_REQUIRED"
-      },
-      "length_m": 8.2,
-      "direction_unit": [
-        0.0,
-        1.0,
-        0.0
-      ],
-      "orientation_deg_xy": 90.0
+      }
     },
     {
       "id": "E1-P2-V-031",
@@ -6413,15 +6649,15 @@
         0.181,
         11.48
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P2-V-033",
@@ -6472,15 +6708,15 @@
         15.982,
         11.48
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.551,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P2-V-039",
@@ -6531,15 +6767,15 @@
         0.181,
         11.48
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P2-V-040",
@@ -6590,15 +6826,15 @@
         9.081,
         11.48
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 1.89,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P2-V-041",
@@ -6653,6 +6889,13 @@
         20.151,
         11.48
       ],
+      "length_m": 3.47,
+      "direction_unit": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_deg_xy": 90.0,
       "width_m": 0.6,
       "height_m": 0.8,
       "post_p1l4_correction": {
@@ -6661,14 +6904,7 @@
         "primary_source": "2017_67-102.dxf / GLOBAL_BEAM_FRAGMENTATION_AUDIT.json",
         "confidence": "HIGH_CONFIDENCE_APPROVED",
         "results_compatibility": "REANALYSIS_REQUIRED"
-      },
-      "length_m": 3.47,
-      "direction_unit": [
-        0.0,
-        1.0,
-        0.0
-      ],
-      "orientation_deg_xy": 90.0
+      }
     },
     {
       "id": "E1-P2-V-042",
@@ -6719,15 +6955,15 @@
         15.982,
         11.48
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.551,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P2-V-045",
@@ -6778,15 +7014,15 @@
         9.081,
         11.48
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 1.86,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P2-V-047",
@@ -6837,15 +7073,15 @@
         16.331,
         11.48
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 1.86,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P2-V-048",
@@ -6900,6 +7136,13 @@
         8.731,
         11.48
       ],
+      "length_m": 8.2,
+      "direction_unit": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_deg_xy": 90.0,
       "width_m": 0.6,
       "height_m": 0.8,
       "post_p1l4_correction": {
@@ -6908,14 +7151,7 @@
         "primary_source": "manual beam revision + canonical geometry/sourceTags",
         "confidence": "HIGH_CONFIDENCE_APPROVED",
         "results_compatibility": "REANALYSIS_REQUIRED"
-      },
-      "length_m": 8.2,
-      "direction_unit": [
-        0.0,
-        1.0,
-        0.0
-      ],
-      "orientation_deg_xy": 90.0
+      }
     },
     {
       "id": "E1-P2-V-052",
@@ -6966,15 +7202,15 @@
         15.982,
         11.48
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.551,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P2-V-058",
@@ -7025,15 +7261,15 @@
         9.081,
         11.48
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P2-V-059",
@@ -7084,15 +7320,15 @@
         16.331,
         11.48
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P2-V-060",
@@ -7147,6 +7383,13 @@
         8.731,
         11.48
       ],
+      "length_m": 8.2,
+      "direction_unit": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_deg_xy": 90.0,
       "width_m": 0.6,
       "height_m": 0.8,
       "post_p1l4_correction": {
@@ -7155,14 +7398,7 @@
         "primary_source": "manual beam revision + canonical geometry/sourceTags",
         "confidence": "HIGH_CONFIDENCE_APPROVED",
         "results_compatibility": "REANALYSIS_REQUIRED"
-      },
-      "length_m": 8.2,
-      "direction_unit": [
-        0.0,
-        1.0,
-        0.0
-      ],
-      "orientation_deg_xy": 90.0
+      }
     },
     {
       "id": "E1-P2-V-063",
@@ -7213,15 +7449,15 @@
         0.181,
         11.48
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P2-V-064",
@@ -7272,15 +7508,15 @@
         16.331,
         11.48
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P2-V-068",
@@ -7331,15 +7567,15 @@
         15.982,
         11.48
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.551,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P2-V-071",
@@ -7390,15 +7626,15 @@
         0.181,
         11.48
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P2-V-073",
@@ -7449,15 +7685,15 @@
         9.081,
         11.48
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P2-V-076",
@@ -7512,6 +7748,13 @@
         8.731,
         11.48
       ],
+      "length_m": 8.2,
+      "direction_unit": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_deg_xy": 90.0,
       "width_m": 0.6,
       "height_m": 0.8,
       "post_p1l4_correction": {
@@ -7520,14 +7763,7 @@
         "primary_source": "manual beam revision + canonical geometry/sourceTags",
         "confidence": "HIGH_CONFIDENCE_APPROVED",
         "results_compatibility": "REANALYSIS_REQUIRED"
-      },
-      "length_m": 8.2,
-      "direction_unit": [
-        0.0,
-        1.0,
-        0.0
-      ],
-      "orientation_deg_xy": 90.0
+      }
     },
     {
       "id": "E1-P2-V-081",
@@ -7578,15 +7814,15 @@
         15.982,
         11.48
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.551,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P2-V-084",
@@ -7637,15 +7873,15 @@
         9.081,
         11.48
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P2-V-087",
@@ -7700,6 +7936,13 @@
         8.731,
         11.48
       ],
+      "length_m": 8.2,
+      "direction_unit": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_deg_xy": 90.0,
       "width_m": 0.6,
       "height_m": 0.8,
       "post_p1l4_correction": {
@@ -7708,14 +7951,7 @@
         "primary_source": "manual beam revision + canonical geometry/sourceTags",
         "confidence": "HIGH_CONFIDENCE_APPROVED",
         "results_compatibility": "REANALYSIS_REQUIRED"
-      },
-      "length_m": 8.2,
-      "direction_unit": [
-        0.0,
-        1.0,
-        0.0
-      ],
-      "orientation_deg_xy": 90.0
+      }
     },
     {
       "id": "E1-P2-V-089",
@@ -7766,15 +8002,15 @@
         0.181,
         11.48
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P2-V-090",
@@ -7825,15 +8061,15 @@
         16.331,
         11.48
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P2-V-092",
@@ -7884,15 +8120,15 @@
         15.982,
         11.48
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.551,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P2-V-093",
@@ -7943,15 +8179,15 @@
         0.181,
         11.48
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P2-V-095",
@@ -8002,15 +8238,15 @@
         9.081,
         11.48
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P2-V-096",
@@ -8061,15 +8297,15 @@
         16.331,
         11.48
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P2-V-097",
@@ -8124,6 +8360,13 @@
         8.731,
         11.48
       ],
+      "length_m": 8.2,
+      "direction_unit": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_deg_xy": 90.0,
       "width_m": 0.6,
       "height_m": 0.8,
       "post_p1l4_correction": {
@@ -8132,14 +8375,7 @@
         "primary_source": "manual beam revision + canonical geometry/sourceTags",
         "confidence": "HIGH_CONFIDENCE_APPROVED",
         "results_compatibility": "REANALYSIS_REQUIRED"
-      },
-      "length_m": 8.2,
-      "direction_unit": [
-        0.0,
-        1.0,
-        0.0
-      ],
-      "orientation_deg_xy": 90.0
+      }
     },
     {
       "id": "E1-P2-V-101",
@@ -8190,15 +8426,15 @@
         15.982,
         11.48
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.551,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P2-V-103",
@@ -8249,15 +8485,15 @@
         0.181,
         11.48
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.3,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P2-V-105",
@@ -8308,15 +8544,15 @@
         9.081,
         11.48
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.3,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P2-V-106",
@@ -8367,15 +8603,15 @@
         16.331,
         11.48
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.3,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P2-V-108",
@@ -8430,6 +8666,13 @@
         8.731,
         11.48
       ],
+      "length_m": 8.2,
+      "direction_unit": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_deg_xy": 90.0,
       "width_m": 0.6,
       "height_m": 0.8,
       "post_p1l4_correction": {
@@ -8438,14 +8681,7 @@
         "primary_source": "manual beam revision + canonical geometry/sourceTags",
         "confidence": "HIGH_CONFIDENCE_APPROVED",
         "results_compatibility": "REANALYSIS_REQUIRED"
-      },
-      "length_m": 8.2,
-      "direction_unit": [
-        0.0,
-        1.0,
-        0.0
-      ],
-      "orientation_deg_xy": 90.0
+      }
     },
     {
       "id": "E1-P2-V-112",
@@ -8496,15 +8732,15 @@
         15.982,
         11.48
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.551,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-C-001",
@@ -9695,6 +9931,124 @@
       }
     },
     {
+      "id": "E1-P3-M-003",
+      "solidTag": "SOL_3_wall_0113",
+      "category": "wall",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "kind": "linear_prism",
+      "coordinates": {
+        "start": [
+          30.766,
+          12.448,
+          13.86
+        ],
+        "end": [
+          30.766,
+          13.927,
+          13.86
+        ],
+        "center": [
+          30.766,
+          13.1875,
+          13.86
+        ],
+        "z_bottom_m": 11.88,
+        "z_top_m": 15.84
+      },
+      "section_id": "SEC_WALL_0.250x1.479",
+      "material_id": "MAT_G35_10_2017_67_100_1E116",
+      "material": "G35_10",
+      "active": true,
+      "merged_from": [],
+      "aliases": [],
+      "elementTag": "SOL_3_wall_0113",
+      "human_id": "E1-P3-M-003",
+      "source_dxf": "2017_67-102.dxf",
+      "source_layer": "RLE-MURO_CONTOUR_PAIR",
+      "axis_x": null,
+      "axis_y": null,
+      "confidence": "confirmed_from_RLE_MURO_contour_pair",
+      "start": [
+        30.766,
+        12.448,
+        13.86
+      ],
+      "end": [
+        30.766,
+        13.927,
+        13.86
+      ],
+      "length_m": 1.479,
+      "direction_unit": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.25,
+      "height_m": 3.959999999999999
+    },
+    {
+      "id": "E1-P3-M-005",
+      "solidTag": "SOL_3_wall_0115",
+      "category": "wall",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "kind": "linear_prism",
+      "coordinates": {
+        "start": [
+          34.216,
+          12.448,
+          13.86
+        ],
+        "end": [
+          34.216,
+          13.927,
+          13.86
+        ],
+        "center": [
+          34.216,
+          13.1875,
+          13.86
+        ],
+        "z_bottom_m": 11.88,
+        "z_top_m": 15.84
+      },
+      "section_id": "SEC_WALL_0.250x1.479",
+      "material_id": "MAT_G35_10_2017_67_100_1E116",
+      "material": "G35_10",
+      "active": true,
+      "merged_from": [],
+      "aliases": [],
+      "elementTag": "SOL_3_wall_0115",
+      "human_id": "E1-P3-M-005",
+      "source_dxf": "2017_67-102.dxf",
+      "source_layer": "RLE-MURO_CONTOUR_PAIR",
+      "axis_x": null,
+      "axis_y": null,
+      "confidence": "confirmed_from_RLE_MURO_contour_pair",
+      "start": [
+        34.216,
+        12.448,
+        13.86
+      ],
+      "end": [
+        34.216,
+        13.927,
+        13.86
+      ],
+      "length_m": 1.479,
+      "direction_unit": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.25,
+      "height_m": 3.959999999999999
+    },
+    {
       "id": "E1-P3-V-005",
       "solidTag": "SOL_3_beam_0368",
       "category": "beam",
@@ -9747,6 +10101,13 @@
         8.731,
         15.44
       ],
+      "length_m": 8.2,
+      "direction_unit": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_deg_xy": 90.0,
       "width_m": 0.6,
       "height_m": 0.8,
       "post_p1l4_correction": {
@@ -9755,14 +10116,7 @@
         "primary_source": "manual beam revision + canonical geometry/sourceTags",
         "confidence": "HIGH_CONFIDENCE_APPROVED",
         "results_compatibility": "REANALYSIS_REQUIRED"
-      },
-      "length_m": 8.2,
-      "direction_unit": [
-        0.0,
-        1.0,
-        0.0
-      ],
-      "orientation_deg_xy": 90.0
+      }
     },
     {
       "id": "E1-P3-V-006",
@@ -9813,15 +10167,15 @@
         15.982,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.551,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-007",
@@ -9872,15 +10226,15 @@
         0.181,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 9.3,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-009",
@@ -9931,15 +10285,15 @@
         9.081,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 9.3,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-011",
@@ -9990,15 +10344,15 @@
         16.331,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 9.3,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-018",
@@ -10049,15 +10403,15 @@
         8.731,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 8.2,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-019",
@@ -10108,15 +10462,15 @@
         15.982,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.551,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-020",
@@ -10167,15 +10521,15 @@
         18.641,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 1.96,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-021",
@@ -10226,15 +10580,15 @@
         18.941,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 2.8,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-023",
@@ -10285,15 +10639,15 @@
         9.081,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 1.55,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-024",
@@ -10344,15 +10698,15 @@
         16.331,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 1.55,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-026",
@@ -10403,15 +10757,15 @@
         15.982,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.551,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-027",
@@ -10462,15 +10816,15 @@
         18.641,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 1.96,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-032",
@@ -10521,15 +10875,15 @@
         0.181,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-033",
@@ -10580,15 +10934,15 @@
         9.081,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 2.2,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-038",
@@ -10639,15 +10993,15 @@
         0.181,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-039",
@@ -10698,15 +11052,15 @@
         8.731,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 8.2,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-040",
@@ -10757,15 +11111,15 @@
         15.982,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.551,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-041",
@@ -10816,15 +11170,15 @@
         16.331,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 2.2,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-043",
@@ -10875,15 +11229,15 @@
         9.081,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-045",
@@ -10934,15 +11288,15 @@
         16.331,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-050",
@@ -10993,15 +11347,15 @@
         8.731,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 8.2,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-051",
@@ -11052,15 +11406,15 @@
         15.982,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.551,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-052",
@@ -11111,15 +11465,15 @@
         20.151,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 3.47,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-053",
@@ -11170,15 +11524,15 @@
         0.181,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-054",
@@ -11229,15 +11583,15 @@
         9.081,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-059",
@@ -11288,15 +11642,15 @@
         0.181,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-060",
@@ -11347,15 +11701,15 @@
         16.331,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-061",
@@ -11406,15 +11760,15 @@
         20.451,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 9.3,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-063",
@@ -11465,15 +11819,15 @@
         8.731,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 8.2,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-064",
@@ -11524,15 +11878,15 @@
         15.982,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.551,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-066",
@@ -11583,15 +11937,15 @@
         9.081,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-068",
@@ -11642,15 +11996,15 @@
         16.331,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-072",
@@ -11701,15 +12055,15 @@
         8.731,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 8.2,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-073",
@@ -11760,15 +12114,15 @@
         15.982,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.551,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-074",
@@ -11819,15 +12173,15 @@
         20.151,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 3.47,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-076",
@@ -11878,15 +12232,15 @@
         0.181,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-077",
@@ -11937,15 +12291,15 @@
         9.081,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-082",
@@ -11996,15 +12350,15 @@
         0.181,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-083",
@@ -12055,15 +12409,15 @@
         16.331,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-084",
@@ -12114,15 +12468,15 @@
         8.731,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 8.2,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-085",
@@ -12173,15 +12527,15 @@
         15.982,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.551,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-087",
@@ -12232,15 +12586,15 @@
         9.081,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-089",
@@ -12291,15 +12645,15 @@
         16.331,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-093",
@@ -12350,15 +12704,15 @@
         8.731,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 8.2,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-094",
@@ -12409,15 +12763,15 @@
         15.982,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.551,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-097",
@@ -12468,15 +12822,15 @@
         0.181,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.3,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-099",
@@ -12527,15 +12881,15 @@
         9.081,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.3,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-101",
@@ -12586,6 +12940,13 @@
         16.331,
         15.44
       ],
+      "length_m": 4.3,
+      "direction_unit": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "orientation_deg_xy": 0.0,
       "width_m": 0.6,
       "height_m": 0.8,
       "post_p1l4_correction": {
@@ -12594,14 +12955,7 @@
         "primary_source": "P1L6_READINESS_GEOMETRY",
         "confidence": "HIGH_CONFIDENCE_APPROVED",
         "results_compatibility": "REANALYSIS_REQUIRED"
-      },
-      "length_m": 4.3,
-      "direction_unit": [
-        1.0,
-        0.0,
-        0.0
-      ],
-      "orientation_deg_xy": 0.0
+      }
     },
     {
       "id": "E1-P3-V-106",
@@ -12652,15 +13006,15 @@
         8.731,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 8.2,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-107",
@@ -12711,15 +13065,15 @@
         15.982,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.551,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-109",
@@ -12770,15 +13124,15 @@
         9.081,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 2.4,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-112",
@@ -12829,15 +13183,15 @@
         0.181,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.25,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-114",
@@ -12888,15 +13242,15 @@
         16.331,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.25,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-116",
@@ -12947,15 +13301,15 @@
         8.731,
         15.54
       ],
-      "width_m": 0.4,
-      "height_m": 0.6,
       "length_m": 8.2,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.4,
+      "height_m": 0.6
     },
     {
       "id": "E1-P3-V-117",
@@ -13006,15 +13360,15 @@
         15.982,
         15.54
       ],
-      "width_m": 0.4,
-      "height_m": 0.6,
       "length_m": 6.551,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.4,
+      "height_m": 0.6
     },
     {
       "id": "E1-P3-V-119",
@@ -13065,15 +13419,15 @@
         9.081,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 1.85,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-120",
@@ -13124,15 +13478,15 @@
         8.731,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 8.2,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P3-V-121",
@@ -13183,15 +13537,15 @@
         15.982,
         15.44
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.551,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-C-001",
@@ -14468,6 +14822,13 @@
         8.731,
         19.4
       ],
+      "length_m": 8.2,
+      "direction_unit": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_deg_xy": 90.0,
       "width_m": 0.6,
       "height_m": 0.8,
       "post_p1l4_correction": {
@@ -14476,14 +14837,7 @@
         "primary_source": "manual beam revision + canonical geometry/sourceTags",
         "confidence": "HIGH_CONFIDENCE_APPROVED",
         "results_compatibility": "REANALYSIS_REQUIRED"
-      },
-      "length_m": 8.2,
-      "direction_unit": [
-        0.0,
-        1.0,
-        0.0
-      ],
-      "orientation_deg_xy": 90.0
+      }
     },
     {
       "id": "E1-P4-V-006",
@@ -14534,15 +14888,15 @@
         15.982,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.551,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-007",
@@ -14593,15 +14947,15 @@
         0.181,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 9.3,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-009",
@@ -14652,15 +15006,15 @@
         9.081,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 9.3,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-011",
@@ -14711,15 +15065,15 @@
         16.331,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 9.3,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-015",
@@ -14770,15 +15124,15 @@
         8.731,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 8.2,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-016",
@@ -14829,15 +15183,15 @@
         15.982,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.551,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-017",
@@ -14888,15 +15242,15 @@
         0.181,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-018",
@@ -14947,15 +15301,15 @@
         9.081,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-023",
@@ -15006,15 +15360,15 @@
         0.181,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-024",
@@ -15065,15 +15419,15 @@
         16.331,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-025",
@@ -15124,15 +15478,15 @@
         8.731,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 8.2,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-026",
@@ -15183,15 +15537,15 @@
         15.982,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.551,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-028",
@@ -15242,15 +15596,15 @@
         9.081,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-030",
@@ -15301,15 +15655,15 @@
         16.331,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-037",
@@ -15360,15 +15714,15 @@
         8.731,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 8.2,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-038",
@@ -15419,15 +15773,15 @@
         15.982,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.551,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-039",
@@ -15478,15 +15832,15 @@
         20.151,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 3.47,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-040",
@@ -15537,15 +15891,15 @@
         0.181,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-041",
@@ -15596,15 +15950,15 @@
         9.081,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-046",
@@ -15655,15 +16009,15 @@
         0.181,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-047",
@@ -15714,15 +16068,15 @@
         16.331,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-049",
@@ -15773,15 +16127,15 @@
         20.451,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 9.3,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-050",
@@ -15832,15 +16186,15 @@
         8.731,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 8.2,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-051",
@@ -15891,15 +16245,15 @@
         15.982,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.551,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-053",
@@ -15950,15 +16304,15 @@
         9.081,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-055",
@@ -16009,15 +16363,15 @@
         16.331,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-061",
@@ -16068,15 +16422,15 @@
         8.731,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 8.2,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-062",
@@ -16127,15 +16481,15 @@
         15.982,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.551,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-063",
@@ -16186,15 +16540,15 @@
         20.151,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 3.47,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-065",
@@ -16245,15 +16599,15 @@
         0.181,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-066",
@@ -16304,15 +16658,15 @@
         9.081,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-071",
@@ -16363,15 +16717,15 @@
         0.181,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-072",
@@ -16422,15 +16776,15 @@
         16.331,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-073",
@@ -16481,15 +16835,15 @@
         8.731,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 8.2,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-074",
@@ -16540,15 +16894,15 @@
         15.982,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.551,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-076",
@@ -16599,15 +16953,15 @@
         9.081,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-078",
@@ -16658,15 +17012,15 @@
         16.331,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.35,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-082",
@@ -16717,15 +17071,15 @@
         8.731,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 8.2,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-083",
@@ -16776,15 +17130,15 @@
         15.982,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.551,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-084",
@@ -16835,15 +17189,15 @@
         0.181,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.3,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-086",
@@ -16894,15 +17248,15 @@
         9.081,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.3,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-088",
@@ -16953,15 +17307,15 @@
         16.331,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.3,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-092",
@@ -17012,15 +17366,15 @@
         8.731,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 8.2,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-093",
@@ -17071,15 +17425,15 @@
         15.982,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.551,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-094",
@@ -17130,15 +17484,15 @@
         9.081,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 2.4,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-104",
@@ -17189,15 +17543,15 @@
         0.181,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.25,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-106",
@@ -17248,15 +17602,15 @@
         16.331,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 4.25,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-108",
@@ -17307,15 +17661,15 @@
         8.731,
         19.5
       ],
-      "width_m": 0.4,
-      "height_m": 0.6,
       "length_m": 8.2,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.4,
+      "height_m": 0.6
     },
     {
       "id": "E1-P4-V-109",
@@ -17366,15 +17720,15 @@
         15.982,
         19.5
       ],
-      "width_m": 0.4,
-      "height_m": 0.6,
       "length_m": 6.551,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.4,
+      "height_m": 0.6
     },
     {
       "id": "E1-P4-V-116",
@@ -17425,15 +17779,15 @@
         9.081,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 1.85,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-118",
@@ -17484,15 +17838,15 @@
         8.731,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 8.2,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-P4-V-119",
@@ -17543,15 +17897,15 @@
         15.982,
         19.4
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.551,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-S1-A-006",
@@ -19297,6 +19651,242 @@
       }
     },
     {
+      "id": "E1-S1-M-005",
+      "solidTag": "SOL_1S_wall_0005",
+      "category": "wall",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "kind": "linear_prism",
+      "coordinates": {
+        "start": [
+          30.766,
+          12.448,
+          1.98
+        ],
+        "end": [
+          30.766,
+          13.926,
+          1.98
+        ],
+        "center": [
+          30.766,
+          13.187000000000001,
+          1.98
+        ],
+        "z_bottom_m": 0.0,
+        "z_top_m": 3.96
+      },
+      "section_id": "SEC_WALL_0.250x1.478",
+      "material_id": "MAT_G35_10_2017_67_100_1E116",
+      "material": "G35_10",
+      "active": true,
+      "merged_from": [],
+      "aliases": [],
+      "elementTag": "SOL_1S_wall_0005",
+      "human_id": "E1-S1-M-005",
+      "source_dxf": "2017_67-101.dxf",
+      "source_layer": "RLE-MURO_CONTOUR_PAIR",
+      "axis_x": null,
+      "axis_y": null,
+      "confidence": "confirmed_from_RLE_MURO_contour_pair",
+      "start": [
+        30.766,
+        12.448,
+        1.98
+      ],
+      "end": [
+        30.766,
+        13.926,
+        1.98
+      ],
+      "length_m": 1.478,
+      "direction_unit": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.25,
+      "height_m": 3.96
+    },
+    {
+      "id": "E1-S1-M-026",
+      "solidTag": "SOL_1S_wall_0045",
+      "category": "wall",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "kind": "linear_prism",
+      "coordinates": {
+        "start": [
+          31.191,
+          4.081,
+          1.98
+        ],
+        "end": [
+          33.791,
+          4.081,
+          1.98
+        ],
+        "center": [
+          32.491,
+          4.081,
+          1.98
+        ],
+        "z_bottom_m": 0.0,
+        "z_top_m": 3.96
+      },
+      "section_id": "SEC_WALL_0.200x2.600",
+      "material_id": "MAT_G35_10_2017_67_100_1E116",
+      "material": "G35_10",
+      "active": true,
+      "merged_from": [],
+      "aliases": [],
+      "elementTag": "SOL_1S_wall_0045",
+      "human_id": "E1-S1-M-026",
+      "source_dxf": "2017_67-101.dxf",
+      "source_layer": "RLE-MURO_CONTOUR_PAIR",
+      "axis_x": null,
+      "axis_y": null,
+      "confidence": "confirmed_from_RLE_MURO_contour_pair",
+      "start": [
+        31.191,
+        4.081,
+        1.98
+      ],
+      "end": [
+        33.791,
+        4.081,
+        1.98
+      ],
+      "length_m": 2.6,
+      "direction_unit": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.2,
+      "height_m": 3.96
+    },
+    {
+      "id": "E1-S1-M-029",
+      "solidTag": "SOL_1S_wall_0035",
+      "category": "wall",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "kind": "linear_prism",
+      "coordinates": {
+        "start": [
+          30.891,
+          14.026,
+          1.98
+        ],
+        "end": [
+          34.091,
+          14.026,
+          1.98
+        ],
+        "center": [
+          32.491,
+          14.026,
+          1.98
+        ],
+        "z_bottom_m": 0.0,
+        "z_top_m": 3.96
+      },
+      "section_id": "SEC_WALL_0.200x3.200",
+      "material_id": "MAT_G35_10_2017_67_100_1E116",
+      "material": "G35_10",
+      "active": true,
+      "merged_from": [],
+      "aliases": [],
+      "elementTag": "SOL_1S_wall_0035",
+      "human_id": "E1-S1-M-029",
+      "source_dxf": "2017_67-101.dxf",
+      "source_layer": "RLE-MURO_CONTOUR_PAIR",
+      "axis_x": null,
+      "axis_y": null,
+      "confidence": "confirmed_from_RLE_MURO_contour_pair",
+      "start": [
+        30.891,
+        14.026,
+        1.98
+      ],
+      "end": [
+        34.091,
+        14.026,
+        1.98
+      ],
+      "length_m": 3.2,
+      "direction_unit": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.2,
+      "height_m": 3.96
+    },
+    {
+      "id": "E1-S1-M-049",
+      "solidTag": "SOL_1S_wall_0033",
+      "category": "wall",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "kind": "linear_prism",
+      "coordinates": {
+        "start": [
+          34.216,
+          12.448,
+          1.98
+        ],
+        "end": [
+          34.216,
+          13.926,
+          1.98
+        ],
+        "center": [
+          34.216,
+          13.187000000000001,
+          1.98
+        ],
+        "z_bottom_m": 0.0,
+        "z_top_m": 3.96
+      },
+      "section_id": "SEC_WALL_0.250x1.478",
+      "material_id": "MAT_G35_10_2017_67_100_1E116",
+      "material": "G35_10",
+      "active": true,
+      "merged_from": [],
+      "aliases": [],
+      "elementTag": "SOL_1S_wall_0033",
+      "human_id": "E1-S1-M-049",
+      "source_dxf": "2017_67-101.dxf",
+      "source_layer": "RLE-MURO_CONTOUR_PAIR",
+      "axis_x": null,
+      "axis_y": null,
+      "confidence": "confirmed_from_RLE_MURO_contour_pair",
+      "start": [
+        34.216,
+        12.448,
+        1.98
+      ],
+      "end": [
+        34.216,
+        13.926,
+        1.98
+      ],
+      "length_m": 1.478,
+      "direction_unit": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.25,
+      "height_m": 3.96
+    },
+    {
       "id": "E1-S1-V-003",
       "solidTag": "SOL_1S_beam_0008",
       "category": "beam",
@@ -19345,15 +19935,15 @@
         8.731,
         3.56
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 8.2,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-S1-V-004",
@@ -19404,15 +19994,15 @@
         15.981,
         3.56
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.55,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-S1-V-021",
@@ -19471,6 +20061,13 @@
         9.081,
         3.56
       ],
+      "length_m": 8.975,
+      "direction_unit": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "orientation_deg_xy": 0.0,
       "width_m": 0.6,
       "height_m": 0.8,
       "post_p1l4_correction": {
@@ -19479,14 +20076,7 @@
         "primary_source": "manual beam revision + canonical geometry/sourceTags",
         "confidence": "HIGH_CONFIDENCE_APPROVED",
         "results_compatibility": "REANALYSIS_REQUIRED"
-      },
-      "length_m": 8.975,
-      "direction_unit": [
-        1.0,
-        0.0,
-        0.0
-      ],
-      "orientation_deg_xy": 0.0
+      }
     },
     {
       "id": "E1-S1-V-025",
@@ -19545,6 +20135,13 @@
         0.131,
         3.56
       ],
+      "length_m": 8.975,
+      "direction_unit": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "orientation_deg_xy": 0.0,
       "width_m": 0.6,
       "height_m": 0.8,
       "post_p1l4_correction": {
@@ -19553,14 +20150,7 @@
         "primary_source": "manual beam revision + canonical geometry/sourceTags",
         "confidence": "HIGH_CONFIDENCE_APPROVED",
         "results_compatibility": "REANALYSIS_REQUIRED"
-      },
-      "length_m": 8.975,
-      "direction_unit": [
-        1.0,
-        0.0,
-        0.0
-      ],
-      "orientation_deg_xy": 0.0
+      }
     },
     {
       "id": "E1-S1-V-038",
@@ -19611,15 +20201,15 @@
         8.731,
         3.56
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 8.2,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-S1-V-039",
@@ -19670,15 +20260,15 @@
         15.981,
         3.56
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 6.55,
       "direction_unit": [
         0.0,
         1.0,
         0.0
       ],
-      "orientation_deg_xy": 90.0
+      "orientation_deg_xy": 90.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     },
     {
       "id": "E1-S1-V-055",
@@ -19729,15 +20319,15 @@
         16.081,
         3.56
       ],
-      "width_m": 0.6,
-      "height_m": 0.8,
       "length_m": 9.3,
       "direction_unit": [
         1.0,
         0.0,
         0.0
       ],
-      "orientation_deg_xy": 0.0
+      "orientation_deg_xy": 0.0,
+      "width_m": 0.6,
+      "height_m": 0.8
     }
   ],
   "segments": [
@@ -83778,9 +84368,9 @@
   },
   "central_sync": {
     "source": "entregas/P1L5/modelo_central/model_master.json",
-    "timestamp_utc": "2026-09-29T05:58:12.688611+00:00",
+    "timestamp_utc": "2026-10-01T00:22:26.539730+00:00",
     "geometry_state": "P1L6_CURRENT_SLAB_POLYGONS",
     "results_state": "STALE_REANALYSIS_REQUIRED",
-    "solid_count": 342
+    "solid_count": 352
   }
 }

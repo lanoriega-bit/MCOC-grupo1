@@ -1,20 +1,28 @@
-# CURRENT model health — baseline audit
+# CURRENT model health — checkpoint audit
 
-Read-only snapshot of active `model_master.json` elements; no geometry or results changed.
+Inventory of active `model_master.json` elements. Result and capacity coverage counts are zero while the CURRENT contract is stale, even if historical files remain on disk.
 
-Base: `7f216bb7b4835c167af3862ffc594c91ce4e38ed`. Contract: `CURRENT_VERIFIED`.
+Base: `7f216bb7b4835c167af3862ffc594c91ce4e38ed`. Contract: `CURRENT_GEOMETRY_STALE_REANALYSIS_REQUIRED`.
 
-| Type | Total | Usable geometry | Valid section | Resolved material | G/Q/EX/EY result | Capacity record |
+| Type | Total | Usable geometry | Valid section | Resolved material | G/Q/EX/EY CURRENT | Capacity CURRENT |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| beam | 442 | 442 | 442 | 389 | 442 | 442 |
-| column | 143 | 143 | 143 | 117 | 143 | 143 |
+| beam | 442 | 442 | 442 | 389 | 0 | 0 |
+| column | 143 | 143 | 143 | 117 | 0 | 0 |
 | slab | 10 | 10 | 10 | 0 | N/A | N/A |
-| wall | 30 | 30 | 30 | 30 | 30 | 30 |
+| wall | 60 | 60 | 60 | 60 | 0 | 0 |
 
 ## Issues
 
-- `LENGTH_METADATA_MISSING_DERIVABLE`: 472. IDs: E1-P1-V-002, E1-P1-V-005, E1-P1-V-007, E1-P1-V-009, E1-P1-V-011, E1-P1-V-013, E1-P1-V-014, E1-P1-V-016, E1-P1-V-019, E1-P1-V-021, E1-P1-V-022, E1-P1-V-023 …
+- `CURRENT_RESULT_CONTRACT_STALE`: 645. IDs: E1-P1-C-001, E1-P1-C-002, E1-P1-C-003, E1-P1-C-004, E1-P1-C-005, E1-P1-C-006, E1-P1-C-008, E1-P1-C-010, E1-P1-C-011, E1-P1-C-012, E1-P1-C-013, E1-P1-C-014 …
+- `CAPACITY_CONTRACT_STALE`: 645. IDs: E1-P1-C-001, E1-P1-C-002, E1-P1-C-003, E1-P1-C-004, E1-P1-C-005, E1-P1-C-006, E1-P1-C-008, E1-P1-C-010, E1-P1-C-011, E1-P1-C-012, E1-P1-C-013, E1-P1-C-014 …
+- `LENGTH_METADATA_MISSING_DERIVABLE`: 502. IDs: E1-P1-V-002, E1-P1-V-005, E1-P1-V-007, E1-P1-V-009, E1-P1-V-011, E1-P1-V-013, E1-P1-V-014, E1-P1-V-016, E1-P1-V-019, E1-P1-V-021, E1-P1-V-022, E1-P1-V-023 …
 - `MATERIAL_SCOPE_REVIEW_REQUIRED`: 79. IDs: E1-P4-C-001, E1-P4-C-002, E1-P4-C-003, E1-P4-C-004, E1-P4-C-005, E1-P4-C-006, E1-P4-C-007, E1-P4-C-008, E1-P4-C-009, E1-P4-C-010, E1-P4-C-011, E1-P4-C-012 …
+- `LOAD_RECORD_MISSING`: 30. IDs: E1-S1-M-026, E1-S1-M-029, E2-S1-M-007, E2-P1-M-007, E2-P2-M-007, E2-P3-M-007, E2-S1-M-008, E2-P1-M-008, E2-P2-M-008, E2-P3-M-008, E2-S1-M-010, E2-P1-M-010 …
+- `RESULT_G_MISSING`: 30. IDs: E1-S1-M-026, E1-S1-M-029, E2-S1-M-007, E2-P1-M-007, E2-P2-M-007, E2-P3-M-007, E2-S1-M-008, E2-P1-M-008, E2-P2-M-008, E2-P3-M-008, E2-S1-M-010, E2-P1-M-010 …
+- `RESULT_Q_MISSING`: 30. IDs: E1-S1-M-026, E1-S1-M-029, E2-S1-M-007, E2-P1-M-007, E2-P2-M-007, E2-P3-M-007, E2-S1-M-008, E2-P1-M-008, E2-P2-M-008, E2-P3-M-008, E2-S1-M-010, E2-P1-M-010 …
+- `RESULT_EX_MISSING`: 30. IDs: E1-S1-M-026, E1-S1-M-029, E2-S1-M-007, E2-P1-M-007, E2-P2-M-007, E2-P3-M-007, E2-S1-M-008, E2-P1-M-008, E2-P2-M-008, E2-P3-M-008, E2-S1-M-010, E2-P1-M-010 …
+- `RESULT_EY_MISSING`: 30. IDs: E1-S1-M-026, E1-S1-M-029, E2-S1-M-007, E2-P1-M-007, E2-P2-M-007, E2-P3-M-007, E2-S1-M-008, E2-P1-M-008, E2-P2-M-008, E2-P3-M-008, E2-S1-M-010, E2-P1-M-010 …
+- `CAPACITY_RECORD_MISSING`: 30. IDs: E1-S1-M-026, E1-S1-M-029, E2-S1-M-007, E2-P1-M-007, E2-P2-M-007, E2-P3-M-007, E2-S1-M-008, E2-P1-M-008, E2-P2-M-008, E2-P3-M-008, E2-S1-M-010, E2-P1-M-010 …
 - `MATERIAL_UNRESOLVED`: 10. IDs: E1-P1-L-001, E1-P2-L-001, E1-P3-L-001, E1-P4-L-001, E1-S1-L-001, E2-P1-L-001, E2-P2-L-001, E2-P3-L-001, E2-P4-L-001, E2-S1-L-001
 
 ## Important distinction

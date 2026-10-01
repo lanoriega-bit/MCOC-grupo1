@@ -45,6 +45,7 @@ def main() -> None:
     viewer = {e["id"]: e for e in read(STREAM / "model_viewer.json")["solids"]}
     node_ids = {n["node_id"] for n in master["nodes"]}
     contract = read(STREAM / "current_dataset_contract.json")
+    results_current = contract.get("status") == "CURRENT_VERIFIED" and contract.get("analysis_available") is True
     rows = []
     for e in master["elements"]:
         if not e.get("active"):
@@ -105,6 +106,9 @@ def main() -> None:
                 problems.append("SLAB_THICKNESS_MISSING")
         structural = kind in {"beam", "column", "wall"}
         if structural:
+            if not results_current:
+                problems.append("CURRENT_RESULT_CONTRACT_STALE")
+                problems.append("CAPACITY_CONTRACT_STALE")
             if not e.get("analysis_refs"):
                 problems.append("FE_CROSSWALK_MISSING")
             if eid not in loads:
@@ -144,8 +148,8 @@ def main() -> None:
         c["section_valid"] += int("SECTION_MISSING" not in row["problems"])
         c["material_resolved"] += int("MATERIAL_UNRESOLVED" not in row["problems"] and "MATERIAL_SCOPE_REVIEW_REQUIRED" not in row["problems"])
         if row["type"] != "slab":
-            c["all_four_results"] += int(not any(p.startswith("RESULT_") for p in row["problems"]))
-            c["capacity_record"] += int(not any(p.startswith("CAPACITY_") for p in row["problems"]))
+            c["all_four_results"] += int(results_current and not any(p.startswith("RESULT_") for p in row["problems"]))
+            c["capacity_record"] += int(results_current and not any(p.startswith("CAPACITY_") for p in row["problems"]))
         for problem in row["problems"]:
             issue_counts[problem] += 1
     report = {
@@ -159,7 +163,7 @@ def main() -> None:
     }
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "current_model_health.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    md = ["# CURRENT model health — baseline audit", "", "Read-only snapshot of active `model_master.json` elements; no geometry or results changed.", "", f"Base: `{report['base_commit']}`. Contract: `{report['contract_status']}`.", "", "| Type | Total | Usable geometry | Valid section | Resolved material | G/Q/EX/EY result | Capacity record |", "| --- | ---: | ---: | ---: | ---: | ---: | ---: |"]
+    md = ["# CURRENT model health — checkpoint audit", "", "Inventory of active `model_master.json` elements. Result and capacity coverage counts are zero while the CURRENT contract is stale, even if historical files remain on disk.", "", f"Base: `{report['base_commit']}`. Contract: `{report['contract_status']}`.", "", "| Type | Total | Usable geometry | Valid section | Resolved material | G/Q/EX/EY CURRENT | Capacity CURRENT |", "| --- | ---: | ---: | ---: | ---: | ---: | ---: |"]
     for kind, c in sorted(by_type.items()):
         result_count = str(c['all_four_results']) if kind != "slab" else "N/A"
         capacity_count = str(c['capacity_record']) if kind != "slab" else "N/A"

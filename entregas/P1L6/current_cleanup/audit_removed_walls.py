@@ -81,14 +81,33 @@ def main() -> None:
         primary = primary_pair(old, ed1_pairs if row["building"] == "EDIFICIO_1" else ed2_pairs)
         source_tags = old.get("sourceTags") or []
         cad_contour = old.get("source_layer") == "RLE-MURO_CONTOUR_PAIR" and len(source_tags) >= 2
+        lower_support_unresolved = row["id"] in {
+            "E1-P2-M-007", "E1-P2-M-008", "E1-P3-M-007", "E1-P3-M-008"
+        }
+        vertical_p1 = any(
+            prior.get("before", {}).get("category") == "wall"
+            and prior["before"].get("building") == "EDIFICIO_2"
+            and prior["before"].get("floor") == "P1"
+            and max(abs(a - b) for a, b in zip(prior["before"]["start"][:2], row["start"])) <= 0.02
+            and max(abs(a - b) for a, b in zip(prior["before"]["end"][:2], row["end"])) <= 0.02
+            for prior in exclusions
+        )
         if am and am["strong"]:
             decision = "REJECT_DUPLICATE_ACTIVE"
+        elif lower_support_unresolved:
+            # Isolated FE rebuild leaves these two P2/P3 chains floating; no
+            # P1 beam lies directly below either wall (nearest >2 m).
+            decision = "REVIEW_REQUIRED_FE_SUPPORT"
         elif cad_contour and primary["confirmed_pair"] and sm and sm["strong"] and cm and cm["strong"] and row["building"] == "EDIFICIO_2" and row["floor"] == "P4":
             # Earlier owner review explicitly excluded this E2-P4 wall zone.
             # CAD face pairs and cross-repo consensus cannot resolve the scope conflict.
             decision = "REVIEW_REQUIRED_PRIOR_SCOPE_CONFLICT"
         elif cad_contour and primary["confirmed_pair"] and sm and sm["strong"] and cm and cm["strong"] and row["building"] == "EDIFICIO_1" and row["floor"] == "P4":
             decision = "REVIEW_REQUIRED_MATERIAL_SCOPE"
+        elif (cad_contour and primary["confirmed_pair"] and row["building"] == "EDIFICIO_2"
+              and row["floor"] == "S1" and row["id"] in {f"E2-S1-M-{i:03d}" for i in (7, 8, 9, 10, 11)}
+              and cm and cm["strong"] and vertical_p1):
+            decision = "CONFIRMED_REINTEGRATE"
         elif cad_contour and primary["confirmed_pair"] and sm and sm["strong"] and cm and cm["strong"]:
             decision = "CONFIRMED_REINTEGRATE"
         else:
@@ -132,7 +151,7 @@ def main() -> None:
     if not both:
         lines.append("| — | — | — | — | — | Ninguno |")
     lines += ["", "## Regla de decisión", "", "`CONFIRMED_REINTEGRATE` requiere un par de caras único en la auditoría CAD original (endpoints/espesor a ≤0,02 m), layer estructural, coincidencia fuerte en ambos externos y ausencia de duplicado activo. La retirada anterior fue una decisión de alcance del usuario, no un hallazgo de inexistencia en CAD; la instrucción actual pide reconsiderar los muros reales. Los candidatos EDIFICIO_1/P4 quedan `REVIEW_REQUIRED_MATERIAL_SCOPE` porque el único material asignado a miembros activos de ese nivel apunta a la nota 2024_22 de EDIFICIO_2, no a una confirmación primaria de EDIFICIO_1/P4. Esta clasificación habilita preparar la reintegración, **no** autoriza mostrar resultados CURRENT hasta rehacer FE, cargas, masas y OpenSees. `REVIEW_REQUIRED` no se agrega. El detalle de los 92 candidatos está en `removed_wall_candidates.json`.", ""]
-    lines += ["", "Nota de precedencia: los cuatro candidatos E2-P4 marcados REVIEW_REQUIRED_PRIOR_SCOPE_CONFLICT no se reintegran automáticamente. Una instrucción manual anterior pidió retirar esa zona; la coincidencia de contornos y repositorios externos no resuelve por sí sola su rol estructural.", ""]
+    lines += ["", "Nota de precedencia: los cuatro candidatos E2-P4 marcados REVIEW_REQUIRED_PRIOR_SCOPE_CONFLICT no se reintegran automáticamente. Una instrucción manual anterior pidió retirar esa zona; la coincidencia de contornos y repositorios externos no resuelve por sí sola su rol estructural.", "", "Excepción a la regla de ambos repositorios: los cinco E2-S1-M-007…011 tienen par de caras primario único, coincidencia Cáceres y continuidad geométrica exacta con P1; Santiago no tiene control S1 equivalente. La prueba FE aislada confirma que la continuidad S1 conecta las cadenas P1–P3 sin apoyos inventados. Los cuatro E1-P2/P3-M-007/008 quedan REVIEW_REQUIRED_FE_SUPPORT: el candidato FE los deja flotantes y no hay viga P1 directamente debajo. No se consideran listos para análisis.", ""]
     (HERE / "REMOVED_WALL_REVIEW.md").write_text("\n".join(lines), encoding="utf-8")
     print(json.dumps({"active": len(active), "removed": len(records), "classification": classes, "both_external_strong": len(both)}, default=dict, indent=2))
 
