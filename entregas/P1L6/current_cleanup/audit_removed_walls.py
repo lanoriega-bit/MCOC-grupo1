@@ -83,6 +83,8 @@ def main() -> None:
         cad_contour = old.get("source_layer") == "RLE-MURO_CONTOUR_PAIR" and len(source_tags) >= 2
         if am and am["strong"]:
             decision = "REJECT_DUPLICATE_ACTIVE"
+        elif cad_contour and primary["confirmed_pair"] and sm and sm["strong"] and cm and cm["strong"] and row["building"] == "EDIFICIO_1" and row["floor"] == "P4":
+            decision = "REVIEW_REQUIRED_MATERIAL_SCOPE"
         elif cad_contour and primary["confirmed_pair"] and sm and sm["strong"] and cm and cm["strong"]:
             decision = "CONFIRMED_REINTEGRATE"
         else:
@@ -125,7 +127,7 @@ def main() -> None:
         lines.append(f"| {r['candidate_id']} | {r['floor']} | {r['santiago']['id']} | {r['caceres']['id']} | {src['sheet']} / {src['layer']} | {r['decision']} |")
     if not both:
         lines.append("| — | — | — | — | — | Ninguno |")
-    lines += ["", "## Regla de decisión", "", "`CONFIRMED_REINTEGRATE` requiere un par de caras único en la auditoría CAD original (endpoints/espesor a ≤0,02 m), layer estructural, coincidencia fuerte en ambos externos y ausencia de duplicado activo. La retirada anterior fue una decisión de alcance del usuario, no un hallazgo de inexistencia en CAD; la instrucción actual pide reconsiderar los muros reales. Esta clasificación habilita preparar la reintegración, **no** autoriza mostrar resultados CURRENT hasta rehacer FE, cargas, masas y OpenSees. `REVIEW_REQUIRED` no se agrega. El detalle de los 92 candidatos está en `removed_wall_candidates.json`.", ""]
+    lines += ["", "## Regla de decisión", "", "`CONFIRMED_REINTEGRATE` requiere un par de caras único en la auditoría CAD original (endpoints/espesor a ≤0,02 m), layer estructural, coincidencia fuerte en ambos externos y ausencia de duplicado activo. La retirada anterior fue una decisión de alcance del usuario, no un hallazgo de inexistencia en CAD; la instrucción actual pide reconsiderar los muros reales. Los candidatos EDIFICIO_1/P4 quedan `REVIEW_REQUIRED_MATERIAL_SCOPE` porque el único material asignado a miembros activos de ese nivel apunta a la nota 2024_22 de EDIFICIO_2, no a una confirmación primaria de EDIFICIO_1/P4. Esta clasificación habilita preparar la reintegración, **no** autoriza mostrar resultados CURRENT hasta rehacer FE, cargas, masas y OpenSees. `REVIEW_REQUIRED` no se agrega. El detalle de los 92 candidatos está en `removed_wall_candidates.json`.", ""]
     (HERE / "REMOVED_WALL_REVIEW.md").write_text("\n".join(lines), encoding="utf-8")
     print(json.dumps({"active": len(active), "removed": len(records), "classification": classes, "both_external_strong": len(both)}, default=dict, indent=2))
 

@@ -64,6 +64,8 @@ def main() -> None:
             problems.append("SECTION_MISSING")
         if mat is None or e.get("material_id") == "MAT_UNKNOWN":
             problems.append("MATERIAL_UNRESOLVED")
+        elif e["building"] == "EDIFICIO_1" and e["floor"] == "P4" and "2024_22" in e["material_id"]:
+            problems.append("MATERIAL_SCOPE_REVIEW_REQUIRED")
         if kind in {"beam", "wall"}:
             a, b = geo.get("start_m"), geo.get("end_m")
             if not a or not b or len(a) != 3 or len(b) != 3:
@@ -140,7 +142,7 @@ def main() -> None:
             )
         ))
         c["section_valid"] += int("SECTION_MISSING" not in row["problems"])
-        c["material_resolved"] += int("MATERIAL_UNRESOLVED" not in row["problems"])
+        c["material_resolved"] += int("MATERIAL_UNRESOLVED" not in row["problems"] and "MATERIAL_SCOPE_REVIEW_REQUIRED" not in row["problems"])
         if row["type"] != "slab":
             c["all_four_results"] += int(not any(p.startswith("RESULT_") for p in row["problems"]))
             c["capacity_record"] += int(not any(p.startswith("CAPACITY_") for p in row["problems"]))

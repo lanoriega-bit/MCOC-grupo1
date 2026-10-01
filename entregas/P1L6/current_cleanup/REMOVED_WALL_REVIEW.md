@@ -9,7 +9,8 @@ Activos: 30. Retirados examinados: 92. Santiago: 66 muros; Cáceres: 82 muros.
 | Decisión provisional | Cantidad |
 | --- | ---: |
 | REVIEW_REQUIRED | 55 |
-| CONFIRMED_REINTEGRATE | 37 |
+| CONFIRMED_REINTEGRATE | 33 |
+| REVIEW_REQUIRED_MATERIAL_SCOPE | 4 |
 
 ## Candidatos con coincidencia fuerte en ambos externos
 
@@ -18,11 +19,11 @@ Activos: 30. Retirados examinados: 92. Santiago: 66 muros; Cáceres: 82 muros.
 | E1-S1-M-026 | S1 | S-W-16 | C-W-1701 | 2017_67-101.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
 | E1-P2-M-007 | P2 | S-W-18 | C-W-1003 | 2017_67-102.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
 | E1-P3-M-007 | P3 | S-W-19 | C-W-1004 | 2017_67-102.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
-| E1-P4-M-007 | P4 | S-W-20 | C-W-1005 | 2017_67-103.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
+| E1-P4-M-007 | P4 | S-W-20 | C-W-1005 | 2017_67-103.dxf / RLE-MURO_CONTOUR_PAIR | REVIEW_REQUIRED_MATERIAL_SCOPE |
 | E1-S1-M-029 | S1 | S-W-1 | C-W-1401 | 2017_67-101.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
 | E1-P2-M-008 | P2 | S-W-3 | C-W-1403 | 2017_67-102.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
 | E1-P3-M-008 | P3 | S-W-4 | C-W-1404 | 2017_67-102.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
-| E1-P4-M-008 | P4 | S-W-5 | C-W-1405 | 2017_67-103.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
+| E1-P4-M-008 | P4 | S-W-5 | C-W-1405 | 2017_67-103.dxf / RLE-MURO_CONTOUR_PAIR | REVIEW_REQUIRED_MATERIAL_SCOPE |
 | E2-P1-M-007 | P1 | S-W-37 | C-W-902 | 2024_22-101.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
 | E2-P2-M-007 | P2 | S-W-38 | C-W-903 | 2024_22-101.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
 | E2-P3-M-007 | P3 | S-W-39 | C-W-904 | 2024_22-101.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
@@ -50,9 +51,9 @@ Activos: 30. Retirados examinados: 92. Santiago: 66 muros; Cáceres: 82 muros.
 | E1-P2-M-005 | P2 | S-W-8 | C-W-1603 | 2017_67-102.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
 | E1-P3-M-003 | P3 | S-W-14 | C-W-1504 | 2017_67-102.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
 | E1-P3-M-005 | P3 | S-W-9 | C-W-1604 | 2017_67-102.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
-| E1-P4-M-003 | P4 | S-W-15 | C-W-1505 | 2017_67-103.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
-| E1-P4-M-012 | P4 | S-W-10 | C-W-1605 | 2017_67-103.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
+| E1-P4-M-003 | P4 | S-W-15 | C-W-1505 | 2017_67-103.dxf / RLE-MURO_CONTOUR_PAIR | REVIEW_REQUIRED_MATERIAL_SCOPE |
+| E1-P4-M-012 | P4 | S-W-10 | C-W-1605 | 2017_67-103.dxf / RLE-MURO_CONTOUR_PAIR | REVIEW_REQUIRED_MATERIAL_SCOPE |
 
 ## Regla de decisión
 
-`CONFIRMED_REINTEGRATE` requiere un par de caras único en la auditoría CAD original (endpoints/espesor a ≤0,02 m), layer estructural, coincidencia fuerte en ambos externos y ausencia de duplicado activo. La retirada anterior fue una decisión de alcance del usuario, no un hallazgo de inexistencia en CAD; la instrucción actual pide reconsiderar los muros reales. Esta clasificación habilita preparar la reintegración, **no** autoriza mostrar resultados CURRENT hasta rehacer FE, cargas, masas y OpenSees. `REVIEW_REQUIRED` no se agrega. El detalle de los 92 candidatos está en `removed_wall_candidates.json`.
+`CONFIRMED_REINTEGRATE` requiere un par de caras único en la auditoría CAD original (endpoints/espesor a ≤0,02 m), layer estructural, coincidencia fuerte en ambos externos y ausencia de duplicado activo. La retirada anterior fue una decisión de alcance del usuario, no un hallazgo de inexistencia en CAD; la instrucción actual pide reconsiderar los muros reales. Los candidatos EDIFICIO_1/P4 quedan `REVIEW_REQUIRED_MATERIAL_SCOPE` porque el único material asignado a miembros activos de ese nivel apunta a la nota 2024_22 de EDIFICIO_2, no a una confirmación primaria de EDIFICIO_1/P4. Esta clasificación habilita preparar la reintegración, **no** autoriza mostrar resultados CURRENT hasta rehacer FE, cargas, masas y OpenSees. `REVIEW_REQUIRED` no se agrega. El detalle de los 92 candidatos está en `removed_wall_candidates.json`.

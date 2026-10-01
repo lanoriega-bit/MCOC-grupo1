@@ -6,14 +6,15 @@ Base: `7f216bb7b4835c167af3862ffc594c91ce4e38ed`. Contract: `CURRENT_VERIFIED`.
 
 | Type | Total | Usable geometry | Valid section | Resolved material | G/Q/EX/EY result | Capacity record |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| beam | 442 | 442 | 442 | 442 | 442 | 442 |
-| column | 143 | 143 | 143 | 143 | 143 | 143 |
+| beam | 442 | 442 | 442 | 389 | 442 | 442 |
+| column | 143 | 143 | 143 | 117 | 143 | 143 |
 | slab | 10 | 10 | 10 | 0 | N/A | N/A |
 | wall | 30 | 30 | 30 | 30 | 30 | 30 |
 
 ## Issues
 
 - `LENGTH_METADATA_MISSING_DERIVABLE`: 472. IDs: E1-P1-V-002, E1-P1-V-005, E1-P1-V-007, E1-P1-V-009, E1-P1-V-011, E1-P1-V-013, E1-P1-V-014, E1-P1-V-016, E1-P1-V-019, E1-P1-V-021, E1-P1-V-022, E1-P1-V-023 …
+- `MATERIAL_SCOPE_REVIEW_REQUIRED`: 79. IDs: E1-P4-C-001, E1-P4-C-002, E1-P4-C-003, E1-P4-C-004, E1-P4-C-005, E1-P4-C-006, E1-P4-C-007, E1-P4-C-008, E1-P4-C-009, E1-P4-C-010, E1-P4-C-011, E1-P4-C-012 …
 - `MATERIAL_UNRESOLVED`: 10. IDs: E1-P1-L-001, E1-P2-L-001, E1-P3-L-001, E1-P4-L-001, E1-S1-L-001, E2-P1-L-001, E2-P2-L-001, E2-P3-L-001, E2-P4-L-001, E2-S1-L-001
 
 ## Important distinction
