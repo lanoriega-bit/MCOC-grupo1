@@ -1,196 +1,73 @@
-# MCOC-grupo1
+# MCOC grupo 1 — laboratorio estructural digital
 
-Repositorio de trabajo para el Proyecto 1 del curso. El grupo desarrollara durante el semestre un laboratorio estructural digital del Edificio de Ingenieria, usando OpenSeesPy para analisis estructural y Unity para visualizacion/interaccion en etapas posteriores.
+Edificios 1 y 2: modelo 3D canónico, OpenSees y Unity. Rama compartida: **main**.
+El estado vigente incluye las correcciones de núcleos y columnas de P1L6;
+las entregas históricas se conservan, no se sobrescriben.
 
-> Estado actual: consolidación `POST-P1L3 / PRE-P1L4`. La interfaz principal
-> es Unity; los viewers web permanecen solo como herramientas históricas de
-> depuración. Ver `PROJECT_INDEX.md` para las fuentes canónicas y estados.
+## Empieza aquí
 
-## Abrir y validar la versión actual
+1. **Abrir el edificio:** doble clic en `Abrir_Unity.bat`.
+2. En Unity abre `Assets/Main.unity`, pulsa **Play** y usa la pestaña **Game**.
+3. **Menú del proyecto:** doble clic en `Proyecto.bat`.
+4. **Comprobar el modelo actual sin recalcular:** doble clic en `Validar_Modelo.bat`.
 
-- `Abrir_Unity.bat`: abre la única interfaz visual principal.
-- `Validar_Modelo.bat`: revisa geometría, diagnóstico FE, crosswalk y hashes
-  sin ejecutar OpenSees ni recalcular cargas.
+Unity: 6000.6.0f1, licencia activa en Unity Hub.
+El visor de escritorio es la interfaz habitual; la escena AR no sustituye Main.
 
-## Entrada Rapida
+## Qué abrir y qué editar
 
-- Enunciado completo organizado: `docs/gestion/enunciado-proyecto-p1.md`.
-- Entrega P1L0: `entregas/p1l0/`.
-- Entrega P1L1 benchmark 3D: `entregas/p1l1_benchmark_3d/`.
-- P1L2 edificio completo desde CAD: `entregas/P1L2/`.
-- Entrega P1L1 benchmark 3D 2: `entregas/p1l1_benchmark_3d_2/`.
-- Ejercicio adicional columna-viga: `entregas/ejercicios/columna_viga/`.
-- Registro semanal: `docs/gestion/weekly-log.md`.
-- Registro de uso de IA: `docs/gestion/ai-usage-log.md`.
-- Reglas para agentes IA: `AGENTS.md`.
-- Índice de fuentes canónicas: `PROJECT_INDEX.md`.
-- Inventario reproducible completo: `REPOSITORY_INVENTORY.json`.
+| Necesidad | Entrada |
+| --- | --- |
+| Instrucciones detalladas y dónde cambiar código | [Guía de uso y cambios](docs/GUIA_USO_Y_CAMBIOS.md) |
+| Archivos vigentes / históricos / generados | [Índice canónico](PROJECT_INDEX.md) |
+| Menú y coordinación de comandos | [main.py](main.py) |
+| Configuración de rutas | [project_config.json](project_config.json) |
+| Geometría, secciones, materiales y cargas editables | [modelo_central](entregas/P1L5/modelo_central/README.md) |
+| Auditoría estructural y QA más recientes | [Muros y núcleos CURRENT](entregas/P1L6/wall_continuity/README.md) |
+| Uso del visor y funcionalidades | [Unity desktop P1L6](entregas/P1L6/desktop/README.md) |
 
-## Entregas
+`modelo_central` es la única fuente del modelo. No corregir geometría editando
+`StreamingAssets`, resultados OpenSees o exportaciones antiguas.
 
-| Entrega | Descripcion | Script principal | Resultados |
-| --- | --- | --- | --- |
-| P1L0 | Benchmark 2D basado en Pregunta 2 del Control 1. | `entregas/p1l0/opensees/ejemplo_minimo_2d.py` | `entregas/p1l0/results/` |
-| P1L1 | Benchmark 3D del sector `P1L1-S01`: pano entre ejes `F-G` y `2-3`. | `entregas/p1l1_benchmark_3d/opensees/benchmark_3d.py` | `entregas/p1l1_benchmark_3d/results/` |
-| P1L2 | Edificio completo preliminar desde CAD, con viewer 3D volumetrico, export web y esqueleto OpenSees de gravedad. | `entregas/P1L2/opensees/extract_cad_model.py` | `entregas/P1L2/viewer/` |
-| P1L1 3D 2 | Benchmark 3D del sector `P1L1-S02`: dos panos entre ejes `F-G-H` y `2-3`. | `entregas/p1l1_benchmark_3d_2/opensees/benchmark_3d_2.py` | `entregas/p1l1_benchmark_3d_2/results/` |
-| Ejercicio adicional | Modelo 2D columna-viga de acero. | `entregas/ejercicios/columna_viga/opensees/columna_viga_2d.py` | `entregas/ejercicios/columna_viga/results/` |
+## Comandos sencillos
 
-Cada entrega se organiza igual:
-
-- `docs/`: explicacion, informe o enunciado usado.
-- `opensees/`: scripts OpenSeesPy.
-- `results/`: figuras, tablas y verificaciones generadas.
-
-No debe quedar material especifico de una entrega en carpetas raiz como `docs/`, `opensees/`, `tools/` o `reports/`. La raiz conserva solo configuracion/documentacion general del proyecto.
-
-## Organizacion
-
-```text
-entregas/
-  p1l0/
-    docs/       documentacion de la entrega
-    opensees/   scripts OpenSeesPy
-    results/    figuras y resultados generados
-  p1l1_benchmark_3d/
-    docs/
-    opensees/
-    results/
-  P1L2/
-    data/
-    docs/
-    tools/
-    opensees/
-    unity_export/
-    viewer/
-  p1l1_benchmark_3d_2/
-    docs/
-    opensees/
-    results/
-  ejercicios/
-    columna_viga/
-      docs/
-      opensees/
-      results/
-docs/gestion/   bitacoras, enunciado y registros generales, no archivos de entrega
-```
-
-## Alcance general del proyecto
-
-- Modelo estructural global lineal elastico 3D en OpenSees/OpenSeesPy.
-- Nodos 3D con 6 GDL para el modelo global.
-- Vigas, columnas y muros idealizados con elementos lineales equivalentes.
-- Cargas gravitacionales y vivas transferidas por areas tributarias.
-- Casos base `G`, `Q`, `EX`, `EY` y uso de superposicion.
-- Capacidad no lineal de secciones RC separada del modelo global.
-- Unity como herramienta de visualizacion, preproceso, postproceso e interaccion.
-- AR basica en etapas posteriores.
-- Uso documentado y critico de IA durante el semestre.
-
-## Como ejecutar
+En PowerShell, dentro de la carpeta principal:
 
 ```powershell
-python -m pip install -r requirements.txt
-python entregas/p1l0/opensees/ejemplo_minimo_2d.py
+.\Proyecto.bat estado
+.\Proyecto.bat rutas
+.\Proyecto.bat validar
 ```
 
-Para ejecutar el ejercicio adicional de columna-viga:
+También se puede usar Python 3.10+ directamente: `python main.py estado`.
+El menú y el resumen solo leen datos; validar actualiza su informe QA, pero no
+cambia geometría/cargas ni ejecuta OpenSees. No instala dependencias automáticamente.
 
-```powershell
-python entregas/ejercicios/columna_viga/opensees/columna_viga_2d.py
-```
+## Estado técnico y límites
 
-Para ejecutar el benchmark 3D P1L1:
+Checkpoint CURRENT: 442 vigas, 143 columnas, 84 muros, 10 losas y 33 apoyos visuales.
+FE: 1170 nodos topológicos, 677 segmentos (673 analizados), 0 componentes sin camino a apoyo.
+G/Q/EX/EY y superposición compatibles; el comando `estado` calcula conteos y verifica
+identidad del dataset, y `validar` ejecuta el QA técnico.
 
-```powershell
-python entregas/p1l1_benchmark_3d/opensees/benchmark_3d.py
-```
+Laboratorio lineal elástico en SI (m, N, Pa), no un modelo de diseño certificado.
+Losas sin elementos FE; cargas transmitidas por tributarias.
+Capacidad HA separada. Persisten supuestos de materiales/armaduras/losas y seis
+registros de cargas puntuales sin receptor, explícitamente excluidos; ver las
+notas del [QA vigente](entregas/P1L6/wall_continuity/CURRENT_PIPELINE_QA.md).
 
-Para ejecutar el benchmark 3D P1L1 2:
+## Entregas y reproducibilidad
 
-```powershell
-python entregas/p1l1_benchmark_3d_2/opensees/benchmark_3d_2.py
-```
+| Etapa | Documentación |
+| --- | --- |
+| P1L0 | [Benchmark mínimo](entregas/P1L0/README.md) |
+| P1L1 | [Benchmark 3D](entregas/p1l1_benchmark_3d) |
+| P1L2 | [Entrega y evolución](entregas/P1L2/README.md) |
+| P1L3 | [Informe](entregas/P1L3/INFORME.md) |
+| P1L4 | [Entrega histórica](entregas/P1L4/README.md) |
+| P1L5 | [Guía funcional](entregas/P1L5/README.md) |
+| P1L6 | [Integración](entregas/P1L6/README.md) |
 
-Para generar el modelo 3D preliminar de P1L2 desde DXF locales:
-
-```powershell
-python entregas/P1L2/opensees/extract_cad_model.py
-```
-
-Para correr el esqueleto OpenSees de gravedad de P1L2:
-
-```powershell
-python entregas/P1L2/opensees/building_gravity_skeleton.py
-```
-
-Para abrir el viewer web 3D histórico de P1L2 (solo depuración):
-
-```powershell
-entregas/P1L2/Abrir_Viewer_P1L2.bat
-```
-
-O levantar servidor desde la raiz y abrir:
-
-```text
-http://localhost:8000/entregas/P1L2/viewer/
-```
-
-Al ejecutarlo, ademas de imprimir la verificacion numerica, se genera una imagen con el resultado fisico del modelo:
-
-```text
-entregas/p1l0/results/diagrama_pregunta_2.png
-entregas/p1l0/results/diagramas_nvm_pregunta_2.png
-```
-
-El primer diagrama muestra la geometria original, la deformada amplificada, la carga distribuida, la rotula interna, las reacciones y los esfuerzos maximos. El segundo contiene los diagramas `N`, `V` y `M`.
-
-El ejercicio adicional de columna-viga genera:
-
-```text
-entregas/ejercicios/columna_viga/results/diagrama_columna_viga.png
-entregas/ejercicios/columna_viga/results/diagramas_nvm_columna_viga.png
-```
-
-## Que modela
-
-Se modela el marco 2D de la Pregunta 2:
-
-- Modelo: `basic`, 2 dimensiones, 3 GDL por nodo.
-- GDL por nodo: desplazamiento `ux`, desplazamiento `uy`, rotacion `rz`.
-- Elementos: `elasticBeamColumn`.
-- Transformacion geometrica: `Linear`.
-- Apoyos en `A` y `E`: articulaciones, restringen `ux` y `uy`.
-- Rotula interna en `C`: se duplican nodos y se igualan solo las traslaciones.
-- Carga: distribuida vertical de `3 tonf/m` sobre la proyeccion horizontal.
-- Geometria: `A(0,0)`, `B(4,3)`, `C(6.5,3)`, `D(9,3)`, `E(13,0)`.
-
-## Validacion contra la pauta
-
-El script compara automaticamente contra los resultados de la pauta:
-
-- Reacciones verticales: `R_Ay = R_Ey = 19.5 tonf`.
-- Reacciones horizontales: `|R_Ax| = |R_Ex| = 21.13 tonf`.
-- Axial maximo: `|N|max = 28.6 tonf`.
-- Corte maximo: `|Q|max = 7.5 tonf`.
-- Momento maximo: `|M|max = 9.38 tonf*m`.
-- Tension maxima por flexion: aproximadamente `80.511 MPa`.
-- Tension tangencial maxima por corte: aproximadamente `29.6 MPa`.
-
-Tambien verifica equilibrio global:
-
-```text
-sum Fx = 0
-sum Fy = 0
-```
-
-## Criterio de aceptacion
-
-La entrega P1L0 se considera correcta si:
-
-- El analisis converge.
-- Las reacciones equilibran la carga aplicada.
-- Las reacciones coinciden con la pauta de la Pregunta 2 dentro de redondeo.
-- Los maximos de axial, corte y momento coinciden con la pauta dentro de redondeo.
-- Se genera el diagrama `entregas/p1l0/results/diagrama_pregunta_2.png`.
-- Se puede explicar claramente el modelo, los GDL, apoyos, rotula interna, carga y verificacion.
+`P1L4_FINAL` permanece intacto. La referencia original de Luis
+`entregas/P1L2/unity_export/model_viewer.json` es solo lectura.
+No mover masivamente carpetas históricas: las rutas forman parte de la reproducción.

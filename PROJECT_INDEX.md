@@ -1,163 +1,88 @@
-# Índice maestro del proyecto
+# Índice canónico — main CURRENT
 
-Estado: `P1L6 READINESS COMPLETE / CURRENT VERIFIED`
+Este índice identifica qué usar hoy. Las auditorías anteriores son evidencia
+histórica; sus conteos y estados no sustituyen los datos CURRENT.
 
-Integración vigente: [auditoría P1L5](entregas/P1L5/INTEGRATION_AUDIT.md) y
-[QA del modelo integrado](entregas/P1L5/validation/INTEGRATION_QA.md).
-La fuente editable única está en `entregas/P1L5/modelo_central/`.
+## Fuentes editables
 
-Estado central: 712 sólidos (442 vigas, 143 columnas, 84 muros, 10 losas
-poligonales y 33 apoyos visuales); FE CURRENT con 1170 nodos topológicos,
-677 segmentos (673 analizados), 1240 restricciones y 44 nodos fijos.
-Componentes desconectados: 0. OpenSees CURRENT
-G/Q/EX/EY y superposición R: verificados.
-
-Revisión vigente de muros y columnas:
-[núcleos CURRENT y comparación antes/después](entregas/P1L6/wall_continuity/WALL_CONTINUITY_AFTER.md).
-Tres grupos en C S1–P4; material ED1-P4 y armaduras conservan supuestos de
-laboratorio explícitos. No confundir continuidad geométrica con una sección C
-monolítica en el FE. 38 candidatos de muros siguen en revisión, fuera del modelo.
-
-Guía vigente: [P1L6_READINESS](entregas/P1L6/P1L6_READINESS.md).
-Revisión vigente: [continuidad manual de vigas](entregas/PRE_P1L5/manual_beam_revision/REVIEW_STATUS.md).
-Diagnóstico → Cambios de esta revisión / COLUMN STACKS / Pendientes FE: un pendiente / un componente.
-Las [43 fichas originales](entregas/PRE_P1L5/FE_PENDING_43_DETAILED_REVIEW.md) se conservan
-como expediente previo, no diagnóstico actual. No hay nueva corrida FE.
-Incluye [QA global](entregas/PRE_P1L5/GLOBAL_VALIDATION.md),
-[auditoría retrospectiva](entregas/PRE_P1L5/DELIVERY_RETROSPECTIVE_AUDIT.md),
-[matriz externa](entregas/PRE_P1L5/CROSS_GROUP_FEATURE_MATRIX.md) y
-[pendientes individuales](entregas/PRE_P1L5/REMAINING_STRUCTURAL_AUDIT.md).
-No ejecutar P1L5 ni el candidato FE hasta resolver los bloqueos documentados.
-588 materiales confirmados en miembros actualmente incluidos; resultados históricos intactos.
-Unity agrega ENTREGAS, Evolución y Estado del proyecto desde metadata.
-
-Rama de trabajo: `codex/p1l5-integration`
-
-Snapshot P1L4 preservado: tag `P1L4_FINAL`, commit `56e24ac0568b24eba3cf119f2e3cc66fc0af3a35`
-
-Interfaz visual principal única: Unity de José
-
-Este índice responde qué archivo debe usarse hoy. El inventario máquina a
-máquina de todos los archivos, hashes, ramas y duplicados está en
-`REPOSITORY_INVENTORY.json` y se regenera con
-`tools/inventory_repository.py`.
-
-## Inicio rápido
-
-1. Doble clic en `Abrir_Unity.bat`.
-2. En Unity, abrir `Assets/Main.unity` y pulsar **Play**.
-3. Para revisar los contratos sin recalcular OpenSees, doble clic en
-   `Validar_Modelo.bat`.
-4. Para regenerar y auditar el sistema central, ejecutar
-   `powershell -ExecutionPolicy Bypass -File entregas/P1L5/build_and_validate.ps1`.
-
-Unity 6000.6.0f1 debe tener una licencia activa mediante Unity Hub. El botón no
-instala ni activa licencias.
-
-## Estado que muestra Unity
-
-La interfaz normal muestra únicamente el modelo actual. El histórico requiere
-activación explícita en Entregas o Avanzado y nunca se presenta como resultado vigente:
-
-| Capa | Estado | Interpretación |
+| Componente | Ruta | Cómo usar |
 | --- | --- | --- |
-| Geometría | `CURRENT VERIFIED` | 712 sólidos; 442 vigas; 143 columnas; 84 muros; 10 losas CAD poligonales de 0,15 m. |
-| Diagnóstico FE | `CURRENT / PASS` | 677 segmentos, 1170 nodos topológicos; 0 componentes desconectados. |
-| Resultados actuales | `CURRENT VERIFIED` | G/Q/EX/EY y R compatibles; hashes de geometría, cargas y payload verificados. |
-| G/Q/EX/EY/R y capacidad anteriores | `HISTORICAL` | Avanzado → Histórico, apagado por defecto. |
-| Catálogo de cargas | `CURRENT_RECOMPUTED` | 46 paños/rutas; conservación G/Q PASS; 6 cargas puntuales siguen unresolved. |
+| Geometría, IDs, aliases y topología FE | `entregas/P1L5/modelo_central/model_master.json` | Fuente única; cambios trazables por ID |
+| Secciones | `entregas/P1L5/modelo_central/sections.json` | Propiedades geométricas |
+| Materiales | `entregas/P1L5/modelo_central/materials.json` | Propiedades elásticas y resistentes separadas |
+| Cargas | `entregas/P1L5/modelo_central/loads.json` | Catálogo, tributarias y aplicación CURRENT |
+| Rutas del menú | `project_config.json` | No contiene propiedades estructurales |
 
-El diagnóstico se reconstruyó: solo `E2-P4-V-009` permanece sin camino FE a apoyo.
-`E1-S1-V-005` fue retirado con aprobación y trazabilidad. El foco de clasificación histórico
-no sustituye ese inventario completo. Un extremo libre no prueba un voladizo real.
-QA vigente: [continuidad manual de vigas](entregas/PRE_P1L5/manual_beam_revision/REVIEW_STATUS.md).
-EXT-5 y sus conteos permanecen como antecedentes históricos.
+Las modificaciones físicas requieren QA y reanálisis antes de presentar resultados como vigentes.
+No ejecutar bootstrap ni migraciones antiguas como rutina.
 
-## Fuentes canónicas
+## Código y resultados actuales
 
-| Componente | Ruta canónica | Estado/uso |
-| --- | --- | --- |
-| Planos originales | `C:/Users/matis/OneDrive/Documentos/Planos_edificio_ingeniera/` | Fuente primaria local, no versionada. Planos/cotas/ejes > fotos > inferencia. |
-| Ejes globales | `entregas/P1L2/edificio/datos/global_axes.json` | Vigente. |
-| Geometría ED1 | `entregas/P1L2/unity_export/model_1_audited_corrected.json` | Vigente; no confundir con `model_1_audited.json`. |
-| Geometría ED2 | `entregas/P1L2/unity_export/model_2_viewer.json` | Vigente. |
-| Geometría combinada | `entregas/P1L2/unity_export/model_combined_viewer.json` | Única geometría actual para consumidores. |
-| Referencia de Luis | `entregas/P1L2/unity_export/model_viewer.json` | Solo lectura; referencia histórica, nunca regenerar ni modificar. |
-| Modelo FE actual | `entregas/P1L3/results/post_p1l3_candidate/analysis_model_post_p1l3_candidate.json` | Candidato topológico, no aprobado y no ejecutado. |
-| Modelo FE entregado | `entregas/P1L3/results/a3a4/analysis_model.json` | Histórico P1L3; conservar para reproducibilidad. |
-| Catálogo de cargas | `entregas/P1L3/results/a1a2/load_zones_700_completion/load_catalog_700.json` | 108 entradas; `READY_FOR_Q_REVIEW_NOT_APPLIED`; G y Q separados. |
-| Resultados entregados | `entregas/P1L3/results/a7/` | Histórico `G/Q/EX/EY/R`, no recalcular en esta etapa. |
-| Capacidad HA | `entregas/P1L3/capacidad_ha/` | Histórico de laboratorio, separado del modelo global. |
-| Unity | `entregas/P1L3/José/viewer_unity/` | Única interfaz primaria. Escena `Assets/Main.unity`. |
-| Bundle Unity | `entregas/P1L3/scripts/build_unity_bundle.py` | Único adaptador de fuentes a `StreamingAssets`. No edita números a mano. |
-| Validación Unity | `entregas/P1L3/scripts/validate_unity_integration.py` | Verifica geometría, hashes, estados y crosswalk sin OpenSees. |
-| OpenSees entregado | `entregas/P1L3/scripts/run_p1l3_integrated.py` + `entregas/P1L3/p1l3/` | Pipeline histórico reproducible; no ejecutar hasta validar Q completo. |
+| Función | Archivo/carpeta |
+| --- | --- |
+| Entrada y menú | `main.py`, `Proyecto.bat` |
+| Validador canónico | `entregas/P1L5/modelo_central/validate_central_model.py` |
+| Reconstrucción topología | `entregas/P1L5/modelo_central/rebuild_central_fe_topology.py` |
+| Derivados geométricos | `entregas/P1L5/modelo_central/build_central_derivatives.py` |
+| Cargas y tributarias | `entregas/P1L5/analysis/build_current_loads.py` |
+| OpenSees | `entregas/P1L5/analysis/run_current_opensees.py` |
+| Resultados actuales | `entregas/P1L5/analysis/results/current/` |
+| Adaptador de resultados Unity | `entregas/P1L5/analysis/export_current_to_unity.py` |
+| Capacidad CURRENT | `entregas/P1L5/analysis/build_current_capacity.py` |
+| QA integrado, hashes, equilibrio y crosswalk | `entregas/P1L6/current_cleanup/validate_current_pipeline.py` |
+| QA de la última corrección primaria | `entregas/P1L6/wall_continuity/validate_corrected_cores.py` |
 
-## Artefactos no canónicos
+`Validar_Modelo.bat` verifica CURRENT, no el bundle histórico.
+`build_and_validate.ps1` es el flujo especializado de modificaciones P1L5;
+incluye aplicación de solicitudes/supuestos, reanálisis y preparación AR.
+No es una comprobación de solo lectura ni el botón para empezar a usar el proyecto.
 
-| Ruta | Clasificación | Decisión |
-| --- | --- | --- |
-| `entregas/P1L2/viewer/` | `LEGACY_DEBUG_VIEWER` | Consulta técnica histórica. No es interfaz de presentación ni debe crecer. |
-| `entregas/semana2/viewer/` | `DELIVERED_LEGACY_VIEWER` | Entrega histórica autocontenida. No modificar salvo corrección histórica explícita. |
-| `entregas/P1L2/unity_export/model_1_audited.json` | `SUPERSEDED_RETAINED` | Checkpoint anterior a la geometría corregida. |
-| `model_viewer_candidate.json` y backups `model_viewer_*backup*` | `SUPERSEDED_RETAINED` | Evidencia de recuperación; no usar como entrada. |
-| `entregas/P1L3/José/viewer_unity/Assets/StreamingAssets/` | `GENERATED_ADAPTER` | Copias necesarias para ejecución Unity; sus fuentes se declaran en `integration_manifest.json`. |
+## Unity único
 
-## Ramas
+Proyecto: `entregas/P1L3/José/viewer_unity/`.
+Escena de escritorio: `Assets/Main.unity`.
+Código: `Assets/Scripts/`; herramientas del editor: `Assets/Editor/`.
+Datos generados: `Assets/StreamingAssets/`, nunca editar a mano como fuente.
+Contrato vigente: `current_dataset_contract.json`; las versiones/hashes determinan
+compatibilidad, no el nombre de rama ni un conteo histórico.
 
-| Rama remota | Clasificación | Acción |
-| --- | --- | --- |
-| `origin/codex/post-p1l4-structural-audit` | `CURRENT` | Auditoría y Unity vigentes. |
-| `origin/codex/pre-p1l4-consolidation` | `HISTORICAL` | Consolidación anterior. |
-| `origin/main` | `SHARED_MAIN_REVIEW_BEFORE_INTEGRATION` | Tiene un PDF agregado después de la base; revisar al integrar, sin merge ciego. |
-| `origin/codex/arquitectura-p4` | `DELIVERED_HISTORY_FULLY_CONTAINED` | Ya está contenida en esta rama. |
-| `origin/jose-viewer` | `SUPERSEDED` | Funciones útiles ya portadas a Unity actual. |
-| `origin/luis-semana3-capacidad-ha` | `SUPERSEDED_PORTED` | Capacidad ya integrada. |
-| `origin/luis-gravedad-tributarias` | `PARTIALLY_PORTED_REFERENCE` | Consultar QA útil; geometría/IDs son antiguos. |
-| `origin/e2-work` | `SUPERSEDED_GEOMETRY_REFERENCE` | Antecedente de ED2; no fusionar completo. |
-| `origin/luis` | `HISTORICAL_SETUP` | Configuración temprana. |
+[Guía para abrir y modificar](docs/GUIA_USO_Y_CAMBIOS.md).
+[Guía funcional desktop](entregas/P1L6/desktop/README.md).
 
-## Duplicados y limpieza segura
+## Estado y evidencia
 
-El inventario detecta siete grupos de contenido idéntico. Las copias de imágenes
-HA, arquitectura y sismo dentro de `StreamingAssets` son intencionales: Unity
-las necesita como bundle autocontenido. Los tres `model_viewer` históricos
-idénticos y la copia de superposición Semana 3 son redundantes, pero forman
-parte de entregas/checkpoints ya versionados.
+La última corrección validó 712 sólidos, 669 miembros físicos estructurales,
+677 segmentos FE, 1170 nodos topológicos y 0 componentes sin camino a apoyo.
+No confundir 33 apoyos visuales con 44 tags fijos FE.
+OpenSees usa 1165 nodos y analiza 673 segmentos; cuatro enlaces redundantes
+se omiten del análisis, conservando trazabilidad.
 
-Resultado R5: **0 archivos eliminados y 0 archivos movidos**. No existe todavía
-certeza suficiente para borrar historia sin afectar trazabilidad. Las rutas
-ambiguas quedan clasificadas y fuera de la lista canónica.
+- [Informe primario vigente](entregas/P1L6/wall_continuity/WALL_CONTINUITY_AFTER.md).
+- [QA geométrico y físico](entregas/P1L6/wall_continuity/CURRENT_PIPELINE_QA.md).
+- [Prueba real Unity compile/Play](entregas/P1L6/wall_continuity/UNITY_QA.md).
+- [Estado general](entregas/P1L6/P1L6_READINESS.md).
 
-## Estructura conceptual futura (sin migración masiva)
+Mantener visibles las limitaciones académicas: materiales ED1 P4, espesor de
+losas, armaduras/capacidad asumidas, cargas puntuales unresolved y candidatos
+de muros fuera del modelo. Conectividad PASS no prueba un diseño real correcto.
 
-```text
-project/
-  sources/          manifiestos de planos; originales fuera de Git
-  geometry/         ED1, ED2, combinado y auditorías
-  analysis/
-    delivered/      snapshots P1L0–P1L3 inmutables
-    candidates/     modelos PRE-P1L4 aún no aprobados
-  loads/            catálogo, paños y QA de conservación
-  unity/            única interfaz y adaptadores JSON
-  docs/             índice, handoff, decisiones y defensa
-```
+## Historia y referencias protegidas
 
-Por ahora esta estructura es solo una guía. Mover cientos de archivos rompería
-rutas, historia y scripts; cualquier migración futura debe hacerse por
-adaptadores y en commits pequeños.
+| Archivo/etapa | Clasificación |
+| --- | --- |
+| `entregas/P1L2/unity_export/model_viewer.json` | LUIS_REFERENCE — no modificar |
+| `entregas/P1L2/unity_export/model_1_audited_corrected.json` | Derivado actualizado desde central |
+| `entregas/P1L2/unity_export/model_combined_viewer.json` | Derivado actualizado desde central |
+| `entregas/P1L3/results/a3a4/`, `a7/` | HISTORICAL — resultados entregados |
+| `entregas/P1L3/scripts/build_unity_bundle.py` | Adaptador histórico, no usar para reemplazar CURRENT |
+| `entregas/POST_P1L4/`, `entregas/PRE_P1L5/` | Auditorías/checkpoints previos |
+| `P1L4_FINAL` | Tag evaluable inmutable |
 
-## Próximo trabajo técnico autorizado
+Commit del tag P1L4: `56e24ac0568b24eba3cf119f2e3cc66fc0af3a35`.
+La [auditoría retrospectiva](entregas/PRE_P1L5/DELIVERY_RETROSPECTIVE_AUDIT.md)
+explica método válido frente a inputs superados.
 
-Último checkpoint: `entregas/PRE_P1L5/current_readiness/CURRENT_READINESS_REPORT.md`.
-Inspector estructural actual y contrato de versiones separados del archivo
-histórico. Materiales: 752 confirmados (391 ED1 hasta P3 + 361 ED2).
-Arquitectura futura, sin P1L5 implementado:
-`current_readiness/P1L5_ARCHITECTURE_PREPARATION.md` y `SQ4_FEASIBILITY.md`
-dentro de PRE_P1L5. No usar el candidato ni el catálogo como análisis aprobado.
-
-1. Revisar las 22 geometrías de `user_structural_review/FE_PENDING_AFTER_USER_REVIEW.md` y el desfase de columnas >5 cm.
-2. Validar las restricciones del adaptador usando `user_structural_review/current_constraint_clusters.json`; los IDs de nodos históricos no son vigentes.
-3. Terminar perímetros/huecos de losas y cobertura.
-4. Validar Q completo.
-5. Solo entonces recalcular G/Q, masas, EX/EY, superposición y OpenSees.
+`main` reúne el estado compartido actual. Las ramas de Luis/José y las ramas
+de auditoría se preservan como procedencia; no se eliminan ni se fusionan a ciegas.
+`REPOSITORY_INVENTORY.json` es un inventario de un checkpoint anterior, no un
+selector de fuentes actuales. Puede regenerarse con `tools/inventory_repository.py`.

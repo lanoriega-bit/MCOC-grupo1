@@ -49,7 +49,12 @@ El punto P-M usa demanda CURRENT combinada por los sliders. La curva compatible 
 - `STALE`: el modelo cambió y hay que reanalizar.
 - `STOP / UNRESOLVED`: dato aislado que no fue inventado.
 
-## Regenerar todo fuera de Unity
+## Validación cotidiana sin recalcular
+
+Desde la raíz: `Proyecto.bat validar`. El menú `Proyecto.bat` también permite
+ver el estado y encontrar archivos. [Guía actual](../../docs/GUIA_USO_Y_CAMBIOS.md).
+
+## Flujo especializado con reanálisis fuera de Unity
 
 Desde PowerShell, en la carpeta principal del repositorio:
 
@@ -57,7 +62,9 @@ Desde PowerShell, en la carpeta principal del repositorio:
 powershell -ExecutionPolicy Bypass -File entregas/P1L5/build_and_validate.ps1
 ```
 
-La secuencia valida, actualiza cargas y tributarias, ejecuta OpenSees, exporta a Unity y hace QA. El final esperado es `Unity CURRENT actualizado: PASS`.
+La secuencia también aplica solicitudes y supuestos P1L5 antes de reconstruir.
+No usarla como verificación de solo lectura ni migración genérica de geometría.
+Revisar el código y cerrar Play antes de regenerar datos.
 
 ## Alcance
 

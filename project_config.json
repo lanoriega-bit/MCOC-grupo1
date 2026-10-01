@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "paths": {
+    "geometry": "entregas/P1L5/modelo_central/model_master.json",
+    "sections": "entregas/P1L5/modelo_central/sections.json",
+    "materials": "entregas/P1L5/modelo_central/materials.json",
+    "loads": "entregas/P1L5/modelo_central/loads.json",
+    "results": "entregas/P1L5/analysis/results/current/manifest.json",
+    "unity": "entregas/P1L3/José/viewer_unity",
+    "contract": "entregas/P1L3/José/viewer_unity/Assets/StreamingAssets/current_dataset_contract.json",
+    "luis_reference": "entregas/P1L2/unity_export/model_viewer.json"
+  },
+  "validators": [
+    "entregas/P1L5/modelo_central/validate_central_model.py",
+    "entregas/P1L6/current_cleanup/validate_current_pipeline.py"
+  ]
+}

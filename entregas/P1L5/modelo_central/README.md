@@ -1,18 +1,18 @@
 # Modelo central P1L5
 
-Esta carpeta es la fuente central reversible para el estado POST-P1L4. Los
+Esta carpeta es la fuente central para el estado CURRENT. Los
 contratos históricos de P1L2/P1L3/P1L4 se conservan, pero nunca se usan como
-fallback CURRENT. OpenSees permanece bloqueado hasta cerrar los gates indicados
-por el generador y `../validation/INTEGRATION_QA.md`.
+fallback CURRENT. OpenSees CURRENT ya fue ejecutado y verificado; la última
+evidencia está en `../../P1L6/wall_continuity/CURRENT_PIPELINE_QA.md`.
 
 ## Fuentes Editables Canonicas
 
-Editar manualmente solo estos archivos cuando se migre el flujo de produccion:
+Editar estas fuentes con evidencia, validación y trazabilidad:
 
 - `model_master.json`: nodos geométricos, elementos, apoyos visuales, topología FE, restricciones, `section_id`, `material_id`, `active`, aliases y trazabilidad PRE5.
 - `sections.json`: catalogo unico de secciones.
 - `materials.json`: catalogo unico de materiales, separando propiedades elasticas y resistentes.
-- `loads.json`: casos, catalogo de cargas, tributarias y estado `AUDITED_NOT_APPLIED` / `HISTORICAL`.
+- `loads.json`: casos, catálogo, tributarias y aplicación CURRENT; pendientes explícitos no se rellenan.
 
 Estas son las unicas fuentes editables del modelo central. No editar derivados
 para modificar CURRENT.
@@ -24,13 +24,13 @@ No editar manualmente:
 - `generated/`: derivados de prueba creados por `build_central_derivatives.py`.
 - `generated/` es regenerable, esta ignorado por Git y no forma parte del commit.
 - Cualquier futuro contrato Unity/OpenSees producido desde estos JSON.
-- `Assets/StreamingAssets/` sigue siendo generado por los adaptadores existentes y no se toca en esta etapa.
+- `Assets/StreamingAssets/` es generado por los adaptadores CURRENT, no una fuente editable.
 
 ## RESULT
 
 Resultados OpenSees son salidas de analisis. No son fuente editable del modelo.
-Los resultados actuales PRE5 son `NONE`; los casos `G/Q/EX/EY/R` disponibles hoy
-son historicos.
+Los resultados CURRENT están en `../analysis/results/current/` y son compatibles
+con el modelo verificado. Los casos entregados P1L3/P1L4 siguen históricos.
 
 ## LEGACY / HISTORICAL
 
@@ -46,9 +46,9 @@ Semana 4/P1L4. En CURRENT PRE5 el muro activo correspondiente al `solidTag`
 historico `SOL2_1_wall_0021` es `E2-P1-M-002`. `E2-P1-M-019` no debe aparecer
 como elemento activo CURRENT ni crear un segundo muro fisico.
 
-Caso pendiente explicito: `E2-P4-V-009` permanece activo en CURRENT PRE5, pero
-su trayectoria FE sigue pendiente. No se inventa conectividad, apoyo ni enlace
-para forzar `PASS`; el pendiente queda documentado en `model_master.json`.
+El pendiente histórico `E2-P4-V-009` fue revisado en correcciones posteriores.
+El CURRENT validado tiene cero componentes sin camino a apoyo; esto no autoriza
+inventar conectividad para futuras modificaciones.
 
 ## Flujo con reanalisis
 
@@ -109,7 +109,12 @@ loads.json
 
 - `validate_central_model.py`: valida identidad, referencias, aliases y politica de cargas.
 
-## Comando único
+## Validar sin recalcular
+
+Desde la raíz: `Proyecto.bat validar`. Para rutas: `Proyecto.bat rutas`.
+Guía completa: [uso y cambios](../../../docs/GUIA_USO_Y_CAMBIOS.md).
+
+## Flujo especializado P1L5 con reanálisis
 
 Desde la raíz del repositorio:
 
@@ -123,5 +128,6 @@ Para incluir compilación de Unity:
 powershell -ExecutionPolicy Bypass -File entregas/P1L5/build_and_validate.ps1 -UnityCompile
 ```
 
-El comando falla ante errores de integridad, pero informa los bloqueos
-estructurales honestos por separado.
+Este flujo modifica fuentes y aplica solicitudes/supuestos P1L5, además de
+reanálisis y preparación AR. Revisar su secuencia antes de usarlo; no es una
+validación de solo lectura. Cerrar Unity antes de usar -UnityCompile.

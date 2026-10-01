@@ -1,15 +1,6 @@
 @echo off
 setlocal
-cd /d "%~dp0"
-set "PYTHON_EXE=%~dp0.venv\Scripts\python.exe"
-
-if not exist "%PYTHON_EXE%" (
-  echo No se encontro el entorno Python del proyecto.
-  pause
-  exit /b 1
-)
-
-"%PYTHON_EXE%" "entregas\P1L3\scripts\validate_unity_integration.py"
+call "%~dp0Proyecto.bat" validar
 set "RESULT=%ERRORLEVEL%"
 echo.
 if "%RESULT%"=="0" echo Validacion terminada correctamente.

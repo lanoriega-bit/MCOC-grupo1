@@ -1,5 +1,18 @@
 # P1L2 Status
 
+## main CURRENT — organización y núcleos (2026-10-01)
+
+- Fuente única: `entregas/P1L5/modelo_central/`; 712 sólidos: 442 vigas,
+  143 columnas, 84 muros, 10 losas y 33 apoyos visuales.
+- FE: 1170 nodos topológicos, 677 segmentos, 1240 restricciones y 44 tags
+  fijos; 0 componentes sin camino a apoyo. G/Q/EX/EY/R CURRENT verificados.
+- Entrada de uso: `Proyecto.bat` / `main.py`. `Validar_Modelo.bat` ahora
+  verifica CURRENT, no el histórico. No se recalcula física al ordenar main.
+- La referencia original de Luis y los tags históricos permanecen intactos.
+- Guía vigente: [índice canónico](../../PROJECT_INDEX.md) y
+  [QA de núcleos](../P1L6/wall_continuity/CURRENT_PIPELINE_QA.md).
+- Los apartados siguientes son checkpoints históricos, no el estado actual.
+
 ## P1L6 readiness CURRENT (2026-09-29)
 
 - Fuente vigente: `entregas/P1L5/modelo_central/model_master.json`.
