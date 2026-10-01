@@ -9,8 +9,9 @@ Activos: 30. Retirados examinados: 92. Santiago: 66 muros; Cáceres: 82 muros.
 | Decisión provisional | Cantidad |
 | --- | ---: |
 | REVIEW_REQUIRED | 55 |
-| CONFIRMED_REINTEGRATE | 33 |
+| CONFIRMED_REINTEGRATE | 29 |
 | REVIEW_REQUIRED_MATERIAL_SCOPE | 4 |
+| REVIEW_REQUIRED_PRIOR_SCOPE_CONFLICT | 4 |
 
 ## Candidatos con coincidencia fuerte en ambos externos
 
@@ -27,19 +28,19 @@ Activos: 30. Retirados examinados: 92. Santiago: 66 muros; Cáceres: 82 muros.
 | E2-P1-M-007 | P1 | S-W-37 | C-W-902 | 2024_22-101.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
 | E2-P2-M-007 | P2 | S-W-38 | C-W-903 | 2024_22-101.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
 | E2-P3-M-007 | P3 | S-W-39 | C-W-904 | 2024_22-101.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
-| E2-P4-M-007 | P4 | S-W-40 | C-W-905 | 2024_22-102.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
+| E2-P4-M-007 | P4 | S-W-40 | C-W-905 | 2024_22-102.dxf / RLE-MURO_CONTOUR_PAIR | REVIEW_REQUIRED_PRIOR_SCOPE_CONFLICT |
 | E2-P1-M-008 | P1 | S-W-32 | C-W-802 | 2024_22-101.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
 | E2-P2-M-008 | P2 | S-W-33 | C-W-803 | 2024_22-101.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
 | E2-P3-M-008 | P3 | S-W-34 | C-W-804 | 2024_22-101.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
-| E2-P4-M-008 | P4 | S-W-35 | C-W-805 | 2024_22-102.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
+| E2-P4-M-008 | P4 | S-W-35 | C-W-805 | 2024_22-102.dxf / RLE-MURO_CONTOUR_PAIR | REVIEW_REQUIRED_PRIOR_SCOPE_CONFLICT |
 | E2-P1-M-010 | P1 | S-W-42 | C-W-602 | 2024_22-101.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
 | E2-P2-M-010 | P2 | S-W-43 | C-W-603 | 2024_22-101.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
 | E2-P3-M-010 | P3 | S-W-44 | C-W-604 | 2024_22-101.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
-| E2-P4-M-009 | P4 | S-W-45 | C-W-705 | 2024_22-102.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
+| E2-P4-M-009 | P4 | S-W-45 | C-W-705 | 2024_22-102.dxf / RLE-MURO_CONTOUR_PAIR | REVIEW_REQUIRED_PRIOR_SCOPE_CONFLICT |
 | E2-P1-M-011 | P1 | S-W-52 | C-W-502 | 2024_22-101.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
 | E2-P2-M-011 | P2 | S-W-53 | C-W-503 | 2024_22-101.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
 | E2-P3-M-011 | P3 | S-W-54 | C-W-504 | 2024_22-101.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
-| E2-P4-M-010 | P4 | S-W-55 | C-W-505 | 2024_22-102.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
+| E2-P4-M-010 | P4 | S-W-55 | C-W-505 | 2024_22-102.dxf / RLE-MURO_CONTOUR_PAIR | REVIEW_REQUIRED_PRIOR_SCOPE_CONFLICT |
 | E2-P1-M-009 | P1 | S-W-47 | C-W-602 | 2024_22-101.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
 | E2-P2-M-009 | P2 | S-W-48 | C-W-603 | 2024_22-101.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
 | E2-P3-M-009 | P3 | S-W-49 | C-W-604 | 2024_22-101.dxf / RLE-MURO_CONTOUR_PAIR | CONFIRMED_REINTEGRATE |
@@ -57,3 +58,6 @@ Activos: 30. Retirados examinados: 92. Santiago: 66 muros; Cáceres: 82 muros.
 ## Regla de decisión
 
 `CONFIRMED_REINTEGRATE` requiere un par de caras único en la auditoría CAD original (endpoints/espesor a ≤0,02 m), layer estructural, coincidencia fuerte en ambos externos y ausencia de duplicado activo. La retirada anterior fue una decisión de alcance del usuario, no un hallazgo de inexistencia en CAD; la instrucción actual pide reconsiderar los muros reales. Los candidatos EDIFICIO_1/P4 quedan `REVIEW_REQUIRED_MATERIAL_SCOPE` porque el único material asignado a miembros activos de ese nivel apunta a la nota 2024_22 de EDIFICIO_2, no a una confirmación primaria de EDIFICIO_1/P4. Esta clasificación habilita preparar la reintegración, **no** autoriza mostrar resultados CURRENT hasta rehacer FE, cargas, masas y OpenSees. `REVIEW_REQUIRED` no se agrega. El detalle de los 92 candidatos está en `removed_wall_candidates.json`.
+
+
+Nota de precedencia: los cuatro candidatos E2-P4 marcados REVIEW_REQUIRED_PRIOR_SCOPE_CONFLICT no se reintegran automáticamente. Una instrucción manual anterior pidió retirar esa zona; la coincidencia de contornos y repositorios externos no resuelve por sí sola su rol estructural.
