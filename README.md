@@ -59,6 +59,18 @@ Fiber separado, sin sobrescribir historia ni capacidad CURRENT:
 
 Outputs: `entregas/P1L7/fiber_studies`. Algunos puntos P-M no convergen:
 ver `QA.json`; no son capacidad certificada ni se usan para calibrar D/C.
+Los gráficos nuevos no interpolan intervalos no convergidos. Para volver a dibujar
+los CSV existentes sin repetir ensayos: añadir `--plots-only` al comando anterior.
+
+La regeneración también se comprobó en una copia Git limpia con un entorno nuevo;
+ver `entregas/P1L7/CLEAN_CLONE_QA.json`. Para repetir esa comprobación, tras preparar
+otra copia y su `.venv-p1l5`, desde el proyecto principal ejecutar:
+
+```powershell
+.\.venv-p1l5\Scripts\python.exe -B entregas/P1L7/verify_clean_clone.py --clone-root ../MCOC-grupo1-repro
+```
+
+Esto verifica Python/JSON, no sustituye Play ni la prueba del ejecutable final.
 Estado de cierre y límites: [WEEK7_MODEL_CLOSURE](entregas/P1L7/WEEK7_MODEL_CLOSURE.md).
 
 ## Qué abrir y qué editar

@@ -1,6 +1,8 @@
 # Semana 7 — cierre técnico CURRENT
 
-Estado de este checkpoint: **IN PROGRESS**. No es un tag/release evaluable final.
+Estado de este checkpoint: **WEEK 7 MODEL READY WITH EXPLICIT BLOCKERS**.
+Pipeline académico CURRENT reproducido y Viewer validado; no constituye un congelamiento
+estructural definitivo ni autoriza tag/release/build final mientras persistan los bloques indicados.
 Rama `codex/week7-model-closure`, base `3cc21d613377f295880974a62fe98c48c9eea50f`.
 
 ## A. Estado inicial
@@ -53,7 +55,8 @@ Negativos/NaN/Inf rechazados. Para Q, qQ doble con λQ=1 equivale a baseline
 con λQ=2; **EX/EY no son equivalentes**, porque la masa educativa depende de Q.
 Demostración Editor: guardar 1,334 → STALE → reanálisis → recarga CURRENT verificada.
 Restauración desde Unity demostrada; baseline final exacto 0,667 regenerado
-y QA de hashes/contrato aprobado. La demo integral final sigue pendiente.
+y QA de hashes/contrato aprobado. La demo integral del Editor pasó posteriormente
+(83 checks visuales, 29 de Q, 44 de losas, más checks de inicio/resultados).
 
 ## D. Peso sísmico
 
@@ -124,6 +127,9 @@ Muro: estudio histórico E2-P1-M-019 (no es un miembro activo CURRENT),
 8/14 puntos válidos; **6 no convergidos** excluidos como capacidad fiable.
 `fiber_studies/QA.json` registra ambos límites. CURRENT sigue siendo screening
 académico con armaduras asumidas, no Fiber ni diseño certificado.
+Los gráficos nuevos no conectan puntos válidos a través de intervalos no convergidos:
+la compresión pura permanece como punto aislado cuando faltan los ensayos intermedios.
+Las cruces son diagnósticas, no capacidad utilizable. No se modificaron los gráficos históricos.
 
 ## H. Versiones
 
@@ -136,9 +142,14 @@ El entorno antiguo no se actualizó; cada tag histórico conserva sus inputs.
 ## I. Reproducibilidad
 
 Comandos relativos exactos en [README](../../README.md).
-Entorno nuevo `.venv-week7-check` creado, instalación desde requirements completada;
-Q/superposición real y 20 pruebas de transformación pasaron en él.
-No equivale todavía a un smoke test de descarga/standalone ni licencia portátil de Unity.
+Entorno nuevo `.venv-week7-check` creado y probado. Además, se creó un **clone local limpio**
+del commit publicado `ffed146d54c8c0c0b4cf014968f01a551f6530a2`, con otro entorno Python
+instalado exclusivamente desde requirements. Regeneración completa, Q/superposición real,
+20 checks de transformación, 10 tests de entrada y 24 checks de losas pasaron.
+[CLEAN_CLONE_QA.json](CLEAN_CLONE_QA.json) registra comandos/exit codes y comparación
+semántica exacta de configuración, casos, equilibrio y contrato de cargas contra el baseline.
+Fue una copia Git local del mismo commit publicado, **no una descarga nueva de GitHub**.
+No equivale a prueba standalone ni a disponibilidad de licencia Unity en otro PC.
 
 ## J. Desktop build
 
@@ -160,8 +171,8 @@ No se declara un build PASS sin ejecutarlo fuera del Editor y comprobarlo.
 | P–M columna / muro completo | REVIEW_REQUIRED | 1 caso parcial / 6 puntos no convergidos |
 | AR crosswalk / longitudes / demanda | PASS | AR_DATASET_VALIDATION; 712 / 669 FE |
 | Unity compile / Play / qQ reanálisis | PASS_WITH_NOTE | compilación y Play reales; 83 checks UX, 29 Q, 44 losas y regresión PASS; flujo doble/restauración demostrado |
-| Entorno nuevo | PASS_WITH_NOTE | instalado y tests físicos/transformación; clone completo pendiente |
-| Documentación / enlaces | IN_PROGRESS | completar evidencias finales antes de release |
+| Entorno nuevo / clone limpio | PASS | regeneración, cinco comandos exit 0; misma respuesta y equilibrio; CLEAN_CLONE_QA |
+| Documentación / enlaces | PASS_WITH_NOTE | comandos y límites actualizados; no release final |
 | Desktop externo | NOT_TESTED | requiere build final + smoke test |
 
 ## L. Limitaciones reales restantes
@@ -172,6 +183,20 @@ No se declara un build PASS sin ejecutarlo fuera del Editor y comprobarlo.
 - Política sísmica educativa pendiente de contraste con instrucción específica del profesor.
 - Puntos Fiber no convergidos no sirven para extrapolar una envolvente completa.
 - La compilación final y demo integrada del Editor pasaron; falta prueba standalone externo, condicionado al cierre estructural.
+
+### Bloques que impiden el congelamiento definitivo
+
+| Bloque | Fuente/responsabilidad | Qué falta |
+| --- | --- | --- |
+| Certificación física de losas/huecos/espesores | Planos y detalle primario del edificio | Confirmar contornos y espesores; QA numérico no certifica el dibujo ni el fallback 0,15 m |
+| Tres PM puntuales excluidas | L700 P2/P3; equipo con fuente primaria legible | Punto real y receptor inequívoco; no sustituir coordenada de texto por punto de aplicación |
+| Política sísmica del curso no verificada | Profesor/pauta específica | Confirmar si 20% y G+0,5Q son los parámetros de entrega; hoy son hipótesis educativas explícitas |
+| P–M Fiber incompleta | Estudios separados OpenSees | Resolver/justificar convergencia: columna P50 parcial y seis puntos del muro; no cerrar la envolvente interpolando huecos |
+| Build final / ejecución fuera del Editor | Etapa de release del equipo | Pendiente, no PASS; se difiere por la condición del usuario de cerrar primero los bloques estructurales |
+
+El Viewer usa capacidades analíticas aproximadas y no incorpora estos estudios Fiber como
+capacidad real del edificio. Este checkpoint es útil y reproducible, pero no debe entregarse
+como si los puntos incompletos o las fuentes ausentes hubieran sido confirmados.
 
 ### Comprobación posterior a la restauración
 
@@ -192,3 +217,21 @@ integrar solo cambios compatibles de informe/configuración después de QA,
 y posteriormente merge no destructivo de esta rama hacia main **solo con autorización**.
 No tag/release nuevo todavía; `P1L4_FINAL`, entregas históricas y Luis intactos.
 Los hashes de cada checkpoint se comunicarán tras commit/push, no se inventa un hash autorreferente.
+
+Propuesta concreta, **no ejecutada**:
+
+1. Cerrar los bloques primarios/Fiber, reanálisis si cambia un input, QA y standalone externo.
+2. Revisar `p1l6/final-integration`: `800160e`, `3fceca2`, `ae9992f` son informes
+   de los compañeros. Incorporarlos conservando su autoría y sin hacerlos pasar por resultados Week7.
+3. `0e6b23b` contiene un guard de compilación Android y builder PC a estudiar,
+   pero también activa losas por defecto: **rechazar ese comportamiento**, incompatible con
+   losas OFF aprobado. No importar sus cambios de Viewer completos sobre la UI CURRENT.
+4. Integrar `codex/week7-model-closure` no destructivamente en main cuando el usuario lo apruebe.
+   En la comprobación previa al último checkpoint, `origin/main` era ancestro (0 exclusivos
+   main, 10 exclusivos Week7). Esto no garantiza ausencia de cambios remotos posteriores:
+   fetch y revisar conflictos inmediatamente antes de cualquier merge.
+5. Repetir QA tras integración; tag/release solamente con confirmación del usuario.
+
+Checkpoints de implementación: `6e2cf3d` (Q/sismo/AR) y `ffed146`
+(precisión qQ, compilación y Play/QA después de restauración). La evidencia de clone limpio
+registra exactamente `ffed146d54c8c0c0b4cf014968f01a551f6530a2`.

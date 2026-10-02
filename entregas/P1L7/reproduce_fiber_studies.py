@@ -4,6 +4,8 @@ Run: python -B entregas/P1L7/reproduce_fiber_studies.py
 Partial/nonconverged points are retained and flagged; they are not design data.
 """
 import importlib
+import argparse
+import csv
 import json
 import math
 import sys
@@ -13,7 +15,48 @@ ROOT = Path(__file__).resolve().parents[2]
 OUT = Path(__file__).resolve().parent / "fiber_studies"
 
 
+def plot_partial_pm(rows, output, title, moment_key, status_key="valid"):
+    """Never bridge a nonconverged axial interval or imply a complete envelope."""
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    rows = sorted(rows, key=lambda r: float(r["compression_magnitude_kN"]))
+    valid = [(str(r.get("valid")).lower() == "true") if status_key == "valid"
+             else r["status"] in ("PASS", "AXIAL_ONLY_PASS") for r in rows]
+    fig, ax = plt.subplots(figsize=(10, 6))
+    previous = None
+    labelled = set()
+    for row, okay in zip(rows, valid):
+        x, y = float(row[moment_key]), float(row["compression_magnitude_kN"])
+        label = "Ensayo convergido" if okay else "Parcial/no convergido: NO usar como capacidad"
+        ax.scatter(x, y, color="#1f77b4" if okay else "#d62728", marker="o" if okay else "x",
+                   label=label if label not in labelled else None, s=45)
+        labelled.add(label)
+        ax.annotate(row.get("point_id", row.get("case", "")), (x, y), xytext=(5, 5), textcoords="offset points", fontsize=8)
+        if okay and previous is not None:
+            ax.plot([previous[0], x], [previous[1], y], color="#444444", linewidth=1)
+        previous = (x, y) if okay else None
+    ax.set(xlabel="Momento [kN·m]", ylabel="Compresión |P| [kN]",
+           title=title + " — ASUMIDO_LAB / HISTÓRICO\nMuestreo incompleto: sin interpolación en intervalos no convergidos")
+    ax.grid(alpha=.35)
+    ax.legend(fontsize=8)
+    fig.tight_layout()
+    fig.savefig(output, dpi=160)
+    plt.close(fig)
+
+
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--plots-only", action="store_true", help="Redraw recorded CSV without rerunning or changing OpenSees data")
+    if parser.parse_args().plots_only:
+        for name, file, moment in [("column", "pm_interaction", "max_moment_kNm"), ("wall", "wall_pm_interaction", "M_kNm")]:
+            with (OUT / name / (file + ".csv")).open(encoding="utf-8", newline="") as stream:
+                recorded = list(csv.DictReader(stream))
+            title = "P–M muro (Mz)" if name == "wall" else "P–M columna (sección 2D)"
+            plot_partial_pm(recorded, OUT / name / (file + ".png"), title, moment,
+                            "status" if name == "column" else "valid")
+        print("PASS: plots redrawn from recorded CSV; no invalid interval bridged; no result changed")
+        return
     sys.path.insert(0, str(ROOT / "entregas/P1L3/capacidad_ha/opensees"))
     section = importlib.import_module("section_model")
     mc = importlib.import_module("moment_curvature")
@@ -37,7 +80,7 @@ def main():
     points = pm.run_pm_points(config, axial_meta["p0_kN"])
     pm.write_axial_csv(axial)
     pm.write_pm_csv(points)
-    pm.plot_pm_interaction(config, points)
+    plot_partial_pm(points, pm.PM_FIGURE_PATH, "P–M columna (sección 2D)", "max_moment_kNm", "status")
     sys.path.insert(0, str(ROOT / "entregas/P1L4/demanda_capacidad/opensees"))
     wall_section = importlib.import_module("wall_section_model")
     wall_pm = importlib.import_module("wall_pm_interaction")
@@ -50,7 +93,7 @@ def main():
     assert wall_axial_meta["failed_step"] is None
     wall_points = wall_pm.run_pm_interaction(wall_config, wall_axial_meta["p0_kN"])
     wall_pm.write_csv(wall_points)
-    wall_pm.plot_pm(wall_config, wall_points)
+    plot_partial_pm(wall_points, wall_pm.FIGURE_PATH, "P–M muro (Mz)", "M_kNm")
     summary = {"status":"PASS_WITH_EXPLICIT_INVALID_POINTS", "scope":"SEPARATE_FIBER_STUDIES_NOT_CURRENT_CAPACITY",
         "column_Mphi_steps":steps,"column_Mphi_complete":True,
         "column_PM_statuses":{r["case"]:r["status"] for r in points},

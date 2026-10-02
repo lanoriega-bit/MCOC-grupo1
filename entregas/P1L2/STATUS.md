@@ -8,6 +8,8 @@
 - Agregado G por piso corregido: 2,265720 MN permanentes antes omitidos del peso sísmico.
 - AR sincronizado: 712 sólidos, 54 muros faltantes añadidos, 0 IDs retirados.
 - Fiber separado de capacidad aproximada; puntos no convergidos explícitos.
+- qQ restaurado exactamente a 0,667; Unity compiló/Play PASS (83 UX, 29 Q, 44 losas).
+- Clone limpio y nuevo entorno regeneraron CURRENT con la misma respuesta; cierre con bloques explícitos, no release final.
 - Cierre y QA: [Semana 7](../P1L7/WEEK7_MODEL_CLOSURE.md). Build final todavía no aprobado.
 
 ## Exclusión lateral ED1-P1 y cargas visibles (2026-10-01)
