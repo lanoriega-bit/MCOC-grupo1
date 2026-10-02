@@ -1,5 +1,15 @@
 # P1L2 Status
 
+## Semana 7 — Q uniforme y sincronización (2026-10-01)
+
+- Rama de cierre `codex/week7-model-closure`, base `3cc21d6`; no modificar historia.
+- Geometría/FE/tributarias físicas intactas; Q configurable sustituye toda SC histórica.
+- qQ inicial 0,667 kN/m² (hipótesis), λQ separado; flujo Unity → STALE → OpenSees → recarga probado.
+- Agregado G por piso corregido: 2,265720 MN permanentes antes omitidos del peso sísmico.
+- AR sincronizado: 712 sólidos, 54 muros faltantes añadidos, 0 IDs retirados.
+- Fiber separado de capacidad aproximada; puntos no convergidos explícitos.
+- Cierre y QA: [Semana 7](../P1L7/WEEK7_MODEL_CLOSURE.md). Build final todavía no aprobado.
+
 ## Exclusión lateral ED1-P1 y cargas visibles (2026-10-01)
 
 - Excluidos H08 (100,850 m²) y H10/H12 (70,422 m²), incluida su SC/PM y tributarias.

@@ -48,6 +48,7 @@ def main() -> None:
     result_ids = {name: {r["element_id"] for r in case["elements"]} for name, case in basis.items()}
     unsupported = unsupported_components(master)
     checks = {
+        "analysis_settings_identity": manifest.get("analysis_settings_sha256") == sha(CENTRAL / "analysis_settings.json") == contract.get("analysis_settings_sha256") == sha(STREAM / "week7_analysis_settings.json"),
         "unique_physical_and_viewer_ids": len(physical_ids) == len(set(physical_ids)) and len(viewer_ids) == len(set(viewer_ids)),
         "unity_geometry_covers_central": set(viewer_ids) == set(physical_ids) | {r["support_id"] for r in master["supports"]},
         "linear_geometry_metadata": all(
@@ -105,7 +106,7 @@ def main() -> None:
             "Remaining wall candidates are review-only; see the latest wall-continuity audit, not previous checkpoint counts.",
             f"{sum(r['building'] == 'EDIFICIO_1' and r['floor'] == 'P4' for r in active)} active ED1/P4 structural members retain an explicitly inferred material fallback.",
             "10 non-FE slabs have MAT_UNKNOWN; slab thickness 0.15 m is an academic load fallback.",
-            "6 point-load catalog entries lack an unequivocal receiver and remain excluded.",
+            f"{len(loads['current_load_application']['unresolved_load_ids'])} permanent point-load catalog entries lack an unequivocal receiver and remain excluded; historical SC is reference-only under the project-Q policy.",
             f"LT1 Q differs by {loads['current_load_application']['by_building']['EDIFICIO_1']['Q_difference_percent']:+.3f}% from ETABS; benchmark, not a calibration target.",
             "Unity compile/Play requires a separate editor test; this script verifies the JSON contract only.",
         ],

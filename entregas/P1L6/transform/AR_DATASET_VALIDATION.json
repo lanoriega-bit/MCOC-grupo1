@@ -1,21 +1,21 @@
 {
   "format": "P1L6_AR_DATASET_VALIDATION_v1",
-  "dataset": "C:\\Users\\josel\\AppData\\Local\\Temp\\opencode\\je-mati\\entregas\\P1L6\\preparation\\current_ar_elements.json",
-  "overlay": "C:\\Users\\josel\\AppData\\Local\\Temp\\opencode\\je-mati\\entregas\\P1L6\\transform\\current_ar_geometry_overlay.json",
-  "generated_utc": null,
+  "dataset": "entregas/P1L6/preparation/current_ar_elements.json",
+  "overlay": "entregas/P1L6/transform/current_ar_geometry_overlay.json",
+  "generated_utc": "2026-10-02T00:42:45.743582+00:00",
   "summary": {
-    "total_elements": 658,
-    "with_fe_results": 615,
+    "total_elements": 712,
+    "with_fe_results": 669,
     "without_fe_results": 43,
     "type_distribution": {
       "column": 143,
       "slab": 10,
       "beam": 442,
-      "wall": 30,
+      "wall": 84,
       "support": 33
     },
     "data_state_distribution": {
-      "CURRENT_VERIFIED": 615,
+      "CURRENT_VERIFIED": 669,
       "CURRENT_GEOMETRY_NO_FE_RESULT": 43
     }
   },
@@ -24,78 +24,27 @@
     "unique_elementTag": true,
     "unique_future_ar_elementTag": true,
     "unique_solidTag": true,
-    "unique_opensees_tags": false,
+    "unique_opensees_tags": true,
     "elementTag_matches_element_id": true
   },
   "geometry_overlay": {
-    "total": 658,
-    "from_fe_topology": 615,
-    "from_model_geometry": 43,
+    "total": 712,
+    "from_fe_topology": 585,
+    "from_model_geometry": 127,
     "missing": 0,
     "overlay_records_missing_start_end": 0,
     "overlay_records_absent": 0
   },
   "length_consistency": {
-    "max_relative_error": 4.012658227848107,
-    "mismatches": 30,
-    "ok": false
+    "max_relative_error": 3.0555555555340794e-05,
+    "mismatches": 0,
+    "ok": true
   },
   "demand_envelope_gap": {
-    "records_with_zero_P_demand": 615,
-    "demand_mismatch_examples": [
-      [
-        "E1-P1-C-001",
-        1433.72,
-        0.0
-      ],
-      [
-        "E1-P1-C-002",
-        1839.08,
-        0.0
-      ],
-      [
-        "E1-P1-C-003",
-        1155.21,
-        0.0
-      ],
-      [
-        "E1-P1-C-004",
-        2505.5,
-        0.0
-      ],
-      [
-        "E1-P1-C-005",
-        3223.14,
-        0.0
-      ],
-      [
-        "E1-P1-C-006",
-        2967.62,
-        0.0
-      ],
-      [
-        "E1-P1-C-008",
-        972.94,
-        0.0
-      ],
-      [
-        "E1-P1-C-010",
-        2698.1,
-        0.0
-      ],
-      [
-        "E1-P1-C-011",
-        3622.53,
-        0.0
-      ],
-      [
-        "E1-P1-C-012",
-        3333.87,
-        0.0
-      ]
-    ],
-    "ok": false,
-    "note": "capacity.demand still zeroed in the AR dataset; R envelope in current_result_R is authoritative and used by element_query."
+    "records_with_zero_P_demand": 0,
+    "demand_mismatch_examples": [],
+    "ok": true,
+    "note": "Compare CURRENT capacity demand with the signed-R absolute envelope. Zero demand alone is not a failure."
   },
   "units": {
     "length": "m",
@@ -103,7 +52,7 @@
     "moment": "N.m",
     "rotation": "rad"
   },
-  "units_ok": false,
-  "overall": "PASS_WITH_NOTE",
-  "overall_note": "all identity/geometry/length/units checks PASS; KNOWN_GAP: capacity.demand envelope is zeroed (615/615), mitigated by element_query using current_result_R."
+  "units_ok": true,
+  "overall": "PASS",
+  "overall_note": "all checked invariants PASS"
 }

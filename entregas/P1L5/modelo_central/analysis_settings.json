@@ -1,0 +1,21 @@
+{
+  "format": "MCOC_WEEK7_ANALYSIS_SETTINGS_V1",
+  "live_load": {
+    "intensity_kN_m2": 0.667,
+    "default_intensity_kN_m2": 0.667,
+    "source": "PROJECT_ASSUMPTION",
+    "description": "One person of 68 kg per m2: 68 * 9.81 = 667.08 N/m2, rounded to 667 N/m2. Not a regulatory requirement.",
+    "mode": "UNIFORM_ON_FROZEN_CURRENT_TRIBUTARIES",
+    "historical_SC_policy": "REFERENCE_ONLY_NOT_APPLIED",
+    "units": "kN/m2"
+  },
+  "seismic": {
+    "acceleration_fraction_g": 0.2,
+    "live_load_participation": 0.5,
+    "source": "PROJECT_ASSUMPTION_CONTINUED_FROM_APPROVED_P1L3",
+    "description": "Retain the existing educational 0.20*(G+0.50Q) formulation. No verified professor-specific Q participation rule is claimed.",
+    "application": "CLOSEST_RETAINED_NODE_TO_FLOOR_GEOMETRY_CENTROID"
+  },
+  "frozen_geometry_sha256": "d7998121ea5f547b385da6a2ed1a7fd687c0b0ec7a21b3c984ee0cb55404751b",
+  "frozen_tributaries_sha256": "592d59ac2d14239677541f550ac795b796d136162f5a0d35e87f845e6e9b4df6"
+}

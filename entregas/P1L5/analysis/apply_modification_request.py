@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import math
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -35,10 +36,23 @@ def main():
     sections = {row["section_id"] for row in read(CENTRAL / "sections.json")["sections"]}
     by_id = {row["element_id"]: row for row in master["elements"]}
     now = datetime.now(timezone.utc).isoformat()
+    settings_path = CENTRAL / "analysis_settings.json"
+    analysis_settings = read(settings_path) if settings_path.exists() else None
+    settings_changed = False
     applied = []
     for operation in request.get("operations", []):
         kind = operation.get("type")
-        if kind == "SET_Q_SCALE":
+        if kind == "SET_Q_INTENSITY":
+            q = float(operation["value"])
+            if not math.isfinite(q) or q < 0 or analysis_settings is None:
+                raise ValueError("qQ must be finite, non-negative and use CURRENT settings")
+            previous = analysis_settings["live_load"]["intensity_kN_m2"]
+            analysis_settings["live_load"]["intensity_kN_m2"] = q
+            settings_changed = True
+            applied.append({"type": kind, "previous": previous, "value": q, "unit": "kN/m2"})
+        elif kind == "SET_Q_SCALE":
+            if analysis_settings is not None:
+                raise ValueError("SET_Q_SCALE is superseded: use SET_Q_INTENSITY in kN/m2, not lambdaQ")
             scale = float(operation["value"])
             if not 0.0 < scale <= 5.0:
                 raise ValueError("Q scale must be in (0, 5]")
@@ -115,6 +129,8 @@ def main():
     master["sources"]["current_contract"]["status"] = "MODIFIED_REANALYSIS_IN_PROGRESS"
     write(CENTRAL / "model_master.json", master)
     write(CENTRAL / "loads.json", loads)
+    if settings_changed:
+        write(settings_path, analysis_settings)
     request["status"] = "APPLIED"
     request["applied_utc"] = now
     request["applied_operations"] = applied

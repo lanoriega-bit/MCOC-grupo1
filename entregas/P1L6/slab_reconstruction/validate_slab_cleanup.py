@@ -27,7 +27,9 @@ def main():
     }
     strips=[p for p in panels if 'LINE-SC-100-STRIP' in p['id']]
     checks['single equivalent line strip']=len(strips)==1
-    checks['line strip correct live intensity']=len(strips)==1 and abs(strips[0]['case_force_N']['Q']-strips[0]['area_m2']*100*9.80665)<0.02
+    live_policy=loads['current_load_application'].get('live_load')
+    strip_intensity=live_policy['intensity_kN_m2']*1000 if live_policy else 100*9.80665
+    checks['line strip correct live intensity']=len(strips)==1 and abs(strips[0]['case_force_N']['Q']-strips[0]['area_m2']*strip_intensity)<0.02
     checks['surface mesh equals physical polygon']=True;checks['hole-aware visual load mesh']=True
     for slab in slabs:
         g=slab['geometry'];v=g['surface_vertices_xy'];t=g['surface_triangles']

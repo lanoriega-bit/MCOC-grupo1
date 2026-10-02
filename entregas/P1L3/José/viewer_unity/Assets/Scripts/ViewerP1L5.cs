@@ -1,12 +1,15 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Globalization;
 using UnityEngine;
 
 namespace Mcoc.UnityViewer
 {
     [Serializable] public class P1L5ModificationOperation { public string type, element_id, section_id; public float value; }
     [Serializable] public class P1L5ModificationRequest { public string format, request_id, status, created_utc; public List<P1L5ModificationOperation> operations; }
+    [Serializable] public class Week7LiveLoad { public float intensity_kN_m2, default_intensity_kN_m2; public string source, description; }
+    [Serializable] public class Week7Settings { public Week7LiveLoad live_load; }
     /// <summary>P1L5 CURRENT superposition and transparent analysis-state UI.</summary>
     public partial class ViewerController
     {
@@ -14,7 +17,8 @@ namespace Mcoc.UnityViewer
         private float p1l5LambdaG = 1.0f, p1l5LambdaQ = 0.5f, p1l5LambdaEX = 0.0f, p1l5LambdaEY = 0.0f;
         private bool p1l5ModelModified;
         private bool p1l5ReanalysisRequired;
-        private float p1l5RequestedQScale = 1.30f;
+        private string week7QInput;
+        private Week7Settings week7Settings;
         private string p1l5ModificationMessage = "Sin cambios pendientes.";
 
         AnalysisResultsData FindP1L5Case(string name)
@@ -188,6 +192,7 @@ namespace Mcoc.UnityViewer
 
         string ProjectAnalysisState()
         {
+            if (p1l5ReanalysisRequired) return "MODELO MODIFICADO · REANÁLISIS REQUERIDO\nQ / EX / EY / R / D-C: STALE";
             if (!currentResultsAvailable) return "MODEL: CURRENT\nOPENSees: NOT RUN\nRESULTS: NONE";
             return "MODEL: " + (p1l5ModelModified ? "MODIFIED" : "CURRENT") +
                 "\nOPENSees: PASS\nRESULTS: " + (p1l5ReanalysisRequired ? "STALE" : "CURRENT") +
@@ -207,6 +212,8 @@ namespace Mcoc.UnityViewer
 
         void SaveP1L5Request(P1L5ModificationOperation operation)
         {
+            if (FindRepositoryRoot() == null)
+            { p1l5ModificationMessage = "Build de consulta: el reanálisis necesita el repositorio y Python en el PC."; return; }
             var request = new P1L5ModificationRequest
             {
                 format = "MCOC_P1L5_MODIFICATION_REQUEST_V1",
@@ -217,7 +224,16 @@ namespace Mcoc.UnityViewer
             string path = Path.Combine(Application.streamingAssetsPath, "p1l5_modification_request.json");
             File.WriteAllText(path, JsonUtility.ToJson(request, true));
             p1l5ModelModified = true; p1l5ReanalysisRequired = true;
-            p1l5ModificationMessage = "Cambio guardado en la fuente de solicitudes. Resultados STALE.";
+            p1l5ModificationMessage = "MODELO MODIFICADO · REANÁLISIS REQUERIDO. Solicitud qQ pendiente; G/Q/EX/EY/R y D/C STALE.";
+            currentResultsAvailable = false;
+            analysisResults = null;
+            LoadCurrentContract();
+            if (currentContract != null)
+            {
+                currentContract.status = "STALE_REANALYSIS_REQUIRED";
+                currentContract.analysis_available = false;
+                File.WriteAllText(Path.Combine(Application.streamingAssetsPath, "current_dataset_contract.json"), JsonUtility.ToJson(currentContract, true));
+            }
             RefreshStructuralFailureStates();
         }
 
@@ -225,7 +241,7 @@ namespace Mcoc.UnityViewer
         {
             string root = FindRepositoryRoot();
             if (string.IsNullOrEmpty(root)) { p1l5ModificationMessage = "No se encontró la raíz del repositorio. Usa build_and_validate.ps1."; return; }
-            string script = Path.Combine(root, "entregas", "P1L5", "build_and_validate.ps1");
+            string script = Path.Combine(root, "entregas", "P1L7", "reanalyse_current.ps1");
             try
             {
                 p1l5ModificationMessage = "Reanalizando... Unity puede quedar inmóvil unos segundos.";
@@ -242,12 +258,9 @@ namespace Mcoc.UnityViewer
                     process.WaitForExit(120000);
                     if (!process.HasExited || process.ExitCode != 0) throw new Exception("El pipeline terminó con error.");
                 }
-                analysisCases = JsonLoader.LoadP1L5CurrentAnalysisCases();
-                p1l4Metadata = JsonLoader.LoadP1L5CurrentStructuralMetadata();
-                currentResultsAvailable = ReloadCurrentContractAndCheck() && analysisCases?.cases != null && analysisCases.cases.Count >= 4;
-                BuildP1L4Indexes(); InitializeP1L5Superposition(); ActivateAnalysisCase("R");
-                p1l5ModelModified = false; p1l5ReanalysisRequired = false;
-                p1l5ModificationMessage = "Reanálisis PASS. Resultados CURRENT recargados.";
+                if (!ReloadCurrentContractAndCheck()) throw new Exception("Contrato CURRENT no válido después del pipeline.");
+                // Reload all data/capacity/load meshes, not only result vectors.
+                UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
             }
             catch (Exception ex) { p1l5ModificationMessage = "Reanálisis FAIL: " + ex.Message; }
         }
@@ -255,21 +268,32 @@ namespace Mcoc.UnityViewer
         void DrawP1L5ModificationControls(ElementInfo selected)
         {
             GUILayout.Label(ProjectAnalysisState(), currentBody);
-            GUILayout.Label("A. Intensidad real de Q", currentHeading);
-            GUILayout.Label("Factor Q = " + p1l5RequestedQScale.ToString("F2"), currentBody);
-            p1l5RequestedQScale = Mathf.Round(GUILayout.HorizontalSlider(p1l5RequestedQScale, 0.50f, 2.00f) * 100f) / 100f;
-            if (GUILayout.Button("Guardar factor Q en modelo central", currentButton))
-                SaveP1L5Request(new P1L5ModificationOperation { type = "SET_Q_SCALE", value = p1l5RequestedQScale });
-            if (selected != null && (selected.category == "beam" || selected.category == "column"))
+            if (week7Settings == null)
             {
-                string id = selected.humanId ?? selected.id;
-                string target = selected.category == "beam" ? "SEC_BEAM_RECT_0.400x0.800" : "SEC_COLUMN_RECT_0.700x0.700";
-                GUILayout.Label("B. Sección real del elemento seleccionado", currentHeading);
-                GUILayout.Label(id + " → " + target, currentBody);
-                if (GUILayout.Button("Guardar cambio de sección", currentButton))
-                    SaveP1L5Request(new P1L5ModificationOperation { type = "SET_SECTION", element_id = id, section_id = target });
+                string path = Path.Combine(Application.streamingAssetsPath, "week7_analysis_settings.json");
+                if (File.Exists(path)) week7Settings = JsonUtility.FromJson<Week7Settings>(File.ReadAllText(path));
+                if (week7Settings?.live_load != null) week7QInput = week7Settings.live_load.intensity_kN_m2.ToString("G", CultureInfo.InvariantCulture);
+                string pendingPath = Path.Combine(Application.streamingAssetsPath, "p1l5_modification_request.json");
+                if (File.Exists(pendingPath))
+                {
+                    var pending = JsonUtility.FromJson<P1L5ModificationRequest>(File.ReadAllText(pendingPath));
+                    if (pending?.status == "PENDING" || (currentContract?.status ?? "").Contains("STALE"))
+                    { p1l5ReanalysisRequired = true; p1l5ModelModified = true; }
+                }
             }
-            else GUILayout.Label("Selecciona una viga o columna para cambiar su sección.", currentBody);
+            if (week7Settings?.live_load == null) { GUILayout.Label("qQ: NO DATA; falta configuración CURRENT.", currentBody); return; }
+            GUILayout.Label(new GUIContent("qQ · Intensidad física [kN/m²]", "Se aplica a las áreas tributarias CURRENT. " + week7Settings.live_load.description + " Cambiar qQ requiere reanálisis; λQ solo combina resultados."), currentHeading);
+            week7QInput = GUILayout.TextField(week7QInput ?? "", currentBody);
+            if (GUILayout.Button("Volver al valor inicial del proyecto", currentButton))
+                week7QInput = week7Settings.live_load.default_intensity_kN_m2.ToString("G", CultureInfo.InvariantCulture);
+            bool validQ = double.TryParse((week7QInput ?? "").Replace(',', '.'), NumberStyles.Float, CultureInfo.InvariantCulture, out double requestedQ)
+                && !double.IsNaN(requestedQ) && !double.IsInfinity(requestedQ) && requestedQ >= 0;
+            GUI.enabled = validQ;
+            if (GUILayout.Button("Guardar qQ · invalidar resultados", currentButton))
+                SaveP1L5Request(new P1L5ModificationOperation { type = "SET_Q_INTENSITY", value = requestedQ });
+            GUI.enabled = true;
+            if (!validQ) GUILayout.Label("Introduce un decimal no negativo en kN/m².", currentBody);
+            GUILayout.Label("λQ = " + p1l5LambdaQ.ToString("F2") + " · multiplicador de combinación, no intensidad física.", currentBody);
             GUI.enabled = p1l5ReanalysisRequired;
             if (GUILayout.Button("REANALIZAR · OpenSees · Recargar", currentButton, GUILayout.Height(34))) ReanalyseP1L5();
             GUI.enabled = true;

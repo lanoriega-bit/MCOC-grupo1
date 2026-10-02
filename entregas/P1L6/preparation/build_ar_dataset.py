@@ -91,6 +91,9 @@ def main() -> None:
         start = geometry.get("start_m")
         end = geometry.get("end_m")
         center = geometry.get("center_m")
+        if start is None and center is not None and "z_bottom_m" in geometry:
+            start = [center[0], center[1], geometry["z_bottom_m"]]
+            end = [center[0], center[1], geometry["z_top_m"]]
         refs = row.get("analysis_refs", [])
         fe_tags = sorted({int(ref[key]) for ref in refs for key in ("node_i", "node_j")})
         displacement_rows = []
@@ -121,6 +124,9 @@ def main() -> None:
             "orientation_model": direction(start, end) if start and end else [0.0, 0.0, 1.0],
             "orientation_unity": direction(unity(start), unity(end)) if start and end else [0.0, 1.0, 0.0],
             "length_m": math.dist(start, end) if start and end else max(0.0, geometry.get("z_top_m", 0) - geometry.get("z_bottom_m", 0)),
+            "geometry": geometry,
+            "dimensions": sections.get(row.get("section_id"), {}).get("dimensions", {}),
+            "geometry_measure_note": "Physical axis endpoints: wall length is its plan axis, not the height of its equivalent FE column. FE coordinates are separate in current_result_R.node_displacements.",
             "section": sections.get(row.get("section_id")),
             "material": materials.get(row.get("material_id")),
             "current_result_R": {

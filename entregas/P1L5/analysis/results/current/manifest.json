@@ -1,8 +1,14 @@
 {
   "format": "MCOC_P1L5_CURRENT_RESULTS_MANIFEST_V2",
-  "generated_utc": "2026-10-01T18:13:21.275464+00:00",
+  "generated_utc": "2026-10-02T00:42:41.294799+00:00",
   "status": "PASS",
-  "analysis_version": "P1L5_CURRENT_ZONED_V2",
+  "analysis_version": "WEEK7_CURRENT_UNIFORM_Q_V1",
+  "runtime": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "openseespy": "3.8.0.0",
+    "opensees_engine": "3.8.0"
+  },
+  "analysis_settings_sha256": "6cdf28e10cd00f20799b25ae6e08fab398b0baf2b075e48bf518df4f1528722e",
   "cases": {
     "G": {
       "status": "PASS",
@@ -11,18 +17,18 @@
     },
     "Q": {
       "status": "PASS",
-      "max_translation_m": 0.0023763790173476802,
-      "equilibrium_relative_residual": 3.291277242588369e-16
+      "max_translation_m": 0.0006838893354290882,
+      "equilibrium_relative_residual": 4.3015267635940333e-16
     },
     "EX": {
       "status": "PASS",
-      "max_translation_m": 0.06619803458256172,
-      "equilibrium_relative_residual": 1.8675471089003548e-14
+      "max_translation_m": 0.06503610169526525,
+      "equilibrium_relative_residual": 1.0593527585916761e-13
     },
     "EY": {
       "status": "PASS",
-      "max_translation_m": 0.0962320486057846,
-      "equilibrium_relative_residual": 5.687529831650756e-14
+      "max_translation_m": 0.09616179171484437,
+      "equilibrium_relative_residual": 4.271955146059729e-14
     }
   },
   "linear_superposition_compatible": true,
@@ -31,13 +37,10 @@
   "load_contract": {
     "status": "PASS_WITH_EXPLICIT_UNRESOLVED",
     "G_total_N": 78716059.334,
-    "Q_total_N": 22637353.432,
+    "Q_total_N": 4330195.420369001,
     "unresolved_load_ids": [
-      "L700-P2-POINT-SC-7000-SC_POINT",
       "L700-P2-POINT-SC-7000-PM_ADIC_POINT",
-      "L700-P3-POINT-SC-6000-SC_POINT",
       "L700-P3-POINT-SC-6000-PM_ADIC_POINT",
-      "L700-P3-POINT-SC-6700-SC_POINT",
       "L700-P3-POINT-SC-6700-PM_ADIC_POINT"
     ]
   }

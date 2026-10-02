@@ -1,11 +1,12 @@
 {
   "format": "MCOC_CURRENT_DATASET_V1",
-  "geometry_version": "ab197de10ad58f4f85a4bbb66c78d68c9694538d58267d449bb41873279aec7d",
+  "analysis_settings_sha256": "6cdf28e10cd00f20799b25ae6e08fab398b0baf2b075e48bf518df4f1528722e",
+  "geometry_version": "9d04e0fc3f42f2d284b3153092b62f4305ceb5256ebb0f61e6c573140130fa16",
   "fe_version": "e49fe1c4e2be7ab3478f4e87963cc996e8ee0d6a42b6c16f34da40b761f3ddc1",
-  "loads_version": "cadc290d58aa7171f0d8c2c1fccc00c81811a494376bcd1d0775aca559fff18d",
-  "analysis_version": "P1L5_CURRENT_ZONED_V2",
-  "git_commit": "d81514d65dcca6babb0740d966a0117c5ff307c3",
-  "timestamp": "2026-10-01T18:13:22.695206+00:00",
+  "loads_version": "341e1a7b9b3676036caf91836493578aface0f7b89cdc8d35c2f61bf497ec680",
+  "analysis_version": "WEEK7_CURRENT_UNIFORM_Q_V1",
+  "git_commit": "3cc21d613377f295880974a62fe98c48c9eea50f",
+  "timestamp": "2026-10-02T00:42:43.217662+00:00",
   "status": "CURRENT_VERIFIED",
   "geometry_stream_sha256": "61174468bae669270938ec84bc3bfd329bf79af33f92aff36ff0183b2856c8a4",
   "units": {
@@ -34,14 +35,14 @@
   "loads_approved": true,
   "linear_verified": true,
   "payload_file": "p1l5_current_analysis_cases.json",
-  "payload_sha256": "2b8f90028e2ab750492ebacef0aa4b28b0328c16f7dcb4059e76edbbee56e83e",
+  "payload_sha256": "f1cf961a58b9431fb92d743ea5bd3c9011771287a62409110f2084ec2ecda7e3",
   "source_geometry": "entregas/P1L5/modelo_central/model_master.json",
   "source_fe": "entregas/P1L5/modelo_central/model_master.json#/fe_topology",
   "source_loads": "entregas/P1L5/modelo_central/loads.json",
   "basis_policy": "Identical K, supports, local axes, node/member ordering and signed SI components.",
   "capacity_policy": "Demand changes by compatible linear superposition; section/material changes require reanalysis and capacity compatibility review.",
   "result_state": "CURRENT_WITH_DOCUMENTED_FALLBACKS",
-  "unresolved_load_count": 6,
+  "unresolved_load_count": 3,
   "current_element_loads_file": "p1l5_current_loads_by_element.json",
-  "current_element_loads_sha256": "7b8654e163b33533e4ca40a73d7e69187edde46bd05a7157aeb637d1ffd0f66a"
+  "current_element_loads_sha256": "518bab686a731604b6c0cafbf1d907c792cc7cbdb57c47485e756b5031c61986"
 }

@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import json
 import math
+from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
@@ -48,7 +49,7 @@ def main() -> None:
         "unique_elementTag": len(set(tags)) == n,
         "unique_future_ar_elementTag": len(set(future)) == n,
         "unique_solidTag": len(set(solids)) == n,
-        "unique_opensees_tags": len(set(op_tags)) == n,
+        "unique_opensees_tags": len([t for group in op_tags for t in group]) == len({t for group in op_tags for t in group}),
         "elementTag_matches_element_id": all(t == i for t, i in zip(tags, ids)),
     }
 
@@ -117,7 +118,7 @@ def main() -> None:
     # ---- units ----
     units = ds.get("units", {})
     units_ok = units.get("length") == "m" and units.get("force") == "N" \
-        and units.get("moment") == "N.m" and units.get("angle") == "rad"
+        and units.get("moment") == "N.m" and units.get("rotation", units.get("angle")) == "rad"
 
     summary = {
         "total_elements": n,
@@ -128,9 +129,9 @@ def main() -> None:
     }
     result = {
         "format": "P1L6_AR_DATASET_VALIDATION_v1",
-        "dataset": str(DATASET),
-        "overlay": str(OVERLAY),
-        "generated_utc": None,
+        "dataset": DATASET.relative_to(ROOT).as_posix(),
+        "overlay": OVERLAY.relative_to(ROOT).as_posix(),
+        "generated_utc": datetime.now(timezone.utc).isoformat(),
         "summary": summary,
         "checks": checks,
         "geometry_overlay": {
@@ -146,27 +147,24 @@ def main() -> None:
         "demand_envelope_gap": {
             "records_with_zero_P_demand": demand_zero,
             "demand_mismatch_examples": demand_mismatch[:10],
-            "ok": not demand_gap,
-            "note": "capacity.demand still zeroed in the AR dataset; R envelope in "
-                    "current_result_R is authoritative and used by element_query.",
+            "ok": not demand_mismatch,
+            "note": "Compare CURRENT capacity demand with the signed-R absolute envelope. Zero demand alone is not a failure.",
         },
         "units": units,
         "units_ok": units_ok,
     }
 
     all_ok = (all(checks.values()) and overlay_na == [] and overlay_missing == []
-              and length_ok and result_ok and units_ok and not demand_gap)
-    result["overall"] = "PASS" if all_ok else "PASS_WITH_NOTE"
-    result["overall_note"] = (
-        "all identity/geometry/length/units checks PASS; "
-        "KNOWN_GAP: capacity.demand envelope is zeroed (615/615), "
-        "mitigated by element_query using current_result_R." if demand_gap else "all PASS"
-    )
+              and length_ok and result_ok and units_ok and not demand_mismatch)
+    result["overall"] = "PASS" if all_ok else "FAIL"
+    result["overall_note"] = "all checked invariants PASS" if all_ok else "Identity, geometry, units or demand mismatch; do not accept this dataset."
 
     OUT_JSON.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     _write_md(result, checks, len_mismatch, demand_mismatch)
     print(json.dumps(result["summary"], ensure_ascii=False, indent=1))
     print("overall:", result["overall"], "-", result["overall_note"])
+    if not all_ok:
+        raise SystemExit(1)
 
 
 def _write_md(res, checks, len_mismatch, demand_mismatch) -> None:
@@ -175,7 +173,7 @@ def _write_md(res, checks, len_mismatch, demand_mismatch) -> None:
     lines = [
         "# Validación del dataset AR P1L6",
         "",
-        f"Fecha: 2026-09-29. Dataset de referencia: `current_ar_elements.json`.",
+        f"Fecha UTC: {res['generated_utc']}. Dataset de referencia: `current_ar_elements.json`.",
         "",
         "## Resumen",
         "",
@@ -211,11 +209,10 @@ def _write_md(res, checks, len_mismatch, demand_mismatch) -> None:
         lines += [f"- `{t}` dataset={d} overlap={o}" for t, d, o in len_mismatch[:5]]
     lines += [
         "",
-        "## Brecha conocida: envolvente de demanda en cero",
+        "## Coherencia de la envolvente de demanda",
         "",
-        f"`capacity.demand` está en cero en {res['demand_envelope_gap']['records_with_zero_P_demand']} registros "
-        f"mientras `current_result_R` sí trae fuerzas (p.ej. P axial real).",
-        "El módulo `element_query.py` resuelve esto consumiendo la envolvente R de `current_result_R`.",
+        f"P = 0 en {res['demand_envelope_gap']['records_with_zero_P_demand']} registros; por sí solo no es un error.",
+        f"Demanda compatible con la envolvente absoluta R: {res['demand_envelope_gap']['ok']}.",
         "",
         "## Resultado",
         "",

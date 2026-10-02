@@ -73,7 +73,12 @@ def main() -> None:
                     fe_pts.append((ref["node_i"], fe_coords[ref["node_i"]]))
                 if ref.get("node_j") in fe_coords:
                     fe_pts.append((ref["node_j"], fe_coords[ref["node_j"]]))
-            if len(fe_pts) >= 2:
+            if row["type"] == "wall" and row["geometry"].get("start_m"):
+                # Physical wall axis in plan != vertical equivalent FE member.
+                start, end = row["geometry"]["start_m"], row["geometry"]["end_m"]
+                source = "model_master.wall_plan_axis_not_fe_column"
+                stats["from_geometry"] += 1
+            elif len(fe_pts) >= 2:
                 distinct = {}
                 for nd, p in fe_pts:
                     distinct[nd] = p
@@ -136,8 +141,8 @@ def main() -> None:
         "units": {"length": "m"},
         "status": "CURRENT",
         "source": {
-            "dataset": str(DATASET),
-            "central_model": str(CENTRAL / "model_master.json"),
+            "dataset": DATASET.relative_to(ROOT).as_posix(),
+            "central_model": (CENTRAL / "model_master.json").relative_to(ROOT).as_posix(),
         },
         "stats": stats,
         "elements": overlay,

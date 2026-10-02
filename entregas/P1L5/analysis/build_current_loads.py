@@ -140,6 +140,11 @@ def hole_area(geometry) -> float:
 
 
 def main() -> None:
+    # Week 7: an intensity edit must not rerun CAD/grid area assignment.
+    from week7_loads import CONFIG, main as refresh_frozen_loads
+    if CONFIG.exists():
+        refresh_frozen_loads()
+        return
     master = read(MASTER_PATH)
     loads = read(LOADS_PATH)
     sections = {row["section_id"]: row for row in read(SECTIONS_PATH)["sections"]}

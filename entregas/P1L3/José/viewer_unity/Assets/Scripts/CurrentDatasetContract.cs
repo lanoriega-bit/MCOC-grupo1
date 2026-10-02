@@ -12,6 +12,7 @@ namespace Mcoc.UnityViewer
     {
         public string format,geometry_version,fe_version,loads_version,analysis_version,git_commit,timestamp,status;
         public string geometry_stream_sha256,payload_file,payload_sha256;
+        public string analysis_settings_sha256;
         public bool analysis_available,fe_approved,loads_approved,linear_verified;
         public CurrentDatasetUnits units;
         public List<string> cases,basis_cases;
@@ -83,6 +84,19 @@ namespace Mcoc.UnityViewer
                 string payloadPath=string.IsNullOrEmpty(currentContract.payload_file)?"":Path.Combine(Application.streamingAssetsPath,currentContract.payload_file);
                 string payloadHash=!string.IsNullOrEmpty(payloadPath)&&File.Exists(payloadPath)?CurrentVersionGate.HashFile(payloadPath):"";
                 currentGateStatus=CurrentVersionGate.CheckRuntime(currentContract,geometryHash,payloadHash);
+                if(currentGateStatus=="CURRENT_VERIFIED" && (currentContract.analysis_version??"").StartsWith("WEEK7_"))
+                {
+                    string settingsPath=Path.Combine(Application.streamingAssetsPath,"week7_analysis_settings.json");
+                    if(!File.Exists(settingsPath)||CurrentVersionGate.HashFile(settingsPath)!=currentContract.analysis_settings_sha256)
+                        currentGateStatus="SETTINGS_MISMATCH_REANALYSIS_REQUIRED";
+                    string repository=FindRepositoryRoot();
+                    if(repository!=null)
+                    {
+                        string sourcePath=Path.Combine(repository,"entregas","P1L5","modelo_central","analysis_settings.json");
+                        if(!File.Exists(sourcePath)||CurrentVersionGate.HashFile(sourcePath)!=currentContract.analysis_settings_sha256)
+                            currentGateStatus="SOURCE_SETTINGS_MODIFIED_REANALYSIS_REQUIRED";
+                    }
+                }
                 if(currentGateStatus!="CURRENT_VERIFIED")Debug.LogWarning("CURRENT bloqueado: "+currentGateStatus);
             }
             catch(Exception ex){Debug.LogWarning("Current contract unavailable: "+ex.Message);}

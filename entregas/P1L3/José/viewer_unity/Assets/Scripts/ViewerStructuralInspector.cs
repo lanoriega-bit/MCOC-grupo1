@@ -133,7 +133,7 @@ namespace Mcoc.UnityViewer
                 lines.Add("Q · Sobrecarga de uso");
                 if(row.Q.tributary_area_m2>0)
                 {
-                    lines.Add($"qQ base (media multizona): {row.Q.average_surface_intensity_kN_m2:F3} kN/m²");
+                    lines.Add($"qQ base (hipótesis de proyecto): {row.Q.average_surface_intensity_kN_m2:F3} kN/m²");
                     lines.Add($"Área tributaria: {row.Q.tributary_area_m2:F3} m²");
                     lines.Add($"Ancho tributario equivalente: {row.Q.equivalent_width_m:F3} m");
                     lines.Add($"wQ equivalente base: {row.Q.equivalent_line_load_N_m/1000.0:F3} kN/m");
@@ -314,8 +314,7 @@ namespace Mcoc.UnityViewer
             }
             if(InspectorSection("MODIFICACIONES · P1L5"))
             {
-                if(currentResultsAvailable)DrawP1L5ModificationControls(e);
-                else GUILayout.Label("Carga · sección: disponibles después de una base CURRENT.",currentBody);
+                GUILayout.Label("qQ físico y reanálisis → panel ANÁLISIS. λQ → RESULTADOS.",currentBody);
             }
             GUILayout.EndScrollView();GUILayout.EndArea();
         }

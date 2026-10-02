@@ -1,0 +1,79 @@
+{
+  "source": "resumen_modelos.pdf, page 1, forces N; LT1=ED1/LT2=ED2",
+  "comparisons": [
+    {
+      "building": "EDIFICIO_1",
+      "case": "G",
+      "CURRENT_N": 45213021.356,
+      "ETABS_N": 47140276.0,
+      "difference_percent": -4.088339754311154,
+      "comparison_scope": "building load resultant; global basal equilibrium verified separately"
+    },
+    {
+      "building": "EDIFICIO_1",
+      "case": "Q",
+      "CURRENT_N": 2482393.9593579997,
+      "ETABS_N": 11620380.0,
+      "difference_percent": -78.63758363015667,
+      "comparison_scope": "building load resultant; global basal equilibrium verified separately"
+    },
+    {
+      "building": "EDIFICIO_1",
+      "case": "EX",
+      "CURRENT_N": 9290843.666935802,
+      "ETABS_N": 6593501.0,
+      "difference_percent": 40.9091113649001,
+      "comparison_scope": "building load resultant; global basal equilibrium verified separately"
+    },
+    {
+      "building": "EDIFICIO_1",
+      "case": "EY",
+      "CURRENT_N": 9290843.666935802,
+      "ETABS_N": 4331107.0,
+      "difference_percent": 114.51429546616608,
+      "comparison_scope": "building load resultant; global basal equilibrium verified separately"
+    },
+    {
+      "building": "EDIFICIO_2",
+      "case": "G",
+      "CURRENT_N": 33503038.007,
+      "ETABS_N": 34723194.0,
+      "difference_percent": -3.513950914192976,
+      "comparison_scope": "building load resultant; global basal equilibrium verified separately"
+    },
+    {
+      "building": "EDIFICIO_2",
+      "case": "Q",
+      "CURRENT_N": 1847801.461011,
+      "ETABS_N": 11096777.0,
+      "difference_percent": -83.34830499873071,
+      "comparison_scope": "building load resultant; global basal equilibrium verified separately"
+    },
+    {
+      "building": "EDIFICIO_2",
+      "case": "EX",
+      "CURRENT_N": 6885387.747901101,
+      "ETABS_N": 2953084.0,
+      "difference_percent": 133.15922431942676,
+      "comparison_scope": "building load resultant; global basal equilibrium verified separately"
+    },
+    {
+      "building": "EDIFICIO_2",
+      "case": "EY",
+      "CURRENT_N": 6885387.747901101,
+      "ETABS_N": 3680735.0,
+      "difference_percent": 87.06556565199888,
+      "comparison_scope": "building load resultant; global basal equilibrium verified separately"
+    }
+  ],
+  "seismic_weight_before_N": 87769016.5625,
+  "seismic_weight_old_Q_correct_G_N": 90034736.08049999,
+  "missing_G_N": 2265719.517999992,
+  "seismic_weight_new_Q_N": 80881157.0741845,
+  "note": "New Q is deliberately different; do not interpret the Q-driven decrease as the effect of fixing missing G.",
+  "unmatched": [
+    "ETABS node 311/2987 and C9/C21/B739/C1/C4/B189 have no verified CURRENT crosswalk; no false displacement/internal-force comparison.",
+    "ETABS modal periods not comparable: this CURRENT pipeline does not perform eigenanalysis.",
+    "Pseudo-static 0.2*(G+0.5Q), centroid-nearest-node and rigid-arm simplifications differ from ETABS."
+  ]
+}

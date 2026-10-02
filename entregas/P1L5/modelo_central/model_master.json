@@ -21,7 +21,7 @@
     "current_contract": {
       "path": "entregas/PRE_P1L5/current_readiness/current_dataset_contract.json",
       "status": "CURRENT_VERIFIED",
-      "analysis_version": "P1L5_CURRENT_ZONED_V2",
+      "analysis_version": "WEEK7_CURRENT_UNIFORM_Q_V1",
       "results_manifest": "entregas/P1L5/analysis/results/current/manifest.json"
     },
     "exclusions_aliases": {
@@ -141475,6 +141475,30 @@
           "type": "SET_Q_SCALE",
           "previous": 0.7400000095367432,
           "value": 1.0
+        }
+      ]
+    },
+    {
+      "request_id": "20261002T003142138Z",
+      "applied_utc": "2026-10-02T00:31:59.324203+00:00",
+      "operations": [
+        {
+          "type": "SET_Q_INTENSITY",
+          "previous": 0.667,
+          "value": 1.3339999914169312,
+          "unit": "kN/m2"
+        }
+      ]
+    },
+    {
+      "request_id": "20261002T004126998Z",
+      "applied_utc": "2026-10-02T00:41:42.584549+00:00",
+      "operations": [
+        {
+          "type": "SET_Q_INTENSITY",
+          "previous": 1.3339999914169312,
+          "value": 0.6669999957084656,
+          "unit": "kN/m2"
         }
       ]
     }

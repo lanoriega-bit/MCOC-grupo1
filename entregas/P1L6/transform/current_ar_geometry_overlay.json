@@ -6,13 +6,13 @@
   },
   "status": "CURRENT",
   "source": {
-    "dataset": "C:\\Users\\josel\\AppData\\Local\\Temp\\opencode\\je-mati\\entregas\\P1L6\\preparation\\current_ar_elements.json",
-    "central_model": "C:\\Users\\josel\\AppData\\Local\\Temp\\opencode\\je-mati\\entregas\\P1L5\\modelo_central\\model_master.json"
+    "dataset": "entregas/P1L6/preparation/current_ar_elements.json",
+    "central_model": "entregas/P1L5/modelo_central/model_master.json"
   },
   "stats": {
-    "total": 658,
-    "from_fe": 615,
-    "from_geometry": 43,
+    "total": 712,
+    "from_fe": 585,
+    "from_geometry": 127,
     "missing": 0
   },
   "elements": {
@@ -855,33 +855,33 @@
     "E1-P1-L-001": {
       "start_m": [
         50.088642,
-        9.022142,
+        9.710137,
         7.77
       ],
       "end_m": [
         50.088642,
-        9.022142,
+        9.710137,
         7.92
       ],
       "start_unity_m": [
         50.088642,
         7.77,
-        -9.022142
+        -9.710137
       ],
       "end_unity_m": [
         50.088642,
         7.92,
-        -9.022142
+        -9.710137
       ],
       "center_m": [
         50.088642,
-        9.022142,
+        9.710137,
         7.845
       ],
       "center_unity_m": [
         50.088642,
         7.845,
-        -9.022142
+        -9.710137
       ],
       "length_m": 0.15,
       "orientation_model": [
@@ -10666,32 +10666,32 @@
     },
     "E1-P4-L-001": {
       "start_m": [
-        52.890864,
+        52.890865,
         9.891476,
         19.65
       ],
       "end_m": [
-        52.890864,
+        52.890865,
         9.891476,
         19.8
       ],
       "start_unity_m": [
-        52.890864,
+        52.890865,
         19.65,
         -9.891476
       ],
       "end_unity_m": [
-        52.890864,
+        52.890865,
         19.8,
         -9.891476
       ],
       "center_m": [
-        52.890864,
+        52.890865,
         9.891476,
         19.725
       ],
       "center_unity_m": [
-        52.890864,
+        52.890865,
         19.725,
         -9.891476
       ],
@@ -13878,34 +13878,34 @@
     },
     "E1-S1-L-001": {
       "start_m": [
-        38.091025,
-        3.021432,
+        32.491025,
+        8.256348,
         3.81
       ],
       "end_m": [
-        38.091025,
-        3.021432,
+        32.491025,
+        8.256348,
         3.96
       ],
       "start_unity_m": [
-        38.091025,
+        32.491025,
         3.81,
-        -3.021432
+        -8.256348
       ],
       "end_unity_m": [
-        38.091025,
+        32.491025,
         3.96,
-        -3.021432
+        -8.256348
       ],
       "center_m": [
-        38.091025,
-        3.021432,
+        32.491025,
+        8.256348,
         3.885
       ],
       "center_unity_m": [
-        38.091025,
+        32.491025,
         3.885,
-        -3.021432
+        -8.256348
       ],
       "length_m": 0.15,
       "orientation_model": [
@@ -14627,23 +14627,23 @@
     "E2-P1-M-001": {
       "start_m": [
         -3.648,
-        -0.697,
-        3.96
+        -1.094,
+        5.94
       ],
       "end_m": [
         -3.648,
-        -0.697,
-        7.92
+        -0.299,
+        5.94
       ],
       "start_unity_m": [
         -3.648,
-        3.96,
-        0.697
+        5.94,
+        1.094
       ],
       "end_unity_m": [
         -3.648,
-        7.92,
-        0.697
+        5.94,
+        0.299
       ],
       "center_m": [
         -3.648,
@@ -14655,39 +14655,39 @@
         5.94,
         0.697
       ],
-      "length_m": 3.96,
+      "length_m": 0.795,
       "orientation_model": [
-        0.0,
-        0.0,
-        1.0
-      ],
-      "orientation_unity": [
         0.0,
         1.0,
         0.0
       ],
-      "source": "fe_topology"
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
     },
     "E2-P1-M-002": {
       "start_m": [
         -3.648,
-        0.913,
-        3.96
+        0.001,
+        5.94
       ],
       "end_m": [
         -3.648,
-        0.913,
-        7.92
+        1.826,
+        5.94
       ],
       "start_unity_m": [
         -3.648,
-        3.96,
-        -0.913
+        5.94,
+        -0.001
       ],
       "end_unity_m": [
         -3.648,
-        7.92,
-        -0.913
+        5.94,
+        -1.826
       ],
       "center_m": [
         -3.648,
@@ -14699,39 +14699,39 @@
         5.94,
         -0.913
       ],
-      "length_m": 3.96,
+      "length_m": 1.825,
       "orientation_model": [
-        0.0,
-        0.0,
-        1.0
-      ],
-      "orientation_unity": [
         0.0,
         1.0,
         0.0
       ],
-      "source": "fe_topology"
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
     },
     "E2-P1-M-003": {
       "start_m": [
         -3.648,
-        15.238,
-        3.96
+        14.326,
+        5.94
       ],
       "end_m": [
         -3.648,
-        15.238,
-        7.92
+        16.151,
+        5.94
       ],
       "start_unity_m": [
         -3.648,
-        3.96,
-        -15.238
+        5.94,
+        -14.326
       ],
       "end_unity_m": [
         -3.648,
-        7.92,
-        -15.238
+        5.94,
+        -16.151
       ],
       "center_m": [
         -3.648,
@@ -14743,39 +14743,39 @@
         5.94,
         -15.238
       ],
-      "length_m": 3.96,
+      "length_m": 1.825,
       "orientation_model": [
-        0.0,
-        0.0,
-        1.0
-      ],
-      "orientation_unity": [
         0.0,
         1.0,
         0.0
       ],
-      "source": "fe_topology"
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
     },
     "E2-P1-M-004": {
       "start_m": [
         -3.648,
-        16.846,
-        3.96
+        16.451,
+        5.94
       ],
       "end_m": [
         -3.648,
-        16.846,
-        7.92
+        17.241,
+        5.94
       ],
       "start_unity_m": [
         -3.648,
-        3.96,
-        -16.846
+        5.94,
+        -16.451
       ],
       "end_unity_m": [
         -3.648,
-        7.92,
-        -16.846
+        5.94,
+        -17.241
       ],
       "center_m": [
         -3.648,
@@ -14787,38 +14787,38 @@
         5.94,
         -16.846
       ],
-      "length_m": 3.96,
+      "length_m": 0.79,
       "orientation_model": [
-        0.0,
-        0.0,
-        1.0
-      ],
-      "orientation_unity": [
         0.0,
         1.0,
         0.0
       ],
-      "source": "fe_topology"
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
     },
     "E2-P1-M-005": {
       "start_m": [
-        -2.623,
+        -3.348,
         -0.149,
-        3.96
+        5.94
       ],
       "end_m": [
-        -2.623,
+        -1.898,
         -0.149,
-        7.92
+        5.94
       ],
       "start_unity_m": [
-        -2.623,
-        3.96,
+        -3.348,
+        5.94,
         0.149
       ],
       "end_unity_m": [
-        -2.623,
-        7.92,
+        -1.898,
+        5.94,
         0.149
       ],
       "center_m": [
@@ -14831,38 +14831,38 @@
         5.94,
         0.149
       ],
-      "length_m": 3.96,
+      "length_m": 1.45,
       "orientation_model": [
-        0.0,
-        0.0,
-        1.0
-      ],
-      "orientation_unity": [
-        0.0,
         1.0,
+        0.0,
         0.0
       ],
-      "source": "fe_topology"
+      "orientation_unity": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
     },
     "E2-P1-M-006": {
       "start_m": [
-        -2.623,
+        -3.348,
         16.301,
-        3.96
+        5.94
       ],
       "end_m": [
-        -2.623,
+        -1.898,
         16.301,
-        7.92
+        5.94
       ],
       "start_unity_m": [
-        -2.623,
-        3.96,
+        -3.348,
+        5.94,
         -16.301
       ],
       "end_unity_m": [
-        -2.623,
-        7.92,
+        -1.898,
+        5.94,
         -16.301
       ],
       "center_m": [
@@ -14875,18 +14875,18 @@
         5.94,
         -16.301
       ],
-      "length_m": 3.96,
+      "length_m": 1.45,
       "orientation_model": [
-        0.0,
-        0.0,
-        1.0
-      ],
-      "orientation_unity": [
-        0.0,
         1.0,
+        0.0,
         0.0
       ],
-      "source": "fe_topology"
+      "orientation_unity": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
     },
     "E2-P1-V-001": {
       "start_m": [
@@ -17267,23 +17267,23 @@
     "E2-P2-M-001": {
       "start_m": [
         -3.648,
-        -0.697,
-        7.92
+        -1.094,
+        9.9
       ],
       "end_m": [
         -3.648,
-        -0.697,
-        11.88
+        -0.299,
+        9.9
       ],
       "start_unity_m": [
         -3.648,
-        7.92,
-        0.697
+        9.9,
+        1.094
       ],
       "end_unity_m": [
         -3.648,
-        11.88,
-        0.697
+        9.9,
+        0.299
       ],
       "center_m": [
         -3.648,
@@ -17295,39 +17295,39 @@
         9.9,
         0.697
       ],
-      "length_m": 3.96,
+      "length_m": 0.795,
       "orientation_model": [
-        0.0,
-        0.0,
-        1.0
-      ],
-      "orientation_unity": [
         0.0,
         1.0,
         0.0
       ],
-      "source": "fe_topology"
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
     },
     "E2-P2-M-002": {
       "start_m": [
         -3.648,
-        0.913,
-        7.92
+        0.001,
+        9.9
       ],
       "end_m": [
         -3.648,
-        0.913,
-        11.88
+        1.826,
+        9.9
       ],
       "start_unity_m": [
         -3.648,
-        7.92,
-        -0.913
+        9.9,
+        -0.001
       ],
       "end_unity_m": [
         -3.648,
-        11.88,
-        -0.913
+        9.9,
+        -1.826
       ],
       "center_m": [
         -3.648,
@@ -17339,39 +17339,39 @@
         9.9,
         -0.913
       ],
-      "length_m": 3.96,
+      "length_m": 1.825,
       "orientation_model": [
-        0.0,
-        0.0,
-        1.0
-      ],
-      "orientation_unity": [
         0.0,
         1.0,
         0.0
       ],
-      "source": "fe_topology"
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
     },
     "E2-P2-M-003": {
       "start_m": [
         -3.648,
-        15.238,
-        7.92
+        14.326,
+        9.9
       ],
       "end_m": [
         -3.648,
-        15.238,
-        11.88
+        16.151,
+        9.9
       ],
       "start_unity_m": [
         -3.648,
-        7.92,
-        -15.238
+        9.9,
+        -14.326
       ],
       "end_unity_m": [
         -3.648,
-        11.88,
-        -15.238
+        9.9,
+        -16.151
       ],
       "center_m": [
         -3.648,
@@ -17383,39 +17383,39 @@
         9.9,
         -15.238
       ],
-      "length_m": 3.96,
+      "length_m": 1.825,
       "orientation_model": [
-        0.0,
-        0.0,
-        1.0
-      ],
-      "orientation_unity": [
         0.0,
         1.0,
         0.0
       ],
-      "source": "fe_topology"
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
     },
     "E2-P2-M-004": {
       "start_m": [
         -3.648,
-        16.846,
-        7.92
+        16.451,
+        9.9
       ],
       "end_m": [
         -3.648,
-        16.846,
-        11.88
+        17.241,
+        9.9
       ],
       "start_unity_m": [
         -3.648,
-        7.92,
-        -16.846
+        9.9,
+        -16.451
       ],
       "end_unity_m": [
         -3.648,
-        11.88,
-        -16.846
+        9.9,
+        -17.241
       ],
       "center_m": [
         -3.648,
@@ -17427,38 +17427,38 @@
         9.9,
         -16.846
       ],
-      "length_m": 3.96,
+      "length_m": 0.79,
       "orientation_model": [
-        0.0,
-        0.0,
-        1.0
-      ],
-      "orientation_unity": [
         0.0,
         1.0,
         0.0
       ],
-      "source": "fe_topology"
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
     },
     "E2-P2-M-005": {
       "start_m": [
-        -2.623,
+        -3.348,
         -0.149,
-        7.92
+        9.9
       ],
       "end_m": [
-        -2.623,
+        -1.898,
         -0.149,
-        11.88
+        9.9
       ],
       "start_unity_m": [
-        -2.623,
-        7.92,
+        -3.348,
+        9.9,
         0.149
       ],
       "end_unity_m": [
-        -2.623,
-        11.88,
+        -1.898,
+        9.9,
         0.149
       ],
       "center_m": [
@@ -17471,38 +17471,38 @@
         9.9,
         0.149
       ],
-      "length_m": 3.96,
+      "length_m": 1.45,
       "orientation_model": [
-        0.0,
-        0.0,
-        1.0
-      ],
-      "orientation_unity": [
-        0.0,
         1.0,
+        0.0,
         0.0
       ],
-      "source": "fe_topology"
+      "orientation_unity": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
     },
     "E2-P2-M-006": {
       "start_m": [
-        -2.623,
+        -3.348,
         16.301,
-        7.92
+        9.9
       ],
       "end_m": [
-        -2.623,
+        -1.898,
         16.301,
-        11.88
+        9.9
       ],
       "start_unity_m": [
-        -2.623,
-        7.92,
+        -3.348,
+        9.9,
         -16.301
       ],
       "end_unity_m": [
-        -2.623,
-        11.88,
+        -1.898,
+        9.9,
         -16.301
       ],
       "center_m": [
@@ -17515,18 +17515,18 @@
         9.9,
         -16.301
       ],
-      "length_m": 3.96,
+      "length_m": 1.45,
       "orientation_model": [
-        0.0,
-        0.0,
-        1.0
-      ],
-      "orientation_unity": [
-        0.0,
         1.0,
+        0.0,
         0.0
       ],
-      "source": "fe_topology"
+      "orientation_unity": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
     },
     "E2-P2-V-001": {
       "start_m": [
@@ -19907,23 +19907,23 @@
     "E2-P3-M-001": {
       "start_m": [
         -3.648,
-        -0.697,
-        11.88
+        -1.094,
+        13.86
       ],
       "end_m": [
         -3.648,
-        -0.697,
-        15.84
+        -0.299,
+        13.86
       ],
       "start_unity_m": [
         -3.648,
-        11.88,
-        0.697
+        13.86,
+        1.094
       ],
       "end_unity_m": [
         -3.648,
-        15.84,
-        0.697
+        13.86,
+        0.299
       ],
       "center_m": [
         -3.648,
@@ -19935,39 +19935,39 @@
         13.86,
         0.697
       ],
-      "length_m": 3.96,
+      "length_m": 0.795,
       "orientation_model": [
-        0.0,
-        0.0,
-        1.0
-      ],
-      "orientation_unity": [
         0.0,
         1.0,
         0.0
       ],
-      "source": "fe_topology"
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
     },
     "E2-P3-M-002": {
       "start_m": [
         -3.648,
-        0.913,
-        11.88
+        0.001,
+        13.86
       ],
       "end_m": [
         -3.648,
-        0.913,
-        15.84
+        1.826,
+        13.86
       ],
       "start_unity_m": [
         -3.648,
-        11.88,
-        -0.913
+        13.86,
+        -0.001
       ],
       "end_unity_m": [
         -3.648,
-        15.84,
-        -0.913
+        13.86,
+        -1.826
       ],
       "center_m": [
         -3.648,
@@ -19979,39 +19979,39 @@
         13.86,
         -0.913
       ],
-      "length_m": 3.96,
+      "length_m": 1.825,
       "orientation_model": [
-        0.0,
-        0.0,
-        1.0
-      ],
-      "orientation_unity": [
         0.0,
         1.0,
         0.0
       ],
-      "source": "fe_topology"
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
     },
     "E2-P3-M-003": {
       "start_m": [
         -3.648,
-        15.238,
-        11.88
+        14.326,
+        13.86
       ],
       "end_m": [
         -3.648,
-        15.238,
-        15.84
+        16.151,
+        13.86
       ],
       "start_unity_m": [
         -3.648,
-        11.88,
-        -15.238
+        13.86,
+        -14.326
       ],
       "end_unity_m": [
         -3.648,
-        15.84,
-        -15.238
+        13.86,
+        -16.151
       ],
       "center_m": [
         -3.648,
@@ -20023,39 +20023,39 @@
         13.86,
         -15.238
       ],
-      "length_m": 3.96,
+      "length_m": 1.825,
       "orientation_model": [
-        0.0,
-        0.0,
-        1.0
-      ],
-      "orientation_unity": [
         0.0,
         1.0,
         0.0
       ],
-      "source": "fe_topology"
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
     },
     "E2-P3-M-004": {
       "start_m": [
         -3.648,
-        16.846,
-        11.88
+        16.451,
+        13.86
       ],
       "end_m": [
         -3.648,
-        16.846,
-        15.84
+        17.241,
+        13.86
       ],
       "start_unity_m": [
         -3.648,
-        11.88,
-        -16.846
+        13.86,
+        -16.451
       ],
       "end_unity_m": [
         -3.648,
-        15.84,
-        -16.846
+        13.86,
+        -17.241
       ],
       "center_m": [
         -3.648,
@@ -20067,38 +20067,38 @@
         13.86,
         -16.846
       ],
-      "length_m": 3.96,
+      "length_m": 0.79,
       "orientation_model": [
-        0.0,
-        0.0,
-        1.0
-      ],
-      "orientation_unity": [
         0.0,
         1.0,
         0.0
       ],
-      "source": "fe_topology"
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
     },
     "E2-P3-M-005": {
       "start_m": [
-        -2.623,
+        -3.348,
         -0.149,
-        11.88
+        13.86
       ],
       "end_m": [
-        -2.623,
+        -1.898,
         -0.149,
-        15.84
+        13.86
       ],
       "start_unity_m": [
-        -2.623,
-        11.88,
+        -3.348,
+        13.86,
         0.149
       ],
       "end_unity_m": [
-        -2.623,
-        15.84,
+        -1.898,
+        13.86,
         0.149
       ],
       "center_m": [
@@ -20111,38 +20111,38 @@
         13.86,
         0.149
       ],
-      "length_m": 3.96,
+      "length_m": 1.45,
       "orientation_model": [
-        0.0,
-        0.0,
-        1.0
-      ],
-      "orientation_unity": [
-        0.0,
         1.0,
+        0.0,
         0.0
       ],
-      "source": "fe_topology"
+      "orientation_unity": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
     },
     "E2-P3-M-006": {
       "start_m": [
-        -2.623,
+        -3.348,
         16.301,
-        11.88
+        13.86
       ],
       "end_m": [
-        -2.623,
+        -1.898,
         16.301,
-        15.84
+        13.86
       ],
       "start_unity_m": [
-        -2.623,
-        11.88,
+        -3.348,
+        13.86,
         -16.301
       ],
       "end_unity_m": [
-        -2.623,
-        15.84,
+        -1.898,
+        13.86,
         -16.301
       ],
       "center_m": [
@@ -20155,18 +20155,18 @@
         13.86,
         -16.301
       ],
-      "length_m": 3.96,
+      "length_m": 1.45,
       "orientation_model": [
-        0.0,
-        0.0,
-        1.0
-      ],
-      "orientation_unity": [
-        0.0,
         1.0,
+        0.0,
         0.0
       ],
-      "source": "fe_topology"
+      "orientation_unity": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
     },
     "E2-P3-V-001": {
       "start_m": [
@@ -22547,23 +22547,23 @@
     "E2-P4-M-001": {
       "start_m": [
         -3.648,
-        -0.697,
-        15.84
+        -1.094,
+        17.82
       ],
       "end_m": [
         -3.648,
-        -0.697,
-        19.8
+        -0.299,
+        17.82
       ],
       "start_unity_m": [
         -3.648,
-        15.84,
-        0.697
+        17.82,
+        1.094
       ],
       "end_unity_m": [
         -3.648,
-        19.8,
-        0.697
+        17.82,
+        0.299
       ],
       "center_m": [
         -3.648,
@@ -22575,39 +22575,39 @@
         17.82,
         0.697
       ],
-      "length_m": 3.96,
+      "length_m": 0.795,
       "orientation_model": [
-        0.0,
-        0.0,
-        1.0
-      ],
-      "orientation_unity": [
         0.0,
         1.0,
         0.0
       ],
-      "source": "fe_topology"
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
     },
     "E2-P4-M-002": {
       "start_m": [
         -3.648,
-        0.913,
-        15.84
+        0.001,
+        17.82
       ],
       "end_m": [
         -3.648,
-        0.913,
-        19.8
+        1.826,
+        17.82
       ],
       "start_unity_m": [
         -3.648,
-        15.84,
-        -0.913
+        17.82,
+        -0.001
       ],
       "end_unity_m": [
         -3.648,
-        19.8,
-        -0.913
+        17.82,
+        -1.826
       ],
       "center_m": [
         -3.648,
@@ -22619,39 +22619,39 @@
         17.82,
         -0.913
       ],
-      "length_m": 3.96,
+      "length_m": 1.825,
       "orientation_model": [
-        0.0,
-        0.0,
-        1.0
-      ],
-      "orientation_unity": [
         0.0,
         1.0,
         0.0
       ],
-      "source": "fe_topology"
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
     },
     "E2-P4-M-003": {
       "start_m": [
         -3.648,
-        15.238,
-        15.84
+        14.326,
+        17.82
       ],
       "end_m": [
         -3.648,
-        15.238,
-        19.8
+        16.151,
+        17.82
       ],
       "start_unity_m": [
         -3.648,
-        15.84,
-        -15.238
+        17.82,
+        -14.326
       ],
       "end_unity_m": [
         -3.648,
-        19.8,
-        -15.238
+        17.82,
+        -16.151
       ],
       "center_m": [
         -3.648,
@@ -22663,39 +22663,39 @@
         17.82,
         -15.238
       ],
-      "length_m": 3.96,
+      "length_m": 1.825,
       "orientation_model": [
-        0.0,
-        0.0,
-        1.0
-      ],
-      "orientation_unity": [
         0.0,
         1.0,
         0.0
       ],
-      "source": "fe_topology"
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
     },
     "E2-P4-M-004": {
       "start_m": [
         -3.648,
-        16.846,
-        15.84
+        16.451,
+        17.82
       ],
       "end_m": [
         -3.648,
-        16.846,
-        19.8
+        17.241,
+        17.82
       ],
       "start_unity_m": [
         -3.648,
-        15.84,
-        -16.846
+        17.82,
+        -16.451
       ],
       "end_unity_m": [
         -3.648,
-        19.8,
-        -16.846
+        17.82,
+        -17.241
       ],
       "center_m": [
         -3.648,
@@ -22707,38 +22707,38 @@
         17.82,
         -16.846
       ],
-      "length_m": 3.96,
+      "length_m": 0.79,
       "orientation_model": [
-        0.0,
-        0.0,
-        1.0
-      ],
-      "orientation_unity": [
         0.0,
         1.0,
         0.0
       ],
-      "source": "fe_topology"
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
     },
     "E2-P4-M-005": {
       "start_m": [
-        -2.623,
+        -3.348,
         -0.149,
-        15.84
+        17.82
       ],
       "end_m": [
-        -2.623,
+        -1.898,
         -0.149,
-        19.8
+        17.82
       ],
       "start_unity_m": [
-        -2.623,
-        15.84,
+        -3.348,
+        17.82,
         0.149
       ],
       "end_unity_m": [
-        -2.623,
-        19.8,
+        -1.898,
+        17.82,
         0.149
       ],
       "center_m": [
@@ -22751,38 +22751,38 @@
         17.82,
         0.149
       ],
-      "length_m": 3.96,
+      "length_m": 1.45,
       "orientation_model": [
-        0.0,
-        0.0,
-        1.0
-      ],
-      "orientation_unity": [
-        0.0,
         1.0,
+        0.0,
         0.0
       ],
-      "source": "fe_topology"
+      "orientation_unity": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
     },
     "E2-P4-M-006": {
       "start_m": [
-        -2.623,
+        -3.348,
         16.301,
-        15.84
+        17.82
       ],
       "end_m": [
-        -2.623,
+        -1.898,
         16.301,
-        19.8
+        17.82
       ],
       "start_unity_m": [
-        -2.623,
-        15.84,
+        -3.348,
+        17.82,
         -16.301
       ],
       "end_unity_m": [
-        -2.623,
-        19.8,
+        -1.898,
+        17.82,
         -16.301
       ],
       "center_m": [
@@ -22795,18 +22795,18 @@
         17.82,
         -16.301
       ],
-      "length_m": 3.96,
+      "length_m": 1.45,
       "orientation_model": [
-        0.0,
-        0.0,
-        1.0
-      ],
-      "orientation_unity": [
-        0.0,
         1.0,
+        0.0,
         0.0
       ],
-      "source": "fe_topology"
+      "orientation_unity": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
     },
     "E2-P4-V-001": {
       "start_m": [
@@ -25275,23 +25275,23 @@
     "E2-S1-M-001": {
       "start_m": [
         -3.648,
-        -0.697,
-        0.0
+        -1.094,
+        1.98
       ],
       "end_m": [
         -3.648,
-        -0.697,
-        3.96
+        -0.299,
+        1.98
       ],
       "start_unity_m": [
         -3.648,
-        0.0,
-        0.697
+        1.98,
+        1.094
       ],
       "end_unity_m": [
         -3.648,
-        3.96,
-        0.697
+        1.98,
+        0.299
       ],
       "center_m": [
         -3.648,
@@ -25303,39 +25303,39 @@
         1.98,
         0.697
       ],
-      "length_m": 3.96,
+      "length_m": 0.795,
       "orientation_model": [
-        0.0,
-        0.0,
-        1.0
-      ],
-      "orientation_unity": [
         0.0,
         1.0,
         0.0
       ],
-      "source": "fe_topology"
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
     },
     "E2-S1-M-002": {
       "start_m": [
         -3.648,
-        0.913,
-        0.0
+        0.001,
+        1.98
       ],
       "end_m": [
         -3.648,
-        0.913,
-        3.96
+        1.826,
+        1.98
       ],
       "start_unity_m": [
         -3.648,
-        0.0,
-        -0.913
+        1.98,
+        -0.001
       ],
       "end_unity_m": [
         -3.648,
-        3.96,
-        -0.913
+        1.98,
+        -1.826
       ],
       "center_m": [
         -3.648,
@@ -25347,39 +25347,39 @@
         1.98,
         -0.913
       ],
-      "length_m": 3.96,
+      "length_m": 1.825,
       "orientation_model": [
-        0.0,
-        0.0,
-        1.0
-      ],
-      "orientation_unity": [
         0.0,
         1.0,
         0.0
       ],
-      "source": "fe_topology"
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
     },
     "E2-S1-M-003": {
       "start_m": [
         -3.648,
-        15.238,
-        0.0
+        14.326,
+        1.98
       ],
       "end_m": [
         -3.648,
-        15.238,
-        3.96
+        16.151,
+        1.98
       ],
       "start_unity_m": [
         -3.648,
-        0.0,
-        -15.238
+        1.98,
+        -14.326
       ],
       "end_unity_m": [
         -3.648,
-        3.96,
-        -15.238
+        1.98,
+        -16.151
       ],
       "center_m": [
         -3.648,
@@ -25391,39 +25391,39 @@
         1.98,
         -15.238
       ],
-      "length_m": 3.96,
+      "length_m": 1.825,
       "orientation_model": [
-        0.0,
-        0.0,
-        1.0
-      ],
-      "orientation_unity": [
         0.0,
         1.0,
         0.0
       ],
-      "source": "fe_topology"
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
     },
     "E2-S1-M-004": {
       "start_m": [
         -3.648,
-        16.846,
-        0.0
+        16.451,
+        1.98
       ],
       "end_m": [
         -3.648,
-        16.846,
-        3.96
+        17.241,
+        1.98
       ],
       "start_unity_m": [
         -3.648,
-        0.0,
-        -16.846
+        1.98,
+        -16.451
       ],
       "end_unity_m": [
         -3.648,
-        3.96,
-        -16.846
+        1.98,
+        -17.241
       ],
       "center_m": [
         -3.648,
@@ -25435,38 +25435,38 @@
         1.98,
         -16.846
       ],
-      "length_m": 3.96,
+      "length_m": 0.79,
       "orientation_model": [
-        0.0,
-        0.0,
-        1.0
-      ],
-      "orientation_unity": [
         0.0,
         1.0,
         0.0
       ],
-      "source": "fe_topology"
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
     },
     "E2-S1-M-005": {
       "start_m": [
-        -2.623,
+        -3.348,
         -0.149,
-        0.0
+        1.98
       ],
       "end_m": [
-        -2.623,
+        -1.898,
         -0.149,
-        3.96
+        1.98
       ],
       "start_unity_m": [
-        -2.623,
-        0.0,
+        -3.348,
+        1.98,
         0.149
       ],
       "end_unity_m": [
-        -2.623,
-        3.96,
+        -1.898,
+        1.98,
         0.149
       ],
       "center_m": [
@@ -25479,38 +25479,38 @@
         1.98,
         0.149
       ],
-      "length_m": 3.96,
+      "length_m": 1.45,
       "orientation_model": [
-        0.0,
-        0.0,
-        1.0
-      ],
-      "orientation_unity": [
-        0.0,
         1.0,
+        0.0,
         0.0
       ],
-      "source": "fe_topology"
+      "orientation_unity": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
     },
     "E2-S1-M-006": {
       "start_m": [
-        -2.623,
+        -3.348,
         16.301,
-        0.0
+        1.98
       ],
       "end_m": [
-        -2.623,
+        -1.898,
         16.301,
-        3.96
+        1.98
       ],
       "start_unity_m": [
-        -2.623,
-        0.0,
+        -3.348,
+        1.98,
         -16.301
       ],
       "end_unity_m": [
-        -2.623,
-        3.96,
+        -1.898,
+        1.98,
         -16.301
       ],
       "center_m": [
@@ -25523,18 +25523,18 @@
         1.98,
         -16.301
       ],
-      "length_m": 3.96,
+      "length_m": 1.45,
       "orientation_model": [
-        0.0,
-        0.0,
-        1.0
-      ],
-      "orientation_unity": [
-        0.0,
         1.0,
+        0.0,
         0.0
       ],
-      "source": "fe_topology"
+      "orientation_unity": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
     },
     "E2-S1-V-001": {
       "start_m": [
@@ -27515,6 +27515,2382 @@
         0.0
       ],
       "source": "fe_topology"
+    },
+    "E1-S1-M-026": {
+      "start_m": [
+        31.191,
+        3.9,
+        1.98
+      ],
+      "end_m": [
+        33.791,
+        3.9,
+        1.98
+      ],
+      "start_unity_m": [
+        31.191,
+        1.98,
+        -3.9
+      ],
+      "end_unity_m": [
+        33.791,
+        1.98,
+        -3.9
+      ],
+      "center_m": [
+        32.491,
+        3.9,
+        1.98
+      ],
+      "center_unity_m": [
+        32.491,
+        1.98,
+        -3.9
+      ],
+      "length_m": 2.6,
+      "orientation_model": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "orientation_unity": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E1-S1-M-029": {
+      "start_m": [
+        30.891,
+        13.845,
+        1.98
+      ],
+      "end_m": [
+        34.091,
+        13.845,
+        1.98
+      ],
+      "start_unity_m": [
+        30.891,
+        1.98,
+        -13.845
+      ],
+      "end_unity_m": [
+        34.091,
+        1.98,
+        -13.845
+      ],
+      "center_m": [
+        32.491,
+        13.845,
+        1.98
+      ],
+      "center_unity_m": [
+        32.491,
+        1.98,
+        -13.845
+      ],
+      "length_m": 3.2,
+      "orientation_model": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "orientation_unity": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E2-S1-M-007": {
+      "start_m": [
+        25.082,
+        3.331,
+        1.98
+      ],
+      "end_m": [
+        25.082,
+        6.151,
+        1.98
+      ],
+      "start_unity_m": [
+        25.082,
+        1.98,
+        -3.331
+      ],
+      "end_unity_m": [
+        25.082,
+        1.98,
+        -6.151
+      ],
+      "center_m": [
+        25.082,
+        4.741,
+        1.98
+      ],
+      "center_unity_m": [
+        25.082,
+        1.98,
+        -4.741
+      ],
+      "length_m": 2.82,
+      "orientation_model": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E2-P1-M-007": {
+      "start_m": [
+        25.082,
+        3.331,
+        5.94
+      ],
+      "end_m": [
+        25.082,
+        6.151,
+        5.94
+      ],
+      "start_unity_m": [
+        25.082,
+        5.94,
+        -3.331
+      ],
+      "end_unity_m": [
+        25.082,
+        5.94,
+        -6.151
+      ],
+      "center_m": [
+        25.082,
+        4.741,
+        5.94
+      ],
+      "center_unity_m": [
+        25.082,
+        5.94,
+        -4.741
+      ],
+      "length_m": 2.82,
+      "orientation_model": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E2-P2-M-007": {
+      "start_m": [
+        25.082,
+        3.331,
+        9.9
+      ],
+      "end_m": [
+        25.082,
+        6.151,
+        9.9
+      ],
+      "start_unity_m": [
+        25.082,
+        9.9,
+        -3.331
+      ],
+      "end_unity_m": [
+        25.082,
+        9.9,
+        -6.151
+      ],
+      "center_m": [
+        25.082,
+        4.741,
+        9.9
+      ],
+      "center_unity_m": [
+        25.082,
+        9.9,
+        -4.741
+      ],
+      "length_m": 2.82,
+      "orientation_model": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E2-P3-M-007": {
+      "start_m": [
+        25.082,
+        3.331,
+        13.86
+      ],
+      "end_m": [
+        25.082,
+        6.151,
+        13.86
+      ],
+      "start_unity_m": [
+        25.082,
+        13.86,
+        -3.331
+      ],
+      "end_unity_m": [
+        25.082,
+        13.86,
+        -6.151
+      ],
+      "center_m": [
+        25.082,
+        4.741,
+        13.86
+      ],
+      "center_unity_m": [
+        25.082,
+        13.86,
+        -4.741
+      ],
+      "length_m": 2.82,
+      "orientation_model": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E2-S1-M-008": {
+      "start_m": [
+        25.207,
+        3.181,
+        1.98
+      ],
+      "end_m": [
+        27.602,
+        3.181,
+        1.98
+      ],
+      "start_unity_m": [
+        25.207,
+        1.98,
+        -3.181
+      ],
+      "end_unity_m": [
+        27.602,
+        1.98,
+        -3.181
+      ],
+      "center_m": [
+        26.4045,
+        3.181,
+        1.98
+      ],
+      "center_unity_m": [
+        26.4045,
+        1.98,
+        -3.181
+      ],
+      "length_m": 2.395,
+      "orientation_model": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "orientation_unity": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E2-P1-M-008": {
+      "start_m": [
+        25.207,
+        3.181,
+        5.94
+      ],
+      "end_m": [
+        27.602,
+        3.181,
+        5.94
+      ],
+      "start_unity_m": [
+        25.207,
+        5.94,
+        -3.181
+      ],
+      "end_unity_m": [
+        27.602,
+        5.94,
+        -3.181
+      ],
+      "center_m": [
+        26.4045,
+        3.181,
+        5.94
+      ],
+      "center_unity_m": [
+        26.4045,
+        5.94,
+        -3.181
+      ],
+      "length_m": 2.395,
+      "orientation_model": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "orientation_unity": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E2-P2-M-008": {
+      "start_m": [
+        25.207,
+        3.181,
+        9.9
+      ],
+      "end_m": [
+        27.602,
+        3.181,
+        9.9
+      ],
+      "start_unity_m": [
+        25.207,
+        9.9,
+        -3.181
+      ],
+      "end_unity_m": [
+        27.602,
+        9.9,
+        -3.181
+      ],
+      "center_m": [
+        26.4045,
+        3.181,
+        9.9
+      ],
+      "center_unity_m": [
+        26.4045,
+        9.9,
+        -3.181
+      ],
+      "length_m": 2.395,
+      "orientation_model": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "orientation_unity": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E2-P3-M-008": {
+      "start_m": [
+        25.207,
+        3.181,
+        13.86
+      ],
+      "end_m": [
+        27.602,
+        3.181,
+        13.86
+      ],
+      "start_unity_m": [
+        25.207,
+        13.86,
+        -3.181
+      ],
+      "end_unity_m": [
+        27.602,
+        13.86,
+        -3.181
+      ],
+      "center_m": [
+        26.4045,
+        3.181,
+        13.86
+      ],
+      "center_unity_m": [
+        26.4045,
+        13.86,
+        -3.181
+      ],
+      "length_m": 2.395,
+      "orientation_model": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "orientation_unity": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E2-S1-M-010": {
+      "start_m": [
+        27.727,
+        3.331,
+        1.98
+      ],
+      "end_m": [
+        27.727,
+        6.151,
+        1.98
+      ],
+      "start_unity_m": [
+        27.727,
+        1.98,
+        -3.331
+      ],
+      "end_unity_m": [
+        27.727,
+        1.98,
+        -6.151
+      ],
+      "center_m": [
+        27.727,
+        4.741,
+        1.98
+      ],
+      "center_unity_m": [
+        27.727,
+        1.98,
+        -4.741
+      ],
+      "length_m": 2.82,
+      "orientation_model": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E2-P1-M-010": {
+      "start_m": [
+        27.727,
+        3.331,
+        5.94
+      ],
+      "end_m": [
+        27.727,
+        6.151,
+        5.94
+      ],
+      "start_unity_m": [
+        27.727,
+        5.94,
+        -3.331
+      ],
+      "end_unity_m": [
+        27.727,
+        5.94,
+        -6.151
+      ],
+      "center_m": [
+        27.727,
+        4.741,
+        5.94
+      ],
+      "center_unity_m": [
+        27.727,
+        5.94,
+        -4.741
+      ],
+      "length_m": 2.82,
+      "orientation_model": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E2-P2-M-010": {
+      "start_m": [
+        27.727,
+        3.331,
+        9.9
+      ],
+      "end_m": [
+        27.727,
+        6.151,
+        9.9
+      ],
+      "start_unity_m": [
+        27.727,
+        9.9,
+        -3.331
+      ],
+      "end_unity_m": [
+        27.727,
+        9.9,
+        -6.151
+      ],
+      "center_m": [
+        27.727,
+        4.741,
+        9.9
+      ],
+      "center_unity_m": [
+        27.727,
+        9.9,
+        -4.741
+      ],
+      "length_m": 2.82,
+      "orientation_model": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E2-P3-M-010": {
+      "start_m": [
+        27.727,
+        3.331,
+        13.86
+      ],
+      "end_m": [
+        27.727,
+        6.151,
+        13.86
+      ],
+      "start_unity_m": [
+        27.727,
+        13.86,
+        -3.331
+      ],
+      "end_unity_m": [
+        27.727,
+        13.86,
+        -6.151
+      ],
+      "center_m": [
+        27.727,
+        4.741,
+        13.86
+      ],
+      "center_unity_m": [
+        27.727,
+        13.86,
+        -4.741
+      ],
+      "length_m": 2.82,
+      "orientation_model": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E2-S1-M-011": {
+      "start_m": [
+        27.727,
+        8.551,
+        1.98
+      ],
+      "end_m": [
+        27.727,
+        16.501,
+        1.98
+      ],
+      "start_unity_m": [
+        27.727,
+        1.98,
+        -8.551
+      ],
+      "end_unity_m": [
+        27.727,
+        1.98,
+        -16.501
+      ],
+      "center_m": [
+        27.727,
+        12.526,
+        1.98
+      ],
+      "center_unity_m": [
+        27.727,
+        1.98,
+        -12.526
+      ],
+      "length_m": 7.95,
+      "orientation_model": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E2-P1-M-011": {
+      "start_m": [
+        27.727,
+        8.551,
+        5.94
+      ],
+      "end_m": [
+        27.727,
+        16.501,
+        5.94
+      ],
+      "start_unity_m": [
+        27.727,
+        5.94,
+        -8.551
+      ],
+      "end_unity_m": [
+        27.727,
+        5.94,
+        -16.501
+      ],
+      "center_m": [
+        27.727,
+        12.526,
+        5.94
+      ],
+      "center_unity_m": [
+        27.727,
+        5.94,
+        -12.526
+      ],
+      "length_m": 7.95,
+      "orientation_model": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E2-P2-M-011": {
+      "start_m": [
+        27.727,
+        8.551,
+        9.9
+      ],
+      "end_m": [
+        27.727,
+        16.501,
+        9.9
+      ],
+      "start_unity_m": [
+        27.727,
+        9.9,
+        -8.551
+      ],
+      "end_unity_m": [
+        27.727,
+        9.9,
+        -16.501
+      ],
+      "center_m": [
+        27.727,
+        12.526,
+        9.9
+      ],
+      "center_unity_m": [
+        27.727,
+        9.9,
+        -12.526
+      ],
+      "length_m": 7.95,
+      "orientation_model": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E2-P3-M-011": {
+      "start_m": [
+        27.727,
+        8.551,
+        13.86
+      ],
+      "end_m": [
+        27.727,
+        16.501,
+        13.86
+      ],
+      "start_unity_m": [
+        27.727,
+        13.86,
+        -8.551
+      ],
+      "end_unity_m": [
+        27.727,
+        13.86,
+        -16.501
+      ],
+      "center_m": [
+        27.727,
+        12.526,
+        13.86
+      ],
+      "center_unity_m": [
+        27.727,
+        13.86,
+        -12.526
+      ],
+      "length_m": 7.95,
+      "orientation_model": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E2-S1-M-009": {
+      "start_m": [
+        27.727,
+        0.351,
+        1.98
+      ],
+      "end_m": [
+        27.727,
+        3.031,
+        1.98
+      ],
+      "start_unity_m": [
+        27.727,
+        1.98,
+        -0.351
+      ],
+      "end_unity_m": [
+        27.727,
+        1.98,
+        -3.031
+      ],
+      "center_m": [
+        27.727,
+        1.691,
+        1.98
+      ],
+      "center_unity_m": [
+        27.727,
+        1.98,
+        -1.691
+      ],
+      "length_m": 2.68,
+      "orientation_model": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E2-P1-M-009": {
+      "start_m": [
+        27.727,
+        0.351,
+        5.94
+      ],
+      "end_m": [
+        27.727,
+        3.031,
+        5.94
+      ],
+      "start_unity_m": [
+        27.727,
+        5.94,
+        -0.351
+      ],
+      "end_unity_m": [
+        27.727,
+        5.94,
+        -3.031
+      ],
+      "center_m": [
+        27.727,
+        1.691,
+        5.94
+      ],
+      "center_unity_m": [
+        27.727,
+        5.94,
+        -1.691
+      ],
+      "length_m": 2.68,
+      "orientation_model": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E2-P2-M-009": {
+      "start_m": [
+        27.727,
+        0.351,
+        9.9
+      ],
+      "end_m": [
+        27.727,
+        3.031,
+        9.9
+      ],
+      "start_unity_m": [
+        27.727,
+        9.9,
+        -0.351
+      ],
+      "end_unity_m": [
+        27.727,
+        9.9,
+        -3.031
+      ],
+      "center_m": [
+        27.727,
+        1.691,
+        9.9
+      ],
+      "center_unity_m": [
+        27.727,
+        9.9,
+        -1.691
+      ],
+      "length_m": 2.68,
+      "orientation_model": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E2-P3-M-009": {
+      "start_m": [
+        27.727,
+        0.351,
+        13.86
+      ],
+      "end_m": [
+        27.727,
+        3.031,
+        13.86
+      ],
+      "start_unity_m": [
+        27.727,
+        13.86,
+        -0.351
+      ],
+      "end_unity_m": [
+        27.727,
+        13.86,
+        -3.031
+      ],
+      "center_m": [
+        27.727,
+        1.691,
+        13.86
+      ],
+      "center_unity_m": [
+        27.727,
+        13.86,
+        -1.691
+      ],
+      "length_m": 2.68,
+      "orientation_model": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E1-S1-M-005": {
+      "start_m": [
+        30.766,
+        12.267,
+        1.98
+      ],
+      "end_m": [
+        30.766,
+        13.745,
+        1.98
+      ],
+      "start_unity_m": [
+        30.766,
+        1.98,
+        -12.267
+      ],
+      "end_unity_m": [
+        30.766,
+        1.98,
+        -13.745
+      ],
+      "center_m": [
+        30.766,
+        13.006,
+        1.98
+      ],
+      "center_unity_m": [
+        30.766,
+        1.98,
+        -13.006
+      ],
+      "length_m": 1.478,
+      "orientation_model": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E1-S1-M-049": {
+      "start_m": [
+        34.216,
+        12.267,
+        1.98
+      ],
+      "end_m": [
+        34.216,
+        13.745,
+        1.98
+      ],
+      "start_unity_m": [
+        34.216,
+        1.98,
+        -12.267
+      ],
+      "end_unity_m": [
+        34.216,
+        1.98,
+        -13.745
+      ],
+      "center_m": [
+        34.216,
+        13.006,
+        1.98
+      ],
+      "center_unity_m": [
+        34.216,
+        1.98,
+        -13.006
+      ],
+      "length_m": 1.478,
+      "orientation_model": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E1-S1-M-020": {
+      "start_m": [
+        31.041,
+        4.0,
+        1.98
+      ],
+      "end_m": [
+        31.041,
+        6.15,
+        1.98
+      ],
+      "start_unity_m": [
+        31.041,
+        1.98,
+        -4.0
+      ],
+      "end_unity_m": [
+        31.041,
+        1.98,
+        -6.15
+      ],
+      "center_m": [
+        31.041,
+        5.075,
+        1.98
+      ],
+      "center_unity_m": [
+        31.041,
+        1.98,
+        -5.075
+      ],
+      "length_m": 2.15,
+      "orientation_model": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E1-S1-M-034": {
+      "start_m": [
+        33.941,
+        4.0,
+        1.98
+      ],
+      "end_m": [
+        33.941,
+        6.15,
+        1.98
+      ],
+      "start_unity_m": [
+        33.941,
+        1.98,
+        -4.0
+      ],
+      "end_unity_m": [
+        33.941,
+        1.98,
+        -6.15
+      ],
+      "center_m": [
+        33.941,
+        5.075,
+        1.98
+      ],
+      "center_unity_m": [
+        33.941,
+        1.98,
+        -5.075
+      ],
+      "length_m": 2.15,
+      "orientation_model": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E1-P1-M-012": {
+      "start_m": [
+        31.041,
+        4.0,
+        5.94
+      ],
+      "end_m": [
+        31.041,
+        6.15,
+        5.94
+      ],
+      "start_unity_m": [
+        31.041,
+        5.94,
+        -4.0
+      ],
+      "end_unity_m": [
+        31.041,
+        5.94,
+        -6.15
+      ],
+      "center_m": [
+        31.041,
+        5.075,
+        5.94
+      ],
+      "center_unity_m": [
+        31.041,
+        5.94,
+        -5.075
+      ],
+      "length_m": 2.15,
+      "orientation_model": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E1-P1-M-004": {
+      "start_m": [
+        31.191,
+        3.9,
+        5.94
+      ],
+      "end_m": [
+        33.791,
+        3.9,
+        5.94
+      ],
+      "start_unity_m": [
+        31.191,
+        5.94,
+        -3.9
+      ],
+      "end_unity_m": [
+        33.791,
+        5.94,
+        -3.9
+      ],
+      "center_m": [
+        32.491,
+        3.9,
+        5.94
+      ],
+      "center_unity_m": [
+        32.491,
+        5.94,
+        -3.9
+      ],
+      "length_m": 2.6,
+      "orientation_model": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "orientation_unity": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E1-P1-M-025": {
+      "start_m": [
+        33.941,
+        4.0,
+        5.94
+      ],
+      "end_m": [
+        33.941,
+        6.15,
+        5.94
+      ],
+      "start_unity_m": [
+        33.941,
+        5.94,
+        -4.0
+      ],
+      "end_unity_m": [
+        33.941,
+        5.94,
+        -6.15
+      ],
+      "center_m": [
+        33.941,
+        5.075,
+        5.94
+      ],
+      "center_unity_m": [
+        33.941,
+        5.94,
+        -5.075
+      ],
+      "length_m": 2.15,
+      "orientation_model": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E1-P2-M-010": {
+      "start_m": [
+        31.041,
+        4.0,
+        9.9
+      ],
+      "end_m": [
+        31.041,
+        6.15,
+        9.9
+      ],
+      "start_unity_m": [
+        31.041,
+        9.9,
+        -4.0
+      ],
+      "end_unity_m": [
+        31.041,
+        9.9,
+        -6.15
+      ],
+      "center_m": [
+        31.041,
+        5.075,
+        9.9
+      ],
+      "center_unity_m": [
+        31.041,
+        9.9,
+        -5.075
+      ],
+      "length_m": 2.15,
+      "orientation_model": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E1-P2-M-007": {
+      "start_m": [
+        31.191,
+        3.9,
+        9.9
+      ],
+      "end_m": [
+        33.791,
+        3.9,
+        9.9
+      ],
+      "start_unity_m": [
+        31.191,
+        9.9,
+        -3.9
+      ],
+      "end_unity_m": [
+        33.791,
+        9.9,
+        -3.9
+      ],
+      "center_m": [
+        32.491,
+        3.9,
+        9.9
+      ],
+      "center_unity_m": [
+        32.491,
+        9.9,
+        -3.9
+      ],
+      "length_m": 2.6,
+      "orientation_model": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "orientation_unity": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E1-P2-M-009": {
+      "start_m": [
+        33.941,
+        4.0,
+        9.9
+      ],
+      "end_m": [
+        33.941,
+        6.15,
+        9.9
+      ],
+      "start_unity_m": [
+        33.941,
+        9.9,
+        -4.0
+      ],
+      "end_unity_m": [
+        33.941,
+        9.9,
+        -6.15
+      ],
+      "center_m": [
+        33.941,
+        5.075,
+        9.9
+      ],
+      "center_unity_m": [
+        33.941,
+        9.9,
+        -5.075
+      ],
+      "length_m": 2.15,
+      "orientation_model": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E1-P3-M-010": {
+      "start_m": [
+        31.041,
+        4.0,
+        13.86
+      ],
+      "end_m": [
+        31.041,
+        6.15,
+        13.86
+      ],
+      "start_unity_m": [
+        31.041,
+        13.86,
+        -4.0
+      ],
+      "end_unity_m": [
+        31.041,
+        13.86,
+        -6.15
+      ],
+      "center_m": [
+        31.041,
+        5.075,
+        13.86
+      ],
+      "center_unity_m": [
+        31.041,
+        13.86,
+        -5.075
+      ],
+      "length_m": 2.15,
+      "orientation_model": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E1-P3-M-007": {
+      "start_m": [
+        31.191,
+        3.9,
+        13.86
+      ],
+      "end_m": [
+        33.791,
+        3.9,
+        13.86
+      ],
+      "start_unity_m": [
+        31.191,
+        13.86,
+        -3.9
+      ],
+      "end_unity_m": [
+        33.791,
+        13.86,
+        -3.9
+      ],
+      "center_m": [
+        32.491,
+        3.9,
+        13.86
+      ],
+      "center_unity_m": [
+        32.491,
+        13.86,
+        -3.9
+      ],
+      "length_m": 2.6,
+      "orientation_model": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "orientation_unity": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E1-P3-M-009": {
+      "start_m": [
+        33.941,
+        4.0,
+        13.86
+      ],
+      "end_m": [
+        33.941,
+        6.15,
+        13.86
+      ],
+      "start_unity_m": [
+        33.941,
+        13.86,
+        -4.0
+      ],
+      "end_unity_m": [
+        33.941,
+        13.86,
+        -6.15
+      ],
+      "center_m": [
+        33.941,
+        5.075,
+        13.86
+      ],
+      "center_unity_m": [
+        33.941,
+        13.86,
+        -5.075
+      ],
+      "length_m": 2.15,
+      "orientation_model": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E1-P4-M-009": {
+      "start_m": [
+        31.041,
+        4.0,
+        17.82
+      ],
+      "end_m": [
+        31.041,
+        6.15,
+        17.82
+      ],
+      "start_unity_m": [
+        31.041,
+        17.82,
+        -4.0
+      ],
+      "end_unity_m": [
+        31.041,
+        17.82,
+        -6.15
+      ],
+      "center_m": [
+        31.041,
+        5.075,
+        17.82
+      ],
+      "center_unity_m": [
+        31.041,
+        17.82,
+        -5.075
+      ],
+      "length_m": 2.15,
+      "orientation_model": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E1-P4-M-007": {
+      "start_m": [
+        31.191,
+        3.9,
+        17.82
+      ],
+      "end_m": [
+        33.791,
+        3.9,
+        17.82
+      ],
+      "start_unity_m": [
+        31.191,
+        17.82,
+        -3.9
+      ],
+      "end_unity_m": [
+        33.791,
+        17.82,
+        -3.9
+      ],
+      "center_m": [
+        32.491,
+        3.9,
+        17.82
+      ],
+      "center_unity_m": [
+        32.491,
+        17.82,
+        -3.9
+      ],
+      "length_m": 2.6,
+      "orientation_model": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "orientation_unity": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E1-P4-M-010": {
+      "start_m": [
+        33.941,
+        4.0,
+        17.82
+      ],
+      "end_m": [
+        33.941,
+        6.15,
+        17.82
+      ],
+      "start_unity_m": [
+        33.941,
+        17.82,
+        -4.0
+      ],
+      "end_unity_m": [
+        33.941,
+        17.82,
+        -6.15
+      ],
+      "center_m": [
+        33.941,
+        5.075,
+        17.82
+      ],
+      "center_unity_m": [
+        33.941,
+        17.82,
+        -5.075
+      ],
+      "length_m": 2.15,
+      "orientation_model": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E1-P1-M-002": {
+      "start_m": [
+        30.766,
+        12.266,
+        5.94
+      ],
+      "end_m": [
+        30.766,
+        13.745,
+        5.94
+      ],
+      "start_unity_m": [
+        30.766,
+        5.94,
+        -12.266
+      ],
+      "end_unity_m": [
+        30.766,
+        5.94,
+        -13.745
+      ],
+      "center_m": [
+        30.766,
+        13.0055,
+        5.94
+      ],
+      "center_unity_m": [
+        30.766,
+        5.94,
+        -13.0055
+      ],
+      "length_m": 1.479,
+      "orientation_model": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E1-P1-M-010": {
+      "start_m": [
+        30.891,
+        13.845,
+        5.94
+      ],
+      "end_m": [
+        34.091,
+        13.845,
+        5.94
+      ],
+      "start_unity_m": [
+        30.891,
+        5.94,
+        -13.845
+      ],
+      "end_unity_m": [
+        34.091,
+        5.94,
+        -13.845
+      ],
+      "center_m": [
+        32.491,
+        13.845,
+        5.94
+      ],
+      "center_unity_m": [
+        32.491,
+        5.94,
+        -13.845
+      ],
+      "length_m": 3.2,
+      "orientation_model": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "orientation_unity": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E1-P1-M-026": {
+      "start_m": [
+        34.216,
+        12.266,
+        5.94
+      ],
+      "end_m": [
+        34.216,
+        13.745,
+        5.94
+      ],
+      "start_unity_m": [
+        34.216,
+        5.94,
+        -12.266
+      ],
+      "end_unity_m": [
+        34.216,
+        5.94,
+        -13.745
+      ],
+      "center_m": [
+        34.216,
+        13.0055,
+        5.94
+      ],
+      "center_unity_m": [
+        34.216,
+        5.94,
+        -13.0055
+      ],
+      "length_m": 1.479,
+      "orientation_model": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E1-P2-M-003": {
+      "start_m": [
+        30.766,
+        12.266,
+        9.9
+      ],
+      "end_m": [
+        30.766,
+        13.745,
+        9.9
+      ],
+      "start_unity_m": [
+        30.766,
+        9.9,
+        -12.266
+      ],
+      "end_unity_m": [
+        30.766,
+        9.9,
+        -13.745
+      ],
+      "center_m": [
+        30.766,
+        13.0055,
+        9.9
+      ],
+      "center_unity_m": [
+        30.766,
+        9.9,
+        -13.0055
+      ],
+      "length_m": 1.479,
+      "orientation_model": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E1-P2-M-008": {
+      "start_m": [
+        30.891,
+        13.845,
+        9.9
+      ],
+      "end_m": [
+        34.091,
+        13.845,
+        9.9
+      ],
+      "start_unity_m": [
+        30.891,
+        9.9,
+        -13.845
+      ],
+      "end_unity_m": [
+        34.091,
+        9.9,
+        -13.845
+      ],
+      "center_m": [
+        32.491,
+        13.845,
+        9.9
+      ],
+      "center_unity_m": [
+        32.491,
+        9.9,
+        -13.845
+      ],
+      "length_m": 3.2,
+      "orientation_model": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "orientation_unity": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E1-P2-M-005": {
+      "start_m": [
+        34.216,
+        12.266,
+        9.9
+      ],
+      "end_m": [
+        34.216,
+        13.745,
+        9.9
+      ],
+      "start_unity_m": [
+        34.216,
+        9.9,
+        -12.266
+      ],
+      "end_unity_m": [
+        34.216,
+        9.9,
+        -13.745
+      ],
+      "center_m": [
+        34.216,
+        13.0055,
+        9.9
+      ],
+      "center_unity_m": [
+        34.216,
+        9.9,
+        -13.0055
+      ],
+      "length_m": 1.479,
+      "orientation_model": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E1-P3-M-003": {
+      "start_m": [
+        30.766,
+        12.266,
+        13.86
+      ],
+      "end_m": [
+        30.766,
+        13.745,
+        13.86
+      ],
+      "start_unity_m": [
+        30.766,
+        13.86,
+        -12.266
+      ],
+      "end_unity_m": [
+        30.766,
+        13.86,
+        -13.745
+      ],
+      "center_m": [
+        30.766,
+        13.0055,
+        13.86
+      ],
+      "center_unity_m": [
+        30.766,
+        13.86,
+        -13.0055
+      ],
+      "length_m": 1.479,
+      "orientation_model": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E1-P3-M-008": {
+      "start_m": [
+        30.891,
+        13.845,
+        13.86
+      ],
+      "end_m": [
+        34.091,
+        13.845,
+        13.86
+      ],
+      "start_unity_m": [
+        30.891,
+        13.86,
+        -13.845
+      ],
+      "end_unity_m": [
+        34.091,
+        13.86,
+        -13.845
+      ],
+      "center_m": [
+        32.491,
+        13.845,
+        13.86
+      ],
+      "center_unity_m": [
+        32.491,
+        13.86,
+        -13.845
+      ],
+      "length_m": 3.2,
+      "orientation_model": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "orientation_unity": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E1-P3-M-005": {
+      "start_m": [
+        34.216,
+        12.266,
+        13.86
+      ],
+      "end_m": [
+        34.216,
+        13.745,
+        13.86
+      ],
+      "start_unity_m": [
+        34.216,
+        13.86,
+        -12.266
+      ],
+      "end_unity_m": [
+        34.216,
+        13.86,
+        -13.745
+      ],
+      "center_m": [
+        34.216,
+        13.0055,
+        13.86
+      ],
+      "center_unity_m": [
+        34.216,
+        13.86,
+        -13.0055
+      ],
+      "length_m": 1.479,
+      "orientation_model": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E1-P4-M-003": {
+      "start_m": [
+        30.766,
+        12.266,
+        17.82
+      ],
+      "end_m": [
+        30.766,
+        13.745,
+        17.82
+      ],
+      "start_unity_m": [
+        30.766,
+        17.82,
+        -12.266
+      ],
+      "end_unity_m": [
+        30.766,
+        17.82,
+        -13.745
+      ],
+      "center_m": [
+        30.766,
+        13.0055,
+        17.82
+      ],
+      "center_unity_m": [
+        30.766,
+        17.82,
+        -13.0055
+      ],
+      "length_m": 1.479,
+      "orientation_model": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E1-P4-M-008": {
+      "start_m": [
+        30.891,
+        13.845,
+        17.82
+      ],
+      "end_m": [
+        34.091,
+        13.845,
+        17.82
+      ],
+      "start_unity_m": [
+        30.891,
+        17.82,
+        -13.845
+      ],
+      "end_unity_m": [
+        34.091,
+        17.82,
+        -13.845
+      ],
+      "center_m": [
+        32.491,
+        13.845,
+        17.82
+      ],
+      "center_unity_m": [
+        32.491,
+        17.82,
+        -13.845
+      ],
+      "length_m": 3.2,
+      "orientation_model": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "orientation_unity": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E1-P4-M-012": {
+      "start_m": [
+        34.216,
+        12.266,
+        17.82
+      ],
+      "end_m": [
+        34.216,
+        13.745,
+        17.82
+      ],
+      "start_unity_m": [
+        34.216,
+        17.82,
+        -12.266
+      ],
+      "end_unity_m": [
+        34.216,
+        17.82,
+        -13.745
+      ],
+      "center_m": [
+        34.216,
+        13.0055,
+        17.82
+      ],
+      "center_unity_m": [
+        34.216,
+        17.82,
+        -13.0055
+      ],
+      "length_m": 1.479,
+      "orientation_model": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E2-P4-M-007": {
+      "start_m": [
+        25.082,
+        3.331,
+        17.82
+      ],
+      "end_m": [
+        25.082,
+        6.151,
+        17.82
+      ],
+      "start_unity_m": [
+        25.082,
+        17.82,
+        -3.331
+      ],
+      "end_unity_m": [
+        25.082,
+        17.82,
+        -6.151
+      ],
+      "center_m": [
+        25.082,
+        4.741,
+        17.82
+      ],
+      "center_unity_m": [
+        25.082,
+        17.82,
+        -4.741
+      ],
+      "length_m": 2.82,
+      "orientation_model": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E2-P4-M-008": {
+      "start_m": [
+        25.207,
+        3.181,
+        17.82
+      ],
+      "end_m": [
+        27.602,
+        3.181,
+        17.82
+      ],
+      "start_unity_m": [
+        25.207,
+        17.82,
+        -3.181
+      ],
+      "end_unity_m": [
+        27.602,
+        17.82,
+        -3.181
+      ],
+      "center_m": [
+        26.4045,
+        3.181,
+        17.82
+      ],
+      "center_unity_m": [
+        26.4045,
+        17.82,
+        -3.181
+      ],
+      "length_m": 2.395,
+      "orientation_model": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "orientation_unity": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E2-P4-M-009": {
+      "start_m": [
+        27.727,
+        3.331,
+        17.82
+      ],
+      "end_m": [
+        27.727,
+        6.151,
+        17.82
+      ],
+      "start_unity_m": [
+        27.727,
+        17.82,
+        -3.331
+      ],
+      "end_unity_m": [
+        27.727,
+        17.82,
+        -6.151
+      ],
+      "center_m": [
+        27.727,
+        4.741,
+        17.82
+      ],
+      "center_unity_m": [
+        27.727,
+        17.82,
+        -4.741
+      ],
+      "length_m": 2.82,
+      "orientation_model": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
+    },
+    "E2-P4-M-010": {
+      "start_m": [
+        27.727,
+        8.551,
+        17.82
+      ],
+      "end_m": [
+        27.727,
+        16.501,
+        17.82
+      ],
+      "start_unity_m": [
+        27.727,
+        17.82,
+        -8.551
+      ],
+      "end_unity_m": [
+        27.727,
+        17.82,
+        -16.501
+      ],
+      "center_m": [
+        27.727,
+        12.526,
+        17.82
+      ],
+      "center_unity_m": [
+        27.727,
+        17.82,
+        -12.526
+      ],
+      "length_m": 7.95,
+      "orientation_model": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "orientation_unity": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "model_master.wall_plan_axis_not_fe_column"
     },
     "E1-S1-A-006": {
       "start_m": [

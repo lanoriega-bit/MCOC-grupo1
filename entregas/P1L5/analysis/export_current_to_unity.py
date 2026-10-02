@@ -68,6 +68,7 @@ def section_properties(section):
 
 
 def main() -> None:
+    (STREAMING / "week7_analysis_settings.json").write_bytes((CENTRAL / "analysis_settings.json").read_bytes())
     master = read(CENTRAL / "model_master.json")
     sections_data = read(CENTRAL / "sections.json")
     manifest = read(RESULTS / "manifest.json")
@@ -127,6 +128,7 @@ def main() -> None:
         "default_case": "R",
         "result_state": "CURRENT_WITH_DOCUMENTED_FALLBACKS",
         "analysis_version": manifest["analysis_version"],
+        "analysis_settings_sha256": manifest["analysis_settings_sha256"],
         "generated_utc": datetime.now(timezone.utc).isoformat(),
         "basis_cases": ["G", "Q", "EX", "EY"],
         "default_coefficients": DEFAULT_R_COEFFICIENTS,
@@ -239,6 +241,7 @@ def main() -> None:
         git_commit = "WORKTREE_UNCOMMITTED"
     contract = {
         "format": "MCOC_CURRENT_DATASET_V1",
+        "analysis_settings_sha256": manifest["analysis_settings_sha256"],
         "geometry_version": sha256(CENTRAL / "model_master.json"),
         "fe_version": hashlib.sha256(json.dumps(master["fe_topology"], sort_keys=True).encode()).hexdigest(),
         "loads_version": sha256(CENTRAL / "loads.json"),

@@ -5,6 +5,9 @@ from __future__ import annotations
 
 import json
 import math
+import sys
+import hashlib
+from importlib.metadata import version
 from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
@@ -134,8 +137,13 @@ def prepare_contract(master: dict, sections: dict, materials: dict, loads: dict)
             candidates,
             key=lambda tag: sum((nodes[str(tag)][axis] - centroid[i]) ** 2 for i, axis in enumerate("xyz")),
         )
-        weight = float(source["G_total_N"]) + 0.5 * float(source["Q_N"])
-        force = 0.20 * weight
+        policy = loads["current_load_application"].get("seismic_policy")
+        if policy is None:
+            raise ValueError("Missing explicit seismic policy; no silent Q participation default")
+        participation = float(policy["live_load_participation"])
+        coefficient = float(policy["acceleration_fraction_g"])
+        weight = float(source["G_total_N"]) + participation * float(source["Q_N"])
+        force = coefficient * weight
         lateral[application_tag] += force
         point = nodes[str(application_tag)]
         seismic_floor_loads.append({
@@ -145,6 +153,9 @@ def prepare_contract(master: dict, sections: dict, materials: dict, loads: dict)
             "G_N": float(source["G_total_N"]),
             "Q_N": float(source["Q_N"]),
             "seismic_weight_N": weight,
+            "live_load_participation": participation,
+            "acceleration_fraction_g": coefficient,
+            "policy_source": policy["source"],
             "lateral_force_N": force,
             "target_centroid_m": centroid,
             "application_node": application_tag,
@@ -222,7 +233,13 @@ def build_model(contract: dict, case: str) -> tuple[dict[int, dict], dict[int, l
     ops.timeSeries("Linear", 1)
     ops.pattern("Plain", 1, 1)
     external = defaultdict(lambda: [0.0, 0.0, 0.0])
-    if case in {"G", "Q"}:
+    if case == "R":
+        # Explicit equivalent load case for regression against superposition.
+        for tag, vector in contract["combined_nodal_loads"].items():
+            ops.load(int(tag), *vector, 0.0, 0.0, 0.0)
+            for axis in range(3):
+                external[int(tag)][axis] += vector[axis]
+    elif case in {"G", "Q"}:
         for tag, fz in contract["nodal"][case].items():
             ops.load(tag, 0.0, 0.0, fz, 0.0, 0.0, 0.0)
             external[tag][2] += fz
@@ -354,7 +371,9 @@ def main() -> None:
         "format": "MCOC_P1L5_CURRENT_RESULTS_MANIFEST_V2",
         "generated_utc": datetime.now(timezone.utc).isoformat(),
         "status": overall,
-        "analysis_version": "P1L5_CURRENT_ZONED_V2",
+        "analysis_version": "WEEK7_CURRENT_UNIFORM_Q_V1",
+        "runtime": {"python": sys.version, "openseespy": version("openseespy"), "opensees_engine": ops.version()},
+        "analysis_settings_sha256": hashlib.sha256((CENTRAL / "analysis_settings.json").read_bytes()).hexdigest(),
         "cases": cases,
         "linear_superposition_compatible": overall == "PASS",
         "stop_elements": [],

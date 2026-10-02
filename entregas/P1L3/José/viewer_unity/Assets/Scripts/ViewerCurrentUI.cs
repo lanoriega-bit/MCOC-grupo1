@@ -144,7 +144,7 @@ namespace Mcoc.UnityViewer
             if (uiHidden) return;
             PanelBackground(new Rect(0,0,Screen.width,72));
             GUI.Label(new Rect(16,8,400,28), "LABORATORIO ESTRUCTURAL", currentTitle);
-            GUI.Label(new Rect(17,37,600,26), new GUIContent("CURRENT  ·  Edificios 1 y 2  ·  Caso "+activeAnalysisCase,
+            GUI.Label(new Rect(17,37,600,26), new GUIContent((p1l5ReanalysisRequired?"STALE · REANÁLISIS REQUERIDO":"CURRENT")+"  ·  Edificios 1 y 2  ·  Caso "+activeAnalysisCase,
                 "Modelo canónico vigente. Los estilos ladrillo/acero son claves visuales, no materiales estructurales."), currentBody);
             float bx = Screen.width - 515;
             if (GUI.Button(new Rect(bx,17,108,34), navigationExpanded ? "Paneles  −" : "Paneles  +", currentButton)) navigationExpanded = !navigationExpanded;
@@ -260,7 +260,8 @@ namespace Mcoc.UnityViewer
             }
             if (Accordion("ANÁLISIS"))
             {
-                GUILayout.Label(currentResultsAvailable ? "OpenSees CURRENT · PASS\nG / Q / EX / EY\nSuperposición lineal instantánea" : $"FE candidato · NO EJECUTADO\n{feDiagnostic?.summary?.fe_element_count ?? 0} miembros\n{feDiagnostic?.summary?.candidate_floating_geometry_elements ?? 0} geometrías flotantes",currentBody);
+                GUILayout.Label(currentResultsAvailable ? "OpenSees CURRENT · PASS\nG / Q / EX / EY\nSuperposición lineal instantánea" : "Resultados CURRENT bloqueados · consultar estado de reanálisis",currentBody);
+                DrawP1L5ModificationControls(null);
                 GUILayout.Label(new GUIContent("Modelo académico · ver trazabilidad", "Materiales inferidos y cargas excluidas están documentados en las fuentes CURRENT. No es un modelo de diseño certificado."),currentBody);
             }
             if (Accordion("CAPACIDAD"))
