@@ -6,9 +6,9 @@ using UnityEngine;
 
 namespace Mcoc.UnityViewer
 {
-    [Serializable] public class P1L5ModificationOperation { public string type, element_id, section_id; public float value; }
+    [Serializable] public class P1L5ModificationOperation { public string type, element_id, section_id; public double value; }
     [Serializable] public class P1L5ModificationRequest { public string format, request_id, status, created_utc; public List<P1L5ModificationOperation> operations; }
-    [Serializable] public class Week7LiveLoad { public float intensity_kN_m2, default_intensity_kN_m2; public string source, description; }
+    [Serializable] public class Week7LiveLoad { public double intensity_kN_m2, default_intensity_kN_m2; public string source, description; }
     [Serializable] public class Week7Settings { public Week7LiveLoad live_load; }
     /// <summary>P1L5 CURRENT superposition and transparent analysis-state UI.</summary>
     public partial class ViewerController

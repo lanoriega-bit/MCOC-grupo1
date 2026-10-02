@@ -3083,12 +3083,12 @@ namespace Mcoc.UnityViewer
         void RunVisibilitySelfCheck()
         {
             var requiredTypes = new List<string> {
-                "beam", "column", "wall", "slab", "support", "slab_edge", "diaphragm",
+                "beam", "column", "wall", "slab", "support", "diaphragm",
                 "p1l4_support",
-                "architectural_slab", "architectural_slab_edge", "tributary"
+                "tributary"
             };
             if (historicalArchiveLoaded)
-                requiredTypes.AddRange(new[] { "seismic_arrow", "seismic_cm", "seismic_mass", "seismic_shear",
+                requiredTypes.AddRange(new[] { "slab_edge", "architectural_slab", "architectural_slab_edge", "seismic_arrow", "seismic_cm", "seismic_mass", "seismic_shear",
                     "seismic_torsion", "seismic_deform_ex", "seismic_deform_ey" });
             var failures = new List<string>();
             foreach (var key in requiredTypes)

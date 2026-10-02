@@ -159,7 +159,7 @@ No se declara un build PASS sin ejecutarlo fuera del Editor y comprobarlo.
 | Fiber / M–φ | PASS_WITH_NOTE | estudio reproducido, no capacidad CURRENT |
 | P–M columna / muro completo | REVIEW_REQUIRED | 1 caso parcial / 6 puntos no convergidos |
 | AR crosswalk / longitudes / demanda | PASS | AR_DATASET_VALIDATION; 712 / 669 FE |
-| Unity compile / Play / qQ reanálisis | PASS_WITH_NOTE | flujo doble demostrado; suite integral final pendiente |
+| Unity compile / Play / qQ reanálisis | PASS_WITH_NOTE | compilación y Play reales; 83 checks UX, 29 Q, 44 losas y regresión PASS; flujo doble/restauración demostrado |
 | Entorno nuevo | PASS_WITH_NOTE | instalado y tests físicos/transformación; clone completo pendiente |
 | Documentación / enlaces | IN_PROGRESS | completar evidencias finales antes de release |
 | Desktop externo | NOT_TESTED | requiere build final + smoke test |
@@ -171,7 +171,19 @@ No se declara un build PASS sin ejecutarlo fuera del Editor y comprobarlo.
 - Materiales/armaduras educativos y capacidad aproximada no certifican seguridad real.
 - Política sísmica educativa pendiente de contraste con instrucción específica del profesor.
 - Puntos Fiber no convergidos no sirven para extrapolar una envolvente completa.
-- Falta cerrar demo completa, compilación final y prueba standalone externo.
+- La compilación final y demo integrada del Editor pasaron; falta prueba standalone externo, condicionado al cierre estructural.
+
+### Comprobación posterior a la restauración
+
+qQ central y exportado restaurado exactamente a **0,667 kN/m²**. La prueba real OpenSees
+repitió 0 / 0,667 / 1,334 / 0,667 sin cambiar G ni áreas y recuperó el baseline.
+Se corrigió la serialización de qQ y de solicitudes Unity a `double` para evitar truncamiento
+por `float`. Después de importar esos scripts, Unity entró en Play sin errores de compilación.
+Las capas CAD/históricas sustituidas no se exigen al QA CURRENT cuando el archivo histórico
+no está cargado; las capas físicas vigentes y filtros sí se verifican.
+Los checks de inicio, deformada, fuerzas, ejes, superposición, D/C, materiales, selección y
+diagramas pasaron. `UNITY_VISUAL_RUNTIME_QA.json`, `UNITY_Q_QA.json` y `UNITY_SLAB_QA.json`
+contienen los resultados de las suites ejecutadas en este checkpoint.
 
 ## M. Integración final
 
