@@ -2,11 +2,12 @@
 
 > Migración en curso en `codex/final-repository-architecture`, sin modificar `main`.
 > Las fuentes oficiales están ahora en [model/](model/README.md) y
-> [config/](config/README.md). Los módulos de análisis, Unity y AR aún se están
-> consolidando. Véase [arquitectura](docs/ARCHITECTURE.md).
+> [config/](config/README.md). Unity desktop está en `viewer/unity/` y pasó Play
+> desde esa ubicación. AR solo se organiza; no se prueba ni regenera en esta etapa.
+> Véase [arquitectura](docs/ARCHITECTURE.md) y [comandos](tools/README.md).
 
-Edificios 1 y 2: modelo 3D canónico, OpenSees y Unity. Rama de cierre Semana 7:
-**codex/week7-model-closure**. `main` todavía no incorpora este cierre.
+Edificios 1 y 2: modelo 3D canónico, OpenSees y Unity. Rama de reorganización:
+**codex/final-repository-architecture**. No se modifica `main` en esta etapa.
 El estado vigente incluye las correcciones de núcleos y columnas de P1L6;
 las entregas históricas se conservan, no se sobrescriben.
 
@@ -27,29 +28,29 @@ Unity **6000.6.0f1**; versiones de paquetes en `Packages/manifest.json` y
 `packages-lock.json` del Viewer. No actualizar paquetes silenciosamente.
 
 ```powershell
-git clone --branch codex/week7-model-closure https://github.com/lanoriega-bit/MCOC-grupo1.git
+git clone --branch codex/final-repository-architecture https://github.com/lanoriega-bit/MCOC-grupo1.git
 cd MCOC-grupo1
 python --version
 python -m venv .venv-p1l5
 .\.venv-p1l5\Scripts\python.exe -m pip install -r requirements.txt
-powershell -ExecutionPolicy Bypass -File entregas/P1L7/reanalyse_current.ps1
-.\.venv-p1l5\Scripts\python.exe -B entregas/P1L7/test_week7_loads.py
-.\.venv-p1l5\Scripts\python.exe -B entregas/P1L6/transform/test_ar_transform.py
-.\.venv-p1l5\Scripts\python.exe -B entregas/P1L7/benchmark_and_ar_diff.py
+.\.venv-p1l5\Scripts\python.exe -B tools/validate_project.py
+.\.venv-p1l5\Scripts\python.exe -B tools/rebuild_all.py
 ```
 
 El pipeline usa la geometría y tributarias CURRENT versionadas: **no necesita CAD
 original ni reconstruye áreas al editar qQ**. Produce G/Q/EX/EY, capacidades
-aproximadas, contratos Unity y paquete de datos AR. Si falla, CURRENT queda STALE.
+aproximadas y contratos Unity desktop. AR no forma parte de este comando.
+`tools/rebuild_all.py` solo muestra un plan; `--execute` permite recalcular.
+No recalcular para abrir el Viewer ni durante una reorganización. Si falla, CURRENT queda STALE.
 No sustituirlo por el pipeline geométrico antiguo para cambiar solo qQ.
 
-En Unity Hub → Add → proyecto `entregas/P1L3/José/viewer_unity` →
+En Unity Hub → Add → proyecto `viewer/unity` →
 `Assets/Main.unity` → Play → Game, escala 1x.
 En **Análisis**: campo qQ [kN/m²] → Guardar → Reanalizar → recarga de escena.
 En **Resultados**: λQ solo combina respuestas; no cambia el caso físico Q.
 Un standalone fuera del repositorio es de consulta: no incluye OpenSees/Python.
 
-Configuración única: `entregas/P1L5/modelo_central/analysis_settings.json`.
+Configuración única: `config/analysis_settings.json`.
 Valor inicial qQ = **0,667 kN/m²**, hipótesis de proyecto, no norma.
 SC originales (incluidas lineales/puntuales) son referencia, no se suman a Q.
 G permanente permanece; el sismo conserva explícitamente la hipótesis
@@ -59,10 +60,10 @@ del profesor. Cambiar qQ invalida Q/EX/EY/R/D-C (se regenera también G por QA).
 Fiber separado, sin sobrescribir historia ni capacidad CURRENT:
 
 ```powershell
-.\.venv-p1l5\Scripts\python.exe -B entregas/P1L7/reproduce_fiber_studies.py
+.\.venv-p1l5\Scripts\python.exe -B analysis/fiber/reproduce_studies.py
 ```
 
-Outputs: `entregas/P1L7/fiber_studies`. Algunos puntos P-M no convergen:
+Outputs: `results/fiber`. Algunos puntos P-M no convergen:
 ver `QA.json`; no son capacidad certificada ni se usan para calibrar D/C.
 Los gráficos nuevos no interpolan intervalos no convergidos. Para volver a dibujar
 los CSV existentes sin repetir ensayos: añadir `--plots-only` al comando anterior.
