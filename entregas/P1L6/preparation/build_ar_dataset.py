@@ -12,7 +12,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-CENTRAL = ROOT / "entregas" / "P1L5" / "modelo_central"
+CENTRAL = ROOT / "model"
 STREAM = ROOT / "entregas" / "P1L3" / "José" / "viewer_unity" / "Assets" / "StreamingAssets"
 OUT = Path(__file__).resolve().parent / "current_ar_elements.json"
 STREAM_OUT = STREAM / "p1l6_current_ar_elements.json"

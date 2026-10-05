@@ -17,7 +17,7 @@ from current_contract_config import DEFAULT_R_COEFFICIENTS
 
 
 ROOT = Path(__file__).resolve().parents[3]
-CENTRAL = ROOT / "entregas" / "P1L5" / "modelo_central"
+CENTRAL = ROOT / "model"
 RESULTS = Path(__file__).resolve().parent / "results" / "current"
 STREAMING = ROOT / "entregas" / "P1L3" / "José" / "viewer_unity" / "Assets" / "StreamingAssets"
 TARGET = STREAMING / "p1l5_current_analysis_cases.json"
@@ -68,7 +68,7 @@ def section_properties(section):
 
 
 def main() -> None:
-    (STREAMING / "week7_analysis_settings.json").write_bytes((CENTRAL / "analysis_settings.json").read_bytes())
+    (STREAMING / "week7_analysis_settings.json").write_bytes((ROOT / "config" / "analysis_settings.json").read_bytes())
     master = read(CENTRAL / "model_master.json")
     sections_data = read(CENTRAL / "sections.json")
     manifest = read(RESULTS / "manifest.json")

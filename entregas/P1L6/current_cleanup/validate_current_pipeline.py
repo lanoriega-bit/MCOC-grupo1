@@ -13,7 +13,7 @@ from fe_support_graph import unsupported_components
 
 
 ROOT = Path(__file__).resolve().parents[3]
-CENTRAL = ROOT / "entregas/P1L5/modelo_central"
+CENTRAL = ROOT / "model"
 ANALYSIS = ROOT / "entregas/P1L5/analysis"
 STREAM = ROOT / "entregas/P1L3/José/viewer_unity/Assets/StreamingAssets"
 HERE = Path(__file__).resolve().parent
@@ -48,7 +48,7 @@ def main() -> None:
     result_ids = {name: {r["element_id"] for r in case["elements"]} for name, case in basis.items()}
     unsupported = unsupported_components(master)
     checks = {
-        "analysis_settings_identity": manifest.get("analysis_settings_sha256") == sha(CENTRAL / "analysis_settings.json") == contract.get("analysis_settings_sha256") == sha(STREAM / "week7_analysis_settings.json"),
+        "analysis_settings_identity": manifest.get("analysis_settings_sha256") == sha(ROOT / "config/analysis_settings.json") == contract.get("analysis_settings_sha256") == sha(STREAM / "week7_analysis_settings.json"),
         "unique_physical_and_viewer_ids": len(physical_ids) == len(set(physical_ids)) and len(viewer_ids) == len(set(viewer_ids)),
         "unity_geometry_covers_central": set(viewer_ids) == set(physical_ids) | {r["support_id"] for r in master["supports"]},
         "linear_geometry_metadata": all(

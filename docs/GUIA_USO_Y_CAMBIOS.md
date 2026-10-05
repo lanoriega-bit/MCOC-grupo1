@@ -51,7 +51,7 @@ Console de Unity: esa ventana solo muestra mensajes y errores.
 | Quiero cambiar | Archivo/carpeta |
 | --- | --- |
 | Menú, coordinación o mensajes | main.py |
-| Rutas que muestra el menú | project_config.json |
+| Rutas que muestra el menú | config/project_config.json |
 | Geometría/conectividad/IDs | entregas/P1L5/modelo_central/model_master.json |
 | Dimensiones de secciones | entregas/P1L5/modelo_central/sections.json |
 | Propiedades de materiales | entregas/P1L5/modelo_central/materials.json |

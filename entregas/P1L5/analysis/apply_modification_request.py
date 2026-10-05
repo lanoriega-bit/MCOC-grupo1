@@ -10,7 +10,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-CENTRAL = ROOT / "entregas" / "P1L5" / "modelo_central"
+CENTRAL = ROOT / "model"
 STREAMING = ROOT / "entregas" / "P1L3" / "José" / "viewer_unity" / "Assets" / "StreamingAssets"
 REQUEST = STREAMING / "p1l5_modification_request.json"
 
@@ -36,7 +36,7 @@ def main():
     sections = {row["section_id"] for row in read(CENTRAL / "sections.json")["sections"]}
     by_id = {row["element_id"]: row for row in master["elements"]}
     now = datetime.now(timezone.utc).isoformat()
-    settings_path = CENTRAL / "analysis_settings.json"
+    settings_path = ROOT / "config" / "analysis_settings.json"
     analysis_settings = read(settings_path) if settings_path.exists() else None
     settings_changed = False
     applied = []

@@ -16,7 +16,7 @@ import openseespy.opensees as ops
 
 
 ROOT = Path(__file__).resolve().parents[3]
-CENTRAL = ROOT / "entregas" / "P1L5" / "modelo_central"
+CENTRAL = ROOT / "model"
 OUT = Path(__file__).resolve().parent / "results" / "current"
 
 
@@ -373,7 +373,7 @@ def main() -> None:
         "status": overall,
         "analysis_version": "WEEK7_CURRENT_UNIFORM_Q_V1",
         "runtime": {"python": sys.version, "openseespy": version("openseespy"), "opensees_engine": ops.version()},
-        "analysis_settings_sha256": hashlib.sha256((CENTRAL / "analysis_settings.json").read_bytes()).hexdigest(),
+        "analysis_settings_sha256": hashlib.sha256((ROOT / "config" / "analysis_settings.json").read_bytes()).hexdigest(),
         "cases": cases,
         "linear_superposition_compatible": overall == "PASS",
         "stop_elements": [],

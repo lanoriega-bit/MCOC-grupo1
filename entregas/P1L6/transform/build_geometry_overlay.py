@@ -23,7 +23,7 @@ import math
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
-CENTRAL = ROOT / "entregas" / "P1L5" / "modelo_central"
+CENTRAL = ROOT / "model"
 DATASET = ROOT / "entregas" / "P1L6" / "preparation" / "current_ar_elements.json"
 OUT = ROOT / "entregas" / "P1L6" / "transform" / "current_ar_geometry_overlay.json"
 

@@ -12,7 +12,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-HERE = Path(__file__).resolve().parent
+HERE = ROOT / "model"
 
 MODEL_MASTER = HERE / "model_master.json"
 SECTIONS = HERE / "sections.json"

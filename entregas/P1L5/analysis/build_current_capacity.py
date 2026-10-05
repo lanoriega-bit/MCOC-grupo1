@@ -20,7 +20,7 @@ from current_contract_config import DEFAULT_R_COEFFICIENTS
 
 
 ROOT = Path(__file__).resolve().parents[3]
-CENTRAL = ROOT / "entregas" / "P1L5" / "modelo_central"
+CENTRAL = ROOT / "model"
 STREAM = ROOT / "entregas" / "P1L3" / "José" / "viewer_unity" / "Assets" / "StreamingAssets"
 RESULTS = Path(__file__).resolve().parent / "results" / "current"
 OUT = Path(__file__).resolve().parent / "generated" / "current_capacity.json"

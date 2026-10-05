@@ -1,5 +1,10 @@
 # MCOC grupo 1 — laboratorio estructural digital
 
+> Migración en curso en `codex/final-repository-architecture`, sin modificar `main`.
+> Las fuentes oficiales están ahora en [model/](model/README.md) y
+> [config/](config/README.md). Los módulos de análisis, Unity y AR aún se están
+> consolidando. Véase [arquitectura](docs/ARCHITECTURE.md).
+
 Edificios 1 y 2: modelo 3D canónico, OpenSees y Unity. Rama de cierre Semana 7:
 **codex/week7-model-closure**. `main` todavía no incorpora este cierre.
 El estado vigente incluye las correcciones de núcleos y columnas de P1L6;
@@ -80,7 +85,7 @@ Estado de cierre y límites: [WEEK7_MODEL_CLOSURE](entregas/P1L7/WEEK7_MODEL_CLO
 | Instrucciones detalladas y dónde cambiar código | [Guía de uso y cambios](docs/GUIA_USO_Y_CAMBIOS.md) |
 | Archivos vigentes / históricos / generados | [Índice canónico](PROJECT_INDEX.md) |
 | Menú y coordinación de comandos | [main.py](main.py) |
-| Configuración de rutas | [project_config.json](project_config.json) |
+| Configuración de rutas | [project_config.json](config/project_config.json) |
 | Geometría, secciones, materiales y cargas editables | [modelo_central](entregas/P1L5/modelo_central/README.md) |
 | Auditoría estructural y QA más recientes | [Muros y núcleos CURRENT](entregas/P1L6/wall_continuity/README.md) |
 | Uso del visor y funcionalidades | [Unity desktop P1L6](entregas/P1L6/desktop/README.md) |

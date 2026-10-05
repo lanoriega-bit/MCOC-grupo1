@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-SOURCE = ROOT / "entregas" / "P1L5" / "modelo_central" / "materials.json"
+SOURCE = ROOT / "model" / "materials.json"
 TARGET = (
     ROOT
     / "entregas"

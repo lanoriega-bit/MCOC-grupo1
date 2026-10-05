@@ -16,8 +16,8 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-HERE = Path(__file__).resolve().parent
-OUT = HERE / "generated"
+HERE = ROOT / "model"
+OUT = ROOT / "results" / "validation" / "model_preview"
 
 
 def load(path: Path):

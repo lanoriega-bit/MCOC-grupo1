@@ -11,7 +11,7 @@ histórica; sus conteos y estados no sustituyen los datos CURRENT.
 | Secciones | `entregas/P1L5/modelo_central/sections.json` | Propiedades geométricas |
 | Materiales | `entregas/P1L5/modelo_central/materials.json` | Propiedades elásticas y resistentes separadas |
 | Cargas | `entregas/P1L5/modelo_central/loads.json` | Catálogo, tributarias y aplicación CURRENT |
-| Rutas del menú | `project_config.json` | No contiene propiedades estructurales |
+| Rutas del menú | `config/project_config.json` | No contiene propiedades estructurales |
 
 Las modificaciones físicas requieren QA y reanálisis antes de presentar resultados como vigentes.
 No ejecutar bootstrap ni migraciones antiguas como rutina.

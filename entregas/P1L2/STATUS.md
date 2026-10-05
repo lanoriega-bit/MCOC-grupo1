@@ -1,5 +1,18 @@
 # P1L2 Status
 
+## Reorganización funcional — fuentes canónicas (2026-10-05)
+
+- Fuentes únicas trasladadas a `model/` mediante `git mv`; configuración en `config/`.
+- Las losas permanecen en `model_master.json`: no se crea una fuente duplicada.
+- Consumidores CURRENT dirigidos a las nuevas fuentes. Referencias Git antiguas
+  solo para verificar propiedades contra el commit de procedencia del resultado.
+- QA: modelo PASS, pipeline PASS_WITH_EXPLICIT_NOTES, 10 tests de entrada PASS,
+  prueba OpenSees Q/superposición en memoria PASS y FE preview READY_TO_RUN.
+- Equivalencia: 120/120 archivos protegidos idénticos byte a byte; Luis intacto.
+- No se regeneraron ni sustituyeron resultados guardados, capacidades o datasets.
+- Pendientes: módulos de análisis/resultados, integración AR funcional, traslado
+  Unity, wrappers finales, histórico y QA desde copia limpia. No es cierre final.
+
 ## Reorganización funcional — checkpoint de auditoría (2026-10-05)
 
 - Rama `codex/final-repository-architecture`; `main` e historia entregada intactas.

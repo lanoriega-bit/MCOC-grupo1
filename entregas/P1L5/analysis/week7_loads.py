@@ -15,8 +15,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
-CENTRAL = ROOT / "entregas/P1L5/modelo_central"
-CONFIG = CENTRAL / "analysis_settings.json"
+CENTRAL = ROOT / "model"
+CONFIG = ROOT / "config" / "analysis_settings.json"
 OUT = Path(__file__).resolve().parent / "generated"
 
 
