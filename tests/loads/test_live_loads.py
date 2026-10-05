@@ -1,7 +1,7 @@
 """Read-only numerical modification demo: solve 0/default/double/restored Q.
 
 Actual OpenSees solves are performed in memory. No canonical sources/results
-are changed by this test. Run from root: python -B entregas/P1L7/test_week7_loads.py
+are changed by this test. Run from root: python -B tests/loads/test_live_loads.py
 """
 import copy
 import json

@@ -1,6 +1,6 @@
 """Reproduce historical Fiber studies into NEW Week 7 outputs, never CURRENT capacity.
 
-Run: python -B entregas/P1L7/reproduce_fiber_studies.py
+Run: python -B analysis/fiber/reproduce_studies.py
 Partial/nonconverged points are retained and flagged; they are not design data.
 """
 import importlib

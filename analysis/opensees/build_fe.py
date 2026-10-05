@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build traceable derivatives from the P1L5 central model.
 
-Outputs are written only to entregas/P1L5/modelo_central/generated.
+Outputs are written only to results/validation/model_preview.
 No historical file is used silently.  Authorised STOP elements and documented
 P1L5 approximations are propagated explicitly.
 """
