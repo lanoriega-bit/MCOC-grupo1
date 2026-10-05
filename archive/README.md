@@ -11,6 +11,7 @@ Para consultar la evidencia, aplicar estos prefijos; no editar el JSON históric
 
 | Ruta original | Ubicación actual |
 |---|---|
+| entregas/P1L3/ | archive/historical_deliveries/P1L3/ |
 | entregas/P1L4/ | archive/historical_deliveries/P1L4/ |
 | entregas/P1L5/ | archive/historical_deliveries/P1L5/ |
 | entregas/P1L6/ | archive/historical_deliveries/P1L6/ |

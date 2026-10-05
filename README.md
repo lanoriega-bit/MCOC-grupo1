@@ -129,7 +129,7 @@ notas del [QA vigente](results/validation/CURRENT_PIPELINE_QA.md).
 | P1L0 | [Benchmark mínimo](entregas/P1L0/README.md) |
 | P1L1 | [Benchmark 3D](entregas/p1l1_benchmark_3d) |
 | P1L2 | [Entrega y evolución](entregas/P1L2/README.md) |
-| P1L3 | [Informe](entregas/P1L3/INFORME.md) |
+| P1L3 | [Informe](archive/historical_deliveries/P1L3/INFORME.md) |
 | P1L4 | [Entrega histórica](archive/historical_deliveries/P1L4/README.md) |
 | P1L5 | [Entrega histórica](archive/historical_deliveries/P1L5/README.md) |
 | P1L6 | [Integración histórica](archive/historical_deliveries/P1L6/README.md) |

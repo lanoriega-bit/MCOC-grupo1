@@ -82,8 +82,8 @@ de muros fuera del modelo. Conectividad PASS no prueba un diseño real correcto.
 | `entregas/P1L2/unity_export/model_viewer.json` | LUIS_REFERENCE — no modificar |
 | `entregas/P1L2/unity_export/model_1_audited_corrected.json` | Derivado actualizado desde central |
 | `entregas/P1L2/unity_export/model_combined_viewer.json` | Derivado actualizado desde central |
-| `entregas/P1L3/results/a3a4/`, `a7/` | HISTORICAL — resultados entregados |
-| `entregas/P1L3/scripts/build_unity_bundle.py` | Adaptador histórico, no usar para reemplazar CURRENT |
+| `archive/historical_deliveries/P1L3/results/a3a4/`, `a7/` | HISTORICAL — resultados entregados |
+| `archive/historical_deliveries/P1L3/scripts/build_unity_bundle.py` | Adaptador histórico, no usar para reemplazar CURRENT |
 | `entregas/POST_P1L4/`, `entregas/PRE_P1L5/` | Auditorías/checkpoints previos |
 | `P1L4_FINAL` | Tag evaluable inmutable |
 
