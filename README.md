@@ -131,7 +131,7 @@ notas del [QA vigente](entregas/P1L6/wall_continuity/CURRENT_PIPELINE_QA.md).
 | P1L2 | [Entrega y evolución](entregas/P1L2/README.md) |
 | P1L3 | [Informe](entregas/P1L3/INFORME.md) |
 | P1L4 | [Entrega histórica](archive/historical_deliveries/P1L4/README.md) |
-| P1L5 | [Entrega histórica, archivo pendiente](entregas/P1L5/README.md) |
+| P1L5 | [Entrega histórica](archive/historical_deliveries/P1L5/README.md) |
 | P1L6 | [Integración](entregas/P1L6/README.md) |
 
 `P1L4_FINAL` permanece intacto. La referencia original de Luis
