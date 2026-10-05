@@ -17,7 +17,7 @@ import openseespy.opensees as ops
 
 ROOT = Path(__file__).resolve().parents[2]
 CENTRAL = ROOT / "model"
-OUT = ROOT / "entregas/P1L5/analysis/results/current"
+OUT = ROOT / "results"
 
 
 def read(path: Path) -> dict:
@@ -360,7 +360,7 @@ def main() -> None:
     cases = {}
     for case in ("G", "Q", "EX", "EY"):
         result = run_case(contract, case)
-        write(OUT / f"{case}.json", result)
+        write(OUT / case / "result.json", result)
         cases[case] = {
             "status": result["status"],
             "max_translation_m": result["qa"]["max_translation_m"],

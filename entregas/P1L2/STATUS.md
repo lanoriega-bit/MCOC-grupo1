@@ -1,5 +1,13 @@
 # P1L2 Status
 
+## Reorganización funcional — resultados (2026-10-05)
+
+- Resultados CURRENT en `results/{G,Q,EX,EY}`, capacidad/cargas/Fiber separados.
+- Traslado sin recalcular: 120/120 archivos protegidos idénticos, referencia Luis intacta.
+- Modelo/pipeline PASS, prueba de capacidad aislada PASS, fuente única 4 tests PASS.
+- Procedencia histórica dentro de JSON conservada; no es una ruta fallback.
+- Pendientes: auxiliares y funciones AR finales, Unity, wrappers, histórico y QA limpio.
+
 ## Reorganización funcional — implementaciones (2026-10-05)
 
 - OpenSees/capacidad/postproceso/Fiber trasladados a `analysis/`; tests a `tests/`.

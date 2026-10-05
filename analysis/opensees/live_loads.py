@@ -17,7 +17,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 CENTRAL = ROOT / "model"
 CONFIG = ROOT / "config" / "analysis_settings.json"
-OUT = ROOT / "entregas/P1L5/analysis/generated"
+OUT = ROOT / "results/loads"
 
 
 def read(path):

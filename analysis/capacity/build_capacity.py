@@ -24,8 +24,8 @@ from current_contract_config import DEFAULT_R_COEFFICIENTS
 ROOT = Path(__file__).resolve().parents[2]
 CENTRAL = ROOT / "model"
 STREAM = ROOT / "entregas" / "P1L3" / "José" / "viewer_unity" / "Assets" / "StreamingAssets"
-RESULTS = ROOT / "entregas/P1L5/analysis/results/current"
-OUT = ROOT / "entregas/P1L5/analysis/generated/current_capacity.json"
+RESULTS = ROOT / "results"
+OUT = ROOT / "results/capacity/current_capacity.json"
 STREAM_OUT = STREAM / "p1l6_current_capacity.json"
 
 
@@ -104,7 +104,7 @@ def demand_index() -> tuple[dict, dict[str, list[dict]]]:
     manifest = read(RESULTS / "manifest.json")
     if manifest.get("status") != "PASS" or not manifest.get("linear_superposition_compatible"):
         raise RuntimeError("CURRENT basis is not verified for superposition")
-    basis = {name: read(RESULTS / f"{name}.json") for name in DEFAULT_R_COEFFICIENTS}
+    basis = {name: read(RESULTS / name / "result.json") for name in DEFAULT_R_COEFFICIENTS}
     if any(row.get("status") != "PASS" for row in basis.values()):
         raise RuntimeError("A CURRENT OpenSees basis case did not pass")
     by_case = {name: {row["analysis_id"]: row for row in data["elements"]}

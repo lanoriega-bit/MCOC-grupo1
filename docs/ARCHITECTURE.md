@@ -15,9 +15,10 @@ Fuentes trasladadas con identidad byte a byte, sin reemplazar datos estructurale
 La configuración está en `config/`. Las losas permanecen dentro del modelo.
 
 Los módulos principales ya están en `analysis/`, con validación y pruebas de Q,
-superposición, capacidad y Fiber. Los resultados, algunos auxiliares y el proyecto
-Unity aún están en sus ubicaciones anteriores. No deben archivarse hasta cerrar
-su migración y QA. El menú y los módulos CURRENT consumen las nuevas fuentes.
+superposición, capacidad y Fiber. Los resultados vigentes están en `results/`.
+Algunos auxiliares y el proyecto Unity aún están en sus ubicaciones anteriores.
+No deben archivarse hasta cerrar su migración y QA. El menú y los módulos CURRENT
+consumen las nuevas fuentes.
 
 ## Destinos acordados
 

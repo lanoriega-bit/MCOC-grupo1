@@ -12,7 +12,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT / "entregas/P1L7/fiber_studies"
+OUT = ROOT / "results/fiber"
 
 
 def plot_partial_pm(rows, output, title, moment_key, status_key="valid"):

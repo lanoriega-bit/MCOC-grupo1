@@ -14,7 +14,7 @@ from fe_support_graph import unsupported_components
 
 ROOT = Path(__file__).resolve().parents[2]
 CENTRAL = ROOT / "model"
-ANALYSIS = ROOT / "entregas/P1L5/analysis"
+ANALYSIS = ROOT / "results"
 STREAM = ROOT / "entregas/P1L3/José/viewer_unity/Assets/StreamingAssets"
 HERE = ROOT / "entregas/P1L6/current_cleanup"
 
@@ -30,7 +30,7 @@ def sha(path: Path) -> str:
 def main() -> None:
     master_path, loads_path = CENTRAL / "model_master.json", CENTRAL / "loads.json"
     master, loads = read(master_path), read(loads_path)
-    manifest_path = ANALYSIS / "results/current/manifest.json"
+    manifest_path = ANALYSIS / "manifest.json"
     manifest = read(manifest_path)
     contract = read(STREAM / "current_dataset_contract.json")
     payload_path = STREAM / contract["payload_file"]
@@ -44,7 +44,7 @@ def main() -> None:
     cap_ids = [r["element_id"] for r in capacity["elements"]]
     physical_ids = [r["element_id"] for r in master["elements"]]
     viewer_ids = [r["id"] for r in viewer["solids"]]
-    basis = {name: read(ANALYSIS / f"results/current/{name}.json") for name in ("G", "Q", "EX", "EY")}
+    basis = {name: read(ANALYSIS / name / "result.json") for name in ("G", "Q", "EX", "EY")}
     result_ids = {name: {r["element_id"] for r in case["elements"]} for name, case in basis.items()}
     unsupported = unsupported_components(master)
     checks = {
@@ -75,7 +75,7 @@ def main() -> None:
             contract["loads_version"] == sha(loads_path) and
             contract["payload_sha256"] == sha(payload_path) and
             contract["current_element_loads_sha256"] == sha(STREAM / contract["current_element_loads_file"]),
-        "unity_capacity_artifact_matches_generated": sha(capacity_path) == sha(ANALYSIS / "generated/current_capacity.json"),
+        "unity_capacity_artifact_matches_generated": sha(capacity_path) == sha(ANALYSIS / "capacity/current_capacity.json"),
         "unity_basis_and_capacity_coefficients": payload["basis_cases"] == ["G", "Q", "EX", "EY"] and
             payload["default_coefficients"] == capacity["default_coefficients"],
     }
