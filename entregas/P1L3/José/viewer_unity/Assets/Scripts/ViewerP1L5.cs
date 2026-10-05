@@ -204,7 +204,7 @@ namespace Mcoc.UnityViewer
             var directory = new DirectoryInfo(Application.dataPath);
             while (directory != null)
             {
-                if (File.Exists(Path.Combine(directory.FullName, "entregas", "P1L5", "build_and_validate.ps1"))) return directory.FullName;
+                if (File.Exists(Path.Combine(directory.FullName, "config", "project_config.json"))) return directory.FullName;
                 directory = directory.Parent;
             }
             return null;

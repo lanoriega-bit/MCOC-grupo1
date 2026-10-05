@@ -92,7 +92,7 @@ namespace Mcoc.UnityViewer
                     string repository=FindRepositoryRoot();
                     if(repository!=null)
                     {
-                        string sourcePath=Path.Combine(repository,"entregas","P1L5","modelo_central","analysis_settings.json");
+                        string sourcePath=Path.Combine(repository,"config","analysis_settings.json");
                         if(!File.Exists(sourcePath)||CurrentVersionGate.HashFile(sourcePath)!=currentContract.analysis_settings_sha256)
                             currentGateStatus="SOURCE_SETTINGS_MODIFIED_REANALYSIS_REQUIRED";
                     }

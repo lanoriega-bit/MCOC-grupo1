@@ -1,5 +1,14 @@
 # P1L2 Status
 
+## Reorganización funcional — Editor CURRENT (2026-10-05)
+
+- Editor abierto; scripts recompilados tras actualizar Assets.
+- Corregidas rutas del gate de configuración y detección de raíz a `config/`.
+- Play/Edit y demo CURRENT PASS: selección, casos, deformada, diagramas y R.
+- Modelo/cargas/resultados/capacidad/AR intactos: 120/120 archivos protegidos iguales.
+- Traslado Unity y pruebas AR Play/dispositivo aún pendientes.
+- Evidencia: `reports/repository_architecture_audit/EDITOR_RUNTIME_CHECKPOINT.md`.
+
 ## Reorganización funcional — integración AR (2026-10-05)
 
 - Scripts/escena/suites AR finales integrados selectivamente desde `862da8c`.
