@@ -15,8 +15,9 @@ from fe_support_graph import unsupported_components
 ROOT = Path(__file__).resolve().parents[2]
 CENTRAL = ROOT / "model"
 ANALYSIS = ROOT / "results"
-STREAM = ROOT / "entregas/P1L3/José/viewer_unity/Assets/StreamingAssets"
-HERE = ROOT / "entregas/P1L6/current_cleanup"
+PROJECT_CONFIG = json.loads((ROOT / "config/project_config.json").read_text(encoding="utf-8-sig"))
+STREAM = ROOT / PROJECT_CONFIG["paths"]["unity"] / "Assets" / "StreamingAssets"
+HERE = ROOT / "results/validation"
 
 
 def read(path: Path) -> dict:

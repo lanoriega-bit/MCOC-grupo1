@@ -11,7 +11,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 CENTRAL = ROOT / "model"
-STREAMING = ROOT / "entregas" / "P1L3" / "José" / "viewer_unity" / "Assets" / "StreamingAssets"
+PROJECT_CONFIG = json.loads((ROOT / "config/project_config.json").read_text(encoding="utf-8-sig"))
+STREAMING = ROOT / PROJECT_CONFIG["paths"]["unity"] / "Assets" / "StreamingAssets"
 REQUEST = STREAMING / "p1l5_modification_request.json"
 
 

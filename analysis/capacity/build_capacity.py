@@ -23,7 +23,8 @@ from current_contract_config import DEFAULT_R_COEFFICIENTS
 
 ROOT = Path(__file__).resolve().parents[2]
 CENTRAL = ROOT / "model"
-STREAM = ROOT / "entregas" / "P1L3" / "José" / "viewer_unity" / "Assets" / "StreamingAssets"
+PROJECT_CONFIG = json.loads((ROOT / "config/project_config.json").read_text(encoding="utf-8-sig"))
+STREAM = ROOT / PROJECT_CONFIG["paths"]["unity"] / "Assets" / "StreamingAssets"
 RESULTS = ROOT / "results"
 OUT = ROOT / "results/capacity/current_capacity.json"
 STREAM_OUT = STREAM / "p1l6_current_capacity.json"

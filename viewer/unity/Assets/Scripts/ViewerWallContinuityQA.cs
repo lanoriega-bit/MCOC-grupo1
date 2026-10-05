@@ -77,7 +77,7 @@ namespace Mcoc.UnityViewer
             foreach (var pair in colors) if (pair.Key.material.color != pair.Value) restored = false;
             check("D/C colours restore", restored);
             string root = Path.GetFullPath(Path.Combine(Application.dataPath, "../../../../.."));
-            string folder = Path.Combine(root, "entregas", "P1L6", "wall_continuity");
+            string folder = Path.Combine(root, "results", "validation", "wall_continuity");
             Directory.CreateDirectory(folder);
             foreach (string view in new[] { "Iso", "Planta", "Frente", "Lateral" })
             {

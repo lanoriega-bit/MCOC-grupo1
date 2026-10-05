@@ -18,7 +18,7 @@ namespace Mcoc.UnityViewer
             check("startup nodes ON",typeVisible["node"]);
             check("startup slabs OFF",!typeVisible["slab"]&&(!typeVisible.ContainsKey("architectural_slab")||!typeVisible["architectural_slab"]));
             check("startup capacity OFF",!structuralFailureVisualizationEnabled);
-            string folder=outputFolder??Path.Combine(FindRepositoryRoot(),"entregas","P1L6","visual_ux");
+            string folder=outputFolder??Path.Combine(FindRepositoryRoot(),"results","validation","visual_ux");
             Directory.CreateDirectory(folder);
             ResetPresentation();SetQuickView("Iso");
             foreach(string type in new[]{"beam","column","wall"})

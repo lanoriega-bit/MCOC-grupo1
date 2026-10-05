@@ -1,13 +1,18 @@
-# Realidad aumentada
+# AR — organización, sin intervención funcional
 
-Generación en `data/`, matemática/consultas en `transforms/`, validación en `tests/`
-y guía de runtime en `tracking/`. El dataset vigente coincide con
-`origin/p1l7/ar-final-search`: sus funciones de colocación, escalas, selección y
-diagramas se integraron junto con su escena y pruebas, sin sustituir datos.
+AR está fuera del alcance funcional de esta etapa. No ejecutar pruebas AR,
+abrir escenas AR, regenerar datasets, comparar resultados ni integrar nuevas funciones.
 
-Consume modelo/resultados mediante derivados; el móvil no ejecuta OpenSees.
-La generación escribe un único dataset en StreamingAssets del Viewer configurado.
-La copia predecesora queda fuera del pipeline activo, pendiente de limpieza.
-Runtime y suites compilan offline con referencias cacheadas; Editor compile/Play
-está pendiente por licencia. No declarar integración funcional completa antes de
-validar la escena en el Editor y cerrar el checkpoint.
+## Ubicaciones
+
+- `data/`: productores existentes, sin ejecución en esta etapa.
+- `transforms/`: matemática y consultas existentes.
+- `tests/`: validadores existentes, no ejecutados en esta etapa.
+- `tracking/`: documentación de runtime.
+- `viewer/unity/Assets/AR`, `Assets/Scripts/P1L6AR` y escenas AR: assets ligados
+  al proyecto Unity y sus GUID. Se trasladan con el proyecto, conservando código,
+  datos y `.meta`, sin cambiar tracking, anchors, transforms ni comportamiento.
+- Suites Unity AR: `viewer/unity/Tests/AR*`, conservadas sin ejecutarlas.
+
+No se certifica funcionalidad AR en este checkpoint. El pipeline desktop no debe
+invocar módulos AR. Las evidencias anteriores son históricas, no pruebas de esta etapa.

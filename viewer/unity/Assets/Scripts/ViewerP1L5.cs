@@ -241,7 +241,7 @@ namespace Mcoc.UnityViewer
         {
             string root = FindRepositoryRoot();
             if (string.IsNullOrEmpty(root)) { p1l5ModificationMessage = "No se encontró la raíz del repositorio. Usa build_and_validate.ps1."; return; }
-            string script = Path.Combine(root, "entregas", "P1L7", "reanalyse_current.ps1");
+            string script = Path.Combine(root, "tools", "reanalyse_current.ps1");
             try
             {
                 p1l5ModificationMessage = "Reanalizando... Unity puede quedar inmóvil unos segundos.";

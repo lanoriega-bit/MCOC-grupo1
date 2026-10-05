@@ -16,7 +16,7 @@ La configuración está en `config/`. Las losas permanecen dentro del modelo.
 
 Los módulos principales ya están en `analysis/`, con validación y pruebas de Q,
 superposición, capacidad y Fiber. Los resultados vigentes están en `results/`.
-Algunos auxiliares y el proyecto Unity aún están en sus ubicaciones anteriores.
+El proyecto Unity productivo está en `viewer/unity/`; algunos auxiliares aún están en sus ubicaciones anteriores.
 No deben archivarse hasta cerrar su migración y QA. El menú y los módulos CURRENT
 consumen las nuevas fuentes.
 
@@ -30,14 +30,17 @@ consumen las nuevas fuentes.
 | `analysis/postprocessing/` | Superposición, contratos y exportación |
 | `results/` | Resultados y QA generados, no fuentes editables |
 | `viewer/unity/` | Único proyecto Unity activo |
-| `ar/` | Generación, transformaciones y documentación de AR |
+| `ar/` | Archivos AR organizados; funcionalidad fuera del alcance de esta etapa |
 | `tools/` | Entradas públicas reproducibles y fail-closed |
 | `tests/` | Pruebas por dominio |
 | `archive/` | Historia fuera del pipeline activo |
 
 Una fuente puede generar una copia de consumo dentro de StreamingAssets;
 esa copia se regenera, no se mantiene manualmente como segundo modelo.
-Las funciones AR finales se integrarán sin copiar un segundo dataset equivalente.
+AR queda congelado funcionalmente: no ejecutar pruebas, escenas, generación ni
+comparación de resultados AR. Los assets ligados a GUID/escenas Unity se conservan
+intactos dentro del proyecto trasladado; no se desacoplan arbitrariamente.
+El comando desktop `tools/reanalyse_current.ps1` no invoca pasos AR.
 
 ## Equivalencia
 

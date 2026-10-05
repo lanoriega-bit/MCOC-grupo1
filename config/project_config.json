@@ -7,15 +7,15 @@
     "loads": "model/loads.json",
     "analysis_settings": "config/analysis_settings.json",
     "results": "results/manifest.json",
-    "unity": "entregas/P1L3/José/viewer_unity",
-    "contract": "entregas/P1L3/José/viewer_unity/Assets/StreamingAssets/current_dataset_contract.json",
+    "unity": "viewer/unity",
+    "contract": "viewer/unity/Assets/StreamingAssets/current_dataset_contract.json",
     "luis_reference": "entregas/P1L2/unity_export/model_viewer.json"
   },
   "historical_property_paths": {
     "sections": "entregas/P1L5/modelo_central/sections.json",
     "materials": "entregas/P1L5/modelo_central/materials.json"
   },
-  "architecture_stage": "AR_INTEGRATED_EDITOR_QA_AND_VIEWER_RELOCATION_PENDING",
+  "architecture_stage": "VIEWER_RELOCATED_DESKTOP_QA_PENDING_AR_ORGANIZATION_ONLY",
   "validators": [
     "tests/model/validate_model.py",
     "tests/model/validate_pipeline.py"

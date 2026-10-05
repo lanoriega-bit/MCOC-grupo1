@@ -1,6 +1,6 @@
 param()
 $ErrorActionPreference = 'Stop'
-$repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '../..')).Path
+$repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
 $pythonExe = Join-Path $repoRoot '.venv-p1l5/Scripts/python.exe'
 if (-not (Test-Path -LiteralPath $pythonExe)) {
     throw 'Crea .venv-p1l5 e instala requirements.txt según README antes del reanálisis.'
@@ -16,11 +16,8 @@ try {
         'analysis/opensees/run_cases.py',
         'analysis/capacity/build_capacity.py',
         'analysis/postprocessing/export_unity.py',
-        'entregas/P1L6/desktop/export_current_member_identity.py',
-        'entregas/P1L6/desktop/export_current_materials.py',
-        'ar/data/build_dataset.py',
-        'ar/transforms/build_geometry_overlay.py',
-        'ar/tests/validate_ar_dataset.py',
+        'analysis/postprocessing/export_member_identity.py',
+        'analysis/postprocessing/export_materials.py',
         'tests/model/validate_pipeline.py'
     )
     foreach ($script in $scripts) {

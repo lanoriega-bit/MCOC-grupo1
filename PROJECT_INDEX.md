@@ -7,10 +7,10 @@ histórica; sus conteos y estados no sustituyen los datos CURRENT.
 
 | Componente | Ruta | Cómo usar |
 | --- | --- | --- |
-| Geometría, IDs, aliases y topología FE | `entregas/P1L5/modelo_central/model_master.json` | Fuente única; cambios trazables por ID |
-| Secciones | `entregas/P1L5/modelo_central/sections.json` | Propiedades geométricas |
-| Materiales | `entregas/P1L5/modelo_central/materials.json` | Propiedades elásticas y resistentes separadas |
-| Cargas | `entregas/P1L5/modelo_central/loads.json` | Catálogo, tributarias y aplicación CURRENT |
+| Geometría, IDs, aliases y topología FE | `model/model_master.json` | Fuente única; cambios trazables por ID |
+| Secciones | `model/sections.json` | Propiedades geométricas |
+| Materiales | `model/materials.json` | Propiedades elásticas y resistentes separadas |
+| Cargas | `model/loads.json` | Catálogo, tributarias y aplicación CURRENT |
 | Rutas del menú | `config/project_config.json` | No contiene propiedades estructurales |
 
 Las modificaciones físicas requieren QA y reanálisis antes de presentar resultados como vigentes.
@@ -21,15 +21,15 @@ No ejecutar bootstrap ni migraciones antiguas como rutina.
 | Función | Archivo/carpeta |
 | --- | --- |
 | Entrada y menú | `main.py`, `Proyecto.bat` |
-| Validador canónico | `entregas/P1L5/modelo_central/validate_central_model.py` |
+| Validador canónico | `tests/model/validate_model.py` |
 | Reconstrucción topología | `entregas/P1L5/modelo_central/rebuild_central_fe_topology.py` |
 | Derivados geométricos | `entregas/P1L5/modelo_central/build_central_derivatives.py` |
 | Cargas y tributarias | `entregas/P1L5/analysis/build_current_loads.py` |
-| OpenSees | `entregas/P1L5/analysis/run_current_opensees.py` |
-| Resultados actuales | `entregas/P1L5/analysis/results/current/` |
-| Adaptador de resultados Unity | `entregas/P1L5/analysis/export_current_to_unity.py` |
-| Capacidad CURRENT | `entregas/P1L5/analysis/build_current_capacity.py` |
-| QA integrado, hashes, equilibrio y crosswalk | `entregas/P1L6/current_cleanup/validate_current_pipeline.py` |
+| OpenSees | `analysis/opensees/run_cases.py` |
+| Resultados actuales | `results/` |
+| Adaptador de resultados Unity | `analysis/postprocessing/export_unity.py` |
+| Capacidad CURRENT | `analysis/capacity/build_capacity.py` |
+| QA integrado, hashes, equilibrio y crosswalk | `tests/model/validate_pipeline.py` |
 | QA de la última corrección primaria | `entregas/P1L6/wall_continuity/validate_corrected_cores.py` |
 
 `Validar_Modelo.bat` verifica CURRENT, no el bundle histórico.
@@ -39,7 +39,7 @@ No es una comprobación de solo lectura ni el botón para empezar a usar el proy
 
 ## Unity único
 
-Proyecto: `entregas/P1L3/José/viewer_unity/`.
+Proyecto: `viewer/unity/` (configurado en `config/project_config.json`).
 Escena de escritorio: `Assets/Main.unity`.
 Código: `Assets/Scripts/`; herramientas del editor: `Assets/Editor/`.
 Datos generados: `Assets/StreamingAssets/`, nunca editar a mano como fuente.

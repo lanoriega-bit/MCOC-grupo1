@@ -7,18 +7,10 @@ import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[2]
 SOURCE = ROOT / "model" / "model_master.json"
-TARGET = (
-    ROOT
-    / "entregas"
-    / "P1L3"
-    / "José"
-    / "viewer_unity"
-    / "Assets"
-    / "StreamingAssets"
-    / "p1l6_current_member_identity.json"
-)
+PROJECT_CONFIG = json.loads((ROOT / "config/project_config.json").read_text(encoding="utf-8-sig"))
+TARGET = ROOT / PROJECT_CONFIG["paths"]["unity"] / "Assets/StreamingAssets/p1l6_current_member_identity.json"
 
 
 def main() -> None:

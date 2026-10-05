@@ -1,5 +1,14 @@
 # P1L2 Status
 
+## Reorganización funcional — traslado desktop (2026-10-05)
+
+- Unity productivo trasladado a `viewer/unity/`, con GUID/.meta conservados.
+- Compile/Play desde Unity Hub PASS: selección, casos, deformada, diagramas y R.
+- QA modelo PASS; pipeline PASS_WITH_EXPLICIT_NOTES; 117/117 protegidos desktop idénticos.
+- AR limitado a organización; no se ejecutaron pruebas ni regeneración AR.
+- Sin reanálisis ni modificación de resultados. Copia limpia/archivo final pendientes.
+- Evidencia: `reports/repository_architecture_audit/DESKTOP_RELOCATION.md`.
+
 ## Reorganización funcional — Editor CURRENT (2026-10-05)
 
 - Editor abierto; scripts recompilados tras actualizar Assets.

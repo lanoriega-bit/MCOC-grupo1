@@ -14,7 +14,7 @@ namespace Mcoc.UnityViewer
         {
             var checks=new List<WallReviewCheck>();
             Action<string,bool> check=(name,pass)=>checks.Add(new WallReviewCheck{check=name,pass=pass});
-            string folder=Path.Combine(FindRepositoryRoot(),"entregas","P1L6","slab_reconstruction","p1_lateral_qa");
+            string folder=Path.Combine(FindRepositoryRoot(),"results","validation","slabs_lateral");
             Directory.CreateDirectory(folder);
             check("CURRENT results verified",currentResultsAvailable);
             check("CAD layers not constructed",!allElements.Exists(e=>e.category=="axis"||e.category=="slab_edge"||e.category=="cad_reference"));
@@ -64,7 +64,7 @@ namespace Mcoc.UnityViewer
         {
             var checks=new List<WallReviewCheck>();
             Action<string,bool> check=(name,pass)=>checks.Add(new WallReviewCheck{check=name,pass=pass});
-            string folder=outputFolder??Path.Combine(FindRepositoryRoot(),"entregas","P1L6","slab_reconstruction","unity_qa");
+            string folder=outputFolder??Path.Combine(FindRepositoryRoot(),"results","validation","slabs_unity");
             Directory.CreateDirectory(folder);
             ResetPresentation();
             check("slabs default OFF",!typeVisible["slab"]);

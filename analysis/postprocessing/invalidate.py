@@ -3,7 +3,8 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-STREAM = ROOT / "entregas/P1L3/José/viewer_unity/Assets/StreamingAssets"
+PROJECT_CONFIG = json.loads((ROOT / "config/project_config.json").read_text(encoding="utf-8-sig"))
+STREAM = ROOT / PROJECT_CONFIG["paths"]["unity"] / "Assets" / "StreamingAssets"
 
 
 def main():
