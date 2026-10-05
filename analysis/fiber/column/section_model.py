@@ -19,9 +19,9 @@ from matplotlib.patches import Circle, Rectangle
 import openseespy.opensees as ops
 
 
-ROOT = Path(__file__).resolve().parents[1]
-CONFIG_PATH = ROOT / "datos" / "seccion_estudio.json"
-RESULTS_DIR = ROOT / "results"
+ROOT = Path(__file__).resolve().parents[3]
+CONFIG_PATH = ROOT / "analysis/fiber/sections/column_study.json"
+RESULTS_DIR = ROOT / "results/fiber/column"
 FIBER_SECTION_FIGURE_PATH = RESULTS_DIR / "fiber_section.png"
 
 CONCRETE_MAT_TAG = 1

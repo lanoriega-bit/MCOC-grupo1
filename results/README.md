@@ -5,5 +5,5 @@ Los resultados CURRENT guardados todavía están en
 Esta carpeta ya recibe `validation/model_preview/`, contrato FE generado desde
 `model/`, ignorado por Git y distinto de los resultados analizados.
 
-Generar preview: `python entregas/P1L5/modelo_central/build_central_derivatives.py`.
+Generar preview: `python analysis/opensees/build_fe.py`.
 No editar resultados manualmente ni interpretar el preview como análisis ejecutado.

@@ -1,6 +1,13 @@
 # Análisis
 
-Destino de OpenSees, capacidad, Fiber y postproceso. Migración de código pendiente.
-Recibe fuentes de `model/` y `config/`; generará resultados y contratos de consumo.
-Mientras se trasladan los módulos, usar `python main.py validar` y el pipeline
-existente. No crear una segunda implementación ni borrar sus predecesores.
+Implementaciones existentes trasladadas por función: `opensees/`, `capacity/`,
+`fiber/` y `postprocessing/`. Reciben fuentes de `model/` y `config/`; generan
+resultados y contratos de consumo. No hay una segunda implementación de esos
+módulos en sus ubicaciones anteriores.
+
+Generar FE preview: `python analysis/opensees/build_fe.py`.
+Validar: `python main.py validar`. Capacidad aproximada y Fiber son métodos
+distintos: consultar [Fiber](fiber/README.md).
+
+Migración de resultados y exportadores auxiliares pendiente: algunas rutas de
+salida aún son semanales. No borrar históricos antes del QA global.

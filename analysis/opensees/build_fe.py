@@ -15,7 +15,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[2]
 HERE = ROOT / "model"
 OUT = ROOT / "results" / "validation" / "model_preview"
 

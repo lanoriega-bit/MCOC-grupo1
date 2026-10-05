@@ -15,9 +15,9 @@ from pathlib import Path
 import openseespy.opensees as ops
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[2]
 CENTRAL = ROOT / "model"
-OUT = Path(__file__).resolve().parent / "results" / "current"
+OUT = ROOT / "entregas/P1L5/analysis/results/current"
 
 
 def read(path: Path) -> dict:

@@ -12,7 +12,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT = Path(__file__).resolve().parent / "fiber_studies"
+OUT = ROOT / "entregas/P1L7/fiber_studies"
 
 
 def plot_partial_pm(rows, output, title, moment_key, status_key="valid"):
@@ -57,7 +57,7 @@ def main():
                             "status" if name == "column" else "valid")
         print("PASS: plots redrawn from recorded CSV; no invalid interval bridged; no result changed")
         return
-    sys.path.insert(0, str(ROOT / "entregas/P1L3/capacidad_ha/opensees"))
+    sys.path.insert(0, str(ROOT / "analysis/fiber/column"))
     section = importlib.import_module("section_model")
     mc = importlib.import_module("moment_curvature")
     pm = importlib.import_module("pm_interaction")
@@ -81,7 +81,7 @@ def main():
     pm.write_axial_csv(axial)
     pm.write_pm_csv(points)
     plot_partial_pm(points, pm.PM_FIGURE_PATH, "P–M columna (sección 2D)", "max_moment_kNm", "status")
-    sys.path.insert(0, str(ROOT / "entregas/P1L4/demanda_capacidad/opensees"))
+    sys.path.insert(0, str(ROOT / "analysis/fiber/wall"))
     wall_section = importlib.import_module("wall_section_model")
     wall_pm = importlib.import_module("wall_pm_interaction")
     wall_config = wall_section.load_config()
@@ -98,8 +98,8 @@ def main():
         "column_Mphi_steps":steps,"column_Mphi_complete":True,
         "column_PM_statuses":{r["case"]:r["status"] for r in points},
         "wall_PM_valid":sum(r["valid"] for r in wall_points),"wall_PM_total":len(wall_points),
-        "column_source":"entregas/P1L3/capacidad_ha/datos/seccion_estudio.json",
-        "wall_source":"entregas/P1L4/demanda_capacidad/datos/wall_section_estudio.json"}
+        "column_source":"analysis/fiber/sections/column_study.json",
+        "wall_source":"analysis/fiber/sections/wall_study.json"}
     (OUT / "QA.json").write_text(json.dumps(summary,indent=2)+"\n",encoding="utf-8")
     (col / "section_config.json").write_text(json.dumps(config,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
     (wall / "section_config.json").write_text(json.dumps(wall_config,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")

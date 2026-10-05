@@ -12,11 +12,11 @@ from pathlib import Path
 from fe_support_graph import unsupported_components
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[2]
 CENTRAL = ROOT / "model"
 ANALYSIS = ROOT / "entregas/P1L5/analysis"
 STREAM = ROOT / "entregas/P1L3/José/viewer_unity/Assets/StreamingAssets"
-HERE = Path(__file__).resolve().parent
+HERE = ROOT / "entregas/P1L6/current_cleanup"
 
 
 def read(path: Path) -> dict:

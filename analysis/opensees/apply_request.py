@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[2]
 CENTRAL = ROOT / "model"
 STREAMING = ROOT / "entregas" / "P1L3" / "José" / "viewer_unity" / "Assets" / "StreamingAssets"
 REQUEST = STREAMING / "p1l5_modification_request.json"

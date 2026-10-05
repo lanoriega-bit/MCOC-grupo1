@@ -16,14 +16,16 @@ from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "postprocessing"))
 from current_contract_config import DEFAULT_R_COEFFICIENTS
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[2]
 CENTRAL = ROOT / "model"
 STREAM = ROOT / "entregas" / "P1L3" / "José" / "viewer_unity" / "Assets" / "StreamingAssets"
-RESULTS = Path(__file__).resolve().parent / "results" / "current"
-OUT = Path(__file__).resolve().parent / "generated" / "current_capacity.json"
+RESULTS = ROOT / "entregas/P1L5/analysis/results/current"
+OUT = ROOT / "entregas/P1L5/analysis/generated/current_capacity.json"
 STREAM_OUT = STREAM / "p1l6_current_capacity.json"
 
 

@@ -18,8 +18,8 @@ Unidades: m, N, Pa. Véase [diccionario](DATA_DICTIONARY.md).
 Configuración de análisis: `config/analysis_settings.json`. qQ y λQ no son lo mismo.
 Los valores no fueron modificados durante el traslado.
 
-Checkpoint de migración: los ejecutables aún conservan ubicaciones semanales.
+Checkpoint de migración: los módulos principales están en `analysis/`.
 Validar con `python main.py validar`; generar el contrato FE de comprobación con
-`python entregas/P1L5/modelo_central/build_central_derivatives.py`.
+`python analysis/opensees/build_fe.py`.
 Este último no ejecuta OpenSees ni sustituye resultados. Las entradas funcionales
 de `tools/` se consolidarán junto con los módulos de análisis.

@@ -14,9 +14,9 @@ from pathlib import Path
 import openseespy.opensees as ops
 
 
-ROOT = Path(__file__).resolve().parents[1]
-CONFIG_PATH = ROOT / "datos" / "wall_section_estudio.json"
-RESULTS_DIR = ROOT / "results"
+ROOT = Path(__file__).resolve().parents[3]
+CONFIG_PATH = ROOT / "analysis/fiber/sections/wall_study.json"
+RESULTS_DIR = ROOT / "results/fiber/wall"
 
 CONCRETE_MAT_TAG = 101
 STEEL_MAT_TAG = 102

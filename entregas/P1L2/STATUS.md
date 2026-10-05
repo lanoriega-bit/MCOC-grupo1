@@ -1,5 +1,13 @@
 # P1L2 Status
 
+## Reorganización funcional — implementaciones (2026-10-05)
+
+- OpenSees/capacidad/postproceso/Fiber trasladados a `analysis/`; tests a `tests/`.
+- Algoritmos conservados; rutas/imports ajustados, pipeline y superposición PASS.
+- Fiber ejecutado en carpeta temporal: cuatro CSV exactamente iguales a históricos.
+- Baseline 120/120 protegido; no se sustituyen resultados o datasets.
+- Resultados, auxiliares, Unity/AR e histórico siguen pendientes de las siguientes fases.
+
 ## Reorganización funcional — fuentes canónicas (2026-10-05)
 
 - Fuentes únicas trasladadas a `model/` mediante `git mv`; configuración en `config/`.

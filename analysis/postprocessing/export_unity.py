@@ -16,9 +16,9 @@ from shapely import constrained_delaunay_triangles
 from current_contract_config import DEFAULT_R_COEFFICIENTS
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[2]
 CENTRAL = ROOT / "model"
-RESULTS = Path(__file__).resolve().parent / "results" / "current"
+RESULTS = ROOT / "entregas/P1L5/analysis/results/current"
 STREAMING = ROOT / "entregas" / "P1L3" / "José" / "viewer_unity" / "Assets" / "StreamingAssets"
 TARGET = STREAMING / "p1l5_current_analysis_cases.json"
 METADATA_TARGET = STREAMING / "p1l5_current_structural_metadata.json"
@@ -178,7 +178,7 @@ def main() -> None:
         "qa": {"element_count": len(metadata_elements), "unique_opensees_tags": len({x["opensees_tag"] for x in metadata_elements}), "unique_analysis_ids": len({x["analysis_id"] for x in metadata_elements}), "support_count": len(master["fe_topology"]["support_node_tags"]), "all_nodes_exist": True, "all_local_axes_unit_and_orthogonal": True},
     }
     write(METADATA_TARGET, metadata)
-    panel_contract = read(Path(__file__).resolve().parent / "generated" / "current_tributary_panels.json")
+    panel_contract = read(ROOT / "entregas/P1L5/analysis/generated/current_tributary_panels.json")
     tributary_areas = []
     total_area = 0.0
     total_load_kn = 0.0
@@ -226,7 +226,7 @@ def main() -> None:
         "areas": tributary_areas, "point_areas": [],
         "data_state": "CURRENT_RECOMPUTED", "source": "P1L5 current_tributary_panels.json",
     })
-    current_element_loads = read(Path(__file__).resolve().parent / "generated" / "current_loads_by_element.json")
+    current_element_loads = read(ROOT / "entregas/P1L5/analysis/generated/current_loads_by_element.json")
     for row in current_element_loads.get("elements", []):
         area = float(row.get("Q", {}).get("tributary_area_m2", 0.0) or 0.0)
         force = float(row.get("Q", {}).get("surface_force_N", 0.0) or 0.0)

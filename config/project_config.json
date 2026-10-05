@@ -15,9 +15,9 @@
     "sections": "entregas/P1L5/modelo_central/sections.json",
     "materials": "entregas/P1L5/modelo_central/materials.json"
   },
-  "architecture_stage": "CANONICAL_SOURCES_MIGRATED_CODE_AND_VIEWER_PENDING",
+  "architecture_stage": "SOURCES_AND_ANALYSIS_MIGRATED_RESULTS_VIEWER_AR_PENDING",
   "validators": [
-    "entregas/P1L5/modelo_central/validate_central_model.py",
-    "entregas/P1L6/current_cleanup/validate_current_pipeline.py"
+    "tests/model/validate_model.py",
+    "tests/model/validate_pipeline.py"
   ]
 }
