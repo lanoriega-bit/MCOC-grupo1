@@ -246,6 +246,7 @@ namespace Mcoc.UnityViewer
             if (tributaries != null) BuildTributaries();
             BuildP1L4Loads();
             BuildPhysicalContext();
+            BuildVisualTerrain();
             seismic = null;
             if (seismic != null) BuildSeismic();
             historicalResultsEnabled = false;
@@ -1624,6 +1625,7 @@ namespace Mcoc.UnityViewer
                     ApplyVisibility(go,
                         registeredType.TryGetValue(go, out var type) ? type : kv.Key,
                         registeredFloor.TryGetValue(go, out var floor) ? floor : "");
+            UpdateVisualTerrainVisibility();
         }
 
         // ---------- Seleccion por clic ----------
@@ -3036,6 +3038,7 @@ namespace Mcoc.UnityViewer
 
         void ResetPresentation()
         {
+            visualTerrainVisible = lowerTerrainVisible = accessTerrainVisible = true;
             ExitPendingReview();
             historicalResultsEnabled = false;
             demandCapacityPlotVisible = false;

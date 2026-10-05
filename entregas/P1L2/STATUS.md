@@ -390,3 +390,12 @@ con XY, altura, material e IDs preservados. FE 677 segmentos, 1170 nodos,
 669 registros y export CURRENT_VERIFIED con hashes coherentes.
 Muros duplicados y solapes accidentales: 0. Luis original intacto.
 Véase `entregas/P1L6/wall_continuity/WALL_CONTINUITY_AFTER.md`.
+
+## Contexto visual de terreno — 2026-10-04
+
+Dos niveles de terreno/plataforma en el viewer, sin cambio estructural:
+13 columnas ED1 S1 C-007–C-019 cubiertas visualmente; acceso exterior junto
+a P1 V-106/V-107 hasta base de P2. Controles independientes en Contexto.
+Unity Main/Play, Right/ISO, selección y filtro S1 comprobados. CURRENT,
+OpenSees y AR intactos; Luis original sin cambios. QA y alcance esquemático:
+`entregas/P1L7/visual_terrain/RUNTIME_VALIDATION.md`.

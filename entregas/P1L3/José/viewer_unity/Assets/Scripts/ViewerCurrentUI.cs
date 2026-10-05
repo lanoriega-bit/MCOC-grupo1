@@ -283,6 +283,7 @@ namespace Mcoc.UnityViewer
             }
             if (Accordion("CONTEXTO"))
             {
+                DrawVisualTerrainControls();
                 LayerToggle("Contexto físico · solo visual","physical_context");
                 if (contextVisible.Count==0)
                     foreach(var item in allElements) if(!string.IsNullOrEmpty(item.physicalCluster)) contextVisible[item.physicalCluster]=true;
@@ -292,7 +293,7 @@ namespace Mcoc.UnityViewer
                     bool next=GUILayout.Toggle(contextVisible[cluster],friendly,GUILayout.Height(25));
                     if(next!=contextVisible[cluster]){contextVisible[cluster]=next;ReapplyAll();}
                 }
-                GUILayout.Label("Escaleras y accesos son contexto documentado. Terreno métrico y superficies no confirmadas siguen pendientes.",currentBody);
+                GUILayout.Label("Escaleras y accesos: contexto. Terreno nuevo esquemático, sin participación FE; no representa una topografía medida.",currentBody);
                 if(GUILayout.Button("Inspeccionar núcleo · Piso 4",currentButton))
                 {var core=allElements.Find(e=>e!=null&&e.humanId=="E1-P4-M-007");if(core!=null)Select(core);}
             }
