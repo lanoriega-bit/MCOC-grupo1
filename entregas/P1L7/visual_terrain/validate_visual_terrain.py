@@ -39,6 +39,9 @@ def main():
     site_ymax = max([access_ymax] + [s["center"][1] + s["depth_m"] / 2 for s in all_columns]) + 12
     site_bottom = min([bottom] + [s["center"][2] - s["height_m"] / 2 - .6 for s in all_columns])
     site_top = site_bottom + .6 - .04
+    # Revision 3: terraces span both lateral site edges and the upper terrace
+    # reaches the exterior X perimeter. Shared boundary removes box overlap.
+    xmax, ymin, ymax = near, site_ymin, site_ymax
     covered = {s["human_id"]: s["category"] == "column" and
                xmin <= s["center"][0] - s["width_m"] / 2 <= s["center"][0] + s["width_m"] / 2 <= xmax and
                ymin <= s["center"][1] - s["depth_m"] / 2 <= s["center"][1] + s["depth_m"] / 2 <= ymax and
@@ -78,6 +81,9 @@ def main():
         "no angled terrain mesh": "new Mesh" not in source and "CreateVisualAccessMass" not in source,
         "paving and grass are passive visual primitives": all(s in source for s in ("VISUAL_ONLY_ENTRY_PATH_TO_V106_V107", "VISUAL_ONLY_GRASS", "VISUAL_ONLY_CONTINUOUS_SITE_FUTURE_CONTEXT", "PrimitiveType.Cube")),
         "grass body and cap avoid coincident top faces": "bodyBounds.SetMinMax" in source,
+        "terraces use the same lateral perimeter": "TerrainBox(xmin - TerrainMargin, near, siteBounds.min.y" in source and "TerrainBox(near, siteBounds.max.x, siteBounds.min.y" in source,
+        "upper terrace and path reach exterior site edge": "TerrainBox(near, siteBounds.max.x, entryY - PathWidth / 2" in source,
+        "runtime QA checks shared boundary and perimeter": "bool perimeter =" in source and "covered && passive && perimeter" in source,
     })
     tracked = subprocess.check_output(["git", "ls-files", "-z", "--", *protected], cwd=ROOT).decode("utf-8").split("\0")
     hashes = {p: hashlib.sha256((ROOT / p).read_bytes()).hexdigest() for p in tracked if p and (ROOT / p).is_file()}
@@ -85,11 +91,11 @@ def main():
     report = {"status": "PASS" if all(checks.values()) else "FAIL", "base_commit": BASE, "scope": "READ_ONLY_GEOMETRIC_AND_SOURCE_QA_NOT_UNITY_PLAY",
               "checks": checks, "covered_columns": covered, "unchanged_protected_files": len(hashes), "protected_sha256_digest": digest,
               "lower": {"xy_bounds_m": [xmin, xmax, ymin, ymax], "bottom_m": bottom, "top_m": entry["P1"]},
-              "access": {"xy_bounds_m": [near, near + 10, access_ymin, access_ymax], "top_m": entry["P2"], "flat_box_no_slope": True},
+              "access": {"xy_bounds_m": [near, site_xmax, site_ymin, site_ymax], "top_m": entry["P2"], "flat_box_no_slope": True},
               "site": {"xy_bounds_m": [site_xmin, site_xmax, site_ymin, site_ymax], "bottom_m": site_bottom - .4, "top_m": site_top},
-              "metric_scope": "Z and adjacency derived from CURRENT; margins 4/12 m, access length 10 m and path width 3 m are visual choices only",
-              "unity_play": "NOT_ASSESSED_BY_THIS_SCRIPT_SEE_TERRAIN_V2_VALIDATION_MD"}
-    (HERE / "VISUAL_TERRAIN_V2_QA.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
+              "metric_scope": "Z and adjacency derived from CURRENT; terraces extend to common site Y perimeter and upper X perimeter; initial margins 4/12 m, access seed 10 m and path width 3 m are visual choices only",
+              "unity_play": "NOT_ASSESSED_BY_THIS_SCRIPT_SEE_TERRAIN_V3_VALIDATION_MD"}
+    (HERE / "VISUAL_TERRAIN_V3_QA.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(report, indent=2))
     return 0 if report["status"] == "PASS" else 1
 

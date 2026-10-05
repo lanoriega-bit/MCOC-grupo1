@@ -407,3 +407,11 @@ y camino sobre el acceso P2. Reserva perimetral para contexto futuro.
 ISO/Right/Top, selección y filtro S1 comprobados en Play; 19 checks PASS,
 260 archivos protegidos intactos. Sin cambios estructurales, CURRENT ni AR.
 Diseño vigente: `entregas/P1L7/visual_terrain/TERRAIN_V2_VALIDATION.md`.
+
+### Terrazas visuales hasta el perímetro — revisión 3
+
+Los niveles intermedio y superior ahora alcanzan ambos bordes laterales del
+terreno general. El superior llega también al borde exterior de su base;
+camino prolongado hasta ese borde. Pasto, acceso P2 y cotas conservados.
+Main/Play y perímetros PASS; 22 checks PASS, 260 archivos protegidos intactos.
+Diseño vigente: `entregas/P1L7/visual_terrain/TERRAIN_V3_VALIDATION.md`.

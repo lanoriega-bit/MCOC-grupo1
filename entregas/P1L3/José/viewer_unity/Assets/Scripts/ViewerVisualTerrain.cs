@@ -60,12 +60,8 @@ namespace Mcoc.UnityViewer
                 bottom = Mathf.Min(bottom, c.z - (float)column.height_m / 2);
             }
             bottom -= TerrainBaseDepth;
-            lowerTerrainBounds = new Bounds(
-                new Vector3((xmin + xmax) / 2, (ymin + ymax) / 2, (bottom + lowerTerrainElevation) / 2),
-                new Vector3(xmax - xmin + 2 * TerrainMargin, ymax - ymin + 2 * TerrainMargin, lowerTerrainElevation - bottom));
             visualTerrainRoot = new GameObject("VISUAL_ONLY_TERRAIN_NO_FE");
             visualTerrainRoot.transform.SetParent(transform, false);
-            lowerTerrainObject = CreateTerrainTerrace("VISUAL_ONLY_LEVEL_1_S1_C007_C019", lowerTerrainBounds);
 
             // Only the exterior +X side, adjacent to the physical outer column/beam face.
             float near = Mathf.Max(V(beamA.start).x, V(beamA.end).x, V(beamB.start).x, V(beamB.end).x);
@@ -73,8 +69,6 @@ namespace Mcoc.UnityViewer
             near = Mathf.Max(near, xmax);
             float accessYmin = Mathf.Min(V(beamA.start).y, V(beamA.end).y, V(beamB.start).y, V(beamB.end).y) - TerrainMargin;
             float accessYmax = Mathf.Max(V(beamA.start).y, V(beamA.end).y, V(beamB.start).y, V(beamB.end).y) + TerrainMargin;
-            accessTerrainObject = CreateTerrainTerrace("VISUAL_ONLY_LEVEL_2_ACCESS_V106_V107",
-                TerrainBox(near, near + AccessRun, accessYmin, accessYmax, bottom, accessTerrainElevation));
             // A broad lower level supports BOTH wings without hiding their S1 columns.
             // It joins the two raised boxes below grade, rather than introducing a slope.
             float siteXmin = xmin, siteXmax = near + AccessRun, siteYmin = accessYmin, siteYmax = accessYmax;
@@ -90,13 +84,22 @@ namespace Mcoc.UnityViewer
                 siteBase = Mathf.Min(siteBase, p.z - (float)solid.height_m / 2 - TerrainBaseDepth);
             }
             float baseTop = siteBase + TerrainBaseDepth - .04f;
-            terrainBaseObject = CreateTerrainTerrace("VISUAL_ONLY_CONTINUOUS_SITE_FUTURE_CONTEXT",
-                TerrainBox(siteXmin - SiteMargin, siteXmax + SiteMargin, siteYmin - SiteMargin,
-                    siteYmax + SiteMargin, siteBase - .4f, baseTop));
+            var siteBounds = TerrainBox(siteXmin - SiteMargin, siteXmax + SiteMargin, siteYmin - SiteMargin,
+                siteYmax + SiteMargin, siteBase - .4f, baseTop);
+            terrainBaseObject = CreateTerrainTerrace("VISUAL_ONLY_CONTINUOUS_SITE_FUTURE_CONTEXT", siteBounds);
+            // Complete lateral bands reach the site's two Y edges. X separates the
+            // levels: retain the low ED2 sector, intermediate ED1, exterior P2 access.
+            // Adjacent raised boxes share one boundary, not overlapping interior pieces.
+            lowerTerrainBounds = TerrainBox(xmin - TerrainMargin, near, siteBounds.min.y,
+                siteBounds.max.y, bottom, lowerTerrainElevation);
+            lowerTerrainObject = CreateTerrainTerrace("VISUAL_ONLY_LEVEL_1_S1_C007_C019", lowerTerrainBounds);
+            var accessBounds = TerrainBox(near, siteBounds.max.x, siteBounds.min.y,
+                siteBounds.max.y, bottom, accessTerrainElevation);
+            accessTerrainObject = CreateTerrainTerrace("VISUAL_ONLY_LEVEL_2_ACCESS_V106_V107", accessBounds);
             // Flat paved route on the elevated terrace, no false ramp between levels.
             float entryY = (accessYmin + accessYmax) / 2;
             CreateTerrainBox("VISUAL_ONLY_ENTRY_PATH_TO_V106_V107", accessTerrainObject.transform,
-                TerrainBox(near, near + AccessRun, entryY - PathWidth / 2, entryY + PathWidth / 2,
+                TerrainBox(near, siteBounds.max.x, entryY - PathWidth / 2, entryY + PathWidth / 2,
                     accessTerrainElevation + .006f, accessTerrainElevation + .025f), TerrainPaving());
             CreateTerrainBox("VISUAL_ONLY_ENTRY_FRONT_WALK", accessTerrainObject.transform,
                 TerrainBox(near, near + 1.5f, accessYmin + 1, accessYmax - 1,
@@ -112,8 +115,14 @@ namespace Mcoc.UnityViewer
                 var collider = child.GetComponent<Collider>();
                 if (child.GetComponent<ElementInfo>() != null || (collider != null && collider.enabled)) passive = false;
             }
-            if (covered && passive)
-                Debug.Log($"[VISUAL TERRAIN QA] PASS: 13 S1 columns covered; P1 entry={lowerTerrainElevation:F3} m; P2 entry={accessTerrainElevation:F3} m; passive context only; continuous site, box terraces and paved entry path.");
+            bool perimeter = Mathf.Abs(lowerTerrainBounds.min.y - siteBounds.min.y) < .001f &&
+                Mathf.Abs(lowerTerrainBounds.max.y - siteBounds.max.y) < .001f &&
+                Mathf.Abs(accessBounds.min.y - siteBounds.min.y) < .001f &&
+                Mathf.Abs(accessBounds.max.y - siteBounds.max.y) < .001f &&
+                Mathf.Abs(accessBounds.max.x - siteBounds.max.x) < .001f &&
+                Mathf.Abs(lowerTerrainBounds.max.x - accessBounds.min.x) < .001f;
+            if (covered && passive && perimeter)
+                Debug.Log($"[VISUAL TERRAIN QA] PASS: 13 S1 columns covered; P1 entry={lowerTerrainElevation:F3} m; P2 entry={accessTerrainElevation:F3} m; passive context only; full-width terraces reach site perimeter and share boundary.");
             else Debug.LogError("[VISUAL TERRAIN QA] FAIL: coverage/passive context. No structural data changed.");
         }
 

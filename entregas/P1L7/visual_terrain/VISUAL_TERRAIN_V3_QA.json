@@ -1,0 +1,78 @@
+{
+  "status": "PASS",
+  "base_commit": "88a463b36d8a7a319167d7dd9c2d415c798ef78c",
+  "scope": "READ_ONLY_GEOMETRIC_AND_SOURCE_QA_NOT_UNITY_PLAY",
+  "checks": {
+    "13 target columns geometrically covered": true,
+    "P2 entry equals referenced P1 beam top": true,
+    "reference beams parallel to canonical Y": true,
+    "elevated mass outside physical reference faces": true,
+    "two distinct nonzero levels": true,
+    "structural and CURRENT data unchanged": true,
+    "diff restricted to visual code documentation QA": true,
+    "passive construction": true,
+    "not a structural registry": true,
+    "visibility follows building floors diagnosis isolation": true,
+    "startup integration": true,
+    "visibility integration": true,
+    "context controls integrated": true,
+    "broad site surrounds both buildings": true,
+    "site top below every column base": true,
+    "continuous base overlaps raised terrace bases": true,
+    "no angled terrain mesh": true,
+    "paving and grass are passive visual primitives": true,
+    "grass body and cap avoid coincident top faces": true,
+    "terraces use the same lateral perimeter": true,
+    "upper terrace and path reach exterior site edge": true,
+    "runtime QA checks shared boundary and perimeter": true
+  },
+  "covered_columns": {
+    "E1-S1-C-007": true,
+    "E1-S1-C-008": true,
+    "E1-S1-C-009": true,
+    "E1-S1-C-010": true,
+    "E1-S1-C-011": true,
+    "E1-S1-C-012": true,
+    "E1-S1-C-013": true,
+    "E1-S1-C-014": true,
+    "E1-S1-C-015": true,
+    "E1-S1-C-016": true,
+    "E1-S1-C-017": true,
+    "E1-S1-C-018": true,
+    "E1-S1-C-019": true
+  },
+  "unchanged_protected_files": 260,
+  "protected_sha256_digest": "f078008112752032565004938ea6300636325e37121de07ea868d4ec981932b6",
+  "lower": {
+    "xy_bounds_m": [
+      40.806000000000004,
+      72.841,
+      -15.65,
+      32.627
+    ],
+    "bottom_m": -0.6,
+    "top_m": 3.9600000000000004
+  },
+  "access": {
+    "xy_bounds_m": [
+      72.841,
+      94.841,
+      -15.65,
+      32.627
+    ],
+    "top_m": 7.92,
+    "flat_box_no_slope": true
+  },
+  "site": {
+    "xy_bounds_m": [
+      -12.348,
+      94.841,
+      -15.65,
+      32.627
+    ],
+    "bottom_m": -1.0,
+    "top_m": -0.04
+  },
+  "metric_scope": "Z and adjacency derived from CURRENT; terraces extend to common site Y perimeter and upper X perimeter; initial margins 4/12 m, access seed 10 m and path width 3 m are visual choices only",
+  "unity_play": "NOT_ASSESSED_BY_THIS_SCRIPT_SEE_TERRAIN_V3_VALIDATION_MD"
+}
