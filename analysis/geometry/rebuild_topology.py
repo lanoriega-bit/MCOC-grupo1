@@ -149,7 +149,7 @@ def main() -> None:
                 "node_i": element["node_i"],
                 "node_j": element["node_j"],
                 "geometry_segment_index": index,
-                "source": "entregas/P1L5/modelo_central/model_master.json / rebuilt central FE topology",
+                "source": "model/model_master.json / rebuilt central FE topology",
                 "status": "CURRENT_GEOMETRY_NOT_RUN",
             }
             if analysis_id in assigned:
@@ -169,7 +169,7 @@ def main() -> None:
         "status": "APPROVED_FOR_ANALYSIS",
         "migrated_utc": timestamp,
         "provenance": {
-            "source": "entregas/P1L5/modelo_central/model_master.json",
+            "source": "model/model_master.json",
             "method": "central adapter + audited PRE5 physical-footprint topology algorithm",
             "legacy_algorithm": LEGACY_BUILDER.relative_to(ROOT).as_posix(),
             "opensees_executed": False,

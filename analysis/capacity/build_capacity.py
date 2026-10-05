@@ -142,7 +142,7 @@ def demand_payload(rows: list[dict]) -> dict:
             for index in range(min(6, len(vector))):
                 maxima[index] = max(maxima[index], abs(float(vector[index])))
     return {
-        "case_name": "R", "source_file": "entregas/P1L5/analysis/results/current/{G,Q,EX,EY}.json",
+        "case_name": "R", "source_file": "results/{G,Q,EX,EY}/result.json",
         "coefficients": DEFAULT_R_COEFFICIENTS,
         "selection_rule": "signed R superposition first; absolute envelope over CURRENT FE segments and both ends",
         "selected_end": selected_end,
@@ -193,10 +193,10 @@ def main() -> None:
             "section_id": row["section_id"],
             "demand": demand_payload(demands.get(row["element_id"], [])),
             "traceability": {
-                "geometry_source": "entregas/P1L5/modelo_central/model_master.json",
-                "analysis_source": "entregas/P1L5/analysis/results/current/{G,Q,EX,EY}.json",
+                "geometry_source": "model/model_master.json",
+                "analysis_source": "results/{G,Q,EX,EY}/result.json",
                 "demand_source": "CURRENT default R signed superposition then absolute envelope",
-                "capacity_source": "entregas/P1L5/analysis/build_current_capacity.py",
+                "capacity_source": "analysis/capacity/build_capacity.py",
                 "capacity_section_config": cap_signature,
                 "case_manifest": manifest["analysis_version"],
             },

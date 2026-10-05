@@ -170,10 +170,10 @@ def main() -> None:
             })
     metadata = {
         "format": "MCOC_P1L5_CURRENT_STRUCTURAL_METADATA_V2", "data_state": "CURRENT_WITH_DOCUMENTED_FALLBACKS",
-        "source": "entregas/P1L5/modelo_central/model_master.json + analysis/results/current",
+        "source": "model/model_master.json + results/",
         "units": {"length": "m", "force": "N", "moment": "N.m", "stress": "Pa"},
         "material": {"material_id": "PER_ELEMENT", "model": "LINEAR_ELASTIC", "E_pa": 28e9, "nu": 0.2, "G_pa": 28e9 / 2.4, "source": "P1L5 authorised approximation"},
-        "cases": [{"case_id": name, "folder": "current", "element_count": len(cases[0]["elements"]), "node_count": len(cases[0]["nodes"]), "manifest_source": "entregas/P1L5/analysis/results/current/manifest.json"} for name in ("G", "Q", "EX", "EY", "R")],
+        "cases": [{"case_id": name, "folder": "current", "element_count": len(cases[0]["elements"]), "node_count": len(cases[0]["nodes"]), "manifest_source": "results/manifest.json"} for name in ("G", "Q", "EX", "EY", "R")],
         "elements": metadata_elements,
         "supports": [{"support_id": f"FE-NODE-{tag}", "node_tag": tag, "floor": "BASE", "coord_m": [fe_nodes[str(tag)][k] for k in "xyz"], "UX": True, "UY": True, "UZ": True, "RX": True, "RY": True, "RZ": True} for tag in master["fe_topology"]["support_node_tags"]],
         "qa": {"element_count": len(metadata_elements), "unique_opensees_tags": len({x["opensees_tag"] for x in metadata_elements}), "unique_analysis_ids": len({x["analysis_id"] for x in metadata_elements}), "support_count": len(master["fe_topology"]["support_node_tags"]), "all_nodes_exist": True, "all_local_axes_unit_and_orthogonal": True},
@@ -233,7 +233,7 @@ def main() -> None:
         force = float(row.get("Q", {}).get("surface_force_N", 0.0) or 0.0)
         row["Q"]["average_surface_intensity_kN_m2"] = force / area / 1000.0 if area > 0.0 else None
     current_element_loads["status"] = "PASS_WITH_EXPLICIT_UNRESOLVED"
-    current_element_loads["source"] = "entregas/P1L5/analysis/generated/current_loads_by_element.json"
+    current_element_loads["source"] = "model/loads.json"
     write(LOADS_TARGET, current_element_loads)
     model_stream = STREAMING / "model_viewer.json"
     try:
@@ -255,9 +255,9 @@ def main() -> None:
         "cases": ["G", "Q", "EX", "EY", "R"], "basis_cases": ["G", "Q", "EX", "EY"],
         "analysis_available": True, "fe_approved": True, "loads_approved": True, "linear_verified": True,
         "payload_file": TARGET.name, "payload_sha256": sha256(TARGET),
-        "source_geometry": "entregas/P1L5/modelo_central/model_master.json",
-        "source_fe": "entregas/P1L5/modelo_central/model_master.json#/fe_topology",
-        "source_loads": "entregas/P1L5/modelo_central/loads.json",
+        "source_geometry": "model/model_master.json",
+        "source_fe": "model/model_master.json#/fe_topology",
+        "source_loads": "model/loads.json",
         "basis_policy": "Identical K, supports, local axes, node/member ordering and signed SI components.",
         "capacity_policy": "Demand changes by compatible linear superposition; section/material changes require reanalysis and capacity compatibility review.",
         "result_state": "CURRENT_WITH_DOCUMENTED_FALLBACKS",

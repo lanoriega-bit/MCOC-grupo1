@@ -139,7 +139,7 @@ def refresh(loads, master, config):
     app["generated_utc"] = datetime.now(timezone.utc).isoformat()
     app["basis"] = "FROZEN_CURRENT_TRIBUTARIES_UNIFORM_PROJECT_Q"
     result["generated_utc"] = app["generated_utc"]
-    result["sources_week7_config"] = "entregas/P1L5/modelo_central/analysis_settings.json"
+    result["sources_week7_config"] = "config/analysis_settings.json"
     result["tributary_areas"]["coverage_by_floor"] = copy.deepcopy(app["by_floor"])
     return result
 

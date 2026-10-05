@@ -30,8 +30,8 @@ No ejecutar bootstrap ni migraciones antiguas como rutina.
 | Entrada y menú | `main.py`, `Proyecto.bat` |
 | Validador canónico | `tests/model/validate_model.py` |
 | Reconstrucción topología (solo cambio físico autorizado) | `analysis/geometry/rebuild_topology.py` |
-| Derivados geométricos | `entregas/P1L5/modelo_central/build_central_derivatives.py` |
-| Cargas y tributarias | `entregas/P1L5/analysis/build_current_loads.py` |
+| Derivados geométricos de vista previa | `analysis/opensees/build_fe.py` |
+| Refresh Q sobre tributarias congeladas | `analysis/opensees/live_loads.py` |
 | OpenSees | `analysis/opensees/run_cases.py` |
 | Resultados actuales | `results/` |
 | Adaptador de resultados Unity | `analysis/postprocessing/export_unity.py` |

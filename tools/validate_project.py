@@ -9,9 +9,9 @@ def main():
     commands = [
         ['main.py', 'validar'],
         ['tools/verify_migration.py', '--scope', 'desktop'],
-        ['tests/test_project_entrypoint.py'],
-        ['tests/test_desktop_relocation.py'],
-        ['tests/test_pipeline_commands.py'],
+        ['tests/model/test_project_entrypoint.py'],
+        ['tests/unity/test_desktop_relocation.py'],
+        ['tests/model/test_pipeline_commands.py'],
         ['tests/model/test_topology_relocation.py'],
     ]
     for args in commands:

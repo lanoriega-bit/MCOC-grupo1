@@ -18,7 +18,7 @@ def main() -> None:
     payload = {
         "format": "MCOC_P1L6_DESKTOP_CURRENT_MATERIALS_V1",
         "data_state": "CURRENT",
-        "source": "entregas/P1L5/modelo_central/materials.json",
+        "source": "model/materials.json",
         "materials": source["materials"],
     }
     TARGET.write_text(

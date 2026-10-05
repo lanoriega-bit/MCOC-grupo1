@@ -390,7 +390,7 @@ def main() -> None:
         master["sources"]["current_contract"].update({
             "status": "CURRENT_VERIFIED",
             "analysis_version": manifest["analysis_version"],
-            "results_manifest": "entregas/P1L5/analysis/results/current/manifest.json",
+            "results_manifest": "results/manifest.json",
         })
         for row in loads.get("base_cases", []):
             if row.get("case_id") in {"G", "Q", "EX", "EY"}: row["status"] = "CURRENT_READY"

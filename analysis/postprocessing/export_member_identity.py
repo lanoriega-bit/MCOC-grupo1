@@ -30,7 +30,7 @@ def main() -> None:
     payload = {
         "format": "MCOC_P1L6_DESKTOP_MEMBER_IDENTITY_V1",
         "data_state": "CURRENT",
-        "source": "entregas/P1L5/modelo_central/model_master.json",
+        "source": "model/model_master.json",
         "members": members,
     }
     TARGET.write_text(
