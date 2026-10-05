@@ -16,15 +16,15 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[3]
-HERE = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[2]
+HERE = ROOT / 'model'
 MASTER_PATH = HERE / "model_master.json"
 SECTIONS_PATH = HERE / "sections.json"
-ADAPTER_PATH = HERE / "generated" / "current_geometry_for_fe.json"
-CANDIDATE_PATH = HERE / "generated" / "rebuilt_fe_topology.json"
-CANDIDATE_REPORT = HERE / "generated" / "rebuilt_fe_topology.md"
-LEGACY_BUILDER = ROOT / "entregas" / "P1L3" / "scripts" / "build_post_p1l3_topology_candidate.py"
-PRIOR_AUDIT = ROOT / "entregas" / "P1L2" / "edificio" / "validacion" / "fe_connectivity_post_geometry" / "connectivity_comparison.json"
+ADAPTER_PATH = ROOT / 'results/validation/topology/current_geometry_for_fe.json'
+CANDIDATE_PATH = ROOT / 'results/validation/topology/rebuilt_fe_topology.json'
+CANDIDATE_REPORT = ROOT / 'results/validation/topology/rebuilt_fe_topology.md'
+LEGACY_BUILDER = ROOT / 'analysis/geometry/topology_kernel.py'
+PRIOR_AUDIT = ROOT / 'model/reference/connectivity_prior.json'
 
 
 def read(path: Path) -> dict:

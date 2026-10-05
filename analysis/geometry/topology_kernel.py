@@ -13,16 +13,15 @@ from pathlib import Path
 from shapely.geometry import LineString, Point
 
 
-REPO = Path(__file__).resolve().parents[3]
-P1L3 = REPO / "entregas/P1L3"
-sys.path.insert(0, str(P1L3))
-from p1l3.modelado import _section_props  # noqa: E402
-from p1l3.rutas import COMBINED_VIEWER_JSON, LEVELS_Z_M  # noqa: E402
-
-OUT_DIR = P1L3 / "results/post_p1l3_candidate"
+REPO = Path(__file__).resolve().parents[2]
+# The adapter injects geometry and levels from the canonical model. The unused
+# legacy section-properties import is intentionally removed (never called here).
+COMBINED_VIEWER_JSON = None
+LEVELS_Z_M = {}
+OUT_DIR = REPO / 'results/validation/topology'
 OUT_JSON = OUT_DIR / "analysis_model_post_p1l3_candidate.json"
 OUT_REPORT = OUT_DIR / "TOPOLOGY_REPORT.md"
-AUDIT = REPO / "entregas/P1L2/edificio/validacion/fe_connectivity_post_geometry/connectivity_comparison.json"
+AUDIT = REPO / 'model/reference/connectivity_prior.json'
 TOL = 0.06
 
 

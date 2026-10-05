@@ -12,6 +12,7 @@ def main():
         ['tests/test_project_entrypoint.py'],
         ['tests/test_desktop_relocation.py'],
         ['tests/test_pipeline_commands.py'],
+        ['tests/model/test_topology_relocation.py'],
     ]
     for args in commands:
         code = subprocess.run([sys.executable, '-B', *args], cwd=ROOT).returncode
