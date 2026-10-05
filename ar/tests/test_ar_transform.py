@@ -18,7 +18,11 @@ from __future__ import annotations
 
 import json
 import math
+import sys
 from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "ar/transforms"))
 
 from ar_math import (
     EPS, MODEL_TO_UNITY, ar_to_model, check_anchor_rigidity, check_round_trip,
@@ -27,8 +31,7 @@ from ar_math import (
 )
 from element_query import geometry
 
-ROOT = Path(__file__).resolve().parents[3]
-OVERLAY = ROOT / "entregas" / "P1L6" / "transform" / "current_ar_geometry_overlay.json"
+OVERLAY = ROOT / "ar/data/geometry_overlay.json"
 
 KNOWN = ["E2-P1-C-002", "E1-P1-C-010", "E1-P1-C-023", "E2-P1-V-032"]
 

@@ -1,5 +1,16 @@
 # P1L2 Status
 
+## Reorganización funcional — integración AR (2026-10-05)
+
+- Scripts/escena/suites AR finales integrados selectivamente desde `862da8c`.
+- Colocación, escalas, selección y diagramas; Main/terreno/tema y dataset intactos.
+- Generador y transformaciones en `ar/`, una sola salida AR generada en StreamingAssets.
+- QA Python PASS; runtime/suites compilan con referencias cacheadas y métricas offline PASS.
+- Equivalencia: dataset temporal igual salvo timestamp; 120/120 archivos protegidos iguales.
+- Editor compile/Play bloqueado por licencia; usuario verificando apertura en Hub.
+- No se trasladó Unity ni se limpió historia antes de pasar esa barrera.
+- Detalle: `reports/repository_architecture_audit/AR_INTEGRATION_QA.md`.
+
 ## Reorganización funcional — resultados (2026-10-05)
 
 - Resultados CURRENT en `results/{G,Q,EX,EY}`, capacidad/cargas/Fiber separados.

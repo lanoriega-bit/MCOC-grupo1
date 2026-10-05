@@ -18,9 +18,9 @@ try {
         'analysis/postprocessing/export_unity.py',
         'entregas/P1L6/desktop/export_current_member_identity.py',
         'entregas/P1L6/desktop/export_current_materials.py',
-        'entregas/P1L6/preparation/build_ar_dataset.py',
-        'entregas/P1L6/transform/build_geometry_overlay.py',
-        'entregas/P1L6/transform/validate_ar_dataset.py',
+        'ar/data/build_dataset.py',
+        'ar/transforms/build_geometry_overlay.py',
+        'ar/tests/validate_ar_dataset.py',
         'tests/model/validate_pipeline.py'
     )
     foreach ($script in $scripts) {

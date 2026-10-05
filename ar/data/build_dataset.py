@@ -11,10 +11,10 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[2]
 CENTRAL = ROOT / "model"
-STREAM = ROOT / "entregas" / "P1L3" / "José" / "viewer_unity" / "Assets" / "StreamingAssets"
-OUT = Path(__file__).resolve().parent / "current_ar_elements.json"
+PROJECT = json.loads((ROOT / "config/project_config.json").read_text(encoding="utf-8-sig"))
+STREAM = ROOT / PROJECT["paths"]["unity"] / "Assets" / "StreamingAssets"
 STREAM_OUT = STREAM / "p1l6_current_ar_elements.json"
 
 
@@ -181,7 +181,6 @@ def main() -> None:
         "summary": {"records": len(records), "with_fe_results": sum(bool(row["current_result_R"]["segments"]) for row in records), "with_capacity": sum(row["capacity"] is not None for row in records)},
         "elements": records,
     }
-    write(OUT, output)
     write(STREAM_OUT, output)
     print(json.dumps({"status": output["status"], "summary": output["summary"], "demo_elements": demos}, ensure_ascii=False, indent=2))
 

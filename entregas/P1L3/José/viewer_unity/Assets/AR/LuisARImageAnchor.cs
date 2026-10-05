@@ -10,27 +10,45 @@ public class LuisARImageAnchor : MonoBehaviour
     [SerializeField] GameObject cubePrefab;
 
     public string ReferenceImageName { get; private set; }
-    public Pose AnchorPose { get; private set; }
-    public TrackingState TrackingStatus { get; private set; }
-    public bool HasAnchor => currentAnchor != null;
-    public Transform AnchorTransform => currentAnchor != null
-        ? currentAnchor.transform
-        : null;
 
-    public event Action<string, Pose, TrackingState> TrackingUpdated;
+    public Pose AnchorPose { get; private set; }
+
+    public TrackingState TrackingStatus { get; private set; }
+
+    public bool HasAnchor =>
+        currentAnchor != null;
+
+    // Permite que los nuevos scripts AR utilicen
+    // exactamente el mismo anchor creado por este módulo.
+    public Transform AnchorTransform =>
+        currentAnchor != null
+            ? currentAnchor.transform
+            : null;
+
+    public event Action<string, Pose, TrackingState>
+        TrackingUpdated;
 
     ARAnchor currentAnchor;
     GameObject currentCube;
+
     bool creatingAnchor = false;
 
     void OnEnable()
     {
-        trackedImageManager.trackablesChanged.AddListener(OnTrackablesChanged);
+        if (trackedImageManager != null)
+        {
+            trackedImageManager.trackablesChanged
+                .AddListener(OnTrackablesChanged);
+        }
     }
 
     void OnDisable()
     {
-        trackedImageManager.trackablesChanged.RemoveListener(OnTrackablesChanged);
+        if (trackedImageManager != null)
+        {
+            trackedImageManager.trackablesChanged
+                .RemoveListener(OnTrackablesChanged);
+        }
     }
 
     void OnTrackablesChanged(
@@ -47,25 +65,37 @@ public class LuisARImageAnchor : MonoBehaviour
         }
     }
 
-    async void HandleImage(ARTrackedImage image)
+    async void HandleImage(
+        ARTrackedImage image)
     {
+        if (image == null)
+            return;
+
         if (image.referenceImage.name != "ImagenPrueba")
             return;
 
-        ReferenceImageName = image.referenceImage.name;
-        TrackingStatus = image.trackingState;
+        ReferenceImageName =
+            image.referenceImage.name;
 
-        Pose detectedPose = new Pose(
-            image.transform.position,
-            image.transform.rotation
-        );
+        TrackingStatus =
+            image.trackingState;
 
-        AnchorPose = currentAnchor != null
-            ? new Pose(
-                currentAnchor.transform.position,
-                currentAnchor.transform.rotation
-            )
-            : detectedPose;
+        Pose detectedPose =
+            new Pose(
+                image.transform.position,
+                image.transform.rotation
+            );
+
+        // Si ya existe un anchor usamos su pose.
+        // Si todavía no existe, usamos temporalmente
+        // la pose detectada de la imagen.
+        AnchorPose =
+            currentAnchor != null
+                ? new Pose(
+                    currentAnchor.transform.position,
+                    currentAnchor.transform.rotation
+                )
+                : detectedPose;
 
         TrackingUpdated?.Invoke(
             ReferenceImageName,
@@ -80,39 +110,52 @@ public class LuisARImageAnchor : MonoBehaviour
             $"Rotation: {AnchorPose.rotation}"
         );
 
+        // Solo intentamos crear el anchor cuando
+        // AR Foundation confirma tracking real.
         if (image.trackingState != TrackingState.Tracking)
             return;
 
-        if (currentAnchor != null || creatingAnchor)
+        // Evita crear anchors duplicados.
+        if (currentAnchor != null ||
+            creatingAnchor)
             return;
 
         creatingAnchor = true;
 
-        var result = await anchorManager.TryAddAnchorAsync(detectedPose);
+        var result =
+            await anchorManager.TryAddAnchorAsync(
+                detectedPose
+            );
 
         creatingAnchor = false;
 
         if (result.status.IsSuccess())
         {
-            currentAnchor = result.value;
+            currentAnchor =
+                result.value;
 
-            AnchorPose = new Pose(
-                currentAnchor.transform.position,
-                currentAnchor.transform.rotation
-            );
-
-            // The cube is useful only in Luis's isolated tracking scene.  The
-            // final P1L6 scene leaves cubePrefab empty and lets the structural
-            // renderer own the visual object under this anchor.
-            if (cubePrefab != null)
-            {
-                currentCube = Instantiate(
-                    cubePrefab,
-                    currentAnchor.transform
+            AnchorPose =
+                new Pose(
+                    currentAnchor.transform.position,
+                    currentAnchor.transform.rotation
                 );
 
+            // Mantiene el objeto de prueba que ya
+            // utilizábamos para comprobar el anchor.
+            if (cubePrefab != null)
+            {
+                currentCube =
+                    Instantiate(
+                        cubePrefab,
+                        currentAnchor.transform
+                    );
+
                 currentCube.transform.localPosition =
-                    new Vector3(0f, 0.025f, 0f);
+                    new Vector3(
+                        0f,
+                        0.025f,
+                        0f
+                    );
 
                 currentCube.transform.localRotation =
                     Quaternion.identity;
@@ -132,7 +175,9 @@ public class LuisARImageAnchor : MonoBehaviour
         }
         else
         {
-            Debug.LogError("No se pudo crear el anchor.");
+            Debug.LogError(
+                "No se pudo crear el anchor."
+            );
         }
     }
 }

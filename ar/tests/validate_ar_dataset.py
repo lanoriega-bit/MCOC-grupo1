@@ -18,11 +18,12 @@ import math
 from datetime import datetime, timezone
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
-DATASET = ROOT / "entregas" / "P1L6" / "preparation" / "current_ar_elements.json"
-OVERLAY = ROOT / "entregas" / "P1L6" / "transform" / "current_ar_geometry_overlay.json"
-OUT_MD = ROOT / "entregas" / "P1L6" / "transform" / "AR_DATASET_VALIDATION.md"
-OUT_JSON = ROOT / "entregas" / "P1L6" / "transform" / "AR_DATASET_VALIDATION.json"
+ROOT = Path(__file__).resolve().parents[2]
+PROJECT = json.loads((ROOT / "config/project_config.json").read_text(encoding="utf-8-sig"))
+DATASET = ROOT / PROJECT["paths"]["unity"] / "Assets/StreamingAssets/p1l6_current_ar_elements.json"
+OVERLAY = ROOT / "ar/data/geometry_overlay.json"
+OUT_MD = ROOT / "results/validation/AR_DATASET_VALIDATION.md"
+OUT_JSON = ROOT / "results/validation/AR_DATASET_VALIDATION.json"
 
 
 def read(p: Path) -> dict:
@@ -30,6 +31,7 @@ def read(p: Path) -> dict:
 
 
 def main() -> None:
+    OUT_JSON.parent.mkdir(parents=True, exist_ok=True)
     ds = read(DATASET)
     ov = read(OVERLAY)
     elements = ds["elements"]

@@ -34,6 +34,7 @@ namespace Mcoc.UnityViewer.P1L6AR
         public string elementTag;
         public string solidTag;
         public int[] opensees_tags;
+        public int[] fe_node_tags;
         public string type;
         public string building;
         public string floor;
@@ -42,11 +43,25 @@ namespace Mcoc.UnityViewer.P1L6AR
         public double[] orientation_model;
         public double[] orientation_unity;
         public double length_m;
+        public ARPhysicalGeometry geometry;
+        public ARSectionDimensions dimensions;
         public ARSection section;
         public ARMaterial material;
         public ARCurrentResult current_result_R;
         public ARElementCapacity capacity;
         public string data_state;
+    }
+
+    // Physical geometry is in model coordinates: model Z is Unity Y.
+    [Serializable] public sealed class ARPhysicalGeometry
+    {
+        public double[] start_m;
+        public double[] end_m;
+        public double[] center_m;
+        public double z_bottom_m;
+        public double z_top_m;
+        public double length_m;
+        public double[] direction_unit;
     }
 
     [Serializable] public sealed class ARCoordinates

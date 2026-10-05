@@ -27,10 +27,12 @@ from pathlib import Path
 
 from ar_math import (fake_anchor, identity, model_to_unity, unity_to_ar, unity_to_model)
 
-ROOT = Path(__file__).resolve().parents[3]
-DATASET = ROOT / "entregas" / "P1L6" / "preparation" / "current_ar_elements.json"
-OVERLAY = ROOT / "entregas" / "P1L6" / "transform" / "current_ar_geometry_overlay.json"
-CAPACITY = ROOT / "entregas" / "P1L3" / "José" / "viewer_unity" / "Assets" / "StreamingAssets" / "p1l6_current_capacity.json"
+ROOT = Path(__file__).resolve().parents[2]
+PROJECT = json.loads((ROOT / "config/project_config.json").read_text(encoding="utf-8-sig"))
+STREAM = ROOT / PROJECT["paths"]["unity"] / "Assets/StreamingAssets"
+DATASET = STREAM / "p1l6_current_ar_elements.json"
+OVERLAY = ROOT / "ar/data/geometry_overlay.json"
+CAPACITY = STREAM / "p1l6_current_capacity.json"
 
 _raw = None
 _overlay = None

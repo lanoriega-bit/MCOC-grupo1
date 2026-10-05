@@ -1,10 +1,13 @@
 # Realidad aumentada
 
-Destino de generación, transformaciones y pruebas AR; traslado pendiente.
-El dataset vigente coincide con `origin/p1l7/ar-final-search`, sin necesidad de
-sustituirlo. Deben incorporarse sus funciones de colocación, escalas, selección y
-diagramas, junto con su escena y pruebas, preservando valores y crosswalk 1:N.
+Generación en `data/`, matemática/consultas en `transforms/`, validación en `tests/`
+y guía de runtime en `tracking/`. El dataset vigente coincide con
+`origin/p1l7/ar-final-search`: sus funciones de colocación, escalas, selección y
+diagramas se integraron junto con su escena y pruebas, sin sustituir datos.
 
 Consume modelo/resultados mediante derivados; el móvil no ejecuta OpenSees.
-No crear una segunda copia editable del dataset ni declarar integración terminada
-antes de compile, pruebas y validación de la escena correspondiente.
+La generación escribe un único dataset en StreamingAssets del Viewer configurado.
+La copia predecesora queda fuera del pipeline activo, pendiente de limpieza.
+Runtime y suites compilan offline con referencias cacheadas; Editor compile/Play
+está pendiente por licencia. No declarar integración funcional completa antes de
+validar la escena en el Editor y cerrar el checkpoint.

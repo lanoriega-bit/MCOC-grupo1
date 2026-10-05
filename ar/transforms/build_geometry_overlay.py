@@ -22,10 +22,11 @@ import json
 import math
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[2]
 CENTRAL = ROOT / "model"
-DATASET = ROOT / "entregas" / "P1L6" / "preparation" / "current_ar_elements.json"
-OUT = ROOT / "entregas" / "P1L6" / "transform" / "current_ar_geometry_overlay.json"
+PROJECT = json.loads((ROOT / "config/project_config.json").read_text(encoding="utf-8-sig"))
+DATASET = ROOT / PROJECT["paths"]["unity"] / "Assets/StreamingAssets/p1l6_current_ar_elements.json"
+OUT = ROOT / "ar/data/geometry_overlay.json"
 
 
 def read(path: Path) -> dict:
