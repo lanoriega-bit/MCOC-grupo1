@@ -1,5 +1,13 @@
 # P1L2 Status
 
+## Archivo conservador — lote B P1L4 (2026-10-05)
+
+- 51 archivos de la entrega oficial P1L4 archivados, sin cambios de contenido.
+- Destino `archive/historical_deliveries/P1L4/`; README operativo corregido.
+- Sin consumidores productivos de la carpeta antigua; campos de procedencia permanecen.
+- Modelo/pipeline, 117 protegidos desktop y 17 pruebas PASS. AR no ejecutado.
+- Evidencia: `reports/repository_architecture_audit/LOT_B_P1L4.md`.
+
 ## Reorganización funcional — comandos y copia limpia (2026-10-05)
 
 - `tools/validate_project.py`: entrada QA segura, sin AR ni solver.
