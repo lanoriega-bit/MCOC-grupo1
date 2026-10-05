@@ -28,7 +28,9 @@ AR, regenerar datos, abrir escenas ni cambiar código funcional.
 
 P1L6: TRASLADADO tras aportar AR_PATH_PROOF.md. La primera solicitud fue
 rechazada por posibles dependencias; se autorizó el nuevo intento con evidencia
-estática adicional. P1L7: PROPUESTO, todavía sin trasladar en este checkpoint.
+estática adicional. P1L7: TRASLADADO en un lote separado después del QA P1L6.
+Los 15 archivos restantes son informes/runners históricos. Los estudios Fiber
+productivos ya están en analysis/fiber; sus resultados en results/fiber.
 
 Cada carpeta es un lote separado y se valida antes de continuar:
 `entregas/P1L6` → `archive/historical_deliveries/P1L6`;

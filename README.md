@@ -69,7 +69,7 @@ Los gráficos nuevos no interpolan intervalos no convergidos. Para volver a dibu
 los CSV existentes sin repetir ensayos: añadir `--plots-only` al comando anterior.
 
 La evidencia siguiente pertenece al cierre histórico anterior, no certifica esta reorganización:
-ver `entregas/P1L7/CLEAN_CLONE_QA.json`. Para repetir esa comprobación histórica, tras preparar
+ver `archive/historical_deliveries/P1L7/CLEAN_CLONE_QA.json`. Para repetir esa comprobación histórica, tras preparar
 otra copia y su `.venv-p1l5`, desde el proyecto principal ejecutar:
 
 ```powershell
@@ -77,7 +77,7 @@ otra copia y su `.venv-p1l5`, desde el proyecto principal ejecutar:
 ```
 
 Esto verifica Python/JSON, no sustituye Play ni la prueba del ejecutable final.
-Estado histórico de cierre: [WEEK7_MODEL_CLOSURE](entregas/P1L7/WEEK7_MODEL_CLOSURE.md).
+Estado histórico de cierre: [WEEK7_MODEL_CLOSURE](archive/historical_deliveries/P1L7/WEEK7_MODEL_CLOSURE.md).
 
 ## Qué abrir y qué editar
 
