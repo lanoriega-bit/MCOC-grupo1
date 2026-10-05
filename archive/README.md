@@ -1,17 +1,27 @@
-# Histórico: no es el pipeline productivo
+# Archivo histórico — no es el pipeline vigente
 
-Destino previsto: `archive/entregas/` para evidencia y scripts históricos.
-El archivo masivo todavía no está ejecutado: faltan revisiones individuales de
-referencias y auxiliares activos. Ver `reports/repository_architecture_audit/ARCHIVE_PLAN.md`.
-No ejecutar scripts precedentes sobre CURRENT como rutina.
-Los tags/commits entregados siguen intactos y son la forma reproducible de abrir
-exactamente una entrega histórica. Las rutas relativas dentro de documentos
-antiguos describen su checkpoint original; consultar el índice funcional vigente.
+Las entregas y auditorías originales conservan su contenido. Para ejecutarlas
+exactamente, usar su commit/tag original en una copia separada: los scripts
+históricos pueden asumir la disposición antigua y no deben aplicarse a CURRENT.
 
-Fuera de este archivo hay dos excepciones protegidas en `entregas/P1L2/`:
-la referencia original `unity_export/model_viewer.json` (sin modificación ni
-traslado) y `STATUS.md` (seguimiento exigido por AGENTS.md).
+## Resolver referencias de procedencia congeladas
 
-Fuentes activas: `model/`; cálculo: `analysis/`; resultados: `results/`;
-Viewer: `viewer/unity/`; comandos: `tools/`; QA: `tests/`; AR: `ar/`, solo ordenado.
-Los duplicados históricos no son una segunda fuente activa y no se borran.
+Los JSON de modelo/resultados conservan sus bytes y pueden citar rutas antiguas.
+Para consultar la evidencia, aplicar estos prefijos; no editar el JSON histórico:
+
+| Ruta original | Ubicación actual |
+|---|---|
+| entregas/P1L4/ | archive/historical_deliveries/P1L4/ |
+| entregas/P1L5/ | archive/historical_deliveries/P1L5/ |
+| entregas/P1L6/ | archive/historical_deliveries/P1L6/ |
+| REPOSITORY_INVENTORY.json | archive/old_data/REPOSITORY_INVENTORY.json |
+| tools/audit_architecture.py | archive/deprecated_code/repository_audits/audit_architecture.py |
+| tools/inventory_repository.py | archive/deprecated_code/repository_audits/inventory_repository.py |
+| tools/build_viewer.py | archive/deprecated_code/viewers/build_viewer.py |
+
+Excepciones migradas previamente a fuentes funcionales: modelo P1L5 → model/;
+OpenSees/capacidad → analysis/; resultados → results/; Unity → viewer/unity/.
+Ver PROJECT_INDEX.md y reports/repository_architecture_audit/path_mapping.json.
+
+La referencia original de Luis permanece protegida en su ruta original.
+No se ha reescrito ningún tag ni commit entregado. AR solo se organiza.

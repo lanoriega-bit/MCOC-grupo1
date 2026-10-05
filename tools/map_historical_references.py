@@ -4,6 +4,7 @@ Classification is deliberately conservative: unknown operational references rema
 ACTIVE_REQUIRED. Serialized IDs/formats/provenance are not filesystem dependencies.
 """
 from collections import Counter, defaultdict
+import ast
 import hashlib
 import json
 from pathlib import Path
@@ -16,6 +17,10 @@ PATTERN = re.compile(r'entregas[/\\]+P1L[2-7]|pre_|post_|current_cleanup|week7|C
 SUFFIXES = {'.py', '.cs', '.json', '.ps1', '.bat', '.md', '.meta', '.yaml', '.yml', '.unity', '.asset', '.asmdef', '.txt'}
 
 def classify(path, line):
+    if path == 'ar/data/geometry_overlay.json' and any(key in line for key in ('"dataset":', '"central_model":')):
+        return 'HISTORICAL_ONLY', 'Frozen source metadata; static consumer review recorded in AR_PATH_PROOF.md. Not opened as a path.'
+    if path == 'ar/data/build_dataset.py' and '"geometry": "entregas/' in line:
+        return 'HISTORICAL_ONLY', 'Output provenance only; actual inputs use CENTRAL=model and configured StreamingAssets.'
     if path.startswith(('archive/', 'reports/', 'entregas/')) or path == 'REPOSITORY_INVENTORY.json':
         return 'HISTORICAL_ONLY', 'Historical evidence or non-productive delivery; not permission to delete.'
     if path.endswith('.md') or line.lstrip().startswith(('#', '//', '///', '*')):
@@ -47,6 +52,8 @@ def main():
     references = []
     hashes = defaultdict(list)
     for name in tracked:
+        if name in {'reports/repository_architecture_audit/reference_map.json', 'reports/repository_architecture_audit/REFERENCE_MAP.md', 'reports/repository_architecture_audit/exact_duplicates.json'}:
+            continue  # Never recursively inventory the previous inventory itself.
         path = ROOT / name
         if not path.is_file():
             continue
@@ -55,11 +62,22 @@ def main():
             hashes[hashlib.sha256(data).hexdigest()].append(name)
         if path.suffix not in SUFFIXES or name.startswith('archive/'):
             continue
-        for number, line in enumerate(data.decode('utf-8-sig', errors='replace').splitlines(), 1):
+        content = data.decode('utf-8-sig', errors='replace')
+        doc_lines = set()
+        if path.suffix == '.py':
+            try:
+                for node in ast.walk(ast.parse(content)):
+                    if isinstance(node, ast.Expr) and isinstance(node.value, ast.Constant) and isinstance(node.value.value, str):
+                        doc_lines.update(range(node.lineno, node.end_lineno + 1))
+            except SyntaxError:
+                pass  # Unknown text stays conservative, never silently marked dead.
+        for number, line in enumerate(content.splitlines(), 1):
             matches = list(dict.fromkeys(PATTERN.findall(line)))
             if not matches:
                 continue
             classification, reason = classify(name, line)
+            if number in doc_lines:
+                classification, reason = 'DOCUMENTATION_ONLY', 'Python documentation literal, not executable filesystem access.'
             references.append({'consumer': name, 'line': number, 'tokens': matches,
                                'classification': classification, 'reason': reason, 'excerpt': line[:280]})
     duplicates = [{'sha256': digest, 'paths': paths, 'decision': 'REVIEW_CONSUMERS_AND_HISTORICAL_REASON'}

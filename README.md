@@ -69,15 +69,15 @@ Los gráficos nuevos no interpolan intervalos no convergidos. Para volver a dibu
 los CSV existentes sin repetir ensayos: añadir `--plots-only` al comando anterior.
 
 La evidencia siguiente pertenece al cierre histórico anterior, no certifica esta reorganización:
-ver `entregas/P1L7/CLEAN_CLONE_QA.json`. Para repetir esa comprobación, tras preparar
+ver `entregas/P1L7/CLEAN_CLONE_QA.json`. Para repetir esa comprobación histórica, tras preparar
 otra copia y su `.venv-p1l5`, desde el proyecto principal ejecutar:
 
 ```powershell
-.\.venv-p1l5\Scripts\python.exe -B entregas/P1L7/verify_clean_clone.py --clone-root ../MCOC-grupo1-repro
+.\.venv-p1l5\Scripts\python.exe -B tools/validate_project.py
 ```
 
 Esto verifica Python/JSON, no sustituye Play ni la prueba del ejecutable final.
-Estado de cierre y límites: [WEEK7_MODEL_CLOSURE](entregas/P1L7/WEEK7_MODEL_CLOSURE.md).
+Estado histórico de cierre: [WEEK7_MODEL_CLOSURE](entregas/P1L7/WEEK7_MODEL_CLOSURE.md).
 
 ## Qué abrir y qué editar
 
@@ -88,7 +88,7 @@ Estado de cierre y límites: [WEEK7_MODEL_CLOSURE](entregas/P1L7/WEEK7_MODEL_CLO
 | Menú y coordinación de comandos | [main.py](main.py) |
 | Configuración de rutas | [project_config.json](config/project_config.json) |
 | Geometría, secciones, materiales y cargas editables | [Modelo canónico](model/README.md) |
-| Auditoría estructural y QA más recientes | [Muros y núcleos CURRENT](entregas/P1L6/wall_continuity/README.md) |
+| Auditoría estructural y QA actuales | [Pipeline CURRENT](results/validation/CURRENT_PIPELINE_QA.md) |
 | Uso del visor y funcionalidades | [Unity desktop](viewer/README.md) |
 
 `modelo_central` es la única fuente del modelo. No corregir geometría editando
@@ -120,7 +120,7 @@ Losas sin elementos FE; cargas transmitidas por tributarias.
 Capacidad HA separada. Persisten supuestos de materiales/armaduras/losas y tres
 registros permanentes puntuales sin receptor, explícitamente excluidos; SC
 histórica es referencia bajo la política Q uniforme. Ver las
-notas del [QA vigente](entregas/P1L6/wall_continuity/CURRENT_PIPELINE_QA.md).
+notas del [QA vigente](results/validation/CURRENT_PIPELINE_QA.md).
 
 ## Entregas y reproducibilidad
 
@@ -132,7 +132,7 @@ notas del [QA vigente](entregas/P1L6/wall_continuity/CURRENT_PIPELINE_QA.md).
 | P1L3 | [Informe](entregas/P1L3/INFORME.md) |
 | P1L4 | [Entrega histórica](archive/historical_deliveries/P1L4/README.md) |
 | P1L5 | [Entrega histórica](archive/historical_deliveries/P1L5/README.md) |
-| P1L6 | [Integración](entregas/P1L6/README.md) |
+| P1L6 | [Integración histórica](archive/historical_deliveries/P1L6/README.md) |
 
 `P1L4_FINAL` permanece intacto. La referencia original de Luis
 `entregas/P1L2/unity_export/model_viewer.json` es solo lectura.

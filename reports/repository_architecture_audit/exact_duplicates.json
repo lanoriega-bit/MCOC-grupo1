@@ -3,7 +3,7 @@
     "sha256": "35af0c932ff43d9fae62004e27604a78bc6118efe506eba128bed802eb1c5b96",
     "paths": [
       "analysis/fiber/wall/wall_pm_interaction.py",
-      "entregas/P1L5/analysis/capacidad/opensees/wall_pm_interaction.py"
+      "archive/historical_deliveries/P1L5/analysis/capacidad/opensees/wall_pm_interaction.py"
     ],
     "decision": "REVIEW_CONSUMERS_AND_HISTORICAL_REASON"
   },
@@ -104,6 +104,64 @@
     "decision": "REVIEW_CONSUMERS_AND_HISTORICAL_REASON"
   },
   {
+    "sha256": "c082d61cfbdf96030c318f10c285cab6072c0542b377cb934678c2c43bf30cd7",
+    "paths": [
+      "archive/historical_deliveries/P1L5/analysis/capacidad/demanda_capacidad.json",
+      "archive/historical_deliveries/P1L5/demanda_capacidad/demanda_capacidad.json",
+      "viewer/unity/Assets/StreamingAssets/demanda_capacidad.json"
+    ],
+    "decision": "REVIEW_CONSUMERS_AND_HISTORICAL_REASON"
+  },
+  {
+    "sha256": "b8aa4d1b84d84966a144bd114794952a03db1c50f79f811ae81e0766a33bf921",
+    "paths": [
+      "archive/historical_deliveries/P1L5/analysis/capacidad/results/capacidad_por_seccion.json",
+      "archive/historical_deliveries/P1L5/capacidad/capacidad_por_seccion.json"
+    ],
+    "decision": "REVIEW_CONSUMERS_AND_HISTORICAL_REASON"
+  },
+  {
+    "sha256": "0fb7616f3e4068cdd030e6e1f4a7f4d58a3dacea99c62751ad9e81beef6b4a60",
+    "paths": [
+      "archive/historical_deliveries/P1L6/current_cleanup/CURRENT_PIPELINE_QA.json",
+      "results/validation/CURRENT_PIPELINE_QA.json"
+    ],
+    "decision": "REVIEW_CONSUMERS_AND_HISTORICAL_REASON"
+  },
+  {
+    "sha256": "6a4efbf4424061ea6fb2b7d4cb080b304e81606296fd84e740a22af4f690c381",
+    "paths": [
+      "archive/historical_deliveries/P1L6/current_cleanup/CURRENT_PIPELINE_QA.md",
+      "results/validation/CURRENT_PIPELINE_QA.md"
+    ],
+    "decision": "REVIEW_CONSUMERS_AND_HISTORICAL_REASON"
+  },
+  {
+    "sha256": "d4a730f6681a84c7cb41bb2890ee038fd7f214e33e6ee67918615855bb8f2abc",
+    "paths": [
+      "archive/historical_deliveries/P1L6/preparation/current_ar_elements.json",
+      "viewer/unity/Assets/StreamingAssets/p1l6_current_ar_elements.json"
+    ],
+    "decision": "REVIEW_CONSUMERS_AND_HISTORICAL_REASON"
+  },
+  {
+    "sha256": "7ba46290741d683af88e6c33fe4ffe6cc5fa1f394a06d8c139c2bfae452fa052",
+    "paths": [
+      "archive/historical_deliveries/P1L6/slab_reconstruction/p1_lateral_qa/UNITY_SLAB_QA.json",
+      "archive/historical_deliveries/P1L6/slab_reconstruction/unity_qa/UNITY_SLAB_QA.json"
+    ],
+    "decision": "REVIEW_CONSUMERS_AND_HISTORICAL_REASON"
+  },
+  {
+    "sha256": "6ca5c30b5d7015800c0a44a6c556414cf7189d61cff01038c90d1b943ff4a218",
+    "paths": [
+      "archive/historical_deliveries/P1L6/slab_reconstruction/p1_lateral_qa/UNITY_VISUAL_RUNTIME_QA.json",
+      "archive/historical_deliveries/P1L6/slab_reconstruction/unity_qa/UNITY_VISUAL_RUNTIME_QA.json",
+      "archive/historical_deliveries/P1L6/visual_ux/UNITY_VISUAL_RUNTIME_QA.json"
+    ],
+    "decision": "REVIEW_CONSUMERS_AND_HISTORICAL_REASON"
+  },
+  {
     "sha256": "6cdf28e10cd00f20799b25ae6e08fab398b0baf2b075e48bf518df4f1528722e",
     "paths": [
       "config/analysis_settings.json",
@@ -140,64 +198,6 @@
     "paths": [
       "entregas/P1L3/capacidad_ha/results/pm_interaction.csv",
       "results/fiber/column/pm_interaction.csv"
-    ],
-    "decision": "REVIEW_CONSUMERS_AND_HISTORICAL_REASON"
-  },
-  {
-    "sha256": "c082d61cfbdf96030c318f10c285cab6072c0542b377cb934678c2c43bf30cd7",
-    "paths": [
-      "entregas/P1L5/analysis/capacidad/demanda_capacidad.json",
-      "entregas/P1L5/demanda_capacidad/demanda_capacidad.json",
-      "viewer/unity/Assets/StreamingAssets/demanda_capacidad.json"
-    ],
-    "decision": "REVIEW_CONSUMERS_AND_HISTORICAL_REASON"
-  },
-  {
-    "sha256": "b8aa4d1b84d84966a144bd114794952a03db1c50f79f811ae81e0766a33bf921",
-    "paths": [
-      "entregas/P1L5/analysis/capacidad/results/capacidad_por_seccion.json",
-      "entregas/P1L5/capacidad/capacidad_por_seccion.json"
-    ],
-    "decision": "REVIEW_CONSUMERS_AND_HISTORICAL_REASON"
-  },
-  {
-    "sha256": "0fb7616f3e4068cdd030e6e1f4a7f4d58a3dacea99c62751ad9e81beef6b4a60",
-    "paths": [
-      "entregas/P1L6/current_cleanup/CURRENT_PIPELINE_QA.json",
-      "results/validation/CURRENT_PIPELINE_QA.json"
-    ],
-    "decision": "REVIEW_CONSUMERS_AND_HISTORICAL_REASON"
-  },
-  {
-    "sha256": "6a4efbf4424061ea6fb2b7d4cb080b304e81606296fd84e740a22af4f690c381",
-    "paths": [
-      "entregas/P1L6/current_cleanup/CURRENT_PIPELINE_QA.md",
-      "results/validation/CURRENT_PIPELINE_QA.md"
-    ],
-    "decision": "REVIEW_CONSUMERS_AND_HISTORICAL_REASON"
-  },
-  {
-    "sha256": "d4a730f6681a84c7cb41bb2890ee038fd7f214e33e6ee67918615855bb8f2abc",
-    "paths": [
-      "entregas/P1L6/preparation/current_ar_elements.json",
-      "viewer/unity/Assets/StreamingAssets/p1l6_current_ar_elements.json"
-    ],
-    "decision": "REVIEW_CONSUMERS_AND_HISTORICAL_REASON"
-  },
-  {
-    "sha256": "7ba46290741d683af88e6c33fe4ffe6cc5fa1f394a06d8c139c2bfae452fa052",
-    "paths": [
-      "entregas/P1L6/slab_reconstruction/p1_lateral_qa/UNITY_SLAB_QA.json",
-      "entregas/P1L6/slab_reconstruction/unity_qa/UNITY_SLAB_QA.json"
-    ],
-    "decision": "REVIEW_CONSUMERS_AND_HISTORICAL_REASON"
-  },
-  {
-    "sha256": "6ca5c30b5d7015800c0a44a6c556414cf7189d61cff01038c90d1b943ff4a218",
-    "paths": [
-      "entregas/P1L6/slab_reconstruction/p1_lateral_qa/UNITY_VISUAL_RUNTIME_QA.json",
-      "entregas/P1L6/slab_reconstruction/unity_qa/UNITY_VISUAL_RUNTIME_QA.json",
-      "entregas/P1L6/visual_ux/UNITY_VISUAL_RUNTIME_QA.json"
     ],
     "decision": "REVIEW_CONSUMERS_AND_HISTORICAL_REASON"
   },

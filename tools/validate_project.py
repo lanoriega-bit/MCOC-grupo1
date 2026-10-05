@@ -13,6 +13,7 @@ def main():
         ['tests/unity/test_desktop_relocation.py'],
         ['tests/model/test_pipeline_commands.py'],
         ['tests/model/test_topology_relocation.py'],
+        ['tests/model/validate_wall_cores.py'],
     ]
     for args in commands:
         code = subprocess.run([sys.executable, '-B', *args], cwd=ROOT).returncode

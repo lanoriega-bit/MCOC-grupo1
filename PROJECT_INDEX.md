@@ -37,7 +37,7 @@ No ejecutar bootstrap ni migraciones antiguas como rutina.
 | Adaptador de resultados Unity | `analysis/postprocessing/export_unity.py` |
 | Capacidad CURRENT | `analysis/capacity/build_capacity.py` |
 | QA integrado, hashes, equilibrio y crosswalk | `tests/model/validate_pipeline.py` |
-| QA de la última corrección primaria | `entregas/P1L6/wall_continuity/validate_corrected_cores.py` |
+| QA CURRENT de núcleos | `tests/model/validate_wall_cores.py` |
 
 `Validar_Modelo.bat` verifica CURRENT, no el bundle histórico.
 `build_and_validate.ps1` es el flujo especializado de modificaciones P1L5;
@@ -56,7 +56,7 @@ Contrato vigente: `current_dataset_contract.json`; las versiones/hashes determin
 compatibilidad, no el nombre de rama ni un conteo histórico.
 
 [Guía para abrir y modificar](docs/GUIA_USO_Y_CAMBIOS.md).
-[Guía funcional desktop](entregas/P1L6/desktop/README.md).
+[Guía funcional desktop](viewer/README.md).
 
 ## Estado y evidencia
 
@@ -66,10 +66,10 @@ No confundir 33 apoyos visuales con 44 tags fijos FE.
 OpenSees usa 1165 nodos y analiza 673 segmentos; cuatro enlaces redundantes
 se omiten del análisis, conservando trazabilidad.
 
-- [Informe primario vigente](entregas/P1L6/wall_continuity/WALL_CONTINUITY_AFTER.md).
-- [QA geométrico y físico](entregas/P1L6/wall_continuity/CURRENT_PIPELINE_QA.md).
-- [Prueba real Unity compile/Play](entregas/P1L6/wall_continuity/UNITY_QA.md).
-- [Estado general](entregas/P1L6/P1L6_READINESS.md).
+- [Informe primario histórico](archive/historical_deliveries/P1L6/wall_continuity/WALL_CONTINUITY_AFTER.md).
+- [QA geométrico y físico CURRENT](results/validation/CURRENT_PIPELINE_QA.md).
+- [Prueba real Unity compile/Play reorganizado](reports/repository_architecture_audit/DESKTOP_RELOCATION.md).
+- [Estado general histórico](archive/historical_deliveries/P1L6/P1L6_READINESS.md).
 
 Mantener visibles las limitaciones académicas: materiales ED1 P4, espesor de
 losas, armaduras/capacidad asumidas, cargas puntuales unresolved y candidatos
@@ -93,5 +93,6 @@ explica método válido frente a inputs superados.
 
 `main` reúne el estado compartido actual. Las ramas de Luis/José y las ramas
 de auditoría se preservan como procedencia; no se eliminan ni se fusionan a ciegas.
-`REPOSITORY_INVENTORY.json` es un inventario de un checkpoint anterior, no un
-selector de fuentes actuales. Puede regenerarse con `tools/inventory_repository.py`.
+`archive/old_data/REPOSITORY_INVENTORY.json` es un inventario de un checkpoint
+anterior, no un selector de fuentes actuales. El mapa vigente se genera con
+`tools/map_historical_references.py`; el inventariador antiguo está archivado.

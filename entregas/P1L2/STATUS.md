@@ -1,5 +1,15 @@
 # P1L2 Status
 
+## Archivo conservador — dependencias y lote D P1L6 (2026-10-05)
+
+- P1L5 archivada tras prueba de ausencia de consumidores en clon aislado.
+- P1L6 archivada conservando evidencia y contenido AR intactos; revisión solo estática.
+- Kernel/reconstructor FE productivo en analysis/geometry; no ejecutado sobre CURRENT.
+- Validador actual de 45 muros de núcleo PASS, 19 tests PASS y 117 bytes protegidos idénticos.
+- Solo dos backups byte-idénticos eliminados; referencia original Luis intacta.
+- Rutas congeladas de procedencia resueltas con archive/README.md, sin cambiar datasets.
+- P1L7 y demás lotes aún pendientes de revisión; no archivo masivo ni cambios a main.
+
 ## Archivo conservador — lote B P1L4 (2026-10-05)
 
 - 51 archivos de la entrega oficial P1L4 archivados, sin cambios de contenido.

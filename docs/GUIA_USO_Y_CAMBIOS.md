@@ -96,6 +96,6 @@ No editar resultados numéricos para hacerlos coincidir ni cambiar tags entregad
 No tocar la referencia original de Luis en P1L2.
 No usar repos externos como fuente confirmada sin evidencia primaria.
 
-Última prueba real de Unity: entregas/P1L6/wall_continuity/UNITY_QA.md.
+Prueba real de Unity tras la reorganización: reports/repository_architecture_audit/DESKTOP_RELOCATION.md.
 El QA del menú comprueba datos, no sustituye esa prueba visual.
 La reorganización de main no cambia geometría, materiales, cargas o resultados.
