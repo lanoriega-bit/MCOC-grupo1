@@ -6,7 +6,7 @@ comparaciones externas y evidencias conservados íntegros; no ejecutarlos sobre 
 Destino archive/historical_deliveries/POST_P1L4.
 
 PRE_P1L5 (141 archivos): revisión equivalente, solo citas en PROJECT_INDEX.
-Auditoría retrospectiva y overlays son evidencia única. Se propone lote separado
+Auditoría retrospectiva y overlays son evidencia única. Lote trasladado a
 archive/historical_deliveries/PRE_P1L5 después del QA de POST_P1L4.
 
 QA de cada lote: modelo/contrato, 117 hashes desktop, 19 pruebas y 45 muros de núcleo.
