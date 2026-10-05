@@ -6,11 +6,12 @@ namespace Mcoc.UnityViewer
     public partial class ViewerController
     {
         // Presentation context only. Never registered as elements, nodes, loads or FE members.
-        bool visualTerrainVisible = true, lowerTerrainVisible = true, accessTerrainVisible = true;
-        GameObject visualTerrainRoot, lowerTerrainObject, accessTerrainObject;
+        bool visualTerrainVisible = true, lowerTerrainVisible = true, accessTerrainVisible = true, terrainBaseVisible = true;
+        GameObject visualTerrainRoot, lowerTerrainObject, accessTerrainObject, terrainBaseObject;
         Bounds lowerTerrainBounds;
         float lowerTerrainElevation, accessTerrainElevation;
-        const float TerrainMargin = 1.5f, AccessPlateau = 3f, AccessRun = 8f, TerrainBaseDepth = .6f;
+        // Schematic presentation dimensions only, not surveyed architecture.
+        const float TerrainMargin = 4f, SiteMargin = 12f, AccessRun = 10f, PathWidth = 3f, TerrainBaseDepth = .6f;
 
         SolidData TerrainReference(string id)
         {
@@ -64,15 +65,7 @@ namespace Mcoc.UnityViewer
                 new Vector3(xmax - xmin + 2 * TerrainMargin, ymax - ymin + 2 * TerrainMargin, lowerTerrainElevation - bottom));
             visualTerrainRoot = new GameObject("VISUAL_ONLY_TERRAIN_NO_FE");
             visualTerrainRoot.transform.SetParent(transform, false);
-            lowerTerrainObject = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            lowerTerrainObject.name = "VISUAL_ONLY_LEVEL_1_S1_C007_C019";
-            var collider = lowerTerrainObject.GetComponent<Collider>();
-            collider.enabled = false; Destroy(collider);
-            lowerTerrainObject.layer = 2; // Ignore Raycast, including the creation frame.
-            lowerTerrainObject.transform.SetParent(visualTerrainRoot.transform, false);
-            lowerTerrainObject.transform.localPosition = lowerTerrainBounds.center;
-            lowerTerrainObject.transform.localScale = lowerTerrainBounds.size;
-            lowerTerrainObject.GetComponent<Renderer>().sharedMaterial = VisualSurface("TERRAIN", new Color(.24f, .29f, .22f), 0, 0, .08f);
+            lowerTerrainObject = CreateTerrainTerrace("VISUAL_ONLY_LEVEL_1_S1_C007_C019", lowerTerrainBounds);
 
             // Only the exterior +X side, adjacent to the physical outer column/beam face.
             float near = Mathf.Max(V(beamA.start).x, V(beamA.end).x, V(beamB.start).x, V(beamB.end).x);
@@ -80,73 +73,109 @@ namespace Mcoc.UnityViewer
             near = Mathf.Max(near, xmax);
             float accessYmin = Mathf.Min(V(beamA.start).y, V(beamA.end).y, V(beamB.start).y, V(beamB.end).y) - TerrainMargin;
             float accessYmax = Mathf.Max(V(beamA.start).y, V(beamA.end).y, V(beamB.start).y, V(beamB.end).y) + TerrainMargin;
-            accessTerrainObject = CreateVisualAccessMass(near, accessYmin, accessYmax, bottom);
+            accessTerrainObject = CreateTerrainTerrace("VISUAL_ONLY_LEVEL_2_ACCESS_V106_V107",
+                TerrainBox(near, near + AccessRun, accessYmin, accessYmax, bottom, accessTerrainElevation));
+            // A broad lower level supports BOTH wings without hiding their S1 columns.
+            // It joins the two raised boxes below grade, rather than introducing a slope.
+            float siteXmin = xmin, siteXmax = near + AccessRun, siteYmin = accessYmin, siteYmax = accessYmax;
+            float siteBase = bottom;
+            foreach (var solid in model.solids)
+            {
+                if (solid.category != "column" || solid.center == null || solid.center.Count != 3) continue;
+                Vector3 p = V(solid.center);
+                siteXmin = Mathf.Min(siteXmin, p.x - (float)solid.width_m / 2);
+                siteXmax = Mathf.Max(siteXmax, p.x + (float)solid.width_m / 2);
+                siteYmin = Mathf.Min(siteYmin, p.y - (float)solid.depth_m / 2);
+                siteYmax = Mathf.Max(siteYmax, p.y + (float)solid.depth_m / 2);
+                siteBase = Mathf.Min(siteBase, p.z - (float)solid.height_m / 2 - TerrainBaseDepth);
+            }
+            float baseTop = siteBase + TerrainBaseDepth - .04f;
+            terrainBaseObject = CreateTerrainTerrace("VISUAL_ONLY_CONTINUOUS_SITE_FUTURE_CONTEXT",
+                TerrainBox(siteXmin - SiteMargin, siteXmax + SiteMargin, siteYmin - SiteMargin,
+                    siteYmax + SiteMargin, siteBase - .4f, baseTop));
+            // Flat paved route on the elevated terrace, no false ramp between levels.
+            float entryY = (accessYmin + accessYmax) / 2;
+            CreateTerrainBox("VISUAL_ONLY_ENTRY_PATH_TO_V106_V107", accessTerrainObject.transform,
+                TerrainBox(near, near + AccessRun, entryY - PathWidth / 2, entryY + PathWidth / 2,
+                    accessTerrainElevation + .006f, accessTerrainElevation + .025f), TerrainPaving());
+            CreateTerrainBox("VISUAL_ONLY_ENTRY_FRONT_WALK", accessTerrainObject.transform,
+                TerrainBox(near, near + 1.5f, accessYmin + 1, accessYmax - 1,
+                    accessTerrainElevation + .026f, accessTerrainElevation + .045f), TerrainPaving());
             UpdateVisualTerrainVisibility();
             bool covered = columns.TrueForAll(c => {
                 Vector3 p = V(c.center);
                 return lowerTerrainBounds.Contains(p) && p.z + (float)c.height_m / 2 <= lowerTerrainElevation + .001f;
             });
-            bool passive = lowerTerrainObject.GetComponent<ElementInfo>() == null && accessTerrainObject.GetComponent<ElementInfo>() == null &&
-                accessTerrainObject.GetComponent<Collider>() == null && !collider.enabled;
+            bool passive = true;
+            foreach (var child in visualTerrainRoot.GetComponentsInChildren<Transform>(true))
+            {
+                var collider = child.GetComponent<Collider>();
+                if (child.GetComponent<ElementInfo>() != null || (collider != null && collider.enabled)) passive = false;
+            }
             if (covered && passive)
-                Debug.Log($"[VISUAL TERRAIN QA] PASS: 13 S1 columns covered; P1 entry={lowerTerrainElevation:F3} m; P2 entry={accessTerrainElevation:F3} m; passive context only.");
+                Debug.Log($"[VISUAL TERRAIN QA] PASS: 13 S1 columns covered; P1 entry={lowerTerrainElevation:F3} m; P2 entry={accessTerrainElevation:F3} m; passive context only; continuous site, box terraces and paved entry path.");
             else Debug.LogError("[VISUAL TERRAIN QA] FAIL: coverage/passive context. No structural data changed.");
         }
 
-        GameObject CreateVisualAccessMass(float near, float ymin, float ymax, float bottom)
+        Bounds TerrainBox(float xmin, float xmax, float ymin, float ymax, float bottom, float top)
         {
-            // Convex X/Z profile extruded along Y: flat landing, then schematic embankment.
-            // Margins/run are visual choices, NOT surveyed terrain or an accessible-ramp design.
-            var profile = new[] {
-                new Vector2(near, bottom), new Vector2(near + AccessRun, bottom),
-                new Vector2(near + AccessRun, lowerTerrainElevation),
-                new Vector2(near + AccessPlateau, accessTerrainElevation), new Vector2(near, accessTerrainElevation)
-            };
-            var vertices = new List<Vector3>(); var triangles = new List<int>();
-            System.Action<Vector3, Vector3, Vector3> triangle = (a, b, c) => {
-                int first = vertices.Count; vertices.Add(a); vertices.Add(b); vertices.Add(c);
-                triangles.Add(first); triangles.Add(first + 1); triangles.Add(first + 2);
-            };
-            System.Func<int, float, Vector3> point = (i, y) => new Vector3(profile[i].x, y, profile[i].y);
-            for (int i = 1; i < profile.Length - 1; i++)
-            {
-                triangle(point(0, ymin), point(i, ymin), point(i + 1, ymin));
-                triangle(point(0, ymax), point(i + 1, ymax), point(i, ymax));
-            }
-            for (int i = 0; i < profile.Length; i++)
-            {
-                int j = (i + 1) % profile.Length;
-                triangle(point(i, ymin), point(i, ymax), point(j, ymax));
-                triangle(point(i, ymin), point(j, ymax), point(j, ymin));
-            }
-            var mesh = new Mesh { name = "VISUAL_ONLY_P2_ACCESS_MASS" };
-            mesh.SetVertices(vertices); mesh.SetTriangles(triangles, 0); mesh.RecalculateNormals(); mesh.RecalculateBounds();
-            var go = new GameObject("VISUAL_ONLY_LEVEL_2_ACCESS_V106_V107"); go.layer = 2;
-            go.transform.SetParent(visualTerrainRoot.transform, false);
-            go.AddComponent<MeshFilter>().sharedMesh = mesh;
-            go.AddComponent<MeshRenderer>().sharedMaterial = VisualSurface("ACCESS_TERRACE", new Color(.38f, .40f, .34f), 0, 0, .08f);
-            return go; // No Collider, ElementInfo, registration, load or analysis reference.
+            return new Bounds(new Vector3((xmin + xmax) / 2, (ymin + ymax) / 2, (bottom + top) / 2),
+                new Vector3(xmax - xmin, ymax - ymin, top - bottom));
+        }
+
+        Material TerrainPaving() => VisualSurface("VISUAL_ONLY_PAVING", new Color(.56f, .55f, .49f), 0, 0, .08f);
+
+        GameObject CreateTerrainBox(string name, Transform parent, Bounds bounds, Material material)
+        {
+            var go = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            go.name = name; go.layer = 2;
+            var collider = go.GetComponent<Collider>();
+            collider.enabled = false; Destroy(collider);
+            go.transform.SetParent(parent, false);
+            go.transform.localPosition = bounds.center;
+            go.transform.localScale = bounds.size;
+            go.GetComponent<Renderer>().sharedMaterial = material;
+            return go;
+        }
+
+        GameObject CreateTerrainTerrace(string name, Bounds bounds)
+        {
+            var group = new GameObject(name); group.layer = 2;
+            group.transform.SetParent(visualTerrainRoot.transform, false);
+            var bodyBounds = bounds;
+            bodyBounds.SetMinMax(bounds.min, new Vector3(bounds.max.x, bounds.max.y, bounds.max.z - .03f));
+            CreateTerrainBox(name + "_BODY", group.transform, bodyBounds,
+                VisualSurface("VISUAL_ONLY_TERRACE_BODY", new Color(.29f, .30f, .26f), 0, 0, .08f));
+            // A flush grass cap gives a readable green surface and neutral retaining faces.
+            var grassBounds = bounds;
+            grassBounds.SetMinMax(new Vector3(bounds.min.x, bounds.min.y, bounds.max.z - .03f), bounds.max);
+            CreateTerrainBox(name + "_GRASS", group.transform, grassBounds,
+                VisualSurface("VISUAL_ONLY_GRASS", new Color(.28f, .37f, .24f), 0, 0, .05f));
+            return group;
         }
 
         void UpdateVisualTerrainVisibility()
         {
             if (visualTerrainRoot == null) return;
             bool building = !buildingVisible.ContainsKey("EDIFICIO_1") || buildingVisible["EDIFICIO_1"];
-            visualTerrainRoot.SetActive(visualTerrainVisible && building && diagnosticViewMode != 1 && !isolateSelected);
-            lowerTerrainObject.SetActive(lowerTerrainVisible && (!floorVisible.ContainsKey("S1") || floorVisible["S1"]));
-            accessTerrainObject.SetActive(accessTerrainVisible &&
+            bool otherBuilding = !buildingVisible.ContainsKey("EDIFICIO_2") || buildingVisible["EDIFICIO_2"];
+            visualTerrainRoot.SetActive(visualTerrainVisible && (building || otherBuilding) && diagnosticViewMode != 1 && !isolateSelected);
+            terrainBaseObject.SetActive(terrainBaseVisible);
+            lowerTerrainObject.SetActive(building && lowerTerrainVisible && (!floorVisible.ContainsKey("S1") || floorVisible["S1"]));
+            accessTerrainObject.SetActive(building && accessTerrainVisible &&
                 ((!floorVisible.ContainsKey("P1") || floorVisible["P1"]) || (!floorVisible.ContainsKey("P2") || floorVisible["P2"])));
         }
 
         void DrawVisualTerrainControls()
         {
             bool all = GUILayout.Toggle(visualTerrainVisible, new GUIContent("Terreno y acceso · SOLO VISUAL", "Sin FE, cargas ni colisiones. Apágalo para inspeccionar columnas enterradas."), GUILayout.Height(25));
+            bool site = GUILayout.Toggle(terrainBaseVisible, "Base continua · entorno ampliado", GUILayout.Height(25));
             bool lower = GUILayout.Toggle(lowerTerrainVisible, "Nivel 1 · cubre S1 C-007 a C-019", GUILayout.Height(25));
             bool upper = GUILayout.Toggle(accessTerrainVisible, "Nivel 2 · acceso base de P2", GUILayout.Height(25));
-            if (all != visualTerrainVisible || lower != lowerTerrainVisible || upper != accessTerrainVisible)
-            { visualTerrainVisible = all; lowerTerrainVisible = lower; accessTerrainVisible = upper; UpdateVisualTerrainVisibility(); }
+            if (all != visualTerrainVisible || site != terrainBaseVisible || lower != lowerTerrainVisible || upper != accessTerrainVisible)
+            { visualTerrainVisible = all; terrainBaseVisible = site; lowerTerrainVisible = lower; accessTerrainVisible = upper; UpdateVisualTerrainVisibility(); }
             if (visualTerrainRoot != null)
-                GUILayout.Label($"Niveles Z: {lowerTerrainElevation:F2} / {accessTerrainElevation:F2} m\nForma esquemática; no topografía medida.", currentBody);
+                GUILayout.Label($"Terrazas Z: {lowerTerrainElevation:F2} / {accessTerrainElevation:F2} m\nPasto y camino; entorno esquemático.", currentBody);
         }
     }
 }

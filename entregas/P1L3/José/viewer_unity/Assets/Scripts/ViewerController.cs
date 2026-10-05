@@ -3038,7 +3038,7 @@ namespace Mcoc.UnityViewer
 
         void ResetPresentation()
         {
-            visualTerrainVisible = lowerTerrainVisible = accessTerrainVisible = true;
+            visualTerrainVisible = terrainBaseVisible = lowerTerrainVisible = accessTerrainVisible = true;
             ExitPendingReview();
             historicalResultsEnabled = false;
             demandCapacityPlotVisible = false;

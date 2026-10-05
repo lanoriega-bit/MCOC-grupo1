@@ -399,3 +399,11 @@ a P1 V-106/V-107 hasta base de P2. Controles independientes en Contexto.
 Unity Main/Play, Right/ISO, selección y filtro S1 comprobados. CURRENT,
 OpenSees y AR intactos; Luis original sin cambios. QA y alcance esquemático:
 `entregas/P1L7/visual_terrain/RUNTIME_VALIDATION.md`.
+
+### Entorno visual continuo — revisión 2
+
+Base ampliada bajo ED1/ED2, terrazas rectangulares sin talud, pasto discreto
+y camino sobre el acceso P2. Reserva perimetral para contexto futuro.
+ISO/Right/Top, selección y filtro S1 comprobados en Play; 19 checks PASS,
+260 archivos protegidos intactos. Sin cambios estructurales, CURRENT ni AR.
+Diseño vigente: `entregas/P1L7/visual_terrain/TERRAIN_V2_VALIDATION.md`.
