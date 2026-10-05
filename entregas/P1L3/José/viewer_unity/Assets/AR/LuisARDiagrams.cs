@@ -1,636 +1,255 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using System.Globalization;
 using UnityEngine;
-using UnityEngine.Networking;
-using UnityEngine.XR.ARSubsystems;
+using UnityEngine.UI;
+using Mcoc.UnityViewer.P1L6AR;
 
 public class LuisARDiagrams : MonoBehaviour
 {
+    // Preserve the existing scene assignments. Tracking is read through the
+    // controller's existing provider; this component never changes AR state.
     [SerializeField] LuisARImageAnchor arTracking;
     [SerializeField] GameObject infoPanel;
 
-    const string ElementId = "E1-P2-V-041";
+    ARStructuralElementController controller;
+    StructuralElementARData selected;
+    GameObject canvasObject, panel;
+    RectTransform safeArea;
+    Text title, metadata, values, axis, description;
+    Button launcher, previous, next;
+    Text caseLabel;
+    readonly Button[] components = new Button[6];
+    ARForceDiagramGraphic graph;
+    int segmentIndex, componentIndex = 4;
+    bool subscribed, restoreInfo;
+    Font font;
+    public bool IsOpen => panel != null && panel.activeSelf;
+    ARStructuralResultOverlay3D overlay;
+    GameObject overlayActions;
+    Button overlayToggle;
+    Text overlayCaption, overlayNote;
 
-    bool trackingOk = false;
-    bool showDiagrams = false;
-
-    string selectedCase = "CASE_R";
-    string selectedComponent = "My";
-
-    AnalysisCasesRoot data;
-
-    Texture2D lineTexture;
-    Texture2D panelTexture;
-
-    [Serializable]
-    public class AnalysisCasesRoot
+    void Start()
     {
-        public string format;
-        public string default_case;
-        public List<AnalysisCase> cases;
+        controller = GetComponent<ARStructuralElementController>();
+        if (controller == null) controller = FindAnyObjectByType<ARStructuralElementController>();
+        overlay = GetComponent<ARStructuralResultOverlay3D>();
+        if (overlay == null) overlay = gameObject.AddComponent<ARStructuralResultOverlay3D>();
+        BuildUI();
+        Subscribe();
+        Select(controller?.SelectedElement);
+        RefreshVisibility();
     }
 
-    [Serializable]
-    public class AnalysisCase
+    void OnEnable() { Subscribe(); }
+    void Subscribe()
     {
-        public string case_name;
-        public List<AnalysisElement> elements;
+        if (subscribed || controller == null) return;
+        controller.ElementShown += OnElementShown;
+        subscribed = true;
+        Select(controller.SelectedElement);
     }
-
-    [Serializable]
-    public class AnalysisElement
-    {
-        public string case_name;
-        public string element_id;
-        public string analysis_id;
-        public int opensees_tag;
-
-        public List<double> localForce_end1;
-        public List<double> localForce_end2;
-    }
-
-    void Awake()
-    {
-        if (arTracking == null)
-            arTracking = GetComponent<LuisARImageAnchor>();
-
-        // Textura negra para las líneas de los diagramas.
-        lineTexture = new Texture2D(1, 1);
-        lineTexture.SetPixel(0, 0, Color.black);
-        lineTexture.Apply();
-
-        // Fondo blanco sólido para que la información
-        // se vea bien sobre la cámara AR.
-        panelTexture = new Texture2D(1, 1);
-        panelTexture.SetPixel(0, 0, Color.white);
-        panelTexture.Apply();
-
-        StartCoroutine(LoadResults());
-    }
-
-    void OnEnable()
-    {
-        if (arTracking != null)
-            arTracking.TrackingUpdated += OnTrackingUpdated;
-    }
-
     void OnDisable()
     {
-        if (arTracking != null)
-            arTracking.TrackingUpdated -= OnTrackingUpdated;
+        if (subscribed && controller != null) controller.ElementShown -= OnElementShown;
+        subscribed = false;
+        Close();
+        if (canvasObject != null) canvasObject.SetActive(false);
+    }
+    void OnDestroy() { if (canvasObject != null) Destroy(canvasObject); }
+    void OnElementShown(StructuralElementARData row, string state, AnchorPoseData pose) { Select(row); }
+    void Select(StructuralElementARData row)
+    {
+        if (selected == row) return; // Tracking notifications retain UI selection.
+        selected = row;
+        segmentIndex = 0;
+        if (title != null) RefreshDiagram();
     }
 
-    void OnTrackingUpdated(
-        string referenceImageName,
-        Pose anchorPose,
-        TrackingState trackingState)
+    void Update()
     {
-        trackingOk =
-            trackingState == TrackingState.Tracking &&
-            arTracking != null &&
-            arTracking.HasAnchor;
-
-        if (!trackingOk)
-            showDiagrams = false;
-    }
-
-    IEnumerator LoadResults()
-    {
-        string path =
-            Application.streamingAssetsPath +
-            "/analysis_cases.json";
-
-        using (UnityWebRequest request =
-               UnityWebRequest.Get(path))
+        if (canvasObject == null) return;
+        RefreshVisibility();
+        Rect safe = Screen.safeArea;
+        if (Screen.width > 0 && Screen.height > 0)
         {
-            yield return request.SendWebRequest();
-
-            if (request.result !=
-                UnityWebRequest.Result.Success)
-            {
-                Debug.LogError(
-                    "LuisARDiagrams: error leyendo resultados: " +
-                    request.error
-                );
-
-                yield break;
-            }
-
-            string json =
-                request.downloadHandler.text;
-
-            data =
-                JsonUtility.FromJson<AnalysisCasesRoot>(
-                    json
-                );
-
-            if (data == null ||
-                data.cases == null)
-            {
-                Debug.LogError(
-                    "LuisARDiagrams: JSON inválido."
-                );
-
-                yield break;
-            }
-
-            Debug.Log(
-                "LuisARDiagrams: " +
-                data.cases.Count +
-                " casos cargados correctamente."
-            );
+            safeArea.anchorMin = new Vector2(safe.xMin / Screen.width, safe.yMin / Screen.height);
+            safeArea.anchorMax = new Vector2(safe.xMax / Screen.width, safe.yMax / Screen.height);
+        }
+        if (panel.activeSelf && infoPanel != null && infoPanel.activeSelf)
+        {
+            restoreInfo = true;
+            infoPanel.SetActive(false);
         }
     }
-
-    AnalysisElement GetSelectedResult()
+    void RefreshVisibility()
     {
-        if (data == null || data.cases == null)
-            return null;
-
-        foreach (var analysisCase in data.cases)
-        {
-            if (analysisCase == null ||
-                analysisCase.case_name != selectedCase ||
-                analysisCase.elements == null)
-                continue;
-
-            foreach (var element in analysisCase.elements)
-            {
-                if (element != null &&
-                    element.element_id == ElementId)
-                    return element;
-            }
-        }
-
-        return null;
+        bool tracked = controller != null && controller.HasTrackedAnchor;
+        if (!tracked) { restoreInfo = false; Close(); }
+        canvasObject.SetActive(tracked);
+        launcher.interactable = selected != null;
+        RefreshOverlayControls();
+        if (controller != null && controller.SurfacePlacement != null) launcher.gameObject.SetActive(false);
     }
 
-    int ComponentIndex()
+    public void Open()
     {
-        if (selectedComponent == "N")
-            return 0;
-
-        if (selectedComponent == "Vy")
-            return 1;
-
-        if (selectedComponent == "Vz")
-            return 2;
-
-        if (selectedComponent == "My")
-            return 4;
-
-        if (selectedComponent == "Mz")
-            return 5;
-
-        return 4;
+        if (panel == null || selected == null || controller == null || !controller.HasTrackedAnchor) return;
+        if (!panel.activeSelf) restoreInfo = infoPanel != null && infoPanel.activeSelf;
+        if (infoPanel != null) infoPanel.SetActive(false);
+        RefreshDiagram();
+        panel.SetActive(true);
+        launcher.gameObject.SetActive(false);
+        RefreshOverlayControls();
     }
-
-    string Units()
+    public void Close()
     {
-        if (selectedComponent == "My" ||
-            selectedComponent == "Mz")
-            return "kN·m";
-
-        return "kN";
+        if (panel == null) return;
+        panel.SetActive(false);
+        if (overlayActions != null) overlayActions.SetActive(false);
+        launcher.gameObject.SetActive(true);
+        if (restoreInfo && infoPanel != null && controller != null && controller.HasTrackedAnchor)
+            infoPanel.SetActive(true);
+        restoreInfo = false;
     }
-
-    void OnGUI()
+    void MoveSegment(int step)
     {
-        if (!trackingOk)
-            return;
-
-        // Solo mostramos diagramas si el panel
-        // de información de la viga está abierto.
-        if (infoPanel != null &&
-            !infoPanel.activeInHierarchy)
-            return;
-
-        GUIStyle button =
-            new GUIStyle(GUI.skin.button);
-
-        button.fontSize = 25;
-        button.normal.textColor = Color.black;
-        button.hover.textColor = Color.black;
-        button.active.textColor = Color.black;
-        button.focused.textColor = Color.black;
-
-        GUIStyle label =
-            new GUIStyle(GUI.skin.label);
-
-        label.fontSize = 25;
-        label.normal.textColor = Color.black;
-        label.alignment = TextAnchor.MiddleCenter;
-
-        float w =
-            Mathf.Min(
-                Screen.width - 40f,
-                950f
-            );
-
-        Rect toggleRect =
-            new Rect(
-                (Screen.width - w) * 0.5f,
-                Screen.height - 170f,
-                w,
-                70f
-            );
-
-        if (!showDiagrams)
-        {
-            if (GUI.Button(
-                toggleRect,
-                "Ver diagramas",
-                button))
-            {
-                showDiagrams = true;
-            }
-
-            return;
-        }
-
-        float panelHeight = 720f;
-
-        Rect panel =
-            new Rect(
-                (Screen.width - w) * 0.5f,
-                Mathf.Max(
-                    20f,
-                    Screen.height -
-                    panelHeight -
-                    40f
-                ),
-                w,
-                panelHeight
-            );
-
-        // Fondo blanco completamente sólido.
-        GUI.DrawTexture(
-            panel,
-            panelTexture,
-            ScaleMode.StretchToFill
-        );
-
-        GUI.Box(panel, "");
-
-        if (GUI.Button(
-            new Rect(
-                panel.x +
-                panel.width -
-                70f,
-                panel.y + 15f,
-                50f,
-                45f
-            ),
-            "X",
-            button))
-        {
-            showDiagrams = false;
-            return;
-        }
-
-        GUI.Label(
-            new Rect(
-                panel.x + 20f,
-                panel.y + 15f,
-                panel.width - 100f,
-                45f
-            ),
-            "Diagramas · " +
-            ElementId,
-            label
-        );
-
-        DrawCaseButtons(
-            panel,
-            button
-        );
-
-        DrawComponentButtons(
-            panel,
-            button
-        );
-
-        DrawDiagram(
-            panel,
-            label
-        );
+        segmentIndex = Mathf.Clamp(segmentIndex + step, 0, ARCurrentDiagramData.SegmentCount(selected) - 1);
+        RefreshDiagram();
     }
+    bool CurrentDataset => controller?.Repository != null && controller.Repository.IsCurrent &&
+        controller.Repository.Dataset?.format == "MCOC_P1L6_AR_CURRENT_ELEMENTS_V1";
 
-    void DrawCaseButtons(
-        Rect panel,
-        GUIStyle button)
+    void RefreshDiagram()
     {
-        string[] cases =
+        title.text = "Diagramas Â· " + (selected?.element_id ?? "Sin selecciÃ³n");
+        int count = ARCurrentDiagramData.SegmentCount(selected);
+        bool anyValid = false;
+        for (int component = 0; component < 6; component++)
         {
-            "CASE_G",
-            "CASE_Q",
-            "CASE_EX",
-            "CASE_EY",
-            "CASE_R"
-        };
-
-        string[] names =
-        {
-            "G",
-            "Q",
-            "EX",
-            "EY",
-            "R"
-        };
-
-        float y =
-            panel.y + 80f;
-
-        float spacing = 10f;
-
-        float bw =
-            (
-                panel.width -
-                40f -
-                4f * spacing
-            ) / 5f;
-
-        for (int i = 0;
-             i < cases.Length;
-             i++)
-        {
-            if (GUI.Button(
-                new Rect(
-                    panel.x +
-                    20f +
-                    i * (bw + spacing),
-                    y,
-                    bw,
-                    50f
-                ),
-                names[i],
-                button))
-            {
-                selectedCase =
-                    cases[i];
-            }
+            bool valid = CurrentDataset && ARCurrentDiagramData.TryValues(selected, segmentIndex, component, out _, out _);
+            components[component].gameObject.SetActive(valid);
+            components[component].GetComponent<Image>().color = component == componentIndex
+                ? new Color(.12f, .38f, .66f) : new Color(.28f, .31f, .36f);
+            anyValid |= valid;
         }
+        if (anyValid && !ARCurrentDiagramData.TryValues(selected, segmentIndex, componentIndex, out _, out _))
+            for (int component = 0; component < 6; component++)
+                if (ARCurrentDiagramData.TryValues(selected, segmentIndex, component, out _, out _)) { componentIndex = component; break; }
+        caseLabel.gameObject.SetActive(anyValid);
+        previous.gameObject.SetActive(count > 1);
+        next.gameObject.SetActive(count > 1);
+        previous.interactable = segmentIndex > 0;
+        next.interactable = segmentIndex < count - 1;
+        ARResultSegment segment = count > 0 ? selected.current_result_R.segments[segmentIndex] : null;
+        metadata.text = segment == null ? "Sin segmentos FE CURRENT disponibles."
+            : "Segmento " + (segmentIndex + 1) + " / " + count + " Â· " + selected.type.ToUpperInvariant() +
+                "\n" + segment.analysis_id + " Â· OpenSees " + segment.opensees_tag +
+                "\nNodo i: " + segment.node_i + "    â†’    Nodo j: " + segment.node_j;
+        double i = double.NaN, j = double.NaN;
+        bool available = CurrentDataset && ARCurrentDiagramData.TryValues(selected, segmentIndex, componentIndex, out i, out j);
+        graph.SetComponent(componentIndex);
+        graph.SetValues(available, i, j);
+        string unit = ARCurrentDiagramData.Units(componentIndex);
+        values.text = available ? ARCurrentDiagramData.Components[componentIndex] + " Â· CASE_R Â· " + unit +
+            "\ni: " + Number(i) + "    |    j: " + Number(j) : "Resultados CURRENT no disponibles para este segmento.";
+        double length = ARCurrentDiagramData.SegmentLength(selected, segmentIndex);
+        axis.text = double.IsNaN(length) ? "i  â†’  j Â· Longitud FE no disponible" : "i Â· 0 m                         j Â· " + Number(length) + " m";
+        description.text = available
+            ? "InterpolaciÃ³n lineal de fuerzas en extremos; no es una distribuciÃ³n interna calculada.\n" +
+              "Ejes locales FE, independientes de la orientaciÃ³n AR.\n" +
+              "ConvenciÃ³n de secciÃ³n: i = acciÃ³n i; j = âˆ’acciÃ³n j.\n" +
+              "Acciones originales: i " + Number(i) + "; j " + Number(-j) + " " + unit + ".\nFuente: dataset AR CURRENT Â· CASE_R."
+            : "No se sustituyen datos ausentes por ceros. Solo se muestran resultados CASE_R del dataset AR CURRENT.";
+        overlay?.SelectDiagram(selected, segmentIndex, componentIndex);
+        RefreshOverlayControls();
     }
-
-    void DrawComponentButtons(
-        Rect panel,
-        GUIStyle button)
+    void RefreshOverlayControls()
     {
-        string[] components =
-        {
-            "N",
-            "Vy",
-            "Vz",
-            "My",
-            "Mz"
-        };
-
-        float y =
-            panel.y + 150f;
-
-        float spacing = 10f;
-
-        float bw =
-            (
-                panel.width -
-                40f -
-                4f * spacing
-            ) / 5f;
-
-        for (int i = 0;
-             i < components.Length;
-             i++)
-        {
-            string component =
-                components[i];
-
-            if (GUI.Button(
-                new Rect(
-                    panel.x +
-                    20f +
-                    i * (bw + spacing),
-                    y,
-                    bw,
-                    50f
-                ),
-                component,
-                button))
-            {
-                selectedComponent =
-                    component;
-            }
-        }
+        if (overlayToggle == null) return;
+        overlayActions.SetActive(IsOpen);
+        bool available = overlay != null && overlay.CanShow(out _);
+        overlayToggle.interactable = overlay != null && (overlay.Requested || available);
+        overlayCaption.text = overlay != null && overlay.Requested ? "OCULTAR DEL ELEMENTO" : "MOSTRAR SOBRE ELEMENTO";
+        if (overlay != null) { overlay.CanShow(out string reason); overlayNote.text = reason; }
     }
+    static string Number(double value) => value.ToString("0.###", CultureInfo.InvariantCulture);
 
-    void DrawDiagram(
-        Rect panel,
-        GUIStyle label)
+    void BuildUI()
     {
-        AnalysisElement result =
-            GetSelectedResult();
-
-        if (result == null ||
-            result.localForce_end1 == null ||
-            result.localForce_end2 == null)
+        font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
+        canvasObject = new GameObject("CurrentARDiagrams", typeof(RectTransform), typeof(Canvas), typeof(CanvasScaler), typeof(GraphicRaycaster));
+        Canvas canvas = canvasObject.GetComponent<Canvas>();
+        canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+        canvas.sortingOrder = 30;
+        CanvasScaler scaler = canvasObject.GetComponent<CanvasScaler>();
+        scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
+        scaler.referenceResolution = new Vector2(1080, 1920);
+        scaler.matchWidthOrHeight = 0;
+        safeArea = Rect("SafeArea", canvasObject.transform, Vector2.zero, Vector2.one);
+        launcher = MakeButton("Ver diagramas", safeArea, new Vector2(.26f, .115f), new Vector2(.74f, .165f), Open);
+        RectTransform panelRect = Rect("DiagramPanel", safeArea, new Vector2(.025f, .19f), new Vector2(.975f, .72f));
+        panel = panelRect.gameObject;
+        panel.AddComponent<Image>().color = new Color(.98f, .98f, .98f, 1);
+        title = Label("Title", panelRect, new Vector2(.04f, .90f), new Vector2(.78f, .99f), 34);
+        MakeButton("CERRAR", panelRect, new Vector2(.79f, .92f), new Vector2(.98f, .99f), Close);
+        caseLabel = Label("CurrentCase", panelRect, new Vector2(.04f, .82f), new Vector2(.96f, .89f), 30);
+        caseLabel.text = "Caso: R Â· CURRENT";
+        for (int index = 0; index < 6; index++)
         {
-            GUI.Label(
-                new Rect(
-                    panel.x + 20f,
-                    panel.y + 240f,
-                    panel.width - 40f,
-                    80f
-                ),
-                "Sin resultados para este caso.",
-                label
-            );
-
-            return;
+            int captured = index;
+            float x = .04f + index * .154f;
+            components[index] = MakeButton(ARCurrentDiagramData.Components[index], panelRect,
+                new Vector2(x, .73f), new Vector2(x + .145f, .81f), () => { componentIndex = captured; RefreshDiagram(); });
         }
-
-        int component =
-            ComponentIndex();
-
-        if (result.localForce_end1.Count <= component ||
-            result.localForce_end2.Count <= component)
-        {
-            return;
-        }
-
-        // Mismo criterio usado por ViewerController:
-        // extremo i se conserva.
-        // extremo j se invierte para trabajar
-        // sobre una cara interna común.
-        double valueI =
-            result.localForce_end1[component] /
-            1000.0;
-
-        double valueJ =
-            -result.localForce_end2[component] /
-            1000.0;
-
-        Rect graph =
-            new Rect(
-                panel.x + 60f,
-                panel.y + 260f,
-                panel.width - 120f,
-                300f
-            );
-
-        // Fondo blanco del gráfico.
-        GUI.DrawTexture(
-            graph,
-            panelTexture,
-            ScaleMode.StretchToFill
-        );
-
-        GUI.Box(graph, "");
-
-        float centerY =
-            graph.y +
-            graph.height * 0.5f;
-
-        // Eje horizontal negro.
-        DrawLine(
-            new Vector2(
-                graph.x,
-                centerY
-            ),
-            new Vector2(
-                graph.xMax,
-                centerY
-            ),
-            2f
-        );
-
-        double maxAbs =
-            Math.Max(
-                Math.Abs(valueI),
-                Math.Abs(valueJ)
-            );
-
-        if (maxAbs < 1e-12)
-            maxAbs = 1.0;
-
-        float scale =
-            (
-                graph.height *
-                0.38f
-            ) /
-            (float)maxAbs;
-
-        Vector2 p0 =
-            new Vector2(
-                graph.x,
-                centerY -
-                (float)valueI *
-                scale
-            );
-
-        Vector2 p1 =
-            new Vector2(
-                graph.xMax,
-                centerY -
-                (float)valueJ *
-                scale
-            );
-
-        // Línea desde el eje hasta extremo i.
-        DrawLine(
-            new Vector2(
-                graph.x,
-                centerY
-            ),
-            p0,
-            4f
-        );
-
-        // Diagrama.
-        DrawLine(
-            p0,
-            p1,
-            5f
-        );
-
-        // Línea desde extremo j al eje.
-        DrawLine(
-            p1,
-            new Vector2(
-                graph.xMax,
-                centerY
-            ),
-            4f
-        );
-
-        GUI.Label(
-            new Rect(
-                panel.x + 30f,
-                panel.y + 580f,
-                panel.width - 60f,
-                45f
-            ),
-            selectedComponent +
-            " · " +
-            selectedCase +
-            " · " +
-            result.analysis_id,
-            label
-        );
-
-        GUI.Label(
-            new Rect(
-                panel.x + 30f,
-                panel.y + 625f,
-                panel.width - 60f,
-                60f
-            ),
-            "i = " +
-            valueI.ToString("F3") +
-            " " +
-            Units() +
-            "     |     j = " +
-            valueJ.ToString("F3") +
-            " " +
-            Units(),
-            label
-        );
+        metadata = Label("Segment", panelRect, new Vector2(.21f, .58f), new Vector2(.79f, .72f), 29);
+        previous = MakeButton("Anterior", panelRect, new Vector2(.02f, .62f), new Vector2(.20f, .70f), () => MoveSegment(-1));
+        next = MakeButton("Siguiente", panelRect, new Vector2(.80f, .62f), new Vector2(.98f, .70f), () => MoveSegment(1));
+        values = Label("EndValues", panelRect, new Vector2(.03f, .49f), new Vector2(.97f, .58f), 32);
+        RectTransform plot = Rect("ForceGraph", panelRect, new Vector2(.04f, .23f), new Vector2(.96f, .48f));
+        graph = plot.gameObject.AddComponent<ARForceDiagramGraphic>();
+        graph.raycastTarget = false;
+        axis = Label("LengthAxis", panelRect, new Vector2(.04f, .18f), new Vector2(.96f, .23f), 28);
+        description = Label("Explanation", panelRect, new Vector2(.04f, .01f), new Vector2(.96f, .18f), 26);
+        description.alignment = TextAnchor.MiddleLeft;
+        RectTransform overlayRect = Rect("OverlayActions", safeArea, new Vector2(.025f, .095f), new Vector2(.975f, .17f));
+        overlayActions = overlayRect.gameObject;
+        overlayToggle = MakeButton("MOSTRAR SOBRE ELEMENTO", overlayRect, new Vector2(0, .42f), Vector2.one,
+            () => { overlay?.Toggle(); RefreshOverlayControls(); });
+        overlayCaption = overlayToggle.GetComponentInChildren<Text>();
+        RectTransform noteRect = Rect("OverlayNoteBackground", overlayRect, Vector2.zero, new Vector2(1, .40f));
+        noteRect.gameObject.AddComponent<Image>().color = new Color(.03f, .05f, .08f, .85f);
+        overlayNote = Label("OverlayExplanation", noteRect, new Vector2(.01f, .02f), new Vector2(.99f, .98f), 23);
+        overlayNote.color = Color.white;
+        overlayActions.SetActive(false);
+        panel.SetActive(false);
     }
-
-    void DrawLine(
-        Vector2 start,
-        Vector2 end,
-        float width)
+    static RectTransform Rect(string name, Transform parent, Vector2 min, Vector2 max)
     {
-        Matrix4x4 oldMatrix =
-            GUI.matrix;
-
-        Vector2 delta =
-            end - start;
-
-        float angle =
-            Mathf.Atan2(
-                delta.y,
-                delta.x
-            ) *
-            Mathf.Rad2Deg;
-
-        GUIUtility.RotateAroundPivot(
-            angle,
-            start
-        );
-
-        GUI.DrawTexture(
-            new Rect(
-                start.x,
-                start.y -
-                width * 0.5f,
-                delta.magnitude,
-                width
-            ),
-            lineTexture
-        );
-
-        GUI.matrix =
-            oldMatrix;
+        RectTransform rect = new GameObject(name, typeof(RectTransform)).GetComponent<RectTransform>();
+        rect.SetParent(parent, false);
+        rect.anchorMin = min; rect.anchorMax = max;
+        rect.offsetMin = rect.offsetMax = Vector2.zero;
+        return rect;
+    }
+    Text Label(string name, Transform parent, Vector2 min, Vector2 max, int size)
+    {
+        Text text = Rect(name, parent, min, max).gameObject.AddComponent<Text>();
+        text.font = font; text.fontSize = size; text.color = new Color(.10f, .13f, .17f);
+        text.alignment = TextAnchor.MiddleCenter;
+        text.resizeTextForBestFit = true; text.resizeTextMinSize = 22; text.resizeTextMaxSize = size;
+        text.raycastTarget = false; text.supportRichText = false;
+        return text;
+    }
+    Button MakeButton(string label, Transform parent, Vector2 min, Vector2 max, UnityEngine.Events.UnityAction action)
+    {
+        RectTransform rect = Rect(label, parent, min, max);
+        rect.gameObject.AddComponent<Image>().color = new Color(.28f, .31f, .36f);
+        Button button = rect.gameObject.AddComponent<Button>();
+        button.targetGraphic = rect.GetComponent<Image>();
+        Text caption = Label("Caption", rect, new Vector2(.02f, .02f), new Vector2(.98f, .98f), 29);
+        caption.text = label;
+        caption.color = Color.white;
+        button.onClick.AddListener(action);
+        return button;
     }
 }

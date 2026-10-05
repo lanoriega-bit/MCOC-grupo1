@@ -1253,6 +1253,11 @@ GameObject:
   - component: {fileID: 1799401479}
   - component: {fileID: 1799401480}
   - component: {fileID: 1799401481}
+  - component: {fileID: 1799401486}
+  - component: {fileID: 1799401485}
+  - component: {fileID: 1799401484}
+  - component: {fileID: 1799401483}
+  - component: {fileID: 1799401482}
   m_Layer: 0
   m_Name: XR Origin
   m_TagString: Untagged
@@ -1341,9 +1346,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LuisARImageAnchor
   trackedImageManager: {fileID: 1799401477}
   anchorManager: {fileID: 1799401478}
-  cubePrefab: {fileID: 8526360105420586342, guid: 89ac8a83bdc95db49bc7a8c505427983, type: 3}
-  contentLocalPosition: {x: 0, y: 0.024, z: 0}
-  contentLocalEulerAngles: {x: 0, y: 90, z: 0}
+  cubePrefab: {fileID: 0}
 --- !u!114 &1799401480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1373,6 +1376,80 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LuisARDiagrams
   arTracking: {fileID: 1799401479}
   infoPanel: {fileID: 105667675}
+--- !u!114 &1799401482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799401474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7384800e6779464191f3dbb55d7bb434, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Mcoc.UnityViewer.P1L6AR.ARStructuralElementController
+  repository: {fileID: 1799401486}
+  elementRenderer: {fileID: 1799401485}
+  anchorProviderBehaviour: {fileID: 1799401484}
+  transformBehaviour: {fileID: 1799401483}
+  initialElementTag: E1-P1-V-002
+  visualizationScale: 0.08
+--- !u!114 &1799401483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799401474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6d40438655fe304fb2b3453a6e1af73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Mcoc.UnityViewer.P1L6AR.TrackedModelToARTransformBehaviour
+  anchorProvider: {fileID: 1799401484}
+  modelOriginUnityMetres: {x: 7.502, y: 3.96, z: -0.001}
+  calibrationEulerDegrees: {x: 0, y: 0, z: 0}
+  calibrationOffsetMetres: {x: 0, y: 0, z: 0}
+  calibrationScale: 1
+--- !u!114 &1799401484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799401474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7facf0700d926b64aabd8e6498c7540b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Mcoc.UnityViewer.P1L6AR.LuisAnchorProviderAdapter
+  source: {fileID: 1799401479}
+--- !u!114 &1799401485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799401474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cb62c540f1a42b3ac52425ac1f74be4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Mcoc.UnityViewer.P1L6AR.StructuralARElementRenderer
+  opacity: 0.78
+--- !u!114 &1799401486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799401474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d319b5282a847feb783a390d8fe9fde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Mcoc.UnityViewer.P1L6AR.ARDatasetRepository
+  datasetFileName: p1l6_current_ar_elements.json
 --- !u!1 &1807744472
 GameObject:
   m_ObjectHideFlags: 0
