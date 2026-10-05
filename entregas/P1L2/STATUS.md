@@ -1,5 +1,16 @@
 # P1L2 Status
 
+## Reorganización funcional — checkpoint de auditoría (2026-10-05)
+
+- Rama `codex/final-repository-architecture`; `main` e historia entregada intactas.
+- Inventario read-only: 1.362 archivos, 281 archivos de código, 321 JSON.
+- 27 grupos JSON equivalentes pendientes de clasificación, no eliminación automática.
+- Base desktop/terreno `53a0484`; funcionalidades AR finales identificadas en `p1l7/ar-final-search`.
+- Dataset AR idéntico en contenido y sus 102.811 hojas numéricas; no sustituir los datos CURRENT.
+- Baseline de 120 archivos protegido en `reports/repository_architecture_audit/baseline.json`.
+- Todavía no hay migración de fuentes, cambios físicos ni regeneración de resultados.
+- Referencia original de Luis intacta. Este checkpoint no certifica la arquitectura final.
+
 ## Semana 7 — Q uniforme y sincronización (2026-10-01)
 
 - Rama de cierre `codex/week7-model-closure`, base `3cc21d6`; no modificar historia.
