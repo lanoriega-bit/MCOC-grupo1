@@ -17,6 +17,7 @@ Para consultar la evidencia, aplicar estos prefijos; no editar el JSON históric
 | entregas/P1L5/ | archive/historical_deliveries/P1L5/ |
 | entregas/P1L6/ | archive/historical_deliveries/P1L6/ |
 | entregas/P1L7/ | archive/historical_deliveries/P1L7/ |
+| entregas/POST_P1L4/ | archive/historical_deliveries/POST_P1L4/ |
 | REPOSITORY_INVENTORY.json | archive/old_data/REPOSITORY_INVENTORY.json |
 | tools/audit_architecture.py | archive/deprecated_code/repository_audits/audit_architecture.py |
 | tools/inventory_repository.py | archive/deprecated_code/repository_audits/inventory_repository.py |
