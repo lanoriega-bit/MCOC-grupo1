@@ -3,6 +3,13 @@
 Este índice identifica qué usar hoy. Las auditorías anteriores son evidencia
 histórica; sus conteos y estados no sustituyen los datos CURRENT.
 
+Reorganización en curso: `codex/final-repository-architecture`. Fuentes activas
+en `model/`, análisis en `analysis/`, resultados en `results/`, Viewer en
+`viewer/unity/`. [Comandos](tools/README.md) y
+[QA de copia limpia](reports/repository_architecture_audit/CLEAN_DESKTOP_CHECKPOINT.md).
+El archivo definitivo de auxiliares/entregas sigue pendiente de revisión individual.
+AR: solo organización, sin ejecución ni nuevas integraciones.
+
 ## Fuentes editables
 
 | Componente | Ruta | Cómo usar |
@@ -34,7 +41,9 @@ No ejecutar bootstrap ni migraciones antiguas como rutina.
 
 `Validar_Modelo.bat` verifica CURRENT, no el bundle histórico.
 `build_and_validate.ps1` es el flujo especializado de modificaciones P1L5;
-incluye aplicación de solicitudes/supuestos, reanálisis y preparación AR.
+es un flujo histórico; no usarlo como entrada del pipeline reorganizado.
+El flujo desktop vigente es `tools/reanalyse_current.ps1` o el plan
+`python tools/rebuild_all.py`; no incluye AR.
 No es una comprobación de solo lectura ni el botón para empezar a usar el proyecto.
 
 ## Unity único

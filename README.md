@@ -68,7 +68,7 @@ ver `QA.json`; no son capacidad certificada ni se usan para calibrar D/C.
 Los gráficos nuevos no interpolan intervalos no convergidos. Para volver a dibujar
 los CSV existentes sin repetir ensayos: añadir `--plots-only` al comando anterior.
 
-La regeneración también se comprobó en una copia Git limpia con un entorno nuevo;
+La evidencia siguiente pertenece al cierre histórico anterior, no certifica esta reorganización:
 ver `entregas/P1L7/CLEAN_CLONE_QA.json`. Para repetir esa comprobación, tras preparar
 otra copia y su `.venv-p1l5`, desde el proyecto principal ejecutar:
 
@@ -87,9 +87,9 @@ Estado de cierre y límites: [WEEK7_MODEL_CLOSURE](entregas/P1L7/WEEK7_MODEL_CLO
 | Archivos vigentes / históricos / generados | [Índice canónico](PROJECT_INDEX.md) |
 | Menú y coordinación de comandos | [main.py](main.py) |
 | Configuración de rutas | [project_config.json](config/project_config.json) |
-| Geometría, secciones, materiales y cargas editables | [modelo_central](entregas/P1L5/modelo_central/README.md) |
+| Geometría, secciones, materiales y cargas editables | [Modelo canónico](model/README.md) |
 | Auditoría estructural y QA más recientes | [Muros y núcleos CURRENT](entregas/P1L6/wall_continuity/README.md) |
-| Uso del visor y funcionalidades | [Unity desktop P1L6](entregas/P1L6/desktop/README.md) |
+| Uso del visor y funcionalidades | [Unity desktop](viewer/README.md) |
 
 `modelo_central` es la única fuente del modelo. No corregir geometría editando
 `StreamingAssets`, resultados OpenSees o exportaciones antiguas.

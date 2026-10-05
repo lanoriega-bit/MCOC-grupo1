@@ -9,7 +9,7 @@ def main():
     commands = [
         ['main.py', 'validar'],
         ['tools/verify_migration.py', '--scope', 'desktop'],
-        ['tools/test_project_entrypoint.py'],
+        ['tests/test_project_entrypoint.py'],
         ['tests/test_desktop_relocation.py'],
         ['tests/test_pipeline_commands.py'],
     ]

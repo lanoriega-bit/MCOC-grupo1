@@ -5,7 +5,7 @@ Pruebas por dominio, sin eliminar coberturas únicas. Entrada segura:
 `python tools/validate_project.py`: modelo, pipeline guardado, rutas desktop y
 seguridad de comandos. No ejecuta OpenSees ni AR. Produce solo informes QA.
 
-- `python tools/test_project_entrypoint.py`: menú, paths y detección STALE.
+- `python tests/test_project_entrypoint.py`: menú, paths y detección STALE.
 - `python tests/loads/test_live_loads.py`: Q y superposición con OpenSees en memoria.
 - `python tests/capacity/test_migration_capacity.py`: regeneración aislada de capacidad.
 - `python tools/verify_migration.py --scope desktop`: identidad protegida del modelo/desktop.

@@ -25,7 +25,7 @@ No se ejecutó ese script durante la migración.
 | Compilación y ciclo Play/Edit | PASS | Menú MCOC → Probar interfaz en Play, 17:00 |
 | Selección/casos/deformada/diagramas/R | PASS | `[P1L5 DEMO QA] PASS: selección; casos; deformada; My/Mz/N/Vy/Vz; sliders y R instantánea.` |
 | Final de prueba | PASS | `[UI QA] PLAY_SMOKE_COMPLETE: arranque y ciclo Play/Edit finalizados.` |
-| Copia limpia | PENDING | Hito posterior, no declarado terminado |
+| Copia limpia modelo/pipeline | PASS_WITH_NOTE | `CLEAN_DESKTOP_CHECKPOINT.md`; Play del clon no ejecutado |
 
 Captura de logs local: `viewer/unity/Temp/p1l4-ui-smoke.result.txt` (no versionada).
 Sin cambios de modelo, cargas, resultados estructurales, capacidad ni datasets.

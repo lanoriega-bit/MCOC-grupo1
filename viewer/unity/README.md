@@ -1,27 +1,29 @@
-# Unity — modelo actual POST-P1L4
+# Unity desktop — CURRENT
 
-Este es el único proyecto Unity canónico. Su ubicación histórica bajo P1L3 no
-significa que muestre geometría antigua. OpenSees calcula; Unity visualiza;
+Este es el único proyecto Unity canónico: `viewer/unity/`.
+Los nombres históricos de scripts/formatos se conservan por compatibilidad.
+OpenSees calcula; Unity visualiza;
 JSON es el contrato. Unidades del modelo: m, N, Pa.
 
 ## Abrir sin recalcular
 
 1. Desde la raíz, abrir `Abrir_Unity.bat`, o añadir esta carpeta en Unity Hub.
 2. Usar Unity **6000.6.0f1**, abrir `Assets/Main.unity` y pulsar **Play**.
-3. No ejecutar `run_p1l3_integrated.py` para abrir el visor: no es necesario
-   para revisar y podría recalcular el pipeline histórico.
-4. Para refrescar datos ya auditados: `python entregas/P1L3/scripts/build_unity_bundle.py`
-   desde la raíz. Validar con `validate_unity_integration.py` en esa misma carpeta.
+3. No ejecutar scripts históricos ni reanálisis para abrir el visor.
+4. QA desde raíz: `python tools/validate_project.py`; no cambia resultados.
+5. Rutas de exportación: `config/project_config.json`. Recalcular solo mediante
+   los comandos documentados en `tools/README.md`, cuando esté autorizado.
 
 ## Qué se muestra
 
-- Modelo actual: `POST_P1L4_CURRENT`, 909 sólidos, resultado de EXT-1…EXT-4.
-- FE: candidato de 856 miembros, **NO EJECUTADO**, 43 geometrías flotantes.
-- Resultados actuales: **NO DISPONIBLES**. No hay corrida compatible todavía.
+- Modelo CURRENT: 712 sólidos: 442 vigas, 143 columnas, 84 muros, 10 losas y 33 apoyos.
+- Topología FE: 677 segmentos, 1170 nodos, 44 restricciones; losas no FE.
+- Resultados CURRENT disponibles cuando pasan hashes/contrato, no por nombre de rama.
 - Avanzado → Histórico / Legacy: resultados entregados, solo mediante opt-in.
   No corresponden a esta geometría; todas las gráficas históricas lo indican.
-- Cargas: catálogo auditado aún no aplicado. No confundirlo con G/Q definitivo.
-- Losas visuales: alcance parcial; ED1 S1/P1 y huecos siguen pendientes.
+- Cargas: qQ=0,667 kN/m² como hipótesis aprobada; 3 cargas unresolved explícitas.
+- Losas físicas y áreas tributarias son distintas; no editar ninguna desde el Viewer.
+- AR queda fuera de esta tarea: no abrir escenas ni ejecutar pruebas AR.
 
 ## Uso y presentación
 
@@ -39,8 +41,8 @@ Contexto, Avanzado y Ayuda se despliegan/retraen y el panel tiene scroll.
   la navegación de la cámara para no moverla mientras se usa el scroll.
 - GLOBAL: XYZ permanente en una esquina, rojo/verde/azul. Flechas grandes
   opcionales desde el origen canónico. Z es vertical.
-- LOCAL: x/y/z sobre el elemento seleccionado; ejes geométricos, no ejes
-  certificados del futuro FE. En muros, x sigue la longitud en planta.
+- LOCAL: comprobar el contrato de ejes y la procedencia del caso seleccionado;
+  no interpretar ejes globales como ejes locales del elemento.
 - Planta mira desde +Z; Frente desde +Y; Lateral desde +X; Iso restablece
   la vista oblicua. Los botones XYZ del indicador también cambian la vista.
 

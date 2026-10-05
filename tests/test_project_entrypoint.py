@@ -55,7 +55,7 @@ class EntryPointTests(unittest.TestCase):
     def test_document_links_exist(self):
         import re
         for relative in ("README.md", "PROJECT_INDEX.md", "docs/GUIA_USO_Y_CAMBIOS.md",
-                         "entregas/P1L5/modelo_central/README.md"):
+                         "model/README.md"):
             path = ROOT / relative
             for target in re.findall(r'\]\(([^)]+)\)', path.read_text(encoding="utf-8")):
                 if "://" not in target and not target.startswith("#"):

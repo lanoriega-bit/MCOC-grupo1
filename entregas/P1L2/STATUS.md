@@ -1,5 +1,15 @@
 # P1L2 Status
 
+## Reorganización funcional — comandos y copia limpia (2026-10-05)
+
+- `tools/validate_project.py`: entrada QA segura, sin AR ni solver.
+- Planes build_model/run_analysis/generate_unity_data/rebuild_all; escritura exige `--execute`.
+- Copia Git limpia: modelo/pipeline/117 bytes protegidos/17 tests PASS; notas explícitas intactas.
+- Q y superposición OpenSees en memoria, capacidad aislada de 669 miembros PASS; resultados activos intactos.
+- Corregida preservación LF/CRLF para clones sin alterar valores ni contratos declarados.
+- Archivo masivo rechazado por seguridad; 998 candidatos inventariados, requieren revisión individual.
+- Evidencia: `reports/repository_architecture_audit/CLEAN_DESKTOP_CHECKPOINT.md`.
+
 ## Reorganización funcional — traslado desktop (2026-10-05)
 
 - Unity productivo trasladado a `viewer/unity/`, con GUID/.meta conservados.
