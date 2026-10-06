@@ -1,0 +1,342 @@
+{
+  "status": "READ_ONLY_COMPLETE_NO_EXTERNAL_GEOMETRY_ADOPTED",
+  "sources": [
+    {
+      "repo": "SANTIAGO",
+      "commit": "394a437aff9e33678d6250fb4f93231bba9a4295",
+      "path": "P1L4/unity_visualizador/Assets/Resources/estructura_p1l4_unity.json",
+      "raw_slab_count": 169,
+      "normalization": "existing independently audited rigid transforms; comparison only"
+    },
+    {
+      "repo": "CACERES",
+      "commit": "7aeadd4a5c51414da27a4d79eacecf2c04e176eb",
+      "path": "Edificio/results/modelo_3d_manual.json",
+      "raw_slab_count": 656,
+      "normalization": "existing independently audited rigid transforms; comparison only"
+    }
+  ],
+  "floors": [
+    {
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "ours_area_m2": 997.0424260331404,
+      "SANTIAGO": {
+        "external_area_m2": 922.825,
+        "intersection_m2": 749.18,
+        "iou": 0.6399,
+        "candidate_coverage_by_external_percent": 75.14,
+        "holes": 0,
+        "bounds": [
+          17.244999999999997,
+          0.17999999999999972,
+          72.47,
+          20.45
+        ]
+      },
+      "CACERES": {
+        "external_area_m2": 1207.138,
+        "intersection_m2": 816.938,
+        "iou": 0.5889,
+        "candidate_coverage_by_external_percent": 81.94,
+        "holes": 0,
+        "bounds": [
+          -4.960000000000004,
+          -0.9700000000000024,
+          72.99,
+          20.75
+        ]
+      },
+      "decision": "SECONDARY_CLUE_ONLY_NOT_PHYSICAL_BOUNDARY_CONFIRMATION"
+    },
+    {
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "ours_area_m2": 843.9139758990041,
+      "SANTIAGO": {
+        "external_area_m2": 947.425,
+        "intersection_m2": 768.039,
+        "iou": 0.7506,
+        "candidate_coverage_by_external_percent": 91.01,
+        "holes": 0,
+        "bounds": [
+          17.244999999999997,
+          0.17999999999999972,
+          72.47,
+          20.45
+        ]
+      },
+      "CACERES": {
+        "external_area_m2": 1230.988,
+        "intersection_m2": 839.001,
+        "iou": 0.6789,
+        "candidate_coverage_by_external_percent": 99.42,
+        "holes": 0,
+        "bounds": [
+          -4.960000000000004,
+          -0.9700000000000024,
+          72.99,
+          20.75
+        ]
+      },
+      "decision": "SECONDARY_CLUE_ONLY_NOT_PHYSICAL_BOUNDARY_CONFIRMATION"
+    },
+    {
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "ours_area_m2": 956.720752824426,
+      "SANTIAGO": {
+        "external_area_m2": 1019.576,
+        "intersection_m2": 851.994,
+        "iou": 0.7578,
+        "candidate_coverage_by_external_percent": 89.05,
+        "holes": 0,
+        "bounds": [
+          17.244999999999997,
+          0.17999999999999972,
+          77.47,
+          20.45
+        ]
+      },
+      "CACERES": {
+        "external_area_m2": 1332.92,
+        "intersection_m2": 952.904,
+        "iou": 0.7129,
+        "candidate_coverage_by_external_percent": 99.6,
+        "holes": 0,
+        "bounds": [
+          -4.960000000000004,
+          -0.9700000000000024,
+          78.64,
+          20.75
+        ]
+      },
+      "decision": "SECONDARY_CLUE_ONLY_NOT_PHYSICAL_BOUNDARY_CONFIRMATION"
+    },
+    {
+      "building": "EDIFICIO_1",
+      "floor": "P4",
+      "ours_area_m2": 934.5611289996205,
+      "SANTIAGO": {
+        "external_area_m2": 1013.834,
+        "intersection_m2": 840.047,
+        "iou": 0.7579,
+        "candidate_coverage_by_external_percent": 89.89,
+        "holes": 0,
+        "bounds": [
+          17.244999999999997,
+          0.17999999999999972,
+          77.47,
+          20.45
+        ]
+      },
+      "CACERES": {
+        "external_area_m2": 1325.772,
+        "intersection_m2": 933.319,
+        "iou": 0.7033,
+        "candidate_coverage_by_external_percent": 99.87,
+        "holes": 0,
+        "bounds": [
+          -4.960000000000004,
+          -0.9700000000000024,
+          78.64,
+          20.75
+        ]
+      },
+      "decision": "SECONDARY_CLUE_ONLY_NOT_PHYSICAL_BOUNDARY_CONFIRMATION"
+    },
+    {
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "ours_area_m2": 160.76399639999997,
+      "SANTIAGO": {
+        "external_area_m2": 326.634,
+        "intersection_m2": 147.28,
+        "iou": 0.433,
+        "candidate_coverage_by_external_percent": 91.61,
+        "holes": 0,
+        "bounds": [
+          17.244999999999997,
+          0.17999999999999972,
+          37.47,
+          16.33
+        ]
+      },
+      "CACERES": {
+        "external_area_m2": 549.645,
+        "intersection_m2": 157.927,
+        "iou": 0.2859,
+        "candidate_coverage_by_external_percent": 98.24,
+        "holes": 0,
+        "bounds": [
+          -4.960000000000004,
+          -0.9700000000000024,
+          37.739999999999995,
+          16.58
+        ]
+      },
+      "decision": "SECONDARY_CLUE_ONLY_NOT_PHYSICAL_BOUNDARY_CONFIRMATION"
+    },
+    {
+      "building": "EDIFICIO_2",
+      "floor": "P1",
+      "ours_area_m2": 557.8942661288229,
+      "SANTIAGO": {
+        "external_area_m2": 343.187,
+        "intersection_m2": 343.187,
+        "iou": 0.6151,
+        "candidate_coverage_by_external_percent": 61.51,
+        "holes": 0,
+        "bounds": [
+          -3.7450000000000045,
+          0.0,
+          17.504999999999995,
+          16.15
+        ]
+      },
+      "CACERES": {
+        "external_area_m2": 191.732,
+        "intersection_m2": 191.698,
+        "iou": 0.3436,
+        "candidate_coverage_by_external_percent": 34.36,
+        "holes": 0,
+        "bounds": [
+          -4.150000000000002,
+          0.0,
+          7.5,
+          17.24
+        ]
+      },
+      "decision": "SECONDARY_CLUE_ONLY_NOT_PHYSICAL_BOUNDARY_CONFIRMATION"
+    },
+    {
+      "building": "EDIFICIO_2",
+      "floor": "P2",
+      "ours_area_m2": 557.8942661288229,
+      "SANTIAGO": {
+        "external_area_m2": 343.187,
+        "intersection_m2": 343.187,
+        "iou": 0.6151,
+        "candidate_coverage_by_external_percent": 61.51,
+        "holes": 0,
+        "bounds": [
+          -3.7450000000000045,
+          0.0,
+          17.504999999999995,
+          16.15
+        ]
+      },
+      "CACERES": {
+        "external_area_m2": 191.732,
+        "intersection_m2": 191.698,
+        "iou": 0.3436,
+        "candidate_coverage_by_external_percent": 34.36,
+        "holes": 0,
+        "bounds": [
+          -4.150000000000002,
+          0.0,
+          7.5,
+          17.24
+        ]
+      },
+      "decision": "SECONDARY_CLUE_ONLY_NOT_PHYSICAL_BOUNDARY_CONFIRMATION"
+    },
+    {
+      "building": "EDIFICIO_2",
+      "floor": "P3",
+      "ours_area_m2": 557.8942661288229,
+      "SANTIAGO": {
+        "external_area_m2": 343.187,
+        "intersection_m2": 343.187,
+        "iou": 0.6151,
+        "candidate_coverage_by_external_percent": 61.51,
+        "holes": 0,
+        "bounds": [
+          -3.7450000000000045,
+          0.0,
+          17.504999999999995,
+          16.15
+        ]
+      },
+      "CACERES": {
+        "external_area_m2": 191.732,
+        "intersection_m2": 191.698,
+        "iou": 0.3436,
+        "candidate_coverage_by_external_percent": 34.36,
+        "holes": 0,
+        "bounds": [
+          -4.150000000000002,
+          0.0,
+          7.5,
+          17.24
+        ]
+      },
+      "decision": "SECONDARY_CLUE_ONLY_NOT_PHYSICAL_BOUNDARY_CONFIRMATION"
+    },
+    {
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "ours_area_m2": 535.6199736500499,
+      "SANTIAGO": {
+        "external_area_m2": 343.187,
+        "intersection_m2": 328.545,
+        "iou": 0.5971,
+        "candidate_coverage_by_external_percent": 61.34,
+        "holes": 0,
+        "bounds": [
+          -3.7450000000000045,
+          0.0,
+          17.504999999999995,
+          16.15
+        ]
+      },
+      "CACERES": {
+        "external_area_m2": 191.807,
+        "intersection_m2": 184.451,
+        "iou": 0.3397,
+        "candidate_coverage_by_external_percent": 34.44,
+        "holes": 0,
+        "bounds": [
+          -4.150000000000002,
+          0.0,
+          7.800000000000001,
+          17.24
+        ]
+      },
+      "decision": "SECONDARY_CLUE_ONLY_NOT_PHYSICAL_BOUNDARY_CONFIRMATION"
+    },
+    {
+      "building": "EDIFICIO_2",
+      "floor": "S1",
+      "ours_area_m2": 557.8942661288229,
+      "SANTIAGO": {
+        "external_area_m2": 343.187,
+        "intersection_m2": 343.187,
+        "iou": 0.6151,
+        "candidate_coverage_by_external_percent": 61.51,
+        "holes": 0,
+        "bounds": [
+          -3.7450000000000045,
+          0.0,
+          17.504999999999995,
+          16.15
+        ]
+      },
+      "CACERES": {
+        "external_area_m2": 191.732,
+        "intersection_m2": 191.698,
+        "iou": 0.3436,
+        "candidate_coverage_by_external_percent": 34.36,
+        "holes": 0,
+        "bounds": [
+          -4.150000000000002,
+          0.0,
+          7.5,
+          17.24
+        ]
+      },
+      "decision": "SECONDARY_CLUE_ONLY_NOT_PHYSICAL_BOUNDARY_CONFIRMATION"
+    }
+  ],
+  "reason": "Santiago uses rectangular beam-enclosed load panels, not independently measured physical perimeters. Caceres uses manual slab polygons; hole/perimeter agreement is insufficient to promote unresolved CAD edges. Existing transformations are comparison references, not an alignment of our model."
+}

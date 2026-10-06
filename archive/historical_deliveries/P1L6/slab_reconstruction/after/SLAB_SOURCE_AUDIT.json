@@ -1,0 +1,370 @@
+{
+  "status": "AUDIT_COMPLETE_PHYSICAL_BOUNDARIES_REQUIRE_REVIEW",
+  "baseline": "21aa110",
+  "active_slabs": 10,
+  "active_boxes": 0,
+  "current_panels": 43,
+  "orphan_receivers": [],
+  "duplicate_panel_ids": [],
+  "unity_tributary_orphans": [],
+  "floors": [
+    {
+      "element_id": "E1-S1-L-001",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "kind": "slab_polygon",
+      "area_m2": 160.763996,
+      "mesh_sum_area_m2": 160.763996,
+      "holes": 2,
+      "components": 1,
+      "component_areas_m2": [
+        160.763996
+      ],
+      "z_top_m": 3.96,
+      "valid": true,
+      "degenerate_triangles": 0,
+      "load_union_m2": 160.763992,
+      "load_sum_m2": 160.763992,
+      "load_overlap_m2": 0.0,
+      "slab_vs_load_symmetric_difference_m2": 2.1e-05,
+      "structural_convex_hull_m2": 151.41,
+      "outside_structural_convex_hull_m2": 28.886806,
+      "cad_source": "recursos/planos/dxf_full/2017_67/2017_67-101.dxf",
+      "cad_sha256": "8adccabb890585ae49078d3a76437509d7580aa7645e01e9d95c4dda64c0998b",
+      "cad_slab_segments": 8,
+      "raw_cad_closed_loops": [
+        {
+          "area_m2": 1.3223443466342406,
+          "bounds": [
+            30.83602726868004,
+            14.126432316165719,
+            34.14602726890751,
+            14.525932118746796
+          ]
+        }
+      ],
+      "historical_boxes_not_active": 1,
+      "origin": "EXISTING_CURRENT_GEOMETRY_WITH_USER_APPROVED_S1_EXCLUSION",
+      "status": "REVIEW_REQUIRED_PHYSICAL_BOUNDARY"
+    },
+    {
+      "element_id": "E1-P1-L-001",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "kind": "slab_polygon",
+      "area_m2": 997.042426,
+      "mesh_sum_area_m2": 997.042426,
+      "holes": 1,
+      "components": 2,
+      "component_areas_m2": [
+        896.19246,
+        100.849966
+      ],
+      "z_top_m": 7.92,
+      "valid": true,
+      "degenerate_triangles": 0,
+      "load_union_m2": 997.042431,
+      "load_sum_m2": 997.042431,
+      "load_overlap_m2": -0.0,
+      "slab_vs_load_symmetric_difference_m2": 7e-05,
+      "structural_convex_hull_m2": 828.4109,
+      "outside_structural_convex_hull_m2": 240.949072,
+      "cad_source": "recursos/planos/dxf_full/2017_67/2017_67-101.dxf",
+      "cad_sha256": "8adccabb890585ae49078d3a76437509d7580aa7645e01e9d95c4dda64c0998b",
+      "cad_slab_segments": 25,
+      "raw_cad_closed_loops": [
+        {
+          "area_m2": 1.3223443466342228,
+          "bounds": [
+            30.83602726867997,
+            13.945136755375637,
+            34.14602726890744,
+            14.34463655795671
+          ]
+        }
+      ],
+      "historical_boxes_not_active": 1,
+      "origin": "EXISTING_CURRENT_GEOMETRY_WITH_USER_APPROVED_S1_EXCLUSION",
+      "status": "REVIEW_REQUIRED_PHYSICAL_BOUNDARY"
+    },
+    {
+      "element_id": "E1-P2-L-001",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "kind": "slab_polygon",
+      "area_m2": 843.913976,
+      "mesh_sum_area_m2": 843.913976,
+      "holes": 2,
+      "components": 2,
+      "component_areas_m2": [
+        807.357766,
+        36.55621
+      ],
+      "z_top_m": 11.88,
+      "valid": true,
+      "degenerate_triangles": 0,
+      "load_union_m2": 843.913957,
+      "load_sum_m2": 843.913957,
+      "load_overlap_m2": 0.0,
+      "slab_vs_load_symmetric_difference_m2": 9.2e-05,
+      "structural_convex_hull_m2": 831.85375,
+      "outside_structural_convex_hull_m2": 68.351004,
+      "cad_source": "recursos/planos/dxf_full/2017_67/2017_67-102.dxf",
+      "cad_sha256": "604331684dff83317a5585a9d6479d167fb2989a4b0a6fc7005ccbddf56a25a8",
+      "cad_slab_segments": 19,
+      "raw_cad_closed_loops": [
+        {
+          "area_m2": 1.3223443466342066,
+          "bounds": [
+            30.835861415664308,
+            14.126524604294946,
+            34.14586141589178,
+            14.526024406876013
+          ]
+        }
+      ],
+      "historical_boxes_not_active": 1,
+      "origin": "EXISTING_CURRENT_GEOMETRY_WITH_USER_APPROVED_S1_EXCLUSION",
+      "status": "REVIEW_REQUIRED_PHYSICAL_BOUNDARY"
+    },
+    {
+      "element_id": "E1-P3-L-001",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "kind": "slab_polygon",
+      "area_m2": 956.720753,
+      "mesh_sum_area_m2": 956.720753,
+      "holes": 3,
+      "components": 1,
+      "component_areas_m2": [
+        956.720753
+      ],
+      "z_top_m": 15.84,
+      "valid": true,
+      "degenerate_triangles": 0,
+      "load_union_m2": 956.720751,
+      "load_sum_m2": 956.720751,
+      "load_overlap_m2": 0.0,
+      "slab_vs_load_symmetric_difference_m2": 2.5e-05,
+      "structural_convex_hull_m2": 933.109825,
+      "outside_structural_convex_hull_m2": 94.255866,
+      "cad_source": "recursos/planos/dxf_full/2017_67/2017_67-102.dxf",
+      "cad_sha256": "604331684dff83317a5585a9d6479d167fb2989a4b0a6fc7005ccbddf56a25a8",
+      "cad_slab_segments": 22,
+      "raw_cad_closed_loops": [
+        {
+          "area_m2": 1.3223443466342537,
+          "bounds": [
+            30.835867438438566,
+            14.126508195766615,
+            34.14586743866604,
+            14.526007998347696
+          ]
+        }
+      ],
+      "historical_boxes_not_active": 1,
+      "origin": "EXISTING_CURRENT_GEOMETRY_WITH_USER_APPROVED_S1_EXCLUSION",
+      "status": "REVIEW_REQUIRED_PHYSICAL_BOUNDARY"
+    },
+    {
+      "element_id": "E1-P4-L-001",
+      "building": "EDIFICIO_1",
+      "floor": "P4",
+      "kind": "slab_polygon",
+      "area_m2": 934.561129,
+      "mesh_sum_area_m2": 934.561129,
+      "holes": 0,
+      "components": 2,
+      "component_areas_m2": [
+        891.419129,
+        43.142
+      ],
+      "z_top_m": 19.8,
+      "valid": true,
+      "degenerate_triangles": 0,
+      "load_union_m2": 934.561139,
+      "load_sum_m2": 934.561172,
+      "load_overlap_m2": 3.4e-05,
+      "slab_vs_load_symmetric_difference_m2": 3.7e-05,
+      "structural_convex_hull_m2": 926.270825,
+      "outside_structural_convex_hull_m2": 94.030854,
+      "cad_source": "recursos/planos/dxf_full/2017_67/2017_67-103.dxf",
+      "cad_sha256": "38a3c6ad384f57180b6bbe7e1fd8180400ad15525697e0e4b1ae28fd0c245990",
+      "cad_slab_segments": 50,
+      "raw_cad_closed_loops": [
+        {
+          "area_m2": 0.4418997178743613,
+          "bounds": [
+            28.121695018345815,
+            10.660581379296463,
+            28.78688727657088,
+            11.324900171961735
+          ]
+        },
+        {
+          "area_m2": 3.4955903272633346,
+          "bounds": [
+            39.88488063447995,
+            5.196487657377884,
+            41.56788063460221,
+            7.2734872575023015
+          ]
+        }
+      ],
+      "historical_boxes_not_active": 1,
+      "origin": "EXISTING_CURRENT_GEOMETRY_WITH_USER_APPROVED_S1_EXCLUSION",
+      "status": "REVIEW_REQUIRED_PHYSICAL_BOUNDARY"
+    },
+    {
+      "element_id": "E2-S1-L-001",
+      "building": "EDIFICIO_2",
+      "floor": "S1",
+      "kind": "slab_polygon",
+      "area_m2": 557.894266,
+      "mesh_sum_area_m2": 557.894266,
+      "holes": 1,
+      "components": 1,
+      "component_areas_m2": [
+        557.894266
+      ],
+      "z_top_m": 3.96,
+      "valid": true,
+      "degenerate_triangles": 0,
+      "load_union_m2": 557.894267,
+      "load_sum_m2": 557.894267,
+      "load_overlap_m2": 0.0,
+      "slab_vs_load_symmetric_difference_m2": 3.2e-05,
+      "structural_convex_hull_m2": 546.058625,
+      "outside_structural_convex_hull_m2": 29.628561,
+      "cad_source": "recursos/planos/dxf_full/2024_22/2024_22-101.dxf",
+      "cad_sha256": "3e9d5e60c897e543a206c1f3c6e4498435f0419cba74c127e0cc4c957e92797c",
+      "cad_slab_segments": 22,
+      "raw_cad_closed_loops": [],
+      "historical_boxes_not_active": 1,
+      "origin": "EXISTING_CURRENT_GEOMETRY_WITH_USER_APPROVED_S1_EXCLUSION",
+      "status": "REVIEW_REQUIRED_PHYSICAL_BOUNDARY"
+    },
+    {
+      "element_id": "E2-P1-L-001",
+      "building": "EDIFICIO_2",
+      "floor": "P1",
+      "kind": "slab_polygon",
+      "area_m2": 557.894266,
+      "mesh_sum_area_m2": 557.894266,
+      "holes": 1,
+      "components": 1,
+      "component_areas_m2": [
+        557.894266
+      ],
+      "z_top_m": 7.92,
+      "valid": true,
+      "degenerate_triangles": 0,
+      "load_union_m2": 557.894267,
+      "load_sum_m2": 557.894267,
+      "load_overlap_m2": 0.0,
+      "slab_vs_load_symmetric_difference_m2": 3.2e-05,
+      "structural_convex_hull_m2": 546.058625,
+      "outside_structural_convex_hull_m2": 29.628561,
+      "cad_source": "recursos/planos/dxf_full/2024_22/2024_22-101.dxf",
+      "cad_sha256": "3e9d5e60c897e543a206c1f3c6e4498435f0419cba74c127e0cc4c957e92797c",
+      "cad_slab_segments": 22,
+      "raw_cad_closed_loops": [],
+      "historical_boxes_not_active": 1,
+      "origin": "EXISTING_CURRENT_GEOMETRY_WITH_USER_APPROVED_S1_EXCLUSION",
+      "status": "REVIEW_REQUIRED_PHYSICAL_BOUNDARY"
+    },
+    {
+      "element_id": "E2-P2-L-001",
+      "building": "EDIFICIO_2",
+      "floor": "P2",
+      "kind": "slab_polygon",
+      "area_m2": 557.894266,
+      "mesh_sum_area_m2": 557.894266,
+      "holes": 1,
+      "components": 1,
+      "component_areas_m2": [
+        557.894266
+      ],
+      "z_top_m": 11.88,
+      "valid": true,
+      "degenerate_triangles": 0,
+      "load_union_m2": 557.894267,
+      "load_sum_m2": 557.894267,
+      "load_overlap_m2": 0.0,
+      "slab_vs_load_symmetric_difference_m2": 3.2e-05,
+      "structural_convex_hull_m2": 546.058625,
+      "outside_structural_convex_hull_m2": 29.628561,
+      "cad_source": "recursos/planos/dxf_full/2024_22/2024_22-101.dxf",
+      "cad_sha256": "3e9d5e60c897e543a206c1f3c6e4498435f0419cba74c127e0cc4c957e92797c",
+      "cad_slab_segments": 22,
+      "raw_cad_closed_loops": [],
+      "historical_boxes_not_active": 1,
+      "origin": "EXISTING_CURRENT_GEOMETRY_WITH_USER_APPROVED_S1_EXCLUSION",
+      "status": "REVIEW_REQUIRED_PHYSICAL_BOUNDARY"
+    },
+    {
+      "element_id": "E2-P3-L-001",
+      "building": "EDIFICIO_2",
+      "floor": "P3",
+      "kind": "slab_polygon",
+      "area_m2": 557.894266,
+      "mesh_sum_area_m2": 557.894266,
+      "holes": 1,
+      "components": 1,
+      "component_areas_m2": [
+        557.894266
+      ],
+      "z_top_m": 15.84,
+      "valid": true,
+      "degenerate_triangles": 0,
+      "load_union_m2": 557.894267,
+      "load_sum_m2": 557.894267,
+      "load_overlap_m2": 0.0,
+      "slab_vs_load_symmetric_difference_m2": 3.2e-05,
+      "structural_convex_hull_m2": 546.058625,
+      "outside_structural_convex_hull_m2": 29.628561,
+      "cad_source": "recursos/planos/dxf_full/2024_22/2024_22-101.dxf",
+      "cad_sha256": "3e9d5e60c897e543a206c1f3c6e4498435f0419cba74c127e0cc4c957e92797c",
+      "cad_slab_segments": 22,
+      "raw_cad_closed_loops": [],
+      "historical_boxes_not_active": 1,
+      "origin": "EXISTING_CURRENT_GEOMETRY_WITH_USER_APPROVED_S1_EXCLUSION",
+      "status": "REVIEW_REQUIRED_PHYSICAL_BOUNDARY"
+    },
+    {
+      "element_id": "E2-P4-L-001",
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "kind": "slab_polygon",
+      "area_m2": 535.619974,
+      "mesh_sum_area_m2": 535.619974,
+      "holes": 6,
+      "components": 1,
+      "component_areas_m2": [
+        535.619974
+      ],
+      "z_top_m": 19.8,
+      "valid": true,
+      "degenerate_triangles": 0,
+      "load_union_m2": 538.739965,
+      "load_sum_m2": 538.739965,
+      "load_overlap_m2": 0.0,
+      "slab_vs_load_symmetric_difference_m2": 3.120048,
+      "structural_convex_hull_m2": 546.158625,
+      "outside_structural_convex_hull_m2": 30.268493,
+      "cad_source": "recursos/planos/dxf_full/2024_22/2024_22-102.dxf",
+      "cad_sha256": "6c0e993a02e3ff123a4171ea74c601a1763dc0de0587c38ac7b788012115b17a",
+      "cad_slab_segments": 28,
+      "raw_cad_closed_loops": [],
+      "historical_boxes_not_active": 1,
+      "origin": "EXISTING_CURRENT_GEOMETRY_WITH_USER_APPROVED_S1_EXCLUSION",
+      "status": "REVIEW_REQUIRED_PHYSICAL_BOUNDARY"
+    }
+  ],
+  "ui_cause": "MODEL LOSAS toggles architectural_slab (old P4); current slabs are category slab under AVANZADO mislabeled boxes",
+  "notes": [
+    "Convex hull is diagnostic only: valid overhangs may lie outside it.",
+    "All current physical slabs were derived from load zones by apply_p1l6_slab_polygons.py; this is not independent evidence.",
+    "Historical data remains immutable, not a fallback for CURRENT."
+  ]
+}

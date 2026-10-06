@@ -1,0 +1,88 @@
+{
+  "status": "PASS",
+  "generated_utc": "2026-10-02T01:04:43.517746+00:00",
+  "tested_commit": "ffed146d54c8c0c0b4cf014968f01a551f6530a2",
+  "clone_method": "LOCAL_CLONE_OF_COMMIT_PUSHED_TO_GITHUB",
+  "commands": [
+    {
+      "command": [
+        "powershell",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "entregas/P1L7/reanalyse_current.ps1"
+      ],
+      "exit_code": 0,
+      "log": "clean_clone_0.log"
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "entregas/P1L7/test_week7_loads.py"
+      ],
+      "exit_code": 0,
+      "log": "clean_clone_1.log"
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "entregas/P1L6/transform/test_ar_transform.py"
+      ],
+      "exit_code": 0,
+      "log": "clean_clone_2.log"
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "tools/test_project_entrypoint.py"
+      ],
+      "exit_code": 0,
+      "log": "clean_clone_3.log"
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "entregas/P1L6/slab_reconstruction/validate_slab_cleanup.py"
+      ],
+      "exit_code": 0,
+      "log": "clean_clone_4.log"
+    }
+  ],
+  "checks": {
+    "all_commands_completed": true,
+    "same_logical_settings": true,
+    "same_case_response_and_equilibrium": true,
+    "same_load_contract": true,
+    "same_canonical_runtime": true,
+    "clone_analysis_pass": true
+  },
+  "cases": {
+    "G": {
+      "status": "PASS",
+      "max_translation_m": 0.011039428039520417,
+      "equilibrium_relative_residual": 1.1358160956086676e-15
+    },
+    "Q": {
+      "status": "PASS",
+      "max_translation_m": 0.0006838893354290882,
+      "equilibrium_relative_residual": 4.3015267635940333e-16
+    },
+    "EX": {
+      "status": "PASS",
+      "max_translation_m": 0.06503610169526525,
+      "equilibrium_relative_residual": 1.0593527585916761e-13
+    },
+    "EY": {
+      "status": "PASS",
+      "max_translation_m": 0.09616179171484437,
+      "equilibrium_relative_residual": 4.271955146059729e-14
+    }
+  },
+  "scope": "CLEAN_CHECKOUT_AND_NEW_PYTHON_ENVIRONMENT; NOT_A_UNITY_OR_STANDALONE_TEST",
+  "note": "Byte hashes may differ with Git line-ending conversion. Configuration contents and numerical outputs are compared semantically."
+}

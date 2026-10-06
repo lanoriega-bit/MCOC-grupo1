@@ -1,0 +1,365 @@
+{
+  "status": "PASS",
+  "checks": {
+    "excluded physical surfaces absent": true,
+    "six excluded catalog entries": true,
+    "excluded load entries absent": true,
+    "excluded tributary panels absent": true,
+    "G equilibrium": true,
+    "Q equilibrium": true,
+    "EX equilibrium": true,
+    "EY equilibrium": true
+  },
+  "surfaces": [
+    {
+      "side": "NORTH",
+      "source_panels": [
+        "L700-E1-P1-H08"
+      ],
+      "area_m2": 100.84997385436122,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              65.04097125946556,
+              16.52013655801766
+            ],
+            [
+              65.0409744588972,
+              18.762412853231595
+            ],
+            [
+              61.81810273495488,
+              18.76241745184317
+            ],
+            [
+              61.81810498951636,
+              20.342494884255235
+            ],
+            [
+              61.21810499401343,
+              20.342478304361645
+            ],
+            [
+              61.21810499401337,
+              28.841244245402507
+            ],
+            [
+              67.6033817943905,
+              26.32577486557178
+            ],
+            [
+              67.79102726889387,
+              26.32577486557178
+            ],
+            [
+              67.79102726889387,
+              26.291305168647956
+            ],
+            [
+              72.04118546768566,
+              24.577606485101146
+            ],
+            [
+              72.04118546768566,
+              16.520136558017715
+            ],
+            [
+              65.04097125946556,
+              16.52013655801766
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "side": "SOUTH",
+      "source_panels": [
+        "L700-E1-P1-H10",
+        "L700-E1-P1-H12"
+      ],
+      "area_m2": 70.4222561292665,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.03626130281648,
+              -6.299892174034853
+            ],
+            [
+              73.03626130281648,
+              -10.796960107593682
+            ],
+            [
+              69.9910272691625,
+              -10.796960107593682
+            ],
+            [
+              69.9910272691625,
+              -6.299892174034853
+            ],
+            [
+              62.75731438620872,
+              -6.299892174034853
+            ],
+            [
+              62.75731438620872,
+              -3.6498911795604227
+            ],
+            [
+              61.24102726893048,
+              -3.6498911795604227
+            ],
+            [
+              61.24102726893048,
+              -1.1498634420468852
+            ],
+            [
+              73.03626130281648,
+              -1.1498634420468852
+            ],
+            [
+              73.03626130281648,
+              -3.6498911795604227
+            ],
+            [
+              73.03626130281648,
+              -6.299892174034853
+            ]
+          ]
+        ]
+      }
+    }
+  ],
+  "old_totals": {
+    "Q_N": 23477156.839,
+    "G_self_weight_N": 36839559.851,
+    "G_superimposed_dead_N": 43677573.457,
+    "G_total_N": 80517133.308
+  },
+  "current_totals": {
+    "Q_N": 22637353.432,
+    "G_self_weight_N": 36839559.851,
+    "G_superimposed_dead_N": 41876499.483,
+    "G_total_N": 78716059.334
+  },
+  "delta_N": {
+    "G_total_N": -1801073.973999992,
+    "Q_N": -839803.4070000015
+  },
+  "G_plus_half_Q_weight_N": {
+    "old": 92255711.72749999,
+    "current": 90034736.05000001,
+    "delta": -2220975.6774999797
+  },
+  "actual_seismic_floor_weight_N": {
+    "old": 89989992.239,
+    "current": 87769016.5625
+  },
+  "weight_note": "Global G+0.5Q includes gravity weights not assigned to the seismic floor groups; actual lateral cases use only documented seismic_floor_loads. No formulation change.",
+  "analysis_delta": {
+    "G": {
+      "old": {
+        "finite": true,
+        "max_translation_m": 0.011060014029265448,
+        "external_force_N": [
+          0.0,
+          0.0,
+          -80517133.3
+        ],
+        "reaction_force_N": [
+          1.548323780298233e-08,
+          -1.5187510777622897e-09,
+          80517133.29999995
+        ],
+        "equilibrium_residual_N": [
+          1.548323780298233e-08,
+          -1.5187510777622897e-09,
+          -4.470348358154297e-08
+        ],
+        "equilibrium_relative_residual": 5.552046098683318e-16,
+        "equilibrium_status": "PASS"
+      },
+      "current": {
+        "finite": true,
+        "max_translation_m": 0.011039428039520417,
+        "external_force_N": [
+          0.0,
+          0.0,
+          -78716059.324
+        ],
+        "reaction_force_N": [
+          2.325396053493023e-08,
+          6.961616952938846e-09,
+          78716059.32399991
+        ],
+        "equilibrium_residual_N": [
+          2.325396053493023e-08,
+          6.961616952938846e-09,
+          -8.940696716308594e-08
+        ],
+        "equilibrium_relative_residual": 1.1358160956086676e-15,
+        "equilibrium_status": "PASS"
+      },
+      "delta_max_translation_m": -2.0585989745030772e-05,
+      "delta_reaction_force_N": [
+        7.770722731947899e-09,
+        8.480368030701136e-09,
+        -1801073.9760000408
+      ]
+    },
+    "Q": {
+      "old": {
+        "finite": true,
+        "max_translation_m": 0.002385389238218962,
+        "external_force_N": [
+          0.0,
+          0.0,
+          -23477156.775
+        ],
+        "reaction_force_N": [
+          2.750311978161335e-09,
+          2.624801709316671e-09,
+          23477156.77499999
+        ],
+        "equilibrium_residual_N": [
+          2.750311978161335e-09,
+          2.624801709316671e-09,
+          -7.450580596923828e-09
+        ],
+        "equilibrium_relative_residual": 3.173544679335996e-16,
+        "equilibrium_status": "PASS"
+      },
+      "current": {
+        "finite": true,
+        "max_translation_m": 0.0023763790173476802,
+        "external_force_N": [
+          0.0,
+          0.0,
+          -22637353.367
+        ],
+        "reaction_force_N": [
+          4.147295840084553e-09,
+          1.3387762010097504e-09,
+          22637353.36699999
+        ],
+        "equilibrium_residual_N": [
+          4.147295840084553e-09,
+          1.3387762010097504e-09,
+          -7.450580596923828e-09
+        ],
+        "equilibrium_relative_residual": 3.291277242588369e-16,
+        "equilibrium_status": "PASS"
+      },
+      "delta_max_translation_m": -9.010220871281602e-06,
+      "delta_reaction_force_N": [
+        1.3969838619232178e-09,
+        -1.2860255083069205e-09,
+        -839803.4079999998
+      ]
+    },
+    "EX": {
+      "old": {
+        "finite": true,
+        "max_translation_m": 0.06810109280383474,
+        "external_force_N": [
+          17997998.4478,
+          0.0,
+          0.0
+        ],
+        "reaction_force_N": [
+          -17997998.447799593,
+          -1.3505541573977098e-08,
+          4.889443516731262e-09
+        ],
+        "equilibrium_residual_N": [
+          4.0605664253234863e-07,
+          -1.3505541573977098e-08,
+          4.889443516731262e-09
+        ],
+        "equilibrium_relative_residual": 2.2561211109671104e-14,
+        "equilibrium_status": "PASS"
+      },
+      "current": {
+        "finite": true,
+        "max_translation_m": 0.06619803458256172,
+        "external_force_N": [
+          17553803.3125,
+          0.0,
+          0.0
+        ],
+        "reaction_force_N": [
+          -17553803.312499672,
+          -1.4884335541864857e-08,
+          6.984919309616089e-09
+        ],
+        "equilibrium_residual_N": [
+          3.2782554626464844e-07,
+          -1.4884335541864857e-08,
+          6.984919309616089e-09
+        ],
+        "equilibrium_relative_residual": 1.8675471089003548e-14,
+        "equilibrium_status": "PASS"
+      },
+      "delta_max_translation_m": -0.001903058221273013,
+      "delta_reaction_force_N": [
+        444195.13529992104,
+        -1.3787939678877592e-09,
+        2.0954757928848267e-09
+      ]
+    },
+    "EY": {
+      "old": {
+        "finite": true,
+        "max_translation_m": 0.09869325276596161,
+        "external_force_N": [
+          0.0,
+          17997998.4478,
+          0.0
+        ],
+        "reaction_force_N": [
+          9.42964106798172e-09,
+          -17997998.447801333,
+          -4.773028194904327e-09
+        ],
+        "equilibrium_residual_N": [
+          9.42964106798172e-09,
+          -1.3336539268493652e-06,
+          -4.773028194904327e-09
+        ],
+        "equilibrium_relative_residual": 7.410012456203355e-14,
+        "equilibrium_status": "PASS"
+      },
+      "current": {
+        "finite": true,
+        "max_translation_m": 0.0962320486057846,
+        "external_force_N": [
+          0.0,
+          17553803.3125,
+          0.0
+        ],
+        "reaction_force_N": [
+          1.0390067473053932e-08,
+          -17553803.312501,
+          -4.540197551250458e-09
+        ],
+        "equilibrium_residual_N": [
+          1.0390067473053932e-08,
+          -9.98377799987793e-07,
+          -4.540197551250458e-09
+        ],
+        "equilibrium_relative_residual": 5.687529831650756e-14,
+        "equilibrium_status": "PASS"
+      },
+      "delta_max_translation_m": -0.002461204160177005,
+      "delta_reaction_force_N": [
+        9.604264050722122e-10,
+        444195.13530033454,
+        2.3283064365386963e-10
+      ]
+    }
+  },
+  "pending": "Other physical contours/void classifications still REVIEW_REQUIRED; hull outside areas diagnostic, not automatic removals."
+}

@@ -1,0 +1,48 @@
+{
+  "format": "MCOC_CURRENT_DATASET_V1",
+  "analysis_settings_sha256": "6cdf28e10cd00f20799b25ae6e08fab398b0baf2b075e48bf518df4f1528722e",
+  "geometry_version": "9d04e0fc3f42f2d284b3153092b62f4305ceb5256ebb0f61e6c573140130fa16",
+  "fe_version": "e49fe1c4e2be7ab3478f4e87963cc996e8ee0d6a42b6c16f34da40b761f3ddc1",
+  "loads_version": "341e1a7b9b3676036caf91836493578aface0f7b89cdc8d35c2f61bf497ec680",
+  "analysis_version": "WEEK7_CURRENT_UNIFORM_Q_V1",
+  "git_commit": "3cc21d613377f295880974a62fe98c48c9eea50f",
+  "timestamp": "2026-10-02T00:42:43.217662+00:00",
+  "status": "CURRENT_VERIFIED",
+  "geometry_stream_sha256": "61174468bae669270938ec84bc3bfd329bf79af33f92aff36ff0183b2856c8a4",
+  "units": {
+    "length": "m",
+    "force": "N",
+    "moment": "N.m",
+    "stress": "Pa",
+    "mass": "kg",
+    "rotation": "rad"
+  },
+  "cases": [
+    "G",
+    "Q",
+    "EX",
+    "EY",
+    "R"
+  ],
+  "basis_cases": [
+    "G",
+    "Q",
+    "EX",
+    "EY"
+  ],
+  "analysis_available": true,
+  "fe_approved": true,
+  "loads_approved": true,
+  "linear_verified": true,
+  "payload_file": "p1l5_current_analysis_cases.json",
+  "payload_sha256": "f1cf961a58b9431fb92d743ea5bd3c9011771287a62409110f2084ec2ecda7e3",
+  "source_geometry": "entregas/P1L5/modelo_central/model_master.json",
+  "source_fe": "entregas/P1L5/modelo_central/model_master.json#/fe_topology",
+  "source_loads": "entregas/P1L5/modelo_central/loads.json",
+  "basis_policy": "Identical K, supports, local axes, node/member ordering and signed SI components.",
+  "capacity_policy": "Demand changes by compatible linear superposition; section/material changes require reanalysis and capacity compatibility review.",
+  "result_state": "CURRENT_WITH_DOCUMENTED_FALLBACKS",
+  "unresolved_load_count": 3,
+  "current_element_loads_file": "p1l5_current_loads_by_element.json",
+  "current_element_loads_sha256": "518bab686a731604b6c0cafbf1d907c792cc7cbdb57c47485e756b5031c61986"
+}

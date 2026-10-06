@@ -1,0 +1,46 @@
+{
+  "status": "PASS_WITH_EXPLICIT_NOTES",
+  "checks": {
+    "analysis_settings_identity": true,
+    "unique_physical_and_viewer_ids": true,
+    "unity_geometry_covers_central": true,
+    "linear_geometry_metadata": true,
+    "column_height_metadata": true,
+    "fe_support_reachability": true,
+    "load_conservation": true,
+    "opensees_four_cases": true,
+    "result_crosswalk_complete": true,
+    "capacity_crosswalk_complete": true,
+    "capacity_source_identity": true,
+    "unity_contract_verified": true,
+    "unity_contract_hashes": true,
+    "unity_capacity_artifact_matches_generated": true,
+    "unity_basis_and_capacity_coefficients": true,
+    "manual_R_My_sample": true
+  },
+  "failures": [],
+  "counts": {
+    "beams": 442,
+    "columns": 143,
+    "walls": 84,
+    "slabs": 10,
+    "active_structural": 669,
+    "fe_segments": 677,
+    "unity_solids": 712,
+    "capacity_records": 669,
+    "unresolved_loads": 3
+  },
+  "manual_sample": {
+    "element_id": "E1-P2-V-041",
+    "R_My_kNm": 353.7784227678549
+  },
+  "unsupported_fe_components": [],
+  "limitations": [
+    "Remaining wall candidates are review-only; see the latest wall-continuity audit, not previous checkpoint counts.",
+    "85 active ED1/P4 structural members retain an explicitly inferred material fallback.",
+    "10 non-FE slabs have MAT_UNKNOWN; slab thickness 0.15 m is an academic load fallback.",
+    "3 permanent point-load catalog entries lack an unequivocal receiver and remain excluded; historical SC is reference-only under the project-Q policy.",
+    "LT1 Q differs by -78.638% from ETABS; benchmark, not a calibration target.",
+    "Unity compile/Play requires a separate editor test; this script verifies the JSON contract only."
+  ]
+}

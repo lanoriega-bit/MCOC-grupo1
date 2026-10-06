@@ -1,0 +1,16 @@
+{
+  "status": "PASS_WITH_EXPLICIT_INVALID_POINTS",
+  "scope": "SEPARATE_FIBER_STUDIES_NOT_CURRENT_CAPACITY",
+  "column_Mphi_steps": 240,
+  "column_Mphi_complete": true,
+  "column_PM_statuses": {
+    "P0_Mflexion": "PASS",
+    "P25": "PASS",
+    "P50": "PARTIAL_FAIL_STEP_237_PHI_TARGET_REDUCED_TO_1.25PHIY",
+    "PureCompression": "AXIAL_ONLY_PASS"
+  },
+  "wall_PM_valid": 8,
+  "wall_PM_total": 14,
+  "column_source": "entregas/P1L3/capacidad_ha/datos/seccion_estudio.json",
+  "wall_source": "entregas/P1L4/demanda_capacidad/datos/wall_section_estudio.json"
+}

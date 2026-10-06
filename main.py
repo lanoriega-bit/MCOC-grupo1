@@ -15,7 +15,7 @@ import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parent
-CONFIG = ROOT / "project_config.json"
+CONFIG = ROOT / "config" / "project_config.json"
 
 
 def read_json(path: Path) -> dict:
@@ -65,10 +65,10 @@ def properties_match_export(config: dict) -> bool:
         return False
     try:
         for name in ("sections", "materials"):
-            relative = config["paths"][name]
+            relative = config.get("historical_property_paths", {}).get(name, config["paths"][name])
             original = subprocess.check_output(["git", "show", f"{commit}:{relative}"],
                                                cwd=ROOT, stderr=subprocess.PIPE)
-            if json.loads(original.decode("utf-8-sig")) != read_json(project_path(relative)):
+            if json.loads(original.decode("utf-8-sig")) != read_json(project_path(config["paths"][name])):
                 return False
     except (OSError, subprocess.CalledProcessError, ValueError):
         return False

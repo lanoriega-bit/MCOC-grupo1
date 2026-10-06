@@ -1,10 +1,39 @@
 # MCOC grupo 1 — laboratorio estructural digital
 
-Edificios 1 y 2: modelo 3D canónico, OpenSees y Unity. Rama compartida: **main**.
+> Arquitectura funcional en `codex/final-repository-architecture`, sin modificar `main`.
+> Las fuentes oficiales están ahora en [model/](model/README.md) y
+> [config/](config/README.md). Unity desktop está en `viewer/unity/` y pasó Play
+> desde esa ubicación. AR solo se organiza; no se prueba ni regenera en esta etapa.
+> Véase [arquitectura](docs/ARCHITECTURE.md) y [comandos](tools/README.md).
+> [Cierre conservador y QA final](reports/repository_architecture_audit/FINAL_ARCHITECTURE.md):
+> Cierre de organización con QA estático; no requiere abrir Unity ni probar AR.
+
+Edificios 1 y 2: modelo 3D canónico, OpenSees y Unity. Rama de reorganización:
+**codex/final-repository-architecture**. No se modifica `main` en esta etapa.
 El estado vigente incluye las correcciones de núcleos y columnas de P1L6;
 las entregas históricas se conservan, no se sobrescriben.
 
 ## Empieza aquí
+
+```text
+model/          modelo y datos físicos canónicos
+config/         rutas e hipótesis del análisis
+analysis/       OpenSees, capacidad, Fiber y postproceso
+results/        resultados y QA generados
+viewer/unity/   Viewer desktop: Assets/Main.unity
+ar/             módulo AR organizado, funcionalmente intacto
+tools/          comandos principales
+tests/          validaciones por dominio
+docs/           documentación técnica y de uso
+reports/        informes y evidencia de reorganización
+archive/        entregas, auditorías y código histórico
+entregas/P1L2/  excepciones protegidas; no es el modelo activo
+```
+
+Flujo de datos: `model → analysis → results → Unity / AR`.
+AR no se ejecuta ni se regenera en esta reorganización.
+Los benchmarks académicos P1L0/P1L1 y ejercicios antiguos quedan separados del
+pipeline CURRENT; no se alteran ni se archivan sin revisar su cobertura particular.
 
 1. **Abrir el edificio:** doble clic en `Abrir_Unity.bat`.
 2. En Unity abre `Assets/Main.unity`, pulsa **Play** y usa la pestaña **Game**.
@@ -14,6 +43,64 @@ las entregas históricas se conservan, no se sobrescriben.
 Unity: 6000.6.0f1, licencia activa en Unity Hub.
 El visor de escritorio es la interfaz habitual; la escena AR no sustituye Main.
 
+## Reproducir CURRENT Semana 7 desde cero (Windows / PowerShell)
+
+Python canónico: **3.12.14 x64**. OpenSeesPy **3.8.0.0** (motor 3.8.0).
+Unity **6000.6.0f1**; versiones de paquetes en `Packages/manifest.json` y
+`packages-lock.json` del Viewer. No actualizar paquetes silenciosamente.
+
+```powershell
+git clone --branch codex/final-repository-architecture https://github.com/lanoriega-bit/MCOC-grupo1.git
+cd MCOC-grupo1
+python --version
+python -m venv .venv-p1l5
+.\.venv-p1l5\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv-p1l5\Scripts\python.exe -B tools/validate_project.py
+.\.venv-p1l5\Scripts\python.exe -B tools/rebuild_all.py
+```
+
+El pipeline usa la geometría y tributarias CURRENT versionadas: **no necesita CAD
+original ni reconstruye áreas al editar qQ**. Produce G/Q/EX/EY, capacidades
+aproximadas y contratos Unity desktop. AR no forma parte de este comando.
+`tools/rebuild_all.py` solo muestra un plan; `--execute` permite recalcular.
+No recalcular para abrir el Viewer ni durante una reorganización. Si falla, CURRENT queda STALE.
+No sustituirlo por el pipeline geométrico antiguo para cambiar solo qQ.
+
+En Unity Hub → Add → proyecto `viewer/unity` →
+`Assets/Main.unity` → Play → Game, escala 1x.
+En **Análisis**: campo qQ [kN/m²] → Guardar → Reanalizar → recarga de escena.
+En **Resultados**: λQ solo combina respuestas; no cambia el caso físico Q.
+Un standalone fuera del repositorio es de consulta: no incluye OpenSees/Python.
+
+Configuración única: `config/analysis_settings.json`.
+Valor inicial qQ = **0,667 kN/m²**, hipótesis de proyecto, no norma.
+SC originales (incluidas lineales/puntuales) son referencia, no se suman a Q.
+G permanente permanece; el sismo conserva explícitamente la hipótesis
+educativa **0,20 × (G + 0,50 Q)**, sin atribuirla a una instrucción verificada
+del profesor. Cambiar qQ invalida Q/EX/EY/R/D-C (se regenera también G por QA).
+
+Fiber separado, sin sobrescribir historia ni capacidad CURRENT:
+
+```powershell
+.\.venv-p1l5\Scripts\python.exe -B analysis/fiber/reproduce_studies.py
+```
+
+Outputs: `results/fiber`. Algunos puntos P-M no convergen:
+ver `QA.json`; no son capacidad certificada ni se usan para calibrar D/C.
+Los gráficos nuevos no interpolan intervalos no convergidos. Para volver a dibujar
+los CSV existentes sin repetir ensayos: añadir `--plots-only` al comando anterior.
+
+La evidencia siguiente pertenece al cierre histórico anterior, no certifica esta reorganización:
+ver `archive/historical_deliveries/P1L7/CLEAN_CLONE_QA.json`. Para repetir esa comprobación histórica, tras preparar
+otra copia y su `.venv-p1l5`, desde el proyecto principal ejecutar:
+
+```powershell
+.\.venv-p1l5\Scripts\python.exe -B tools/validate_project.py
+```
+
+Esto verifica Python/JSON, no sustituye Play ni la prueba del ejecutable final.
+Estado histórico de cierre: [WEEK7_MODEL_CLOSURE](archive/historical_deliveries/P1L7/WEEK7_MODEL_CLOSURE.md).
+
 ## Qué abrir y qué editar
 
 | Necesidad | Entrada |
@@ -21,12 +108,19 @@ El visor de escritorio es la interfaz habitual; la escena AR no sustituye Main.
 | Instrucciones detalladas y dónde cambiar código | [Guía de uso y cambios](docs/GUIA_USO_Y_CAMBIOS.md) |
 | Archivos vigentes / históricos / generados | [Índice canónico](PROJECT_INDEX.md) |
 | Menú y coordinación de comandos | [main.py](main.py) |
-| Configuración de rutas | [project_config.json](project_config.json) |
-| Geometría, secciones, materiales y cargas editables | [modelo_central](entregas/P1L5/modelo_central/README.md) |
-| Auditoría estructural y QA más recientes | [Muros y núcleos CURRENT](entregas/P1L6/wall_continuity/README.md) |
-| Uso del visor y funcionalidades | [Unity desktop P1L6](entregas/P1L6/desktop/README.md) |
+| Configuración de rutas | [project_config.json](config/project_config.json) |
+| Geometría editable | [model_master.json](model/model_master.json) |
+| Materiales y secciones | [materials.json](model/materials.json), [sections.json](model/sections.json) |
+| Cargas y tributarias | [loads.json](model/loads.json) |
+| OpenSees | [analysis/opensees/](analysis/opensees/) |
+| Resultados guardados | [results/](results/README.md) |
+| AR y sus excepciones de ubicación | [ar/](ar/README.md) |
+| Tests por dominio | [tests/](tests/README.md) |
+| Informe final de reorganización | [FINAL_ARCHITECTURE.md](reports/repository_architecture_audit/FINAL_ARCHITECTURE.md) |
+| Auditoría estructural y QA actuales | [Pipeline CURRENT](results/validation/CURRENT_PIPELINE_QA.md) |
+| Uso del visor y funcionalidades | [Unity desktop](viewer/README.md) |
 
-`modelo_central` es la única fuente del modelo. No corregir geometría editando
+`model/` es la única fuente del modelo. No corregir geometría editando
 `StreamingAssets`, resultados OpenSees o exportaciones antiguas.
 
 ## Comandos sencillos
@@ -52,21 +146,22 @@ identidad del dataset, y `validar` ejecuta el QA técnico.
 
 Laboratorio lineal elástico en SI (m, N, Pa), no un modelo de diseño certificado.
 Losas sin elementos FE; cargas transmitidas por tributarias.
-Capacidad HA separada. Persisten supuestos de materiales/armaduras/losas y seis
-registros de cargas puntuales sin receptor, explícitamente excluidos; ver las
-notas del [QA vigente](entregas/P1L6/wall_continuity/CURRENT_PIPELINE_QA.md).
+Capacidad HA separada. Persisten supuestos de materiales/armaduras/losas y tres
+registros permanentes puntuales sin receptor, explícitamente excluidos; SC
+histórica es referencia bajo la política Q uniforme. Ver las
+notas del [QA vigente](results/validation/CURRENT_PIPELINE_QA.md).
 
 ## Entregas y reproducibilidad
 
 | Etapa | Documentación |
 | --- | --- |
-| P1L0 | [Benchmark mínimo](entregas/P1L0/README.md) |
+| P1L0 | [Benchmark mínimo](entregas/p1l0/README.md) |
 | P1L1 | [Benchmark 3D](entregas/p1l1_benchmark_3d) |
-| P1L2 | [Entrega y evolución](entregas/P1L2/README.md) |
-| P1L3 | [Informe](entregas/P1L3/INFORME.md) |
-| P1L4 | [Entrega histórica](entregas/P1L4/README.md) |
-| P1L5 | [Guía funcional](entregas/P1L5/README.md) |
-| P1L6 | [Integración](entregas/P1L6/README.md) |
+| P1L2 | [Entrega histórica](archive/historical_deliveries/P1L2/README.md) |
+| P1L3 | [Informe](archive/historical_deliveries/P1L3/INFORME.md) |
+| P1L4 | [Entrega histórica](archive/historical_deliveries/P1L4/README.md) |
+| P1L5 | [Entrega histórica](archive/historical_deliveries/P1L5/README.md) |
+| P1L6 | [Integración histórica](archive/historical_deliveries/P1L6/README.md) |
 
 `P1L4_FINAL` permanece intacto. La referencia original de Luis
 `entregas/P1L2/unity_export/model_viewer.json` es solo lectura.

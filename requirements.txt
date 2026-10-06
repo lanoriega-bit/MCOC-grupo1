@@ -1,4 +1,17 @@
-openseespy==3.7.1.2
+openseespy==3.8.0.0
+openseespywin==3.8.0.0; sys_platform == "win32"
+numpy==2.5.3
 matplotlib==3.10.5
 ezdxf==1.4.4
 shapely==2.1.2
+# Windows/Python 3.12 reproducible transitive set, verified in .venv-week7-check.
+contourpy==1.4.0
+cycler==0.12.1
+fonttools==4.66.1
+kiwisolver==1.5.1
+packaging==26.3
+pillow==12.3.0
+pyparsing==3.3.3
+python-dateutil==2.9.0.post0
+six==1.17.0
+typing_extensions==4.16.0

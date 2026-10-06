@@ -1,0 +1,460 @@
+{
+  "status": "PLAN_ONLY_NOT_AUTHORIZED_FOR_BULK_MOVE",
+  "count": 62,
+  "exceptions": [
+    "entregas/P1L2/README.md",
+    "entregas/P1L2/STATUS.md",
+    "entregas/P1L2/unity_export/model_1_audited_corrected.json",
+    "entregas/P1L2/unity_export/model_combined_viewer.json",
+    "entregas/P1L2/unity_export/model_viewer.json"
+  ],
+  "files": [
+    {
+      "path": "entregas/README.md",
+      "proposed_destination": "archive/historical_deliveries/README.md",
+      "active_literal_references": [],
+      "decision": "REVIEW_DYNAMIC_DEPENDENCIES"
+    },
+    {
+      "path": "entregas/ejercicios/README.md",
+      "proposed_destination": "archive/historical_deliveries/ejercicios/README.md",
+      "active_literal_references": [],
+      "decision": "REVIEW_DYNAMIC_DEPENDENCIES"
+    },
+    {
+      "path": "entregas/ejercicios/columna_viga/README.md",
+      "proposed_destination": "archive/historical_deliveries/ejercicios/columna_viga/README.md",
+      "active_literal_references": [],
+      "decision": "REVIEW_DYNAMIC_DEPENDENCIES"
+    },
+    {
+      "path": "entregas/ejercicios/columna_viga/docs/explicacion.md",
+      "proposed_destination": "archive/historical_deliveries/ejercicios/columna_viga/docs/explicacion.md",
+      "active_literal_references": [
+        "docs/gestion/weekly-log.md"
+      ],
+      "decision": "REVIEW_REFERENCES"
+    },
+    {
+      "path": "entregas/ejercicios/columna_viga/opensees/columna_viga_2d.py",
+      "proposed_destination": "archive/historical_deliveries/ejercicios/columna_viga/opensees/columna_viga_2d.py",
+      "active_literal_references": [
+        "docs/gestion/weekly-log.md"
+      ],
+      "decision": "REVIEW_REFERENCES"
+    },
+    {
+      "path": "entregas/ejercicios/columna_viga/results/diagrama_columna_viga.png",
+      "proposed_destination": "archive/historical_deliveries/ejercicios/columna_viga/results/diagrama_columna_viga.png",
+      "active_literal_references": [
+        "docs/gestion/ai-usage-log.md",
+        "docs/gestion/weekly-log.md"
+      ],
+      "decision": "REVIEW_REFERENCES"
+    },
+    {
+      "path": "entregas/ejercicios/columna_viga/results/diagramas_nvm_columna_viga.png",
+      "proposed_destination": "archive/historical_deliveries/ejercicios/columna_viga/results/diagramas_nvm_columna_viga.png",
+      "active_literal_references": [
+        "docs/gestion/ai-usage-log.md",
+        "docs/gestion/weekly-log.md"
+      ],
+      "decision": "REVIEW_REFERENCES"
+    },
+    {
+      "path": "entregas/p1l0/README.md",
+      "proposed_destination": "archive/historical_deliveries/p1l0/README.md",
+      "active_literal_references": [],
+      "decision": "REVIEW_DYNAMIC_DEPENDENCIES"
+    },
+    {
+      "path": "entregas/p1l0/docs/P1L0_explicacion_codigo.pdf",
+      "proposed_destination": "archive/historical_deliveries/p1l0/docs/P1L0_explicacion_codigo.pdf",
+      "active_literal_references": [],
+      "decision": "REVIEW_DYNAMIC_DEPENDENCIES"
+    },
+    {
+      "path": "entregas/p1l0/docs/enunciado-control-1-p2.md",
+      "proposed_destination": "archive/historical_deliveries/p1l0/docs/enunciado-control-1-p2.md",
+      "active_literal_references": [
+        "docs/gestion/enunciado-proyecto-p1.md"
+      ],
+      "decision": "REVIEW_REFERENCES"
+    },
+    {
+      "path": "entregas/p1l0/docs/explicacion.md",
+      "proposed_destination": "archive/historical_deliveries/p1l0/docs/explicacion.md",
+      "active_literal_references": [
+        "docs/gestion/enunciado-proyecto-p1.md"
+      ],
+      "decision": "REVIEW_REFERENCES"
+    },
+    {
+      "path": "entregas/p1l0/docs/generar_pdf.py",
+      "proposed_destination": "archive/historical_deliveries/p1l0/docs/generar_pdf.py",
+      "active_literal_references": [],
+      "decision": "REVIEW_DYNAMIC_DEPENDENCIES"
+    },
+    {
+      "path": "entregas/p1l0/legacy/opensees/ejemplo_minimo_2d.py",
+      "proposed_destination": "archive/historical_deliveries/p1l0/legacy/opensees/ejemplo_minimo_2d.py",
+      "active_literal_references": [],
+      "decision": "REVIEW_DYNAMIC_DEPENDENCIES"
+    },
+    {
+      "path": "entregas/p1l0/legacy/opensees/visualizar_p1l0.py",
+      "proposed_destination": "archive/historical_deliveries/p1l0/legacy/opensees/visualizar_p1l0.py",
+      "active_literal_references": [],
+      "decision": "REVIEW_DYNAMIC_DEPENDENCIES"
+    },
+    {
+      "path": "entregas/p1l0/opensees/ejemplo_minimo_2d.py",
+      "proposed_destination": "archive/historical_deliveries/p1l0/opensees/ejemplo_minimo_2d.py",
+      "active_literal_references": [
+        "docs/gestion/enunciado-proyecto-p1.md",
+        "docs/gestion/weekly-log.md"
+      ],
+      "decision": "REVIEW_REFERENCES"
+    },
+    {
+      "path": "entregas/p1l0/results/diagrama_pregunta_2.png",
+      "proposed_destination": "archive/historical_deliveries/p1l0/results/diagrama_pregunta_2.png",
+      "active_literal_references": [
+        "docs/gestion/ai-usage-log.md",
+        "docs/gestion/weekly-log.md"
+      ],
+      "decision": "REVIEW_REFERENCES"
+    },
+    {
+      "path": "entregas/p1l0/results/diagramas_nvm_pregunta_2.png",
+      "proposed_destination": "archive/historical_deliveries/p1l0/results/diagramas_nvm_pregunta_2.png",
+      "active_literal_references": [
+        "docs/gestion/ai-usage-log.md",
+        "docs/gestion/weekly-log.md"
+      ],
+      "decision": "REVIEW_REFERENCES"
+    },
+    {
+      "path": "entregas/p1l0/results/p1l0_deformada.png",
+      "proposed_destination": "archive/historical_deliveries/p1l0/results/p1l0_deformada.png",
+      "active_literal_references": [],
+      "decision": "REVIEW_DYNAMIC_DEPENDENCIES"
+    },
+    {
+      "path": "entregas/p1l0/results/p1l0_modelo.png",
+      "proposed_destination": "archive/historical_deliveries/p1l0/results/p1l0_modelo.png",
+      "active_literal_references": [],
+      "decision": "REVIEW_DYNAMIC_DEPENDENCIES"
+    },
+    {
+      "path": "entregas/p1l0/results/p1l0_validacion.png",
+      "proposed_destination": "archive/historical_deliveries/p1l0/results/p1l0_validacion.png",
+      "active_literal_references": [],
+      "decision": "REVIEW_DYNAMIC_DEPENDENCIES"
+    },
+    {
+      "path": "entregas/p1l1_benchmark_3d/README.md",
+      "proposed_destination": "archive/historical_deliveries/p1l1_benchmark_3d/README.md",
+      "active_literal_references": [],
+      "decision": "REVIEW_DYNAMIC_DEPENDENCIES"
+    },
+    {
+      "path": "entregas/p1l1_benchmark_3d/docs/P1L1_explicacion_codigo.pdf",
+      "proposed_destination": "archive/historical_deliveries/p1l1_benchmark_3d/docs/P1L1_explicacion_codigo.pdf",
+      "active_literal_references": [],
+      "decision": "REVIEW_DYNAMIC_DEPENDENCIES"
+    },
+    {
+      "path": "entregas/p1l1_benchmark_3d/docs/generar_pdf_explicacion.py",
+      "proposed_destination": "archive/historical_deliveries/p1l1_benchmark_3d/docs/generar_pdf_explicacion.py",
+      "active_literal_references": [],
+      "decision": "REVIEW_DYNAMIC_DEPENDENCIES"
+    },
+    {
+      "path": "entregas/p1l1_benchmark_3d/docs/guia_modelo_3d.md",
+      "proposed_destination": "archive/historical_deliveries/p1l1_benchmark_3d/docs/guia_modelo_3d.md",
+      "active_literal_references": [],
+      "decision": "REVIEW_DYNAMIC_DEPENDENCIES"
+    },
+    {
+      "path": "entregas/p1l1_benchmark_3d/docs/semana01.md",
+      "proposed_destination": "archive/historical_deliveries/p1l1_benchmark_3d/docs/semana01.md",
+      "active_literal_references": [],
+      "decision": "REVIEW_DYNAMIC_DEPENDENCIES"
+    },
+    {
+      "path": "entregas/p1l1_benchmark_3d/docs/semana01.pdf",
+      "proposed_destination": "archive/historical_deliveries/p1l1_benchmark_3d/docs/semana01.pdf",
+      "active_literal_references": [],
+      "decision": "REVIEW_DYNAMIC_DEPENDENCIES"
+    },
+    {
+      "path": "entregas/p1l1_benchmark_3d/opensees/benchmark_3d.py",
+      "proposed_destination": "archive/historical_deliveries/p1l1_benchmark_3d/opensees/benchmark_3d.py",
+      "active_literal_references": [],
+      "decision": "REVIEW_DYNAMIC_DEPENDENCIES"
+    },
+    {
+      "path": "entregas/p1l1_benchmark_3d/results/diagramas_nvm_3d.png",
+      "proposed_destination": "archive/historical_deliveries/p1l1_benchmark_3d/results/diagramas_nvm_3d.png",
+      "active_literal_references": [],
+      "decision": "REVIEW_DYNAMIC_DEPENDENCIES"
+    },
+    {
+      "path": "entregas/p1l1_benchmark_3d/results/diagramas_nvm_3d_valores.csv",
+      "proposed_destination": "archive/historical_deliveries/p1l1_benchmark_3d/results/diagramas_nvm_3d_valores.csv",
+      "active_literal_references": [],
+      "decision": "REVIEW_DYNAMIC_DEPENDENCIES"
+    },
+    {
+      "path": "entregas/p1l1_benchmark_3d/results/fuerzas_elementos.csv",
+      "proposed_destination": "archive/historical_deliveries/p1l1_benchmark_3d/results/fuerzas_elementos.csv",
+      "active_literal_references": [],
+      "decision": "REVIEW_DYNAMIC_DEPENDENCIES"
+    },
+    {
+      "path": "entregas/p1l1_benchmark_3d/results/geometria_deformada_ejes.png",
+      "proposed_destination": "archive/historical_deliveries/p1l1_benchmark_3d/results/geometria_deformada_ejes.png",
+      "active_literal_references": [],
+      "decision": "REVIEW_DYNAMIC_DEPENDENCIES"
+    },
+    {
+      "path": "entregas/p1l1_benchmark_3d/results/verificacion.json",
+      "proposed_destination": "archive/historical_deliveries/p1l1_benchmark_3d/results/verificacion.json",
+      "active_literal_references": [],
+      "decision": "REVIEW_DYNAMIC_DEPENDENCIES"
+    },
+    {
+      "path": "entregas/p1l1_benchmark_3d_2/README.md",
+      "proposed_destination": "archive/historical_deliveries/p1l1_benchmark_3d_2/README.md",
+      "active_literal_references": [],
+      "decision": "REVIEW_DYNAMIC_DEPENDENCIES"
+    },
+    {
+      "path": "entregas/p1l1_benchmark_3d_2/docs/semana01.md",
+      "proposed_destination": "archive/historical_deliveries/p1l1_benchmark_3d_2/docs/semana01.md",
+      "active_literal_references": [
+        "docs/gestion/weekly-log.md"
+      ],
+      "decision": "REVIEW_REFERENCES"
+    },
+    {
+      "path": "entregas/p1l1_benchmark_3d_2/opensees/benchmark_3d_2.py",
+      "proposed_destination": "archive/historical_deliveries/p1l1_benchmark_3d_2/opensees/benchmark_3d_2.py",
+      "active_literal_references": [
+        "docs/gestion/weekly-log.md"
+      ],
+      "decision": "REVIEW_REFERENCES"
+    },
+    {
+      "path": "entregas/p1l1_benchmark_3d_2/results/diagramas_nvm_3d.png",
+      "proposed_destination": "archive/historical_deliveries/p1l1_benchmark_3d_2/results/diagramas_nvm_3d.png",
+      "active_literal_references": [
+        "docs/gestion/weekly-log.md"
+      ],
+      "decision": "REVIEW_REFERENCES"
+    },
+    {
+      "path": "entregas/p1l1_benchmark_3d_2/results/diagramas_nvm_3d_valores.csv",
+      "proposed_destination": "archive/historical_deliveries/p1l1_benchmark_3d_2/results/diagramas_nvm_3d_valores.csv",
+      "active_literal_references": [
+        "docs/gestion/weekly-log.md"
+      ],
+      "decision": "REVIEW_REFERENCES"
+    },
+    {
+      "path": "entregas/p1l1_benchmark_3d_2/results/fuerzas_elementos.csv",
+      "proposed_destination": "archive/historical_deliveries/p1l1_benchmark_3d_2/results/fuerzas_elementos.csv",
+      "active_literal_references": [
+        "docs/gestion/weekly-log.md"
+      ],
+      "decision": "REVIEW_REFERENCES"
+    },
+    {
+      "path": "entregas/p1l1_benchmark_3d_2/results/geometria_deformada_ejes.png",
+      "proposed_destination": "archive/historical_deliveries/p1l1_benchmark_3d_2/results/geometria_deformada_ejes.png",
+      "active_literal_references": [
+        "docs/gestion/weekly-log.md"
+      ],
+      "decision": "REVIEW_REFERENCES"
+    },
+    {
+      "path": "entregas/p1l1_benchmark_3d_2/results/verificacion.json",
+      "proposed_destination": "archive/historical_deliveries/p1l1_benchmark_3d_2/results/verificacion.json",
+      "active_literal_references": [],
+      "decision": "REVIEW_DYNAMIC_DEPENDENCIES"
+    },
+    {
+      "path": "entregas/semana2/data/piso1S_raw.json",
+      "proposed_destination": "archive/historical_deliveries/semana2/data/piso1S_raw.json",
+      "active_literal_references": [
+        "docs/gestion/weekly-log.md"
+      ],
+      "decision": "REVIEW_REFERENCES"
+    },
+    {
+      "path": "entregas/semana2/data/piso1_raw.json",
+      "proposed_destination": "archive/historical_deliveries/semana2/data/piso1_raw.json",
+      "active_literal_references": [],
+      "decision": "REVIEW_DYNAMIC_DEPENDENCIES"
+    },
+    {
+      "path": "entregas/semana2/data/piso2_raw.json",
+      "proposed_destination": "archive/historical_deliveries/semana2/data/piso2_raw.json",
+      "active_literal_references": [],
+      "decision": "REVIEW_DYNAMIC_DEPENDENCIES"
+    },
+    {
+      "path": "entregas/semana2/data/piso3_raw.json",
+      "proposed_destination": "archive/historical_deliveries/semana2/data/piso3_raw.json",
+      "active_literal_references": [
+        "docs/gestion/ai-usage-log.md",
+        "docs/gestion/weekly-log.md"
+      ],
+      "decision": "REVIEW_REFERENCES"
+    },
+    {
+      "path": "entregas/semana2/data/piso4_raw.json",
+      "proposed_destination": "archive/historical_deliveries/semana2/data/piso4_raw.json",
+      "active_literal_references": [],
+      "decision": "REVIEW_DYNAMIC_DEPENDENCIES"
+    },
+    {
+      "path": "entregas/semana2/docs/informe-semana2.md",
+      "proposed_destination": "archive/historical_deliveries/semana2/docs/informe-semana2.md",
+      "active_literal_references": [
+        "docs/gestion/ai-usage-log.md",
+        "docs/gestion/weekly-log.md"
+      ],
+      "decision": "REVIEW_REFERENCES"
+    },
+    {
+      "path": "entregas/semana2/docs/mapeo-planos-reticulas.md",
+      "proposed_destination": "archive/historical_deliveries/semana2/docs/mapeo-planos-reticulas.md",
+      "active_literal_references": [
+        "docs/gestion/ai-usage-log.md"
+      ],
+      "decision": "REVIEW_REFERENCES"
+    },
+    {
+      "path": "entregas/semana2/opensees/edificio_completo.py",
+      "proposed_destination": "archive/historical_deliveries/semana2/opensees/edificio_completo.py",
+      "active_literal_references": [
+        "docs/gestion/ai-usage-log.md",
+        "docs/gestion/weekly-log.md"
+      ],
+      "decision": "REVIEW_REFERENCES"
+    },
+    {
+      "path": "entregas/semana2/opensees/edificio_completo_2bloques.py",
+      "proposed_destination": "archive/historical_deliveries/semana2/opensees/edificio_completo_2bloques.py",
+      "active_literal_references": [
+        "docs/gestion/weekly-log.md"
+      ],
+      "decision": "REVIEW_REFERENCES"
+    },
+    {
+      "path": "entregas/semana2/results/geometria_edificio.png",
+      "proposed_destination": "archive/historical_deliveries/semana2/results/geometria_edificio.png",
+      "active_literal_references": [
+        "docs/gestion/ai-usage-log.md"
+      ],
+      "decision": "REVIEW_REFERENCES"
+    },
+    {
+      "path": "entregas/semana2/results/geometria_edificio_2bloques.png",
+      "proposed_destination": "archive/historical_deliveries/semana2/results/geometria_edificio_2bloques.png",
+      "active_literal_references": [
+        "docs/gestion/weekly-log.md"
+      ],
+      "decision": "REVIEW_REFERENCES"
+    },
+    {
+      "path": "entregas/semana2/results/geometria_unity.json",
+      "proposed_destination": "archive/historical_deliveries/semana2/results/geometria_unity.json",
+      "active_literal_references": [
+        "docs/gestion/ai-usage-log.md"
+      ],
+      "decision": "REVIEW_REFERENCES"
+    },
+    {
+      "path": "entregas/semana2/results/geometria_unity_2bloques.json",
+      "proposed_destination": "archive/historical_deliveries/semana2/results/geometria_unity_2bloques.json",
+      "active_literal_references": [
+        "docs/gestion/weekly-log.md"
+      ],
+      "decision": "REVIEW_REFERENCES"
+    },
+    {
+      "path": "entregas/semana2/results/verificacion.json",
+      "proposed_destination": "archive/historical_deliveries/semana2/results/verificacion.json",
+      "active_literal_references": [
+        "docs/gestion/ai-usage-log.md"
+      ],
+      "decision": "REVIEW_REFERENCES"
+    },
+    {
+      "path": "entregas/semana2/results/verificacion_2bloques.json",
+      "proposed_destination": "archive/historical_deliveries/semana2/results/verificacion_2bloques.json",
+      "active_literal_references": [
+        "docs/gestion/weekly-log.md"
+      ],
+      "decision": "REVIEW_REFERENCES"
+    },
+    {
+      "path": "entregas/semana2/viewer/README.md",
+      "proposed_destination": "archive/historical_deliveries/semana2/viewer/README.md",
+      "active_literal_references": [
+        "docs/gestion/weekly-log.md"
+      ],
+      "decision": "REVIEW_REFERENCES"
+    },
+    {
+      "path": "entregas/semana2/viewer/index.html",
+      "proposed_destination": "archive/historical_deliveries/semana2/viewer/index.html",
+      "active_literal_references": [
+        "docs/gestion/ai-usage-log.md",
+        "docs/gestion/weekly-log.md"
+      ],
+      "decision": "REVIEW_REFERENCES"
+    },
+    {
+      "path": "entregas/semana3/results/superposicion_GQ.json",
+      "proposed_destination": "archive/historical_deliveries/semana3/results/superposicion_GQ.json",
+      "active_literal_references": [],
+      "decision": "REVIEW_DYNAMIC_DEPENDENCIES"
+    },
+    {
+      "path": "entregas/semana3/tarea8_superposicion/docs/informe-tarea8.md",
+      "proposed_destination": "archive/historical_deliveries/semana3/tarea8_superposicion/docs/informe-tarea8.md",
+      "active_literal_references": [],
+      "decision": "REVIEW_DYNAMIC_DEPENDENCIES"
+    },
+    {
+      "path": "entregas/semana3/tarea8_superposicion/opensees/superposicion_GQ.py",
+      "proposed_destination": "archive/historical_deliveries/semana3/tarea8_superposicion/opensees/superposicion_GQ.py",
+      "active_literal_references": [
+        "docs/gestion/ai-usage-log.md",
+        "docs/gestion/weekly-log.md"
+      ],
+      "decision": "REVIEW_REFERENCES"
+    },
+    {
+      "path": "entregas/semana3/tarea8_superposicion/results/superposicion_GQ.json",
+      "proposed_destination": "archive/historical_deliveries/semana3/tarea8_superposicion/results/superposicion_GQ.json",
+      "active_literal_references": [],
+      "decision": "REVIEW_DYNAMIC_DEPENDENCIES"
+    },
+    {
+      "path": "entregas/semana3/tarea8_superposicion/results/superposicion_reacciones.png",
+      "proposed_destination": "archive/historical_deliveries/semana3/tarea8_superposicion/results/superposicion_reacciones.png",
+      "active_literal_references": [],
+      "decision": "REVIEW_DYNAMIC_DEPENDENCIES"
+    }
+  ],
+  "limitations": [
+    "No scripts or AR tests executed.",
+    "No claim that every candidate is obsolete.",
+    "Dynamic imports/relative references need module-by-module review."
+  ]
+}

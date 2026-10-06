@@ -1,0 +1,1501 @@
+{
+  "format": "MCOC_P1L4_PHYSICAL_CONTEXT_V1",
+  "status": "AUDITED_DIAGNOSTIC_ONLY",
+  "data_state": "POST_P1L3_PHYSICAL_CONTEXT_NOT_RUN",
+  "participates_in_FE": false,
+  "opensees_changed": false,
+  "historical_results_changed": false,
+  "terrain_surface_generated": false,
+  "terrain_note": "No se genera una superficie continua: A/C no tienen cotas exteriores suficientes y B/D solo permiten marcadores/rangos respaldados.",
+  "source_priority": "PLANOS_DXF_COTAS > FOTOS_E_INFORMACION_FISICA > INFERENCIA",
+  "source_evidence": [
+    "2017_67-100: planta de fundaciones y radier",
+    "2017_67-101: RADIER SOBRE TERRENO; NOG -4.21, -1.90, -1.54 y -0.95; NSM +0.95",
+    "2017_67-102/103: plantas estructurales y continuidad del núcleo",
+    "2017_67-300..310: elevaciones estructurales por ejes",
+    "2017_67-500..503: detalles de escaleras con niveles S1/P1/P2/P3/P4",
+    "Información física del usuario: accesos B/D aproximadamente a P1 y S1 enterrado en esas fachadas"
+  ],
+  "terrain_by_side": [
+    {
+      "side": "A",
+      "exterior_level": "UNRESOLVED",
+      "relation": "No hay cota exterior continua inequívoca en el juego estructural."
+    },
+    {
+      "side": "B",
+      "exterior_level": "APPROX_P1",
+      "relation": "Acceso exterior aproximadamente en P1; S1 enterrado en gran parte.",
+      "confidence": "USER_CONFIRMED_PLUS_BUILDING_GEOMETRY"
+    },
+    {
+      "side": "C",
+      "exterior_level": "UNRESOLVED",
+      "relation": "No hay cota exterior continua inequívoca en el juego estructural."
+    },
+    {
+      "side": "D",
+      "exterior_level": "VARIABLE_NEAR_P1",
+      "relation": "Radier sobre terreno y cotas NOG -1.90/-1.54/-0.95; S1 enterrado en gran parte.",
+      "confidence": "PLAN_AND_USER_CONFIRMED"
+    }
+  ],
+  "summary": {
+    "prior_pending": 40,
+    "physical_confirmed_or_context_explained": 38,
+    "unresolved_real": 2,
+    "duplicate_extraction_confirmed": 0,
+    "geometry_deleted": 0,
+    "fe_connections_added": 0,
+    "revised_counts": {
+      "PHYSICAL_CONFIRMED_FE_ADAPTER_REVIEW": 20,
+      "PHYSICAL_CONFIRMED_SECONDARY_FE_SCOPE": 4,
+      "PHYSICAL_CONFIRMED_TOPOGRAPHY_OR_STAIR_CONTEXT": 14,
+      "UNRESOLVED_REAL": 2
+    },
+    "physical_classification_counts": {
+      "EXTERIOR_STAIR_MEMBER": 2,
+      "EXTERIOR_STAIR_SUPPORT": 3,
+      "LANDING_BEAM": 5,
+      "RETAINING_WALL": 8,
+      "RETURN_WALL": 12,
+      "SHAFT_WALL": 8,
+      "UNRESOLVED": 2
+    }
+  },
+  "clusters": [
+    {
+      "id": "STAIR_ACCESS_B",
+      "label": "ACCESO / ESCALERA B",
+      "floor": "P1",
+      "center": [
+        24.9,
+        21.1,
+        8.0
+      ],
+      "size": [
+        12.2,
+        11.8,
+        8.5
+      ],
+      "color": "#06b6d4",
+      "element_ids": [
+        "E1-P1-C-016",
+        "E1-P1-C-017",
+        "E1-P2-V-055",
+        "E1-P2-V-075"
+      ],
+      "note": "Columnas exteriores y borde/descanso P2. Geometría física; FE secundario por revisar.",
+      "participates_in_FE": false
+    },
+    {
+      "id": "STAIR_ACCESS_D",
+      "label": "ACCESO / ESCALERA D",
+      "floor": "P1",
+      "center": [
+        39.6,
+        -5.8,
+        5.94
+      ],
+      "size": [
+        13.0,
+        13.0,
+        4.3
+      ],
+      "color": "#f97316",
+      "element_ids": [
+        "E1-P1-M-016",
+        "E1-P1-M-020",
+        "E1-P1-M-021",
+        "E1-P1-M-022",
+        "E1-P1-M-023",
+        "E1-P1-M-024",
+        "E1-P1-M-031",
+        "E1-P1-M-034",
+        "E1-P1-M-035",
+        "E1-P1-M-036",
+        "E1-P1-M-037",
+        "E1-P1-V-068",
+        "E1-P1-V-072",
+        "E1-P1-V-098"
+      ],
+      "note": "Muros de contención y vigas de plataforma en zona con nivel exterior variable.",
+      "participates_in_FE": false
+    },
+    {
+      "id": "CORE_ELEVATOR_P1_P4",
+      "label": "NÚCLEO ASCENSORES S1–P4",
+      "floor": "P2",
+      "center": [
+        5.0,
+        9.0,
+        10.0
+      ],
+      "size": [
+        5.2,
+        12.8,
+        20.2
+      ],
+      "color": "#a855f7",
+      "element_ids": [
+        "E1-P1-M-004",
+        "E1-P1-M-010",
+        "E1-P2-M-003",
+        "E1-P2-M-005",
+        "E1-P2-M-007",
+        "E1-P2-M-008",
+        "E1-P2-M-009",
+        "E1-P2-M-010",
+        "E1-P3-M-003",
+        "E1-P3-M-005",
+        "E1-P3-M-007",
+        "E1-P3-M-008",
+        "E1-P3-M-009",
+        "E1-P3-M-010",
+        "E1-P4-M-003",
+        "E1-P4-M-007",
+        "E1-P4-M-008",
+        "E1-P4-M-009",
+        "E1-P4-M-010",
+        "E1-P4-M-012"
+      ],
+      "note": "Paños y retornos reales repetidos verticalmente; sin duplicado inequívoco.",
+      "participates_in_FE": false
+    }
+  ],
+  "level_markers": [
+    {
+      "id": "GRADE_B",
+      "label": "TERRENO/ACCESO B ≈ P1",
+      "floor": "P1",
+      "start": [
+        17.0,
+        27.5,
+        7.92
+      ],
+      "end": [
+        32.0,
+        27.5,
+        7.92
+      ],
+      "color": "#06b6d4",
+      "participates_in_FE": false
+    },
+    {
+      "id": "GRADE_D_LOW",
+      "label": "D: NOG -1.90 → z modelo 6.07",
+      "floor": "P1",
+      "start": [
+        33.0,
+        -12.6,
+        6.07
+      ],
+      "end": [
+        46.8,
+        -12.6,
+        6.07
+      ],
+      "color": "#f97316",
+      "participates_in_FE": false
+    },
+    {
+      "id": "GRADE_D_HIGH",
+      "label": "D: NOG -0.95 → z modelo 7.02",
+      "floor": "P1",
+      "start": [
+        33.0,
+        -13.2,
+        7.02
+      ],
+      "end": [
+        46.8,
+        -13.2,
+        7.02
+      ],
+      "color": "#fb923c",
+      "participates_in_FE": false
+    }
+  ],
+  "classifications": [
+    {
+      "element_id": "E1-P1-C-016",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "type": "column",
+      "prior_validation": "UNRESOLVED",
+      "prior_structural_classification": "UNRESOLVED",
+      "cluster": "STAIR_ACCESS_B",
+      "physical_geometry": "CONFIRMED",
+      "physical_classification": "EXTERIOR_STAIR_SUPPORT",
+      "physical_support": "EXTERIOR_FOUNDATION_CONNECTION",
+      "main_fe_participation": "SECONDARY_STRUCTURE_EXPECTED",
+      "revised_diagnostic": "PHYSICAL_CONFIRMED_SECONDARY_FE_SCOPE",
+      "duplicate_classification": "NO_DUPLICATE",
+      "participates_in_FE_changed": false,
+      "opensees_changed": false,
+      "start": [
+        30.02706,
+        18.84259,
+        5.94
+      ],
+      "end": [
+        30.02706,
+        18.84259,
+        5.94
+      ],
+      "width_m": 0.35,
+      "height_m": 3.96,
+      "source_dxf": "2017_67-101.dxf",
+      "source_layer": "RLE-PILAR",
+      "evidence": "Elemento exterior coherente con el sistema de escalera/pasarela B; las vigas V-055/V-075 forman un borde continuo y llegan por huella a vigas transversales."
+    },
+    {
+      "element_id": "E1-P1-C-017",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "type": "column",
+      "prior_validation": "UNRESOLVED",
+      "prior_structural_classification": "UNRESOLVED",
+      "cluster": "STAIR_ACCESS_B",
+      "physical_geometry": "CONFIRMED",
+      "physical_classification": "EXTERIOR_STAIR_SUPPORT",
+      "physical_support": "EXTERIOR_FOUNDATION_CONNECTION",
+      "main_fe_participation": "SECONDARY_STRUCTURE_EXPECTED",
+      "revised_diagnostic": "PHYSICAL_CONFIRMED_SECONDARY_FE_SCOPE",
+      "duplicate_classification": "NO_DUPLICATE",
+      "participates_in_FE_changed": false,
+      "opensees_changed": false,
+      "start": [
+        30.02706,
+        26.17558,
+        5.94
+      ],
+      "end": [
+        30.02706,
+        26.17558,
+        5.94
+      ],
+      "width_m": 0.35,
+      "height_m": 3.96,
+      "source_dxf": "2017_67-101.dxf",
+      "source_layer": "RLE-PILAR",
+      "evidence": "Elemento exterior coherente con el sistema de escalera/pasarela B; las vigas V-055/V-075 forman un borde continuo y llegan por huella a vigas transversales."
+    },
+    {
+      "element_id": "E1-P1-M-004",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "type": "wall",
+      "prior_validation": "DISCONNECTED_ERROR",
+      "prior_structural_classification": "UNRESOLVED",
+      "cluster": "CORE_ELEVATOR_P1_P4",
+      "physical_geometry": "CONFIRMED",
+      "physical_classification": "SHAFT_WALL",
+      "physical_support": "VERTICAL_CONTINUITY_CONFIRMED",
+      "main_fe_participation": "PRIMARY_FE_REVIEW_REQUIRED",
+      "revised_diagnostic": "PHYSICAL_CONFIRMED_FE_ADAPTER_REVIEW",
+      "duplicate_classification": "SAME_PHYSICAL_WALL",
+      "participates_in_FE_changed": false,
+      "opensees_changed": false,
+      "start": [
+        3.7,
+        3.9001,
+        5.94
+      ],
+      "end": [
+        6.3,
+        3.9001,
+        5.94
+      ],
+      "width_m": 0.2,
+      "height_m": 3.9599999999999995,
+      "source_dxf": "2017_67-101.dxf",
+      "source_layer": "RLE-MURO_CONTOUR_PAIR",
+      "evidence": "Paño/retorno del shaft confirmado por pares de contorno y repetición vertical S1–P4; el nodo central del adaptador no representa todos los encuentros."
+    },
+    {
+      "element_id": "E1-P1-M-010",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "type": "wall",
+      "prior_validation": "DISCONNECTED_ERROR",
+      "prior_structural_classification": "UNRESOLVED",
+      "cluster": "CORE_ELEVATOR_P1_P4",
+      "physical_geometry": "CONFIRMED",
+      "physical_classification": "SHAFT_WALL",
+      "physical_support": "VERTICAL_CONTINUITY_CONFIRMED",
+      "main_fe_participation": "PRIMARY_FE_REVIEW_REQUIRED",
+      "revised_diagnostic": "PHYSICAL_CONFIRMED_FE_ADAPTER_REVIEW",
+      "duplicate_classification": "SAME_PHYSICAL_WALL",
+      "participates_in_FE_changed": false,
+      "opensees_changed": false,
+      "start": [
+        3.4,
+        13.8451,
+        5.94
+      ],
+      "end": [
+        6.6,
+        13.8451,
+        5.94
+      ],
+      "width_m": 0.2,
+      "height_m": 3.9599999999999995,
+      "source_dxf": "2017_67-101.dxf",
+      "source_layer": "RLE-MURO_CONTOUR_PAIR",
+      "evidence": "Paño/retorno del shaft confirmado por pares de contorno y repetición vertical S1–P4; el nodo central del adaptador no representa todos los encuentros."
+    },
+    {
+      "element_id": "E1-P1-M-016",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "type": "wall",
+      "prior_validation": "DISCONNECTED_ERROR",
+      "prior_structural_classification": "UNRESOLVED",
+      "cluster": "STAIR_ACCESS_D",
+      "physical_geometry": "CONFIRMED",
+      "physical_classification": "RETAINING_WALL",
+      "physical_support": "TERRAIN_SUPPORTED_REVIEW",
+      "main_fe_participation": "SECONDARY_STRUCTURE_EXPECTED",
+      "revised_diagnostic": "PHYSICAL_CONFIRMED_TOPOGRAPHY_OR_STAIR_CONTEXT",
+      "duplicate_classification": "NO_DUPLICATE",
+      "participates_in_FE_changed": false,
+      "opensees_changed": false,
+      "start": [
+        35.2663,
+        -3.5749,
+        5.94
+      ],
+      "end": [
+        38.75,
+        -3.5749,
+        5.94
+      ],
+      "width_m": 0.15,
+      "height_m": 3.9599999999999995,
+      "source_dxf": "2017_67-101.dxf",
+      "source_layer": "RLE-MURO_CONTOUR_PAIR",
+      "evidence": "Parte del recinto de acceso/escalera D, sobre zona con radier y cotas exteriores variables próximas a P1; no debe evaluarse como pieza interior aislada."
+    },
+    {
+      "element_id": "E1-P1-M-020",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "type": "wall",
+      "prior_validation": "DISCONNECTED_ERROR",
+      "prior_structural_classification": "UNRESOLVED",
+      "cluster": "STAIR_ACCESS_D",
+      "physical_geometry": "CONFIRMED",
+      "physical_classification": "EXTERIOR_STAIR_SUPPORT",
+      "physical_support": "TERRAIN_SUPPORTED_REVIEW",
+      "main_fe_participation": "SECONDARY_STRUCTURE_EXPECTED",
+      "revised_diagnostic": "PHYSICAL_CONFIRMED_TOPOGRAPHY_OR_STAIR_CONTEXT",
+      "duplicate_classification": "NO_DUPLICATE",
+      "participates_in_FE_changed": false,
+      "opensees_changed": false,
+      "start": [
+        38.825,
+        -3.4999,
+        5.94
+      ],
+      "end": [
+        38.825,
+        -0.5999,
+        5.94
+      ],
+      "width_m": 0.15,
+      "height_m": 3.9599999999999995,
+      "source_dxf": "2017_67-101.dxf",
+      "source_layer": "RLE-MURO_CONTOUR_PAIR",
+      "evidence": "Parte del recinto de acceso/escalera D, sobre zona con radier y cotas exteriores variables próximas a P1; no debe evaluarse como pieza interior aislada."
+    },
+    {
+      "element_id": "E1-P1-M-021",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "type": "wall",
+      "prior_validation": "DISCONNECTED_ERROR",
+      "prior_structural_classification": "UNRESOLVED",
+      "cluster": "STAIR_ACCESS_D",
+      "physical_geometry": "CONFIRMED",
+      "physical_classification": "RETAINING_WALL",
+      "physical_support": "TERRAIN_SUPPORTED_REVIEW",
+      "main_fe_participation": "SECONDARY_STRUCTURE_EXPECTED",
+      "revised_diagnostic": "PHYSICAL_CONFIRMED_TOPOGRAPHY_OR_STAIR_CONTEXT",
+      "duplicate_classification": "NO_DUPLICATE",
+      "participates_in_FE_changed": false,
+      "opensees_changed": false,
+      "start": [
+        40.35,
+        -0.5249,
+        5.94
+      ],
+      "end": [
+        42.7,
+        -0.5249,
+        5.94
+      ],
+      "width_m": 0.15,
+      "height_m": 3.9599999999999995,
+      "source_dxf": "2017_67-101.dxf",
+      "source_layer": "RLE-MURO_CONTOUR_PAIR",
+      "evidence": "Parte del recinto de acceso/escalera D, sobre zona con radier y cotas exteriores variables próximas a P1; no debe evaluarse como pieza interior aislada."
+    },
+    {
+      "element_id": "E1-P1-M-022",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "type": "wall",
+      "prior_validation": "DISCONNECTED_ERROR",
+      "prior_structural_classification": "UNRESOLVED",
+      "cluster": "STAIR_ACCESS_D",
+      "physical_geometry": "CONFIRMED",
+      "physical_classification": "RETAINING_WALL",
+      "physical_support": "TERRAIN_SUPPORTED_REVIEW",
+      "main_fe_participation": "SECONDARY_STRUCTURE_EXPECTED",
+      "revised_diagnostic": "PHYSICAL_CONFIRMED_TOPOGRAPHY_OR_STAIR_CONTEXT",
+      "duplicate_classification": "NO_DUPLICATE",
+      "participates_in_FE_changed": false,
+      "opensees_changed": false,
+      "start": [
+        40.35,
+        -6.2249,
+        5.94
+      ],
+      "end": [
+        42.7,
+        -6.2249,
+        5.94
+      ],
+      "width_m": 0.15,
+      "height_m": 3.9599999999999995,
+      "source_dxf": "2017_67-101.dxf",
+      "source_layer": "RLE-MURO_CONTOUR_PAIR",
+      "evidence": "Parte del recinto de acceso/escalera D, sobre zona con radier y cotas exteriores variables próximas a P1; no debe evaluarse como pieza interior aislada."
+    },
+    {
+      "element_id": "E1-P1-M-023",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "type": "wall",
+      "prior_validation": "DISCONNECTED_ERROR",
+      "prior_structural_classification": "UNRESOLVED",
+      "cluster": "STAIR_ACCESS_D",
+      "physical_geometry": "CONFIRMED",
+      "physical_classification": "RETAINING_WALL",
+      "physical_support": "TERRAIN_SUPPORTED_REVIEW",
+      "main_fe_participation": "SECONDARY_STRUCTURE_EXPECTED",
+      "revised_diagnostic": "PHYSICAL_CONFIRMED_TOPOGRAPHY_OR_STAIR_CONTEXT",
+      "duplicate_classification": "NO_DUPLICATE",
+      "participates_in_FE_changed": false,
+      "opensees_changed": false,
+      "start": [
+        35.2663,
+        -6.2249,
+        5.94
+      ],
+      "end": [
+        40.3,
+        -6.2249,
+        5.94
+      ],
+      "width_m": 0.15,
+      "height_m": 3.9599999999999995,
+      "source_dxf": "2017_67-101.dxf",
+      "source_layer": "RLE-MURO_CONTOUR_PAIR",
+      "evidence": "Parte del recinto de acceso/escalera D, sobre zona con radier y cotas exteriores variables próximas a P1; no debe evaluarse como pieza interior aislada."
+    },
+    {
+      "element_id": "E1-P1-M-024",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "type": "wall",
+      "prior_validation": "DISCONNECTED_ERROR",
+      "prior_structural_classification": "UNRESOLVED",
+      "cluster": "STAIR_ACCESS_D",
+      "physical_geometry": "CONFIRMED",
+      "physical_classification": "RETAINING_WALL",
+      "physical_support": "TERRAIN_SUPPORTED_REVIEW",
+      "main_fe_participation": "SECONDARY_STRUCTURE_EXPECTED",
+      "revised_diagnostic": "PHYSICAL_CONFIRMED_TOPOGRAPHY_OR_STAIR_CONTEXT",
+      "duplicate_classification": "NO_DUPLICATE",
+      "participates_in_FE_changed": false,
+      "opensees_changed": false,
+      "start": [
+        33.75,
+        -0.5249,
+        5.94
+      ],
+      "end": [
+        40.3,
+        -0.5249,
+        5.94
+      ],
+      "width_m": 0.15,
+      "height_m": 3.9599999999999995,
+      "source_dxf": "2017_67-101.dxf",
+      "source_layer": "RLE-MURO_CONTOUR_PAIR",
+      "evidence": "Parte del recinto de acceso/escalera D, sobre zona con radier y cotas exteriores variables próximas a P1; no debe evaluarse como pieza interior aislada."
+    },
+    {
+      "element_id": "E1-P1-M-031",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "type": "wall",
+      "prior_validation": "DISCONNECTED_ERROR",
+      "prior_structural_classification": "UNRESOLVED",
+      "cluster": "STAIR_ACCESS_D",
+      "physical_geometry": "CONFIRMED",
+      "physical_classification": "EXTERIOR_STAIR_MEMBER",
+      "physical_support": "TERRAIN_SUPPORTED_REVIEW",
+      "main_fe_participation": "SECONDARY_STRUCTURE_EXPECTED",
+      "revised_diagnostic": "PHYSICAL_CONFIRMED_TOPOGRAPHY_OR_STAIR_CONTEXT",
+      "duplicate_classification": "NO_DUPLICATE",
+      "participates_in_FE_changed": false,
+      "opensees_changed": false,
+      "start": [
+        42.6,
+        -11.4754,
+        5.94
+      ],
+      "end": [
+        42.6,
+        -10.797,
+        5.94
+      ],
+      "width_m": 0.2,
+      "height_m": 3.9599999999999995,
+      "source_dxf": "2017_67-101.dxf",
+      "source_layer": "RLE-MURO_CONTOUR_PAIR",
+      "evidence": "Parte del recinto de acceso/escalera D, sobre zona con radier y cotas exteriores variables próximas a P1; no debe evaluarse como pieza interior aislada."
+    },
+    {
+      "element_id": "E1-P1-M-034",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "type": "wall",
+      "prior_validation": "DISCONNECTED_ERROR",
+      "prior_structural_classification": "UNRESOLVED",
+      "cluster": "STAIR_ACCESS_D",
+      "physical_geometry": "CONFIRMED",
+      "physical_classification": "EXTERIOR_STAIR_MEMBER",
+      "physical_support": "TERRAIN_SUPPORTED_REVIEW",
+      "main_fe_participation": "SECONDARY_STRUCTURE_EXPECTED",
+      "revised_diagnostic": "PHYSICAL_CONFIRMED_TOPOGRAPHY_OR_STAIR_CONTEXT",
+      "duplicate_classification": "NO_DUPLICATE",
+      "participates_in_FE_changed": false,
+      "opensees_changed": false,
+      "start": [
+        42.6,
+        -10.597,
+        5.94
+      ],
+      "end": [
+        42.6,
+        -10.0651,
+        5.94
+      ],
+      "width_m": 0.2,
+      "height_m": 3.9599999999999995,
+      "source_dxf": "2017_67-101.dxf",
+      "source_layer": "RLE-MURO_CONTOUR_PAIR",
+      "evidence": "Parte del recinto de acceso/escalera D, sobre zona con radier y cotas exteriores variables próximas a P1; no debe evaluarse como pieza interior aislada."
+    },
+    {
+      "element_id": "E1-P1-M-035",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "type": "wall",
+      "prior_validation": "DISCONNECTED_ERROR",
+      "prior_structural_classification": "UNRESOLVED",
+      "cluster": "STAIR_ACCESS_D",
+      "physical_geometry": "CONFIRMED",
+      "physical_classification": "RETAINING_WALL",
+      "physical_support": "TERRAIN_SUPPORTED_REVIEW",
+      "main_fe_participation": "SECONDARY_STRUCTURE_EXPECTED",
+      "revised_diagnostic": "PHYSICAL_CONFIRMED_TOPOGRAPHY_OR_STAIR_CONTEXT",
+      "duplicate_classification": "NO_DUPLICATE",
+      "participates_in_FE_changed": false,
+      "opensees_changed": false,
+      "start": [
+        42.7203,
+        -0.5249,
+        5.94
+      ],
+      "end": [
+        45.2453,
+        -0.5249,
+        5.94
+      ],
+      "width_m": 0.15,
+      "height_m": 3.9599999999999995,
+      "source_dxf": "2017_67-101.dxf",
+      "source_layer": "RLE-MURO_CONTOUR_PAIR",
+      "evidence": "Parte del recinto de acceso/escalera D, sobre zona con radier y cotas exteriores variables próximas a P1; no debe evaluarse como pieza interior aislada."
+    },
+    {
+      "element_id": "E1-P1-M-036",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "type": "wall",
+      "prior_validation": "DISCONNECTED_ERROR",
+      "prior_structural_classification": "UNRESOLVED",
+      "cluster": "STAIR_ACCESS_D",
+      "physical_geometry": "CONFIRMED",
+      "physical_classification": "RETAINING_WALL",
+      "physical_support": "TERRAIN_SUPPORTED_REVIEW",
+      "main_fe_participation": "SECONDARY_STRUCTURE_EXPECTED",
+      "revised_diagnostic": "PHYSICAL_CONFIRMED_TOPOGRAPHY_OR_STAIR_CONTEXT",
+      "duplicate_classification": "NO_DUPLICATE",
+      "participates_in_FE_changed": false,
+      "opensees_changed": false,
+      "start": [
+        42.7203,
+        -10.697,
+        5.94
+      ],
+      "end": [
+        45.2453,
+        -10.697,
+        5.94
+      ],
+      "width_m": 0.2,
+      "height_m": 3.9599999999999995,
+      "source_dxf": "2017_67-101.dxf",
+      "source_layer": "RLE-MURO_CONTOUR_PAIR",
+      "evidence": "Parte del recinto de acceso/escalera D, sobre zona con radier y cotas exteriores variables próximas a P1; no debe evaluarse como pieza interior aislada."
+    },
+    {
+      "element_id": "E1-P1-M-037",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "type": "wall",
+      "prior_validation": "DISCONNECTED_ERROR",
+      "prior_structural_classification": "UNRESOLVED",
+      "cluster": "STAIR_ACCESS_D",
+      "physical_geometry": "CONFIRMED",
+      "physical_classification": "RETAINING_WALL",
+      "physical_support": "TERRAIN_SUPPORTED_REVIEW",
+      "main_fe_participation": "SECONDARY_STRUCTURE_EXPECTED",
+      "revised_diagnostic": "PHYSICAL_CONFIRMED_TOPOGRAPHY_OR_STAIR_CONTEXT",
+      "duplicate_classification": "NO_DUPLICATE",
+      "participates_in_FE_changed": false,
+      "opensees_changed": false,
+      "start": [
+        45.3953,
+        -11.4754,
+        5.94
+      ],
+      "end": [
+        45.3953,
+        -0.4499,
+        5.94
+      ],
+      "width_m": 0.3,
+      "height_m": 3.9599999999999995,
+      "source_dxf": "2017_67-101.dxf",
+      "source_layer": "RLE-MURO_CONTOUR_PAIR",
+      "evidence": "Parte del recinto de acceso/escalera D, sobre zona con radier y cotas exteriores variables próximas a P1; no debe evaluarse como pieza interior aislada."
+    },
+    {
+      "element_id": "E1-P1-V-068",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "type": "beam",
+      "prior_validation": "UNRESOLVED",
+      "prior_structural_classification": "UNRESOLVED",
+      "cluster": "STAIR_ACCESS_D",
+      "physical_geometry": "CONFIRMED",
+      "physical_classification": "LANDING_BEAM",
+      "physical_support": "MEMBER_FOOTPRINT_CONNECTION",
+      "main_fe_participation": "SECONDARY_STRUCTURE_EXPECTED",
+      "revised_diagnostic": "PHYSICAL_CONFIRMED_TOPOGRAPHY_OR_STAIR_CONTEXT",
+      "duplicate_classification": "NO_DUPLICATE",
+      "participates_in_FE_changed": false,
+      "opensees_changed": false,
+      "start": [
+        33.825,
+        -3.4999,
+        7.42
+      ],
+      "end": [
+        33.825,
+        -0.5999,
+        7.42
+      ],
+      "width_m": 0.15,
+      "height_m": 1.0,
+      "source_dxf": "2017_67-101.dxf",
+      "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+      "evidence": "Parte del recinto de acceso/escalera D, sobre zona con radier y cotas exteriores variables próximas a P1; no debe evaluarse como pieza interior aislada."
+    },
+    {
+      "element_id": "E1-P1-V-072",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "type": "beam",
+      "prior_validation": "UNRESOLVED",
+      "prior_structural_classification": "UNRESOLVED",
+      "cluster": "STAIR_ACCESS_D",
+      "physical_geometry": "CONFIRMED",
+      "physical_classification": "LANDING_BEAM",
+      "physical_support": "MEMBER_FOOTPRINT_CONNECTION",
+      "main_fe_participation": "SECONDARY_STRUCTURE_EXPECTED",
+      "revised_diagnostic": "PHYSICAL_CONFIRMED_TOPOGRAPHY_OR_STAIR_CONTEXT",
+      "duplicate_classification": "NO_DUPLICATE",
+      "participates_in_FE_changed": false,
+      "opensees_changed": false,
+      "start": [
+        33.9,
+        -3.5749,
+        7.42
+      ],
+      "end": [
+        35.2663,
+        -3.5749,
+        7.42
+      ],
+      "width_m": 0.15,
+      "height_m": 1.0,
+      "source_dxf": "2017_67-101.dxf",
+      "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+      "evidence": "Parte del recinto de acceso/escalera D, sobre zona con radier y cotas exteriores variables próximas a P1; no debe evaluarse como pieza interior aislada."
+    },
+    {
+      "element_id": "E1-P1-V-098",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "type": "beam",
+      "prior_validation": "UNRESOLVED",
+      "prior_structural_classification": "UNRESOLVED",
+      "cluster": "STAIR_ACCESS_D",
+      "physical_geometry": "CONFIRMED",
+      "physical_classification": "LANDING_BEAM",
+      "physical_support": "MEMBER_FOOTPRINT_CONNECTION",
+      "main_fe_participation": "SECONDARY_STRUCTURE_EXPECTED",
+      "revised_diagnostic": "PHYSICAL_CONFIRMED_TOPOGRAPHY_OR_STAIR_CONTEXT",
+      "duplicate_classification": "NO_DUPLICATE",
+      "participates_in_FE_changed": false,
+      "opensees_changed": false,
+      "start": [
+        38.9,
+        -3.5749,
+        7.295
+      ],
+      "end": [
+        45.2453,
+        -3.5749,
+        7.295
+      ],
+      "width_m": 0.15,
+      "height_m": 1.25,
+      "source_dxf": "2017_67-101.dxf",
+      "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+      "evidence": "Parte del recinto de acceso/escalera D, sobre zona con radier y cotas exteriores variables próximas a P1; no debe evaluarse como pieza interior aislada."
+    },
+    {
+      "element_id": "E1-P2-M-003",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "type": "wall",
+      "prior_validation": "DISCONNECTED_ERROR",
+      "prior_structural_classification": "UNRESOLVED",
+      "cluster": "CORE_ELEVATOR_P1_P4",
+      "physical_geometry": "CONFIRMED",
+      "physical_classification": "RETURN_WALL",
+      "physical_support": "VERTICAL_CONTINUITY_CONFIRMED",
+      "main_fe_participation": "PRIMARY_FE_REVIEW_REQUIRED",
+      "revised_diagnostic": "PHYSICAL_CONFIRMED_FE_ADAPTER_REVIEW",
+      "duplicate_classification": "SAME_PHYSICAL_WALL",
+      "participates_in_FE_changed": false,
+      "opensees_changed": false,
+      "start": [
+        3.2749,
+        12.4477,
+        9.9
+      ],
+      "end": [
+        3.2749,
+        13.9265,
+        9.9
+      ],
+      "width_m": 0.25,
+      "height_m": 3.960000000000001,
+      "source_dxf": "2017_67-102.dxf",
+      "source_layer": "RLE-MURO_CONTOUR_PAIR",
+      "evidence": "Paño/retorno del shaft confirmado por pares de contorno y repetición vertical S1–P4; el nodo central del adaptador no representa todos los encuentros."
+    },
+    {
+      "element_id": "E1-P2-M-005",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "type": "wall",
+      "prior_validation": "DISCONNECTED_ERROR",
+      "prior_structural_classification": "UNRESOLVED",
+      "cluster": "CORE_ELEVATOR_P1_P4",
+      "physical_geometry": "CONFIRMED",
+      "physical_classification": "RETURN_WALL",
+      "physical_support": "VERTICAL_CONTINUITY_CONFIRMED",
+      "main_fe_participation": "PRIMARY_FE_REVIEW_REQUIRED",
+      "revised_diagnostic": "PHYSICAL_CONFIRMED_FE_ADAPTER_REVIEW",
+      "duplicate_classification": "SAME_PHYSICAL_WALL",
+      "participates_in_FE_changed": false,
+      "opensees_changed": false,
+      "start": [
+        6.7249,
+        12.4477,
+        9.9
+      ],
+      "end": [
+        6.7249,
+        13.9265,
+        9.9
+      ],
+      "width_m": 0.25,
+      "height_m": 3.960000000000001,
+      "source_dxf": "2017_67-102.dxf",
+      "source_layer": "RLE-MURO_CONTOUR_PAIR",
+      "evidence": "Paño/retorno del shaft confirmado por pares de contorno y repetición vertical S1–P4; el nodo central del adaptador no representa todos los encuentros."
+    },
+    {
+      "element_id": "E1-P2-M-007",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "type": "wall",
+      "prior_validation": "DISCONNECTED_ERROR",
+      "prior_structural_classification": "UNRESOLVED",
+      "cluster": "CORE_ELEVATOR_P1_P4",
+      "physical_geometry": "CONFIRMED",
+      "physical_classification": "SHAFT_WALL",
+      "physical_support": "VERTICAL_CONTINUITY_CONFIRMED",
+      "main_fe_participation": "PRIMARY_FE_REVIEW_REQUIRED",
+      "revised_diagnostic": "PHYSICAL_CONFIRMED_FE_ADAPTER_REVIEW",
+      "duplicate_classification": "SAME_PHYSICAL_WALL",
+      "participates_in_FE_changed": false,
+      "opensees_changed": false,
+      "start": [
+        3.6999,
+        4.0815,
+        9.9
+      ],
+      "end": [
+        6.2999,
+        4.0815,
+        9.9
+      ],
+      "width_m": 0.2,
+      "height_m": 3.960000000000001,
+      "source_dxf": "2017_67-102.dxf",
+      "source_layer": "RLE-MURO_CONTOUR_PAIR",
+      "evidence": "Paño/retorno del shaft confirmado por pares de contorno y repetición vertical S1–P4; el nodo central del adaptador no representa todos los encuentros."
+    },
+    {
+      "element_id": "E1-P2-M-008",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "type": "wall",
+      "prior_validation": "DISCONNECTED_ERROR",
+      "prior_structural_classification": "UNRESOLVED",
+      "cluster": "CORE_ELEVATOR_P1_P4",
+      "physical_geometry": "CONFIRMED",
+      "physical_classification": "SHAFT_WALL",
+      "physical_support": "VERTICAL_CONTINUITY_CONFIRMED",
+      "main_fe_participation": "PRIMARY_FE_REVIEW_REQUIRED",
+      "revised_diagnostic": "PHYSICAL_CONFIRMED_FE_ADAPTER_REVIEW",
+      "duplicate_classification": "SAME_PHYSICAL_WALL",
+      "participates_in_FE_changed": false,
+      "opensees_changed": false,
+      "start": [
+        3.3999,
+        14.0265,
+        9.9
+      ],
+      "end": [
+        6.5999,
+        14.0265,
+        9.9
+      ],
+      "width_m": 0.2,
+      "height_m": 3.960000000000001,
+      "source_dxf": "2017_67-102.dxf",
+      "source_layer": "RLE-MURO_CONTOUR_PAIR",
+      "evidence": "Paño/retorno del shaft confirmado por pares de contorno y repetición vertical S1–P4; el nodo central del adaptador no representa todos los encuentros."
+    },
+    {
+      "element_id": "E1-P2-M-009",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "type": "wall",
+      "prior_validation": "DISCONNECTED_ERROR",
+      "prior_structural_classification": "UNRESOLVED",
+      "cluster": "CORE_ELEVATOR_P1_P4",
+      "physical_geometry": "CONFIRMED",
+      "physical_classification": "RETURN_WALL",
+      "physical_support": "VERTICAL_CONTINUITY_CONFIRMED",
+      "main_fe_participation": "PRIMARY_FE_REVIEW_REQUIRED",
+      "revised_diagnostic": "PHYSICAL_CONFIRMED_FE_ADAPTER_REVIEW",
+      "duplicate_classification": "SAME_PHYSICAL_WALL",
+      "participates_in_FE_changed": false,
+      "opensees_changed": false,
+      "start": [
+        6.4499,
+        4.1815,
+        9.9
+      ],
+      "end": [
+        6.4499,
+        6.3315,
+        9.9
+      ],
+      "width_m": 0.3,
+      "height_m": 3.960000000000001,
+      "source_dxf": "2017_67-102.dxf",
+      "source_layer": "RLE-MURO_CONTOUR_PAIR",
+      "evidence": "Paño/retorno del shaft confirmado por pares de contorno y repetición vertical S1–P4; el nodo central del adaptador no representa todos los encuentros."
+    },
+    {
+      "element_id": "E1-P2-M-010",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "type": "wall",
+      "prior_validation": "DISCONNECTED_ERROR",
+      "prior_structural_classification": "UNRESOLVED",
+      "cluster": "CORE_ELEVATOR_P1_P4",
+      "physical_geometry": "CONFIRMED",
+      "physical_classification": "RETURN_WALL",
+      "physical_support": "VERTICAL_CONTINUITY_CONFIRMED",
+      "main_fe_participation": "PRIMARY_FE_REVIEW_REQUIRED",
+      "revised_diagnostic": "PHYSICAL_CONFIRMED_FE_ADAPTER_REVIEW",
+      "duplicate_classification": "SAME_PHYSICAL_WALL",
+      "participates_in_FE_changed": false,
+      "opensees_changed": false,
+      "start": [
+        3.5499,
+        4.1815,
+        9.9
+      ],
+      "end": [
+        3.5499,
+        6.3315,
+        9.9
+      ],
+      "width_m": 0.3,
+      "height_m": 3.960000000000001,
+      "source_dxf": "2017_67-102.dxf",
+      "source_layer": "RLE-MURO_CONTOUR_PAIR",
+      "evidence": "Paño/retorno del shaft confirmado por pares de contorno y repetición vertical S1–P4; el nodo central del adaptador no representa todos los encuentros."
+    },
+    {
+      "element_id": "E1-P2-V-055",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "type": "beam",
+      "prior_validation": "UNRESOLVED",
+      "prior_structural_classification": "UNRESOLVED",
+      "cluster": "STAIR_ACCESS_B",
+      "physical_geometry": "CONFIRMED",
+      "physical_classification": "LANDING_BEAM",
+      "physical_support": "MEMBER_FOOTPRINT_CONNECTION",
+      "main_fe_participation": "SECONDARY_STRUCTURE_EXPECTED",
+      "revised_diagnostic": "PHYSICAL_CONFIRMED_SECONDARY_FE_SCOPE",
+      "duplicate_classification": "NO_DUPLICATE",
+      "participates_in_FE_changed": false,
+      "opensees_changed": false,
+      "start": [
+        19.6999,
+        18.7914,
+        11.655
+      ],
+      "end": [
+        24.6999,
+        18.7914,
+        11.655
+      ],
+      "width_m": 0.3,
+      "height_m": 0.45,
+      "source_dxf": "2017_67-102.dxf",
+      "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+      "evidence": "Elemento exterior coherente con el sistema de escalera/pasarela B; las vigas V-055/V-075 forman un borde continuo y llegan por huella a vigas transversales."
+    },
+    {
+      "element_id": "E1-P2-V-075",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "type": "beam",
+      "prior_validation": "UNRESOLVED",
+      "prior_structural_classification": "UNRESOLVED",
+      "cluster": "STAIR_ACCESS_B",
+      "physical_geometry": "CONFIRMED",
+      "physical_classification": "LANDING_BEAM",
+      "physical_support": "MEMBER_FOOTPRINT_CONNECTION",
+      "main_fe_participation": "SECONDARY_STRUCTURE_EXPECTED",
+      "revised_diagnostic": "PHYSICAL_CONFIRMED_SECONDARY_FE_SCOPE",
+      "duplicate_classification": "NO_DUPLICATE",
+      "participates_in_FE_changed": false,
+      "opensees_changed": false,
+      "start": [
+        24.6999,
+        18.7914,
+        11.655
+      ],
+      "end": [
+        29.6499,
+        18.7914,
+        11.655
+      ],
+      "width_m": 0.3,
+      "height_m": 0.45,
+      "source_dxf": "2017_67-102.dxf",
+      "source_layer": "RLE-VIGA_CONTOUR_CENTERLINE",
+      "evidence": "Elemento exterior coherente con el sistema de escalera/pasarela B; las vigas V-055/V-075 forman un borde continuo y llegan por huella a vigas transversales."
+    },
+    {
+      "element_id": "E1-P3-M-003",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "type": "wall",
+      "prior_validation": "DISCONNECTED_ERROR",
+      "prior_structural_classification": "UNRESOLVED",
+      "cluster": "CORE_ELEVATOR_P1_P4",
+      "physical_geometry": "CONFIRMED",
+      "physical_classification": "RETURN_WALL",
+      "physical_support": "VERTICAL_CONTINUITY_CONFIRMED",
+      "main_fe_participation": "PRIMARY_FE_REVIEW_REQUIRED",
+      "revised_diagnostic": "PHYSICAL_CONFIRMED_FE_ADAPTER_REVIEW",
+      "duplicate_classification": "SAME_PHYSICAL_WALL",
+      "participates_in_FE_changed": false,
+      "opensees_changed": false,
+      "start": [
+        3.2749,
+        12.4477,
+        13.86
+      ],
+      "end": [
+        3.2749,
+        13.9265,
+        13.86
+      ],
+      "width_m": 0.25,
+      "height_m": 3.959999999999999,
+      "source_dxf": "2017_67-102.dxf",
+      "source_layer": "RLE-MURO_CONTOUR_PAIR",
+      "evidence": "Paño/retorno del shaft confirmado por pares de contorno y repetición vertical S1–P4; el nodo central del adaptador no representa todos los encuentros."
+    },
+    {
+      "element_id": "E1-P3-M-005",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "type": "wall",
+      "prior_validation": "DISCONNECTED_ERROR",
+      "prior_structural_classification": "UNRESOLVED",
+      "cluster": "CORE_ELEVATOR_P1_P4",
+      "physical_geometry": "CONFIRMED",
+      "physical_classification": "RETURN_WALL",
+      "physical_support": "VERTICAL_CONTINUITY_CONFIRMED",
+      "main_fe_participation": "PRIMARY_FE_REVIEW_REQUIRED",
+      "revised_diagnostic": "PHYSICAL_CONFIRMED_FE_ADAPTER_REVIEW",
+      "duplicate_classification": "SAME_PHYSICAL_WALL",
+      "participates_in_FE_changed": false,
+      "opensees_changed": false,
+      "start": [
+        6.7249,
+        12.4477,
+        13.86
+      ],
+      "end": [
+        6.7249,
+        13.9265,
+        13.86
+      ],
+      "width_m": 0.25,
+      "height_m": 3.959999999999999,
+      "source_dxf": "2017_67-102.dxf",
+      "source_layer": "RLE-MURO_CONTOUR_PAIR",
+      "evidence": "Paño/retorno del shaft confirmado por pares de contorno y repetición vertical S1–P4; el nodo central del adaptador no representa todos los encuentros."
+    },
+    {
+      "element_id": "E1-P3-M-007",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "type": "wall",
+      "prior_validation": "DISCONNECTED_ERROR",
+      "prior_structural_classification": "UNRESOLVED",
+      "cluster": "CORE_ELEVATOR_P1_P4",
+      "physical_geometry": "CONFIRMED",
+      "physical_classification": "SHAFT_WALL",
+      "physical_support": "VERTICAL_CONTINUITY_CONFIRMED",
+      "main_fe_participation": "PRIMARY_FE_REVIEW_REQUIRED",
+      "revised_diagnostic": "PHYSICAL_CONFIRMED_FE_ADAPTER_REVIEW",
+      "duplicate_classification": "SAME_PHYSICAL_WALL",
+      "participates_in_FE_changed": false,
+      "opensees_changed": false,
+      "start": [
+        3.6999,
+        4.0815,
+        13.86
+      ],
+      "end": [
+        6.2999,
+        4.0815,
+        13.86
+      ],
+      "width_m": 0.2,
+      "height_m": 3.959999999999999,
+      "source_dxf": "2017_67-102.dxf",
+      "source_layer": "RLE-MURO_CONTOUR_PAIR",
+      "evidence": "Paño/retorno del shaft confirmado por pares de contorno y repetición vertical S1–P4; el nodo central del adaptador no representa todos los encuentros."
+    },
+    {
+      "element_id": "E1-P3-M-008",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "type": "wall",
+      "prior_validation": "DISCONNECTED_ERROR",
+      "prior_structural_classification": "UNRESOLVED",
+      "cluster": "CORE_ELEVATOR_P1_P4",
+      "physical_geometry": "CONFIRMED",
+      "physical_classification": "SHAFT_WALL",
+      "physical_support": "VERTICAL_CONTINUITY_CONFIRMED",
+      "main_fe_participation": "PRIMARY_FE_REVIEW_REQUIRED",
+      "revised_diagnostic": "PHYSICAL_CONFIRMED_FE_ADAPTER_REVIEW",
+      "duplicate_classification": "SAME_PHYSICAL_WALL",
+      "participates_in_FE_changed": false,
+      "opensees_changed": false,
+      "start": [
+        3.3999,
+        14.0265,
+        13.86
+      ],
+      "end": [
+        6.5999,
+        14.0265,
+        13.86
+      ],
+      "width_m": 0.2,
+      "height_m": 3.959999999999999,
+      "source_dxf": "2017_67-102.dxf",
+      "source_layer": "RLE-MURO_CONTOUR_PAIR",
+      "evidence": "Paño/retorno del shaft confirmado por pares de contorno y repetición vertical S1–P4; el nodo central del adaptador no representa todos los encuentros."
+    },
+    {
+      "element_id": "E1-P3-M-009",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "type": "wall",
+      "prior_validation": "DISCONNECTED_ERROR",
+      "prior_structural_classification": "UNRESOLVED",
+      "cluster": "CORE_ELEVATOR_P1_P4",
+      "physical_geometry": "CONFIRMED",
+      "physical_classification": "RETURN_WALL",
+      "physical_support": "VERTICAL_CONTINUITY_CONFIRMED",
+      "main_fe_participation": "PRIMARY_FE_REVIEW_REQUIRED",
+      "revised_diagnostic": "PHYSICAL_CONFIRMED_FE_ADAPTER_REVIEW",
+      "duplicate_classification": "SAME_PHYSICAL_WALL",
+      "participates_in_FE_changed": false,
+      "opensees_changed": false,
+      "start": [
+        6.4499,
+        4.1815,
+        13.86
+      ],
+      "end": [
+        6.4499,
+        6.3315,
+        13.86
+      ],
+      "width_m": 0.3,
+      "height_m": 3.959999999999999,
+      "source_dxf": "2017_67-102.dxf",
+      "source_layer": "RLE-MURO_CONTOUR_PAIR",
+      "evidence": "Paño/retorno del shaft confirmado por pares de contorno y repetición vertical S1–P4; el nodo central del adaptador no representa todos los encuentros."
+    },
+    {
+      "element_id": "E1-P3-M-010",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "type": "wall",
+      "prior_validation": "DISCONNECTED_ERROR",
+      "prior_structural_classification": "UNRESOLVED",
+      "cluster": "CORE_ELEVATOR_P1_P4",
+      "physical_geometry": "CONFIRMED",
+      "physical_classification": "RETURN_WALL",
+      "physical_support": "VERTICAL_CONTINUITY_CONFIRMED",
+      "main_fe_participation": "PRIMARY_FE_REVIEW_REQUIRED",
+      "revised_diagnostic": "PHYSICAL_CONFIRMED_FE_ADAPTER_REVIEW",
+      "duplicate_classification": "SAME_PHYSICAL_WALL",
+      "participates_in_FE_changed": false,
+      "opensees_changed": false,
+      "start": [
+        3.5499,
+        4.1815,
+        13.86
+      ],
+      "end": [
+        3.5499,
+        6.3315,
+        13.86
+      ],
+      "width_m": 0.3,
+      "height_m": 3.959999999999999,
+      "source_dxf": "2017_67-102.dxf",
+      "source_layer": "RLE-MURO_CONTOUR_PAIR",
+      "evidence": "Paño/retorno del shaft confirmado por pares de contorno y repetición vertical S1–P4; el nodo central del adaptador no representa todos los encuentros."
+    },
+    {
+      "element_id": "E1-P4-M-003",
+      "building": "EDIFICIO_1",
+      "floor": "P4",
+      "type": "wall",
+      "prior_validation": "DISCONNECTED_ERROR",
+      "prior_structural_classification": "UNRESOLVED",
+      "cluster": "CORE_ELEVATOR_P1_P4",
+      "physical_geometry": "CONFIRMED",
+      "physical_classification": "RETURN_WALL",
+      "physical_support": "VERTICAL_CONTINUITY_CONFIRMED",
+      "main_fe_participation": "PRIMARY_FE_REVIEW_REQUIRED",
+      "revised_diagnostic": "PHYSICAL_CONFIRMED_FE_ADAPTER_REVIEW",
+      "duplicate_classification": "SAME_PHYSICAL_WALL",
+      "participates_in_FE_changed": false,
+      "opensees_changed": false,
+      "start": [
+        3.2749,
+        12.4477,
+        17.82
+      ],
+      "end": [
+        3.2749,
+        13.9265,
+        17.82
+      ],
+      "width_m": 0.25,
+      "height_m": 3.960000000000001,
+      "source_dxf": "2017_67-103.dxf",
+      "source_layer": "RLE-MURO_CONTOUR_PAIR",
+      "evidence": "Paño/retorno del shaft confirmado por pares de contorno y repetición vertical S1–P4; el nodo central del adaptador no representa todos los encuentros."
+    },
+    {
+      "element_id": "E1-P4-M-007",
+      "building": "EDIFICIO_1",
+      "floor": "P4",
+      "type": "wall",
+      "prior_validation": "DISCONNECTED_ERROR",
+      "prior_structural_classification": "UNRESOLVED",
+      "cluster": "CORE_ELEVATOR_P1_P4",
+      "physical_geometry": "CONFIRMED",
+      "physical_classification": "SHAFT_WALL",
+      "physical_support": "VERTICAL_CONTINUITY_CONFIRMED",
+      "main_fe_participation": "PRIMARY_FE_REVIEW_REQUIRED",
+      "revised_diagnostic": "PHYSICAL_CONFIRMED_FE_ADAPTER_REVIEW",
+      "duplicate_classification": "SAME_PHYSICAL_WALL",
+      "participates_in_FE_changed": false,
+      "opensees_changed": false,
+      "start": [
+        3.6999,
+        4.0815,
+        17.82
+      ],
+      "end": [
+        6.2999,
+        4.0815,
+        17.82
+      ],
+      "width_m": 0.2,
+      "height_m": 3.960000000000001,
+      "source_dxf": "2017_67-103.dxf",
+      "source_layer": "RLE-MURO_CONTOUR_PAIR",
+      "evidence": "Paño/retorno del shaft confirmado por pares de contorno y repetición vertical S1–P4; el nodo central del adaptador no representa todos los encuentros."
+    },
+    {
+      "element_id": "E1-P4-M-008",
+      "building": "EDIFICIO_1",
+      "floor": "P4",
+      "type": "wall",
+      "prior_validation": "DISCONNECTED_ERROR",
+      "prior_structural_classification": "UNRESOLVED",
+      "cluster": "CORE_ELEVATOR_P1_P4",
+      "physical_geometry": "CONFIRMED",
+      "physical_classification": "SHAFT_WALL",
+      "physical_support": "VERTICAL_CONTINUITY_CONFIRMED",
+      "main_fe_participation": "PRIMARY_FE_REVIEW_REQUIRED",
+      "revised_diagnostic": "PHYSICAL_CONFIRMED_FE_ADAPTER_REVIEW",
+      "duplicate_classification": "SAME_PHYSICAL_WALL",
+      "participates_in_FE_changed": false,
+      "opensees_changed": false,
+      "start": [
+        3.3999,
+        14.0265,
+        17.82
+      ],
+      "end": [
+        6.5999,
+        14.0265,
+        17.82
+      ],
+      "width_m": 0.2,
+      "height_m": 3.960000000000001,
+      "source_dxf": "2017_67-103.dxf",
+      "source_layer": "RLE-MURO_CONTOUR_PAIR",
+      "evidence": "Paño/retorno del shaft confirmado por pares de contorno y repetición vertical S1–P4; el nodo central del adaptador no representa todos los encuentros."
+    },
+    {
+      "element_id": "E1-P4-M-009",
+      "building": "EDIFICIO_1",
+      "floor": "P4",
+      "type": "wall",
+      "prior_validation": "DISCONNECTED_ERROR",
+      "prior_structural_classification": "UNRESOLVED",
+      "cluster": "CORE_ELEVATOR_P1_P4",
+      "physical_geometry": "CONFIRMED",
+      "physical_classification": "RETURN_WALL",
+      "physical_support": "VERTICAL_CONTINUITY_CONFIRMED",
+      "main_fe_participation": "PRIMARY_FE_REVIEW_REQUIRED",
+      "revised_diagnostic": "PHYSICAL_CONFIRMED_FE_ADAPTER_REVIEW",
+      "duplicate_classification": "SAME_PHYSICAL_WALL",
+      "participates_in_FE_changed": false,
+      "opensees_changed": false,
+      "start": [
+        3.5499,
+        4.1815,
+        17.82
+      ],
+      "end": [
+        3.5499,
+        6.3315,
+        17.82
+      ],
+      "width_m": 0.3,
+      "height_m": 3.960000000000001,
+      "source_dxf": "2017_67-103.dxf",
+      "source_layer": "RLE-MURO_CONTOUR_PAIR",
+      "evidence": "Paño/retorno del shaft confirmado por pares de contorno y repetición vertical S1–P4; el nodo central del adaptador no representa todos los encuentros."
+    },
+    {
+      "element_id": "E1-P4-M-010",
+      "building": "EDIFICIO_1",
+      "floor": "P4",
+      "type": "wall",
+      "prior_validation": "DISCONNECTED_ERROR",
+      "prior_structural_classification": "UNRESOLVED",
+      "cluster": "CORE_ELEVATOR_P1_P4",
+      "physical_geometry": "CONFIRMED",
+      "physical_classification": "RETURN_WALL",
+      "physical_support": "VERTICAL_CONTINUITY_CONFIRMED",
+      "main_fe_participation": "PRIMARY_FE_REVIEW_REQUIRED",
+      "revised_diagnostic": "PHYSICAL_CONFIRMED_FE_ADAPTER_REVIEW",
+      "duplicate_classification": "SAME_PHYSICAL_WALL",
+      "participates_in_FE_changed": false,
+      "opensees_changed": false,
+      "start": [
+        6.4499,
+        4.1815,
+        17.82
+      ],
+      "end": [
+        6.4499,
+        6.3315,
+        17.82
+      ],
+      "width_m": 0.3,
+      "height_m": 3.960000000000001,
+      "source_dxf": "2017_67-103.dxf",
+      "source_layer": "RLE-MURO_CONTOUR_PAIR",
+      "evidence": "Paño/retorno del shaft confirmado por pares de contorno y repetición vertical S1–P4; el nodo central del adaptador no representa todos los encuentros."
+    },
+    {
+      "element_id": "E1-P4-M-012",
+      "building": "EDIFICIO_1",
+      "floor": "P4",
+      "type": "wall",
+      "prior_validation": "DISCONNECTED_ERROR",
+      "prior_structural_classification": "UNRESOLVED",
+      "cluster": "CORE_ELEVATOR_P1_P4",
+      "physical_geometry": "CONFIRMED",
+      "physical_classification": "RETURN_WALL",
+      "physical_support": "VERTICAL_CONTINUITY_CONFIRMED",
+      "main_fe_participation": "PRIMARY_FE_REVIEW_REQUIRED",
+      "revised_diagnostic": "PHYSICAL_CONFIRMED_FE_ADAPTER_REVIEW",
+      "duplicate_classification": "SAME_PHYSICAL_WALL",
+      "participates_in_FE_changed": false,
+      "opensees_changed": false,
+      "start": [
+        6.7249,
+        12.4477,
+        17.82
+      ],
+      "end": [
+        6.7249,
+        13.9265,
+        17.82
+      ],
+      "width_m": 0.25,
+      "height_m": 3.960000000000001,
+      "source_dxf": "2017_67-103.dxf",
+      "source_layer": "RLE-MURO_CONTOUR_PAIR",
+      "evidence": "Paño/retorno del shaft confirmado por pares de contorno y repetición vertical S1–P4; el nodo central del adaptador no representa todos los encuentros."
+    },
+    {
+      "element_id": "E2-P4-V-050",
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "type": "beam",
+      "prior_validation": "UNRESOLVED",
+      "prior_structural_classification": "UNRESOLVED",
+      "cluster": "ED2_REVIEW",
+      "physical_geometry": "SOURCE_MODEL_MISSING",
+      "physical_classification": "UNRESOLVED",
+      "physical_support": "UNRESOLVED",
+      "main_fe_participation": "UNRESOLVED",
+      "revised_diagnostic": "UNRESOLVED_REAL",
+      "duplicate_classification": "UNRESOLVED",
+      "participates_in_FE_changed": false,
+      "opensees_changed": false,
+      "start": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "end": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "width_m": null,
+      "height_m": null,
+      "source_dxf": "2024_22-102.dxf",
+      "source_layer": "RLE-VIGA",
+      "evidence": "Caso EDIFICIO_2 fuera de los tres clusters con nueva evidencia; se mantiene pendiente sin conexión artificial."
+    },
+    {
+      "element_id": "E2-P4-V-051",
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "type": "beam",
+      "prior_validation": "UNRESOLVED",
+      "prior_structural_classification": "UNRESOLVED",
+      "cluster": "ED2_REVIEW",
+      "physical_geometry": "SOURCE_MODEL_MISSING",
+      "physical_classification": "UNRESOLVED",
+      "physical_support": "UNRESOLVED",
+      "main_fe_participation": "UNRESOLVED",
+      "revised_diagnostic": "UNRESOLVED_REAL",
+      "duplicate_classification": "UNRESOLVED",
+      "participates_in_FE_changed": false,
+      "opensees_changed": false,
+      "start": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "end": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "width_m": null,
+      "height_m": null,
+      "source_dxf": "2024_22-102.dxf",
+      "source_layer": "RLE-VIGA",
+      "evidence": "Caso EDIFICIO_2 fuera de los tres clusters con nueva evidencia; se mantiene pendiente sin conexión artificial."
+    }
+  ]
+}

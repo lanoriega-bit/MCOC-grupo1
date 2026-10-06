@@ -10,6 +10,8 @@ En Unity abre **Assets → Main.unity**, pulsa el triángulo **Play** arriba
 y selecciona **Game**. Si la imagen está recortada, reduce Scale a 1x.
 No abras P1L6_AR_Final para la demostración de escritorio.
 No se reinstala Unity ni se crea otro edificio.
+Si el lanzador directo queda bloqueado por licencia, abrir Unity Hub → Añadir
+desde disco → `viewer/unity`. No abrir el registro antiguo de `viewer_unity`.
 
 Para tener acceso fácil: clic derecho sobre Abrir_Unity.bat → Mostrar más opciones
 → Enviar a → Escritorio (crear acceso directo). El acceso directo debe apuntar
@@ -51,16 +53,16 @@ Console de Unity: esa ventana solo muestra mensajes y errores.
 | Quiero cambiar | Archivo/carpeta |
 | --- | --- |
 | Menú, coordinación o mensajes | main.py |
-| Rutas que muestra el menú | project_config.json |
-| Geometría/conectividad/IDs | entregas/P1L5/modelo_central/model_master.json |
-| Dimensiones de secciones | entregas/P1L5/modelo_central/sections.json |
-| Propiedades de materiales | entregas/P1L5/modelo_central/materials.json |
-| Cargas físicas y tributarias | entregas/P1L5/modelo_central/loads.json y analysis/build_current_loads.py |
-| Construcción/casos OpenSees | entregas/P1L5/analysis/run_current_opensees.py |
-| Contrato resultados → Unity | entregas/P1L5/analysis/export_current_to_unity.py |
-| P-M / screening demanda-capacidad | entregas/P1L5/analysis/build_current_capacity.py |
-| Interfaz/filtros/selección Unity | entregas/P1L3/José/viewer_unity/Assets/Scripts/ |
-| Acciones del menú MCOC | entregas/P1L3/José/viewer_unity/Assets/Editor/ |
+| Rutas que muestra el menú | config/project_config.json |
+| Geometría/conectividad/IDs | model/model_master.json |
+| Dimensiones de secciones | model/sections.json |
+| Propiedades de materiales | model/materials.json |
+| Cargas físicas y tributarias | model/loads.json y analysis/opensees/live_loads.py |
+| Construcción/casos OpenSees | analysis/opensees/run_cases.py |
+| Contrato resultados → Unity | analysis/postprocessing/export_unity.py |
+| P-M / screening demanda-capacidad | analysis/capacity/build_capacity.py |
+| Interfaz/filtros/selección Unity | viewer/unity/Assets/Scripts/ |
+| Acciones del menú MCOC | viewer/unity/Assets/Editor/ |
 | Instrucciones del equipo | README.md, PROJECT_INDEX.md, docs/ |
 
 El código está dividido por responsabilidades. `main.py` es una entrada completa,
@@ -94,6 +96,6 @@ No editar resultados numéricos para hacerlos coincidir ni cambiar tags entregad
 No tocar la referencia original de Luis en P1L2.
 No usar repos externos como fuente confirmada sin evidencia primaria.
 
-Última prueba real de Unity: entregas/P1L6/wall_continuity/UNITY_QA.md.
+Prueba real de Unity tras la reorganización: reports/repository_architecture_audit/DESKTOP_RELOCATION.md.
 El QA del menú comprueba datos, no sustituye esa prueba visual.
 La reorganización de main no cambia geometría, materiales, cargas o resultados.

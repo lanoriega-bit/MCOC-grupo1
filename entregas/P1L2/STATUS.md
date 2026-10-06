@@ -1,5 +1,156 @@
 # P1L2 Status
 
+## Cierre de organización — alcance corregido (2026-10-06)
+
+- El cierre de esta rama es estático; no requiere nuevas pruebas Unity ni licencias.
+- AR permanece congelado, sin ejecución ni cambios funcionales.
+- El intento anterior de Play conserva su resultado histórico, pero ya no es barrera de cierre.
+- Fuentes protegidas verificadas por identidad de bytes; main permanece intacta.
+- Evidencia vigente: reports/repository_architecture_audit/STATIC_ORGANIZATION_QA.json.
+
+## Arquitectura funcional — checkpoint final conservador (2026-10-06)
+
+- Lotes históricos P1L2–P1L7 y PRE/POST revisados archivados, con cuatro excepciones protegidas.
+- Fuentes/modelo, resultados y Luis siguen idénticos al baseline (117 hashes desktop).
+- Clon fdbe07f: modelo/pipeline, 19 tests, 45 muros, solver Q/R y 669 capacidades PASS.
+- Sin main/tag modificado, ni AR funcional probado/regenerado.
+- Play del clon final pendiente por inicialización de licencia; no declarar PASS sin evidencia.
+- Informe: reports/repository_architecture_audit/FINAL_ARCHITECTURE.md.
+
+## Archivo conservador — dependencias y lote D P1L6 (2026-10-05)
+
+- P1L5 archivada tras prueba de ausencia de consumidores en clon aislado.
+- P1L6 archivada conservando evidencia y contenido AR intactos; revisión solo estática.
+- Kernel/reconstructor FE productivo en analysis/geometry; no ejecutado sobre CURRENT.
+- Validador actual de 45 muros de núcleo PASS, 19 tests PASS y 117 bytes protegidos idénticos.
+- Solo dos backups byte-idénticos eliminados; referencia original Luis intacta.
+- Rutas congeladas de procedencia resueltas con archive/README.md, sin cambiar datasets.
+- P1L7 y demás lotes aún pendientes de revisión; no archivo masivo ni cambios a main.
+
+## Archivo conservador — lote B P1L4 (2026-10-05)
+
+- 51 archivos de la entrega oficial P1L4 archivados, sin cambios de contenido.
+- Destino `archive/historical_deliveries/P1L4/`; README operativo corregido.
+- Sin consumidores productivos de la carpeta antigua; campos de procedencia permanecen.
+- Modelo/pipeline, 117 protegidos desktop y 17 pruebas PASS. AR no ejecutado.
+- Evidencia: `reports/repository_architecture_audit/LOT_B_P1L4.md`.
+
+## Reorganización funcional — comandos y copia limpia (2026-10-05)
+
+- `tools/validate_project.py`: entrada QA segura, sin AR ni solver.
+- Planes build_model/run_analysis/generate_unity_data/rebuild_all; escritura exige `--execute`.
+- Copia Git limpia: modelo/pipeline/117 bytes protegidos/17 tests PASS; notas explícitas intactas.
+- Q y superposición OpenSees en memoria, capacidad aislada de 669 miembros PASS; resultados activos intactos.
+- Corregida preservación LF/CRLF para clones sin alterar valores ni contratos declarados.
+- Archivo masivo rechazado por seguridad; 998 candidatos inventariados, requieren revisión individual.
+- Evidencia: `reports/repository_architecture_audit/CLEAN_DESKTOP_CHECKPOINT.md`.
+
+## Reorganización funcional — traslado desktop (2026-10-05)
+
+- Unity productivo trasladado a `viewer/unity/`, con GUID/.meta conservados.
+- Compile/Play desde Unity Hub PASS: selección, casos, deformada, diagramas y R.
+- QA modelo PASS; pipeline PASS_WITH_EXPLICIT_NOTES; 117/117 protegidos desktop idénticos.
+- AR limitado a organización; no se ejecutaron pruebas ni regeneración AR.
+- Sin reanálisis ni modificación de resultados. Copia limpia/archivo final pendientes.
+- Evidencia: `reports/repository_architecture_audit/DESKTOP_RELOCATION.md`.
+
+## Reorganización funcional — Editor CURRENT (2026-10-05)
+
+- Editor abierto; scripts recompilados tras actualizar Assets.
+- Corregidas rutas del gate de configuración y detección de raíz a `config/`.
+- Play/Edit y demo CURRENT PASS: selección, casos, deformada, diagramas y R.
+- Modelo/cargas/resultados/capacidad/AR intactos: 120/120 archivos protegidos iguales.
+- Traslado Unity y pruebas AR Play/dispositivo aún pendientes.
+- Evidencia: `reports/repository_architecture_audit/EDITOR_RUNTIME_CHECKPOINT.md`.
+
+## Reorganización funcional — integración AR (2026-10-05)
+
+- Scripts/escena/suites AR finales integrados selectivamente desde `862da8c`.
+- Colocación, escalas, selección y diagramas; Main/terreno/tema y dataset intactos.
+- Generador y transformaciones en `ar/`, una sola salida AR generada en StreamingAssets.
+- QA Python PASS; runtime/suites compilan con referencias cacheadas y métricas offline PASS.
+- Equivalencia: dataset temporal igual salvo timestamp; 120/120 archivos protegidos iguales.
+- Editor compile/Play bloqueado por licencia; usuario verificando apertura en Hub.
+- No se trasladó Unity ni se limpió historia antes de pasar esa barrera.
+- Detalle: `reports/repository_architecture_audit/AR_INTEGRATION_QA.md`.
+
+## Reorganización funcional — resultados (2026-10-05)
+
+- Resultados CURRENT en `results/{G,Q,EX,EY}`, capacidad/cargas/Fiber separados.
+- Traslado sin recalcular: 120/120 archivos protegidos idénticos, referencia Luis intacta.
+- Modelo/pipeline PASS, prueba de capacidad aislada PASS, fuente única 4 tests PASS.
+- Procedencia histórica dentro de JSON conservada; no es una ruta fallback.
+- Pendientes: auxiliares y funciones AR finales, Unity, wrappers, histórico y QA limpio.
+
+## Reorganización funcional — implementaciones (2026-10-05)
+
+- OpenSees/capacidad/postproceso/Fiber trasladados a `analysis/`; tests a `tests/`.
+- Algoritmos conservados; rutas/imports ajustados, pipeline y superposición PASS.
+- Fiber ejecutado en carpeta temporal: cuatro CSV exactamente iguales a históricos.
+- Baseline 120/120 protegido; no se sustituyen resultados o datasets.
+- Resultados, auxiliares, Unity/AR e histórico siguen pendientes de las siguientes fases.
+
+## Reorganización funcional — fuentes canónicas (2026-10-05)
+
+- Fuentes únicas trasladadas a `model/` mediante `git mv`; configuración en `config/`.
+- Las losas permanecen en `model_master.json`: no se crea una fuente duplicada.
+- Consumidores CURRENT dirigidos a las nuevas fuentes. Referencias Git antiguas
+  solo para verificar propiedades contra el commit de procedencia del resultado.
+- QA: modelo PASS, pipeline PASS_WITH_EXPLICIT_NOTES, 10 tests de entrada PASS,
+  prueba OpenSees Q/superposición en memoria PASS y FE preview READY_TO_RUN.
+- Equivalencia: 120/120 archivos protegidos idénticos byte a byte; Luis intacto.
+- No se regeneraron ni sustituyeron resultados guardados, capacidades o datasets.
+- Pendientes: módulos de análisis/resultados, integración AR funcional, traslado
+  Unity, wrappers finales, histórico y QA desde copia limpia. No es cierre final.
+
+## Reorganización funcional — checkpoint de auditoría (2026-10-05)
+
+- Rama `codex/final-repository-architecture`; `main` e historia entregada intactas.
+- Inventario read-only: 1.362 archivos, 281 archivos de código, 321 JSON.
+- 27 grupos JSON equivalentes pendientes de clasificación, no eliminación automática.
+- Base desktop/terreno `53a0484`; funcionalidades AR finales identificadas en `p1l7/ar-final-search`.
+- Dataset AR idéntico en contenido y sus 102.811 hojas numéricas; no sustituir los datos CURRENT.
+- Baseline de 120 archivos protegido en `reports/repository_architecture_audit/baseline.json`.
+- Todavía no hay migración de fuentes, cambios físicos ni regeneración de resultados.
+- Referencia original de Luis intacta. Este checkpoint no certifica la arquitectura final.
+
+## Semana 7 — Q uniforme y sincronización (2026-10-01)
+
+- Rama de cierre `codex/week7-model-closure`, base `3cc21d6`; no modificar historia.
+- Geometría/FE/tributarias físicas intactas; Q configurable sustituye toda SC histórica.
+- qQ inicial 0,667 kN/m² (hipótesis), λQ separado; flujo Unity → STALE → OpenSees → recarga probado.
+- Agregado G por piso corregido: 2,265720 MN permanentes antes omitidos del peso sísmico.
+- AR sincronizado: 712 sólidos, 54 muros faltantes añadidos, 0 IDs retirados.
+- Fiber separado de capacidad aproximada; puntos no convergidos explícitos.
+- qQ restaurado exactamente a 0,667; Unity compiló/Play PASS (83 UX, 29 Q, 44 losas).
+- Clone limpio y nuevo entorno regeneraron CURRENT con la misma respuesta; cierre con bloques explícitos, no release final.
+- Cierre y QA: [Semana 7](../P1L7/WEEK7_MODEL_CLOSURE.md). Build final todavía no aprobado.
+
+## Exclusión lateral ED1-P1 y cargas visibles (2026-10-01)
+
+- Excluidos H08 (100,850 m²) y H10/H12 (70,422 m²), incluida su SC/PM y tributarias.
+- CURRENT recalculado: G 78.716,059 kN; Q 22.637,353 kN; cuatro casos en equilibrio.
+- Losas OFF por defecto; CAD fuera del flujo visual; ficha CARGAS explica Q base y λ.
+- FE estructural/Luis original sin cambios. [Reporte](../P1L6/slab_reconstruction/P1_LATERAL_FINAL.md).
+
+## Losas CURRENT — saneamiento aprobado (2026-10-01)
+
+- Rama `codex/current-slab-reconstruction`: exclusión sur ED1-S1 227,099 m²,
+  franja lineal duplicada corregida y cargas/análisis/capacidades regenerados.
+- Diez losas poligonales accesibles en Modelo, OFF al iniciar; sin piloto P4 duplicado.
+- FE y referencia original Luis intactos. Contornos físicos todavía REVIEW_REQUIRED;
+  no confundir QA numérico con certificación de perímetros/huecos.
+- Fuente/tabla/pendientes: [losas CURRENT](../P1L6/slab_reconstruction/README.md).
+
+## Viewer CURRENT — checkpoint visual/UX (2026-10-01)
+
+- Rama `codex/unity-visual-ux`: materiales visuales, paneles compactos,
+  ayuda contextual y ficha ordenada. No modifica el modelo ni resultados.
+- Validación compile/Play y regresión visual: [QA](../P1L6/visual_ux/FINAL_QA.md).
+- Losas parciales y overlays de cargas sin datos CURRENT siguen explícitos;
+  no se sustituyen por datasets históricos.
+- Export original de Luis, geometría central y `P1L4_FINAL` intactos.
+
 ## main CURRENT — organización y núcleos (2026-10-01)
 
 - Fuente única: `entregas/P1L5/modelo_central/`; 712 sólidos: 442 vigas,
@@ -353,3 +504,28 @@ con XY, altura, material e IDs preservados. FE 677 segmentos, 1170 nodos,
 669 registros y export CURRENT_VERIFIED con hashes coherentes.
 Muros duplicados y solapes accidentales: 0. Luis original intacto.
 Véase `entregas/P1L6/wall_continuity/WALL_CONTINUITY_AFTER.md`.
+
+## Contexto visual de terreno — 2026-10-04
+
+Dos niveles de terreno/plataforma en el viewer, sin cambio estructural:
+13 columnas ED1 S1 C-007–C-019 cubiertas visualmente; acceso exterior junto
+a P1 V-106/V-107 hasta base de P2. Controles independientes en Contexto.
+Unity Main/Play, Right/ISO, selección y filtro S1 comprobados. CURRENT,
+OpenSees y AR intactos; Luis original sin cambios. QA y alcance esquemático:
+`entregas/P1L7/visual_terrain/RUNTIME_VALIDATION.md`.
+
+### Entorno visual continuo — revisión 2
+
+Base ampliada bajo ED1/ED2, terrazas rectangulares sin talud, pasto discreto
+y camino sobre el acceso P2. Reserva perimetral para contexto futuro.
+ISO/Right/Top, selección y filtro S1 comprobados en Play; 19 checks PASS,
+260 archivos protegidos intactos. Sin cambios estructurales, CURRENT ni AR.
+Diseño vigente: `entregas/P1L7/visual_terrain/TERRAIN_V2_VALIDATION.md`.
+
+### Terrazas visuales hasta el perímetro — revisión 3
+
+Los niveles intermedio y superior ahora alcanzan ambos bordes laterales del
+terreno general. El superior llega también al borde exterior de su base;
+camino prolongado hasta ese borde. Pasto, acceso P2 y cotas conservados.
+Main/Play y perímetros PASS; 22 checks PASS, 260 archivos protegidos intactos.
+Diseño vigente: `entregas/P1L7/visual_terrain/TERRAIN_V3_VALIDATION.md`.

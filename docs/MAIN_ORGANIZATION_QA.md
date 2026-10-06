@@ -9,7 +9,7 @@ modelo central y se añade una entrada de uso por encima de los módulos existen
 
 | Control | Estado | Evidencia |
 | --- | --- | --- |
-| Entrada pública y protección frente a fallos | PASS | 10 tests en tools/test_project_entrypoint.py |
+| Entrada pública y protección frente a fallos | PASS | 10 tests en tests/model/test_project_entrypoint.py |
 | Enlaces de las nuevas guías | PASS | test_document_links_exist |
 | Lanzador Windows y rutas Unicode | PASS | Proyecto.bat rutas / validar |
 | Modelo central, IDs y referencias | PASS | validate_central_model.py, cero errores/advertencias |

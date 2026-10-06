@@ -1,25 +1,9 @@
+param([string]$UnityEditor)
 $ErrorActionPreference = 'Stop'
-
-$unityExe = 'C:\Program Files\Unity\Hub\Editor\6000.6.0f1\Editor\Unity.exe'
-$p1l3Path = Join-Path $PSScriptRoot 'entregas\P1L3'
-$projectCandidates = @(
-    Get-ChildItem -LiteralPath $p1l3Path -Directory | Where-Object {
-        Test-Path -LiteralPath (Join-Path $_.FullName 'viewer_unity\ProjectSettings\ProjectVersion.txt')
-    } | ForEach-Object {
-        Join-Path $_.FullName 'viewer_unity'
-    }
-)
-
-if (-not (Test-Path -LiteralPath $unityExe)) {
-    throw "No se encontró Unity en: $unityExe"
-}
-
-if ($projectCandidates.Count -ne 1) {
-    throw "Se esperaba un unico Unity canonico bajo entregas\P1L3; encontrados: $($projectCandidates.Count)"
-}
-$projectPath = $projectCandidates[0]
-
-Start-Process -FilePath $unityExe -WorkingDirectory (Split-Path -Parent $unityExe) -ArgumentList @(
-    '-projectPath'
-    ('"{0}"' -f $projectPath)
-)
+$projectConfig = Get-Content -LiteralPath (Join-Path $PSScriptRoot 'config/project_config.json') -Raw | ConvertFrom-Json
+$projectPath = (Resolve-Path -LiteralPath (Join-Path $PSScriptRoot $projectConfig.paths.unity)).Path
+$versionFile = Join-Path $projectPath 'ProjectSettings/ProjectVersion.txt'
+$version = ((Get-Content -LiteralPath $versionFile | Select-String '^m_EditorVersion:').Line -split ':',2)[1].Trim()
+if (-not $UnityEditor) { $UnityEditor = Join-Path $env:ProgramFiles "Unity/Hub/Editor/$version/Editor/Unity.exe" }
+if (-not (Test-Path -LiteralPath $UnityEditor)) { throw "No se encontró Unity $version. Indica su ejecutable con -UnityEditor." }
+Start-Process -FilePath $UnityEditor -WindowStyle Hidden -ArgumentList @('-projectPath', ('"{0}"' -f $projectPath))
