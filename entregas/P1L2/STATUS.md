@@ -1,5 +1,18 @@
 # P1L2 Status
 
+## main CURRENT — organización y núcleos (2026-10-01)
+
+- Fuente única: `entregas/P1L5/modelo_central/`; 712 sólidos: 442 vigas,
+  143 columnas, 84 muros, 10 losas y 33 apoyos visuales.
+- FE: 1170 nodos topológicos, 677 segmentos, 1240 restricciones y 44 tags
+  fijos; 0 componentes sin camino a apoyo. G/Q/EX/EY/R CURRENT verificados.
+- Entrada de uso: `Proyecto.bat` / `main.py`. `Validar_Modelo.bat` ahora
+  verifica CURRENT, no el histórico. No se recalcula física al ordenar main.
+- La referencia original de Luis y los tags históricos permanecen intactos.
+- Guía vigente: [índice canónico](../../PROJECT_INDEX.md) y
+  [QA de núcleos](../P1L6/wall_continuity/CURRENT_PIPELINE_QA.md).
+- Los apartados siguientes son checkpoints históricos, no el estado actual.
+
 ## P1L6 readiness CURRENT (2026-09-29)
 
 - Fuente vigente: `entregas/P1L5/modelo_central/model_master.json`.
@@ -320,3 +333,23 @@ Inspector semántico con Resumen/Resultados; actuales no disponibles, archivo
 histórico sólo opt-in. Contrato de versiones y preparación de superposición.
 Persisten 43/22, alturas19 y restricciones físicamente no aprobadas. Ver informe
 `entregas/PRE_P1L5/current_readiness/CURRENT_READINESS_REPORT.md`.
+
+## CURRENT — auditoría de continuidad de núcleos (2026-10-01)
+
+Rama `codex/p1l6-wall-continuity-correction`. Auditoría de 54 muros activos,
+15 líneas y tres conjuntos en C contra ejes y caras CAD. El candidato aislado
+de 84 muros pasa FE (0 componentes sin apoyo) y OpenSees G/Q/EX/EY.
+Todavía no promovido en este checkpoint. ED1-P4 conserva el supuesto material
+G35 explícito; no se declara confirmación primaria nueva. El muro largo ED2
+se mantiene en su lado CAD, según aclaración del usuario.
+Ver `entregas/P1L6/wall_continuity/WALL_CONTINUITY_BEFORE.md`.
+
+### Promoción y análisis CURRENT de núcleos
+
+30 muros reintegrados, cuatro muros S1 registrados contra ejes primarios;
+84 muros activos. E2-P4-C-004/C-007: sección existente 70×70 cm de P3,
+con XY, altura, material e IDs preservados. FE 677 segmentos, 1170 nodos,
+44 apoyos FE, 0 componentes sin apoyo. OpenSees G/Q/EX/EY PASS; capacidad
+669 registros y export CURRENT_VERIFIED con hashes coherentes.
+Muros duplicados y solapes accidentales: 0. Luis original intacto.
+Véase `entregas/P1L6/wall_continuity/WALL_CONTINUITY_AFTER.md`.

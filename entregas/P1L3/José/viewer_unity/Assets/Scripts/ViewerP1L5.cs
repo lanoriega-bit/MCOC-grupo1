@@ -110,6 +110,19 @@ namespace Mcoc.UnityViewer
             else RefreshStructuralFailureStates();
         }
 
+        internal static string LoadCaseExplanation(string name)
+        {
+            switch ((name ?? "").ToUpperInvariant())
+            {
+                case "G": return "G · Carga permanente: peso propio y cargas muertas permanentes del edificio.";
+                case "Q": return "Q · Sobrecarga de uso: cargas variables de ocupación, transferidas por áreas tributarias.";
+                case "EX": return "EX · Acción horizontal en X: caso lateral/sísmico en el eje global X.";
+                case "EY": return "EY · Acción horizontal en Y: caso lateral/sísmico en el eje global Y.";
+                case "R": return "R · Respuesta combinada: superposición de G, Q, EX y EY con los multiplicadores seleccionados.";
+                default: return "Seleccione un caso base o la respuesta combinada R.";
+            }
+        }
+
         float DrawCoefficient(string label, float value)
         {
             GUILayout.BeginHorizontal();
@@ -137,7 +150,10 @@ namespace Mcoc.UnityViewer
             foreach (string name in new[] { "G", "Q", "EX", "EY", "R" })
                 if (GUILayout.Button(name, currentButton)) ActivateAnalysisCase(name);
             GUILayout.EndHorizontal();
-            GUILayout.Label("Caso activo: " + activeAnalysisCase + " · CURRENT_APPROX_FALLBACK", currentBody);
+            GUILayout.Label("Caso activo: " + activeAnalysisCase + " · CURRENT con supuestos documentados", currentBody);
+            GUILayout.Label(LoadCaseExplanation(activeAnalysisCase), currentBody);
+            if (activeAnalysisCase == "R")
+                GUILayout.Label("λ: coeficientes adimensionales. Combinan resultados ya calculados; no ejecutan OpenSees.", currentBody);
             bool deform = GUILayout.Toggle(activeDeformationVisible, "Deformada CURRENT", GUILayout.Height(25));
             if (deform != activeDeformationVisible) { activeDeformationVisible = deform; typeVisible["analysis_deformed"] = deform; ReapplyAll(); }
             GUILayout.Label("Amplificación visual ×" + activeDeformationScale.ToString("F0"), currentBody);

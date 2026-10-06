@@ -9,7 +9,7 @@ namespace Mcoc.UnityViewer
     {
         private readonly Dictionary<string, FailureResult> structuralFailureByElementId =
             new Dictionary<string, FailureResult>();
-        private bool structuralFailureVisualizationEnabled = true;
+        private bool structuralFailureVisualizationEnabled = false;
         private bool structuralDamageOverlayEnabled;
         private readonly HashSet<string> previouslyExceededElementIds = new HashSet<string>();
         private FailureResult firstExceededEvent;

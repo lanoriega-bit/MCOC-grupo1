@@ -16,11 +16,13 @@ from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
+from current_contract_config import DEFAULT_R_COEFFICIENTS
+
 
 ROOT = Path(__file__).resolve().parents[3]
 CENTRAL = ROOT / "entregas" / "P1L5" / "modelo_central"
 STREAM = ROOT / "entregas" / "P1L3" / "José" / "viewer_unity" / "Assets" / "StreamingAssets"
-ANALYSIS = STREAM / "p1l5_current_analysis_cases.json"
+RESULTS = Path(__file__).resolve().parent / "results" / "current"
 OUT = Path(__file__).resolve().parent / "generated" / "current_capacity.json"
 STREAM_OUT = STREAM / "p1l6_current_capacity.json"
 
@@ -84,16 +86,52 @@ def shear_capacity_kN(width: float, depth: float, fc: float, fy: float) -> float
     return 0.75 * (concrete + steel) / 1000.0
 
 
-def demand_index(cases: dict) -> dict[str, list[dict]]:
+def pm_capacity_at_compression(points: list[dict], compression_kN: float) -> float | None:
+    if compression_kN < 0 or compression_kN > points[-1]["compression_magnitude_kN"]:
+        return None
+    for left, right in zip(points, points[1:]):
+        p0, p1 = left["compression_magnitude_kN"], right["compression_magnitude_kN"]
+        if p0 <= compression_kN <= p1:
+            fraction = (compression_kN - p0) / (p1 - p0) if p1 > p0 else 0.0
+            return left["M_kNm"] + fraction * (right["M_kNm"] - left["M_kNm"])
+    return points[-1]["M_kNm"]
+
+
+def demand_index() -> tuple[dict, dict[str, list[dict]]]:
+    """Combine signed local end forces from the fresh four OpenSees basis cases."""
+    manifest = read(RESULTS / "manifest.json")
+    if manifest.get("status") != "PASS" or not manifest.get("linear_superposition_compatible"):
+        raise RuntimeError("CURRENT basis is not verified for superposition")
+    basis = {name: read(RESULTS / f"{name}.json") for name in DEFAULT_R_COEFFICIENTS}
+    if any(row.get("status") != "PASS" for row in basis.values()):
+        raise RuntimeError("A CURRENT OpenSees basis case did not pass")
+    by_case = {name: {row["analysis_id"]: row for row in data["elements"]}
+               for name, data in basis.items()}
+    segment_ids = set(by_case["G"])
+    if any(set(rows) != segment_ids for rows in by_case.values()):
+        raise RuntimeError("Basis cases have incompatible FE segment identities")
     result = defaultdict(list)
-    case_r = next((row for row in cases.get("cases", []) if row.get("case_name") == "R"), None)
-    if case_r:
-        for row in case_r.get("elements", []):
-            result[row["element_id"]].append(row)
-    return result
+    components = ("N", "Vy", "Vz", "T", "My", "Mz")
+    for analysis_id in sorted(segment_ids):
+        reference = by_case["G"][analysis_id]
+        if any(by_case[name][analysis_id]["element_id"] != reference["element_id"] or
+               by_case[name][analysis_id]["node_i"] != reference["node_i"] or
+               by_case[name][analysis_id]["node_j"] != reference["node_j"]
+               for name in by_case):
+            raise RuntimeError(f"Basis geometry mismatch for {analysis_id}")
+        combined = {"element_id": reference["element_id"], "analysis_id": analysis_id}
+        for endpoint, target in (("i", "localForce_end1"), ("j", "localForce_end2")):
+            combined[target] = [sum(DEFAULT_R_COEFFICIENTS[name] *
+                                    float(by_case[name][analysis_id]["local_end_forces"][endpoint][component])
+                                    for name in DEFAULT_R_COEFFICIENTS)
+                                for component in components]
+        result[reference["element_id"]].append(combined)
+    return manifest, result
 
 
 def demand_payload(rows: list[dict]) -> dict:
+    if not rows:
+        raise RuntimeError("No CURRENT FE force data for an active structural element")
     maxima = [0.0] * 6
     selected_end = "envelope"
     for row in rows:
@@ -101,8 +139,9 @@ def demand_payload(rows: list[dict]) -> dict:
             for index in range(min(6, len(vector))):
                 maxima[index] = max(maxima[index], abs(float(vector[index])))
     return {
-        "case_name": "R", "source_file": "p1l5_current_analysis_cases.json",
-        "selection_rule": "absolute envelope over every CURRENT FE segment and both ends",
+        "case_name": "R", "source_file": "entregas/P1L5/analysis/results/current/{G,Q,EX,EY}.json",
+        "coefficients": DEFAULT_R_COEFFICIENTS,
+        "selection_rule": "signed R superposition first; absolute envelope over CURRENT FE segments and both ends",
         "selected_end": selected_end,
         "P_kN": maxima[0] / 1000.0, "Vy_kN": maxima[1] / 1000.0, "Vz_kN": maxima[2] / 1000.0,
         "T_kNm": maxima[3] / 1000.0, "My_kNm": maxima[4] / 1000.0, "Mz_kNm": maxima[5] / 1000.0,
@@ -114,8 +153,7 @@ def main() -> None:
     master = read(CENTRAL / "model_master.json")
     sections = {row["section_id"]: row for row in read(CENTRAL / "sections.json")["sections"]}
     materials = {row["material_id"]: row for row in read(CENTRAL / "materials.json")["materials"]}
-    cases = read(ANALYSIS) if ANALYSIS.exists() else {"cases": [], "analysis_version": "NONE"}
-    demands = demand_index(cases)
+    manifest, demands = demand_index()
     elements = []
     signatures = {}
     counts = Counter()
@@ -137,6 +175,8 @@ def main() -> None:
             "type": row["type"], "section_id": row["section_id"], "material_id": row["material_id"],
             "dim_local_y_m": dim_y, "dim_local_z_m": dim_z, "fc_pa": fc, "fy_pa": fy,
             "reinforcement_ratio": rho, "cover_m": 0.05, "phi_flexure": 0.9, "phi_shear": 0.75,
+            "orientation": {k: row["geometry"][k] for k in ("direction_unit", "orientation_deg_xy", "rotation_deg") if k in row["geometry"]},
+            "reinforcement_status": "ASSUMED_FOR_LAB_NOT_AS_BUILT",
         }
         cap_signature = signature(signature_input)
         signatures.setdefault(cap_signature, {**signature_input, "assumption_status": "APPROX / ASSUMED_FOR_LAB"})
@@ -151,11 +191,11 @@ def main() -> None:
             "demand": demand_payload(demands.get(row["element_id"], [])),
             "traceability": {
                 "geometry_source": "entregas/P1L5/modelo_central/model_master.json",
-                "analysis_source": "p1l5_current_analysis_cases.json",
-                "demand_source": "CURRENT R absolute envelope",
+                "analysis_source": "entregas/P1L5/analysis/results/current/{G,Q,EX,EY}.json",
+                "demand_source": "CURRENT default R signed superposition then absolute envelope",
                 "capacity_source": "entregas/P1L5/analysis/build_current_capacity.py",
                 "capacity_section_config": cap_signature,
-                "case_manifest": cases.get("analysis_version", "NONE"),
+                "case_manifest": manifest["analysis_version"],
             },
         }
         if row["type"] == "beam":
@@ -171,6 +211,21 @@ def main() -> None:
                 "source": "section geometry + confirmed material strengths where available",
                 "note": f"rho_l={rho:.4f}, rho_v=0.0020 and cover=0.05 m assumed for lab; fc={fc_status}; fy={fy_status}; screening only.",
             }
+            demand = payload["demand"]
+            limits = payload["beam_capacity"]
+            ratios = {
+                "My": demand["My_kNm"] / limits["phi_Mny_kNm"],
+                "Mz": demand["Mz_kNm"] / limits["phi_Mnz_kNm"],
+                "Vy": demand["Vy_kN"] / limits["phi_Vy_kN"],
+                "Vz": demand["Vz_kN"] / limits["phi_Vz_kN"],
+            }
+            mode = max(ratios, key=ratios.get)
+            payload["beam_demand_capacity"] = {
+                "case": "R", "component_ratios": {k: round(v, 6) for k, v in ratios.items()},
+                "controlling_mode": mode, "ratio": round(ratios[mode], 6),
+                "status": "CAPACITY_EXCEEDED" if ratios[mode] > 1.0 else "OK",
+                "note": "Axial N and torsion T are reported as demand but no lab capacity check is claimed for them.",
+            }
         else:
             points_my = pm_curve(dim_y, dim_z, fc, fy, rho, "MY")
             points_mz = pm_curve(dim_z, dim_y, fc, fy, rho, "MZ")
@@ -183,12 +238,35 @@ def main() -> None:
                 "invalid_points_note": "None. All displayed points belong to the declared approximate screening envelope.",
             }
             demand = payload["demand"]
+            p = demand["P_kN"]
+            cap_my = pm_capacity_at_compression(points_my, p)
+            cap_mz = pm_capacity_at_compression(points_mz, p)
+            def component_ratio(demand_value: float, capacity_value: float | None) -> float | None:
+                if capacity_value is None:
+                    return None
+                if capacity_value <= 0:
+                    return 0.0 if demand_value <= 1e-9 else None
+                return demand_value / capacity_value
+            ratios = {
+                "My": component_ratio(demand["My_kNm"], cap_my),
+                "Mz": component_ratio(demand["Mz_kNm"], cap_mz),
+            }
+            if any(value is None for value in ratios.values()):
+                controlling = "AXIAL_OUT_OF_ENVELOPE"
+                ratio = None
+                capacity = 0.0
+            else:
+                controlling = max(ratios, key=ratios.get)
+                ratio = ratios[controlling]
+                capacity = cap_my if controlling == "My" else cap_mz
             payload["demand_capacity"] = {
-                "case": "R", "P_kN": demand["P_kN"], "compression_magnitude_kN": demand["P_kN"],
+                "case": "R", "P_kN": p, "compression_magnitude_kN": p,
                 "M_kNm": max(demand["My_kNm"], demand["Mz_kNm"]),
-                "M_abs_kNm": max(demand["My_kNm"], demand["Mz_kNm"]), "pm_axis": "CONTROLLING_MY_OR_MZ",
-                "inside_envelope": False, "interpolated_capacity_M_abs_kNm": 0.0,
-                "method": "Unity interpolates CURRENT demand against My and Mz envelopes independently.",
+                "M_abs_kNm": max(demand["My_kNm"], demand["Mz_kNm"]), "pm_axis": controlling,
+                "inside_envelope": ratio is not None and ratio <= 1.0,
+                "interpolated_capacity_M_abs_kNm": round(capacity, 6),
+                "ratio": round(ratio, 6) if ratio is not None else None,
+                "method": "Default CURRENT R; interpolate My/Mz screening curves at |P|, choose larger demand/capacity ratio.",
             }
         elements.append(payload)
         counts[row["type"]] += 1
@@ -197,7 +275,10 @@ def main() -> None:
         "format": "MCOC_P1L6_CURRENT_CAPACITY_V1",
         "active_case": "R",
         "generated_utc": datetime.now(timezone.utc).isoformat(),
-        "analysis_version": cases.get("analysis_version", "NONE"),
+        "analysis_version": manifest["analysis_version"],
+        "geometry_version": hashlib.sha256((CENTRAL / "model_master.json").read_bytes()).hexdigest(),
+        "analysis_manifest_sha256": hashlib.sha256((RESULTS / "manifest.json").read_bytes()).hexdigest(),
+        "default_coefficients": DEFAULT_R_COEFFICIENTS,
         "geometry_state": master["current_pre5_identity"].get("geometry_state"),
         "assumption_status": "APPROX / ASSUMED_FOR_LAB",
         "units": {"force": "kN", "moment": "kN.m", "length": "m", "stress": "Pa"},

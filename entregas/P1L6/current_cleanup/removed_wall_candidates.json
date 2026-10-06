@@ -1,0 +1,5268 @@
+{
+  "scope": "READ_ONLY_REMOVED_WALL_REVIEW",
+  "external_snapshots": {
+    "santiago": "Santiago411323/Trabajo-MCOC@de20a7afeff6778cf2ab58c1893eed428dd68582",
+    "caceres": "jpCaceres123/Proyecto-1-MCOC@8dc2787445f00b1c3a70db4d03732f364abe2883"
+  },
+  "normalization": "entregas/POST_P1L4/STRUCTURAL_CROSS_REPO_COMPARISON.json#/normalization/transforms",
+  "thresholds": {
+    "angle_deg": 3,
+    "perpendicular_m": 0.15,
+    "overlap_ratio": 0.8
+  },
+  "active_walls": 54,
+  "santiago_walls": 66,
+  "caceres_walls": 82,
+  "candidates": [
+    {
+      "candidate_id": "E1-P1-M-027",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "geometry": {
+        "start_xy_m": [
+          67.641,
+          16.7201
+        ],
+        "end_xy_m": [
+          67.641,
+          26.3258
+        ],
+        "thickness_m": 0.3
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_EXTERIOR_NOT_CAD_ABSENCE",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P1-RLE-MURO-0029",
+          "P1-RLE-MURO-0031"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": null,
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P1-M-028",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "geometry": {
+        "start_xy_m": [
+          67.641,
+          0.3501
+        ],
+        "end_xy_m": [
+          67.641,
+          8.5501
+        ],
+        "thickness_m": 0.3
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_INTERIOR_WALL_ACKNOWLEDGED",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P1-RLE-MURO-0024",
+          "P1-RLE-MURO-0025"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": {
+        "id": "C-W-2402",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.001,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 8.2,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 8.2,
+          "strong": true
+        },
+        "thickness_m": 0.3
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P1-M-029",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "geometry": {
+        "start_xy_m": [
+          67.641,
+          9.2501
+        ],
+        "end_xy_m": [
+          67.641,
+          15.8
+        ],
+        "thickness_m": 0.3
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_INTERIOR_WALL_ACKNOWLEDGED",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P1-RLE-MURO-0021",
+          "P1-RLE-MURO-0022"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": {
+        "id": "C-W-2402",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.001,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 6.5499,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 9.8501,
+          "strong": true
+        },
+        "thickness_m": 0.3
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-S1-M-026",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "geometry": {
+        "start_xy_m": [
+          31.191000000000003,
+          4.0814
+        ],
+        "end_xy_m": [
+          33.791,
+          4.0814
+        ],
+        "thickness_m": 0.2
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "S1-RLE-MURO-0058",
+          "S1-RLE-MURO-0059"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-16",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0014,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.6,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.8,
+          "strong": true
+        },
+        "thickness_m": 0.2
+      },
+      "caceres": {
+        "id": "C-W-1701",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0014,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.6,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.2,
+          "strong": true
+        },
+        "thickness_m": 0.2
+      },
+      "active_duplicate": {
+        "id": "E1-S1-M-026",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0004,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.6,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.0,
+          "strong": true
+        },
+        "thickness_m": 0.2
+      },
+      "decision": "ALREADY_RESTORED_CURRENT",
+      "missing_evidence": null
+    },
+    {
+      "candidate_id": "E1-P1-M-004",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "geometry": {
+        "start_xy_m": [
+          31.191000000000003,
+          3.9001
+        ],
+        "end_xy_m": [
+          33.791,
+          3.9001
+        ],
+        "thickness_m": 0.2
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P1-RLE-MURO-0015",
+          "P1-RLE-MURO-0016"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-17",
+        "strong": false,
+        "match": {
+          "perpendicular_distance_m": 0.1799,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.6,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.8,
+          "strong": false
+        },
+        "thickness_m": 0.2
+      },
+      "caceres": {
+        "id": "C-W-1002",
+        "strong": false,
+        "match": {
+          "perpendicular_distance_m": 0.1799,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.6,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 4.05,
+          "strong": false
+        },
+        "thickness_m": 0.2
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P2-M-007",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "geometry": {
+        "start_xy_m": [
+          31.190900000000003,
+          4.0815
+        ],
+        "end_xy_m": [
+          33.79090000000001,
+          4.0815
+        ],
+        "thickness_m": 0.2
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "our_primary_provenance": {
+        "sheet": "2017_67-102.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P2-RLE-MURO-0015",
+          "P2-RLE-MURO-0016"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-18",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0015,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.6,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.8,
+          "strong": true
+        },
+        "thickness_m": 0.2
+      },
+      "caceres": {
+        "id": "C-W-1003",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0015,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.6,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 4.05,
+          "strong": true
+        },
+        "thickness_m": 0.2
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED_FE_SUPPORT",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P3-M-007",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "geometry": {
+        "start_xy_m": [
+          31.190900000000003,
+          4.0815
+        ],
+        "end_xy_m": [
+          33.79090000000001,
+          4.0815
+        ],
+        "thickness_m": 0.2
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "our_primary_provenance": {
+        "sheet": "2017_67-102.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P3-RLE-MURO-0015",
+          "P3-RLE-MURO-0016"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-19",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0015,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.6,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.8,
+          "strong": true
+        },
+        "thickness_m": 0.2
+      },
+      "caceres": {
+        "id": "C-W-1004",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0015,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.6,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 4.05,
+          "strong": true
+        },
+        "thickness_m": 0.2
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED_FE_SUPPORT",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P4-M-007",
+      "building": "EDIFICIO_1",
+      "floor": "P4",
+      "geometry": {
+        "start_xy_m": [
+          31.190900000000003,
+          4.0815
+        ],
+        "end_xy_m": [
+          33.79090000000001,
+          4.0815
+        ],
+        "thickness_m": 0.2
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "our_primary_provenance": {
+        "sheet": "2017_67-103.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P4-RLE-MURO-0015",
+          "P4-RLE-MURO-0016"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-20",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0015,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.6,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.8,
+          "strong": true
+        },
+        "thickness_m": 0.2
+      },
+      "caceres": {
+        "id": "C-W-1005",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0015,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.6,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 4.05,
+          "strong": true
+        },
+        "thickness_m": 0.2
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED_MATERIAL_SCOPE",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-S1-M-029",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "geometry": {
+        "start_xy_m": [
+          30.891000000000002,
+          14.0264
+        ],
+        "end_xy_m": [
+          34.09100000000001,
+          14.0264
+        ],
+        "thickness_m": 0.2
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "S1-RLE-MURO-0044",
+          "S1-RLE-MURO-0045"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-1",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0014,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 3.2,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.2,
+          "strong": true
+        },
+        "thickness_m": 0.2
+      },
+      "caceres": {
+        "id": "C-W-1401",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0014,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 3.2,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.2,
+          "strong": true
+        },
+        "thickness_m": 0.2
+      },
+      "active_duplicate": {
+        "id": "E1-S1-M-029",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0004,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 3.2,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.0,
+          "strong": true
+        },
+        "thickness_m": 0.2
+      },
+      "decision": "ALREADY_RESTORED_CURRENT",
+      "missing_evidence": null
+    },
+    {
+      "candidate_id": "E1-P1-M-010",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "geometry": {
+        "start_xy_m": [
+          30.891000000000002,
+          13.8451
+        ],
+        "end_xy_m": [
+          34.09100000000001,
+          13.8451
+        ],
+        "thickness_m": 0.2
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P1-RLE-MURO-0001",
+          "P1-RLE-MURO-0002"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-2",
+        "strong": false,
+        "match": {
+          "perpendicular_distance_m": 0.1799,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 3.2,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.2,
+          "strong": false
+        },
+        "thickness_m": 0.2
+      },
+      "caceres": {
+        "id": "C-W-1402",
+        "strong": false,
+        "match": {
+          "perpendicular_distance_m": 0.1799,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 3.2,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.2,
+          "strong": false
+        },
+        "thickness_m": 0.2
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P2-M-008",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "geometry": {
+        "start_xy_m": [
+          30.890900000000002,
+          14.0265
+        ],
+        "end_xy_m": [
+          34.090900000000005,
+          14.0265
+        ],
+        "thickness_m": 0.2
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "our_primary_provenance": {
+        "sheet": "2017_67-102.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P2-RLE-MURO-0001",
+          "P2-RLE-MURO-0002"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-3",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0015,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 3.2,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.2,
+          "strong": true
+        },
+        "thickness_m": 0.2
+      },
+      "caceres": {
+        "id": "C-W-1403",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0015,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 3.2,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.2,
+          "strong": true
+        },
+        "thickness_m": 0.2
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED_FE_SUPPORT",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P3-M-008",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "geometry": {
+        "start_xy_m": [
+          30.890900000000002,
+          14.0265
+        ],
+        "end_xy_m": [
+          34.090900000000005,
+          14.0265
+        ],
+        "thickness_m": 0.2
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "our_primary_provenance": {
+        "sheet": "2017_67-102.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P3-RLE-MURO-0001",
+          "P3-RLE-MURO-0002"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-4",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0015,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 3.2,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.2,
+          "strong": true
+        },
+        "thickness_m": 0.2
+      },
+      "caceres": {
+        "id": "C-W-1404",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0015,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 3.2,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.2,
+          "strong": true
+        },
+        "thickness_m": 0.2
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED_FE_SUPPORT",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P4-M-008",
+      "building": "EDIFICIO_1",
+      "floor": "P4",
+      "geometry": {
+        "start_xy_m": [
+          30.890900000000002,
+          14.0265
+        ],
+        "end_xy_m": [
+          34.090900000000005,
+          14.0265
+        ],
+        "thickness_m": 0.2
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "our_primary_provenance": {
+        "sheet": "2017_67-103.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P4-RLE-MURO-0001",
+          "P4-RLE-MURO-0002"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-5",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0015,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 3.2,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.2,
+          "strong": true
+        },
+        "thickness_m": 0.2
+      },
+      "caceres": {
+        "id": "C-W-1405",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0015,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 3.2,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.2,
+          "strong": true
+        },
+        "thickness_m": 0.2
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED_MATERIAL_SCOPE",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P1-M-003",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "geometry": {
+        "start_xy_m": [
+          27.141000000000002,
+          3.9001
+        ],
+        "end_xy_m": [
+          30.891000000000002,
+          3.9001
+        ],
+        "thickness_m": 0.2
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P1-RLE-MURO-0015",
+          "P1-RLE-MURO-0017"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": {
+        "id": "C-W-1002",
+        "strong": false,
+        "match": {
+          "perpendicular_distance_m": 0.1799,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 3.651,
+          "overlap_ratio": 0.9736,
+          "length_delta_m": 2.9,
+          "strong": false
+        },
+        "thickness_m": 0.2
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P2-M-002",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "geometry": {
+        "start_xy_m": [
+          27.140900000000002,
+          4.0815
+        ],
+        "end_xy_m": [
+          30.890900000000002,
+          4.0815
+        ],
+        "thickness_m": 0.2
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "our_primary_provenance": {
+        "sheet": "2017_67-102.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P2-RLE-MURO-0015",
+          "P2-RLE-MURO-0017"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": {
+        "id": "C-W-1003",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0015,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 3.6509,
+          "overlap_ratio": 0.9736,
+          "length_delta_m": 2.9,
+          "strong": true
+        },
+        "thickness_m": 0.2
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P3-M-002",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "geometry": {
+        "start_xy_m": [
+          27.140900000000002,
+          4.0815
+        ],
+        "end_xy_m": [
+          30.890900000000002,
+          4.0815
+        ],
+        "thickness_m": 0.2
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "our_primary_provenance": {
+        "sheet": "2017_67-102.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P3-RLE-MURO-0015",
+          "P3-RLE-MURO-0017"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": {
+        "id": "C-W-1004",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0015,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 3.6509,
+          "overlap_ratio": 0.9736,
+          "length_delta_m": 2.9,
+          "strong": true
+        },
+        "thickness_m": 0.2
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P4-M-002",
+      "building": "EDIFICIO_1",
+      "floor": "P4",
+      "geometry": {
+        "start_xy_m": [
+          27.140900000000002,
+          4.0815
+        ],
+        "end_xy_m": [
+          30.890900000000002,
+          4.0815
+        ],
+        "thickness_m": 0.2
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "our_primary_provenance": {
+        "sheet": "2017_67-103.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P4-RLE-MURO-0015",
+          "P4-RLE-MURO-0017"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": {
+        "id": "C-W-1005",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0015,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 3.6509,
+          "overlap_ratio": 0.9736,
+          "length_delta_m": 2.9,
+          "strong": true
+        },
+        "thickness_m": 0.2
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E2-S1-M-007",
+      "building": "EDIFICIO_2",
+      "floor": "S1",
+      "geometry": {
+        "start_xy_m": [
+          25.082,
+          3.3307
+        ],
+        "end_xy_m": [
+          25.082,
+          6.1507
+        ],
+        "thickness_m": 0.25
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "our_primary_provenance": {
+        "sheet": "2024_22-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "S1-RLE-MURO-0005",
+          "S1-RLE-MURO-0007"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED2 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": {
+        "id": "C-W-901",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.002,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.7193,
+          "overlap_ratio": 0.9643,
+          "length_delta_m": 0.125,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "active_duplicate": {
+        "id": "E2-S1-M-007",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.8197,
+          "overlap_ratio": 0.9999,
+          "length_delta_m": 0.0,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "decision": "ALREADY_RESTORED_CURRENT",
+      "missing_evidence": null
+    },
+    {
+      "candidate_id": "E2-P1-M-007",
+      "building": "EDIFICIO_2",
+      "floor": "P1",
+      "geometry": {
+        "start_xy_m": [
+          25.082,
+          3.3307
+        ],
+        "end_xy_m": [
+          25.082,
+          6.1507
+        ],
+        "thickness_m": 0.25
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "our_primary_provenance": {
+        "sheet": "2024_22-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P1-RLE-MURO-0005",
+          "P1-RLE-MURO-0007"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED2 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-37",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.003,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.8193,
+          "overlap_ratio": 0.9998,
+          "length_delta_m": 0.125,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "caceres": {
+        "id": "C-W-902",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.002,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.7193,
+          "overlap_ratio": 0.9643,
+          "length_delta_m": 0.125,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "active_duplicate": {
+        "id": "E2-P1-M-007",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.8197,
+          "overlap_ratio": 0.9999,
+          "length_delta_m": 0.0,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "decision": "ALREADY_RESTORED_CURRENT",
+      "missing_evidence": null
+    },
+    {
+      "candidate_id": "E2-P2-M-007",
+      "building": "EDIFICIO_2",
+      "floor": "P2",
+      "geometry": {
+        "start_xy_m": [
+          25.082,
+          3.3307
+        ],
+        "end_xy_m": [
+          25.082,
+          6.1507
+        ],
+        "thickness_m": 0.25
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "our_primary_provenance": {
+        "sheet": "2024_22-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P2-RLE-MURO-0005",
+          "P2-RLE-MURO-0007"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED2 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-38",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.003,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.8193,
+          "overlap_ratio": 0.9998,
+          "length_delta_m": 0.125,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "caceres": {
+        "id": "C-W-903",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.002,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.7193,
+          "overlap_ratio": 0.9643,
+          "length_delta_m": 0.125,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "active_duplicate": {
+        "id": "E2-P2-M-007",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.8197,
+          "overlap_ratio": 0.9999,
+          "length_delta_m": 0.0,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "decision": "ALREADY_RESTORED_CURRENT",
+      "missing_evidence": null
+    },
+    {
+      "candidate_id": "E2-P3-M-007",
+      "building": "EDIFICIO_2",
+      "floor": "P3",
+      "geometry": {
+        "start_xy_m": [
+          25.082,
+          3.3307
+        ],
+        "end_xy_m": [
+          25.082,
+          6.1507
+        ],
+        "thickness_m": 0.25
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "our_primary_provenance": {
+        "sheet": "2024_22-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P3-RLE-MURO-0005",
+          "P3-RLE-MURO-0007"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED2 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-39",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.003,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.8193,
+          "overlap_ratio": 0.9998,
+          "length_delta_m": 0.125,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "caceres": {
+        "id": "C-W-904",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.002,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.7193,
+          "overlap_ratio": 0.9643,
+          "length_delta_m": 0.125,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "active_duplicate": {
+        "id": "E2-P3-M-007",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.8197,
+          "overlap_ratio": 0.9999,
+          "length_delta_m": 0.0,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "decision": "ALREADY_RESTORED_CURRENT",
+      "missing_evidence": null
+    },
+    {
+      "candidate_id": "E2-P4-M-007",
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "geometry": {
+        "start_xy_m": [
+          25.082,
+          3.3307
+        ],
+        "end_xy_m": [
+          25.082,
+          6.1507
+        ],
+        "thickness_m": 0.25
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "our_primary_provenance": {
+        "sheet": "2024_22-102.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P4-RLE-MURO-0005",
+          "P4-RLE-MURO-0007"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED2 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-40",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.003,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.8193,
+          "overlap_ratio": 0.9998,
+          "length_delta_m": 0.125,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "caceres": {
+        "id": "C-W-905",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.002,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.7193,
+          "overlap_ratio": 0.9643,
+          "length_delta_m": 0.125,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED_PRIOR_SCOPE_CONFLICT",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E2-S1-M-008",
+      "building": "EDIFICIO_2",
+      "floor": "S1",
+      "geometry": {
+        "start_xy_m": [
+          25.207,
+          3.1807
+        ],
+        "end_xy_m": [
+          27.602,
+          3.1807
+        ],
+        "thickness_m": 0.3
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "our_primary_provenance": {
+        "sheet": "2024_22-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "S1-RLE-MURO-0008",
+          "S1-RLE-MURO-0009"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED2 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": {
+        "id": "C-W-801",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0757,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.395,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.25,
+          "strong": true
+        },
+        "thickness_m": 0.3
+      },
+      "active_duplicate": {
+        "id": "E2-S1-M-008",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0003,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.395,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.0,
+          "strong": true
+        },
+        "thickness_m": 0.3
+      },
+      "decision": "ALREADY_RESTORED_CURRENT",
+      "missing_evidence": null
+    },
+    {
+      "candidate_id": "E2-P1-M-008",
+      "building": "EDIFICIO_2",
+      "floor": "P1",
+      "geometry": {
+        "start_xy_m": [
+          25.207,
+          3.1807
+        ],
+        "end_xy_m": [
+          27.602,
+          3.1807
+        ],
+        "thickness_m": 0.3
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "our_primary_provenance": {
+        "sheet": "2024_22-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P1-RLE-MURO-0008",
+          "P1-RLE-MURO-0009"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED2 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-32",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0243,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.395,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.25,
+          "strong": true
+        },
+        "thickness_m": 0.3
+      },
+      "caceres": {
+        "id": "C-W-802",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0757,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.395,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.25,
+          "strong": true
+        },
+        "thickness_m": 0.3
+      },
+      "active_duplicate": {
+        "id": "E2-P1-M-008",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0003,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.395,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.0,
+          "strong": true
+        },
+        "thickness_m": 0.3
+      },
+      "decision": "ALREADY_RESTORED_CURRENT",
+      "missing_evidence": null
+    },
+    {
+      "candidate_id": "E2-P2-M-008",
+      "building": "EDIFICIO_2",
+      "floor": "P2",
+      "geometry": {
+        "start_xy_m": [
+          25.207,
+          3.1807
+        ],
+        "end_xy_m": [
+          27.602,
+          3.1807
+        ],
+        "thickness_m": 0.3
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "our_primary_provenance": {
+        "sheet": "2024_22-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P2-RLE-MURO-0008",
+          "P2-RLE-MURO-0009"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED2 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-33",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0243,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.395,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.25,
+          "strong": true
+        },
+        "thickness_m": 0.3
+      },
+      "caceres": {
+        "id": "C-W-803",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0757,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.395,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.25,
+          "strong": true
+        },
+        "thickness_m": 0.3
+      },
+      "active_duplicate": {
+        "id": "E2-P2-M-008",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0003,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.395,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.0,
+          "strong": true
+        },
+        "thickness_m": 0.3
+      },
+      "decision": "ALREADY_RESTORED_CURRENT",
+      "missing_evidence": null
+    },
+    {
+      "candidate_id": "E2-P3-M-008",
+      "building": "EDIFICIO_2",
+      "floor": "P3",
+      "geometry": {
+        "start_xy_m": [
+          25.207,
+          3.1807
+        ],
+        "end_xy_m": [
+          27.602,
+          3.1807
+        ],
+        "thickness_m": 0.3
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "our_primary_provenance": {
+        "sheet": "2024_22-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P3-RLE-MURO-0008",
+          "P3-RLE-MURO-0009"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED2 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-34",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0243,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.395,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.25,
+          "strong": true
+        },
+        "thickness_m": 0.3
+      },
+      "caceres": {
+        "id": "C-W-804",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0757,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.395,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.25,
+          "strong": true
+        },
+        "thickness_m": 0.3
+      },
+      "active_duplicate": {
+        "id": "E2-P3-M-008",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0003,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.395,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.0,
+          "strong": true
+        },
+        "thickness_m": 0.3
+      },
+      "decision": "ALREADY_RESTORED_CURRENT",
+      "missing_evidence": null
+    },
+    {
+      "candidate_id": "E2-P4-M-008",
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "geometry": {
+        "start_xy_m": [
+          25.207,
+          3.1807
+        ],
+        "end_xy_m": [
+          27.602,
+          3.1807
+        ],
+        "thickness_m": 0.3
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "our_primary_provenance": {
+        "sheet": "2024_22-102.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P4-RLE-MURO-0008",
+          "P4-RLE-MURO-0009"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED2 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-35",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0243,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.395,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.25,
+          "strong": true
+        },
+        "thickness_m": 0.3
+      },
+      "caceres": {
+        "id": "C-W-805",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0757,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.395,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.25,
+          "strong": true
+        },
+        "thickness_m": 0.3
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED_PRIOR_SCOPE_CONFLICT",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E2-S1-M-010",
+      "building": "EDIFICIO_2",
+      "floor": "S1",
+      "geometry": {
+        "start_xy_m": [
+          27.727,
+          3.3307
+        ],
+        "end_xy_m": [
+          27.727,
+          6.1507
+        ],
+        "thickness_m": 0.25
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "our_primary_provenance": {
+        "sheet": "2024_22-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "S1-RLE-MURO-0010",
+          "S1-RLE-MURO-0012"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED2 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": {
+        "id": "C-W-601",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.002,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.82,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 3.68,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "active_duplicate": {
+        "id": "E2-S1-M-010",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.8197,
+          "overlap_ratio": 0.9999,
+          "length_delta_m": 0.0,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "decision": "ALREADY_RESTORED_CURRENT",
+      "missing_evidence": null
+    },
+    {
+      "candidate_id": "E2-P1-M-010",
+      "building": "EDIFICIO_2",
+      "floor": "P1",
+      "geometry": {
+        "start_xy_m": [
+          27.727,
+          3.3307
+        ],
+        "end_xy_m": [
+          27.727,
+          6.1507
+        ],
+        "thickness_m": 0.25
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "our_primary_provenance": {
+        "sheet": "2024_22-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P1-RLE-MURO-0010",
+          "P1-RLE-MURO-0012"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED2 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-42",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.003,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.8193,
+          "overlap_ratio": 0.9998,
+          "length_delta_m": 0.125,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "caceres": {
+        "id": "C-W-602",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.002,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.82,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 3.68,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "active_duplicate": {
+        "id": "E2-P1-M-010",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.8197,
+          "overlap_ratio": 0.9999,
+          "length_delta_m": 0.0,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "decision": "ALREADY_RESTORED_CURRENT",
+      "missing_evidence": null
+    },
+    {
+      "candidate_id": "E2-P2-M-010",
+      "building": "EDIFICIO_2",
+      "floor": "P2",
+      "geometry": {
+        "start_xy_m": [
+          27.727,
+          3.3307
+        ],
+        "end_xy_m": [
+          27.727,
+          6.1507
+        ],
+        "thickness_m": 0.25
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "our_primary_provenance": {
+        "sheet": "2024_22-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P2-RLE-MURO-0010",
+          "P2-RLE-MURO-0012"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED2 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-43",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.003,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.8193,
+          "overlap_ratio": 0.9998,
+          "length_delta_m": 0.125,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "caceres": {
+        "id": "C-W-603",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.002,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.82,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 3.68,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "active_duplicate": {
+        "id": "E2-P2-M-010",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.8197,
+          "overlap_ratio": 0.9999,
+          "length_delta_m": 0.0,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "decision": "ALREADY_RESTORED_CURRENT",
+      "missing_evidence": null
+    },
+    {
+      "candidate_id": "E2-P3-M-010",
+      "building": "EDIFICIO_2",
+      "floor": "P3",
+      "geometry": {
+        "start_xy_m": [
+          27.727,
+          3.3307
+        ],
+        "end_xy_m": [
+          27.727,
+          6.1507
+        ],
+        "thickness_m": 0.25
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "our_primary_provenance": {
+        "sheet": "2024_22-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P3-RLE-MURO-0010",
+          "P3-RLE-MURO-0012"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED2 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-44",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.003,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.8193,
+          "overlap_ratio": 0.9998,
+          "length_delta_m": 0.125,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "caceres": {
+        "id": "C-W-604",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.002,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.82,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 3.68,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "active_duplicate": {
+        "id": "E2-P3-M-010",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.8197,
+          "overlap_ratio": 0.9999,
+          "length_delta_m": 0.0,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "decision": "ALREADY_RESTORED_CURRENT",
+      "missing_evidence": null
+    },
+    {
+      "candidate_id": "E2-P4-M-009",
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "geometry": {
+        "start_xy_m": [
+          27.727,
+          3.3307
+        ],
+        "end_xy_m": [
+          27.727,
+          6.1507
+        ],
+        "thickness_m": 0.25
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "our_primary_provenance": {
+        "sheet": "2024_22-102.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P4-RLE-MURO-0010",
+          "P4-RLE-MURO-0011"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED2 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-45",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.003,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.8193,
+          "overlap_ratio": 0.9998,
+          "length_delta_m": 0.125,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "caceres": {
+        "id": "C-W-705",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.002,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.82,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 3.68,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED_PRIOR_SCOPE_CONFLICT",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E2-S1-M-011",
+      "building": "EDIFICIO_2",
+      "floor": "S1",
+      "geometry": {
+        "start_xy_m": [
+          27.727,
+          8.5507
+        ],
+        "end_xy_m": [
+          27.727,
+          16.5007
+        ],
+        "thickness_m": 0.25
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "our_primary_provenance": {
+        "sheet": "2024_22-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "S1-RLE-MURO-0001",
+          "S1-RLE-MURO-0003"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED2 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": {
+        "id": "C-W-501",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.002,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 7.9493,
+          "overlap_ratio": 0.9999,
+          "length_delta_m": 0.0,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "active_duplicate": {
+        "id": "E2-S1-M-011",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 7.9497,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.0,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "decision": "ALREADY_RESTORED_CURRENT",
+      "missing_evidence": null
+    },
+    {
+      "candidate_id": "E2-P1-M-011",
+      "building": "EDIFICIO_2",
+      "floor": "P1",
+      "geometry": {
+        "start_xy_m": [
+          27.727,
+          8.5507
+        ],
+        "end_xy_m": [
+          27.727,
+          16.5007
+        ],
+        "thickness_m": 0.25
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "our_primary_provenance": {
+        "sheet": "2024_22-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P1-RLE-MURO-0001",
+          "P1-RLE-MURO-0003"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED2 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-52",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.003,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 7.5993,
+          "overlap_ratio": 0.9999,
+          "length_delta_m": 0.35,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "caceres": {
+        "id": "C-W-502",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.002,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 7.9493,
+          "overlap_ratio": 0.9999,
+          "length_delta_m": 0.0,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "active_duplicate": {
+        "id": "E2-P1-M-011",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 7.9497,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.0,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "decision": "ALREADY_RESTORED_CURRENT",
+      "missing_evidence": null
+    },
+    {
+      "candidate_id": "E2-P2-M-011",
+      "building": "EDIFICIO_2",
+      "floor": "P2",
+      "geometry": {
+        "start_xy_m": [
+          27.727,
+          8.5507
+        ],
+        "end_xy_m": [
+          27.727,
+          16.5007
+        ],
+        "thickness_m": 0.25
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "our_primary_provenance": {
+        "sheet": "2024_22-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P2-RLE-MURO-0001",
+          "P2-RLE-MURO-0003"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED2 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-53",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.003,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 7.5993,
+          "overlap_ratio": 0.9999,
+          "length_delta_m": 0.35,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "caceres": {
+        "id": "C-W-503",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.002,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 7.9493,
+          "overlap_ratio": 0.9999,
+          "length_delta_m": 0.0,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "active_duplicate": {
+        "id": "E2-P2-M-011",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 7.9497,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.0,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "decision": "ALREADY_RESTORED_CURRENT",
+      "missing_evidence": null
+    },
+    {
+      "candidate_id": "E2-P3-M-011",
+      "building": "EDIFICIO_2",
+      "floor": "P3",
+      "geometry": {
+        "start_xy_m": [
+          27.727,
+          8.5507
+        ],
+        "end_xy_m": [
+          27.727,
+          16.5007
+        ],
+        "thickness_m": 0.25
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "our_primary_provenance": {
+        "sheet": "2024_22-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P3-RLE-MURO-0001",
+          "P3-RLE-MURO-0003"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED2 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-54",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.003,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 7.5993,
+          "overlap_ratio": 0.9999,
+          "length_delta_m": 0.35,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "caceres": {
+        "id": "C-W-504",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.002,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 7.9493,
+          "overlap_ratio": 0.9999,
+          "length_delta_m": 0.0,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "active_duplicate": {
+        "id": "E2-P3-M-011",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 7.9497,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.0,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "decision": "ALREADY_RESTORED_CURRENT",
+      "missing_evidence": null
+    },
+    {
+      "candidate_id": "E2-P4-M-010",
+      "building": "EDIFICIO_2",
+      "floor": "P4",
+      "geometry": {
+        "start_xy_m": [
+          27.727,
+          8.5507
+        ],
+        "end_xy_m": [
+          27.727,
+          16.5007
+        ],
+        "thickness_m": 0.25
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "our_primary_provenance": {
+        "sheet": "2024_22-102.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P4-RLE-MURO-0001",
+          "P4-RLE-MURO-0003"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED2 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-55",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.003,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 7.5993,
+          "overlap_ratio": 0.9999,
+          "length_delta_m": 0.35,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "caceres": {
+        "id": "C-W-505",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.002,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 7.9493,
+          "overlap_ratio": 0.9999,
+          "length_delta_m": 0.0,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED_PRIOR_SCOPE_CONFLICT",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E2-S1-M-009",
+      "building": "EDIFICIO_2",
+      "floor": "S1",
+      "geometry": {
+        "start_xy_m": [
+          27.727,
+          0.3507
+        ],
+        "end_xy_m": [
+          27.727,
+          3.0307
+        ],
+        "thickness_m": 0.25
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "our_primary_provenance": {
+        "sheet": "2024_22-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "S1-RLE-MURO-0011",
+          "S1-RLE-MURO-0012"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED2 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": {
+        "id": "C-W-601",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.002,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.68,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 3.82,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "active_duplicate": {
+        "id": "E2-S1-M-009",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.6797,
+          "overlap_ratio": 0.9999,
+          "length_delta_m": 0.0,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "decision": "ALREADY_RESTORED_CURRENT",
+      "missing_evidence": null
+    },
+    {
+      "candidate_id": "E2-P1-M-009",
+      "building": "EDIFICIO_2",
+      "floor": "P1",
+      "geometry": {
+        "start_xy_m": [
+          27.727,
+          0.3507
+        ],
+        "end_xy_m": [
+          27.727,
+          3.0307
+        ],
+        "thickness_m": 0.25
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "our_primary_provenance": {
+        "sheet": "2024_22-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P1-RLE-MURO-0011",
+          "P1-RLE-MURO-0012"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED2 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-47",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.003,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.68,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.525,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "caceres": {
+        "id": "C-W-602",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.002,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.68,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 3.82,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "active_duplicate": {
+        "id": "E2-P1-M-009",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.6797,
+          "overlap_ratio": 0.9999,
+          "length_delta_m": 0.0,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "decision": "ALREADY_RESTORED_CURRENT",
+      "missing_evidence": null
+    },
+    {
+      "candidate_id": "E2-P2-M-009",
+      "building": "EDIFICIO_2",
+      "floor": "P2",
+      "geometry": {
+        "start_xy_m": [
+          27.727,
+          0.3507
+        ],
+        "end_xy_m": [
+          27.727,
+          3.0307
+        ],
+        "thickness_m": 0.25
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "our_primary_provenance": {
+        "sheet": "2024_22-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P2-RLE-MURO-0011",
+          "P2-RLE-MURO-0012"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED2 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-48",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.003,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.68,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.525,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "caceres": {
+        "id": "C-W-603",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.002,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.68,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 3.82,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "active_duplicate": {
+        "id": "E2-P2-M-009",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.6797,
+          "overlap_ratio": 0.9999,
+          "length_delta_m": 0.0,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "decision": "ALREADY_RESTORED_CURRENT",
+      "missing_evidence": null
+    },
+    {
+      "candidate_id": "E2-P3-M-009",
+      "building": "EDIFICIO_2",
+      "floor": "P3",
+      "geometry": {
+        "start_xy_m": [
+          27.727,
+          0.3507
+        ],
+        "end_xy_m": [
+          27.727,
+          3.0307
+        ],
+        "thickness_m": 0.25
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_WALL_CHAIN_NOT_CAD_ABSENCE",
+      "our_primary_provenance": {
+        "sheet": "2024_22-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P3-RLE-MURO-0011",
+          "P3-RLE-MURO-0012"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED2 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-49",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.003,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.68,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.525,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "caceres": {
+        "id": "C-W-604",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.002,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.68,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 3.82,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "active_duplicate": {
+        "id": "E2-P3-M-009",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.6797,
+          "overlap_ratio": 0.9999,
+          "length_delta_m": 0.0,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "decision": "ALREADY_RESTORED_CURRENT",
+      "missing_evidence": null
+    },
+    {
+      "candidate_id": "E1-S1-M-001",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "geometry": {
+        "start_xy_m": [
+          27.241000000000003,
+          -8.3686
+        ],
+        "end_xy_m": [
+          27.241000000000003,
+          -0.4687
+        ],
+        "thickness_m": 0.2
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "S1-RLE-MURO-0001",
+          "S1-RLE-MURO-0002"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": null,
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-S1-M-007",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "geometry": {
+        "start_xy_m": [
+          27.341000000000005,
+          -8.4686
+        ],
+        "end_xy_m": [
+          27.991000000000003,
+          -8.4686
+        ],
+        "thickness_m": 0.2
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "S1-RLE-MURO-0061",
+          "S1-RLE-MURO-0077"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": null,
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-S1-M-027",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "geometry": {
+        "start_xy_m": [
+          31.567300000000003,
+          -8.4686
+        ],
+        "end_xy_m": [
+          32.1673,
+          -8.4686
+        ],
+        "thickness_m": 0.2
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "S1-RLE-MURO-0060",
+          "S1-RLE-MURO-0078"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": null,
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-S1-M-051",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "geometry": {
+        "start_xy_m": [
+          33.96730000000001,
+          -8.4686
+        ],
+        "end_xy_m": [
+          34.5673,
+          -8.4686
+        ],
+        "thickness_m": 0.2
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "S1-RLE-MURO-0082",
+          "S1-RLE-MURO-0084"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": null,
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-S1-M-052",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "geometry": {
+        "start_xy_m": [
+          33.96730000000001,
+          -0.4187
+        ],
+        "end_xy_m": [
+          48.741,
+          -0.4187
+        ],
+        "thickness_m": 0.3
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "S1-RLE-MURO-0004",
+          "S1-RLE-MURO-0005"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": null,
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-S1-M-053",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "geometry": {
+        "start_xy_m": [
+          36.966300000000004,
+          -8.4686
+        ],
+        "end_xy_m": [
+          48.741,
+          -8.4686
+        ],
+        "thickness_m": 0.2
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "S1-RLE-MURO-0070",
+          "S1-RLE-MURO-0072"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": null,
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-S1-M-060",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "geometry": {
+        "start_xy_m": [
+          48.891000000000005,
+          -8.3686
+        ],
+        "end_xy_m": [
+          48.891000000000005,
+          -0.5687
+        ],
+        "thickness_m": 0.3
+      },
+      "previous_removal_reason": "USER_SCOPE_EXCLUSION_S1_SOUTH_SECTOR",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "S1-RLE-MURO-0007",
+          "S1-RLE-MURO-0008"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": null,
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-S1-M-004",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "geometry": {
+        "start_xy_m": [
+          27.241000000000003,
+          0.5314
+        ],
+        "end_xy_m": [
+          27.241000000000003,
+          6.3314
+        ],
+        "thickness_m": 0.2
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "S1-RLE-MURO-0039",
+          "S1-RLE-MURO-0040"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": {
+        "id": "C-W-2201",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.001,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 5.8,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 10.85,
+          "strong": true
+        },
+        "thickness_m": 0.2
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-S1-M-002",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "geometry": {
+        "start_xy_m": [
+          27.241000000000003,
+          9.4313
+        ],
+        "end_xy_m": [
+          27.241000000000003,
+          15.9814
+        ],
+        "thickness_m": 0.2
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "S1-RLE-MURO-0037",
+          "S1-RLE-MURO-0038"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": {
+        "id": "C-W-1301",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.001,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 6.5501,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.6999,
+          "strong": true
+        },
+        "thickness_m": 0.2
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-S1-M-031",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "geometry": {
+        "start_xy_m": [
+          27.341000000000005,
+          -0.3687
+        ],
+        "end_xy_m": [
+          32.1673,
+          -0.3687
+        ],
+        "thickness_m": 0.2
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "S1-RLE-MURO-0073",
+          "S1-RLE-MURO-0074"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": {
+        "id": "C-W-1801",
+        "strong": false,
+        "match": {
+          "perpendicular_distance_m": 0.2987,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 4.8263,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.1037,
+          "strong": false
+        },
+        "thickness_m": 0.2
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-S1-M-016",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "geometry": {
+        "start_xy_m": [
+          27.841000000000005,
+          -0.0687
+        ],
+        "end_xy_m": [
+          32.1673,
+          -0.0687
+        ],
+        "thickness_m": 0.2002
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "S1-RLE-MURO-0080",
+          "S1-RLE-MURO-0081"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": {
+        "id": "C-W-1801",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0013,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 4.3263,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.6037,
+          "strong": true
+        },
+        "thickness_m": 0.2
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-S1-M-030",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "geometry": {
+        "start_xy_m": [
+          27.841000000000005,
+          16.5314
+        ],
+        "end_xy_m": [
+          37.141000000000005,
+          16.5314
+        ],
+        "thickness_m": 0.3
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "S1-RLE-MURO-0042",
+          "S1-RLE-MURO-0043"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": {
+        "id": "C-W-2101",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0486,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 9.3,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 1.2,
+          "strong": true
+        },
+        "thickness_m": 0.3
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-S1-M-005",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "geometry": {
+        "start_xy_m": [
+          30.766000000000002,
+          12.4476
+        ],
+        "end_xy_m": [
+          30.766000000000002,
+          13.9264
+        ],
+        "thickness_m": 0.25
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "S1-RLE-MURO-0046",
+          "S1-RLE-MURO-0048"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-11",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.004,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 1.4764,
+          "overlap_ratio": 0.9984,
+          "length_delta_m": 0.0962,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "caceres": {
+        "id": "C-W-1501",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.024,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 1.4788,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.1012,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "active_duplicate": {
+        "id": "E1-S1-M-005",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 1.478,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.0008,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "decision": "ALREADY_RESTORED_CURRENT",
+      "missing_evidence": null
+    },
+    {
+      "candidate_id": "E1-S1-M-020",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "geometry": {
+        "start_xy_m": [
+          31.041000000000004,
+          4.1814
+        ],
+        "end_xy_m": [
+          31.041000000000004,
+          6.3314
+        ],
+        "thickness_m": 0.3
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "S1-RLE-MURO-0052",
+          "S1-RLE-MURO-0053"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-26",
+        "strong": false,
+        "match": {
+          "perpendicular_distance_m": 0.271,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 1.4736,
+          "overlap_ratio": 0.9356,
+          "length_delta_m": 0.575,
+          "strong": false
+        },
+        "thickness_m": 0.25
+      },
+      "caceres": {
+        "id": "C-W-1101",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.049,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.1486,
+          "overlap_ratio": 0.9993,
+          "length_delta_m": 0.1,
+          "strong": true
+        },
+        "thickness_m": 0.3
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-S1-M-034",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "geometry": {
+        "start_xy_m": [
+          33.941,
+          4.1814
+        ],
+        "end_xy_m": [
+          33.941,
+          6.3314
+        ],
+        "thickness_m": 0.3
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "S1-RLE-MURO-0055",
+          "S1-RLE-MURO-0056"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-21",
+        "strong": false,
+        "match": {
+          "perpendicular_distance_m": 0.229,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 1.4736,
+          "overlap_ratio": 0.9356,
+          "length_delta_m": 0.575,
+          "strong": false
+        },
+        "thickness_m": 0.25
+      },
+      "caceres": {
+        "id": "C-W-1201",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.051,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.1486,
+          "overlap_ratio": 0.9993,
+          "length_delta_m": 0.1,
+          "strong": true
+        },
+        "thickness_m": 0.3
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-S1-M-039",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "geometry": {
+        "start_xy_m": [
+          33.96730000000001,
+          -0.0686
+        ],
+        "end_xy_m": [
+          37.141000000000005,
+          -0.0686
+        ],
+        "thickness_m": 0.2
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "S1-RLE-MURO-0067",
+          "S1-RLE-MURO-0069"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": {
+        "id": "C-W-1901",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0014,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 3.171,
+          "overlap_ratio": 0.9991,
+          "length_delta_m": 0.5963,
+          "strong": true
+        },
+        "thickness_m": 0.2
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-S1-M-049",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "geometry": {
+        "start_xy_m": [
+          34.21600000000001,
+          12.4476
+        ],
+        "end_xy_m": [
+          34.21600000000001,
+          13.9264
+        ],
+        "thickness_m": 0.25
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "S1-RLE-MURO-0049",
+          "S1-RLE-MURO-0051"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-6",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.046,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 1.4764,
+          "overlap_ratio": 0.9984,
+          "length_delta_m": 0.0962,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "caceres": {
+        "id": "C-W-1601",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.026,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 1.4788,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.1012,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "active_duplicate": {
+        "id": "E1-S1-M-049",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 1.478,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.0008,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "decision": "ALREADY_RESTORED_CURRENT",
+      "missing_evidence": null
+    },
+    {
+      "candidate_id": "E1-S1-M-050",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "geometry": {
+        "start_xy_m": [
+          37.691,
+          0.5314
+        ],
+        "end_xy_m": [
+          37.691,
+          8.7313
+        ],
+        "thickness_m": 0.3
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "S1-RLE-MURO-0033",
+          "S1-RLE-MURO-0034"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": {
+        "id": "C-W-2001",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.049,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 8.1999,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 8.4501,
+          "strong": true
+        },
+        "thickness_m": 0.3
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-S1-M-019",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "geometry": {
+        "start_xy_m": [
+          37.691,
+          9.4313
+        ],
+        "end_xy_m": [
+          37.691,
+          15.9814
+        ],
+        "thickness_m": 0.3
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "S1-RLE-MURO-0035",
+          "S1-RLE-MURO-0036"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": {
+        "id": "C-W-2001",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.049,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 6.5501,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 10.0999,
+          "strong": true
+        },
+        "thickness_m": 0.3
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P1-M-001",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "geometry": {
+        "start_xy_m": [
+          27.241000000000003,
+          9.2501
+        ],
+        "end_xy_m": [
+          27.241000000000003,
+          15.8
+        ],
+        "thickness_m": 0.2
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P1-RLE-MURO-0019",
+          "P1-RLE-MURO-0020"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": {
+        "id": "C-W-1302",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.001,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 6.5499,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.7001,
+          "strong": true
+        },
+        "thickness_m": 0.2
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P1-M-002",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "geometry": {
+        "start_xy_m": [
+          30.766000000000002,
+          12.2663
+        ],
+        "end_xy_m": [
+          30.766000000000002,
+          13.7451
+        ],
+        "thickness_m": 0.25
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P1-RLE-MURO-0003",
+          "P1-RLE-MURO-0005"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-12",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.004,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 1.2951,
+          "overlap_ratio": 0.8758,
+          "length_delta_m": 0.0962,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "caceres": {
+        "id": "C-W-1502",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.024,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 1.3001,
+          "overlap_ratio": 0.8792,
+          "length_delta_m": 0.1012,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED_FE_SUPPORT",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P1-M-012",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "geometry": {
+        "start_xy_m": [
+          31.041000000000004,
+          4.0001
+        ],
+        "end_xy_m": [
+          31.041000000000004,
+          6.1501
+        ],
+        "thickness_m": 0.3
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P1-RLE-MURO-0009",
+          "P1-RLE-MURO-0010"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-27",
+        "strong": false,
+        "match": {
+          "perpendicular_distance_m": 0.271,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 1.575,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.575,
+          "strong": false
+        },
+        "thickness_m": 0.25
+      },
+      "caceres": {
+        "id": "C-W-1102",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.049,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.0701,
+          "overlap_ratio": 0.9628,
+          "length_delta_m": 0.1,
+          "strong": true
+        },
+        "thickness_m": 0.3
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P1-M-025",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "geometry": {
+        "start_xy_m": [
+          33.941,
+          4.0001
+        ],
+        "end_xy_m": [
+          33.941,
+          6.1501
+        ],
+        "thickness_m": 0.3
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P1-RLE-MURO-0012",
+          "P1-RLE-MURO-0013"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-22",
+        "strong": false,
+        "match": {
+          "perpendicular_distance_m": 0.229,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 1.575,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.575,
+          "strong": false
+        },
+        "thickness_m": 0.25
+      },
+      "caceres": {
+        "id": "C-W-1202",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.051,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.0701,
+          "overlap_ratio": 0.9628,
+          "length_delta_m": 0.1,
+          "strong": true
+        },
+        "thickness_m": 0.3
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P1-M-026",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "geometry": {
+        "start_xy_m": [
+          34.21600000000001,
+          12.2663
+        ],
+        "end_xy_m": [
+          34.21600000000001,
+          13.7451
+        ],
+        "thickness_m": 0.25
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P1-RLE-MURO-0006",
+          "P1-RLE-MURO-0008"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-7",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.046,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 1.2951,
+          "overlap_ratio": 0.8758,
+          "length_delta_m": 0.0962,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "caceres": {
+        "id": "C-W-1602",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.026,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 1.3001,
+          "overlap_ratio": 0.8792,
+          "length_delta_m": 0.1012,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED_FE_SUPPORT",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P1-M-015",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "geometry": {
+        "start_xy_m": [
+          57.84100000000001,
+          -0.1999
+        ],
+        "end_xy_m": [
+          67.141,
+          -0.1999
+        ],
+        "thickness_m": 0.3
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P1-RLE-MURO-0026",
+          "P1-RLE-MURO-0027"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": {
+        "id": "C-W-2302",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.1299,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 9.3,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 5.7,
+          "strong": true
+        },
+        "thickness_m": 0.3
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P1-M-024",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "geometry": {
+        "start_xy_m": [
+          61.241,
+          -0.5249
+        ],
+        "end_xy_m": [
+          67.791,
+          -0.5249
+        ],
+        "thickness_m": 0.15
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P1-RLE-MURO-0050",
+          "P1-RLE-MURO-0052"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 3,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": null,
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P1-M-023",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "geometry": {
+        "start_xy_m": [
+          62.7573,
+          -6.2249
+        ],
+        "end_xy_m": [
+          67.791,
+          -6.2249
+        ],
+        "thickness_m": 0.15
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P1-RLE-MURO-0044",
+          "P1-RLE-MURO-0046"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 2,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": null,
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P1-M-016",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "geometry": {
+        "start_xy_m": [
+          62.7573,
+          -3.5749
+        ],
+        "end_xy_m": [
+          66.241,
+          -3.5749
+        ],
+        "thickness_m": 0.15
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P1-RLE-MURO-0048",
+          "P1-RLE-MURO-0049"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": null,
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P1-M-020",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "geometry": {
+        "start_xy_m": [
+          66.316,
+          -3.4999
+        ],
+        "end_xy_m": [
+          66.316,
+          -0.5999
+        ],
+        "thickness_m": 0.15
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P1-RLE-MURO-0042",
+          "P1-RLE-MURO-0043"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": null,
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P1-M-022",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "geometry": {
+        "start_xy_m": [
+          67.841,
+          -6.2249
+        ],
+        "end_xy_m": [
+          70.191,
+          -6.2249
+        ],
+        "thickness_m": 0.15
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P1-RLE-MURO-0044",
+          "P1-RLE-MURO-0046"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 2,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": null,
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P1-M-021",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "geometry": {
+        "start_xy_m": [
+          67.841,
+          -0.5249
+        ],
+        "end_xy_m": [
+          70.191,
+          -0.5249
+        ],
+        "thickness_m": 0.15
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P1-RLE-MURO-0050",
+          "P1-RLE-MURO-0052"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 3,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": null,
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P1-M-032",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "geometry": {
+        "start_xy_m": [
+          67.841,
+          -0.1999
+        ],
+        "end_xy_m": [
+          70.191,
+          -0.1999
+        ],
+        "thickness_m": 0.3
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P1-RLE-MURO-0028",
+          "P1-RLE-MURO-0051"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 2,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": {
+        "id": "C-W-2302",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.1299,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.35,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 12.65,
+          "strong": true
+        },
+        "thickness_m": 0.3
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P1-M-031",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "geometry": {
+        "start_xy_m": [
+          70.091,
+          -11.4754
+        ],
+        "end_xy_m": [
+          70.091,
+          -10.797
+        ],
+        "thickness_m": 0.2
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P1-RLE-MURO-0038",
+          "P1-RLE-MURO-0039"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": null,
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P1-M-034",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "geometry": {
+        "start_xy_m": [
+          70.091,
+          -10.597
+        ],
+        "end_xy_m": [
+          70.091,
+          -10.0651
+        ],
+        "thickness_m": 0.2
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P1-RLE-MURO-0035",
+          "P1-RLE-MURO-0039"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": null,
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P1-M-036",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "geometry": {
+        "start_xy_m": [
+          70.2113,
+          -10.697
+        ],
+        "end_xy_m": [
+          72.7363,
+          -10.697
+        ],
+        "thickness_m": 0.2
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P1-RLE-MURO-0036",
+          "P1-RLE-MURO-0037"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": null,
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P1-M-035",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "geometry": {
+        "start_xy_m": [
+          70.2113,
+          -0.5249
+        ],
+        "end_xy_m": [
+          72.7363,
+          -0.5249
+        ],
+        "thickness_m": 0.15
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P1-RLE-MURO-0050",
+          "P1-RLE-MURO-0052"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 3,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": null,
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P1-M-033",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "geometry": {
+        "start_xy_m": [
+          70.2113,
+          -0.1999
+        ],
+        "end_xy_m": [
+          72.141,
+          -0.1999
+        ],
+        "thickness_m": 0.3
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P1-RLE-MURO-0028",
+          "P1-RLE-MURO-0051"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 2,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": {
+        "id": "C-W-2302",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.1299,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 1.9297,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 13.0703,
+          "strong": true
+        },
+        "thickness_m": 0.3
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P1-M-037",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "geometry": {
+        "start_xy_m": [
+          72.8863,
+          -11.4754
+        ],
+        "end_xy_m": [
+          72.8863,
+          -0.4499
+        ],
+        "thickness_m": 0.3
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P1-RLE-MURO-0040",
+          "P1-RLE-MURO-0041"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": null,
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P2-M-003",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "geometry": {
+        "start_xy_m": [
+          30.765900000000002,
+          12.4477
+        ],
+        "end_xy_m": [
+          30.765900000000002,
+          13.9265
+        ],
+        "thickness_m": 0.25
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-102.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P2-RLE-MURO-0003",
+          "P2-RLE-MURO-0005"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-13",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0041,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 1.4765,
+          "overlap_ratio": 0.9984,
+          "length_delta_m": 0.0962,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "caceres": {
+        "id": "C-W-1503",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0241,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 1.4788,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.1012,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED_FE_SUPPORT",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P2-M-010",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "geometry": {
+        "start_xy_m": [
+          31.040900000000004,
+          4.1815
+        ],
+        "end_xy_m": [
+          31.040900000000004,
+          6.3315
+        ],
+        "thickness_m": 0.3
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-102.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P2-RLE-MURO-0009",
+          "P2-RLE-MURO-0010"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-28",
+        "strong": false,
+        "match": {
+          "perpendicular_distance_m": 0.2709,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 1.4735,
+          "overlap_ratio": 0.9356,
+          "length_delta_m": 0.575,
+          "strong": false
+        },
+        "thickness_m": 0.25
+      },
+      "caceres": {
+        "id": "C-W-1103",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0491,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.1485,
+          "overlap_ratio": 0.9993,
+          "length_delta_m": 0.1,
+          "strong": true
+        },
+        "thickness_m": 0.3
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P2-M-009",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "geometry": {
+        "start_xy_m": [
+          33.9409,
+          4.1815
+        ],
+        "end_xy_m": [
+          33.9409,
+          6.3315
+        ],
+        "thickness_m": 0.3
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-102.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P2-RLE-MURO-0012",
+          "P2-RLE-MURO-0013"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-23",
+        "strong": false,
+        "match": {
+          "perpendicular_distance_m": 0.2291,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 1.4735,
+          "overlap_ratio": 0.9356,
+          "length_delta_m": 0.575,
+          "strong": false
+        },
+        "thickness_m": 0.25
+      },
+      "caceres": {
+        "id": "C-W-1203",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0509,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.1485,
+          "overlap_ratio": 0.9993,
+          "length_delta_m": 0.1,
+          "strong": true
+        },
+        "thickness_m": 0.3
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P2-M-005",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "geometry": {
+        "start_xy_m": [
+          34.215900000000005,
+          12.4477
+        ],
+        "end_xy_m": [
+          34.215900000000005,
+          13.9265
+        ],
+        "thickness_m": 0.25
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-102.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P2-RLE-MURO-0006",
+          "P2-RLE-MURO-0008"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-8",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0459,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 1.4765,
+          "overlap_ratio": 0.9984,
+          "length_delta_m": 0.0962,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "caceres": {
+        "id": "C-W-1603",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0259,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 1.4788,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.1012,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED_FE_SUPPORT",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P3-M-003",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "geometry": {
+        "start_xy_m": [
+          30.765900000000002,
+          12.4477
+        ],
+        "end_xy_m": [
+          30.765900000000002,
+          13.9265
+        ],
+        "thickness_m": 0.25
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-102.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P3-RLE-MURO-0003",
+          "P3-RLE-MURO-0005"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-14",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0041,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 1.4765,
+          "overlap_ratio": 0.9984,
+          "length_delta_m": 0.0962,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "caceres": {
+        "id": "C-W-1504",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0241,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 1.4788,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.1012,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED_FE_SUPPORT",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P3-M-010",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "geometry": {
+        "start_xy_m": [
+          31.040900000000004,
+          4.1815
+        ],
+        "end_xy_m": [
+          31.040900000000004,
+          6.3315
+        ],
+        "thickness_m": 0.3
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-102.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P3-RLE-MURO-0009",
+          "P3-RLE-MURO-0010"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-29",
+        "strong": false,
+        "match": {
+          "perpendicular_distance_m": 0.2709,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 1.4735,
+          "overlap_ratio": 0.9356,
+          "length_delta_m": 0.575,
+          "strong": false
+        },
+        "thickness_m": 0.25
+      },
+      "caceres": {
+        "id": "C-W-1104",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0491,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.1485,
+          "overlap_ratio": 0.9993,
+          "length_delta_m": 0.1,
+          "strong": true
+        },
+        "thickness_m": 0.3
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P3-M-009",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "geometry": {
+        "start_xy_m": [
+          33.9409,
+          4.1815
+        ],
+        "end_xy_m": [
+          33.9409,
+          6.3315
+        ],
+        "thickness_m": 0.3
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-102.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P3-RLE-MURO-0012",
+          "P3-RLE-MURO-0013"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-24",
+        "strong": false,
+        "match": {
+          "perpendicular_distance_m": 0.2291,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 1.4735,
+          "overlap_ratio": 0.9356,
+          "length_delta_m": 0.575,
+          "strong": false
+        },
+        "thickness_m": 0.25
+      },
+      "caceres": {
+        "id": "C-W-1204",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0509,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.1485,
+          "overlap_ratio": 0.9993,
+          "length_delta_m": 0.1,
+          "strong": true
+        },
+        "thickness_m": 0.3
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P3-M-005",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "geometry": {
+        "start_xy_m": [
+          34.215900000000005,
+          12.4477
+        ],
+        "end_xy_m": [
+          34.215900000000005,
+          13.9265
+        ],
+        "thickness_m": 0.25
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-102.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P3-RLE-MURO-0006",
+          "P3-RLE-MURO-0008"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-9",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0459,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 1.4765,
+          "overlap_ratio": 0.9984,
+          "length_delta_m": 0.0962,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "caceres": {
+        "id": "C-W-1604",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0259,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 1.4788,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.1012,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED_FE_SUPPORT",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P4-M-003",
+      "building": "EDIFICIO_1",
+      "floor": "P4",
+      "geometry": {
+        "start_xy_m": [
+          30.765900000000002,
+          12.4477
+        ],
+        "end_xy_m": [
+          30.765900000000002,
+          13.9265
+        ],
+        "thickness_m": 0.25
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-103.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P4-RLE-MURO-0003",
+          "P4-RLE-MURO-0005"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-15",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0041,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 1.4765,
+          "overlap_ratio": 0.9984,
+          "length_delta_m": 0.0962,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "caceres": {
+        "id": "C-W-1505",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0241,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 1.4788,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.1012,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED_MATERIAL_SCOPE",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P4-M-009",
+      "building": "EDIFICIO_1",
+      "floor": "P4",
+      "geometry": {
+        "start_xy_m": [
+          31.040900000000004,
+          4.1815
+        ],
+        "end_xy_m": [
+          31.040900000000004,
+          6.3315
+        ],
+        "thickness_m": 0.3
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-103.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P4-RLE-MURO-0009",
+          "P4-RLE-MURO-0010"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-30",
+        "strong": false,
+        "match": {
+          "perpendicular_distance_m": 0.2709,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 1.4735,
+          "overlap_ratio": 0.9356,
+          "length_delta_m": 0.575,
+          "strong": false
+        },
+        "thickness_m": 0.25
+      },
+      "caceres": {
+        "id": "C-W-1105",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0491,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.1485,
+          "overlap_ratio": 0.9993,
+          "length_delta_m": 0.1,
+          "strong": true
+        },
+        "thickness_m": 0.3
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P4-M-010",
+      "building": "EDIFICIO_1",
+      "floor": "P4",
+      "geometry": {
+        "start_xy_m": [
+          33.9409,
+          4.1815
+        ],
+        "end_xy_m": [
+          33.9409,
+          6.3315
+        ],
+        "thickness_m": 0.3
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-103.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P4-RLE-MURO-0012",
+          "P4-RLE-MURO-0013"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-25",
+        "strong": false,
+        "match": {
+          "perpendicular_distance_m": 0.2291,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 1.4735,
+          "overlap_ratio": 0.9356,
+          "length_delta_m": 0.575,
+          "strong": false
+        },
+        "thickness_m": 0.25
+      },
+      "caceres": {
+        "id": "C-W-1205",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0509,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.1485,
+          "overlap_ratio": 0.9993,
+          "length_delta_m": 0.1,
+          "strong": true
+        },
+        "thickness_m": 0.3
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-P4-M-012",
+      "building": "EDIFICIO_1",
+      "floor": "P4",
+      "geometry": {
+        "start_xy_m": [
+          34.215900000000005,
+          12.4477
+        ],
+        "end_xy_m": [
+          34.215900000000005,
+          13.9265
+        ],
+        "thickness_m": 0.25
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-103.dxf",
+        "layer": "RLE-MURO_CONTOUR_PAIR",
+        "sourceTags": [
+          "P4-RLE-MURO-0006",
+          "P4-RLE-MURO-0008"
+        ],
+        "confidence": "confirmed_from_RLE_MURO_contour_pair"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": true,
+        "pair_count": 1,
+        "endpoint_error_m": 0.0,
+        "thickness_error_m": 0.0,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": {
+        "id": "S-W-10",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0459,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 1.4765,
+          "overlap_ratio": 0.9984,
+          "length_delta_m": 0.0962,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "caceres": {
+        "id": "C-W-1605",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.0259,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 1.4788,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 0.1012,
+          "strong": true
+        },
+        "thickness_m": 0.25
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED_MATERIAL_SCOPE",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    },
+    {
+      "candidate_id": "E1-S1-M-061",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "geometry": {
+        "start_xy_m": [
+          27.241023000000002,
+          6.351432
+        ],
+        "end_xy_m": [
+          27.241023000000002,
+          8.711265
+        ],
+        "thickness_m": 0.2
+      },
+      "previous_removal_reason": "USER_SCOPE_DECISION_ED1_WALLS",
+      "our_primary_provenance": {
+        "sheet": "2017_67-101.dxf",
+        "layer": "RLA-MURO DILATADO",
+        "sourceTags": [
+          "1C106",
+          "1C107",
+          "1C108",
+          "1C109"
+        ],
+        "confidence": "confirmed_from_closed_CAD_contour_and_explicit_label"
+      },
+      "primary_pair_audit": {
+        "confirmed_pair": false,
+        "pair_count": 0,
+        "endpoint_error_m": null,
+        "thickness_error_m": null,
+        "source": "ED1 paired contour audit"
+      },
+      "santiago": null,
+      "caceres": {
+        "id": "C-W-2201",
+        "strong": true,
+        "match": {
+          "perpendicular_distance_m": 0.001,
+          "angle_delta_deg": 0.0,
+          "overlap_m": 2.3598,
+          "overlap_ratio": 1.0,
+          "length_delta_m": 14.2902,
+          "strong": true
+        },
+        "thickness_m": 0.2
+      },
+      "active_duplicate": null,
+      "decision": "REVIEW_REQUIRED",
+      "missing_evidence": "Original CAD/plan verification of physical wall, structural role, floor and joints; prior user scope exclusion must be reconciled."
+    }
+  ]
+}

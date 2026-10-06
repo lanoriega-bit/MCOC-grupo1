@@ -1,0 +1,934 @@
+{
+  "status": "PARTIAL_PROMOTION_24_ACTIVE_6_DEFERRED_CURRENT_VERIFIED",
+  "restored_count": 30,
+  "exploratory_ids": [],
+  "by_building_floor": {
+    "('EDIFICIO_1', 'S1')": 4,
+    "('EDIFICIO_2', 'S1')": 5,
+    "('EDIFICIO_2', 'P1')": 5,
+    "('EDIFICIO_2', 'P2')": 5,
+    "('EDIFICIO_2', 'P3')": 5,
+    "('EDIFICIO_1', 'P1')": 2,
+    "('EDIFICIO_1', 'P2')": 2,
+    "('EDIFICIO_1', 'P3')": 2
+  },
+  "restored": [
+    {
+      "element_id": "E1-S1-M-026",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "start_m": [
+        31.191,
+        4.081,
+        1.98
+      ],
+      "end_m": [
+        33.791,
+        4.081,
+        1.98
+      ],
+      "length_m": 2.6,
+      "thickness_m": 0.2,
+      "section_id": "SEC_WALL_0.200x2.600",
+      "material_id": "MAT_G35_10_2017_67_100_1E116",
+      "nodes": [
+        "N-01283",
+        "N-01284"
+      ],
+      "primary_source": "2017_67-101.dxf",
+      "primary_face_tags": [
+        "S1-RLE-MURO-0058",
+        "S1-RLE-MURO-0059"
+      ]
+    },
+    {
+      "element_id": "E1-S1-M-029",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "start_m": [
+        30.891,
+        14.026,
+        1.98
+      ],
+      "end_m": [
+        34.091,
+        14.026,
+        1.98
+      ],
+      "length_m": 3.2,
+      "thickness_m": 0.2,
+      "section_id": "SEC_WALL_0.200x3.200",
+      "material_id": "MAT_G35_10_2017_67_100_1E116",
+      "nodes": [
+        "N-01285",
+        "N-01286"
+      ],
+      "primary_source": "2017_67-101.dxf",
+      "primary_face_tags": [
+        "S1-RLE-MURO-0044",
+        "S1-RLE-MURO-0045"
+      ]
+    },
+    {
+      "element_id": "E2-S1-M-007",
+      "building": "EDIFICIO_2",
+      "floor": "S1",
+      "start_m": [
+        25.082,
+        3.331,
+        1.98
+      ],
+      "end_m": [
+        25.082,
+        6.151,
+        1.98
+      ],
+      "length_m": 2.82,
+      "thickness_m": 0.25,
+      "section_id": "SEC_WALL_0.250x2.820",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
+      "nodes": [
+        "N-01287",
+        "N-01288"
+      ],
+      "primary_source": "2024_22-101.dxf",
+      "primary_face_tags": [
+        "S1-RLE-MURO-0005",
+        "S1-RLE-MURO-0007"
+      ]
+    },
+    {
+      "element_id": "E2-P1-M-007",
+      "building": "EDIFICIO_2",
+      "floor": "P1",
+      "start_m": [
+        25.082,
+        3.331,
+        5.94
+      ],
+      "end_m": [
+        25.082,
+        6.151,
+        5.94
+      ],
+      "length_m": 2.82,
+      "thickness_m": 0.25,
+      "section_id": "SEC_WALL_0.250x2.820",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
+      "nodes": [
+        "N-01289",
+        "N-01290"
+      ],
+      "primary_source": "2024_22-101.dxf",
+      "primary_face_tags": [
+        "P1-RLE-MURO-0005",
+        "P1-RLE-MURO-0007"
+      ]
+    },
+    {
+      "element_id": "E2-P2-M-007",
+      "building": "EDIFICIO_2",
+      "floor": "P2",
+      "start_m": [
+        25.082,
+        3.331,
+        9.9
+      ],
+      "end_m": [
+        25.082,
+        6.151,
+        9.9
+      ],
+      "length_m": 2.82,
+      "thickness_m": 0.25,
+      "section_id": "SEC_WALL_0.250x2.820",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
+      "nodes": [
+        "N-01291",
+        "N-01292"
+      ],
+      "primary_source": "2024_22-101.dxf",
+      "primary_face_tags": [
+        "P2-RLE-MURO-0005",
+        "P2-RLE-MURO-0007"
+      ]
+    },
+    {
+      "element_id": "E2-P3-M-007",
+      "building": "EDIFICIO_2",
+      "floor": "P3",
+      "start_m": [
+        25.082,
+        3.331,
+        13.86
+      ],
+      "end_m": [
+        25.082,
+        6.151,
+        13.86
+      ],
+      "length_m": 2.82,
+      "thickness_m": 0.25,
+      "section_id": "SEC_WALL_0.250x2.820",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
+      "nodes": [
+        "N-01293",
+        "N-01294"
+      ],
+      "primary_source": "2024_22-101.dxf",
+      "primary_face_tags": [
+        "P3-RLE-MURO-0005",
+        "P3-RLE-MURO-0007"
+      ]
+    },
+    {
+      "element_id": "E2-S1-M-008",
+      "building": "EDIFICIO_2",
+      "floor": "S1",
+      "start_m": [
+        25.207,
+        3.181,
+        1.98
+      ],
+      "end_m": [
+        27.602,
+        3.181,
+        1.98
+      ],
+      "length_m": 2.395,
+      "thickness_m": 0.3,
+      "section_id": "SEC_WALL_0.300x2.395",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
+      "nodes": [
+        "N-01295",
+        "N-01296"
+      ],
+      "primary_source": "2024_22-101.dxf",
+      "primary_face_tags": [
+        "S1-RLE-MURO-0008",
+        "S1-RLE-MURO-0009"
+      ]
+    },
+    {
+      "element_id": "E2-P1-M-008",
+      "building": "EDIFICIO_2",
+      "floor": "P1",
+      "start_m": [
+        25.207,
+        3.181,
+        5.94
+      ],
+      "end_m": [
+        27.602,
+        3.181,
+        5.94
+      ],
+      "length_m": 2.395,
+      "thickness_m": 0.3,
+      "section_id": "SEC_WALL_0.300x2.395",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
+      "nodes": [
+        "N-01297",
+        "N-01298"
+      ],
+      "primary_source": "2024_22-101.dxf",
+      "primary_face_tags": [
+        "P1-RLE-MURO-0008",
+        "P1-RLE-MURO-0009"
+      ]
+    },
+    {
+      "element_id": "E2-P2-M-008",
+      "building": "EDIFICIO_2",
+      "floor": "P2",
+      "start_m": [
+        25.207,
+        3.181,
+        9.9
+      ],
+      "end_m": [
+        27.602,
+        3.181,
+        9.9
+      ],
+      "length_m": 2.395,
+      "thickness_m": 0.3,
+      "section_id": "SEC_WALL_0.300x2.395",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
+      "nodes": [
+        "N-01299",
+        "N-01300"
+      ],
+      "primary_source": "2024_22-101.dxf",
+      "primary_face_tags": [
+        "P2-RLE-MURO-0008",
+        "P2-RLE-MURO-0009"
+      ]
+    },
+    {
+      "element_id": "E2-P3-M-008",
+      "building": "EDIFICIO_2",
+      "floor": "P3",
+      "start_m": [
+        25.207,
+        3.181,
+        13.86
+      ],
+      "end_m": [
+        27.602,
+        3.181,
+        13.86
+      ],
+      "length_m": 2.395,
+      "thickness_m": 0.3,
+      "section_id": "SEC_WALL_0.300x2.395",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
+      "nodes": [
+        "N-01301",
+        "N-01302"
+      ],
+      "primary_source": "2024_22-101.dxf",
+      "primary_face_tags": [
+        "P3-RLE-MURO-0008",
+        "P3-RLE-MURO-0009"
+      ]
+    },
+    {
+      "element_id": "E2-S1-M-010",
+      "building": "EDIFICIO_2",
+      "floor": "S1",
+      "start_m": [
+        27.727,
+        3.331,
+        1.98
+      ],
+      "end_m": [
+        27.727,
+        6.151,
+        1.98
+      ],
+      "length_m": 2.82,
+      "thickness_m": 0.25,
+      "section_id": "SEC_WALL_0.250x2.820",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
+      "nodes": [
+        "N-01303",
+        "N-01304"
+      ],
+      "primary_source": "2024_22-101.dxf",
+      "primary_face_tags": [
+        "S1-RLE-MURO-0010",
+        "S1-RLE-MURO-0012"
+      ]
+    },
+    {
+      "element_id": "E2-P1-M-010",
+      "building": "EDIFICIO_2",
+      "floor": "P1",
+      "start_m": [
+        27.727,
+        3.331,
+        5.94
+      ],
+      "end_m": [
+        27.727,
+        6.151,
+        5.94
+      ],
+      "length_m": 2.82,
+      "thickness_m": 0.25,
+      "section_id": "SEC_WALL_0.250x2.820",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
+      "nodes": [
+        "N-01305",
+        "N-01306"
+      ],
+      "primary_source": "2024_22-101.dxf",
+      "primary_face_tags": [
+        "P1-RLE-MURO-0010",
+        "P1-RLE-MURO-0012"
+      ]
+    },
+    {
+      "element_id": "E2-P2-M-010",
+      "building": "EDIFICIO_2",
+      "floor": "P2",
+      "start_m": [
+        27.727,
+        3.331,
+        9.9
+      ],
+      "end_m": [
+        27.727,
+        6.151,
+        9.9
+      ],
+      "length_m": 2.82,
+      "thickness_m": 0.25,
+      "section_id": "SEC_WALL_0.250x2.820",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
+      "nodes": [
+        "N-01307",
+        "N-01308"
+      ],
+      "primary_source": "2024_22-101.dxf",
+      "primary_face_tags": [
+        "P2-RLE-MURO-0010",
+        "P2-RLE-MURO-0012"
+      ]
+    },
+    {
+      "element_id": "E2-P3-M-010",
+      "building": "EDIFICIO_2",
+      "floor": "P3",
+      "start_m": [
+        27.727,
+        3.331,
+        13.86
+      ],
+      "end_m": [
+        27.727,
+        6.151,
+        13.86
+      ],
+      "length_m": 2.82,
+      "thickness_m": 0.25,
+      "section_id": "SEC_WALL_0.250x2.820",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
+      "nodes": [
+        "N-01309",
+        "N-01310"
+      ],
+      "primary_source": "2024_22-101.dxf",
+      "primary_face_tags": [
+        "P3-RLE-MURO-0010",
+        "P3-RLE-MURO-0012"
+      ]
+    },
+    {
+      "element_id": "E2-S1-M-011",
+      "building": "EDIFICIO_2",
+      "floor": "S1",
+      "start_m": [
+        27.727,
+        8.551,
+        1.98
+      ],
+      "end_m": [
+        27.727,
+        16.501,
+        1.98
+      ],
+      "length_m": 7.95,
+      "thickness_m": 0.25,
+      "section_id": "SEC_WALL_0.250x7.950",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
+      "nodes": [
+        "N-01311",
+        "N-01312"
+      ],
+      "primary_source": "2024_22-101.dxf",
+      "primary_face_tags": [
+        "S1-RLE-MURO-0001",
+        "S1-RLE-MURO-0003"
+      ]
+    },
+    {
+      "element_id": "E2-P1-M-011",
+      "building": "EDIFICIO_2",
+      "floor": "P1",
+      "start_m": [
+        27.727,
+        8.551,
+        5.94
+      ],
+      "end_m": [
+        27.727,
+        16.501,
+        5.94
+      ],
+      "length_m": 7.95,
+      "thickness_m": 0.25,
+      "section_id": "SEC_WALL_0.250x7.950",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
+      "nodes": [
+        "N-01313",
+        "N-01314"
+      ],
+      "primary_source": "2024_22-101.dxf",
+      "primary_face_tags": [
+        "P1-RLE-MURO-0001",
+        "P1-RLE-MURO-0003"
+      ]
+    },
+    {
+      "element_id": "E2-P2-M-011",
+      "building": "EDIFICIO_2",
+      "floor": "P2",
+      "start_m": [
+        27.727,
+        8.551,
+        9.9
+      ],
+      "end_m": [
+        27.727,
+        16.501,
+        9.9
+      ],
+      "length_m": 7.95,
+      "thickness_m": 0.25,
+      "section_id": "SEC_WALL_0.250x7.950",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
+      "nodes": [
+        "N-01315",
+        "N-01316"
+      ],
+      "primary_source": "2024_22-101.dxf",
+      "primary_face_tags": [
+        "P2-RLE-MURO-0001",
+        "P2-RLE-MURO-0003"
+      ]
+    },
+    {
+      "element_id": "E2-P3-M-011",
+      "building": "EDIFICIO_2",
+      "floor": "P3",
+      "start_m": [
+        27.727,
+        8.551,
+        13.86
+      ],
+      "end_m": [
+        27.727,
+        16.501,
+        13.86
+      ],
+      "length_m": 7.95,
+      "thickness_m": 0.25,
+      "section_id": "SEC_WALL_0.250x7.950",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
+      "nodes": [
+        "N-01317",
+        "N-01318"
+      ],
+      "primary_source": "2024_22-101.dxf",
+      "primary_face_tags": [
+        "P3-RLE-MURO-0001",
+        "P3-RLE-MURO-0003"
+      ]
+    },
+    {
+      "element_id": "E2-S1-M-009",
+      "building": "EDIFICIO_2",
+      "floor": "S1",
+      "start_m": [
+        27.727,
+        0.351,
+        1.98
+      ],
+      "end_m": [
+        27.727,
+        3.031,
+        1.98
+      ],
+      "length_m": 2.68,
+      "thickness_m": 0.25,
+      "section_id": "SEC_WALL_0.250x2.680",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
+      "nodes": [
+        "N-01319",
+        "N-01320"
+      ],
+      "primary_source": "2024_22-101.dxf",
+      "primary_face_tags": [
+        "S1-RLE-MURO-0011",
+        "S1-RLE-MURO-0012"
+      ]
+    },
+    {
+      "element_id": "E2-P1-M-009",
+      "building": "EDIFICIO_2",
+      "floor": "P1",
+      "start_m": [
+        27.727,
+        0.351,
+        5.94
+      ],
+      "end_m": [
+        27.727,
+        3.031,
+        5.94
+      ],
+      "length_m": 2.68,
+      "thickness_m": 0.25,
+      "section_id": "SEC_WALL_0.250x2.680",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
+      "nodes": [
+        "N-01321",
+        "N-01322"
+      ],
+      "primary_source": "2024_22-101.dxf",
+      "primary_face_tags": [
+        "P1-RLE-MURO-0011",
+        "P1-RLE-MURO-0012"
+      ]
+    },
+    {
+      "element_id": "E2-P2-M-009",
+      "building": "EDIFICIO_2",
+      "floor": "P2",
+      "start_m": [
+        27.727,
+        0.351,
+        9.9
+      ],
+      "end_m": [
+        27.727,
+        3.031,
+        9.9
+      ],
+      "length_m": 2.68,
+      "thickness_m": 0.25,
+      "section_id": "SEC_WALL_0.250x2.680",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
+      "nodes": [
+        "N-01323",
+        "N-01324"
+      ],
+      "primary_source": "2024_22-101.dxf",
+      "primary_face_tags": [
+        "P2-RLE-MURO-0011",
+        "P2-RLE-MURO-0012"
+      ]
+    },
+    {
+      "element_id": "E2-P3-M-009",
+      "building": "EDIFICIO_2",
+      "floor": "P3",
+      "start_m": [
+        27.727,
+        0.351,
+        13.86
+      ],
+      "end_m": [
+        27.727,
+        3.031,
+        13.86
+      ],
+      "length_m": 2.68,
+      "thickness_m": 0.25,
+      "section_id": "SEC_WALL_0.250x2.680",
+      "material_id": "MAT_G35_10_2024_22_100_53994",
+      "nodes": [
+        "N-01325",
+        "N-01326"
+      ],
+      "primary_source": "2024_22-101.dxf",
+      "primary_face_tags": [
+        "P3-RLE-MURO-0011",
+        "P3-RLE-MURO-0012"
+      ]
+    },
+    {
+      "element_id": "E1-S1-M-005",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "start_m": [
+        30.766,
+        12.448,
+        1.98
+      ],
+      "end_m": [
+        30.766,
+        13.926,
+        1.98
+      ],
+      "length_m": 1.478,
+      "thickness_m": 0.25,
+      "section_id": "SEC_WALL_0.250x1.478",
+      "material_id": "MAT_G35_10_2017_67_100_1E116",
+      "nodes": [
+        "N-01327",
+        "N-01328"
+      ],
+      "primary_source": "2017_67-101.dxf",
+      "primary_face_tags": [
+        "S1-RLE-MURO-0046",
+        "S1-RLE-MURO-0048"
+      ]
+    },
+    {
+      "element_id": "E1-S1-M-049",
+      "building": "EDIFICIO_1",
+      "floor": "S1",
+      "start_m": [
+        34.216,
+        12.448,
+        1.98
+      ],
+      "end_m": [
+        34.216,
+        13.926,
+        1.98
+      ],
+      "length_m": 1.478,
+      "thickness_m": 0.25,
+      "section_id": "SEC_WALL_0.250x1.478",
+      "material_id": "MAT_G35_10_2017_67_100_1E116",
+      "nodes": [
+        "N-01329",
+        "N-01330"
+      ],
+      "primary_source": "2017_67-101.dxf",
+      "primary_face_tags": [
+        "S1-RLE-MURO-0049",
+        "S1-RLE-MURO-0051"
+      ]
+    },
+    {
+      "element_id": "E1-P1-M-002",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "start_m": [
+        30.766,
+        12.266,
+        5.94
+      ],
+      "end_m": [
+        30.766,
+        13.745,
+        5.94
+      ],
+      "length_m": 1.479,
+      "thickness_m": 0.25,
+      "section_id": "SEC_WALL_0.250x1.479",
+      "material_id": "MAT_G35_10_2017_67_100_1E116",
+      "nodes": [
+        "N-01331",
+        "N-01332"
+      ],
+      "primary_source": "2017_67-101.dxf",
+      "primary_face_tags": [
+        "P1-RLE-MURO-0003",
+        "P1-RLE-MURO-0005"
+      ]
+    },
+    {
+      "element_id": "E1-P1-M-026",
+      "building": "EDIFICIO_1",
+      "floor": "P1",
+      "start_m": [
+        34.216,
+        12.266,
+        5.94
+      ],
+      "end_m": [
+        34.216,
+        13.745,
+        5.94
+      ],
+      "length_m": 1.479,
+      "thickness_m": 0.25,
+      "section_id": "SEC_WALL_0.250x1.479",
+      "material_id": "MAT_G35_10_2017_67_100_1E116",
+      "nodes": [
+        "N-01333",
+        "N-01334"
+      ],
+      "primary_source": "2017_67-101.dxf",
+      "primary_face_tags": [
+        "P1-RLE-MURO-0006",
+        "P1-RLE-MURO-0008"
+      ]
+    },
+    {
+      "element_id": "E1-P2-M-003",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "start_m": [
+        30.766,
+        12.448,
+        9.9
+      ],
+      "end_m": [
+        30.766,
+        13.927,
+        9.9
+      ],
+      "length_m": 1.479,
+      "thickness_m": 0.25,
+      "section_id": "SEC_WALL_0.250x1.479",
+      "material_id": "MAT_G35_10_2017_67_100_1E116",
+      "nodes": [
+        "N-01335",
+        "N-01336"
+      ],
+      "primary_source": "2017_67-102.dxf",
+      "primary_face_tags": [
+        "P2-RLE-MURO-0003",
+        "P2-RLE-MURO-0005"
+      ]
+    },
+    {
+      "element_id": "E1-P2-M-005",
+      "building": "EDIFICIO_1",
+      "floor": "P2",
+      "start_m": [
+        34.216,
+        12.448,
+        9.9
+      ],
+      "end_m": [
+        34.216,
+        13.927,
+        9.9
+      ],
+      "length_m": 1.479,
+      "thickness_m": 0.25,
+      "section_id": "SEC_WALL_0.250x1.479",
+      "material_id": "MAT_G35_10_2017_67_100_1E116",
+      "nodes": [
+        "N-01337",
+        "N-01338"
+      ],
+      "primary_source": "2017_67-102.dxf",
+      "primary_face_tags": [
+        "P2-RLE-MURO-0006",
+        "P2-RLE-MURO-0008"
+      ]
+    },
+    {
+      "element_id": "E1-P3-M-003",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "start_m": [
+        30.766,
+        12.448,
+        13.86
+      ],
+      "end_m": [
+        30.766,
+        13.927,
+        13.86
+      ],
+      "length_m": 1.479,
+      "thickness_m": 0.25,
+      "section_id": "SEC_WALL_0.250x1.479",
+      "material_id": "MAT_G35_10_2017_67_100_1E116",
+      "nodes": [
+        "N-01339",
+        "N-01340"
+      ],
+      "primary_source": "2017_67-102.dxf",
+      "primary_face_tags": [
+        "P3-RLE-MURO-0003",
+        "P3-RLE-MURO-0005"
+      ]
+    },
+    {
+      "element_id": "E1-P3-M-005",
+      "building": "EDIFICIO_1",
+      "floor": "P3",
+      "start_m": [
+        34.216,
+        12.448,
+        13.86
+      ],
+      "end_m": [
+        34.216,
+        13.927,
+        13.86
+      ],
+      "length_m": 1.479,
+      "thickness_m": 0.25,
+      "section_id": "SEC_WALL_0.250x1.479",
+      "material_id": "MAT_G35_10_2017_67_100_1E116",
+      "nodes": [
+        "N-01341",
+        "N-01342"
+      ],
+      "primary_source": "2017_67-102.dxf",
+      "primary_face_tags": [
+        "P3-RLE-MURO-0006",
+        "P3-RLE-MURO-0008"
+      ]
+    }
+  ],
+  "excluded_review_required": [
+    "E1-P1-M-027",
+    "E1-P1-M-028",
+    "E1-P1-M-029",
+    "E1-P1-M-004",
+    "E1-P2-M-007",
+    "E1-P3-M-007",
+    "E1-P4-M-007",
+    "E1-P1-M-010",
+    "E1-P2-M-008",
+    "E1-P3-M-008",
+    "E1-P4-M-008",
+    "E1-P1-M-003",
+    "E1-P2-M-002",
+    "E1-P3-M-002",
+    "E1-P4-M-002",
+    "E2-P4-M-007",
+    "E2-P4-M-008",
+    "E2-P4-M-009",
+    "E2-P4-M-010",
+    "E1-S1-M-001",
+    "E1-S1-M-007",
+    "E1-S1-M-027",
+    "E1-S1-M-051",
+    "E1-S1-M-052",
+    "E1-S1-M-053",
+    "E1-S1-M-060",
+    "E1-S1-M-004",
+    "E1-S1-M-002",
+    "E1-S1-M-031",
+    "E1-S1-M-016",
+    "E1-S1-M-030",
+    "E1-S1-M-020",
+    "E1-S1-M-034",
+    "E1-S1-M-039",
+    "E1-S1-M-050",
+    "E1-S1-M-019",
+    "E1-P1-M-001",
+    "E1-P1-M-012",
+    "E1-P1-M-025",
+    "E1-P1-M-015",
+    "E1-P1-M-024",
+    "E1-P1-M-023",
+    "E1-P1-M-016",
+    "E1-P1-M-020",
+    "E1-P1-M-022",
+    "E1-P1-M-021",
+    "E1-P1-M-032",
+    "E1-P1-M-031",
+    "E1-P1-M-034",
+    "E1-P1-M-036",
+    "E1-P1-M-035",
+    "E1-P1-M-033",
+    "E1-P1-M-037",
+    "E1-P2-M-010",
+    "E1-P2-M-009",
+    "E1-P3-M-010",
+    "E1-P3-M-009",
+    "E1-P4-M-003",
+    "E1-P4-M-009",
+    "E1-P4-M-010",
+    "E1-P4-M-012",
+    "E1-S1-M-061"
+  ],
+  "model_master_sha256": "0e66a0450aedac80a25a8aa6f8d8cedefce6e246e704e3a7f26f8dae22f8cb85",
+  "loads_rebuilt": true,
+  "opensees_executed": true,
+  "unity_results_current": true,
+  "deferred_after_support_graph_qa": [
+    "E1-P1-M-002",
+    "E1-P1-M-026",
+    "E1-P2-M-003",
+    "E1-P2-M-005",
+    "E1-P3-M-003",
+    "E1-P3-M-005"
+  ],
+  "active_restored_wall_count": 24
+}
