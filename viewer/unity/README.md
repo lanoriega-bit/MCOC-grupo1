@@ -83,3 +83,9 @@ Para apertura interactiva automatizada, sin `-batchmode` ni `-quit`, existe
 
 Guía completa, evidencias y limitaciones: `entregas/POST_P1L4/UNITY_CURRENT_UX_QA.md`
 desde la raíz del repositorio. Barrera estructural: `EXT_5_REMAINING_AUDIT.md`.
+
+Contexto incluye terrazas, dos escaleras públicas de hormigón, cuatro mesas,
+doce sillas, once personas y una motoneta negra sobre el pasto del acceso alto.
+Todo es opcional y pasivo; no son elementos del modelo ni datos de análisis.
+Ver `docs/VISUAL_ARCHITECTURAL_CONTEXT.md` desde la raíz. La prueba desktop
+`MCOC → Revisar arquitectura visual` guarda QA/capturas en Temp, sin solver.

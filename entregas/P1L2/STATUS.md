@@ -548,3 +548,12 @@ terreno general. El superior llega también al borde exterior de su base;
 camino prolongado hasta ese borde. Pasto, acceso P2 y cotas conservados.
 Main/Play y perímetros PASS; 22 checks PASS, 260 archivos protegidos intactos.
 Diseño vigente: `entregas/P1L7/visual_terrain/TERRAIN_V3_VALIDATION.md`.
+
+### Contexto arquitectónico opcional — terraza pública
+
+Rama `codex/visual-architectural-context`: plataforma intermedia ampliada a
+S1 C004/C005/C006 y terminada en hormigón; dos escaleras públicas exteriores,
+mobiliario negro, ocho figuras adicionales, techo visual V021/V041 y motoneta
+sobre el pasto del acceso superior. Sin cambiar modelo, datos o Luis original.
+QA desktop y evidencia: `reports/visual_architectural_context/public_terrace_revision/`.
+La entrega histórica P1L2 no se reescribe: esto es contexto del Viewer actual.

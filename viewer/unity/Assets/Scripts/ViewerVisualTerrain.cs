@@ -60,6 +60,14 @@ namespace Mcoc.UnityViewer
                 bottom = Mathf.Min(bottom, c.z - (float)column.height_m / 2);
             }
             bottom -= TerrainBaseDepth;
+            // Extend ONLY the presentation terrace to the user-specified column line.
+            var terraceEdge = TerrainReference("E1-S1-C-004");
+            var terraceEdgeB = TerrainReference("E1-S1-C-005");
+            var terraceEdgeC = TerrainReference("E1-S1-C-006");
+            if (terraceEdge?.center == null || terraceEdgeB?.center == null || terraceEdgeC?.center == null ||
+                Mathf.Abs((float)terraceEdge.center[0] - (float)terraceEdgeB.center[0]) > .001f ||
+                Mathf.Abs((float)terraceEdge.center[0] - (float)terraceEdgeC.center[0]) > .001f)
+            { Debug.LogWarning("[VISUAL TERRAIN] Intermediate edge references unavailable; no invented extension."); return; }
             visualTerrainRoot = new GameObject("VISUAL_ONLY_TERRAIN_NO_FE");
             visualTerrainRoot.transform.SetParent(transform, false);
 
@@ -90,9 +98,9 @@ namespace Mcoc.UnityViewer
             // Complete lateral bands reach the site's two Y edges. X separates the
             // levels: retain the low ED2 sector, intermediate ED1, exterior P2 access.
             // Adjacent raised boxes share one boundary, not overlapping interior pieces.
-            lowerTerrainBounds = TerrainBox(xmin - TerrainMargin, near, siteBounds.min.y,
+            lowerTerrainBounds = TerrainBox((float)terraceEdge.center[0], near, siteBounds.min.y,
                 siteBounds.max.y, bottom, lowerTerrainElevation);
-            lowerTerrainObject = CreateTerrainTerrace("VISUAL_ONLY_LEVEL_1_S1_C007_C019", lowerTerrainBounds);
+            lowerTerrainObject = CreateTerrainTerrace("VISUAL_ONLY_LEVEL_1_S1_C007_C019", lowerTerrainBounds, true);
             var accessBounds = TerrainBox(near, siteBounds.max.x, siteBounds.min.y,
                 siteBounds.max.y, bottom, accessTerrainElevation);
             accessTerrainObject = CreateTerrainTerrace("VISUAL_ONLY_LEVEL_2_ACCESS_V106_V107", accessBounds);
@@ -141,19 +149,20 @@ namespace Mcoc.UnityViewer
             return go;
         }
 
-        GameObject CreateTerrainTerrace(string name, Bounds bounds)
+        GameObject CreateTerrainTerrace(string name, Bounds bounds, bool concrete = false)
         {
             var group = new GameObject(name); group.layer = 2;
             group.transform.SetParent(visualTerrainRoot.transform, false);
             var bodyBounds = bounds;
             bodyBounds.SetMinMax(bounds.min, new Vector3(bounds.max.x, bounds.max.y, bounds.max.z - .03f));
             CreateTerrainBox(name + "_BODY", group.transform, bodyBounds,
-                VisualSurface("VISUAL_ONLY_TERRACE_BODY", new Color(.29f, .30f, .26f), 0, 0, .08f));
+                VisualSurface("VISUAL_ONLY_TERRACE_BODY", concrete ? new Color(.53f, .55f, .55f) : new Color(.29f, .30f, .26f), 0, 0, .08f));
             // A flush grass cap gives a readable green surface and neutral retaining faces.
             var grassBounds = bounds;
             grassBounds.SetMinMax(new Vector3(bounds.min.x, bounds.min.y, bounds.max.z - .03f), bounds.max);
-            CreateTerrainBox(name + "_GRASS", group.transform, grassBounds,
-                VisualSurface("VISUAL_ONLY_GRASS", new Color(.28f, .37f, .24f), 0, 0, .05f));
+            CreateTerrainBox(name + (concrete ? "_CONCRETE" : "_GRASS"), group.transform, grassBounds,
+                VisualSurface(concrete ? "VISUAL_ONLY_TERRACE_CONCRETE" : "VISUAL_ONLY_GRASS",
+                    concrete ? new Color(.67f, .68f, .67f) : new Color(.28f, .37f, .24f), 0, 0, .05f));
             return group;
         }
 
@@ -178,7 +187,7 @@ namespace Mcoc.UnityViewer
             if (all != visualTerrainVisible || site != terrainBaseVisible || lower != lowerTerrainVisible || upper != accessTerrainVisible)
             { visualTerrainVisible = all; terrainBaseVisible = site; lowerTerrainVisible = lower; accessTerrainVisible = upper; UpdateVisualTerrainVisibility(); }
             if (visualTerrainRoot != null)
-                GUILayout.Label($"Terrazas Z: {lowerTerrainElevation:F2} / {accessTerrainElevation:F2} m\nPasto y camino; entorno esquemático.", currentBody);
+                GUILayout.Label($"Terrazas Z: {lowerTerrainElevation:F2} / {accessTerrainElevation:F2} m\nIntermedia de hormigón; entorno esquemático.", currentBody);
         }
     }
 }

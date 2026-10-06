@@ -9,6 +9,238 @@ namespace Mcoc.UnityViewer
 {
     public partial class ViewerController
     {
+        // Desktop scenery only. All references are read-only; all objects are passive.
+        Material terraceBlack, scooterRubber;
+        readonly List<Bounds> publicStairBounds = new List<Bounds>();
+        readonly List<Vector3> publicStairPeople = new List<Vector3>();
+        readonly List<GameObject> terraceTables = new List<GameObject>();
+        readonly List<GameObject> terraceChairs = new List<GameObject>();
+        GameObject lowBoxVisualRoof, visualScooter;
+        float publicStairLandingX, publicStairTopX;
+        int publicFigureCount;
+
+        void BuildPublicTerraceContext()
+        {
+            Bounds frame;
+            var a = TerrainReference("E1-P1-C-015");
+            var b = TerrainReference("E1-P1-C-023");
+            if (!TryContextFrame("EDIFICIO_1", "P3", out frame) || a?.center == null || b?.center == null) return;
+            terraceBlack = ContextMaterial("Black terrace furniture and scooter", new Color(.035f, .04f, .045f), .22f);
+            scooterRubber = ContextMaterial("Black tyres", new Color(.018f, .019f, .02f), .03f);
+            // These references share Y. Their midpoint establishes X on the landing line.
+            // Two exterior Y bands avoid stairs inside the structural building footprint.
+            publicStairLandingX = ((float)a.center[0] + (float)b.center[0]) / 2;
+            publicStairTopX = lowerTerrainBounds.max.x;
+            float frontMin = frame.max.y + .75f, rearMax = frame.min.y - .75f;
+            BuildBroadConcreteStair("PUBLIC_CONCRETE_STAIR_FRONT", frontMin, lowerTerrainBounds.max.y);
+            BuildBroadConcreteStair("PUBLIC_CONCRETE_STAIR_REAR", lowerTerrainBounds.min.y, rearMax);
+            BuildTerraceSeating("FRONT", frame.max.y + 5f);
+            BuildTerraceSeating("REAR", frame.min.y - 5f);
+            BuildLowBoxVisualRoof();
+            BuildParkedScooter(frame);
+            BuildAdditionalPeople(frame);
+        }
+
+        void BuildBroadConcreteStair(string name, float ymin, float ymax)
+        {
+            if (ymax <= ymin || publicStairTopX <= publicStairLandingX) return;
+            Transform group = ContextGroup(name, "stairs", "EDIFICIO_1", "P1", "BOTH");
+            float rise = accessTerrainElevation - lowerTerrainElevation;
+            int steps = Mathf.CeilToInt(rise / .18f);
+            float tread = (publicStairTopX - publicStairLandingX) / steps;
+            // Solid concrete stepped mass, NOT a thin metal stair or analytical member.
+            for (int i = 0; i < steps; i++)
+            {
+                float top = lowerTerrainElevation + rise * (i + 1f) / steps;
+                float depth = top - lowerTerrainElevation;
+                ContextBox(group, "Concrete_public_step", new Vector3(publicStairLandingX + tread * (i + .5f),
+                    (ymin + ymax) / 2, lowerTerrainElevation + depth / 2), new Vector3(tread, ymax - ymin, depth), contextConcrete);
+            }
+            // Only the outer side railing; the walking width remains visually open.
+            float outerY = name.EndsWith("FRONT") ? ymax - .12f : ymin + .12f;
+            ContextRail(group, "Concrete_stair_handrail", new Vector3(publicStairLandingX, outerY, lowerTerrainElevation + 1),
+                new Vector3(publicStairTopX, outerY, accessTerrainElevation + 1), .05f, contextFrame);
+            for (int post = 0; post <= 6; post++)
+            {
+                float fraction = post / 6f;
+                float z = lowerTerrainElevation + rise * (post == 0 ? 0 : Mathf.Ceil(fraction * steps) / steps);
+                float railZ = lowerTerrainElevation + rise * fraction + 1;
+                float x = Mathf.Lerp(publicStairLandingX, publicStairTopX, fraction);
+                ContextRail(group, "Public_stair_rail_post", new Vector3(x, outerY, z),
+                    new Vector3(x, outerY, railZ), .045f, contextFrame);
+            }
+            publicStairBounds.Add(TerrainBox(publicStairLandingX, publicStairTopX, ymin, ymax, lowerTerrainElevation, accessTerrainElevation));
+        }
+
+        Transform PassivePropRoot(Transform parent, string name, Vector3 position)
+        {
+            var root = new GameObject("VISUAL_ONLY_" + name); root.layer = 2;
+            root.transform.SetParent(parent, false); root.transform.localPosition = position;
+            return root.transform;
+        }
+
+        void BuildTerraceSeating(string side, float y)
+        {
+            Transform group = ContextGroup("BLACK_TABLES_AND_CHAIRS_" + side, "landscape", "EDIFICIO_1", "P1", "INTERMEDIATE");
+            for (int i = 0; i < 2; i++)
+            {
+                float x = lowerTerrainBounds.min.x + 8 + i * 8;
+                Transform table = PassivePropRoot(group, "BLACK_TABLE_" + i, new Vector3(x, y, lowerTerrainElevation));
+                var top = ContextPrimitive(PrimitiveType.Cylinder, "Table_top", table, Vector3.forward * .76f,
+                    new Vector3(1.10f, .035f, 1.10f), terraceBlack);
+                top.transform.localRotation = Quaternion.Euler(90, 0, 0);
+                ContextBox(table, "Table_pedestal", Vector3.forward * .36f, new Vector3(.12f, .12f, .72f), terraceBlack);
+                ContextBox(table, "Table_foot", Vector3.forward * .035f, new Vector3(.52f, .52f, .07f), terraceBlack);
+                terraceTables.Add(table.gameObject);
+                foreach (Vector2 offset in new[] { new Vector2(0, -1), new Vector2(0, 1), new Vector2(-1, 0) })
+                {
+                    Transform chair = PassivePropRoot(group, "BLACK_CHAIR", new Vector3(x + offset.x, y + offset.y, lowerTerrainElevation));
+                    chair.localRotation = Quaternion.Euler(0, 0, Mathf.Atan2(-offset.x, offset.y) * Mathf.Rad2Deg);
+                    ContextBox(chair, "Chair_seat", Vector3.forward * .46f, new Vector3(.46f, .46f, .065f), terraceBlack);
+                    ContextBox(chair, "Chair_back", new Vector3(0, .20f, .74f), new Vector3(.46f, .06f, .52f), terraceBlack);
+                    foreach (float dx in new[] { -.18f, .18f })
+                        foreach (float dy in new[] { -.18f, .18f })
+                            ContextBox(chair, "Chair_leg", new Vector3(dx, dy, .22f), new Vector3(.045f, .045f, .44f), terraceBlack);
+                    terraceChairs.Add(chair.gameObject);
+                }
+            }
+        }
+
+        void BuildLowBoxVisualRoof()
+        {
+            var a = TerrainReference("E1-P2-V-021"); var b = TerrainReference("E1-P2-V-041");
+            if (a?.start == null || a.end == null || b?.start == null || b.end == null) return;
+            Vector3 a0 = V(a.start), a1 = V(a.end), b0 = V(b.start), b1 = V(b.end);
+            float z = Mathf.Max(a0.z + (float)a.height_m / 2, b0.z + (float)b.height_m / 2) + .02f;
+            Bounds roof = TerrainBox(Mathf.Min(a0.x, b0.x) - .35f, Mathf.Max(a0.x, b0.x) + .35f,
+                Mathf.Min(a0.y, a1.y, b0.y, b1.y) - .40f, Mathf.Max(a0.y, a1.y, b0.y, b1.y) + .50f, z, z + .15f);
+            Transform group = ContextGroup("LOW_BOX_ROOF_V021_V041", "roof", "EDIFICIO_1", "P2");
+            lowBoxVisualRoof = ContextBox(group, "Low_box_grey_roof", roof.center, roof.size, contextRoof);
+        }
+
+        void BuildParkedScooter(Bounds frame)
+        {
+            Transform group = ContextGroup("PARKED_BLACK_RETRO_SCOOTER", "landscape", "EDIFICIO_1", "P2", "ACCESS");
+            Transform scooter = PassivePropRoot(group, "BLACK_RETRO_SCOOTER", new Vector3(publicStairTopX + 4.8f,
+                frame.min.y - 3.5f, accessTerrainElevation));
+            visualScooter = scooter.gameObject;
+            foreach (float x in new[] { -.68f, .68f })
+            {
+                ContextPrimitive(PrimitiveType.Cylinder, "Black_wheel", scooter, new Vector3(x, 0, .26f), new Vector3(.52f, .045f, .52f), scooterRubber);
+                ContextPrimitive(PrimitiveType.Cylinder, "Wheel_hub", scooter, new Vector3(x, -.052f, .26f), new Vector3(.22f, .012f, .22f), contextFrame);
+                ContextPrimitive(PrimitiveType.Sphere, "Rounded_mudguard", scooter, new Vector3(x, 0, .49f), new Vector3(.62f, .35f, .16f), terraceBlack);
+            }
+            ContextPrimitive(PrimitiveType.Sphere, "Rounded_engine_body", scooter, new Vector3(-.32f, 0, .60f), new Vector3(1.05f, .57f, .64f), terraceBlack);
+            ContextBox(scooter, "Footboard", new Vector3(.23f, 0, .35f), new Vector3(.82f, .50f, .09f), terraceBlack);
+            ContextBox(scooter, "Black_seat", new Vector3(-.30f, 0, .94f), new Vector3(.87f, .43f, .12f), terraceBlack);
+            ContextPrimitive(PrimitiveType.Sphere, "Retro_legshield", scooter, new Vector3(.55f, 0, .72f), new Vector3(.22f, .64f, .82f), terraceBlack);
+            ContextRail(scooter, "Steering_stem", new Vector3(.64f, 0, .42f), new Vector3(.57f, 0, 1.10f), .055f, contextFrame);
+            ContextRail(scooter, "Handlebar", new Vector3(.57f, -.32f, 1.12f), new Vector3(.57f, .32f, 1.12f), .055f, terraceBlack);
+            ContextPrimitive(PrimitiveType.Sphere, "Small_headlamp", scooter, new Vector3(.68f, 0, 1.04f), new Vector3(.14f, .19f, .19f), contextConcrete);
+            ContextRail(scooter, "Mirror_stem", new Vector3(.57f, -.24f, 1.12f), new Vector3(.52f, -.31f, 1.34f), .025f, contextFrame);
+            ContextPrimitive(PrimitiveType.Sphere, "Mirror", scooter, new Vector3(.52f, -.31f, 1.36f), new Vector3(.12f, .035f, .10f), contextFrame);
+            ContextRail(scooter, "Parking_stand", new Vector3(-.1f, 0, .38f), new Vector3(-.2f, -.26f, .01f), .035f, contextFrame);
+        }
+
+        void AddContextPerson(Transform parent, string name, Vector3 p, bool seated = false)
+        {
+            Transform person = PassivePropRoot(parent, name, p); publicFigureCount++;
+            float hip = seated ? .72f : .75f, shoulder = seated ? 1.15f : 1.35f;
+            ContextRail(person, "Person_body", Vector3.forward * hip, Vector3.forward * shoulder, .30f, contextPeople);
+            ContextPrimitive(PrimitiveType.Sphere, "Person_head", person, Vector3.forward * (shoulder + .23f), Vector3.one * .24f, contextEarth);
+            foreach (float side in new[] { -1f, 1f })
+            {
+                Vector3 h = new Vector3(side * .10f, 0, hip);
+                Vector3 foot = new Vector3(side * .15f, seated ? -.32f : 0, .03f);
+                if (seated)
+                {
+                    Vector3 knee = new Vector3(side * .12f, -.30f, .46f);
+                    ContextRail(person, "Person_thigh", h, knee, .10f, contextFrame);
+                    ContextRail(person, "Person_leg", knee, foot, .09f, contextFrame);
+                }
+                else ContextRail(person, "Person_leg", h, foot, .09f, contextFrame);
+                ContextRail(person, "Person_arm", new Vector3(side * .18f, 0, shoulder - .08f),
+                    new Vector3(side * .28f, seated ? -.20f : 0, hip + .11f), .075f, contextPeople);
+            }
+        }
+
+        void BuildAdditionalPeople(Bounds frame)
+        {
+            Transform people = ContextGroup("PUBLIC_TERRACE_PEOPLE", "figures", "EDIFICIO_1", "P1", "INTERMEDIATE");
+            foreach (Bounds stair in publicStairBounds)
+                foreach (float fraction in new[] { .30f, .70f })
+                {
+                    float x = Mathf.Lerp(publicStairLandingX, publicStairTopX, fraction);
+                    int count = Mathf.CeilToInt((accessTerrainElevation - lowerTerrainElevation) / .18f);
+                    float z = lowerTerrainElevation + (accessTerrainElevation - lowerTerrainElevation) *
+                        Mathf.Ceil(fraction * count) / count;
+                    Vector3 p = new Vector3(x, stair.center.y + (fraction > .5f ? 1 : -1), z);
+                    AddContextPerson(people, "Person_on_concrete_stair", p); publicStairPeople.Add(p);
+                }
+            foreach (float y in new[] { frame.max.y + 5, frame.min.y - 5 })
+                AddContextPerson(people, "Person_at_table", new Vector3(lowerTerrainBounds.min.x + 8, y + 1, lowerTerrainElevation), true);
+            foreach (string floor in new[] { "P2", "P4" })
+            {
+                Bounds storey;
+                if (!TryContextFrame("EDIFICIO_1", floor, out storey)) continue;
+                var cols = model.solids.FindAll(s => s.building == "EDIFICIO_1" && s.floor == floor && s.category == "column" &&
+                    s.center != null && s.center[1] > frame.max.y + 1);
+                if (cols.Count < 2) continue;
+                Vector3 p = (V(cols[0].center) + V(cols[1].center)) / 2;
+                p.y = (frame.max.y + p.y) / 2; p.z = storey.min.z + .03f;
+                Transform inside = ContextGroup("PERSON_INSIDE_BOX_" + floor, "interior_figures", "EDIFICIO_1", floor);
+                AddContextPerson(inside, "Person_inside_glass_box", p);
+            }
+        }
+
+        void CheckPublicTerraceContext(Action<string, bool> check)
+        {
+            check("intermediate terrace reaches S1 C004 C005 C006 line", Mathf.Abs(lowerTerrainBounds.min.x - (float)TerrainReference("E1-S1-C-004").center[0]) < .001f);
+            Transform cap = lowerTerrainObject.transform.Find("VISUAL_ONLY_LEVEL_1_S1_C007_C019_CONCRETE");
+            check("entire intermediate top uses concrete not grass", cap != null && lowerTerrainObject.transform.Find("VISUAL_ONLY_LEVEL_1_S1_C007_C019_GRASS") == null);
+            check("two broad concrete exterior stairs", publicStairBounds.Count == 2);
+            check("public landing midpoint of C015 C023", Mathf.Abs(publicStairLandingX - ((float)TerrainReference("E1-P1-C-015").center[0] + (float)TerrainReference("E1-P1-C-023").center[0]) / 2) < .001f);
+            check("public stairs join both terrace levels and full exterior bands", publicStairBounds.Count == 2 && publicStairBounds.TrueForAll(s =>
+                Mathf.Abs(s.min.z - lowerTerrainElevation) < .001f && Mathf.Abs(s.max.z - accessTerrainElevation) < .001f &&
+                Mathf.Abs(s.max.x - lowerTerrainBounds.max.x) < .001f) &&
+                Mathf.Abs(publicStairBounds[0].max.y - lowerTerrainBounds.max.y) < .001f &&
+                Mathf.Abs(publicStairBounds[1].min.y - lowerTerrainBounds.min.y) < .001f);
+            check("four black tables and twelve black chairs on intermediate level", terraceTables.Count == 4 && terraceChairs.Count == 12 &&
+                terraceTables.TrueForAll(t => Mathf.Abs(t.transform.localPosition.z - lowerTerrainElevation) < .001f));
+            check("low box roof V021 V041 exists with no stair collision", lowBoxVisualRoof != null && visualStairRoute != null &&
+                lowBoxVisualRoof.transform.localPosition.x + lowBoxVisualRoof.transform.localScale.x / 2 < visualStairRoute[2].x &&
+                visualStairRoute[3].z > lowBoxVisualRoof.transform.localPosition.z + lowBoxVisualRoof.transform.localScale.z / 2 + 1.8f);
+            Bounds entryFrame;
+            check("black scooter rests on upper grass outside entrance and cross path", visualScooter != null &&
+                TryContextFrame("EDIFICIO_1", "P3", out entryFrame) &&
+                Mathf.Abs(visualScooter.transform.localPosition.z - accessTerrainElevation) < .001f &&
+                visualScooter.transform.localPosition.y + .4f < entryFrame.min.y - .5f &&
+                visualScooter.transform.localPosition.y - .4f > lowerTerrainBounds.min.y &&
+                visualScooter.transform.localPosition.x + 1 < transverseAccessWalk.transform.localPosition.x - PathWidth / 2);
+            check("moderate additional people in stairs seating and both boxes", publicFigureCount == 8 && publicStairPeople.Count == 4);
+        }
+
+        IEnumerator CapturePublicTerraceFrames(string folder)
+        {
+            // Camera only, restored immediately; never alter model transforms or results.
+            Vector3 savedTarget = orbitTarget; float savedDistance = orbitDist;
+            orbitTarget = transform.TransformPoint(new Vector3(publicStairLandingX + 4, lowerTerrainBounds.max.y - 5, lowerTerrainElevation + 1.5f));
+            orbitDist = 30; yaw = 145; pitch = 30;
+            yield return new WaitForEndOfFrame(); SaveVisualFrame(folder, "front_public_stair_and_seating.png");
+            orbitTarget = transform.TransformPoint(new Vector3(publicStairLandingX + 4, lowerTerrainBounds.min.y + 5, lowerTerrainElevation + 1.5f));
+            yaw = 35;
+            yield return new WaitForEndOfFrame(); SaveVisualFrame(folder, "rear_public_stair_and_seating.png");
+            orbitTarget = transform.TransformPoint(visualScooter.transform.localPosition + Vector3.forward * .6f); orbitDist = 7; yaw = 145; pitch = 20;
+            yield return new WaitForEndOfFrame(); SaveVisualFrame(folder, "black_scooter.png");
+            orbitTarget = savedTarget; orbitDist = savedDistance; yaw = 145; pitch = 24;
+        }
+    }
+}
+
+namespace Mcoc.UnityViewer
+{
+    public partial class ViewerController
+    {
         // Photo-inspired PRESENTATION ONLY. Model coordinates: XY plan, Z height.
         // No ElementInfo, registration, structural tag, dataset writes or FE participation.
         bool architecturalContextVisible = true, facadeSkinVisible = true, glazingVisible = true;
@@ -28,7 +260,7 @@ namespace Mcoc.UnityViewer
         class VisualContextGroup
         {
             public GameObject root;
-            public string building, floor, kind;
+            public string building, floor, kind, terrainRequirement;
         }
 
         void BuildArchitecturalContext()
@@ -77,6 +309,7 @@ namespace Mcoc.UnityViewer
             BuildContinuousVisualRoof();
             BuildVisualAccessAndStairs();
             BuildLandscapeContext();
+            BuildPublicTerraceContext();
             UpdateArchitecturalContextVisibility();
             bool passive = ContextIsPassive();
             Debug.Log($"[ARCHITECTURAL CONTEXT QA] {(passive && structuralCount == allElements.Count ? "PASS" : "FAIL")}: {architecturePrimitiveCount} passive visual primitives; structural registry unchanged; photo interpretation, not surveyed geometry.");
@@ -107,11 +340,11 @@ namespace Mcoc.UnityViewer
             return found;
         }
 
-        Transform ContextGroup(string name, string kind, string building = "EDIFICIO_1", string floor = null)
+        Transform ContextGroup(string name, string kind, string building = "EDIFICIO_1", string floor = null, string terrainRequirement = null)
         {
             var go = new GameObject("VISUAL_ONLY_" + name); go.layer = 2;
             go.transform.SetParent(architecturalContextRoot.transform, false);
-            visualContextGroups.Add(new VisualContextGroup { root = go, building = building, floor = floor, kind = kind });
+            visualContextGroups.Add(new VisualContextGroup { root = go, building = building, floor = floor, kind = kind, terrainRequirement = terrainRequirement });
             return go.transform;
         }
 
@@ -363,7 +596,7 @@ namespace Mcoc.UnityViewer
             }
             Bounds frame;
             if (!TryContextFrame("EDIFICIO_1", "P3", out frame)) return;
-            Transform figures = ContextGroup("THREE_PEOPLE_FOR_SCALE", "figures");
+            Transform figures = ContextGroup("THREE_PEOPLE_FOR_SCALE", "figures", "EDIFICIO_1", null, "ACCESS");
             for (int i = 0; i < 3; i++)
             {
                 Vector3 p = new Vector3(frame.max.x + 3 + i * 1.4f, frame.center.y + (i % 2), accessTerrainElevation + .12f);
@@ -395,10 +628,13 @@ namespace Mcoc.UnityViewer
             foreach (var group in visualContextGroups)
             {
                 bool visible = group.kind == "facade" ? facadeSkinVisible : group.kind == "glass" ? glazingVisible :
-                    group.kind == "stairs" ? exteriorStairsVisible : group.kind == "roof" ? roofVisible : group.kind == "figures" ? scaleFiguresVisible : landscapeVisible;
+                    group.kind == "stairs" ? exteriorStairsVisible : group.kind == "roof" ? roofVisible :
+                    (group.kind == "figures" || group.kind == "interior_figures") ? scaleFiguresVisible : landscapeVisible;
                 if (group.building != null && buildingVisible.TryGetValue(group.building, out var buildingOn)) visible &= buildingOn;
                 if (group.floor != null && floorVisible.TryGetValue(group.floor, out var floorOn)) visible &= floorOn;
                 if (group.kind == "landscape" || group.kind == "figures") visible &= visualTerrainVisible;
+                if (group.terrainRequirement == "INTERMEDIATE" || group.terrainRequirement == "BOTH") visible &= lowerTerrainObject.activeInHierarchy;
+                if (group.terrainRequirement == "ACCESS" || group.terrainRequirement == "BOTH") visible &= accessTerrainObject.activeInHierarchy;
                 group.root.SetActive(visible);
             }
         }
@@ -413,7 +649,7 @@ namespace Mcoc.UnityViewer
             glazingVisible = GUILayout.Toggle(glazingVisible, "Vidrio y cajas sobresalientes", GUILayout.Height(25));
             exteriorStairsVisible = GUILayout.Toggle(exteriorStairsVisible, "Escalera exterior y descansos", GUILayout.Height(25));
             landscapeVisible = GUILayout.Toggle(landscapeVisible, "Explanadas, barandas y vegetación", GUILayout.Height(25));
-            scaleFiguresVisible = GUILayout.Toggle(scaleFiguresVisible, "Personas de escala · 3", GUILayout.Height(25));
+            scaleFiguresVisible = GUILayout.Toggle(scaleFiguresVisible, $"Personas de escala · {3 + publicFigureCount}", GUILayout.Height(25));
             hideArchitectureForResults = GUILayout.Toggle(hideArchitectureForResults, "Despejar arquitectura al ver resultados", GUILayout.Height(25));
             GUILayout.Label("Interpretación visual de fotos; niveles y cajas apoyados en el modelo. No son fachadas ni escaleras medidas. Sin participación FE; clic atraviesa la piel.", currentBody);
             UpdateArchitecturalContextVisibility();
@@ -433,7 +669,7 @@ namespace Mcoc.UnityViewer
         {
             var checks = new List<WallReviewCheck>();
             Action<string, bool> check = (name, pass) => checks.Add(new WallReviewCheck { check = name, pass = pass });
-            string folder = Path.Combine(Application.dataPath, "..", "Temp", "architecture_visual_revision");
+            string folder = Path.Combine(Application.dataPath, "..", "Temp", "public_terrace_visual_review");
             Directory.CreateDirectory(folder);
             ResetPresentation();
             int registered = allElements.Count;
@@ -441,7 +677,7 @@ namespace Mcoc.UnityViewer
             check("passive context has no structural identities or enabled colliders", ContextIsPassive());
             check("glass transparent and no depth write", contextGlass.renderQueue == 3000 && contextGlass.GetInt("_ZWrite") == 0);
             check("two outboard boxes use model columns", visualContextGroups.FindAll(g => g.root.name.Contains("PROJECTING_GLASS_BOX")).Count == 2);
-            check("two rising stair flights and one horizontal link", visualContextGroups.FindAll(g => g.kind == "stairs").Count == 3 &&
+            check("two rising stair flights and one horizontal link", visualContextGroups.FindAll(g => g.root.name.StartsWith("VISUAL_ONLY_STAIR_")).Count == 3 &&
                 architecturalContextRoot.GetComponentsInChildren<Transform>(true).Length > 0 && visualStairRoute?.Length == 4);
             check("roof panels cover both wings and share one edge", mainVisualRoofs.Count == 2 &&
                 Mathf.Abs(mainVisualRoofs[0].max.x - mainVisualRoofs[1].min.x) < .001f &&
@@ -466,9 +702,10 @@ namespace Mcoc.UnityViewer
                 Mathf.Abs(transverseAccessWalk.transform.localScale.y - visualSiteBounds.size.y) < .001f &&
                 Mathf.Abs(transverseAccessWalk.transform.localPosition.y - visualSiteBounds.center.y) < .001f);
             check("path and entrance use same paving material", transverseAccessWalk != null && transverseAccessWalk.GetComponent<Renderer>().sharedMaterial == contextConcrete);
-            check("old floating paving and lower box cap removed", Array.TrueForAll(architecturalContextRoot.GetComponentsInChildren<Transform>(true), t =>
+            check("old floating paving and unreferenced box cap removed", Array.TrueForAll(architecturalContextRoot.GetComponentsInChildren<Transform>(true), t =>
                 t.name != "VISUAL_ONLY_Future_context_free_paved_area" && t.name != "VISUAL_ONLY_Lower_exterior_promenade" && t.name != "VISUAL_ONLY_Visual_box_cap"));
             check("old longitudinal terrain path removed", visualTerrainRoot.transform.Find("VISUAL_ONLY_LEVEL_2_ACCESS_V106_V107/VISUAL_ONLY_ENTRY_PATH_TO_V106_V107") == null);
+            CheckPublicTerraceContext(check);
             foreach (string kind in new[] { "facade", "glass", "stairs", "roof", "landscape", "figures" })
                 check("visual group " + kind, visualContextGroups.Exists(g => g.kind == kind));
             architecturalContextVisible = false; UpdateArchitecturalContextVisibility();
@@ -480,6 +717,7 @@ namespace Mcoc.UnityViewer
             yield return new WaitForEndOfFrame(); SaveVisualFrame(folder, "orange_facade.png");
             yaw = 145;
             yield return new WaitForEndOfFrame(); SaveVisualFrame(folder, "glazing_and_stairs.png");
+            yield return CapturePublicTerraceFrames(folder);
             SetQuickView("Frente");
             yield return new WaitForEndOfFrame(); SaveVisualFrame(folder, "stair_front.png");
             SetQuickView("Planta");
@@ -511,7 +749,7 @@ namespace Mcoc.UnityViewer
             openGroups.Clear(); openGroups.Add("CONTEXTO");
             var report = new WallReviewReport { status = checks.TrueForAll(c => c.pass) ? "PASS" : "FAIL", dataset = currentGateStatus, checks = checks };
             File.WriteAllText(Path.Combine(folder, "QA.json"), JsonUtility.ToJson(report, true));
-            Debug.Log($"[ARCHITECTURAL CONTEXT REVIEW] {report.status}: {checks.Count} checks; output in Temp/architecture_visual_revision. No dataset changed.");
+            Debug.Log($"[ARCHITECTURAL CONTEXT REVIEW] {report.status}: {checks.Count} checks; output in Temp/public_terrace_visual_review. No dataset changed.");
         }
     }
 }

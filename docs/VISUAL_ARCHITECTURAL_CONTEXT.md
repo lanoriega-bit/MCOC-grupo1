@@ -24,7 +24,7 @@ Son dimensiones de presentación, explícitas en el código.
 ## Organización y uso
 
 En `Contexto` están los controles de arquitectura, fachada naranja, cubierta gris, vidrio,
-escalera, explanadas/vegetación y tres personas de escala. La arquitectura
+escalera, explanadas/mobiliario/vegetación y once personas de escala. La arquitectura
 puede apagarse completa, sin cargar otro modelo ni cambiar resultados.
 Los filtros de edificio y piso se aplican también a los grupos asociados.
 Las personas y el pavimento siguen la visibilidad del terreno.
@@ -36,7 +36,7 @@ del modelo (XY planta, Z altura). Todos sus objetos usan Ignore Raycast, sin
 colliders habilitados, ElementInfo, registro estructural ni tags analíticos.
 Materiales compartidos por la capa y destruidos al cerrar la escena.
 
-## Incorporado y preparado
+## Alcance de la revisión anterior (cubierta y escalera)
 
 Fachadas naranjas permeables a la lectura estructural, ventanas retranqueadas,
 vidrio azul gris transparente y marcos discretos, cajas salientes, cubierta gris
@@ -54,7 +54,7 @@ caja baja y los pequeños caminos longitudinales anteriores se retiraron.
 Con Main en Play: menú `MCOC → Revisar arquitectura visual`.
 Solo prueba presentación, selección existente, lectura de resultados, filtros
 y despeje de la capa. Capturas antes/después y QA se escriben en
-`viewer/unity/Temp/architecture_visual_revision/` (no datasets).
+`viewer/unity/Temp/public_terrace_visual_review/` (no datasets).
 No abre escenas AR ni invoca OpenSees. La identidad de fuentes/resultados
 se comprueba además contra Git/base, sin reexportarlos.
 
@@ -76,7 +76,7 @@ Evidencia y capturas antes/después: `reports/visual_architectural_context/`.
 El terreno, los ritmos de fachada y la escalera siguen siendo contexto
 esquemático. No sustituir planos ni usar esta capa para medir o calcular.
 
-## Revisión vigente: cubierta, escalera y circulación — 2026-10-06
+## Revisión anterior: cubierta, escalera y circulación — 2026-10-06
 
 - Main/Play y compilación PASS; revisión en Play 33/33 checks PASS.
 - Escalera: C021 base (7,92 m) → C012 base (11,88 m); tramo horizontal
@@ -88,3 +88,26 @@ esquemático. No sustituir planos ni usar esta capa para medir o calcular.
 - Los 117 archivos protegidos siguen byte-idénticos; sin solver ni cambios AR.
 - Evidencia vigente: `reports/visual_architectural_context/revision_roof_stair/`.
   Las capturas de la carpeta padre corresponden a la primera propuesta.
+
+## Revisión vigente: terraza pública y contexto habitable — 2026-10-06
+
+La plataforma intermedia llega a X=37,491 m, línea de S1 C004/C005/C006;
+su superficie completa es ahora hormigón. Dos escaleras macizas de 22 peldaños
+unen 7,92 y 3,96 m en las bandas exteriores +Y/−Y, hasta los bordes del terreno.
+C015/C023 comparten Y=16,332 m: su punto medio X=62,491 m define el aterrizaje,
+no una nueva cota Y inferida. No se modifica el suelo estructural.
+
+Dos mesas y seis sillas negras por costado, cuatro personas en las escaleras,
+dos junto a las mesas y dos dentro de las cajas. Ocho personas nuevas, once
+en total. Mobiliario y figuras son primitives de presentación, sin activos externos.
+La motoneta negra retro queda sobre el pasto del acceso alto, fuera de la
+explanada y el camino transversal, según la petición adicional del usuario.
+Se añade una cubierta gris independiente de 0,15 m a la caja V021/V041.
+No reaparece la antigua tapa sin referencia ni la plataforma flotante retirada.
+
+Todo se integra en los controles existentes de Contexto. Los elementos exteriores
+siguen la visibilidad de sus superficies de apoyo; los ocupantes interiores siguen
+el piso y el control de personas. La escenografía se despeja al ver resultados.
+La revisión de arquitectura escribe ahora en `Temp/public_terrace_visual_review/`.
+Evidencia vigente: `reports/visual_architectural_context/public_terrace_revision/`.
+No se modifican datasets, AR, OpenSees, capacidades, IDs, tags ni crosswalks.

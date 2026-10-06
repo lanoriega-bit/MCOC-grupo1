@@ -1,6 +1,7 @@
 # Arquitectura y contexto visual — QA
 
-**Revisión vigente:** [cubierta, escalera y circulación](revision_roof_stair/README.md).
+**Revisión vigente:** [terraza pública, mobiliario y moto sobre el pasto](public_terrace_revision/README.md).
+Revisión anterior: [cubierta, escalera y circulación](revision_roof_stair/README.md).
 Las capturas y los 22 checks de esta carpeta conservan la primera propuesta;
 la revisión posterior tiene sus propias capturas y 33 checks.
 
