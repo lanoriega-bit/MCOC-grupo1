@@ -1,5 +1,14 @@
 # P1L2 Status
 
+## Arquitectura funcional — checkpoint final conservador (2026-10-06)
+
+- Lotes históricos P1L2–P1L7 y PRE/POST revisados archivados, con cuatro excepciones protegidas.
+- Fuentes/modelo, resultados y Luis siguen idénticos al baseline (117 hashes desktop).
+- Clon fdbe07f: modelo/pipeline, 19 tests, 45 muros, solver Q/R y 669 capacidades PASS.
+- Sin main/tag modificado, ni AR funcional probado/regenerado.
+- Play del clon final pendiente por inicialización de licencia; no declarar PASS sin evidencia.
+- Informe: reports/repository_architecture_audit/FINAL_ARCHITECTURE.md.
+
 ## Archivo conservador — dependencias y lote D P1L6 (2026-10-05)
 
 - P1L5 archivada tras prueba de ausencia de consumidores en clon aislado.

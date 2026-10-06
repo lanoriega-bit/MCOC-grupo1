@@ -1,15 +1,15 @@
 {
   "summary": {
-    "tracked_files": 1496,
-    "references": 25865,
+    "tracked_files": 1498,
+    "references": 25804,
     "classifications": {
-      "DOCUMENTATION_ONLY": 89,
-      "HISTORICAL_ONLY": 25739,
+      "DOCUMENTATION_ONLY": 19,
+      "HISTORICAL_ONLY": 25748,
       "ACTIVE_REQUIRED": 37
     },
     "exact_duplicate_groups": 29,
     "scope": "Static file inventory only; no AR test, generation or result comparison.",
-    "distinct_reference_groups": 5702
+    "distinct_reference_groups": 5641
   },
   "references": [
     {
@@ -34,850 +34,6 @@
       "excerpt": "- Keep `entregas/P1L2/STATUS.md` current at important checkpoints.",
       "lines": [
         42
-      ]
-    },
-    {
-      "consumer": "PRE_P1L4_CLEANUP.md",
-      "tokens": [
-        "POST_",
-        "PRE_"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "  `POST_P1L3 / PRE_P1L4`.",
-      "lines": [
-        17
-      ]
-    },
-    {
-      "consumer": "PRE_P1L4_CLEANUP.md",
-      "tokens": [
-        "entregas/P1L3"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "| `origin/jose-viewer` | SUPERSEDED | Viewer/EX-EY antiguos; las funciones útiles fueron reorganizadas e integradas en `entregas/P1L3/José/viewer_unity`. | No fusionar. Consultar solo como antecedente. |",
-      "lines": [
-        32
-      ]
-    },
-    {
-      "consumer": "PRE_P1L4_CLEANUP.md",
-      "tokens": [
-        "post_",
-        "entregas/P1L3"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "| CANONICAL | Ejes `global_axes.json`; ED1 `model_1_audited_corrected.json`; ED2 `model_2_viewer.json`; combinado `model_combined_viewer.json`; FE candidato `results/post_p1l3_candidate/analysis_model_post_p1l3_candidate.json`; Unity `entregas/P1L3/José/viewer_unity`. | Pueden ca",
-      "lines": [
-        43
-      ]
-    },
-    {
-      "consumer": "PRE_P1L4_CLEANUP.md",
-      "tokens": [
-        "entregas/P1L2"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "| Geometría estructural | `entregas/P1L2/unity_export/model_combined_viewer.json` | Auditorías de columnas, muros, vigas y conectividad completas. |",
-      "lines": [
-        58
-      ]
-    },
-    {
-      "consumer": "PRE_P1L4_CLEANUP.md",
-      "tokens": [
-        "entregas/P1L3",
-        "post_"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "| Modelo FE diagnóstico | `entregas/P1L3/results/post_p1l3_candidate/analysis_model_post_p1l3_candidate.json` | Candidato actual, no aprobado ni ejecutado. |",
-      "lines": [
-        61
-      ]
-    },
-    {
-      "consumer": "PRE_P1L4_CLEANUP.md",
-      "tokens": [
-        "entregas/P1L3"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "| Modelo FE entregado | `entregas/P1L3/results/a3a4/analysis_model.json` | Historia P1L3 reproducible; no es la topología actual. |",
-      "lines": [
-        62
-      ]
-    },
-    {
-      "consumer": "PRE_P1L4_CLEANUP.md",
-      "tokens": [
-        "entregas/P1L3"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "| Resultados entregados | `entregas/P1L3/results/a7/` | Histórico bajo `P1L3_DELIVERED`; no sobrescribir. |",
-      "lines": [
-        64
-      ]
-    },
-    {
-      "consumer": "PRE_P1L4_CLEANUP.md",
-      "tokens": [
-        "entregas/P1L3"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "| Arquitectura visual | `entregas/P1L3/arquitectura/architectural_visual_model.json` | Extender por piso manteniendo `participates_in_FE=false`. |",
-      "lines": [
-        65
-      ]
-    },
-    {
-      "consumer": "PRE_P1L4_CLEANUP.md",
-      "tokens": [
-        "entregas/P1L3"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "| Unity | `entregas/P1L3/José/viewer_unity/` | Actualizar solo mediante `build_unity_bundle.py`. |",
-      "lines": [
-        66
-      ]
-    },
-    {
-      "consumer": "PRE_P1L4_CLEANUP.md",
-      "tokens": [
-        "entregas/P1L2"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "| Viewer histórico | `entregas/P1L2/viewer/` | Antecedente, no interfaz objetivo. |",
-      "lines": [
-        67
-      ]
-    },
-    {
-      "consumer": "PRE_P1L4_CLEANUP.md",
-      "tokens": [
-        "POST_"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "| LOAD-Q-001 — Q_POST_P1L3 | Q uniforme histórico | `zone_contributions`, cobertura auditada | Placeholder entregado | Masas, sismo y demanda | P0 | Losas/paños estables | Intersección multizona y conservación por paño/piso/edificio/total | OPEN |",
-      "lines": [
-        117
-      ]
-    },
-    {
-      "consumer": "PRE_P1L4_CLEANUP.md",
-      "tokens": [
-        "POST_"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "| OPS-BASE-001 — reconstrucción FE | FE entregado sobre geometría provisional | A3-A4 y crosswalk | Histórico reproducible | Todo cálculo posterior | P0 | Geometría/conectividad/propiedades | Generar revisión `POST_P1L3_VALIDATED`, sin sobrescribir A7 | OPEN |",
-      "lines": [
-        127
-      ]
-    },
-    {
-      "consumer": "PRE_P1L4_CLEANUP.md",
-      "tokens": [
-        "entregas/P1L2"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "- Evidencia: `entregas/P1L2/edificio/validacion/s1_columns_final/REPORT.md` y",
-      "lines": [
-        203
-      ]
-    },
-    {
-      "consumer": "PRE_P1L4_CLEANUP.md",
-      "tokens": [
-        "entregas/P1L2"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "- Evidencia: `entregas/P1L2/edificio/validacion/ed1_walls/REPORT.md`,",
-      "lines": [
-        226
-      ]
-    },
-    {
-      "consumer": "PRE_P1L4_CLEANUP.md",
-      "tokens": [
-        "entregas/P1L2"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "- Evidencia: `entregas/P1L2/edificio/validacion/ed1_beams/` y",
-      "lines": [
-        243
-      ]
-    },
-    {
-      "consumer": "PRE_P1L4_CLEANUP.md",
-      "tokens": [
-        "entregas/P1L2"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "  `entregas/P1L2/edificio/datos/ed1_beam_resolution.json`.",
-      "lines": [
-        244
-      ]
-    },
-    {
-      "consumer": "PRE_P1L4_CLEANUP.md",
-      "tokens": [
-        "entregas/P1L2"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "- Evidencia: `entregas/P1L2/edificio/validacion/special_interface/`.",
-      "lines": [
-        266
-      ]
-    },
-    {
-      "consumer": "PRE_P1L4_CLEANUP.md",
-      "tokens": [
-        "entregas/P1L2"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "  `entregas/P1L2/unity_export/model_combined_viewer.json`.",
-      "lines": [
-        271
-      ]
-    },
-    {
-      "consumer": "PRE_P1L4_CLEANUP.md",
-      "tokens": [
-        "POST_"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "- El manifiesto distingue explícitamente geometría `POST_P1L3_CURRENT`,",
-      "lines": [
-        274
-      ]
-    },
-    {
-      "consumer": "PRE_P1L4_CLEANUP.md",
-      "tokens": [
-        "POST_"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "  candidato FE `POST_P1L3_CANDIDATE_NOT_RUN` y resultados/cargas/capacidad",
-      "lines": [
-        275
-      ]
-    },
-    {
-      "consumer": "PRE_P1L4_CLEANUP.md",
-      "tokens": [
-        "post_"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "- Se genera `post_p1l3_fe_diagnostic.json` desde el candidato FASE 7 y la",
-      "lines": [
-        282
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L5"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "- Rama: `codex/p1l5-integration`; fuente única en `entregas/P1L5/modelo_central/`.",
-      "lines": [
-        8
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L3"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "- Unity canónico: `entregas/P1L3/José/viewer_unity`, escena `Assets/Main.unity`.",
-      "lines": [
-        10
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L5"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "- Continuar desde [auditoría de integración](entregas/P1L5/INTEGRATION_AUDIT.md)",
-      "lines": [
-        24
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L5"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "  y [QA central](entregas/P1L5/validation/INTEGRATION_QA.md).",
-      "lines": [
-        25
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L3"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "Este documento NO repite planificacion P1L3: eso vive en `entregas/P1L3/PLANIFICACION.md`.",
-      "lines": [
-        31
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L3"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "graficos ampliables y modo presentacion. Ver `entregas/P1L3/INFORME.md` y",
-      "lines": [
-        36
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L3"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "`entregas/P1L3/UI_QA.md`. No volver a tratar P1L3 como \"solo planificado\".",
-      "lines": [
-        37
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "POST_"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "`Validar_Modelo.bat`. Unity muestra geometría `POST_P1L3_CURRENT`, diagnóstico",
-      "lines": [
-        40
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "PRE_"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "  `PRE_P1L4_CLEANUP.md`.",
-      "lines": [
-        50
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "POST_"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "  identificaran `POST_P1L3_VALIDATED`.",
-      "lines": [
-        52
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L2"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "  Evidencia: `entregas/P1L2/edificio/validacion/s1_columns_final/REPORT.md`.",
-      "lines": [
-        57
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L2"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "  60 a 21. Evidencia y overlays: `entregas/P1L2/edificio/validacion/ed1_walls/`.",
-      "lines": [
-        60
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L2"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "  `entregas/P1L2/edificio/validacion/ed1_beams/`.",
-      "lines": [
-        65
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L2"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "  `entregas/P1L2/edificio/validacion/slabs/`.",
-      "lines": [
-        78
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "post_"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "  Evidencia: `validacion/fe_connectivity_post_geometry/`.",
-      "lines": [
-        95
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L3",
-        "post_"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "  `entregas/P1L3/results/post_p1l3_candidate/`: usa incidencias físicas,",
-      "lines": [
-        97
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L2"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "2. Lee `entregas/P1L2/STATUS.md` (estado P1L2 al dia).",
-      "lines": [
-        118
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L3"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "3. Lee `entregas/P1L3/PLANIFICACION.md` (plan G/Q/EX/EY/capacidad; NO lo reescribas).",
-      "lines": [
-        119
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L2"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "   - `entregas/P1L2/unity_export/model_combined_viewer.json` (modelo VIGENTE).",
-      "lines": [
-        122
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L2"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "   - `entregas/P1L2/unity_export/model_1_audited_corrected.json` (EDIFICIO_1 corregido).",
-      "lines": [
-        123
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L2"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "   - `entregas/P1L2/unity_export/model_2_viewer.json` (EDIFICIO_2).",
-      "lines": [
-        124
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L2"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "   - `entregas/P1L2/edificio/datos/global_axes.json` (ejes canonicos).",
-      "lines": [
-        125
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L2"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "   - `entregas/P1L2/edificio/datos/luis_inferred_column_resolution.json` (clasificacion columnas).",
-      "lines": [
-        126
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L2"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "   - `entregas/P1L2/edificio/datos/building_master.json` y `building_2_master.json` (modelos logicos).",
-      "lines": [
-        127
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L2"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "6. NO modifiques: `entregas/P1L2/unity_export/model_viewer.json` (referencia Luis, read-only), el working tree de otras personas, ni `recursos/` (ignorado por Git). Nunca: `force push`, `reset --hard`, `git clean`, borrar trabajo ajeno.",
-      "lines": [
-        128
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L2"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "- Se creaba/copiaba geometria verticalmente cuando faltaba evidencia del mismo piso (p.ej. el extractor historico `entregas/P1L2/opensees/extract_cad_model.py`).",
-      "lines": [
-        163
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L2"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "- `entregas/P1L2/unity_export/model_viewer.json` fue una referencia MUY buena de EDIFICIO_1, pero contiene geometria creada con inferencias automaticas (columnas copiadas verticalmente y supports derivados) cuando faltaba evidencia del mismo piso.",
-      "lines": [
-        191
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L2"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "- Extractor propio: `entregas/P1L2/edificio/scripts/extract_cad_model_ed2.py` -> `building_2_master.json` -> `model_2_viewer.json` (**688 solidos**).",
-      "lines": [
-        220
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L2"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "- Abrir (desde la raiz del repo): `python -m http.server 8000` y luego `http://localhost:8000/entregas/P1L2/viewer/` (el batch `Abrir_Viewer_Semana2.bat` lo automatiza). No abrir `index.html` directo (CORS bloquea el JSON).",
-      "lines": [
-        275
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L2"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "- `entregas/P1L2/opensees/building_gravity_skeleton.py`: esqueleto preliminar de gravedad del modelo auditado (cargas nodales, qG=6.227), NO conectado al combinado y con tributarias pendientes (TODO). Punto de partida, no producto.",
-      "lines": [
-        298
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L2"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "- `entregas/P1L2/opensees/extract_cad_model.py`: HISTORICO - es el extractor que creaba inferencias verticales de columnas y supports. Documentar/depurar esa logica, no reusarla como extraccion valida.",
-      "lines": [
-        299
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L2"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "- `entregas/P1L2/data/load_definitions_draft.json`: catalogo G (qG por espesor: 12cm=5.492, 15cm=6.227, 18cm=6.963 kN/m2; PM.ADIC 260; SC variable 250/300/400/500 segun zona). status: draft.",
-      "lines": [
-        301
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L2"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "Ubicacion: `entregas/P1L2/edificio/scripts/` (+ `entregas/P1L2/opensees/` para ED2/historico).",
-      "lines": [
-        306
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L2"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "- `recursos/planos/dxf_generated/2017_67/` (100..103) y `2024_22/` (100..102) estan IGNORADOS por Git (`.gitignore`: `recursos/planos/`; igual `entregas/P1L2/results/`).",
-      "lines": [
-        335
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L3"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "- Plan vigente: `entregas/P1L3/PLANIFICACION.md` (revisado y verificado contra el repo al 2026-09-08; sigue vigente).",
-      "lines": [
-        389
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L3"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "  - Archivos esperados: `entregas/P1L3/model/`, `entregas/P1L3/opensees/`, `entregas/P1L3/results/`.",
-      "lines": [
-        404
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L3"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "  - Archivos esperados: `entregas/P1L3/viewer/`, `entregas/P1L3/qa/`.",
-      "lines": [
-        412
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L3"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "  - Outputs: `entregas/P1L3/capacidad/` (fiber, M-phi, P-M) + notas de trazabilidad de armadura.",
-      "lines": [
-        419
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L3"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "  - Archivos esperados: `entregas/P1L3/capacidad/*.py`, `*.json`.",
-      "lines": [
-        420
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L3"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "Punto de integracion unico: `entregas/P1L3/results/<run_id>/manifest.json` (unidades SI, revision/hash de geometria, convergencia, equilibrio, desplazamientos nodales, reacciones, fuerzas locales por `analysis_id`). Progreso incremental por hitos la entrega.",
-      "lines": [
-        424
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L2"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "- `entregas/P1L2/STATUS.md` - estado P1L2 al dia.",
-      "lines": [
-        439
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L3"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "- `entregas/P1L3/PLANIFICACION.md` - plan P1L3 (inventario, dependencias, arquitectura, division).",
-      "lines": [
-        440
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L2"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "- `entregas/P1L2/viewer/README.md` - viewer completo.",
-      "lines": [
-        442
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L2"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "- `entregas/P1L2/edificio/datos/global_axes.json`, `axis_calce_validation.json` - ejes/calce.",
-      "lines": [
-        443
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L2"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "- `entregas/P1L2/edificio/datos/luis_inferred_column_resolution.json` - clasificacion columnas.",
-      "lines": [
-        444
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L2"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "- `entregas/P1L2/edificio/datos/cad_property_audit.json` - propiedades.",
-      "lines": [
-        445
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L2"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "- `entregas/P1L2/edificio/datos/building_master.json`, `building_2_master.json` - modelos logicos.",
-      "lines": [
-        446
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L2"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "- `entregas/P1L2/data/load_definitions_draft.json` - cargas G/SC draft.",
-      "lines": [
-        447
-      ]
-    },
-    {
-      "consumer": "PROJECT_HANDOFF.md",
-      "tokens": [
-        "entregas/P1L2"
-      ],
-      "classification": "DOCUMENTATION_ONLY",
-      "reason": "Documentation/comment; update operational instructions separately.",
-      "excerpt": "- Scripts del pipeline: `entregas/P1L2/edificio/scripts/` y `entregas/P1L2/opensees/extract_cad_model_ed2.py`.",
-      "lines": [
-        448
       ]
     },
     {
@@ -950,7 +106,7 @@
       "reason": "Documentation/comment; update operational instructions separately.",
       "excerpt": "entregas/P1L2/  excepciones protegidas; no es el modelo activo",
       "lines": [
-        28
+        30
       ]
     },
     {
@@ -962,7 +118,7 @@
       "reason": "Documentation/comment; update operational instructions separately.",
       "excerpt": "Estado histórico de cierre: [WEEK7_MODEL_CLOSURE](archive/historical_deliveries/P1L7/WEEK7_MODEL_CLOSURE.md).",
       "lines": [
-        100
+        102
       ]
     },
     {
@@ -974,7 +130,7 @@
       "reason": "Documentation/comment; update operational instructions separately.",
       "excerpt": "`entregas/P1L2/unity_export/model_viewer.json` es solo lectura.",
       "lines": [
-        158
+        160
       ]
     },
     {
@@ -1333,7 +489,7 @@
       "reason": "Historical evidence or non-productive delivery; not permission to delete.",
       "excerpt": "- Rama de cierre `codex/week7-model-closure`, base `3cc21d6`; no modificar historia.",
       "lines": [
-        102
+        111
       ]
     },
     {
@@ -1345,7 +501,7 @@
       "reason": "Historical evidence or non-productive delivery; not permission to delete.",
       "excerpt": "- Cierre y QA: [Semana 7](../P1L7/WEEK7_MODEL_CLOSURE.md). Build final todavía no aprobado.",
       "lines": [
-        110
+        119
       ]
     },
     {
@@ -1357,7 +513,7 @@
       "reason": "Historical evidence or non-productive delivery; not permission to delete.",
       "excerpt": "- Fuente única: `entregas/P1L5/modelo_central/`; 712 sólidos: 442 vigas,",
       "lines": [
-        139
+        148
       ]
     },
     {
@@ -1369,7 +525,7 @@
       "reason": "Historical evidence or non-productive delivery; not permission to delete.",
       "excerpt": "- Fuente vigente: `entregas/P1L5/modelo_central/model_master.json`.",
       "lines": [
-        152
+        161
       ]
     },
     {
@@ -1381,7 +537,7 @@
       "reason": "Historical evidence or non-productive delivery; not permission to delete.",
       "excerpt": "- Informe vigente: [corrección manual de vigas](../PRE_P1L5/manual_beam_revision/REVIEW_STATUS.md).",
       "lines": [
-        172
+        181
       ]
     },
     {
@@ -1393,7 +549,7 @@
       "reason": "Historical evidence or non-productive delivery; not permission to delete.",
       "excerpt": "- Informe vigente: [segundo saneamiento](../PRE_P1L5/second_structural_cleanup/REVIEW_STATUS.md).",
       "lines": [
-        183
+        192
       ]
     },
     {
@@ -1405,7 +561,7 @@
       "reason": "Historical evidence or non-productive delivery; not permission to delete.",
       "excerpt": "  `entregas/PRE_P1L5/CURRENT_MODEL_EXCLUSIONS.json`; referencia Luis intacta.",
       "lines": [
-        189
+        198
       ]
     },
     {
@@ -1417,7 +573,7 @@
       "reason": "Historical evidence or non-productive delivery; not permission to delete.",
       "excerpt": "- Informe vigente: `entregas/PRE_P1L5/user_structural_review/REVIEW_STATUS.md`.",
       "lines": [
-        196
+        205
       ]
     },
     {
@@ -1429,7 +585,7 @@
       "reason": "Historical evidence or non-productive delivery; not permission to delete.",
       "excerpt": "- Expediente individual: `entregas/PRE_P1L5/FE_PENDING_43_DETAILED_REVIEW.md`",
       "lines": [
-        204
+        213
       ]
     },
     {
@@ -1441,7 +597,7 @@
       "reason": "Historical evidence or non-productive delivery; not permission to delete.",
       "excerpt": "- Unity normal usa POST_P1L4_CURRENT; resultados históricos apagados y aislados.",
       "lines": [
-        218
+        227
       ]
     },
     {
@@ -1453,7 +609,7 @@
       "reason": "Historical evidence or non-productive delivery; not permission to delete.",
       "excerpt": "- Evidencia: `entregas/POST_P1L4/EXT_5_REMAINING_AUDIT.md` y `UNITY_CURRENT_UX_QA.md`.",
       "lines": [
-        220
+        229
       ]
     },
     {
@@ -1465,7 +621,7 @@
       "reason": "Historical evidence or non-productive delivery; not permission to delete.",
       "excerpt": "- Creado `analysis_model_post_p1l3_candidate.json` sin reemplazar A3-A4 ni",
       "lines": [
-        224
+        233
       ]
     },
     {
@@ -1477,7 +633,7 @@
       "reason": "Historical evidence or non-productive delivery; not permission to delete.",
       "excerpt": "- A6: contrato EX/EY (interfaz sola; demo FICTICIO en `entregas/P1L3/results_local/`, no versionado) + A7: viewer con capa de resultados via `?analysis=...&run=...`.",
       "lines": [
-        359
+        368
       ]
     },
     {
@@ -1489,7 +645,7 @@
       "reason": "Historical evidence or non-productive delivery; not permission to delete.",
       "excerpt": "- Detalles: `entregas/P1L3/DEFENSA.md`, `entregas/P1L3/PLANIFICACION.md`.",
       "lines": [
-        360
+        369
       ]
     },
     {
@@ -1501,7 +657,7 @@
       "reason": "Historical evidence or non-productive delivery; not permission to delete.",
       "excerpt": "- Documento maestro: `PROJECT_HANDOFF.md` (raiz del repositorio) + plan P1L3 en `entregas/P1L3/PLANIFICACION.md`. Leerlos antes de modificar geometria o iniciar P1L3.",
       "lines": [
-        363
+        372
       ]
     },
     {
@@ -1513,7 +669,7 @@
       "reason": "Historical evidence or non-productive delivery; not permission to delete.",
       "excerpt": "- Main viewer model: `entregas/P1L2/unity_export/model_combined_viewer.json`",
       "lines": [
-        390
+        399
       ]
     },
     {
@@ -1525,7 +681,7 @@
       "reason": "Historical evidence or non-productive delivery; not permission to delete.",
       "excerpt": "- Corrected EDIFICIO_1: `entregas/P1L2/unity_export/model_1_audited_corrected.json`",
       "lines": [
-        391
+        400
       ]
     },
     {
@@ -1537,7 +693,7 @@
       "reason": "Historical evidence or non-productive delivery; not permission to delete.",
       "excerpt": "- Audit checkpoint: `entregas/P1L2/unity_export/model_1_audited.json`",
       "lines": [
-        392
+        401
       ]
     },
     {
@@ -1549,7 +705,7 @@
       "reason": "Historical evidence or non-productive delivery; not permission to delete.",
       "excerpt": "cargas ni resultados. Ver `entregas/PRE_P1L5/UNITY_QA.md`.",
       "lines": [
-        449
+        458
       ]
     },
     {
@@ -1561,7 +717,7 @@
       "reason": "Historical evidence or non-productive delivery; not permission to delete.",
       "excerpt": "declararla físicamente aprobada. PRE_P1L5_BASELINE: BLOCKED.",
       "lines": [
-        457
+        466
       ]
     },
     {
@@ -1573,7 +729,7 @@
       "reason": "Historical evidence or non-productive delivery; not permission to delete.",
       "excerpt": "Guía y QA vigentes: `entregas/PRE_P1L5/PRE_P1L5_STATUS.md`.",
       "lines": [
-        458
+        467
       ]
     },
     {
@@ -1585,7 +741,7 @@
       "reason": "Historical evidence or non-productive delivery; not permission to delete.",
       "excerpt": "`entregas/PRE_P1L5/current_readiness/CURRENT_READINESS_REPORT.md`.",
       "lines": [
-        469
+        478
       ]
     },
     {
@@ -1597,7 +753,7 @@
       "reason": "Historical evidence or non-productive delivery; not permission to delete.",
       "excerpt": "Ver `entregas/P1L6/wall_continuity/WALL_CONTINUITY_BEFORE.md`.",
       "lines": [
-        479
+        488
       ]
     },
     {
@@ -1609,7 +765,7 @@
       "reason": "Historical evidence or non-productive delivery; not permission to delete.",
       "excerpt": "Véase `entregas/P1L6/wall_continuity/WALL_CONTINUITY_AFTER.md`.",
       "lines": [
-        489
+        498
       ]
     },
     {
@@ -1621,7 +777,7 @@
       "reason": "Historical evidence or non-productive delivery; not permission to delete.",
       "excerpt": "`entregas/P1L7/visual_terrain/RUNTIME_VALIDATION.md`.",
       "lines": [
-        498
+        507
       ]
     },
     {
@@ -1633,7 +789,7 @@
       "reason": "Historical evidence or non-productive delivery; not permission to delete.",
       "excerpt": "Diseño vigente: `entregas/P1L7/visual_terrain/TERRAIN_V2_VALIDATION.md`.",
       "lines": [
-        506
+        515
       ]
     },
     {
@@ -1645,7 +801,7 @@
       "reason": "Historical evidence or non-productive delivery; not permission to delete.",
       "excerpt": "Diseño vigente: `entregas/P1L7/visual_terrain/TERRAIN_V3_VALIDATION.md`.",
       "lines": [
-        514
+        523
       ]
     },
     {
@@ -4138,6 +3294,118 @@
       "excerpt": "Proyecto único: `viewer/unity/`, antes `entregas/P1L3/José/viewer_unity/`.",
       "lines": [
         7
+      ]
+    },
+    {
+      "consumer": "reports/repository_architecture_audit/FINAL_ARCHITECTURE.md",
+      "tokens": [
+        "POST_",
+        "PRE_"
+      ],
+      "classification": "HISTORICAL_ONLY",
+      "reason": "Historical evidence or non-productive delivery; not permission to delete.",
+      "excerpt": "  historical_deliveries/P1L2..P1L7, POST_P1L4, PRE_P1L5",
+      "lines": [
+        30
+      ]
+    },
+    {
+      "consumer": "reports/repository_architecture_audit/FINAL_ARCHITECTURE.md",
+      "tokens": [
+        "entregas/P1L2"
+      ],
+      "classification": "HISTORICAL_ONLY",
+      "reason": "Historical evidence or non-productive delivery; not permission to delete.",
+      "excerpt": "entregas/P1L2/          cuatro excepciones protegidas + índice",
+      "lines": [
+        33
+      ]
+    },
+    {
+      "consumer": "reports/repository_architecture_audit/FINAL_ARCHITECTURE.md",
+      "tokens": [
+        "POST_"
+      ],
+      "classification": "HISTORICAL_ONLY",
+      "reason": "Historical evidence or non-productive delivery; not permission to delete.",
+      "excerpt": "| POST_P1L4 | 89 | 1f63a83 |",
+      "lines": [
+        59
+      ]
+    },
+    {
+      "consumer": "reports/repository_architecture_audit/FINAL_ARCHITECTURE.md",
+      "tokens": [
+        "PRE_"
+      ],
+      "classification": "HISTORICAL_ONLY",
+      "reason": "Historical evidence or non-productive delivery; not permission to delete.",
+      "excerpt": "| PRE_P1L5 | 141 | 2c5a2ff |",
+      "lines": [
+        60
+      ]
+    },
+    {
+      "consumer": "reports/repository_architecture_audit/FINAL_ARCHITECTURE.md",
+      "tokens": [
+        "PRE_"
+      ],
+      "classification": "HISTORICAL_ONLY",
+      "reason": "Historical evidence or non-productive delivery; not permission to delete.",
+      "excerpt": "P1L3/PRE_P1L5 tenían carpetas locales bloqueadas: se trasladaron solo archivos",
+      "lines": [
+        66
+      ]
+    },
+    {
+      "consumer": "reports/repository_architecture_audit/FINAL_ARCHITECTURE.md",
+      "tokens": [
+        "entregas/P1L2"
+      ],
+      "classification": "HISTORICAL_ONLY",
+      "reason": "Historical evidence or non-productive delivery; not permission to delete.",
+      "excerpt": "- entregas/P1L2/edificio/modelo/model_viewer_backup_576f014.json",
+      "lines": [
+        76
+      ]
+    },
+    {
+      "consumer": "reports/repository_architecture_audit/FINAL_ARCHITECTURE.md",
+      "tokens": [
+        "entregas/P1L2",
+        "pre_"
+      ],
+      "classification": "HISTORICAL_ONLY",
+      "reason": "Historical evidence or non-productive delivery; not permission to delete.",
+      "excerpt": "- entregas/P1L2/unity_export/model_viewer_pre_reextraction_backup.json",
+      "lines": [
+        77
+      ]
+    },
+    {
+      "consumer": "reports/repository_architecture_audit/FINAL_ARCHITECTURE.md",
+      "tokens": [
+        "week7",
+        "post_"
+      ],
+      "classification": "HISTORICAL_ONLY",
+      "reason": "Historical evidence or non-productive delivery; not permission to delete.",
+      "excerpt": "| C# P1L5/P1L6, week7*, post_p1l4_correction, JsonLoader filename | API/contrato/asset serializado necesario; cambiarlo rompería compatibilidad, no depende de entregas/ |",
+      "lines": [
+        113
+      ]
+    },
+    {
+      "consumer": "reports/repository_architecture_audit/FINAL_ARCHITECTURE.md",
+      "tokens": [
+        "C:/Users/",
+        "OneDrive/"
+      ],
+      "classification": "HISTORICAL_ONLY",
+      "reason": "Historical evidence or non-productive delivery; not permission to delete.",
+      "excerpt": "C:/Users/ o OneDrive/. Las rutas absolutas en bitácoras/archivo son evidencia,",
+      "lines": [
+        122
       ]
     },
     {
