@@ -1,5 +1,14 @@
 # P1L2 Status
 
+## Revisión visual: cubierta, escalera y camino (2026-10-06)
+
+- Rama codex/visual-architectural-context; cubierta gris completa, solo visual.
+- Escalera referenciada a C021/C012, V064/V059 y llegada V027/V020.
+- Retirados tapa baja y pavimentos flotantes; camino transversal de ancho completo.
+- Main Compile/Play PASS; revisión 33/33, selección real, My 2D y deformada CURRENT.
+- 117/117 archivos protegidos idénticos; modelo/resultados, Luis, AR y tags intactos.
+- Evidencia vigente: reports/visual_architectural_context/revision_roof_stair/README.md.
+
 ## Contexto arquitectónico visual desktop (2026-10-06)
 
 - Rama codex/visual-architectural-context desde main c243a7b.

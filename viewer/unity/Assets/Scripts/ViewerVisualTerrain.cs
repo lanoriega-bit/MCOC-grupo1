@@ -96,14 +96,8 @@ namespace Mcoc.UnityViewer
             var accessBounds = TerrainBox(near, siteBounds.max.x, siteBounds.min.y,
                 siteBounds.max.y, bottom, accessTerrainElevation);
             accessTerrainObject = CreateTerrainTerrace("VISUAL_ONLY_LEVEL_2_ACCESS_V106_V107", accessBounds);
-            // Flat paved route on the elevated terrace, no false ramp between levels.
-            float entryY = (accessYmin + accessYmax) / 2;
-            CreateTerrainBox("VISUAL_ONLY_ENTRY_PATH_TO_V106_V107", accessTerrainObject.transform,
-                TerrainBox(near, siteBounds.max.x, entryY - PathWidth / 2, entryY + PathWidth / 2,
-                    accessTerrainElevation + .006f, accessTerrainElevation + .025f), TerrainPaving());
-            CreateTerrainBox("VISUAL_ONLY_ENTRY_FRONT_WALK", accessTerrainObject.transform,
-                TerrainBox(near, near + 1.5f, accessYmin + 1, accessYmax - 1,
-                    accessTerrainElevation + .026f, accessTerrainElevation + .045f), TerrainPaving());
+            // Paving is now in the optional architecture/context layer: arrival plaza
+            // and a full-width transverse path. Do not retain the old longitudinal strip.
             UpdateVisualTerrainVisibility();
             bool covered = columns.TrueForAll(c => {
                 Vector3 p = V(c.center);

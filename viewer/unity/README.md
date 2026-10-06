@@ -49,7 +49,9 @@ Contexto, Avanzado y Ayuda se despliegan/retraen y el panel tiene scroll.
 ### Arquitectura y entorno opcionales
 
 En **Contexto** se puede encender/apagar la arquitectura de referencia completa,
-fachadas naranjas, vidrio/cajas, escalera exterior, explanadas/vegetación y personas.
+fachadas naranjas, cubierta gris completa, vidrio/cajas, escalera exterior,
+explanadas/vegetación y personas. La escalera vigente tiene dos subidas y un
+tramo horizontal, con llegada entre V-027/V-020; el camino es transversal.
 Son objetos pasivos de presentación, sin participación FE ni bloqueo de selección.
 La opción «Despejar arquitectura al ver resultados» permite conservar la lectura
 estructural al activar deformada o diagramas. Las fotos guían la composición,

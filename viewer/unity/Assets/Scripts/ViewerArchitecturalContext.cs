@@ -12,13 +12,16 @@ namespace Mcoc.UnityViewer
         // Photo-inspired PRESENTATION ONLY. Model coordinates: XY plan, Z height.
         // No ElementInfo, registration, structural tag, dataset writes or FE participation.
         bool architecturalContextVisible = true, facadeSkinVisible = true, glazingVisible = true;
-        bool exteriorStairsVisible = true, landscapeVisible = true, scaleFiguresVisible = true;
+        bool exteriorStairsVisible = true, landscapeVisible = true, scaleFiguresVisible = true, roofVisible = true;
         bool hideArchitectureForResults = true;
         GameObject architecturalContextRoot;
         readonly List<VisualContextGroup> visualContextGroups = new List<VisualContextGroup>();
         readonly List<Material> architecturalContextMaterials = new List<Material>();
-        Material facadeOrange, contextConcrete, contextFrame, contextGlass, contextEarth, contextLeaves, contextPeople;
+        Material facadeOrange, contextConcrete, contextFrame, contextGlass, contextEarth, contextLeaves, contextPeople, contextRoof;
         Bounds visualSiteBounds;
+        readonly List<Bounds> mainVisualRoofs = new List<Bounds>();
+        Vector3[] visualStairRoute;
+        GameObject visualArrivalPlatform, transverseAccessWalk;
         int architecturePrimitiveCount;
         const float SkinOffset = .32f, VisualBayWidth = 2.5f, StairWidth = 1.8f;
 
@@ -37,6 +40,7 @@ namespace Mcoc.UnityViewer
             architecturalContextRoot.transform.SetParent(transform, false);
             facadeOrange = ContextMaterial("Orange facade", new Color(.93f, .36f, .075f), .14f);
             contextConcrete = ContextMaterial("Light concrete", new Color(.72f, .72f, .67f), .10f);
+            contextRoof = ContextMaterial("Neutral grey roof", new Color(.60f, .62f, .64f), .10f);
             contextFrame = ContextMaterial("Charcoal frames and rails", new Color(.12f, .16f, .18f), .25f);
             contextEarth = ContextMaterial("Earth", new Color(.44f, .37f, .27f), .05f);
             contextLeaves = ContextMaterial("Muted foliage", new Color(.28f, .40f, .24f), .05f);
@@ -70,6 +74,7 @@ namespace Mcoc.UnityViewer
                     BuildProjectingGlazing(building, floor, frame, storey);
                 }
             }
+            BuildContinuousVisualRoof();
             BuildVisualAccessAndStairs();
             BuildLandscapeContext();
             UpdateArchitecturalContextVisibility();
@@ -196,28 +201,52 @@ namespace Mcoc.UnityViewer
                 ContextRail(box, "Glass_box_corner", new Vector3(x, outerY + .20f, storey.min.z), new Vector3(x, outerY + .20f, storey.max.z), .06f, contextFrame);
             }
             ContextBox(box, "Visual_box_soffit", new Vector3((xmin + xmax) / 2, (frame.max.y + outerY) / 2, storey.min.z - .05f), new Vector3(xmax - xmin, outerY - frame.max.y, .12f), contextConcrete);
-            ContextBox(box, "Visual_box_cap", new Vector3((xmin + xmax) / 2, (frame.max.y + outerY) / 2, storey.max.z - .05f), new Vector3(xmax - xmin, outerY - frame.max.y, .12f), contextConcrete);
+            // P2 box cap removed: do not obstruct the corrected stair route.
+            // P4 is covered by the continuous neutral-grey roof instead.
+        }
+
+        void BuildContinuousVisualRoof()
+        {
+            Bounds e1, e2, main1, main2;
+            if (!TryContextFrame("EDIFICIO_1", "P4", out e1) || !TryContextFrame("EDIFICIO_2", "P4", out e2) ||
+                !TryContextFrame("EDIFICIO_1", "P3", out main1) || !TryContextFrame("EDIFICIO_2", "P3", out main2)) return;
+            float jointX = (e2.max.x + e1.min.x) / 2;
+            float ymin = Mathf.Min(main1.min.y, main2.min.y) - .52f;
+            float ymax = Mathf.Max(main1.max.y, main2.max.y) + .52f;
+            float roofBottom = Mathf.Max(e1.max.z, e2.max.z) + .015f;
+            float outerMinX = e2.min.x, outerMaxX = e1.max.x;
+            // Include real roof-level cantilever ends, not only column centres.
+            // Read-only footprint: this changes the visual roof, never the beams.
+            foreach (var solid in model.solids)
+            {
+                if (solid.floor != "P4" || solid.category != "beam" || solid.start == null || solid.end == null) continue;
+                if (solid.building == "EDIFICIO_2") outerMinX = Mathf.Min(outerMinX, V(solid.start).x, V(solid.end).x);
+                if (solid.building == "EDIFICIO_1") outerMaxX = Mathf.Max(outerMaxX, V(solid.start).x, V(solid.end).x);
+            }
+            // Two contiguous visual panels, without coplanar overlap, follow building filters.
+            foreach (string building in new[] { "EDIFICIO_2", "EDIFICIO_1" })
+            {
+                float xmin = building == "EDIFICIO_2" ? outerMinX - .52f : jointX;
+                float xmax = building == "EDIFICIO_2" ? jointX : outerMaxX + .52f;
+                Bounds panel = TerrainBox(xmin, xmax, ymin, ymax, roofBottom, roofBottom + .18f);
+                mainVisualRoofs.Add(panel);
+                Transform roof = ContextGroup(building + "_CONTINUOUS_GREY_ROOF", "roof", building, "P4");
+                ContextBox(roof, "Main_roof", panel.center, panel.size, contextRoof);
+                var outboard = model.solids.FindAll(s => s.building == building && s.floor == "P4" && s.category == "column" &&
+                    s.center != null && s.center.Count == 3 && s.center[1] > ymax);
+                if (outboard.Count < 2) continue;
+                float boxMin = float.PositiveInfinity, boxMax = float.NegativeInfinity, outerY = ymax;
+                foreach (var s in outboard) { boxMin = Mathf.Min(boxMin, (float)s.center[0]); boxMax = Mathf.Max(boxMax, (float)s.center[0]); outerY = Mathf.Max(outerY, (float)s.center[1]); }
+                Bounds extension = TerrainBox(boxMin - .25f, boxMax + .25f, ymax, outerY + .35f, roofBottom, roofBottom + .18f);
+                ContextBox(roof, "Upper_glass_box_roof_continuation", extension.center, extension.size, contextRoof);
+            }
         }
 
         void BuildVisualAccessAndStairs()
         {
             Bounds frame;
             if (!TryContextFrame("EDIFICIO_1", "P3", out frame)) return;
-            float y = frame.max.y + 6.0f;
-            // Three exterior flights interpreted schematically from photographs. Not CAD stair design.
-            for (int i = 0; i < 3; i++)
-            {
-                string lowFloor = "P" + (i + 1), highFloor = "P" + (i + 2);
-                float low, high;
-                if (!TryFloorEntryElevation(lowFloor, out low) || !TryFloorEntryElevation(highFloor, out high)) continue;
-                float startX = frame.max.x - 2 - i * 13;
-                Transform stair = ContextGroup("EXTERIOR_STAIR_" + lowFloor + "_TO_" + highFloor, "stairs", "EDIFICIO_1", lowFloor);
-                Vector3 a = new Vector3(startX, y, low + .05f), b = new Vector3(startX - 11, y, high + .05f);
-                BuildVisualStairFlight(stair, a, b);
-                ContextBox(stair, "Landing", new Vector3(b.x - 1, y, high - .04f), new Vector3(2, StairWidth, .18f), contextConcrete);
-                ContextBox(stair, "Landing_to_facade", new Vector3(b.x - 1, (y + frame.max.y) / 2, high - .04f), new Vector3(2, y - frame.max.y, .18f), contextConcrete);
-                AddLevelRails(stair, b.x - 2, b.x, frame.max.y + .4f, y + StairWidth / 2, high);
-            }
+            BuildReferencedExteriorStair();
             var p2Beam = TerrainReference("E1-P1-V-106");
             if (p2Beam?.start == null) return;
             float accessX = V(p2Beam.start).x + .7f;
@@ -228,14 +257,49 @@ namespace Mcoc.UnityViewer
             float walkwayEnd = Mathf.Min(visualSiteBounds.max.x - 2, accessX + 11);
             ContextBox(paved, "P2_arrival_plaza", new Vector3((accessX + walkwayEnd) / 2, frame.center.y, accessTerrainElevation + .07f),
                 new Vector3(walkwayEnd - accessX, frame.size.y + 1, .08f), contextConcrete);
-            ContextBox(paved, "Lower_exterior_promenade", new Vector3(frame.center.x, y, lowerTerrainElevation + .07f),
-                new Vector3(frame.size.x + 4, 4.4f, .08f), contextConcrete);
             AddLevelRails(paved, accessX, walkwayEnd, frame.min.y - .5f, frame.max.y + .5f, accessTerrainElevation);
-            // Clear future parking area on the low ED2 side; no bays/cars or inferred dimensions.
-            Bounds other;
-            if (TryContextFrame("EDIFICIO_2", "P3", out other))
-                ContextBox(paved, "Future_context_free_paved_area", new Vector3(other.center.x, other.max.y + 7, visualSiteBounds.max.z + .03f),
-                    new Vector3(other.size.x - 3, 8, .06f), contextConcrete);
+            // The old promenade/free paving could hang above the grass; leave that area clear.
+            // Behind the scale figures: full-width Y route, perpendicular to the building's X axis.
+            transverseAccessWalk = ContextBox(paved, "Full_width_transverse_access_walk",
+                new Vector3(walkwayEnd, visualSiteBounds.center.y, accessTerrainElevation + .07f),
+                new Vector3(PathWidth, visualSiteBounds.size.y, .08f), contextConcrete);
+        }
+
+        void BuildReferencedExteriorStair()
+        {
+            var lower = TerrainReference("E1-P2-C-021");
+            var upper = TerrainReference("E1-P3-C-012");
+            var horizontalA = TerrainReference("E1-P2-V-064");
+            var horizontalB = TerrainReference("E1-P2-V-059");
+            var arrival = TerrainReference("E1-P3-V-027");
+            var platformEdge = TerrainReference("E1-P3-V-020");
+            if (lower?.center == null || upper?.center == null || horizontalA?.start == null || horizontalA.end == null ||
+                horizontalB?.start == null || horizontalB.end == null || arrival?.start == null || arrival.end == null ||
+                platformEdge?.start == null || platformEdge.end == null)
+            { Debug.LogWarning("[VISUAL STAIR] Missing reference; no invented route or structural change."); return; }
+            Vector3 la = V(arrival.start), lb = V(arrival.end), ea = V(platformEdge.start), eb = V(platformEdge.end);
+            float routeY = (la.y + lb.y) / 2;
+            Vector3 low = V(lower.center), high = V(upper.center);
+            low.z -= (float)lower.height_m / 2; high.z -= (float)upper.height_m / 2;
+            low.y = high.y = routeY; // Adjacent to column faces, not through column axes.
+            float endX = Mathf.Min(V(horizontalA.start).x, V(horizontalA.end).x, V(horizontalB.start).x, V(horizontalB.end).x);
+            Vector3 horizontalEnd = new Vector3(endX, routeY, high.z);
+            Vector3 arrivalPoint = new Vector3(la.x, routeY, la.z + (float)arrival.height_m / 2);
+            visualStairRoute = new[] { low, high, horizontalEnd, arrivalPoint };
+            Transform first = ContextGroup("STAIR_1_C021_TO_C012", "stairs", "EDIFICIO_1", "P2");
+            BuildVisualStairFlight(first, low, high);
+            Transform middle = ContextGroup("STAIR_2_HORIZONTAL_V064_V059", "stairs", "EDIFICIO_1", "P2");
+            ContextBox(middle, "Horizontal_stair_walkway", (high + horizontalEnd) / 2 - Vector3.forward * .08f,
+                new Vector3(high.x - horizontalEnd.x, StairWidth, .16f), contextConcrete);
+            AddLevelRails(middle, horizontalEnd.x, high.x, routeY - StairWidth / 2, routeY + StairWidth / 2, high.z);
+            Transform last = ContextGroup("STAIR_3_TO_V027_AND_V020", "stairs", "EDIFICIO_1", "P3");
+            BuildVisualStairFlight(last, horizontalEnd, arrivalPoint);
+            float xmin = Mathf.Min(la.x, ea.x), xmax = Mathf.Max(la.x, ea.x);
+            float ymin = Mathf.Min(la.y, lb.y, ea.y, eb.y), ymax = Mathf.Max(la.y, lb.y, ea.y, eb.y);
+            visualArrivalPlatform = ContextBox(last, "Arrival_platform_between_V027_V020",
+                new Vector3((xmin + xmax) / 2, (ymin + ymax) / 2, arrivalPoint.z - .08f),
+                new Vector3(xmax - xmin, ymax - ymin, .16f), contextConcrete);
+            AddLevelRails(last, xmin, xmax, ymin, ymax, arrivalPoint.z);
         }
 
         void BuildVisualStairFlight(Transform parent, Vector3 a, Vector3 b)
@@ -248,7 +312,9 @@ namespace Mcoc.UnityViewer
                 p.z = Mathf.Lerp(a.z, b.z, (i + 1f) / steps) - .08f;
                 ContextBox(parent, "Tread", p, new Vector3(run + .015f, StairWidth, .16f), contextConcrete);
             }
-            ContextRail(parent, "Stair_soffit", a - Vector3.forward * .18f, b - Vector3.forward * .18f, .16f, contextConcrete);
+            var soffit = ContextBox(parent, "Stair_soffit", (a + b) / 2 - Vector3.forward * .18f,
+                new Vector3((b - a).magnitude, StairWidth, .16f), contextConcrete);
+            soffit.transform.localRotation = Quaternion.FromToRotation(Vector3.right, b - a);
             foreach (float side in new[] { -1f, 1f })
             {
                 Vector3 offset = Vector3.up * side * StairWidth / 2;
@@ -329,7 +395,7 @@ namespace Mcoc.UnityViewer
             foreach (var group in visualContextGroups)
             {
                 bool visible = group.kind == "facade" ? facadeSkinVisible : group.kind == "glass" ? glazingVisible :
-                    group.kind == "stairs" ? exteriorStairsVisible : group.kind == "figures" ? scaleFiguresVisible : landscapeVisible;
+                    group.kind == "stairs" ? exteriorStairsVisible : group.kind == "roof" ? roofVisible : group.kind == "figures" ? scaleFiguresVisible : landscapeVisible;
                 if (group.building != null && buildingVisible.TryGetValue(group.building, out var buildingOn)) visible &= buildingOn;
                 if (group.floor != null && floorVisible.TryGetValue(group.floor, out var floorOn)) visible &= floorOn;
                 if (group.kind == "landscape" || group.kind == "figures") visible &= visualTerrainVisible;
@@ -343,6 +409,7 @@ namespace Mcoc.UnityViewer
         {
             architecturalContextVisible = GUILayout.Toggle(architecturalContextVisible, "Arquitectura de referencia · SOLO VISUAL", GUILayout.Height(25));
             facadeSkinVisible = GUILayout.Toggle(facadeSkinVisible, "Fachadas naranjas y aleros", GUILayout.Height(25));
+            roofVisible = GUILayout.Toggle(roofVisible, "Cubierta gris completa · solo visual", GUILayout.Height(25));
             glazingVisible = GUILayout.Toggle(glazingVisible, "Vidrio y cajas sobresalientes", GUILayout.Height(25));
             exteriorStairsVisible = GUILayout.Toggle(exteriorStairsVisible, "Escalera exterior y descansos", GUILayout.Height(25));
             landscapeVisible = GUILayout.Toggle(landscapeVisible, "Explanadas, barandas y vegetación", GUILayout.Height(25));
@@ -366,7 +433,7 @@ namespace Mcoc.UnityViewer
         {
             var checks = new List<WallReviewCheck>();
             Action<string, bool> check = (name, pass) => checks.Add(new WallReviewCheck { check = name, pass = pass });
-            string folder = Path.Combine(Application.dataPath, "..", "Temp", "architecture_visual_review");
+            string folder = Path.Combine(Application.dataPath, "..", "Temp", "architecture_visual_revision");
             Directory.CreateDirectory(folder);
             ResetPresentation();
             int registered = allElements.Count;
@@ -374,8 +441,35 @@ namespace Mcoc.UnityViewer
             check("passive context has no structural identities or enabled colliders", ContextIsPassive());
             check("glass transparent and no depth write", contextGlass.renderQueue == 3000 && contextGlass.GetInt("_ZWrite") == 0);
             check("two outboard boxes use model columns", visualContextGroups.FindAll(g => g.root.name.Contains("PROJECTING_GLASS_BOX")).Count == 2);
-            check("three stair flights", visualContextGroups.FindAll(g => g.kind == "stairs").Count == 3);
-            foreach (string kind in new[] { "facade", "glass", "stairs", "landscape", "figures" })
+            check("two rising stair flights and one horizontal link", visualContextGroups.FindAll(g => g.kind == "stairs").Count == 3 &&
+                architecturalContextRoot.GetComponentsInChildren<Transform>(true).Length > 0 && visualStairRoute?.Length == 4);
+            check("roof panels cover both wings and share one edge", mainVisualRoofs.Count == 2 &&
+                Mathf.Abs(mainVisualRoofs[0].max.x - mainVisualRoofs[1].min.x) < .001f &&
+                Mathf.Abs(mainVisualRoofs[0].max.z - mainVisualRoofs[1].max.z) < .001f &&
+                model.solids.TrueForAll(s => s.floor != "P4" || s.category != "beam" || s.start == null || s.end == null ||
+                    (Mathf.Min(V(s.start).x, V(s.end).x) >= mainVisualRoofs[0].min.x &&
+                     Mathf.Max(V(s.start).x, V(s.end).x) <= mainVisualRoofs[1].max.x)));
+            check("stair start follows C021 bottom", visualStairRoute != null &&
+                Mathf.Abs(visualStairRoute[0].x - (float)TerrainReference("E1-P2-C-021").center[0]) < .001f &&
+                Mathf.Abs(visualStairRoute[0].z - ((float)TerrainReference("E1-P2-C-021").center[2] - (float)TerrainReference("E1-P2-C-021").height_m / 2)) < .001f);
+            check("first rise ends at C012 bottom", visualStairRoute != null &&
+                Mathf.Abs(visualStairRoute[1].x - (float)TerrainReference("E1-P3-C-012").center[0]) < .001f &&
+                Mathf.Abs(visualStairRoute[1].z - ((float)TerrainReference("E1-P3-C-012").center[2] - (float)TerrainReference("E1-P3-C-012").height_m / 2)) < .001f);
+            check("middle walkway horizontal", visualStairRoute != null && Mathf.Abs(visualStairRoute[1].z - visualStairRoute[2].z) < .001f);
+            check("second rise ends at V027 top", visualStairRoute != null &&
+                Mathf.Abs(visualStairRoute[3].x - (float)TerrainReference("E1-P3-V-027").start[0]) < .001f &&
+                Mathf.Abs(visualStairRoute[3].z - ((float)TerrainReference("E1-P3-V-027").start[2] + (float)TerrainReference("E1-P3-V-027").height_m / 2)) < .001f);
+            check("arrival platform touches stair with no gap", visualArrivalPlatform != null && visualStairRoute != null &&
+                Mathf.Abs(visualArrivalPlatform.transform.localPosition.z + visualArrivalPlatform.transform.localScale.z / 2 - visualStairRoute[3].z) < .001f &&
+                Mathf.Abs(visualArrivalPlatform.transform.localPosition.x + visualArrivalPlatform.transform.localScale.x / 2 - visualStairRoute[3].x) < .001f);
+            check("transverse path spans complete terrace Y", transverseAccessWalk != null &&
+                Mathf.Abs(transverseAccessWalk.transform.localScale.y - visualSiteBounds.size.y) < .001f &&
+                Mathf.Abs(transverseAccessWalk.transform.localPosition.y - visualSiteBounds.center.y) < .001f);
+            check("path and entrance use same paving material", transverseAccessWalk != null && transverseAccessWalk.GetComponent<Renderer>().sharedMaterial == contextConcrete);
+            check("old floating paving and lower box cap removed", Array.TrueForAll(architecturalContextRoot.GetComponentsInChildren<Transform>(true), t =>
+                t.name != "VISUAL_ONLY_Future_context_free_paved_area" && t.name != "VISUAL_ONLY_Lower_exterior_promenade" && t.name != "VISUAL_ONLY_Visual_box_cap"));
+            check("old longitudinal terrain path removed", visualTerrainRoot.transform.Find("VISUAL_ONLY_LEVEL_2_ACCESS_V106_V107/VISUAL_ONLY_ENTRY_PATH_TO_V106_V107") == null);
+            foreach (string kind in new[] { "facade", "glass", "stairs", "roof", "landscape", "figures" })
                 check("visual group " + kind, visualContextGroups.Exists(g => g.kind == kind));
             architecturalContextVisible = false; UpdateArchitecturalContextVisibility();
             check("context master OFF", !architecturalContextRoot.activeSelf);
@@ -386,6 +480,10 @@ namespace Mcoc.UnityViewer
             yield return new WaitForEndOfFrame(); SaveVisualFrame(folder, "orange_facade.png");
             yaw = 145;
             yield return new WaitForEndOfFrame(); SaveVisualFrame(folder, "glazing_and_stairs.png");
+            SetQuickView("Frente");
+            yield return new WaitForEndOfFrame(); SaveVisualFrame(folder, "stair_front.png");
+            SetQuickView("Planta");
+            yield return new WaitForEndOfFrame(); SaveVisualFrame(folder, "roof_and_path_top.png");
             SetQuickView("Lateral");
             yield return new WaitForEndOfFrame(); SaveVisualFrame(folder, "right_access.png");
             uiHidden = false;
@@ -413,7 +511,7 @@ namespace Mcoc.UnityViewer
             openGroups.Clear(); openGroups.Add("CONTEXTO");
             var report = new WallReviewReport { status = checks.TrueForAll(c => c.pass) ? "PASS" : "FAIL", dataset = currentGateStatus, checks = checks };
             File.WriteAllText(Path.Combine(folder, "QA.json"), JsonUtility.ToJson(report, true));
-            Debug.Log($"[ARCHITECTURAL CONTEXT REVIEW] {report.status}: {checks.Count} checks; output in Temp/architecture_visual_review. No dataset changed.");
+            Debug.Log($"[ARCHITECTURAL CONTEXT REVIEW] {report.status}: {checks.Count} checks; output in Temp/architecture_visual_revision. No dataset changed.");
         }
     }
 }

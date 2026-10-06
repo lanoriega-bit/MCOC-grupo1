@@ -23,7 +23,7 @@ Son dimensiones de presentación, explícitas en el código.
 
 ## Organización y uso
 
-En `Contexto` están los controles de arquitectura, fachada naranja, vidrio,
+En `Contexto` están los controles de arquitectura, fachada naranja, cubierta gris, vidrio,
 escalera, explanadas/vegetación y tres personas de escala. La arquitectura
 puede apagarse completa, sin cargar otro modelo ni cambiar resultados.
 Los filtros de edificio y piso se aplican también a los grupos asociados.
@@ -39,23 +39,26 @@ Materiales compartidos por la capa y destruidos al cerrar la escena.
 ## Incorporado y preparado
 
 Fachadas naranjas permeables a la lectura estructural, ventanas retranqueadas,
-vidrio azul gris transparente y marcos discretos, cajas salientes, tres tramos
-de escalera con peldaños/descansos/laterales naranjas, barandas, explanada P2,
-paseo inferior, franja de tierra, tres árboles y tres personas.
+vidrio azul gris transparente y marcos discretos, cajas salientes, cubierta gris
+continua sobre ambos edificios (incluidos extremos de vigas P4), dos subidas
+de escalera unidas por un recorrido horizontal, llegada entre V-027/V-020,
+barandas, explanada P2, camino transversal, franja de tierra, tres árboles y
+tres personas. El techo visual tiene 0,18 m de espesor y control independiente.
 Se conservan las terrazas continuas y las cotas del acceso junto a V-106/V-107.
-Una explanada libre en el sector bajo queda disponible para futuro contexto
-o estacionamiento. No se agregan coches ni detalles interiores.
+El sector bajo queda libre de placas flotantes para futuro contexto o
+estacionamiento. No se agregan coches ni detalles interiores. La tapa de la
+caja baja y los pequeños caminos longitudinales anteriores se retiraron.
 
 ## Revisión reproducible
 
 Con Main en Play: menú `MCOC → Revisar arquitectura visual`.
 Solo prueba presentación, selección existente, lectura de resultados, filtros
 y despeje de la capa. Capturas antes/después y QA se escriben en
-`viewer/unity/Temp/architecture_visual_review/` (no datasets).
+`viewer/unity/Temp/architecture_visual_revision/` (no datasets).
 No abre escenas AR ni invoca OpenSees. La identidad de fuentes/resultados
 se comprueba además contra Git/base, sin reexportarlos.
 
-## Validación realizada — 2026-10-06
+## Validación de la primera propuesta — 2026-10-06
 
 - Main abierto en Unity 6000.6.0f1, compilación y Play: PASS.
 - Revisión en Play: 22/22 checks, `CURRENT_VERIFIED`, sin cambiar datasets.
@@ -72,3 +75,16 @@ se comprueba además contra Git/base, sin reexportarlos.
 Evidencia y capturas antes/después: `reports/visual_architectural_context/`.
 El terreno, los ritmos de fachada y la escalera siguen siendo contexto
 esquemático. No sustituir planos ni usar esta capa para medir o calcular.
+
+## Revisión vigente: cubierta, escalera y circulación — 2026-10-06
+
+- Main/Play y compilación PASS; revisión en Play 33/33 checks PASS.
+- Escalera: C021 base (7,92 m) → C012 base (11,88 m); tramo horizontal
+  junto a V064/V059; segunda subida a V027 (15,84 m), con llegada V020/V027.
+- Se retiran la tapa de la caja baja, el paseo inferior y el pavimento
+  aislado. Camino transversal detrás de las personas, mismo material de entrada.
+- Selección real E1-P3-V-094, resultados R, My 2D y deformada comprobados.
+- Cubierta y fachadas se despejan automáticamente al revisar resultados.
+- Los 117 archivos protegidos siguen byte-idénticos; sin solver ni cambios AR.
+- Evidencia vigente: `reports/visual_architectural_context/revision_roof_stair/`.
+  Las capturas de la carpeta padre corresponden a la primera propuesta.

@@ -1,5 +1,9 @@
 # Arquitectura y contexto visual — QA
 
+**Revisión vigente:** [cubierta, escalera y circulación](revision_roof_stair/README.md).
+Las capturas y los 22 checks de esta carpeta conservan la primera propuesta;
+la revisión posterior tiene sus propias capturas y 33 checks.
+
 Fecha: 2026-10-06. Rama: `codex/visual-architectural-context`.
 Base estructural: main `c243a7bcccb21134e0bb7b1cdbd1203faacc2b9d`.
 
