@@ -1,5 +1,15 @@
 # P1L2 Status
 
+## Contexto arquitectónico visual desktop (2026-10-06)
+
+- Rama codex/visual-architectural-context desde main c243a7b.
+- Piel naranja, vidrio/cajas salientes, escalera, pavimentos y escala humana;
+  todos opcionales, sin identidad estructural ni colisión de selección.
+- Main Compile/Play PASS; revisión visual 22/22 y selección real CURRENT R.
+- Fuentes/resultados protegidos 117/117 idénticos; Luis sin modificaciones.
+- Sin solver, regeneración de datasets, cambios AR funcionales ni tags.
+- Evidencia: reports/visual_architectural_context/README.md.
+
 ## Cierre de organización — alcance corregido (2026-10-06)
 
 - El cierre de esta rama es estático; no requiere nuevas pruebas Unity ni licencias.

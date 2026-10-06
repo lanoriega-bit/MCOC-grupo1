@@ -247,6 +247,7 @@ namespace Mcoc.UnityViewer
             BuildP1L4Loads();
             BuildPhysicalContext();
             BuildVisualTerrain();
+            BuildArchitecturalContext();
             seismic = null;
             if (seismic != null) BuildSeismic();
             historicalResultsEnabled = false;
@@ -1626,6 +1627,7 @@ namespace Mcoc.UnityViewer
                         registeredType.TryGetValue(go, out var type) ? type : kv.Key,
                         registeredFloor.TryGetValue(go, out var floor) ? floor : "");
             UpdateVisualTerrainVisibility();
+            UpdateArchitecturalContextVisibility();
         }
 
         // ---------- Seleccion por clic ----------

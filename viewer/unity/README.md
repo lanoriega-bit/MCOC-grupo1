@@ -46,6 +46,15 @@ Contexto, Avanzado y Ayuda se despliegan/retraen y el panel tiene scroll.
 - Planta mira desde +Z; Frente desde +Y; Lateral desde +X; Iso restablece
   la vista oblicua. Los botones XYZ del indicador también cambian la vista.
 
+### Arquitectura y entorno opcionales
+
+En **Contexto** se puede encender/apagar la arquitectura de referencia completa,
+fachadas naranjas, vidrio/cajas, escalera exterior, explanadas/vegetación y personas.
+Son objetos pasivos de presentación, sin participación FE ni bloqueo de selección.
+La opción «Despejar arquitectura al ver resultados» permite conservar la lectura
+estructural al activar deformada o diagramas. Las fotos guían la composición,
+no las cotas. Guía: `docs/VISUAL_ARCHITECTURAL_CONTEXT.md` desde la raíz.
+
 No se inventan resultados, receptores, materiales o dimensiones resistentes.
 Las cajas visuales y las secciones confirmadas se identifican por separado.
 Los estudios anteriores P–M, My/Mz/N/Vy/Vz y deformadas conservan su contrato;
@@ -58,6 +67,7 @@ no se alteraron sus números. Presentación vuelve a bloquear el histórico.
 | `Assets/Scripts/ViewerController.cs` | Geometría, carga de contratos y visualizaciones |
 | `Assets/Scripts/ViewerCurrentUI.cs` | Paneles semánticos, barrera histórica e inspector |
 | `Assets/Scripts/ViewerOrientation.cs` | Vistas y ejes GLOBAL/LOCAL |
+| `Assets/Scripts/ViewerArchitecturalContext.cs` | Arquitectura/entorno visual opcional, sin cambiar contratos |
 | `Assets/Scripts/ViewerReviewQA.cs` | Prueba ejecutable con `--ux-review` |
 | `Assets/Editor/CurrentReviewBuild.cs` | Compilación y apertura de Main en Play |
 | `Assets/StreamingAssets/integration_manifest.json` | Estados y procedencia del bundle |

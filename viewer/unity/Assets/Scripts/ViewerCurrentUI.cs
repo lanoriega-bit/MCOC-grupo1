@@ -283,6 +283,7 @@ namespace Mcoc.UnityViewer
             }
             if (Accordion("CONTEXTO"))
             {
+                DrawArchitecturalContextControls();
                 DrawVisualTerrainControls();
                 LayerToggle("Contexto físico · solo visual","physical_context");
                 if (contextVisible.Count==0)
