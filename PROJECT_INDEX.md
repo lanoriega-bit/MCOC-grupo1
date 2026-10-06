@@ -1,13 +1,13 @@
-# Índice canónico — main CURRENT
+# Índice canónico — modelo CURRENT
 
 Este índice identifica qué usar hoy. Las auditorías anteriores son evidencia
 histórica; sus conteos y estados no sustituyen los datos CURRENT.
 
-Reorganización en curso: `codex/final-repository-architecture`. Fuentes activas
+Reorganización funcional: `codex/final-repository-architecture` (sin modificar main). Fuentes activas
 en `model/`, análisis en `analysis/`, resultados en `results/`, Viewer en
 `viewer/unity/`. [Comandos](tools/README.md) y
-[QA de copia limpia](reports/repository_architecture_audit/CLEAN_DESKTOP_CHECKPOINT.md).
-El archivo definitivo de auxiliares/entregas sigue pendiente de revisión individual.
+[Cierre y excepciones conservadas](reports/repository_architecture_audit/FINAL_ARCHITECTURE.md).
+El cierre es estático y organizativo: no requiere otra ejecución de Unity.
 AR: solo organización, sin ejecución ni nuevas integraciones.
 
 ## Fuentes editables

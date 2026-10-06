@@ -5,8 +5,11 @@ Código probado desde clon limpio: fdbe07f. El commit que contiene este informe
 es el checkpoint documental final (consultar git log; no autorreferenciar un hash).
 Main, tags entregados y resultados estructurales no se modificaron.
 
-**Arquitectura consolidada. QA Python/solver/capacidad: PASS. Play de la copia
-limpia: BLOCKED por arranque/licencia del Editor; no afirmar cierre total de QA.**
+**Arquitectura consolidada; cierre estático y organizativo.** Por instrucción
+del usuario del 2026-10-06 no se abre Unity ni se ejecutan Play, licencias,
+regeneraciones o pruebas AR. El intento anterior del clon no es requisito de
+cierre. Evidencia vigente: `STATIC_ORGANIZATION_QA.json`; los resultados de
+pruebas anteriores permanecen como registros históricos, sin convertirlos en PASS.
 
 ## 1. Árbol y fuentes
 
@@ -33,7 +36,7 @@ archive/
 entregas/P1L2/          cuatro excepciones protegidas + índice
 ```
 
-`model → analysis → results → Unity / AR`. Este trabajo solo valida desktop.
+`model → analysis → results → Unity / AR`. Este cierre solo verifica organización estática.
 Assets AR ligados a GUID siguen intactos dentro del proyecto Unity trasladado;
 no se desacoplan de escenas/prefabs para imponer una estética de carpetas.
 Benchmarks P1L0/P1L1, ejercicios y Semana 2/3 previos se conservan separados del
@@ -41,8 +44,8 @@ pipeline CURRENT. No se elimina cobertura académica única sin auditoría propi
 
 ## 2. Conteos y lotes
 
-Archivos Git: 1481 en 05e885b; 1496 en fdbe07f; 1498 al incorporar este informe
-y CLEAN_FINAL_QA.json. No incluyen .git, entornos, Library, logs ni node_modules.
+Archivos Git: 1481 en 05e885b; 1496 en fdbe07f; 1500 al incorporar el auditor
+estático y su evidencia final. No incluyen .git, entornos, Library, logs ni node_modules.
 El aumento corresponde a QA/documentación nueva; se retiraron exactamente dos backups.
 
 | Lote | Archivos históricos trasladados | Commit validado/publicado |
@@ -83,8 +86,10 @@ Grupos duplicados exactos: 30 inicialmente, 29 después. Ver exact_duplicates.js
 Los restantes tienen razón explícita: evidencia de entrega oficial, archivos AR
 congelados o copia necesaria de consumo Unity. La configuración y capacidad
 canónicas deben tener una copia generada en StreamingAssets; no son dos fuentes.
-El duplicado del benchmark Semana 3 queda conservadoramente pendiente de revisar
-su layout histórico; no se borra por una conclusión automática del hash.
+El duplicado del benchmark Semana 3 se conserva como layout académico independiente:
+el script tarea8_superposicion/opensees/superposicion_GQ.py produce su results local
+y docs/informe-tarea8.md lo referencia; la copia de results del nivel superior
+conserva el snapshot histórico. No es un segundo productor CURRENT ni código duplicado.
 
 ## 4. Dependencias encontradas y sustituciones
 
@@ -116,8 +121,9 @@ sin prueba; los archivos de evidencia no son basura por no estar en el pipeline.
 | herramientas de auditoría: regex/exclusiones | búsquedas y políticas, no carga de carpetas antiguas |
 | STATUS, informes, bitácoras | trazabilidad histórica/documentación, no comandos del pipeline actual |
 
-Los 37 matches ACTIVE_REQUIRED son conservadores: símbolos/archivos compatibles
-y excepciones anteriores, no 37 carpetas productivas sin trasladar.
+La búsqueda ampliada incluye también P1L2–P1L7 sin prefijo de carpeta: registra
+501 matches ACTIVE_REQUIRED conservadores (símbolos/archivos compatibles y
+excepciones anteriores), no 501 carpetas productivas sin trasladar.
 Búsqueda productiva main/analysis/tools/config/tests/C# no encontró paths personales
 C:/Users/ o OneDrive/. Las rutas absolutas en bitácoras/archivo son evidencia,
 no instrucciones activas. Las rutas operativas son relativas a ROOT/config.
@@ -134,7 +140,7 @@ tests/loads: Q y equivalencia lambdaQ. tests/opensees: R explícita.
 tests/capacity: 669 capacidades aisladas. tests/unity: paths/project desktop.
 AR permanece en tests/ar y ar/tests: no ejecución.
 
-## 7. Copia limpia y barrera pendiente
+## 7. Evidencia anterior y cierre estático vigente
 
 Clon Git nuevo de fdbe07f en results/validation/final_clean, sin archivos locales
 ni cachés. Python del entorno instalado compartido (no una instalación nueva).
@@ -148,7 +154,7 @@ Resultados existentes leídos; no regeneración sobre el checkout productivo.
 Unity desktop ya tiene prueba real en la ubicación nueva del checkpoint anterior:
 DESKTOP_RELOCATION.md y log de 2026-10-05 17:00:17, selección/casos/deformada/
 My/Mz/N/Vy/Vz/sliders/R PASS. Ningún lote posterior cambió Assets/C# ni escenas.
-Esto NO sustituye la prueba solicitada del último clon limpio.
+Esta prueba previa del traslado es la aceptada por el usuario; no se repite.
 
 Intento final: Unity Hub registrando la copia y lanzamiento directo del Editor
 instalado con UiSmokeRunner.StartSmoke (abre solo Assets/Main.unity). Arranque
@@ -159,7 +165,27 @@ El log final confirma reconexión fallida y `com.unity.editor.ui was not found`.
 No se atribuye este último error a una causa no verificada ni se cambian paquetes
 para ocultarlo. El proceso de esta prueba aislada se cierra, no el Editor original.
 No se automatizó activación/licencia ni se dio Play por PASS.
-Para cerrar: abrir results/validation/final_clean/viewer/unity desde Unity Hub,
-esperar importación/compilación y ejecutar MCOC → Probar interfaz en Play.
-Después dejar Main en Play y verificar CURRENT, selección, deformada, diagramas y R.
-No abrir escenas AR. Este es el único bloqueo de QA desktop final identificado.
+El usuario retiró explícitamente esa prueba del alcance. CLEAN_FINAL_QA.json
+conserva el resultado del intento anterior, no el estado del cierre organizativo.
+No se solicita resolver la licencia, abrir proyectos ni tocar paquetes.
+
+El cierre actual se reproduce sin motores:
+
+```text
+python tools/plan_archive.py
+python tools/verify_migration.py --scope desktop
+python tools/map_historical_references.py
+python tools/audit_repository_layout.py
+```
+
+El último comando solo analiza sintaxis, existencia de rutas configuradas,
+clasificación de referencias/duplicados y ausencia de cambios en fuentes congeladas.
+No importa módulos de análisis, no ejecuta OpenSees y no abre Unity/AR.
+Los 62 archivos de benchmarks/índice restantes están listados en ARCHIVE_PLAN.md;
+no se afirma que su cobertura haya sido reemplazada. Las excepciones P1L2 quedan
+fuera del plan de candidatos para evitar un archivado accidental.
+
+Archivos locales nuevos aparecieron en entregas/P1L3/José/viewer_unity/Packages
+y ProjectSettings. Se dejan intactos y sin versionar: no pertenecen al proyecto
+canónico ni se incorporan como una segunda copia. Sus nombres están registrados
+en STATIC_ORGANIZATION_QA.json. No se eliminó nada material en este último cierre.

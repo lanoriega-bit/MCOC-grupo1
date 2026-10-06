@@ -49,4 +49,6 @@ El comando desktop `tools/reanalyse_current.ps1` no invoca pasos AR.
 Baseline: `reports/repository_architecture_audit/baseline.json`.
 Mapa de traslados: `path_mapping.json` en la misma carpeta.
 Verificación desktop: `python tools/verify_migration.py --scope desktop`.
-El estado final exige además regeneración desde copia limpia y compile/Play.
+Por alcance confirmado el 2026-10-06, el cierre requiere revisión estática de
+rutas, organización y bytes protegidos. No exige regeneración, compile/Play,
+licencias ni ejecución AR. La validación anterior del traslado desktop se conserva.

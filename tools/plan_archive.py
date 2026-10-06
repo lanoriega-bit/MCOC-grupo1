@@ -10,7 +10,12 @@ import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'reports/repository_architecture_audit'
-EXCEPTIONS = {'entregas/P1L2/unity_export/model_viewer.json', 'entregas/P1L2/STATUS.md'}
+EXCEPTIONS = {
+    'entregas/P1L2/unity_export/model_viewer.json',
+    'entregas/P1L2/unity_export/model_1_audited_corrected.json',
+    'entregas/P1L2/unity_export/model_combined_viewer.json',
+    'entregas/P1L2/STATUS.md', 'entregas/P1L2/README.md',
+}
 
 def main():
     tracked = subprocess.check_output(['git', '-c', 'core.quotepath=false', 'ls-files'], cwd=ROOT, text=True).splitlines()
@@ -25,7 +30,7 @@ def main():
     rows = []
     for path in candidates:
         references = [p for p, text in texts.items() if path in text]
-        rows.append({'path': path, 'proposed_destination': 'archive/' + path,
+        rows.append({'path': path, 'proposed_destination': 'archive/historical_deliveries/' + path.removeprefix('entregas/'),
                      'active_literal_references': references,
                      'decision': 'REVIEW_REFERENCES' if references else 'REVIEW_DYNAMIC_DEPENDENCIES'})
     report = {'status': 'PLAN_ONLY_NOT_AUTHORIZED_FOR_BULK_MOVE', 'count': len(rows),
@@ -37,13 +42,13 @@ def main():
     (OUT / 'archive_candidates.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     groups = Counter('/'.join(p.split('/')[:2]) for p in candidates)
     lines = ['# Plan de archivo pendiente', '', 'No se movió ningún candidato de esta lista.', '',
-             'El movimiento masivo fue rechazado por revisión de seguridad porque no demuestra',
-             'que todos sean históricos. Revisar por módulo, trasladar auxiliares activos y',
+             'Los lotes P1L2–P1L7 y PRE/POST ya revisados fueron archivados.',
+             'Los benchmarks restantes conservan cobertura propia. Revisar por módulo y',
              'actualizar referencias antes de ejecutar movimientos pequeños.', '',
              '| Grupo | Archivos candidatos |', '|---|---:|']
     lines += [f'| `{name}` | {count} |' for name, count in sorted(groups.items())]
     lines += ['', 'Listado exacto y referencias: `archive_candidates.json`.', '',
-              'Excepciones inamovibles: referencia original de Luis y STATUS de P1L2.',
+              'Excepciones: original de Luis, dos derivados protegidos, STATUS e índice de P1L2.',
               'AR: organización solamente; no auditoría funcional ni ejecución.',
               'El baseline desktop pasó desde una copia Git limpia, pero eso no certifica',
               'que scripts geométricos antiguos no sean necesarios para futuras modificaciones.']

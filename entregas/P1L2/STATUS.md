@@ -1,5 +1,13 @@
 # P1L2 Status
 
+## Cierre de organización — alcance corregido (2026-10-06)
+
+- El cierre de esta rama es estático; no requiere nuevas pruebas Unity ni licencias.
+- AR permanece congelado, sin ejecución ni cambios funcionales.
+- El intento anterior de Play conserva su resultado histórico, pero ya no es barrera de cierre.
+- Fuentes protegidas verificadas por identidad de bytes; main permanece intacta.
+- Evidencia vigente: reports/repository_architecture_audit/STATIC_ORGANIZATION_QA.json.
+
 ## Arquitectura funcional — checkpoint final conservador (2026-10-06)
 
 - Lotes históricos P1L2–P1L7 y PRE/POST revisados archivados, con cuatro excepciones protegidas.

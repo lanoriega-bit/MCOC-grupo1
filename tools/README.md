@@ -22,3 +22,18 @@ Los nombres de formatos JSON históricos se conservan por compatibilidad, no
 significan una dependencia productiva de la semana correspondiente.
 OpenSees calcula; Unity visualiza; capacidad Fiber es un estudio independiente.
 AR está excluido de estos comandos.
+
+## Auditoría estática de organización
+
+Para revisar exclusivamente rutas, referencias, duplicados y fuentes protegidas,
+sin abrir Unity/AR ni ejecutar análisis:
+
+```bash
+python tools/verify_migration.py --scope desktop
+python tools/map_historical_references.py
+python tools/audit_repository_layout.py
+```
+
+El informe queda en `reports/repository_architecture_audit/STATIC_ORGANIZATION_QA.json`.
+Esta auditoría no sustituye pruebas funcionales futuras; no las exige para cerrar
+la rama de reorganización.

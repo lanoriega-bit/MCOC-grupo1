@@ -13,10 +13,12 @@ import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'reports/repository_architecture_audit'
-PATTERN = re.compile(r'entregas[/\\]+P1L[2-7]|pre_|post_|current_cleanup|week7|C:[/\\]Users[/\\]|OneDrive[/\\]', re.I)
+PATTERN = re.compile(r'entregas[/\\]+P1L[2-7]|P1L[2-7]|pre_|post_|current_cleanup|week7|C:[/\\]Users[/\\]|OneDrive[/\\]', re.I)
 SUFFIXES = {'.py', '.cs', '.json', '.ps1', '.bat', '.md', '.meta', '.yaml', '.yml', '.unity', '.asset', '.asmdef', '.txt'}
 
 def classify(path, line):
+    if path == 'tools/map_historical_references.py':
+        return 'HISTORICAL_ONLY', 'Inventory matching/classification policy, not an old-path runtime dependency.'
     if path == 'ar/data/geometry_overlay.json' and any(key in line for key in ('"dataset":', '"central_model":')):
         return 'HISTORICAL_ONLY', 'Frozen source metadata; static consumer review recorded in AR_PATH_PROOF.md. Not opened as a path.'
     if path == 'ar/data/build_dataset.py' and '"geometry": "entregas/' in line:
@@ -31,7 +33,7 @@ def classify(path, line):
         return 'ACTIVE_REQUIRED', 'Git show reads paths at the original analysis commit, not live filesystem paths.'
     if 'check_output' in line and 'git' in line and 'show' in line:
         return 'HISTORICAL_ONLY', 'Regression reads the original Git object, not the live historical folder.'
-    if path == 'tools/plan_archive.py' and 'EXCEPTIONS' in line:
+    if path == 'tools/plan_archive.py' and ('EXCEPTIONS' in line or 'entregas/P1L2/' in line):
         return 'HISTORICAL_ONLY', 'Audit exclusion policy, not a filesystem consumer.'
     if path.endswith('.json') and path.startswith(('model/', 'results/', 'viewer/unity/Assets/StreamingAssets/', 'analysis/fiber/sections/')):
         return 'HISTORICAL_ONLY', 'Frozen data provenance/serialized identifiers; consumers use configured files, not these historical labels.'
@@ -84,6 +86,7 @@ def main():
                    'decision': ('KEEP_FROZEN_AR_FILES_NO_FUNCTIONAL_CHANGE' if any('ar_elements' in p for p in paths)
                                 else 'KEEP_OFFICIAL_DELIVERY_EVIDENCE' if any(p.startswith('archive/historical_deliveries/') for p in paths)
                                 else 'KEEP_REQUIRED_SOURCE_AND_UNITY_CONSUMPTION_COPY' if any('/StreamingAssets/' in p for p in paths)
+                                else 'KEEP_INDEPENDENT_BENCHMARK_LAYOUT' if all(p.startswith('entregas/semana3/') for p in paths)
                                 else 'REVIEW_CONSUMERS_AND_HISTORICAL_REASON')}
                   for digest, paths in hashes.items() if len(paths) > 1]
     summary = {'tracked_files': len(tracked), 'references': len(references),

@@ -6,7 +6,7 @@
 > desde esa ubicación. AR solo se organiza; no se prueba ni regenera en esta etapa.
 > Véase [arquitectura](docs/ARCHITECTURE.md) y [comandos](tools/README.md).
 > [Cierre conservador y QA final](reports/repository_architecture_audit/FINAL_ARCHITECTURE.md):
-> Python/solver/capacidad pasan; Play del último clon limpio sigue pendiente de arranque/licencia.
+> Cierre de organización con QA estático; no requiere abrir Unity ni probar AR.
 
 Edificios 1 y 2: modelo 3D canónico, OpenSees y Unity. Rama de reorganización:
 **codex/final-repository-architecture**. No se modifica `main` en esta etapa.
