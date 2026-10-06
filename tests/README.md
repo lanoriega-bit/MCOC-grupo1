@@ -14,7 +14,7 @@ seguridad de comandos. No ejecuta OpenSees ni AR. Produce solo informes QA.
 - `python tests/model/test_topology_relocation.py`: equivalencia del kernel y rutas FE.
 - `python tests/model/validate_wall_cores.py`: continuidad de 45 muros en tres núcleos.
 - `python tests/opensees/run_checks.py`: entrada a pruebas solver/superposición existentes, sin duplicar lógica.
-- `python tests/test_source_migration.py`: fuente única y rutas trasladadas.
+- `python tests/model/test_source_migration.py`: fuente única y rutas trasladadas.
 
 Estos controles no reemplazan Unity compile/Play. AR está fuera del alcance:
 no invocar `tests/ar`, `ar/tests` ni suites AR Unity en esta reorganización.
