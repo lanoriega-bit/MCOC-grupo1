@@ -12,6 +12,7 @@ seguridad de comandos. No ejecuta OpenSees ni AR. Produce solo informes QA.
 - `python tests/unity/test_desktop_relocation.py`: proyecto único, rutas y separación AR.
 - `python tests/model/test_pipeline_commands.py`: planes sin escritura y fallos fail-closed.
 - `python tests/model/test_topology_relocation.py`: equivalencia del kernel y rutas FE.
+- `python tests/model/validate_wall_cores.py`: continuidad de 45 muros en tres núcleos.
 - `python tests/opensees/run_checks.py`: entrada a pruebas solver/superposición existentes, sin duplicar lógica.
 - `python tests/test_source_migration.py`: fuente única y rutas trasladadas.
 

@@ -1,6 +1,6 @@
 # MCOC grupo 1 — laboratorio estructural digital
 
-> Migración en curso en `codex/final-repository-architecture`, sin modificar `main`.
+> Arquitectura funcional en `codex/final-repository-architecture`, sin modificar `main`.
 > Las fuentes oficiales están ahora en [model/](model/README.md) y
 > [config/](config/README.md). Unity desktop está en `viewer/unity/` y pasó Play
 > desde esa ubicación. AR solo se organiza; no se prueba ni regenera en esta etapa.
@@ -12,6 +12,26 @@ El estado vigente incluye las correcciones de núcleos y columnas de P1L6;
 las entregas históricas se conservan, no se sobrescriben.
 
 ## Empieza aquí
+
+```text
+model/          modelo y datos físicos canónicos
+config/         rutas e hipótesis del análisis
+analysis/       OpenSees, capacidad, Fiber y postproceso
+results/        resultados y QA generados
+viewer/unity/   Viewer desktop: Assets/Main.unity
+ar/             módulo AR organizado, funcionalmente intacto
+tools/          comandos principales
+tests/          validaciones por dominio
+docs/           documentación técnica y de uso
+reports/        informes y evidencia de reorganización
+archive/        entregas, auditorías y código histórico
+entregas/P1L2/  excepciones protegidas; no es el modelo activo
+```
+
+Flujo de datos: `model → analysis → results → Unity / AR`.
+AR no se ejecuta ni se regenera en esta reorganización.
+Los benchmarks académicos P1L0/P1L1 y ejercicios antiguos quedan separados del
+pipeline CURRENT; no se alteran ni se archivan sin revisar su cobertura particular.
 
 1. **Abrir el edificio:** doble clic en `Abrir_Unity.bat`.
 2. En Unity abre `Assets/Main.unity`, pulsa **Play** y usa la pestaña **Game**.
@@ -91,7 +111,7 @@ Estado histórico de cierre: [WEEK7_MODEL_CLOSURE](archive/historical_deliveries
 | Auditoría estructural y QA actuales | [Pipeline CURRENT](results/validation/CURRENT_PIPELINE_QA.md) |
 | Uso del visor y funcionalidades | [Unity desktop](viewer/README.md) |
 
-`modelo_central` es la única fuente del modelo. No corregir geometría editando
+`model/` es la única fuente del modelo. No corregir geometría editando
 `StreamingAssets`, resultados OpenSees o exportaciones antiguas.
 
 ## Comandos sencillos

@@ -80,7 +80,11 @@ def main():
                 classification, reason = 'DOCUMENTATION_ONLY', 'Python documentation literal, not executable filesystem access.'
             references.append({'consumer': name, 'line': number, 'tokens': matches,
                                'classification': classification, 'reason': reason, 'excerpt': line[:280]})
-    duplicates = [{'sha256': digest, 'paths': paths, 'decision': 'REVIEW_CONSUMERS_AND_HISTORICAL_REASON'}
+    duplicates = [{'sha256': digest, 'paths': paths,
+                   'decision': ('KEEP_FROZEN_AR_FILES_NO_FUNCTIONAL_CHANGE' if any('ar_elements' in p for p in paths)
+                                else 'KEEP_OFFICIAL_DELIVERY_EVIDENCE' if any(p.startswith('archive/historical_deliveries/') for p in paths)
+                                else 'KEEP_REQUIRED_SOURCE_AND_UNITY_CONSUMPTION_COPY' if any('/StreamingAssets/' in p for p in paths)
+                                else 'REVIEW_CONSUMERS_AND_HISTORICAL_REASON')}
                   for digest, paths in hashes.items() if len(paths) > 1]
     summary = {'tracked_files': len(tracked), 'references': len(references),
                'classifications': dict(Counter(row['classification'] for row in references)),

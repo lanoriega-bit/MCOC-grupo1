@@ -16,9 +16,11 @@ La configuración está en `config/`. Las losas permanecen dentro del modelo.
 
 Los módulos principales ya están en `analysis/`, con validación y pruebas de Q,
 superposición, capacidad y Fiber. Los resultados vigentes están en `results/`.
-El proyecto Unity productivo está en `viewer/unity/`; algunos auxiliares aún están en sus ubicaciones anteriores.
-No deben archivarse hasta cerrar su migración y QA. El menú y los módulos CURRENT
-consumen las nuevas fuentes.
+El proyecto Unity productivo está en `viewer/unity/`. Las entregas P1L2–P1L7,
+POST_P1L4 y PRE_P1L5 revisadas están en archive/historical_deliveries, salvo
+las cuatro excepciones protegidas de P1L2 y su índice. El menú y los módulos
+CURRENT consumen las nuevas fuentes. Los benchmarks previos y bitácoras no se
+convierten en módulos activos por estar fuera de archive.
 
 ## Destinos acordados
 
@@ -46,5 +48,5 @@ El comando desktop `tools/reanalyse_current.ps1` no invoca pasos AR.
 
 Baseline: `reports/repository_architecture_audit/baseline.json`.
 Mapa de traslados: `path_mapping.json` en la misma carpeta.
-Verificación: `python tools/verify_migration.py`.
+Verificación desktop: `python tools/verify_migration.py --scope desktop`.
 El estado final exige además regeneración desde copia limpia y compile/Play.

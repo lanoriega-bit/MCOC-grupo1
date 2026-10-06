@@ -23,6 +23,8 @@ Para consultar la evidencia, aplicar estos prefijos; no editar el JSON históric
 | tools/audit_architecture.py | archive/deprecated_code/repository_audits/audit_architecture.py |
 | tools/inventory_repository.py | archive/deprecated_code/repository_audits/inventory_repository.py |
 | tools/build_viewer.py | archive/deprecated_code/viewers/build_viewer.py |
+| PROJECT_HANDOFF.md | archive/historical_deliveries/PROJECT_HANDOFF_2026_09_23.md |
+| PRE_P1L4_CLEANUP.md | archive/historical_deliveries/PRE_P1L4_CLEANUP.md |
 
 Excepciones migradas previamente a fuentes funcionales: modelo P1L5 → model/;
 OpenSees/capacidad → analysis/; resultados → results/; Unity → viewer/unity/.

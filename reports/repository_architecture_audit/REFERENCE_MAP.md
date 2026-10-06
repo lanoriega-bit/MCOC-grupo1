@@ -7,8 +7,8 @@ No hubo ejecución AR. Los hashes de duplicados son identidad de archivos, no co
 
 | Clase | Referencias |
 |---|---:|
-| DOCUMENTATION_ONLY | 98 |
-| HISTORICAL_ONLY | 30747 |
+| DOCUMENTATION_ONLY | 89 |
+| HISTORICAL_ONLY | 25739 |
 | ACTIVE_REQUIRED | 37 |
 
 ## Dependencias operativas relocalizables
