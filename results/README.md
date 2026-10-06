@@ -14,8 +14,8 @@ Resultados vigentes trasladados sin recalcular ni modificar valores:
 
 Reciben fuentes de `model/` y `config/`. Algunas cadenas de procedencia de los
 JSON guardados aún citan rutas históricas: se conservaron para mantener sus bytes.
-No son fallbacks de lectura. La fase final debe documentar o actualizar únicamente
-esa metadata al probar una regeneración completa.
+No son fallbacks de lectura. La correspondencia documental está en `archive/README.md`;
+no se regenera ni modifica metadata de resultados durante esta reorganización.
 
 Generar preview: `python analysis/opensees/build_fe.py`.
 No editar resultados manualmente ni interpretar el preview como análisis ejecutado.

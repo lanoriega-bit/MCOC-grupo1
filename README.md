@@ -109,7 +109,14 @@ Estado histórico de cierre: [WEEK7_MODEL_CLOSURE](archive/historical_deliveries
 | Archivos vigentes / históricos / generados | [Índice canónico](PROJECT_INDEX.md) |
 | Menú y coordinación de comandos | [main.py](main.py) |
 | Configuración de rutas | [project_config.json](config/project_config.json) |
-| Geometría, secciones, materiales y cargas editables | [Modelo canónico](model/README.md) |
+| Geometría editable | [model_master.json](model/model_master.json) |
+| Materiales y secciones | [materials.json](model/materials.json), [sections.json](model/sections.json) |
+| Cargas y tributarias | [loads.json](model/loads.json) |
+| OpenSees | [analysis/opensees/](analysis/opensees/) |
+| Resultados guardados | [results/](results/README.md) |
+| AR y sus excepciones de ubicación | [ar/](ar/README.md) |
+| Tests por dominio | [tests/](tests/README.md) |
+| Informe final de reorganización | [FINAL_ARCHITECTURE.md](reports/repository_architecture_audit/FINAL_ARCHITECTURE.md) |
 | Auditoría estructural y QA actuales | [Pipeline CURRENT](results/validation/CURRENT_PIPELINE_QA.md) |
 | Uso del visor y funcionalidades | [Unity desktop](viewer/README.md) |
 
@@ -148,7 +155,7 @@ notas del [QA vigente](results/validation/CURRENT_PIPELINE_QA.md).
 
 | Etapa | Documentación |
 | --- | --- |
-| P1L0 | [Benchmark mínimo](entregas/P1L0/README.md) |
+| P1L0 | [Benchmark mínimo](entregas/p1l0/README.md) |
 | P1L1 | [Benchmark 3D](entregas/p1l1_benchmark_3d) |
 | P1L2 | [Entrega histórica](archive/historical_deliveries/P1L2/README.md) |
 | P1L3 | [Informe](archive/historical_deliveries/P1L3/INFORME.md) |

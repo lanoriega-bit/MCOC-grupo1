@@ -22,4 +22,7 @@ Checkpoint de migración: los módulos principales están en `analysis/`.
 Validar con `python main.py validar`; generar el contrato FE de comprobación con
 `python analysis/opensees/build_fe.py`.
 Este último no ejecuta OpenSees ni sustituye resultados. Las entradas funcionales
-de `tools/` se consolidarán junto con los módulos de análisis.
+ya están consolidadas en `tools/`; consultar `tools/README.md`.
+
+`reference/connectivity_prior.json` es evidencia de conectividad anterior para
+comparación del reconstructor, no una segunda fuente geométrica editable.
