@@ -155,6 +155,9 @@ instalado con UiSmokeRunner.StartSmoke (abre solo Assets/Main.unity). Arranque
 detenido en “Licensing is not yet initialized”, luego diálogo Connection Lost
 del servicio de licencias. Se pulsó Retry una vez: empezó Opening project,
 pero todavía sin ventana Main ni resultado smoke al cerrar este checkpoint.
+El log final confirma reconexión fallida y `com.unity.editor.ui was not found`.
+No se atribuye este último error a una causa no verificada ni se cambian paquetes
+para ocultarlo. El proceso de esta prueba aislada se cierra, no el Editor original.
 No se automatizó activación/licencia ni se dio Play por PASS.
 Para cerrar: abrir results/validation/final_clean/viewer/unity desde Unity Hub,
 esperar importación/compilación y ejecutar MCOC → Probar interfaz en Play.
