@@ -108,8 +108,12 @@ namespace Mcoc.UnityViewer
 
         bool IsPointerOverCurrentUi()
         {
-            if (uiHidden) return false;
             Vector2 p = Input.mousePosition; p.y = Screen.height - p.y;
+            return IsPointerOverCurrentUi(p);
+        }
+        bool IsPointerOverCurrentUi(Vector2 p)
+        {
+            if (uiHidden) return false;
             if (p.y < 76 || p.y > Screen.height - 36 || OrientationRect().Contains(p)) return true;
             if (navigationExpanded && SemanticPanelRect().Contains(p)) return true;
             if (lastSelected != null && inspectorVisible && CurrentInspectorRect().Contains(p)) return true;
@@ -258,6 +262,7 @@ namespace Mcoc.UnityViewer
                 LayerToggle("Apoyos geométricos", "support");
                 GUILayout.Label(new GUIContent(currentResultsAvailable ? "CURRENT · con supuestos documentados" : "Pendiente de base FE actual", "G/Q y zonas provienen del contrato CURRENT; PP.LOSA conserva espesor académico de 0,15 m. Las cargas unresolved se excluyen, no equivalen a cero confirmado."),currentBody);
             }
+            if (Accordion("CARGA LOCAL")) DrawLocalScenarioControls();
             if (Accordion("ANÁLISIS"))
             {
                 GUILayout.Label(currentResultsAvailable ? "OpenSees CURRENT · PASS\nG / Q / EX / EY\nSuperposición lineal instantánea" : "Resultados CURRENT bloqueados · consultar estado de reanálisis",currentBody);

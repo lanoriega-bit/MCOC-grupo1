@@ -45,6 +45,7 @@ namespace Mcoc.UnityViewer
         void InitializeP1L5Superposition()
         {
             if (!currentResultsAvailable) return;
+            InitializeLocalScenarioBase();
             RebuildP1L5Combination(false);
         }
 
@@ -106,6 +107,7 @@ namespace Mcoc.UnityViewer
             var prior = FindP1L5Case("R");
             if (prior != null) analysisCases.cases.Remove(prior);
             analysisCases.cases.Add(combined);
+            if (localActive) { RebuildLocalCombination(); RefreshLocalSummary(); }
             if (activate)
             {
                 ActivateAnalysisCase("R");
@@ -123,6 +125,7 @@ namespace Mcoc.UnityViewer
                 case "EX": return "EX · Acción horizontal en X: caso lateral/sísmico en el eje global X.";
                 case "EY": return "EY · Acción horizontal en Y: caso lateral/sísmico en el eje global Y.";
                 case "R": return "R · Respuesta combinada\nR = λG·G + λQ·Q + λEX·EX + λEY·EY\nλ: coeficientes adimensionales sobre resultados ya calculados. No reejecuta OpenSees.";
+                case "R_SCENARIO": return "R_SCENARIO = R_BASE + Q_LOCAL. Carga temporal adicional; CURRENT BASE no cambia.";
                 default: return "Seleccione un caso base o la respuesta combinada R.";
             }
         }
@@ -156,7 +159,7 @@ namespace Mcoc.UnityViewer
             }
             GUILayout.BeginHorizontal();
             foreach (string name in new[] { "G", "Q", "EX", "EY", "R" })
-                if (GUILayout.Toggle(activeAnalysisCase==name,new GUIContent(name,LoadCaseExplanation(name)), currentButton,GUILayout.Width(44))!= (activeAnalysisCase==name))
+                if (GUILayout.Toggle(activeAnalysisCase==name||(name=="R"&&activeAnalysisCase=="R_SCENARIO"),new GUIContent(name,LoadCaseExplanation(name)), currentButton,GUILayout.Width(44))!= (activeAnalysisCase==name||(name=="R"&&activeAnalysisCase=="R_SCENARIO")))
                 { ActivateAnalysisCase(name); ShowCaseHelp(name); }
             GUILayout.EndHorizontal();
             if(activeAnalysisCase=="R")GUILayout.Label(new GUIContent("R = λG·G + λQ·Q + λEX·EX + λEY·EY","Superposición de respuestas compatibles ya calculadas; los cuatro coeficientes visibles arriba pertenecen a R, no alteran los casos base."),currentBody);
@@ -212,6 +215,8 @@ namespace Mcoc.UnityViewer
 
         void SaveP1L5Request(P1L5ModificationOperation operation)
         {
+            if (LocalBusy) { p1l5ModificationMessage = "Espera a que termine Q_LOCAL antes de cambiar BASE."; return; }
+            RestoreLocalBase();
             if (FindRepositoryRoot() == null)
             { p1l5ModificationMessage = "Build de consulta: el reanálisis necesita el repositorio y Python en el PC."; return; }
             var request = new P1L5ModificationRequest

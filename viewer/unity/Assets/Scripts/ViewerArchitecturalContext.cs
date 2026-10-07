@@ -624,7 +624,7 @@ namespace Mcoc.UnityViewer
         {
             if (architecturalContextRoot == null) return;
             bool resultOverlay = hideArchitectureForResults && (activeDeformationVisible || diagramMode != 0 || localAxesVisible || structuralFailureVisualizationEnabled);
-            architecturalContextRoot.SetActive(architecturalContextVisible && diagnosticViewMode == 0 && !isolateSelected && !resultOverlay);
+            architecturalContextRoot.SetActive(architecturalContextVisible && diagnosticViewMode == 0 && !isolateSelected && !resultOverlay && !localSelecting && !localRectangleSet);
             foreach (var group in visualContextGroups)
             {
                 bool visible = group.kind == "facade" ? facadeSkinVisible : group.kind == "glass" ? glazingVisible :
@@ -657,6 +657,8 @@ namespace Mcoc.UnityViewer
 
         void OnDestroy()
         {
+            ClearLocalArea();
+            if (localProcess != null) { try { if (!localProcess.HasExited) localProcess.Kill(); } catch { } localProcess.Dispose(); localProcess = null; }
             foreach (var material in architecturalContextMaterials) if (material != null) Destroy(material);
         }
 

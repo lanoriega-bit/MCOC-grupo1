@@ -278,6 +278,7 @@ namespace Mcoc.UnityViewer
                 GUILayout.Label(new GUIContent("CURRENT · Caso "+activeAnalysisCase,"Fuerzas locales OpenSees: [N, Vy, Vz, T, My, Mz]. Consultar unidades y convención en Detalle técnico."),currentHeading);
                 if(currentResultsAvailable)DrawCompactCurrentForces(e,id);
                 else GUILayout.Label("Sin análisis actual compatible. Se requiere una corrida validada.",currentBody);
+                DrawLocalComparison(e,id);
             }
             if(InspectorSection("CARGAS"))
             {

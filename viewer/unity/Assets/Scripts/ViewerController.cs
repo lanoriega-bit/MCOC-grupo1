@@ -309,6 +309,7 @@ namespace Mcoc.UnityViewer
         void ActivateAnalysisCase(string requested)
         {
             string normalized = (requested ?? "R").Replace("CASE_", "").ToUpperInvariant();
+            if (normalized == "R" && localActive) normalized = "R_SCENARIO";
             AnalysisResultsData chosen = null;
             if (analysisCases != null && analysisCases.cases != null)
             {
@@ -1633,11 +1634,13 @@ namespace Mcoc.UnityViewer
         // ---------- Seleccion por clic ----------
         void Update()
         {
+            PollLocalCalculation();
+            bool drawingLocal = UpdateLocalSelection();
             if (Input.GetKeyDown(KeyCode.F11)) SetPresentationMode(!presentationMode);
             if (Input.GetKeyDown(KeyCode.H)) uiHidden = !uiHidden;
             if (Input.GetKeyDown(KeyCode.R)) ResetPresentation();
             // Seleccion SOLO con click limpio (sin arrastre). Arrastrar = rotar camara.
-            if (Input.GetMouseButtonDown(0) && !IsMouseOverUI())
+            if (!drawingLocal && Input.GetMouseButtonDown(0) && !IsMouseOverUI())
             {
                 mouseDownPos = MousePos2();
                 clickPending = true;
@@ -1645,7 +1648,7 @@ namespace Mcoc.UnityViewer
             if (clickPending && (MousePos2() - mouseDownPos).sqrMagnitude > 49f) clickPending = false;
             if (Input.GetMouseButtonUp(0))
             {
-                if (clickPending && !IsMouseOverUI()) TrySelect(Input.mousePosition);
+                if (!drawingLocal && clickPending && !IsMouseOverUI()) TrySelect(Input.mousePosition);
                 clickPending = false;
             }
             if (Input.GetKeyDown(KeyCode.Return) && !string.IsNullOrEmpty(searchText)) DoSearch();
@@ -2308,6 +2311,7 @@ namespace Mcoc.UnityViewer
         // ---------- UI (IMGUI garantiza visibilidad en build) ----------
         void OnGUI()
         {
+            HandleLocalSelectionGui(Event.current);
             DrawCurrentUi();
         }
 
@@ -3040,6 +3044,7 @@ namespace Mcoc.UnityViewer
 
         void ResetPresentation()
         {
+            RestoreLocalBase();
             visualTerrainVisible = terrainBaseVisible = lowerTerrainVisible = accessTerrainVisible = true;
             ExitPendingReview();
             historicalResultsEnabled = false;
@@ -3596,8 +3601,8 @@ namespace Mcoc.UnityViewer
             }
 
             bool orb = false;
-            if (Input.GetMouseButton(0) && !IsMouseOverUI()) orb = true;
-            if (Input.GetMouseButton(1) && !IsMouseOverUI()) orb = true;
+            if (!localSelecting && !localDragging && Input.GetMouseButton(0) && !IsMouseOverUI()) orb = true;
+            if (!localSelecting && !localDragging && Input.GetMouseButton(1) && !IsMouseOverUI()) orb = true;
 
             Vector2 cur = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
             Vector2 delta = (lastMouse.x >= 0f) ? cur - lastMouse : Vector2.zero;
