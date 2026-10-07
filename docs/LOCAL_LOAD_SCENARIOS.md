@@ -57,4 +57,96 @@ selección parcial exterior; huecos; conservación; equilibrio; linealidad;
 ED2 no afectado; comparación contra corrida explícita R+Q_LOCAL;
 recuperación de partición en todos los pisos disponibles; hashes BASE intactos.
 
-Integración UI, D/C y QA manual en Play: en implementación, todavía no READY.
+## Uso en Main / Play
+
+1. Abre `viewer/unity/Assets/Main.unity`, Play, pestaña Game, escala 1x.
+2. Despliega **CARGA LOCAL**. Selecciona Personas / Peso [kg] / kN/m²,
+   edificio y piso. Default: 10 personas de 68 kg, editable.
+3. **Seleccionar zona · TOP** aísla temporalmente el piso y edificio. Arrastra
+   un rectángulo sobre la losa. La arquitectura visual se oculta temporalmente
+   para no tapar el piso. Esc cancela; un clic sin área no genera un escenario.
+4. Se muestran área dibujada, efectiva, q adicional y receptores. El amarillo
+   identifica la selección, no D/C. **Mostrar zona local** permite ocultarla.
+5. **ANALIZAR ESCENARIO** ejecuta OpenSees asíncronamente: mientras calcula
+   solo BASE es válido. Al finalizar aparece **R_SCENARIO**.
+6. Selecciona un miembro. En **Ficha estructural → Resultados** compara
+   R_BASE / R_SCENARIO / Δ: My, Vz, desplazamiento y D/C. Desplaza la ficha
+   hacia abajo para ver este bloque. Se comparan máximos absolutos de extremos
+   de todos sus segmentos FE; Δ es diferencia de envolventes, no el incremento
+   en un extremo concreto. Signos completos permanecen en la tabla original.
+7. En **Resultados**, diagramas 3D/2D y deformada usan el caso visible. R se
+   convierte en R_SCENARIO cuando está activo; G/Q/EX/EY siguen disponibles.
+   Sus cuatro sliders reconstruyen R_BASE + Q_LOCAL, sin reanalizar Q_LOCAL.
+8. En **Capacidad**, activa los colores D/C existentes: naranja ≥0,80,
+   rojo ≥1,00, gris sin datos y cyan para selección. No se añadió una banda
+   amarilla ni otro evaluador. Las capacidades y sus hipótesis no cambian.
+9. **RESTAURAR BASE** retira la zona y resultados temporales, restaura filtros
+   previos y demanda/colores BASE sin ejecutar OpenSees. R también resetea.
+
+La ejecución requiere el repositorio Windows y `.venv-p1l5/Scripts/python.exe`
+preparado con `requirements.txt`. Un standalone aislado no contiene el solver:
+falla con un mensaje claro, no inventa resultados.
+
+## Implementación y separación
+
+`ViewerLocalScenarios.cs` conserva solicitudes, geometría amarilla y respuesta
+Q_LOCAL fuera de las colecciones físicas canónicas; clona R antes de sumar los
+vectores SI. El worker existente se reutiliza por `prepare_contract/run_case`,
+sin crear otro solver. El proceso es oculto y asíncrono; polling, timeout,
+identidad de BASE y revisión de la solicitud evitan aceptar salidas tardías,
+obsoletas o incompatibles. Cambiar entrada desactiva el escenario hasta analizar.
+
+El caso independiente no incluye G, Q ni EX/EY, ni modifica masas. La combinación
+visible añade cada vector una sola vez. Los receptores siguen siendo vigas
+físicas, aunque su crosswalk tenga varios segmentos. OpenSees propaga después
+su efecto a columnas, muros y reacciones.
+
+Archivos desktop integrados: `ViewerController.cs` (caso/selección/reset),
+`ViewerCurrentUI.cs` (panel), `ViewerP1L5.cs` (R y protección de edición BASE),
+`ViewerStructuralInspector.cs` (comparación), `ViewerArchitecturalContext.cs`
+(visibilidad temporal y liberación de objetos/proceso). No cambia escenarios AR,
+packages, Main, materiales estructurales, geometría ni datasets canónicos.
+
+## QA de Unity
+
+En Main/Play: menú **MCOC → Validar carga local en Main Play**.
+`ViewerLocalScenarioQA.cs` y `Editor/LocalScenarioReviewMenu.cs` prueban
+solves reales, comparación, todos los componentes de diagramas, deformada,
+sliders R, identidad de BASE, colores renderizados y restauración. Salida local:
+`viewer/unity/Temp/local_scenario_review/QA.json` y capturas; evidencia de cierre
+en `reports/local_load_scenarios/`. No abre escenas AR ni ejecuta pruebas AR.
+
+La búsqueda incremental de carga grande encontró 10240 personas equivalentes
+(6830,8992 kN) sobre 35 m²: E1-P2-V-058 pasa de D/C 0,414194 a 1,702513.
+Es un ensayo numérico extremo, no un aforo real ni el default. Comprueba estados
+naranja/rojo provenientes del solver. No representa fractura ni comportamiento
+post-falla. Grandes desplazamientos muestran advertencia del modelo lineal.
+
+Para 10 personas, E1-P2-V-048 tiene |ΔMy Q_LOCAL| máximo 0,089026 kN·m y
+|Δu Q_LOCAL| máximo en sus nodos 0,002555 mm. Su D/C pasa de 0,013778942 a
+0,013778469: una demanda firmada puede disminuir una componente existente;
+no se fuerza crecimiento en todos los miembros. Ningún miembro con D/C BASE
+<0,50 saltó a capacidad excedida con esta pequeña carga.
+
+## Límites explícitos
+
+- Conserva la hipótesis CURRENT de tributarias por celdas de 0,50 m; no es un
+  modelo de placa ni una nueva reconstrucción CAD.
+- Conserva aplicación nodal P/2 por receptor físico; no representa la forma
+  exacta de carga distribuida a lo largo de una viga. Diagramas siguen usando
+  las convenciones existentes, nunca curvas académicas fabricadas.
+- Una sola selección rectangular y escenario activo a la vez. Pueden quedar
+  salidas locales ignoradas; no se añadió gestión de biblioteca/exportación.
+- Solo peso gravitatorio temporal; no nuevas masas, sismo, no linealidad ni AR.
+- D/C sigue siendo el cálculo educativo CURRENT y sus hipótesis de capacidad,
+  no una certificación de seguridad/aforo.
+- BASE STALE/cambiado o selección sin cobertura válida: rechazo explícito.
+
+## Cierre
+
+LOCAL LOAD SCENARIOS — READY. Evidencia reproducible y revisión manual en
+`../reports/local_load_scenarios/README.md`; no hay blockers funcionales abiertos.
+La regresión verificada está detallada allí, sin afirmar cobertura exhaustiva de
+todo el Viewer. Persisten advertencias preexistentes del editor, no fallos de este módulo.
+El máximo D/C global puede corresponder a un miembro ya excedido en BASE
+(en R=G+0,5Q, E1-P3-V-109 ≈1,045); no atribuirlo automáticamente a Q_LOCAL.

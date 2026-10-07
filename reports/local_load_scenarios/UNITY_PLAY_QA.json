@@ -1,0 +1,263 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "rectangle preview clips physical slab without solving",
+      "pass": true
+    },
+    {
+      "check": "preview area 35m2; four physical receivers",
+      "pass": true
+    },
+    {
+      "check": "real OpenSees scenario 0 persons",
+      "pass": true
+    },
+    {
+      "check": "force units 0 persons",
+      "pass": true
+    },
+    {
+      "check": "same physical registry 0",
+      "pass": true
+    },
+    {
+      "check": "zero scenario = BASE",
+      "pass": true
+    },
+    {
+      "check": "real OpenSees scenario 1 persons",
+      "pass": true
+    },
+    {
+      "check": "force units 1 persons",
+      "pass": true
+    },
+    {
+      "check": "same physical registry 1",
+      "pass": true
+    },
+    {
+      "check": "real OpenSees scenario 10 persons",
+      "pass": true
+    },
+    {
+      "check": "force units 10 persons",
+      "pass": true
+    },
+    {
+      "check": "same physical registry 10",
+      "pass": true
+    },
+    {
+      "check": "linear Q_LOCAL scaling 10",
+      "pass": true
+    },
+    {
+      "check": "10-person sanity: no far-safe member leaps beyond capacity",
+      "pass": true
+    },
+    {
+      "check": "scenario selection + inspector comparison",
+      "pass": true
+    },
+    {
+      "check": "same D/C evaluator in scenario map",
+      "pass": true
+    },
+    {
+      "check": "My diagram exists",
+      "pass": true
+    },
+    {
+      "check": "axial diagram exists",
+      "pass": true
+    },
+    {
+      "check": "scenario deformation exists",
+      "pass": true
+    },
+    {
+      "check": "sliders rebuild scenario R",
+      "pass": true
+    },
+    {
+      "check": "real OpenSees scenario 20 persons",
+      "pass": true
+    },
+    {
+      "check": "force units 20 persons",
+      "pass": true
+    },
+    {
+      "check": "same physical registry 20",
+      "pass": true
+    },
+    {
+      "check": "linear Q_LOCAL scaling 20",
+      "pass": true
+    },
+    {
+      "check": "editable mass kg equals ten-person response",
+      "pass": true
+    },
+    {
+      "check": "editable surface kN/m2 equals ten-person response",
+      "pass": true
+    },
+    {
+      "check": "large real load raises a far-safe member above capacity",
+      "pass": true
+    },
+    {
+      "check": "actual scenario renderer colours follow same D/C states",
+      "pass": true
+    },
+    {
+      "check": "actual high-load orange and red states exist",
+      "pass": true
+    },
+    {
+      "check": "Restore BASE, no solver, no scenario/area",
+      "pass": true
+    },
+    {
+      "check": "R_BASE unchanged",
+      "pass": true
+    },
+    {
+      "check": "base case unchanged G",
+      "pass": true
+    },
+    {
+      "check": "base case unchanged Q",
+      "pass": true
+    },
+    {
+      "check": "base case unchanged EX",
+      "pass": true
+    },
+    {
+      "check": "base case unchanged EY",
+      "pass": true
+    },
+    {
+      "check": "BASE physical/capacity/results files unchanged",
+      "pass": true
+    },
+    {
+      "check": "context still passive",
+      "pass": true
+    },
+    {
+      "check": "BASE case selection G",
+      "pass": true
+    },
+    {
+      "check": "BASE case selection Q",
+      "pass": true
+    },
+    {
+      "check": "BASE case selection EX",
+      "pass": true
+    },
+    {
+      "check": "BASE case selection EY",
+      "pass": true
+    },
+    {
+      "check": "BASE case selection R",
+      "pass": true
+    },
+    {
+      "check": "BASE 3D/2D component 1",
+      "pass": true
+    },
+    {
+      "check": "BASE 3D/2D component 2",
+      "pass": true
+    },
+    {
+      "check": "BASE 3D/2D component 3",
+      "pass": true
+    },
+    {
+      "check": "BASE 3D/2D component 4",
+      "pass": true
+    },
+    {
+      "check": "BASE 3D/2D component 5",
+      "pass": true
+    },
+    {
+      "check": "BASE 3D/2D component 6",
+      "pass": true
+    },
+    {
+      "check": "BASE deformation",
+      "pass": true
+    }
+  ],
+  "examples": [
+    {
+      "input": "0 persons ×68kg",
+      "element_id": "E1-P2-V-048",
+      "base_dc": "0,013778941715551858",
+      "scenario_dc": "0,013778941715551855",
+      "force_kN": 0,
+      "area_m2": 35,
+      "q_kN_m2": 0,
+      "increment_my_kNm": 0,
+      "increment_u_mm": 0,
+      "receptors": 4
+    },
+    {
+      "input": "1 persons ×68kg",
+      "element_id": "E1-P2-V-048",
+      "base_dc": "0,013778941715551858",
+      "scenario_dc": "0,013778894415340217",
+      "force_kN": 0.66708,
+      "area_m2": 35,
+      "q_kN_m2": 0.01905942857142857,
+      "increment_my_kNm": 0.008902579022480145,
+      "increment_u_mm": 0.0002555395803571008,
+      "receptors": 4
+    },
+    {
+      "input": "10 persons ×68kg",
+      "element_id": "E1-P2-V-048",
+      "base_dc": "0,013778941715551858",
+      "scenario_dc": "0,013778468713435469",
+      "force_kN": 6.6708,
+      "area_m2": 35,
+      "q_kN_m2": 0.19059428571428572,
+      "increment_my_kNm": 0.08902579022480174,
+      "increment_u_mm": 0.0025553958035710094,
+      "receptors": 4
+    },
+    {
+      "input": "20 persons ×68kg",
+      "element_id": "E1-P2-V-048",
+      "base_dc": "0,013778941715551858",
+      "scenario_dc": "0,013777995711319083",
+      "force_kN": 13.3416,
+      "area_m2": 35,
+      "q_kN_m2": 0.38118857142857143,
+      "increment_my_kNm": 0.17805158044960348,
+      "increment_u_mm": 0.005110791607142019,
+      "receptors": 4
+    },
+    {
+      "input": "QA high load 10240 persons",
+      "element_id": "E1-P2-V-058",
+      "base_dc": "0,41419446036901492",
+      "scenario_dc": "1,7025134817836323",
+      "force_kN": 6830.8992,
+      "area_m2": 35,
+      "q_kN_m2": 195.16854857142857,
+      "increment_my_kNm": 1318.0346780987861,
+      "increment_u_mm": 8.476209812966284,
+      "receptors": 4
+    }
+  ]
+}

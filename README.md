@@ -72,6 +72,16 @@ En **Análisis**: campo qQ [kN/m²] → Guardar → Reanalizar → recarga de es
 En **Resultados**: λQ solo combina respuestas; no cambia el caso físico Q.
 Un standalone fuera del repositorio es de consulta: no incluye OpenSees/Python.
 
+### Escenarios temporales de carga local (desktop)
+
+En la rama `codex/local-load-scenarios`, abre **Carga local** en Main/Play:
+elige edificio/piso, personas/peso/carga superficial, selecciona un rectángulo
+en TOP y pulsa **ANALIZAR ESCENARIO**. **Zona demo · ED1 P2** prepara una zona
+de 35 m² con cuatro vigas receptoras. **RESTAURAR BASE** elimina el escenario
+sin recalcular ni sobrescribir CURRENT. Q_LOCAL es adicional; no cambia qQ.
+Requiere el Python del repositorio y sus dependencias; no ejecuta AR.
+Guía, contrato y QA: [carga local](docs/LOCAL_LOAD_SCENARIOS.md).
+
 Configuración única: `config/analysis_settings.json`.
 Valor inicial qQ = **0,667 kN/m²**, hipótesis de proyecto, no norma.
 SC originales (incluidas lineales/puntuales) son referencia, no se suman a Q.

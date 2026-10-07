@@ -11,6 +11,15 @@ Ejecutar desde la raíz con el Python del entorno del proyecto.
 | `python tools/run_analysis.py` | Plan del solver; por sí solo no publica Viewer CURRENT |
 | `python tools/generate_unity_data.py` | Plan de exportación desktop desde resultados compatibles |
 | `python tools/rebuild_all.py` | Plan completo desktop, sin AR |
+| `python tools/run_local_scenario.py --fingerprint` | Identidad SHA-256 de BASE, solo lectura |
+| `python tools/run_local_scenario.py --request results/scenarios/<id>_request.json --preview` | Recorte y tributarias locales, sin solver |
+| `python tools/run_local_scenario.py --request results/scenarios/<id>_request.json` | Q_LOCAL real; escribe exclusivamente el escenario temporal |
+
+La interfaz **Carga local** de Unity crea esas solicitudes automáticamente;
+no es necesario editar JSON. Escenarios en `results/scenarios/` ignorados por
+Git; no usar `rebuild_all` para ellos. QA numérico:
+`python -B tests/loads/test_local_scenarios.py`. Véase
+`docs/LOCAL_LOAD_SCENARIOS.md`.
 
 Los últimos cuatro solo muestran el plan por defecto. Añadir `--execute` permite
 escribir/recalcular en **esa copia**. No usarlos para abrir Unity ni como rutina

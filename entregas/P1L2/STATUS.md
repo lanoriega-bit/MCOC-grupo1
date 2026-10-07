@@ -1,5 +1,18 @@
 # P1L2 Status
 
+## Carga local temporal desktop (2026-10-07)
+
+- Rama `codex/local-load-scenarios`, desde la última arquitectura/contexto visual.
+- Q_LOCAL independiente, tributarias CURRENT verificadas y OpenSees existente;
+  R_SCENARIO = R_BASE + Q_LOCAL, sin exportar ni reconstruir CURRENT.
+- Personas/masa/superficie, selección rectangular recortada a losa, comparación
+  BASE/ESCENARIO, D/C existente y restauración sin solver.
+- QA numérico: 5 tests PASS; Main Compile/Play: 49 comprobaciones PASS.
+- 42 archivos BASE fijados por SHA-256; Luis y AR sin cambios. Las modificaciones
+  CURRENT previas a esta tarea se preservaron y no forman parte de sus commits.
+- Guía: `docs/LOCAL_LOAD_SCENARIOS.md`; evidencia: `reports/local_load_scenarios/`.
+- No modifica entregas históricas, main ni tags; no certifica aforo/seguridad.
+
 ## Revisión visual: cubierta, escalera y camino (2026-10-06)
 
 - Rama codex/visual-architectural-context; cubierta gris completa, solo visual.

@@ -464,7 +464,9 @@ namespace Mcoc.UnityViewer
         }
         void LocalCompareRow(string label,double baseline,double scenario)
         {
-            GUILayout.Label($"{label}\n{baseline:G5}  →  {scenario:G5}  · Δ {scenario-baseline:+0.#####;-0.#####;0}",currentBody);
+            double delta=scenario-baseline;
+            string change=delta==0?"0":(delta>0?"+":"")+delta.ToString("G5");
+            GUILayout.Label($"{label}\n{baseline:G5}  →  {scenario:G5}  · Δ {change}",currentBody);
         }
     }
 }
