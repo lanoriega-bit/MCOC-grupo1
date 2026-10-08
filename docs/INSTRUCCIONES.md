@@ -101,6 +101,23 @@ El ejecutable de escritorio compilado (Windows x64) se genera con el builder
 `viewer/unity/Assets/Editor/CurrentReviewBuild.cs` hacia
 `viewer/unity/Builds/CurrentReview/StructuralReview.exe`.
 
+### 6.1 Abrir el visor desde el zip del Release (para el ayudante / evaluador)
+
+El producto ejecutable se entrega como `MCOC_Viewer_v7_Entrega.zip`, adjunto en
+la página del Release `SEMANA7_ENTREGA` (sección **Assets**). Para ver el visor:
+
+1. Descargar `MCOC_Viewer_v7_Entrega.zip` desde el Release.
+2. Clic derecho sobre el zip → **Extraer todo** (desempaquetar; NO abrirlo desde
+   dentro del zip, no funciona así).
+3. Abrir la carpeta extraída y hacer doble clic en `StructuralReview.exe`.
+4. Se abre la ventana 3D con el edificio (escena CURRENT).
+
+> El `StructuralReview.exe` solo funciona si se extrae junto a su carpeta
+> `StructuralReview_Data` y archivos auxiliares (`UnityPlayer.dll`,
+> `MonoBleedingEdge/`, `D3D12/`) — todos vienen en el mismo zip. No se puede
+> ejecutar directamente desde dentro del archivo comprimido. Dentro del zip hay
+> además un `LEE_ESTO.txt` con estas mismas indicaciones.
+
 ---
 
 ## 7. Compilar la aplicación AR para Android (APK)
